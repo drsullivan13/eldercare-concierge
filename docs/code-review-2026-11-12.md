@@ -29,8 +29,8 @@ The separate requirements review reported **zero findings**. No review result es
 - Production build: passed.
 - Node test suite: **115 tests passed**, covering domain behavior, imports, rebuilds and actual local PostgreSQL rules.
 - Desktop/mobile browser acceptance: **44 scenarios passed**, including visible care alerts and plan export during a failed provider lookup. Four new cases passed after correcting test selectors and waiting for the workspace to initialize before mobile navigation.
-- Automated accessibility: **zero violations across 12 pages and dialogs**. Root reviewed desktop/mobile screenshots and corrected duplicated address text in provider details.
-- Hosted acceptance passed on application commit `b3b01c8`: real search and evidence APIs, Facebook expansion, shortlist persistence, downloaded plan, account redirects and mobile layout. No uncaught browser errors occurred. The deployment scan found no error/fatal logs in its ten-minute window. The subsequent CSS and singular-label corrections are recorded in the verification record.
+- Automated accessibility: **zero violations across 12 pages and dialogs**. Final visual review covered desktop/mobile screenshots and led to a correction for duplicated address text in provider details.
+- Hosted acceptance passed on final application commit `8be6a78`: real search and evidence APIs, Facebook expansion, shortlist persistence, downloaded plan, account redirects and mobile layout. A separate mobile check verified the final action sizes and saving flow. No uncaught browser errors occurred. The deployment scan found no error/fatal logs in its ten-minute window.
 
 See [the verification record](verification.md) for subsequent acceptance results. Local PostgreSQL tests do not prove hosted authentication, email delivery or independent-session contention; accounts remain deferred.
 

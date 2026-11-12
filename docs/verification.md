@@ -2,6 +2,19 @@
 
 The current user flow is landing → browser-local workspace without sign-in → ZIP/radius search → actual provider evidence → shortlist/comparison/notes → coordination tasks → persisted reload. Accounts are deferred and hidden behind `NEXT_PUBLIC_ENABLE_ACCOUNTS=false`.
 
+## Code and interface cleanup · November 12, 2026
+
+- Final application commit: `8be6a78d6a111cc552acd85f3ab1c61c5360704f`. Vercel deployment `dpl_3BusZxYvBsWnNAde9imKqGZbNSac` reached READY in the existing production project, with deployment protection preserved.
+- Production build, TypeScript, ESLint and Knip passed. All 115 data, domain, rebuild and local PostgreSQL tests passed. Knip reports no unused dependencies; unused declarations were removed or made private, and standalone tools remain explicit entrypoints.
+- [GitHub CI run 43229808816](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43229808816) passed on the final application commit, including the complete unit and browser suites.
+- The complete 44-scenario desktop/mobile browser suite passed again after the final CSS removal. It covers search, maps, comparison, evidence, notes, tasks, storage failures and request recovery. New regressions verify visible care alerts and complete plan downloads when saved-provider lookup fails.
+- Twelve page/dialog axe scans returned zero violations after the final style changes. The browser suite also checks five Facebook states on each viewport. Final visual review covered desktop and mobile layouts, sources, reviews and untruncated care alerts. A final hosted mobile check verified 13px phone/action text, a single-result label, provider saving and the sourced score.
+- Hosted verification passed at **13:43 UTC** against that application commit: 521 catalog records, 122 scores, 399 unrated records, 22 Facebook coverage entities, findings at ten locations, the 521-row CSV, category/radius search, inspection/home-health endpoints, expanded Facebook findings, shortlist save/reload, downloaded plan and old account redirects. Anonymous workspace access remained denied. No horizontal mobile overflow or uncaught browser errors occurred.
+- The deployment-scoped error/fatal log query at 13:43 UTC returned no matching logs in the preceding ten minutes. This is a release check, not continuous monitoring.
+- Retained research and generated data files are byte-identical to baseline `c45b6d1`. Python formatting preserved rebuild behavior; the home-health rebuild now rejects mismatched comparator metadata, measures and footnotes before writing output.
+
+The [code review](code-review-2026-11-12.md) records the independent standards and requirements reviews, resolved findings and bounded follow-up candidates. The [architecture map](architecture.md) describes the resulting modules. Current screenshots are in `docs/screenshots/`; local acceptance reports are in `artifacts/`.
+
 ## Facebook and score expansion · November 12, 2026
 
 - Production build and TypeScript: pass, including the final plain-language Facebook copy. ESLint: pass.
