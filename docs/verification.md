@@ -11,7 +11,8 @@ The current user flow is landing → browser-local workspace without sign-in →
 - Twelve public/dashboard accessibility checks plus eight scrolled evidence, comparison and map states: no violations returned after contrast fixes.
 - Production dependency audit: no known vulnerabilities reported.
 - Catalog, inspection and home-health evidence rebuilds: byte-identical.
-- Previous hosted baseline: pass at 01:56 UTC. Direct dashboard access, 521-record catalog, 57 nursing-home results within 10 miles of 02459, inspection and home-health endpoints, shortlist save/reload, legacy account redirects, mobile layout and anonymous workspace denial all passed with no uncaught browser errors. The expanded hosted check also covers the research endpoint, consumer score, availability evidence, category sorting and review/price tabs; its latest result is written to the local `artifacts/hosted-smoke.json` report.
+- Hosted Vercel smoke check: pass at 10:52 UTC. Direct dashboard access, 521-record catalog, 57 nursing-home results within 10 miles of 02459, inspection and home-health endpoints, shortlist save/reload, legacy account redirects, mobile layout and anonymous workspace denial all passed with no uncaught browser errors. The research endpoint returned Brooksby's 7.4/10 score, 44 reported reviews and published waitlist; category sorting and Sunrise's review/price tabs also passed. The local report is `artifacts/hosted-smoke.json`.
+- Location-research snapshot rebuild: byte-identical. All six current numerical scores have limited evidence.
 
 ## Completed locally
 
@@ -47,7 +48,9 @@ These are real local database checks. They include a regression against broad de
 
 ## Hosting status
 
-Source is published at [drsullivan13/eldercare-concierge](https://github.com/drsullivan13/eldercare-concierge). The Vercel project is `eldercare-concierge`, with alias `https://eldercare-concierge-one.vercel.app`; deployment protection remains enabled. Application commit `ab3ef91` deployed successfully as `dpl_C2cJD18CmQKu9QY7xchSC4PCV3Yk`, and the hosted browser check passed. Subsequent documentation/test-script changes do not change application behavior.
+Source is published at [drsullivan13/eldercare-concierge](https://github.com/drsullivan13/eldercare-concierge). The Vercel project is `eldercare-concierge`, with alias `https://eldercare-concierge-one.vercel.app`; deployment protection remains enabled. Application commit `53339fc` deployed successfully as `dpl_DVke2nLQMWk21Z5gswGkwFsyib1B` (production, READY, Next.js, approximately 28-second build). The hosted browser check passed against that deployment. This verification-record update does not change application behavior.
+
+A deployment-scoped runtime scan at 10:52 UTC returned no error/fatal logs in the preceding ten minutes. This is a short verification window. The project has no configured log drains or independent continuous error monitoring.
 
 `scripts/check-hosted.mjs` repeats the hosted smoke test when supplied an authorized preview URL through `HARBOR_PREVIEW_URL`. It uses the browser's actual network path and deployment-access cookie. Its local report stores only the app origin and results, not the share URL or cookies. A Vercel share link grants temporary preview access; it is separate from the deferred Harbor account flow.
 
