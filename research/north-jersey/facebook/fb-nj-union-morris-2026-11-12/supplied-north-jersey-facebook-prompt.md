@@ -1,0 +1,23 @@
+# Harbor North Jersey Facebook research
+
+Research public Facebook evidence about the experience of receiving elder care in North Jersey. Harbor will use reviewed findings to help families compare specific places and agencies. Harbor calculates its consumer experience index separately.
+
+**Start in Union and Morris counties, including the Morristown area.** Subsequent batches cover Essex, Bergen, Hudson, and Passaic. Track nearby Somerset and Middlesex leads separately for possible expansion.
+
+1. Before searching Facebook, freeze a first assignment of up to 20 locations, aiming for 10 per core county. Include assisted living and memory care, nursing and rehab, continuing-care campuses, certified home health, and private home care where available. Record omissions. Use the Harbor NJ roster if supplied. Otherwise build a provisional roster from NJ DOH facility search, CMS Care Compare, NJ DCA continuing-care records, or NJ Consumer Affairs registration. Record official name, address, municipality, county, care setting or unit, official source URL and source identifier. Use local assignment IDs and leave Harbor IDs blank until reconciled. Select locations before you know how many reviews they have.
+
+2. For each assignment check permitted public Facebook sources using the official name, former names or aliases, municipality, and care unit. Inspect the underlying page or post. Use public material available for this research. Skip private groups, member-only content and inaccessible pages. Do not contact people or facilities. Record access limits. Search snippets can identify leads but cannot establish a finding.
+
+3. For each observation capture a stable observation ID, assignment ID, Harbor ID if known, exact source permalink, source context, date checked, post date if visible, match evidence, relationship explicitly stated, care setting, firsthand or secondhand status, theme, a short neutral paraphrase, and uncertainty. Distinguish resident/family experience after care began from tours, generic recommendations, staff accounts, provider-selected testimonials and promotion. Preserve mixed and unfavorable experiences as well as favorable ones. Omit personal identifiers and medical details. Label allegations as attributed accounts. Flag every observation for human review.
+
+4. Distinguish parent brands, individual offices, campuses, and separately licensed units. An agency office address does not establish its service area. Leave ambiguous matches unresolved with candidate IDs and reasons. Flag reposts, shared source material, syndicated testimonials and accounts of one event. A shared thread alone proves neither duplication nor independence.
+
+5. Return a dated batch with assignments.csv, observations.csv, coverage.csv and a short handoff. Include one coverage record per assignment, even for zero findings, with sources checked, check date, outcome, access limits, and unresolved questions. If given Harbor's import templates, preserve their headers and use a JSON array for sources_checked. Keep provisional identity mappings in the assignment file. Report exact matches, ambiguous observations, locations with no public evidence, and the next batch to check.
+
+6. If a page visibly publishes a consumer rating, scale and review count for the exact location, put those facts, URL, population and check date in a separate aggregate-candidates.csv for eligibility review. Preserve missing fields. Do not derive a rating from posts, likes, recommendations, or inferred reviewer counts. Keep all results staged for Harbor's review.
+
+### Union and Morris assignment file
+
+Use the [first twelve facility assignments](../research/north-jersey/facebook/first-facility-assignments.csv) for the facility portion of the first batch. Six are in each county. The remaining eight slots can cover continuing-care campuses and home-service offices when those official assignments are available. Keep the fixed twelve in the coverage file even when no usable public material is found.
+
+The Oaks at Denville illustrates a matching problem in this batch. NJ DOH lists assisted living at **19 Pocono Road** and long-term care at **21 Pocono Road**. The two records share a name, ZIP, and phone number. A post naming only the community or quoting the shared phone cannot establish which unit it describes. Preserve it as a campus candidate and leave both unit IDs unassigned until there is unit-specific evidence. [Assisted living license](https://healthapps.nj.gov/facilities/fsFacilityDetailsPrint.aspx?item=NJ60A002) · [Long-term care license](https://healthapps.nj.gov/facilities/fsFacilityDetailsPrint.aspx?item=NJ61424)
