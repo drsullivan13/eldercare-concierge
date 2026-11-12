@@ -1,0 +1,1348 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+  <head>
+  <title>S&amp;C QCOR (1)</title>
+  	<script language="javascript" type="text/javascript">
+	<!--
+	/*
+	Image w/ description tooltip- By Dynamic Web Coding (www.dyn-web.com)
+	Copyright 2002 by Sharon Paine
+	Visit http://www.dynamicdrive.com for this script
+	*/
+	
+	/* IMPORTANT: Put script after tooltip div or 
+		 put tooltip div just before </BODY>. */
+	
+	var dom = (document.getElementById) ? true : false;
+	var ns5 = ((navigator.userAgent.indexOf("Gecko")>-1) && dom) ? true: false;
+	var ie5 = ((navigator.userAgent.indexOf("MSIE")>-1) && dom) ? true : false;
+	var ns4 = (document.layers && !dom) ? true : false;
+	var ie4 = (document.all && !dom) ? true : false;
+	var nodyn = (!ns5 && !ns4 && !ie4 && !ie5) ? true : false;
+	
+	// resize fix for ns4
+	var origWidth, origHeight;
+	if (ns4) {
+		origWidth = window.innerWidth; origHeight = window.innerHeight;
+		window.onresize = function() { if (window.innerWidth != origWidth || window.innerHeight != origHeight) history.go(0); }
+	}
+	
+	var ie_older_than_9 = (((navigator.userAgent.indexOf("MSIE 6.0")>-1)||(navigator.userAgent.indexOf("MSIE 7.0")>-1)||(navigator.userAgent.indexOf("MSIE 8.0")>-1)) && dom) ? true : false;
+	
+	// avoid error of passing event object in older browsers
+	if (nodyn) { event = "nope" }
+	
+	///////////////////////  CUSTOMIZE HERE   ////////////////////
+	// settings for tooltip 
+	// Do you want tip to move when mouse moves over link?
+	var tipFollowMouse= true;	
+	// Be sure to set tipWidth wide enough for widest image
+	var tipWidth= 625;
+	var offX= 20;	// how far from mouse to show tip
+	var offY= 12; 
+	var tipFontFamily= "Verdana, arial, helvetica, sans-serif";
+	var tipFontSize= "8pt";
+	// set default text color and background color for tooltip here
+	// individual tooltips can have their own (set in messages arrays)
+	// but don't have to   
+	var tipFontColor= "#000000";
+	var tipBgColor= "#FFFFFF"; 
+	var tipBorderColor= "#FFFFFF";
+	var tipBorderWidth= 0;
+	var tipBorderStyle= "ridge";
+	var tipPadding= 4;
+	
+	// tooltip content goes here (image, description, optional bgColor, optional textcolor)
+	var messages = new Array();
+	var imageloads = new Array();
+	// multi-dimensional arrays containing: 
+	// image and text for tooltip
+	// optional: bgColor and color to be sent to tooltip
+
+	
+ messages[0] = new Array(' <img src="SecImg/active.gif" alt="Active Provider and Supplier Counts" longdesc="Active Provider and Supplier Counts long description" />', '<p><b>Active Provider and Supplier Counts</b> </p><p> Displays number and percent of active providers. </p>'  ,'white'); 
+ imageloads[0] = new Array('SecImg/active.gif'); 
+ messages[1] = new Array(' <img src="SecImg/report8.gif" alt="New Provider and Supplier Counts" longdesc="New Provider and Supplier Counts long description" />', '<p><b>New Provider and Supplier Counts</b> </p><p> Displays number of new providers. </p>'  ,'white'); 
+ imageloads[1] = new Array('SecImg/report8.gif'); 
+ messages[2] = new Array(' <img src="SecImg/mean_days.gif" alt="Terminated Provider Counts" longdesc="Terminated Provider Counts long description" />', '<p><b>Terminated Provider Counts</b> </p><p> Displays number of terminated providers. </p>'  ,'white'); 
+ imageloads[2] = new Array('SecImg/mean_days.gif'); 
+ messages[3] = new Array(' <img src="SecImg/pressure_prev.gif" alt="Prevalence of Pressure Ulcers" longdesc="Prevalence of Pressure Ulcers long description" />', '<p><b>Prevalence of Pressure Ulcers</b> </p><p> Displays number and percentage of residents with pressure ulcers. </p>'  ,'white'); 
+ imageloads[3] = new Array('SecImg/pressure_prev.gif'); 
+ messages[4] = new Array(' <img src="SecImg/pressure_inc.gif" alt="Incidence of Pressure Ulcers" longdesc="Incidence of Pressure Ulcers long description" />', '<p><b>Incidence of Pressure Ulcers</b> </p><p> Displays number and percentage of residents who developed pressure ulcers. </p>'  ,'white'); 
+ imageloads[4] = new Array('SecImg/pressure_inc.gif'); 
+ messages[5] = new Array(' <img src="SecImg/restraint_prev.gif" alt="Prevalence of Physical Restraint Use" longdesc="Prevalence of Physical Restraint Use long description" />', '<p><b>Prevalence of Physical Restraint Use</b> </p><p> Displays number and percentage of restrained residents. </p>'  ,'white'); 
+ imageloads[5] = new Array('SecImg/restraint_prev.gif'); 
+ messages[6] = new Array(' <img src="SecImg/report167.gif" alt="Nursing Home Residents by Age Group" longdesc="Nursing Home Residents by Age Group long description" />', '<p><b>Nursing Home Residents by Age Group</b> </p><p> Displays number and percentage of nursing home residents by age group. </p>'  ,'white'); 
+ imageloads[6] = new Array('SecImg/report167.gif'); 
+ messages[7] = new Array(' <img src="SecImg/standard_survey.gif" alt="Standard Survey Counts" longdesc="Standard Survey Counts long description" />', '<p><b>Standard Survey Counts</b> </p><p> Displays number of standard surveys and percent of providers surveyed. </p>'  ,'white'); 
+ imageloads[7] = new Array('SecImg/standard_survey.gif'); 
+ messages[8] = new Array(' <img src="SecImg/late_survey.gif" alt="Overdue Recertification Surveys" longdesc="Overdue Recertification Surveys long description" />', '<p><b>Overdue Recertification Surveys</b> </p><p> Displays number of providers whose last survey occurred more than the user-selected number of months ago. </p>'  ,'white'); 
+ imageloads[8] = new Array('SecImg/late_survey.gif'); 
+ messages[9] = new Array(' <img src="SecImg/report42.gif" alt="Standard and Complaint Survey Activity" longdesc="Standard and Complaint Survey Activity long description" />', '<p><b>Standard and Complaint Survey Activity</b> </p><p> Displays number of current and prior standard and complaint surveys and percentage of providers surveyed. </p>'  ,'white'); 
+ imageloads[9] = new Array('SecImg/report42.gif'); 
+ messages[10] = new Array(' <img src="SecImg/report9.gif" alt="Recertification Survey Counts" longdesc="Recertification Survey Counts long description" />', '<p><b>Recertification Survey Counts</b> </p><p> Displays number and percent of active providers that have received a recertification survey. </p>'  ,'white'); 
+ imageloads[10] = new Array('SecImg/report9.gif'); 
+ messages[11] = new Array(' <img src="SecImg/report41snf.gif" alt="Deficiency Count - Nursing Home" longdesc="Deficiency Count - Nursing Home long description" />', '<p><b>Deficiency Count</b> </p><p> Displays number and percent of citations at each scope and severity level. </p>'  ,'white'); 
+ imageloads[11] = new Array('SecImg/report41snf.gif'); 
+ messages[12] = new Array(' <img src="SecImg/report41.gif" alt="Deficiency Count" longdesc="Deficiency Count long description" />', '<p><b>Deficiency Count</b> </p><p> Displays number and percent of citations by level of deficiency. </p>'  ,'white'); 
+ imageloads[12] = new Array('SecImg/report41.gif'); 
+ messages[13] = new Array(' <img src="SecImg/report77snf.gif" alt="Average Number of Deficiencies - Nursing Homes" longdesc="Average Number of Deficiencies - Nursing Homes long description" />', '<p><b>Average Number of Deficiencies</b> </p><p> Displays Average number of deficiencies per survey by scope and severity. </p>'  ,'white'); 
+ imageloads[13] = new Array('SecImg/report77snf.gif'); 
+ messages[14] = new Array(' <img src="SecImg/report77.gif" alt="Average Number of Deficiencies" longdesc="Average Number of Deficiencies long description" />', '<p><b>Average Number of Deficiencies</b> </p><p> Displays average number of deficiencies per survey by level of deficiency. </p>'  ,'white'); 
+ imageloads[14] = new Array('SecImg/report77.gif'); 
+ messages[15] = new Array(' <img src="SecImg/report3.gif" alt="Abuse Citation Rates" longdesc="Abuse Citation Rates long description" />', '<p><b>Abuse Citation Rates</b> </p><p> Displays<br>- Number and percentage of providers cited for abuse.  - or -<br> - Number and percentage of surveys resulting in one or more abuse citations. </p>'  ,'white'); 
+ imageloads[15] = new Array('SecImg/report3.gif'); 
+ messages[16] = new Array(' <img src="SecImg/report171.gif" alt="Cited for: Condition Level Deficiencies" longdesc="Cited for: Condition Level Deficiencies long description" />', '<p><b>Cited for: Condition Level Deficiencies</b> </p><p> Displays information about conditions including the number and percent of providers cited for each condition, the number and percent of surveys resulting in a citation for each condition, number of standards included under each condition; and average number of standards cited when each condition is cited. </p>'  ,'white'); 
+ imageloads[16] = new Array('SecImg/report171.gif'); 
+ messages[17] = new Array(' <img src="SecImg/report15.gif" alt="Condition-Level Deficiency Citation Patterns" longdesc="Condition-Level Deficiency Citation Patterns long description" />', '<p><b>Condition-Level Deficiency Citation Patterns</b> </p><p> Number of surveys resulting in 1, 2, 3, 4, and 5 or more condition-level deficiencies. </p>'  ,'white'); 
+ imageloads[17] = new Array('SecImg/report15.gif'); 
+ messages[18] = new Array(' <img src="SecImg/report37.gif" alt="HHAs on 36-Month Cycle" longdesc="HHAs on 36-Month Cycle long description" />', '<p><b>HHAs on 36-Month Cycle</b> </p><p> Number of home health agencies that are surveyed on a 36-month cycle (reported and predicted). </p>'  ,'white'); 
+ imageloads[18] = new Array('SecImg/report37.gif'); 
+ messages[19] = new Array(' <img src="SecImg/report41hosp.gif" alt="Deficiency Count" longdesc="Deficiency Count long description" />', '<p><b>Deficiency Count</b> </p><p> Displays number and percent of citations by level of deficiency. </p>'  ,'white'); 
+ imageloads[19] = new Array('SecImg/report41hosp.gif'); 
+ messages[20] = new Array(' <img src="SecImg/report77hosp.gif" alt="Average Number of Deficiencies" longdesc="Average Number of Deficiencies long description" />', '<p><b>Average Number of Deficiencies</b> </p><p> Displays average number of deficiencies per survey by level of deficiency. </p>'  ,'white'); 
+ imageloads[20] = new Array('SecImg/report77hosp.gif'); 
+ messages[21] = new Array(' <img src="SecImg/report241.gif" alt="Citation Frequency" longdesc="Citation Frequency long description" />', '<p><b>Citation Frequency</b> </p><p> Displays information about conditions including the number and percent of providers cited, and percent of surveys resulting in a citation for each condition. </p>'  ,'white'); 
+ imageloads[21] = new Array('SecImg/report241.gif'); 
+ messages[22] = new Array(' <img src="SecImg/new_count.gif" alt="Survey Activity Report" longdesc="Survey Activity Report long description" />', '<p><b>Survey Activity Report</b> </p><p> Displays number of new surveys by calendar year or fiscal year and by CMS region, state, and county. </p>'  ,'white'); 
+ imageloads[22] = new Array('SecImg/new_count.gif'); 
+ messages[23] = new Array(' <img src="SecImg/report228.gif" alt="Frequency of Data Entry (F4)" longdesc="Frequency of Data Entry (F4) long description" />', '<p><b>Frequency of Data Entry (F4)</b> </p><p> Displays how long state agencies take to enter survey data into the ASPEN/ODIE part of CASPER/OSCAR.  It also determines the average number of days from the survey date to the OSCAR data entry date. </p>'  ,'white'); 
+ imageloads[23] = new Array('SecImg/report228.gif'); 
+ messages[24] = new Array(' <img src="SecImg/report_doubleG.gif" alt="Double G Citations Report" longdesc="Double G Citations Report long description" />', '<p><b>Double G Citations Report</b> </p><p> Displays facilities that have been cited for a G-Level or higher deficiency, multiple times in Oscar. It also indicates citations which run in non-corrective consecutive periods that require automatic enforcement action. </p>'  ,'white'); 
+ imageloads[24] = new Array('SecImg/report_doubleG.gif'); 
+ messages[25] = new Array(' <img src="SecImg/hha_survey_schedule.gif">', '<p><b>HHA Master Survey Schedule</b> </p><p> This report provides a schedule of survey(s) for a selected Report Period, Region, State, State Region, County, Survey Frequency, and Target Survey Completed Status. This report does not include the deemed providers. It provides the HHA Provider Name, Provider Number, Survey Frequency, Survey Date, Target Survey Date, Months Late(-)/Months to Next Survey(+), Trigger Date, and Frequency Triggers (Initial, Complaint, COPs, and/or CHOW). </p>'  ,'white'); 
+ imageloads[25] = new Array('SecImg/hha_survey_schedule.gif'); 
+ messages[26] = new Array(' <img src="SecImg/hha_active_providers.gif">', '<p><b>Active Provider and Supplier Counts Report</b> </p><p> This report provides a complete inventory of all of the active HHA providers (within a Region, State, State Region, or County). This report does not include the deemed providers. It provides the HHA Provider Name, Provider Number, County, Survey Frequency, Survey Date, State Entered Survey Date, Adjusted Survey Date, Target Survey Date, Months Late (-)/Months to Next Survey (+), and Participation Date. There is no report period (begin date, end date) associated with this report; it is the complete list of active providers. </p>'  ,'white'); 
+ imageloads[26] = new Array('SecImg/hha_active_providers.gif'); 
+ messages[27] = new Array(' <img src="SecImg/hha_terminated_providers.gif">', '<p><b>Terminated Provider Counts</b> </p><p> This report provides a complete inventory of all terminated HHA providers (within a Region, State, State Region, or County).  It provides the HHA Provider Name, Provider Number, County, Last Survey Date, Termination Date, and Termination Code. </p>'  ,'white'); 
+ imageloads[27] = new Array('SecImg/hha_terminated_providers.gif'); 
+ messages[28] = new Array(' <img src="SecImg/hha_comments.gif">', '<p><b>Submit Testing Comments</b> </p><p> Submit comments. </p>'  ,'white'); 
+ imageloads[28] = new Array('SecImg/hha_comments.gif'); 
+ messages[29] = new Array(' <img src="SecImg/hha_comments_report.gif">', '<p><b>Comments Report</b> </p><p> View submitted testing comments. </p>'  ,'white'); 
+ imageloads[29] = new Array('SecImg/hha_comments_report.gif'); 
+ messages[30] = new Array(' <img src="SecImg/report9_hospital.gif" alt="Recertification Survey Counts" longdesc="Recertification Survey Counts long description" />', '<p><b>Recertification Survey Counts</b> </p><p> Displays number and percent of active non-accredited hospitals that have received a recertification survey. </p>'  ,'white'); 
+ imageloads[30] = new Array('SecImg/report9_hospital.gif'); 
+ messages[31] = new Array(' <img src="SecImg/hha_deemed.gif">', '<p><b>Deemed HHA Providers</b> </p><p> This report provides a complete inventory of all of the Deemed HHA providers (within a Region, State, State Region, or County).  It provides the HHA Provider Name, Provider Number, County, Survey Frequency, Survey Date, and Participation Date. </p>'  ,'white'); 
+ imageloads[31] = new Array('SecImg/hha_deemed.gif'); 
+ messages[32] = new Array(' <img src="SecImg/hha_comments_report_edit.gif">', '<p><b>Submit Resolution/Retest Comments</b> </p><p> View and edit resolution comments. </p>'  ,'white'); 
+ imageloads[32] = new Array('SecImg/hha_comments_report_edit.gif'); 
+ messages[33] = new Array(' <img src="SecImg/hha_comments_report_delete.gif">', '<p><b>Delete Comments</b> </p><p> Delete submitted comments. </p>'  ,'white'); 
+ imageloads[33] = new Array('SecImg/hha_comments_report_delete.gif'); 
+ messages[34] = new Array(' <img src="SecImg/hha_find_provider.gif" alt="Search for a Provider" longdesc="Search for a Provider long description" />', '<p><b>Search for a Provider</b> </p><p>   </p>'  ,'white'); 
+ imageloads[34] = new Array('SecImg/hha_find_provider.gif'); 
+ messages[35] = new Array(' <img src="SecImg/comments.gif" alt="Submit Testing Comments" longdesc="Submit Testing Comments long description" />', '<p><b>Submit Testing Comments</b> </p><p> Submit comments. </p>'  ,'white'); 
+ imageloads[35] = new Array('SecImg/comments.gif'); 
+ messages[36] = new Array(' <img src="SecImg/comments_report_edit.gif" alt="Submit Resolution/Retest Comments" longdesc="Submit Resolution/Retest Comments long description" />', '<p><b>Submit Resolution/Retest Comments</b> </p><p> View and edit resolution comments. </p>'  ,'white'); 
+ imageloads[36] = new Array('SecImg/comments_report_edit.gif'); 
+ messages[37] = new Array(' <img src="SecImg/comments_report_delete.gif" alt="Delete Comments" longdesc="Delete Comments long description" />', '<p><b>Delete Comments</b> </p><p> Delete submitted comments. </p>'  ,'white'); 
+ imageloads[37] = new Array('SecImg/comments_report_delete.gif'); 
+ messages[38] = new Array(' <img src="SecImg/comments_report.gif" alt="Comments Report" longdesc="Comments Report long description" />', '<p><b>Comments Report</b> </p><p> View submitted testing comments. </p>'  ,'white'); 
+ imageloads[38] = new Array('SecImg/comments_report.gif'); 
+ messages[39] = new Array(' <img src="SecImg/find_provider.gif" alt="Search for a Provider" longdesc="Search for a Provider long description" />', '<p><b>Search for a Provider</b> </p><p>   </p>'  ,'white'); 
+ imageloads[39] = new Array('SecImg/find_provider.gif'); 
+ messages[40] = new Array(' <img src="SecImg/workload.gif" alt="Workload Report" longdesc="Workload Report long description" />', '<p><b>Workload Report</b> </p><p> This report displays the amount of time (in hours and average hours per survey) that state survey agencies have spent performing surveys (inspections).  Time spent on survey preparation, travel, clerical work, and supervisory review are provided as well. </p>'  ,'white'); 
+ imageloads[40] = new Array('SecImg/workload.gif'); 
+ messages[41] = new Array(' <img src="SecImg/comments.gif" alt="Submit Testing Comments" longdesc="Submit Testing Comments long description" />', '<p><b><b>Submit Testing Comments</b></b> </p><p> Submit comments. </p>'  ,'white'); 
+ imageloads[41] = new Array('SecImg/comments.gif'); 
+ messages[42] = new Array(' <img src="SecImg/comments_report_edit.gif" alt="Submit Resolution/Retest Comments" longdesc="Submit Resolution/Retest Comments long description" />', '<p><b><b>Submit Resolution/Retest Comments</b></b> </p><p> View and edit resolution comments. </p>'  ,'white'); 
+ imageloads[42] = new Array('SecImg/comments_report_edit.gif'); 
+ messages[43] = new Array(' <img src="SecImg/comments_report_delete.gif" alt="Delete Comments" longdesc="Delete Comments long description" />', '<p><b><b>Delete Comments</b></b> </p><p> Delete submitted comments. </p>'  ,'white'); 
+ imageloads[43] = new Array('SecImg/comments_report_delete.gif'); 
+ messages[44] = new Array(' <img src="SecImg/comments_report.gif" alt="Comments Report" longdesc="Comments Report long description" />', '<p><b><b>Comments Report</b></b> </p><p> View submitted testing comments. </p>'  ,'white'); 
+ imageloads[44] = new Array('SecImg/comments_report.gif'); 
+ messages[45] = new Array(' <img src="SecImg/find_provider.gif" alt="Search for a Provider" longdesc="Search for a Provider long description" />', '<p><b><b>Search for a Provider</b></b> </p><p>   </p>'  ,'white'); 
+ imageloads[45] = new Array('SecImg/find_provider.gif'); 
+ messages[46] = new Array(' <img src="SecImg/enforcement_type.gif" alt="Enforcement Actions" longdesc="Enforcement Actions long description" />', '<p><b>Enforcement Actions</b> </p><p> The Enforcement Actions Report displays the number/percentage of enforcement actions taken for each type of sanction on a regional and state level. </p>'  ,'white'); 
+ imageloads[46] = new Array('SecImg/enforcement_type.gif'); 
+ messages[47] = new Array(' <img src="SecImg/enf_cmp.jpg" alt="Civil Money Penalty" longdesc="Civil Money Penalty long description" />', '<p><b>Civil Money Penalty</b> </p><p> The Civil Money Penalty Report displays the number and dollar amount of Daily and Per Instance CMPs administered on a regional and state level. </p>'  ,'white'); 
+ imageloads[47] = new Array('SecImg/enf_cmp.jpg'); 
+ messages[48] = new Array(' <img src="SecImg/statesummary.gif" alt="State Summary" longdesc="State Summary long description" />', '<p><b>State Summary</b> </p><p> This report provides quick information about the providers and survey agency activity (e.g. surveys) in one state. </p>'  ,'white'); 
+ imageloads[48] = new Array('SecImg/statesummary.gif'); 
+ messages[49] = new Array(' <img src="SecImg/hha_st_perform_std1_status_rpt.gif" alt="HHA State Performance Standard #1 Status Report" longdesc="HHA State Performance Standard #1 Status Report long description" />', '<p><b>HHA State Performance Standard #1 Status Report</b> </p><p>  This report is intended to provide counts of HHA providers that have overdue surveys based on the 36-month statutory requirement. These HHA providers do not meet the Performance Standard #1. </p>'  ,'white'); 
+ imageloads[49] = new Array('SecImg/hha_st_perform_std1_status_rpt.gif'); 
+ messages[50] = new Array(' <img src="SecImg/hha_st_perform_std4_status_rpt.gif" alt="HHA State Performance Standard #4 Status Report" longdesc="HHA State Performance Standard #4 Status Report long description" />', '<p><b>HHA State Performance Standard #4 Status Report</b> </p><p> This report is intended to provide the status of HHA providers under Performance Standard #4.  The purpose of Performance Standard #4 is to ensure that: "when certifying noncompliance, adverse action procedures set forth in regulations and general instructions are adhered to." </p>'  ,'white'); 
+ imageloads[50] = new Array('SecImg/hha_st_perform_std4_status_rpt.gif'); 
+ messages[51] = new Array(' <img src="SecImg/HHA36Month.gif" alt="HHA 36-Month Statutory Survey Profile" longdesc="HHA 36-Month Statutory Survey Profile long description" />', '<p><b>HHA 36-Month Statutory Survey Profile</b> </p><p> This report is intended to provide a profile of the survey status of HHA providers over the course of a 36-month period of time.  These surveys are divided into two major components:  1) surveyed (survey completed) during the report period selected; and 2) not surveyed (survey not completed) within the report period selected. </p>'  ,'white'); 
+ imageloads[51] = new Array('SecImg/HHA36Month.gif'); 
+ messages[52] = new Array(' <img src="SecImg/hha_completed_survey_summary.gif" alt="HHA Completed Survey Summary" longdesc="HHA Completed Survey Summary long description" />', '<p><b>HHA Completed Survey Summary</b> </p><p> This report is intended to provide counts of completed HHA surveys and revisits (both standard and complaint) for a selected geographic grouping (i.e., Region, State, State Region or County) and report period. </p>'  ,'white'); 
+ imageloads[52] = new Array('SecImg/hha_completed_survey_summary.gif'); 
+ messages[53] = new Array(' <img src="SecImg/active_fq.gif" alt="Active Provider and Supplier Counts" longdesc="Active Provider and Supplier Counts long description" />', '<p><b>Active Provider and Supplier Counts</b> </p><p> Displays number of active providers. </p>'  ,'white'); 
+ imageloads[53] = new Array('SecImg/active_fq.gif'); 
+ messages[54] = new Array(' <img src="SecImg/active_CLIA.gif" alt="Active Laboratory Count Report by Exempt Status and Laboratory Type" longdesc="Active Laboratory Count Report by Exempt Status and Laboratory Type long description" />', '<p><b>Active Laboratory Count Report by Exempt Status and Laboratory Type</b> </p><p> Displays number of active laboratories. </p>'  ,'white'); 
+ imageloads[54] = new Array('SecImg/active_CLIA.gif'); 
+
+
+
+
+
+	////////////////////  END OF CUSTOMIZATION AREA  ///////////////////
+	
+	// preload images that are to appear in tooltip
+	// from arrays above
+
+	if (document.images) {
+		var theImgs = new Array();
+		for (var i=0; i<messages.length; i++) {
+			//theImgs[i] = new Image();
+			//theImgs[i].src = messages[i];
+			
+			theImgs[i] = new Image();
+			theImgs[i].src = imageloads[i];
+		}
+	}
+	
+	// to layout image and text, 2-row table, image centered in top cell
+	// these go in var tip in doTooltip function
+	// startStr goes before image, midStr goes between image and text
+	var startStr = '<table width="' + tipWidth + '">';
+	var midStr = '<tr><td valign="top">';
+	var endStr = '</td></tr></table>';
+
+	
+	////////////////////////////////////////////////////////////
+	//  initTip	- initialization for tooltip.
+	//		Global variables for tooltip. 
+	//		Set styles for all but ns4. 
+	//		Set up mousemove capture if tipFollowMouse set true.
+	////////////////////////////////////////////////////////////
+	var tooltip, tipcss;
+	function initTip() {
+		if (nodyn) return;
+		tooltip = (ns4)? document.tipDiv.document: (ie4)? document.all['tipDiv']: (ie5||ns5)? document.getElementById('tipDiv'): null;
+		tipcss = (ns4)? document.tipDiv: tooltip.style;
+		if (ie4||ie5||ns5) {	// ns4 would lose all this on rewrites
+			tipcss.width = tipWidth+"px";
+			tipcss.fontFamily = tipFontFamily;
+			tipcss.fontSize = tipFontSize;
+			tipcss.color = tipFontColor;
+			tipcss.backgroundColor = tipBgColor;
+			tipcss.borderColor = tipBorderColor;
+			tipcss.borderWidth = tipBorderWidth+"px";
+			tipcss.padding = tipPadding+"px";
+			tipcss.borderStyle = tipBorderStyle;
+		}
+		if (tooltip&&tipFollowMouse) {
+			if (ns4) document.captureEvents(Event.MOUSEMOVE);
+			document.onmousemove = trackMouse;
+		}
+	}
+	
+	window.onload = initTip;
+
+	function setReportSelectFooter(text) {
+		var el = document.getElementById("reportSelectFooter");
+		if (el) {
+			el.innerHTML = text || "";
+		}
+	}
+	
+	/////////////////////////////////////////////////
+	//  doTooltip function
+	//			Assembles content for tooltip and writes 
+	//			it to tipDiv
+	/////////////////////////////////////////////////
+	var t1,t2;	// for setTimeouts
+	var tipOn = false;	// check if over tooltip link
+function doTooltip(evt, num) {
+    if (num > -1) {
+		
+		// Default: CASPER
+		var sourceText = "Source: CASPER (" + CASPER_UPDATE_DATE + ")";
+var useIQIESStatement = false;
+
+// HHA 2567, ASC 2567, OPO 2567, ICF-IID 2567, FQHC 2567, CORF 2567, PRTF 2567
+if (num == 2579 || num == 2580 || num == 2568 || num == 2581 || num == 2582 || num == 2583 || num == 2584) {
+    sourceText = "Source: iQIES (" + IQIES_UPDATE_DATE + ")";
+    useIQIESStatement = true;
+}
+// Hospice 2567
+if (num == 2570) {
+    sourceText = "Source: iQIES and Accrediting Organization data (updated ~quarterly).";
+    useIQIESStatement = true;
+}
+
+// existing iQIES reports
+if (PROVIDER_WHICH == 0 || PROVIDER_WHICH == 8 || PROVIDER_WHICH == 18) {
+    if (
+        num == 0  ||
+        num == 1  ||
+        num == 2  ||
+        num == 8  ||
+        num == 11 ||
+        num == 12 ||
+        num == 13 ||
+        num == 14 ||
+        num == 21 ||
+        num == 22 ||
+        num == 39
+    ) {
+        sourceText = "Source: iQIES (" + IQIES_UPDATE_DATE + ")";
+        useIQIESStatement = true;
+    }
+}
+
+setReportSelectFooter(sourceText);
+setReportDataStatement(useIQIESStatement);
+        if (num == 2567) {
+            if (!tooltip) return;
+            if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+            tipOn = true;
+
+            var tip = '<table><tr><td width="50%"><span><b>EMTALA 2567s</b></span><div style="padding-top: 10px;">Displays information for EMTALA deficiencies and provides links to view or download the 2567 reports.</div></td></tr></table><br>Sample:<br><br>' +
+                      '<img src="SecImg/reportEmtala.gif" alt="EMTALA 2567 Report" width="900" height="auto" />';
+
+            if (ns4) {
+                tooltip.write(tip);
+                tooltip.close();
+            } else if (ie4 || ie5 || ns5) {
+                tooltip.innerHTML = tip;
+            }
+
+            if (!tipFollowMouse) positionTip(evt);
+            else {
+                t1 = setTimeout(function() {
+                    tipcss.visibility = 'visible';
+                }, 100);
+            }
+
+        } else if (num == 2568) {
+            if (!tooltip) return;
+            if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+            tipOn = true;
+
+            var tip = '<table><tr><td width="50%"><span><b>OPO 2567s</b></span><div style="padding-top: 10px;">Displays information for OPO deficiencies and provides links to view or download the 2567 reports.</div></td></tr></table><br>Sample:<br><br>' +
+                      '<img src="SecImg/reportOPO.gif" alt="OPO 2567 Report" width="900" height="auto" />';
+
+            if (ns4) {
+                tooltip.write(tip);
+                tooltip.close();
+            } else if (ie4 || ie5 || ns5) {
+                tooltip.innerHTML = tip;
+            }
+
+            if (!tipFollowMouse) positionTip(evt);
+            else {
+                t1 = setTimeout(function() {
+                    tipcss.visibility = 'visible';
+                }, 100);
+            }
+
+        }else if (num == 2569) {
+            if (!tooltip) return;
+            if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+            tipOn = true;
+
+            var tip = '<table><tr><td width="50%"><span><b>CLIA 2567s</b></span><div style="padding-top: 10px;">Displays information for CLIA deficiencies and provides links to view or download the 2567 reports.</div></td></tr></table><br>Sample:<br><br>' +
+                      '<img src="SecImg/reportCLIA.gif" alt="CLIA 2567 Report" width="900" height="auto" />';
+
+            if (ns4) {
+                tooltip.write(tip);
+                tooltip.close();
+            } else if (ie4 || ie5 || ns5) {
+                tooltip.innerHTML = tip;
+            }
+
+            if (!tipFollowMouse) positionTip(evt);
+            else {
+                t1 = setTimeout(function() {
+                    tipcss.visibility = 'visible';
+                }, 100);
+            }
+
+        }else if (num == 2570) {
+            if (!tooltip) return;
+            if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+            tipOn = true;
+
+            var tip = '<table><tr><td width="50%"><span><b>Hospice 2567s</b></span><div style="padding-top: 10px;">Displays information for Hospice deficiencies and provides links to view or download the 2567 reports.</div></td></tr></table><br>Sample:<br><br>' +
+                      '<img src="SecImg/reportHOSPICE.gif" alt="Hospice 2567 Report" width="900" height="auto" />';
+
+            if (ns4) {
+                tooltip.write(tip);
+                tooltip.close();
+            } else if (ie4 || ie5 || ns5) {
+                tooltip.innerHTML = tip;
+            }
+
+            if (!tipFollowMouse) positionTip(evt);
+            else {
+                t1 = setTimeout(function() {
+                    tipcss.visibility = 'visible';
+                }, 100);
+            }
+
+
+
+
+        }else if (num == 2571) {
+            if (!tooltip) return;
+            if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+            tipOn = true;
+
+            var tip = '<table><tr><td width="50%"><span><b>ESRD 2567s</b></span><div style="padding-top: 10px;">Displays information for ESRD deficiencies and provides links to view or download the 2567 reports.</div></td></tr></table><br>Sample:<br><br>' +
+                      '<img src="SecImg/reportESRD.gif" alt="ESRD 2567 Report" width="900" height="auto" />';
+
+            if (ns4) {
+                tooltip.write(tip);
+                tooltip.close();
+            } else if (ie4 || ie5 || ns5) {
+                tooltip.innerHTML = tip;
+            }
+
+            if (!tipFollowMouse) positionTip(evt);
+            else {
+                t1 = setTimeout(function() {
+                    tipcss.visibility = 'visible';
+                }, 100);
+            }
+
+        } else if (num == 2572) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>Hospital 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Downloads an .xlsx/Excel report. This report contains 2567 data for hospitals from calendar years 2010 through 2025. Short term, critical access, psychiatric, and several other hospital subtypes are included.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportHospital2567s.gif" alt="Hospital 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		} else if (num == 2573) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>Transplant Hospital 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Downloads an .xlsx/Excel report. This report contains 2567 data for transplant hospitals from calendar years 2017 through 2025.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportTransplantHospital2567s.gif" alt="Transplant Hospital 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		} else if (num == 2574) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>Hospital 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for Hospital deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportHospital2567s.gif" alt="Hospital 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		} 
+
+        else if (num == 2575) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>Critical Access Hospital 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for Critical Access Hospital deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportCAH2567s.gif" alt="CAH 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		}
+
+        else if (num == 2576) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>Transplant 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for Transplant deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportTransplant2567s.gif" alt="Transplant 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		}
+
+        else if (num == 2577) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>Hospice 2567 Extract</b></span>' +
+        '<div style="padding-top: 10px;">Provides links to view or download all hospice deficiencies in Excel as well as a data dictionary for the hospice survey reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/hospice_downloadable_extract.gif" alt="Hospice 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		}
+
+        else if (num == 2578) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>RHC 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for RHC deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportRHC2567s.gif" alt="RHC 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		}
+
+        else if (num == 2579) {
+			if (!tooltip) return;
+    if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>HHA 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for HHA deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportHHA2567s.gif" alt="HHA 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+		}
+
+
+        else if (num == 2580) {
+    if (!tooltip) return;
+    if (t1) clearTimeout(t1);
+    if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>ASC 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for Ambulatory Surgical Center (ASC) deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportASC2567s.gif" alt="ASC 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+} else if (num == 2581) {
+    if (!tooltip) return;
+    if (t1) clearTimeout(t1);
+    if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>ICF-IID 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for ICF-IID deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportICFIID2567s.gif" alt="ICF-IID 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+} else if (num == 2582) {
+    if (!tooltip) return;
+    if (t1) clearTimeout(t1);
+    if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>FQHC 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for FQHC deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportFQHC2567s.gif" alt="FQHC 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+} else if (num == 2583) {
+    if (!tooltip) return;
+    if (t1) clearTimeout(t1);
+    if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>CORF 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for CORF deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportCORF2567s.gif" alt="CORF 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+} else if (num == 2584) {
+    if (!tooltip) return;
+    if (t1) clearTimeout(t1);
+    if (t2) clearTimeout(t2);
+    tipOn = true;
+
+    var tip =
+      '<table><tr><td width="50%">' +
+        '<span><b>PRTF 2567s</b></span>' +
+        '<div style="padding-top: 10px;">Displays information for PRTF deficiencies and provides links to view or download the 2567 reports.</div>' +
+      '</td></tr></table><br>Sample:<br><br>' +
+      '<img src="SecImg/reportPRTF2567s.gif" alt="PRTF 2567s Excel preview" width="900" height="auto" />';
+
+    if (ns4) {
+        tooltip.write(tip);
+        tooltip.close();
+    } else if (ie4 || ie5 || ns5) {
+        tooltip.innerHTML = tip;
+    }
+
+    if (!tipFollowMouse) positionTip(evt);
+    else {
+        t1 = setTimeout(function() {
+            tipcss.visibility = 'visible';
+        }, 100);
+    }
+}
+
+		 else {
+            // Handle the case for all other num > -1 values (excluding 2567 and OPO_2567)
+            if (!tooltip) return;
+            if (t1) clearTimeout(t1); if (t2) clearTimeout(t2);
+            tipOn = true;
+
+            var curBgColor = messages[num][2] || tipBgColor;
+            var curFontColor = messages[num][3] || tipFontColor;
+
+            var tip;
+            if (ns4) {
+                tip = '<table bgcolor="' + tipBorderColor + '" width="' + tipWidth + '" cellspacing="0" cellpadding="' + tipBorderWidth + '" border="0"><tr><td><table bgcolor="' + curBgColor + '" width="100%" cellspacing="0" cellpadding="' + tipPadding + '" border="0"><tr><td width="50%">' + startStr + messages[num][0] + midStr + '<span style="font-family:' + tipFontFamily + '; font-size:' + tipFontSize + '; color:' + curFontColor + ';">' + messages[num][1] + '</span>' + endStr + '</td><td width="50%">&nbsp;</td></tr></table></td></tr></table>';
+                tooltip.write(tip);
+                tooltip.close();
+            } else if (ie4 || ie5 || ns5) {
+                if (messages[num][0] != " ") {
+                    tip = startStr + '<table><tr><td width="50%"><span style="font-family:' + tipFontFamily + '; font-size:' + tipFontSize + '; color:' + curFontColor + ';">' + messages[num][1] + '</td></tr></table><br>Sample:<br><br></span>' + midStr + messages[num][0] + endStr;
+                } else {
+                    tip = startStr + '<span style="font-family:' + tipFontFamily + '; font-size:' + tipFontSize + '; color:' + curFontColor + ';">' + messages[num][1] + '</span>' + midStr + endStr;
+                }
+                tipcss.backgroundColor = curBgColor;
+                tooltip.innerHTML = tip;
+            }
+
+            if (!tipFollowMouse) positionTip(evt);
+            else {
+                t1 = setTimeout(function() {
+                    tipcss.visibility = 'visible';
+                }, 100);
+            }
+        }
+    }
+}
+
+	
+	var mouseX, mouseY;
+	function trackMouse(evt) {
+		mouseX = (ns4||ns5)? evt.pageX: window.event.clientX + document.body.scrollLeft;
+		mouseY = (ns4||ns5)? evt.pageY: window.event.clientY + document.body.scrollTop;
+		if (tipOn) positionTip(evt);
+	}
+	
+	/////////////////////////////////////////////////////////////
+	//  positionTip function
+	//		If tipFollowMouse set false, so trackMouse function
+	//		not being used, get position of mouseover event.
+	//		Calculations use mouseover event position, 
+	//		offset amounts and tooltip width to position
+	//		tooltip within window.
+	/////////////////////////////////////////////////////////////
+	function positionTip(evt) {
+		if (!tipFollowMouse) {
+			mouseX = (ns4||ns5)? evt.pageX: window.event.clientX + document.body.scrollLeft;
+			mouseY = (ns4||ns5)? evt.pageY: window.event.clientY + document.body.scrollTop;
+		}
+		// tooltip width and height
+		var tpWd = (ns4)? tooltip.width: (ie4||ie5)? tooltip.clientWidth: tooltip.offsetWidth;
+		var tpHt = (ns4)? tooltip.height: (ie4||ie5)? tooltip.clientHeight: tooltip.offsetHeight;
+		// document area in view (subtract scrollbar width for ns)
+		var winWd = (ns4||ns5)? window.innerWidth-20+window.pageXOffset: document.body.clientWidth+document.body.scrollLeft;
+		var winHt = (ns4||ns5)? window.innerHeight-20+window.pageYOffset: document.body.clientHeight+document.body.scrollTop;
+		// check mouse position against tip and window dimensions
+		// and position the tooltip 
+		if ((mouseX+offX+tpWd)>winWd) 
+			tipcss.left = (ns4)? mouseX-(tpWd+offX): mouseX-(tpWd+offX)+"px";
+		else tipcss.left = (ns4)? mouseX+offX: mouseX+offX+"px";
+		if ((mouseY+offY+tpHt)>winHt) 
+			tipcss.top = (ns4)? winHt-(tpHt+offY): winHt-(tpHt+offY)+"px";
+		else tipcss.top = (ns4)? mouseY+offY: mouseY+offY+"px";
+		if (!tipFollowMouse) t1=setTimeout("tipcss.visibility='visible'",100);
+	}
+	
+	function hideTip() {
+		if (!tooltip) return;
+		t2=setTimeout("tipcss.visibility='hidden'",100);
+		tipOn = false;
+	}
+	
+	//-->
+</script>
+
+
+  <script language="JavaScript" src="./includes/js_functions.js" type="text/javascript"></script>
+  <style type="text/css">
+    .hospice_message{
+      height: auto;
+      width: 80%;
+      padding: 5%;
+      margin-left: 5%;
+      margin-top: 20%;
+      border-radius: 15px;
+      background-color: #035096;
+    }
+
+    .hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 280px;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+.hovertext-multiline {
+
+position: relative;
+
+display: inline-block;
+
+}
+
+
+
+.hovertext-multiline .tooltiptext {
+
+visibility: hidden;
+
+width: 280px;
+
+background-color: yellow;
+
+color: black;
+
+text-align: center;
+
+border-radius: 5px;
+
+padding: 5px 0;
+
+transition: opacity 1s ease-in-out;
+
+position: absolute;
+
+z-index: 1;
+
+left: 0;
+
+top: 110%;
+
+opacity: 0;
+
+}
+
+
+
+.hovertext-multiline:hover .tooltiptext {
+
+visibility: visible;
+
+opacity: 1;
+
+}
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+  </style>
+  
+   <style type="text/css">
+    .asc_message{
+      height: auto;
+      width: 80%;
+      padding: 5%;
+      margin-left: 5%;
+      margin-top: 20%;
+      border-radius: 15px;
+      background-color: #035096;
+    }
+  </style>
+  
+  <style type="text/css">
+    .hha_message{
+      height: auto;
+      width: 80%;
+      padding: 5%;
+      margin-left: 5%;
+      margin-top: 20%;
+      border-radius: 15px;
+      background-color: #035096;
+    }
+  </style>
+  
+    <style type="text/css">
+    .opo_message{
+      height: auto;
+      width: 80%;
+      padding: 1%;
+      margin-left: 0.5%;
+      margin-top: 5%;
+      border-radius: 10px;
+      background-color: #035096;
+    }
+  </style>
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<link href="./styles/hpms.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+	  <!-- Matomo Tag Manager -->
+<script>
+  var _mtm = window._mtm = window._mtm || [];
+  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+  (function() {
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://qnetmatomo.cms.gov/js/container_bmKTK32B.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Tag Manager -->
+    <meta name="HTGold" content="Sasnode, report select">
+    <meta name="Description" content="Reports for Home Health Agencies. Data is valid for the subset of providers/suppliers for which there are survey records in CASPER.">
+    <meta name="Keywords" content="qcor, cms qcor, qcor cms, s&c qcor, cms qcor website, federally qualified health centers reports, fqhc data analysis, fqhc provider reports, casper data reports">
+
+</head>
+<body>
+  <div id="skip"><a href="#maincontent">Skip to main content</a></div>
+  <h1 visibility: hidden>Home Health Agency (HHA) Provider Reports</h1>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height: 100%;">
+
+    
+    
+
+
+
+
+
+<tr>
+	<td rowspan="2" align="center" valign="middle" style="height: 55px; background-color: #ffffff; text-align: center;">
+	<a href="#d" title="Skip sitewide navigation"><span style="font-size: 1px; color: #ffffff; text-decoration: none;">d</span></a>
+	<a href="../../main.jsp">
+		<img src="./images/hpms_local_qcor_logo.gif" alt="QCOR:  Quality, Certification and Oversight Reports." border="0" width="120" height="55">
+	</a>
+	</td>
+	<td valign="middle" align="right" class="navlg">
+	S&amp;C QCOR&nbsp;&nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td align="right" valign="middle" class="navsm">
+	<a class="navtop" href="main.jsp" title="S&C QCOR - Home Page" onMouseOver="self.status = 'Home';return true" ONFOCUS="self.status = 'Home';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true">Home</a>
+	&nbsp;|&nbsp;
+	<!--<a class="navtop" href="#" title="Opens in a new window" onMouseOver="self.status = 'MCO Contacts';return true" ONFOCUS="self.status = 'MCO Contacts';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createPopUp(?hnumber=null,650,480);">MCO Contacts</a>
+	&nbsp;|&nbsp;-->
+	<!--
+	<a class="navtop" href="#" title="CMP Tool" onMouseOver="self.status = 'CMP Tool';return true" ONFOCUS="self.status = 'CMP Tool';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createHelpPopUp('./cmp_tool/cmpCalculator.html', 450, 400);">CMP Tool</a>
+	&nbsp;|&nbsp;
+	-->
+	<a class="navtop" href="#" title="Help Page" onMouseOver="self.status = 'Help';return true" ONFOCUS="self.status = 'Help';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="ShowOnePgHelp();">Help</a>
+	&nbsp;|&nbsp;
+	<a class="navtop" href="#" title="S&C QCOR - Resources" onMouseOver="self.status = 'Resources';return true" ONFOCUS="self.status = 'Resources';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createHelpPopUp('QCOR_Resources', 450, 400);">Resources</a>
+	&nbsp;|&nbsp;
+	<a class="navtop" href="#" title="Frequently Asked Questions" onMouseOver="self.status = 'FAQs';return true" ONFOCUS="self.status = 'FAQs';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createHelpPopUp('./documents/QCOR_FAQs', 1010,595);">FAQs</a>
+	&nbsp;|&nbsp;
+	<a class="navtop" href="QCOR_Site_Map" title="S&C QCOR - Site Map" onMouseOver="self.status = 'Site Map';return true" ONFOCUS="self.status = 'Site Map';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true">Site Map</a>
+	&nbsp;
+
+	</td>
+</tr>
+
+<tr>
+	<td colspan="2" style="height: 4px; background-color: #778899;">&nbsp;</td>
+</tr>
+
+    <tr>
+      <td width="32%" height="100%" align="left" valign="top" class="borderblue">
+
+        
+        	<table width="100%" cellspacing="2" cellpadding="2" border="0" style="height: 100%; background-color: #003366;">
+		<tr>
+			<td valign="top" style="width: 100%; height: 100%;">
+
+        
+        <table style="width: 100%;" cellpadding=0 cellspacing=0>
+          
+          <tr>
+            <td class="navHead"><a href="advanced_find_provider.jsp?which=1" class="navsm" onmouseover="doTooltip(event, 39)" ONFOCUS="doTooltip(event, 39)"><font size="3%">Search</font></a></td>
+          </tr>
+          <tr>
+
+            <td><br></td>
+          </tr>
+          
+          <tr>
+            <td class="navHead">Provider Reports</td>
+          </tr>
+          <tr>
+            <td><a href="Active_HHAs" class="navsm" onmouseover="doTooltip(event, 0)" ONFOCUS="doTooltip(event, 0)">Active Provider and Supplier Counts</a></td>
+
+          </tr>
+          <tr>
+            <td><a href="New_HHAs" class="navsm" onmouseover="doTooltip(event, 1)" ONFOCUS="doTooltip(event, 1)">New Provider and Supplier Counts</a></td>
+          </tr>
+          <tr>
+            <td><a href="Terminated_HHAs" class="navsm" onmouseover="doTooltip(event, 2)" ONFOCUS="doTooltip(event, 2)">Terminated Provider Counts</a></td>
+          </tr>
+
+          <tr>
+            <td><br></td>
+          </tr>
+
+          <tr>
+            <td class="navHead">Survey Reports</td>
+          </tr>
+          <tr>
+            <td><a href="Overdue_Recerts_HHAs" class="navsm" onmouseover="doTooltip(event, 8)" ONFOCUS="doTooltip(event, 8)">Overdue Recertification Surveys</a></td>
+          </tr>
+          <tr>
+            <td><a href="Recert_Counts_HHAs" class="navsm" onmouseover="doTooltip(event, 10)" ONFOCUS="doTooltip(event, 10)">Recertification Survey Counts</a></td>
+          </tr>
+          <tr>
+            <td><a href="Survey_Activity_HHAs" class="navsm" onmouseover="doTooltip(event, 22)" ONFOCUS="doTooltip(event, 22)">Survey Activity Report</a></td>
+          </tr>
+          <tr>
+            <td><a href="36_Month_Cycle_HHAs" class="navsm" onmouseover="doTooltip(event, 18)" ONFOCUS="doTooltip(event, 18)">HHAs on 36-Month Cycle</a></td>
+          </tr>
+
+		  <!--
+          <tr>
+            <td><a href="hha_wizard.jsp?which=1&report=hha_st_perform_std1_status_rpt.jsp" class="navsm" onmouseover="doTooltip(event, 49)" ONFOCUS="doTooltip(event, 49)">HHA State Performance Standard #1 Status</a></td>
+          </tr>
+          <tr>
+            <td><a href="hha_wizard.jsp?which=1&report=hha_st_perform_std4_status_rpt.jsp" class="navsm" onmouseover="doTooltip(event, 50)" ONFOCUS="doTooltip(event, 50)">HHA State Performance Standard #4 Status</a></td>
+          </tr>
+          <tr>
+            <td><a href="hha_wizard.jsp?which=1&report=hha_completed_survey_summary.jsp" class="navsm" onmouseover="doTooltip(event, 52)" ONFOCUS="doTooltip(event, 52)">HHA Completed Survey Summary</a></td>
+          </tr>
+		  -->
+		  
+          <tr>
+            <td><br></td>
+          </tr>
+
+          <tr>
+            <td class="navHead">Deficiency Reports</td>
+          </tr>
+          <tr>
+            <td><a href="Deficiency_Count_HHAs" class="navsm" onmouseover="doTooltip(event, 12)" ONFOCUS="doTooltip(event, 12)">Deficiency Count</a></td>
+          </tr>
+          <tr>
+            <td><a href="AvgNum_Deficiencies_HHAs" class="navsm" onmouseover="doTooltip(event, 14)" ONFOCUS="doTooltip(event, 14)">Average Number of Deficiencies</a></td>
+          </tr>
+
+          <tr>
+            <td><br></td>
+          </tr>
+
+          <tr>
+            <td class="navHead">Statement of Deficiency Text Reports</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="HHA_2567_Reports"
+                  class="navsm" onmouseover="doTooltip(event, 2579)" ONFOCUS="doTooltip(event, 2579)">
+                  HHA 2567s
+              </a>
+            </td>
+          </tr>
+		  <!--
+          <tr>
+            <td><a href="hha_wizard.jsp?which=1&report=report15.jsp" class="navsm" onmouseover="doTooltip(event, 17)" ONFOCUS="doTooltip(event, 17)">Condition-Level Deficiency Citation Patterns</a></td>
+          </tr>
+		  -->
+		  <!--
+          <tr>
+            <td><a href="hha_wizard.jsp?which=1&report=report171.jsp" class="navsm" onmouseover="doTooltip(event, 16)" ONFOCUS="doTooltip(event, 16)">Cited for: Condition Level Deficiencies</a></td>
+          </tr>
+		  -->
+          <!--M&M -->
+         
+		   <tr>
+            <td>
+              <div class="hha_message">
+				<ul style="color: #FFDF00; font-size: 15px; margin-top: 0px;">
+				
+				 <li style="color: #FFDF00; font-size: 15px; margin-top: 0px;" >Due to systems migrations, HHA information generated from the Provider, Survey, and Deficiency Reports on this page is only accurate and/or available through May 19, 2021. 
+				 </li>
+				 <br>
+				 <li style="color: #FFDF00; font-size: 15px; margin-top: 0px;" > HHA data can be found in the Provider of Services File (POS) - Internet Quality Improvement and Evaluation 
+				 System (iQIES) on <a href="https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-internet-quality-improvement-and-evaluation-system-home-health-agency-ambulatory-surgical-center-and-hospice-providers" style="color: #FFDF00">data.cms.gov</a> , 
+				 which includes provider number (CMS Certification Number), name, address, and other characteristics of the participating HHA providers.
+				 </li>
+
+				</ul>
+              </div>
+            </td>
+          </tr>
+
+
+          
+          <tr>
+            <td><br><br></td>
+          </tr>
+
+
+        </table>
+
+        
+        			</td>
+		</tr>
+		<tr>
+			<td align="center" valign="bottom">			
+				<a href="#d" class="navtop">Top of Page</a><br><br>
+				<!--a href="javascript:history.back(-1);" class="navtop">Back</a-->
+			</td>
+		</tr>
+	</table>
+
+      </td>
+      <td valign="top" class="margins">
+        <a name="d"></a>
+
+        
+
+        
+    <h2>Home Health Agency Provider Reports</h2>
+    
+    
+
+
+    <div id="tipDiv"></div>
+
+    <p>
+      <br>
+    </p>
+
+
+
+    <hr>
+    
+     <p id="reportDataStatement">
+  The data in these reports, including provider and supplier counts and percentages,
+  are valid for the subset of providers or suppliers for which there are survey records in CASPER.
+  <a href="JavaScript:createPopUp('data_popup.htm');"><br>For More Information</a>
+</p>
+      
+
+
+    
+
+<script type="text/javascript">
+  var CASPER_UPDATE_DATE = "11/08/2026";
+  var IQIES_UPDATE_DATE  = "11/10/2026";
+  var PROVIDER_WHICH     = "1";
+
+  function clearReportPreview() {
+      var el = document.getElementById("tipDiv");
+      if (el) {
+          el.innerHTML = "";
+      }
+
+      var footer = document.getElementById("reportSelectFooter");
+      if (footer) {
+          footer.innerHTML = "Source: CMS OPO Team";
+      }
+  }
+  
+  function setReportDataStatement(useIQIES) {
+      var el = document.getElementById("reportDataStatement");
+      if (!el) return;
+
+      if (useIQIES) {
+          el.innerHTML =
+              'The data in these reports, including provider and supplier counts and percentages, ' +
+              'are valid for the subset of providers or suppliers for which there are survey records.';
+      } else {
+          el.innerHTML =
+              'The data in these reports, including provider and supplier counts and percentages, ' +
+              'are valid for the subset of providers or suppliers for which there are survey records in CASPER. ' +
+              '<a href="JavaScript:createPopUp(\'data_popup.htm\');"><br>For More Information</a>';
+      }
+  }
+</script>
+    
+    
+<form name="getHelp" id="getHelp" method="post">
+<input type="hidden" name="mystring" id="mystring" value="">
+<input type="hidden" name="mystring1" id="mystring1" value="">
+<input type="hidden" name="mystring2" id="mystring2" value="">
+<input type="hidden" name="myimage" id="myimage" value="reportselect">
+<input type="hidden" name="myreport" id="myreport" value="">
+</form>
+
+
+    <script type="text/javascript">
+      var CASPER_UPDATE_DATE = "11/08/2026";
+      var IQIES_UPDATE_DATE  = "11/10/2026";
+      var PROVIDER_WHICH     = "1";
+    </script>
+
+    <p>
+      <!-- 
+  Source: CASPER (11/08/2026)
+
+ -->
+
+      <br>
+    
+      <span id="reportSelectFooter">Source: CASPER (11/08/2026)</span>
+    
+      <br>
+      <br>
+      <a href="JavaScript:createPopUp('access.jsp');" title="QCOR Website Accessibility">Accessibility Information</a>, <a href="JavaScript:createPopUp('privacy.jsp');"title="Privacy Statement">Privacy & Security</a>
+    </p>
+
+    <hr>
+    <p>
+      <span class="goto">Go To:</span> <a href="main.jsp">S&amp;C QCOR Start Page</a>
+    </p>
+
+    
+
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  </td>
+</tr>
+</table>
+
+</body>
+</html>

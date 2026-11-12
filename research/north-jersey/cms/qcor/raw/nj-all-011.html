@@ -1,0 +1,4108 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	<div id="skip"><a href="#maincontent">Skip to main content</a></div>
+	<title>S&amp;C QCOR</title>
+  
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<link href='./styles/hpms.css' rel='stylesheet' type='text/css'>
+
+
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HHA 2567s</title>
+    <style>
+        /* -------------------------
+           Base / Layout
+        ------------------------- */
+        body{
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f8f9fa;
+          color: #333;
+        }
+        
+        .header{
+          background-color: #fff;
+          border-bottom: 1px solid #ddd;
+          padding: 10px 80px;
+          font-size: 24px;
+          font-weight: bold;
+          color: #0071BC;
+        }
+        
+        .container{
+          width: 90%;
+          margin: 20px auto;
+        }
+        
+        .section-header{
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          user-select: none;
+          font-size: 18px;
+          font-weight: bold;
+          color: #0071BC;
+          margin-bottom: 10px;
+        }
+        
+        .section-header span.arrow{
+          margin-left: 8px;
+          transition: transform 0.3s ease;
+          display: inline-block;
+        }
+        
+        .section-header.expanded span.arrow{
+          transform: rotate(90deg);
+        }
+        
+        .content{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.content.show{
+  max-height: 9999px; /* expands immediately on first paint */
+}
+
+
+/* prevent the initial "auto expand" animation */
+.content.no-anim{
+  transition: none !important;
+}
+
+
+        
+        /* -------------------------
+           Form controls
+        ------------------------- */
+        select, input[type="text"], button{
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+        
+        button{
+          background-color: #003366;
+          color: #fff;
+          border: none;
+          font-weight: bold;
+          cursor: pointer;
+          padding: 5px 10px;
+          font-size: 12px;
+          width: 150px;
+        }
+        
+        button:hover{
+          background-color: #002244;
+        }
+        
+        input:disabled{
+          background-color: #C9C9C9;
+          color: #71767A;
+          border: 1px solid #ced4da;
+        }
+        
+        .filter-box h4{
+          margin-bottom: 10px;
+          font-size: 14px;
+          font-weight: 700;
+          color: black;
+        }
+        
+        .info{
+          font-weight: 400;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        
+        .note{
+          font-weight: 400;
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        
+        /* -------------------------
+           Top filter section (3 cards)
+        ------------------------- */
+        .filter-container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr; /* 3 equal cards */
+          gap: 16px;
+          align-items: start;
+          margin-bottom: 20px;
+          border-top: 1px solid #ddd;
+          padding-top: 20px;
+        }
+        
+        /* remove divider bars in grid layout */
+        .filter-container .vertical-bar{
+          display: none;
+        }
+        
+        .filter-box{
+          width: auto;
+          min-width: 0; /* allow children to shrink */
+        }
+        
+        /* horizontal-filters default (Provider Characteristics etc.) */
+        .horizontal-filters{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+        
+        .filter-item{
+          flex: 1;
+          min-width: 0;
+        }
+        
+        .filter-item label{
+          display: block;
+          margin-bottom: 5px;
+        }
+        
+        /* Multi-select heights */
+        #states, #regions, #deficiencyTags{
+          height: 150px;
+        }
+        
+        /* IMPORTANT: remove fixed widths so grid can size them evenly */
+        #surveyTypes, #tagTypes, #deficiencyTags{
+          width: 100% !important;
+          min-width: 0;
+          display: block;
+          margin-top: 5px;
+        }
+        
+        /* Survey card inner layout:
+           row1: surveyTypes | tagTypes
+           row2: deficiencyTags (full width) */
+        .filter-container .filter-box:last-of-type .horizontal-filters{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px 20px;
+          align-items: start;
+        }
+        
+        /* make the 3rd item (Deficiency Tag) span both columns */
+        .filter-container .filter-box:last-of-type .horizontal-filters .filter-item:nth-child(3){
+          grid-column: 1 / -1;
+        }
+        
+        /* long option text */
+        #deficiencyTags option{
+          white-space: nowrap;
+        }
+        
+        /* responsive: stack the 3 cards only when actually small */
+        @media (max-width: 1100px){
+          .filter-container{
+            grid-template-columns: 1fr;
+          }
+        }
+        
+        /* responsive: inside survey card, stack its fields */
+        @media (max-width: 900px){
+          .filter-container .filter-box:last-of-type .horizontal-filters{
+            grid-template-columns: 1fr;
+          }
+          .filter-container .filter-box:last-of-type .horizontal-filters .filter-item:nth-child(3){
+            grid-column: auto;
+          }
+        }
+        
+        /* -------------------------
+           Second filter section (Facility + Other)
+        ------------------------- */
+        .filter-container-2{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          align-items: start;
+          margin-bottom: 20px;
+          border-top: 1px solid #ddd;
+          padding-top: 20px;
+        }
+        
+        /* remove divider bars in grid layout */
+        .filter-container-2 .vertical-bar{
+          display: none;
+        }
+        
+        .filter-box-2{
+          width: auto;
+          min-width: 0;
+        }
+        
+        @media (max-width: 900px){
+          .filter-container-2{
+            grid-template-columns: 1fr;
+          }
+        }
+        
+        /* Facility picker */
+        .facility-search{
+          width: 100%;
+          padding-right: 0;
+        }
+        
+        /* -------------------------
+           Table / Pagination
+        ------------------------- */
+        .hha-table{
+          font-size: 16px;
+          border-collapse: collapse;
+          width: 100%;
+          margin: 20px auto;
+        }
+        
+        .hha-table th, .hha-table td{
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+          font-size: 16px;
+        }
+        
+        .hha-table th{
+          background-color: #1A4480;
+          color: white;
+          text-align: center;
+          font-weight: 500;
+          font-family: "Helvetica";
+          font-size: 16px;
+          overflow-wrap: normal;
+          word-break: normal;
+          white-space: normal;
+          hyphens: none;
+        }
+        
+        .hha-table tr{
+          display: table-row !important;
+        }
+        
+        .hha-table td{
+          vertical-align: top;
+          background-color: #F0F0F0;
+        }
+        
+        /* Table wrapper */
+        .table-wrap{
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Pagination aligned to right edge */
+        .pagination-container{
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 10px;
+          float: none;
+          text-align: right;
+        }
+        
+        .pagination-buttons{
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+        
+        .page-input{
+          width: 32px;
+          height: 32px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 14px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 0;
+          margin-left: 2px;
+          margin-right: 2px;
+          line-height: 32px;
+          vertical-align: middle;
+          -moz-appearance: textfield;
+          appearance: textfield;
+        }
+        
+        .page-input::-webkit-inner-spin-button,
+        .page-input::-webkit-outer-spin-button{
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        
+        .custom-link{
+          color: #005EA2 !important;
+          text-decoration: none;
+        }
+        
+        /* -------------------------
+           Expandable deficiency rows
+        ------------------------- */
+        .expandable-row{
+          visibility: hidden;
+          display: none;
+        }
+        
+        .expandable-row table{
+          border-collapse: collapse !important;
+          width: 100%;
+          margin: 0;
+        }
+        
+        .expandable-row thead tr{
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        
+        .expandable-row th{
+          background-color: #1A4480 !important;
+          color: white !important;
+          text-align: left;
+          font-weight: bold;
+          padding: 10px;
+        }
+        
+        .expandable-row th, .expandable-row td{
+          border: 1px solid black;
+          padding: 2px 4px;
+          text-align: left;
+          line-height: 1 !important;
+        }
+        
+        .expandable-row td{
+          background-color: #F0F0F0 !important;
+        }
+        
+        .expandable-row.visible{
+          display: table-row-group !important;
+        }
+        
+        .toggle-btn{
+          cursor: pointer;
+          margin-right: 5px;
+        }
+        
+        /* Optional misc */
+        .custom-checkbox{
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 400;
+          font-family: Arial, sans-serif;
+          color: #333;
+          gap: 8px;
+          margin-top: 10px;
+        }
+        
+        .custom-checkbox input[type="checkbox"]{
+          width: 18px;
+          height: 18px;
+          transform: scale(1.5);
+          margin-right: 8px;
+        }
+        </style>
+        
+	  <!-- Matomo Tag Manager -->
+<script>
+  var _mtm = window._mtm = window._mtm || [];
+  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+  (function() {
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://qnetmatomo.cms.gov/js/container_bmKTK32B.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Tag Manager -->
+
+</head>
+
+<body>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		
+		
+
+
+
+
+
+<colgroup>
+	<col span="1" style="width: 140px;">
+	<col span="1">
+</colgroup>
+<tr>
+	<td rowspan="2" align="center" valign="middle" style="height: 55px; background-color: #ffffff;">
+	<a href="#d" title="Skip sitewide navigation"><span style="font-size: 1px; color: #ffffff; text-decoration: none;">d</span></a>
+	<a href="../../main.jsp">
+		<img src="./images/hpms_local_qcor_logo.gif" alt="QCOR:  Quality, Certification and Oversight Reports." border="0" width="120" height="55">
+	</a>
+	</td>
+	<td valign="middle" align="right" class="navlg">
+	S&amp;C QCOR&nbsp;&nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td align="right" valign="middle" class="navsm">
+	<a class="navtop" href="main.jsp" title="S&C QCOR - Home Page" onMouseOver="self.status = 'Home';return true" ONFOCUS="self.status = 'Home';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true">Home</a>
+	&nbsp;|&nbsp; 
+	<!--<a class="navtop" href="#" title="Opens in a new window" onMouseOver="self.status = 'MCO Contacts';return true" ONFOCUS="self.status = 'MCO Contacts';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createPopUp('?hnumber=null', 650, 480);">MCO Contacts</a>
+	&nbsp;|&nbsp;-->
+	<!--
+	<a class="navtop" href="#" title="CMP Tool" onMouseOver="self.status = 'CMP Tool';return true" ONFOCUS="self.status = 'CMP Tool';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createHelpPopUp('./cmp_tool/cmpCalculator.html', 450, 400);">CMP Tool</a>
+	&nbsp;|&nbsp;
+	-->
+	<a class="navtop" href="#" title="Help Page" onMouseOver="self.status = 'Help';return true" ONFOCUS="self.status = 'Help';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="ShowOnePgHelp();">Help</a>
+	&nbsp;|&nbsp;
+	<a class="navtop" href="#" title="S&C QCOR - Resources" onMouseOver="self.status = 'Resources';return true" ONFOCUS="self.status = 'Resources';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createHelpPopUp('QCOR_Resources', 450, 400);">Resources</a>
+	&nbsp;|&nbsp;
+	<a class="navtop" href="#" title="Frequently Asked Questions" onMouseOver="self.status = 'FAQs';return true" ONFOCUS="self.status = 'FAQs';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true" onClick="createHelpPopUp('./documents/QCOR_FAQs', 1010,595);">FAQs</a>
+	&nbsp;|&nbsp;
+	<a class="navtop" href="QCOR_Site_Map" title="S&C QCOR - Site Map" onMouseOver="self.status = 'Site Map';return true" ONFOCUS="self.status = 'Site Map';return true" onMouseOut="self.status = ''; return true" ONBLUR="self.status = ''; return true">Site Map</a>
+	&nbsp;
+
+	</td>
+</tr>
+
+<!--<tr>-->
+	<tr>
+	<td colspan="2" align="right" class="navtop" style="height: 4px; background-color: #778899;">&nbsp;
+	
+
+	&nbsp;
+	
+
+	
+	</td>
+	</tr>
+<!--</tr>-->
+
+		
+		<tr>
+			<td colspan="2" align="left" valign="top">
+			<a name="d"></a>
+			</td>
+		</tr>
+	</table>
+    <!-- Header -->
+    <div class="header">HHAs 2567s<span style="font-size: 12px; margin-left: 20px; color: gray;">
+    </span>
+	</div>
+    <!-- Header -->
+    <!-- <div class="header">OPO 2567s<span style="font-size: 12px; margin-left: 20px; color: gray;">Please see <a href="https://www.cms.gov/medicare/regulations-guidance/legislation/emergency-medical-treatment-labor-act" target="_blank" style="color: blue; text-decoration: underline;">here</a> for information and guidance related to the OPOs.
+    </span> -->
+	<!-- </div> -->
+      <form method="post" action="/HHA_2567_Reports">
+
+ <!-- Collapsible Selection Criteria Section -->
+ <div class="container">
+  <div class="section-header" id="toggleHeader">
+        <div>Selection Criteria <span class="arrow">&#9656;</span></div>
+    </div>
+    <div class="content show" id="contentSection"> <!-- Default expanded -->
+    <div class="filter-container">
+        <!-- Time Interval -->
+        <div class="filter-box">
+			<h4>Time Interval</h4>
+			<p class="info">Please select the calendar year or years for which you would like data.</p>
+
+			<label for="beginYear">Begin Year:</label>
+<select name="beginYear" id="beginYear">
+    
+    <option value="2018" >2018</option>
+
+    <option value="2019" >2019</option>
+
+    <option value="2020" >2020</option>
+
+    <option value="2021" >2021</option>
+
+    <option value="2022" >2022</option>
+
+    <option value="2023" >2023</option>
+
+    <option value="2024" >2024</option>
+
+    <option value="2025" >2025</option>
+
+    <option value="2026" >2026</option>
+
+</select>
+
+<label for="endYear">End Year:</label>
+<select name="endYear" id="endYear">
+    
+    <option value="2018" >2018</option>
+
+    <option value="2019" >2019</option>
+
+    <option value="2020" >2020</option>
+
+    <option value="2021" >2021</option>
+
+    <option value="2022" >2022</option>
+
+    <option value="2023" >2023</option>
+
+    <option value="2024" >2024</option>
+
+    <option value="2025" >2025</option>
+
+    <option value="2026" selected>2026</option>
+
+</select>
+
+		</div>
+
+
+        <div class="vertical-bar"></div>
+
+        <!-- Provider Characteristics -->
+		
+         <div class="filter-box">
+            <h4>Provider Characteristics</h4>
+            <p class="info">Use these filters if you want to limit the report to providers that have certain characteristics. To select more than one option, hold down the Ctrl (individual point-and-click) <b>OR</b> Shift keys (select through a range) while you click on the additional desired option(s).</p>
+
+			<div class="horizontal-filters">
+		       <div class="filter-item">
+                <label for="regions">CMS Region</label>
+                
+
+                <select name="regions" id="regions" multiple>
+                    
+                        <option value="I BOSTON" >1 (Boston)</option>
+                    
+                        <option value="II NEW YORK" >2 (New York)</option>
+                    
+                        <option value="III PHILADELPHIA" >3 (Philadelphia)</option>
+                    
+                        <option value="IV ATLANTA" >4 (Atlanta)</option>
+                    
+                        <option value="V CHICAGO" >5 (Chicago)</option>
+                    
+                        <option value="VI DALLAS" >6 (Dallas)</option>
+                    
+                        <option value="VII KANSAS CITY" >7 (Kansas City)</option>
+                    
+                        <option value="VIII DENVER" >8 (Denver)</option>
+                    
+                        <option value="IX SAN FRANCISCO" >9 (San Francisco)</option>
+                    
+                        <option value="X SEATTLE" >10 (Seattle)</option>
+                    
+                    </select>
+                    
+                </div>
+                
+
+                
+
+
+
+
+			<div class="filter-item">
+            <label for="states">US State or Territory:</label>
+            <select name="states" id="states" multiple>
+                
+                            <option value="AK" >AK</option>
+                
+                            <option value="AL" >AL</option>
+                
+                            <option value="AR" >AR</option>
+                
+                            <option value="AZ" >AZ</option>
+                
+                            <option value="CA" >CA</option>
+                
+                            <option value="CO" >CO</option>
+                
+                            <option value="CT" >CT</option>
+                
+                            <option value="DC" >DC</option>
+                
+                            <option value="DE" >DE</option>
+                
+                            <option value="FL" >FL</option>
+                
+                            <option value="GA" >GA</option>
+                
+                            <option value="GU" >GU</option>
+                
+                            <option value="HI" >HI</option>
+                
+                            <option value="IA" >IA</option>
+                
+                            <option value="ID" >ID</option>
+                
+                            <option value="IL" >IL</option>
+                
+                            <option value="IN" >IN</option>
+                
+                            <option value="KS" >KS</option>
+                
+                            <option value="KY" >KY</option>
+                
+                            <option value="LA" >LA</option>
+                
+                            <option value="MA" >MA</option>
+                
+                            <option value="MD" >MD</option>
+                
+                            <option value="ME" >ME</option>
+                
+                            <option value="MI" >MI</option>
+                
+                            <option value="MN" >MN</option>
+                
+                            <option value="MO" >MO</option>
+                
+                            <option value="MS" >MS</option>
+                
+                            <option value="MT" >MT</option>
+                
+                            <option value="NC" >NC</option>
+                
+                            <option value="ND" >ND</option>
+                
+                            <option value="NE" >NE</option>
+                
+                            <option value="NH" >NH</option>
+                
+                            <option value="NJ" selected>NJ</option>
+                
+                            <option value="NM" >NM</option>
+                
+                            <option value="NV" >NV</option>
+                
+                            <option value="NY" >NY</option>
+                
+                            <option value="OH" >OH</option>
+                
+                            <option value="OK" >OK</option>
+                
+                            <option value="OR" >OR</option>
+                
+                            <option value="PA" >PA</option>
+                
+                            <option value="PR" >PR</option>
+                
+                            <option value="RI" >RI</option>
+                
+                            <option value="SC" >SC</option>
+                
+                            <option value="SD" >SD</option>
+                
+                            <option value="TN" >TN</option>
+                
+                            <option value="TX" >TX</option>
+                
+                            <option value="UT" >UT</option>
+                
+                            <option value="VA" >VA</option>
+                
+                            <option value="VT" >VT</option>
+                
+                            <option value="WA" >WA</option>
+                
+                            <option value="WI" >WI</option>
+                
+                            <option value="WV" >WV</option>
+                
+                            <option value="WY" >WY</option>
+                
+            </select>
+			</div>
+
+     
+			</div>
+         </div>
+
+        <div class="vertical-bar"></div>
+
+ <!-- Survey Results -->
+ <div class="filter-box">
+    <h4>Survey Type & Deficiency Tags</h4>
+    <p  class="info">Use these filters if you want to limit the reports to providers on specific survey types, or to reports that were cited for specific HHA deficiency tags and tag types. To select more than one option, hold down the Ctrl (individual point-and-click) <b>OR</b> Shift keys (select through a range) while you click on the additional desired option(s).</p>
+
+    <div class="horizontal-filters">
+       
+        <div class="filter-item">
+            <label for="surveyType">Survey Type:</label>
+            <select name="surveyTypes" id="surveyTypes" multiple>
+                
+
+
+<option value="Standard"
+    
+    title="This survey type includes Initial Certification and Recertification surveys">
+    Standard &#9432
+</option>                
+
+
+<option value="Complaint"
+    
+    >
+    Complaint
+</option>                
+
+
+<option value="Other"
+    
+    title="This survey type includes Focused Infection Control, Other-Fed, Sample Validation, and Vaccine Requirement surveys">
+    Other &#9432
+</option>                
+            </select>
+        </div>  
+        <div class="filter-item">
+            <label for="tagTypes">Tag Type:</label>
+            <select name="tagTypes" id="tagTypes" multiple>
+                
+                            <option value="Condition" >Condition</option>
+                
+                            <option value="Element" >Element</option>
+                
+                            <option value="Standard" >Standard</option>
+                
+            </select>
+        </div>   
+                <div class="filter-item">
+                    <label for="deficiencyTags">Deficiency Tag:</label>
+                    <select name="deficiencyTags" id="deficiencyTags" multiple>
+                        
+                                        <option value="E0001" >E0001 - Establishment Of The Emergency Program (Ep)</option>
+                            
+                                        <option value="E0004" >E0004 - Develop Ep Plan, Review And Update Annually</option>
+                            
+                                        <option value="E0006" >E0006 - Plan Based On All Hazards Risk Assessment</option>
+                            
+                                        <option value="E0007" >E0007 - Ep Program Patient Population</option>
+                            
+                                        <option value="E0009" >E0009 - Local, State, Tribal Collaboration Process</option>
+                            
+                                        <option value="E0013" >E0013 - Development Of Ep Policies And Procedures</option>
+                            
+                                        <option value="E0017" >E0017 - Hha Comprehensive Assessment In Disaster</option>
+                            
+                                        <option value="E0019" >E0019 - Homebound Hha/Hospice Inform Ep Officials</option>
+                            
+                                        <option value="E0021" >E0021 - Hha- Procedures For Follow Up Staff/Pts.</option>
+                            
+                                        <option value="E0023" >E0023 - Policies/Procedures For Medical Documentation</option>
+                            
+                                        <option value="E0024" >E0024 - Policies/Procedures-Volunteers And Staffing</option>
+                            
+                                        <option value="E0029" >E0029 - Development Of Communication Plan</option>
+                            
+                                        <option value="E0030" >E0030 - Names And Contact Information</option>
+                            
+                                        <option value="E0031" >E0031 - Emergency Officials Contact Information</option>
+                            
+                                        <option value="E0032" >E0032 - Primary/Alternate Means For Communication</option>
+                            
+                                        <option value="E0033" >E0033 - Methods For Sharing Information</option>
+                            
+                                        <option value="E0034" >E0034 - Information On Occupancy/Needs</option>
+                            
+                                        <option value="E0036" >E0036 - Ep Training And Testing</option>
+                            
+                                        <option value="E0037" >E0037 - Ep Training Program</option>
+                            
+                                        <option value="E0039" >E0039 - Ep Testing Requirements</option>
+                            
+                                        <option value="E0042" >E0042 - Integrated Ep Program</option>
+                            
+                                        <option value="G0100" >G0100 - Patient Rights</option>
+                            
+                                        <option value="G0101" >G0101 - Patient Rights</option>
+                            
+                                        <option value="G0102" >G0102 - Notice Of Rights</option>
+                            
+                                        <option value="G0107" >G0107 - Exercise Of Rights And Respect For Prop</option>
+                            
+                                        <option value="G0108" >G0108 - Right To Be Informed And Participate</option>
+                            
+                                        <option value="G0109" >G0109 - Right To Be Informed And Participate</option>
+                            
+                                        <option value="G0110" >G0110 - Right To Be Informed And Participate</option>
+                            
+                                        <option value="G0111" >G0111 - Confidentiality Of Medical Records</option>
+                            
+                                        <option value="G0114" >G0114 - Patient Liability For Payment</option>
+                            
+                                        <option value="G0117" >G0117 - Compliance W/ Fed, State, Local Laws</option>
+                            
+                                        <option value="G0118" >G0118 - Compliance With Fed, State, Local Laws</option>
+                            
+                                        <option value="G0121" >G0121 - Compliance W/ Accepted Professional Std</option>
+                            
+                                        <option value="G0122" >G0122 - Organization, Services & Administration</option>
+                            
+                                        <option value="G0123" >G0123 - Organization, Services & Administration</option>
+                            
+                                        <option value="G0127" >G0127 - Services Furnished</option>
+                            
+                                        <option value="G0128" >G0128 - Governing Body</option>
+                            
+                                        <option value="G0130" >G0130 - Governing Body</option>
+                            
+                                        <option value="G0132" >G0132 - Governing Body</option>
+                            
+                                        <option value="G0133" >G0133 - Administrator</option>
+                            
+                                        <option value="G0134" >G0134 - Administrator</option>
+                            
+                                        <option value="G0135" >G0135 - Administrator</option>
+                            
+                                        <option value="G0137" >G0137 - Administrator</option>
+                            
+                                        <option value="G0138" >G0138 - Supervising Physician Or Regis. Nurse</option>
+                            
+                                        <option value="G0139" >G0139 - Supervising Physician Or Regis. Nurse</option>
+                            
+                                        <option value="G0141" >G0141 - Personnel Policies</option>
+                            
+                                        <option value="G0142" >G0142 - Personnel Hourly/Per Visit Contract</option>
+                            
+                                        <option value="G0143" >G0143 - Coordination Of Patient Services</option>
+                            
+                                        <option value="G0144" >G0144 - Coordination Of Patient Services</option>
+                            
+                                        <option value="G0145" >G0145 - Coordination Of Patient Services</option>
+                            
+                                        <option value="G0150" >G0150 - Laboratory Services</option>
+                            
+                                        <option value="G0151" >G0151 - Group Of Professional Personnel</option>
+                            
+                                        <option value="G0152" >G0152 - Group Of Professional Personnel</option>
+                            
+                                        <option value="G0153" >G0153 - Group Of Professional Personnel</option>
+                            
+                                        <option value="G0154" >G0154 - Advisory And Evaluation Function</option>
+                            
+                                        <option value="G0155" >G0155 - Advisory And Evaluation Function</option>
+                            
+                                        <option value="G0156" >G0156 - Acceptance Of Patients, Poc, Med Super</option>
+                            
+                                        <option value="G0157" >G0157 - Acceptance Of Patients, Poc, Med Super</option>
+                            
+                                        <option value="G0158" >G0158 - Acceptance Of Patients, Poc, Med Super</option>
+                            
+                                        <option value="G0159" >G0159 - Plan Of Care</option>
+                            
+                                        <option value="G0160" >G0160 - Plan Of Care</option>
+                            
+                                        <option value="G0161" >G0161 - Plan Of Care</option>
+                            
+                                        <option value="G0163" >G0163 - Periodic Review Of Plan Of Care</option>
+                            
+                                        <option value="G0164" >G0164 - Periodic Review Of Plan Of Care</option>
+                            
+                                        <option value="G0165" >G0165 - Conformance With Physician Orders</option>
+                            
+                                        <option value="G0166" >G0166 - Conformance With Physician Orders</option>
+                            
+                                        <option value="G0168" >G0168 - Skilled Nursing Services</option>
+                            
+                                        <option value="G0170" >G0170 - Skilled Nursing Services</option>
+                            
+                                        <option value="G0171" >G0171 - Duties Of The Registered Nurse</option>
+                            
+                                        <option value="G0172" >G0172 - Duties Of The Registered Nurse</option>
+                            
+                                        <option value="G0173" >G0173 - Duties Of The Registered Nurse</option>
+                            
+                                        <option value="G0174" >G0174 - Duties Of The Registered Nurse</option>
+                            
+                                        <option value="G0176" >G0176 - Duties Of The Registered Nurse</option>
+                            
+                                        <option value="G0177" >G0177 - Duties Of The Registered Nurse</option>
+                            
+                                        <option value="G0179" >G0179 - Duties Of The Licensed Practical Nurse</option>
+                            
+                                        <option value="G0180" >G0180 - Duties Of The Licensed Practical Nurse</option>
+                            
+                                        <option value="G0182" >G0182 - Duties Of The Licensed Practical Nurse</option>
+                            
+                                        <option value="G0184" >G0184 - Therapy Services</option>
+                            
+                                        <option value="G0185" >G0185 - Therapy Services</option>
+                            
+                                        <option value="G0186" >G0186 - Therapy Services</option>
+                            
+                                        <option value="G0187" >G0187 - Therapy Services</option>
+                            
+                                        <option value="G0190" >G0190 - Supervision Of Physical & Occupational</option>
+                            
+                                        <option value="G0191" >G0191 - Supervision Of Physical & Occupational</option>
+                            
+                                        <option value="G0202" >G0202 - Home Health Aide Services</option>
+                            
+                                        <option value="G0203" >G0203 - Home Health Aide Services</option>
+                            
+                                        <option value="G0210" >G0210 - Hha Training - Documentation</option>
+                            
+                                        <option value="G0211" >G0211 - Competency Evaluation & In-Service Trai</option>
+                            
+                                        <option value="G0212" >G0212 - Competency Evaluation & In-Service Trai</option>
+                            
+                                        <option value="G0214" >G0214 - Competency Evaluation & In-Service Trai</option>
+                            
+                                        <option value="G0215" >G0215 - Competency Evaluation & In-Service Trai</option>
+                            
+                                        <option value="G0218" >G0218 - Competency Evaluation & In-Service Trai</option>
+                            
+                                        <option value="G0224" >G0224 - Assignment & Duties Of Home Health Aide</option>
+                            
+                                        <option value="G0225" >G0225 - Assignment & Duties Of Home Health Aide</option>
+                            
+                                        <option value="G0226" >G0226 - Assignment & Duties Of Home Health Aide</option>
+                            
+                                        <option value="G0229" >G0229 - Supervision</option>
+                            
+                                        <option value="G0230" >G0230 - Supervision</option>
+                            
+                                        <option value="G0235" >G0235 - Clinical Records</option>
+                            
+                                        <option value="G0236" >G0236 - Clinical Records</option>
+                            
+                                        <option value="G0237" >G0237 - Retention Of Records</option>
+                            
+                                        <option value="G0242" >G0242 - Evaluation Of The Agency'S Program</option>
+                            
+                                        <option value="G0243" >G0243 - Evaluation Of The Agency'S Program</option>
+                            
+                                        <option value="G0244" >G0244 - Evaluation Of The Agency'S Program</option>
+                            
+                                        <option value="G0247" >G0247 - Evaluation Of The Agency'S Program</option>
+                            
+                                        <option value="G0248" >G0248 - Policy And Administrative Review</option>
+                            
+                                        <option value="G0250" >G0250 - Clinical Record Review</option>
+                            
+                                        <option value="G0303" >G0303 - Clinical Records</option>
+                            
+                                        <option value="G0321" >G0321 - Encoding Oasis Data</option>
+                            
+                                        <option value="G0322" >G0322 - Accuracy Of Encoded Oasis Data</option>
+                            
+                                        <option value="G0323" >G0323 - Transmittal Of Oasis Data</option>
+                            
+                                        <option value="G0324" >G0324 - Transmittal Of Oasis Data</option>
+                            
+                                        <option value="G0325" >G0325 - Basis And Scope</option>
+                            
+                                        <option value="G0330" >G0330 - Comprehensive Assessment Of Patients</option>
+                            
+                                        <option value="G0331" >G0331 - Initial Assessment Visit</option>
+                            
+                                        <option value="G0332" >G0332 - Initial Assessment Visit</option>
+                            
+                                        <option value="G0334" >G0334 - Completion Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0337" >G0337 - Drug Regimen Review</option>
+                            
+                                        <option value="G0338" >G0338 - Update Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0339" >G0339 - Update Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0340" >G0340 - Update Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0341" >G0341 - Update Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0342" >G0342 - Incorporation Of Oasis Data Items</option>
+                            
+                                        <option value="G0350" >G0350 - Release Of Patient Identifiable Oasis Info.</option>
+                            
+                                        <option value="G0370" >G0370 - Reporting Oasis Information</option>
+                            
+                                        <option value="G0372" >G0372 - Encoding And Transmitting Oasis</option>
+                            
+                                        <option value="G0374" >G0374 - Accuracy Of Encoded Oasis Data</option>
+                            
+                                        <option value="G0376" >G0376 - Transmittal Of Oasis Data</option>
+                            
+                                        <option value="G0378" >G0378 - Oasis Data Transmission Format</option>
+                            
+                                        <option value="G0380" >G0380 - Successfully Transmit Test Data</option>
+                            
+                                        <option value="G0382" >G0382 - Transmit Data Using Compliant Software</option>
+                            
+                                        <option value="G0386" >G0386 - Data Format</option>
+                            
+                                        <option value="G0406" >G0406 - Patient Rights</option>
+                            
+                                        <option value="G0408" >G0408 - Notice Of Rights</option>
+                            
+                                        <option value="G0410" >G0410 - Information To Patient</option>
+                            
+                                        <option value="G0412" >G0412 - Written Notice Of Patient'S Rights</option>
+                            
+                                        <option value="G0414" >G0414 - Hha Administrator Contact Information</option>
+                            
+                                        <option value="G0416" >G0416 - Oasis Privacy Notice</option>
+                            
+                                        <option value="G0418" >G0418 - Patient'S Or Legal Representative'S Signature</option>
+                            
+                                        <option value="G0420" >G0420 - [Removed And Reserved]</option>
+                            
+                                        <option value="G0422" >G0422 - Written Notice Within 4 Business Days</option>
+                            
+                                        <option value="G0424" >G0424 - Exercise Of Rights</option>
+                            
+                                        <option value="G0426" >G0426 - Rights Of The Patient</option>
+                            
+                                        <option value="G0428" >G0428 - Property And Person Treated With Respect</option>
+                            
+                                        <option value="G0430" >G0430 - Be Free From Abuse</option>
+                            
+                                        <option value="G0432" >G0432 - Make Complaints To The Hha</option>
+                            
+                                        <option value="G0434" >G0434 - Participate In Care</option>
+                            
+                                        <option value="G0436" >G0436 - Receive All Services In Plan Of Care</option>
+                            
+                                        <option value="G0438" >G0438 - Have A Confidential Clinical Record</option>
+                            
+                                        <option value="G0440" >G0440 - Payment From Federally Funded Programs</option>
+                            
+                                        <option value="G0442" >G0442 - Written Notice For Non-Covered Care</option>
+                            
+                                        <option value="G0444" >G0444 - State Toll Free Hh Telephone Hotline</option>
+                            
+                                        <option value="G0446" >G0446 - Contact Info Federal/State-Funded Entities</option>
+                            
+                                        <option value="G0448" >G0448 - Freedom From Discrimination Or Reprisal</option>
+                            
+                                        <option value="G0450" >G0450 - Access To Auxiliary Aids And Language Service</option>
+                            
+                                        <option value="G0452" >G0452 - Transfer And Discharge</option>
+                            
+                                        <option value="G0454" >G0454 - Hha Can No Longer Meet The Patient'S Needs</option>
+                            
+                                        <option value="G0456" >G0456 - Patient/Payer Will No Longer Pay For Services</option>
+                            
+                                        <option value="G0458" >G0458 - Outcomes/Goals Have Been Achieved</option>
+                            
+                                        <option value="G0460" >G0460 - Patient Refuses Services</option>
+                            
+                                        <option value="G0462" >G0462 - Before Discharge For Cause Hha Must:</option>
+                            
+                                        <option value="G0464" >G0464 - Advise The Patient Of Discharge For Cause</option>
+                            
+                                        <option value="G0466" >G0466 - Make Efforts To Resolve The Problem(S)</option>
+                            
+                                        <option value="G0468" >G0468 - Provide Contact Info Other Services</option>
+                            
+                                        <option value="G0470" >G0470 - Document Efforts To Resolve Problems</option>
+                            
+                                        <option value="G0472" >G0472 - Death Of Patient</option>
+                            
+                                        <option value="G0474" >G0474 - Hha Ceases To Operate</option>
+                            
+                                        <option value="G0476" >G0476 - Investigation Of Complaints</option>
+                            
+                                        <option value="G0478" >G0478 - Investigate Complaints Made By Patient</option>
+                            
+                                        <option value="G0480" >G0480 - Treatment Or Care</option>
+                            
+                                        <option value="G0482" >G0482 - Mistreatment, Neglect Or Abuse</option>
+                            
+                                        <option value="G0484" >G0484 - Document Complaint And Resolution</option>
+                            
+                                        <option value="G0486" >G0486 - Protect Patient During Investigation</option>
+                            
+                                        <option value="G0488" >G0488 - Immediate Reporting Of Abuse By All Staff</option>
+                            
+                                        <option value="G0490" >G0490 - Accessibility</option>
+                            
+                                        <option value="G0510" >G0510 - Comprehensive Assessment Of Patients</option>
+                            
+                                        <option value="G0512" >G0512 - Standard: Initial Assessment Visit.</option>
+                            
+                                        <option value="G0514" >G0514 - Rn Performs Assessment</option>
+                            
+                                        <option value="G0516" >G0516 - Skilled Professional Performs Assessment</option>
+                            
+                                        <option value="G0518" >G0518 - Completion Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0520" >G0520 - 5 Calendar Days After Start Of Care</option>
+                            
+                                        <option value="G0522" >G0522 - Eligibility For Medicare Home Health Benefit</option>
+                            
+                                        <option value="G0524" >G0524 - Therapy Services Determine Eligibility</option>
+                            
+                                        <option value="G0526" >G0526 - Content Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0528" >G0528 - Health, Psychosocial, Functional, Cognition</option>
+                            
+                                        <option value="G0530" >G0530 - Strengths, Goals, And Care Preferences</option>
+                            
+                                        <option value="G0532" >G0532 - Continuing Need For Home Care</option>
+                            
+                                        <option value="G0534" >G0534 - Patient'S Needs</option>
+                            
+                                        <option value="G0536" >G0536 - A Review Of All Current Medications</option>
+                            
+                                        <option value="G0538" >G0538 - Primary Caregiver(S), If Any</option>
+                            
+                                        <option value="G0540" >G0540 - The Patient'S Representative (If Any);</option>
+                            
+                                        <option value="G0542" >G0542 - Incorporate Oasis Items</option>
+                            
+                                        <option value="G0544" >G0544 - Update Of The Comprehensive Assessment</option>
+                            
+                                        <option value="G0546" >G0546 - Last 5 Days Of Every 60 Days Unless:</option>
+                            
+                                        <option value="G0548" >G0548 - Within 48 Hours Of The Patient'S Return</option>
+                            
+                                        <option value="G0550" >G0550 - At Discharge</option>
+                            
+                                        <option value="G0560" >G0560 - Discharge Planning</option>
+                            
+                                        <option value="G0562" >G0562 - Discharge Planning</option>
+                            
+                                        <option value="G0564" >G0564 - Discharge Or Transfer Summary Content</option>
+                            
+                                        <option value="G0570" >G0570 - Care Planning, Coordination, Quality Of Care</option>
+                            
+                                        <option value="G0572" >G0572 - Plan Of Care</option>
+                            
+                                        <option value="G0574" >G0574 - Plan Of Care Must Include The Following</option>
+                            
+                                        <option value="G0576" >G0576 - All Orders Recorded In Plan Of Care</option>
+                            
+                                        <option value="G0578" >G0578 - Conformance With Physician Orders</option>
+                            
+                                        <option value="G0580" >G0580 - Only As Ordered By A Physician</option>
+                            
+                                        <option value="G0582" >G0582 - Influenza And Pneumococcal Vaccines</option>
+                            
+                                        <option value="G0584" >G0584 - Verbal Orders</option>
+                            
+                                        <option value="G0586" >G0586 - Review And Revision Of The Plan Of Care</option>
+                            
+                                        <option value="G0588" >G0588 - Reviewed, Revised By Physician Every 60 Days</option>
+                            
+                                        <option value="G0590" >G0590 - Promptly Alert Relevant Physician Of Changes</option>
+                            
+                                        <option value="G0592" >G0592 - Revised Plan Of Care</option>
+                            
+                                        <option value="G0594" >G0594 - Plan Of Care Revisions Must Be Communicated</option>
+                            
+                                        <option value="G0596" >G0596 - Revisions Communicated To Patient And Mds</option>
+                            
+                                        <option value="G0598" >G0598 - Discharge Plans Communication</option>
+                            
+                                        <option value="G0600" >G0600 - Coordination Of Care</option>
+                            
+                                        <option value="G0602" >G0602 - Communication With All Physicians</option>
+                            
+                                        <option value="G0604" >G0604 - Integrate All Orders</option>
+                            
+                                        <option value="G0606" >G0606 - Integrate All Services</option>
+                            
+                                        <option value="G0608" >G0608 - Coordinate Care Delivery</option>
+                            
+                                        <option value="G0610" >G0610 - Patients Receive Education And Training</option>
+                            
+                                        <option value="G0612" >G0612 - Written Instructions To Patient Include:</option>
+                            
+                                        <option value="G0614" >G0614 - Visit Schedule</option>
+                            
+                                        <option value="G0616" >G0616 - Patient Medication Schedule/Instructions</option>
+                            
+                                        <option value="G0618" >G0618 - Treatments And Therapy Services</option>
+                            
+                                        <option value="G0620" >G0620 - Other Pertinent Instructions</option>
+                            
+                                        <option value="G0622" >G0622 - Name/Contact Information Of Clinical Manager</option>
+                            
+                                        <option value="G0640" >G0640 - Quality Assessment/Performance Improvement</option>
+                            
+                                        <option value="G0642" >G0642 - Program Scope</option>
+                            
+                                        <option value="G0644" >G0644 - Program Data</option>
+                            
+                                        <option value="G0646" >G0646 - Program Activities</option>
+                            
+                                        <option value="G0648" >G0648 - High Risk, High Volume, Or Problem-Prone Area</option>
+                            
+                                        <option value="G0650" >G0650 - Incidence, Prevalence, Severity Of Problems</option>
+                            
+                                        <option value="G0652" >G0652 - Activities Lead To An Immediate Correction</option>
+                            
+                                        <option value="G0654" >G0654 - Track Adverse Patient Events</option>
+                            
+                                        <option value="G0656" >G0656 - Improvements Are Sustained</option>
+                            
+                                        <option value="G0658" >G0658 - Performance Improvement Projects</option>
+                            
+                                        <option value="G0660" >G0660 - Executive Responsibilities For Qapi</option>
+                            
+                                        <option value="G0680" >G0680 - Infection Prevention And Control</option>
+                            
+                                        <option value="G0682" >G0682 - Infection Prevention</option>
+                            
+                                        <option value="G0684" >G0684 - Infection Control</option>
+                            
+                                        <option value="G0686" >G0686 - Infection Control Education</option>
+                            
+                                        <option value="G0687" >G0687 - Covid-19 Vaccination Of Home Health Agency Staff</option>
+                            
+                                        <option value="G0700" >G0700 - Skilled Professional Services</option>
+                            
+                                        <option value="G0702" >G0702 - Services By Skilled Professionals</option>
+                            
+                                        <option value="G0704" >G0704 - Responsibilities Of Skilled Professionals</option>
+                            
+                                        <option value="G0706" >G0706 - Interdisciplinary Assessment Of The Patient</option>
+                            
+                                        <option value="G0708" >G0708 - Development And Evaluation Of Plan Of Care</option>
+                            
+                                        <option value="G0710" >G0710 - Provide Services In The Plan Of Care</option>
+                            
+                                        <option value="G0712" >G0712 - Patient, Caregiver, And Family Counseling</option>
+                            
+                                        <option value="G0714" >G0714 - Patient And Caregiver Education</option>
+                            
+                                        <option value="G0716" >G0716 - Preparing Clinical Notes</option>
+                            
+                                        <option value="G0718" >G0718 - Communication With Physicians</option>
+                            
+                                        <option value="G0720" >G0720 - Participate In The Hha'S Qapi Program;</option>
+                            
+                                        <option value="G0722" >G0722 - Participate In Hha-Sponsored In-Service</option>
+                            
+                                        <option value="G0724" >G0724 - Supervise Skilled Professional Assistants</option>
+                            
+                                        <option value="G0726" >G0726 - Nursing Services Supervised By Rn</option>
+                            
+                                        <option value="G0728" >G0728 - Rehab Services Supervised By Pt, Ot</option>
+                            
+                                        <option value="G0730" >G0730 - Medical Social Services Supervised By Msw</option>
+                            
+                                        <option value="G0750" >G0750 - Home Health Aide Services</option>
+                            
+                                        <option value="G0752" >G0752 - Home Health Aide Qualifications</option>
+                            
+                                        <option value="G0754" >G0754 - A Qualified Hh Aide Successfully Completed:</option>
+                            
+                                        <option value="G0756" >G0756 - 24 Consecutive Months Paid Service</option>
+                            
+                                        <option value="G0760" >G0760 - Classroom And Supervised Practical Training</option>
+                            
+                                        <option value="G0762" >G0762 - Minimum Hours Of Training</option>
+                            
+                                        <option value="G0764" >G0764 - Hh Aide Training Program Topics</option>
+                            
+                                        <option value="G0766" >G0766 - Hha Maintains Documentation Of Training</option>
+                            
+                                        <option value="G0768" >G0768 - Competency Evaluation</option>
+                            
+                                        <option value="G0770" >G0770 - Unsatisfactory Competency Evaluation</option>
+                            
+                                        <option value="G0772" >G0772 - Documentation Of Competency Evaluation</option>
+                            
+                                        <option value="G0774" >G0774 - 12 Hours Inservice Every 12 Months</option>
+                            
+                                        <option value="G0776" >G0776 - Inservice Training Supervised By Rn</option>
+                            
+                                        <option value="G0778" >G0778 - Documentation Of Inservice Training</option>
+                            
+                                        <option value="G0780" >G0780 - Instructor Qualifications</option>
+                            
+                                        <option value="G0782" >G0782 - Eligible Training/Competency Evaluation Orgs.</option>
+                            
+                                        <option value="G0784" >G0784 - Noncompliance With Training Requirements</option>
+                            
+                                        <option value="G0786" >G0786 - Unqualified Hh Aide Providing Services</option>
+                            
+                                        <option value="G0788" >G0788 - Org. Had Partial/Extended Survey</option>
+                            
+                                        <option value="G0792" >G0792 - Deficiencies That Endangered Health/Safety</option>
+                            
+                                        <option value="G0796" >G0796 - Violations Of Federal Or State Law:</option>
+                            
+                                        <option value="G0798" >G0798 - Home Health Aide Assignments And Duties</option>
+                            
+                                        <option value="G0800" >G0800 - Services Provided By Hh Aide</option>
+                            
+                                        <option value="G0802" >G0802 - Duties Of A Hh Aide</option>
+                            
+                                        <option value="G0804" >G0804 - Aides Are Members Of Interdisciplinary Team</option>
+                            
+                                        <option value="G0806" >G0806 - Supervision Of Home Health Aides</option>
+                            
+                                        <option value="G0808" >G0808 - Onsite Supervisory Visit Every 14 Days</option>
+                            
+                                        <option value="G0810" >G0810 - If Concern Identified, Direct Observation</option>
+                            
+                                        <option value="G0812" >G0812 - If Area Of Concern Is Noted</option>
+                            
+                                        <option value="G0813" >G0813 - Basis And Scope</option>
+                            
+                                        <option value="G0814" >G0814 - Non-Skilled Direct Observation Every 60 Days</option>
+                            
+                                        <option value="G0818" >G0818 - Hh Aide Supervision Elements</option>
+                            
+                                        <option value="G0820" >G0820 - Hh Aide Services Under Arrangement</option>
+                            
+                                        <option value="G0822" >G0822 - Ensuring The Overall Quality Of Care Provided</option>
+                            
+                                        <option value="G0824" >G0824 - Supervising Hh Aide Services</option>
+                            
+                                        <option value="G0826" >G0826 - Ensure Training/Competency Requirements</option>
+                            
+                                        <option value="G0828" >G0828 - Medicaid Personal Care Aide-Only Services</option>
+                            
+                                        <option value="G0848" >G0848 - Compliance With Federal, State, Local Law</option>
+                            
+                                        <option value="G0850" >G0850 - Disclosure Of Ownership And Management Info.</option>
+                            
+                                        <option value="G0852" >G0852 - Information To The State Survey Agency</option>
+                            
+                                        <option value="G0854" >G0854 - All Persons With Ownership Interest</option>
+                            
+                                        <option value="G0856" >G0856 - Officer, A Director, Agent, Managing Employee</option>
+                            
+                                        <option value="G0858" >G0858 - Responsible For The Management Of The Hha</option>
+                            
+                                        <option value="G0860" >G0860 - Licensing</option>
+                            
+                                        <option value="G0862" >G0862 - Laboratory Services/Clia Waivers</option>
+                            
+                                        <option value="G0864" >G0864 - Referral Laboratory Must Be Certified</option>
+                            
+                                        <option value="G0940" >G0940 - Organization And Administration Of Services</option>
+                            
+                                        <option value="G0942" >G0942 - Governing Body</option>
+                            
+                                        <option value="G0944" >G0944 - Administrator Must:</option>
+                            
+                                        <option value="G0946" >G0946 - Administrator Appointed By Governing Body</option>
+                            
+                                        <option value="G0948" >G0948 - Responsible For All Day-To-Day Operations</option>
+                            
+                                        <option value="G0950" >G0950 - Ensure Clinical Manager Is Available</option>
+                            
+                                        <option value="G0952" >G0952 - Ensure That Hha Employs Qualified Personnel</option>
+                            
+                                        <option value="G0954" >G0954 - Ensures Qualified Pre-Designated Person</option>
+                            
+                                        <option value="G0956" >G0956 - Available During All Operating Hours</option>
+                            
+                                        <option value="G0958" >G0958 - Clinical Manager</option>
+                            
+                                        <option value="G0960" >G0960 - Make Patient And Personnel Assignments,</option>
+                            
+                                        <option value="G0962" >G0962 - Coordinate Patient Care</option>
+                            
+                                        <option value="G0964" >G0964 - Coordinate Referrals;</option>
+                            
+                                        <option value="G0966" >G0966 - Assure Patient Needs Are Continually Assessed</option>
+                            
+                                        <option value="G0968" >G0968 - Assure Implementation Of Plan Of Care</option>
+                            
+                                        <option value="G0970" >G0970 - Parent-Branch Relationship</option>
+                            
+                                        <option value="G0972" >G0972 - Report All Branch Locations To Sa</option>
+                            
+                                        <option value="G0974" >G0974 - Direct Support And Administrative Control</option>
+                            
+                                        <option value="G0976" >G0976 - Services Under Arrangement</option>
+                            
+                                        <option value="G0978" >G0978 - Must Have A Written Agreement</option>
+                            
+                                        <option value="G0980" >G0980 - Primary Hha Is Responsible For Patient Care</option>
+                            
+                                        <option value="G0982" >G0982 - Skilled Services Furnished</option>
+                            
+                                        <option value="G0984" >G0984 - In Accordance With Current Clinical Practice</option>
+                            
+                                        <option value="G0986" >G0986 - Outpatient Therapy Services</option>
+                            
+                                        <option value="G0988" >G0988 - Institutional Planning</option>
+                            
+                                        <option value="G1008" >G1008 - Clinical Records</option>
+                            
+                                        <option value="G1010" >G1010 - Contents Of Clinical Record</option>
+                            
+                                        <option value="G1012" >G1012 - Required Items In Clinical Record</option>
+                            
+                                        <option value="G1014" >G1014 - Interventions And Patient Response</option>
+                            
+                                        <option value="G1016" >G1016 - Goals In The Patient'S Plans Of Care</option>
+                            
+                                        <option value="G1018" >G1018 - Contact Information For The Patient</option>
+                            
+                                        <option value="G1020" >G1020 - Contact Info For Primary Care Practitioner</option>
+                            
+                                        <option value="G1022" >G1022 - Discharge And Transfer Summaries</option>
+                            
+                                        <option value="G1024" >G1024 - Authentication</option>
+                            
+                                        <option value="G1026" >G1026 - Retention Of Records</option>
+                            
+                                        <option value="G1028" >G1028 - Protection Of Records</option>
+                            
+                                        <option value="G1030" >G1030 - Retrieval Of Records</option>
+                            
+                                        <option value="G1050" >G1050 - Personnel Qualifications</option>
+                            
+                                        <option value="G1052" >G1052 - Administrator</option>
+                            
+                                        <option value="G1056" >G1056 - Clinical Manager</option>
+                            
+                                        <option value="G1058" >G1058 - Home Health Aide</option>
+                            
+                                        <option value="G1060" >G1060 - Licensed Practical (Vocational) Nurse</option>
+                            
+                                        <option value="G1062" >G1062 - Occupational Therapist</option>
+                            
+                                        <option value="G1064" >G1064 - Occupational Therapy Assistant</option>
+                            
+                                        <option value="G1066" >G1066 - Physical Therapist</option>
+                            
+                                        <option value="G1068" >G1068 - Physical Therapist Assistant</option>
+                            
+                                        <option value="G1070" >G1070 - Physician</option>
+                            
+                                        <option value="G1072" >G1072 - Registered Nurse</option>
+                            
+                                        <option value="G1076" >G1076 - Social Worker</option>
+                            
+                                        <option value="G1078" >G1078 - Speech-Language Pathologist</option>
+                            
+                    </select>
+                </div>
+
+
+
+
+
+                
+                
+             
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="filter-container-2">
+        <!-- Time Interval -->
+        <div class="filter-box-2">
+            <p style=" font-size: 14px;
+            font-weight: 700;
+			color: black;" >CCN and Facility Name</p>
+		<p class="info">Use these filters if you know the name (or partial name) of the facility you are searching for, or the CMS Certification Number (CCN) for the facility you are searching for.</p>
+        
+        <div class="facility-row">
+
+            <div class="ccn-box">
+                <label class="facility-text" for="cmsNumber">CMS Certification Number</label>
+                <input
+                    type="text"
+                    id="cmsNumber"
+                    name="cmsNumber"
+                    value=""
+                    placeholder="Enter CMS Number"
+                    oninput="this.value = this.value.replace(/^\s+/, '')"
+                    onblur="this.value = this.value.trim()"
+                />
+        </div>
+
+        <div class="facility-box">
+            <label class="facility-text" for="facilityName">Facility Name</label>
+            <input
+                type="text"
+                id="facilityName"
+                name="facilityName"
+                value=""
+                placeholder="Enter Facility Name"
+                oninput="this.value = this.value.replace(/^\s+/, '')"
+                onblur="this.value = this.value.trim()"
+            />
+        </div>
+        </div>
+                
+
+                
+
+
+
+
+		
+         </div>
+
+
+        <div class="vertical-bar"></div>
+
+ <!-- Survey Results -->
+ <div class="filter-box-2">
+    <p style=" font-size: 14px;
+    font-weight: 700;
+    color: black;" >Other Survey Characteristics</p>    
+    
+    <p  class="info">Select one of the options below to filter by surveys that cite deficiencies or by surveys that are deficiency-free. By default, only surveys that cite deficiencies are displayed. Selecting "All" displays all surveys.</p>
+
+    <div class="horizontal-filters">
+        <div class="filter-item">
+            <select name="deficiencyFilter" id="deficiencyFilter" size="3" style="width: 60%;">
+                <option value="all" selected>All</option>
+                <option value="with" >Surveys with deficiencies</option>
+                <option value="without" >Surveys without deficiencies</option>
+            </select>
+        </div>
+        
+        
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const beginYear = document.getElementById("beginYear");
+            const endYear = document.getElementById("endYear");
+        
+            function updateBeginYearOptions() {
+                const selectedEnd = parseInt(endYear.value);
+        
+                // Keep currently selected beginYear (if valid)
+                const currentBegin = parseInt(beginYear.value);
+        
+                // Clear all options
+                beginYear.innerHTML = "";
+        
+                for (let year = 2018; year <= selectedEnd; year++) {
+                    const option = document.createElement("option");
+                    option.value = year;
+                    option.textContent = year;
+                    if (year === currentBegin && year <= selectedEnd) {
+                        option.selected = true;
+                    }
+                    beginYear.appendChild(option);
+                }
+        
+                // If previous beginYear is now invalid, set it to selectedEnd
+                if (currentBegin > selectedEnd) {
+                    beginYear.value = selectedEnd;
+                }
+            }
+        
+            // When endYear changes, adjust beginYear options
+            endYear.addEventListener("change", updateBeginYearOptions);
+        
+            // Call once on load to ensure beginYear matches pre-filled endYear
+            updateBeginYearOptions();
+        });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const beginYear = document.getElementById("beginYear");
+                const endYear = document.getElementById("endYear");
+            
+                function updateEndYearOptions() {
+                    const selectedBegin = parseInt(beginYear.value);
+            
+                    // Keep currently selected endYear (if valid)
+                    const currentEnd = parseInt(endYear.value);
+                    const currentYear = new Date().getFullYear(); // or hardcode 2026 if needed
+                    // const currentYear = 2025; // or hardcode 2025 if needed
+
+                    // Clear all options
+                    endYear.innerHTML = "";
+            
+                    for (let year = selectedBegin; year <= currentYear; year++) {
+                        const option = document.createElement("option");
+                        option.value = year;
+                        option.textContent = year;
+                        if (year === currentEnd && year >= selectedBegin) {
+                            option.selected = true;
+                        }
+                        endYear.appendChild(option);
+                    }
+            
+                    // If previous endYear is now invalid, set it to selectedBegin
+                    if (currentEnd < selectedBegin) {
+                        endYear.value = selectedBegin;
+                    }
+                }
+            
+                // When beginYear changes, adjust endYear options
+                beginYear.addEventListener("change", updateEndYearOptions);
+            
+                // Call once on load to sync endYear with selected beginYear
+                updateEndYearOptions();
+            });
+            </script>
+            
+        
+        <script>
+            const searchInput = document.getElementById("facilitySearch");
+            const selectBox = document.getElementById("facilityNames");
+            const badgeContainer = document.getElementById("facilityBadges");
+        
+            function updateBadges() {
+                badgeContainer.innerHTML = "";
+                Array.from(selectBox.selectedOptions).forEach(option => {
+                    const badge = document.createElement("span");
+                    badge.textContent = option.text;
+                    badge.style.cssText = `
+                        background-color: #007bff;
+                        color: white;
+                        padding: 4px 8px;
+                        border-radius: 12px;
+                        font-size: 0.85em;
+                    `;
+                    badgeContainer.appendChild(badge);
+                });
+            }
+        
+            // Filter options
+            searchInput.addEventListener("input", function () {
+                const filter = this.value.toLowerCase();
+                Array.from(selectBox.options).forEach(option => {
+                    option.style.display = option.text.toLowerCase().includes(filter) ? "block" : "none";
+                });
+            });
+        
+            // Update badges on change
+            selectBox.addEventListener("change", updateBadges);
+        
+            // Initialize badges if options were pre-selected
+            window.addEventListener("DOMContentLoaded", updateBadges);
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+
+
+
+
+
+
+
+
+    <!-- <div class="facility-box">
+        <label class="facility-text" for="facilityName">Facility Name</label>
+        <input
+            type="text"
+            id="facilityName"
+            name="facilityName"
+            value=""
+            placeholder="Enter Facility Name"
+			oninput="this.value = this.value.replace(/^\s+/, '')"
+			onblur="this.value = this.value.trim()"
+        />
+    </div>
+	<strong>OR</strong>
+    <div class="ccn-box">
+        <label class="facility-text" for="cmsNumber">CMS Certification Number</label>
+        <input
+            type="text"
+            id="cmsNumber"
+            name="cmsNumber"
+            value=""
+            placeholder="Enter CMS Number"
+			oninput="this.value = this.value.replace(/^\s+/, '')"
+			onblur="this.value = this.value.trim()"
+        />
+			</div> -->
+
+
+					<!-- Run Report Button -->
+					<div class="center-button">
+					<button style="background-color: white; color: black; border: 2px black solid; margin-left: 40%; padding: 10px; " type="button" 
+    onclick="clearFilters()">RESET FILTERS</button>
+					<button style="background-color: #1B1B1B; color: #F0F0F0; border: 2px black solid; margin-left: 0.1%; padding: 10px; " type="submit">RUN REPORT</button>
+
+					</div>
+                </div>
+
+		   </div>
+		   </div>
+		</div>
+
+
+
+         
+
+            
+        </div>
+    </div>
+
+</form>
+
+
+	<div class="pagination">
+
+    <div style="margin-left: 5%; margin-right: 5%; display: flex; align-items: center; gap: 12px;">
+    <form method="get" action="/HHA2567ExportXLSX" style="margin-left: auto;">
+    <a href="/downloadHHA2567" 
+
+   style="display:inline-block; background-color:#217346; border:2px solid #000; width:200px; padding:10px; text-align:center; color:white; text-decoration:none;"> 
+
+    Download full HHA 2567 dataset (Excel/XLSX) 
+
+</a> 
+</form>
+    </div>
+
+	<p style="margin-left: 5%; font-size: 16px; font-weight: bold; ">Total Records: 131</p>
+    <p style="margin-left: 5%; font-size: 16px; ">To see deficiency details, click the arrow icon to the left of the CMS certification number in the row below.</p>
+	
+</div>
+
+<div class="container">
+ 
+
+            <div class="table-wrap">
+
+    <table class="hha-table">
+        <thead>
+            <tr>
+				<th>CMS Certification Number</th>
+				<th>Facility Name</th>
+				<th>Address</th>
+				<th>City</th>
+				<th>State</th>
+                <th>CMS Region</th>
+				<th>Date of CMS Survey</th>
+				<th>Survey Event ID</th>
+                <th>Survey Type</th>
+           
+				<th style="width: 100px;">Statement of Deficiencies Report</th>
+
+            </tr>
+        </thead>
+        <tbody>
+          
+	
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317072
+							</td>
+							<td>Lhcg Cxlv, Llc</td>
+							<td>500 Scarborough Drive, Suite 302a</td>
+							<td>Egg Harbor Township</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>08/01/2024</td>
+
+							<td>63B54-H1</td>
+							<td>Recertification</td>
+
+
+							<!-- <td>
+    E0017, G0000, G0682
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation; Hha Comprehensive Assessment In Disaster; Initial Comments - Not A Deficiency Citation; Infection Prevention
+</td>
+
+<td>Memo; Memo; Standard; Standard</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=E0000%2C+E0017%2C+G0000%2C+G0682&formattedSurveyDate=08%2F01%2F2024"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=E0000%2C+E0017%2C+G0000%2C+G0682&formattedSurveyDate=08%2F01%2F2024"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">E0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=E0000&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=E0000&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=G0000&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=G0000&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">E0017</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">HHA Comprehensive Assessment in Disaster</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=E0017&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=E0017&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0682</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Infection Prevention</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=G0682&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2024-08-01&tag=G0682&formattedSurveyDate=08%2F01%2F2024" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317072
+							</td>
+							<td>Lhcg Cxlv, Llc</td>
+							<td>500 Scarborough Drive, Suite 302a</td>
+							<td>Egg Harbor Township</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>09/03/2021</td>
+
+							<td>SK9X11</td>
+							<td>Focused Infection Control, Other-Fed, Recertification</td>
+
+
+							<!-- <td>
+    E0017, G0000, G0578, G0610, G0654, G0682, G0700, G0702, G0706, G0710
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation; Hha Comprehensive Assessment In Disaster; Initial Comments - Not A Deficiency Citation; Conformance With Physician Orders; Patients Receive Education And Training; Track Adverse Patient Events; Infection Prevention; Skilled Professional Services; Services By Skilled Professionals; Interdisciplinary Assessment Of The Patient; Provide Services In The Plan Of Care
+</td>
+
+<td>Condition; Element; Element; Element; Memo; Memo; Standard; Standard; Standard; Standard; Standard</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=E0000%2C+E0017%2C+G0000%2C+G0578%2C+G0610%2C+G0654%2C+G0682%2C+G0700%2C+G0702%2C+G0706%2C+G0710&formattedSurveyDate=09%2F03%2F2021"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=E0000%2C+E0017%2C+G0000%2C+G0578%2C+G0610%2C+G0654%2C+G0682%2C+G0700%2C+G0702%2C+G0706%2C+G0710&formattedSurveyDate=09%2F03%2F2021"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">E0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=E0000&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=E0000&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0000&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0000&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0700</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Skilled professional services</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Condition</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0700&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0700&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">E0017</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">HHA Comprehensive Assessment in Disaster</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=E0017&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=E0017&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0578</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Conformance with physician orders</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0578&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0578&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0654</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Track adverse patient events</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0654&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0654&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0682</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Infection Prevention</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0682&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0682&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0702</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Services by skilled professionals</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0702&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0702&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0610</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Patients receive education and training</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Element</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0610&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0610&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0706</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Interdisciplinary assessment of the patient</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Element</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0706&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0706&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0710</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Provide services in the plan of care</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Element</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0710&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2021-09-03&tag=G0710&formattedSurveyDate=09%2F03%2F2021" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317072
+							</td>
+							<td>Lhcg Cxlv, Llc</td>
+							<td>500 Scarborough Drive, Suite 302a</td>
+							<td>Egg Harbor Township</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>05/30/2018</td>
+
+							<td>BZJR11</td>
+							<td>Complaint</td>
+
+
+							<!-- <td>
+    G0000
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation
+</td>
+
+<td>Memo</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-05-30&tag=G0000&formattedSurveyDate=05%2F30%2F2018"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-05-30&tag=G0000&formattedSurveyDate=05%2F30%2F2018"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-05-30&tag=G0000&formattedSurveyDate=05%2F30%2F2018" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-05-30&tag=G0000&formattedSurveyDate=05%2F30%2F2018" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317072
+							</td>
+							<td>Lhcg Cxlv, Llc</td>
+							<td>500 Scarborough Drive, Suite 302a</td>
+							<td>Egg Harbor Township</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>01/12/2018</td>
+
+							<td>C54Q11</td>
+							<td>Recertification</td>
+
+
+							<!-- <td>
+    G0000, G0121, G0185, G0224
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation; Initial Comments - Not A Deficiency Citation; Compliance W/ Accepted Professional Std; Therapy Services; Assignment & Duties Of Home Health Aide
+</td>
+
+<td>Memo; Memo; Standard; Standard; Standard</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=E0000%2C+G0000%2C+G0121%2C+G0185%2C+G0224&formattedSurveyDate=01%2F12%2F2018"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=E0000%2C+G0000%2C+G0121%2C+G0185%2C+G0224&formattedSurveyDate=01%2F12%2F2018"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">E0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=E0000&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=E0000&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0000&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0000&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0121</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">COMPLIANCE W/ ACCEPTED PROFESSIONAL STD</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0121&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0121&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0185</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">THERAPY SERVICES</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0185&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0185&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0224</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">ASSIGNMENT & DUTIES OF HOME HEALTH AIDE</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0224&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317072&facilityName=Lhcg+Cxlv%2C+Llc&address=500+Scarborough+Drive%2C+Suite+302a&city=Egg+Harbor+Township&state=NJ&surveyDate=2018-01-12&tag=G0224&formattedSurveyDate=01%2F12%2F2018" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317073
+							</td>
+							<td>Jeffhome Nj, Llc</td>
+							<td>227 Laurel Road, Ste 220</td>
+							<td>Voorhees</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>04/21/2022</td>
+
+							<td>5E0AC-H1</td>
+							<td>Recertification</td>
+
+
+							<!-- <td>
+    G0000
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation
+</td>
+
+<td>Memo</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317073&facilityName=Jeffhome+Nj%2C+Llc&address=227+Laurel+Road%2C+Ste+220&city=Voorhees&state=NJ&surveyDate=2022-04-21&tag=G0000&formattedSurveyDate=04%2F21%2F2022"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317073&facilityName=Jeffhome+Nj%2C+Llc&address=227+Laurel+Road%2C+Ste+220&city=Voorhees&state=NJ&surveyDate=2022-04-21&tag=G0000&formattedSurveyDate=04%2F21%2F2022"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317073&facilityName=Jeffhome+Nj%2C+Llc&address=227+Laurel+Road%2C+Ste+220&city=Voorhees&state=NJ&surveyDate=2022-04-21&tag=G0000&formattedSurveyDate=04%2F21%2F2022" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317073&facilityName=Jeffhome+Nj%2C+Llc&address=227+Laurel+Road%2C+Ste+220&city=Voorhees&state=NJ&surveyDate=2022-04-21&tag=G0000&formattedSurveyDate=04%2F21%2F2022" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317075
+							</td>
+							<td>Hackensack Meridian Ambulatory Care, Inc</td>
+							<td>Laurelton Plaza, 1759 State Highway 88, Suite 100</td>
+							<td>Brick</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>12/29/2025</td>
+
+							<td>1DEFB1-H1</td>
+							<td>Complaint</td>
+
+
+							<!-- <td>
+    G0000
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation
+</td>
+
+<td>Memo</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-12-29&tag=G0000&formattedSurveyDate=12%2F29%2F2025"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-12-29&tag=G0000&formattedSurveyDate=12%2F29%2F2025"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-12-29&tag=G0000&formattedSurveyDate=12%2F29%2F2025" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-12-29&tag=G0000&formattedSurveyDate=12%2F29%2F2025" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317075
+							</td>
+							<td>Hackensack Meridian Ambulatory Care, Inc</td>
+							<td>Laurelton Plaza, 1759 State Highway 88, Suite 100</td>
+							<td>Brick</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>06/06/2025</td>
+
+							<td>661D6-H1</td>
+							<td>Recertification</td>
+
+
+							<!-- <td>
+    G0000, G0602, G0682
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation; Initial Comments - Not A Deficiency Citation; Communication With All Physicians; Infection Prevention
+</td>
+
+<td>Element; Memo; Memo; Standard</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=E0000%2C+G0000%2C+G0602%2C+G0682&formattedSurveyDate=06%2F06%2F2025"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=E0000%2C+G0000%2C+G0602%2C+G0682&formattedSurveyDate=06%2F06%2F2025"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">E0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=E0000&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=E0000&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=G0000&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=G0000&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0682</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Infection Prevention</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=G0682&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=G0682&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0602</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Communication with all physicians</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Element</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=G0602&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2025-06-06&tag=G0602&formattedSurveyDate=06%2F06%2F2025" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317075
+							</td>
+							<td>Hackensack Meridian Ambulatory Care, Inc</td>
+							<td>Laurelton Plaza, 1759 State Highway 88, Suite 100</td>
+							<td>Brick</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>09/09/2022</td>
+
+							<td>61A98-H1</td>
+							<td>Recertification</td>
+
+
+							<!-- <td>
+    G0000
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation
+</td>
+
+<td>Memo</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2022-09-09&tag=G0000&formattedSurveyDate=09%2F09%2F2022"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2022-09-09&tag=G0000&formattedSurveyDate=09%2F09%2F2022"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2022-09-09&tag=G0000&formattedSurveyDate=09%2F09%2F2022" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2022-09-09&tag=G0000&formattedSurveyDate=09%2F09%2F2022" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317075
+							</td>
+							<td>Hackensack Meridian Ambulatory Care, Inc</td>
+							<td>Laurelton Plaza, 1759 State Highway 88, Suite 100</td>
+							<td>Brick</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>10/02/2019</td>
+
+							<td>ZLGB11</td>
+							<td>Recertification</td>
+
+
+							<!-- <td>
+    E0013, G0000, G0612, G0682, G0800
+</td>
+							<td>
+    Development Of Ep Policies And Procedures; Initial Comments - Not A Deficiency Citation; Written Instructions To Patient Include:; Infection Prevention; Services Provided By Hh Aide
+</td>
+
+<td>Element; Memo; Standard; Standard; Standard</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=E0013%2C+G0000%2C+G0612%2C+G0682%2C+G0800&formattedSurveyDate=10%2F02%2F2019"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=E0013%2C+G0000%2C+G0612%2C+G0682%2C+G0800&formattedSurveyDate=10%2F02%2F2019"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0000&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0000&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">E0013</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Development of EP Policies and Procedures</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=E0013&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=E0013&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0612</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Written instructions to patient include:</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0612&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0612&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0682</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Infection Prevention</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Standard</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0682&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0682&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0800</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Services provided by HH aide</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Element</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0800&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317075&facilityName=Hackensack+Meridian+Ambulatory+Care%2C+Inc&address=Laurelton+Plaza%2C+1759+State+Highway+88%2C+Suite+100&city=Brick&state=NJ&surveyDate=2019-10-02&tag=G0800&formattedSurveyDate=10%2F02%2F2019" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+                        <tr>
+							<td style="white-space: nowrap;">
+								<span class="toggle-btn">&#9660;</span>
+								317077
+							</td>
+							<td>Holy Name Home Care</td>
+							<td>718 Teaneck Road</td>
+							<td>Teaneck</td>
+							<td>NJ</td>
+                            
+
+                            <td>2 (New York)</td></td>
+							<td>02/03/2023</td>
+
+							<td>5FDC0-H1</td>
+							<td>Recertification</td>
+
+
+							<!-- <td>
+    G0000
+</td>
+							<td>
+    Initial Comments - Not A Deficiency Citation
+</td>
+
+<td>Memo</td> -->
+
+					<td>
+                        
+					
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- PDF Report Icon -->
+    <a href="HHACombinedReportObjectPDF?cmsNumber=317077&facilityName=Holy+Name+Home+Care&address=718+Teaneck+Road&city=Teaneck&state=NJ&surveyDate=2023-02-03&tag=G0000&formattedSurveyDate=02%2F03%2F2023"
+       target="_blank" title="View PDF Report" style="margin-right: 15px;">
+        <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a; vertical-align: middle;"></i>
+    </a>
+
+    <!-- Web Report Icon -->
+    <a href="HHACombinedReportObject?cmsNumber=317077&facilityName=Holy+Name+Home+Care&address=718+Teaneck+Road&city=Teaneck&state=NJ&surveyDate=2023-02-03&tag=G0000&formattedSurveyDate=02%2F03%2F2023"
+       target="_blank" title="View Web Report">
+        <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+    </a>
+</div>
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const regionSelect = document.getElementById("regions");
+        const stateSelect = document.getElementById("states");
+    
+        const regionToStates = {
+            "I BOSTON": ["CT", "ME", "MA", "NH", "RI", "VT"],
+            "II NEW YORK": ["NJ", "NY", "PR", "VI"],
+            "III PHILADELPHIA": ["DE", "DC", "MD", "PA", "VA", "WV"],
+            "IV ATLANTA": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN"],
+            "V CHICAGO": ["IL", "IN", "MI", "MN", "OH", "WI"],
+            "VI DALLAS": ["AR", "LA", "NM", "OK", "TX"],
+            "VII KANSAS CITY": ["IA", "KS", "MO", "NE"],
+            "VIII DENVER": ["CO", "MT", "ND", "SD", "UT", "WY"],
+            "IX SAN FRANCISCO": ["AZ", "CA", "HI", "NV", "AS", "MP", "FM", "GU", "MH", "PW"],
+            "X SEATTLE": ["AK", "ID", "OR", "WA"]
+        };
+
+    
+        regionSelect.addEventListener("change", function () {
+            // First clear all selected states
+            Array.from(stateSelect.options).forEach(option => option.selected = false);
+    
+            const selectedRegions = Array.from(regionSelect.selectedOptions).map(opt => opt.value);
+    
+            selectedRegions.forEach(region => {
+                const states = regionToStates[region];
+                if (states) {
+                    states.forEach(state => {
+                        const option = Array.from(stateSelect.options).find(opt => opt.value === state);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
+
+
+					</td>
+					
+				<!--	<a href="OPOReportObjectPDF?cmsNumber=123456&facilityName=Test+Facility&surveyDate=2025-01-08&format=pdf" target="_blank">
+    Download PDF
+</a> -->
+
+
+
+                        </tr>
+						
+						<tbody class="expandable-row">
+						<tr>
+							<td colspan="12" style="padding: 20px 40px; border: none !important; background-color: #f9f9f9;">
+								<table style="width: 100%; border: 1px solid #ccc; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin: 0;">
+									<thead>
+										<tr>
+											<th style="width: 8%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Tag</th>
+											<th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Deficiency Description</th>
+                                            <th style="width: 83%; border: 1px solid black; padding: 8px; text-align: left;">Tag Type</th>
+
+											<th style="width: 9%; border: 1px solid black; padding: 8px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+    <tr>
+        <td style="width: 8%; border: 1px solid black; padding: 4px 5px !important;">G0000</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Initial Comments - Not a Deficiency Citation</td>
+        <td style="width: 83.5%; border: 1px solid black; padding: 4px 5px !important;">Memo</td>
+        <td style="width: 8.5%; border: 1px solid black; padding: 4px 5px !important;">
+            <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+                <!-- PDF Report Icon -->
+                <a href="HHAReportObjectPDF?cmsNumber=317077&facilityName=Holy+Name+Home+Care&address=718+Teaneck+Road&city=Teaneck&state=NJ&surveyDate=2023-02-03&tag=G0000&formattedSurveyDate=02%2F03%2F2023" target="_blank" title="View PDF Report" style="margin-right: 15px;">
+                    <i class="fas fa-file-pdf" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+                <!-- Web Report Icon -->
+                <a href="HHAReportObject?cmsNumber=317077&facilityName=Holy+Name+Home+Care&address=718+Teaneck+Road&city=Teaneck&state=NJ&surveyDate=2023-02-03&tag=G0000&formattedSurveyDate=02%2F03%2F2023" target="_blank" title="View Web Report">
+                    <i class="fas fa-globe" style="font-size: 24px; color: #4a4a4a;"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+
+
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						</tbody>
+						
+						
+						
+                        
+        </tbody>
+    </table>
+    	</div>
+        <div class="pagination-container">
+    <div class="pagination">
+        <form method="get" action="/HHA_2567_Reports" style="display: inline;">
+            <input type="hidden" name="beginYear" value="null">
+            <input type="hidden" name="endYear" value="null">
+            
+            
+            <input type='hidden' name='states' value='NJ'>
+
+    
+            
+    
+            
+    
+            
+        </form>
+        <div class="pagination-buttons">
+            
+                <a class="custom-link" href="/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=10">&larr; <u>Previous</u></a>
+            
+            
+            <!-- Editable Page Input -->
+            <form onsubmit="return goToPage()" style="display: inline;">
+            <input type="number" id="pageInput" class="page-input" 
+               min="1" max="14" value="11"
+               onkeypress="if(event.keyCode==13) goToPage();">
+            </form> 
+            <span> of <a href="/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=14" class="custom-link">14</a> </span>
+            
+            
+                <a class="custom-link" href="/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=12" ><u>Next</u> &rarr;</a>
+            
+        </div>
+        
+        <script>
+        function goToPage() {
+            var page = document.getElementById("pageInput").value;
+            var totalPages = 14;
+    
+            // Validate input
+            if (isNaN(page) || page < 1 || page > totalPages) {
+                alert("Enter a valid page number between 1 and " + totalPages);
+                return false;
+            }
+    
+            // Redirect to the entered page
+            window.location.href = "/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=" + page;
+            return false; // Prevent form submission
+        }
+        </script>
+        
+    </div>
+    
+    </div>
+    </div>
+    
+	
+    <!-- Pagination Section -->
+
+
+<script>console.log(document.querySelector('.expandable-content').style.display = 'table-row';);</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleHeader = document.getElementById('toggleHeader');
+      const content = document.getElementById('contentSection');
+      const arrow = toggleHeader.querySelector('.arrow');
+  
+      // set correct arrow on load
+      arrow.innerHTML = content.classList.contains('show') ? '&#9662;' : '&#9656;';
+  
+      toggleHeader.addEventListener('click', () => {
+        content.classList.toggle('show');
+        arrow.innerHTML = content.classList.contains('show') ? '&#9662;' : '&#9656;';
+      });
+    });
+  </script>
+  
+  
+  
+	
+	<script>
+    // Store the original values of the fields before submission
+    let originalFacilityName = "";
+    let originalSubtypes = {};
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Restore original values from the server
+        const facilityInput = document.getElementById("facilityName");
+        if (facilityInput) {
+            facilityInput.value = facilityInput.value.replace(/\|/g, "'");
+        }
+
+   
+		
+		const facilityNameInput = document.getElementById("facilityName");
+    const cmsNumberInput = document.getElementById("cmsNumber");
+
+    // Added event listeners to disable filter
+    facilityNameInput.addEventListener("input", () => {
+        if (facilityNameInput.value.trim() !== "") {
+            cmsNumberInput.disabled = true;
+        } else {
+            cmsNumberInput.disabled = false;
+        }
+    });
+
+    cmsNumberInput.addEventListener("input", () => {
+        if (cmsNumberInput.value.trim() !== "") {
+            facilityNameInput.disabled = true;
+        } else {
+            facilityNameInput.disabled = false;
+        }
+    });
+
+    // Initialize based on existing values (e.g., pre-filled values)
+    if (facilityNameInput.value.trim() !== "") {
+        cmsNumberInput.disabled = true;
+    }
+
+    if (cmsNumberInput.value.trim() !== "") {
+        facilityNameInput.disabled = true;
+    }
+    });
+
+    document.querySelector("form").addEventListener("submit", function () {
+        // Replace single quotes with the placeholder in facility name input
+        const facilityInput = document.getElementById("facilityName");
+        if (facilityInput) {
+            originalFacilityName = facilityInput.value; // Save original value
+			facilityInput.value = facilityInput.value.replace(/\|/g, "'");
+        }
+
+        
+    });
+</script>
+
+<script>
+  
+
+
+</script>
+<script>
+
+// Initialize dropdowns on page load
+
+
+
+function updateBeginYearOptions() {
+    const beginYearDropdown = document.getElementById('beginYear');
+    const endYearDropdown = document.getElementById('endYear');
+
+    if (!beginYearDropdown || !endYearDropdown) return;
+
+    const endYear = parseInt(endYearDropdown.value);
+    let selectedBeginYear = parseInt(beginYearDropdown.value) || 2018;
+
+    // Remove invalid options
+    for (let i = beginYearDropdown.options.length - 1; i >= 0; i--) {
+        if (parseInt(beginYearDropdown.options[i].value) > endYear) {
+            beginYearDropdown.remove(i);
+        }
+    }
+
+    // Add missing options
+    for (let year = 2018; year <= endYear; year++) {
+        if (!Array.from(beginYearDropdown.options).some(opt => parseInt(opt.value) === year)) {
+            let option = new Option(year, year);
+            beginYearDropdown.add(option);
+        }
+    }
+
+    // Ensure Begin Year is set correctly
+    if (selectedBeginYear > endYear) {
+        beginYearDropdown.value = "2018";
+    }
+}
+      
+/* function updateEndYearOptions() {
+    const beginYear = document.getElementById('beginYear').value;
+    const endYearDropdown = document.getElementById('endYear');
+    const selectedEndYear = endYearDropdown.value;
+
+    // Remove all options
+    while (endYearDropdown.options.length) {
+        endYearDropdown.remove(0);
+    }
+
+    // Add options dynamically
+    for (let year = parseInt(beginYear); year <= 2024; year++) {
+        const option = document.createElement('option');
+        option.value = year;
+        option.text = year;
+        if (year == selectedEndYear) {
+            option.selected = true;
+        }
+        endYearDropdown.add(option);
+    }
+}
+
+function updateBeginYearOptions() {
+    const endYear = document.getElementById('endYear').value;
+    const beginYearDropdown = document.getElementById('beginYear');
+    const selectedBeginYear = beginYearDropdown.value;
+
+    // Remove all options
+    while (beginYearDropdown.options.length) {
+        beginYearDropdown.remove(0);
+    }
+
+    // Add options dynamically
+    for (let year = 2021; year <= parseInt(endYear); year++) {
+        const option = document.createElement('option');
+        option.value = year;
+        option.text = year;
+        if (year == selectedBeginYear) {
+            option.selected = true;
+        }
+        beginYearDropdown.add(option);
+    }
+} */
+document.querySelector("form").addEventListener("submit", function (e) {
+    const begin = parseInt(document.getElementById("beginYear").value);
+    const end = parseInt(document.getElementById("endYear").value);
+    if (begin > end) {
+        alert("End year must be greater than or equal to begin year.");
+        e.preventDefault();
+    }
+});
+
+function clearFilters() {
+    document.querySelectorAll('select').forEach(select => {
+        if (select.id === 'beginYear') {
+            select.selectedIndex = 0;
+        } else if (select.id === 'endYear') {
+            select.selectedIndex = select.options.length - 1;
+        } else if (select.id === 'deficiencyFilter') {
+            // Explicitly set the default value
+            select.value = "with";
+        } else {
+            if (select.multiple) {
+                Array.from(select.options).forEach(option => {
+                    option.selected = false;
+                });
+            } else {
+                select.selectedIndex = 0;
+            }
+        }
+    });
+
+    document.querySelectorAll('input[type="text"]').forEach(input => {
+        input.value = '';
+    });
+
+    const form = document.querySelector('form');
+    if (form) {
+        form.submit();
+    }
+}
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+    toggleButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const parentTbody = this.closest("tbody"); // Find the main tbody
+            const expandableTbody = parentTbody.nextElementSibling; // Find the expandable row
+
+            if (expandableTbody && expandableTbody.classList.contains("expandable-row")) {
+				const computedStyle = window.getComputedStyle(expandableTbody);
+
+				if (computedStyle.display === "none" || computedStyle.visibility === "collapse") {
+					expandableTbody.style.visibility = "visible";
+					expandableTbody.style.display = "table-row-group";
+					this.innerHTML = "&#9650;";
+				} else {
+					expandableTbody.style.visibility = "collapse";
+					expandableTbody.style.display = "none";
+					this.innerHTML = "&#9660;";
+				}
+			}
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>

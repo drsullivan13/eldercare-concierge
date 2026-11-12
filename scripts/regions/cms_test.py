@@ -2,6 +2,7 @@
 """Offline regression tests and checks against the retained CMS collection."""
 
 import copy
+from contextlib import contextmanager
 import io
 import json
 import os
@@ -246,6 +247,142 @@ class IntegrityTests(unittest.TestCase):
         metadata["r5ix-sfxw"]["released"] = "2026-09-28"
         with self.assertRaisesRegex(ValueError, "Inconsistent"):
             cms.release_check(metadata)
+
+
+class PartitionCoverageTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.manifest = json.loads((cms.OUTPUT / "manifest.json").read_text())
+        cls.crosswalk = json.loads((cms.OUTPUT / "crosswalk.json").read_text())["rows"]
+
+    @contextmanager
+    def archive(self, mutate):
+        manifest = copy.deepcopy(self.manifest)
+        mutate(manifest)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ("raw", "crosswalk.json", "catalog-discovery.json"):
+                (root / name).symlink_to(cms.OUTPUT / name)
+            datasets = {}
+            changed = set()
+            (root / "datasets").mkdir()
+            for dataset_id, source in manifest["sources"].items():
+                original = self.manifest["sources"][dataset_id]["partitions"]
+                pages = [page["file"] for part in source["partitions"] for page in part["pages"]]
+                original_pages = [page["file"] for part in original for page in part["pages"]]
+                name = f"datasets/{dataset_id}.json"
+                if pages != original_pages:
+                    rows = [
+                        row for filename in pages
+                        for row in json.loads((cms.OUTPUT / filename).read_text())["results"]
+                    ]
+                    if dataset_id == "m5eg-upu5":
+                        rows = cms.unique_rows(rows)
+                    datasets[dataset_id] = rows
+                    changed.add(name)
+                    cms.write_json(root / name, rows)
+                    source["retained_rows"] = len(rows)
+                else:
+                    (root / name).symlink_to(cms.OUTPUT / name)
+            if all(not source["partitions"] for source in manifest["sources"].values()):
+                for name, value in cms.derive(datasets, self.crosswalk).items():
+                    changed.add(f"{name}.json")
+                    cms.write_json(root / f"{name}.json", value)
+            else:
+                for name in ("nursing_roster", "home_health_roster",
+                             "home_health_service_zip_edges", "nursing_evidence", "coverage"):
+                    (root / f"{name}.json").symlink_to(cms.OUTPUT / f"{name}.json")
+            for receipt in manifest["artifacts"]:
+                if receipt["file"] in changed:
+                    body = (root / receipt["file"]).read_bytes()
+                    receipt.update(sha256=cms.digest(body), bytes=len(body))
+            cms.write_json(root / "manifest.json", manifest)
+            yield root
+
+    def reject(self, mutate, message):
+        with self.archive(mutate) as root:
+            with self.assertRaisesRegex(ValueError, message):
+                cms.verify(root)
+
+    def test_rejects_all_sources_without_partitions_and_empty_datasets(self):
+        def mutate(manifest):
+            for source in manifest["sources"].values():
+                source["partitions"] = []
+        self.reject(mutate, "partition coverage")
+
+    def test_rejects_missing_primary_for_every_registry_source(self):
+        for dataset_id in cms.REGISTRY:
+            with self.subTest(dataset_id=dataset_id):
+                self.reject(
+                    lambda manifest: manifest["sources"][dataset_id]["partitions"].pop(0),
+                    "partition coverage",
+                )
+
+    def test_rejects_missing_nj_office_service_query(self):
+        self.reject(
+            lambda manifest: manifest["sources"]["m5eg-upu5"]["partitions"].pop(1),
+            "partition coverage",
+        )
+
+    def test_rejects_each_missing_foreign_clinical_or_survey_query(self):
+        manifest = json.loads((cms.OUTPUT / "manifest.json").read_text())
+        for dataset_id in ("6jpm-sxkc", "ccn4-8vby"):
+            for index in range(1, len(manifest["sources"][dataset_id]["partitions"])):
+                with self.subTest(dataset_id=dataset_id, index=index):
+                    self.reject(
+                        lambda value: value["sources"][dataset_id]["partitions"].pop(index),
+                        "partition coverage",
+                    )
+
+    def test_rejects_substituted_filters_for_each_partition(self):
+        manifest = json.loads((cms.OUTPUT / "manifest.json").read_text())
+        for dataset_id, source in manifest["sources"].items():
+            for index in range(len(source["partitions"])):
+                with self.subTest(dataset_id=dataset_id, index=index):
+                    def mutate(value):
+                        value["sources"][dataset_id]["partitions"][index]["conditions"] = [
+                            cms.condition("state", "=", "NY")]
+                    self.reject(mutate, "filters|request URL")
+
+    def test_rejects_duplicate_partition(self):
+        def mutate(manifest):
+            partitions = manifest["sources"]["4pq5-n9py"]["partitions"]
+            partitions.append(copy.deepcopy(partitions[0]))
+        self.reject(mutate, "Duplicate partition")
+
+    def test_rejects_unexpected_partition_name(self):
+        self.reject(
+            lambda manifest: manifest["sources"]["4pq5-n9py"]["partitions"][0].update(
+                name="substituted-primary"),
+            "partition coverage",
+        )
+
+    def test_rejects_changed_registry_role_family_or_scope(self):
+        for field in ("role", "family", "scope"):
+            with self.subTest(field=field):
+                self.reject(
+                    lambda manifest: manifest["sources"]["4pq5-n9py"].update({field: "other"}),
+                    "Source registry",
+                )
+
+    def test_rejects_invalid_page_sizes(self):
+        for size in (0, -1, True, 1.5, "1000", 5001):
+            with self.subTest(size=size):
+                self.reject(
+                    lambda manifest: manifest["sources"]["4pq5-n9py"]["partitions"][0].update(
+                        page_size=size),
+                    "Page size",
+                )
+
+    def test_rejects_wrong_official_request_url_for_each_receipt_kind(self):
+        for kind in ("probe", "count_after", "pages"):
+            with self.subTest(kind=kind):
+                def mutate(manifest):
+                    partition = manifest["sources"]["4pq5-n9py"]["partitions"][0]
+                    receipt = partition["pages"][0] if kind == "pages" else partition[kind]
+                    receipt["url"] = cms.query_url(
+                        "4pq5-n9py", [cms.condition("state", "=", "NY")], 1, 0)
+                self.reject(mutate, "request URL")
 
 
 class RetainedArtifactTests(unittest.TestCase):

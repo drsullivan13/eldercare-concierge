@@ -2,7 +2,7 @@
 
 This collection retains official CMS source responses for nursing homes and home-health agencies. It does not update the application catalog.
 
-The November 12, 2026 direct collection completed with 17 datasets, 73 response pages, and 362 checksum-verified artifacts. Offline verification and all 29 regression and retained-artifact tests pass. The suite preserves the existing 19 tests and adds 10 transport, resume, ownership, independent-count, and original-dictionary checks.
+The November 12, 2026 direct collection completed with 17 datasets, 73 response pages, and 362 checksum-verified artifacts. Offline verification and all 39 regression and retained-artifact tests pass. The suite preserves the existing 29 tests and adds 10 partition-coverage, registry, page-size, and request-URL checks.
 
 ## Reproduce and verify
 
@@ -68,6 +68,8 @@ The other nursing sources retain provider-level staffing, turnover, ratings, abu
 
 CMS PDC has 38 NJ home-health offices and no office-county field. Root office counties remain unknown. The separately owned [`pos/` supplement](pos/) collects CMS certification county codes and exact-CCN reconciliation. The independent source check found 18 certified offices in the target counties. The root collector neither modifies nor hashes that supplement.
 
+The separately owned [`qcor/` supplement](qcor/) retains additional CMS survey evidence. It remains separate from the PDC collection and its manifest.
+
 Service-ZIP discovery searches the NJ ZIP range without filtering office state, then also pulls all NJ-office service ZIPs. Each discovered non-NJ CCN gets its own clinical-roster and HHCAHPS query. Office location does not establish a service area. A CMS-reported service ZIP does not establish current acceptance or countywide service.
 
 The collection retains 5 non-NJ offices alongside the 38 NJ offices, with no unmatched service CCNs. The target-county ZIP projection has 1,246 associations. Of these, 1,012 use single-county ZIPs, and 234 remain ambiguous candidates.
@@ -78,7 +80,9 @@ ZIP associations use the CMSgov-hosted HUD county-to-ZIP workbook for **2025Q3**
 
 `manifest.json` identifies all 17 sources, query partitions, release dates, retrieval times, byte counts, and SHA256 checksums. `raw/` retains source metadata before and after collection, every response page and count probe, two original PDF dictionaries, and the pinned workbook with its repository provenance. `datasets/` retains each source's complete collected projection. Root JSON files retain the target rosters, nursing evidence, service-ZIP associations, and county coverage.
 
-`verification.json` records offline verification. The verifier checks hashes, metadata equality, family release consistency, pagination, filter values, exact raw-to-dataset projection, workbook projection, derived outputs, and service-CCN roster coverage. The manifest includes only collector-owned raw, dataset, and derived files. It excludes `pos/` and the independently owned verification documents.
+`verification.json` records offline verification. The verifier checks hashes, metadata equality, family release consistency, pagination, filter values, exact raw-to-dataset projection, workbook projection, derived outputs, and service-CCN roster coverage. It requires exactly one canonical `primary` partition per registry source, the NJ-office service-ZIP partition, and an exact-CCN clinical and HHCAHPS partition for each non-NJ office in the reconstructed service records. It rejects missing, duplicate, unexpected, or substituted partitions, changed source roles or scopes, and invalid page sizes. Every probe, page, and count-after request URL must equal the canonical query for that dataset, filters, pagination, and ordering. The current archive has 28 required partitions, including queries for all 5 non-NJ offices in both home-health sources.
+
+The manifest includes only collector-owned raw, dataset, and derived files. It excludes `pos/`, `qcor/`, and the independently owned verification documents. These verifier changes do not rewrite the manifest or retained responses.
 
 Nursing sources report release on October 28, 2026. Home-health sources report release on October 21, 2026. Publication dates are not measure periods. The retained intervals specify April through June 2026 for staffing levels and April 2025 through March 2026 for turnover and HHCAHPS. Clinical periods differ by measure.
 

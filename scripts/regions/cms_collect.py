@@ -122,6 +122,24 @@ def range_conditions(field, start, end):
     return [condition(field, ">=", start), condition(field, "<=", end)]
 
 
+def required_partitions(dataset_id, foreign_ccns=()):
+    primary = {
+        "state": [condition("state", "=", "NJ")],
+        "ccn_range": range_conditions(CCN, "310000", "319999"),
+        "service_zip": range_conditions("zip_code", "07000", "08999"),
+        "national": [],
+    }[REGISTRY[dataset_id]["scope"]]
+    partitions = {"primary": primary}
+    if dataset_id == "m5eg-upu5":
+        partitions["nj-offices"] = [condition("state", "=", "NJ")]
+    if dataset_id in ("6jpm-sxkc", "ccn4-8vby"):
+        partitions.update({
+            "service-office-" + ccn: [condition(CCN, "=", ccn)]
+            for ccn in sorted(foreign_ccns)
+        })
+    return partitions
+
+
 def query_url(dataset_id, conditions, limit, offset, sorts=()):
     params = {"limit": limit, "offset": offset, "count": "true", "results": "true"}
     for index, item in enumerate(conditions):
@@ -385,14 +403,7 @@ def collect(root, page_size):
         for distribution in item.get("distribution", []):
             if distribution.get("describedBy"):
                 dictionary_urls.add(distribution["describedBy"])
-        if spec["scope"] == "state":
-            conditions = [condition("state", "=", "NJ")]
-        elif spec["scope"] == "ccn_range":
-            conditions = range_conditions(CCN, "310000", "319999")
-        elif spec["scope"] == "service_zip":
-            conditions = range_conditions("zip_code", "07000", "08999")
-        else:
-            conditions = []
+        conditions = required_partitions(dataset_id)["primary"]
         rows, partition = pull(root, dataset_id, "primary", conditions, page_size)
         partitions = [partition]
         if dataset_id == "m5eg-upu5":
@@ -495,6 +506,24 @@ def verify(root):
     require(manifest["status"] == "complete", "Collection is incomplete")
     require(manifest["registry"] == REGISTRY and manifest["target_counties"] == COUNTIES,
             "Registry or county scope differs")
+    require(manifest["sources"].keys() == REGISTRY.keys(), "Source registry IDs differ")
+    for dataset_id, spec in REGISTRY.items():
+        source = manifest["sources"][dataset_id]
+        require(all(source.get(key) == value for key, value in spec.items()),
+                f"Source registry role, family or scope differs: {dataset_id}")
+        partitions = source["partitions"]
+        names = [partition["name"] for partition in partitions]
+        require(len(names) == len(set(names)), f"Duplicate partition: {dataset_id}")
+        expected = required_partitions(dataset_id, {
+            name.removeprefix("service-office-") for name in names
+            if re.fullmatch(r"service-office-\d{6}", name)
+        })
+        require({part["name"]: part["conditions"] for part in partitions} == expected,
+                f"Required partition coverage or filters differ: {dataset_id}")
+        for partition in partitions:
+            size = partition["page_size"]
+            require(type(size) is int and 1 <= size <= 5000,
+                    "Page size must be an integer between 1 and 5000")
     for receipt in manifest["artifacts"]:
         verify_receipt(root, receipt)
     catalog = {item["identifier"]: item for item in
@@ -516,6 +545,8 @@ def verify(root):
             conditions, size = partition["conditions"], partition["page_size"]
             expected = partition["expected_count"]
             for key in ("probe", "count_after"):
+                require(partition[key]["url"] == query_url(dataset_id, conditions, 1, 0),
+                        f"Partition request URL differs: {dataset_id}/{partition['name']}/{key}")
                 validate_page(json.loads(verify_receipt(root, partition[key])),
                               conditions, 1, 0, expected)
             rows = []
@@ -523,6 +554,9 @@ def verify(root):
             require([page["offset"] for page in partition["pages"]] == offsets,
                     "Missing or repeated page offsets")
             for receipt in partition["pages"]:
+                require(receipt["url"] == query_url(
+                    dataset_id, conditions, size, receipt["offset"], partition["sorts"]),
+                    f"Partition request URL differs: {dataset_id}/{partition['name']}/page")
                 page = json.loads(verify_receipt(root, receipt))
                 validate_page(page, conditions, size, receipt["offset"], expected, partition["sorts"])
                 require(receipt["rows"] == len(page["results"]), "Page receipt count mismatch")
@@ -537,6 +571,14 @@ def verify(root):
         require(records == saved, f"Raw page projection differs: {dataset_id}")
         require(len(records) == source["retained_rows"], "Source row count mismatch")
         datasets[dataset_id] = records
+    foreign_ccns = {row[CCN] for row in datasets["m5eg-upu5"] if row["state"] != "NJ"}
+    partitions_checked = 0
+    for dataset_id in REGISTRY:
+        expected = required_partitions(dataset_id, foreign_ccns)
+        actual = {partition["name"]: partition["conditions"]
+                  for partition in manifest["sources"][dataset_id]["partitions"]}
+        require(actual == expected, f"Required partition coverage or filters differ: {dataset_id}")
+        partitions_checked += len(expected)
     require(release_check(metadata) == manifest["release_consistency"], "Release report mismatch")
     cross_receipt = next(item for item in manifest["references"]
                          if item["role"] == "zip_county_crosswalk")
@@ -555,6 +597,8 @@ def verify(root):
     services = datasets["m5eg-upu5"]
     require({row[CCN] for row in services} <= roster_ccns, "Service ZIP has no exact-CCN roster record")
     return {"status": "passed", "checked_at": now(), "datasets_checked": len(REGISTRY),
+            "required_partitions_checked": partitions_checked,
+            "service_office_ccns_checked": sorted(foreign_ccns),
             "api_pages_checked": pages_checked, "hashes_checked": len(manifest["artifacts"]),
             "release_consistency": manifest["release_consistency"], **derived["coverage"]}
 

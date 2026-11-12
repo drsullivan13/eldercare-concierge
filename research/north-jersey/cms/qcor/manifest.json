@@ -1,0 +1,555 @@
+{
+  "schema_version": 1,
+  "coverage": "Complete published-export NJ selection, not all surveys ever",
+  "county_scope": [
+    "Bergen",
+    "Essex",
+    "Hudson",
+    "Morris",
+    "Passaic",
+    "Union"
+  ],
+  "county_scope_basis": "Current POS office FIPS",
+  "migration_notice": {
+    "url": "https://qcor.cms.gov/HHAs",
+    "exact_text": "Due to systems migrations, HHA information generated from the Provider, Survey, and Deficiency Reports on this page is only accurate and/or available through May 19, 2021.",
+    "casper_source_date": "11/08/2026"
+  },
+  "export_workbook_dates": {
+    "created": "2026-11-11T04:50:32Z",
+    "modified": "2026-11-11T04:51:59Z"
+  },
+  "pos_provenance": {
+    "basis": "Exact raw page reused from the independently retained POS supplement",
+    "supplement_file": "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/supplement.json",
+    "supplement_sha256": "e8cd3646116e6a73c9a0f6c7eda153640b492d1712aee9879bb0aa0dbe405ddc",
+    "release": {
+      "dataset_type_id": "086e48c4-87a6-4be1-8823-29e8da8f225b",
+      "dataset_version_id": "8b2c0a70-7e47-4b0f-a592-e51eb315cead",
+      "release": "Q3 2026",
+      "release_period_start": "2026-07-01",
+      "page_created_date": "2026-10-14",
+      "page_modified_date": "2026-10-16",
+      "metadata_revision_timestamp": "2026-10-16T18:38:14+00:00",
+      "primary_download_url": "https://data.cms.gov/sites/default/files/2026-10/d7e32873-6bf0-4719-9048-376972900d5c/POS_iQIES.DATA.Q3_2026.csv",
+      "documentation_url": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-internet-quality-improvement-and-evaluation-system/api-docs",
+      "dictionary_url": "https://data.cms.gov/sites/default/files/2026-10/1fea27a3-7603-4fd2-bc2a-3e868934a9bf/iQIES%20POS%20Data%20Dictionary%20Oct2026.xlsx"
+    }
+  },
+  "counts": {
+    "national_export_rows": 95296,
+    "national_export_surveys": 21531,
+    "national_export_surveys_with_citation_rows": 11905,
+    "national_export_surveys_with_memo_rows_only": 9626,
+    "national_export_tag_types": {
+      "Condition": 3807,
+      "Element": 35782,
+      "Memo": 32298,
+      "Standard": 23409
+    },
+    "listing_header_counts": {
+      "listing": 11919,
+      "national-all": 21531,
+      "national-without": 9612,
+      "nj-with": 84,
+      "nj-without": 47,
+      "nj-all": 131
+    },
+    "national_export_survey_date_min": "2018-01-02",
+    "national_export_survey_date_max": "2026-10-30",
+    "nj_export_rows": 506,
+    "nj_export_surveys": 131,
+    "nj_export_ccns": 39,
+    "nj_export_surveys_with_citation_rows": 84,
+    "nj_export_surveys_with_memo_rows_only": 47,
+    "nj_export_tag_types": {
+      "Condition": 17,
+      "Element": 131,
+      "Memo": 200,
+      "Standard": 158
+    },
+    "nj_export_survey_date_min": "2018-01-09",
+    "nj_export_survey_date_max": "2026-09-10",
+    "nj_pos_offices": 75,
+    "nj_pos_certified_offices": 38,
+    "target_certified_offices": 18,
+    "target_certified_office_counties": {
+      "Bergen": 5,
+      "Essex": 4,
+      "Hudson": 3,
+      "Morris": 3,
+      "Passaic": 2,
+      "Union": 1
+    },
+    "target_offices_with_published_surveys": 17,
+    "target_export_surveys": 60,
+    "target_export_rows": 262,
+    "target_citation_rows": 167,
+    "target_memo_rows": 95,
+    "target_export_tag_types": {
+      "Condition": 6,
+      "Element": 81,
+      "Memo": 95,
+      "Standard": 80
+    },
+    "target_ccns_without_published_surveys": [
+      "317022"
+    ],
+    "nj_export_ccns_absent_from_pos": []
+  },
+  "receipts": {
+    "raw/hha-2567.xlsx": {
+      "requestedUrl": "https://qcor.cms.gov/downloadHHA2567",
+      "effectiveUrl": "https://qcor.cms.gov/downloadHHA2567",
+      "retrievedAt": "2026-11-12T15:03:56.406628+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:03:53 GMT",
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "Content-Length": "65769232",
+        "Connection": "close",
+        "Strict-Transport-Security": "max-age=31556927;includeSubDomains",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Disposition": "attachment; filename=\"HHA_2567s_2018_to_2026YTD.xlsx\"",
+        "Server": "Apache"
+      },
+      "sha256": "cc1c1c0bda911386d26beb565fa53c733c3a65a67dfd830506af114b210aae47",
+      "bytes": 65769232
+    },
+    "raw/hhas.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHAs",
+      "effectiveUrl": "https://qcor.cms.gov/HHAs",
+      "retrievedAt": "2026-11-12T15:03:58.874568+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:03:58 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "e7b85dc1f735f96c3077fdffbe2a7d8b25fdfccae8461fde824d4ba1a75b9ec0",
+      "bytes": 62859
+    },
+    "raw/listing.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports",
+      "retrievedAt": "2026-11-12T15:03:58.724584+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:03:56 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "eb937a37030011c9622e5fa44a92c738ccba23e9ec5481c3ac19fdcb5cd483c2",
+      "bytes": 285093
+    },
+    "raw/national-all.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?deficiencyFilter=all",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?deficiencyFilter=all",
+      "retrievedAt": "2026-11-12T15:07:58.184799+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:07:37 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "4802d608ccd8b437e0dfc6dc24ae810d33aff6c3039eb62bb42037968556dfad",
+      "bytes": 285156
+    },
+    "raw/national-without.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?deficiencyFilter=without",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?deficiencyFilter=without",
+      "retrievedAt": "2026-11-12T15:08:17.905754+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:07:58 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "2ea2ad11d269ee5e160d2ca4557a1a53e59486665f0d5f85402739fb998b2ca7",
+      "bytes": 165537
+    },
+    "raw/nj-all-001.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=1",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=1",
+      "retrievedAt": "2026-11-12T15:09:11.288116+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:08:56 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "cebb75af9944bc07a52e129f625b24f27eb1faa11d3e64c00885c7b0e27b4600",
+      "bytes": 213906
+    },
+    "raw/nj-all-002.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=2",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=2",
+      "retrievedAt": "2026-11-12T15:09:27.248479+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:09:11 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "083056beacdc5d592bfdca747513f9d5665fbbc642c743cde3bbdfafd5710f1e",
+      "bytes": 243199
+    },
+    "raw/nj-all-003.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=3",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=3",
+      "retrievedAt": "2026-11-12T15:09:42.676664+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:09:27 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "13c8c60e60f2396b3734e1620c261f8b6454925f3b5b3fe493195d08cced5172",
+      "bytes": 191447
+    },
+    "raw/nj-all-004.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=4",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=4",
+      "retrievedAt": "2026-11-12T15:09:57.894282+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:09:42 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "3136b00d04858796c6d3b742e7cafc5237cd0f654a2142340f6f37aa4f21b443",
+      "bytes": 194984
+    },
+    "raw/nj-all-005.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=5",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=5",
+      "retrievedAt": "2026-11-12T15:10:13.150825+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:09:57 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "362633e250f29c83f7fd8fd920c7b1bdb6ee57f0c84280390748a9e11e2a4dff",
+      "bytes": 211999
+    },
+    "raw/nj-all-006.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=6",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=6",
+      "retrievedAt": "2026-11-12T15:10:29.582886+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:10:13 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "61988778dda6bf0233d0755f32c915a267f073a7656f6c046f5fadfb8c4b99d6",
+      "bytes": 193087
+    },
+    "raw/nj-all-007.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=7",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=7",
+      "retrievedAt": "2026-11-12T15:10:46.701966+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:10:29 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "39a6597002e8c89cb555991c86975e78712164ad33552fa3aac4f5ec578da581",
+      "bytes": 191920
+    },
+    "raw/nj-all-008.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=8",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=8",
+      "retrievedAt": "2026-11-12T15:11:01.170740+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:10:46 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "d52802faac1dc0eb102257662e7c8b09d965e982e5a305bc85b9b86381e6d5a1",
+      "bytes": 226227
+    },
+    "raw/nj-all-009.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=9",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=9",
+      "retrievedAt": "2026-11-12T15:11:18.448686+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:11:01 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "a52d0251f83791a570485fac35e028ab7c5e82467de9f0cfc6e64b49d122d502",
+      "bytes": 183679
+    },
+    "raw/nj-all-010.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=10",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=10",
+      "retrievedAt": "2026-11-12T15:11:34.254182+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:11:18 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "f3d36faf5bfb5f4e4dda65857f38cece18e23a10f09af4da5de6a5b39cf3cc78",
+      "bytes": 182647
+    },
+    "raw/nj-all-011.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=11",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=11",
+      "retrievedAt": "2026-11-12T15:12:17.550138+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:12:01 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "40c918201db8d549850e5aacddf89e813e1714ea42c2e603c0d1f58be44bda88",
+      "bytes": 195900
+    },
+    "raw/nj-all-012.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=12",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=12",
+      "retrievedAt": "2026-11-12T15:12:34.863406+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:12:18 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "f044b49f78eb6e25cce9dfbb4ceb52122658805365b0ae229646ec1dead498ec",
+      "bytes": 181807
+    },
+    "raw/nj-all-013.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=13",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=13",
+      "retrievedAt": "2026-11-12T15:12:52.469671+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:12:35 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "95b0bb7dbe71c9f4b172d2d9e4f4abd5bab2105c82a2f8170a00df7373e7973d",
+      "bytes": 207712
+    },
+    "raw/nj-all-014.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=14",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=all&page=14",
+      "retrievedAt": "2026-11-12T15:13:00.499727+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:12:53 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "f1128573b6a248d4c8a85ac7331ec0a382de69ec39bb1ed3f3e688eaef2cb00f",
+      "bytes": 116755
+    },
+    "raw/nj-with.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=with",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=with",
+      "retrievedAt": "2026-11-12T15:08:38.757383+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:08:17 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "eb34768dff28bb9cce278e82bb12d35171c4047887f88d8f54f9ee56fc2c7777",
+      "bytes": 273945
+    },
+    "raw/nj-without.html": {
+      "requestedUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=without",
+      "effectiveUrl": "https://qcor.cms.gov/HHA_2567_Reports?states=NJ&deficiencyFilter=without",
+      "retrievedAt": "2026-11-12T15:08:55.860010+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 12 Nov 2026 15:08:38 GMT",
+        "Content-Type": "text/html;charset=ISO-8859-1",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-store",
+        "Pragma": "no-cache",
+        "Expires": "-1",
+        "X-Frame-Options": "DENY",
+        "Server": "Apache"
+      },
+      "sha256": "42158fd88bea5bdfd03241d3855e662ab1cb23d9771e4922ae66045b5761d607",
+      "bytes": 162701
+    },
+    "raw/pos-nj-home-health.json": {
+      "requestedUrl": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0",
+      "effectiveUrl": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0",
+      "retrievedAt": "2026-11-12T15:06:12.536892+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Last-Modified": "Thu, 12 Nov 2026 15:02:15 GMT",
+        "ETag": "\"1794495735-gzip\""
+      },
+      "sha256": "cb6dd2ddea08f18e83a49233ad2b2a8be33fb0e95ef370293c976cdc3f87cb31",
+      "bytes": 457286
+    }
+  },
+  "checks": {
+    "national_all_header_matches_distinct_export_surveys": true,
+    "all_nj_listing_pages_retained": 14,
+    "nj_listing_and_export_event_identities_match": true,
+    "nj_listing_and_export_tag_sets_match": true
+  },
+  "unresolved": [
+    {
+      "scope": "national",
+      "export_with_citation_rows": 11905,
+      "export_memo_only": 9626,
+      "listing_with_header": 11919,
+      "listing_without_header": 9612,
+      "status": "Source filter classification discrepancy, cause unresolved"
+    }
+  ],
+  "limitations": [
+    "Complete selection of NJ rows in this published export, not all surveys ever.",
+    "The default listing selects surveys with deficiencies, not every published survey.",
+    "The separate 2567 export includes post-migration records. The HHAs notice does not establish that this export is a complete current inspection history.",
+    "Missing surveys or citations do not establish a clean record.",
+    "Memo tags E0000 and G0000 are initial comments, not deficiency citations.",
+    "Current POS office counties do not establish historical office location or service areas.",
+    "Agencies outside the six office counties may serve these counties. Service coverage is not established by this collection.",
+    "Narratives are exact decoded source cells. Their accuracy, completeness, and any Excel cell-length truncation remain CMS source limitations.",
+    "Report URLs use the source listing's CCN/date parameters, not its event ID. Retain the separate event ID when distinguishing surveys."
+  ],
+  "artifacts": {
+    "surveys.json": {
+      "sha256": "c613c0b23bfd85feb6ff2020943614d06ad7cccba98aaa7b8375f43eedc4cdfd",
+      "bytes": 1734455
+    },
+    "agencies.json": {
+      "sha256": "04c752e7ab8e998974053e66d26d2abeada09c4598da1004aa0ff5dc4d47b217",
+      "bytes": 617837
+    },
+    "pos-source.json": {
+      "sha256": "033913b3765e2834cb0f10fade5b754dcb7cdf99e5985d49ce84fc98b71e9d49",
+      "bytes": 1132
+    }
+  }
+}
