@@ -1,5 +1,5 @@
 "use client";
-import { legacyMarket } from "@/lib/market-registration";
+import { DEFAULT_DASHBOARD_SEARCH_ZIP } from "@/lib/dashboard-defaults";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
@@ -10,7 +10,7 @@ function makeWorkspace(name = "", demo = false): Workspace {
     profile: {
       name,
       relationship: "A parent",
-      zip: demo ? legacyMarket.defaultZip : "",
+      zip: demo ? DEFAULT_DASHBOARD_SEARCH_ZIP : "",
       careTypes: [],
     },
     savedProviderIds: [],

@@ -120,6 +120,7 @@ test("collapsed filters apply care types and mobile controls remain usable witho
   page,
 }) => {
   await page.goto("/dashboard?demo=1");
+  await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Care type", exact: true })
     .selectOption("life-plan");

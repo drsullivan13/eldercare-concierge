@@ -148,6 +148,7 @@ test("care alerts remain visible while source detail is disclosed on demand", as
     (record) => record.cms?.abuse && record.cms?.specialFocus,
   )!;
   await openDemo(page);
+  await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
@@ -515,6 +516,7 @@ test("families filter and compare options, then use the place section selector w
   page,
 }) => {
   await openDemo(page);
+  await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
@@ -1171,6 +1173,7 @@ test("continuing-care campuses retain separate identities and label ZIP estimate
   ).toHaveLength(2);
   expect(campuses.providers.every((p) => p.cms === undefined)).toBe(true);
   await openDemo(page);
+  await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
