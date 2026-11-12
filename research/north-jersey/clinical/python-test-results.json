@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "testsRun": 18,
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/regions/clinical-nj-test.py",
+  "existingChecksUsed": [
+    "build-region.py INSPECTION, HOME_HEALTH, CMS"
+  ],
+  "newChecks": [
+    "test_all_139_ccns_match_original_roster",
+    "test_bounded_citations_preserve_original_findings_and_dates",
+    "test_certified_18_offices_derive_from_original_fips_not_service_zips",
+    "test_clinical_17_measures_have_published_counts_not_fabricated_denominators",
+    "test_comparators_have_retained_nj_and_national_source_rows",
+    "test_consumer_components_are_percent_and_spending_ratio_is_retained",
+    "test_deterministic_default_cli_from_outside_checkout",
+    "test_every_agency_exact_ccn_and_original_rows",
+    "test_every_metric_raw_value_status_and_original_footnote",
+    "test_every_nursing_evidence_row_matches_original_and_provenance",
+    "test_every_output_and_consumed_input_hash",
+    "test_facility_specific_dates_ratings_staffing_and_missing",
+    "test_numeric_and_text_footnotes_and_missing_boundary",
+    "test_penalties_preserve_amounts_denials_and_complete_totals",
+    "test_runtime_fragments_pass_existing_strict_builder_schemas",
+    "test_service_only_8_agencies_never_enter_office_fragment",
+    "test_source_definitions_preserve_all_original_rows",
+    "test_source_specific_clinical_survey_and_staffing_periods"
+  ]
+}

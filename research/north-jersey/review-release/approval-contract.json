@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "assessmentDate": "2026-11-12",
+  "ledgerShape": {"schemaVersion": 1, "assessmentDate": "2026-11-12", "approvals": []},
+  "approvalShape": {
+    "id": "unique-editorial-approval-id",
+    "providerId": "exact-runtime-provider-id",
+    "officialId": "exact-crosswalk-officialId",
+    "observation": {"path": "research/north-jersey/reviews/pilot-direct-check.json", "sha256": "64-lowercase-hex-file-hash", "pointer": "/direct_observation"},
+    "material": {"path": "research/north-jersey/review-release/checks/example.md", "sha256": "64-lowercase-hex-file-hash"},
+    "url": "https://www.mylivingchoice.com/property/example",
+    "checkedAt": "2026-11-12",
+    "access": "full-page",
+    "platform": "MyLivingChoice",
+    "identity": {"name": "Exact observed name", "address": "Exact observed street", "city": "Exact observed city", "state": "New Jersey", "zip": null, "careUnit": "Exact observed care unit"},
+    "aggregate": {"rating": 4, "scale": 5, "count": 185, "asOf": null, "scope": "consumer", "sourceFamily": "google"},
+    "reason": "Independent full-page identity and published aggregate check. Explain exact licensed care-unit reconciliation and any missing observed ZIP."
+  },
+  "rules": [
+    "All approvalShape fields are required. No additional fields. Paths are repository-relative regular files inside research/north-jersey. Hashes bind exact file bytes. JSON pointer selects the retained observation object, not a search snippet.",
+    "identity preserves the observation's exact strings and null ZIP. aggregate preserves the observed published values. MyLivingChoice Google republication uses sourceFamily google.",
+    "material is the separately retained independent FetchUrl full-page response, not the collection observation JSON. Its text must include the URL, observed name and published rating/count evidence. Approval checkedAt is the independent check date.",
+    "Only approved consumer aggregates eligible under the existing TypeScript scorer enter locationResearch. Ineligible approvals are audited as excluded. Unapproved observations remain pending, never silently approved.",
+    "Missing observed ZIP may resolve only through exact street/city/state/care-unit agreement and one unambiguous included official crosswalk. The source identity ZIP remains null.",
+    "Default CLI reads this directory's approvals.json. It writes generated outputs only in review-release and never changes runtime files. Assessment is explicitly 2026-11-12."
+  ]
+}

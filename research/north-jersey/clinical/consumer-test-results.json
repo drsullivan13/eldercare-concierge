@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "command": "TSX_DISABLE_CACHE=1 node --import tsx scripts/regions/clinical-nj-consumer-test.ts",
+  "nursingLookups": 139,
+  "homeHealthLookups": 18,
+  "staticTypeDiagnostics": 0,
+  "staticTypeCheck": "Actual JSON literals satisfy exported snapshot types through an in-memory TypeScript program. No emitted files.",
+  "registryNote": "The real APIs use the published NJ provider identities and the generated clinical fragments.",
+  "concreteLookup": {
+    "nursing": {
+      "ccn": "315005",
+      "providerName": "SPRING GROVE REHABILITATION AND HEALTHCARE CENTER",
+      "providerId": "cms-315005",
+      "careCompareUrl": "https://www.medicare.gov/care-compare/details/nursing-home/315005",
+      "retrieved": "2026-11-12",
+      "limit": 1,
+      "maximumLimit": 25,
+      "dictionaryUrl": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/nursing_home/NH_Data_Dictionary.pdf",
+      "scopeSeverityGuideUrl": "https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/som107c07pdf.pdf#page=42",
+      "sources": [
+        {
+          "datasetId": "r5ix-sfxw",
+          "downloadUrl": "https://data.cms.gov/provider-data/sites/default/files/resources/327fc64eff7ccc64fd7d23c853bb1ade_1792181729/NH_HealthCitations_Oct2026.csv",
+          "modified": "2026-10-01",
+          "released": "2026-10-28",
+          "title": "Health Deficiencies",
+          "url": "https://data.cms.gov/provider-data/dataset/r5ix-sfxw"
+        },
+        {
+          "datasetId": "g6vv-u9sr",
+          "downloadUrl": "https://data.cms.gov/provider-data/sites/default/files/resources/4d0e526b8cf3d0b78294803291483073_1792181741/NH_Penalties_Oct2026.csv",
+          "modified": "2026-10-01",
+          "released": "2026-10-28",
+          "title": "Penalties",
+          "url": "https://data.cms.gov/provider-data/dataset/g6vv-u9sr"
+        }
+      ],
+      "healthCitations": {
+        "available": true,
+        "total": 32,
+        "returned": 1,
+        "hasMore": true,
+        "records": [
+          {
+            "category": "Resident Assessment and Care Planning Deficiencies",
+            "complaint": false,
+            "correctionDate": "2026-04-30",
+            "correctionStatus": "Deficient, Provider has date of correction",
+            "description": "Ensure each resident receives an accurate assessment.",
+            "id": "01687ff1f9ef8e7cf209",
+            "infectionControl": false,
+            "inspectionCycle": "1",
+            "processingDate": "2026-10-01",
+            "scopeSeverityCode": "D",
+            "standard": true,
+            "surveyDate": "2026-03-30",
+            "surveyFootnote": null,
+            "tag": "F0641",
+            "underIDR": false,
+            "underIIDR": false,
+            "scopeSeverityLabel": "Isolated · No actual harm; potential for more than minimal harm, not immediate jeopardy"
+          }
+        ]
+      },
+      "penalties": {
+        "available": true,
+        "total": 1,
+        "returned": 1,
+        "hasMore": false,
+        "records": [
+          {
+            "date": "2024-10-29",
+            "fineAmount": 10527,
+            "fineId": "18062",
+            "id": "24e604109dc175c10fc9",
+            "paymentDenialLengthDays": null,
+            "paymentDenialStartDate": null,
+            "processingDate": "2026-10-01",
+            "type": "Fine"
+          }
+        ],
+        "fineCount": 1,
+        "paymentDenialCount": 0
+      }
+    },
+    "homeHealth": {
+      "providerId": "cms-317002",
+      "ccn": "317002",
+      "timelyCare": {
+        "betterDirection": "higher",
+        "calculationNote": "Published rate retained, not recomputed from counts. Counts are measure-specific, not survey denominators.",
+        "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+        "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+        "id": "timely-care",
+        "label": "How often the home health team began their patients' care in a timely manner",
+        "period": {
+          "end": "2025-12-31",
+          "label": "January 01, 2025-December 31, 2025",
+          "start": "2025-01-01"
+        },
+        "publishedDenominator": {
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "rawValue": "3,194",
+          "sourceColumn": "denominator_for_how_often_the_home_health_team_began_their__9354",
+          "status": "published",
+          "unit": "episodes",
+          "value": 3194
+        },
+        "publishedNumerator": {
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "rawValue": "3,186",
+          "sourceColumn": "numerator_for_how_often_the_home_health_team_began_their_pa_ada1",
+          "status": "published",
+          "unit": "episodes",
+          "value": 3186
+        },
+        "rate": {
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "rawValue": "99.75",
+          "sourceColumn": "how_often_the_home_health_team_began_their_patients_care_in_d440",
+          "status": "published",
+          "unit": "percent",
+          "value": 99.75
+        }
+      },
+      "completedSurveys": {
+        "footnoteCodes": [],
+        "rawFootnote": "",
+        "rawValue": "330",
+        "sourceColumn": "number_of_completed_surveys",
+        "status": "published",
+        "unit": "completed surveys",
+        "value": 330
+      },
+      "surveyPeriod": {
+        "end": "2026-03-31",
+        "label": "April 1, 2025 to March 31, 2026",
+        "start": "2025-04-01"
+      },
+      "stateComparator": {
+        "code": "NJ",
+        "completedSurveys": {
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "rawValue": "14477",
+          "sourceColumn": "number_of_completed_surveys",
+          "status": "published",
+          "unit": "completed surveys",
+          "value": 14477
+        },
+        "label": "New Jersey",
+        "measures": [
+          {
+            "id": "professional",
+            "label": "Percent of patients who reported that their home health team gave care in a professional way",
+            "percent": {
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "rawValue": "88",
+              "sourceColumn": "percent_of_patients_who_reported_that_their_home_health_tea_c7be",
+              "status": "published",
+              "unit": "percent",
+              "value": 88
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Percent of patients who reported that their home health team communicated well with them",
+            "percent": {
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "rawValue": "85",
+              "sourceColumn": "percent_of_patients_who_reported_that_their_home_health_tea_7896",
+              "status": "published",
+              "unit": "percent",
+              "value": 85
+            }
+          },
+          {
+            "id": "specific-care",
+            "label": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+            "percent": {
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "rawValue": "82",
+              "sourceColumn": "percent_of_patients_who_reported_that_their_home_health_tea_7ba5",
+              "status": "published",
+              "unit": "percent",
+              "value": 82
+            }
+          },
+          {
+            "id": "overall-care",
+            "label": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+            "percent": {
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "rawValue": "85",
+              "sourceColumn": "percent_of_patients_who_gave_their_home_health_agency_a_rat_187c",
+              "status": "published",
+              "unit": "percent",
+              "value": 85
+            }
+          },
+          {
+            "id": "recommend",
+            "label": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+            "percent": {
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "rawValue": "77",
+              "sourceColumn": "percent_of_patients_who_reported_yes_they_would_definitely__2707",
+              "status": "published",
+              "unit": "percent",
+              "value": 77
+            }
+          }
+        ],
+        "period": {
+          "end": "2026-03-31",
+          "label": "April 1, 2025 to March 31, 2026",
+          "start": "2025-04-01"
+        },
+        "releasedAt": "2026-10-21",
+        "responseRate": {
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "rawValue": "22",
+          "sourceColumn": "survey_response_rate",
+          "status": "published",
+          "unit": "percent",
+          "value": 22
+        },
+        "sourceFile": "research/north-jersey/clinical/sources/m5jg-jg7i.rows.json"
+      }
+    }
+  }
+}

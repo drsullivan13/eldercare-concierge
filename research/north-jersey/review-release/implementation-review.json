@@ -1,0 +1,14 @@
+{
+  "status": "Coordinator review findings. Read before finalizing or in follow-up.",
+  "sourceChecks": "32 independent FetchUrl checks are retained under source-checks/. Each preserves only identity, care label, published aggregate, FAQ aggregate, Google place IDs and a privacy-safe scope assessment.",
+  "neededChanges": [
+    "Actual-data acceptance requires all 22 approved checks, including records whose published count is below 10. Those are eligible aggregate evidence, with unrated TS score, not exclusions.",
+    "Current validate_identity requires literal normalized name equality, rejecting authentic listing variants such as Sunrise of Westfield vs SUNRISE ASSISTED LIVING OF WESTFIELD; Cornell managed by Autumn Lake vs CORNELL HALL; Bayada Assistive Care vs BAYADA HOME HEALTH CARE INC; Brandywine Summit by Monarch vs BRANDYWINE LIVING AT SUMMIT; appended Nursing Home In New Jersey suffixes. Encode explicit per-approval identity reconciliation binding observed exact name and exact runtime ID plus rationale, never rename observed fields or use unrestricted fuzzy matches.",
+    "Current observed address comparison rejects MORRIS VIEW PO BOX 437 and Bayada 1st Floor vs 1ST FL. Normalize postal delivery suffix and exact floor abbreviations deliberately without dropping suite/unit identity. Need tests.",
+    "Retained listing-index/discovery/pages/*.json are actual full-page material. Most normalized observation records are empty due collection parser limitations, but retained page heads, Types of Care, Reviews and FAQ hold authentic evidence. Add parsing for these retained page observations, preferably reuse existing parser if adequate; do not let empty normalized candidate prevent approval of independently verified material. Current registry normalizes retained page JSON into no identity/aggregate. Approvals will point directly to retained page JSON at empty pointer, plus separate source-checks JSON independent check.",
+    "For direct retained page parsing preserve observed state New Jersey, observed ZIP if explicitly visible, and published average/count/scale from Reviews and FAQ only. No regional/nearby/AI values.",
+    "Current material validation compares numeric string 4.0 to text 4, so accept equal numeric values as numbers with boundaries, not string spelling. Better compare parsed independent identity and published aggregate fields, not mere number occurrence anywhere.",
+    "Expose sourceCheck QA decisions separately for excluded and pending material, not generic independent approval required for employee and wrong-location contamination already established."
+  ],
+  "scope": "No edits outside scripts/regions/release-reviews*.py and review-release/. No commit or push."
+}

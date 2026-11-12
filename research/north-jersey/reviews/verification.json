@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-12T15:44:13Z",
+  "as_of": "2026-11-12",
+  "final_run": {
+    "path": "research/north-jersey/reviews/runs/2026-11-12-d85f52c64856",
+    "first_stage_status": "created",
+    "repeat_stage_status": "unchanged",
+    "repeat_proves": "Identical inputs reproduce identical run bytes; the tool never overwrites an existing run folder.",
+    "counts": {
+      "roster_rows": 2094,
+      "rejected_rows": 0,
+      "locations": 2080,
+      "in_scope_rows": 1783,
+      "out_of_scope_rows": 214,
+      "unresolved_geography_rows": 102,
+      "unresolved_identity_rows": 699,
+      "observations": 31,
+      "candidates": 1,
+      "provider_facts": 1,
+      "leads": 11,
+      "errors": 0
+    },
+    "observation_statuses": { "accepted": 24, "excluded": 7, "invalid": 0 },
+    "staged": {
+      "candidate": "nj-doh:NJ02A00 Jewish Home Assisted Living, MyLivingChoice republished Google aggregate 4.3 of 5 from 11 ratings, awaiting editorial review, no score computed",
+      "provider_facts": "nj-dca-hcsf:HP0427400 Agape Home Care Agency, provider-published offerings, prices unknown, openings unknown"
+    },
+    "honest_exclusions": [
+      "checked-pilot-cms-315488-mlc: observed ZIP missing",
+      "checked-union-morris-NJ90122-mlc: observed ZIP missing",
+      "checked-union-morris-NJ20A014-mlc: observed ZIP missing; population ambiguous (displayed review concerns Sunrise of Madison)",
+      "checked-union-morris-NJ90144-mlc: observed ZIP missing; observed alias Sunrise of Westfield differs from official name",
+      "checked-union-morris-NJ13A012-mlc: observed ZIP missing",
+      "checked-union-morris-NJ60A001-mlc: observed ZIP missing",
+      "checked-home-HP0424700-provider: no permitted source-access entry; exact office identity unresolved on the checked page"
+    ]
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/regions/reviews.test.py",
+      "result": "21 tests passed",
+      "covers": "Synthetic CLI behavior, fail-closed access registry, denied hosts, trailing-dot hosts, missing registry, license-status retention, geography labels, historical CCRC record-kind block"
+    },
+    {
+      "command": "python3 -B scripts/regions/reviews.integration.test.py",
+      "result": "9 tests passed",
+      "covers": "Actual 2,094-row reconciliation against retained receipts, unresolved geography separation, historical CCRC ineligibility, real batch outcomes, provenance hashes, repeat-build byte equality"
+    },
+    {
+      "command": "npx tsx --test tests/experience-score.test.ts tests/location-research.test.ts",
+      "result": "23 tests passed",
+      "covers": "Existing Harbor scoring and location-research behavior; scoring policy, code and docs unchanged"
+    },
+    {
+      "command": "python3 -B scripts/regions/reviews.py stage --as-of 2026-11-12 --observations research/north-jersey/reviews/observations/checked-batch.json (run twice)",
+      "result": "created then unchanged, zero errors",
+      "covers": "Real batch staging and reproducibility"
+    }
+  ],
+  "independent_reviews": [
+    {
+      "file": "research/north-jersey/reviews/review-audit.md",
+      "model": "Opus 5.5",
+      "scope": "CLI correctness, provenance, access handling",
+      "disposition": "research/north-jersey/reviews/review-disposition.md"
+    },
+    {
+      "file": "research/north-jersey/reviews/review-final-evidence.md",
+      "model": "Sonnet 5",
+      "scope": "Assembled evidence fidelity to retained observations"
+    }
+  ],
+  "scope_limits": [
+    "No application code, scoring policy, snapshot, commit, push or external write.",
+    "Full lint, build and end-to-end suites are out of scope for this research-only change; the focused existing suites above passed.",
+    "A checked key means at least one retained outcome, including discovery gaps and access gaps. It is not a survey of every source.",
+    "Full historical terms and robots responses remain session-local; minimal findings and log hashes are retained in access-evidence.md."
+  ]
+}
