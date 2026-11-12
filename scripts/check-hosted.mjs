@@ -32,11 +32,24 @@ try {
   );
   await expect(page.locator('a[href="/signup"]')).toHaveCount(0);
 
-  const search = await context.request.get(
-    `${origin}/api/search?zip=02459&radius=10&category=nursing-home`,
+  // Use the browser's authenticated network path, including its proxy and
+  // deployment-protection cookie, exactly as the app's own fetches do.
+  async function get(path) {
+    return page.evaluate(async (requestPath) => {
+      const response = await fetch(requestPath);
+      return {
+        status: response.status,
+        headers: Object.fromEntries(response.headers),
+        body: await response.json(),
+      };
+    }, path);
+  }
+
+  const search = await get(
+    "/api/search?zip=02459&radius=10&category=nursing-home",
   );
-  expect(search.status()).toBe(200);
-  const results = await search.json();
+  expect(search.status).toBe(200);
+  const results = search.body;
   expect(results.catalogTotal).toBe(521);
   expect(results.providers.length).toBeGreaterThan(0);
   expect(
@@ -44,15 +57,13 @@ try {
       (p) => p.distanceMiles <= 10 && p.category === "nursing-home",
     ),
   ).toBe(true);
-  const inspections = await context.request.get(
-    `${origin}/api/evidence?ccn=${results.providers[0].cms.ccn}`,
+  const inspections = await get(
+    `/api/evidence?ccn=${results.providers[0].cms.ccn}`,
   );
-  expect(inspections.status()).toBe(200);
-  const homeHealth = await context.request.get(
-    `${origin}/api/home-health-evidence?providerId=vna-care`,
-  );
-  expect(homeHealth.status()).toBe(200);
-  const evidence = await homeHealth.json();
+  expect(inspections.status).toBe(200);
+  const homeHealth = await get("/api/home-health-evidence?providerId=vna-care");
+  expect(homeHealth.status).toBe(200);
+  const evidence = homeHealth.body;
   expect(
     evidence.agencies.map((a) => [
       a.ccn,
@@ -62,9 +73,9 @@ try {
     ["227068", 4],
     ["227098", 3],
   ]);
-  const anonymous = await context.request.get(`${origin}/api/workspace`);
-  expect(anonymous.status()).toBe(401);
-  expect(anonymous.headers()["cache-control"]).toContain("no-store");
+  const anonymous = await get("/api/workspace");
+  expect(anonymous.status).toBe(401);
+  expect(anonymous.headers["cache-control"]).toContain("no-store");
 
   await page
     .locator("form.quick-search")
@@ -120,7 +131,7 @@ try {
     catalogTotal: results.catalogTotal,
     nursingResultsWithin10Miles: results.providers.length,
     homeHealthCcns: evidence.agencies.map((a) => a.ccn),
-    anonymousWorkspaceStatus: anonymous.status(),
+    anonymousWorkspaceStatus: anonymous.status,
     appSignInRequired: false,
     localSaveReload: true,
     mobileOverflow: false,

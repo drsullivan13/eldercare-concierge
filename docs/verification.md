@@ -10,6 +10,7 @@ The current user flow is landing → browser-local workspace without sign-in →
 - Twelve public/dashboard accessibility checks plus eight scrolled evidence, comparison and map states: no violations returned after contrast fixes.
 - Production dependency audit: no known vulnerabilities reported.
 - Catalog, inspection and home-health evidence rebuilds: byte-identical.
+- Hosted Vercel smoke check: pass at 01:56 UTC. Direct dashboard access, 521-record catalog, 57 nursing-home results within 10 miles of 02459, inspection and home-health endpoints, shortlist save/reload, legacy account redirects, mobile layout and anonymous workspace denial all passed with no uncaught browser errors.
 
 ## Completed locally
 
@@ -44,7 +45,9 @@ These are real local database checks. They include a regression against broad de
 
 ## Hosting status
 
-Source is published at [drsullivan13/eldercare-concierge](https://github.com/drsullivan13/eldercare-concierge). The Vercel project is `eldercare-concierge`, with alias `https://eldercare-concierge-one.vercel.app`; deployment protection remains enabled. The latest POC changes are being published and checked.
+Source is published at [drsullivan13/eldercare-concierge](https://github.com/drsullivan13/eldercare-concierge). The Vercel project is `eldercare-concierge`, with alias `https://eldercare-concierge-one.vercel.app`; deployment protection remains enabled. Application commit `ab3ef91` deployed successfully as `dpl_C2cJD18CmQKu9QY7xchSC4PCV3Yk`, and the hosted browser check passed. Subsequent documentation/test-script changes do not change application behavior.
+
+`scripts/check-hosted.mjs` repeats the hosted smoke test when supplied an authorized preview URL through `HARBOR_PREVIEW_URL`. It uses the browser's actual network path and deployment-access cookie. Its local report stores only the app origin and results, not the share URL or cookies. A Vercel share link grants temporary preview access; it is separate from the deferred Harbor account flow.
 
 The dedicated Supabase project `harbor-eldercare-poc` has the workspace schema and owner policies applied. Live grants are restricted to authenticated SELECT/INSERT/UPDATE/DELETE, with no anonymous/PUBLIC table access. Security and performance advisors return no findings. Anonymous REST reads are denied. Only a URL and publishable key are configured; the app has no secret/service-role key.
 
