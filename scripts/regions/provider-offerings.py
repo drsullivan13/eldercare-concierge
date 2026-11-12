@@ -99,7 +99,7 @@ def release(provider, page):
     return record
 
 
-def build(market):
+def build(market, additional_pages=None):
     paths = [market / "runtime/providers.json", market / "runtime/crosswalk.json",
              market / "offerings/provider-page-checks.json"]
     inputs = [p.read_bytes() for p in paths]
@@ -108,6 +108,17 @@ def build(market):
     for r in crosswalk:
         if r["status"].startswith("included"):
             county_map[r["providerId"]].add(r["county"])
+    if additional_pages is not None:
+        supplemental_bytes = additional_pages.read_bytes()
+        existing = {r["providerId"]:r for r in pages}
+        for candidate in json.loads(supplemental_bytes):
+            pid = candidate["providerId"]
+            if pid in existing:
+                if existing[pid] != candidate:
+                    raise ValueError(f"Candidate conflicts with an existing provider page: {pid}")
+            else:
+                pages.append(candidate)
+                existing[pid] = candidate
     by_id = {p["providerId"]: p for p in pages}
     if len(by_id) != len(pages) or set(by_id) - {p["id"] for p in providers}:
         raise ValueError("Duplicate or unknown provider-page ID")
@@ -150,6 +161,8 @@ def build(market):
         rowsWithFacts=len(records), comparableRates=sum(r["comparableRates"] for r in coverage),
         providerPriceLocations=sum(r["publishedPriceFacts"]>0 for r in coverage),
         countyAndSetting=[dict(county=c,category=s,**v) for (c,s),v in sorted(groups.items())])
+    if additional_pages is not None:
+        summary["inputs"][str(additional_pages.resolve().relative_to(market.resolve()))] = hashlib.sha256(supplemental_bytes).hexdigest()
     return {"locationResearch.json":records, "coverage.json":coverage, "manifest.json":summary}
 
 
@@ -157,10 +170,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--market", type=Path, default=DEFAULT)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--additional-pages", type=Path, help="Reviewed candidate pages to stage with existing observations")
+    parser.add_argument("--output-dir", type=Path, help="Output directory for a candidate build")
     args = parser.parse_args()
-    result = build(args.market)
+    output = args.output_dir or args.market / "offerings"
+    if args.additional_pages and output.resolve() == (args.market / "offerings").resolve():
+        parser.error("Specify a separate --output-dir when staging additional pages")
+    result = build(args.market, args.additional_pages)
+    if not args.check:
+        output.mkdir(parents=True, exist_ok=True)
     for name,value in result.items():
-        path = args.market / "offerings" / name
+        path = output / name
         body = encode(value)
         if args.check:
             if path.read_bytes()!=body:

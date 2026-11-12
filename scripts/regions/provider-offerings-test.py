@@ -69,6 +69,26 @@ class OfferingEvidenceTests(unittest.TestCase):
         self.assertIsNone(vna["availability"]["sourceId"])
         self.assertFalse(self.coverage["north-jersey-hp-hp0254700"]["regulatedFacts"])
 
+    def test_targeted_candidate_scope_and_price_periods(self):
+        directory = offerings.DEFAULT / "offerings/hudson-passaic"
+        coverage = json.loads((directory/"checks.json").read_text())["rows"]
+        roster_ids = {pid for pid,row in self.coverage.items()
+                      if (row["county"]=="Hudson" and row["category"] in {"assisted-living","life-plan","nursing-home"})
+                      or (row["county"]=="Passaic" and row["category"]=="assisted-living")}
+        self.assertEqual(roster_ids, {r["providerId"] for r in coverage})
+        self.assertEqual(len(roster_ids),len(coverage))
+        pages = json.loads((directory/"pages.json").read_text())
+        self.assertEqual({r["providerId"] for r in pages},
+                         {r["providerId"] for r in coverage if r["result"].startswith("operator-")})
+        base_pages = json.loads((offerings.DEFAULT/"offerings/provider-page-checks.json").read_text())
+        ids = {p["providerId"] for p in base_pages}
+        candidate = self.release if all(p["providerId"] in ids for p in pages) else offerings.build(offerings.DEFAULT, directory/"pages.json")
+        brookdale = candidate["locationResearch.json"]["north-jersey-doh-nj70a003"]
+        self.assertEqual([5975,9365], [f["amount"]["min"] for f in brookdale["facts"] if f.get("amount")])
+        clifton = candidate["locationResearch.json"]["north-jersey-doh-nj25240"]
+        self.assertFalse(any(f.get("amount") for f in clifton["facts"]))
+        self.assertTrue(any("4,275" in f["text"] for f in clifton["facts"]))
+
     def test_generated_hashes_match_actual_bytes(self):
         for name, info in self.release["manifest.json"]["outputs"].items():
             body=(offerings.DEFAULT/"offerings"/name).read_bytes()

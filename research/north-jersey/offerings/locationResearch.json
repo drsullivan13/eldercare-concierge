@@ -8161,10 +8161,25 @@
         "numericValue": 170,
         "sourceId": "offering-a7ff04f669e5e3",
         "text": "State-reported unit capacity: 170. Current vacancies are unknown."
+      },
+      {
+        "amount": {
+          "asOf": null,
+          "currency": "USD",
+          "max": null,
+          "min": 7200,
+          "period": "month",
+          "type": "base-rent"
+        },
+        "asOf": null,
+        "id": "north-jersey-doh-nj16a023-offering-3",
+        "kind": "cost",
+        "sourceId": "offering-f8bfff8d9218d4",
+        "text": "Studio starting rate subject to availability: from $7,200 per month. Confirm the current quote."
       }
     ],
     "notes": [],
-    "providerDetailsReviewed": false,
+    "providerDetailsReviewed": true,
     "providerId": "north-jersey-doh-nj16a023",
     "reviewAggregates": [],
     "reviews": [],
@@ -8178,6 +8193,16 @@
         "publisher": "New Jersey Department of Health",
         "title": "NJ DOH licensed long-term care facilities",
         "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "offering-f8bfff8d9218d4",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "The Bristal Assisted Living",
+        "title": "The Bristal at Wayne",
+        "url": "https://thebristal.com/collection/wayne/"
       }
     ]
   },
@@ -8470,10 +8495,18 @@
         "numericValue": 100,
         "sourceId": "offering-a7ff04f669e5e3",
         "text": "State-reported unit capacity: 100. Current vacancies are unknown."
+      },
+      {
+        "amount": null,
+        "asOf": null,
+        "id": "north-jersey-doh-nj25240-offering-3",
+        "kind": "cost",
+        "sourceId": "offering-08248d69a3d795",
+        "text": "Floor-plan starting amount: from $4,275 (billing period unconfirmed). Confirm the current quote."
       }
     ],
     "notes": [],
-    "providerDetailsReviewed": false,
+    "providerDetailsReviewed": true,
     "providerId": "north-jersey-doh-nj25240",
     "reviewAggregates": [],
     "reviews": [],
@@ -8487,6 +8520,16 @@
         "publisher": "New Jersey Department of Health",
         "title": "NJ DOH licensed long-term care facilities",
         "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "offering-08248d69a3d795",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Mira Vie Senior Living",
+        "title": "Mira Vie at Clifton",
+        "url": "https://miravieseniorliving.com/communities/mira-vie-at-clifton/"
       }
     ]
   },
@@ -11523,10 +11566,18 @@
         "numericValue": 86,
         "sourceId": "offering-a7ff04f669e5e3",
         "text": "State-reported unit capacity: 86. Current vacancies are unknown."
+      },
+      {
+        "amount": null,
+        "asOf": null,
+        "id": "north-jersey-doh-nj70a000-offering-3",
+        "kind": "cost",
+        "sourceId": "offering-dbea41206a4ac4",
+        "text": "Floor-plan starting amount: from $3,095 (billing period unconfirmed). Confirm the current quote."
       }
     ],
     "notes": [],
-    "providerDetailsReviewed": false,
+    "providerDetailsReviewed": true,
     "providerId": "north-jersey-doh-nj70a000",
     "reviewAggregates": [],
     "reviews": [],
@@ -11540,6 +11591,16 @@
         "publisher": "New Jersey Department of Health",
         "title": "NJ DOH licensed long-term care facilities",
         "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "offering-dbea41206a4ac4",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Mira Vie Senior Living",
+        "title": "Mira Vie at West Milford",
+        "url": "https://miravieseniorliving.com/communities/mira-vie-at-west-milford/"
       }
     ]
   },
@@ -11705,10 +11766,40 @@
         "numericValue": 105,
         "sourceId": "offering-a7ff04f669e5e3",
         "text": "State-reported unit capacity: 105. Current vacancies are unknown."
+      },
+      {
+        "amount": {
+          "asOf": "2026-11-10",
+          "currency": "USD",
+          "max": null,
+          "min": 5975,
+          "period": "month",
+          "type": "base-rent"
+        },
+        "asOf": "2026-11-10",
+        "id": "north-jersey-doh-nj70a003-offering-3",
+        "kind": "cost",
+        "sourceId": "offering-0767a8c79eece5",
+        "text": "Assisted living private-pay basic rate; care or other fees additional: from $5,975 per month. Confirm the current quote."
+      },
+      {
+        "amount": {
+          "asOf": "2026-11-10",
+          "currency": "USD",
+          "max": null,
+          "min": 9365,
+          "period": "month",
+          "type": "base-rent"
+        },
+        "asOf": "2026-11-10",
+        "id": "north-jersey-doh-nj70a003-offering-4",
+        "kind": "cost",
+        "sourceId": "offering-0767a8c79eece5",
+        "text": "Memory care private-pay basic rate; care or other fees additional: from $9,365 per month. Confirm the current quote."
       }
     ],
     "notes": [],
-    "providerDetailsReviewed": false,
+    "providerDetailsReviewed": true,
     "providerId": "north-jersey-doh-nj70a003",
     "reviewAggregates": [],
     "reviews": [],
@@ -11722,6 +11813,16 @@
         "publisher": "New Jersey Department of Health",
         "title": "NJ DOH licensed long-term care facilities",
         "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "offering-0767a8c79eece5",
+        "kind": "provider",
+        "publishedAt": "2026-11-10",
+        "publisher": "Brookdale Senior Living",
+        "title": "Brookdale Wayne",
+        "url": "https://www.brookdale.com/en/communities/brookdale-wayne-nj.html"
       }
     ]
   },
