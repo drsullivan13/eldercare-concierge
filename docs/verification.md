@@ -11,7 +11,7 @@ The current user flow is landing → browser-local workspace without sign-in →
 - Independently reviewed frozen research inputs produce 122 numerical scores, all with limited source coverage. Known wrong-unit, industry-mixed, snippet-only and syndicated populations remain excluded. The same source-family rules and ten-review threshold apply.
 - The Facebook projection contains 31 findings from 39 observations across ten locations, with 32 observations withheld and coverage for 22 entities. The original importer still treats all 71 raw observations as pending; the separate [publication audit](facebook-publication.md) records the editorial projection and its limits.
 - Eight provider-confirmed address corrections were applied to both the local catalog and private Supabase registry. The database check confirmed zero enabled Yelp sources afterward.
-- The hosted check for this release is recorded below after publication.
+- Hosted smoke check passed at 12:49 UTC on application commit `498fafaf14200b83bd8854bf522250b0258cacdf`, deployment `dpl_EJSYqBMBpowjkqu6XeN4xDvwsABT`, through the existing protected production alias. It verified 122 scores, 399 unrated records, 22 Facebook coverage entities, findings at ten locations, expanded source-linked findings, the 521-row CSV, geographic/category sorting, old account redirects, local save/reload, anonymous workspace denial and mobile layout. No uncaught browser errors occurred; the deployment error/fatal log query returned no matching logs. The local evidence is `artifacts/hosted-smoke.json`.
 
 ## Earlier baseline checks · November 12, 2026
 
