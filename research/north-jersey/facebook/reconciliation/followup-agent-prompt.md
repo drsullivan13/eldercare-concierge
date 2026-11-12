@@ -22,6 +22,19 @@ Do not substitute Visiting Angels offices for the assigned Union registrations o
 
 None under the current kit.
 
+## Reconcile counts in the original batch
+
+Return a correction keyed to each original assignment. Identify exactly linked observations by stable ID and count ambiguous campus leads separately.
+
+| Original assignment | Declared | Linked to exact assignment |
+|---|---:|---:|
+| nj-doh-NJ60A004 | 17 | 16 |
+| nj-doh-NJ60A002 | 3 | 0 |
+| nj-doh-NJ90A120 | 3 | 2 |
+| nj-doh-NJ20A013 | 8 | 7 |
+| nj-doh-NJ62016 | 13 | 9 |
+| nj-doh-NJ22001L | 3 | 2 |
+
 ## Verify existing leads
 
 Open the live pages for VNA of Northern New Jersey (reported 4.0/5 from 10) and Atria Cranford (reported 4.9/5 from 18). Record the location, permalink, check date, scale and count only if visible.

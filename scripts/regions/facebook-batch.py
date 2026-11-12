@@ -388,7 +388,7 @@ def scope(a):
             "officialId": a.get("officialId", ""), "license": a.get("license", "")}
 
 
-def followup_prompt(followups):
+def followup_prompt(followups, ledger=()):
     lines = [
         "# Private Facebook follow-up assignment",
         "",
@@ -416,6 +416,13 @@ def followup_prompt(followups):
     for a in blocked:
         lines.append(f"- `{a['assignmentId']}`. {a['name'].rstrip('.')}. {a['address']}, {a['municipality']}, NJ {a['zip']}. "
                      f"CCN {a['officialId']}. {a['reason']}. No allowlisted provider ID.")
+    discrepancies = [row for row in ledger if "declared_observation_count_not_exactly_linked" in row["reasons"]]
+    if discrepancies:
+        lines += ["", "## Reconcile counts in the original batch", "",
+                  "Return a correction keyed to each original assignment. Identify exactly linked observations by stable ID and count ambiguous campus leads separately.", "",
+                  "| Original assignment | Declared | Linked to exact assignment |", "|---|---:|---:|"]
+        for row in discrepancies:
+            lines.append(f"| {row['assignmentId']} | {row['declaredObservationCount']} | {row['linkedObservationCount']} |")
     lines += [
         "", "## Verify existing leads", "",
         "Open the live pages for VNA of Northern New Jersey (reported 4.0/5 from 10) and Atria Cranford (reported 4.9/5 from 18). Record the location, permalink, check date, scale and count only if visible.",
@@ -462,7 +469,7 @@ def build(commit=COMMIT, kit=KIT):
         "followup-assignments.json": encode({"publication": "none", "assignments": scopes}),
         "followup-assignments.csv": csv_text(list(scopes[0]) if scopes else ["assignmentId"],
                                             [list(a.values()) for a in scopes]),
-        "followup-agent-prompt.md": followup_prompt(scopes),
+        "followup-agent-prompt.md": followup_prompt(scopes, ledger),
     }
 
 
