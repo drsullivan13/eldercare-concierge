@@ -26,7 +26,7 @@ put one in `provider_id`.
   `nj-reg-HP0414500` (CSS Morris LLC, 15 Wychwood Rd, Morristown
   07960), `nj-hha-317020` (BAYADA Home Health Care, 11 Commerce Dr,
   Cranford 07016), `nj-campus-cedar-crest-village` (Cedar Crest
-  Village, 1 Cedar Crest Village Dr, Pompton Plains 07444 — Passaic
+  Village, 1 Cedar Crest Village Dr, Pompton Plains 07444 — Morris
   County).
 
 ## Rules carried over from the base run

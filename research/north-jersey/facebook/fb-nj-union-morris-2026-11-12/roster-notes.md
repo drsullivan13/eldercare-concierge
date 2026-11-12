@@ -272,7 +272,9 @@ Assisted Living Residence, License 90A000 — exactly as rostered.
 ### Other nearby counties (surfaced while checking the CCRC question)
 
 - **Cedar Crest Village** — 1 Cedar Crest Village Drive, Pompton Plains,
-  NJ 07444 — Passaic County — CCRC/life-plan campus.
+  NJ 07444 — Morris County (Pequannock Township) — CCRC/life-plan campus.
+  [Correction 2026-11-12: an earlier roster note said Passaic County;
+  verified against Morris County records and the operator.]
 - **Home Instead, Millburn office** — 215 Millburn Ave Suite 2B, Millburn,
   NJ 07041 — Essex County — HCSF license HP0118200. Noted to prevent
   misattribution to the Morris County office (the HP0118200 number must
