@@ -28,9 +28,18 @@ await page.locator(".provider-title").first().click();
 await page.locator(".inspection-history article.source-item").first().waitFor();
 await page.screenshot({ path: "docs/screenshots/evidence.png" });
 await page.getByRole("button", { name: "Close dialog", exact: true }).click();
+await page
+  .getByRole("button", { name: "Skilled home health", exact: true })
+  .click();
+await page.locator(".provider-card").first().waitFor();
+await page.locator(".provider-title").first().click();
+await page.locator(".home-health-evidence .hh-agency").first().waitFor();
+await page.locator(".home-health-evidence").scrollIntoViewIfNeeded();
+await page.screenshot({ path: "docs/screenshots/home-health.png" });
+await page.getByRole("button", { name: "Close dialog", exact: true }).click();
 await page.setViewportSize({ width: 390, height: 844 });
 await page.goto("http://localhost:3000/dashboard?demo=1");
 await page.getByRole("heading", { name: "A clearer plan." }).waitFor();
 await page.screenshot({ path: "docs/screenshots/mobile.png", fullPage: true });
-console.log(JSON.stringify({ screenshots: 5, uncaughtErrors: errors }));
+console.log(JSON.stringify({ screenshots: 6, uncaughtErrors: errors }));
 await browser.close();

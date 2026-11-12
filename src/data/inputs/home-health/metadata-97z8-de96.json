@@ -1,0 +1,62 @@
+{
+  "@type": "Dataset",
+  "accessLevel": "public",
+  "bureauCode": [
+    "009:38"
+  ],
+  "contactPoint": {
+    "fn": "Home Health Quality Help Desk",
+    "hasEmail": "mailto:homehealthqualityquestions@cms.hhs.gov"
+  },
+  "description": "The national averages for critical quality measures of Home Health Agencies.",
+  "distribution": [
+    {
+      "@type": "Distribution",
+      "downloadURL": "https://data.cms.gov/provider-data/sites/default/files/resources/82257ab2c58ea7db43b40508535add60_1791237945/HH_National_Oct2026.csv",
+      "mediaType": "text/csv",
+      "describedBy": {
+        "@type": "Distribution",
+        "accessURL": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/home_health/HHS_Data_Dictionary.pdf",
+        "mediaType": "application/pdf"
+      }
+    }
+  ],
+  "identifier": "97z8-de96",
+  "issued": "2026-09-21",
+  "keyword": [
+    "General Information",
+    "Quality",
+    "Ratings",
+    "Comparison",
+    "State",
+    "Average",
+    "Quality",
+    "Measures",
+    "National"
+  ],
+  "landingPage": {
+    "@type": "Document",
+    "title": "Home Health Care - National Data",
+    "accessURL": "https://data.cms.gov/provider-data/dataset/97z8-de96"
+  },
+  "modified": "2026-09-21",
+  "programCode": [
+    "009:000"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Office of Communications (OC)",
+    "subOrganizationOf": [
+      {
+        "@type": "Organization",
+        "name": "Centers for Medicare & Medicaid Services (CMS)"
+      }
+    ]
+  },
+  "released": "2026-10-21",
+  "theme": [
+    "Home health services"
+  ],
+  "title": "Home Health Care - National Data",
+  "accessRights": "public"
+}

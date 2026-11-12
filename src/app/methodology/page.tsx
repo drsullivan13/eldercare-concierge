@@ -70,11 +70,12 @@ export default function Methodology() {
             <MessageSquare />
             <h2>Keep lived experience in context</h2>
             <p>
-              Resident and family experiences matter, including complaints and
-              how providers respond. This version does not publish a blended
-              review score or invent ratings from Google, Yelp or other sites.
-              Authorized review feeds and a structured reference-check process
-              are planned; they are not connected today.
+              Matched home-health agencies include CMS patient-experience
+              surveys, with response counts, response rates and reporting
+              periods. These are separate from clinical-quality ratings and
+              apply to the identified Medicare-certified agency, which may cover
+              several offices. Broader review feeds and a structured
+              reference-check process are planned; they are not connected today.
             </p>
           </article>
           <article>

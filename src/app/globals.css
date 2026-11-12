@@ -13,6 +13,153 @@
   --serif: Georgia, "Times New Roman", serif;
   --sans: var(--font-geist-sans), Arial, sans-serif;
 }
+.hh-agency {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+  margin-top: 20px;
+  background: var(--white);
+}
+.hh-agency h4 {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.hh-agency h5 {
+  margin: 22px 0 5px;
+  font-size: 15px;
+}
+.hh-agency header > p + p {
+  margin-top: 12px;
+}
+.hh-ratings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+.hh-ratings > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  background: var(--teal-pale);
+  border-radius: 10px;
+  padding: 17px;
+}
+.hh-ratings strong {
+  font-size: 25px;
+  font-weight: 600;
+}
+.hh-ratings small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.hh-ratings > div > span {
+  font-weight: 600;
+}
+.hh-survey-context {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin: 16px 0;
+}
+.hh-survey-context > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hh-survey-context strong {
+  font-size: 22px;
+}
+.hh-survey-context > div > span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.hh-measures {
+  margin: 12px 0;
+}
+.hh-measures > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(58px, auto);
+  gap: 18px;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+.hh-measures dt {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.hh-measures dt small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.hh-measures dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+  font-size: 15px;
+}
+.hh-footnote {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.hh-measures > div:has(.hh-footnote) {
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+.hh-measures > div:has(.hh-footnote) dd {
+  text-align: left;
+}
+.hh-clinical-details {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid var(--line);
+}
+.hh-clinical-details summary {
+  font-weight: 600;
+  color: var(--teal-dark);
+  cursor: pointer;
+  line-height: 1.6;
+}
+.hh-clinical-details summary:focus-visible {
+  outline: 3px solid #7cae9e;
+  outline-offset: 3px;
+}
+.hh-clinical-details > p {
+  margin-top: 13px;
+}
+.hh-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 18px;
+}
+.hh-source-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--teal-dark);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 520px) {
+  .hh-agency {
+    padding: 16px;
+  }
+  .hh-ratings {
+    grid-template-columns: 1fr;
+  }
+  .hh-measures > div {
+    gap: 12px;
+  }
+}
 * {
   box-sizing: border-box;
 }

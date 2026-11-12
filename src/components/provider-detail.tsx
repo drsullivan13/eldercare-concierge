@@ -15,6 +15,7 @@ import { CATEGORY_LABELS, formatPhone, type Provider } from "@/lib/providers";
 import { Modal } from "./modal";
 import { ProviderIcon } from "./provider-card";
 import { InspectionHistory } from "./inspection-history";
+import { HomeHealthEvidence } from "./home-health-evidence";
 function metric(value: number | null | undefined, suffix = "") {
   return value === null || value === undefined
     ? "Not published"
@@ -177,6 +178,9 @@ export function ProviderDetail({
           </section>
         )}
         {provider.cms && <InspectionHistory ccn={provider.cms.ccn} />}
+        {provider.category === "home-health" && (
+          <HomeHealthEvidence providerId={provider.id} />
+        )}
         <section>
           <div className="section-title">
             <h3>The source trail</h3>

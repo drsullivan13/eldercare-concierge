@@ -1,0 +1,64 @@
+{
+  "@type": "Dataset",
+  "accessLevel": "public",
+  "bureauCode": [
+    "009:38"
+  ],
+  "contactPoint": {
+    "fn": "Home Health Quality Help Desk",
+    "hasEmail": "mailto:homehealthqualityquestions@cms.hhs.gov"
+  },
+  "description": "Home Health Care - Measure Date Range",
+  "distribution": [
+    {
+      "@type": "Distribution",
+      "downloadURL": "https://data.cms.gov/provider-data/sites/default/files/resources/5f1040a0e7866cbbe28a3906fb82ba93_1791237946/HH_MeasureDateRange_Oct2026.csv",
+      "mediaType": "text/csv",
+      "describedBy": {
+        "@type": "Distribution",
+        "accessURL": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/home_health/HHS_Data_Dictionary.pdf",
+        "mediaType": "application/pdf"
+      }
+    }
+  ],
+  "identifier": "c886-nwpj",
+  "issued": "2026-09-21",
+  "keyword": [
+    "General Information",
+    "Quality",
+    "Ratings",
+    "Comparison",
+    "Measure Dates",
+    "Data Collection Period",
+    "State",
+    "Average",
+    "Measures",
+    "National",
+    "Quality Reporting Program"
+  ],
+  "landingPage": {
+    "@type": "Document",
+    "title": "Home Health Care - Measure Date Range",
+    "accessURL": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+  },
+  "modified": "2026-09-21",
+  "programCode": [
+    "009:000"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Office of Communications (OC)",
+    "subOrganizationOf": [
+      {
+        "@type": "Organization",
+        "name": "Centers for Medicare & Medicaid Services (CMS)"
+      }
+    ]
+  },
+  "released": "2026-10-21",
+  "theme": [
+    "Home health services"
+  ],
+  "title": "Home Health Care - Measure Date Range",
+  "accessRights": "public"
+}

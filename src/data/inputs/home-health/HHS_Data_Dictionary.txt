@@ -1,0 +1,2349 @@
+Data Dictionary for Compare Tool on Medicare.gov and
+Provider Data Catalog:
+Home Health Quality Reporting Program (HHQRP) and
+Value-Based Purchasing (HHVBP)
+Version 14.0
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026    1
+Version Details
+ Version         Date                                       Details
+ Number
+   1.0       January 2020   Measures Removed:
+                                Emergency Department Use without Hospital Readmission during the
+                                   First 30 Days of HH (CBE #2505)
+                                Rehospitalization during the First 30 Days of Home Health (CBE
+                                   #2380)
+    2.0       April 2020    Measures Removed
+                                How often patients had less pain when moving around
+    3.0       July 2020     Revisions
+                                Updated with more recent version of CAHPS tables.
+                                Removed duplicative variables: How often patients remained in the
+                                   community after discharge from home health
+                                Footnote for How often patients remained in the community after
+                                   discharge from home health
+    4.0     October 2020    Measures Removed:
+                                How often patients developed new or worsened pressure ulcers (CBE
+                                   #0678)
+                            Measures Added:
+                                Changes in Skin Integrity Post-Acute Care: Pressure Ulcer/Injury
+                            Revisions
+                                Revised title to reflect transition from Home Health Compare to Care
+                                   Compare
+                                Updated file names and added section on “File Naming Convention”
+                                Added section on the HH_MeasureDateRange_MMMYYYY.csv file
+    5.0       July 2021     Measures Removed
+                                Depression Assessment Conducted
+                                Diabetic Foot Care and Patient/Caregiver Education Implemented
+                                   during All Episodes of Care
+                                Multifactor Fall Risk Assessment Conducted for All Patients Who
+                                   Can Ambulate
+                                Pneumococcal Polysaccharide Vaccine Ever Receive
+                                Improvement in the Status of Surgical Wounds
+    6.0      January 2022   Revisions
+                                Added introduction
+                                Changed format
+                                Revised variable name in HH_State_MMMYYY.csv for Medicare
+                                   Spending Per Beneficiary
+    7.0       April 2022    Measures Added
+                                Percent of Residents Experiencing One or More Falls with Major
+                                   Injury
+                                Application of Percent of Long-Term Care Hospital Patients with an
+                                   Admission and Discharge Functional Assessment
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                               2
+ Version         Date                                       Details
+ Number
+   8.0        July 2022     Revision
+                                Revised variable type for Measure Date Range variable in
+                                   HH_MeasureDateRange_MMMYYYY.csv to be “Character”
+                                   variable.
+    9.0     October 2023    Measure Added
+                                Home Health Within-Stay Potentially Preventable Hospitalization
+                            Measure Removed
+                                Drug Education on All Medications Provided to Patient/Caregiver
+                                   during All Episodes of Care
+                            Revision
+                                Standardization of data variable names
+   10.0     October 2024    Measures Removed
+                                Acute Care Hospitalization During the First 60 Days of Home Health
+                                Emergency Department Use without Hospitalization During the First
+                                   60 days of Home Health
+                            Revision
+                                Update to Type of Ownership categories
+   11.0      January 2025   Measure Removed
+                                Application of Percent of Long-Term Care Hospital Patients with an
+                                   Admission and Discharge Functional Assessment and a Care Plan
+                                   that Addresses Function Process Measure
+                            Measures Added
+                                Transfer of Health Information to the Patient
+                                Transfer of Health Information to the Provider
+                                Discharge Function
+                            Revisions
+                                Addition of numerator and denominator values for OASIS measures
+                                Addition of expanded Home Health Value-Based Purchasing
+                                   (HHVBP) data files and variables
+   12.0       July 2025     Revisions
+                                Addition of Appendix A: Anticipated Home Health Refreshes and
+                                   Data Collection Periods
+   13.0      January 2026   Measure Added
+                                COVID-19 Vaccine: Percent of Patients Who Are Up to Date
+   14.0       April 2026    Measure Removed
+                                COVID-19 Vaccine: Percent of Patients Who Are Up to Date
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                              3
+Introduction
+The Centers for Medicare & Medicaid Services (CMS) created the Compare Tool on Medicare.gov, a streamlined
+redesign of the original eight CMS healthcare compare tools. The Compare Tool provides a single user-friendly
+interface that enables patients and caregivers to make informed decisions about healthcare based on cost, quality of
+care, volume of services, and other data. Information about the quality measures on Medicare.gov is presented in a
+consistent and clear manner across all provider types and care settings. Consumers are able to select multiple
+agencies and directly compare their performance on quality measure information. To access the Compare Tool on
+Medicare.gov, please visit www.medicare.gov/care-compare/.
+This document provides information about the Home Health Quality Reporting Program (HHQRP) data on
+Medicare.gov. Medicare.gov provides data for over 12,000 Home Health Agencies (HHAs). More information about
+the home health (HH) quality measures displayed on Medicare.gov can be found by visiting the HH Quality
+Reporting Measures Information page at: https://www.cms.gov/Medicare/Quality-Initiatives-Patient-Assessment-
+Instruments/HomeHealthQualityInits/Home-Health-Quality-Measures. This document now also includes variable
+information for the expanded Home Health Value-based Purchasing (HHVBP) Model data. This information is
+based on the variables reported in the Final CY 2024 Annual Performance Report (APR) issued to HHAs in late
+2024 and published in the Provider Data Catalog (PDC) in January 2025. Note that HHVBP data are not reported on
+Medicare.gov.
+
+The information about HHAs on Medicare.gov is typically updated, or refreshed, each quarter in January, April,
+July, and October; however, the refresh schedule is subject to change and not all measure data will be updated during
+each quarterly release.
+
+Links to download the data from the zipped comma-separated value (CSV) flat file formats can be found on the PDC
+website. Archived data are also available in the Provider Data Catalog. To access the Provider Data Catalog website,
+please visit: https://data.cms.gov/provider-data/.
+
+The Compare Tool on Medicare.gov and the PDC are publicly accessible websites. As works of the U.S.
+government, Medicare.gov data are in the public domain and permission is not required to reuse them. An attribution
+to the Centers for Medicare & Medicaid Services as the data source is appreciated. However, Medicare.gov data
+should not be construed as an endorsement by the U.S. Department of Health and Human Services of any health care
+provider’s products or services. Conveying a false impression of government approval, endorsement or authorization
+of products or services is forbidden. See 42 U.S.C.1320b-10.
+
+Document Purpose
+The purpose of this document is to provide a directory of material for use in the navigation of (1) HH quality
+information contained within the Compare Tool on Medicare.gov downloadable databases found on the PDC website
+and (2) HHVBP information found in the PDC only.
+
+File Naming Convention
+The files described in the tables below for home health (HH) agencies are named using the following convention:
+HH_Key_Words_[RefreshMMMYYYY]. Thus, for the July 2025 refresh, the file with data on providers is
+“HH_Provider_Jul2025” and the file with national scores is “HH_National_Jul2025.”
+For HHCAHPS measures, files are named following this convention HHCAHPS_Key
+Words_[RefreshMMMYYYY]. Thus, for the July 2025 refresh, the file with HHCAHPS Survey data for providers is
+“HHCAHPS_Provider_Jul2025.”
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                                4
+For HHVBP performance metrics, files are named using the following convention:
+HHVBP_Key_Words_[PerformanceYear_YYYY]. Thus, for the first performance year of the expanded HHVBP
+Model, the file with data on provider is “HHVBP_Provider_PerformanceYear_2023” and the file with cohort data is
+“HHVBP_Cohort_PerformanceYear_2023.” The table names display the Key Words used in each file name, along
+with a placeholder Month and Year for the month and year of the refresh associated with the file.
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          5
+Table of Contents
+Contents
+Version Details ............................................................................................................................................................... 2
+Introduction .................................................................................................................................................................... 4
+Document Purpose.......................................................................................................................................................... 4
+File Naming Convention ................................................................................................................................................ 4
+Table of Contents ........................................................................................................................................................... 6
+Table 1: Acronym Index ................................................................................................................................................. 7
+Table 2: File Summary ................................................................................................................................................... 8
+Table 3: HH_Provider_MMMYYYY.csv (96 columns) Variables.............................................................................. 10
+Table 4: HH_State_MMMYYYY.csv (25 columns) Variables ................................................................................... 16
+Table 5: HH_National_MMMYYYY.csv (40 columns) Variables.............................................................................. 18
+Table 6: HH_ZIP_MMMYYYY.csv (3 columns)........................................................................................................ 21
+Table 7: HH_MeasureDateRange_MMMYYYY.csv (2 columns) .............................................................................. 21
+Table 8: HHCAHPS_Provider_MMMYYYY.csv (26 columns) ................................................................................. 21
+Table 9: HHCAHPS_National_MMMYYYY.csv (8 columns) Variables................................................................... 24
+Table 10: HHCAHPS_State_MMMYYYY.csv (8 columns) ....................................................................................... 25
+Table 11: HHCAHPS_MeasureDateRange_MMMYYYY.csv (2 columns) ............................................................... 26
+Table 12: HHVBP_Provider_PerformanceYear_YYYY.csv (252 columns)............................................................... 26
+Table 13: HHVBP_Cohort_PerformanceYear_YYYY.csv (39 columns) ................................................................... 44
+Table 14: Footnote Details ........................................................................................................................................... 47
+Appendix A: Anticipated Home Health Refreshes and Data Collection Periods ......................................................... 48
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                                                                                           6
+Table 1: Acronym Index
+ Acronym                                              Meaning
+ ACH                                                  Acute Care Hospitalization During the First 60 Days of
+                                                      Home Health Use
+ APR                                                  Annual Performance Report
+ AT                                                   Achievement Threshold
+ APP                                                  Adjusted Payment Percentage
+ BM                                                   Benchmark
+ CAHPS                                                Consumer Assessment of Healthcare Providers and
+                                                      Systems
+ CCN                                                  CMS Certification Number
+ CMS                                                  Centers for Medicare & Medicaid Services
+ DTC                                                  Discharge to Community or Discharged to Community
+ ED                                                   Emergency Department
+ ER                                                   Emergency Room
+ IT                                                   Improvement Threshold
+ HH                                                   Home Health
+ HHA                                                  Home Health Agency
+ LEF                                                  Linear Exchange Function
+ NA                                                   Not available
+ OASIS                                                Outcome and Assessment Information Set
+ PAC                                                  Post-Acute Care
+ PDC                                                  Provider Data Catalog
+ PPH                                                  Potentially Preventable Hospitalization
+ PPR                                                  Potentially Preventable Readmission
+ PY                                                   Performance Year
+ TNC                                                  Total Normalized Composite
+ TPS                                                  Total Performance Score
+ QRP                                                  Quality Reporting Program
+ VBP                                                  Value-Based Purchasing
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                        7
+Table 2: File Summary
+The list below shows the titles of all CSV flat file names included in the downloadable database. CSV Flat Files
+Note: Opening CSV files in Excel will remove leading zeros from data fields. Since some data, such as provider
+numbers, contain leading zeroes, it is recommended that you open CSV files using text editor programs such as
+Notepad to copy or view CSV file content. The CSV column names and file names should mirror the datasets found
+on https://data.cms.gov/provider-data/.
+
+ File Name*                                             PDC Dataset Title         Description
+ HH_Provider_MMMYYYY.csv                                Home Health Care          A list of home health care
+                                                        Agencies                  agencies (HHAs) with data on
+                                                                                  the HHQRP quality of patient
+                                                                                  care measures.
+
+ HH_State_MMMYYYY.csv                                   Home Health Care –        State data on the HHQRP
+                                                        State by State Data       quality of patient care
+                                                                                  measures.
+ HH_National_MMMYYYY.csv                                Home Health Care          National data on the HHQRP
+                                                        National Data             quality of patient care
+                                                                                  measures.
+ HH_ZIP_MMMYYYY.csv                                     Home Health Care –        This file contains information
+                                                        Zip Codes                 on the areas served by the
+                                                                                  home health agency. It is
+                                                                                  based on OASIS assessments
+                                                                                  submitted by the HHA during
+                                                                                  the data collection period.
+                                                                                  There is one record for each
+                                                                                  ZIP code in which there was
+                                                                                  at least one patient served by
+                                                                                  the home health agency.
+ HH_MeasureDateRange_MMMYYYY.csv                        Home Health Care –        A list of the HHQRP quality
+                                                        Measure Date Range        of patient care measure data
+                                                                                  collection periods.
+ HHCAHPS_Provider_MMMYYYY.csv                           Home Health Care –        A list of the HHAs with data
+                                                        Patient Survey            on the HHCAHPS patient
+                                                        (HHCAHPS)                 survey measures.
+                                                        YYYYQX to
+                                                        YYYYQX
+ HHCAHPS_National_MMMYYYY.csv                           Home Health Care –        National data on the
+                                                        Patient Survey            HHCAHPS patient survey
+                                                        (HHCAHPS) National        measures.
+                                                        Data YYYYQX to
+                                                        YYYYQX
+ HHCAHPS_State_MMMYYYY.csv                              Home Health Care –        State data on the HHCAHPS
+                                                        Patient Survey            patient survey measures.
+                                                        (HHCAHPS) State
+                                                        Data YYYYQX to
+                                                        YYYYQX
+ HHCAHPS_MeasureDateRange_MMMYYYY.csv                   Home Health Care –        A list of the HHCAHPS
+                                                        Patient Survey            patient survey measure data
+                                                        (HHCAHPS) Measure         collection periods.
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                             8
+ File Name*                                              PDC Dataset Title          Description
+                                                         Dates YYYYQX to
+                                                         YYYYQX
+ HHVBP_Provider_PerformanceYear_YYYY.csv                 Expanded Home              A list of active HHAs with
+                                                         Health Value-based         data on the HHVBP
+                                                         Purchasing (HHVBP)         performance metrics.
+                                                         Model – Agency Data
+ HHVBP_Cohort_PerformanceYear_YYYY.csv                   Expanded Home              Cohort data on the HHVBP
+                                                         Health Value-based         performance metrics.
+                                                         Purchasing (HHVBP)
+                                                         Model – Cohort Data
+ HHS_Data_Dictionary.pdf                                 HHS_Data_Dictionary         Data dictionary
+ readme.txt                                              N/A                         Information about viewing the
+                                                                                     data dictionary PDF file.
+*HHCAHPS dataset names include the refresh-specific data range, the above format, for each of the four datasets
+available on the PDC. Thus, the dataset name will change for each refresh to align with the content of the files.
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                              9
+Table 3: HH_Provider_MMMYYYY.csv (96 columns) Variables
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    1.    State                        Character      The two character postal code for the state or
+                                                      territory in which the home health agency (HHA) is
+                                                      located.
+    2.    CMS Certification            Character      The six character identification number assigned to
+          Number (CCN)                                the HHA by CMS.
+    3.    Provider Name                Character      The name of the HHA as it appears in the CMS
+                                                      certification system.
+    4.    Address                      Character      The street address of the HHA.
+    5.    City/Town                    Character      The city/town in which the HHA is located.
+    6.    ZIP Code                     Character      The five-digit ZIP code of the HHA.
+    7.    Telephone Number             Character      The ten-digit telephone number of the HHA.
+    8.    Type of Ownership            Character      The general control type of the HHA. Categories
+                                                      include:
+                                                            Non-Profit
+                                                            Proprietary
+                                                            Government Operated
+    9.    Offers Nursing Care          Character      Yes or No.
+          Services
+    10.   Offers Physical Therapy      Character      Yes or No.
+          Services
+    11.   Offers Occupational          Character      Yes or No.
+          Therapy Services
+    12.   Offers Speech Pathology      Character      Yes or No.
+          Services
+    13.   Offers Medical Social        Character      Yes or No.
+          Services
+    14.   Offers Home Health Aide      Character      Yes or No.
+          Services
+    15.   Certification Date           Date           The original date the HHA was certified to
+                                                      participate in the Medicare program.
+    16.   Quality of patient care      Numeric        A numeric rating from 1 through 5, in increments of
+          star rating                                 0.5.
+    17.   Footnote for quality of      Character      If the rating value is missing (blank), the reason the
+          patient care star rating                    rating was not calculated is explained here.
+    18.   Numerator for how often      Numeric        The measure numerator.
+          the home health team
+          began their patients' care
+          in a timely manner
+    19.   Denominator for how          Numeric        The measure denominator.
+          often the home health
+          team began their patients'
+          care in a timely manner
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                        10
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    20. How often the home health      Numeric        The measure percentage as reported on
+        team began their patients'                    Medicare.gov.
+        care in a timely manner
+    21. Footnote for how often the     Character      If the measure value is missing (blank), the reason
+        home health team began                        the measure was not calculated is explained here.
+        their patients' care in a
+        timely manner
+    22. Numerator for how often        Numeric        The measure numerator.
+        the home health team
+        determined whether
+        patients received a flu shot
+        for the current flu season
+    23. Denominator for how            Numeric        The measure denominator.
+        often the home health
+        team determined whether
+        patients received a flu shot
+        for the current flu season
+    24. How often the home health      Numeric        The measure percentage as reported on
+        team determined whether                       Medicare.gov.
+        patients received a flu shot
+        for the current flu season
+    25. Footnote for how often the     Character      If the measure value is missing (blank), the reason
+        home health team                              the measure was not calculated is explained here.
+        determined whether
+        patients received a flu shot
+        for the current flu season
+    26. Numerator for how often        Numeric        The measure numerator.
+        patients got better at
+        walking or moving around
+    27. Denominator for how            Numeric        The measure denominator.
+        often patients got better at
+        walking or moving around
+    28. How often patients got         Numeric        The measure percentage as reported on
+        better at walking or                          Medicare.gov.
+        moving around
+    29. Footnote for how often         Character      If the measure value is missing (blank), the reason
+        patients got better at                        the measure was not calculated is explained here.
+        walking or moving around
+    30. Numerator for how often        Numeric        The measure numerator.
+        patients got better at
+        getting in and out of bed
+    31. Denominator for how            Numeric        The measure denominator.
+        often patients got better at
+        getting in and out of bed
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         11
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    32. How often patients got         Numeric        The measure percentage as reported on
+        better at getting in and out                  Medicare.gov.
+        of bed
+    33. Footnote for how often         Character      If the measure value is missing (blank), the reason
+        patients got better at                        the measure was not calculated is explained here.
+        getting in and out of bed
+    34. Numerator for how often        Numeric        The measure numerator.
+        patients got better at
+        bathing
+    35. Denominator for how            Numeric        The measure denominator.
+        often patients got better at
+        bathing
+    36. How often patients got         Numeric        The measure percentage as reported on
+        better at bathing                             Medicare.gov.
+    37. Footnote for how often         Character      If the measure value is missing (blank), the reason
+        patients got better at                        the measure was not calculated is explained here.
+        bathing
+    38. Numerator for how often        Numeric        The measure numerator.
+        patients' breathing
+        improved
+    39. Denominator for how            Numeric        The measure denominator.
+        often patients' breathing
+        improved
+    40. How often patients'            Numeric        The measure percentage as reported on
+        breathing improved                            Medicare.gov.
+    41. Footnote for how often         Character      If the measure value is missing (blank), the reason
+        patients' breathing                           the measure was not calculated is explained here.
+        improved
+    42. Numerator for how often        Numeric        The measure numerator.
+        patients got better at
+        taking their drugs
+        correctly by mouth
+    43. Denominator for how            Numeric        The measure denominator.
+        often patients got better at
+        taking their drugs
+        correctly by mouth
+    44. How often patients got         Numeric        The measure percentage as reported on
+        better at taking their                        Medicare.gov.
+        drugs correctly by mouth
+    45. Footnote for how often         Character      If the measure value is missing (blank), the reason
+        patients got better at                        the measure was not calculated is explained here.
+        taking their drugs
+        correctly by mouth
+    46. Numerator for Changes in       Numeric        The measure numerator.
+        skin integrity post-acute
+        care: pressure ulcer/injury
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         12
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    47. Denominator for Changes        Numeric        The measure denominator.
+        in skin integrity post-acute
+        care: pressure ulcer/injury
+    48. Changes in skin integrity      Numeric        The measure percentage as reported on
+        post-acute care: pressure                     Medicare.gov.
+        ulcer/injury
+    49. Footnote for changes in        Character      If the measure value is missing (blank), the reason
+        skin integrity post-acute                     the measure was not calculated is explained here.
+        care: pressure ulcer/injury
+    50. Numerator for how often        Numeric        The measure numerator.
+        physician-recommended
+        actions to address
+        medication issues were
+        completely timely
+    51. Denominator for how            Numeric        The measure denominator.
+        often physician-
+        recommended actions to
+        address medication issues
+        were completely timely
+    52. How often physician-           Numeric        The measure percentage as reported on
+        recommended actions to                        Medicare.gov.
+        address medication issues
+        were completely timely
+    53. Footnote for how often         Character      If the measure value is missing (blank), the reason
+        physician-recommended                         the measure was not calculated is explained here.
+        actions to address
+        medication issues were
+        completely timely
+    54. Numerator for Percent of       Numeric        The measure numerator.
+        Residents Experiencing
+        One or More Falls with
+        Major Injury
+    55. Denominator for Percent of     Numeric        The measure denominator.
+        Residents Experiencing
+        One or More Falls with
+        Major Injury
+    56. How often a patient had one    Numeric        The measure percentage as reported on
+        or more falls with a major                    Medicare.gov.
+        injury
+
+    57.   Footnote for how often a     Character      If the measure value is missing (blank), the reason
+          patient had one or more                     the measure was not calculated is explained here.
+          falls with a major injury
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         13
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    58. Numerator for Discharge        Numeric        The measure numerator.
+        Function Score
+    59. Denominator for                Numeric        The measure denominator.
+        Discharge Function Score
+    60. Discharge Function Score       Numeric        The measure percentage as reported on
+                                                      Medicare.gov.
+    61.   Footnote for Discharge       Character      If the measure value is missing (blank), the reason
+          Function Score                              the measure was not calculated is explained here.
+    62.   Numerator for Transfer of    Numeric        The measure numerator.
+          Health Information to the
+          Provider
+    63.   Denominator for Transfer     Numeric        The measure denominator.
+          of Health Information to
+          the Provider
+    64.   Transfer of Health           Numeric        The measure percentage as reported on
+          Information to the                          Medicare.gov.
+          Provider
+    65.   Footnote for Transfer of     Character      If the measure value is missing (blank), the reason
+          Health Information to the                   the measure was not calculated is explained here.
+          Provider
+    66.   Numerator for Transfer of    Numeric        The measure numerator.
+          Health Information to the
+          Patient
+    67.   Denominator for Transfer     Numeric        The measure denominator.
+          of Health Information to
+          the Patient
+    68.   Transfer of Health           Numeric        The measure percentage as reported on
+          Information to the Patient                  Medicare.gov.
+    69.   Footnote for Transfer of     Character      If the measure value is missing (blank), the reason
+          Health Information to the                   the measure was not calculated is explained here.
+          Patient
+    70.   DTC Numerator                Numeric        Observed Number of Discharges to Community
+    71.   DTC Denominator              Numeric        Number of Eligible Stays for DTC Measure
+    72.   DTC Observed Rate            Numeric        Observed Discharge to Community Rate
+    73.   DTC Risk-Standardized        Numeric        Risk-Standardized Discharge to Community Rate
+          Rate
+    74.   DTC Risk-Standardized        Numeric        Lower Limit of the 95% Confidence Interval on the
+          Rate (Lower Limit)                          Risk- Standardized Discharge to Community Rate
+    75.   DTC Risk-Standardized        Numeric        Upper Limit of the 95% Confidence Interval on the
+          Rate (Upper Limit)                          Risk- Standardized Discharge to Community Rate
+    76.   DTC Performance              Character      DTC Comparative Performance Category - One of
+          Categorization                              the following descriptive phrases: “Better than
+                                                      National Rate”, “Worse than National Rate”, or
+                                                      “Same as National Rate”
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         14
+ Column Variable Name                 Variable        Description
+ Number                               Type
+    77. Footnote for DTC Risk-        Character       If the measure value is missing (blank), the reason
+        Standardized Rate                             the measure was not calculated is explained here.
+    78. PPR Numerator                 Numeric         Observed Number of Potentially Preventable
+                                                      Readmissions Following Discharge.
+    79.   PPR Denominator             Numeric         Number of Eligible Stays for PPR Measure.
+    80.   PPR Observed Rate           Numeric         Observed Potentially Preventable Readmissions
+                                                      Rate.
+    81.   PPR Risk-Standardized       Numeric         Risk-Standardized Potentially Preventable
+          Rate                                        Readmissions Rate.
+    82.   PPR Risk-Standardized       Numeric         Lower Limit of the 95% Confidence Interval on the
+          Rate (Lower Limit)                          Risk- Standardized Potentially Preventable
+                                                      Readmissions Rate.
+    83.   PPR Risk-Standardized       Numeric         Upper Limit of the 95% Confidence Interval on the
+          Rate (Upper Limit)                          Risk- Standardized Potentially Preventable
+                                                      Readmissions Rate.
+    84.   PPR Performance             Character       PPR Comparative Performance Category: One of the
+          Categorization                              following descriptive phrases: “Better than National
+                                                      Rate”, “Worse than National Rate”, or “Same as
+                                                      National Rate”.
+    85.   Footnote for PPR Risk-      Character       If the measure value is missing (blank), the reason
+          Standardized Rate                           the measure was not calculated is explained here.
+    86.   PPH Numerator               Numeric         Observed Number of Potentially Preventable
+                                                      Hospitalizations Within-Stay
+    87.   PPH Denominator             Numeric         Number of Eligible Stays for PPH Measure.
+    88.   PPH Observed Rate           Numeric         Observed Potentially Preventable Hospitalizations
+                                                      Rate
+    89.   PPH Risk-Standardized       Numeric         Risk-Standardized Potentially Preventable
+          Rate                                        Hospitalizations Rate
+    90.   PPH Risk-Standardized       Numeric         Lower Limit of the 95% Confidence Interval on the
+          Rate (Lower Limit)                          Risk- Standardized Potentially Preventable
+                                                      Hospitalizations Rate
+    91.   PPH Risk-Standardized       Numeric         Upper Limit of the 95% Confidence Interval on the
+          Rate (Upper Limit)                          Risk- Standardized Potentially Preventable
+                                                      Hospitalizations Rate
+    92.   PPH Performance             Character       PPH Comparative Performance Category: One of the
+          Categorization                              following descriptive phrases: “Better than National
+                                                      Rate”, “Worse than National Rate”, or “Same as
+                                                      National Rate”.
+    93.   Footnote for PPH Risk-      Character       If the measure value is missing (blank), the reason
+          Standardized Rate                           the measure was not calculated is explained here.
+    94.   How much Medicare           Numeric         The measure value as reported on Medicare.gov.
+          spends on an episode of
+          care at this agency,
+          compared to Medicare
+          spending across all
+          agencies nationally
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                     15
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    95. Footnote for How much          Character      If the measure value is missing (blank), the reason
+        Medicare spends on an                         the measure was not calculated is explained here.
+        episode of care at this
+        agency, compared to
+        Medicare spending across
+        all agencies nationally
+    96. Number of episodes of          Numeric        The measure value as reported on Medicare.gov.
+        care used to calculate how
+        much Medicare spends on
+        an episode of care at this
+        agency, compared to
+        Medicare spending across
+        all agencies nationally.
+
+
+Table 4: HH_State_MMMYYYY.csv (25 columns) Variables
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    1.    State                        Character      The two character postal code for the state or
+                                                      territory
+    2.    Quality of patient care      Numeric        A numeric rating from 1 through 5, in increments of
+          star rating                                 0.5.
+    3.    Star Rating 1 Percentage     Numeric        A numeric rating of 1.
+    4.    Star Rating 1.5              Numeric        A numeric rating of 1.5.
+          Percentage
+    5.    Star Rating 2 Percentage     Numeric        A numeric rating of 2.
+    6.    Star Rating 2.5              Numeric        A numeric rating of 2.5.
+          Percentage
+    7.    Star Rating 3 Percentage     Numeric        A numeric rating of 3.
+    8.    Star Rating 3.5              Numeric        A numeric rating of 3.5.
+          Percentage
+    9.    Star Rating 4 Percentage     Numeric        A numeric rating of 4.
+    10.   Star Rating 4.5              Numeric        A numeric rating of 4.5.
+          Percentage
+    11.   Star Rating 5 Percentage     Numeric        A numeric rating of 5.
+    12.   How often the home           Numeric        The measure percentage as reported on
+          health team began their                     Medicare.gov.
+          patients’ care in a timely
+          manner
+    13.   How often the home           Numeric        The measure percentage as reported on
+          health team determined                      Medicare.gov.
+          whether patients
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         16
+ Column Variable Name                 Variable        Description
+ Number                               Type
+          received a flu shot for
+          the current flu season
+    14.   How often patients got      Numeric         The measure percentage as reported on
+          better at walking or                        Medicare.gov.
+          moving around
+    15.   How often patients got      Numeric         The measure percentage as reported on
+          better at getting in and                    Medicare.gov.
+          out of bed
+    16.   How often patients got      Numeric         The measure percentage as reported on
+          better at bathing                           Medicare.gov.
+    17.   How often patients'         Numeric         The measure percentage as reported on
+          breathing improved                          Medicare.gov.
+    18.   How often patients got      Numeric         The measure percentage as reported on
+          better at taking their                      Medicare.gov.
+          drugs correctly by
+          mouth
+    19.   Changes in skin integrity   Numeric         The measure percentage as reported on
+          post-acute care: pressure                   Medicare.gov.
+          ulcer/injury
+    20.   How often physician-        Numeric         The measure percentage as reported on
+          recommended actions to                      Medicare.gov.
+          address medication
+          issues were completely
+          timely
+    21.   How often a patient had     Numeric         The measure percentage as reported on
+          one or more falls with a                    Medicare.gov.
+          major injury
+    22.   Discharge Function          Numeric         The measure percentage as reported on
+          Score                                       Medicare.gov.
+    23.   Transfer of Health          Numeric         The measure percentage as reported on
+          Information to the                          Medicare.gov.
+          Provider
+    24.   Transfer of Health          Numeric         The measure percentage as reported on
+          Information to the                          Medicare.gov.
+          Patient
+    25.   How much Medicare           Numeric         The measure percentage as reported on
+          spends on an episode of                     Medicare.gov.
+          care by home health
+          agencies (HHAs) in this
+          state, compared to
+          Medicare spending
+          across all agencies
+          nationally
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                           17
+Table 5: HH_National_MMMYYYY.csv (40 columns) Variables
+ Column Variable Name                   Variable      Description
+ Number                                 Type
+    1.    Country                      Character      A constant value, equal to “Nation”.
+    2.    Quality of patient care      Numeric        A numeric rating from 1 through 5, in increments of
+          star rating                                 0.5.
+
+    3.    Star Rating 1 Percentage     Numeric        A numeric rating of 1.
+    4.    Star Rating 1.5              Numeric        A numeric rating of 1.5.
+          Percentage
+    5.    Star Rating 2 Percentage     Numeric        A numeric rating of 2.
+    6.    Star Rating 2.5              Numeric        A numeric rating of 2.5.
+          Percentage
+    7.    Star Rating 3 Percentage     Numeric        A numeric rating of 3.
+    8.    Star Rating 3.5              Numeric        A numeric rating of 3.5.
+          Percentage
+    9.    Star Rating 4 Percentage     Numeric        A numeric rating of 4.
+    10.   Star Rating 4.5              Numeric        A numeric rating of 4.5.
+          Percentage
+    11.   Star Rating 5 Percentage     Numeric        A numeric rating of 5.
+    12.   How often the home           Numeric        The measure percentage as reported on
+          health team began their                     Medicare.gov.
+          patients' care in a timely
+          manner
+    13.   How often the home           Numeric        The measure percentage as reported on
+          health team determined                      Medicare.gov.
+          whether patients
+          received a flu shot for
+          the current flu season
+    14.   How often patients got       Numeric        The measure percentage as reported on
+          better at walking or                        Medicare.gov.
+          moving around
+    15.   How often patients got       Numeric        The measure percentage as reported on
+          better at getting in and                    Medicare.gov.
+          out of bed
+    16.   How often patients got       Numeric        The measure percentage as reported on
+          better at bathing                           Medicare.gov.
+    17.   How often patients'          Numeric        The measure percentage as reported on
+          breathing improved                          Medicare.gov.
+    18.   How often patients got       Numeric        The measure percentage as reported on
+          better at taking their                      Medicare.gov.
+          drugs correctly by
+          mouth
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                     18
+ Column Variable Name                Variable         Description
+ Number                              Type
+    19.   Changes in skin integrity Numeric           The measure percentage as reported on
+          post-acute care:                            Medicare.gov.
+          pressure ulcer/injury
+    20.   How often physician-        Numeric         The measure percentage as reported on
+          recommended actions to                      Medicare.gov.
+          address medication
+          issues were completely
+          timely
+    21.   How often a patient had     Numeric         The measure percentage as reported on
+          one or more falls with a                    Medicare.gov.
+          major injury
+    22.   Discharge Function          Numeric         The measure percentage as reported on
+          Score                                       Medicare.gov.
+    23.   Transfer of Health          Numeric         The measure percentage as reported on
+          Information to the                          Medicare.gov.
+          Provider
+    24.   Transfer of Health          Numeric         The measure percentage as reported on
+          Information to the                          Medicare.gov.
+          Patient
+    25.   PPR Number of HHAs          Numeric         Number of HHAs that Performed Better than the
+          that Performed Better                       National Observed Rate
+          than the National
+          Observed Rate
+    26.   PPR Number of HHAs          Numeric         Number of HHAs that Performed No Different than
+          that Performed No                           the National Observed Rate
+          Different than the
+          National Observed Rate
+    27.   PPR Number of HHAs          Numeric         Number of HHAs that Performed Worse than the
+          that Performed Worse                        National Observed Rate
+          than the National
+          Observed Rate
+    28.   PPR Number of HHAs          Numeric         Number of HHAs Too Small to Report
+          that Have Too Few
+          Cases for Public
+          Reporting
+    29.   PPR National Observed       Numeric         National Observed Preventable Readmission Rate
+          Rate
+    30.   DTC Number of HHAs          Numeric         Number of HHAs that Performed Better than the
+          that Performed Better                       National Observed Rate
+          than the National
+          Observed Rate
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                    19
+ Column Variable Name                  Variable       Description
+ Number                                Type
+    31.   DTC Number of HHAs          Numeric         Number of HHAs that Performed No Different than
+          that Performed No                           the National Observed Rate
+          Different than the
+          National Observed Rate
+    32.   DTC Number of HHAs          Numeric         Number of HHAs that Performed Worse than the
+          that Performed Worse                        National Observed Rate
+          than the National
+          Observed Rate
+    33.   DTC Number of HHAs          Numeric         Number of HHAs Too Small to Report
+          that Have Too Few
+          Cases for Public
+          Reporting
+    34.   DTC National Observed       Numeric         National Observed Discharge to Community Rate
+          Rate
+    35.   PPH Number of HHAs          Numeric         Number of HHAs that Performed Better than the
+          that Performed Better                       National Observed Rate
+          than the National
+          Observed Rate
+    36.   PPH Number of HHAs          Numeric         Number of HHAs that Performed No Different than
+          that Performed No                           the National Observed Rate
+          Different than the
+          National Observed Rate
+    37.   PPH Number of HHAs          Numeric         Number of HHAs that Performed Worse than the
+          that Performed Worse                        National Observed Rate
+          than the National
+          Observed Rate
+    38.   PPH Number of HHAs          Numeric         Number of HHAs Too Small to Report
+          that Have Too Few
+          Cases for Public
+          Reporting
+    39.   PPH National Observed       Numeric         National Observed Preventable Hospitalization Rate
+          Rate
+    40.   How much Medicare           Numeric         The measure percentage as reported on
+          spends on an episode of                     Medicare.gov.
+          care at this agency,
+          compared to Medicare
+          spending across all
+          agencies nationally
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                    20
+Table 6: HH_ZIP_MMMYYYY.csv (3 columns)
+ Column Variable                      Variable        Description
+ Number                               Type
+    1.  State                         Character       The two character postal code for the state or
+                                                      territory in which the home health agency is located.
+    2.    CMS Certification           Character       The six character identification number assigned to
+          Number (CCN)                                the home health agency by CMS.
+    3.    ZIP Code                    Character       The five-digit ZIP code where service was provided.
+
+
+
+
+Table 7: HH_MeasureDateRange_MMMYYYY.csv (2 columns)
+ Column Variable                      Variable        Description
+ Number                               Type
+    1.  Measure Name                  Character       The name of the measure.
+    2.  Measure Date Range            Character       The first date (Month Date, Year) through the last
+                                                      date (Month Date, Year) of the measure date range
+                                                      for each measure.
+
+
+Table 8: HHCAHPS_Provider_MMMYYYY.csv (26 columns)
+ Column                             Variable
+        Variable                                      Description
+ Number                             Type
+   1.   CMS Certification                             The six-character identification number assigned to the
+                                    Character
+        Number (CCN)                                  home health agency by CMS.
+   2.   HHCAHPS Survey              Numeric           1-5; Not Available if not calculated
+        Summary Star Rating
+
+   3.     HHCAHPS Survey            Character         8-12 [Footnote text in Table 14]
+          Summary Star Rating
+          Footnote
+
+   4.     Star Rating for           Numeric           1-5; Not Available if not calculated
+          health team gave
+          care in a
+          professional way
+   5.     Footnote for Star         Character         8-12 [Footnote text in Table 14]
+          Rating for gave
+          care in a
+          professional way
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                        21
+ Column                             Variable
+        Variable                                      Description
+ Number                             Type
+   6.   Percent of patients         Numeric           0-100; Not Available if not calculated
+        who reported that
+        their home health
+        team gave care in a
+        professional way
+   7.   Footnote for Percent        Character         8-12 [Footnote text in Table 14]
+        of patients who
+        reported that their
+        home health team gave
+        care in a professional
+        way
+   8.   Star Rating for health      Numeric           1-5; Not Available if not calculated
+        team communicated
+        well with them
+   9.   Footnote for Star           Character         8-12 [Footnote text in Table 14]
+        Rating for
+        communicated well with
+        them
+   10.  Percent of patients         Numeric           0-100; Not Available if not calculated
+        who reported that
+        their home health
+        team communicated
+        well with them
+   11.  Footnote for Percent        Character         8-12 [Footnote text in Table 14]
+        of patients who
+        reported that their
+        home health team
+        communicated well
+        with them
+   12.  Star Rating team            Numeric           1-5; Not Available if not calculated
+        discussed medicines,
+        pain, and home safety
+   13.  Footnote Star Rating        Character         8-12 [Footnote text in Table 14]
+        discussed medicines,
+        pain, home safety
+   14.  Percent of patients         Numeric           0-100; Not Available if not calculated
+        who reported that
+        their home health
+        team discussed
+        medicines, pain, and
+        home safety with
+        them
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                            22
+ Column                             Variable
+        Variable                                      Description
+ Number                             Type
+   15.  Footnote for Percent        Character         8-12 [Footnote text in Table 14]
+        of patients who
+        reported that their
+        home health team
+        discussed medicines,
+        pain, and home safety
+        with them
+   16.  Star Rating for how         Numeric           1-5; Not Available if not calculated
+        patients rated overall
+        care from agency
+   17.  Footnote for Star           Character         8-12 [Footnote text in Table 14]
+        Rating for overall
+        care from agency
+   18.  Percent of patients         Numeric           0-100; Not Available if not calculated
+        who gave their home
+        health agency a rating
+        of 9 or 10 on a scale
+        from 0 (lowest) to 10
+        (highest)
+   19.  Footnote for Percent        Character         8-12 [Footnote text in Table 14]
+        of patients who gave
+        their home health
+        agency a rating of 9 or
+        10 on a scale from 0
+        (lowest) to 10 (highest)
+   20.  Percent of patients         Numeric           0-100; Not Available if not calculated
+        who reported YES,
+        they would definitely
+        recommend the home
+        health agency to
+        friends and family
+   21.  Footnote for Percent        Character         8-12 [Footnote text in Table 14]
+        of patients who
+        reported YES, they
+        would definitely
+        recommend the home
+        health agency to
+        friends and family
+   22.  Number of completed         Numeric           0 – 5,000
+        Surveys
+   23.  Footnote for number         Character         8-12 [Footnote text in Table 14]
+        of completed surveys
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                            23
+ Column                             Variable
+        Variable                                      Description
+ Number                             Type
+   24.  Survey response rate        Numeric           0-100; Not Available if not calculated
+
+   25.    Footnote for survey       Character         8-12 [Footnote text in Table 14]
+          response rate
+   26.    Footnote Number           Character         8-12 [Footnote text in Table 14]
+
+
+
+Table 9: HHCAHPS_National_MMMYYYY.csv (8 columns) Variables
+ Column
+ Number Variable                    Variable Type     Description
+
+   1.     Country                   Character         A constant value, equal to “Nation”.
+   2.     Percent of patients       Numeric           0-100
+          who reported that
+          their home health
+          team gave care in a
+          professional way
+
+   3.     Percent of patients       Numeric           0-100
+          who reported that
+          their home health
+          team
+          communicated
+          well with them
+   4.     Percent of patients       Numeric           0-100
+          who reported that
+          their home health
+          team discussed
+          medicines, pain, and
+          home safety with
+          them
+   5.     Percent of patients       Numeric           0-100
+          who gave their home
+          health agency a rating
+          of 9 or 10 on a scale
+          from 0 (lowest) to 10
+          (highest)
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                            24
+ Column
+ Number Variable                    Variable Type     Description
+
+   6.     Percent of patients       Numeric           0-100
+          who reported YES,
+          they would definitely
+          recommend the home
+          health agency to
+          friends and family
+   7.     Number of completed
+                                    Numeric           0-9,999,999
+          Surveys
+   8.     Survey response rate      Numeric           0-100
+
+
+
+Table 10: HHCAHPS_State_MMMYYYY.csv (8 columns)
+ Column
+        Variable                    Variable Type     Description
+ Number
+   1.   State                       Character         The two-character postal code for the state or territory
+   2.   Percent of patients         Numeric           0-100
+        who reported that
+        their home health
+        team gave care in a
+        professional way
+   3.   Percent of patients         Numeric           0-100
+        who reported that
+        their home health
+        team communicated
+        well with them
+   4.   Percent of patients         Numeric           0-100
+        who reported that
+        their home health
+        team discussed
+        medicines, pain, and
+        home safety with
+        them
+   5.   Percent of patients who     Numeric           0-100
+        gave their home health
+        agency a rating of 9 or
+        10 on a scale from 0
+        (lowest) to 10 (highest)
+   6.   Percent of patients who     Numeric           0-100
+        reported YES, they
+        would definitely
+        recommend the home
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          25
+ Column
+        Variable                     Variable Type    Description
+ Number
+        health agency to friends
+        and family
+   7.   Number of completed          Numeric          0-9,999,999
+        Surveys
+   8.   Survey response rate         Numeric          0-100
+
+Table 11: HHCAHPS_MeasureDateRange_MMMYYYY.csv (2 columns)
+ Column
+        Variable                     Variable Type    Description
+ Number
+   1.   The descriptive measure
+                                     Character        The name of the measure.
+        name
+   2.   The months covered by        Character        The first date (Month Date, Year) through the last date
+        the data collection period                    (Month Date, Year) of the measure date range for each
+        for this measure                              measure.
+
+
+
+Table 12: HHVBP_Provider_PerformanceYear_YYYY.csv (252 columns)
+ Column
+        Variable Name                Variable Type    Description
+ Number
+    1.  CMS Certification            Character        The six character identification number assigned to the
+        Number (CCN)                                  home health agency (HHA) by the Centers for
+                                                      Medicare and Medicaid Services (CMS).
+    2.    State                      Character        The two character postal code for the state or territory
+                                                      in which the HHA is located.
+    3.    Provider Name              Character        The legal name of the HHA as it appears in the CMS
+                                                      certification system.
+    4.    Provider Address           Character        The street address, five-digit ZIP code, city/town, and
+                                                      state of the HHA.
+    5.    Nationwide Cohort          Character        The nationwide cohort to which the HHA is assigned:
+                                                      Larger-volume cohort or smaller-volume cohort.
+
+    6.    Footnote Nationwide        Character        If the metric is dashed (-) or not available (NA), the
+          Cohort                                      reason the metric was not calculated is explained here.
+    7.    Discharged to              Character        Discharged to Community (OASIS-based): The
+          Community: PY HHA                           performance year (12-month end date) for the HHA
+          Data Period                                 used to calculate its risk-adjusted value for this
+                                                      measure in the performance year (PY).
+    8.    Footnote Discharged to     Character        If the metric is dashed (-) or not available (NA), the
+          Community: PY HHA                           reason the metric was not calculated is explained here.
+          Data Period
+    9.    Oral Medications: PY       Character        Improvement in Management of Oral Medications
+          HHA Data Period                             (OASIS-based): The performance year (12-month end
+                                                      date) for the HHA used to calculate its risk-adjusted
+                                                      value for this measure in the performance year (PY).
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                             26
+ Column
+        Variable Name               Variable Type     Description
+ Number
+   10.  Footnote Oral               Character         If the metric is dashed (-) or not available (NA), the
+        Medications: PY HHA                           reason the metric was not calculated is explained here.
+        Data Period
+   11.  Dyspnea: PY HHA Data        Character         Improvement in Dyspnea (OASIS-based): The
+        Period                                        performance year (12-month end date) for the HHA
+                                                      used to calculate its risk-adjusted value for this
+                                                      measure in the performance year (PY).
+   12.    Footnote Dyspnea: PY      Character         If the metric is dashed (-) or not available (NA), the
+          HHA Data Period                             reason the metric was not calculated is explained here.
+   13.    TNC Mobility: PY HHA      Character         Total Normalized Composite Change in Mobility
+          Data Period                                 (OASIS-based): The performance year (12-month end
+                                                      date) for the HHA used to calculate its risk-adjusted
+                                                      value for this measure in the performance year (PY).
+   14.    Footnote TNC Mobility:    Character         If the metric is dashed (-) or not available (NA), the
+          PY HHA Data Period                          reason the metric was not calculated is explained here.
+   15.    TNC Self-Care: PY         Character         Total Normalized Composite Change in Self-Care
+          HHA Data Period                             (OASIS-based): The performance year (12-month end
+                                                      date) for the HHA used to calculate its risk-adjusted
+                                                      value for this measure in the performance year (PY).
+   16.    Footnote TNC Self-Care:   Character         If the metric is dashed (-) or not available (NA), the
+          PY HHA Data Period                          reason the metric was not calculated is explained here.
+   17.    ACH: PY HHA Data          Character         Acute Care Hospitalization During the First 60 Days of
+          Period                                      Home Health (claims-based): The performance year
+                                                      (12-month end date) for the HHA used to calculate its
+                                                      risk-adjusted value for this measure in the performance
+                                                      year (PY).
+   18.    Footnote ACH: PY HHA      Character         If the metric is dashed (-) or not available (NA), the
+          Data Period                                 reason the metric was not calculated is explained here.
+   19.    ED Use: PY HHA Data       Character         Emergency Department Use without Hospitalization
+          Period                                      During the First 60 Days of Home Health (claims-
+                                                      based): The performance year (12-month end date) for
+                                                      the HHA used to calculate its risk-adjusted value for
+                                                      this measure in the performance year (PY).
+   20.    Footnote ED Use: PY       Character         If the metric is dashed (-) or not available (NA), the
+          HHA Data Period                             reason the metric was not calculated is explained here.
+   21.    Care of Patients: PY      Character         Care of Patients (HHCAHPS Survey-based): The
+          HHA Data Period                             performance year (12-month end date) for the HHA
+                                                      used to calculate its risk-adjusted value for this
+                                                      measure in the performance year (PY).
+   22.    Footnote Care of          Character         If the metric is dashed (-) or not available (NA), the
+          Patients: PY HHA Data                       reason the metric was not calculated is explained here.
+          Period
+   23.    Communication: PY         Character         Communications Between Providers and Patients
+          HHA Data Period                             (HHCAHPS Survey-based): The performance year
+                                                      (12-month end date) for the HHA used to calculate its
+                                                      risk-adjusted value for this measure in the performance
+                                                      year (PY).
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         27
+ Column
+        Variable Name                Variable Type    Description
+ Number
+   24.  Footnote                     Character        If the metric is dashed (-) or not available (NA), the
+        Communication: PY                             reason the metric was not calculated is explained here.
+        HHA Data Period
+   25.  Specific Care Issues: PY     Character        Specific Care Issues (HHCAHPS Survey-based): The
+        HHA Data Period                               performance year (12-month end date) for the HHA
+                                                      used to calculate its risk-adjusted value for this
+                                                      measure in the performance year (PY).
+   26.    Footnote Specific Care Character            If the metric is dashed (-) or not available (NA), the
+          Issues: PY HHA Data                         reason the metric was not calculated is explained here.
+          Period
+   27.    Overall Rating: PY HHA Character            Overall Rating of Home Health Care (HHCAHPS
+          Data Period                                 Survey-based): The performance year (12-month end
+                                                      date) for the HHA used to calculate its risk-adjusted
+                                                      value for this measure in the performance year (PY).
+   28.    Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          PY HHA Data Period                          reason the metric was not calculated is explained here.
+   29.    Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: PY HHA                           Survey-based): The performance year (12-month end
+          Data Period                                 date) for the HHA used to calculate its risk-adjusted
+                                                      value for this measure in the performance year (PY).
+   30.    Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: PY HHA                           reason the metric was not calculated is explained here.
+          Data Period
+   31.    Discharged to              Character        Discharged to Community (OASIS-based): The HHA’s
+          Community: PY HHA                           risk-adjusted measure value for this measure in the
+          Measure Value                               performance year (PY).
+   32.    Footnote Discharged to     Character        If the metric is dashed (-) or not available (NA), the
+          Community: PY HHA                           reason the metric was not calculated is explained here.
+          Measure Value
+   33.    Dyspnea: PY HHA            Character        Improvement in Dyspnea (OASIS-based): The HHA’s
+          Measure Value                               risk-adjusted measure value for this measure in the
+                                                      performance year (PY).
+   34.    Footnote Dyspnea: PY       Character        If the metric is dashed (-) or not available (NA), the
+          HHA Measure Value                           reason the metric was not calculated is explained here.
+   35.    Oral Medications: PY       Character        Improvement in Management of Oral Medications
+          HHA Measure Value                           (OASIS-based): The HHA’s risk-adjusted measure
+                                                      value for this measure in the performance year (PY).
+   36.    Footnote Oral              Character        If the metric is dashed (-) or not available (NA), the
+          Medications: PY HHA                         reason the metric was not calculated is explained here.
+          Measure Value
+   37.    TNC Mobility: PY HHA       Character        Total Normalized Composite Change in Mobility
+          Measure Value                               (OASIS-based): The HHA’s risk-adjusted measure
+                                                      value for this measure in the performance year (PY).
+   38.    Footnote TNC Mobility:     Character        If the metric is dashed (-) or not available (NA), the
+          PY HHA Measure Value                        reason the metric was not calculated is explained here.
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          28
+ Column
+        Variable Name                Variable Type    Description
+ Number
+   39.  TNC Self-Care: PY            Character        Total Normalized Composite Change in Self-Care
+        HHA Measure Value                             (OASIS-based): The HHA’s risk-adjusted measure
+                                                      value for this measure in the performance year (PY).
+   40.    Footnote TNC Self-Care:    Character        If the metric is dashed (-) or not available (NA), the
+          PY HHA Measure Value                        reason the metric was not calculated is explained here.
+   41.    ACH: PY HHA Measure        Character        Acute Care Hospitalization During the First 60 Days of
+          Value                                       Home Health (claims-based): The HHA’s risk-adjusted
+                                                      measure value for this measure in the performance year
+                                                      (PY).
+   42.    Footnote ACH: PY HHA       Character        If the metric is dashed (-) or not available (NA), the
+          Measure Value                               reason the metric was not calculated is explained here.
+   43.    ED Use: PY HHA             Character        Emergency Department Use without Hospitalization
+          Measure Value                               During the First 60 Days of Home Health (claims-
+                                                      based): The HHA’s risk-adjusted measure value for
+                                                      this measure in the performance year (PY).
+   44.    Footnote ED Use: PY        Character        If the metric is dashed (-) or not available (NA), the
+          HHA Measure Value                           reason the metric was not calculated is explained here.
+   45.    Care of Patients: PY       Character        Care of Patients (HHCAHPS Survey-based): The
+          HHA Measure Value                           HHA’s risk-adjusted measure value for this measure in
+                                                      the performance year (PY).
+   46.    Footnote Care of           Character        If the metric is dashed (-) or not available (NA), the
+          Patients: PY HHA                            reason the metric was not calculated is explained here.
+          Measure Value
+   47.    Communication: PY          Character        Communications between Providers and Patients
+          HHA Measure Value                           (HHCAHPS Survey-based): The HHA’s risk-adjusted
+                                                      measure value for this measure in the performance year
+                                                      (PY).
+   48.    Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication: PY                           reason the metric was not calculated is explained here.
+          HHA Measure Value
+   49.    Specific Care Issues: PY   Character        Specific Care Issues (HHCAHPS Survey-based): The
+          HHA Measure Value                           HHA’s risk-adjusted measure value for this measure in
+                                                      the performance year (PY).
+   50.    Footnote Specific Care Character            If the metric is dashed (-) or not available (NA), the
+          Issues: PY HHA                              reason the metric was not calculated is explained here.
+          Measure Value
+   51.    Overall Rating: PY HHA Character            Overall Rating of Home Health Care (HHCAHPS
+          Measure Value                               Survey-based): The HHA’s risk-adjusted measure
+                                                      value for this measure in the performance year (PY).
+   52.    Footnote Overall Rating:   Character         If the metric is dashed (-) or not available (NA), the
+          PY HHA Measure Value                        reason the metric was not calculated is explained here.
+   53.    Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: PY HHA                           Survey-based): The HHA’s risk-adjusted measure
+          Measure Value                               value for this measure in the performance year (PY).
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          29
+ Column
+        Variable Name               Variable Type     Description
+ Number
+   54.  Footnote Willingness to     Character         If the metric is dashed (-) or not available (NA), the
+        Recommend: PY HHA                             reason the metric was not calculated is explained here.
+        Measure Value
+   55.    Discharged to             Character         Discharged to Community (OASIS-based): The HHA's
+          Community: HHA                              achievement points for the measure, ranging from zero
+          Achievement Points                          (0) to ten (10).
+   56.    Footnote Discharged to    Character         If the metric is dashed (-) or not available (NA), the
+          Community: HHA                              reason the metric was not calculated is explained here.
+          Achievement Points
+   57.    Dyspnea: HHA              Character         Improvement in Dyspnea (OASIS-based): The HHA's
+          Achievement Points                          achievement points for the measure, ranging from zero
+                                                      (0) to ten (10).
+   58.    Footnote Dyspnea: HHA     Character         If the metric is dashed (-) or not available (NA), the
+          Achievement Points                          reason the metric was not calculated is explained here.
+   59.    Oral Medications: HHA     Character         Improvement in Management of Oral Medications
+          Achievement Points                          (OASIS-based): The HHA's achievement points for the
+                                                      measure, ranging from zero (0) to ten (10).
+   60.    Footnote Oral             Character         If the metric is dashed (-) or not available (NA), the
+          Medications: HHA                            reason the metric was not calculated is explained here.
+          Achievement Points
+   61.    TNC Mobility: HHA         Character         Total Normalized Composite Change in Mobility
+          Achievement Points                          (OASIS-based): The HHA's achievement points for the
+                                                      measure, ranging from zero (0) to ten (10).
+   62.    Footnote TNC Mobility:    Character         If the metric is dashed (-) or not available (NA), the
+          HHA Achievement                             reason the metric was not calculated is explained here.
+          Points
+   63.    TNC Self-Care: HHA        Character         Total Normalized Composite Change in Self-Care
+          Achievement Points                          (OASIS-based): The HHA's achievement points for the
+                                                      measure, ranging from zero (0) to ten (10).
+   64.    Footnote TNC Self-Care:   Character         If the metric is dashed (-) or not available (NA), the
+          HHA Achievement                             reason the metric was not calculated is explained here.
+          Points
+   65.    ACH: HHA                  Character         Acute Care Hospitalization During the First 60 Days of
+          Achievement Points                          Home Health (claims-based): The HHA's achievement
+                                                      points for the measure, ranging from zero (0) to ten
+                                                      (10).
+   66.    Footnote ACH: HHA         Character         If the metric is dashed (-) or not available (NA), the
+          Achievement Points                          reason the metric was not calculated is explained here.
+   67.    ED Use: HHA               Character         Emergency Department Use without Hospitalization
+          Achievement Points                          During the First 60 Days of Home Health (claims-
+                                                      based): The HHA's achievement points for the
+                                                      measure, ranging from zero (0) to ten (10).
+   68.    Footnote ED Use: HHA      Character         If the metric is dashed (-) or not available (NA), the
+          Achievement Points                          reason the metric was not calculated is explained here.
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         30
+ Column
+        Variable Name                Variable Type    Description
+ Number
+   69.  Care of Patients: HHA        Character        Care of Patients (HHCAHPS Survey-based): The
+        Achievement Points                            HHA's achievement points for the measure, ranging
+                                                      from zero (0) to ten (10).
+   70.    Footnote Care of           Character        If the metric is dashed (-) or not available (NA), the
+          Patients: HHA                               reason the metric was not calculated is explained here.
+          Achievement Points
+   71.    Communication: HHA         Character        Communications between Providers and Patients
+          Achievement Points                          (HHCAHPS Survey-based): The HHA's achievement
+                                                      points for the measure, ranging from zero (0) to ten
+                                                      (10).
+   72.    Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication: HHA                          reason the metric was not calculated is explained here.
+          Achievement Points
+   73.    Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): The
+          HHA Achievement                             HHA's achievement points for the measure, ranging
+          Points                                      from zero (0) to ten (10).
+   74.    Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: HHA                                 reason the metric was not calculated is explained here.
+          Achievement Points
+   75.    Overall Rating: HHA        Character        Specific Care Issues (HHCAHPS Survey-based): The
+          Achievement Points                          HHA's achievement points for the measure, ranging
+                                                      from zero (0) to ten (10).
+   76.    Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          HHA Achievement                             reason the metric was not calculated is explained here.
+          Points
+   77.    Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: HHA                              Survey-based): The HHA's achievement points for the
+          Achievement Points                          measure, ranging from zero (0) to ten (10).
+   78.    Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: HHA                              reason the metric was not calculated is explained here.
+          Achievement Points
+   79.    Discharged to              Character        Discharged to Community (OASIS-based): The HHA’s
+          Community: HHA                              baseline year (12-month end date) used to calculate the
+          Baseline Year                               HHA’s improvement threshold for this measure.
+   80.    Footnote Discharged to     Character        If the metric is dashed (-) or not available (NA), the
+          Community: HHA                              reason the metric was not calculated is explained here.
+          Baseline Year
+   81.    Oral Medications: HHA      Character        Improvement in Management of Oral Medications
+          Baseline Year                               (OASIS-based): The HHA’s baseline year (12-month
+                                                      end date) used to calculate the HHA’s improvement
+                                                      threshold for this measure.
+   82.    Footnote Oral              Character        If the metric is dashed (-) or not available (NA), the
+          Medications: HHA                            reason the metric was not calculated is explained here.
+          Baseline Year
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         31
+ Column
+        Variable Name               Variable Type     Description
+ Number
+   83.  Dyspnea: HHA Baseline       Character         Improvement in Dyspnea (OASIS-based): The HHA’s
+        Year                                          baseline year (12-month end date) used to calculate the
+                                                      HHA’s improvement threshold for this measure.
+   84.    Footnote Dyspnea: HHA     Character         If the metric is dashed (-) or not available (NA), the
+          Baseline Year                               reason the metric was not calculated is explained here.
+   85.    TNC Mobility: HHA         Character         Total Normalized Composite Change in Mobility
+          Baseline Year                               (OASIS-based): The HHA’s baseline year (12-month
+                                                      end date) used to calculate the HHA’s improvement
+                                                      threshold for this measure.
+   86.    Footnote TNC Mobility:    Character         If the metric is dashed (-) or not available (NA), the
+          HHA Baseline Year                           reason the metric was not calculated is explained here.
+   87.    TNC Self-Care: HHA        Character         Total Normalized Composite Change in Self-Care
+          Baseline Year                               (OASIS-based): The HHA’s baseline year (12-month
+                                                      end date) used to calculate the HHA’s improvement
+                                                      threshold for this measure.
+   88.    Footnote TNC Self-Care:   Character         If the metric is dashed (-) or not available (NA), the
+          HHA Baseline Year                           reason the metric was not calculated is explained here.
+   89.    ACH: HHA Baseline         Character         Acute Care Hospitalization During the First 60 Days of
+          Year                                        Home Health (claims-based): The HHA’s baseline year
+                                                      (12-month end date) used to calculate the HHA’s
+                                                      improvement threshold for this measure.
+   90.    Footnote ACH: HHA         Character         If the metric is dashed (-) or not available (NA), the
+          Baseline Year                               reason the metric was not calculated is explained here.
+   91.    ED Use: HHA Baseline      Character         Emergency Department Use without Hospitalization
+          Year                                        During the First 60 Days of Home Health (claims-
+                                                      based): The HHA’s baseline year (12-month end date)
+                                                      used to calculate the HHA’s improvement threshold for
+                                                      this measure.
+   92.    Footnote ED Use: HHA      Character         If the metric is dashed (-) or not available (NA), the
+          Baseline Year                               reason the metric was not calculated is explained here.
+   93.    Care of Patients: HHA     Character         Care of Patients (HHCAHPS Survey-based): The
+          Baseline Year                               HHA’s baseline year (12-month end date) used to
+                                                      calculate the HHA’s improvement threshold for this
+                                                      measure.
+   94.    Footnote Care of          Character         If the metric is dashed (-) or not available (NA), the
+          Patients: HHA Baseline                      reason the metric was not calculated is explained here.
+          Year
+   95.    Communication: HHA        Character         Communications Between Providers and Patients
+          Baseline Year                               (HHCAHPS Survey-based): The HHA’s baseline year
+                                                      (12-month end date) used to calculate the HHA’s
+                                                      improvement threshold for this measure.
+   96.    Footnote                  Character         If the metric is dashed (-) or not available (NA), the
+          Communication: HHA                          reason the metric was not calculated is explained here.
+          Baseline Year
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         32
+ Column
+        Variable Name                Variable Type    Description
+ Number
+   97.  Specific Care Issues:        Character        Specific Care Issues (HHCAHPS Survey-based): The
+        HHA Baseline Year                             HHA’s baseline year (12-month end date) used to
+                                                      calculate the HHA’s improvement threshold for this
+                                                      measure.
+   98.    Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: HHA Baseline                        reason the metric was not calculated is explained here.
+          Year
+   99.    Overall Rating: HHA        Character        Overall Rating of Home Health Care (HHCAHPS
+          Baseline Year                               Survey-based): The HHA's baseline year (12-month
+                                                      end date) used to calculate the HHA’s improvement
+                                                      threshold for this measure.
+   100.   Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          HHA Baseline Year                           reason the metric was not calculated is explained here.
+   101.   Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: HHA                              Survey-based): The HHA’s baseline year (12-month
+          Baseline Year                               end date) used to calculate the HHA’s improvement
+                                                      threshold for this measure.
+   102.   Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: HHA                              reason the metric was not calculated is explained here.
+          Baseline Year
+   103.   Discharged to              Character        Discharged to Community (OASIS-based): The
+          Community: HHA                              improvement threshold for this measure, which is the
+          Improvement Threshold                       HHA’s risk-adjusted measure value for this measure in
+                                                      the HHA baseline year.
+   104.   Footnote Discharged to     Character        If the metric is dashed (-) or not available (NA), the
+          Community: HHA                              reason the metric was not calculated is explained here.
+          Improvement Threshold
+   105.   Dyspnea: HHA               Character        Improvement in Dyspnea (OASIS-based): The
+          Improvement Threshold                       improvement threshold for this measure, which is the
+                                                      HHA’s risk-adjusted measure value for this measure in
+                                                      the HHA baseline year.
+   106.   Footnote Dyspnea: HHA      Character        If the metric is dashed (-) or not available (NA), the
+          Improvement Threshold                       reason the metric was not calculated is explained here.
+   107.   Oral Medications: HHA      Character        Improvement in Management of Oral Medications
+          Improvement Threshold                       (OASIS-based): The improvement threshold for this
+                                                      measure, which is the HHA’s risk-adjusted measure
+                                                      value for this measure in the HHA baseline year.
+   108.   Footnote Oral              Character        If the metric is dashed (-) or not available (NA), the
+          Medications: HHA                            reason the metric was not calculated is explained here.
+          Improvement Threshold
+   109.   TNC Mobility: HHA          Character        Total Normalized Composite Change in Mobility
+          Improvement Threshold                       (OASIS-based): The improvement threshold for this
+                                                      measure, which is the HHA’s risk-adjusted measure
+                                                      value for this measure in the HHA baseline year.
+   110.   Footnote TNC Mobility:     Character        If the metric is dashed (-) or not available (NA), the
+          HHA Improvement                             reason the metric was not calculated is explained here.
+          Threshold
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         33
+ Column
+        Variable Name               Variable Type     Description
+ Number
+  111.  TNC Self-Care: HHA          Character         Total Normalized Composite Change in Self-Care
+        Improvement Threshold                         (OASIS-based): The improvement threshold for this
+                                                      measure, which is the HHA’s risk-adjusted measure
+                                                      value for this measure in the HHA baseline year.
+   112.   Footnote TNC Self-Care:   Character         If the metric is dashed (-) or not available (NA), the
+          HHA Improvement                             reason the metric was not calculated is explained here.
+          Threshold
+   113.   ACH: HHA                  Character         Acute Care Hospitalization During the First 60 Days of
+          Improvement Threshold                       Home Health (claims-based): The improvement
+                                                      threshold for this measure, which is the HHA’s risk-
+                                                      adjusted measure value for this measure in the HHA
+                                                      baseline year.
+   114.   Footnote ACH: HHA         Character         If the metric is dashed (-) or not available (NA), the
+          Improvement Threshold                       reason the metric was not calculated is explained here.
+   115.   ED Use: HHA               Character         Emergency Department Use without Hospitalization
+          Improvement Threshold                       During the First 60 Days of Home Health (claims-
+                                                      based): The improvement threshold for this measure,
+                                                      which is the HHA’s risk-adjusted measure value for
+                                                      this measure in the HHA Baseline Year.
+   116.   Footnote ED Use: HHA      Character         If the metric is dashed (-) or not available (NA), the
+          Improvement Threshold                       reason the metric was not calculated is explained here.
+   117.   Care of Patients: HHA     Character         Care of Patients (HHCAHPS Survey-based): The
+          Improvement Threshold                       improvement threshold for this measure, which is the
+                                                      HHA’s risk-adjusted measure value for this measure in
+                                                      the HHA baseline year.
+   118.   Footnote Care of          Character         If the metric is dashed (-) or not available (NA), the
+          Patients: HHA                               reason the metric was not calculated is explained here.
+          Improvement Threshold
+   119.   Communication: HHA        Character         Communications Between Providers and Patients
+          Improvement Threshold                       (HHCAHPS Survey-based): The improvement
+                                                      threshold for this measure, which is the HHA’s risk-
+                                                      adjusted measure value for this measure in the HHA
+                                                      baseline year.
+   120.   Footnote                  Character         If the metric is dashed (-) or not available (NA), the
+          Communication: HHA                          reason the metric was not calculated is explained here.
+          Improvement Threshold
+   121.   Specific Care Issues:     Character         Specific Care Issues (HHCAHPS Survey-based): The
+          HHA Improvement                             improvement threshold for this measure, which is the
+          Threshold                                   HHA’s risk-adjusted measure value for this measure in
+                                                      the HHA baseline year.
+   122.   Footnote Specific Care    Character         If the metric is dashed (-) or not available (NA), the
+          Issues: HHA                                 reason the metric was not calculated is explained here.
+          Improvement Threshold
+   123.   Overall Rating: HHA       Character         Specific Care Issues (HHCAHPS Survey-based): The
+          Improvement Threshold                       improvement threshold for this measure, which is the
+                                                      HHA’s risk-adjusted measure value for this measure in
+                                                      the HHA baseline year.
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         34
+ Column
+        Variable Name               Variable Type     Description
+ Number
+  124.  Footnote Overall Rating:    Character         If the metric is dashed (-) or not available (NA), the
+        HHA Improvement                               reason the metric was not calculated is explained here.
+        Threshold
+  125.  Willingness to              Character         Willingness to Recommend the Agency (HHCAHPS
+        Recommend: HHA                                Survey-based): The improvement threshold for this
+        Improvement Threshold                         measure, which is the HHA’s risk-adjusted measure
+                                                      value for this measure in the HHA baseline year.
+   126.   Footnote Willingness to   Character         If the metric is dashed (-) or not available (NA), the
+          Recommend: HHA                              reason the metric was not calculated is explained here.
+          Improvement Threshold
+   127.   Discharged to             Character         Discharged to Community (OASIS-based): The HHA’s
+          Community: HHA                              improvement points for this measure, ranging from
+          Improvement Points                          zero (0) to nine (9).
+   128.   Footnote Discharged to    Character         If the metric is dashed (-) or not available (NA), the
+          Community: HHA                              reason the metric was not calculated is explained here.
+          Improvement Points
+   129.   Dyspnea: HHA              Character         Improvement in Dyspnea (OASIS-based): The HHA’s
+          Improvement Points                          improvement points for this measure, ranging from
+                                                      zero (0) to nine (9).
+   130.   Footnote Dyspnea: HHA     Character         If the metric is dashed (-) or not available (NA), the
+          Improvement Points                          reason the metric was not calculated is explained here.
+   131.   Oral Medications: HHA     Character         Improvement in Management of Oral Medications
+          Improvement Points                          (OASIS-based): The HHA’s improvement points for
+                                                      this measure, ranging from zero (0) to nine (9).
+   132.   Footnote Oral             Character         If the metric is dashed (-) or not available (NA), the
+          Medications: HHA                            reason the metric was not calculated is explained here.
+          Improvement Points
+   133.   TNC Mobility: HHA         Character         Total Normalized Composite Change in Mobility
+          Improvement Points                          (OASIS-based): The HHA’s improvement points for
+                                                      this measure, ranging from zero (0) to nine (9).
+   134.   Footnote TNC Mobility:    Character         If the metric is dashed (-) or not available (NA), the
+          HHA Improvement                             reason the metric was not calculated is explained here.
+          Points
+   135.   TNC Self-Care: HHA        Character         Total Normalized Composite Change in Self-Care
+          Improvement Points                          (OASIS-based): The HHA’s improvement points for
+                                                      this measure, ranging from zero (0) to nine (9).
+   136.   Footnote TNC Self-Care:   Character         If the metric is dashed (-) or not available (NA), the
+          HHA Improvement                             reason the metric was not calculated is explained here.
+          Points
+   137.   ACH: HHA                  Character         Acute Care Hospitalization During the First 60 Days of
+          Improvement Points                          Home Health (claims-based): The HHA’s
+                                                      improvement points for this measure, ranging from
+                                                      zero (0) to nine (9).
+   138.   Footnote ACH: HHA         Character         If the metric is dashed (-) or not available (NA), the
+          Improvement Points                          reason the metric was not calculated is explained here.
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         35
+ Column
+        Variable Name                Variable Type    Description
+ Number
+  139.  ED Use: HHA                  Character        Emergency Department Use without Hospitalization
+        Improvement Points                            During the First 60 Days of Home Health (claims-
+                                                      based): The HHA’s improvement points for this
+                                                      measure, ranging from zero (0) to nine (9).
+   140.   Footnote ED Use: HHA       Character        If the metric is dashed (-) or not available (NA), the
+          Improvement Points                          reason the metric was not calculated is explained here.
+   141.   Care of Patients: HHA      Character        Care of Patients (HHCAHPS Survey-based): The
+          Improvement Points                          HHA’s improvement points for this measure, ranging
+                                                      from zero (0) to nine (9).
+   142.   Footnote Care of           Character        If the metric is dashed (-) or not available (NA), the
+          Patients: HHA                               reason the metric was not calculated is explained here.
+          Improvement Points
+   143.   Communication: HHA         Character        Communications Between Providers and Patients
+          Improvement Points                          (HHCAHPS Survey-based): The HHA’s improvement
+                                                      points for this measure, ranging from zero (0) to nine
+                                                      (9).
+   144.   Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication: HHA                          reason the metric was not calculated is explained here.
+          Improvement Points
+   145.   Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): The
+          HHA Improvement                             HHA’s improvement points for this measure, ranging
+          Points                                      from zero (0) to nine (9).
+   146.   Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: HHA                                 reason the metric was not calculated is explained here.
+          Improvement Points
+   147.   Overall Rating: HHA        Character        Specific Care Issues (HHCAHPS Survey-based): The
+          Improvement Points                          HHA’s improvement points for this measure, ranging
+                                                      from zero (0) to nine (9).
+   148.   Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          HHA Improvement                             reason the metric was not calculated is explained here.
+          Points
+   149.   Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: HHA                              Survey-based): The HHA’s improvement points for
+          Improvement Points                          this measure, ranging from zero (0) to nine (9).
+   150.   Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: HHA                              reason the metric was not calculated is explained here.
+          Improvement Points
+   151.   Discharged to              Character        Discharged to Community (OASIS-based): The HHA’s
+          Community: HHA Care                         care points for this measure, ranging from zero (0) to
+          Points                                      ten (10). The measure's care points are the higher of the
+                                                      measure's achievement points or improvement points.
+   152.   Footnote Discharged to     Character        If the metric is dashed (-) or not available (NA), the
+          Community: HHA Care                         reason the metric was not calculated is explained here.
+          Points
+   153.   Dyspnea: HHA Care          Character        Improvement in Dyspnea (OASIS-based): The HHA’s
+          Points                                      care points for this measure, ranging from zero (0) to
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          36
+ Column
+        Variable Name               Variable Type     Description
+ Number
+                                                      ten (10). The measure's care points are the higher of the
+                                                      measure's achievement points or improvement points.
+   154.   Footnote Dyspnea: HHA     Character         If the metric is dashed (-) or not available (NA), the
+          Care Points                                 reason the metric was not calculated is explained here.
+   155.   Oral Medications: HHA     Character         Improvement in Management of Oral Medications
+          Care Points                                 (OASIS-based): The HHA’s care points for this
+                                                      measure, ranging from zero (0) to ten (10). The
+                                                      measure's care points are the higher of the measure's
+                                                      achievement points or improvement points.
+   156.   Footnote Oral             Character         If the metric is dashed (-) or not available (NA), the
+          Medications: HHA Care                       reason the metric was not calculated is explained here.
+          Points
+   157.   TNC Mobility: HHA         Character         Total Normalized Composite Change in Mobility
+          Care Points                                 (OASIS-based): The HHA’s care points for this
+                                                      measure, ranging from zero (0) to ten (10). The
+                                                      measure's care points are the higher of the measure's
+                                                      achievement points or improvement points.
+   158.   Footnote TNC Mobility:    Character         If the metric is dashed (-) or not available (NA), the
+          HHA Care Points                             reason the metric was not calculated is explained here.
+   159.   TNC Self-Care: HHA        Character         Total Normalized Composite Change in Self-Care
+          Care Points                                 (OASIS-based): The HHA’s care points for this
+                                                      measure, ranging from zero (0) to ten (10). The
+                                                      measure's care points are the higher of the measure's
+                                                      achievement points or improvement points.
+   160.   Footnote TNC Self-Care:   Character         If the metric is dashed (-) or not available (NA), the
+          HHA Care Points                             reason the metric was not calculated is explained here.
+   161.   ACH: HHA Care Points      Character         Acute Care Hospitalization During the First 60 Days of
+                                                      Home Health (claims-based): The HHA’s care points
+                                                      for this measure, ranging from zero (0) to ten (10). The
+                                                      measure's care points are the higher of the measure's
+                                                      achievement points or improvement points.
+   162.   Footnote ACH: HHA         Character         If the metric is dashed (-) or not available (NA), the
+          Care Points                                 reason the metric was not calculated is explained here.
+   163.   ED Use: HHA Care          Character         Emergency Department Use without Hospitalization
+          Points                                      During the First 60 Days of Home Health (claims-
+                                                      based): The HHA’s care points for this measure,
+                                                      ranging from zero (0) to ten (10). The measure's care
+                                                      points are the higher of the measure's achievement
+                                                      points or improvement points.
+   164.   Footnote ED Use: HHA      Character         If the metric is dashed (-) or not available (NA), the
+          Care Points                                 reason the metric was not calculated is explained here.
+   165.   Care of Patients: HHA     Character         Care of Patients (HHCAHPS Survey-based): The
+          Care Points                                 HHA’s Care Points for this measure, ranging from zero
+                                                      (0) to ten (10). The measure's care points are the higher
+                                                      of the measure's achievement points or improvement
+                                                      points.
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          37
+ Column
+        Variable Name                Variable Type    Description
+ Number
+  166.  Footnote Care of             Character        If the metric is dashed (-) or not available (NA), the
+        Patients: HHA Care                            reason the metric was not calculated is explained here.
+        Points
+  167.  Communication: HHA           Character        Communications Between Providers and Patients
+        Care Points                                   (HHCAHPS Survey-based): The HHA’s care points
+                                                      for this measure, ranging from zero (0) to ten (10). The
+                                                      measure's care points are the higher of the measure's
+                                                      achievement points or improvement points.
+   168.   Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication: HHA                          reason the metric was not calculated is explained here.
+          Care Points
+   169.   Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): The
+          HHA Care Points                             HHA’s care points for this measure, ranging from zero
+                                                      (0) to ten (10). The measure's care points are the higher
+                                                      of the measure's achievement points or improvement
+                                                      points.
+   170.   Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: HHA Care Points                     reason the metric was not calculated is explained here.
+   171.   Overall Rating: HHA        Character        Specific Care Issues (HHCAHPS Survey-based): The
+          Care Points                                 HHA’s care points for this measure, ranging from zero
+                                                      (0) to ten (10). The measure's care points are the higher
+                                                      of the measure's achievement points or improvement
+                                                      points.
+   172.   Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          HHA Care Points                             reason the metric was not calculated is explained here.
+   173.   Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: HHA Care                         Survey-based): The HHA’s care points for this
+          Points                                      measure, ranging from zero (0) to ten (10). The
+                                                      measure's care points are the higher of the measure's
+                                                      achievement points or improvement points.
+   174.   Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: HHA Care                         reason the metric was not calculated is explained here.
+          Points
+   175.   Discharged to              Character        Discharged to Community (OASIS-based): Did the
+          Community: Included in                      HHA have sufficient data in the baseline year and
+          TPS                                         performance year to create care points for this measure
+                                                      and count toward the 5-measure minimum to create a
+                                                      TPS? Yes/No
+   176.   Footnote Discharged to     Character        If the metric is dashed (-) or not available (NA), the
+          Community: Included in                      reason the metric was not calculated is explained here.
+          TPS
+   177.   Dyspnea: Included in       Character        Improvement in Dyspnea (OASIS-based): Did the
+          TPS                                         HHA have sufficient data in the baseline year and
+                                                      performance year to create care points for this measure
+                                                      and count toward the 5-measure minimum to create a
+                                                      TPS? Yes/No
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          38
+ Column
+        Variable Name                Variable Type    Description
+ Number
+  178.  Footnote Dyspnea:            Character        If the metric is dashed (-) or not available (NA), the
+        Included in TPS                               reason the metric was not calculated is explained here.
+   179.   Oral Medications:          Character        Improvement in Management of Oral Medications
+          Included in TPS                             (OASIS-based): Did the HHA have sufficient data in
+                                                      the baseline year and performance year to create care
+                                                      points for this measure and count toward the 5-measure
+                                                      minimum to create a TPS? Yes/No
+   180.   Footnote Oral              Character        If the metric is dashed (-) or not available (NA), the
+          Medications: Included in                    reason the metric was not calculated is explained here.
+          TPS
+   181.   TNC Mobility: Included     Character        Total Normalized Composite Change in Mobility
+          in TPS                                      (OASIS-based): Did the HHA have sufficient data in
+                                                      the baseline year and performance year to create care
+                                                      points for this measure and count toward the 5-measure
+                                                      minimum to create a TPS? Yes/No
+   182.   Footnote TNC Mobility:     Character        If the metric is dashed (-) or not available (NA), the
+          Included in TPS                             reason the metric was not calculated is explained here.
+   183.   TNC Self-Care: Included    Character        Total Normalized Composite Change in Self-Care
+          in TPS                                      (OASIS-based): Did the HHA have sufficient data in
+                                                      the baseline year and performance year to create care
+                                                      points for this measure and count toward the 5-measure
+                                                      minimum to create a TPS? Yes/No
+   184.   Footnote TNC Self-Care:    Character        If the metric is dashed (-) or not available (NA), the
+          Included in TPS                             reason the metric was not calculated is explained here.
+   185.   ACH: Included in TPS       Character        Acute Care Hospitalization During the First 60 Days of
+                                                      Home Health (claims-based): Did the HHA have
+                                                      sufficient data in the baseline year and performance
+                                                      year to create care points for this measure and count
+                                                      toward the 5-measure minimum to create a TPS?
+                                                      Yes/No
+   186.   Footnote ACH: Included     Character        If the metric is dashed (-) or not available (NA), the
+          in TPS                                      reason the metric was not calculated is explained here.
+   187.   ED Use: Included in TPS    Character        Emergency Department Use without Hospitalization
+                                                      During the First 60 Days of Home Health (claims-
+                                                      based): Did the HHA have sufficient data in the
+                                                      baseline year and performance year to create care
+                                                      points for this measure and count toward the 5-measure
+                                                      minimum to create a TPS? Yes/No
+   188.   Footnote ED Use:           Character        If the metric is dashed (-) or not available (NA), the
+          Included in TPS                             reason the metric was not calculated is explained here.
+   189.   Care of Patients:          Character        Care of Patients (HHCAHPS Survey-based): Did the
+          Included in TPS                             HHA have sufficient data in the baseline year and
+                                                      performance year to create care points for this measure
+                                                      and count toward the 5-measure minimum to create a
+                                                      TPS? Yes/No
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         39
+ Column
+        Variable Name                Variable Type    Description
+ Number
+  190.  Footnote Care of             Character        If the metric is dashed (-) or not available (NA), the
+        Patients: Included in                         reason the metric was not calculated is explained here.
+        TPS
+  191.  Communication:               Character        Communications Between Providers and Patients
+        Included in TPS                               (HHCAHPS Survey-based): Did the HHA have
+                                                      sufficient data in the baseline year and performance
+                                                      year to create care points for this measure and count
+                                                      toward the 5-measure minimum to create a TPS?
+                                                      Yes/No
+   192.   Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication:                              reason the metric was not calculated is explained here.
+          Included in TPS
+   193.   Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): Did
+          Included in TPS                             the HHA have sufficient data in the baseline year and
+                                                      performance year to create care points for this measure
+                                                      and count toward the 5-measure minimum to create a
+                                                      TPS? Yes/No
+   194.   Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: Included in TPS                     reason the metric was not calculated is explained here.
+   195.   Overall Rating: Included   Character        Overall Rating of Home Health Care (HHCAHPS
+          in TPS                                      Survey-based): Did the HHA have sufficient data in
+                                                      the baseline year and performance year to create care
+                                                      points for this measure and count toward the 5-measure
+                                                      minimum to create a TPS? Yes/No
+   196.   Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          Included in TPS                             reason the metric was not calculated is explained here.
+   197.   Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: Included in                      Survey-based): Did the HHA have sufficient data in
+          TPS                                         the baseline year and performance year to create care
+                                                      points for this measure and count toward the 5-measure
+                                                      minimum to create a TPS? Yes/No
+   198.   Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: Included in                      reason the metric was not calculated is explained here.
+          TPS
+   199.   Discharged to              Character        Discharged to Community (OASIS-based): The
+          Community: Measure                          measure's weight.
+          Weight
+   200.   Footnote Discharged to     Character        If the metric is dashed (-) or not available (NA), the
+          Community: Measure                          reason the metric was not calculated is explained here.
+          Weight
+   201.   Dyspnea: Measure           Character        Improvement in Dyspnea (OASIS-based): The
+          Weight                                      measure's weight.
+   202.   Footnote Dyspnea:          Character        If the metric is dashed (-) or not available (NA), the
+          Measure Weight                              reason the metric was not calculated is explained here.
+   203.   Oral Medications:          Character        Improvement in Management of Oral Medications
+          Measure Weight                              (OASIS-based): The measure's weight.
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         40
+ Column
+        Variable Name                Variable Type    Description
+ Number
+  204.  Footnote Oral                Character        If the metric is dashed (-) or not available (NA), the
+        Medications: Measure                          reason the metric was not calculated is explained here.
+        Weight
+  205.  TNC Mobility: Measure        Character        Total Normalized Composite Change in Mobility
+        Weight                                        (OASIS-based): The measure's weight.
+   206.   Footnote TNC Mobility:     Character        If the metric is dashed (-) or not available (NA), the
+          Measure Weight                              reason the metric was not calculated is explained here.
+   207.   TNC Self-Care: Measure     Character        Total Normalized Composite Change in Self-Care
+          Weight                                      (OASIS-based): The measure's weight.
+   208.   Footnote TNC Self-Care:    Character        If the metric is dashed (-) or not available (NA), the
+          Measure Weight                              reason the metric was not calculated is explained here.
+   209.   ACH: Measure Weight        Character        Acute Care Hospitalization During the First 60 Days of
+                                                      Home Health (claims-based): The measure's weight.
+   210.   Footnote ACH: Measure      Character        If the metric is dashed (-) or not available (NA), the
+          Weight                                      reason the metric was not calculated is explained here.
+   211.   ED Use: Measure            Character        Emergency Department Use without Hospitalization
+          Weight                                      During the First 60 Days of Home Health (claims-
+                                                      based): The measure's weight.
+   212.   Footnote ED Use:           Character        If the metric is dashed (-) or not available (NA), the
+          Measure Weight                              reason the metric was not calculated is explained here.
+   213.   Care of Patients:          Character        Care of Patients (HHCAHPS Survey-based): The
+          Measure Weight                              measure's weight.
+   214.   Footnote Care of           Character        If the metric is dashed (-) or not available (NA), the
+          Patients: Measure                           reason the metric was not calculated is explained here.
+          Weight
+   215.   Communication:             Character        Communications Between Providers and Patients
+          Measure Weight                              (HHCAHPS Survey-based): The measure's weight.
+   216.   Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication:                              reason the metric was not calculated is explained here.
+          Measure Weight
+   217.   Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): The
+          Measure Weight                              measure's weight.
+   218.   Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: Measure Weight                      reason the metric was not calculated is explained here.
+   219.   Overall Rating: Measure    Character        Overall Rating of Home Health Care (HHCAHPS
+          Weight                                      Survey-based): The measure's weight.
+   220.   Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          Measure Weight                              reason the metric was not calculated is explained here.
+   221.   Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: Measure                          Survey-based): The measure's weight.
+          Weight
+   222.   Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: Measure                          reason the metric was not calculated is explained here.
+          Weight
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         41
+ Column
+        Variable Name               Variable Type     Description
+ Number
+  223.  Discharged to               Character         Discharged to Community (OASIS-based): The HHA’s
+        Community: HHA                                weighted Measure Points for this measure, which are
+        Weighted Measure                              calculated by dividing your HHA’s care points by the
+        Points                                        maximum possible points and multiplying by the
+                                                      measure weight.
+   224.   Footnote Discharged to    Character         If the metric is dashed (-) or not available (NA), the
+          Community: HHA                              reason the metric was not calculated is explained here.
+          Weighted Measure
+          Points
+   225.   Dyspnea: HHA              Character         Improvement in Dyspnea (OASIS-based): The HHA’s
+          Weighted Measure                            weighted Measure Points for this measure, which are
+          Points                                      calculated by dividing your HHA’s care points by the
+                                                      maximum possible points and multiplying by the
+                                                      measure weight.
+   226.   Footnote Dyspnea: HHA     Character         If the metric is dashed (-) or not available (NA), the
+          Weighted Measure                            reason the metric was not calculated is explained here.
+          Points
+   227.   Oral Medications: HHA     Character         Improvement in Management of Oral Medications
+          Weighted Measure                            (OASIS-based): The HHA’s weighted measure points
+          Points                                      for this measure, which are calculated by dividing your
+                                                      HHA’s care points by the maximum possible points
+                                                      and multiplying by the measure weight.
+   228.   Footnote Oral             Character         If the metric is dashed (-) or not available (NA), the
+          Medications: HHA                            reason the metric was not calculated is explained here.
+          Weighted Measure
+          Points
+   229.   TNC Mobility: HHA         Character         Total Normalized Composite Change in Mobility
+          Weighted Measure                            (OASIS-based): The HHA’s weighted measure points
+          Points                                      for this measure, which are calculated by dividing your
+                                                      HHA’s care points by the maximum possible points
+                                                      and multiplying by the measure weight.
+   230.   Footnote TNC Mobility:    Character         If the metric is dashed (-) or not available (NA), the
+          HHA Weighted Measure                        reason the metric was not calculated is explained here.
+          Points
+   231.   TNC Self-Care: HHA        Character         Total Normalized Composite Change in Self-Care
+          Weighted Measure                            (OASIS-based): The HHA’s weighted measure points
+          Points                                      for this measure, which are calculated by dividing your
+                                                      HHA’s care points by the maximum possible points
+                                                      and multiplying by the measure weight.
+   232.   Footnote TNC Self-Care:   Character         If the metric is dashed (-) or not available (NA), the
+          HHA Weighted Measure                        reason the metric was not calculated is explained here.
+          Points
+   233.   ACH: HHA Weighted         Character         Acute Care Hospitalization During the First 60 Days of
+          Measure Points                              Home Health (claims-based): The HHA’s weighted
+                                                      measure points for this measure, which are calculated
+                                                      by dividing your HHA’s care points by the maximum
+                                                      possible points and multiplying by the measure weight.
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         42
+ Column
+        Variable Name                Variable Type    Description
+ Number
+  234.  Footnote ACH: HHA            Character        If the metric is dashed (-) or not available (NA), the
+        Weighted Measure                              reason the metric was not calculated is explained here.
+        Points
+  235.  ED Use: HHA Weighted         Character        Emergency Department Use without Hospitalization
+        Measure Points                                During the First 60 Days of Home Health (claims-
+                                                      based): The HHA’s weighted measure points for this
+                                                      measure, which are calculated by dividing your HHA’s
+                                                      care points by the maximum possible points and
+                                                      multiplying by the measure weight.
+   236.   Footnote ED Use: HHA       Character        If the metric is dashed (-) or not available (NA), the
+          Weighted Measure                            reason the metric was not calculated is explained here.
+          Points
+   237.   Care of Patients: HHA      Character        Care of Patients (HHCAHPS Survey-based): The
+          Weighted Measure                            HHA’s weighted measure points for this measure,
+          Points                                      which are calculated by dividing your HHA’s care
+                                                      points by the maximum possible points and
+                                                      multiplying by the measure weight.
+   238.   Footnote Care of           Character        If the metric is dashed (-) or not available (NA), the
+          Patients: HHA Weighted                      reason the metric was not calculated is explained here.
+          Measure Points
+   239.   Communication: HHA         Character        Communications Between Providers and Patients
+          Weighted Measure                            (HHCAHPS Survey-based): The HHA’s weighted
+          Points                                      measure points for this measure, which are calculated
+                                                      by dividing your HHA’s care points by the maximum
+                                                      possible points and multiplying by the measure weight.
+   240.   Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication: HHA                          reason the metric was not calculated is explained here.
+          Weighted Measure
+          Points
+   241.   Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): The
+          HHA Weighted Measure                        HHA’s weighted measure points for this measure,
+          Points                                      which are calculated by dividing your HHA’s care
+                                                      points by the maximum possible points and
+                                                      multiplying by the measure weight.
+   242.   Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: HHA Weighted                        reason the metric was not calculated is explained here.
+          Measure Points
+   243.   Overall Rating: HHA        Character        Specific Care Issues (HHCAHPS Survey-based): The
+          Weighted Measure                            HHA’s weighted measure points for this measure,
+          Points                                      which are calculated by dividing your HHA’s care
+                                                      points by the maximum possible points and
+                                                      multiplying by the measure weight.
+   244.   Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          HHA Weighted Measure                        reason the metric was not calculated is explained here.
+          Points
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         43
+ Column
+        Variable Name                  Variable Type   Description
+ Number
+  245.  Willingness to                 Character       Willingness to Recommend the Agency (HHCAHPS
+        Recommend: HHA                                 Survey-based): The HHA’s weighted measure points
+        Weighted Measure                               for this measure, which are calculated by dividing your
+        Points                                         HHA’s care points by the maximum possible points
+                                                       and multiplying by the measure weight.
+      246.   Footnote Willingness to   Character       If the metric is dashed (-) or not available (NA), the
+             Recommend: HHA                            reason the metric was not calculated is explained here.
+             Weighted Measure
+             Points
+      247.   Total Performance Score   Character       The Total Performance Score for the HHA, calculated
+             (TPS)                                     by summing the weighted care points across all
+                                                       applicable measures.
+      248.   Footnote Total            Character       If the metric is dashed (-) or not available (NA), the
+             Performance Score                         reason the metric was not calculated is explained here.
+             (TPS)
+      249.   Payment Year              Character       The calendar year in which the HHA's Final TPS-
+                                                       Adjusted Payment Percentage (APP) for a designated
+                                                       performance year applies.
+      250.   Footnote Payment Year     Character       If the metric is dashed (-) or not available (NA), the
+                                                       reason the metric was not calculated is explained here.
+      251.   Adjusted Payment          Character       The Final TPS-Adjusted Payment Percentage (APP)
+             Percentage (APP)                          for the HHA. The APP ranges from minus 5% to plus
+                                                       5% for all home health agencies.
+      252.   Footnote Adjusted         Character       If the metric is dashed (-) or not available (NA), the
+             Payment Percentage                        reason the metric was not calculated is explained here.
+             (APP)
+
+
+Table 13: HHVBP_Cohort_PerformanceYear_YYYY.csv (39 columns)
+ Column
+        Variable Name                  Variable Type   Description
+ Number
+ 1.     Nationwide Cohort              Character       The two nationwide cohorts to which the home health
+                                                       agencies (HHAs) are assigned: Larger-volume cohort
+                                                       or smaller-volume cohort.
+ 2.          Model Baseline Year       Character       The Model baseline year used to calculate the cohort's
+                                                       achievement thresholds and benchmarks.
+ 3.          Discharged to             Character       Discharged to Community (OASIS-based): The
+             Community: Cohort's                       cohort's achievement threshold for this measure.
+             Achievement Threshold
+ 4.          Dyspnea: Cohort's         Character       Improvement in Dyspnea (OASIS-based): The cohort's
+             Achievement Threshold                     achievement threshold for this measure.
+ 5.          Oral Medications:         Character       Improvement in Management of Oral Medications
+             Cohort's Achievement                      (OASIS-based): The cohort's achievement threshold
+             Threshold                                 for this measure.
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                          44
+ Column
+        Variable Name                Variable Type    Description
+ Number
+ 6.     TNC Mobility: Cohort's       Character        Total Normalized Composite Change in Mobility
+        Achievement Threshold                         (OASIS-based): The cohort's achievement threshold
+                                                      for this measure.
+ 7.       TNC Self-Care: Cohort's    Character        Total Normalized Composite Change in Self-Care
+          Achievement Threshold                       (OASIS-based): The cohort's achievement threshold
+                                                      for this measure.
+ 8.       ACH: Cohort's              Character        Acute Care Hospitalization During the First 60 Days of
+          Achievement Threshold                       Home Health (claims-based): The cohort's achievement
+                                                      threshold for this measure.
+ 9.       ED Use: Cohort's           Character        Emergency Department Use without Hospitalization
+          Achievement Threshold                       During the First 60 Days of Home Health (claims-
+                                                      based): The cohort's achievement threshold for this
+                                                      measure.
+ 10.      Care of Patients:          Character        Care of Patients (HHCAHPS Survey-based): The
+          Cohort's Achievement                        cohort's achievement threshold for this measure.
+          Threshold
+ 11.      Footnote Care of           Character        If the metric is dashed (-) or not available (NA), the
+          Patients: Cohort's                          reason the metric was not calculated is explained here.
+          Achievement Threshold
+ 12.      Communication:             Character        Communication Between Providers and Patients
+          Cohort's Achievement                        (HHCAHPS Survey-based): The cohort's achievement
+          Threshold                                   threshold for this measure.
+ 13.      Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication:                              reason the metric was not calculated is explained here.
+          Cohort's Achievement
+          Threshold
+ 14.      Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): The
+          Cohort's Achievement                        cohort's achievement threshold for this measure.
+          Threshold
+ 15.      Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: Cohort's                            reason the metric was not calculated is explained here.
+          Achievement Threshold
+ 16.      Overall Rating: Cohort's   Character        Overall Rating of Home Health Care (HHCAHPS
+          Achievement Threshold                       Survey-based): The cohort's achievement threshold for
+                                                      this measure.
+ 17.      Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          Cohort's Achievement                        reason the metric was not calculated is explained here.
+          Threshold
+ 18.      Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: Cohort's                         Survey-based): The cohort's achievement threshold for
+          Achievement Threshold                       this measure.
+ 19.      Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: Cohort's                         reason the metric was not calculated is explained here.
+          Achievement Threshold
+ 20.      Discharged to              Character        Discharged to Community (OASIS-based): The
+          Community: Cohort's                         cohort's benchmark.
+          Benchmark
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         45
+ Column
+        Variable Name                Variable Type    Description
+ Number
+ 21.    Dyspnea: Cohort's            Character        Improvement in Dyspnea (OASIS-based): The cohort's
+        Benchmark                                     benchmark for this measure.
+ 22.      Oral Medications:          Character        Improvement in Management of Oral Medications
+          Cohort's Benchmark                          (OASIS-based): The cohort's benchmark.
+ 23.      TNC Mobility: Cohort's     Character        Total Normalized Composite Change in Mobility
+          Benchmark                                   (OASIS-based): The cohort's benchmark for this
+                                                      measure.
+ 24.      TNC Self-Care: Cohort's    Character        Total Normalized Composite Change in Self-Care
+          Benchmark                                   (OASIS-based): The cohort's benchmark for this
+                                                      measure.
+ 25.      ACH: Cohort's              Character        Acute Care Hospitalization During the First 60 Days of
+          Benchmark                                   Home Health (claims-based): The cohort's benchmark
+                                                      for this measure.
+ 26.      ED Use: Cohort's           Character        Emergency Department Use without Hospitalization
+          Benchmark                                   During the First 60 Days of Home Health (claims-
+                                                      based): The cohort's benchmark for this measure.
+ 27.      Care of Patients:          Character        Care of Patients (HHCAHPS Survey-based): The
+          Cohort's Benchmark                          cohort's benchmark for this measure.
+ 28.      Footnote Care of           Character        If the metric is dashed (-) or not available (NA), the
+          Patients: Cohort's                          reason the metric was not calculated is explained here.
+          Benchmark
+ 29.      Communication:             Character        Communication Between Providers and Patients
+          Cohort's Benchmark                          (HHCAHPS Survey-based): The cohort's benchmark
+                                                      for this measure.
+ 30.      Footnote                   Character        If the metric is dashed (-) or not available (NA), the
+          Communication:                              reason the metric was not calculated is explained here.
+          Cohort's Benchmark
+ 31.      Specific Care Issues:      Character        Specific Care Issues (HHCAHPS Survey-based): The
+          Cohort's Benchmark                          cohort's benchmark for this measure.
+ 32.      Footnote Specific Care     Character        If the metric is dashed (-) or not available (NA), the
+          Issues: Cohort's                            reason the metric was not calculated is explained here.
+          Benchmark
+ 33.      Overall Rating: Cohort's   Character        Overall Rating of Home Health Care (HHCAHPS
+          Benchmark                                   Survey-based): The cohort's benchmark for this
+                                                      measure.
+ 34.      Footnote Overall Rating:   Character        If the metric is dashed (-) or not available (NA), the
+          Cohort's Benchmark                          reason the metric was not calculated is explained here.
+ 35.      Willingness to             Character        Willingness to Recommend the Agency (HHCAHPS
+          Recommend: Cohort's                         Survey-based): The cohort's benchmark for this
+          Benchmark                                   measure.
+ 36.      Footnote Willingness to    Character        If the metric is dashed (-) or not available (NA), the
+          Recommend: Cohort's                         reason the metric was not calculated is explained here.
+          Benchmark
+ 37.      Cohort's Linear            Character        The cohort’s Linear Exchange Function (LEF) ratio.
+          Exchange Function
+          (LEF) Ratio
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                         46
+ Column
+        Variable Name                     Variable Type      Description
+ Number
+ 38.    Cohort's Average Total            Character          The average Total Performance Score (TPS) for the
+        Performance Score                                    cohort to which the HHA was assigned, weighted by
+        (TPS)                                                Medicare Fee-for-Service (FFS) claims in the calendar
+                                                             year prior to the payment year.
+ 39.         Cohort's Average             Character          The average Final TPS-Adjusted Payment Percentage
+             Adjusted Payment                                (APP) for the cohort, weighted by Medicare Fee-for-
+             Percentage (APP)                                Service (FFS) claims in the calendar year prior to the
+                                                             payment year.
+
+
+Table 14: Footnote Details
+  Footnote     Description
+     1         This agency provides services under a federal waiver program to non-traditional, chronic long term
+               population.
+       2       This agency provides services to a special needs population.
+       3       Not Available.
+       4       The number of patient episodes for this measure is too small to report.
+       5       This measure currently does not have data or provider has been certified/recertified for less than 6
+               months.
+       6       The national average for this measure is not provided because of state-to-state differences in data
+               collection.
+       7       Medicare is not displaying rates for this measure for any home health agency, because of an issue
+               with the data.
+       8       There were problems with the data and they are being corrected.
+       9       Zero, or very few, patients met the survey’s rules for inclusion. The scores shown, if any, reflect a
+               very small number of surveys and may not accurately tell how an agency is doing.
+       10      Survey results are based on less than 12 months of data.
+       11      Fewer than 70 patients completed the survey. Use the scores shown, if any, with caution as the
+               number of surveys may be too low to accurately tell how an agency is doing.
+       12      No survey results are available for this period.
+       13      Data suppressed by CMS for one or more quarters.
+              No or insufficient data available. Measures with no or insufficient data available are excluded from
+       14*
+              the TPS calculation.
+              HHA ineligible to receive an APR due to Medicare certification date and/or no or insufficient data
+      15*
+              on at least five measures to calculate a Total Performance Score (TPS).
+              Achievement thresholds and benchmarks are not calculated for HHCAHPS Survey-based measures
+      16*
+              for HHAs in the smaller-volume cohort.
+* Footnote applies to HHVBP only.
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                                    47
+Appendix A: Anticipated Home Health Refreshes and Data Collection Periods
+This table provides the data collection timeframes for HHA quality measures displayed on Medicare.gov for April 2026 – January
+2027. The first column displays the plain-language measure name used on Medicare.gov, the second column displays the full technical
+measure name, the third column displays the reporting cycle which describes the collection period and refresh frequency, and the last
+columns contain the timeframe for each quarterly website refresh. Periods of performance are subject to change.
+
+                                                        Data Collection         Data Collection Timeframes Displayed on
+     Measure Name
+                             Technical Measure           Periods and                          Medicare.gov
+      displayed on
+                                   Name                   Reporting          April 2026   July 2026     October    January
+     Medicare.gov
+                                                          Frequency                                      2026        2027
+ OASIS-Based Measures
+ How often patients got   Improvement in         Collection period:          Q3 2024 –      Q4 2024 –        Q1 2025 -   Q2 2025 –
+ better at walking or     Ambulation/Locomotion Four rolling quarters        Q2 2025        Q3 2025          Q4 2025     Q1 2026
+ moving around                                   (12 months).
+                                                 Refreshed quarterly.
+ How often patients got   Improvement in Bed     Collection period:          Q3 2024 –      Q4 2024 –        Q1 2025 -   Q2 2025 –
+ better at getting in and Transferring           Four rolling quarters       Q2 2025        Q3 2025          Q4 2025     Q1 2026
+ out of bed                                      (12 months).
+                                                 Refreshed quarterly.
+ How often patients got   Improvement in Bathing Collection period:          Q3 2024 –      Q4 2024 –        Q1 2025 -   Q2 2025 –
+ better at bathing                               Four rolling quarters       Q2 2025        Q3 2025          Q4 2025     Q1 2026
+                                                 (12 months).
+                                                 Refreshed quarterly.
+ How often patients       Discharge Function     Collection period:          Q3 2024 –      Q4 2024 –        Q1 2025 -   Q2 2025 –
+ were at or above an      Score                  Four rolling quarters       Q2 2025        Q3 2025          Q4 2025     Q1 2026
+ expected ability to care                        (12 months).
+ for themselves and                              Refreshed quarterly.
+ move around at
+ discharge
+ How often patients’      Improvement in         Collection period:          Q3 2024 –      Q4 2024 –        Q1 2025 -   Q2 2025 –
+ breathing improved       Dyspnea                Four rolling quarters       Q2 2025        Q3 2025          Q4 2025     Q1 2026
+                                                 (12 months).
+                                                 Refreshed quarterly.
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                     48
+ How often patients have      Changes in Skin            Collection period:      Q3 2024 –   Q4 2024 –        Q1 2025 -   Q2 2025 –
+ pressure ulcers/pressure     Integrity Post-Acute       Four rolling quarters   Q2 2025     Q3 2025          Q4 2025     Q1 2026
+ injuries that are new or     Care: Pressure             (12 months).
+ worsened                     Ulcer/Injury - HH          Refreshed quarterly.
+ How often the home           Influenza Immunization     Collection period:      Q3 2024 –   Q4 2024 –        Q1 2025 -   Q2 2025 –
+ health team made sure        Received                   Four rolling quarters   Q2 2025     Q3 2025          Q4 2025     Q1 2026
+ that their patients have                                (12 months).
+ received a flu shot for                                 Refreshed quarterly.
+ the current flu season
+ How often patients got       Improvement in             Collection period:      Q3 2024 –   Q4 2024 –        Q1 2025 -   Q2 2025 –
+ better at taking their       Management of Oral         Four rolling quarters   Q2 2025     Q3 2025          Q4 2025     Q1 2026
+ drugs correctly by           Medication                 (12 months).
+ mouth                                                   Refreshed quarterly.
+ How often the home           Drug Regimen Review        Collection period:      Q3 2024 –   Q4 2024 –        Q1 2025 -   Q2 2025 –
+ health team checked          Conducted with Follow-     Four rolling quarters   Q2 2025     Q3 2025          Q4 2025     Q1 2026
+ patients’ medications        Up for Identified Issues   (12 months).
+ and got doctor’s orders                                 Refreshed quarterly.
+ for medication issues in
+ a timely manner
+ How often the home           Timely Initiation of       Collection period:      Q3 2024 –   Q4 2024 –        Q1 2025 -   Q2 2025 –
+ health team began their      Care                       Four rolling quarters   Q2 2025     Q3 2025          Q4 2025     Q1 2026
+ patients' care in a timely                              (12 months).
+ manner                                                  Refreshed quarterly.
+ How often patients           Application of Percent     Collection period:      Q3 2024 –   Q4 2024 –        Q1 2025 -   Q2 2025 –
+ experienced one or           of Residents               Four rolling quarters   Q2 2025     Q3 2025          Q4 2025     Q1 2026
+ more falls with a major      Experiencing One or        (12 months).
+ injury                       More Falls with Major      Refreshed quarterly.
+                              Injury
+ How often the home           Transfer of Health         Collection period:    Q3 2024 –     Q4 2024 –        Q1 2025 -   Q2 2025 –
+ health agency reviewed       Information to Patient -   Four rolling quarters Q2 2025       Q3 2025          Q4 2025     Q1 2026
+ and provided a               Post-Acute Care            (12 months).
+ medication list to the                                  Refreshed quarterly.
+ patient, family, and/or
+ caregiver at final
+ discharge
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                      49
+ How often the home      Transfer of Health           Collection period:    Q3 2024 –   Q4 2024 –        Q1 2025 -   Q2 2025 –
+ health agency reviewed Information to Provider       Four rolling quarters Q2 2025     Q3 2025          Q4 2025     Q1 2026
+ and provided a          - Post-Acute Care            (12 months).
+ medication list to the                               Refreshed quarterly.
+ next healthcare setting
+ Claims-Based Measures
+ How often patients      Discharge to                 Collection period:    Q1 2023 –   Q1 2023 –        Q1 2024 –   Q1 2024 –
+ remained at home        Community - Post             24 months.            Q4 2024     Q4 2024          Q4 2025     Q4 2025
+ within 31 days of being Acute Care Home              Refreshed annually.
+ discharged from home    Health Quality
+ health                  Reporting Program
+ How often patients      Home Health Within-          Collection period:    Q1 2024 –   Q1 2024 –        Q1 2025 –   Q1 2025 –
+ were re-admitted to the Stay Potentially             12 months.            Q4 2024     Q4 2024          Q4 2025     Q4 2025
+ hospital for a          Preventable                  Refreshed annually.
+ potentially-preventable Hospitalization
+ condition after
+ discharge from home
+ health
+ How often patients      Potentially Preventable      Collection period:    Q1 2022 –   Q1 2022 –        Q1 2023 –   Q1 2023 –
+ were admitted to the    30-Day Post-Discharge        36 months.            Q4 2024     Q4 2024          Q4 2025     Q4 2025
+ hospital for a          Readmission Measure -        Refreshed annually.
+ potentially preventable Claims-based for HH
+ condition while         QRP
+ receiving home health
+ care
+ How much Medicare       Medicare Spending Per        Collection Period:    Q1 2023 –   Q1 2023 –        Q1 2024 –   Q1 2024 –
+ spends on an episode of Beneficiary - Post Acute     24 months.            Q4 2024     Q4 2024          Q4 2025     Q4 2025
+ care at this agency,    Care Home Health             Refreshed annually.
+ compared to Medicare
+ spending across all
+ agencies nationally
+ HHCAHPS Measures
+
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                 50
+ How often the home       Care of Patients            Collection period:      Q4 2024 –   Q1 2025 –        Q2 2025 –   N/A
+ health team gave care in Composite                   Four rolling quarters   Q3 2025     Q4 2025          Q1 2026
+ a professional way                                   (12 months).
+                                                      Refreshed quarterly.
+ How well did the home      Communications            Collection period:      Q4 2024 –   Q1 2025 –        Q2 2025 –   N/A
+ health team                Between Providers and     Four rolling quarters   Q3 2025     Q4 2025          Q1 2026
+ communicate with           Patients Composite        (12 months).
+ patients                                             Refreshed quarterly.
+ Did the home health        Specific Care Issues      Collection period:      Q4 2024 –   Q1 2025 –        Q2 2025 –   N/A
+ team discuss medicines,    Composite                 Four rolling quarters   Q3 2025     Q4 2025          Q1 2026
+ pain, and home safety                                (12 months).
+ with patients                                        Refreshed quarterly.
+ How do patients rate the   Overall Rating of Care    Collection period:      Q4 2024 –   Q1 2025 –        Q2 2025 –   Q3 2025 –
+ overall care from the      Received                  Four rolling quarters   Q3 2025     Q4 2025          Q1 2026     Q2 2026
+ home health agency                                   (12 months).
+                                                      Refreshed quarterly.
+ Would patients             Willingness to            Collection period:      Q4 2024 –   Q1 2025 –        Q2 2025 –   Q3 2025 –
+ recommend the home         Recommend Rating          Four rolling quarters   Q3 2025     Q4 2025          Q1 2026     Q2 2026
+ health agency to friends                             (12 months).
+ and family                                           Refreshed quarterly.
+
+
+
+
+Centers for Medicare & Medicaid Services
+This material is in the public domain and may not be copyrighted.
+
+
+
+HHQRP and HHVBP Data Dictionary, updated April 2026                                                   51
+

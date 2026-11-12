@@ -1,0 +1,60 @@
+{
+  "@type": "Dataset",
+  "accessLevel": "public",
+  "bureauCode": [
+    "009:38"
+  ],
+  "contactPoint": {
+    "fn": "Home Health CAHPS Helpdesk",
+    "hasEmail": "mailto:hhcahps@rti.org"
+  },
+  "description": "State Data for Home Health Care - Patient Survey (HHCAHPS) for 2025Q2 to 2026Q1",
+  "distribution": [
+    {
+      "@type": "Distribution",
+      "downloadURL": "https://data.cms.gov/provider-data/sites/default/files/resources/9b979e54ed1ecc16029141f286513ca8_1791237947/HHCAHPS_State_Oct2026.csv",
+      "mediaType": "text/csv",
+      "describedBy": {
+        "@type": "Distribution",
+        "accessURL": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/home_health/HHS_Data_Dictionary.pdf",
+        "mediaType": "application/pdf"
+      }
+    }
+  ],
+  "identifier": "m5jg-jg7i",
+  "issued": "2026-09-16",
+  "keyword": [
+    "Patient Survey",
+    "State",
+    "Average",
+    "CAHPS",
+    "Medicare",
+    "Patient Experience of Care"
+  ],
+  "landingPage": {
+    "@type": "Document",
+    "title": "Home Health Care - Patient Survey (HHCAHPS) State Data 2025Q2 to 2026Q1",
+    "accessURL": "https://data.cms.gov/provider-data/dataset/m5jg-jg7i"
+  },
+  "modified": "2026-09-16",
+  "nextUpdateDate": "2027-01-13",
+  "programCode": [
+    "009:000"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Office of Communications (OC)",
+    "subOrganizationOf": [
+      {
+        "@type": "Organization",
+        "name": "Centers for Medicare & Medicaid Services (CMS)"
+      }
+    ]
+  },
+  "released": "2026-10-21",
+  "theme": [
+    "Home health services"
+  ],
+  "title": "Home Health Care - Patient Survey (HHCAHPS) State Data 2025Q2 to 2026Q1",
+  "accessRights": "public"
+}

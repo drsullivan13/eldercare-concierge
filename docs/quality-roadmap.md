@@ -4,7 +4,7 @@ The first useful outcome is a shortlist a family can investigate with less repea
 
 ## What this version establishes
 
-A ZIP search, documented provider identity, care-setting-specific public evidence and a place to organize follow-up. CMS nursing-home data adds inspections, staffing, turnover and penalties beyond public review averages. Massachusetts assisted-living records establish a different kind of regulatory record. Agency service descriptions are attributed to the agency.
+A ZIP search, documented provider identity, care-setting-specific public evidence and a place to organize follow-up. CMS nursing-home data adds inspections, staffing, turnover and penalties beyond public review averages. Matched home-health agencies include clinical-quality measures and a separate patient survey, with participation and reporting dates. Massachusetts assisted-living records establish a different kind of regulatory record. Agency service descriptions are attributed to the agency.
 
 The app does not establish live staffing, admission suitability, openings, total cost or individual caregiver competence. No amount of interface polish should turn a source link into a claim that those checks happened.
 

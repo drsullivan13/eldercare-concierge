@@ -64,7 +64,11 @@ async function openDemo(page: Page) {
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "next chapter",
   );
-  await page.getByRole("link", { name: "Explore the demo" }).click();
+  await page
+    .getByRole("link", {
+      name: /^(Open your care workspace|Explore the demo)$/,
+    })
+    .click();
   await expect(page).toHaveURL(/\/dashboard\?demo=1/);
   await expect(page.locator(".demo-banner")).toContainText(
     "Real provider records. Your plan stays in this browser.",
@@ -537,9 +541,80 @@ test("protected API never returns a workspace to an anonymous browser or silentl
   });
   expect(maliciousPut.status()).toBe(403);
   await page.goto("/auth/callback?next=https://evil.example/");
-  await expect(page).toHaveURL(/\/login\?error=auth_callback$/);
+  await expect(page).toHaveURL(
+    (url) =>
+      url.origin === browserOrigin &&
+      ((url.pathname === "/login" &&
+        url.searchParams.get("error") === "auth_callback") ||
+        (url.pathname === "/dashboard" &&
+          url.searchParams.get("demo") === "1")),
+  );
   expect(new URL(page.url()).origin).toBe(browserOrigin);
+  const accountsDisabled = new URL(page.url()).pathname === "/dashboard";
+  if (accountsDisabled) {
+    // Backend configuration and account activation are separate: the current product needs neither sign-in nor SMTP.
+    await expect(page.locator(".demo-banner")).toContainText(
+      "Your plan stays in this browser.",
+    );
+    await expect(
+      page.locator('a[href="/signup"], a[href="/login"]'),
+    ).toHaveCount(0);
+    await expect(
+      page.getByRole("textbox", { name: "Email address" }),
+    ).toHaveCount(0);
+    await page.goto("/");
+    await expect(
+      page.getByRole("link", { name: "Open your care workspace", exact: true }),
+    ).toHaveAttribute("href", "/dashboard?demo=1");
+    await expect(
+      page.getByRole("link", { name: /Get started/ }),
+    ).toHaveAttribute("href", "/dashboard?demo=1");
+    await expect(
+      page.getByRole("link", { name: "Log in", exact: true }),
+    ).toHaveCount(0);
+    await expect(
+      page.getByText("No sign-in needed. Your plan stays in this browser.", {
+        exact: true,
+      }),
+    ).toBeVisible();
+    for (const entry of ["/signup", "/login", "/dashboard"]) {
+      await page.goto(entry);
+      await expect(page).toHaveURL(/\/dashboard\?demo=1$/);
+      await expect(page.locator(".demo-banner")).toBeVisible();
+      await expect(page.getByRole("heading", { level: 1 })).toContainText(
+        "A clearer plan",
+      );
+      await expect(
+        page.locator('a[href="/signup"], a[href="/login"]'),
+      ).toHaveCount(0);
+      await expect(
+        page.getByText("Account sign-in is being connected.", { exact: false }),
+      ).toHaveCount(0);
+    }
+    return;
+  }
   await expect(page.getByRole("heading", { level: 2 })).toBeVisible();
+  const configured = get.status() === 401;
+  const login = page.getByRole("button", { name: "Log in", exact: true });
+  if (configured) await expect(login).toBeEnabled();
+  else await expect(login).toBeDisabled();
+  await page.goto("/signup");
+  const signup = page.getByRole("button", {
+    name: "Create account",
+    exact: true,
+  });
+  if (configured) {
+    await expect(signup).toBeEnabled();
+    await expect(
+      page.getByText("Account sign-in is being connected.", { exact: false }),
+    ).toHaveCount(0);
+  } else {
+    await expect(signup).toBeDisabled();
+    await expect(
+      page.getByText("Account sign-in is being connected.", { exact: false }),
+    ).toBeVisible();
+  }
+  // Deliberately do not submit signup: confirmation stays enabled and no email is sent by this test.
 });
 
 test("nursing-home detail shows actual CMS findings, bounded history, published sources, empty records and retry recovery", async ({

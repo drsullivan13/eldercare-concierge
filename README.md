@@ -2,19 +2,20 @@
 
 A Greater Boston elder-care research and coordination proof of concept. Families can search by ZIP and radius, inspect public evidence, compare resources, save a shortlist, and build a transition plan.
 
-**Status:** the local application and public provider data work. Cloud accounts require a new Supabase project and deployment configuration. The demo is explicitly labeled and saves only in the current browser. It does not create an account or send data to a care provider.
+**Status:** the POC opens directly into a browser-local workspace, with no app sign-in required. Source is published to GitHub and a protected Vercel preview is available. Shortlists, notes and tasks stay in the current browser; export is available. Accounts are deliberately disabled for this phase. See [the verification record](docs/verification.md) for the latest hosted checks.
 
 ![Harbor care workspace](docs/screenshots/dashboard.png)
 
 ## What is built
 
-- Public landing page, signup/login screens and a short care-preferences setup.
+- Public landing page and immediate dashboard access. Account screens and care-preferences setup are retained for a later activation.
 - A family dashboard with a 90-day planning outline, saved options and next steps.
 - Real ZIP/radius search across 521 resource records: 280 nursing homes, 224 assisted-living residences, 10 home-service organizations and 7 continuing-care campuses.
 - List and map views, care-category filters, name/town search and nursing-home-only CMS rating order.
 - Source links, source dates, published staffing metrics, actual CMS inspection findings and penalty events, explicit unknowns and provider follow-up questions.
+- CMS home-health clinical-quality ratings and patient surveys for seven certified agencies across six organizations, with response counts, response rates, five experience measures and separate clinical measures.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
-- Supabase email/password auth and owner-only database access, ready for configuration. No service-role key is used by the app.
+- A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
 
 There are no live vacancy feeds, price quotes, independently vetted individual caregivers, completed reference checks or connected Google/Yelp/review feeds. A provider record is not an endorsement. Public reviews are not blended into a fabricated quality score.
 
@@ -27,7 +28,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`, then choose **Explore the demo**. Or open `http://localhost:3000/dashboard?demo=1` directly. No secrets are needed for provider research and the demo plan. Demo storage uses `harbor.demo.workspace.v1`; clearing browser storage removes it. Real-account state is never written to that storage key.
+Open `http://localhost:3000`, then choose **Open your care workspace**. Or open `http://localhost:3000/dashboard` directly. No secrets are needed for provider research and the demo plan. Demo storage uses `harbor.demo.workspace.v1`; clearing browser storage removes it. Real-account state is never written to that storage key.
 
 For a production-mode local check:
 
@@ -38,7 +39,9 @@ npm run start
 
 Do not run a fresh build while serving the previous `.next` build from the same directory. Stop the server, build, then start it again.
 
-## Connect real accounts
+## Activate accounts later
+
+`NEXT_PUBLIC_ENABLE_ACCOUNTS` defaults to false. In this mode, signup/login links are hidden and their URLs redirect into the local demo. Keep it off while testing the current POC. A dedicated Supabase project is already provisioned for this repository; the steps below also describe setup for a fresh copy.
 
 1. Select a **new, dedicated Supabase project**. Inspect its schema before applying SQL. Do not apply this app's schema to an unrelated project.
 2. Review and run `supabase/schema.sql` once. It creates `user_workspaces`, enables RLS, and grants authenticated users access only to their own row. Policies are deliberately not blindly reapplied.
@@ -47,6 +50,7 @@ Do not run a fresh build while serving the previous `.next` build from the same 
 5. Keep email confirmation enabled. Configure a production email sender before opening signup beyond Supabase's default email restrictions. Confirm that delivery, callback, session refresh and sign-out actually work.
 6. Add the same two environment variables to the intended Vercel environment, then rebuild. `NEXT_PUBLIC_` values are compiled into client bundles.
 7. Run the live-account verification checklist in `docs/verification.md`. Static code review and a local demo do not prove a hosted auth setup works.
+8. Only after those checks, set `NEXT_PUBLIC_ENABLE_ACCOUNTS=true` in the intended environment and rebuild to expose the account flow.
 
 The app fails closed when account infrastructure is unavailable. Signup is disabled with a clear explanation; `/api/workspace` returns 503. Anonymous calls return 401 once configured. Personal responses are `private, no-store`; writes validate browser origin, payload size and every accepted field. Owner identity comes from `auth.getUser()`, not a submitted user ID or editable metadata.
 
@@ -65,6 +69,7 @@ Read [`docs/data-sources.md`](docs/data-sources.md) for provenance, licenses, fi
 ```bash
 python scripts/prepare-data.py
 python scripts/prepare-inspections.py
+python scripts/prepare-home-health.py
 ```
 
 This rebuilds the catalog from retained, reviewed input snapshots. It does not refresh upstream sources or change their dates. Review source changes and matching before replacing those inputs. Do not change a retrieval date without retrieving the underlying source.
@@ -89,7 +94,7 @@ For E2E tests, start the production server first, or use `PLAYWRIGHT_START_SERVE
 - `src/components/`: dashboard, provider evidence, map and auth screens.
 - `src/hooks/use-workspace.ts`: separate local-demo and cloud persistence paths.
 - `src/app/api/workspace/`: authenticated workspace reads/writes.
-- `supabase/schema.sql`: draft database setup and owner policies.
+- `supabase/schema.sql`: database setup and owner policies, applied to the dedicated Harbor project.
 - `tests/`: data, security-boundary and browser-flow tests.
 
 ## Current boundaries

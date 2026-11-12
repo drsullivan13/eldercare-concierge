@@ -1,0 +1,3864 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-12",
+  "releasedAt": "2026-10-21",
+  "units": [
+    {
+      "ccn": "227068",
+      "organizationId": "vna-care",
+      "organizationName": "VNA Care (VNA of Boston and VNA Care Network)",
+      "cmsProviderName": "VISITING NURSE ASSOCIATION OF BOSTON",
+      "cmsAddress": {
+        "street": "150 MOUNT VERNON STREET, SUITE 2",
+        "city": "DORCHESTER",
+        "state": "MA",
+        "zip": "02125"
+      },
+      "scope": "Results for this Medicare-certified reporting entity/CCN, not every office, service or affiliate in the organization.",
+      "releasedAt": "2026-10-21",
+      "checkedAt": "2026-11-12",
+      "qualityOfPatientCare": {
+        "starRating": {
+          "value": 3,
+          "unit": "stars out of 5",
+          "sourceColumn": "Quality of patient care star rating",
+          "rawValue": "3",
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "status": "published"
+        },
+        "datasetId": "6jpm-sxkc",
+        "measurementPeriodNote": "The seven current star-component measures in this release cover January–December 2025. Other available clinical measures use different periods; see the retained date file. This is separate from the HHCAHPS survey period.",
+        "measureDateRangesFile": "matched-c886-nwpj.json",
+        "rawUnitRowFile": "matched-6jpm-sxkc.json",
+        "starComponentPeriod": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "January 1–December 31, 2025"
+        },
+        "components": [
+          {
+            "id": "timely-initiation",
+            "label": "Care began in a timely manner",
+            "rate": {
+              "value": 99.4,
+              "unit": "percent",
+              "sourceColumn": "How often the home health team began their patients' care in a timely manner",
+              "rawValue": "99.40",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 2987,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "2,987",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3005,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "3,005",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "walking",
+            "label": "Patients got better at walking or moving around",
+            "rate": {
+              "value": 81.41,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at walking or moving around",
+              "rawValue": "81.41",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at walking or moving around",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 1924,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at walking or moving around",
+              "rawValue": "1,924",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 2265,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at walking or moving around",
+              "rawValue": "2,265",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bed-transfers",
+            "label": "Patients got better at getting in and out of bed",
+            "rate": {
+              "value": 87.91,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at getting in and out of bed",
+              "rawValue": "87.91",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at getting in and out of bed",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 2077,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at getting in and out of bed",
+              "rawValue": "2,077",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 2259,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at getting in and out of bed",
+              "rawValue": "2,259",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bathing",
+            "label": "Patients got better at bathing",
+            "rate": {
+              "value": 85.76,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at bathing",
+              "rawValue": "85.76",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at bathing",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 2001,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at bathing",
+              "rawValue": "2,001",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 2265,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at bathing",
+              "rawValue": "2,265",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "breathing",
+            "label": "Patients' breathing improved",
+            "rate": {
+              "value": 87.57,
+              "unit": "percent",
+              "sourceColumn": "How often patients' breathing improved",
+              "rawValue": "87.57",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients' breathing improved",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 1923,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients' breathing improved",
+              "rawValue": "1,923",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 2143,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients' breathing improved",
+              "rawValue": "2,143",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "oral-medications",
+            "label": "Patients got better at taking drugs correctly by mouth",
+            "rate": {
+              "value": 80.54,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "80.54",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at taking their drugs correctly by mouth",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 1901,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "1,901",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 2249,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "2,249",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "potentially-preventable-hospitalization",
+            "label": "Within-stay potentially preventable hospitalization, risk-standardized rate",
+            "rate": {
+              "value": 8.64,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate",
+              "rawValue": "8.64",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "lower",
+            "dateSourceMeasureName": "How often patients were admitted to the hospital for a potentially-preventable condition while receiving home health care",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 100,
+              "unit": "observed hospitalizations",
+              "sourceColumn": "PPH Numerator",
+              "rawValue": "100",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 1132,
+              "unit": "eligible stays",
+              "sourceColumn": "PPH Denominator",
+              "rawValue": "1,132",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "observedRate": {
+              "value": 8.83,
+              "unit": "percent",
+              "sourceColumn": "PPH Observed Rate",
+              "rawValue": "8.83",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedLowerLimit": {
+              "value": 7.22,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Lower Limit)",
+              "rawValue": "7.22",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedUpperLimit": {
+              "value": 10.18,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Upper Limit)",
+              "rawValue": "10.18",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "cmsPerformanceCategorization": "Better Than National Rate",
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          }
+        ],
+        "componentDefinitionSource": "https://www.cms.gov/medicare/quality/home-health/home-health-star-ratings",
+        "componentPeriodSource": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+      },
+      "patientExperience": {
+        "datasetId": "ccn4-8vby",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31",
+          "label": "April 1, 2025–March 31, 2026"
+        },
+        "summaryStarRating": {
+          "value": 4,
+          "unit": "stars out of 5",
+          "sourceColumn": "HHCAHPS Survey Summary Star Rating",
+          "rawValue": "4",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "completedSurveys": {
+          "value": 282,
+          "unit": "completed surveys",
+          "sourceColumn": "Number of completed Surveys",
+          "rawValue": "282",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "responseRate": {
+          "value": 17,
+          "unit": "percent",
+          "sourceColumn": "Survey response rate",
+          "rawValue": "17",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "generalFootnoteCodes": [],
+        "rawGeneralFootnote": "",
+        "measures": [
+          {
+            "id": "professional-care",
+            "label": "Patients reporting professional care",
+            "percent": {
+              "value": 87,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+              "rawValue": "87",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team gave care in a professional way",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Patients reporting good communication",
+            "percent": {
+              "value": 84,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+              "rawValue": "84",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team communicated well with them",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "medicines-pain-home-safety",
+            "label": "Patients reporting discussions of medicines, pain and home safety",
+            "percent": {
+              "value": 84,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+              "rawValue": "84",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating team discussed medicines, pain, and home safety",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "overall-care-9-or-10",
+            "label": "Patients rating overall care 9 or 10 out of 10",
+            "percent": {
+              "value": 84,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+              "rawValue": "84",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for how patients rated overall care from agency",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "definitely-recommend",
+            "label": "Patients who would definitely recommend the agency",
+            "percent": {
+              "value": 81,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+              "rawValue": "81",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": null
+          }
+        ],
+        "rawUnitRowFile": "matched-ccn4-8vby.json"
+      },
+      "sources": [
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/ccn4-8vby",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/fa88-6ff2",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/c886-nwpj",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        }
+      ],
+      "warnings": [
+        "Published survey results describe past patients, not current staffing, openings, visit reliability or suitability for a particular patient.",
+        "Completed surveys is the agency-level survey count, not a verified denominator for each adjusted survey measure.",
+        "Keep patient-experience stars separate from quality-of-patient-care stars. Do not average them.",
+        "VNA Care has two matched CCNs. Show both certified reporting entities separately; never average or assign one entity’s score to the whole network."
+      ]
+    },
+    {
+      "ccn": "227082",
+      "organizationId": "south-shore-vna",
+      "organizationName": "South Shore Visiting Nurse Association (South Shore Health)",
+      "cmsProviderName": "SOUTH SHORE VISITING NURSE ASSOCIATION",
+      "cmsAddress": {
+        "street": "30 RESERVOIR PARK DRIVE",
+        "city": "ROCKLAND",
+        "state": "MA",
+        "zip": "02370"
+      },
+      "scope": "Results for this Medicare-certified reporting entity/CCN, not every office, service or affiliate in the organization.",
+      "releasedAt": "2026-10-21",
+      "checkedAt": "2026-11-12",
+      "qualityOfPatientCare": {
+        "starRating": {
+          "value": 2.5,
+          "unit": "stars out of 5",
+          "sourceColumn": "Quality of patient care star rating",
+          "rawValue": "2.5",
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "status": "published"
+        },
+        "datasetId": "6jpm-sxkc",
+        "measurementPeriodNote": "The seven current star-component measures in this release cover January–December 2025. Other available clinical measures use different periods; see the retained date file. This is separate from the HHCAHPS survey period.",
+        "measureDateRangesFile": "matched-c886-nwpj.json",
+        "rawUnitRowFile": "matched-6jpm-sxkc.json",
+        "starComponentPeriod": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "January 1–December 31, 2025"
+        },
+        "components": [
+          {
+            "id": "timely-initiation",
+            "label": "Care began in a timely manner",
+            "rate": {
+              "value": 91.04,
+              "unit": "percent",
+              "sourceColumn": "How often the home health team began their patients' care in a timely manner",
+              "rawValue": "91.04",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 6413,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "6,413",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 7044,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "7,044",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "walking",
+            "label": "Patients got better at walking or moving around",
+            "rate": {
+              "value": 82.56,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at walking or moving around",
+              "rawValue": "82.56",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at walking or moving around",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 4411,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at walking or moving around",
+              "rawValue": "4,411",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 5026,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at walking or moving around",
+              "rawValue": "5,026",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bed-transfers",
+            "label": "Patients got better at getting in and out of bed",
+            "rate": {
+              "value": 88.29,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at getting in and out of bed",
+              "rawValue": "88.29",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at getting in and out of bed",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 4630,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at getting in and out of bed",
+              "rawValue": "4,630",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 5012,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at getting in and out of bed",
+              "rawValue": "5,012",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bathing",
+            "label": "Patients got better at bathing",
+            "rate": {
+              "value": 84.94,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at bathing",
+              "rawValue": "84.94",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at bathing",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 4500,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at bathing",
+              "rawValue": "4,500",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 5042,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at bathing",
+              "rawValue": "5,042",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "breathing",
+            "label": "Patients' breathing improved",
+            "rate": {
+              "value": 86.3,
+              "unit": "percent",
+              "sourceColumn": "How often patients' breathing improved",
+              "rawValue": "86.30",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients' breathing improved",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 4299,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients' breathing improved",
+              "rawValue": "4,299",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 4817,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients' breathing improved",
+              "rawValue": "4,817",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "oral-medications",
+            "label": "Patients got better at taking drugs correctly by mouth",
+            "rate": {
+              "value": 79.48,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "79.48",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at taking their drugs correctly by mouth",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 4287,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "4,287",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 4988,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "4,988",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "potentially-preventable-hospitalization",
+            "label": "Within-stay potentially preventable hospitalization, risk-standardized rate",
+            "rate": {
+              "value": 9.41,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate",
+              "rawValue": "9.41",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "lower",
+            "dateSourceMeasureName": "How often patients were admitted to the hospital for a potentially-preventable condition while receiving home health care",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 302,
+              "unit": "observed hospitalizations",
+              "sourceColumn": "PPH Numerator",
+              "rawValue": "302",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 2852,
+              "unit": "eligible stays",
+              "sourceColumn": "PPH Denominator",
+              "rawValue": "2,852",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "observedRate": {
+              "value": 10.59,
+              "unit": "percent",
+              "sourceColumn": "PPH Observed Rate",
+              "rawValue": "10.59",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedLowerLimit": {
+              "value": 8.45,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Lower Limit)",
+              "rawValue": "8.45",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedUpperLimit": {
+              "value": 10.26,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Upper Limit)",
+              "rawValue": "10.26",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "cmsPerformanceCategorization": "Better Than National Rate",
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          }
+        ],
+        "componentDefinitionSource": "https://www.cms.gov/medicare/quality/home-health/home-health-star-ratings",
+        "componentPeriodSource": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+      },
+      "patientExperience": {
+        "datasetId": "ccn4-8vby",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31",
+          "label": "April 1, 2025–March 31, 2026"
+        },
+        "summaryStarRating": {
+          "value": 4,
+          "unit": "stars out of 5",
+          "sourceColumn": "HHCAHPS Survey Summary Star Rating",
+          "rawValue": "4",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "completedSurveys": {
+          "value": 491,
+          "unit": "completed surveys",
+          "sourceColumn": "Number of completed Surveys",
+          "rawValue": "491",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "responseRate": {
+          "value": 24,
+          "unit": "percent",
+          "sourceColumn": "Survey response rate",
+          "rawValue": "24",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "generalFootnoteCodes": [],
+        "rawGeneralFootnote": "",
+        "measures": [
+          {
+            "id": "professional-care",
+            "label": "Patients reporting professional care",
+            "percent": {
+              "value": 91,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+              "rawValue": "91",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 5,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team gave care in a professional way",
+              "rawValue": "5",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Patients reporting good communication",
+            "percent": {
+              "value": 88,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+              "rawValue": "88",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team communicated well with them",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "medicines-pain-home-safety",
+            "label": "Patients reporting discussions of medicines, pain and home safety",
+            "percent": {
+              "value": 88,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+              "rawValue": "88",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 5,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating team discussed medicines, pain, and home safety",
+              "rawValue": "5",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "overall-care-9-or-10",
+            "label": "Patients rating overall care 9 or 10 out of 10",
+            "percent": {
+              "value": 88,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+              "rawValue": "88",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for how patients rated overall care from agency",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "definitely-recommend",
+            "label": "Patients who would definitely recommend the agency",
+            "percent": {
+              "value": 85,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+              "rawValue": "85",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": null
+          }
+        ],
+        "rawUnitRowFile": "matched-ccn4-8vby.json"
+      },
+      "sources": [
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/ccn4-8vby",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/fa88-6ff2",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/c886-nwpj",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        }
+      ],
+      "warnings": [
+        "Published survey results describe past patients, not current staffing, openings, visit reliability or suitability for a particular patient.",
+        "Completed surveys is the agency-level survey count, not a verified denominator for each adjusted survey measure.",
+        "Keep patient-experience stars separate from quality-of-patient-care stars. Do not average them."
+      ]
+    },
+    {
+      "ccn": "227098",
+      "organizationId": "vna-care",
+      "organizationName": "VNA Care (VNA of Boston and VNA Care Network)",
+      "cmsProviderName": "VNA CARE NETWORK",
+      "cmsAddress": {
+        "street": "67 MILLBROOK STREET, 500 NORTH",
+        "city": "WORCESTER",
+        "state": "MA",
+        "zip": "01606"
+      },
+      "scope": "Results for this Medicare-certified reporting entity/CCN, not every office, service or affiliate in the organization.",
+      "releasedAt": "2026-10-21",
+      "checkedAt": "2026-11-12",
+      "qualityOfPatientCare": {
+        "starRating": {
+          "value": 3,
+          "unit": "stars out of 5",
+          "sourceColumn": "Quality of patient care star rating",
+          "rawValue": "3",
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "status": "published"
+        },
+        "datasetId": "6jpm-sxkc",
+        "measurementPeriodNote": "The seven current star-component measures in this release cover January–December 2025. Other available clinical measures use different periods; see the retained date file. This is separate from the HHCAHPS survey period.",
+        "measureDateRangesFile": "matched-c886-nwpj.json",
+        "rawUnitRowFile": "matched-6jpm-sxkc.json",
+        "starComponentPeriod": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "January 1–December 31, 2025"
+        },
+        "components": [
+          {
+            "id": "timely-initiation",
+            "label": "Care began in a timely manner",
+            "rate": {
+              "value": 98.71,
+              "unit": "percent",
+              "sourceColumn": "How often the home health team began their patients' care in a timely manner",
+              "rawValue": "98.71",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 16763,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "16,763",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 16982,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "16,982",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "walking",
+            "label": "Patients got better at walking or moving around",
+            "rate": {
+              "value": 84,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at walking or moving around",
+              "rawValue": "84.00",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at walking or moving around",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 11311,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at walking or moving around",
+              "rawValue": "11,311",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 12748,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at walking or moving around",
+              "rawValue": "12,748",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bed-transfers",
+            "label": "Patients got better at getting in and out of bed",
+            "rate": {
+              "value": 88.48,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at getting in and out of bed",
+              "rawValue": "88.48",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at getting in and out of bed",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 11925,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at getting in and out of bed",
+              "rawValue": "11,925",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 12713,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at getting in and out of bed",
+              "rawValue": "12,713",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bathing",
+            "label": "Patients got better at bathing",
+            "rate": {
+              "value": 86.55,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at bathing",
+              "rawValue": "86.55",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at bathing",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 11475,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at bathing",
+              "rawValue": "11,475",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 12773,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at bathing",
+              "rawValue": "12,773",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "breathing",
+            "label": "Patients' breathing improved",
+            "rate": {
+              "value": 87.69,
+              "unit": "percent",
+              "sourceColumn": "How often patients' breathing improved",
+              "rawValue": "87.69",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients' breathing improved",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 10122,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients' breathing improved",
+              "rawValue": "10,122",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 11340,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients' breathing improved",
+              "rawValue": "11,340",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "oral-medications",
+            "label": "Patients got better at taking drugs correctly by mouth",
+            "rate": {
+              "value": 81.11,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "81.11",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at taking their drugs correctly by mouth",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 10876,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "10,876",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 12536,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "12,536",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "potentially-preventable-hospitalization",
+            "label": "Within-stay potentially preventable hospitalization, risk-standardized rate",
+            "rate": {
+              "value": 8.56,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate",
+              "rawValue": "8.56",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "lower",
+            "dateSourceMeasureName": "How often patients were admitted to the hospital for a potentially-preventable condition while receiving home health care",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 504,
+              "unit": "observed hospitalizations",
+              "sourceColumn": "PPH Numerator",
+              "rawValue": "504",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 5926,
+              "unit": "eligible stays",
+              "sourceColumn": "PPH Denominator",
+              "rawValue": "5,926",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "observedRate": {
+              "value": 8.5,
+              "unit": "percent",
+              "sourceColumn": "PPH Observed Rate",
+              "rawValue": "8.50",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedLowerLimit": {
+              "value": 7.92,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Lower Limit)",
+              "rawValue": "7.92",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedUpperLimit": {
+              "value": 9.2,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Upper Limit)",
+              "rawValue": "9.20",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "cmsPerformanceCategorization": "Better Than National Rate",
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          }
+        ],
+        "componentDefinitionSource": "https://www.cms.gov/medicare/quality/home-health/home-health-star-ratings",
+        "componentPeriodSource": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+      },
+      "patientExperience": {
+        "datasetId": "ccn4-8vby",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31",
+          "label": "April 1, 2025–March 31, 2026"
+        },
+        "summaryStarRating": {
+          "value": 3,
+          "unit": "stars out of 5",
+          "sourceColumn": "HHCAHPS Survey Summary Star Rating",
+          "rawValue": "3",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "completedSurveys": {
+          "value": 1279,
+          "unit": "completed surveys",
+          "sourceColumn": "Number of completed Surveys",
+          "rawValue": "1279",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "responseRate": {
+          "value": 24,
+          "unit": "percent",
+          "sourceColumn": "Survey response rate",
+          "rawValue": "24",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "generalFootnoteCodes": [],
+        "rawGeneralFootnote": "",
+        "measures": [
+          {
+            "id": "professional-care",
+            "label": "Patients reporting professional care",
+            "percent": {
+              "value": 90,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+              "rawValue": "90",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team gave care in a professional way",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Patients reporting good communication",
+            "percent": {
+              "value": 85,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+              "rawValue": "85",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team communicated well with them",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "medicines-pain-home-safety",
+            "label": "Patients reporting discussions of medicines, pain and home safety",
+            "percent": {
+              "value": 81,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+              "rawValue": "81",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating team discussed medicines, pain, and home safety",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "overall-care-9-or-10",
+            "label": "Patients rating overall care 9 or 10 out of 10",
+            "percent": {
+              "value": 85,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+              "rawValue": "85",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for how patients rated overall care from agency",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "definitely-recommend",
+            "label": "Patients who would definitely recommend the agency",
+            "percent": {
+              "value": 82,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+              "rawValue": "82",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": null
+          }
+        ],
+        "rawUnitRowFile": "matched-ccn4-8vby.json"
+      },
+      "sources": [
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/ccn4-8vby",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/fa88-6ff2",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/c886-nwpj",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        }
+      ],
+      "warnings": [
+        "Published survey results describe past patients, not current staffing, openings, visit reliability or suitability for a particular patient.",
+        "Completed surveys is the agency-level survey count, not a verified denominator for each adjusted survey measure.",
+        "Keep patient-experience stars separate from quality-of-patient-care stars. Do not average them.",
+        "VNA Care has two matched CCNs. Show both certified reporting entities separately; never average or assign one entity’s score to the whole network."
+      ]
+    },
+    {
+      "ccn": "227207",
+      "organizationId": "mgb-home-care",
+      "organizationName": "Mass General Brigham Home Care",
+      "cmsProviderName": "MASS GENERAL BRIGHAM HOME CARE, INC",
+      "cmsAddress": {
+        "street": "95 WELLS AVE STE 320",
+        "city": "NEWTON",
+        "state": "MA",
+        "zip": "02459"
+      },
+      "scope": "Results for this Medicare-certified reporting entity/CCN, not every office, service or affiliate in the organization.",
+      "releasedAt": "2026-10-21",
+      "checkedAt": "2026-11-12",
+      "qualityOfPatientCare": {
+        "starRating": {
+          "value": 3.5,
+          "unit": "stars out of 5",
+          "sourceColumn": "Quality of patient care star rating",
+          "rawValue": "3.5",
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "status": "published"
+        },
+        "datasetId": "6jpm-sxkc",
+        "measurementPeriodNote": "The seven current star-component measures in this release cover January–December 2025. Other available clinical measures use different periods; see the retained date file. This is separate from the HHCAHPS survey period.",
+        "measureDateRangesFile": "matched-c886-nwpj.json",
+        "rawUnitRowFile": "matched-6jpm-sxkc.json",
+        "starComponentPeriod": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "January 1–December 31, 2025"
+        },
+        "components": [
+          {
+            "id": "timely-initiation",
+            "label": "Care began in a timely manner",
+            "rate": {
+              "value": 97.69,
+              "unit": "percent",
+              "sourceColumn": "How often the home health team began their patients' care in a timely manner",
+              "rawValue": "97.69",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 33093,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "33,093",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 33876,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "33,876",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "walking",
+            "label": "Patients got better at walking or moving around",
+            "rate": {
+              "value": 84.67,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at walking or moving around",
+              "rawValue": "84.67",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at walking or moving around",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 22860,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at walking or moving around",
+              "rawValue": "22,860",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 25479,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at walking or moving around",
+              "rawValue": "25,479",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bed-transfers",
+            "label": "Patients got better at getting in and out of bed",
+            "rate": {
+              "value": 89.75,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at getting in and out of bed",
+              "rawValue": "89.75",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at getting in and out of bed",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 23743,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at getting in and out of bed",
+              "rawValue": "23,743",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 25342,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at getting in and out of bed",
+              "rawValue": "25,342",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bathing",
+            "label": "Patients got better at bathing",
+            "rate": {
+              "value": 89.29,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at bathing",
+              "rawValue": "89.29",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at bathing",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 23828,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at bathing",
+              "rawValue": "23,828",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 25482,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at bathing",
+              "rawValue": "25,482",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "breathing",
+            "label": "Patients' breathing improved",
+            "rate": {
+              "value": 92.08,
+              "unit": "percent",
+              "sourceColumn": "How often patients' breathing improved",
+              "rawValue": "92.08",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients' breathing improved",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 22431,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients' breathing improved",
+              "rawValue": "22,431",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 23988,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients' breathing improved",
+              "rawValue": "23,988",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "oral-medications",
+            "label": "Patients got better at taking drugs correctly by mouth",
+            "rate": {
+              "value": 84.95,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "84.95",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at taking their drugs correctly by mouth",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 22833,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "22,833",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 25262,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "25,262",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "potentially-preventable-hospitalization",
+            "label": "Within-stay potentially preventable hospitalization, risk-standardized rate",
+            "rate": {
+              "value": 8,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate",
+              "rawValue": "8.00",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "lower",
+            "dateSourceMeasureName": "How often patients were admitted to the hospital for a potentially-preventable condition while receiving home health care",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 1310,
+              "unit": "observed hospitalizations",
+              "sourceColumn": "PPH Numerator",
+              "rawValue": "1,310",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 14564,
+              "unit": "eligible stays",
+              "sourceColumn": "PPH Denominator",
+              "rawValue": "14,564",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "observedRate": {
+              "value": 8.99,
+              "unit": "percent",
+              "sourceColumn": "PPH Observed Rate",
+              "rawValue": "8.99",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedLowerLimit": {
+              "value": 7.55,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Lower Limit)",
+              "rawValue": "7.55",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedUpperLimit": {
+              "value": 8.43,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Upper Limit)",
+              "rawValue": "8.43",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "cmsPerformanceCategorization": "Better Than National Rate",
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          }
+        ],
+        "componentDefinitionSource": "https://www.cms.gov/medicare/quality/home-health/home-health-star-ratings",
+        "componentPeriodSource": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+      },
+      "patientExperience": {
+        "datasetId": "ccn4-8vby",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31",
+          "label": "April 1, 2025–March 31, 2026"
+        },
+        "summaryStarRating": {
+          "value": 4,
+          "unit": "stars out of 5",
+          "sourceColumn": "HHCAHPS Survey Summary Star Rating",
+          "rawValue": "4",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "completedSurveys": {
+          "value": 519,
+          "unit": "completed surveys",
+          "sourceColumn": "Number of completed Surveys",
+          "rawValue": "519",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "responseRate": {
+          "value": 18,
+          "unit": "percent",
+          "sourceColumn": "Survey response rate",
+          "rawValue": "18",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "generalFootnoteCodes": [],
+        "rawGeneralFootnote": "",
+        "measures": [
+          {
+            "id": "professional-care",
+            "label": "Patients reporting professional care",
+            "percent": {
+              "value": 89,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+              "rawValue": "89",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team gave care in a professional way",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Patients reporting good communication",
+            "percent": {
+              "value": 86,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+              "rawValue": "86",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team communicated well with them",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "medicines-pain-home-safety",
+            "label": "Patients reporting discussions of medicines, pain and home safety",
+            "percent": {
+              "value": 84,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+              "rawValue": "84",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating team discussed medicines, pain, and home safety",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "overall-care-9-or-10",
+            "label": "Patients rating overall care 9 or 10 out of 10",
+            "percent": {
+              "value": 89,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+              "rawValue": "89",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for how patients rated overall care from agency",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "definitely-recommend",
+            "label": "Patients who would definitely recommend the agency",
+            "percent": {
+              "value": 84,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+              "rawValue": "84",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": null
+          }
+        ],
+        "rawUnitRowFile": "matched-ccn4-8vby.json"
+      },
+      "sources": [
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/ccn4-8vby",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/fa88-6ff2",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/c886-nwpj",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        }
+      ],
+      "warnings": [
+        "Published survey results describe past patients, not current staffing, openings, visit reliability or suitability for a particular patient.",
+        "Completed surveys is the agency-level survey count, not a verified denominator for each adjusted survey measure.",
+        "Keep patient-experience stars separate from quality-of-patient-care stars. Do not average them."
+      ]
+    },
+    {
+      "ccn": "227241",
+      "organizationId": "croi-health",
+      "organizationName": "Croí Health (formerly NVNA and Hospice)",
+      "cmsProviderName": "CROI HEALTH",
+      "cmsAddress": {
+        "street": "120 LONGWATER DRIVE",
+        "city": "NORWELL",
+        "state": "MA",
+        "zip": "02061"
+      },
+      "scope": "Results for this Medicare-certified reporting entity/CCN, not every office, service or affiliate in the organization.",
+      "releasedAt": "2026-10-21",
+      "checkedAt": "2026-11-12",
+      "qualityOfPatientCare": {
+        "starRating": {
+          "value": 4.5,
+          "unit": "stars out of 5",
+          "sourceColumn": "Quality of patient care star rating",
+          "rawValue": "4.5",
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "status": "published"
+        },
+        "datasetId": "6jpm-sxkc",
+        "measurementPeriodNote": "The seven current star-component measures in this release cover January–December 2025. Other available clinical measures use different periods; see the retained date file. This is separate from the HHCAHPS survey period.",
+        "measureDateRangesFile": "matched-c886-nwpj.json",
+        "rawUnitRowFile": "matched-6jpm-sxkc.json",
+        "starComponentPeriod": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "January 1–December 31, 2025"
+        },
+        "components": [
+          {
+            "id": "timely-initiation",
+            "label": "Care began in a timely manner",
+            "rate": {
+              "value": 99.92,
+              "unit": "percent",
+              "sourceColumn": "How often the home health team began their patients' care in a timely manner",
+              "rawValue": "99.92",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 5106,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "5,106",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 5110,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "5,110",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "walking",
+            "label": "Patients got better at walking or moving around",
+            "rate": {
+              "value": 95.1,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at walking or moving around",
+              "rawValue": "95.10",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at walking or moving around",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3550,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at walking or moving around",
+              "rawValue": "3,550",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3633,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at walking or moving around",
+              "rawValue": "3,633",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bed-transfers",
+            "label": "Patients got better at getting in and out of bed",
+            "rate": {
+              "value": 96.73,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at getting in and out of bed",
+              "rawValue": "96.73",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at getting in and out of bed",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3562,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at getting in and out of bed",
+              "rawValue": "3,562",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3632,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at getting in and out of bed",
+              "rawValue": "3,632",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bathing",
+            "label": "Patients got better at bathing",
+            "rate": {
+              "value": 95.06,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at bathing",
+              "rawValue": "95.06",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at bathing",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3567,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at bathing",
+              "rawValue": "3,567",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3633,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at bathing",
+              "rawValue": "3,633",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "breathing",
+            "label": "Patients' breathing improved",
+            "rate": {
+              "value": 93.27,
+              "unit": "percent",
+              "sourceColumn": "How often patients' breathing improved",
+              "rawValue": "93.27",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients' breathing improved",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3592,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients' breathing improved",
+              "rawValue": "3,592",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3634,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients' breathing improved",
+              "rawValue": "3,634",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "oral-medications",
+            "label": "Patients got better at taking drugs correctly by mouth",
+            "rate": {
+              "value": 93.73,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "93.73",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at taking their drugs correctly by mouth",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3455,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "3,455",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3626,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "3,626",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "potentially-preventable-hospitalization",
+            "label": "Within-stay potentially preventable hospitalization, risk-standardized rate",
+            "rate": {
+              "value": 10.15,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate",
+              "rawValue": "10.15",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "lower",
+            "dateSourceMeasureName": "How often patients were admitted to the hospital for a potentially-preventable condition while receiving home health care",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 353,
+              "unit": "observed hospitalizations",
+              "sourceColumn": "PPH Numerator",
+              "rawValue": "353",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 2892,
+              "unit": "eligible stays",
+              "sourceColumn": "PPH Denominator",
+              "rawValue": "2,892",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "observedRate": {
+              "value": 12.21,
+              "unit": "percent",
+              "sourceColumn": "PPH Observed Rate",
+              "rawValue": "12.21",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedLowerLimit": {
+              "value": 9.38,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Lower Limit)",
+              "rawValue": "9.38",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedUpperLimit": {
+              "value": 11.07,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Upper Limit)",
+              "rawValue": "11.07",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "cmsPerformanceCategorization": "Same As National Rate",
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          }
+        ],
+        "componentDefinitionSource": "https://www.cms.gov/medicare/quality/home-health/home-health-star-ratings",
+        "componentPeriodSource": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+      },
+      "patientExperience": {
+        "datasetId": "ccn4-8vby",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31",
+          "label": "April 1, 2025–March 31, 2026"
+        },
+        "summaryStarRating": {
+          "value": 5,
+          "unit": "stars out of 5",
+          "sourceColumn": "HHCAHPS Survey Summary Star Rating",
+          "rawValue": "5",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "completedSurveys": {
+          "value": 306,
+          "unit": "completed surveys",
+          "sourceColumn": "Number of completed Surveys",
+          "rawValue": "306",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "responseRate": {
+          "value": 26,
+          "unit": "percent",
+          "sourceColumn": "Survey response rate",
+          "rawValue": "26",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "generalFootnoteCodes": [],
+        "rawGeneralFootnote": "",
+        "measures": [
+          {
+            "id": "professional-care",
+            "label": "Patients reporting professional care",
+            "percent": {
+              "value": 93,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+              "rawValue": "93",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 5,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team gave care in a professional way",
+              "rawValue": "5",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Patients reporting good communication",
+            "percent": {
+              "value": 91,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+              "rawValue": "91",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 5,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team communicated well with them",
+              "rawValue": "5",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "medicines-pain-home-safety",
+            "label": "Patients reporting discussions of medicines, pain and home safety",
+            "percent": {
+              "value": 88,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+              "rawValue": "88",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 5,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating team discussed medicines, pain, and home safety",
+              "rawValue": "5",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "overall-care-9-or-10",
+            "label": "Patients rating overall care 9 or 10 out of 10",
+            "percent": {
+              "value": 92,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+              "rawValue": "92",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 5,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for how patients rated overall care from agency",
+              "rawValue": "5",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "definitely-recommend",
+            "label": "Patients who would definitely recommend the agency",
+            "percent": {
+              "value": 91,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+              "rawValue": "91",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": null
+          }
+        ],
+        "rawUnitRowFile": "matched-ccn4-8vby.json"
+      },
+      "sources": [
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/ccn4-8vby",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/fa88-6ff2",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/c886-nwpj",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        }
+      ],
+      "warnings": [
+        "Published survey results describe past patients, not current staffing, openings, visit reliability or suitability for a particular patient.",
+        "Completed surveys is the agency-level survey count, not a verified denominator for each adjusted survey measure.",
+        "Keep patient-experience stars separate from quality-of-patient-care stars. Do not average them."
+      ]
+    },
+    {
+      "ccn": "227263",
+      "organizationId": "all-care",
+      "organizationName": "All Care VNA, Hospice and Private Care",
+      "cmsProviderName": "ALL CARE VNA-GREATER LYNN INC",
+      "cmsAddress": {
+        "street": "210 MARKET STREET",
+        "city": "LYNN",
+        "state": "MA",
+        "zip": "01901"
+      },
+      "scope": "Results for this Medicare-certified reporting entity/CCN, not every office, service or affiliate in the organization.",
+      "releasedAt": "2026-10-21",
+      "checkedAt": "2026-11-12",
+      "qualityOfPatientCare": {
+        "starRating": {
+          "value": 4,
+          "unit": "stars out of 5",
+          "sourceColumn": "Quality of patient care star rating",
+          "rawValue": "4",
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "status": "published"
+        },
+        "datasetId": "6jpm-sxkc",
+        "measurementPeriodNote": "The seven current star-component measures in this release cover January–December 2025. Other available clinical measures use different periods; see the retained date file. This is separate from the HHCAHPS survey period.",
+        "measureDateRangesFile": "matched-c886-nwpj.json",
+        "rawUnitRowFile": "matched-6jpm-sxkc.json",
+        "starComponentPeriod": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "January 1–December 31, 2025"
+        },
+        "components": [
+          {
+            "id": "timely-initiation",
+            "label": "Care began in a timely manner",
+            "rate": {
+              "value": 96.16,
+              "unit": "percent",
+              "sourceColumn": "How often the home health team began their patients' care in a timely manner",
+              "rawValue": "96.16",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 4553,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "4,553",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 4735,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "4,735",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "walking",
+            "label": "Patients got better at walking or moving around",
+            "rate": {
+              "value": 93.11,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at walking or moving around",
+              "rawValue": "93.11",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at walking or moving around",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3285,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at walking or moving around",
+              "rawValue": "3,285",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3346,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at walking or moving around",
+              "rawValue": "3,346",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bed-transfers",
+            "label": "Patients got better at getting in and out of bed",
+            "rate": {
+              "value": 94.18,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at getting in and out of bed",
+              "rawValue": "94.18",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at getting in and out of bed",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3271,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at getting in and out of bed",
+              "rawValue": "3,271",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3346,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at getting in and out of bed",
+              "rawValue": "3,346",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bathing",
+            "label": "Patients got better at bathing",
+            "rate": {
+              "value": 93.38,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at bathing",
+              "rawValue": "93.38",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at bathing",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3318,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at bathing",
+              "rawValue": "3,318",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3346,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at bathing",
+              "rawValue": "3,346",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "breathing",
+            "label": "Patients' breathing improved",
+            "rate": {
+              "value": 92.78,
+              "unit": "percent",
+              "sourceColumn": "How often patients' breathing improved",
+              "rawValue": "92.78",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients' breathing improved",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3316,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients' breathing improved",
+              "rawValue": "3,316",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3341,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients' breathing improved",
+              "rawValue": "3,341",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "oral-medications",
+            "label": "Patients got better at taking drugs correctly by mouth",
+            "rate": {
+              "value": 91.62,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "91.62",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at taking their drugs correctly by mouth",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 3199,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "3,199",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 3338,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "3,338",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "potentially-preventable-hospitalization",
+            "label": "Within-stay potentially preventable hospitalization, risk-standardized rate",
+            "rate": {
+              "value": 10.44,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate",
+              "rawValue": "10.44",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "lower",
+            "dateSourceMeasureName": "How often patients were admitted to the hospital for a potentially-preventable condition while receiving home health care",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 214,
+              "unit": "observed hospitalizations",
+              "sourceColumn": "PPH Numerator",
+              "rawValue": "214",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 1712,
+              "unit": "eligible stays",
+              "sourceColumn": "PPH Denominator",
+              "rawValue": "1,712",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "observedRate": {
+              "value": 12.5,
+              "unit": "percent",
+              "sourceColumn": "PPH Observed Rate",
+              "rawValue": "12.50",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedLowerLimit": {
+              "value": 9.26,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Lower Limit)",
+              "rawValue": "9.26",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedUpperLimit": {
+              "value": 11.53,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Upper Limit)",
+              "rawValue": "11.53",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "cmsPerformanceCategorization": "Same As National Rate",
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          }
+        ],
+        "componentDefinitionSource": "https://www.cms.gov/medicare/quality/home-health/home-health-star-ratings",
+        "componentPeriodSource": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+      },
+      "patientExperience": {
+        "datasetId": "ccn4-8vby",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31",
+          "label": "April 1, 2025–March 31, 2026"
+        },
+        "summaryStarRating": {
+          "value": 4,
+          "unit": "stars out of 5",
+          "sourceColumn": "HHCAHPS Survey Summary Star Rating",
+          "rawValue": "4",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "completedSurveys": {
+          "value": 314,
+          "unit": "completed surveys",
+          "sourceColumn": "Number of completed Surveys",
+          "rawValue": "314",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "responseRate": {
+          "value": 21,
+          "unit": "percent",
+          "sourceColumn": "Survey response rate",
+          "rawValue": "21",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "generalFootnoteCodes": [],
+        "rawGeneralFootnote": "",
+        "measures": [
+          {
+            "id": "professional-care",
+            "label": "Patients reporting professional care",
+            "percent": {
+              "value": 89,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+              "rawValue": "89",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team gave care in a professional way",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Patients reporting good communication",
+            "percent": {
+              "value": 86,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+              "rawValue": "86",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team communicated well with them",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "medicines-pain-home-safety",
+            "label": "Patients reporting discussions of medicines, pain and home safety",
+            "percent": {
+              "value": 83,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+              "rawValue": "83",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating team discussed medicines, pain, and home safety",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "overall-care-9-or-10",
+            "label": "Patients rating overall care 9 or 10 out of 10",
+            "percent": {
+              "value": 85,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+              "rawValue": "85",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for how patients rated overall care from agency",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "definitely-recommend",
+            "label": "Patients who would definitely recommend the agency",
+            "percent": {
+              "value": 79,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+              "rawValue": "79",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": null
+          }
+        ],
+        "rawUnitRowFile": "matched-ccn4-8vby.json"
+      },
+      "sources": [
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/ccn4-8vby",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/fa88-6ff2",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/c886-nwpj",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        }
+      ],
+      "warnings": [
+        "Published survey results describe past patients, not current staffing, openings, visit reliability or suitability for a particular patient.",
+        "Completed surveys is the agency-level survey count, not a verified denominator for each adjusted survey measure.",
+        "Keep patient-experience stars separate from quality-of-patient-care stars. Do not average them."
+      ]
+    },
+    {
+      "ccn": "227495",
+      "organizationId": "bilh-at-home",
+      "organizationName": "Beth Israel Lahey Health At Home",
+      "cmsProviderName": "BETH ISRAEL LAHEY HEALTH AT HOME",
+      "cmsAddress": {
+        "street": "48 DUNHAM RIDGE, SUITE 2750",
+        "city": "BEVERLY",
+        "state": "MA",
+        "zip": "01915"
+      },
+      "scope": "Results for this Medicare-certified reporting entity/CCN, not every office, service or affiliate in the organization.",
+      "releasedAt": "2026-10-21",
+      "checkedAt": "2026-11-12",
+      "qualityOfPatientCare": {
+        "starRating": {
+          "value": 3,
+          "unit": "stars out of 5",
+          "sourceColumn": "Quality of patient care star rating",
+          "rawValue": "3",
+          "footnoteCodes": [],
+          "rawFootnote": "-",
+          "status": "published"
+        },
+        "datasetId": "6jpm-sxkc",
+        "measurementPeriodNote": "The seven current star-component measures in this release cover January–December 2025. Other available clinical measures use different periods; see the retained date file. This is separate from the HHCAHPS survey period.",
+        "measureDateRangesFile": "matched-c886-nwpj.json",
+        "rawUnitRowFile": "matched-6jpm-sxkc.json",
+        "starComponentPeriod": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "January 1–December 31, 2025"
+        },
+        "components": [
+          {
+            "id": "timely-initiation",
+            "label": "Care began in a timely manner",
+            "rate": {
+              "value": 89.68,
+              "unit": "percent",
+              "sourceColumn": "How often the home health team began their patients' care in a timely manner",
+              "rawValue": "89.68",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often the home health team began their patients' care in a timely manner",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 9564,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "9,564",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 10664,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often the home health team began their patients' care in a timely manner",
+              "rawValue": "10,664",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "walking",
+            "label": "Patients got better at walking or moving around",
+            "rate": {
+              "value": 83,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at walking or moving around",
+              "rawValue": "83.00",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at walking or moving around",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 7176,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at walking or moving around",
+              "rawValue": "7,176",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 8026,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at walking or moving around",
+              "rawValue": "8,026",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bed-transfers",
+            "label": "Patients got better at getting in and out of bed",
+            "rate": {
+              "value": 88.3,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at getting in and out of bed",
+              "rawValue": "88.30",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at getting in and out of bed",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 7504,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at getting in and out of bed",
+              "rawValue": "7,504",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 8014,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at getting in and out of bed",
+              "rawValue": "8,014",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "bathing",
+            "label": "Patients got better at bathing",
+            "rate": {
+              "value": 87.34,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at bathing",
+              "rawValue": "87.34",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at bathing",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 7497,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at bathing",
+              "rawValue": "7,497",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 8024,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at bathing",
+              "rawValue": "8,024",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "breathing",
+            "label": "Patients' breathing improved",
+            "rate": {
+              "value": 87.59,
+              "unit": "percent",
+              "sourceColumn": "How often patients' breathing improved",
+              "rawValue": "87.59",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients' breathing improved",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 5952,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients' breathing improved",
+              "rawValue": "5,952",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 6631,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients' breathing improved",
+              "rawValue": "6,631",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "oral-medications",
+            "label": "Patients got better at taking drugs correctly by mouth",
+            "rate": {
+              "value": 80.96,
+              "unit": "percent",
+              "sourceColumn": "How often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "80.96",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "higher",
+            "dateSourceMeasureName": "How often patients got better at taking their drugs correctly by mouth",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 7024,
+              "unit": "published numerator",
+              "sourceColumn": "Numerator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "7,024",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 7999,
+              "unit": "published denominator",
+              "sourceColumn": "Denominator for how often patients got better at taking their drugs correctly by mouth",
+              "rawValue": "7,999",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          },
+          {
+            "id": "potentially-preventable-hospitalization",
+            "label": "Within-stay potentially preventable hospitalization, risk-standardized rate",
+            "rate": {
+              "value": 6.51,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate",
+              "rawValue": "6.51",
+              "footnoteCodes": [],
+              "rawFootnote": "-",
+              "status": "published"
+            },
+            "period": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "label": "January 1–December 31, 2025"
+            },
+            "betterDirection": "lower",
+            "dateSourceMeasureName": "How often patients were admitted to the hospital for a potentially-preventable condition while receiving home health care",
+            "dateSourceRawRange": "January 01, 2025-December 31, 2025",
+            "publishedNumerator": {
+              "value": 338,
+              "unit": "observed hospitalizations",
+              "sourceColumn": "PPH Numerator",
+              "rawValue": "338",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "publishedDenominator": {
+              "value": 4416,
+              "unit": "eligible stays",
+              "sourceColumn": "PPH Denominator",
+              "rawValue": "4,416",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "observedRate": {
+              "value": 7.65,
+              "unit": "percent",
+              "sourceColumn": "PPH Observed Rate",
+              "rawValue": "7.65",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedLowerLimit": {
+              "value": 6.05,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Lower Limit)",
+              "rawValue": "6.05",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "riskStandardizedUpperLimit": {
+              "value": 6.97,
+              "unit": "percent",
+              "sourceColumn": "PPH Risk-Standardized Rate (Upper Limit)",
+              "rawValue": "6.97",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "cmsPerformanceCategorization": "Better Than National Rate",
+            "calculationNote": "Published rates are retained. Do not recompute risk-adjusted rates from the observed numerator and denominator."
+          }
+        ],
+        "componentDefinitionSource": "https://www.cms.gov/medicare/quality/home-health/home-health-star-ratings",
+        "componentPeriodSource": "https://data.cms.gov/provider-data/dataset/c886-nwpj"
+      },
+      "patientExperience": {
+        "datasetId": "ccn4-8vby",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31",
+          "label": "April 1, 2025–March 31, 2026"
+        },
+        "summaryStarRating": {
+          "value": 4,
+          "unit": "stars out of 5",
+          "sourceColumn": "HHCAHPS Survey Summary Star Rating",
+          "rawValue": "4",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "completedSurveys": {
+          "value": 346,
+          "unit": "completed surveys",
+          "sourceColumn": "Number of completed Surveys",
+          "rawValue": "346",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "responseRate": {
+          "value": 22,
+          "unit": "percent",
+          "sourceColumn": "Survey response rate",
+          "rawValue": "22",
+          "footnoteCodes": [],
+          "rawFootnote": "",
+          "status": "published"
+        },
+        "generalFootnoteCodes": [],
+        "rawGeneralFootnote": "",
+        "measures": [
+          {
+            "id": "professional-care",
+            "label": "Patients reporting professional care",
+            "percent": {
+              "value": 90,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+              "rawValue": "90",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team gave care in a professional way",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "communication",
+            "label": "Patients reporting good communication",
+            "percent": {
+              "value": 88,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+              "rawValue": "88",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for health team communicated well with them",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "medicines-pain-home-safety",
+            "label": "Patients reporting discussions of medicines, pain and home safety",
+            "percent": {
+              "value": 82,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+              "rawValue": "82",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 3,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating team discussed medicines, pain, and home safety",
+              "rawValue": "3",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "overall-care-9-or-10",
+            "label": "Patients rating overall care 9 or 10 out of 10",
+            "percent": {
+              "value": 87,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+              "rawValue": "87",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": {
+              "value": 4,
+              "unit": "stars out of 5",
+              "sourceColumn": "Star Rating for how patients rated overall care from agency",
+              "rawValue": "4",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            }
+          },
+          {
+            "id": "definitely-recommend",
+            "label": "Patients who would definitely recommend the agency",
+            "percent": {
+              "value": 81,
+              "unit": "percent",
+              "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+              "rawValue": "81",
+              "footnoteCodes": [],
+              "rawFootnote": "",
+              "status": "published"
+            },
+            "starRating": null
+          }
+        ],
+        "rawUnitRowFile": "matched-ccn4-8vby.json"
+      },
+      "sources": [
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/ccn4-8vby",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/fa88-6ff2",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        },
+        {
+          "url": "https://data.cms.gov/provider-data/dataset/c886-nwpj",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "checkedAt": "2026-11-12",
+          "releasedAt": "2026-10-21"
+        }
+      ],
+      "warnings": [
+        "Published survey results describe past patients, not current staffing, openings, visit reliability or suitability for a particular patient.",
+        "Completed surveys is the agency-level survey count, not a verified denominator for each adjusted survey measure.",
+        "Keep patient-experience stars separate from quality-of-patient-care stars. Do not average them."
+      ]
+    }
+  ],
+  "patientExperienceComparators": {
+    "massachusetts": {
+      "period": {
+        "start": "2025-04-01",
+        "end": "2026-03-31",
+        "label": "April 1, 2025–March 31, 2026"
+      },
+      "releasedAt": "2026-10-21",
+      "measures": [
+        {
+          "id": "professional-care",
+          "label": "Patients reporting professional care",
+          "percent": {
+            "value": 87,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+            "rawValue": "87",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "communication",
+          "label": "Patients reporting good communication",
+          "percent": {
+            "value": 83,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+            "rawValue": "83",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "medicines-pain-home-safety",
+          "label": "Patients reporting discussions of medicines, pain and home safety",
+          "percent": {
+            "value": 83,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+            "rawValue": "83",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "overall-care-9-or-10",
+          "label": "Patients rating overall care 9 or 10 out of 10",
+          "percent": {
+            "value": 83,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+            "rawValue": "83",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "definitely-recommend",
+          "label": "Patients who would definitely recommend the agency",
+          "percent": {
+            "value": 77,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+            "rawValue": "77",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        }
+      ],
+      "completedSurveys": {
+        "value": 23334,
+        "unit": "completed surveys",
+        "sourceColumn": "Number of completed Surveys",
+        "rawValue": "23334",
+        "footnoteCodes": [],
+        "rawFootnote": "",
+        "status": "published"
+      },
+      "responseRate": {
+        "value": 20,
+        "unit": "percent",
+        "sourceColumn": "Survey response rate",
+        "rawValue": "20",
+        "footnoteCodes": [],
+        "rawFootnote": "",
+        "status": "published"
+      },
+      "sourceFile": "matched-m5jg-jg7i.json"
+    },
+    "national": {
+      "period": {
+        "start": "2025-04-01",
+        "end": "2026-03-31",
+        "label": "April 1, 2025–March 31, 2026"
+      },
+      "releasedAt": "2026-10-21",
+      "measures": [
+        {
+          "id": "professional-care",
+          "label": "Patients reporting professional care",
+          "percent": {
+            "value": 89,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported that their home health team gave care in a professional way",
+            "rawValue": "89",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "communication",
+          "label": "Patients reporting good communication",
+          "percent": {
+            "value": 86,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported that their home health team communicated well with them",
+            "rawValue": "86",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "medicines-pain-home-safety",
+          "label": "Patients reporting discussions of medicines, pain and home safety",
+          "percent": {
+            "value": 82,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them",
+            "rawValue": "82",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "overall-care-9-or-10",
+          "label": "Patients rating overall care 9 or 10 out of 10",
+          "percent": {
+            "value": 85,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)",
+            "rawValue": "85",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        },
+        {
+          "id": "definitely-recommend",
+          "label": "Patients who would definitely recommend the agency",
+          "percent": {
+            "value": 79,
+            "unit": "percent",
+            "sourceColumn": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family",
+            "rawValue": "79",
+            "footnoteCodes": [],
+            "rawFootnote": "",
+            "status": "published"
+          }
+        }
+      ],
+      "completedSurveys": {
+        "value": 993300,
+        "unit": "completed surveys",
+        "sourceColumn": "Number of completed Surveys",
+        "rawValue": "993300",
+        "footnoteCodes": [],
+        "rawFootnote": "",
+        "status": "published"
+      },
+      "responseRate": {
+        "value": 22,
+        "unit": "percent",
+        "sourceColumn": "Survey response rate",
+        "rawValue": "22",
+        "footnoteCodes": [],
+        "rawFootnote": "",
+        "status": "published"
+      },
+      "sourceFile": "matched-vxub-6swi.json"
+    }
+  },
+  "footnoteDefinitions": {
+    "1": "Agency provides services under a federal waiver program to a non-traditional, chronic long-term population.",
+    "2": "Agency provides services to a special-needs population.",
+    "3": "Not available.",
+    "4": "The number of patient episodes for this measure is too small to report.",
+    "5": "No current data, or provider certified/recertified for less than six months.",
+    "6": "National average not provided because of state-to-state data-collection differences.",
+    "7": "Medicare is not displaying rates for any agency because of a data issue.",
+    "8": "Data problems are being corrected.",
+    "9": "Zero or very few patients met survey inclusion rules; available scores may not accurately describe the agency.",
+    "10": "Survey results are based on less than 12 months of data.",
+    "11": "Fewer than 70 patients completed the survey; use available scores with caution.",
+    "12": "No survey results are available for this period.",
+    "13": "CMS suppressed data for one or more quarters."
+  },
+  "interpretationRules": [
+    "Results belong to the exact six-character CCN. A CCN may encompass multiple branches; it is not necessarily a single street office or an entire brand network.",
+    "Survey percentages, four domain star ratings, and the published summary star are distinct measures. Recommendation has no published star rating in this release.",
+    "All seven matched entities have numeric survey results and no populated survey footnote fields in this release. This does not remove nonresponse, sampling or time-lag limitations.",
+    "CMS survey stars require at least 40 completed surveys over four quarters; footnote 11 cautions on fewer than 70. These are different thresholds.",
+    "Retain missing raw values and footnotes; never convert blanks, NA, Not Available or a dash to zero stars or zero percent.",
+    "Use official state/national values for the same period only as descriptive context, not statistical proof that an agency is better.",
+    "Do not multiply adjusted percentages by completed-survey counts to invent a number of favorable respondents.",
+    "The survey was revised beginning April 2026. This public reporting period ends March 2026, so these are original-survey measures. Do not relabel them with future revised-survey questions."
+  ]
+}

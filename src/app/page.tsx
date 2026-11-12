@@ -9,6 +9,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { Brand } from "@/components/brand";
+import { ACCOUNTS_ENABLED } from "@/lib/features";
 
 export default function Home() {
   return (
@@ -17,10 +18,15 @@ export default function Home() {
         <Brand />
         <nav>
           <Link href="/methodology">How we research care</Link>
-          <Link href="/login" className="login-link">
-            Log in
-          </Link>
-          <Link href="/signup" className="button button-dark">
+          {ACCOUNTS_ENABLED && (
+            <Link href="/login" className="login-link">
+              Log in
+            </Link>
+          )}
+          <Link
+            href={ACCOUNTS_ENABLED ? "/signup" : "/dashboard?demo=1"}
+            className="button button-dark"
+          >
             Get started <ArrowUpRight size={16} />
           </Link>
         </nav>
@@ -41,16 +47,26 @@ export default function Home() {
               options, and the next steps together.
             </p>
             <div className="hero-actions">
-              <Link href="/signup" className="button button-primary">
-                Create your care workspace <ArrowRight size={18} />
+              <Link
+                href={ACCOUNTS_ENABLED ? "/signup" : "/dashboard?demo=1"}
+                className="button button-primary"
+              >
+                {ACCOUNTS_ENABLED
+                  ? "Create your care workspace"
+                  : "Open your care workspace"}{" "}
+                <ArrowRight size={18} />
               </Link>
-              <Link href="/dashboard?demo=1" className="text-link">
-                Explore the demo <ArrowUpRight size={16} />
-              </Link>
+              {ACCOUNTS_ENABLED && (
+                <Link href="/dashboard?demo=1" className="text-link">
+                  Explore the demo <ArrowUpRight size={16} />
+                </Link>
+              )}
             </div>
             <div className="hero-footnote">
-              <ShieldCheck size={16} /> Official records. Visible sources. Room
-              for questions.
+              <ShieldCheck size={16} />{" "}
+              {ACCOUNTS_ENABLED
+                ? "Official records. Visible sources. Room for questions."
+                : "No sign-in needed. Your plan stays in this browser."}
             </div>
           </div>
           <div

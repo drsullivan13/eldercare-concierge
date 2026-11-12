@@ -1,6 +1,6 @@
 # Discovery data and search scope
 
-This proof of concept contains **521 real public-source records** checked November 11, 2026: 280 CMS nursing facilities, 224 Massachusetts assisted-living directory entries, 10 home-care/home-health/private-staff agencies, and seven continuing/tiered-care campuses. These are discovery candidates, not recommendations, independent vetting, a comprehensive directory, or confirmation that a particular person can receive care.
+This proof of concept contains **521 real public-source records** checked November 11, 2026: 280 CMS nursing facilities, 224 Massachusetts assisted-living directory entries, 10 home-care/home-health/private-staff agencies, and seven continuing/tiered-care campuses. Home-health quality and survey evidence was separately retrieved November 12. These are discovery candidates, not recommendations, independent vetting, a comprehensive directory, or confirmation that a particular person can receive care.
 
 ## Rebuild and retained inputs
 
@@ -57,3 +57,17 @@ Tests: `npx tsx --test tests/search.test.ts`. They verify real-source ZIP points
 - Scope/severity definitions: CMS State Operations Manual, Chapter 7, section 7203.3.2, https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/som107c07pdf.pdf#page=42
 
 The A–L explanation is a direct mapping of the CMS grid; it is shown alongside the original source code. It describes the classification at that inspection. A correction date is a reported field, not an independent assessment of present conditions. Inspection cycles and penalty periods differ; the UI does not assert one uniform three-year window.
+
+## Home-health clinical quality and patient experience
+
+`src/data/home-health-evidence.json` preserves the October 21, 2026 CMS release, retrieved November 12. It joins seven exact Medicare certification numbers (CCNs) to six existing catalog organizations. VNA Care has two separately displayed agencies: Visiting Nurse Association of Boston (227068) and VNA Care Network (227098). The other matches are Mass General Brigham Home Care (227207), Beth Israel Lahey Health at Home (227495), South Shore VNA (227082), All Care VNA–Greater Lynn (227263) and Croí Health (227241).
+
+A CCN identifies a Medicare-certified reporting agency and may cover multiple branches. It is not a rating of the nearest office, every service sold by the brand, a separate private-care business, or an entire corporate network. No network average is calculated, and these measures are never used as nursing-home stars.
+
+The [Home Health Care Agencies dataset](https://data.cms.gov/provider-data/dataset/6jpm-sxkc) supplies the quality-of-patient-care star rating and seven component measures. Half stars are preserved. The components in this release cover January–December 2025; each visible rate keeps its own period and favorable direction. Published risk-adjusted outcome rates are not reconstructed from observed numerators and denominators. The timely-start measure is a care-process measure.
+
+The separate [HHCAHPS dataset](https://data.cms.gov/provider-data/dataset/ccn4-8vby) covers April 1, 2025–March 31, 2026. It supplies survey stars, five published percentages, completion counts and response rates. “Overall care 9 or 10” is a response to a 0–10 question; “definitely recommend” retains that exact distinction. The seven agencies have 282–1,279 completed surveys and 17–26% response rates. Completion totals are not denominators for every question, and the published percentages include CMS adjustments. Results reflect respondents and prior care, not current capacity or an individual patient's likely outcome.
+
+Missing and suppressed values remain null with raw CMS values and footnotes retained. A published zero remains zero. All seven current survey rows have published stars and no survey footnotes; that does not establish an unbiased sample. The [CMS dictionary](https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/home_health/HHS_Data_Dictionary.pdf) distinguishes insufficient clinical episodes, no current data, corrections, short survey periods, low survey counts and suppressed quarters. These reasons must not be collapsed into a poor-quality score. Forty completions is the survey-star eligibility threshold; the separate fewer-than-70 footnote is a caution, not the same threshold.
+
+`python scripts/prepare-home-health.py` rebuilds the display snapshot from retained source rows, schemas, metadata and reporting-date files under `src/data/inputs/home-health/`. The API returns only an exact allowlisted catalog organization. Sources and clinical/survey periods remain distinct from the general November 11 catalog date.

@@ -40,6 +40,8 @@ describe(
       grant usage on schema public, auth to anon, authenticated;
       grant execute on function auth.uid() to anon, authenticated;
       revoke all on auth.users from public, anon, authenticated;
+      -- Model Supabase's broad default table grants so the schema must narrow them explicitly.
+      alter default privileges in schema public grant all on tables to authenticated;
     `);
       await db.exec(schema);
     });
@@ -246,6 +248,30 @@ describe(
         { user_id: USER_A, name: "Test A" },
         { user_id: USER_B, name: "Test B" },
       ]);
+    });
+
+    test("authenticated default privileges cannot bypass row isolation through TRUNCATE", async () => {
+      await seedBoth();
+      await asUser(USER_A);
+      const privileges = await db.query<{
+        truncate: boolean;
+        references: boolean;
+        trigger: boolean;
+      }>(`
+        select has_table_privilege(current_user, 'public.user_workspaces', 'TRUNCATE') as truncate,
+          has_table_privilege(current_user, 'public.user_workspaces', 'REFERENCES') as references,
+          has_table_privilege(current_user, 'public.user_workspaces', 'TRIGGER') as trigger
+      `);
+      assert.deepEqual(privileges.rows, [
+        { truncate: false, references: false, trigger: false },
+      ]);
+      await expectDenied(db.query("truncate public.user_workspaces"));
+      await db.exec("reset role");
+      assert.equal(
+        (await db.query("select user_id from public.user_workspaces")).rows
+          .length,
+        2,
+      );
     });
 
     test("authenticated role without an identity sees no private rows and cannot insert", async () => {

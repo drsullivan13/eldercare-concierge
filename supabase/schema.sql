@@ -1,4 +1,4 @@
--- DRAFT for an explicitly selected Harbor project; not applied by this task.
+-- Applied to the dedicated Harbor project on 2026-11-12 (creation + privilege-hardening migrations).
 -- User data only. Public provider evidence belongs in a separately reviewed read-only catalogue.
 begin;
 
@@ -15,7 +15,8 @@ create table if not exists public.user_workspaces (
 );
 
 alter table public.user_workspaces enable row level security;
-revoke all on public.user_workspaces from public, anon;
+-- Supabase default table grants can include TRUNCATE, which is not governed by RLS.
+revoke all on public.user_workspaces from public, anon, authenticated;
 grant select, insert, update, delete on public.user_workspaces to authenticated;
 
 create policy "Read own workspace" on public.user_workspaces

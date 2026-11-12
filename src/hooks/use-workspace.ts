@@ -195,7 +195,11 @@ export function useWorkspace(demo: boolean) {
     [demo, persist],
   );
   useEffect(() => {
-    if (demo || saveStatus !== "Saving…") return;
+    if (
+      demo ||
+      (saveStatus !== "Saving…" && saveStatus !== "Changes not saved")
+    )
+      return;
     const warn = (event: BeforeUnloadEvent) => {
       event.preventDefault();
     };

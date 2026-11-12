@@ -1,4 +1,5 @@
 "use client";
+import { ACCOUNTS_ENABLED } from "@/lib/features";
 import {
   useCallback,
   useEffect,
@@ -310,6 +311,14 @@ function WorkspaceDashboard({
     setToast("Your care plan has been exported.");
   }
   async function signOut() {
+    if (
+      !demo &&
+      saveStatus === "Changes not saved" &&
+      !window.confirm(
+        "Your latest changes have not been saved. Sign out and discard those changes? You can cancel and export your plan or retry saving.",
+      )
+    )
+      return;
     if (!demo) {
       const { error } = await createClient().auth.signOut();
       if (error) {
@@ -464,23 +473,28 @@ function WorkspaceDashboard({
               Demo workspace · Real provider records. Your plan stays in this
               browser.
             </span>
-            <Link href="/signup">
-              Create an account <ArrowUpRight size={13} />
-            </Link>
+            {ACCOUNTS_ENABLED && (
+              <Link href="/signup">
+                Create an account <ArrowUpRight size={13} />
+              </Link>
+            )}
           </div>
         )}
         <main id="main-content" className="dashboard-content">
-          {error && (
+          {(error || saveStatus === "Changes not saved") && (
             <div role="alert" className="form-error page-error">
-              {error}
+              {error ||
+                "Your latest changes have not been saved. Retry saving or export your plan before leaving."}
               {saveStatus === "Changes not saved" && (
                 <button className="text-link" onClick={retrySave}>
                   Retry saving
                 </button>
               )}
-              <button onClick={() => setError("")} aria-label="Dismiss error">
-                <X size={16} />
-              </button>
+              {saveStatus !== "Changes not saved" && (
+                <button onClick={() => setError("")} aria-label="Dismiss error">
+                  <X size={16} />
+                </button>
+              )}
             </div>
           )}
           {view === "overview" && (
@@ -1618,9 +1632,9 @@ function EvidenceStandards() {
           },
           {
             n: "04",
-            title: "Resident & family experience",
-            text: "Broader review feeds, structured reference checks and direct family feedback belong in a fuller assessment. They are not connected or completed in this version.",
-            tag: "Not yet connected",
+            title: "Patient experience",
+            text: "Matched home-health agencies include CMS patient surveys, response counts and reporting periods. Broader review feeds, reference checks and direct family feedback still need to be added.",
+            tag: "CMS home-health surveys available",
           },
         ].map((item) => (
           <article key={item.n}>

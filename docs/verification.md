@@ -1,15 +1,15 @@
 # Verification record
 
-The user flow is landing/signup → personal or explicitly local demo workspace → ZIP/radius search → actual provider evidence → shortlist/comparison/notes → coordination tasks → persisted reload.
+The current user flow is landing → browser-local workspace without sign-in → ZIP/radius search → actual provider evidence → shortlist/comparison/notes → coordination tasks → persisted reload. Accounts are deferred and hidden behind `NEXT_PUBLIC_ENABLE_ACCOUNTS=false`.
 
 ## Latest check results · November 12, 2026
 
 - Production build and ESLint: pass.
-- 32 data, input-validation and actual local SQL tests: pass.
-- 18 desktop/mobile browser scenarios: pass, including the added campus and failed-storage cases. The inspection assertions were updated for the new source-derived severity explanation and rechecked on both sizes.
+- 39 data, input-validation and actual local SQL tests: pass.
+- 24 desktop/mobile browser scenarios: pass, including direct entry without sign-in, old account URLs redirecting to the local workspace, real evidence, save/reload and failed-request recovery.
 - Twelve public/dashboard accessibility checks plus eight scrolled evidence, comparison and map states: no violations returned after contrast fixes.
 - Production dependency audit: no known vulnerabilities reported.
-- Catalog normalization and retained inspection-source rebuild: byte-identical.
+- Catalog, inspection and home-health evidence rebuilds: byte-identical.
 
 ## Completed locally
 
@@ -19,6 +19,7 @@ The user flow is landing/signup → personal or explicitly local demo workspace 
 - Care-category separation, missing/zero preservation and nursing-only CMS sorting.
 - Campus identities remain separate from licensed care units. No campus CMS rating is inferred. Two approximate campus points use the exact published Census ZIP values with explicit labels.
 - Bounded inspection APIs use real CMS records, preserve dates and codes, sort newest first and distinguish absent data from a published zero.
+- Home-health evidence preserves seven exact agency identities, clinical half stars, five survey measures, seven clinical measures and actual reporting periods. VNA's two agency results remain separate. Synthetic missing values, long footnotes, stale responses and retry states were also checked in the browser.
 - Workspace validation rejects forged ownership, malformed dates, unsupported statuses, duplicate IDs, prototype keys and oversized input.
 - Callback redirects remain on the current app origin. Same-origin writes are accepted at the origin gate; cross-site writes are rejected.
 - Desktop (1440 px) and mobile (390 px) browser flows exercise actual API results, maps, saves, comparison, notes, tasks, reloads, failed requests and inspection pagination.
@@ -28,9 +29,9 @@ The user flow is landing/signup → personal or explicitly local demo workspace 
 
 `tests/rls.test.ts` executes `supabase/schema.sql` in PGlite's PostgreSQL engine. It creates only test `auth.users`, an `auth.uid()` harness and the expected roles, then changes to a role without superuser/BYPASSRLS privileges. It asserts that row-level security is active before testing owner CRUD, foreign reads/writes, owner reassignment, anonymous access, size constraints and foreign-key behavior.
 
-These are real local database checks. They do not validate a Supabase project's JWTs, settings, grants, email delivery, session lifecycle or deployed endpoints.
+These are real local database checks. They include a regression against broad default table privileges: authenticated users cannot TRUNCATE the table. They do not validate a Supabase project's JWTs, email delivery or session lifecycle.
 
-## Required after connecting a dedicated Supabase project
+## Required before activating accounts
 
 1. Inspect the selected project's existing schema, apply the reviewed schema, and run its security advisors.
 2. Create two controlled test accounts through the actual email-confirmation flow. Confirm delivery, canonical callback origin, login, logout and expired-link behavior.
@@ -43,6 +44,10 @@ These are real local database checks. They do not validate a Supabase project's 
 
 ## Hosting status
 
-No remote repository or Vercel deployment has been created. GitHub's current integration rejected repository creation; Vercel requires a team-specific access grant. Supabase has two connected organizations and the requested selection is pending. The app has been tested locally while those access requirements remain unresolved.
+Source is published at [drsullivan13/eldercare-concierge](https://github.com/drsullivan13/eldercare-concierge). The Vercel project is `eldercare-concierge`, with alias `https://eldercare-concierge-one.vercel.app`; deployment protection remains enabled. The latest POC changes are being published and checked.
 
-Do not describe the current demo as a deployed, independently vetted care service or a live account system.
+The dedicated Supabase project `harbor-eldercare-poc` has the workspace schema and owner policies applied. Live grants are restricted to authenticated SELECT/INSERT/UPDATE/DELETE, with no anonymous/PUBLIC table access. Security and performance advisors return no findings. Anonymous REST reads are denied. Only a URL and publishable key are configured; the app has no secret/service-role key.
+
+Accounts were intentionally deferred. Before activation, update the Supabase Site URL and allowed callback URLs: the current observed fallback is localhost. Keep confirmation enabled, configure an appropriate mail sender, and verify real signup/session/two-user isolation. None of those deferred steps is required to use the current browser-local POC. No test emails were sent.
+
+Deployment readiness, database access, signup email delivery and provider vetting are separate checks. A hosted demo alone does not establish that the others have been completed.
