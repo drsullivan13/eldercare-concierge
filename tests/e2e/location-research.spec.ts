@@ -307,6 +307,11 @@ test("actual review sources, excluded populations and selected family accounts n
   await expect(panel).toContainText("44 reviews reported");
   await expect(panel).toContainText("1 source family");
   const method = panel.locator(".experience-method");
+  const quote = panel.locator(".public-reviews blockquote").first();
+  await expect(quote).toBeVisible();
+  const quoteBounds = await quote.boundingBox();
+  const methodBounds = await method.locator("summary").boundingBox();
+  expect(quoteBounds!.y + quoteBounds!.height).toBeLessThan(methodBounds!.y);
   await expect(method.locator("p").first()).not.toBeVisible();
   await method.locator("summary").focus();
   await page.keyboard.press("Enter");
@@ -404,12 +409,8 @@ test("research filtering and experience sorting retain category rules and select
       name: `${name}, published prices`,
       exact: true,
     });
-    await expect(prices).toContainText(
-      "Published prices, not a personal quote.",
-    );
-    await prices
-      .getByText("Pricing details & sources", { exact: true })
-      .click();
+    await expect(prices).toContainText("Published, not a personal quote.");
+    await prices.getByText("Rates & sources", { exact: true }).click();
     const response = await request.get("/api/research", { params: { id } });
     expect(response.ok()).toBe(true);
     const research: LocationResearchResponse = await response.json();
@@ -482,7 +483,17 @@ test("research filtering and experience sorting retain category rules and select
     }),
   ).toBeVisible();
   await noOverflow(page);
-  await dialog.getByRole("button", { name: "Close dialog" }).click();
+  await dialog
+    .getByRole("button", { name: providers.get(ids[2])!.name, exact: true })
+    .click();
+  const profile = page.getByRole("dialog", {
+    name: providers.get(ids[2])!.name,
+    exact: true,
+  });
+  await expect(
+    profile.getByRole("tab", { name: "Overview", exact: true }),
+  ).toHaveAttribute("aria-selected", "true");
+  await profile.getByRole("button", { name: "Close dialog" }).click();
   await page.getByRole("button", { name: "Clear", exact: true }).click();
   await expect(
     page.getByRole("button", { name: "Compare", exact: true }),
@@ -669,6 +680,13 @@ test("families see sourced costs and an account preview, with a direct path to c
   ).toBeVisible();
   await expect(overview.locator(".overview-rate")).toContainText("$2,523");
   await expect(overview.locator("blockquote")).toBeVisible();
+  const caveat = overview.locator("details");
+  await expect(caveat.locator("p")).toBeHidden();
+  await caveat.locator("summary").click();
+  await expect(caveat.locator("p")).toBeVisible();
+  await expect(caveat).toContainText(
+    "Relationships are not independently verified",
+  );
   await overview
     .getByRole("button", { name: "Read concerns", exact: true })
     .click();
@@ -682,6 +700,13 @@ test("families see sourced costs and an account preview, with a direct path to c
   await expect(unfavorable.locator("blockquote")).toHaveText(
     "“The food is generally awful.”",
   );
+  await expect(unfavorable.locator(".review-concern")).toBeVisible();
+  await expect(unfavorable.locator(".review-concern")).toHaveText(
+    data.reviews.find((review) => review.rating === 2)!.summary,
+  );
+  const context = unfavorable.locator("details");
+  await expect(unfavorable.locator(".sentiment-negative")).not.toBeVisible();
+  await context.locator("summary").click();
   await expect(unfavorable.locator(".review-meta")).toContainText("Caring.com");
   await expect(unfavorable.locator(".review-meta")).toContainText(
     "Self-described family",
@@ -689,21 +714,27 @@ test("families see sourced costs and an account preview, with a direct path to c
   await expect(unfavorable.locator(".review-meta")).toContainText(
     "Sep 29, 2025",
   );
+  await expect(
+    unfavorable.locator(".review-meta").getByText("Caring.com", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    unfavorable.locator(".review-meta").getByText(/Sep 29, 2025/),
+  ).toBeVisible();
   await expect(unfavorable.locator(".sentiment-negative")).toContainText(
     "food",
   );
-  await expect(
-    unfavorable.getByText(
-      data.reviews.find((review) => review.rating === 2)!.summary,
-      { exact: false },
-    ),
-  ).not.toBeVisible();
+  await expect(unfavorable.locator(".sentiment-negative")).toBeVisible();
+  await expect(unfavorable.getByRole("link")).toHaveAttribute(
+    "href",
+    data.reviews.find((review) => review.rating === 2)!.url,
+  );
 
   const reddit = accounts.filter({ hasText: "Reddit" });
   await expect(reddit.locator("blockquote")).toHaveCount(0);
   await expect(reddit.locator(".review-summary")).toContainText(
     "Research summary",
   );
+  await reddit.locator("summary").click();
   await expect(reddit.locator(".review-meta")).toContainText(
     "Date not published",
   );
@@ -786,6 +817,10 @@ test("families can open concerns even when a mixed account has a favorable excer
   await expect(first.locator("blockquote")).toHaveText(
     "“some nurses that were wonderful”",
   );
+  await expect(first.locator(".review-concern")).toContainText(
+    "concerns with administration communication",
+  );
+  await first.getByText("Account context", { exact: true }).click();
   await expect(first.locator(".review-meta")).toContainText("A Place for Mom");
   await expect(first.locator(".review-meta")).toContainText(
     "Self-described family",
@@ -793,8 +828,7 @@ test("families can open concerns even when a mixed account has a favorable excer
   await expect(first.locator(".sentiment-negative")).toContainText(
     "communication",
   );
-  await first.getByText("Account context", { exact: true }).click();
-  await expect(first).toContainText("Research summary");
+  await expect(first.locator(".sentiment-negative")).toBeVisible();
   await expect(first).toContainText(
     "concerns with administration communication",
   );

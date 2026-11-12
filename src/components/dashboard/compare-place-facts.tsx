@@ -132,7 +132,7 @@ function Prices({ data }: { data: LocationResearchResponse }) {
       fact.amount &&
       fact.amount.min > 0 &&
       fact.amount.period !== "one-time" &&
-      !/second.person|additional person/i.test(fact.text),
+      !/^(?:Published\s+)?(?:second.person|additional person)/i.test(fact.text),
   );
   const lead =
     recurring.find((fact) => fact.amount?.type === "base-rent") ??

@@ -198,6 +198,11 @@ export function LocationResearch({
             ) || (b.date ?? "").localeCompare(a.date ?? ""),
       ) ?? [];
   const careFacts = facts(["care", "amenity", "activity", "dining"]);
+  const licensingFacts = careFacts.filter(
+    (fact) =>
+      data?.sources.find((source) => source.id === fact.sourceId)?.kind ===
+      "regulator",
+  );
   const catalogServices = provider.services.filter(
     (service) =>
       !careFacts.some((fact) =>
@@ -221,14 +226,12 @@ export function LocationResearch({
       aria-label={pane === "overview" ? "Overview" : undefined}
       aria-labelledby={pane === "overview" ? undefined : `${uid}-title`}
     >
-      {pane !== "overview" && (
+      {pane !== "overview" && pane !== "reviews" && (
         <div className="section-title">
           <h3 id={`${uid}-title`}>
             {pane === "costs"
               ? "Make yourself at home"
-              : pane === "reviews"
-                ? "Resident & family experiences"
-                : "Availability & services"}
+              : "Availability & services"}
           </h3>
           {data?.checkedAt && (
             <span>Research checked {date(data.checkedAt)}</span>
@@ -343,7 +346,9 @@ export function LocationResearch({
                     contract.
                   </p>
                   <Facts
-                    facts={facts(["care", "amenity", "activity", "dining"])}
+                    facts={careFacts.filter(
+                      (fact) => !licensingFacts.includes(fact),
+                    )}
                     sources={data.sources}
                     empty="Amenities and activities have not been researched yet. Ask the provider what is available."
                   />
@@ -449,8 +454,8 @@ export function LocationResearch({
             {pane === "reviews" && (
               <>
                 <section aria-labelledby={`${uid}-reviews`}>
-                  <div className="review-section-title">
-                    <h4 id={`${uid}-reviews`}>Selected public experiences</h4>
+                  <div className="review-section-title" id={`${uid}-reviews`}>
+                    <h3 id={`${uid}-title`}>What people say</h3>
                     <label>
                       <input
                         type="checkbox"
@@ -460,19 +465,13 @@ export function LocationResearch({
                       Family & resident accounts
                     </label>
                   </div>
-                  <p className="research-intro">
-                    Selected accounts, not a representative survey.
-                    Relationships are self-described, not verified. Accounts
-                    with negative or mixed aspects appear first, including when
-                    the excerpt itself is positive.
-                  </p>
-                  <FamilyExperienceEvidence evidence={data.familyExperience} />
                   {!reviews.length && (
                     <p className="research-empty">
-                      No researched excerpts match this view.{" "}
+                      No excerpts to show
+                      {familyOnly ? " for this filter" : " yet"}.{" "}
                       {data.reviewAggregates.length
                         ? "Use the review-page links below to read available reviews."
-                        : "No location-matched rating-page links are retained here."}{" "}
+                        : ""}{" "}
                       Missing excerpts do not mean no reviews exist.
                     </p>
                   )}
@@ -480,6 +479,9 @@ export function LocationResearch({
                     {reviews.map((review) => {
                       const reviewSource = data.sources.find(
                         (source) => source.id === review.sourceId,
+                      );
+                      const hasConcerns = review.aspects.some(
+                        ({ sentiment }) => sentiment !== "positive",
                       );
                       return (
                         <article
@@ -492,6 +494,14 @@ export function LocationResearch({
                               : undefined
                           }
                         >
+                          {review.excerpt ? (
+                            <blockquote>“{review.excerpt}”</blockquote>
+                          ) : (
+                            <p className="review-summary">
+                              <strong>Research summary</strong> ·{" "}
+                              {review.summary}
+                            </p>
+                          )}
                           <div className="review-meta">
                             <strong>
                               {reviewSource?.publisher ??
@@ -511,39 +521,42 @@ export function LocationResearch({
                                 : ""}
                             </span>
                           </div>
-                          {review.excerpt ? (
-                            <blockquote>“{review.excerpt}”</blockquote>
-                          ) : (
-                            <p className="review-summary">
-                              <strong>Research summary</strong> ·{" "}
-                              {review.summary}
+                          {review.excerpt && hasConcerns && (
+                            <p className="review-concern">
+                              {review.summary ||
+                                "This account also raises concerns."}
                             </p>
                           )}
-                          <div className="review-aspects">
-                            {review.aspects.map((aspect, i) => (
-                              <span
-                                key={i}
-                                className={`sentiment-${aspect.sentiment}`}
-                              >
-                                {aspect.aspect} · {aspect.sentiment}
-                              </span>
-                            ))}
-                          </div>
-                          {(review.notes.length > 0 ||
-                            (review.excerpt && review.summary)) && (
-                            <details className="evidence-disclosure">
-                              <summary>Account context</summary>
-                              {review.excerpt && review.summary && (
+                          <details className="evidence-disclosure">
+                            <summary>Account context</summary>
+                            <div className="review-aspects">
+                              {review.aspects.map((aspect, i) => (
+                                <span
+                                  key={i}
+                                  className={`sentiment-${aspect.sentiment}`}
+                                >
+                                  {aspect.aspect} · {aspect.sentiment}
+                                </span>
+                              ))}
+                            </div>
+                            {review.excerpt &&
+                              review.summary &&
+                              !hasConcerns && (
                                 <p>
                                   <strong>Research summary</strong> ·{" "}
                                   {review.summary}
                                 </p>
                               )}
-                              {review.notes.map((note, i) => (
-                                <p key={i}>{note}</p>
-                              ))}
-                            </details>
-                          )}
+                            {review.notes.map((note, i) => (
+                              <p key={i}>{note}</p>
+                            ))}
+                            {reviewSource?.access === "search-result" && (
+                              <p>
+                                Search result only. The full page was not
+                                reviewed.
+                              </p>
+                            )}
+                          </details>
                           <a
                             className="research-source"
                             href={review.url}
@@ -556,16 +569,29 @@ export function LocationResearch({
                               : ""}
                             <ExternalLink size={12} />
                           </a>
-                          {reviewSource?.access === "search-result" && (
-                            <p className="small">
-                              Search result only. The full page was not
-                              reviewed.
-                            </p>
-                          )}
                         </article>
                       );
                     })}
                   </div>
+                  <details className="evidence-disclosure review-sampling">
+                    <summary>How these accounts were selected</summary>
+                    {data.checkedAt && (
+                      <p>Research checked {date(data.checkedAt)}.</p>
+                    )}
+                    <p>
+                      Selected accounts, not a representative survey.
+                      Relationships are self-described, not verified. An unknown
+                      relationship does not establish firsthand experience.
+                    </p>
+                    <p>
+                      Accounts with negative or mixed aspects appear first,
+                      including when the excerpt itself is positive. Within each
+                      group, the most recent dated accounts appear first.
+                    </p>
+                    <FamilyExperienceEvidence
+                      evidence={data.familyExperience}
+                    />
+                  </details>
                   <FacebookResearch
                     key={providerId}
                     research={data.facebookResearch}
@@ -694,6 +720,12 @@ export function LocationResearch({
                   </div>
                 </section>
               </>
+            )}
+            {pane === "details" && licensingFacts.length > 0 && (
+              <section aria-labelledby={`${uid}-licensing`}>
+                <h4 id={`${uid}-licensing`}>Licensing & care setting</h4>
+                <Facts facts={licensingFacts} sources={data.sources} empty="" />
+              </section>
             )}
             {pane === "details" && facts(["capacity"]).length > 0 && (
               <section aria-labelledby={`${uid}-capacity`}>

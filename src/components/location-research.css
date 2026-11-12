@@ -60,3 +60,69 @@
 .provider-detail .family-experience-method {
   margin-bottom: 20px;
 }
+
+.provider-detail .review-section-title {
+  margin-top: 0;
+  gap: 4px 16px;
+}
+
+.provider-detail .review-section-title h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.provider-detail .review-section-title label {
+  min-height: 44px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.provider-detail .public-reviews {
+  margin-top: 8px;
+  gap: 24px;
+}
+
+.provider-detail .public-reviews article {
+  padding: 0 0 16px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.provider-detail .public-reviews blockquote {
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.provider-detail .review-meta {
+  justify-content: flex-start;
+  gap: 4px 12px;
+  font-size: 13px;
+}
+
+.provider-detail .review-meta strong {
+  font-weight: 400;
+}
+
+.provider-detail .public-reviews .research-source {
+  font-size: 13px;
+}
+
+.provider-detail .public-reviews .evidence-disclosure > summary,
+.provider-detail .review-sampling > summary {
+  width: fit-content;
+  min-height: 44px;
+  padding-block: 12px;
+  cursor: pointer;
+}
+
+.provider-detail .public-reviews .review-concern {
+  color: #6b4938;
+  font-size: 14px;
+}
+
+.provider-detail .review-sampling {
+  margin-block: 12px 24px;
+}

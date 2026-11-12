@@ -557,8 +557,7 @@ test("families filter and compare options, then use the place section selector w
         const url = new URL(response.url());
         return (
           url.pathname === "/api/research" &&
-          url.searchParams.get("id") === provider.id &&
-          response.status() === 200
+          url.searchParams.get("id") === provider.id
         );
       }),
     ),
@@ -583,13 +582,13 @@ test("families filter and compare options, then use the place section selector w
       exact: true,
     });
     await expect(prices).not.toHaveAttribute("aria-busy", "true");
-    await expect(prices).toContainText(
-      "Published prices, not a personal quote.",
-    );
+    await expect(prices).toContainText("Published, not a personal quote.");
+    await prices.getByText("Rates & sources", { exact: true }).click();
     await expect(prices.getByRole("link").first()).toHaveAttribute(
       "href",
       /^https?:/,
     );
+    expect(researchResponses[index].status()).toBe(200);
     const research = (await researchResponses[
       index
     ].json()) as LocationResearchResponse;
@@ -605,11 +604,13 @@ test("families filter and compare options, then use the place section selector w
       .map((fact) => fact.text);
     expect(publishedPerks.length).toBeGreaterThan(0);
     await expect(perks.locator("p").first()).toBeVisible();
+    const morePerks = perks.getByText("Perks & details", { exact: true });
+    if (await morePerks.isVisible()) await morePerks.click();
     for (const text of await perks.locator("p").allTextContents()) {
-      expect(publishedPerks).toContain(text);
+      expect(
+        publishedPerks.some((fact) => fact.startsWith(text.replace(/…$/, ""))),
+      ).toBe(true);
     }
-    const morePrices = prices.getByText(/^More prices \(/);
-    if (await morePrices.isVisible()) await morePrices.click();
     const costs = research.facts.filter((fact) => fact.kind === "cost");
     expect(costs.length).toBeGreaterThan(0);
     for (const cost of costs) {
@@ -619,6 +620,7 @@ test("families filter and compare options, then use the place section selector w
           new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
+            minimumFractionDigits: 0,
             maximumFractionDigits: 2,
           }).format(cost.amount.min),
         );
@@ -685,9 +687,9 @@ test("families filter and compare options, then use the place section selector w
   await overview.focus();
   for (const [key, label, content] of [
     ["ArrowRight", "Costs & perks", "Care, amenities & everyday life"],
-    ["ArrowRight", "Reviews", "Selected public experiences"],
+    ["ArrowRight", "Reviews", "What people say"],
     ["End", "Details", "About this provider"],
-    ["Home", "Overview", "At a glance"],
+    ["Home", "Overview", "Price details & source"],
   ]) {
     await page.keyboard.press(key);
     const tab = sections.getByRole("tab", { name: label, exact: true });
@@ -699,7 +701,7 @@ test("families filter and compare options, then use the place section selector w
       "id",
       (await tab.getAttribute("aria-controls"))!,
     );
-    await expect(panel).toContainText(content);
+    await expect(panel.getByText(content, { exact: true })).toBeVisible();
     await expect(sections.getByRole("tab", { selected: true })).toHaveCount(1);
   }
   await noDocumentOverflow(page);
@@ -905,7 +907,11 @@ test("protected API never returns a workspace to an anonymous browser or silentl
     await expect(
       page
         .getByRole("navigation", { name: "Main navigation" })
-        .getByRole("link", { name: "Find care", exact: true }),
+        .getByRole("link", {
+          name: "Find care",
+          exact: true,
+          includeHidden: true,
+        }),
     ).toHaveAttribute("href", "/dashboard?demo=1");
     await expect(
       page.getByRole("link", { name: "Log in", exact: true }),

@@ -97,7 +97,10 @@ export function PropertyOverview({
     office ? ["care", "amenity"] : ["dining", "amenity", "activity"]
   )
     .flatMap((kind) => {
-      const matches = data.facts.filter((fact) => fact.kind === kind);
+      const matches = data.facts.filter(
+        (fact) =>
+          fact.kind === kind && sourceFor(fact.sourceId)?.kind !== "regulator",
+      );
       return (
         matches.find((fact) => sourceFor(fact.sourceId)?.kind === "provider") ??
         matches[0] ??
@@ -205,8 +208,9 @@ export function PropertyOverview({
           ))
         ) : (
           <p>
-            {provider.services.slice(0, 2).join(" · ") ||
-              "Everyday offerings have not been researched yet."}
+            {office
+              ? "Ask which services are available at your address."
+              : "Ask about meals, activities and everyday help."}
           </p>
         )}
         <button
@@ -234,8 +238,7 @@ export function PropertyOverview({
           </>
         ) : (
           <p>
-            No quoted public review is retained here. The Reviews pane has
-            source links and any available family discussions.
+            No review excerpt yet. See available sources and family discussions.
           </p>
         )}
         <button
@@ -251,23 +254,26 @@ export function PropertyOverview({
             ? "Full review & context"
             : "Explore reviews & family discussions"}
         </button>
-        <details className="overview-caveat">
-          <summary>About this review</summary>
-          <p>
-            {account && `${evidenceDate(account.date)}. `}
-            Selected accounts, not a survey. Relationships are not independently
-            verified.
-          </p>
-          {data.experience.publicationStatus === "sources-disagree" && (
-            <p>Harbor score withheld · Sources disagree</p>
-          )}
-          {data.experience.publicationStatus === "single-source-estimate" && (
+        {account && (
+          <details className="overview-caveat">
+            <summary>About this review</summary>
             <p>
-              Single-source estimate ·{" "}
-              {data.experience.singleSourceLabel ?? "one review source"}
+              {evidenceDate(account.date)}. Selected accounts, not a survey.
+              Relationships are not independently verified.
             </p>
-          )}
-        </details>
+          </details>
+        )}
+        {data.experience.publicationStatus === "sources-disagree" && (
+          <p className="overview-concern">
+            Harbor score withheld · Sources disagree
+          </p>
+        )}
+        {data.experience.publicationStatus === "single-source-estimate" && (
+          <p className="small">
+            Single-source estimate ·{" "}
+            {data.experience.singleSourceLabel ?? "one review source"}
+          </p>
+        )}
         {(data.experience.selectedConcerns || concern) && (
           <p className="overview-concern">
             Selected reviews include concerns.{" "}
