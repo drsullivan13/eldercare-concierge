@@ -13,6 +13,8 @@ This collection retains state records for Union, Morris, Essex, Bergen, Hudson, 
 
 Each raw input has a JSON sidecar with its URL, retrieval timestamp, SHA-256, and size. HTTP modification dates remain separate. Generated records point to the exact source row or PDF page.
 
+The municipality response has 564 rows, matching the state API's count query. The locality table has 3,301 rows, matching its displayed total. One malformed Cumberland locality row has no county cell and cannot support a county assignment. Its original HTML remains in the capture.
+
 ## Counts in this capture
 
 Home-care counts describe registrations at business addresses assigned to each county. They do not describe service areas, private-pay acceptance, or Medicare home-health agencies. A firm outside these counties may serve residents inside them.

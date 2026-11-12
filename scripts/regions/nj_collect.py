@@ -318,13 +318,14 @@ def county_references(ltc_rows):
     parser.feed(locality_html)
     localities = defaultdict(set)
     counties = {value for values in municipalities.values() for value in values}
-    locality_rows = []
     for row in parser.rows:
         if len(row) == 3 and row[2] in counties:
-            locality_rows.append(row)
             localities[place_key(row[0])].add(row[2])
     match = re.search(r"Your search\s+generated (\d+) matches", locality_html)
-    if not match or len(locality_rows) != int(match[1]):
+    if (
+        not match or not parser.rows or parser.rows[0] != ["Local Name", "Municipality", "County"]
+        or len(parser.rows) - 1 != int(match[1])
+    ):
         raise ValueError("State locality table differs from its reported result count")
     postal = defaultdict(set)
     for row in ltc_rows:

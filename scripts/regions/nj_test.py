@@ -163,6 +163,21 @@ class StateCollectionTests(unittest.TestCase):
                     nj.provenance("source.xlsx")
         nj.provenance.cache_clear()
 
+    def test_incomplete_county_reference_is_rejected(self):
+        municipality = json.loads((nj.OUTPUT / "raw/municipalities.json").read_text())[0]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "raw").mkdir()
+            (root / "raw/municipalities.json").write_text(json.dumps([municipality]))
+            (root / "raw/localities.html").write_text("""
+                Your search generated 2 matches.
+                <table><tr><th>Local Name</th><th>Municipality</th><th>County</th></tr>
+                <tr><td>Absecon</td><td>Absecon City</td><td>Atlantic</td></tr></table>
+            """)
+            with patch.object(nj, "OUTPUT", root):
+                with self.assertRaisesRegex(ValueError, "reported result count"):
+                    nj.county_references([])
+
     def test_real_cli_rebuild_is_deterministic(self):
         paths = [
             path for county in nj.COUNTIES
