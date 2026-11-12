@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "market": {
+    "id": "massachusetts-baseline",
+    "state": "MA",
+    "label": "Massachusetts read-only baseline"
+  },
+  "read_only": true,
+  "known_gaps": [
+    "Boston-radius office locations and ZIP points describe geographic discovery. Historical source checks use retained releases."
+  ],
+  "steps": [
+    {
+      "id": "catalog",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "catalog"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "src/data/catalog-meta.json",
+          "role": "manifest",
+          "metadata": [
+            ""
+          ]
+        },
+        {
+          "path": "src/data/providers.json",
+          "role": "output"
+        },
+        {
+          "path": "src/data/inputs/dataset-summary.json",
+          "role": "source",
+          "metadata": [
+            ""
+          ]
+        },
+        {
+          "path": "src/data/inputs/provider-corrections.json",
+          "role": "source"
+        }
+      ],
+      "known_gaps": [
+        "Read-only snapshot integrity and joins. Source freshness is assessed separately."
+      ]
+    },
+    {
+      "id": "geography",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "geography"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "src/data/zip-source-manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/sourceSnapshotDate",
+            "/sources"
+          ]
+        },
+        {
+          "path": "src/data/ma-zips.json",
+          "role": "output",
+          "sha256_from": {
+            "path": "src/data/zip-source-manifest.json",
+            "pointer": "/outputs/ma-zips.json/sha256"
+          }
+        },
+        {
+          "path": "src/data/ma-zips-provenance.json",
+          "role": "output",
+          "sha256_from": {
+            "path": "src/data/zip-source-manifest.json",
+            "pointer": "/outputs/ma-zips-provenance.json/sha256"
+          }
+        }
+      ],
+      "known_gaps": [
+        "Read-only snapshot integrity and joins. Source freshness is assessed separately."
+      ]
+    },
+    {
+      "id": "evidence",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "evidence"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "src/data/inspection-history.json",
+          "role": "output",
+          "metadata": [
+            "/retrieved",
+            "/sourceFileSha256",
+            "/sources"
+          ]
+        },
+        {
+          "path": "src/data/home-health-evidence.json",
+          "role": "output",
+          "metadata": [
+            "/retrieved",
+            "/releasedAt",
+            "/sources"
+          ]
+        },
+        {
+          "path": "src/data/location-research.json",
+          "role": "output",
+          "metadata": [
+            "/*/checkedAt",
+            "/*/sources/*/checkedAt",
+            "/*/sources/*/publishedAt"
+          ]
+        },
+        {
+          "path": "src/data/location-research-coverage.json",
+          "role": "coverage",
+          "metadata": [
+            ""
+          ]
+        },
+        {
+          "path": "src/data/facebook-research.json",
+          "role": "output",
+          "metadata": [
+            "/checkedAt",
+            "/runId",
+            "/reviewBasis"
+          ]
+        }
+      ],
+      "known_gaps": [
+        "Read-only snapshot integrity and joins. Source freshness is assessed separately."
+      ]
+    }
+  ]
+}

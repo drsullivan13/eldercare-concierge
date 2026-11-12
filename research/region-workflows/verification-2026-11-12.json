@@ -1,0 +1,196 @@
+{
+  "date": "2026-11-12",
+  "dataCommit": "b00e3b00be995d87acbdf14804bce55ae6433e2c",
+  "checks": "Full local verification and fresh git-archive verification with the workflow files identified below installed. The fresh checkout reconstructed supplemental clinical sidecars offline before using shared verification. Local discovery archives and private review observations were excluded from shared verification.",
+  "workflowFiles": {
+    "scripts/regions/workflow.py": "9b61052c39bf220596f39fc55440a67c00f23bece0ec62a483bbceed4db490ac",
+    "scripts/regions/workflow-evidence.py": "2552cad4c2ac4069fa47e29dc2f6274fd26f7f16567f47a68bf9c34f8e13b7f2",
+    "scripts/regions/workflow-test.py": "1f3279b402721226f2dec3fe14195ede5daf66c0ba473968e3385ee4e5551015",
+    "research/region-workflows/north-jersey.json": "657e1a11d8827eaf10ffd5a50ffac153b5f35f18c71ba7e2e9f5407a9f35ae14",
+    "research/region-workflows/massachusetts.json": "a8d7ce46d5fdd23d682f6156e37df745f793bae72cc1747f8297bd9046ee6dcb"
+  },
+  "regressionTests": {
+    "command": "python3 -B scripts/regions/workflow-test.py",
+    "passed": 26
+  },
+  "reports": [
+    {
+      "market": "massachusetts-baseline",
+      "scope": "all",
+      "startedAt": "2026-11-12T16:05:32.499309+00:00",
+      "configSha256": "a8d7ce46d5fdd23d682f6156e37df745f793bae72cc1747f8297bd9046ee6dcb",
+      "reportSha256": "a3b10382aad9949fd38ff4047b2c78783ddb8c485432f7a8912fd60ba97a87d4",
+      "verified": [
+        "catalog",
+        "geography",
+        "evidence"
+      ],
+      "notSelected": [],
+      "artifactCounts": {
+        "hash_verified": 2,
+        "verified": 10
+      }
+    },
+    {
+      "market": "north-jersey",
+      "scope": "all",
+      "startedAt": "2026-11-12T16:06:37.399150+00:00",
+      "configSha256": "657e1a11d8827eaf10ffd5a50ffac153b5f35f18c71ba7e2e9f5407a9f35ae14",
+      "reportSha256": "d4811ec7740774b4633ca053575d19f5fde2091020a24726de5a317fa67de571",
+      "verified": [
+        "state",
+        "geography",
+        "cms",
+        "pos",
+        "qcor",
+        "clinical",
+        "reviews",
+        "listings",
+        "address-points",
+        "offerings",
+        "release-reviews",
+        "normalize",
+        "runtime",
+        "facebook-kit"
+      ],
+      "notSelected": [],
+      "artifactCounts": {
+        "absent_optional": 2,
+        "hash_verified": 7,
+        "verified": 114
+      }
+    },
+    {
+      "market": "massachusetts-baseline",
+      "scope": "shared",
+      "startedAt": "2026-11-12T16:07:03.528647+00:00",
+      "configSha256": "a8d7ce46d5fdd23d682f6156e37df745f793bae72cc1747f8297bd9046ee6dcb",
+      "reportSha256": "0a66fa2b245b5c96fa1409e3ca8b04d092388b4e11f1147c94e5537f0bb7dee6",
+      "verified": [
+        "catalog",
+        "geography",
+        "evidence"
+      ],
+      "notSelected": [],
+      "artifactCounts": {
+        "hash_verified": 2,
+        "verified": 10
+      }
+    },
+    {
+      "market": "north-jersey",
+      "scope": "shared",
+      "startedAt": "2026-11-12T16:06:43.183657+00:00",
+      "configSha256": "657e1a11d8827eaf10ffd5a50ffac153b5f35f18c71ba7e2e9f5407a9f35ae14",
+      "reportSha256": "00b7498d7cd6cbb43d09764fc35dd125dda29711a7c4de7035ad6fce8838e0bb",
+      "verified": [
+        "state",
+        "geography",
+        "cms",
+        "pos",
+        "qcor",
+        "clinical",
+        "address-points",
+        "offerings",
+        "release-reviews",
+        "normalize",
+        "runtime",
+        "facebook-kit"
+      ],
+      "notSelected": [
+        "reviews",
+        "listings"
+      ],
+      "artifactCounts": {
+        "absent_optional": 2,
+        "hash_verified": 7,
+        "verified": 97
+      }
+    }
+  ],
+  "published": {
+    "massachusetts": {
+      "byCategory": {
+        "assisted-living": 224,
+        "home-care": 2,
+        "home-health": 6,
+        "life-plan": 7,
+        "nursing-home": 280,
+        "staffing": 2
+      },
+      "catalogRecords": 521,
+      "facebookLocations": 22,
+      "facebookWithFindings": 10,
+      "homeHealthReportingEntities": 7,
+      "inspectionFacilities": 280,
+      "openingClaims": 7,
+      "supportedZips": 685,
+      "waitlistClaims": 8,
+      "withFacts": 521,
+      "withPositivePrice": 35,
+      "withReviewAggregate": 311
+    },
+    "north-jersey": {
+      "byCategory": {
+        "assisted-living": 116,
+        "home-care": 673,
+        "home-health": 18,
+        "life-plan": 7,
+        "nursing-home": 160
+      },
+      "catalogRecords": 974,
+      "facebookLocations": 0,
+      "facebookWithFindings": 0,
+      "homeHealthReportingEntities": 18,
+      "inspectionFacilities": 139,
+      "openingClaims": 0,
+      "supportedZips": 270,
+      "waitlistClaims": 1,
+      "withFacts": 282,
+      "withPositivePrice": 20,
+      "withReviewAggregate": 40
+    }
+  },
+  "reviewRelease": {
+    "approved": 40,
+    "excluded": 0,
+    "included": 40,
+    "observations": 40,
+    "pendingOrInventory": 10,
+    "providers": 40,
+    "withNumericExperienceScore": 37
+  },
+  "addressPrecision": {
+    "census-street-interpolated": 56,
+    "fallback": 121,
+    "matched": 853,
+    "nj-address-point": 784,
+    "nj-street-interpolated": 13,
+    "supplied-coordinate-unverified": 30,
+    "total": 974,
+    "zip-representative-point": 91
+  },
+  "listingDiscoveryArchive": {
+    "discoveryInputDrift": [
+      "research/north-jersey/runtime/providers.json"
+    ],
+    "discoveryProviderCount": 960,
+    "historicalArchiveOnly": [
+      "2026-11-12-b96ab1f1902a"
+    ],
+    "reproducibleWithCurrentTool": [],
+    "runtimeProviderCount": 974,
+    "uninspectedDiscoveryOnly": false
+  },
+  "certificationHistory": {
+    "current": "20261112T150611097460Z",
+    "historicalReceiptsChecked": [
+      "20261112T150310897562Z",
+      "20261112T150445855040Z"
+    ],
+    "incompleteHistoricalAttempts": [
+      "20261112T150138591700Z",
+      "20261112T150214087676Z"
+    ]
+  }
+}

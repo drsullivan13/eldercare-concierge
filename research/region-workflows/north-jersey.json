@@ -1,0 +1,1127 @@
+{
+  "schema_version": 1,
+  "market": {
+    "id": "north-jersey",
+    "state": "NJ",
+    "label": "North Jersey"
+  },
+  "read_only": false,
+  "known_gaps": [
+    "Collection, owner-check success and runtime publication are separate states. This workflow never asserts market completion.",
+    "Office location, licensed care unit, campus, service ZIP edge, consumer aggregate and clinical evidence retain their existing owners and meanings.",
+    "No live availability or pricing is established. Restricted sources remain restricted.",
+    "Refresh runs only explicitly configured public collectors. Listing/review discovery and source permissions remain with their existing tools."
+  ],
+  "steps": [
+    {
+      "id": "state",
+      "depends_on": [],
+      "commands": {
+        "refresh": {
+          "argv": [
+            "python3",
+            "scripts/regions/nj_collect.py",
+            "--download",
+            "--collect-firms",
+            "--verify-live"
+          ],
+          "timeout_seconds": 1800
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/nj_collect.py"
+          ],
+          "timeout_seconds": 180
+        },
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "state"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/state/coverage.json",
+          "role": "coverage",
+          "metadata": [
+            "/counties",
+            "/sources",
+            "/county_counts",
+            "/limitations"
+          ]
+        },
+        {
+          "path": "research/north-jersey/state/raw/ltc.xlsx",
+          "role": "source",
+          "sha256_from": {
+            "path": "research/north-jersey/state/coverage.json",
+            "pointer": "/sources/ltc/sha256"
+          }
+        },
+        {
+          "path": "research/north-jersey/state/raw/firms.xlsx",
+          "role": "source",
+          "sha256_from": {
+            "path": "research/north-jersey/state/coverage.json",
+            "pointer": "/sources/firms/sha256"
+          }
+        },
+        {
+          "path": "research/north-jersey/state/raw/ccrc.pdf",
+          "role": "source",
+          "sha256_from": {
+            "path": "research/north-jersey/state/coverage.json",
+            "pointer": "/sources/ccrc/sha256"
+          }
+        },
+        {
+          "path": "research/north-jersey/state/*/care-units.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/state/*/home-care-firms.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/state/*/ccrc-campuses.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/state/unresolved-home-care-counties.json",
+          "role": "coverage"
+        }
+      ],
+      "known_gaps": [
+        "Checks raw source receipts, county projections and provenance links. Historical campus publication and registration dates require a current check."
+      ]
+    },
+    {
+      "id": "geography",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/zip-build.py",
+            "--check"
+          ]
+        },
+        "refresh": {
+          "argv": [
+            "python3",
+            "scripts/regions/zip-build.py",
+            "--refresh"
+          ],
+          "timeout_seconds": 600
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/zip-build.py",
+            "--offline"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/geography/manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/scope",
+            "/sources",
+            "/sourceManifestSha256"
+          ]
+        },
+        {
+          "path": "research/north-jersey/geography/source-manifest.json",
+          "role": "manifest"
+        },
+        {
+          "path": "research/north-jersey/geography/nj-zips.json",
+          "role": "output",
+          "sha256_from": {
+            "path": "research/north-jersey/geography/manifest.json",
+            "pointer": "/outputs/nj-zips.json/sha256"
+          }
+        },
+        {
+          "path": "research/north-jersey/geography/nj-zips-provenance.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/geography/nj-county-zips.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/geography/validation.json",
+          "role": "coverage",
+          "metadata": [
+            ""
+          ]
+        },
+        {
+          "path": "research/north-jersey/geography/exclusions.json",
+          "role": "coverage"
+        }
+      ],
+      "known_gaps": [
+        "Postal/ZCTA county overlap and coordinates do not establish agency service territory."
+      ]
+    },
+    {
+      "id": "cms",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/cms_collect.py",
+            "verify"
+          ],
+          "timeout_seconds": 300
+        },
+        "refresh": {
+          "argv": [
+            "python3",
+            "scripts/regions/cms_collect.py",
+            "collect"
+          ],
+          "timeout_seconds": 1800
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/cms/manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/started_at",
+            "/status",
+            "/target_counties",
+            "/release_consistency"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/coverage.json",
+          "role": "coverage",
+          "metadata": [
+            ""
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/nursing_roster.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/cms/home_health_roster.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/cms/home_health_service_zip_edges.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/cms/raw/4pq5-n9py/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/4pq5-n9py/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/6jpm-sxkc/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/6jpm-sxkc/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/c886-nwpj/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/c886-nwpj/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/ccn4-8vby/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/ccn4-8vby/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/djen-97ju/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/djen-97ju/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/fa88-6ff2/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/fa88-6ff2/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/fykj-qjee/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/fykj-qjee/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/g6vv-u9sr/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/g6vv-u9sr/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/hicp-9999/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/hicp-9999/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/ifjz-ge4w/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/ifjz-ge4w/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/ijh5-nb2v/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/ijh5-nb2v/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/m5eg-upu5/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/m5eg-upu5/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/qmdc-9999/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/qmdc-9999/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/r5ix-sfxw/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/r5ix-sfxw/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/svdt-c123/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/svdt-c123/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/tagd-9999/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/tagd-9999/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/tbry-pc2d/metadata.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/raw/tbry-pc2d/metadata-after.json",
+          "role": "source",
+          "metadata": [
+            "/identifier",
+            "/released",
+            "/modified",
+            "/issued"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/manifest.partial.json",
+          "role": "manifest",
+          "optional": true,
+          "owner_check": false,
+          "metadata": [
+            "/started_at",
+            "/status",
+            "/target_counties"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/pending-request.json",
+          "role": "manifest",
+          "optional": true,
+          "owner_check": false,
+          "metadata": [
+            ""
+          ]
+        }
+      ],
+      "known_gaps": [
+        "CMS source completeness is bounded by the owner's source registry and retained release. It is not clinical publication or review coverage.",
+        "Registry-owned metadata is declared by explicit per-dataset paths matching the cms_collect.py registry. Any other retained file remains undeclared inventory.",
+        "cms_collect.py collect refuses an output directory that already holds a completed manifest. Wiring a new --output directory is an explicit operator action that this workflow never composes.",
+        "A present manifest.partial.json or pending-request.json records an interrupted or pending collection. It is reported as retained inventory, never promoted to verified or complete."
+      ]
+    },
+    {
+      "id": "pos",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "pos"
+          ]
+        },
+        "refresh": {
+          "argv": [
+            "python3",
+            "scripts/regions/cms_pos.py",
+            "pull"
+          ],
+          "timeout_seconds": 1800
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/cms/pos/latest.json",
+          "role": "manifest",
+          "metadata": [
+            "/snapshot"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/pos/snapshots/*/manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/release"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/pos/snapshots/*/supplement.json",
+          "role": "output",
+          "metadata": [
+            "/release",
+            "/counts",
+            "/reconciliation"
+          ]
+        }
+      ],
+      "known_gaps": [
+        "Current certification is checked against the selected POS snapshot. Historical receipts describe their original collection date. Incomplete prior attempts remain listed separately."
+      ]
+    },
+    {
+      "id": "qcor",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/cms_qcor.py",
+            "verify"
+          ],
+          "timeout_seconds": 180
+        },
+        "refresh": {
+          "argv": [
+            "python3",
+            "scripts/regions/cms_qcor.py",
+            "pull"
+          ],
+          "timeout_seconds": 1800
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/cms_qcor.py",
+            "build"
+          ],
+          "timeout_seconds": 180
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/cms/qcor/manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/coverage",
+            "/migration_notice",
+            "/export_workbook_dates",
+            "/counts",
+            "/unresolved",
+            "/limitations"
+          ]
+        },
+        {
+          "path": "research/north-jersey/cms/qcor/surveys.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/cms/qcor/agencies.json",
+          "role": "output"
+        }
+      ],
+      "known_gaps": [
+        "Published QCOR exports are not all surveys ever. Source-filter discrepancies and migration limits remain in the owner manifest."
+      ]
+    },
+    {
+      "id": "clinical",
+      "depends_on": [
+        "cms",
+        "pos"
+      ],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/clinical-nj.py",
+            "--check"
+          ],
+          "timeout_seconds": 300
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/clinical-nj.py"
+          ],
+          "timeout_seconds": 300
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/clinical/manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/cmsManifest",
+            "/posSnapshot",
+            "/datasetIds",
+            "/supplementalDatasetIds",
+            "/counts",
+            "/runtimeArtifactReferences"
+          ]
+        },
+        {
+          "path": "research/north-jersey/clinical/inspection-history.json",
+          "role": "output",
+          "sha256_from": {
+            "path": "research/north-jersey/clinical/manifest.json",
+            "pointer": "/outputs/inspection-history.json/sha256"
+          }
+        },
+        {
+          "path": "research/north-jersey/clinical/home-health-evidence.json",
+          "role": "output",
+          "sha256_from": {
+            "path": "research/north-jersey/clinical/manifest.json",
+            "pointer": "/outputs/home-health-evidence.json/sha256"
+          }
+        },
+        {
+          "path": "research/north-jersey/clinical/source-periods-and-definitions.json",
+          "role": "source"
+        }
+      ],
+      "known_gaps": [
+        "Supplemental retained CMS definitions have no refresh CLI here. Clinical periods, suppression and exact CCNs remain owned by clinical-nj.py."
+      ]
+    },
+    {
+      "id": "reviews",
+      "depends_on": [],
+      "commands": {
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/reviews.py",
+            "inventory",
+            "--as-of",
+            "2026-11-12"
+          ],
+          "timeout_seconds": 180
+        },
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "reviews"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/reviews/source-access.json",
+          "role": "source"
+        },
+        {
+          "path": "research/north-jersey/reviews/runs/*/manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/asOf",
+            "/counties",
+            "/counts"
+          ]
+        },
+        {
+          "path": "research/north-jersey/reviews/runs/*/coverage.json",
+          "role": "coverage"
+        }
+      ],
+      "known_gaps": [
+        "Historical per-run coverage includes access failures and unresolved identities. These counts do not certify the truth of staged observations.",
+        "No external source requests in verification; retained incomplete searches remain separately visible."
+      ],
+      "local_acquisition": true
+    },
+    {
+      "id": "listings",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "listings"
+          ]
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/listing-index.py",
+            "build",
+            "--as-of",
+            "2026-11-12",
+            "--denominator",
+            "county-roster"
+          ],
+          "timeout_seconds": 180
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/listing-index/discovery-queue.json",
+          "role": "coverage",
+          "metadata": [
+            "/providerCount",
+            "/denominator"
+          ]
+        },
+        {
+          "path": "research/north-jersey/listing-index/runs/*/manifest.json",
+          "role": "manifest",
+          "optional": true
+        }
+      ],
+      "known_gaps": [
+        "Historical immutable runs retain their original tool hash and source bytes. Compare the eligible county denominator with total runtime coverage. Discovery candidates need underlying-page verification."
+      ],
+      "local_acquisition": true
+    },
+    {
+      "id": "address-points",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "address-points"
+          ]
+        },
+        "refresh": {
+          "argv": [
+            "python3",
+            "scripts/regions/address-points.py",
+            "collect"
+          ],
+          "timeout_seconds": 3600
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/address-points.py",
+            "build"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/address-points/coverage.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/address-points/providers-by-id.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/address-points/exceptions.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/address-points/shared-premises.json",
+          "role": "output"
+        }
+      ],
+      "known_gaps": []
+    },
+    {
+      "id": "offerings",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/provider-offerings.py",
+            "--check"
+          ]
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/provider-offerings.py"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/offerings/manifest.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/offerings/coverage.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/offerings/locationResearch.json",
+          "role": "output"
+        }
+      ],
+      "known_gaps": []
+    },
+    {
+      "id": "release-reviews",
+      "depends_on": [
+        "reviews",
+        "listings"
+      ],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "release-reviews"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/review-release/manifest.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/review-release/locationResearch.json",
+          "role": "output"
+        }
+      ],
+      "known_gaps": [
+        "The verifier checks release outputs, source inputs and scorer hashes. For a full rescore run release-reviews.py --check with Node and tsx available."
+      ]
+    },
+    {
+      "id": "normalize",
+      "depends_on": [
+        "state",
+        "geography",
+        "cms",
+        "pos",
+        "clinical",
+        "address-points",
+        "offerings",
+        "release-reviews"
+      ],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/normalize-nj.py",
+            "--check"
+          ],
+          "timeout_seconds": 300
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/normalize-nj.py"
+          ],
+          "timeout_seconds": 300
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/runtime-manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/markets/0/review",
+            "/markets/0/state"
+          ]
+        },
+        {
+          "path": "research/north-jersey/runtime/providers.json",
+          "role": "output",
+          "sha256_from": {
+            "path": "research/north-jersey/runtime-manifest.json",
+            "pointer": "/markets/0/artifacts/providers/sha256"
+          }
+        },
+        {
+          "path": "research/north-jersey/runtime/meta.json",
+          "role": "output",
+          "metadata": [
+            "/asOf",
+            "/catalogTotal",
+            "/geography"
+          ]
+        },
+        {
+          "path": "research/north-jersey/runtime/validation.json",
+          "role": "coverage",
+          "metadata": [
+            ""
+          ]
+        },
+        {
+          "path": "research/north-jersey/runtime/unresolved-exclusions.json",
+          "role": "coverage"
+        }
+      ],
+      "known_gaps": [
+        "Owner exclusions and unresolved identities stay excluded. Normalization does not turn consumer candidates into released evidence."
+      ]
+    },
+    {
+      "id": "runtime",
+      "depends_on": [
+        "normalize"
+      ],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/build-region.py",
+            "--check"
+          ],
+          "timeout_seconds": 180
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/build-region.py"
+          ],
+          "timeout_seconds": 180
+        }
+      },
+      "artifacts": [
+        {
+          "path": "src/data/regional-markets.json",
+          "role": "output",
+          "metadata": [
+            "/0/id",
+            "/0/state",
+            "/0/meta/asOf",
+            "/0/meta/catalogTotal"
+          ]
+        },
+        {
+          "path": "research/north-jersey/runtime-manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/markets/0/review"
+          ]
+        }
+      ],
+      "known_gaps": [
+        "Runtime byte equality is checked against the reviewed manifest. Rebuild normalization and runtime after new evidence and regenerate the Facebook kit."
+      ]
+    },
+    {
+      "id": "facebook-kit",
+      "depends_on": [
+        "runtime"
+      ],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/facebook-kit.py",
+            "--check"
+          ],
+          "timeout_seconds": 180
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/facebook-kit.py"
+          ],
+          "timeout_seconds": 180
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/facebook/kit/assignment-manifest.json",
+          "role": "manifest",
+          "metadata": [
+            "/summary"
+          ]
+        },
+        {
+          "path": "research/north-jersey/facebook/kit/kit.csv",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/facebook/kit/assigned.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/facebook/kit/coverage.csv",
+          "role": "coverage"
+        },
+        {
+          "path": "research/north-jersey/facebook/kit/observations.csv",
+          "role": "output"
+        }
+      ],
+      "known_gaps": [
+        "The fixed pilot kit is selected qualitative research, not statewide coverage or a numeric score input."
+      ]
+    }
+  ]
+}
