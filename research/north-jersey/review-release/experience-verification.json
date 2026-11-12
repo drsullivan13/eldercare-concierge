@@ -1,5 +1,35 @@
 {
   "approvedInput": {
+    "cms-315005": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 328,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-spring-grove-rehabilitation-and-healthcare-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 328,
+      "value": 9.2
+    },
     "cms-315101": {
       "confidence": "limited",
       "excludedSources": [],
@@ -60,6 +90,66 @@
       "reviewCount": 149,
       "value": 8.2
     },
+    "cms-315120": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 224,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-chatham-hills-subacute-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 224,
+      "value": 8.4
+    },
+    "cms-315122": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 437,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-westfield-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 437,
+      "value": 8.6
+    },
     "cms-315146": {
       "confidence": "limited",
       "excludedSources": [],
@@ -89,6 +179,36 @@
       "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
       "reviewCount": 21,
       "value": 6.8
+    },
+    "cms-315147": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 130,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-grove-park-healthcare-and-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 130,
+      "value": 8.6
     },
     "cms-315157": {
       "confidence": "limited",
@@ -120,6 +240,66 @@
       "reviewCount": 290,
       "value": 8.6
     },
+    "cms-315178": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 200,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-orange-park",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 200,
+      "value": 8.8
+    },
+    "cms-315194": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 110,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-st-vincents-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 110,
+      "value": 9
+    },
     "cms-315195": {
       "confidence": "limited",
       "excludedSources": [],
@@ -150,6 +330,66 @@
       "reviewCount": 244,
       "value": 9
     },
+    "cms-315198": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 400,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-adroit-care-rehabilitation-and-nursing-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 400,
+      "value": 9.4
+    },
+    "cms-315216": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 215,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-cedar-grove",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 215,
+      "value": 8.8
+    },
     "cms-315217": {
       "confidence": "limited",
       "excludedSources": [],
@@ -178,6 +418,126 @@
       "platformCount": 1,
       "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
       "reviewCount": 359,
+      "value": 9.4
+    },
+    "cms-315249": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 194,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-lincoln-park-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 194,
+      "value": 8.6
+    },
+    "cms-315259": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 110,
+          "normalizedRating": 7.6,
+          "platform": "MyLivingChoice",
+          "rating": 3.8,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-mountainside-skilled-nursing-and-rehab",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 110,
+      "value": 7.6
+    },
+    "cms-315266": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 63,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-park-crescent-healthcare-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 63,
+      "value": 7.8
+    },
+    "cms-315273": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 261,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-woodlands",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 261,
       "value": 9.4
     },
     "cms-315303": {
@@ -240,6 +600,156 @@
       "reviewCount": 179,
       "value": 7.8
     },
+    "cms-315343": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-broadway-house-for-continuing-care",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 35,
+      "value": 7.2
+    },
+    "cms-315355": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 130,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-excel-care-at-dover",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 130,
+      "value": 7.8
+    },
+    "cms-315357": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 174,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-alaris-health-at-cedar-grove",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 174,
+      "value": 7.8
+    },
+    "cms-315359": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 266,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-alliance-care-rehabilitation-and-nursing-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 266,
+      "value": 8.8
+    },
+    "cms-315383": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 18,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-cheshire-home",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 18,
+      "value": 8.6
+    },
     "cms-315390": {
       "confidence": "limited",
       "excludedSources": [],
@@ -269,6 +779,36 @@
       "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
       "reviewCount": 106,
       "value": 8.6
+    },
+    "cms-315449": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 162,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-alaris-health-at-west-orange",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 162,
+      "value": 7.8
     },
     "cms-315488": {
       "confidence": "limited",
@@ -663,6 +1203,36 @@
   },
   "assessmentDate": "2026-11-12",
   "releasedOutput": {
+    "cms-315005": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 328,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-spring-grove-rehabilitation-and-healthcare-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 328,
+      "value": 9.2
+    },
     "cms-315101": {
       "confidence": "limited",
       "excludedSources": [],
@@ -723,6 +1293,66 @@
       "reviewCount": 149,
       "value": 8.2
     },
+    "cms-315120": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 224,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-chatham-hills-subacute-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 224,
+      "value": 8.4
+    },
+    "cms-315122": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 437,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-westfield-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 437,
+      "value": 8.6
+    },
     "cms-315146": {
       "confidence": "limited",
       "excludedSources": [],
@@ -752,6 +1382,36 @@
       "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
       "reviewCount": 21,
       "value": 6.8
+    },
+    "cms-315147": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 130,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-grove-park-healthcare-and-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 130,
+      "value": 8.6
     },
     "cms-315157": {
       "confidence": "limited",
@@ -783,6 +1443,66 @@
       "reviewCount": 290,
       "value": 8.6
     },
+    "cms-315178": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 200,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-orange-park",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 200,
+      "value": 8.8
+    },
+    "cms-315194": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 110,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-st-vincents-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 110,
+      "value": 9
+    },
     "cms-315195": {
       "confidence": "limited",
       "excludedSources": [],
@@ -813,6 +1533,66 @@
       "reviewCount": 244,
       "value": 9
     },
+    "cms-315198": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 400,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-adroit-care-rehabilitation-and-nursing-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 400,
+      "value": 9.4
+    },
+    "cms-315216": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 215,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-cedar-grove",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 215,
+      "value": 8.8
+    },
     "cms-315217": {
       "confidence": "limited",
       "excludedSources": [],
@@ -841,6 +1621,126 @@
       "platformCount": 1,
       "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
       "reviewCount": 359,
+      "value": 9.4
+    },
+    "cms-315249": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 194,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-lincoln-park-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 194,
+      "value": 8.6
+    },
+    "cms-315259": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 110,
+          "normalizedRating": 7.6,
+          "platform": "MyLivingChoice",
+          "rating": 3.8,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-mountainside-skilled-nursing-and-rehab",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 110,
+      "value": 7.6
+    },
+    "cms-315266": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 63,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-park-crescent-healthcare-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 63,
+      "value": 7.8
+    },
+    "cms-315273": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 261,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-complete-care-at-woodlands",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 261,
       "value": 9.4
     },
     "cms-315303": {
@@ -903,6 +1803,156 @@
       "reviewCount": 179,
       "value": 7.8
     },
+    "cms-315343": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-broadway-house-for-continuing-care",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 35,
+      "value": 7.2
+    },
+    "cms-315355": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 130,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-excel-care-at-dover",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 130,
+      "value": 7.8
+    },
+    "cms-315357": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 174,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-alaris-health-at-cedar-grove",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 174,
+      "value": 7.8
+    },
+    "cms-315359": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 266,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-alliance-care-rehabilitation-and-nursing-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 266,
+      "value": 8.8
+    },
+    "cms-315383": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 18,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-cheshire-home",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 18,
+      "value": 8.6
+    },
     "cms-315390": {
       "confidence": "limited",
       "excludedSources": [],
@@ -932,6 +1982,36 @@
       "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
       "reviewCount": 106,
       "value": 8.6
+    },
+    "cms-315449": {
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 162,
+          "normalizedRating": 7.800000000000001,
+          "platform": "MyLivingChoice",
+          "rating": 3.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-additional-alaris-health-at-west-orange",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected individual reviews and social posts are qualitative context only and never alter the numeric score. Missing, inaccessible and excluded evidence is not treated as a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "1.0",
+      "platformCount": 1,
+      "reason": "Limited evidence coverage: only one independent source family or fewer than 30 reported reviews.",
+      "reviewCount": 162,
+      "value": 7.8
     },
     "cms-315488": {
       "confidence": "limited",
