@@ -131,7 +131,7 @@ export function CareSearchView({
             {loading
               ? "Searching…"
               : data
-                ? `${data.total} care options`
+                ? `${data.total} care ${data.total === 1 ? "option" : "options"}`
                 : "No results to show"}
           </strong>
           {data && !loading && (

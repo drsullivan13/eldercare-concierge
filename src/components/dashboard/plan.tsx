@@ -72,7 +72,11 @@ export function PlanView({
             <Bookmark size={24} />
             <strong>
               {workspace.savedProviderIds.length}
-              <span>care options saved</span>
+              <span>
+                care{" "}
+                {workspace.savedProviderIds.length === 1 ? "option" : "options"}{" "}
+                saved
+              </span>
             </strong>
           </div>
           <button className="text-link" onClick={exportPlan}>

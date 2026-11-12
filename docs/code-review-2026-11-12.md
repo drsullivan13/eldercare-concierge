@@ -5,7 +5,7 @@ Harbor's architecture cleanup reduces the work needed to follow the family works
 ## What changed
 
 - The dashboard decreased from **1,771 to 435 lines**. Search state, saved-provider loading, screens, dialogs and plan export now live in cohesive modules with smaller interfaces. The dashboard coordinates navigation and shared actions.
-- Provider cards and details present research more compactly. Supporting methodology uses disclosures; material care warnings remain visible. Related styles have clearer ownership.
+- Provider cards and details present research more compactly. Supporting methodology uses disclosures; material care warnings remain visible. Card styles have their own file. A final audit removed 58 additional unused dashboard selectors across 22 class families and restored 13px mobile action text.
 - The existing deep search, scoring, workspace-validation and research-import modules retain their rules. Public evidence still comes from reviewed snapshots; private collection does not publish automatically.
 - The [architecture map](architecture.md), [contributor guide](../CONTRIBUTING.md), [glossary](../GLOSSARY.md) and documentation index provide an entry point for future work. Operational descriptions were updated to distinguish implemented private monitoring from manual publication.
 - Knip now checks the application, tests, standalone scripts and Deno entry point. It reports **zero unused dependencies**; this is an audit result, not a claim that dependencies were removed.
@@ -29,7 +29,8 @@ The separate requirements review reported **zero findings**. No review result es
 - Production build: passed.
 - Node test suite: **115 tests passed**, covering domain behavior, imports, rebuilds and actual local PostgreSQL rules.
 - Desktop/mobile browser acceptance: **44 scenarios passed**, including visible care alerts and plan export during a failed provider lookup. Four new cases passed after correcting test selectors and waiting for the workspace to initialize before mobile navigation.
-- Automated accessibility: **zero violations across 12 pages and dialogs**. Root reviewed desktop/mobile screenshots and corrected duplicated address text in provider details. Hosted acceptance is pending deployment.
+- Automated accessibility: **zero violations across 12 pages and dialogs**. Root reviewed desktop/mobile screenshots and corrected duplicated address text in provider details.
+- Hosted acceptance passed on application commit `b3b01c8`: real search and evidence APIs, Facebook expansion, shortlist persistence, downloaded plan, account redirects and mobile layout. No uncaught browser errors occurred. The deployment scan found no error/fatal logs in its ten-minute window. The subsequent CSS and singular-label corrections are recorded in the verification record.
 
 See [the verification record](verification.md) for subsequent acceptance results. Local PostgreSQL tests do not prove hosted authentication, email delivery or independent-session contention; accounts remain deferred.
 
