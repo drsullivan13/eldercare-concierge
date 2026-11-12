@@ -1,0 +1,62 @@
+{
+  "asOf": "2026-11-12",
+  "catalogTotal": 974,
+  "categories": {
+    "assisted-living": 116,
+    "home-care": 673,
+    "home-health": 18,
+    "life-plan": 7,
+    "nursing-home": 160
+  },
+  "countyCounts": {
+    "Bergen": {
+      "assisted-living": 43,
+      "home-care": 161,
+      "home-health": 5,
+      "nursing-home": 30
+    },
+    "Essex": {
+      "assisted-living": 20,
+      "home-care": 207,
+      "home-health": 4,
+      "life-plan": 2,
+      "nursing-home": 39
+    },
+    "Hudson": {
+      "assisted-living": 2,
+      "home-care": 70,
+      "home-health": 3,
+      "life-plan": 1,
+      "nursing-home": 18
+    },
+    "Morris": {
+      "assisted-living": 30,
+      "home-care": 60,
+      "home-health": 3,
+      "life-plan": 2,
+      "nursing-home": 26
+    },
+    "Passaic": {
+      "assisted-living": 10,
+      "home-care": 58,
+      "home-health": 2,
+      "life-plan": 1,
+      "nursing-home": 23
+    },
+    "Union": {
+      "assisted-living": 11,
+      "home-care": 117,
+      "home-health": 1,
+      "life-plan": 1,
+      "nursing-home": 24
+    }
+  },
+  "limitations": [
+    "Missing services, price, openings, reviews and certification links remain missing.",
+    "CMS citation and penalty totals describe the retained reporting window, not lifetime safety histories.",
+    "Record totals are source identities, not unique physical facilities or brands. Unresolved CMS/state pairs and separate active firm registrations can share premises.",
+    "CMS home-health service coverage is not used to place an office in a county.",
+    "ZIP locations from Census 2026 Gazetteer and GeoNames CC BY 4.0. County overlaps from Census 2020. ZIP fallback points are approximate."
+  ],
+  "scope": "Licensed care units, certified home-health offices, active registered business offices and explicitly historical named campuses."
+}

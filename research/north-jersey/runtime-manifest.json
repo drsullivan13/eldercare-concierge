@@ -1,0 +1,43 @@
+{
+  "markets": [
+    {
+      "artifacts": {
+        "homeHealthEvidence": {
+          "count": 18,
+          "path": "runtime/homeHealthEvidence.json",
+          "sha256": "264ac3b5819a17da087f6e92718526c5cc6e882e8e5316fc3398c770fca8e6c9"
+        },
+        "inspectionHistory": {
+          "count": 139,
+          "path": "runtime/inspectionHistory.json",
+          "sha256": "d28297aef2b562b46669acb5f845e1437239f4bbc516ed039e0d9306dc973838"
+        },
+        "meta": {
+          "count": 974,
+          "path": "runtime/meta.json",
+          "sha256": "b598c0c725af67256322eef0f2947fee32a7c49b0e2fb55a55274ed1e1b6dea0"
+        },
+        "providers": {
+          "count": 974,
+          "path": "runtime/providers.json",
+          "sha256": "81a1ccbc3d1deaa59c82c30095166e04f8e9b7d0663129ee857e7bf4433acf51"
+        },
+        "zips": {
+          "count": 270,
+          "path": "runtime/zips.json",
+          "sha256": "d3e20077d709b26d164442ca3ae12e9db07e4a144b2193ff7ae515da9576ebfe"
+        }
+      },
+      "defaultZip": "07960",
+      "id": "north-jersey",
+      "label": "North Jersey",
+      "review": {
+        "reviewedAt": "2026-11-12",
+        "reviewer": "NJ adapter source identity and schema verification; consumer candidates withheld",
+        "status": "reviewed"
+      },
+      "state": "NJ"
+    }
+  ],
+  "schemaVersion": 1
+}
