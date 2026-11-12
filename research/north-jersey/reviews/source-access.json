@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-11-12",
+  "purpose": "Low-volume public factual research, private staging only. No external writes or restricted-access bypass.",
+  "sources": [
+    {
+      "source": "MyLivingChoice",
+      "terms_url": "https://www.mylivingchoice.com/terms-of-service",
+      "terms_effective_date": "2026-10-30",
+      "robots_url": "https://www.mylivingchoice.com/robots.txt",
+      "access_decision": "permitted_low_volume",
+      "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms.",
+      "limitations": "This is an operational access assessment, not a license to redistribute narratives or a legal opinion. Ratings are combined from other review sources according to the terms. Preserve the underlying family and do not count syndicated ratings as independent.",
+      "evidence": "FetchUrl calls in call_66b0c712376f5e88_1.log"
+    },
+    {
+      "source": "Caring.com",
+      "terms_url": "https://www.caring.com/about/terms",
+      "terms_effective_date": "2025-01-31",
+      "access_decision": "restricted_no_automation",
+      "basis": "Directly read Access and Interference prohibits automated data gathering and extraction without prior written permission. A first location page was opened before the terms were identified. No further location extraction is permitted for this run.",
+      "retain_as_eligible": false,
+      "evidence": "FetchUrl terms result in call_b59a6094e32c370c_2.log"
+    },
+    {
+      "source": "CareOne",
+      "terms_url": "https://www.care-one.com/terms-conditions/",
+      "robots_url": "https://www.care-one.com/robots.txt",
+      "access_decision": "restricted_no_automation",
+      "basis": "Directly read terms prohibit automated/non-human access and systematic collection without written permission. Robots allows paths and specifies a 10-second crawl delay, but that does not override the terms. Location, directory, privacy and transparency pages had been opened before these terms were identified. Their contents are not eligible staged provider evidence. No further collection.",
+      "retain_as_eligible": false,
+      "evidence": "FetchUrl terms result in call_67aefc1b68d55951_1.log"
+    },
+    {
+      "source": "CareOne mobile legacy site",
+      "url": "http://m.care-one.com/site/care1/careone-at-madison-avenue",
+      "access_decision": "authentication_required",
+      "basis": "FetchUrl returned Sign-in required. No retry through another transport or browser.",
+      "retain_as_eligible": false,
+      "evidence": "FetchUrl error in call_12dfb23d477c4d20_1.log"
+    },
+    {
+      "source": "Agape Home Care Agency",
+      "host": "agapehomecareagency.org",
+      "terms_url": "https://agapehomecareagency.org/terms-of-service/",
+      "terms_effective_date": "2025-10-15",
+      "robots_url": "https://agapehomecareagency.org/robots.txt",
+      "access_decision": "permitted_low_volume_no_stated_prohibition",
+      "basis": "Directly checked terms contain no prohibition on factual public-page research. Robots excludes admin and form uploads, not the public homepage or contact page. Those two pages were checked without using a form, popup or login.",
+      "limitations": "Provider-published claims are attributed offerings, not proof of CMS certification, staffing or an opening.",
+      "evidence": "home-care-direct-checks.json"
+    },
+    {
+      "source": "360Healthcare",
+      "host": "360healthcare.online",
+      "robots_url": "https://360healthcare.online/robots.txt",
+      "access_decision": "public_read_only_identity_unresolved",
+      "basis": "Robots explicitly allows public paths. Public terms search found no terms page. The single homepage read did not establish the office street address, so provider facts remain withheld.",
+      "retain_as_eligible": false,
+      "evidence": "home-care-direct-checks.json"
+    },
+    {
+      "source": "SeniorCare.com",
+      "robots_url": "https://www.seniorcare.com/robots.txt",
+      "access_decision": "excluded_ai_crawler_restriction",
+      "basis": "Robots directly checked and disallows GPTBot. No location page was fetched. No attempt to evade that rule by changing user agents.",
+      "retain_as_eligible": false,
+      "evidence": "FetchUrl robots result in call_9143cf9cdce6e251_1.log"
+    },
+    {
+      "source": "Yelp",
+      "access_decision": "disabled_existing_policy",
+      "basis": "Existing Harbor collector policy leaves Yelp disabled. No request made."
+    }
+  ]
+}

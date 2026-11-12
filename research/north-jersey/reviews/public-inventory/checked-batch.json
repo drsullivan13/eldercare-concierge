@@ -1,0 +1,911 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-12",
+  "observations": [
+    {
+      "id": "checked-pilot-cms-315488-mlc",
+      "rosterKey": "cms-ccn:315488",
+      "outcome": "observed",
+      "kind": "consumer-listing",
+      "platform": "MyLivingChoice",
+      "sourceFamily": "google",
+      "sourceType": "review-platform",
+      "population": "consumer",
+      "url": "https://www.mylivingchoice.com/property/careone-at-madison-avenue",
+      "canonicalUrl": "https://www.mylivingchoice.com/property/careone-at-madison-avenue",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms."
+      },
+      "identity": {
+        "name": "Careone At Madison Avenue",
+        "street": "151 Madison Avenue",
+        "city": "Morristown",
+        "state": "New Jersey",
+        "zip": null,
+        "careSetting": "nursing-home",
+        "careUnitText": "Skilled Nursing / Long Term Care",
+        "unit": null
+      },
+      "rating": {
+        "kind": "consumer-average",
+        "value": 4,
+        "scale": 5,
+        "count": 185,
+        "asOf": null
+      },
+      "syndication": {
+        "status": "syndicated",
+        "family": "google"
+      },
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/0"
+        }
+      ]
+    },
+    {
+      "id": "checked-pilot-access-1",
+      "rosterKey": "cms-ccn:315488",
+      "outcome": "access-gap",
+      "platform": "Caring.com",
+      "url": "https://www.caring.com/senior-living/new-jersey/morristown/careone-at-madison-avenue",
+      "checkedAt": "2026-11-12",
+      "reason": "page_reachable_but_automation_restricted",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/1"
+        }
+      ]
+    },
+    {
+      "id": "checked-pilot-access-2",
+      "rosterKey": "cms-ccn:315488",
+      "outcome": "access-gap",
+      "platform": "Caring.com",
+      "url": "https://www.caring.com/about/terms-and-conditions",
+      "checkedAt": "2026-11-12",
+      "reason": "http_404",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/2"
+        }
+      ]
+    },
+    {
+      "id": "checked-pilot-access-3",
+      "rosterKey": "cms-ccn:315488",
+      "outcome": "access-gap",
+      "platform": "CareOne",
+      "url": "https://www.care-one.com/locations/careone-at-madison-avenue-rehab-in-morristown-nj/",
+      "checkedAt": "2026-11-12",
+      "reason": "page_reachable_but_automation_restricted",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/3"
+        }
+      ]
+    },
+    {
+      "id": "checked-pilot-access-4",
+      "rosterKey": "cms-ccn:315488",
+      "outcome": "access-gap",
+      "platform": "CareOne mobile legacy site",
+      "url": "http://m.care-one.com/site/care1/careone-at-madison-avenue",
+      "checkedAt": "2026-11-12",
+      "reason": "authentication_required",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/4"
+        }
+      ]
+    },
+    {
+      "id": "checked-home-HP0424700-discovery",
+      "rosterKey": "nj-dca-hcsf:HP0424700",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/5"
+        }
+      ]
+    },
+    {
+      "id": "checked-home-HP0424700-provider",
+      "rosterKey": "nj-dca-hcsf:HP0424700",
+      "outcome": "observed",
+      "kind": "provider-page",
+      "platform": "360Healthcare",
+      "sourceType": "provider-website",
+      "url": "https://360healthcare.online/",
+      "canonicalUrl": "https://360healthcare.online/",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "excluded",
+        "basis": "Robots explicitly allows public paths. Public terms search found no terms page. The single homepage read did not establish the office street address, so provider facts remain withheld."
+      },
+      "identity": {
+        "name": null,
+        "street": null,
+        "city": "Springfield",
+        "state": null,
+        "zip": null,
+        "careSetting": "Health Care Services",
+        "careUnitText": null,
+        "unit": null
+      },
+      "sourceClaimDate": null,
+      "offerings": [],
+      "prices": "not-listed",
+      "openings": "not-listed",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/6"
+        }
+      ]
+    },
+    {
+      "id": "checked-home-HP0427400-discovery",
+      "rosterKey": "nj-dca-hcsf:HP0427400",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/7"
+        }
+      ]
+    },
+    {
+      "id": "checked-home-HP0427400-provider",
+      "rosterKey": "nj-dca-hcsf:HP0427400",
+      "outcome": "observed",
+      "kind": "provider-page",
+      "platform": "Agape Home Care Agency",
+      "sourceType": "provider-website",
+      "url": "https://agapehomecareagency.org/",
+      "canonicalUrl": "https://agapehomecareagency.org/",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Terms and robots directly checked before homepage and contact page. Terms contain no prohibition on this factual public-page research. Robots restricts admin and form-upload paths, not these public pages. No form, popup, login or communication was used."
+      },
+      "identity": {
+        "name": "Agape Home Care Agency",
+        "street": "59 Beaverbrook Rd, ste 201C",
+        "city": "Lincoln Park",
+        "state": "NJ",
+        "zip": "07035",
+        "careSetting": "Health Care Services",
+        "careUnitText": "in-home care for seniors",
+        "unit": null
+      },
+      "sourceClaimDate": null,
+      "offerings": [
+        "Personal care",
+        "Home care aide",
+        "Skilled nursing",
+        "Companionship",
+        "Physical/occupational therapy",
+        "Respite care"
+      ],
+      "prices": "not-listed",
+      "openings": "not-listed",
+      "identitySupportUrl": "https://agapehomecareagency.org/contact-us/",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/8"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ90122-mlc",
+      "rosterKey": "nj-doh:NJ90122",
+      "outcome": "observed",
+      "kind": "consumer-listing",
+      "platform": "MyLivingChoice",
+      "sourceFamily": "google",
+      "sourceType": "review-platform",
+      "population": "consumer",
+      "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-mountainside",
+      "canonicalUrl": "https://www.mylivingchoice.com/property/brighton-gardens-of-mountainside",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms."
+      },
+      "identity": {
+        "name": "Brighton Gardens of Mountainside",
+        "street": "1350 Route 22 West",
+        "city": "Mountainside",
+        "state": "New Jersey",
+        "zip": null,
+        "careSetting": "ASSISTED LIVING RESIDENCE",
+        "careUnitText": "Assisted Living, Memory Care, Respite / Short-Term Care",
+        "unit": null
+      },
+      "rating": {
+        "kind": "consumer-average",
+        "value": 4.2,
+        "scale": 5,
+        "count": 24,
+        "asOf": null
+      },
+      "syndication": {
+        "status": "syndicated",
+        "family": "google"
+      },
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/9"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ20A014-mlc",
+      "rosterKey": "nj-doh:NJ20A014",
+      "outcome": "observed",
+      "kind": "consumer-listing",
+      "platform": "MyLivingChoice",
+      "sourceFamily": "google",
+      "sourceType": "review-platform",
+      "population": "ambiguous",
+      "url": "https://www.mylivingchoice.com/property/sunrise-of-summit",
+      "canonicalUrl": "https://www.mylivingchoice.com/property/sunrise-of-summit",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms."
+      },
+      "identity": {
+        "name": "Sunrise of Summit",
+        "street": "26 River Road",
+        "city": "Summit",
+        "state": "New Jersey",
+        "zip": null,
+        "careSetting": "ASSISTED LIVING RESIDENCE",
+        "careUnitText": "Assisted Living, Memory Care",
+        "unit": null
+      },
+      "rating": {
+        "kind": "consumer-average",
+        "value": 4.6,
+        "scale": 5,
+        "count": 24,
+        "asOf": null
+      },
+      "syndication": {
+        "status": "syndicated",
+        "family": "google"
+      },
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/10"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ90144-mlc",
+      "rosterKey": "nj-doh:NJ90144",
+      "outcome": "observed",
+      "kind": "consumer-listing",
+      "platform": "MyLivingChoice",
+      "sourceFamily": "google",
+      "sourceType": "review-platform",
+      "population": "consumer",
+      "url": "https://www.mylivingchoice.com/property/sunrise-of-westfield",
+      "canonicalUrl": "https://www.mylivingchoice.com/property/sunrise-of-westfield",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms."
+      },
+      "identity": {
+        "name": "Sunrise of Westfield",
+        "street": "240 Springfield Avenue",
+        "city": "Westfield",
+        "state": "New Jersey",
+        "zip": null,
+        "careSetting": "ASSISTED LIVING RESIDENCE",
+        "careUnitText": "Assisted Living, Memory Care, Respite / Short-Term Care",
+        "unit": null
+      },
+      "rating": {
+        "kind": "consumer-average",
+        "value": 4.6,
+        "scale": 5,
+        "count": 25,
+        "asOf": null
+      },
+      "syndication": {
+        "status": "syndicated",
+        "family": "google"
+      },
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/11"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ13A012-mlc",
+      "rosterKey": "nj-doh:NJ13A012",
+      "outcome": "observed",
+      "kind": "consumer-listing",
+      "platform": "MyLivingChoice",
+      "sourceFamily": "google",
+      "sourceType": "review-platform",
+      "population": "consumer",
+      "url": "https://www.mylivingchoice.com/property/arbor-terrace-morris-plains",
+      "canonicalUrl": "https://www.mylivingchoice.com/property/arbor-terrace-morris-plains",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms."
+      },
+      "identity": {
+        "name": "Arbor Terrace Morris Plains",
+        "street": "361 Speedwell Avenue",
+        "city": "Morris Plains",
+        "state": "New Jersey",
+        "zip": null,
+        "careSetting": "ASSISTED LIVING RESIDENCE",
+        "careUnitText": "Assisted Living, Memory Care",
+        "unit": null
+      },
+      "rating": {
+        "kind": "consumer-average",
+        "value": 4.9,
+        "scale": 5,
+        "count": 120,
+        "asOf": null
+      },
+      "syndication": {
+        "status": "syndicated",
+        "family": "google"
+      },
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/12"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ60A001-mlc",
+      "rosterKey": "nj-doh:NJ60A001",
+      "outcome": "observed",
+      "kind": "consumer-listing",
+      "platform": "MyLivingChoice",
+      "sourceFamily": "google",
+      "sourceType": "review-platform",
+      "population": "consumer",
+      "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-florham-park",
+      "canonicalUrl": "https://www.mylivingchoice.com/property/brighton-gardens-of-florham-park",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms."
+      },
+      "identity": {
+        "name": "Brighton Gardens of Florham Park",
+        "street": "21 Ridgedale Avenue",
+        "city": "Florham Park",
+        "state": "New Jersey",
+        "zip": null,
+        "careSetting": "ASSISTED LIVING RESIDENCE",
+        "careUnitText": "Assisted Living, Memory Care, Respite / Short-Term Care",
+        "unit": null
+      },
+      "rating": {
+        "kind": "consumer-average",
+        "value": 4.6,
+        "scale": 5,
+        "count": 30,
+        "asOf": null
+      },
+      "syndication": {
+        "status": "syndicated",
+        "family": "google"
+      },
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/13"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ20A013-discovery",
+      "rosterKey": "nj-doh:NJ20A013",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/14"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ20A015-discovery",
+      "rosterKey": "nj-doh:NJ20A015",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/15"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-922TYU-discovery",
+      "rosterKey": "nj-doh:922TYU",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/16"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ14A002-discovery",
+      "rosterKey": "nj-doh:NJ14A002",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/17"
+        }
+      ]
+    },
+    {
+      "id": "checked-union-morris-NJ60A000-discovery",
+      "rosterKey": "nj-doh:NJ60A000",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/18"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-NJ02A00-mlc",
+      "rosterKey": "nj-doh:NJ02A00",
+      "outcome": "observed",
+      "kind": "consumer-listing",
+      "platform": "MyLivingChoice",
+      "sourceFamily": "google",
+      "sourceType": "review-platform",
+      "population": "consumer",
+      "url": "https://www.mylivingchoice.com/property/jewish-home-assisted-living",
+      "canonicalUrl": "https://www.mylivingchoice.com/property/jewish-home-assisted-living",
+      "checkedAt": "2026-11-12",
+      "inspection": "full-page",
+      "access": {
+        "decision": "permitted",
+        "basis": "Directly read terms prohibit scraping at disruptive volume, false affiliation, fake inquiries and unauthorized access. Directly read robots allows public property pages, including the listed AI user agents. This run checks individual public property pages through FetchUrl at low volume, not internal APIs, restricted paths or forms."
+      },
+      "identity": {
+        "name": "Jewish Home Assisted Living",
+        "street": "685 Westwood Avenue",
+        "city": "River Vale",
+        "state": "New Jersey",
+        "zip": "07675",
+        "careSetting": "ASSISTED LIVING RESIDENCE",
+        "careUnitText": "Assisted Living",
+        "unit": null
+      },
+      "rating": {
+        "kind": "consumer-average",
+        "value": 4.3,
+        "scale": 5,
+        "count": 11,
+        "asOf": null
+      },
+      "syndication": {
+        "status": "syndicated",
+        "family": "google"
+      },
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/19"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-NJ07015-discovery",
+      "rosterKey": "nj-doh:NJ07015",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/20"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-NJ07028-discovery",
+      "rosterKey": "cms-ccn:315527",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/21"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-HP0221900-discovery",
+      "rosterKey": "nj-dca-hcsf:HP0221900",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/22"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-30201-discovery",
+      "rosterKey": "cms-ccn:315377",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/23"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-HP0409400-discovery",
+      "rosterKey": "nj-dca-hcsf:HP0409400",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/24"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-NJ7U0NFD-discovery",
+      "rosterKey": "nj-doh:NJ7U0NFD",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/25"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-60909-discovery",
+      "rosterKey": "cms-ccn:315083",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/26"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-HP0057100-discovery",
+      "rosterKey": "nj-dca-hcsf:HP0057100",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/27"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-NJ16A001-discovery",
+      "rosterKey": "nj-doh:NJ16A001",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/28"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-NJ16008-discovery",
+      "rosterKey": "cms-ccn:315507",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/29"
+        }
+      ]
+    },
+    {
+      "id": "checked-remaining-HP0283100-discovery",
+      "rosterKey": "nj-dca-hcsf:HP0283100",
+      "outcome": "not-listed",
+      "platform": "MyLivingChoice",
+      "checkedAt": "2026-11-12",
+      "method": "Public-source discovery completed; no exact underlying location page retained.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/30"
+        }
+      ]
+    }
+  ],
+  "leads": [
+    {
+      "id": "checked-lead-001",
+      "name": "Careone At Madison Avenue",
+      "url": "https://www.mylivingchoice.com/property/careone-at-madison-avenue",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/31"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-002",
+      "name": "360 HealthCare Services LLC",
+      "url": "https://www.aplaceformom.com/agency/360-health-care-services-llc-1492564",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/32"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-003",
+      "name": "360 HealthCare Services LLC",
+      "url": "https://360healthcare.online/",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/33"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-004",
+      "name": "Agape Home Care Agency",
+      "url": "https://agapehomecareagency.org/",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/34"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-005",
+      "name": "Agape Home Care Agency",
+      "url": "https://agapehomecareagency.org/contact-us/",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/35"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-006",
+      "name": "Brighton Gardens of Mountainside",
+      "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-mountainside",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/36"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-007",
+      "name": "Sunrise of Summit",
+      "url": "https://www.mylivingchoice.com/property/sunrise-of-summit",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/37"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-008",
+      "name": "Sunrise of Westfield",
+      "url": "https://www.mylivingchoice.com/property/sunrise-of-westfield",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/38"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-009",
+      "name": "Arbor Terrace Morris Plains",
+      "url": "https://www.mylivingchoice.com/property/arbor-terrace-morris-plains",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/39"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-010",
+      "name": "Brighton Gardens of Florham Park",
+      "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-florham-park",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/40"
+        }
+      ]
+    },
+    {
+      "id": "checked-lead-011",
+      "name": "Jewish Home Assisted Living",
+      "url": "https://www.mylivingchoice.com/property/jewish-home-assisted-living",
+      "foundAt": "2026-11-12",
+      "relationship": "discovery-only",
+      "note": "Discovery URL only.",
+      "evidence": [
+        {
+          "path": "research/north-jersey/reviews/public-inventory/evidence.json",
+          "sha256": "b07820b6cfaeb0226f04bc4358d60e9b79983dadaa7add983e157d4986b28b20",
+          "pointer": "/rows/41"
+        }
+      ]
+    }
+  ]
+}
