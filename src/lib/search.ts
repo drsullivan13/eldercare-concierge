@@ -1,4 +1,5 @@
 import { distanceMiles } from "./distance";
+import { legacyMarket, marketRegistrations } from "./market-registration";
 import prefixData from "@/data/us-zip-prefix-states.json";
 import {
   BOSTON,
@@ -60,7 +61,8 @@ export function searchProviders(
   registry: MarketRegistry = markets,
 ): SearchResponse {
   const opts = optionsFrom(input);
-  const zip = opts.zip === undefined ? "02459" : opts.zip.trim();
+  const zip =
+    opts.zip === undefined ? legacyMarket.defaultZip : opts.zip.trim();
   if (!/^\d{5}$/.test(zip))
     throw new SearchInputError(
       "Enter a five-digit ZIP code, including its leading zero.",
@@ -68,15 +70,18 @@ export function searchProviders(
   const market = registry.find((entry) => Object.hasOwn(entry.zips, zip));
   if (!market) {
     const states = prefixes[zip.slice(0, 3)];
-    if (states?.includes("NJ"))
+    const regional = marketRegistrations.find(
+      (r) => r.id !== legacyMarket.id && states?.includes(r.state),
+    );
+    if (regional)
       throw new SearchInputError(
-        getMarket("north-jersey", registry)
-          ? "This ZIP is not recognized in the published North Jersey coverage. It may be invalid or outside the covered counties. Check it or try a nearby covered ZIP."
-          : "North Jersey coverage is pending for this ZIP. No reviewed ZIP and provider snapshot is available for it.",
+        getMarket(regional.id, registry)
+          ? `This ZIP is not recognized in the published ${regional.label} coverage. It may be invalid or outside the covered counties. Check it or try a nearby covered ZIP.`
+          : `${regional.label} coverage is pending for this ZIP. No reviewed ZIP and provider snapshot is available for it.`,
       );
-    if (states && !states.includes("MA"))
+    if (states && !states.includes(legacyMarket.state))
       throw new SearchInputError(
-        "This ZIP is outside the supported Massachusetts and North Jersey markets.",
+        `This ZIP is outside the supported ${new Intl.ListFormat("en-US").format(marketRegistrations.map((r) => r.label))} markets.`,
       );
     throw new SearchInputError(
       "This ZIP is not recognized in the reviewed market ZIP datasets. Check it or try a nearby ZIP.",

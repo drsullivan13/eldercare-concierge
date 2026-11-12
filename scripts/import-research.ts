@@ -19,6 +19,14 @@ import {
   validateResearchImport,
 } from "../src/lib/research-pipeline/import";
 
+import {
+  legacyMarket,
+  matchesProviderNamespace,
+  parseMarketRegistrations,
+  registeredMarket,
+  type MarketRegistration,
+} from "../src/lib/market-registration";
+
 const USAGE = `Usage (from repository root):
   npx tsx scripts/import-research.ts --observations observations.csv --coverage coverage.csv
     [--catalog harbor-catalog-521.csv] [--assigned assigned-provider-ids.json]
@@ -59,13 +67,20 @@ function selectStateCatalog(
   legacy: unknown,
   registered: unknown,
   state: unknown,
+  registrations: MarketRegistration[],
+  legacyZips: unknown,
 ): AppIdentity[] {
   const providerIds = new Set<string>();
   const ccns = new Set<string>();
-  const marketIds = new Set(["massachusetts"]);
-  const zipIds = new Set<string>();
+  const marketIds = new Set([legacyMarket.id]);
+  if (!record(legacyZips)) throw new Error("Invalid legacy market ZIPs.");
+  const zipIds = new Set(Object.keys(legacyZips));
   const catalogs = new Map<string, AppIdentity[]>();
-  function providers(value: unknown, marketState: string): AppIdentity[] {
+  function providers(
+    value: unknown,
+    marketState: string,
+    marketId: string,
+  ): AppIdentity[] {
     if (!Array.isArray(value) || !value.length)
       throw new Error("Published providers must be a nonempty array.");
     return value.map((provider: unknown) => {
@@ -74,6 +89,7 @@ function selectStateCatalog(
         typeof provider.id !== "string" ||
         !/^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(provider.id) ||
         providerIds.has(provider.id) ||
+        !matchesProviderNamespace(provider.id, marketId) ||
         provider.state !== marketState ||
         ["name", "category", "address", "city"].some(
           (key) => typeof provider[key] !== "string" || !provider[key],
@@ -109,14 +125,24 @@ function selectStateCatalog(
       return provider as AppIdentity;
     });
   }
-  catalogs.set("MA", providers(legacy, "MA"));
+  catalogs.set(
+    legacyMarket.state,
+    providers(legacy, legacyMarket.state, legacyMarket.id),
+  );
   if (!Array.isArray(registered))
     throw new Error("Published market registry must be an array.");
   for (const market of registered) {
+    const registration = registeredMarket(
+      record(market) ? market.id : undefined,
+      registrations,
+    );
     if (
       !record(market) ||
-      market.id !== "north-jersey" ||
-      market.state !== "NJ" ||
+      !registration ||
+      typeof market.id !== "string" ||
+      market.state !== registration.state ||
+      market.label !== registration.label ||
+      market.defaultZip !== registration.defaultZip ||
       marketIds.has(market.id) ||
       typeof market.label !== "string" ||
       !market.label ||
@@ -146,7 +172,10 @@ function selectStateCatalog(
         throw new Error("Invalid or ambiguous reviewed market ZIP.");
       zipIds.add(zip);
     }
-    catalogs.set(market.state, providers(market.providers, market.state));
+    catalogs.set(market.state, [
+      ...(catalogs.get(market.state) ?? []),
+      ...providers(market.providers, market.state, market.id),
+    ]);
   }
   if (typeof state !== "string" || !catalogs.has(state))
     throw new Error("Assignment state has no published app catalog.");
@@ -487,6 +516,17 @@ async function main() {
       catalog,
       registered,
       record(assignment.geography) ? assignment.geography.state : undefined,
+      parseMarketRegistrations(
+        JSON.parse(
+          await readUtf8(
+            join(root, "src/data/market-registrations.json"),
+            "Market registrations",
+          ),
+        ),
+      ),
+      JSON.parse(
+        await readUtf8(join(root, "src/data/ma-zips.json"), "Legacy ZIPs"),
+      ),
     );
   }
   const scope = validateImportScope({

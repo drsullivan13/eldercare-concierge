@@ -19,6 +19,13 @@ import type { LocationResearch } from "../src/lib/location-research-types";
 import type { FacebookResearchDataset } from "../src/lib/facebook-research";
 import homeHealth from "../src/data/home-health-evidence.json";
 import inspections from "../src/data/inspection-history.json";
+import registrations from "../src/data/market-registrations.json";
+import legacy from "../src/data/providers.json";
+import { searchProviders } from "../src/lib/search";
+import {
+  COVERAGE_COLUMNS,
+  OBSERVATION_COLUMNS,
+} from "../src/lib/research-pipeline/import";
 import { createMarketRegistry } from "../src/lib/markets";
 import { getHomeHealthEvidence } from "../src/lib/home-health";
 
@@ -714,6 +721,10 @@ test("regional CLI reports pending honestly and cannot erase an existing market 
     mkdirSync(dirname(script), { recursive: true });
     mkdirSync(dirname(output), { recursive: true });
     copyFileSync(builder, script);
+    writeFileSync(
+      join(f.dir, "src/data/market-registrations.json"),
+      JSON.stringify(registrations),
+    );
     const run = (...args: string[]) =>
       spawnSync("python3", ["-B", script, ...args], {
         cwd: f.dir,
@@ -790,6 +801,134 @@ test("regional CLI supports explicit empty reviewed manifests and rejects duplic
       '{"schemaVersion":1,"schemaVersion":1,"markets":[]}',
     );
     unchangedOnFailure(f, /Duplicate JSON key/);
+  } finally {
+    f.close();
+  }
+});
+
+test("one new registered region builds, searches, and imports without registering the fixture in Harbor", () => {
+  const f = fixture();
+  try {
+    const third = {
+      id: "new-york-city",
+      label: "New York City",
+      state: "NY",
+      stateLabel: "New York",
+      defaultZip: "10001",
+    };
+    const configured = [...registrations, third];
+    Object.assign(f.entry, {
+      id: third.id,
+      label: third.label,
+      state: third.state,
+      defaultZip: third.defaultZip,
+    });
+    f.data.zips = { "10001": { city: "New York", lat: 40.75, lng: -73.99 } };
+    const place = {
+      ...provider("new-york-city-example"),
+      state: third.state,
+      city: "New York",
+      zip: third.defaultZip,
+      lat: 40.75,
+      lng: -73.99,
+    };
+    f.data.providers = [place];
+    f.save();
+    const data = join(f.dir, "src/data");
+    const region = join(f.dir, "research", third.id);
+    const script = join(f.dir, "scripts/regions/build-region.py");
+    for (const directory of [data, region, dirname(script)])
+      mkdirSync(directory, { recursive: true });
+    copyFileSync(builder, script);
+    for (const name of ["providers", "zips", "meta", "runtime-manifest"])
+      copyFileSync(join(f.dir, name + ".json"), join(region, name + ".json"));
+    writeFileSync(
+      join(data, "market-registrations.json"),
+      JSON.stringify(configured),
+    );
+    writeFileSync(join(data, "providers.json"), JSON.stringify([legacy[0]]));
+    writeFileSync(join(data, "home-health-evidence.json"), '{"agencies":[]}');
+    writeFileSync(
+      join(data, "ma-zips.json"),
+      '{"02459":{"city":"Newton","lat":42,"lng":-71}}',
+    );
+    copyFileSync(
+      join(root, "src/data/us-zip-prefix-states.json"),
+      join(data, "us-zip-prefix-states.json"),
+    );
+    const run = spawnSync("python3", ["-B", script], {
+      cwd: f.dir,
+      encoding: "utf8",
+    });
+    assert.equal(run.status, 0, run.stderr);
+    const published = JSON.parse(
+      readFileSync(join(data, "regional-markets.json"), "utf8"),
+    );
+    assert.throws(() => createMarketRegistry(published), /Invalid/);
+    const registry = createMarketRegistry(published, configured);
+    const result = searchProviders(
+      { zip: third.defaultZip },
+      undefined,
+      registry,
+    );
+    assert.equal(result.market.id, third.id);
+    assert.equal(result.providers[0].id, place.id);
+    assert.throws(
+      () =>
+        createMarketRegistry(
+          [
+            {
+              ...published[0],
+              providers: [{ ...place, id: "north-jersey-elsewhere" }],
+            },
+          ],
+          configured,
+        ),
+      /namespace/,
+    );
+    writeFileSync(
+      join(f.dir, "assigned.json"),
+      JSON.stringify({
+        geography: { state: third.state },
+        providerIds: [place.id],
+      }),
+    );
+    writeFileSync(
+      join(f.dir, "observations.csv"),
+      OBSERVATION_COLUMNS.join(",") + "\n",
+    );
+    const row = {
+      run_id: "fb-ny-synthetic-2026",
+      provider_id: place.id,
+      status: "not_searched",
+      queries_used: "[]",
+      sources_checked: "[]",
+      observations_found: "0",
+    };
+    writeFileSync(
+      join(f.dir, "coverage.csv"),
+      COVERAGE_COLUMNS.join(",") +
+        "\n" +
+        COVERAGE_COLUMNS.map((k) => row[k as keyof typeof row] ?? "").join(
+          ",",
+        ) +
+        "\n",
+    );
+    const importer = spawnSync(
+      join(root, "node_modules/.bin/tsx"),
+      [
+        join(root, "scripts/import-research.ts"),
+        "--observations",
+        "observations.csv",
+        "--coverage",
+        "coverage.csv",
+        "--assigned",
+        "assigned.json",
+      ],
+      { cwd: f.dir, encoding: "utf8" },
+    );
+    assert.equal(importer.status, 0, importer.stdout + importer.stderr);
+    assert.equal(JSON.parse(importer.stdout).ok, true);
   } finally {
     f.close();
   }

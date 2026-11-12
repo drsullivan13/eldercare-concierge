@@ -1,3 +1,4 @@
+import { registeredMarket } from "@/lib/market-registration";
 import {
   getResearchCoverage,
   researchCoverageCsv,
@@ -9,8 +10,7 @@ export function GET(request: Request) {
   if (
     [...params.keys()].some((key) => !["format", "market"].includes(key)) ||
     params.getAll("market").length > 1 ||
-    (params.has("market") &&
-      !["massachusetts", "north-jersey"].includes(params.get("market")!)) ||
+    (params.has("market") && !registeredMarket(params.get("market"))) ||
     params.getAll("format").length > 1 ||
     (params.has("format") && !["json", "csv"].includes(params.get("format")!))
   ) {

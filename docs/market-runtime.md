@@ -13,8 +13,7 @@ lists, and access checks are not reviewed runtime provider catalogs.
 The reviewed `research/north-jersey/runtime-manifest.json` now publishes the
 normalized provider catalog. The build summary reports its current provider and
 ZIP counts. The manifest also retains nursing-home inspection history and
-home-health evidence. Location and Facebook evidence are absent from this
-manifest. Those optional datasets remain pending, not implicitly negative.
+home-health evidence. The current manifest lists the optional evidence files included in each release.
 The catalog contains source-linked discovery records, not claims of current
 availability or service coverage.
 
@@ -31,11 +30,9 @@ python3 scripts/regions/build-region.py \
 	--output src/data/regional-markets.json
 ```
 
-With no explicit manifest, the builder uses
-`research/north-jersey/runtime-manifest.json`. If that file is absent, the builder
-emits `[]` and reports `pending-reviewed-manifest`. It refuses to erase a
-nonempty published output in that state. An explicitly supplied missing manifest
-is always an error.
+Add one entry to `src/data/market-registrations.json` for each new service area, supplying the stable market ID, public label, two-letter state, state label and default ZIP. The offline builder discovers `research/<market-id>/runtime-manifest.json` for every registered regional market. A registered market becomes searchable only after its reviewed manifest produces a published snapshot. The builder checks ZIPs, provider IDs and CCNs across the combined output and refuses to erase a previously published market when its manifest is missing. An explicitly supplied missing manifest is an error.
+
+A new geography still needs verified ZIPs, provider records and source provenance in the normalized format below. A different licensing agency or source schema can require a collection adapter. The publication builder, search APIs, runtime registry and research importer share the registration file.
 
 `--check` compares the complete deterministic output bytes without writing.
 Validation or I/O errors exit with status 1. A successful build prints the market,
@@ -78,9 +75,7 @@ manifest. Schema version 1 has these fields.
 This is a shape description, not a publishable sample. `defaultZip`, input paths,
 hashes, dates, reviewer attribution, and evidence must come from the actual
 reviewed artifacts. `markets: []` is an explicit empty publication.
-The only supported additional market identity is exactly `north-jersey` with
-state `NJ`. Other pairs fail before publication. Massachusetts remains in its
-existing snapshots, not this manifest.
+Each additional market must match its registration ID, state, label and default ZIP. Massachusetts uses its existing snapshot files.
 
 Each artifact is a separate UTF-8 JSON file. `path` is relative to the manifest
 directory. Absolute paths and paths or symlinks that escape that directory fail.

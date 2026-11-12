@@ -11,7 +11,7 @@ A geographic assignment selects the complete authoritative catalog for its expli
 - MA uses the legacy `src/data/providers.json` records.
 - NJ uses the reviewed `north-jersey` snapshot in `src/data/regional-markets.json`, matching the app registry's registered market ID and state. The importer validates snapshot metadata, ZIP locations, provider identity and state, globally unique provider IDs, and CMS ID/CCN consistency across MA and registered snapshots. A provider claiming a different state from its snapshot fails validation.
 - `regional-markets.json` is optional. An absent file adds no published IDs. A present malformed JSON file, invalid snapshot, duplicate market or colliding identity rejects geographic imports, including MA imports. It does not silently fall back to MA.
-- Other states require an app registry integration; a kit cannot register a market. There is no caller-provided authority-file option. `--catalog` supplies rows to verify, never new authoritative IDs.
+- Additional states use the same checked-in `src/data/market-registrations.json` and reviewed publication path. When multiple published markets share a state, their globally unique IDs form the state catalog. A kit cannot register a market. There is no caller-provided authority-file option. `--catalog` supplies rows to verify, never new authoritative IDs.
 
 Legacy ID arrays and commands without an assignment keep the MA-only catalog and do not load the regional registry. Registering NJ therefore does not change their full-catalog or ID-only compatibility.
 

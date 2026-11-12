@@ -13,6 +13,7 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
+import marketRegistrations from "../src/data/market-registrations.json";
 import appCatalog from "../src/data/providers.json";
 import { validateImportScope } from "../scripts/import-research";
 import {
@@ -444,6 +445,16 @@ function cliFixture(
   const root = mkdtempSync(join(tmpdir(), "harbor-import-test-"));
   mkdirSync(join(root, "src/data"), { recursive: true });
   writeFileSync(join(root, "src/data/providers.json"), JSON.stringify(catalog));
+  writeFileSync(
+    join(root, "src/data/market-registrations.json"),
+    JSON.stringify(marketRegistrations),
+  );
+  writeFileSync(
+    join(root, "src/data/ma-zips.json"),
+    JSON.stringify({
+      "02459": { city: "Newton Center", lat: 42.31, lng: -71.19 },
+    }),
+  );
   writeFileSync(join(root, ".gitignore"), "/artifacts/\n");
   assert.equal(spawnSync("git", ["init", "--quiet"], { cwd: root }).status, 0);
   writeFileSync(
@@ -621,22 +632,26 @@ function njSnapshot() {
     id: "north-jersey",
     label: "North Jersey",
     state: "NJ",
-    defaultZip: "07102",
-    zips: { "07102": { city: "Newark", lat: 40.7, lng: -74.1 } },
+    defaultZip: "07960",
+    zips: {
+      "07102": { city: "Newark", lat: 40.7, lng: -74.1 },
+      "07960": { city: "Morristown", lat: 40.79, lng: -74.48 },
+    },
     meta: { asOf: "2026-11-12" },
-    providers: ["synthetic-nj-published", "synthetic-nj-unassigned"].map(
-      (id) => ({
-        id,
-        name: `Synthetic ${id}`,
-        category: "home-care",
-        address: "1 Synthetic Road",
-        city: "Newark",
-        state: "NJ",
-        zip: "07102",
-        lat: null,
-        lng: null,
-      }),
-    ),
+    providers: [
+      "north-jersey-synthetic-published",
+      "north-jersey-synthetic-unassigned",
+    ].map((id) => ({
+      id,
+      name: `Synthetic ${id}`,
+      category: "home-care",
+      address: "1 Synthetic Road",
+      city: "Newark",
+      state: "NJ",
+      zip: "07102",
+      lat: null,
+      lng: null,
+    })),
   };
 }
 

@@ -1,3 +1,4 @@
+import { registeredMarket } from "./market-registration";
 import { getProviderMarket, markets, type MarketRegistry } from "./markets";
 import type { Market } from "./market-types";
 
@@ -91,6 +92,7 @@ export type HomeHealthEvidenceResponse = {
   clinicalMeasureDateRanges: { measure: string; rawPeriod: string }[];
   surveyMeasureDateRanges: { measure: string; rawPeriod: string }[];
   patientExperienceComparators: {
+    [marketId: string]: HomeHealthSurveyComparator | undefined;
     massachusetts?: HomeHealthSurveyComparator;
     ma?: HomeHealthSurveyComparator;
     nj?: HomeHealthSurveyComparator;
@@ -208,13 +210,15 @@ function stateComparator(
   const comparator =
     comparators.state?.code === market.state
       ? comparators.state
-      : market.state === "NJ"
-        ? (comparators.nj ?? comparators["north-jersey"])
-        : (comparators.ma ?? comparators.massachusetts);
+      : (comparators[market.id] ?? comparators[market.state.toLowerCase()]);
   if (!comparator) return undefined;
   return {
     ...comparator,
     code: market.state,
-    label: market.state === "NJ" ? "New Jersey" : "Massachusetts",
+    label:
+      registeredMarket(market.id)?.stateLabel ??
+      (comparators.state?.code === market.state
+        ? comparators.state.label
+        : market.label),
   };
 }

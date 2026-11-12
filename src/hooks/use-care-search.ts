@@ -1,5 +1,6 @@
 "use client";
 
+import { legacyMarket } from "@/lib/market-registration";
 import { useEffect, useState } from "react";
 import type { SearchResponse } from "@/lib/providers";
 import type { Workspace } from "@/lib/workspace";
@@ -16,7 +17,7 @@ type SearchFields = {
 /** Keeps edits separate from the last submitted search and cancels stale requests. */
 export function useCareSearch(profile: Workspace["profile"]) {
   const [draft, setDraft] = useState<SearchFields>(() => ({
-    zip: profile.zip || "02459",
+    zip: profile.zip || legacyMarket.defaultZip,
     radius: "25",
     category: profile.careTypes.length === 1 ? profile.careTypes[0] : "all",
     sort: "distance",

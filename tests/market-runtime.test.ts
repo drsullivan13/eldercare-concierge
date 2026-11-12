@@ -56,8 +56,8 @@ const nj: MarketSnapshot = {
   id: "north-jersey",
   label: "North Jersey",
   state: "NJ",
-  defaultZip: "07030",
-  zips: { "07030": njPoint },
+  defaultZip: "07960",
+  zips: { "07030": njPoint, "07960": retainedNJZips["07960"] },
   meta: { asOf: "2026-10-01" },
   providers: [njProvider],
 };
@@ -354,10 +354,15 @@ test("NJ research, Facebook provenance and inspection metadata come only from th
 });
 
 test("coverage includes unresearched NJ providers as gaps without borrowing Massachusetts scores", () => {
-  const scoped = createMarketRegistry([
-    ma,
-    { ...nj, providers: [...nj.providers, nursing] },
-  ]);
+  assert.throws(
+    () =>
+      createMarketRegistry([
+        ma,
+        { ...nj, providers: [...nj.providers, nursing] },
+      ]),
+    /state/,
+  );
+  const scoped = createMarketRegistry([ma, nj]);
   const coverage = getResearchCoverage("2026-11-12", "north-jersey", scoped);
   assert.equal(coverage.market.id, "north-jersey");
   assert.equal(coverage.total, 1);
@@ -494,7 +499,7 @@ test("registry rejects market collisions, ambiguous ZIPs and rewritten or duplic
   assert.throws(
     () =>
       createMarketRegistry([
-        { ...nj, zips: { "07030": { ...njPoint, lat: NaN } } },
+        { ...nj, zips: { ...nj.zips, "07030": { ...njPoint, lat: NaN } } },
       ]),
     /ZIP/,
   );

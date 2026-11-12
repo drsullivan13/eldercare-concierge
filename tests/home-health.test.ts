@@ -318,6 +318,13 @@ test("regional agencies require the exact organization, CCN, state and CMS catal
             : "cms-3170010";
       agency.organizationId = provider.id;
     }
+    if (["short-ccn", "long-ccn", "provider-state"].includes(mismatch)) {
+      assert.throws(
+        () => createMarketRegistry([ma, market]),
+        /namespace|state/,
+      );
+      continue;
+    }
     assert.throws(
       () =>
         getHomeHealthEvidence(provider.id, createMarketRegistry([ma, market])),

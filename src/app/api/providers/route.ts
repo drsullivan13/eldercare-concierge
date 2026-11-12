@@ -1,3 +1,4 @@
+import { registeredMarket } from "@/lib/market-registration";
 import { getProvidersByIds } from "@/lib/search";
 
 export function GET(request: Request) {
@@ -9,8 +10,7 @@ export function GET(request: Request) {
     params.getAll("ids").length !== 1 ||
     params.getAll("market").length > 1 ||
     [...params.keys()].some((key) => !["ids", "market"].includes(key)) ||
-    (market !== undefined &&
-      !["massachusetts", "north-jersey"].includes(market))
+    (market !== undefined && !registeredMarket(market))
   )
     return Response.json(
       { error: "Supply one ids parameter and at most one supported market." },

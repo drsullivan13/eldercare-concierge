@@ -1,7 +1,5 @@
-type MarketId = "massachusetts" | "north-jersey";
-
 export type Market = {
-  id: MarketId;
+  id: string;
   label: string;
-  state: "MA" | "NJ";
+  state: string;
 };

@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_MANIFEST = ROOT / "research/north-jersey/runtime-manifest.json"
+REGISTRATIONS = ROOT / "src/data/market-registrations.json"
 DEFAULT_OUTPUT = ROOT / "src/data/regional-markets.json"
 CATEGORIES = {
     "nursing-home", "assisted-living", "home-care", "home-health", "staffing", "life-plan"
@@ -454,12 +454,37 @@ def artifact_count(key, value):
     return len(value)
 
 
+def registrations():
+    rows = decode(REGISTRATIONS.read_bytes())
+    require(isinstance(rows, list), "Market registrations must be an array")
+    for row in rows:
+        require(isinstance(row, dict) and isinstance(row.get("id"), str)
+                and re.fullmatch(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*", row["id"])
+                and isinstance(row.get("state"), str) and re.fullmatch(r"[A-Z]{2}", row["state"])
+                and all(isinstance(row.get(k), str) and row[k].strip() for k in ("label", "stateLabel"))
+                and isinstance(row.get("defaultZip"), str) and re.fullmatch(r"\d{5}", row["defaultZip"]),
+                "Invalid market registration")
+    unique([r["id"] for r in rows], "registered IDs")
+    unique([r["defaultZip"] for r in rows], "registered default ZIPs")
+    require(any(r["id"] == "massachusetts" for r in rows), "Missing legacy market registration")
+    return {r["id"]: r for r in rows}
+
+
 def build(manifest_path, output):
-    require(output != manifest_path, "Output must not overwrite the input manifest")
-    manifest = decode(manifest_path.read_bytes())
-    MANIFEST(manifest, "manifest")
-    unique([m["id"] for m in manifest["markets"]], "manifest.markets")
-    base = manifest_path.parent.resolve()
+    return build_markets([(manifest_path, None)], output, registrations())
+
+
+def build_markets(manifests, output, registered):
+    entries = []
+    for path, expected_id in manifests:
+        require(output != path, "Output must not overwrite the input manifest")
+        manifest = decode(path.read_bytes())
+        MANIFEST(manifest, "manifest")
+        if expected_id is not None:
+            require([e["id"] for e in manifest["markets"]] == [expected_id],
+                    f"Default manifest must contain its registered market {expected_id}")
+        entries.extend((entry, path.parent.resolve()) for entry in manifest["markets"])
+    unique([entry["id"] for entry, _ in entries], "manifest.markets")
     prefixes = decode((ROOT / "src/data/us-zip-prefix-states.json").read_bytes())
     existing = decode((ROOT / "src/data/providers.json").read_bytes())
     ids = {provider["id"] for provider in existing}
@@ -468,8 +493,9 @@ def build(manifest_path, output):
     ccns.update(agency["ccn"] for agency in ma_home_health["agencies"])
     used_zips = set(decode((ROOT / "src/data/ma-zips.json").read_bytes()))
     markets = []
-    for entry in manifest["markets"]:
-        require((entry["id"], entry["state"]) == ("north-jersey", "NJ"), f"{entry['id']}/{entry['state']}: unsupported market identity")
+    for entry, base in entries:
+        registration = registered.get(entry["id"])
+        require(entry["id"] != "massachusetts" and registration and registration["state"] == entry["state"], f"{entry['id']}/{entry['state']}: unsupported market identity")
         market = {key: entry[key] for key in ("id", "label", "state", "defaultZip")}
         for key, ref in entry["artifacts"].items():
             require(not Path(ref["path"]).is_absolute(), f"{key}: artifact path must be relative")
@@ -483,6 +509,8 @@ def build(manifest_path, output):
             require(artifact_count(key, value) == ref["count"], f"{key}: artifact count mismatch")
             market[key] = value
         validate_market(market, entry["review"], prefixes)
+        require(entry["label"] == registration["label"] and entry["defaultZip"] == registration["defaultZip"],
+                f"{entry['id']}: label/defaultZip differ from registration")
         require(not (set(market["zips"]) & used_zips), f"{entry['id']}: ZIP collision across markets")
         used_zips.update(market["zips"])
         for provider in market["providers"]:
@@ -524,15 +552,23 @@ def main():
     resolved = output.resolve()
     require(not output.is_symlink(), "Output must not be a symlink")
     require(not resolved.is_relative_to(ROOT) or resolved == DEFAULT_OUTPUT, "Only src/data/regional-markets.json may be written inside the checkout")
-    manifest = args.manifest.resolve() if args.manifest else DEFAULT_MANIFEST
-    if args.manifest is None and not manifest.exists():
-        markets = []
-        status = "pending-reviewed-manifest"
-        if output.exists():
-            require(decode(output.read_bytes()) == [], "Missing default manifest must not erase published markets")
-    else:
-        markets = build(manifest, resolved)
+    registered = registrations()
+    if args.manifest:
+        markets = build_markets([(args.manifest.resolve(), None)], resolved, registered)
         status = "reviewed"
+    else:
+        manifests = [(ROOT / "research" / mid / "runtime-manifest.json", mid)
+                     for mid in registered if mid != "massachusetts"]
+        available = [(p, mid) for p, mid in manifests if p.is_file()]
+        if output.exists():
+            published = {m["id"] for m in decode(output.read_bytes())}
+            require(published <= {mid for _, mid in available},
+                    "Missing default manifest must not erase published markets")
+        markets = build_markets(available, resolved, registered) if available else []
+        status = "reviewed" if available else "pending-reviewed-manifest"
+    if args.manifest and resolved == DEFAULT_OUTPUT and output.is_file():
+        published = {m["id"] for m in decode(output.read_bytes())}
+        require(published <= {m["id"] for m in markets}, "A partial manifest must not erase published markets")
     data = (json.dumps(markets, indent=2, sort_keys=True, ensure_ascii=False, allow_nan=False) + "\n").encode()
     if args.check:
         require(output.read_bytes() == data, "Regional output differs from reviewed artifacts")
