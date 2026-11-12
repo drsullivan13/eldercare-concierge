@@ -1,0 +1,898 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-11",
+  "purpose": "Curated Greater Boston continuing-care/life-plan campus search seed; seven supported options, not an exhaustive directory or recommendation.",
+  "search_rules": [
+    "Treat each record as a campus, not a duplicate nursing-home or assisted-living license.",
+    "Do not attach CMS stars, staffing, inspection findings or penalties to a campus. Follow relatedUnits to the separately scoped unit record.",
+    "Five campuses have supported points. Two have null points and must be excluded from radius calculations or shown separately as city/ZIP matches with distance unavailable.",
+    "Advertised care levels, current availability, transfer rights, affordability and care suitability are different questions. Provider service descriptions are claims, not verified capacity.",
+    "CCRC directory inclusion does not mean every campus uses a lifetime fixed-price/Lifecare contract or guarantees all care on site."
+  ],
+  "providers": [
+    {
+      "id": "lifeplan-north-hill",
+      "name": "North Hill",
+      "category": "life-plan",
+      "address": "865 Central Avenue",
+      "city": "Needham",
+      "state": "MA",
+      "zip": "02492",
+      "lat": 42.2909,
+      "lng": -71.25,
+      "locationKind": "facility",
+      "phone": "7814449910",
+      "website": "https://northhill.org/",
+      "description": "Needham continuing-care campus with independent living, Vista Terrace enhanced living and memory support, and Pines Edge skilled nursing and rehabilitation. Enhanced living is the provider’s terminology.",
+      "services": [
+        "Independent living",
+        "Enhanced living",
+        "Memory and dementia support",
+        "Short-term rehabilitation",
+        "Long-term skilled nursing"
+      ],
+      "officialRecord": true,
+      "officialRecordScope": "Campus appears in Massachusetts Executive Office of Aging & Independence CCRC directory; this does not establish every care-unit license.",
+      "careLevels": [
+        {
+          "level": "Independent living",
+          "unit": "Independent residences",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://northhill.org/"
+        },
+        {
+          "level": "Enhanced independent living",
+          "unit": "Vista Terrace",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://northhill.org/neighborhoods/enhanced-living/"
+        },
+        {
+          "level": "Memory and dementia support",
+          "unit": "Vista Terrace household",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://northhill.org/neighborhoods/enhanced-living/"
+        },
+        {
+          "level": "Skilled nursing, long-term care and short-term rehabilitation",
+          "unit": "Pines Edge",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://northhill.org/neighborhoods/skilled-nursing-long-term-care/"
+        }
+      ],
+      "relatedUnits": [
+        {
+          "providerId": "cms-225281",
+          "name": "Skilled Nursing Facility at North Hill",
+          "address": "865 Central Avenue",
+          "category": "nursing-home",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus.",
+          "ccn": "225281"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts continuing care retirement communities",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/lists/continuing-care-retirement-communities",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus name and address; links to operational disclosures submitted under MGL Chapter 93, Section 76."
+        },
+        {
+          "title": "North Hill",
+          "publisher": "North Hill",
+          "url": "https://northhill.org/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Independent living and continuing-care campus description."
+        },
+        {
+          "title": "Enhanced living",
+          "publisher": "North Hill",
+          "url": "https://northhill.org/neighborhoods/enhanced-living/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Vista Terrace daily-living support and memory/dementia household; provider uses enhanced independent living terminology."
+        },
+        {
+          "title": "Skilled nursing and long-term care",
+          "publisher": "North Hill",
+          "url": "https://northhill.org/neighborhoods/skilled-nursing-long-term-care/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Pines Edge skilled nursing, long-term care and rehabilitation."
+        },
+        {
+          "title": "North Hill residency agreement, state-hosted scan",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/doc/site-documents-for-north-hill",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "State-published sample residency agreement; first page identifies a CCRC and entrance/Lifecare fees. Scan has no verified current effective date."
+        },
+        {
+          "title": "CMS Nursing Home Provider Information, location only",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Coordinate reused only because campus and separately listed nursing-unit street address match exactly. No CMS quality measure is assigned to the campus.",
+          "dataAsOf": "2026-10-01"
+        }
+      ],
+      "warnings": [
+        "Do not relabel Vista Terrace as a Massachusetts-certified assisted living residence on the strength of this provider page.",
+        "Pines Edge nursing-unit CMS measures must stay on the separate nursing-home record."
+      ],
+      "limitations": [
+        "Care levels are descriptions from the provider, not an independent clinical assessment or a promise of admission.",
+        "No live vacancies, waiting-list position, prices, admission eligibility, transfer entitlement or financial solvency have been verified.",
+        "The state CCRC directory is evidence of a listed continuing-care community and published filings, not a campus quality rating. Review a current signed contract and current financial statements."
+      ],
+      "locationEvidence": {
+        "method": "Exact-address reuse of existing CMS nursing-unit point; location only",
+        "relatedProviderId": "cms-225281",
+        "matchedAddress": "865 CENTRAL AVENUE",
+        "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+        "checkedAt": "2026-11-11",
+        "dataAsOf": "2026-10-01",
+        "precision": "CMS published facility coordinates; not independently surveyed or a campus boundary"
+      }
+    },
+    {
+      "id": "lifeplan-lasell-village",
+      "name": "Lasell Village",
+      "category": "life-plan",
+      "address": "120 Seminary Avenue",
+      "city": "Newton",
+      "state": "MA",
+      "zip": "02466",
+      "lat": 42.3401,
+      "lng": -71.249,
+      "locationKind": "facility",
+      "phone": "6176637000",
+      "website": "https://lasellvillage.com/",
+      "description": "Newton continuing-care campus with independent apartments, supportive living at Lasell Studios, and skilled nursing and rehabilitation at Lasell House.",
+      "services": [
+        "Independent living",
+        "Supportive living",
+        "Skilled nursing",
+        "Short-term rehabilitation",
+        "Hospice services"
+      ],
+      "officialRecord": true,
+      "officialRecordScope": "Campus appears in Massachusetts Executive Office of Aging & Independence CCRC directory; this does not establish every care-unit license.",
+      "careLevels": [
+        {
+          "level": "Independent living",
+          "unit": "Lasell Village apartments",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://lasellvillage.com/continuing-care-retirement-community-ccrc-newton-boston/lasell-village-continuing-care/"
+        },
+        {
+          "level": "Supportive living",
+          "unit": "Lasell Studios",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://lasellvillage.com/continuing-care-retirement-community-ccrc-newton-boston/lasell-village-continuing-care/"
+        },
+        {
+          "level": "Skilled nursing, rehabilitation and hospice",
+          "unit": "Lasell House",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://lasellvillage.com/continuing-care-retirement-community-ccrc-newton-boston/lasell-village-continuing-care/"
+        }
+      ],
+      "relatedUnits": [
+        {
+          "providerId": "cms-225755",
+          "name": "Lasell House",
+          "address": "120 Seminary Avenue",
+          "category": "nursing-home",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus.",
+          "ccn": "225755"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts continuing care retirement communities",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/lists/continuing-care-retirement-communities",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus name and address; links to operational disclosures submitted under MGL Chapter 93, Section 76."
+        },
+        {
+          "title": "Lasell Village continuing care",
+          "publisher": "Lasell Village",
+          "url": "https://lasellvillage.com/continuing-care-retirement-community-ccrc-newton-boston/lasell-village-continuing-care/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Independent living; Lasell Studios help with daily activities and supervision; Lasell House skilled nursing, rehabilitation and hospice."
+        },
+        {
+          "title": "Lasell Village residence and care documents",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/doc/site-documents-for-lasell-village-0",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "State-hosted sample residence and care agreement, cover March 2022. Historical contract evidence, not current terms.",
+          "dataAsOf": "2022-03"
+        },
+        {
+          "title": "CMS Nursing Home Provider Information, location only",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Coordinate reused only because campus and separately listed nursing-unit street address match exactly. No CMS quality measure is assigned to the campus.",
+          "dataAsOf": "2026-10-01"
+        }
+      ],
+      "warnings": [
+        "Supportive living for people with memory impairment does not establish a separately licensed secure memory-care unit.",
+        "Provider page bed counts and promotional star claims were not imported; Lasell House ratings belong to its nursing-unit record."
+      ],
+      "limitations": [
+        "Care levels are descriptions from the provider, not an independent clinical assessment or a promise of admission.",
+        "No live vacancies, waiting-list position, prices, admission eligibility, transfer entitlement or financial solvency have been verified.",
+        "The state CCRC directory is evidence of a listed continuing-care community and published filings, not a campus quality rating. Review a current signed contract and current financial statements."
+      ],
+      "locationEvidence": {
+        "method": "Exact-address reuse of existing CMS nursing-unit point; location only",
+        "relatedProviderId": "cms-225755",
+        "matchedAddress": "120 SEMINARY AVENUE",
+        "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+        "checkedAt": "2026-11-11",
+        "dataAsOf": "2026-10-01",
+        "precision": "CMS published facility coordinates; not independently surveyed or a campus boundary"
+      }
+    },
+    {
+      "id": "lifeplan-newbridge-on-the-charles",
+      "name": "NewBridge on the Charles",
+      "category": "life-plan",
+      "address": "5000 Great Meadow Road",
+      "city": "Dedham",
+      "state": "MA",
+      "zip": "02026",
+      "lat": null,
+      "lng": null,
+      "locationKind": "facility",
+      "phone": "7812349020",
+      "website": "https://www.hebrewseniorlife.org/newbridge",
+      "description": "Dedham continuing-care campus offering independent living, assisted living, memory-care assisted living and the separate Hebrew Rehabilitation Center at NewBridge.",
+      "services": [
+        "Independent living",
+        "Assisted living",
+        "Memory-care assisted living",
+        "Long-term chronic care",
+        "Post-acute rehabilitation",
+        "Outpatient care"
+      ],
+      "officialRecord": true,
+      "officialRecordScope": "Campus appears in Massachusetts Executive Office of Aging & Independence CCRC directory; this does not establish every care-unit license.",
+      "careLevels": [
+        {
+          "level": "Independent living",
+          "unit": "NewBridge residences",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.hebrewseniorlife.org/newbridge"
+        },
+        {
+          "level": "Assisted living and memory-care assisted living",
+          "unit": "NewBridge assisted living, 6000 Great Meadow Road",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.hebrewseniorlife.org/newbridge"
+        },
+        {
+          "level": "Long-term chronic care, post-acute rehabilitation and outpatient services",
+          "unit": "Hebrew Rehabilitation Center at NewBridge, 7000 Great Meadow Road",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.hebrewseniorlife.org/locations/hebrew-rehabilitation-center/hrc-newbridge"
+        }
+      ],
+      "relatedUnits": [
+        {
+          "providerId": "ma-alr-newbridge-on-the-charles",
+          "name": "NewBridge on the Charles assisted living",
+          "address": "6000 Great Meadow Road",
+          "category": "assisted-living",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus."
+        },
+        {
+          "providerId": "cms-225774",
+          "name": "NewBridge on the Charles Skilled Nursing Facility",
+          "address": "7000 Great Meadow Road",
+          "category": "nursing-home",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus.",
+          "ccn": "225774"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts continuing care retirement communities",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/lists/continuing-care-retirement-communities",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus name and address; links to operational disclosures submitted under MGL Chapter 93, Section 76."
+        },
+        {
+          "title": "NewBridge on the Charles",
+          "publisher": "Hebrew SeniorLife",
+          "url": "https://www.hebrewseniorlife.org/newbridge",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus address, phone and independent/assisted/memory-care living options."
+        },
+        {
+          "title": "Hebrew Rehabilitation Center at NewBridge",
+          "publisher": "Hebrew SeniorLife",
+          "url": "https://www.hebrewseniorlife.org/locations/hebrew-rehabilitation-center/hrc-newbridge",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Separate health-care location at 7000 Great Meadow Road; long-term chronic care, post-acute rehabilitation and outpatient services. Provider describes HRC as part of an independent hospital."
+        },
+        {
+          "title": "NewBridge CCRC disclosure statement",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/doc/site-documents-for-newbridge-on-the-charles-1-0",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "FY2015 disclosure dated January 22, 2016; identifies the wider campus as a CCRC. Not current financial evidence.",
+          "dataAsOf": "2016-01-22"
+        },
+        {
+          "title": "NewBridge assisted living unit",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/locations/newbridge-on-the-charles",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Separate ALR at 6000 Great Meadow Road. Its page says not part of a CCRC, conflicting with the wider-campus CCRC directory/filing; retained as a unit-versus-campus discrepancy."
+        },
+        {
+          "title": "Census campus address geocode",
+          "publisher": "US Census Bureau",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5000+Great+Meadow+Road%2C+Dedham%2C+MA+02026&benchmark=Public_AR_Current&format=json",
+          "kind": "directory",
+          "checkedAt": "2026-11-11",
+          "supports": "Address-geocoding result and point provenance; no care-level or quality evidence."
+        }
+      ],
+      "warnings": [
+        "Campus CCRC listing and the ALR page disagree on CCRC status; the records describe different scopes and this discrepancy is unresolved.",
+        "Do not treat all Hebrew Rehabilitation Center services as one CMS nursing unit or transfer its nursing-unit ratings to the campus.",
+        "The state directory link labeled NewBridge Residency & Respite Agreement actually leads to a New Pond Village document; that link was not used as NewBridge contract evidence.",
+        "Campus coordinates are unavailable. Do not substitute a different-address care-unit point or invent a radius distance."
+      ],
+      "limitations": [
+        "Care levels are descriptions from the provider, not an independent clinical assessment or a promise of admission.",
+        "No live vacancies, waiting-list position, prices, admission eligibility, transfer entitlement or financial solvency have been verified.",
+        "The state CCRC directory is evidence of a listed continuing-care community and published filings, not a campus quality rating. Review a current signed contract and current financial statements."
+      ],
+      "locationEvidence": {
+        "method": "US Census one-line address geocoder, Public_AR_Current",
+        "query": "5000 Great Meadow Road, Dedham, MA 02026",
+        "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5000+Great+Meadow+Road%2C+Dedham%2C+MA+02026&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-11-11",
+        "matchStatus": "no match",
+        "precision": "No reliable campus point supplied"
+      }
+    },
+    {
+      "id": "lifeplan-brooksby-village",
+      "name": "Brooksby Village",
+      "category": "life-plan",
+      "address": "100 Brooksby Village Drive",
+      "city": "Peabody",
+      "state": "MA",
+      "zip": "01960",
+      "lat": null,
+      "lng": null,
+      "locationKind": "facility",
+      "phone": "9783060261",
+      "website": "https://www.ericksonseniorliving.com/brooksby-village",
+      "description": "Peabody continuing-care campus with independent living, assisted care, memory care, long-term nursing and rehabilitation. Nursing care has a separate 400 Brooksby Village Drive record.",
+      "services": [
+        "Independent living",
+        "Assisted care",
+        "Memory care",
+        "Long-term nursing",
+        "Rehabilitation",
+        "On-site medical center"
+      ],
+      "officialRecord": true,
+      "officialRecordScope": "Campus appears in Massachusetts Executive Office of Aging & Independence CCRC directory; this does not establish every care-unit license.",
+      "careLevels": [
+        {
+          "level": "Independent living and on-site medical services",
+          "unit": "Brooksby Village",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.ericksonseniorliving.com/brooksby-village/health"
+        },
+        {
+          "level": "Assisted care and memory care",
+          "unit": "Continuing Care at Brooksby Village",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.ericksonseniorliving.com/brooksby-village/health"
+        },
+        {
+          "level": "Long-term nursing and rehabilitation",
+          "unit": "Continuing Care at Brooksby Village, 400 Brooksby Village Drive",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.ericksonseniorliving.com/brooksby-village/health"
+        }
+      ],
+      "relatedUnits": [
+        {
+          "providerId": "cms-225767",
+          "name": "Continuing Care at Brooksby Village",
+          "address": "400 Brooksby Village Drive",
+          "category": "nursing-home",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus.",
+          "ccn": "225767"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts continuing care retirement communities",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/lists/continuing-care-retirement-communities",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus name and address; links to operational disclosures submitted under MGL Chapter 93, Section 76."
+        },
+        {
+          "title": "Brooksby Village health care",
+          "publisher": "Erickson Senior Living",
+          "url": "https://www.ericksonseniorliving.com/brooksby-village/health",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Independent living, assisted care, long-term care, rehabilitation and on-site medical services; FAQ explicitly includes memory care."
+        },
+        {
+          "title": "Brooksby Village development portfolio",
+          "publisher": "Erickson Senior Living",
+          "url": "https://development.ericksonseniorliving.com/portfolio/brooksby-village",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus address at 100 Brooksby Village Drive."
+        },
+        {
+          "title": "Brooksby Village contact",
+          "publisher": "Erickson Senior Living",
+          "url": "https://www.ericksonseniorliving.com/brooksby-village/contact",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Independent-living sales phone; continuing-care intake is a separate contact."
+        },
+        {
+          "title": "Brooksby Village disclosure statement",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/doc/brooksby-village-disclosure-statement-1/download",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "State-hosted disclosure dated May 2026; includes separate residence and care agreement. Disclosure itself is not a contract.",
+          "dataAsOf": "2026-05"
+        },
+        {
+          "title": "Census campus address geocode",
+          "publisher": "US Census Bureau",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=100+Brooksby+Village+Drive%2C+Peabody%2C+MA+01960&benchmark=Public_AR_Current&format=json",
+          "kind": "directory",
+          "checkedAt": "2026-11-11",
+          "supports": "Address-geocoding result and point provenance; no care-level or quality evidence."
+        }
+      ],
+      "warnings": [
+        "The 100 Brooksby Village Drive campus address is different from the 400 Brooksby Village Drive nursing unit.",
+        "Provider describes a continuum of care; actual transfer terms, care fees and access depend on the resident agreement.",
+        "Campus coordinates are unavailable. Do not substitute a different-address care-unit point or invent a radius distance."
+      ],
+      "limitations": [
+        "Care levels are descriptions from the provider, not an independent clinical assessment or a promise of admission.",
+        "No live vacancies, waiting-list position, prices, admission eligibility, transfer entitlement or financial solvency have been verified.",
+        "The state CCRC directory is evidence of a listed continuing-care community and published filings, not a campus quality rating. Review a current signed contract and current financial statements."
+      ],
+      "locationEvidence": {
+        "method": "US Census one-line address geocoder, Public_AR_Current",
+        "query": "100 Brooksby Village Drive, Peabody, MA 01960",
+        "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=100+Brooksby+Village+Drive%2C+Peabody%2C+MA+01960&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-11-11",
+        "matchStatus": "no match",
+        "precision": "No reliable campus point supplied"
+      }
+    },
+    {
+      "id": "lifeplan-linden-ponds",
+      "name": "Linden Ponds",
+      "category": "life-plan",
+      "address": "300 Linden Ponds Way",
+      "city": "Hingham",
+      "state": "MA",
+      "zip": "02043",
+      "lat": 42.192454506882,
+      "lng": -70.913651908798,
+      "locationKind": "facility",
+      "phone": "6175397223",
+      "website": "https://www.ericksonseniorliving.com/linden-ponds",
+      "description": "Hingham continuing-care campus with independent living, assisted care, long-term nursing and rehabilitation. Nursing care at 400 Linden Ponds Way is a separate record.",
+      "services": [
+        "Independent living",
+        "Assisted care",
+        "Long-term nursing",
+        "Rehabilitation",
+        "On-site medical center"
+      ],
+      "officialRecord": true,
+      "officialRecordScope": "Campus appears in Massachusetts Executive Office of Aging & Independence CCRC directory; this does not establish every care-unit license.",
+      "careLevels": [
+        {
+          "level": "Independent living and on-site medical services",
+          "unit": "Linden Ponds",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.ericksonseniorliving.com/linden-ponds/health"
+        },
+        {
+          "level": "Assisted care",
+          "unit": "Linden Ponds assisted care",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.ericksonseniorliving.com/linden-ponds/health"
+        },
+        {
+          "level": "Long-term nursing and rehabilitation",
+          "unit": "Linden Ponds continuing care, 400 Linden Ponds Way",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.ericksonseniorliving.com/linden-ponds/health"
+        }
+      ],
+      "relatedUnits": [
+        {
+          "providerId": "cms-225773",
+          "name": "Linden Ponds nursing unit",
+          "address": "400 Linden Ponds Way",
+          "category": "nursing-home",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus.",
+          "ccn": "225773"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts continuing care retirement communities",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/lists/continuing-care-retirement-communities",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus name and address; links to operational disclosures submitted under MGL Chapter 93, Section 76."
+        },
+        {
+          "title": "Linden Ponds health care",
+          "publisher": "Erickson Senior Living",
+          "url": "https://www.ericksonseniorliving.com/linden-ponds/health",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Independent living, assisted care, long-term care, rehabilitation, on-site medical services and memory-support programs."
+        },
+        {
+          "title": "Linden Ponds development portfolio",
+          "publisher": "Erickson Senior Living",
+          "url": "https://development.ericksonseniorliving.com/portfolio/linden-ponds",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus address at 300 Linden Ponds Way."
+        },
+        {
+          "title": "Linden Ponds contact",
+          "publisher": "Erickson Senior Living",
+          "url": "https://www.ericksonseniorliving.com/linden-ponds/contact",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Independent-living sales phone; continuing-care intake is a separate contact."
+        },
+        {
+          "title": "Linden Ponds disclosure statement",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/doc/linden-ponds-disclosure-statement/download",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "State-hosted disclosure dated May 2026. Disclosure itself is not a contract.",
+          "dataAsOf": "2026-05"
+        },
+        {
+          "title": "Census campus address geocode",
+          "publisher": "US Census Bureau",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=300+Linden+Ponds+Way%2C+Hingham%2C+MA+02043&benchmark=Public_AR_Current&format=json",
+          "kind": "directory",
+          "checkedAt": "2026-11-11",
+          "supports": "Address-geocoding result and point provenance; no care-level or quality evidence."
+        }
+      ],
+      "warnings": [
+        "The 300 Linden Ponds Way campus address is different from the 400 Linden Ponds Way nursing unit.",
+        "Memory support is mentioned by the provider, but a dedicated licensed memory-care unit was not verified and is not asserted here."
+      ],
+      "limitations": [
+        "Care levels are descriptions from the provider, not an independent clinical assessment or a promise of admission.",
+        "No live vacancies, waiting-list position, prices, admission eligibility, transfer entitlement or financial solvency have been verified.",
+        "The state CCRC directory is evidence of a listed continuing-care community and published filings, not a campus quality rating. Review a current signed contract and current financial statements."
+      ],
+      "locationEvidence": {
+        "method": "US Census one-line address geocoder, Public_AR_Current",
+        "query": "300 Linden Ponds Way, Hingham, MA 02043",
+        "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=300+Linden+Ponds+Way%2C+Hingham%2C+MA+02043&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-11-11",
+        "matchStatus": "exact street address match",
+        "precision": "Street-range interpolation, not rooftop or a campus boundary",
+        "matchedAddress": "300 LINDEN PONDS WAY, HINGHAM, MA, 02043",
+        "tigerLineId": "616478115"
+      }
+    },
+    {
+      "id": "lifeplan-fox-hill-village",
+      "name": "Fox Hill Village",
+      "category": "life-plan",
+      "address": "10 Longwood Drive",
+      "city": "Westwood",
+      "state": "MA",
+      "zip": "02090",
+      "lat": 42.240460020762,
+      "lng": -71.21080831885,
+      "locationKind": "facility",
+      "phone": "7813294433",
+      "website": "https://www.foxhillvillage.com/",
+      "description": "Westwood cooperative retirement campus with independent living, Birch Grove assisted living and White Oak Cottages memory care. Inpatient rehabilitation is arranged off campus.",
+      "services": [
+        "Independent cooperative living",
+        "Assisted living",
+        "Memory care",
+        "On-site outpatient physical therapy"
+      ],
+      "officialRecord": true,
+      "officialRecordScope": "Campus appears in Massachusetts Executive Office of Aging & Independence CCRC directory; this does not establish every care-unit license.",
+      "careLevels": [
+        {
+          "level": "Independent cooperative living",
+          "unit": "Fox Hill Village",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.foxhillvillage.com/health-services/"
+        },
+        {
+          "level": "Assisted living",
+          "unit": "Birch Grove, 20 Longwood Drive",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.foxhillvillage.com/health-services/"
+        },
+        {
+          "level": "Memory care",
+          "unit": "White Oak Cottages, separate Longwood Drive residence",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.foxhillvillage.com/health-services/"
+        }
+      ],
+      "relatedUnits": [
+        {
+          "providerId": "ma-alr-birch-grove-at-fox-hill-village",
+          "name": "Birch Grove at Fox Hill Village",
+          "address": "20 Longwood Drive",
+          "category": "assisted-living",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus."
+        },
+        {
+          "providerId": "ma-alr-white-oak-cottages-at-fox-hill-village",
+          "name": "White Oak Cottages at Fox Hill Village",
+          "address": "6 Longwod Drive (state record spelling)",
+          "category": "assisted-living",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts continuing care retirement communities",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/lists/continuing-care-retirement-communities",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus name and address; links to operational disclosures submitted under MGL Chapter 93, Section 76."
+        },
+        {
+          "title": "Fox Hill Village health services",
+          "publisher": "Fox Hill Village",
+          "url": "https://www.foxhillvillage.com/health-services/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Independent cooperative model; Birch Grove assisted living; White Oak memory care; on-site outpatient PT. Explicitly says inpatient rehabilitation is off campus."
+        },
+        {
+          "title": "Fox Hill Village disclosure summary",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/doc/fox-hill-village-disclosure-statement/download",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "State-hosted disclosure summary dated May 2024; underlying documents control over the summary.",
+          "dataAsOf": "2024-05"
+        },
+        {
+          "title": "Birch Grove ALR listing",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/locations/birch-grove-at-fox-hill-village",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Separate assisted-living residence listing and address at 20 Longwood Drive."
+        },
+        {
+          "title": "White Oak Cottages ALR listing",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/locations/white-oak-cottages-at-fox-hill-village",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Separate assisted-living/memory-care residence listing. Official record misspells its street as Longwod Drive."
+        },
+        {
+          "title": "Census campus address geocode",
+          "publisher": "US Census Bureau",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10+Longwood+Drive%2C+Westwood%2C+MA+02090&benchmark=Public_AR_Current&format=json",
+          "kind": "directory",
+          "checkedAt": "2026-11-11",
+          "supports": "Address-geocoding result and point provenance; no care-level or quality evidence."
+        }
+      ],
+      "warnings": [
+        "Listed in the state CCRC directory, but the provider distinguishes its cooperative, pay-for-care-when-needed model from traditional CCRCs.",
+        "No on-campus inpatient skilled nursing or rehabilitation is asserted. The provider describes off-campus inpatient rehab."
+      ],
+      "limitations": [
+        "Care levels are descriptions from the provider, not an independent clinical assessment or a promise of admission.",
+        "No live vacancies, waiting-list position, prices, admission eligibility, transfer entitlement or financial solvency have been verified.",
+        "The state CCRC directory is evidence of a listed continuing-care community and published filings, not a campus quality rating. Review a current signed contract and current financial statements."
+      ],
+      "locationEvidence": {
+        "method": "US Census one-line address geocoder, Public_AR_Current",
+        "query": "10 Longwood Drive, Westwood, MA 02090",
+        "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10+Longwood+Drive%2C+Westwood%2C+MA+02090&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-11-11",
+        "matchStatus": "exact street address match",
+        "precision": "Street-range interpolation, not rooftop or a campus boundary",
+        "matchedAddress": "10 LONGWOOD DR, WESTWOOD, MA, 02090",
+        "tigerLineId": "657987386"
+      }
+    },
+    {
+      "id": "lifeplan-carleton-willard-village",
+      "name": "Carleton-Willard Village",
+      "category": "life-plan",
+      "address": "100 Old Billerica Road",
+      "city": "Bedford",
+      "state": "MA",
+      "zip": "01730",
+      "lat": 42.5004,
+      "lng": -71.257,
+      "locationKind": "facility",
+      "phone": "7812758700",
+      "website": "https://www.cwvillage.org/",
+      "description": "Bedford continuing-care campus with independent residences, Llewsac Lodge supportive residential care, Ross-Worthen dementia care and skilled nursing and rehabilitation.",
+      "services": [
+        "Independent living",
+        "Supportive residential care",
+        "Memory care",
+        "Long-term nursing",
+        "Short-term rehabilitation"
+      ],
+      "officialRecord": true,
+      "officialRecordScope": "Campus appears in Massachusetts Executive Office of Aging & Independence CCRC directory; this does not establish every care-unit license.",
+      "careLevels": [
+        {
+          "level": "Independent living",
+          "unit": "Carleton-Willard residences",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.cwvillage.org/about-carleton-willard/benefits-of-a-continuing-care-retirement-community/"
+        },
+        {
+          "level": "Supportive residential care",
+          "unit": "Llewsac Lodge",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.cwvillage.org/nursing-and-supporting-care/asistance-in-living/"
+        },
+        {
+          "level": "Memory care",
+          "unit": "Ross-Worthen Center for Dementia Care",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.cwvillage.org/nursing-and-supporting-care/memory-care/"
+        },
+        {
+          "level": "Skilled nursing and rehabilitation",
+          "unit": "Carleton-Willard nursing and rehabilitation center",
+          "evidenceType": "provider claim",
+          "sourceUrl": "https://www.cwvillage.org/nursing-and-supporting-care/nursing-and-rehabilitation/"
+        }
+      ],
+      "relatedUnits": [
+        {
+          "providerId": "cms-225273",
+          "name": "Carleton-Willard Village nursing unit",
+          "address": "100 Old Billerica Road",
+          "category": "nursing-home",
+          "relationship": "Separate care-unit record within this campus; its ratings and inspections do not describe the entire campus.",
+          "ccn": "225273"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts continuing care retirement communities",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/lists/continuing-care-retirement-communities",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Campus name and address; links to operational disclosures submitted under MGL Chapter 93, Section 76."
+        },
+        {
+          "title": "Benefits of a CCRC",
+          "publisher": "Carleton-Willard Village",
+          "url": "https://www.cwvillage.org/about-carleton-willard/benefits-of-a-continuing-care-retirement-community/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Explicit CCRC description and on-campus independent, supportive, memory and long-term nursing options."
+        },
+        {
+          "title": "Assistance in living",
+          "publisher": "Carleton-Willard Village",
+          "url": "https://www.cwvillage.org/nursing-and-supporting-care/asistance-in-living/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Llewsac Lodge residential care. Provider says it is licensed to provide nursing assistance, unlike Massachusetts ALRs; license class not independently verified here."
+        },
+        {
+          "title": "Memory care",
+          "publisher": "Carleton-Willard Village",
+          "url": "https://www.cwvillage.org/nursing-and-supporting-care/memory-care/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Ross-Worthen dementia care."
+        },
+        {
+          "title": "Nursing and rehabilitation",
+          "publisher": "Carleton-Willard Village",
+          "url": "https://www.cwvillage.org/nursing-and-supporting-care/nursing-and-rehabilitation/",
+          "kind": "provider",
+          "checkedAt": "2026-11-11",
+          "supports": "Skilled nursing, long-term care and rehabilitation."
+        },
+        {
+          "title": "Carleton-Willard disclosure statement",
+          "publisher": "Massachusetts Executive Office of Aging & Independence",
+          "url": "https://www.mass.gov/doc/site-documents-for-carleton-willard-village-1",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "State-hosted disclosure revised January 1, 2016; historical identity/model evidence, not current financial statements or capacity.",
+          "dataAsOf": "2016-01-01"
+        },
+        {
+          "title": "CMS Nursing Home Provider Information, location only",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+          "kind": "regulatory",
+          "checkedAt": "2026-11-11",
+          "supports": "Coordinate reused only because campus and separately listed nursing-unit street address match exactly. No CMS quality measure is assigned to the campus.",
+          "dataAsOf": "2026-10-01"
+        }
+      ],
+      "warnings": [
+        "Llewsac Lodge is described as supportive residential care; do not automatically classify it as a Massachusetts assisted living residence.",
+        "Nursing-unit CMS measures apply to the separately listed nursing unit, not independent residences or the campus as a whole."
+      ],
+      "limitations": [
+        "Care levels are descriptions from the provider, not an independent clinical assessment or a promise of admission.",
+        "No live vacancies, waiting-list position, prices, admission eligibility, transfer entitlement or financial solvency have been verified.",
+        "The state CCRC directory is evidence of a listed continuing-care community and published filings, not a campus quality rating. Review a current signed contract and current financial statements."
+      ],
+      "locationEvidence": {
+        "method": "Exact-address reuse of existing CMS nursing-unit point; location only",
+        "relatedProviderId": "cms-225273",
+        "matchedAddress": "100 OLD BILLERICA ROAD",
+        "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+        "checkedAt": "2026-11-11",
+        "dataAsOf": "2026-10-01",
+        "precision": "CMS published facility coordinates; not independently surveyed or a campus boundary"
+      }
+    }
+  ]
+}

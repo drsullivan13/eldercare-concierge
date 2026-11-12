@@ -1,0 +1,99 @@
+# Harbor
+
+A Greater Boston elder-care research and coordination proof of concept. Families can search by ZIP and radius, inspect public evidence, compare resources, save a shortlist, and build a transition plan.
+
+**Status:** the local application and public provider data work. Cloud accounts require a new Supabase project and deployment configuration. The demo is explicitly labeled and saves only in the current browser. It does not create an account or send data to a care provider.
+
+![Harbor care workspace](docs/screenshots/dashboard.png)
+
+## What is built
+
+- Public landing page, signup/login screens and a short care-preferences setup.
+- A family dashboard with a 90-day planning outline, saved options and next steps.
+- Real ZIP/radius search across 521 resource records: 280 nursing homes, 224 assisted-living residences, 10 home-service organizations and 7 continuing-care campuses.
+- List and map views, care-category filters, name/town search and nursing-home-only CMS rating order.
+- Source links, source dates, published staffing metrics, actual CMS inspection findings and penalty events, explicit unknowns and provider follow-up questions.
+- Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
+- Supabase email/password auth and owner-only database access, ready for configuration. No service-role key is used by the app.
+
+There are no live vacancy feeds, price quotes, independently vetted individual caregivers, completed reference checks or connected Google/Yelp/review feeds. A provider record is not an endorsement. Public reviews are not blended into a fabricated quality score.
+
+## Run locally
+
+Requires Node 24 and npm. All npm dependencies are locked in `package-lock.json`.
+
+```bash
+npm ci
+npm run dev
+```
+
+Open `http://localhost:3000`, then choose **Explore the demo**. Or open `http://localhost:3000/dashboard?demo=1` directly. No secrets are needed for provider research and the demo plan. Demo storage uses `harbor.demo.workspace.v1`; clearing browser storage removes it. Real-account state is never written to that storage key.
+
+For a production-mode local check:
+
+```bash
+npm run build
+npm run start
+```
+
+Do not run a fresh build while serving the previous `.next` build from the same directory. Stop the server, build, then start it again.
+
+## Connect real accounts
+
+1. Select a **new, dedicated Supabase project**. Inspect its schema before applying SQL. Do not apply this app's schema to an unrelated project.
+2. Review and run `supabase/schema.sql` once. It creates `user_workspaces`, enables RLS, and grants authenticated users access only to their own row. Policies are deliberately not blindly reapplied.
+3. Copy `.env.example` to `.env.local` and set the project's URL and publishable key. The publishable key is designed for client use. Never substitute a secret/service-role key.
+4. Configure the Supabase Site URL and allowed callback URL for the exact app origin, including `http://localhost:3000/auth/callback` for development and the deployed HTTPS callback for production.
+5. Keep email confirmation enabled. Configure a production email sender before opening signup beyond Supabase's default email restrictions. Confirm that delivery, callback, session refresh and sign-out actually work.
+6. Add the same two environment variables to the intended Vercel environment, then rebuild. `NEXT_PUBLIC_` values are compiled into client bundles.
+7. Run the live-account verification checklist in `docs/verification.md`. Static code review and a local demo do not prove a hosted auth setup works.
+
+The app fails closed when account infrastructure is unavailable. Signup is disabled with a clear explanation; `/api/workspace` returns 503. Anonymous calls return 401 once configured. Personal responses are `private, no-store`; writes validate browser origin, payload size and every accepted field. Owner identity comes from `auth.getUser()`, not a submitted user ID or editable metadata.
+
+## Data and ordering
+
+The catalog is a **November 11, 2026 research snapshot**. CMS nursing-home processing date is October 1; its release date is October 28. Massachusetts directory records and the June 25 certified-residence spreadsheet are separate evidence. Home-health records and agency websites have their own dates.
+
+Facility coverage is Massachusetts locations within 55 straight-line miles of central Boston. Search origins are Massachusetts ZIPs inside that pilot region, and the selectable radius is 1–50 miles. A search near the boundary is clipped by the catalog's coverage; no result is not proof that no care exists.
+
+Distances use published Census/GeoNames ZIP points, not an exact home location or driving time. Home-service distances refer to offices, not confirmed service availability. One agency without a reliable coordinate remains in the catalog but is excluded from radius and map results. Two continuing-care campuses use explicitly labeled published Census ZIP-area estimates, not borrowed nursing-unit coordinates. Categories keep each record’s primary service; four agencies with documented private-care services also appear under Help at home. Campus and licensed-unit records are separate resources, not a count of unique parent organizations.
+
+Default order is distance. Nursing-home searches can sort by published CMS overall rating, with missing ratings last and distance/name/ID as tie-breakers. Assisted living and home services never receive CMS nursing-home stars. Counts, zero values and missing values stay distinct.
+
+Read [`docs/data-sources.md`](docs/data-sources.md) for provenance, licenses, field meanings and known gaps. GeoNames postal data is used under CC BY 4.0; Census coordinates are US government data. Maps credit OpenStreetMap contributors.
+
+```bash
+python scripts/prepare-data.py
+python scripts/prepare-inspections.py
+```
+
+This rebuilds the catalog from retained, reviewed input snapshots. It does not refresh upstream sources or change their dates. Review source changes and matching before replacing those inputs. Do not change a retrieval date without retrieving the underlying source.
+
+## Checks
+
+```bash
+npm run lint
+npm run test
+npm run build
+npm run test:e2e
+```
+
+For E2E tests, start the production server first, or use `PLAYWRIGHT_START_SERVER=1 npm run test:e2e`. Install the browser once with `npx playwright install chromium`. Desktop and mobile cases use the actual provider API and data.
+
+`node scripts/check-accessibility.mjs` checks public and demo screens with axe against a running server and writes a local report under `artifacts/`.
+
+## Structure
+
+- `src/lib/search.ts`: geographic validation, filtering and deterministic order.
+- `src/data/`: sourced catalog, retained input records and ZIP provenance.
+- `src/components/`: dashboard, provider evidence, map and auth screens.
+- `src/hooks/use-workspace.ts`: separate local-demo and cloud persistence paths.
+- `src/app/api/workspace/`: authenticated workspace reads/writes.
+- `supabase/schema.sql`: draft database setup and owner policies.
+- `tests/`: data, security-boundary and browser-flow tests.
+
+## Current boundaries
+
+This is a personal research workspace. Multi-person invitations, staff operations, appointment booking, outreach, payments and clinical record uploads are not implemented. A full-document workspace save is last-write-wins across devices; the UI serializes saves within a session. Multi-user collaboration needs revisions and conflict handling before it is enabled.
+
+The product does not diagnose care needs, confirm suitability or promise that a provider is safe. See [`docs/quality-roadmap.md`](docs/quality-roadmap.md) for the next evidence and workflow milestones.

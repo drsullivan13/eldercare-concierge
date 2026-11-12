@@ -1,0 +1,43 @@
+{
+  "outputs": {
+    "ma-zip-prefixes.json": {
+      "bytes": 174,
+      "sha256": "5b5aeacb1be8702acb45e394ed9c006c6207101a8e1296b49d34a6607aab96b4"
+    },
+    "ma-zips-provenance.json": {
+      "bytes": 123800,
+      "sha256": "040316081b29d440311737d98e502ba0568b741f2d4862870648c11f24d20403"
+    },
+    "ma-zips.json": {
+      "bytes": 58974,
+      "sha256": "e8a782734afad1f392bc476c80e60b0ad923e59b71a55969c0beb4272e9557c7"
+    },
+    "us-zip-prefix-states.json": {
+      "bytes": 23193,
+      "sha256": "1c8edb97e73cf06e705c7ddb0e4004b4dd7a36c3b00c0413354443e03eb7c111"
+    },
+    "validation.json": {
+      "bytes": 1159,
+      "sha256": "058fdf7af824f220492db6ed6069f3ea3781afcdff0767c1aa6b22032de39a1e"
+    }
+  },
+  "schemaVersion": 1,
+  "sourceSnapshotDate": "2026-11-11",
+  "sources": {
+    "census-2026-zcta.zip": {
+      "bytes": 952131,
+      "sha256": "f1e9046b91f6e60686a99343cb2752834c02b0764939403b331c78c017e2c54c",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_zcta_national.zip"
+    },
+    "geonames-US.zip": {
+      "bytes": 634328,
+      "sha256": "0a7da672f3441dd51685a3754c4ea2ab77a4322f5f7ecec5b27c4000c0778ac3",
+      "url": "https://download.geonames.org/export/zip/US.zip"
+    },
+    "geonames-readme.txt": {
+      "bytes": 2893,
+      "sha256": "fff60148da20f4d182859d926518efa5b0f3949f3c3273a284901325f1f8f008",
+      "url": "https://download.geonames.org/export/zip/readme.txt"
+    }
+  }
+}
