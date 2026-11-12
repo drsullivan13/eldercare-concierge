@@ -5,12 +5,17 @@
         "homeHealthEvidence": {
           "count": 18,
           "path": "runtime/homeHealthEvidence.json",
-          "sha256": "264ac3b5819a17da087f6e92718526c5cc6e882e8e5316fc3398c770fca8e6c9"
+          "sha256": "59884c3e9fc35f773c80985aee1f909d57d87dd3ea1919f1a5b8ea84dff48d82"
         },
         "inspectionHistory": {
           "count": 139,
           "path": "runtime/inspectionHistory.json",
           "sha256": "d28297aef2b562b46669acb5f845e1437239f4bbc516ed039e0d9306dc973838"
+        },
+        "locationResearch": {
+          "count": 282,
+          "path": "runtime/locationResearch.json",
+          "sha256": "569f815d1a61d1d60cc49324704afc42a1d329896abba15a004a68aec19c937f"
         },
         "meta": {
           "count": 974,
@@ -20,7 +25,7 @@
         "providers": {
           "count": 974,
           "path": "runtime/providers.json",
-          "sha256": "81a1ccbc3d1deaa59c82c30095166e04f8e9b7d0663129ee857e7bf4433acf51"
+          "sha256": "27603e930d0c56d42edee3177d3a8a93bbf94725e12e134e5e5b17255e0d1855"
         },
         "zips": {
           "count": 270,
@@ -33,7 +38,7 @@
       "label": "North Jersey",
       "review": {
         "reviewedAt": "2026-11-12",
-        "reviewer": "NJ adapter source identity and schema verification; consumer candidates withheld",
+        "reviewer": "NJ source and location identity verification; release-manifest checks",
         "status": "reviewed"
       },
       "state": "NJ"

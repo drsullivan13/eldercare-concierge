@@ -1,0 +1,786 @@
+{
+  "categories": {
+    "assisted-living": 116,
+    "home-care": 673,
+    "home-health": 18,
+    "life-plan": 7,
+    "nursing-home": 160
+  },
+  "cmsLinkedCount": 139,
+  "cmsStatus": "complete",
+  "countyCounts": {
+    "Bergen": {
+      "assisted-living": 43,
+      "home-care": 161,
+      "home-health": 5,
+      "nursing-home": 30
+    },
+    "Essex": {
+      "assisted-living": 20,
+      "home-care": 207,
+      "home-health": 4,
+      "life-plan": 2,
+      "nursing-home": 39
+    },
+    "Hudson": {
+      "assisted-living": 2,
+      "home-care": 70,
+      "home-health": 3,
+      "life-plan": 1,
+      "nursing-home": 18
+    },
+    "Morris": {
+      "assisted-living": 30,
+      "home-care": 60,
+      "home-health": 3,
+      "life-plan": 2,
+      "nursing-home": 26
+    },
+    "Passaic": {
+      "assisted-living": 10,
+      "home-care": 58,
+      "home-health": 2,
+      "life-plan": 1,
+      "nursing-home": 23
+    },
+    "Union": {
+      "assisted-living": 11,
+      "home-care": 117,
+      "home-health": 1,
+      "life-plan": 1,
+      "nursing-home": 24
+    }
+  },
+  "crosswalkRows": 986,
+  "dohSourceRows": 894,
+  "evidenceByCountyAndSetting": {
+    "Bergen": {
+      "assisted-living": {
+        "locations": 43,
+        "locationsWithFacts": 43,
+        "locationsWithPublishedRate": 6,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 38
+      },
+      "home-care": {
+        "locations": 161,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 141
+      },
+      "home-health": {
+        "locations": 5,
+        "locationsWithFacts": 5,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 5
+      },
+      "nursing-home": {
+        "locations": 30,
+        "locationsWithFacts": 29,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 25
+      }
+    },
+    "Essex": {
+      "assisted-living": {
+        "locations": 20,
+        "locationsWithFacts": 20,
+        "locationsWithPublishedRate": 3,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 19
+      },
+      "home-care": {
+        "locations": 207,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 183
+      },
+      "home-health": {
+        "locations": 4,
+        "locationsWithFacts": 4,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 4
+      },
+      "life-plan": {
+        "locations": 2,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 2
+      },
+      "nursing-home": {
+        "locations": 39,
+        "locationsWithFacts": 35,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 37
+      }
+    },
+    "Hudson": {
+      "assisted-living": {
+        "locations": 2,
+        "locationsWithFacts": 2,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 0
+      },
+      "home-care": {
+        "locations": 70,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 60
+      },
+      "home-health": {
+        "locations": 3,
+        "locationsWithFacts": 3,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 3
+      },
+      "life-plan": {
+        "locations": 1,
+        "locationsWithFacts": false,
+        "locationsWithPublishedRate": false,
+        "locationsWithReviewAggregate": false,
+        "publishedOpenings": false,
+        "publishedWaitlists": false,
+        "scoredLocations": false,
+        "streetMatched": false
+      },
+      "nursing-home": {
+        "locations": 18,
+        "locationsWithFacts": 16,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 16
+      }
+    },
+    "Morris": {
+      "assisted-living": {
+        "locations": 30,
+        "locationsWithFacts": 30,
+        "locationsWithPublishedRate": 6,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 23
+      },
+      "home-care": {
+        "locations": 60,
+        "locationsWithFacts": 1,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 47
+      },
+      "home-health": {
+        "locations": 3,
+        "locationsWithFacts": 3,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 3
+      },
+      "life-plan": {
+        "locations": 2,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 2
+      },
+      "nursing-home": {
+        "locations": 26,
+        "locationsWithFacts": 24,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 21
+      }
+    },
+    "Passaic": {
+      "assisted-living": {
+        "locations": 10,
+        "locationsWithFacts": 10,
+        "locationsWithPublishedRate": 1,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 10
+      },
+      "home-care": {
+        "locations": 58,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 54
+      },
+      "home-health": {
+        "locations": 2,
+        "locationsWithFacts": 2,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 1
+      },
+      "life-plan": {
+        "locations": 1,
+        "locationsWithFacts": false,
+        "locationsWithPublishedRate": false,
+        "locationsWithReviewAggregate": false,
+        "publishedOpenings": false,
+        "publishedWaitlists": false,
+        "scoredLocations": false,
+        "streetMatched": true
+      },
+      "nursing-home": {
+        "locations": 23,
+        "locationsWithFacts": 19,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 19
+      }
+    },
+    "Union": {
+      "assisted-living": {
+        "locations": 11,
+        "locationsWithFacts": 11,
+        "locationsWithPublishedRate": 3,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 10
+      },
+      "home-care": {
+        "locations": 117,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 103
+      },
+      "home-health": {
+        "locations": 1,
+        "locationsWithFacts": true,
+        "locationsWithPublishedRate": false,
+        "locationsWithReviewAggregate": false,
+        "publishedOpenings": false,
+        "publishedWaitlists": false,
+        "scoredLocations": false,
+        "streetMatched": true
+      },
+      "life-plan": {
+        "locations": 1,
+        "locationsWithFacts": true,
+        "locationsWithPublishedRate": true,
+        "locationsWithReviewAggregate": false,
+        "publishedOpenings": false,
+        "publishedWaitlists": true,
+        "scoredLocations": false,
+        "streetMatched": true
+      },
+      "nursing-home": {
+        "locations": 24,
+        "locationsWithFacts": 23,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 24
+      }
+    }
+  },
+  "examples": {
+    "07083": [
+      {
+        "address": "234 CHESTNUT STREET UNION, NJ 07083",
+        "category": "nursing-home",
+        "cmsCcn": "315104",
+        "id": "cms-315104",
+        "name": "CORNELL HALL CARE & REHABILITATION CENTER"
+      },
+      {
+        "address": "2165 MORRIS AVENUE, SUITE 1A",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0024800",
+        "name": "AMAZING GRACE NURSING CARE SERVICE"
+      },
+      {
+        "address": "930 STUYVESANT AVE. STE 10",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0049900",
+        "name": "ACE HOME HEALTHCARE INC"
+      },
+      {
+        "address": "960 KOEHL AVENUE",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0107600",
+        "name": "GRACIOUS HOME CARE, LLC"
+      },
+      {
+        "address": "1460 MORRIS AVENUE, SUITE 2A & 2B",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0122400",
+        "name": "FULL CIRCLE HEALTH SERVICES LLC"
+      },
+      {
+        "address": "2444 MORRIS AVE ROOM 102",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0194000",
+        "name": "BETTY NURSING SERVICES, INC."
+      },
+      {
+        "address": "2333 MORRIS AVENUE, SUITE C-214",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0224400",
+        "name": "CARE ASSIST LLC"
+      },
+      {
+        "address": "2400 MORRIS AVENUE, SUITE 203",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0231605",
+        "name": "PREMIER HOME HEALTH CARE SERVICES, INC."
+      },
+      {
+        "address": "2400 Morris Avenue, Suite 203",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0231606",
+        "name": "PREMIER HOME HEALTH CARE SERVICES, INC."
+      },
+      {
+        "address": "1600 ROUTE 22 EAST, SUITE 301",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0249500",
+        "name": "PRUDENZA LLC DBA HOMEWELL CARE SVCS"
+      },
+      {
+        "address": "2424 MORRIS AVENUE, SUITE 107",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0254700",
+        "name": "A1 PLUS HOME CARE SERVICES LLC"
+      },
+      {
+        "address": "2190 MORRIS AVENUE",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0277700",
+        "name": "AVILO CARE SERVICES LLC"
+      },
+      {
+        "address": "2810 MORRIS AVENUE, SUITE 304",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0292700",
+        "name": "OUTFRONT HOME CARE LLC"
+      },
+      {
+        "address": "3 Bond Drive",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0310500",
+        "name": "EROS HEALTHCARE SERVICES, LLC"
+      },
+      {
+        "address": "530 Chestnut Street, Ste. 201",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0313100",
+        "name": "ALPHA HEALTHCARE STAFFING FIRM LLC"
+      },
+      {
+        "address": "1460 Morris Ave Ste 3A",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0327700",
+        "name": "S & S HOME HEALTH CARE INC."
+      },
+      {
+        "address": "540 NORTH AVENUE",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0344700",
+        "name": "AA QUALITY HOME CARE CORP"
+      },
+      {
+        "address": "2500 MORRIS AVENUE, SUITE 200",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0345400",
+        "name": "KIKU HOME HEALTH CARE LLC"
+      },
+      {
+        "address": "2414 Morris Avenue, Suite 203",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0346600",
+        "name": "Apollo PICC Nursing Contractors LLC"
+      },
+      {
+        "address": "1473 CARLSEN DRIVE",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0354000",
+        "name": "BETTYLIN HOME CARE LLC"
+      },
+      {
+        "address": "1460 Morris Avenue",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0364600",
+        "name": "AAK HEALTHCARE INSTITUTE LLC"
+      },
+      {
+        "address": "1496 MORRIS AVENUE LOWER LEVEL B",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0366800",
+        "name": "ESTEEM HOME CARE SERVICES LLC"
+      },
+      {
+        "address": "2204 Morris Avenue, Suite LL5",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0366900",
+        "name": "Keon Home Healthcare LLC"
+      },
+      {
+        "address": "362 LUM AVENUE",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0371800",
+        "name": "LIGHT AND LIFE HOME CARE LLC"
+      },
+      {
+        "address": "2810 Morris Avenue, Suite 102B",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0374500",
+        "name": "Agape Berean Health Services, Inc"
+      },
+      {
+        "address": "1915 Morris Avenue, Suite 101",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0380400",
+        "name": "HELENA HOME CARE UNION LLC"
+      },
+      {
+        "address": "1915 MORRIS AVENUE, SUITE 104",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0391400",
+        "name": "LIBERTY COMPLETE CARE SERVICES LLC"
+      },
+      {
+        "address": "1238 Roger Ave",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0395500",
+        "name": "BERAKAH MULTI SERVICES LLC"
+      },
+      {
+        "address": "1946 Churchill Drive",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0402700",
+        "name": "C3 GOLDEN HOME HEALTHCARE LLC"
+      },
+      {
+        "address": "985 A Stuyvesant Avenue",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0402800",
+        "name": "LOVELY HOME CARE INC"
+      },
+      {
+        "address": "1215 Jeanette Ave",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0404400",
+        "name": "DAY STAR HOME HEALTHCARE LLC"
+      },
+      {
+        "address": "1541 Stuyvesant Ave",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0415500",
+        "name": "Neddy Services LLC"
+      },
+      {
+        "address": "1018 Stuyvesant Ave Suite 8",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0416300",
+        "name": "Love Care Agency LLC"
+      },
+      {
+        "address": "1390 Stuyvesant Ave",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0417100",
+        "name": "Tender Care Agency LLC"
+      },
+      {
+        "address": "692 Colonial Arms Rd",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0420400",
+        "name": "Four Seasons Healthcare Agency LLC"
+      },
+      {
+        "address": "1000C Stuyvesant Ave",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0424200",
+        "name": "Comfort Angels Homecare"
+      },
+      {
+        "address": "2414 Morris Ave. Ste 352",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0425700",
+        "name": "OnVerra Health LLC"
+      },
+      {
+        "address": "1018 Stuyvesant Ave",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0430500",
+        "name": "Amazing U Community Services LLC"
+      },
+      {
+        "address": "2003 Morris Avenue, Suite 1A",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0431300",
+        "name": "Connect Path Support Services"
+      },
+      {
+        "address": "2003 Morris Ave Suite 1A",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0434100",
+        "name": "DT Healthcare of New Jersey"
+      },
+      {
+        "address": "642 Florence Ter",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0438100",
+        "name": "GOODMOTHER CARE SERVICES LLC"
+      },
+      {
+        "address": "1640 VAUXHALL ROAD, SUITE 2D",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0440600",
+        "name": "L & L STAFFING AND HOME CARE SERVICES, INC."
+      }
+    ],
+    "07960": [
+      {
+        "address": "77 MADISON AVENUE MORRISTOWN, NJ 07960",
+        "category": "nursing-home",
+        "cmsCcn": "315157",
+        "id": "cms-315157",
+        "name": "MORRISTOWN POST ACUTE REHAB AND NURSING CENTER"
+      },
+      {
+        "address": "540 WEST HANOVER AVENUE PO BOX 437 MORRISTOWN, NJ 07960",
+        "category": "nursing-home",
+        "cmsCcn": "315303",
+        "id": "cms-315303",
+        "name": "MORRIS VIEW HEALTHCARE CENTER"
+      },
+      {
+        "address": "151 MADISON AVENUE MORRISTOWN, NJ 07960",
+        "category": "nursing-home",
+        "cmsCcn": "315488",
+        "id": "cms-315488",
+        "name": "CAREONE AT MADISON AVENUE"
+      },
+      {
+        "address": "175 SOUTH STREET",
+        "category": "home-health",
+        "cmsCcn": "317002",
+        "id": "cms-317002",
+        "name": "VISITING NURSE ASSOC OF NORTHERN NEW JERSEY, INC"
+      },
+      {
+        "address": "465 SOUTH STREET, SUITE 100",
+        "category": "home-health",
+        "cmsCcn": "317054",
+        "id": "cms-317054",
+        "name": "ATLANTIC VISITING NURSE"
+      },
+      {
+        "address": "95 MT KEMBLE AVENUE MORRISTOWN, NJ 07960",
+        "category": "nursing-home",
+        "cmsCcn": null,
+        "id": "north-jersey-doh-nj11404",
+        "name": "ATLANTIC REHABILITATION INSTITUTE"
+      },
+      {
+        "address": "17 SPRING PLACE MORRISTOWN, NJ 07960",
+        "category": "assisted-living",
+        "cmsCcn": null,
+        "id": "north-jersey-doh-nj60a005",
+        "name": "SPRING HILLS AT MORRISTOWN"
+      },
+      {
+        "address": "32 MAPLE AVENUE,1ST FL",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0015347",
+        "name": "BAYADA HOME HEALTH CARE, INC."
+      },
+      {
+        "address": "175 SOUTH STREET",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0104000",
+        "name": "VNANNJ AFFILIATED HEALTH SERVICES, INC."
+      },
+      {
+        "address": "25 Miller St",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0281500",
+        "name": "VITACARE SUPPORT LLC"
+      },
+      {
+        "address": "58 Ketch Road",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0328100",
+        "name": "COSMED AT HOME LLC"
+      },
+      {
+        "address": "11 UPPERFIELD ROAD",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0398400",
+        "name": "WELLPATH HOME HEALTH SERVICES LLC"
+      },
+      {
+        "address": "55 Madison Avenue, Suite 400",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0408100",
+        "name": "Comfort Care NJ LLC"
+      },
+      {
+        "address": "55 Madison Ave Ste 400",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0413400",
+        "name": "Live Easy Home Care Morristown LLC"
+      },
+      {
+        "address": "15 Wychwood Rd",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0414500",
+        "name": "CSS Morris, LLC"
+      }
+    ]
+  },
+  "inspectionFacilities": 139,
+  "inspectionTotals": {
+    "healthCitations": 3256,
+    "penalties": 107
+  },
+  "ledgerReasons": {
+    "clinical_detail_outside_runtime_contract": 6,
+    "no_exact_runtime_care_category": 92,
+    "no_unique_exact_nursing_unit_address_match": 14,
+    "not_certified": 37,
+    "office_address_or_zip_missing": 1,
+    "office_county_not_verified": 59,
+    "office_outside_selected_counties": 20,
+    "outside_selected_counties": 540,
+    "registration_not_active": 832,
+    "registration_outside_retained_county_scope": 2046,
+    "service_coverage_is_not_an_office_location": 1246
+  },
+  "providerCount": 974,
+  "publishedHomeHealthOffices": 18,
+  "verifiedHomeHealthOfficeInputs": 18
+}
