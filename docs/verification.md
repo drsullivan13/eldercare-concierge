@@ -5,7 +5,7 @@ The current user flow is landing → browser-local workspace without sign-in →
 ## Latest check results · November 12, 2026
 
 - Production build and ESLint: pass.
-- 59 data, scoring, input-validation and actual local SQL tests: pass.
+- 102 data, scoring, import, collection, worker-ticket, input-validation and actual local SQL tests: pass.
 - 34 desktop/mobile browser scenarios: pass, including direct entry without sign-in, old account URLs redirecting to the local workspace, real evidence, save/reload, research filters, review scores, pricing periods, future effective dates and failed-request recovery.
 - Eight additional research-tab accessibility states: no violations returned. The close control remains visible after scrolling long details; desktop and mobile screenshots were visually reviewed.
 - Twelve public/dashboard accessibility checks plus eight scrolled evidence, comparison and map states: no violations returned after contrast fixes.
@@ -54,8 +54,24 @@ A deployment-scoped runtime scan at 10:52 UTC returned no error/fatal logs in th
 
 `scripts/check-hosted.mjs` repeats the hosted smoke test when supplied an authorized preview URL through `HARBOR_PREVIEW_URL`. It uses the browser's actual network path and deployment-access cookie. Its local report stores only the app origin and results, not the share URL or cookies. A Vercel share link grants temporary preview access; it is separate from the deferred Harbor account flow.
 
-The dedicated Supabase project `harbor-eldercare-poc` has the workspace schema and owner policies applied. Live grants are restricted to authenticated SELECT/INSERT/UPDATE/DELETE, with no anonymous/PUBLIC table access. Security and performance advisors return no findings. Anonymous REST reads are denied. Only a URL and publishable key are configured; the app has no secret/service-role key.
+The dedicated Supabase project `harbor-eldercare-poc` has the workspace schema and owner policies applied. Workspace grants are restricted to authenticated SELECT/INSERT/UPDATE/DELETE, with no anonymous/PUBLIC table access. At the workspace setup check, security and performance advisors returned no findings. Anonymous workspace REST reads are denied. Only a URL and publishable key are configured in Vercel; the dashboard has no secret/service-role key. The separately deployed research worker uses its platform-injected server credential as described below.
 
 Accounts were intentionally deferred. Before activation, update the Supabase Site URL and allowed callback URLs: the current observed fallback is localhost. Keep confirmation enabled, configure an appropriate mail sender, and verify real signup/session/two-user isolation. None of those deferred steps is required to use the current browser-local POC. No test emails were sent.
 
 Deployment readiness, database access, signup email delivery and provider vetting are separate checks. A hosted demo alone does not establish that the others have been completed.
+
+## Research automation check · November 12, 2026
+
+The dedicated Supabase project has the private research schema, source registry, service-only RPCs and `research-collector` version 2 deployed. The registry contains 521 providers and 1,577 provider/source coverage rows. All 21 initial CMS jobs succeeded and produced 21 source snapshots with 21 pending review candidates. These are baseline observations for review, not 21 newly established changes to care quality.
+
+The worker verified that both Yelp secrets are configured without returning either value. The initial three-location evaluation used five requests: Brooksby matched exactly and its details endpoint worked; its reviews endpoint returned 404. The first two other match requests returned no listing. A subsequent address-format correction strips only an exact known town/state/ZIP suffix from a catalog street address. A bounded follow-up still returned no listing for Sunrise of Newton and Allerton House at Harbor Park, bringing total Yelp usage to seven requests. These outcomes do not establish missing reviews or poor care, and no Yelp review content is stored or scored.
+
+The scheduler itself dispatched the version 2 worker at 12:02 UTC during a temporary one-minute verification interval. Its HTTP response was 200: the CMS repeat returned `unchanged`, both Yelp follow-ups recorded their no-match outcomes, and snapshot/review-candidate counts remained 21. The schedule was then restored and verified as active every 15 minutes. CMS jobs repeat daily; the three Yelp evaluation sources do not. Both dispatch and worker outcomes were checked.
+
+The final authorization design uses operation-bound, single-use tickets with a two-minute lifetime. Both authenticated status and run invocations returned HTTP 200 and consumed their tickets. An unauthenticated call and a fabricated ticket both returned 401. Anonymous REST requests to the `net` and `harbor_research` schemas returned 406 (`PGRST106`); the private status RPC returned 401 (`42501`). Anonymous/authenticated database roles cannot read research data or tickets, consume tickets, or invoke the worker. The server role can consume but cannot mint tickets.
+
+Hosted `pg_net` queue grants cannot be revoked by the project role. The earlier reusable invocation token was removed after replacing it with tickets; neither Yelp credentials nor a project-wide API key passes through that queue. The remaining brief ticket-race risk is documented in the automation guide. Security advisors returned no findings; live privilege checks identified the platform constraint. A performance check identified eight uncovered foreign keys, now indexed in `research-indexes.sql`. New, lightly used indexes may still be reported as unused; that is not a load-test result.
+
+Production compilation, ESLint, all 102 tests and the pinned Deno type check passed. Eight new PostgreSQL ticket tests cover roles, expiry, replay, operation binding, atomic consumption, pruning and rollback with a mocked transport. The rest of the database pipeline tests cover leases, budgets, snapshot hashes and rollback. No UI component changed in this release; the 34 browser scenarios above are the preceding application check, not a fresh run for this backend change.
+
+The Facebook pilot was read from commit `8b9f8eb7` without merging the research branch. Three deterministic coverage-format corrections allowed private staging. All 71 observations remain review-pending and score-ineligible. The [pilot review](facebook-pilot-review.md) records the counts, source/unit inconsistencies, related-event grouping, hashes and corrections. No Facebook sources were independently revisited during this metadata/import review.

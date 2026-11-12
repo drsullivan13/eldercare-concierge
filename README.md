@@ -19,8 +19,12 @@ A Greater Boston elder-care research and coordination proof of concept. Families
 - Research filters, category-specific consumer-score sorting, and separate Life here, Rooms & costs, Availability and Reviews tabs.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
 - A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
+- A private research collection service with a 521-record registry, source coverage, daily CMS checks, retries, request budgets and a review queue. A bounded Yelp evaluation checks listing identity and API access without retaining review content.
+- A strict CSV importer for Facebook research batches. The first 71-observation pilot is privately staged for review; it has not changed public evidence or scores.
 
 Published offerings and consumer reviews are a research snapshot. Current vacancies and personalized prices still require confirmation. Individual caregivers have not been vetted, reference checks have not been completed, and no automated social-review feeds are connected. The consumer experience index summarizes eligible published ratings; clinical and regulatory evidence remains separate. See [location research coverage](docs/location-research.md) and [the score policy](docs/experience-score.md).
+
+Collection setup and operating queries are in [research automation](docs/research-automation.md). Read [the Facebook pilot review](docs/facebook-pilot-review.md) before using that batch, and [data access](docs/data-access.md) for the requirements and inquiry draft for licensed review analysis.
 
 ## Run locally
 
@@ -102,6 +106,8 @@ For E2E tests, start the production server first, or use `PLAYWRIGHT_START_SERVE
 - `src/hooks/use-workspace.ts`: separate local-demo and cloud persistence paths.
 - `src/app/api/workspace/`: authenticated workspace reads/writes.
 - `supabase/schema.sql`: database setup and owner policies, applied to the dedicated Harbor project.
+- `supabase/research-*.sql` and `supabase/functions/`: private collection queue, single-use worker authentication, CMS collector and Yelp capability checks.
+- `scripts/import-research.ts`: dry-run validation and optional private staging of research-kit CSVs.
 - `tests/`: data, security-boundary and browser-flow tests.
 
 ## Current boundaries
