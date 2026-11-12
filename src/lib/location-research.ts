@@ -1,5 +1,8 @@
 import { getProviderMarket, markets, type MarketRegistry } from "./markets";
-import { computeExperienceScore } from "./experience-score";
+import {
+  computeExperienceScore,
+  type ExperienceSummary,
+} from "./experience-score";
 import { getFacebookResearch, getFacebookSummary } from "./facebook-research";
 import type {
   LocationResearch,
@@ -15,13 +18,30 @@ export class ResearchInputError extends Error {
     super(message);
   }
 }
-export function getLocationResearch(
-  providerId: string,
-  asOfDate = new Date().toISOString().slice(0, 10),
-  registry: MarketRegistry = markets,
-): LocationResearchResponse {
+function validateProviderId(providerId: string): void {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(providerId) || providerId.length > 150)
     throw new ResearchInputError("Supply one exact provider ID.");
+}
+
+function scoreLocation(
+  record: LocationResearch,
+  asOfDate = new Date().toISOString().slice(0, 10),
+): ExperienceSummary {
+  const { sources, reviewAggregates, reviews } = record;
+  return computeExperienceScore({
+    sources,
+    reviewAggregates,
+    reviews,
+    asOfDate,
+  });
+}
+
+export function getLocationResearch(
+  providerId: string,
+  asOfDate?: string,
+  registry: MarketRegistry = markets,
+): LocationResearchResponse {
+  validateProviderId(providerId);
   const market = getProviderMarket(providerId, registry);
   if (!market)
     throw new ResearchInputError("No catalog provider matches this ID.", 404);
@@ -50,12 +70,7 @@ export function getLocationResearch(
   return {
     ...record,
     facebookResearch: getFacebookResearch(providerId, registry),
-    experience: computeExperienceScore({
-      sources: record.sources,
-      reviewAggregates: record.reviewAggregates,
-      reviews: record.reviews,
-      asOfDate,
-    }),
+    experience: scoreLocation(record, asOfDate),
   };
 }
 export function getResearchSummary(
@@ -80,9 +95,10 @@ export function getResearchSummary(
       },
     };
   }
-  const record = getLocationResearch(providerId, undefined, registry);
+  validateProviderId(providerId);
+  const record = records[providerId];
   const { value, reviewCount, confidence, independentSourceCount } =
-    record.experience;
+    scoreLocation(record);
   const source = record.sources.find(
     (s) => s.id === record.availability.sourceId,
   );

@@ -1,12 +1,9 @@
 import { chromium } from "@playwright/test";
+import { chromiumLaunchOptions } from "./lib/chromium.mjs";
 import AxeBuilder from "@axe-core/playwright";
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
 const base = process.env.BASE_URL || "http://localhost:3000";
-const browser = await chromium.launch({
-  executablePath:
-    process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
-    (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
-});
+const browser = await chromium.launch(chromiumLaunchOptions);
 const context = await browser.newContext({
   viewport: { width: 1440, height: 1000 },
 });

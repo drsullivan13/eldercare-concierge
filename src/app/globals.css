@@ -984,39 +984,6 @@ em {
 .side-nav button.active b {
   background: #bed2b3;
 }
-.sidebar-note {
-  margin-top: auto;
-  margin-bottom: 25px;
-  padding: 20px 14px;
-  background: #29473b;
-  border: 1px solid #3a5746;
-  border-radius: 8px;
-}
-.sidebar-note-mark {
-  color: #b5c6a0;
-  margin-bottom: 14px;
-}
-.sidebar-note h3 {
-  font-family: var(--serif);
-  font-size: 20px;
-  color: #e4ecda;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-}
-.sidebar-note p {
-  font-size: 10px;
-  color: #9db09e;
-  line-height: 1.8;
-  margin: 12px 0 14px;
-}
-.sidebar-note button {
-  font-size: 10px;
-  color: #c7d9b6;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0;
-}
 .sidebar-bottom {
   margin-top: 12px;
 }
@@ -1168,14 +1135,6 @@ em {
   font-size: 11px;
   color: #8b9681;
   margin-top: 15px;
-}
-.page-heading .export-button {
-  align-self: flex-start;
-  margin-top: 31px;
-  font-size: 10px;
-  min-height: 37px;
-  padding: 10px 13px;
-  background: #fbfcf7;
 }
 .page-heading.compact h1 {
   font-size: 38px;
@@ -2647,15 +2606,6 @@ em {
   .auth-story .eyebrow {
     font-size: 8px;
   }
-  .sidebar-note {
-    padding: 16px 12px;
-  }
-  .sidebar-note h3 {
-    font-size: 18px;
-  }
-  .sidebar-note p {
-    font-size: 9px;
-  }
 }
 @media (max-width: 760px) {
   .landing-nav {
@@ -2843,15 +2793,6 @@ em {
   .sidebar > .brand {
     font-size: 32px;
   }
-  .sidebar-note {
-    padding: 20px 14px;
-  }
-  .sidebar-note h3 {
-    font-size: 21px;
-  }
-  .sidebar-note p {
-    font-size: 10px;
-  }
   .profile-button {
     width: calc(100% + 46px);
     margin-left: -23px;
@@ -2940,16 +2881,6 @@ em {
     font-size: 8px;
     letter-spacing: 1px;
     margin-bottom: 10px;
-  }
-  .page-heading .export-button {
-    margin-top: 20px;
-    font-size: 8px;
-    padding: 9px 10px;
-    min-height: 33px;
-    gap: 6px;
-  }
-  .page-heading .export-button svg {
-    width: 13px;
   }
   .page-heading.compact h1 {
     font-size: 34px;
@@ -3391,9 +3322,6 @@ em {
   .quick-search .button {
     width: 100%;
   }
-  .page-heading .export-button {
-    display: none;
-  }
   .plan-summary {
     gap: 17px;
   }
@@ -3481,13 +3409,6 @@ em {
 .workspace-picker > div span,
 .profile-button strong {
   font-size: 10px;
-}
-.sidebar-note p {
-  color: #c1cfb9;
-  font-size: 11px;
-}
-.sidebar-note button {
-  font-size: 11px;
 }
 .sidebar-bottom > span {
   color: #b6c8aa;

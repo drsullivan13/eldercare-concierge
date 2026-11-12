@@ -14,9 +14,21 @@ import {
 } from "lucide-react";
 import {
   CATEGORY_LABELS,
+  type CareCategory,
   type Provider,
   type SearchProvider,
 } from "@/lib/providers";
+const categoryServices: Partial<Record<CareCategory, string[]>> = {
+  "nursing-home": [
+    "Nursing facility",
+    "LONG TERM CARE FACILITY",
+    "LONG TERM CARE FACILITY SNF/NF",
+  ],
+  "assisted-living": ["Assisted living", "ASSISTED LIVING RESIDENCE"],
+  "home-health": ["Skilled home health"],
+  staffing: ["Staffing"],
+};
+
 export function ProviderIcon({
   provider,
   size = 21,
@@ -24,22 +36,12 @@ export function ProviderIcon({
   provider: Provider;
   size?: number;
 }) {
-  return provider.category === "home-care" ||
-    provider.category === "staffing" ? (
-    <HeartHandshake size={size} />
-  ) : provider.category === "home-health" ? (
-    <Hospital size={size} />
-  ) : (
-    <Building2 size={size} />
-  );
+  if (provider.category === "home-care" || provider.category === "staffing")
+    return <HeartHandshake size={size} />;
+  if (provider.category === "home-health") return <Hospital size={size} />;
+  return <Building2 size={size} />;
 }
-function Rating({
-  value,
-  label = "CMS overall",
-}: {
-  value: number | null;
-  label?: string;
-}) {
+function Rating({ value }: { value: number | null }) {
   return (
     <span className="rating">
       <span className="rating-stars" aria-hidden="true">
@@ -53,7 +55,7 @@ function Rating({
         ))}
       </span>
       <strong>{value === null ? "Not rated" : `${value}/5`}</strong>
-      <span>{label}</span>
+      <span>CMS overall</span>
     </span>
   );
 }
@@ -90,8 +92,10 @@ export function ProviderCard({
   compare?: boolean;
   onCompare?: () => void;
 }) {
-  const alerts = providerCareAlerts(provider);
   const research = provider.research;
+  const alerts = new Set<string>();
+  if (research?.admissionRestriction) alerts.add(research.admissionRestriction);
+  for (const alert of providerCareAlerts(provider)) alerts.add(alert);
   const availability =
     research?.availabilityStatus === "opening-published"
       ? "Openings listed · confirm"
@@ -103,12 +107,7 @@ export function ProviderCard({
     ...(research?.publishedCosts ? ["Published costs"] : []),
     ...(research?.facebookResearch?.findingCount ? ["Facebook findings"] : []),
     ...provider.services.filter(
-      (service) =>
-        ![
-          "Nursing facility",
-          "Assisted living",
-          "Skilled home health",
-        ].includes(service),
+      (service) => !categoryServices[provider.category]?.includes(service),
     ),
   ].slice(0, 3);
   return (
@@ -200,20 +199,14 @@ export function ProviderCard({
           ))}
         </div>
       )}
-      {research?.admissionRestriction && (
-        <div className="provider-alert">
-          <ShieldAlert size={16} aria-hidden="true" />
-          <span>{research.admissionRestriction}</span>
-        </div>
-      )}
-      {alerts.map((alert) => (
+      {[...alerts].map((alert) => (
         <div className="provider-alert" key={alert}>
           <ShieldAlert size={16} aria-hidden="true" />
           <span>{alert}</span>
         </div>
       ))}
       <div className="provider-footer">
-        {onCompare ? (
+        {onCompare && (
           <label className="compare-check">
             <input
               type="checkbox"
@@ -222,8 +215,6 @@ export function ProviderCard({
             />
             <span>{compare ? <Check size={12} /> : null}</span>Compare
           </label>
-        ) : (
-          <span />
         )}
         <button className="text-link" onClick={onOpen}>
           View details <ArrowUpRight size={15} />

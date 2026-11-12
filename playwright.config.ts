@@ -1,9 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
-import { existsSync } from 'node:fs';
+import { chromiumLaunchOptions } from './scripts/lib/chromium.mjs';
 
 const baseURL = process.env.PLAYWRIGHT_BASE_URL || 'http://127.0.0.1:3000';
-const systemChromium = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
-  (existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : undefined);
 
 export default defineConfig({
   testDir: './tests/e2e',
@@ -19,7 +17,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'off',
-    launchOptions: { executablePath: systemChromium },
+    launchOptions: chromiumLaunchOptions,
     reducedMotion: 'reduce',
   },
   projects: [

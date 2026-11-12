@@ -1,9 +1,10 @@
 import { chromium, expect } from "@playwright/test";
+import { chromiumLaunchOptions } from "./lib/chromium.mjs";
 import AxeBuilder from "@axe-core/playwright";
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const base = process.env.BASE_URL || "http://localhost:3000";
-const browser = await chromium.launch();
+const browser = await chromium.launch(chromiumLaunchOptions);
 const reports = [];
 mkdirSync("artifacts", { recursive: true });
 mkdirSync("docs/screenshots", { recursive: true });

@@ -177,8 +177,11 @@ function WorkspaceDashboard({
     )
       return;
     if (!demo) {
-      const { error } = await createClient().auth.signOut();
-      if (error) {
+      try {
+        const supabase = await createClient();
+        const { error } = await supabase.auth.signOut();
+        if (error) throw error;
+      } catch {
         setError("Could not sign out. Please try again.");
         return;
       }

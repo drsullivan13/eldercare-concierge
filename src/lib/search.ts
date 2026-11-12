@@ -148,10 +148,10 @@ export function searchProviders(
     facebookCovered: 0,
   };
   let excludedWithoutCoordinates = 0;
-  const scopedRecords = (records ?? market.providers).filter(
-    (provider) => provider.state === market.state,
-  );
-  for (const provider of scopedRecords) {
+  let catalogTotal = 0;
+  for (const provider of records ?? market.providers) {
+    if (provider.state !== market.state) continue;
+    catalogTotal++;
     if (
       query &&
       !`${provider.name} ${provider.city}`
@@ -208,21 +208,24 @@ export function searchProviders(
     a.distanceMiles! - b.distanceMiles! ||
     a.name.localeCompare(b.name, "en", { sensitivity: "base" }) ||
     a.id.localeCompare(b.id, "en");
-  providers.sort((a, b) =>
-    sort === "cms-rating"
-      ? (b.cms?.overall ?? -1) - (a.cms?.overall ?? -1) || byDistanceName(a, b)
-      : sort === "experience"
-        ? (b.research?.experience.value ?? -1) -
-            (a.research?.experience.value ?? -1) || byDistanceName(a, b)
-        : byDistanceName(a, b),
-  );
+  providers.sort((a, b) => {
+    let ratingDifference = 0;
+    if (sort === "cms-rating") {
+      ratingDifference = (b.cms?.overall ?? -1) - (a.cms?.overall ?? -1);
+    } else if (sort === "experience") {
+      ratingDifference =
+        (b.research?.experience.value ?? -1) -
+        (a.research?.experience.value ?? -1);
+    }
+    return ratingDifference || byDistanceName(a, b);
+  });
   return {
     market: marketIdentity(market),
     providers,
     total: providers.length,
     origin: { zip, ...point },
     radius,
-    catalogTotal: scopedRecords.length,
+    catalogTotal,
     asOf: market.meta.asOf,
     categories,
     excludedWithoutCoordinates,

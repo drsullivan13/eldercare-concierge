@@ -26,6 +26,11 @@ const CareMap = dynamic(() => import("../care-map"), {
   ),
 });
 
+const careCategories = Object.entries({
+  all: "All care options",
+  ...CATEGORY_LABELS,
+});
+
 export function CareSearchView({
   search,
   submit,
@@ -51,9 +56,6 @@ export function CareSearchView({
           <h1>
             Find care <em>nearby.</em>
           </h1>
-          <p>
-            Explore your options and save the ones you want to know more about.
-          </p>
         </div>
       </div>
       <form
@@ -108,15 +110,8 @@ export function CareSearchView({
           Search <ArrowRight size={16} />
         </button>
       </form>
-      <div className="category-tabs" aria-label="Care category">
-        <button
-          className={draft.category === "all" ? "active" : ""}
-          aria-pressed={draft.category === "all"}
-          onClick={() => changeCategory("all")}
-        >
-          All care options
-        </button>
-        {Object.entries(CATEGORY_LABELS).map(([id, label]) => (
+      <div className="category-tabs" role="group" aria-label="Care category">
+        {careCategories.map(([id, label]) => (
           <button
             key={id}
             className={draft.category === id ? "active" : ""}
@@ -171,7 +166,7 @@ export function CareSearchView({
             >
               <option value="distance">Distance</option>
               {draft.category !== "all" && (
-                <option value="experience">Consumer experience index</option>
+                <option value="experience">Experience score</option>
               )}
               {draft.category === "nursing-home" && (
                 <option value="cms-rating">CMS overall rating</option>

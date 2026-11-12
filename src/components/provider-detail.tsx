@@ -117,6 +117,16 @@ export function ProviderDetail({
         <details className="detail-disclosure provider-background">
           <summary>About this provider & research notes</summary>
           <p className="detail-description">{provider.description}</p>
+          {provider.services.length > 0 && (
+            <>
+              <h4>Listed services and care settings</h4>
+              <ul className="provider-research-notes">
+                {provider.services.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+            </>
+          )}
           {provider.serviceArea && (
             <div className="inline-notice">
               <strong>Service area reported by the provider</strong>

@@ -5,10 +5,7 @@ import {
 export function GET(request: Request) {
   try {
     const params = new URL(request.url).searchParams;
-    if (
-      params.getAll("id").length !== 1 ||
-      [...params.keys()].some((k) => k !== "id")
-    )
+    if (params.size !== 1 || !params.has("id"))
       throw new ResearchInputError("Supply one provider ID using id.");
     return Response.json(getLocationResearch(params.get("id")!), {
       headers: { "Cache-Control": "public, max-age=300" },

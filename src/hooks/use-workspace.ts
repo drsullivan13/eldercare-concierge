@@ -91,7 +91,7 @@ export function useWorkspace(demo: boolean) {
           router.replace("/signup");
           return;
         }
-        const supabase = createClient();
+        const supabase = await createClient();
         const {
           data: { user },
           error: authError,

@@ -6,10 +6,7 @@ import {
 export function GET(request: Request) {
   try {
     const params = new URL(request.url).searchParams;
-    if (
-      params.getAll("providerId").length !== 1 ||
-      [...params.keys()].some((key) => key !== "providerId")
-    ) {
+    if (params.size !== 1 || !params.has("providerId")) {
       throw new HomeHealthEvidenceError(
         "Supply exactly one catalog providerId and no CCN or other selectors.",
       );

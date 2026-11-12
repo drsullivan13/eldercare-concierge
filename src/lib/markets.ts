@@ -118,11 +118,21 @@ export const markets = createMarketRegistry([
   ...(regionalMarkets as unknown as MarketSnapshot[]),
 ]);
 
+// Bundled snapshots are fixed for the lifetime of this module. Callers that
+// supply their own registry still resolve against its current contents.
+const publishedProviderMarkets = new Map<string, MarketSnapshot>();
+for (const market of markets) {
+  for (const provider of market.providers) {
+    publishedProviderMarkets.set(provider.id, market);
+  }
+}
+
 export function getMarket(id = legacyMarket.id, registry = markets) {
   return registry.find((market) => market.id === id);
 }
 
 export function getProviderMarket(providerId: string, registry = markets) {
+  if (registry === markets) return publishedProviderMarkets.get(providerId);
   return registry.find((market) =>
     market.providers.some(
       (provider) =>

@@ -1,16 +1,13 @@
 import { chromium, expect } from "@playwright/test";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { chromiumLaunchOptions } from "./lib/chromium.mjs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 // Use a Vercel-authorized share URL when the deployment is protected. The URL
 // stays in this process; neither the share value nor cookies enter the report.
 const entry = process.env.HARBOR_PREVIEW_URL;
 if (!entry)
   throw new Error("Set HARBOR_PREVIEW_URL to the authorized preview URL.");
-const browser = await chromium.launch({
-  executablePath:
-    process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
-    (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
-});
+const browser = await chromium.launch(chromiumLaunchOptions);
 const context = await browser.newContext({
   viewport: { width: 1440, height: 1000 },
   reducedMotion: "reduce",

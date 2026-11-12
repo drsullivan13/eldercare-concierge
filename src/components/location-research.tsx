@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useId, useState } from "react";
+import { useId, useState } from "react";
+import { useProviderEvidence } from "@/hooks/use-provider-evidence";
 import {
   CalendarClock,
   Check,
@@ -91,6 +92,14 @@ function Facts({
   );
 }
 
+const source = {
+  path: "/api/research",
+  idParameter: "id",
+  unavailable: "The location research could not be loaded.",
+  mismatched: "The research did not match this location.",
+  fallback: "Research is unavailable.",
+};
+
 export function LocationResearch({
   providerId,
   providerName,
@@ -102,44 +111,10 @@ export function LocationResearch({
 }) {
   const uid = useId();
   const [tab, setTab] = useState<Tab>("life");
-  const [attempt, setAttempt] = useState(0);
   const [taskAdded, setTaskAdded] = useState(false);
   const [familyOnly, setFamilyOnly] = useState(false);
-  const [state, setState] = useState<{
-    key: string;
-    data?: LocationResearchResponse;
-    error?: string;
-  }>({ key: "" });
-  const key = `${providerId}:${attempt}`;
-  const data = state.key === key ? state.data : undefined;
-  useEffect(() => {
-    const controller = new AbortController();
-    async function load() {
-      try {
-        const response = await fetch(
-          `/api/research?${new URLSearchParams({ id: providerId })}`,
-          { signal: controller.signal },
-        );
-        if (!response.ok)
-          throw new Error("The location research could not be loaded.");
-        const result = (await response.json()) as LocationResearchResponse;
-        if (result.providerId !== providerId)
-          throw new Error("The research did not match this location.");
-        if (!controller.signal.aborted) setState({ key, data: result });
-      } catch (error) {
-        if (!controller.signal.aborted)
-          setState({
-            key,
-            error:
-              error instanceof Error
-                ? error.message
-                : "Research is unavailable.",
-          });
-      }
-    }
-    void load();
-    return () => controller.abort();
-  }, [providerId, key]);
+  const { data, error, loading, retry } =
+    useProviderEvidence<LocationResearchResponse>(providerId, source);
   const facts = (kinds: OfferingFact["kind"][]) =>
     data?.facts.filter((f) => kinds.includes(f.kind)) ?? [];
   const availabilitySource = data?.sources.find(
@@ -161,18 +136,15 @@ export function LocationResearch({
           <span>Research checked {date(data.checkedAt)}</span>
         )}
       </div>
-      {state.key !== key && (
+      {loading && (
         <p role="status" className="small muted">
           Loading offerings, availability and review evidence…
         </p>
       )}
-      {state.key === key && state.error && (
+      {error && (
         <div role="alert">
-          <p>{state.error}</p>
-          <button
-            className="button button-outline"
-            onClick={() => setAttempt((v) => v + 1)}
-          >
+          <p>{error}</p>
+          <button className="button button-outline" onClick={retry}>
             Retry location research
           </button>
         </div>

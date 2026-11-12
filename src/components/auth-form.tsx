@@ -28,7 +28,7 @@ export function AuthForm({
     setError("");
     setBusy(true);
     try {
-      const supabase = createClient();
+      const supabase = await createClient();
       if (signup) {
         const { data, error } = await supabase.auth.signUp({
           email: email.trim(),

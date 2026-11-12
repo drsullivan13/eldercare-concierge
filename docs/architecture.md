@@ -21,9 +21,9 @@ flowchart LR
 
 The modules under `src/components/dashboard/` own search, overview, shortlist, plan and dialogs. Search request state lives in `use-care-search`; it separates form edits from submitted filters and cancels superseded requests. `use-saved-providers` resolves the shortlist's IDs to current catalog records. The workspace remains the source of truth for saved IDs and notes when that lookup is loading or fails.
 
-`use-workspace` validates every change before storing it. A failed browser write does not claim a save succeeded. Account-backed persistence is retained behind the existing feature flag; it has separate server-side identity checks and row-level access controls.
+`use-workspace` validates every change before storing it. A failed browser write does not claim a save succeeded. The browser loads the Supabase SDK when a cloud account action requests a client. Account-backed persistence has separate server-side identity checks and row-level access controls.
 
-Provider cards show the information needed to choose which options to investigate. Details expose source-linked offerings, costs, availability, consumer reviews, Facebook findings and applicable CMS evidence. Supporting methodology and provenance use disclosures; material care warnings remain visible.
+Provider cards show the information needed to choose which options to investigate. Details expose source-linked offerings, costs, availability, consumer reviews, Facebook findings and applicable CMS evidence. Location research and home-health panels share a request hook that checks the returned provider ID, cancels superseded requests and supports retry. The provider detail disclosure preserves the complete list of source-reported services. Material care warnings remain visible on cards.
 
 ## Search and evidence
 
@@ -38,7 +38,7 @@ Provider cards show the information needed to choose which options to investigat
 | `src/lib/research-coverage.ts` | Produces a complete catalog checklist with missing-score reasons and a spreadsheet-safe CSV export.                                                       |
 | `src/lib/workspace.ts`         | Validates the complete plan and its limits; callers do not bypass that validation.                                                                        |
 
-The route handlers under `src/app/api/` validate request shape and delegate to these modules. They are intentionally small. Score freshness is assessed using the current UTC date; a process-lifetime cache would silently retain scores after their sources expire.
+The route handlers under `src/app/api/` validate request shape and delegate to these modules. They are intentionally small. The published registry indexes stable provider IDs once for search and coverage lookups. The scorer evaluates freshness against the requested date, defaulting to the current UTC date.
 
 ## Research collection and publication
 

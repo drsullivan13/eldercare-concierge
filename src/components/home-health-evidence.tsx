@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useId } from "react";
+import { useProviderEvidence } from "@/hooks/use-provider-evidence";
 import { ExternalLink, MessageSquare, Activity } from "lucide-react";
 import type { HomeHealthEvidenceResponse } from "@/lib/home-health";
 
@@ -47,59 +48,27 @@ function PublishedValue({
   );
 }
 
+const source = {
+  path: "/api/home-health-evidence",
+  idParameter: "providerId",
+  unavailable: "The published home-health snapshot could not be loaded.",
+  notFound:
+    "No matched CMS home-health evidence is available for this organization in our snapshot.",
+  mismatched: "The evidence response did not match this organization.",
+  fallback: "The home-health snapshot could not be loaded.",
+};
+
 export function HomeHealthEvidence({ providerId }: { providerId: string }) {
   const headingId = useId();
-  const [attempt, setAttempt] = useState(0);
-  const [state, setState] = useState<{
-    key: string;
-    data?: HomeHealthEvidenceResponse;
-    error?: string;
-  }>({ key: "" });
-  const key = `${providerId}:${attempt}`;
-  const data = state.key === key ? state.data : undefined;
-  const error = state.key === key ? state.error : undefined;
-
-  useEffect(() => {
-    const controller = new AbortController();
-    async function load() {
-      try {
-        const response = await fetch(
-          `/api/home-health-evidence?${new URLSearchParams({ providerId })}`,
-          { signal: controller.signal },
-        );
-        if (!response.ok)
-          throw new Error(
-            response.status === 404
-              ? "No matched CMS home-health evidence is available for this organization in our snapshot."
-              : "The published home-health snapshot could not be loaded.",
-          );
-        const evidence = (await response.json()) as HomeHealthEvidenceResponse;
-        if (evidence.providerId !== providerId)
-          throw new Error(
-            "The evidence response did not match this organization.",
-          );
-        if (!controller.signal.aborted) setState({ key, data: evidence });
-      } catch (reason) {
-        if (!controller.signal.aborted)
-          setState({
-            key,
-            error:
-              reason instanceof Error
-                ? reason.message
-                : "The home-health snapshot could not be loaded.",
-          });
-      }
-    }
-    void load();
-    return () => controller.abort();
-  }, [providerId, key]);
+  const { data, error, loading, retry } =
+    useProviderEvidence<HomeHealthEvidenceResponse>(providerId, source);
 
   return (
     <section className="home-health-evidence" aria-labelledby={headingId}>
       <div className="section-title">
         <h3 id={headingId}>Home-health quality & patient experience</h3>
       </div>
-      {state.key !== key && (
+      {loading && (
         <p className="small muted" role="status">
           Loading the published CMS home-health snapshot…
         </p>
@@ -110,7 +79,7 @@ export function HomeHealthEvidence({ providerId }: { providerId: string }) {
           <button
             type="button"
             className="button button-outline"
-            onClick={() => setAttempt((value) => value + 1)}
+            onClick={retry}
           >
             Try again
           </button>

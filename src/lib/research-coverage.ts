@@ -28,6 +28,26 @@ type ResearchCoverageRow = {
   nextAction: string;
 };
 
+const nextActionByStatus: Record<CoverageStatus, string> = {
+  scored:
+    "Add independent sources and dated resident/family context; check for duplicates.",
+  "too-few-reviews":
+    "Find additional exact-location published rating averages and counts; at least 10 eligible reviews are needed.",
+  "source-check-needed":
+    "Inspect the original rating page, confirm the exact care unit, population, count and date; resolve the recorded exclusions.",
+  "no-rating-evidence":
+    "Find an exact-location public consumer rating average and review count. Record no result or access limits honestly.",
+};
+
+function coverageStatus(
+  research: ReturnType<typeof getLocationResearch> | undefined,
+): CoverageStatus {
+  if (research?.experience.value != null) return "scored";
+  if (research && research.experience.reviewCount > 0) return "too-few-reviews";
+  if (research?.reviewAggregates.length) return "source-check-needed";
+  return "no-rating-evidence";
+}
+
 export function getResearchCoverage(
   asOfDate = new Date().toISOString().slice(0, 10),
   marketId = "massachusetts",
@@ -47,24 +67,11 @@ export function getResearchCoverage(
         Object.hasOwn(market.locationResearch, provider.id)
           ? getLocationResearch(provider.id, asOfDate, registry)
           : undefined;
-      const facebook = getFacebookResearch(provider.id, registry);
+      const facebook = research
+        ? research.facebookResearch
+        : getFacebookResearch(provider.id, registry);
       const score = research?.experience;
-      const status: CoverageStatus =
-        score?.value != null
-          ? "scored"
-          : (score?.reviewCount ?? 0) > 0
-            ? "too-few-reviews"
-            : research?.reviewAggregates.length
-              ? "source-check-needed"
-              : "no-rating-evidence";
-      const nextAction =
-        status === "scored"
-          ? "Add independent sources and dated resident/family context; check for duplicates."
-          : status === "too-few-reviews"
-            ? "Find additional exact-location published rating averages and counts; at least 10 eligible reviews are needed."
-            : status === "source-check-needed"
-              ? "Inspect the original rating page, confirm the exact care unit, population, count and date; resolve the recorded exclusions."
-              : "Find an exact-location public consumer rating average and review count. Record no result or access limits honestly.";
+      const status = coverageStatus(research);
       return {
         providerId: provider.id,
         name: provider.name,
@@ -89,15 +96,16 @@ export function getResearchCoverage(
         facebookStatus: facebook?.status ?? "not-searched",
         facebookFindings: facebook?.findings.length ?? 0,
         facebookWithheldObservations: facebook?.withheldCount ?? 0,
-        nextAction,
+        nextAction: nextActionByStatus[status],
       };
     });
+  const scored = locations.filter((row) => row.score !== null).length;
   return {
     market: marketIdentity(market),
     asOfDate,
     total: locations.length,
-    scored: locations.filter((row) => row.score !== null).length,
-    unscored: locations.filter((row) => row.score === null).length,
+    scored,
+    unscored: locations.length - scored,
     facebookCovered: locations.filter(
       (row) => row.facebookStatus !== "not-searched",
     ).length,
