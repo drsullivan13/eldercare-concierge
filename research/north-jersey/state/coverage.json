@@ -1,0 +1,195 @@
+{
+  "counties": [
+    "Union",
+    "Morris",
+    "Essex",
+    "Bergen",
+    "Hudson",
+    "Passaic"
+  ],
+  "sources": {
+    "ltc": {
+      "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "file": "raw/ltc.xlsx",
+      "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716",
+      "retrieved_at": "2026-11-12T15:01:16.444870+00:00",
+      "http_last_modified": "Fri, 06 Nov 2026 18:16:17 GMT"
+    },
+    "firms": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null
+    },
+    "ccrc": {
+      "url": "https://www.nj.gov/dca/codes/publications/pdf_ccrc/ccrc2011.pdf",
+      "file": "raw/ccrc.pdf",
+      "sha256": "b751b7bddbfb349b8aca4f7459aba62e26ec5ae57348a55a5a2f0c89b5271153",
+      "retrieved_at": "2026-11-12T15:01:16.698914+00:00",
+      "http_last_modified": "Wed, 11 Oct 2023 17:53:42 GMT"
+    },
+    "municipalities": {
+      "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+      "file": "raw/municipalities.json",
+      "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+      "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+      "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+    },
+    "localities": {
+      "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+      "file": "raw/localities.html",
+      "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+      "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+      "http_last_modified": null
+    }
+  },
+  "statewide_ltc_source_rows": 894,
+  "statewide_ltc_type_counts": {
+    "ADULT DAY HEALTH SERVICES FACILITY": 160,
+    "ADULT DAY HEALTH SERVICES in a LONG-TERM CARE FACILITY": 6,
+    "ADULT DAY HEALTH SERVICES in an ASSISTED LIVING RESIDENCE": 1,
+    "ALTERNATE FAMILY CARE": 3,
+    "ASSISTED LIVING PROGRAM": 17,
+    "ASSISTED LIVING RESIDENCE": 256,
+    "COMPREHENSIVE PERSONAL CARE HOME": 32,
+    "HOSPITAL BASED - ADULT DAY HEALTH SERVICES": 1,
+    "HOSPITAL BASED - LONG TERM CARE FACILITY SNF/NF": 6,
+    "HOSPITAL BASED - LONG TERM CARE SUB ACUTE FACILITY SNF": 4,
+    "LONG TERM CARE FACILITY": 15,
+    "LONG TERM CARE FACILITY - HOME FOR THE AGED LTC-PRIV": 1,
+    "LONG TERM CARE FACILITY - HOME FOR THE AGED SNF/NF": 23,
+    "LONG TERM CARE FACILITY LTC-PRIV": 5,
+    "LONG TERM CARE FACILITY S/NF DP": 7,
+    "LONG TERM CARE FACILITY SNF/NF": 303,
+    "PEDIATRIC DAY HEALTH SERVICES FACILITY": 13,
+    "RESIDENTIAL DEMENTIA CARE HOME": 31,
+    "RESIDENTIAL HEALTH CARE in a LONG-TERM CARE FACILITY": 10
+  },
+  "statewide_firm_source_rows": 3623,
+  "statewide_firm_status_counts": {
+    "Active": 1673,
+    "Closed": 59,
+    "Expired": 1885,
+    "Expired.": 2,
+    "Inactive": 2,
+    "Revoked": 2
+  },
+  "unresolved_nj_firm_county_rows": 59,
+  "county_counts": {
+    "Union": {
+      "care_unit_rows": 12,
+      "care_unit_types": {
+        "ASSISTED LIVING PROGRAM": 1,
+        "ASSISTED LIVING RESIDENCE": 8,
+        "COMPREHENSIVE PERSONAL CARE HOME": 3
+      },
+      "historical_ccrc_campuses": 1,
+      "home_care_registration_rows": 260,
+      "home_care_unique_registration_ids": 259,
+      "home_care_status_counts": {
+        "Active": 117,
+        "Closed": 3,
+        "Expired": 140
+      },
+      "home_care_active_unique_registration_ids": 117
+    },
+    "Morris": {
+      "care_unit_rows": 30,
+      "care_unit_types": {
+        "ASSISTED LIVING RESIDENCE": 23,
+        "COMPREHENSIVE PERSONAL CARE HOME": 2,
+        "RESIDENTIAL DEMENTIA CARE HOME": 5
+      },
+      "historical_ccrc_campuses": 2,
+      "home_care_registration_rows": 139,
+      "home_care_unique_registration_ids": 138,
+      "home_care_status_counts": {
+        "Active": 61,
+        "Closed": 5,
+        "Expired": 73
+      },
+      "home_care_active_unique_registration_ids": 60
+    },
+    "Essex": {
+      "care_unit_rows": 21,
+      "care_unit_types": {
+        "ASSISTED LIVING PROGRAM": 1,
+        "ASSISTED LIVING RESIDENCE": 15,
+        "COMPREHENSIVE PERSONAL CARE HOME": 4,
+        "RESIDENTIAL DEMENTIA CARE HOME": 1
+      },
+      "historical_ccrc_campuses": 2,
+      "home_care_registration_rows": 473,
+      "home_care_unique_registration_ids": 471,
+      "home_care_status_counts": {
+        "Active": 210,
+        "Closed": 5,
+        "Expired": 258
+      },
+      "home_care_active_unique_registration_ids": 208
+    },
+    "Bergen": {
+      "care_unit_rows": 44,
+      "care_unit_types": {
+        "ASSISTED LIVING PROGRAM": 1,
+        "ASSISTED LIVING RESIDENCE": 28,
+        "COMPREHENSIVE PERSONAL CARE HOME": 3,
+        "RESIDENTIAL DEMENTIA CARE HOME": 12
+      },
+      "historical_ccrc_campuses": 0,
+      "home_care_registration_rows": 352,
+      "home_care_unique_registration_ids": 348,
+      "home_care_status_counts": {
+        "Active": 165,
+        "Closed": 6,
+        "Expired": 181
+      },
+      "home_care_active_unique_registration_ids": 161
+    },
+    "Hudson": {
+      "care_unit_rows": 2,
+      "care_unit_types": {
+        "ASSISTED LIVING RESIDENCE": 1,
+        "COMPREHENSIVE PERSONAL CARE HOME": 1
+      },
+      "historical_ccrc_campuses": 1,
+      "home_care_registration_rows": 164,
+      "home_care_unique_registration_ids": 160,
+      "home_care_status_counts": {
+        "Active": 74,
+        "Closed": 4,
+        "Expired": 84,
+        "Revoked": 2
+      },
+      "home_care_active_unique_registration_ids": 70
+    },
+    "Passaic": {
+      "care_unit_rows": 10,
+      "care_unit_types": {
+        "ASSISTED LIVING RESIDENCE": 10
+      },
+      "historical_ccrc_campuses": 1,
+      "home_care_registration_rows": 130,
+      "home_care_unique_registration_ids": 129,
+      "home_care_status_counts": {
+        "Active": 59,
+        "Closed": 1,
+        "Expired": 70
+      },
+      "home_care_active_unique_registration_ids": 58
+    }
+  },
+  "limitations": [
+    "DOH workbook is a listing, not a real-time license status check. Expiration does not establish status.",
+    "AL residences and programs do not establish memory care availability. Only residential dementia license type is explicit.",
+    "CCRC guide revision is January 2018, not its HTTP modification date or retrieval date. Current completeness is unknown.",
+    "No CCRC certificates or official IDs appear in the guide. Do not substitute DOH unit IDs for campus IDs.",
+    "Bergen has no entry in this historical guide. That is not evidence of no present-day CCRC campuses.",
+    "HP registry includes historical and duplicate registration rows. Rows are not brands or unique agencies.",
+    "Home-care county is derived from official municipality or locality names, not supplied by the firm registry.",
+    "Ambiguous names need city and ZIP support from DOH or remain unresolved. Postal geography can cross county boundaries.",
+    "Firm business location does not establish county service area, private-pay acceptance, availability, or Medicare certification.",
+    "All statuses are retained. Active in the portal can coexist with a past expiration date. Do not silently correct either."
+  ]
+}

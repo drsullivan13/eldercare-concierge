@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "expected_counties": [
+    "Union",
+    "Morris",
+    "Essex",
+    "Bergen",
+    "Hudson",
+    "Passaic"
+  ],
+  "counties": {
+    "Union": {
+      "live_rows": 12,
+      "exact_facility_id_set_match": true,
+      "field_disagreements": []
+    },
+    "Morris": {
+      "live_rows": 30,
+      "exact_facility_id_set_match": true,
+      "field_disagreements": []
+    },
+    "Essex": {
+      "live_rows": 21,
+      "exact_facility_id_set_match": true,
+      "field_disagreements": []
+    },
+    "Bergen": {
+      "live_rows": 44,
+      "exact_facility_id_set_match": true,
+      "field_disagreements": [
+        {
+          "official_facility_id": "NJ5A003",
+          "fields": [
+            "name"
+          ],
+          "workbook_name": "MONARCH PARAMUS (NJ5A003)",
+          "workbook_address": "567 PARAMUS ROAD \nPARAMUS, NJ 07652",
+          "live_name": "SUNRISE ASSISTED LIVING OF PARAMUS",
+          "live_row_text": "SUNRISE ASSISTED LIVING OF PARAMUS\n567 Paramus Road\nParamus, NJ 07652\n(201)493-9889\tAssisted Living Residence\tPrivate"
+        }
+      ]
+    },
+    "Hudson": {
+      "live_rows": 2,
+      "exact_facility_id_set_match": true,
+      "field_disagreements": []
+    },
+    "Passaic": {
+      "live_rows": 10,
+      "exact_facility_id_set_match": true,
+      "field_disagreements": []
+    }
+  }
+}
