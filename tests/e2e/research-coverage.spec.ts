@@ -46,9 +46,12 @@ test("research filters expose Facebook findings and score gaps, with a complete 
     .getByRole("link", { name: "Download catalog research checklist" })
     .click();
   expect((await download).suggestedFilename()).toMatch(
-    /^harbor-experience-research-\d{4}-\d{2}-\d{2}\.csv$/,
+    /^harbor-experience-research-massachusetts-\d{4}-\d{2}-\d{2}\.csv$/,
   );
-  const coverage = await (await request.get("/api/research-coverage")).json();
+  const coverage = await (
+    await request.get("/api/research-coverage?market=massachusetts")
+  ).json();
+  expect(coverage.market.id).toBe("massachusetts");
   expect(coverage.total).toBe(521);
   expect(coverage.scored + coverage.unscored).toBe(521);
   expect(coverage.facebookCovered).toBe(22);

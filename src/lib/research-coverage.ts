@@ -1,5 +1,11 @@
-import catalog from "@/data/providers.json";
+import {
+  getMarket,
+  marketIdentity,
+  markets,
+  type MarketRegistry,
+} from "./markets";
 import { getLocationResearch } from "./location-research";
+import { getFacebookResearch } from "./facebook-research";
 import type { CareCategory } from "./providers";
 
 type CoverageStatus =
@@ -24,55 +30,70 @@ type ResearchCoverageRow = {
 
 export function getResearchCoverage(
   asOfDate = new Date().toISOString().slice(0, 10),
+  marketId = "massachusetts",
+  registry: MarketRegistry = markets,
 ) {
-  const locations: ResearchCoverageRow[] = catalog.map((provider) => {
-    const research = getLocationResearch(provider.id, asOfDate);
-    const score = research.experience;
-    const status: CoverageStatus =
-      score.value !== null
-        ? "scored"
-        : score.reviewCount > 0
-          ? "too-few-reviews"
-          : research.reviewAggregates.length
-            ? "source-check-needed"
-            : "no-rating-evidence";
-    const nextAction =
-      status === "scored"
-        ? "Add independent sources and dated resident/family context; check for duplicates."
-        : status === "too-few-reviews"
-          ? "Find additional exact-location published rating averages and counts; at least 10 eligible reviews are needed."
-          : status === "source-check-needed"
-            ? "Inspect the original rating page, confirm the exact care unit, population, count and date; resolve the recorded exclusions."
-            : "Find an exact-location public consumer rating average and review count. Record no result or access limits honestly.";
-    return {
-      providerId: provider.id,
-      name: provider.name,
-      category: provider.category as CareCategory,
-      address: provider.address,
-      city: provider.city,
-      zip: provider.zip,
-      score: score.value,
-      status,
-      eligibleReviews: score.reviewCount,
-      sourceFamilies: score.independentSourceCount,
-      ratingSourceUrls: [
-        ...new Set(
-          research.reviewAggregates.flatMap((aggregate) => {
-            const source = research.sources.find(
-              (s) => s.id === aggregate.sourceId,
-            );
-            return source ? [source.url] : [];
-          }),
-        ),
-      ],
-      facebookStatus: research.facebookResearch?.status ?? "not-searched",
-      facebookFindings: research.facebookResearch?.findings.length ?? 0,
-      facebookWithheldObservations:
-        research.facebookResearch?.withheldCount ?? 0,
-      nextAction,
-    };
-  });
+  const market = getMarket(marketId, registry);
+  if (!market)
+    throw new ResearchCoverageInputError(
+      "No reviewed research coverage snapshot is available for this market.",
+      404,
+    );
+  const locations: ResearchCoverageRow[] = market.providers
+    .filter((provider) => provider.state === market.state)
+    .map((provider) => {
+      const research =
+        market.locationResearch &&
+        Object.hasOwn(market.locationResearch, provider.id)
+          ? getLocationResearch(provider.id, asOfDate, registry)
+          : undefined;
+      const facebook = getFacebookResearch(provider.id, registry);
+      const score = research?.experience;
+      const status: CoverageStatus =
+        score?.value != null
+          ? "scored"
+          : (score?.reviewCount ?? 0) > 0
+            ? "too-few-reviews"
+            : research?.reviewAggregates.length
+              ? "source-check-needed"
+              : "no-rating-evidence";
+      const nextAction =
+        status === "scored"
+          ? "Add independent sources and dated resident/family context; check for duplicates."
+          : status === "too-few-reviews"
+            ? "Find additional exact-location published rating averages and counts; at least 10 eligible reviews are needed."
+            : status === "source-check-needed"
+              ? "Inspect the original rating page, confirm the exact care unit, population, count and date; resolve the recorded exclusions."
+              : "Find an exact-location public consumer rating average and review count. Record no result or access limits honestly.";
+      return {
+        providerId: provider.id,
+        name: provider.name,
+        category: provider.category as CareCategory,
+        address: provider.address,
+        city: provider.city,
+        zip: provider.zip,
+        score: score?.value ?? null,
+        status,
+        eligibleReviews: score?.reviewCount ?? 0,
+        sourceFamilies: score?.independentSourceCount ?? 0,
+        ratingSourceUrls: [
+          ...new Set(
+            (research?.reviewAggregates ?? []).flatMap((aggregate) => {
+              const source = research!.sources.find(
+                (s) => s.id === aggregate.sourceId,
+              );
+              return source ? [source.url] : [];
+            }),
+          ),
+        ],
+        facebookStatus: facebook?.status ?? "not-searched",
+        facebookFindings: facebook?.findings.length ?? 0,
+        facebookWithheldObservations: facebook?.withheldCount ?? 0,
+        nextAction,
+      };
+    });
   return {
+    market: marketIdentity(market),
     asOfDate,
     total: locations.length,
     scored: locations.filter((row) => row.score !== null).length,
@@ -84,6 +105,15 @@ export function getResearchCoverage(
       .length,
     locations,
   };
+}
+
+export class ResearchCoverageInputError extends Error {
+  constructor(
+    message: string,
+    readonly status: 400 | 404 = 400,
+  ) {
+    super(message);
+  }
 }
 
 /** CSV remains a research checklist; no observation text or personal data is exported. */

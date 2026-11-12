@@ -1,6 +1,4 @@
-import historyData from "@/data/inspection-history.json";
-import providerData from "@/data/providers.json";
-import type { Provider } from "./providers";
+import { markets, type MarketRegistry } from "./markets";
 
 export const MAX_EVIDENCE_RECORDS = 25;
 const DEFAULT_EVIDENCE_RECORDS = 5;
@@ -73,7 +71,7 @@ type EvidenceSource = {
   modified: string | null;
   released: string | null;
 };
-type Snapshot = {
+export type InspectionHistorySnapshot = {
   retrieved: string;
   dictionaryUrl: string;
   sources: EvidenceSource[];
@@ -115,13 +113,6 @@ export class EvidenceInputError extends Error {
   }
 }
 
-const snapshot = historyData as unknown as Snapshot;
-const cmsProviders = new Map(
-  (providerData as Provider[])
-    .filter((provider) => provider.category === "nursing-home" && provider.cms)
-    .map((provider) => [provider.cms!.ccn, provider]),
-);
-
 /** ISO source dates sort chronologically; absent dates are last, ties deterministic. */
 function latestFirst<T extends { id: string }>(
   records: readonly T[],
@@ -155,15 +146,29 @@ function bounded<T extends { id: string }>(
 export function getInspectionEvidence(
   ccn: string,
   rawLimit: string | number = DEFAULT_EVIDENCE_RECORDS,
+  registry: MarketRegistry = markets,
 ): InspectionEvidence {
   if (!/^\d{6}$/.test(ccn))
     throw new EvidenceInputError(
       "Supply one six-digit CMS nursing-home certification number (CCN).",
     );
-  const provider = cmsProviders.get(ccn);
+  const market = registry.find((entry) =>
+    entry.providers.some(
+      (provider) =>
+        provider.state === entry.state &&
+        provider.category === "nursing-home" &&
+        provider.cms?.ccn === ccn,
+    ),
+  );
+  const provider = market?.providers.find(
+    (provider) =>
+      provider.state === market.state &&
+      provider.category === "nursing-home" &&
+      provider.cms?.ccn === ccn,
+  );
   if (!provider)
     throw new EvidenceInputError(
-      "This CCN is not a nursing home in the Boston pilot catalog.",
+      "This CCN is not a nursing home in a reviewed market catalog.",
       404,
     );
   const value = String(rawLimit);
@@ -178,6 +183,12 @@ export function getInspectionEvidence(
       `Limit must be a whole number from 1 to ${MAX_EVIDENCE_RECORDS}.`,
     );
   }
+  const snapshot = market?.inspectionHistory;
+  if (!snapshot)
+    throw new EvidenceInputError(
+      "No retained inspection-history snapshot is available for this market.",
+      404,
+    );
   const facility = Object.hasOwn(snapshot.facilities, ccn)
     ? snapshot.facilities[ccn]
     : undefined;

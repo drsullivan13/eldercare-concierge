@@ -97,6 +97,12 @@ export function ProviderDetail({
         </div>
       </div>
       <div className="detail-body">
+        {provider.locationKind === "office" && (
+          <div className="inline-notice">
+            Office location only. Confirm service coverage at your address and
+            staff availability directly.
+          </div>
+        )}
         {alerts.length > 0 && (
           <div className="detail-warnings">
             <ShieldAlert size={20} />
@@ -134,7 +140,7 @@ export function ProviderDetail({
           providerName={provider.name}
           onTask={onTask}
         />
-        {provider.cms && (
+        {provider.category === "nursing-home" && provider.cms && (
           <section>
             <div className="section-title">
               <h3>Published CMS evidence</h3>
@@ -209,7 +215,9 @@ export function ProviderDetail({
             </details>
           </section>
         )}
-        {provider.cms && <InspectionHistory ccn={provider.cms.ccn} />}
+        {provider.category === "nursing-home" && provider.cms && (
+          <InspectionHistory ccn={provider.cms.ccn} />
+        )}
         {provider.category === "home-health" && (
           <HomeHealthEvidence providerId={provider.id} />
         )}

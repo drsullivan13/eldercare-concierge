@@ -99,7 +99,7 @@ async function searchTenMiles(page: Page) {
   expect(response.status()).toBe(200);
   const body = (await response.json()) as SearchResponse;
   await expect(page.locator(".results-toolbar")).toContainText(
-    "within 10 miles of Newton Center 02459",
+    "within 10 miles of Newton Center, MA 02459",
   );
   await expect(page.locator(".provider-card").first()).toContainText(
     body.providers[0].name,
@@ -587,7 +587,9 @@ test("empty and unsupported searches are honest errors, with working mobile navi
   expect((await unknown.json()).error).toContain("not recognized");
   const nonMA = await request.get("/api/search", { params: { zip: "10001" } });
   expect(nonMA.status()).toBe(400);
-  expect((await nonMA.json()).error).toContain("Massachusetts ZIP codes only");
+  expect((await nonMA.json()).error).toContain(
+    "outside the supported Massachusetts and North Jersey markets",
+  );
   await navigate(page, "Your shortlist");
   await expect(
     page.getByRole("heading", {
@@ -977,7 +979,7 @@ test("a browser storage failure never claims a new shortlist item or note was sa
       exact: true,
     }),
   ).toHaveCount(0);
-  await expect(detail.getByRole("status")).toContainText(
-    "could not save this change",
-  );
+  await expect(
+    detail.locator(".detail-notes").getByRole("status"),
+  ).toContainText("could not save this change");
 });

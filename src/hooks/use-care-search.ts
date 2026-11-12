@@ -71,6 +71,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
 
   function run(next = draft) {
     setLoading(true);
+    setData(null);
     setError("");
     setDisplayCount(18);
     setRequest({ ...next, zip: next.zip.trim(), q: next.q.trim() });

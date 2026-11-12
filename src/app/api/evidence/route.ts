@@ -5,7 +5,8 @@ export function GET(request: Request) {
     const params = new URL(request.url).searchParams;
     if (
       params.getAll("ccn").length !== 1 ||
-      params.getAll("limit").length > 1
+      params.getAll("limit").length > 1 ||
+      [...params.keys()].some((key) => !["ccn", "limit"].includes(key))
     ) {
       throw new EvidenceInputError("Supply one CCN and at most one limit.");
     }

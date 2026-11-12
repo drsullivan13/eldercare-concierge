@@ -35,7 +35,8 @@ export default function Home() {
         <section className="landing-hero">
           <div className="hero-copy">
             <span className="eyebrow">
-              <span className="live-dot" /> STARTING IN GREATER BOSTON
+              <span className="live-dot" /> CARE RESEARCH, STARTING WITH YOUR
+              ZIP
             </span>
             <h1>
               A clearer path <br />
@@ -100,7 +101,7 @@ export default function Home() {
               </div>
               <div>
                 <strong>Close to the people who matter.</strong>
-                <span>Boston · Newton · North & South Shore</span>
+                <span>Search by ZIP. Confirm care and service coverage.</span>
               </div>
             </div>
             <div className="preview-check">

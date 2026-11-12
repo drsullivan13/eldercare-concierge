@@ -3,21 +3,19 @@ import type { SearchResponse } from "@/lib/providers";
 
 export function ResearchDisclosure({
   data,
-  category,
   filtered,
 }: {
   data: SearchResponse;
-  category: string;
   filtered: boolean;
 }) {
-  const officeSearch = ["home-care", "home-health", "staffing"].includes(
-    category,
+  const hasOffices = data.providers.some(
+    (provider) => provider.locationKind === "office",
   );
   return (
     <div className="search-research-summary">
       <p>
-        {officeSearch
-          ? "Distances are to offices. Confirm service coverage at your address, availability, and care needs directly."
+        {hasOffices
+          ? "Office distances do not confirm service coverage at your address. Confirm coverage, availability, and care needs directly."
           : "Sources are linked in each option. Confirm current availability, costs, and care needs directly."}
       </p>
       <details className="search-research-disclosure">
@@ -51,9 +49,9 @@ export function ResearchDisclosure({
             does not establish service coverage.
           </p>
           <p className="catalog-note">
-            Catalog retrieved {data.asOf}. {data.catalogTotal} records in this
-            pilot. Facility coverage stops 55 miles from central Boston; search
-            circles can extend beyond it.
+            {data.market.label} catalog as of {data.asOf}.{" "}
+            {data.catalogTotal} records in this market. The catalog is not a
+            complete inventory of local care.
             {data.excludedWithoutCoordinates > 0
               ? ` ${data.excludedWithoutCoordinates} records without usable location coordinates are excluded from radius results.`
               : ""}{" "}
@@ -70,7 +68,10 @@ export function ResearchDisclosure({
             </a>
             <a
               className="text-link"
-              href="/api/research-coverage?format=csv"
+              href={`/api/research-coverage?${new URLSearchParams({
+                format: "csv",
+                market: data.market.id,
+              })}`}
               download
             >
               Download catalog research checklist <ArrowUpRight size={14} />

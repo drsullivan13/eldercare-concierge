@@ -59,10 +59,12 @@ export default function CareMap({
         if (provider.lat === null || provider.lng === null) return;
         const content = document.createElement("span");
         content.textContent =
-          provider.name +
+          `${provider.name} · ${provider.city}, ${provider.state}` +
           (provider.locationKind === "zip"
             ? " · ZIP-area estimate; exact campus point unconfirmed"
-            : "");
+            : provider.locationKind === "office"
+              ? " · office; service coverage not confirmed"
+              : "");
         L.circleMarker([provider.lat, provider.lng], {
           radius: 6,
           color: "#fff",

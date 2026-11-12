@@ -1,4 +1,4 @@
-import researchData from "@/data/location-research.json";
+import { getProviderMarket, markets, type MarketRegistry } from "./markets";
 import { computeExperienceScore } from "./experience-score";
 import { getFacebookResearch, getFacebookSummary } from "./facebook-research";
 import type {
@@ -7,7 +7,6 @@ import type {
   ResearchSummary,
 } from "./location-research-types";
 
-const records = researchData as Record<string, LocationResearch>;
 export class ResearchInputError extends Error {
   constructor(
     message: string,
@@ -19,18 +18,38 @@ export class ResearchInputError extends Error {
 export function getLocationResearch(
   providerId: string,
   asOfDate = new Date().toISOString().slice(0, 10),
+  registry: MarketRegistry = markets,
 ): LocationResearchResponse {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(providerId) || providerId.length > 150)
     throw new ResearchInputError("Supply one exact provider ID.");
-  if (!Object.hasOwn(records, providerId))
-    throw new ResearchInputError(
-      "This provider is not in the Boston research catalog.",
-      404,
-    );
-  const record = records[providerId];
+  const market = getProviderMarket(providerId, registry);
+  if (!market)
+    throw new ResearchInputError("No catalog provider matches this ID.", 404);
+  const records = market.locationResearch;
+  const record: LocationResearch =
+    records && Object.hasOwn(records, providerId)
+      ? records[providerId]
+      : {
+          providerId,
+          checkedAt: null,
+          providerDetailsReviewed: false,
+          sources: [],
+          facts: [],
+          reviews: [],
+          reviewAggregates: [],
+          availability: {
+            status: "not-published",
+            text: "Current availability has not been researched for this location. Contact the provider to confirm openings and waitlist timing.",
+            sourceId: null,
+            asOf: null,
+          },
+          notes: [
+            "No retained location research is available for this catalog provider. Missing evidence does not imply poor care or that no public information exists.",
+          ],
+        };
   return {
     ...record,
-    facebookResearch: getFacebookResearch(providerId),
+    facebookResearch: getFacebookResearch(providerId, registry),
     experience: computeExperienceScore({
       sources: record.sources,
       reviewAggregates: record.reviewAggregates,
@@ -41,16 +60,34 @@ export function getLocationResearch(
 }
 export function getResearchSummary(
   providerId: string,
+  registry: MarketRegistry = markets,
 ): ResearchSummary | undefined {
-  if (!Object.hasOwn(records, providerId)) return undefined;
-  const record = getLocationResearch(providerId);
+  const records = getProviderMarket(providerId, registry)?.locationResearch;
+  if (!records || !Object.hasOwn(records, providerId)) {
+    const facebookResearch = getFacebookSummary(providerId, registry);
+    if (!facebookResearch) return undefined;
+    return {
+      facebookResearch,
+      detailsAvailable: false,
+      publishedCosts: 0,
+      availabilityStatus: "not-published",
+      availabilityCheckedAt: null,
+      experience: {
+        value: null,
+        reviewCount: 0,
+        confidence: "unrated",
+        independentSourceCount: 0,
+      },
+    };
+  }
+  const record = getLocationResearch(providerId, undefined, registry);
   const { value, reviewCount, confidence, independentSourceCount } =
     record.experience;
   const source = record.sources.find(
     (s) => s.id === record.availability.sourceId,
   );
   return {
-    facebookResearch: getFacebookSummary(providerId),
+    facebookResearch: getFacebookSummary(providerId, registry),
     detailsAvailable: record.providerDetailsReviewed,
     publishedCosts: record.facts.filter(
       (f) => f.kind === "cost" && f.amount && f.amount.min > 0,

@@ -83,7 +83,7 @@ export function AuthForm({
             <span />
           </div>
         </div>
-        <span className="auth-location">GREATER BOSTON · EARLY ACCESS</span>
+        <span className="auth-location">CARE RESEARCH · EARLY ACCESS</span>
       </aside>
       <main className="auth-main">
         <Link href="/" className="text-link muted">

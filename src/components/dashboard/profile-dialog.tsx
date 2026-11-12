@@ -66,7 +66,7 @@ export function ProfileDialog({
             pattern="[0-9]{5}"
             maxLength={5}
             required
-            placeholder="02459"
+            placeholder="Five-digit ZIP"
           />
         </label>
         <fieldset>

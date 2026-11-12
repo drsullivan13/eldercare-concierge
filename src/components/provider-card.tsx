@@ -64,13 +64,14 @@ export function providerCareAlerts(provider: Provider) {
       warning,
     ),
   );
-  if (provider.cms?.abuse && !alerts.some((alert) => /abuse/i.test(alert)))
+  const cms = provider.category === "nursing-home" ? provider.cms : undefined;
+  if (cms?.abuse && !alerts.some((alert) => /abuse/i.test(alert)))
     alerts.push("CMS abuse icon is present in this source release.");
   if (
-    provider.cms?.specialFocus &&
+    cms?.specialFocus &&
     !alerts.some((alert) => /special.focus/i.test(alert))
   )
-    alerts.push(`CMS special-focus status: ${provider.cms.specialFocus}.`);
+    alerts.push(`CMS special-focus status: ${cms.specialFocus}.`);
   return alerts;
 }
 
@@ -148,6 +149,11 @@ export function ProviderCard({
       <p className="provider-address">
         {provider.city}, {provider.state} {provider.zip}
       </p>
+      {provider.locationKind === "office" && (
+        <p className="small muted">
+          Office location. Service at your address is not confirmed.
+        </p>
+      )}
       <div className="provider-research-summary">
         {research && research.experience.value !== null ? (
           <span className="experience-card-score">
@@ -175,7 +181,7 @@ export function ProviderCard({
           </span>
         )}
       </div>
-      {provider.cms && (
+      {provider.category === "nursing-home" && provider.cms && (
         <div className="provider-proof">
           <Rating value={provider.cms.overall} />
         </div>

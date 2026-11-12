@@ -45,7 +45,9 @@ export function CareSearchView({
     <div className="care-search-view">
       <div className="page-heading compact">
         <div>
-          <span className="eyebrow">GREATER BOSTON CARE</span>
+          <span className="eyebrow">
+            {data?.market.label || "ZIP-SELECTED CARE SEARCH"}
+          </span>
           <h1>
             Find care <em>nearby.</em>
           </h1>
@@ -136,7 +138,8 @@ export function CareSearchView({
           </strong>
           {data && !loading && (
             <span>
-              within {data.radius} miles of {data.origin.city} {data.origin.zip}
+              within {data.radius} miles of {data.origin.city},{" "}
+              {data.market.state} {data.origin.zip}
             </span>
           )}
         </div>
@@ -215,7 +218,6 @@ export function CareSearchView({
           <>
             <ResearchDisclosure
               data={data}
-              category={search.request.category}
               filtered={
                 search.request.sort === "experience" ||
                 search.request.evidence !== "all"

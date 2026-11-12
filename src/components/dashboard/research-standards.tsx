@@ -34,8 +34,8 @@ export function EvidenceStandards() {
           {
             n: "01",
             title: "Regulatory records",
-            text: "CMS nursing-home records and Massachusetts assisted-living listings establish distinct types of public evidence. A listing alone does not prove high-quality care.",
-            tag: "Available now",
+            text: "CMS records and state care listings establish distinct types of public evidence. Available sources vary by market and care setting. A listing alone does not prove high-quality care.",
+            tag: "Sources linked in each record",
           },
           {
             n: "02",

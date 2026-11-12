@@ -114,7 +114,8 @@ function CompareDialog({
               ).map(([label, field]) => ({
                 label,
                 value(p: Provider) {
-                  if (!p.cms) return "Not applicable";
+                  if (p.category !== "nursing-home" || !p.cms)
+                    return "Not applicable";
                   const rating = p.cms[field];
                   return rating === null ? "Not published" : `${rating} / 5`;
                 },

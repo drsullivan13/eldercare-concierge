@@ -39,9 +39,11 @@ export default function Methodology() {
             <p>
               For Medicare- and Medicaid-certified nursing homes, we use CMS
               Care Compare data: published ratings, inspections, staffing,
-              turnover and penalties. For assisted living, we use Massachusetts’
-              certified-residence records. Assisted living does not have a CMS
-              nursing-home rating.
+              turnover and penalties. State records vary by market and care
+              setting. Massachusetts assisted-living records identify certified
+              residences in that state, not New Jersey facilities. Check each
+              provider’s linked sources and dates. Assisted living does not have
+              a CMS nursing-home rating.
             </p>
           </article>
           <article>

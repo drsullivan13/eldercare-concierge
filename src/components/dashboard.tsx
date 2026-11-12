@@ -250,7 +250,8 @@ function WorkspaceDashboard({
         </button>
         <div className="sidebar-bottom">
           <span>
-            <span className="live-dot" /> GREATER BOSTON PILOT
+            <span className="live-dot" />{" "}
+            {data?.market.label || "ZIP-SELECTED CARE SEARCH"}
           </span>
           <button
             className="profile-button"
@@ -423,6 +424,7 @@ function WorkspaceDashboard({
           close={() => setProfileOpen(false)}
           save={(profile) => {
             if (update((w) => ({ ...w, profile }))) {
+              comparison.clear();
               search.filter({ zip: profile.zip });
               setProfileOpen(false);
               setToast("Your workspace has been updated.");

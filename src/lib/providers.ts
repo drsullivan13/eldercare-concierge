@@ -1,4 +1,5 @@
 import type { ResearchSummary } from "./location-research-types";
+import type { Market } from "./market-types";
 export type CareCategory =
   | "nursing-home"
   | "assisted-living"
@@ -74,6 +75,7 @@ export type Provider = {
 };
 export type SearchProvider = Provider & { distanceMiles: number | null };
 export type SearchResponse = {
+  market: Market;
   providers: SearchProvider[];
   total: number;
   origin: { zip: string; city: string; lat: number; lng: number };

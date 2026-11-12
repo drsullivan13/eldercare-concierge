@@ -1,4 +1,4 @@
-import facebookData from "@/data/facebook-research.json";
+import { getProviderMarket, markets, type MarketRegistry } from "./markets";
 
 export type FacebookFindingKind =
   | "resident-family"
@@ -55,14 +55,15 @@ export type FacebookSummary = Pick<
   | "withheldCount"
 > & { findingCount: number };
 
-const dataset = facebookData as unknown as FacebookResearchDataset;
-
 // This curated snapshot is separate from review aggregates and the score policy.
 // An absent location means not searched in this pilot, never "no Facebook reviews".
 export function getFacebookResearch(
   providerId: string,
+  registry: MarketRegistry = markets,
 ): FacebookResearch | undefined {
-  if (!Object.hasOwn(dataset.locations, providerId)) return undefined;
+  const dataset = getProviderMarket(providerId, registry)?.facebookResearch;
+  if (!dataset || !Object.hasOwn(dataset.locations, providerId))
+    return undefined;
   const location = dataset.locations[providerId];
   return {
     providerId,
@@ -81,8 +82,9 @@ export function getFacebookResearch(
 
 export function getFacebookSummary(
   providerId: string,
+  registry: MarketRegistry = markets,
 ): FacebookSummary | undefined {
-  const research = getFacebookResearch(providerId);
+  const research = getFacebookResearch(providerId, registry);
   if (!research) return undefined;
   const {
     status,

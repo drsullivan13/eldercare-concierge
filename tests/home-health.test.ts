@@ -10,6 +10,11 @@ import {
   type HomeHealthMetric,
 } from "../src/lib/home-health";
 import { GET } from "../src/app/api/home-health-evidence/route";
+import {
+  createMarketRegistry,
+  getMarket,
+  type MarketSnapshot,
+} from "../src/lib/markets";
 
 const read = (file: string) =>
   JSON.parse(
@@ -170,10 +175,17 @@ test("provenance URLs are strings and official comparators remain distinct same-
     ["national", "matched-vxub-6swi.json"],
   ] as const) {
     const raw = read(file)[0];
-    assert.equal(references[key].period.start, "2025-04-01");
-    for (const measure of references[key].measures)
-      matchesRaw(measure.percent, raw);
+    const comparator = references[key];
+    assert.ok(comparator);
+    assert.equal(comparator.period.start, "2025-04-01");
+    for (const measure of comparator.measures) matchesRaw(measure.percent, raw);
   }
+  assert.equal(references.state?.code, "MA");
+  assert.equal(references.state?.label, "Massachusetts");
+  assert.deepEqual(
+    references.state?.measures,
+    references.massachusetts?.measures,
+  );
   assert.match(result.footnoteDefinitions["11"], /Fewer than 70/);
   assert.ok(
     result.interpretationRules.some((rule) =>
@@ -217,6 +229,145 @@ test("endpoint rejects missing, duplicate, malformed, unknown, unrelated and for
   );
   assert.equal(response.status, 200);
   assert.equal((await response.json()).agencies.length, 2);
+});
+
+function regionalHomeHealth() {
+  const ma = getMarket()!;
+  const evidence = getHomeHealthEvidence("vna-care");
+  const template = ma.providers.find((provider) => provider.id === "vna-care")!;
+  const provider = {
+    ...template,
+    id: "cms-317001",
+    state: "NJ",
+    cms: undefined,
+  };
+  const agency = {
+    ...evidence.agencies[0],
+    ccn: "317001",
+    organizationId: provider.id,
+    cmsAddress: { ...evidence.agencies[0].cmsAddress, state: "NJ" },
+  };
+  const market: MarketSnapshot = {
+    id: "north-jersey",
+    label: "North Jersey",
+    state: "NJ",
+    defaultZip: "07960",
+    zips: { "07960": { city: "Morristown", lat: 40.79, lng: -74.48 } },
+    meta: { asOf: evidence.retrieved },
+    providers: [provider],
+    homeHealthEvidence: {
+      ...evidence,
+      agencies: [agency],
+      patientExperienceComparators: {
+        national: evidence.patientExperienceComparators.national,
+        "north-jersey": {
+          ...evidence.patientExperienceComparators.massachusetts!,
+          sourceFile: "nj-state-survey.json",
+        },
+      },
+    },
+  };
+  return { ma, market, provider, agency };
+}
+
+test("stable NJ CMS agency IDs work without nursing-home metrics and normalize the market comparator", () => {
+  const { ma, market, provider, agency } = regionalHomeHealth();
+  assert.equal(provider.cms, undefined);
+  const result = getHomeHealthEvidence(
+    provider.id,
+    createMarketRegistry([ma, market]),
+  );
+  assert.deepEqual(result.agencies, [agency]);
+  assert.deepEqual(result.patientExperienceComparators, {
+    national: market.homeHealthEvidence!.patientExperienceComparators.national,
+    state: {
+      ...market.homeHealthEvidence!.patientExperienceComparators[
+        "north-jersey"
+      ],
+      code: "NJ",
+      label: "New Jersey",
+    },
+  });
+});
+
+test("regional agencies require the exact organization, CCN, state and CMS catalog identity", () => {
+  for (const mismatch of [
+    "ccn",
+    "state",
+    "organization",
+    "unknown-provider",
+    "regional-id",
+    "short-ccn",
+    "long-ccn",
+    "wrong-category",
+    "provider-state",
+  ]) {
+    const { ma, market, provider, agency } = regionalHomeHealth();
+    if (mismatch === "ccn") agency.ccn = "317002";
+    if (mismatch === "state") agency.cmsAddress.state = "MA";
+    if (mismatch === "organization") agency.organizationId = "cms-317002";
+    if (mismatch === "unknown-provider") market.providers = [];
+    if (mismatch === "provider-state") provider.state = "MA";
+    if (mismatch === "wrong-category") provider.category = "home-care";
+    if (["regional-id", "short-ccn", "long-ccn"].includes(mismatch)) {
+      provider.id =
+        mismatch === "regional-id"
+          ? "north-jersey-agency"
+          : mismatch === "short-ccn"
+            ? "cms-31700"
+            : "cms-3170010";
+      agency.organizationId = provider.id;
+    }
+    assert.throws(
+      () =>
+        getHomeHealthEvidence(provider.id, createMarketRegistry([ma, market])),
+      (error) =>
+        error instanceof HomeHealthEvidenceError && error.status === 404,
+      mismatch,
+    );
+  }
+});
+
+test("NJ omits missing and mismatched state comparators without borrowing MA evidence", () => {
+  for (const form of ["missing", "wrong-state", "ma-only"] as const) {
+    const { ma, market, provider } = regionalHomeHealth();
+    const comparators = market.homeHealthEvidence!.patientExperienceComparators;
+    const state = comparators["north-jersey"]!;
+    delete comparators["north-jersey"];
+    if (form === "wrong-state")
+      comparators.state = { ...state, code: "MA", label: "Massachusetts" };
+    if (form === "ma-only") comparators.massachusetts = state;
+    const result = getHomeHealthEvidence(
+      provider.id,
+      createMarketRegistry([ma, market]),
+    );
+    assert.deepEqual(result.patientExperienceComparators, {
+      national: comparators.national,
+    });
+  }
+});
+
+test("MA retains its exact allowlist and Massachusetts comparator beside regional evidence", () => {
+  const { ma, market } = regionalHomeHealth();
+  const original = getHomeHealthEvidence("vna-care");
+  const result = getHomeHealthEvidence(
+    "vna-care",
+    createMarketRegistry([ma, market]),
+  );
+  assert.deepEqual(result, original);
+  assert.deepEqual(
+    result.agencies.map((agency) => agency.ccn),
+    ["227068", "227098"],
+  );
+  assert.equal(result.patientExperienceComparators.state?.code, "MA");
+  assert.equal(
+    result.patientExperienceComparators.state?.label,
+    "Massachusetts",
+  );
+  assert.deepEqual(
+    result.patientExperienceComparators.massachusetts,
+    ma.homeHealthEvidence!.patientExperienceComparators.massachusetts,
+  );
 });
 
 test("offline rebuild is byte-identical, excludes its own hash manifest, and distinguishes missing from published zero", () => {

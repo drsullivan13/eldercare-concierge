@@ -1,13 +1,19 @@
 import { getProvidersByIds } from "@/lib/search";
 
 export function GET(request: Request) {
-  const raw = new URL(request.url).searchParams.get("ids");
-  if (raw === null)
+  const params = new URL(request.url).searchParams;
+  const raw = params.get("ids");
+  const market = params.get("market") ?? undefined;
+  if (
+    raw === null ||
+    params.getAll("ids").length !== 1 ||
+    params.getAll("market").length > 1 ||
+    [...params.keys()].some((key) => !["ids", "market"].includes(key)) ||
+    (market !== undefined &&
+      !["massachusetts", "north-jersey"].includes(market))
+  )
     return Response.json(
-      {
-        error:
-          "Supply a comma-separated ids query parameter (maximum 100 IDs).",
-      },
+      { error: "Supply one ids parameter and at most one supported market." },
       { status: 400 },
     );
   if (!raw.trim()) return Response.json({ providers: [] });
@@ -17,5 +23,5 @@ export function GET(request: Request) {
       { error: "Supply 1 to 100 nonempty provider IDs." },
       { status: 400 },
     );
-  return Response.json({ providers: getProvidersByIds(ids) });
+  return Response.json({ providers: getProvidersByIds(ids, market) });
 }

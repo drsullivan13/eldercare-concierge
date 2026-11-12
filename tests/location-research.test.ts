@@ -4,7 +4,12 @@ import { readFileSync, readdirSync } from "node:fs";
 import { basename, join } from "node:path";
 import catalogue from "../src/data/providers.json";
 import merged from "../src/data/location-research.json";
-import { getLocationResearch } from "../src/lib/location-research";
+import {
+  getLocationResearch,
+  getResearchSummary,
+} from "../src/lib/location-research";
+import { getMarket } from "../src/lib/markets";
+import { getFacebookResearch } from "../src/lib/facebook-research";
 import { searchProviders, getProvidersByIds } from "../src/lib/search";
 import { GET } from "../src/app/api/research/route";
 import type { LocationResearch } from "../src/lib/location-research-types";
@@ -21,6 +26,100 @@ const raw = readdirSync(inputs)
     ).map((row) => ({ row, prefix: `${basename(name, ".json")}-` })),
   );
 const asOf = "2026-11-12";
+
+test("retained Massachusetts location records are returned unchanged alongside computed evidence", () => {
+  for (const [id, record] of Object.entries(snapshot)) {
+    const { experience, facebookResearch, ...detail } = getLocationResearch(
+      id,
+      asOf,
+    );
+    assert.deepEqual(detail, record, id);
+    assert.ok(experience);
+    assert.deepEqual(facebookResearch, getFacebookResearch(id), id);
+  }
+});
+
+test("Facebook-only catalog records remain accessible through the getter and research API without contributing scores", async () => {
+  const market = getMarket()!;
+  const id = Object.keys(market.facebookResearch!.locations).find(
+    (id) =>
+      market.providers.some((provider) => provider.id === id) &&
+      market.facebookResearch!.locations[id].findings.length > 0,
+  )!;
+  assert.ok(id, "Retained Facebook findings supply the regression fixture");
+  const original = market.locationResearch!;
+  const withoutLocation = { ...original };
+  delete withoutLocation[id];
+  market.locationResearch = withoutLocation;
+  try {
+    const facebook = getFacebookResearch(id);
+    assert.ok(facebook?.findings.length);
+    const detail = getLocationResearch(id, asOf);
+    assert.deepEqual(detail.facebookResearch, facebook);
+    assert.equal(detail.checkedAt, null);
+    assert.equal(detail.providerDetailsReviewed, false);
+    assert.deepEqual(detail.sources, []);
+    assert.deepEqual(detail.facts, []);
+    assert.deepEqual(detail.reviews, []);
+    assert.deepEqual(detail.reviewAggregates, []);
+    assert.equal(detail.experience.value, null);
+    assert.equal(detail.experience.reviewCount, 0);
+    assert.equal(detail.experience.independentSourceCount, 0);
+    assert.deepEqual(detail.experience.includedSources, []);
+    assert.equal(detail.experience.confidence, "unrated");
+    assert.equal(detail.availability.sourceId, null);
+    assert.equal(detail.availability.asOf, null);
+    assert.equal(detail.availability.status, "not-published");
+    const summary = getResearchSummary(id)!;
+    assert.equal(
+      summary.facebookResearch?.findingCount,
+      facebook.findings.length,
+    );
+    assert.equal(summary.detailsAvailable, false);
+    assert.equal(summary.experience.value, null);
+    const response = GET(new Request(`http://localhost/api/research?id=${id}`));
+    assert.equal(response.status, 200);
+    const body = await response.json();
+    assert.deepEqual(body.facebookResearch, facebook);
+    assert.equal(body.providerId, id);
+    assert.equal(body.experience.value, null);
+    assert.deepEqual(body.experience.includedSources, []);
+  } finally {
+    market.locationResearch = original;
+  }
+});
+
+test("actual NJ catalog gaps return unknown research rather than a missing-provider error", async () => {
+  const market = getMarket("north-jersey")!;
+  assert.ok(market, "The published NJ catalog must be available");
+  const gaps = market.providers.filter(
+    (provider) => !Object.hasOwn(market.locationResearch ?? {}, provider.id),
+  );
+  assert.ok(gaps.length > 0);
+  for (const provider of gaps) {
+    const detail = getLocationResearch(provider.id, asOf);
+    assert.equal(detail.providerId, provider.id);
+    assert.equal(detail.checkedAt, null);
+    assert.equal(detail.providerDetailsReviewed, false);
+    assert.deepEqual(detail.sources, []);
+    assert.deepEqual(detail.facts, []);
+    assert.deepEqual(detail.reviews, []);
+    assert.deepEqual(detail.reviewAggregates, []);
+    assert.equal(detail.availability.status, "not-published");
+    assert.equal(detail.availability.sourceId, null);
+    assert.equal(detail.availability.asOf, null);
+    assert.match(detail.availability.text, /not been researched/i);
+    assert.equal(detail.experience.value, null);
+    assert.equal(detail.experience.reviewCount, 0);
+    assert.deepEqual(detail.experience.includedSources, []);
+    assert.deepEqual(detail.facebookResearch, getFacebookResearch(provider.id));
+  }
+  const response = GET(
+    new Request(`http://localhost/api/research?id=${gaps[0].id}`),
+  );
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).checkedAt, null);
+});
 
 test("every catalog location has research state and every imported claim retains exact source provenance", () => {
   assert.deepEqual(
@@ -326,6 +425,9 @@ test("research API returns the exact requested location and rejects missing, dup
     ["", 400],
     ["?id=", 400],
     ["?id=unknown-location", 404],
+    ["?id=INVALID-id", 400],
+    ["?id=invalid%2Fid", 400],
+    [`?id=${"a".repeat(151)}`, 400],
     ["?id=lifeplan-brooksby-village&id=lifeplan-linden-ponds", 400],
     ["?id=lifeplan-brooksby-village&ccn=225001", 400],
   ]) {
