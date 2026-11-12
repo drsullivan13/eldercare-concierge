@@ -1,0 +1,727 @@
+{
+  "assignments": [
+    {
+      "address": "1155 EAST JERSEY STREET ELIZABETH, NJ 07201",
+      "assignmentId": "nj-doh-NJ90A120",
+      "county": "Union",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "90A120",
+      "municipality": "ELIZABETH",
+      "name": "AMBER COURT OF ELIZABETH, LLC (NJ90A120)",
+      "officialId": "NJ90A120",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 401
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 401,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj90a120",
+        "status": "exact"
+      },
+      "row": 2,
+      "setting": "ASSISTED LIVING RESIDENCE",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07201"
+    },
+    {
+      "address": "295 SOUTH AVENUE FANWOOD, NJ 07023",
+      "assignmentId": "nj-doh-NJ90A000",
+      "county": "Union",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "90A000",
+      "municipality": "FANWOOD",
+      "name": "MIRA VIE AT FANWOOD (NJ90A000)",
+      "officialId": "NJ90A000",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 399
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 399,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj90a000",
+        "status": "exact"
+      },
+      "row": 3,
+      "setting": "ASSISTED LIVING RESIDENCE",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07023"
+    },
+    {
+      "address": "1050 SPRINGFIELD AVENUE MOUNTAINSIDE, NJ 07092",
+      "assignmentId": "nj-doh-NJ20A013",
+      "county": "Union",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "AL20001",
+      "municipality": "MOUNTAINSIDE",
+      "name": "ARBOR TERRACE MOUNTAINSIDE (NJ20A013)",
+      "officialId": "NJ20A013",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 278
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 278,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj20a013",
+        "status": "exact"
+      },
+      "row": 4,
+      "setting": "ASSISTED LIVING RESIDENCE",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07092"
+    },
+    {
+      "address": "35 COTTAGE STREET BERKELEY HEIGHTS, NJ 07922",
+      "assignmentId": "nj-doh-NJ62016",
+      "county": "Union",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "062016",
+      "municipality": "BERKELEY HEIGHTS",
+      "name": "AUTUMN LAKE HEALTHCARE AT BERKELEY HEIGHTS (NJ62016)",
+      "officialId": "NJ62016",
+      "result": {
+        "basis": "licensed_unit_cms_certified",
+        "evidence": {
+          "cms": {
+            "address": "35 COTTAGE STREET",
+            "ccn": "315195",
+            "city": "BERKELEY HEIGHTS",
+            "dataset": "4pq5-n9py",
+            "file": "cms/raw/4pq5-n9py/primary/page-0000000.json",
+            "matchBasis": "unique_nursing_unit_normalized_name_street_and_zip",
+            "name": "AUTUMN LAKE HEALTHCARE AT BERKELEY HEIGHTS",
+            "rowIndex": 97,
+            "sha256": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c",
+            "state": "NJ",
+            "zip": "07922"
+          },
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 802
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 802,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "cms-315195",
+        "status": "exact"
+      },
+      "row": 5,
+      "setting": "LONG TERM CARE FACILITY SNF/NF",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07922"
+    },
+    {
+      "address": "40 WATCHUNG WAY BERKELEY HEIGHTS, NJ 07922",
+      "assignmentId": "nj-doh-NJ22001L",
+      "county": "Union",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "22001L",
+      "municipality": "BERKELEY HEIGHTS",
+      "name": "RUNNELLS CENTER FOR REHABILITATION & HEALTHCARE (NJ22001L)",
+      "officialId": "NJ22001L",
+      "result": {
+        "basis": "licensed_unit_cms_certified",
+        "evidence": {
+          "cms": {
+            "address": "40 WATCHUNG WAY",
+            "ccn": "315009",
+            "city": "BERKELEY HEIGHTS",
+            "dataset": "4pq5-n9py",
+            "file": "cms/raw/4pq5-n9py/primary/page-0000000.json",
+            "matchBasis": "unique_nursing_unit_normalized_name_street_and_zip",
+            "name": "RUNNELLS CENTER FOR REHABILITATION & HEALTHCARE",
+            "rowIndex": 4,
+            "sha256": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c",
+            "state": "NJ",
+            "zip": "07922"
+          },
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 587
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 587,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "cms-315009",
+        "status": "exact"
+      },
+      "row": 6,
+      "setting": "LONG TERM CARE FACILITY SNF/NF",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07922"
+    },
+    {
+      "address": "10 JACKSON DRIVE CRANFORD, NJ 07016",
+      "assignmentId": "nj-doh-NJ82472",
+      "county": "Union",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "82472",
+      "municipality": "Cranford",
+      "name": "ATRIA CRANFORD (NJ82472)",
+      "officialId": "NJ82472",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 471
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 471,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj82472",
+        "status": "exact"
+      },
+      "row": 7,
+      "setting": "COMPREHENSIVE PERSONAL CARE HOME",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07016"
+    },
+    {
+      "address": "51 NORTH MAIN STREET BOONTON TOWNSHIP, NJ 07005",
+      "assignmentId": "nj-doh-NJ60A004",
+      "county": "Morris",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "60a004",
+      "municipality": "BOONTON TOWNSHIP",
+      "name": "VICTORIA MEWS ASSISTED LIVING (NJ60A004)",
+      "officialId": "NJ60A004",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 341
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 341,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj60a004",
+        "status": "exact"
+      },
+      "row": 8,
+      "setting": "ASSISTED LIVING RESIDENCE",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07005"
+    },
+    {
+      "address": "500 SOUTHERN BOULEVARD CHATHAM, NJ 07928",
+      "assignmentId": "nj-doh-NJ60A006",
+      "county": "Morris",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "60A006",
+      "municipality": "CHATHAM",
+      "name": "JUNIPER VILLAGE AT CHATHAM (NJ60A006)",
+      "officialId": "NJ60A006",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 343
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 343,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj60a006",
+        "status": "exact"
+      },
+      "row": 9,
+      "setting": "ASSISTED LIVING RESIDENCE",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07928"
+    },
+    {
+      "address": "19 POCONO ROAD DENVILLE, NJ 07834",
+      "assignmentId": "nj-doh-NJ60A002",
+      "county": "Morris",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "60a002",
+      "municipality": "DENVILLE",
+      "name": "OAKS AT DENVILLE, THE (NJ60A002)",
+      "officialId": "NJ60A002",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 339
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 339,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj60a002",
+        "status": "exact"
+      },
+      "row": 10,
+      "setting": "ASSISTED LIVING RESIDENCE",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07834"
+    },
+    {
+      "address": "415 SOUTHERN BLVD CHATHAM, NJ 07928",
+      "assignmentId": "nj-doh-NJ61407",
+      "county": "Morris",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "061407",
+      "municipality": "CHATHAM",
+      "name": "CHATHAM HILLS SUBACUTE CARE CENTER (NJ61407)",
+      "officialId": "NJ61407",
+      "result": {
+        "basis": "licensed_unit_cms_certified",
+        "evidence": {
+          "cms": {
+            "address": "415 SOUTHERN BLVD",
+            "ccn": "315120",
+            "city": "CHATHAM",
+            "dataset": "4pq5-n9py",
+            "file": "cms/raw/4pq5-n9py/primary/page-0000000.json",
+            "matchBasis": "unique_nursing_unit_normalized_name_street_and_zip",
+            "name": "Chatham Hills Subacute Care Center",
+            "rowIndex": 53,
+            "sha256": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c",
+            "state": "NJ",
+            "zip": "07928"
+          },
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 736
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 736,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "cms-315120",
+        "status": "exact"
+      },
+      "row": 11,
+      "setting": "LONG TERM CARE FACILITY SNF/NF",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07928"
+    },
+    {
+      "address": "21 POCONO ROAD DENVILLE, NJ 07834",
+      "assignmentId": "nj-doh-NJ61424",
+      "county": "Morris",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "061424",
+      "municipality": "DENVILLE",
+      "name": "OAKS AT DENVILLE, THE (NJ61424)",
+      "officialId": "NJ61424",
+      "result": {
+        "basis": "licensed_unit_cms_certified",
+        "evidence": {
+          "cms": {
+            "address": "21 POCONO ROAD",
+            "ccn": "315329",
+            "city": "DENVILLE",
+            "dataset": "4pq5-n9py",
+            "file": "cms/raw/4pq5-n9py/primary/page-0000000.json",
+            "matchBasis": "unique_nursing_unit_normalized_name_street_and_zip",
+            "name": "OAKS AT DENVILLE, THE",
+            "rowIndex": 197,
+            "sha256": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c",
+            "state": "NJ",
+            "zip": "07834"
+          },
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 745
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 745,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "cms-315329",
+        "status": "exact"
+      },
+      "row": 12,
+      "setting": "LONG TERM CARE FACILITY SNF/NF",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07834"
+    },
+    {
+      "address": "190 PARK AVENUE FLORHAM PARK, NJ 07932",
+      "assignmentId": "nj-doh-NJ14C014",
+      "county": "Morris",
+      "file": "facebook/first-facility-assignments.csv",
+      "kind": "licensed_care_unit",
+      "license": "14C014",
+      "municipality": "FLORHAM PARK",
+      "name": "THE TERRACES AT FLORHAM PARK (NJ14C014)",
+      "officialId": "NJ14C014",
+      "result": {
+        "basis": "licensed_unit_provisional",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ DOH All_LTC",
+            "sourceRow": 451
+          },
+          "stateSource": {
+            "file": "state/raw/ltc.xlsx",
+            "row": 451,
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716"
+          }
+        },
+        "providerId": "north-jersey-doh-nj14c014",
+        "status": "exact"
+      },
+      "row": 13,
+      "setting": "COMPREHENSIVE PERSONAL CARE HOME",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "zip": "07932"
+    },
+    {
+      "address": "535 Mountain Avenue",
+      "assignmentId": "nj-campus-lantern-hill",
+      "county": "Union",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "NJ DCA consumer guide; confirm current campus identity separately",
+      "kind": "ccrc_campus",
+      "municipality": "New Providence",
+      "name": "Lantern Hill",
+      "result": {
+        "basis": "historical_campus_listing",
+        "evidence": {
+          "crosswalk": {
+            "pdfPage": 44,
+            "source": "NJ DCA historical CCRC directory",
+            "sourceFile": "state/union/ccrc-campuses.json"
+          },
+          "stateSource": {
+            "file": "state/raw/ccrc.pdf",
+            "pdfPage": 44,
+            "sha256": "b751b7bddbfb349b8aca4f7459aba62e26ec5ae57348a55a5a2f0c89b5271153",
+            "sourceDate": "2018-01"
+          }
+        },
+        "providerId": "north-jersey-campus-lantern-hill-07974",
+        "status": "exact"
+      },
+      "row": 2,
+      "setting": "Continuing-care campus",
+      "sourceUrl": "https://www.nj.gov/dca/codes/publications/pdf_ccrc/ccrc2011.pdf",
+      "zip": "07974"
+    },
+    {
+      "address": "1 Cedar Crest Village Drive",
+      "assignmentId": "nj-campus-cedar-crest-village",
+      "county": "Morris",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "NJ DCA consumer guide; confirm current campus identity separately",
+      "kind": "ccrc_campus",
+      "municipality": "Pompton Plains",
+      "name": "Cedar Crest Village",
+      "result": {
+        "basis": "historical_campus_listing",
+        "evidence": {
+          "crosswalk": {
+            "pdfPage": 42,
+            "source": "NJ DCA historical CCRC directory",
+            "sourceFile": "state/morris/ccrc-campuses.json"
+          },
+          "stateSource": {
+            "file": "state/raw/ccrc.pdf",
+            "pdfPage": 42,
+            "sha256": "b751b7bddbfb349b8aca4f7459aba62e26ec5ae57348a55a5a2f0c89b5271153",
+            "sourceDate": "2018-01"
+          }
+        },
+        "providerId": "north-jersey-campus-cedar-crest-village-07444",
+        "status": "exact"
+      },
+      "row": 3,
+      "setting": "Continuing-care campus",
+      "sourceUrl": "https://www.nj.gov/dca/codes/publications/pdf_ccrc/ccrc2011.pdf",
+      "zip": "07444"
+    },
+    {
+      "address": "2424 MORRIS AVENUE, SUITE 107",
+      "assignmentId": "nj-reg-HP0254700",
+      "county": "Union",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "NJ registration HP0254700; verify branch and services separately",
+      "kind": "registered_office",
+      "municipality": "UNION",
+      "name": "A1 PLUS HOME CARE SERVICES LLC",
+      "officialId": "HP0254700",
+      "result": {
+        "basis": "registered_office",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ HP registry",
+            "sourceRow": 64
+          },
+          "stateSource": {
+            "file": "state/raw/firms.xlsx",
+            "row": 64,
+            "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708"
+          }
+        },
+        "providerId": "north-jersey-hp-hp0254700",
+        "status": "exact"
+      },
+      "row": 4,
+      "setting": "Registered health care services office",
+      "sourceUrl": "https://rgbportal.dca.njoag.gov/public-view/",
+      "zip": "07083"
+    },
+    {
+      "address": "1460 Morris Avenue",
+      "assignmentId": "nj-reg-HP0364600",
+      "county": "Union",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "NJ registration HP0364600; verify branch and services separately",
+      "kind": "registered_office",
+      "municipality": "Union",
+      "name": "AAK HEALTHCARE INSTITUTE LLC",
+      "officialId": "HP0364600",
+      "result": {
+        "basis": "registered_office",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ HP registry",
+            "sourceRow": 70
+          },
+          "stateSource": {
+            "file": "state/raw/firms.xlsx",
+            "row": 70,
+            "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708"
+          }
+        },
+        "providerId": "north-jersey-hp-hp0364600",
+        "status": "exact"
+      },
+      "row": 5,
+      "setting": "Registered health care services office",
+      "sourceUrl": "https://rgbportal.dca.njoag.gov/public-view/",
+      "zip": "07083"
+    },
+    {
+      "address": "32 MAPLE AVENUE,1ST FL",
+      "assignmentId": "nj-reg-HP0015347",
+      "county": "Morris",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "NJ registration HP0015347; verify branch and services separately",
+      "kind": "registered_office",
+      "municipality": "MORRISTOWN",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "officialId": "HP0015347",
+      "result": {
+        "basis": "registered_office",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ HP registry",
+            "sourceRow": 555
+          },
+          "stateSource": {
+            "file": "state/raw/firms.xlsx",
+            "row": 555,
+            "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708"
+          }
+        },
+        "providerId": "north-jersey-hp-hp0015347",
+        "status": "exact"
+      },
+      "row": 6,
+      "setting": "Registered health care services office",
+      "sourceUrl": "https://rgbportal.dca.njoag.gov/public-view/",
+      "zip": "07960"
+    },
+    {
+      "address": "15 Wychwood Rd",
+      "assignmentId": "nj-reg-HP0414500",
+      "county": "Morris",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "NJ registration HP0414500; verify branch and services separately",
+      "kind": "registered_office",
+      "municipality": "Morristown",
+      "name": "CSS Morris, LLC",
+      "officialId": "HP0414500",
+      "result": {
+        "basis": "registered_office",
+        "evidence": {
+          "crosswalk": {
+            "source": "NJ HP registry",
+            "sourceRow": 1144
+          },
+          "stateSource": {
+            "file": "state/raw/firms.xlsx",
+            "row": 1144,
+            "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708"
+          }
+        },
+        "providerId": "north-jersey-hp-hp0414500",
+        "status": "exact"
+      },
+      "row": 7,
+      "setting": "Registered health care services office",
+      "sourceUrl": "https://rgbportal.dca.njoag.gov/public-view/",
+      "zip": "07960-2621"
+    },
+    {
+      "address": "11 COMMERCE DRIVE",
+      "assignmentId": "nj-hha-317020",
+      "county": "Union",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "CMS CCN 317020; service geography separate",
+      "kind": "cms_home_health_office",
+      "municipality": "CRANFORD",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "officialId": "317020",
+      "result": {
+        "basis": "cms_certified_agency",
+        "evidence": {
+          "cmsSource": {
+            "ccn": "317020",
+            "snapshot": "cms/pos/snapshots/20261112T150611097460Z"
+          },
+          "crosswalk": [
+            {
+              "source": "CMS POS and PDC home health",
+              "status": "included"
+            },
+            {
+              "source": "CMS POS and PDC home health",
+              "status": "included"
+            }
+          ]
+        },
+        "providerId": "cms-317020",
+        "status": "exact"
+      },
+      "row": 8,
+      "setting": "CMS-certified home health office",
+      "sourceUrl": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+      "zip": "07016"
+    },
+    {
+      "address": "175 SOUTH STREET",
+      "assignmentId": "nj-hha-317002",
+      "county": "Morris",
+      "file": "facebook/campus-and-office-assignments.csv",
+      "identityBasis": "CMS CCN 317002; service geography separate",
+      "kind": "cms_home_health_office",
+      "municipality": "MORRISTOWN",
+      "name": "VISITING NURSE ASSOC OF NORTHERN NEW JERSEY, INC",
+      "officialId": "317002",
+      "result": {
+        "basis": "cms_certified_agency",
+        "evidence": {
+          "cmsSource": {
+            "ccn": "317002",
+            "snapshot": "cms/pos/snapshots/20261112T150611097460Z"
+          },
+          "crosswalk": [
+            {
+              "source": "CMS POS and PDC home health",
+              "status": "included"
+            },
+            {
+              "source": "CMS POS and PDC home health",
+              "status": "included"
+            }
+          ]
+        },
+        "providerId": "cms-317002",
+        "status": "exact"
+      },
+      "row": 9,
+      "setting": "CMS-certified home health office",
+      "sourceUrl": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc",
+      "zip": "07960"
+    }
+  ],
+  "inputs": {
+    "appCatalogSha256": "35979284b46b123cd34645cbed0ae6f62f8bfb851d31c8f1427bd9a8ddd689f7",
+    "importerSha256": "8a08142634f6f01b73921d6b37c78e66d3d27545cfaafafee69baa17c4faab5a",
+    "research": {
+      "cms/pos/latest.json": "f712a7e377d851b3459f41a18b0243262ae26588775135b5733706f64afe9be1",
+      "cms/pos/snapshots/20261112T150611097460Z/raw/home_health/pdc-00000.json": "06626e719a4045ff7e042510ef43fa4dbabb117809a170f85e9a5ac4b37c0c3d",
+      "cms/pos/snapshots/20261112T150611097460Z/raw/home_health/pos-00000.json": "cb6dd2ddea08f18e83a49233ad2b2a8be33fb0e95ef370293c976cdc3f87cb31",
+      "cms/pos/snapshots/20261112T150611097460Z/raw/home_health/pos-00075.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "cms/raw/4pq5-n9py/primary/page-0000000.json": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c",
+      "facebook/campus-and-office-assignments.csv": "4b24d745f148d3f1656d480b566d2f7b77d4f069da9b750dc620a8030b56867d",
+      "facebook/first-facility-assignments.csv": "2793eeb2230a9129c705654fe377e55a0c00a949ba9f897f6e3986980fd02906",
+      "runtime-manifest.json": "e82d0ff02651d07b8785076db12ae44a7497d0aa1d1a02c16e91c4a195ba617b",
+      "runtime/crosswalk.json": "d1c245c73dad30cbd5fb32fe987ab3fb53d02df8ef51378a4663ee54a73caa95",
+      "runtime/home-health-release-inputs.json": "c074b2b5e6d7d7a0b561cafeb319840492c02bd1f5790d1635d618e3faebc796",
+      "runtime/providers.json": "27603e930d0c56d42edee3177d3a8a93bbf94725e12e134e5e5b17255e0d1855",
+      "state/bergen/ccrc-campuses.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "state/essex/ccrc-campuses.json": "beea41b2ae2148ebcbd7a5dee04aa02664fa1bb8c0769cafb4c60f90e9d14b10",
+      "state/hudson/ccrc-campuses.json": "9ea1ebc25cda9d85455c9b73e94b9dcc594e841302c4a6e864349b0bb13602bb",
+      "state/morris/ccrc-campuses.json": "b7e77fec9a6a15796e3111c3dd286a622f230e0b3396f117fb868459e9f73710",
+      "state/passaic/ccrc-campuses.json": "ef02c5637ca2ec5cfa7b324698fe677932c9a0091c3c5bc911d2f0a2204009a0",
+      "state/raw/ccrc.pdf": "b751b7bddbfb349b8aca4f7459aba62e26ec5ae57348a55a5a2f0c89b5271153",
+      "state/raw/ccrc.pdf.json": "eb954825f8cd0529c31efc8749b81b15f6f1e28e465dc6faf2fe40ca330702c3",
+      "state/raw/firms.xlsx": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "state/raw/firms.xlsx.json": "b912e67ee60d8a78a1614a474856dc2eaadd6ffbf196b048f32ba78a73ea4b91",
+      "state/raw/ltc.xlsx": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716",
+      "state/raw/ltc.xlsx.json": "372cb92cee42438328512e83eeadc7cc326e71a9447621fe1c62064649e1a561",
+      "state/union/ccrc-campuses.json": "a2cd5169191d645bdde4292f84e3032e65d45b78058b96497549d75805382972"
+    }
+  },
+  "market": "north-jersey",
+  "publication": "none",
+  "purpose": "Exact identity reconciliation for the fixed Facebook research assignments. Contains no observations, coverage statuses or research findings.",
+  "schemaVersion": 1,
+  "summary": {
+    "assignments": 20,
+    "exact": 20,
+    "unresolved": 0,
+    "unresolvedReasons": {}
+  }
+}

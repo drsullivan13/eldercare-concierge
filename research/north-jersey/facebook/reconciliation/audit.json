@@ -1,0 +1,2308 @@
+{
+  "acceptance": "identity_and_coverage_scope_only_not_content_or_import",
+  "acceptedAssignmentIds": [
+    "nj-doh-NJ14C014",
+    "nj-doh-NJ20A013",
+    "nj-doh-NJ22001L",
+    "nj-doh-NJ60A002",
+    "nj-doh-NJ60A004",
+    "nj-doh-NJ60A006",
+    "nj-doh-NJ61407",
+    "nj-doh-NJ61424",
+    "nj-doh-NJ62016",
+    "nj-doh-NJ82472",
+    "nj-doh-NJ90A000",
+    "nj-doh-NJ90A120",
+    "nj-hha-317002"
+  ],
+  "batchPath": "research/north-jersey/facebook/fb-nj-union-morris-2026-11-12",
+  "commit": "0041ba3fa1c111f630865834d765206c3280e002",
+  "followups": [
+    {
+      "address": "535 Mountain Avenue",
+      "assignmentId": "nj-campus-lantern-hill",
+      "kind": "ccrc_campus",
+      "license": "",
+      "municipality": "New Providence",
+      "name": "Lantern Hill",
+      "officialId": "",
+      "providerId": "north-jersey-campus-lantern-hill-07974",
+      "reason": "missing_accepted_assignment_and_coverage",
+      "setting": "Continuing-care campus",
+      "status": "actionable",
+      "zip": "07974"
+    },
+    {
+      "address": "1 Cedar Crest Village Drive",
+      "assignmentId": "nj-campus-cedar-crest-village",
+      "kind": "ccrc_campus",
+      "license": "",
+      "municipality": "Pompton Plains",
+      "name": "Cedar Crest Village",
+      "officialId": "",
+      "providerId": "north-jersey-campus-cedar-crest-village-07444",
+      "reason": "missing_accepted_assignment_and_coverage",
+      "setting": "Continuing-care campus",
+      "status": "actionable",
+      "zip": "07444"
+    },
+    {
+      "address": "2424 MORRIS AVENUE, SUITE 107",
+      "assignmentId": "nj-reg-HP0254700",
+      "kind": "registered_office",
+      "license": "",
+      "municipality": "UNION",
+      "name": "A1 PLUS HOME CARE SERVICES LLC",
+      "officialId": "HP0254700",
+      "providerId": "north-jersey-hp-hp0254700",
+      "reason": "missing_accepted_assignment_and_coverage",
+      "setting": "Registered health care services office",
+      "status": "actionable",
+      "zip": "07083"
+    },
+    {
+      "address": "1460 Morris Avenue",
+      "assignmentId": "nj-reg-HP0364600",
+      "kind": "registered_office",
+      "license": "",
+      "municipality": "Union",
+      "name": "AAK HEALTHCARE INSTITUTE LLC",
+      "officialId": "HP0364600",
+      "providerId": "north-jersey-hp-hp0364600",
+      "reason": "missing_accepted_assignment_and_coverage",
+      "setting": "Registered health care services office",
+      "status": "actionable",
+      "zip": "07083"
+    },
+    {
+      "address": "32 MAPLE AVENUE,1ST FL",
+      "assignmentId": "nj-reg-HP0015347",
+      "kind": "registered_office",
+      "license": "",
+      "municipality": "MORRISTOWN",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "officialId": "HP0015347",
+      "providerId": "north-jersey-hp-hp0015347",
+      "reason": "missing_accepted_assignment_and_coverage",
+      "setting": "Registered health care services office",
+      "status": "actionable",
+      "zip": "07960"
+    },
+    {
+      "address": "15 Wychwood Rd",
+      "assignmentId": "nj-reg-HP0414500",
+      "kind": "registered_office",
+      "license": "",
+      "municipality": "Morristown",
+      "name": "CSS Morris, LLC",
+      "officialId": "HP0414500",
+      "providerId": "north-jersey-hp-hp0414500",
+      "reason": "missing_accepted_assignment_and_coverage",
+      "setting": "Registered health care services office",
+      "status": "actionable",
+      "zip": "07960-2621"
+    },
+    {
+      "address": "11 COMMERCE DRIVE",
+      "assignmentId": "nj-hha-317020",
+      "kind": "cms_home_health_office",
+      "license": "",
+      "municipality": "CRANFORD",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "officialId": "317020",
+      "providerId": "cms-317020",
+      "reason": "missing_accepted_assignment_and_coverage",
+      "setting": "CMS-certified home health office",
+      "status": "actionable",
+      "zip": "07016"
+    }
+  ],
+  "identityMismatches": [
+    {
+      "organizationIdentityMetadata": {
+        "address_as_published": "537 Mountain Avenue, New Providence, NJ 07974",
+        "license": "20016",
+        "licensed_name": "Continuing Care At Lantern Hill",
+        "municipality": "New Providence",
+        "zip": "07974"
+      },
+      "reason": "campus_unit_confusion",
+      "sourceAssignmentId": "nj-u-08",
+      "trustedScopeContextNotMapping": [
+        {
+          "address": "535 Mountain Avenue",
+          "assignmentId": "nj-campus-lantern-hill",
+          "kind": "ccrc_campus",
+          "license": "",
+          "municipality": "New Providence",
+          "name": "Lantern Hill",
+          "officialId": "",
+          "providerId": "north-jersey-campus-lantern-hill-07974",
+          "reason": "missing_accepted_assignment_and_coverage",
+          "setting": "Continuing-care campus",
+          "status": "actionable",
+          "zip": "07974"
+        }
+      ]
+    },
+    {
+      "organizationIdentityMetadata": {
+        "address_as_published": "6 Commerce Dr PH Suite, Cranford, NJ 07016",
+        "license": "HP0015342",
+        "licensed_name": "BAYADA Home Health Care, Inc.",
+        "municipality": "Cranford",
+        "zip": "07016"
+      },
+      "reason": "office_address_and_registration_discrepancy",
+      "sourceAssignmentId": "nj-u-09",
+      "trustedScopeContextNotMapping": [
+        {
+          "address": "11 COMMERCE DRIVE",
+          "assignmentId": "nj-hha-317020",
+          "kind": "cms_home_health_office",
+          "license": "",
+          "municipality": "CRANFORD",
+          "name": "BAYADA HOME HEALTH CARE, INC.",
+          "officialId": "317020",
+          "providerId": "cms-317020",
+          "reason": "missing_accepted_assignment_and_coverage",
+          "setting": "CMS-certified home health office",
+          "status": "actionable",
+          "zip": "07016"
+        },
+        {
+          "address": "32 MAPLE AVENUE,1ST FL",
+          "assignmentId": "nj-reg-HP0015347",
+          "kind": "registered_office",
+          "license": "",
+          "municipality": "MORRISTOWN",
+          "name": "BAYADA HOME HEALTH CARE, INC.",
+          "officialId": "HP0015347",
+          "providerId": "north-jersey-hp-hp0015347",
+          "reason": "missing_accepted_assignment_and_coverage",
+          "setting": "Registered health care services office",
+          "status": "actionable",
+          "zip": "07960"
+        }
+      ]
+    },
+    {
+      "organizationIdentityMetadata": {
+        "address_as_published": "2816 Morris Ave Ste 37, Union, NJ 07083",
+        "license": "HP0065000",
+        "licensed_name": "Visiting Angels",
+        "municipality": "Union",
+        "zip": "07083"
+      },
+      "reason": "unassigned_union_office_substitution",
+      "sourceAssignmentId": "nj-u-10",
+      "trustedScopeContextNotMapping": [
+        {
+          "address": "2424 MORRIS AVENUE, SUITE 107",
+          "assignmentId": "nj-reg-HP0254700",
+          "kind": "registered_office",
+          "license": "",
+          "municipality": "UNION",
+          "name": "A1 PLUS HOME CARE SERVICES LLC",
+          "officialId": "HP0254700",
+          "providerId": "north-jersey-hp-hp0254700",
+          "reason": "missing_accepted_assignment_and_coverage",
+          "setting": "Registered health care services office",
+          "status": "actionable",
+          "zip": "07083"
+        },
+        {
+          "address": "1460 Morris Avenue",
+          "assignmentId": "nj-reg-HP0364600",
+          "kind": "registered_office",
+          "license": "",
+          "municipality": "Union",
+          "name": "AAK HEALTHCARE INSTITUTE LLC",
+          "officialId": "HP0364600",
+          "providerId": "north-jersey-hp-hp0364600",
+          "reason": "missing_accepted_assignment_and_coverage",
+          "setting": "Registered health care services office",
+          "status": "actionable",
+          "zip": "07083"
+        }
+      ]
+    },
+    {
+      "organizationIdentityMetadata": {
+        "address_as_published": "55 Madison Avenue #400, Morristown, NJ 07960",
+        "license": "",
+        "licensed_name": "Visiting Angels of Morris and Somerset County",
+        "municipality": "Morristown",
+        "zip": "07960"
+      },
+      "reason": "office_address_and_organization_discrepancy",
+      "sourceAssignmentId": "nj-m-10",
+      "trustedScopeContextNotMapping": [
+        {
+          "address": "15 Wychwood Rd",
+          "assignmentId": "nj-reg-HP0414500",
+          "kind": "registered_office",
+          "license": "",
+          "municipality": "Morristown",
+          "name": "CSS Morris, LLC",
+          "officialId": "HP0414500",
+          "providerId": "north-jersey-hp-hp0414500",
+          "reason": "missing_accepted_assignment_and_coverage",
+          "setting": "Registered health care services office",
+          "status": "actionable",
+          "zip": "07960-2621"
+        }
+      ]
+    }
+  ],
+  "ledger": [
+    {
+      "assignmentId": "nj-doh-NJ90A120",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 2,
+      "lastLine": 2,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a120",
+      "reasons": [],
+      "row": 1,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A000",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 3,
+      "lastLine": 3,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a000",
+      "reasons": [],
+      "row": 2,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 4,
+      "lastLine": 4,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [],
+      "row": 3,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 5,
+      "lastLine": 5,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [],
+      "row": 4,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ22001L",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 6,
+      "lastLine": 6,
+      "linkedObservationCount": "",
+      "providerId": "cms-315009",
+      "reasons": [],
+      "row": 5,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 7,
+      "lastLine": 7,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [],
+      "row": 6,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 8,
+      "lastLine": 8,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [],
+      "row": 7,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A006",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 9,
+      "lastLine": 9,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a006",
+      "reasons": [],
+      "row": 8,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A002",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 10,
+      "lastLine": 10,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a002",
+      "reasons": [],
+      "row": 9,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ61407",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 11,
+      "lastLine": 11,
+      "linkedObservationCount": "",
+      "providerId": "cms-315120",
+      "reasons": [],
+      "row": 10,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ61424",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 12,
+      "lastLine": 12,
+      "linkedObservationCount": "",
+      "providerId": "cms-315329",
+      "reasons": [],
+      "row": 11,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ14C014",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 13,
+      "lastLine": 13,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj14c014",
+      "reasons": [],
+      "row": 12,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "assignments.csv",
+      "firstLine": 14,
+      "lastLine": 14,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "unknown_assignment_id"
+      ],
+      "row": 13,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-u-09",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "assignments.csv",
+      "firstLine": 15,
+      "lastLine": 15,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "unknown_assignment_id"
+      ],
+      "row": 14,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-u-10",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "assignments.csv",
+      "firstLine": 16,
+      "lastLine": 16,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "unknown_assignment_id"
+      ],
+      "row": 15,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-m-09",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "assignments.csv",
+      "firstLine": 17,
+      "lastLine": 17,
+      "linkedObservationCount": "",
+      "providerId": "cms-317002",
+      "reasons": [],
+      "row": 16,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-m-10",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "assignments.csv",
+      "firstLine": 18,
+      "lastLine": 18,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "unknown_assignment_id"
+      ],
+      "row": 17,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A120",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 2,
+      "lastLine": 2,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a120",
+      "reasons": [],
+      "row": 1,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A000",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 3,
+      "lastLine": 3,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a000",
+      "reasons": [],
+      "row": 2,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 4,
+      "lastLine": 4,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [],
+      "row": 3,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 5,
+      "lastLine": 5,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [],
+      "row": 4,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ22001L",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 6,
+      "lastLine": 6,
+      "linkedObservationCount": "",
+      "providerId": "cms-315009",
+      "reasons": [],
+      "row": 5,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 7,
+      "lastLine": 7,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [],
+      "row": 6,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 8,
+      "lastLine": 8,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [],
+      "row": 7,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A006",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 9,
+      "lastLine": 9,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a006",
+      "reasons": [],
+      "row": 8,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A002",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 10,
+      "lastLine": 10,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a002",
+      "reasons": [],
+      "row": 9,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ61407",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 11,
+      "lastLine": 11,
+      "linkedObservationCount": "",
+      "providerId": "cms-315120",
+      "reasons": [],
+      "row": 10,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ61424",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 12,
+      "lastLine": 12,
+      "linkedObservationCount": "",
+      "providerId": "cms-315329",
+      "reasons": [],
+      "row": 11,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ14C014",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "supplied-first-facility-assignments.csv",
+      "firstLine": 13,
+      "lastLine": 13,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj14c014",
+      "reasons": [],
+      "row": 12,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A120",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 6,
+      "lastLine": 24,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a120",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 1,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A000",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 25,
+      "lastLine": 43,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a000",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 2,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 44,
+      "lastLine": 62,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 3,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 63,
+      "lastLine": 81,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 4,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ22001L",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 82,
+      "lastLine": 100,
+      "linkedObservationCount": "",
+      "providerId": "cms-315009",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 5,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 101,
+      "lastLine": 119,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 6,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 120,
+      "lastLine": 138,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 7,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A006",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 139,
+      "lastLine": 157,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a006",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 8,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A002",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 158,
+      "lastLine": 176,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a002",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 9,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ61407",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 177,
+      "lastLine": 195,
+      "linkedObservationCount": "",
+      "providerId": "cms-315120",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 10,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ61424",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 196,
+      "lastLine": 214,
+      "linkedObservationCount": "",
+      "providerId": "cms-315329",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 11,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ14C014",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 215,
+      "lastLine": 233,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj14c014",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 12,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "batch-manifest.json",
+      "firstLine": 234,
+      "lastLine": 252,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 13,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-u-09",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "batch-manifest.json",
+      "firstLine": 253,
+      "lastLine": 271,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 14,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-u-10",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "batch-manifest.json",
+      "firstLine": 272,
+      "lastLine": 290,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 15,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-m-09",
+      "declaredObservationCount": "",
+      "disposition": "identity_only",
+      "file": "batch-manifest.json",
+      "firstLine": 291,
+      "lastLine": 309,
+      "linkedObservationCount": "",
+      "providerId": "cms-317002",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 16,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-m-10",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "batch-manifest.json",
+      "firstLine": 310,
+      "lastLine": 328,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 17,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": 17,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 2,
+      "lastLine": 2,
+      "linkedObservationCount": 16,
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "declared_observation_count_not_exactly_linked",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 1,
+      "sourceStatus": "evidence_found"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A006",
+      "declaredObservationCount": 0,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 3,
+      "lastLine": 3,
+      "linkedObservationCount": 0,
+      "providerId": "north-jersey-doh-nj60a006",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 2,
+      "sourceStatus": "searched_no_relevant_result"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A002",
+      "declaredObservationCount": 3,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 4,
+      "lastLine": 4,
+      "linkedObservationCount": 0,
+      "providerId": "north-jersey-doh-nj60a002",
+      "reasons": [
+        "declared_observation_count_not_exactly_linked",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 3,
+      "sourceStatus": "ambiguous_only"
+    },
+    {
+      "assignmentId": "nj-doh-NJ61424",
+      "declaredObservationCount": 0,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 5,
+      "lastLine": 5,
+      "linkedObservationCount": 0,
+      "providerId": "cms-315329",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 4,
+      "sourceStatus": "searched_no_relevant_result"
+    },
+    {
+      "assignmentId": "nj-doh-NJ61407",
+      "declaredObservationCount": 0,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 6,
+      "lastLine": 6,
+      "linkedObservationCount": 0,
+      "providerId": "cms-315120",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 5,
+      "sourceStatus": "searched_no_relevant_result"
+    },
+    {
+      "assignmentId": "nj-doh-NJ14C014",
+      "declaredObservationCount": 0,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 7,
+      "lastLine": 7,
+      "linkedObservationCount": 0,
+      "providerId": "north-jersey-doh-nj14c014",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 6,
+      "sourceStatus": "searched_no_relevant_result"
+    },
+    {
+      "assignmentId": "nj-m-09",
+      "declaredObservationCount": 1,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 8,
+      "lastLine": 8,
+      "linkedObservationCount": 1,
+      "providerId": "cms-317002",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 7,
+      "sourceStatus": "evidence_found"
+    },
+    {
+      "assignmentId": "nj-m-10",
+      "declaredObservationCount": 0,
+      "disposition": "quarantine",
+      "file": "coverage.csv",
+      "firstLine": 9,
+      "lastLine": 9,
+      "linkedObservationCount": 0,
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 8,
+      "sourceStatus": "searched_no_relevant_result"
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A120",
+      "declaredObservationCount": 3,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 10,
+      "lastLine": 10,
+      "linkedObservationCount": 2,
+      "providerId": "north-jersey-doh-nj90a120",
+      "reasons": [
+        "declared_observation_count_not_exactly_linked",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 9,
+      "sourceStatus": "partial"
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A000",
+      "declaredObservationCount": 3,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 11,
+      "lastLine": 11,
+      "linkedObservationCount": 3,
+      "providerId": "north-jersey-doh-nj90a000",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 10,
+      "sourceStatus": "partial"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": 8,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 12,
+      "lastLine": 12,
+      "linkedObservationCount": 7,
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "declared_observation_count_not_exactly_linked",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 11,
+      "sourceStatus": "partial"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": 13,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 13,
+      "lastLine": 13,
+      "linkedObservationCount": 9,
+      "providerId": "cms-315195",
+      "reasons": [
+        "declared_observation_count_not_exactly_linked",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 12,
+      "sourceStatus": "partial"
+    },
+    {
+      "assignmentId": "nj-doh-NJ22001L",
+      "declaredObservationCount": 3,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 14,
+      "lastLine": 14,
+      "linkedObservationCount": 2,
+      "providerId": "cms-315009",
+      "reasons": [
+        "declared_observation_count_not_exactly_linked",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 13,
+      "sourceStatus": "partial"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": 7,
+      "disposition": "identity_only",
+      "file": "coverage.csv",
+      "firstLine": 15,
+      "lastLine": 15,
+      "linkedObservationCount": 7,
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 14,
+      "sourceStatus": "evidence_found"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": 7,
+      "disposition": "quarantine",
+      "file": "coverage.csv",
+      "firstLine": 16,
+      "lastLine": 16,
+      "linkedObservationCount": 7,
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 15,
+      "sourceStatus": "evidence_found"
+    },
+    {
+      "assignmentId": "nj-u-09",
+      "declaredObservationCount": 0,
+      "disposition": "quarantine",
+      "file": "coverage.csv",
+      "firstLine": 17,
+      "lastLine": 17,
+      "linkedObservationCount": 0,
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 16,
+      "sourceStatus": "searched_no_relevant_result"
+    },
+    {
+      "assignmentId": "nj-u-10",
+      "declaredObservationCount": 0,
+      "disposition": "quarantine",
+      "file": "coverage.csv",
+      "firstLine": 18,
+      "lastLine": 18,
+      "linkedObservationCount": 0,
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 17,
+      "sourceStatus": "searched_no_relevant_result"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 2,
+      "lastLine": 2,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 1,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 3,
+      "lastLine": 3,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 2,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 4,
+      "lastLine": 4,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 3,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 5,
+      "lastLine": 5,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 4,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 6,
+      "lastLine": 6,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 5,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 7,
+      "lastLine": 7,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 6,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 8,
+      "lastLine": 8,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 7,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 9,
+      "lastLine": 9,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 8,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 10,
+      "lastLine": 10,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 9,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 11,
+      "lastLine": 11,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 10,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 12,
+      "lastLine": 12,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 11,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 13,
+      "lastLine": 13,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 12,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 14,
+      "lastLine": 14,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 13,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 15,
+      "lastLine": 15,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 14,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 16,
+      "lastLine": 16,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 15,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 17,
+      "lastLine": 17,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 16,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ60A004",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 18,
+      "lastLine": 18,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj60a004",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 17,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 19,
+      "lastLine": 19,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 18,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 20,
+      "lastLine": 20,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 19,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 21,
+      "lastLine": 21,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 20,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "nj-m-09",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 22,
+      "lastLine": 22,
+      "linkedObservationCount": "",
+      "providerId": "cms-317002",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 21,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A120",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 23,
+      "lastLine": 23,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a120",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 22,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A120",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 24,
+      "lastLine": 24,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a120",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 23,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 25,
+      "lastLine": 25,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 24,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A000",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 26,
+      "lastLine": 26,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a000",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 25,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A000",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 27,
+      "lastLine": 27,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a000",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 26,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ90A000",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 28,
+      "lastLine": 28,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj90a000",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 27,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 29,
+      "lastLine": 29,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 28,
+      "sourceStatus": "unresolved"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 30,
+      "lastLine": 30,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 29,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 31,
+      "lastLine": 31,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 30,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 32,
+      "lastLine": 32,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 31,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 33,
+      "lastLine": 33,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 32,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 34,
+      "lastLine": 34,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 33,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 35,
+      "lastLine": 35,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 34,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ20A013",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 36,
+      "lastLine": 36,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj20a013",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 35,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 37,
+      "lastLine": 37,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 36,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 38,
+      "lastLine": 38,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 37,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 39,
+      "lastLine": 39,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 38,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 40,
+      "lastLine": 40,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 39,
+      "sourceStatus": "unresolved"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 41,
+      "lastLine": 41,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 40,
+      "sourceStatus": "unresolved"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 42,
+      "lastLine": 42,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 41,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 43,
+      "lastLine": 43,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 42,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 44,
+      "lastLine": 44,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 43,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 45,
+      "lastLine": 45,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 44,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 46,
+      "lastLine": 46,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 45,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 47,
+      "lastLine": 47,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 46,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 48,
+      "lastLine": 48,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 47,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ62016",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 49,
+      "lastLine": 49,
+      "linkedObservationCount": "",
+      "providerId": "cms-315195",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 48,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ22001L",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 50,
+      "lastLine": 50,
+      "linkedObservationCount": "",
+      "providerId": "cms-315009",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 49,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ22001L",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 51,
+      "lastLine": 51,
+      "linkedObservationCount": "",
+      "providerId": "cms-315009",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 50,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 52,
+      "lastLine": 52,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "observation_match_not_exact",
+        "unassigned_observation"
+      ],
+      "row": 51,
+      "sourceStatus": "probable"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 53,
+      "lastLine": 53,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 52,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 54,
+      "lastLine": 54,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 53,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 55,
+      "lastLine": 55,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 54,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 56,
+      "lastLine": 56,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 55,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 57,
+      "lastLine": 57,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 56,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 58,
+      "lastLine": 58,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 57,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "private_review_only",
+      "file": "observations.csv",
+      "firstLine": 59,
+      "lastLine": 59,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "content_not_reviewed",
+        "source_uses_assignment_id_namespace"
+      ],
+      "row": 58,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 60,
+      "lastLine": 60,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 59,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 61,
+      "lastLine": 61,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 60,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 62,
+      "lastLine": 62,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 61,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 63,
+      "lastLine": 63,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 62,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 64,
+      "lastLine": 64,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 63,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 65,
+      "lastLine": 65,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 64,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-u-08",
+      "declaredObservationCount": "",
+      "disposition": "quarantine",
+      "file": "observations.csv",
+      "firstLine": 66,
+      "lastLine": 66,
+      "linkedObservationCount": "",
+      "providerId": "",
+      "reasons": [
+        "source_uses_assignment_id_namespace",
+        "unknown_assignment_id"
+      ],
+      "row": 65,
+      "sourceStatus": "exact"
+    },
+    {
+      "assignmentId": "nj-m-09",
+      "declaredObservationCount": "",
+      "disposition": "excluded",
+      "file": "aggregate-candidates.csv",
+      "firstLine": 2,
+      "lastLine": 2,
+      "linkedObservationCount": "",
+      "providerId": "cms-317002",
+      "reasons": [
+        "aggregate_not_eligible_for_publication_or_scoring"
+      ],
+      "row": 1,
+      "sourceStatus": ""
+    },
+    {
+      "assignmentId": "nj-doh-NJ82472",
+      "declaredObservationCount": "",
+      "disposition": "excluded",
+      "file": "aggregate-candidates.csv",
+      "firstLine": 3,
+      "lastLine": 3,
+      "linkedObservationCount": "",
+      "providerId": "north-jersey-doh-nj82472",
+      "reasons": [
+        "aggregate_not_eligible_for_publication_or_scoring"
+      ],
+      "row": 2,
+      "sourceStatus": ""
+    }
+  ],
+  "ledgerContract": {
+    "dispositions": [
+      "excluded",
+      "identity_only",
+      "private_review_only",
+      "quarantine"
+    ],
+    "reasons": [
+      "aggregate_not_eligible_for_publication_or_scoring",
+      "assignment_address_mismatch",
+      "assignment_county_mismatch",
+      "assignment_license_mismatch",
+      "assignment_municipality_mismatch",
+      "assignment_name_mismatch",
+      "assignment_officialId_mismatch",
+      "assignment_setting_mismatch",
+      "assignment_zip_mismatch",
+      "content_not_reviewed",
+      "declared_observation_count_not_exactly_linked",
+      "observation_match_not_exact",
+      "provider_id_disagreement",
+      "source_uses_assignment_id_namespace",
+      "trusted_identity_unresolved",
+      "unassigned_observation",
+      "unknown_assignment_id"
+    ]
+  },
+  "publication": "none",
+  "schemaVersion": 1,
+  "sourceArtifactSha256": {
+    "aggregate-candidates.csv": "f84ee77228ee4adb2fd3664987933d095c31615c84a8beb8b39dd8ca8f335479",
+    "assignments.csv": "2c5808660963ebb7a46c40e36c4f207eeba9993b1080599e94a73e031e982bd6",
+    "batch-manifest.json": "53a084891940804c0484a47bce24ca64db4e6d26da68ec3aa500d3fff0ee9ec3",
+    "coverage.csv": "32372adc14b6c0e682dc7924f597c47553ece3713f557bfda3de1743c4047a18",
+    "observations.csv": "ce92af646f0256b011e3e5a826db34da26d1dff6c2d1c3f6914dd9841aa32f75",
+    "supplied-first-facility-assignments.csv": "2793eeb2230a9129c705654fe377e55a0c00a949ba9f897f6e3986980fd02906"
+  },
+  "summary": {
+    "acceptedAssignmentAndCoverageIds": 13,
+    "actionableFollowups": 7,
+    "aggregateRows": 2,
+    "batchAssignments": 17,
+    "blockedFollowups": 0,
+    "coverageCountDiscrepancies": 6,
+    "coverageRows": 17,
+    "followups": 7,
+    "manifestProviderRows": 17,
+    "observationRows": 65,
+    "suppliedAssignmentRows": 12,
+    "trustedAssignments": 20,
+    "trustedExact": 20,
+    "unassignedObservationRows": 11
+  },
+  "trustedArtifactSha256": {
+    "assigned.json": "38fec99e9e3738cc4a589f047a538e118b2289e9d6fb7d12e2c26ced75a7753c",
+    "assignment-manifest.json": "82295259e9b4814b6f85654585515beedbdab4fbd16e41cbd5c90d93b98cac5e",
+    "coverage.csv": "ab86daa043a857a0c3fc5e480458501bc69af9a7e7e4b057eb982a9fc66039d2",
+    "kit.csv": "7a4d3cea0639cb5f1dd6685a0f9d31e1356a33b30e46825eafa4848b6c9a912d",
+    "observations.csv": "cbed22dc6c32e87cc11eb3b4f29245a3436f0996ffcbe09c468ececdffef5cd5"
+  },
+  "trustedValidation": {
+    "policy": "kit_supplied_allowlist_internal_consistency_status_drives_actionable_vs_blocked",
+    "sourceKitSummary": {
+      "assignments": 20,
+      "exact": 20,
+      "unresolved": 0,
+      "unresolvedReasons": {}
+    }
+  }
+}
