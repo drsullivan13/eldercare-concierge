@@ -248,7 +248,7 @@ test("actual North Hill source keeps 38 mixed-campus ratings distinct from four 
   const catalog: IndividualReviewsResponse = await response.json();
   const source = catalog.sources.find((item) => item.reportedCount === 38)!;
   expect(source).toBeTruthy();
-  expect(source.scopeNote).toContain("mixed-scope");
+  expect(source.scopeNote).toContain("38 ratings across North Hill and Pines Edge");
   expect(catalog.accounts).toHaveLength(4);
   const evidence: LocationResearchResponse = await (
     await request.get("/api/research", { params: { id } })

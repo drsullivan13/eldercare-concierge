@@ -70,8 +70,12 @@ class MassachusettsCatalogTests(unittest.TestCase):
         record = self.records["cms-225281"]
         self.assertEqual(record["sources"][0]["reportedCount"], 38)
         self.assertEqual(len(record["accounts"]), 4)
-        self.assertIn("mixed-scope", " ".join(record["notes"]))
-        self.assertIn("mixed-scope", record["sources"][0]["scopeNote"])
+        note = record["sources"][0]["scopeNote"]
+        self.assertRegex(note, r"38 ratings across North Hill.*Pines Edge")
+        self.assertRegex(note, r"four accounts shown.*Pines Edge rehab")
+        self.assertRegex(note, r"broader source.*not.*nursing-unit rating.*score")
+        self.assertNotRegex(note, r"(?i)release only|do not assign|copy its aggregate")
+        self.assertIn(note, record["notes"])
         coverage = next(s for s in self.coverage if s["providerId"] == "cms-225281")
         self.assertIn("mlc-external-301320", {r["nativeId"] for r in coverage["excluded"]})
 

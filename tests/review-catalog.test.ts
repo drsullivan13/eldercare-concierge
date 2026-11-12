@@ -83,7 +83,19 @@ test("the real 38-count mixed listing supplies four exact nursing accounts, not 
   assert.equal(source.reportedCount, 38);
   assert.equal(source.retainedCount, 4);
   assert.equal(source.pagesChecked, 1);
-  assert.ok(source.scopeNote?.includes("campus"));
+  assert.match(
+    source.scopeNote ?? "",
+    /38 ratings across North Hill.*Pines Edge/,
+  );
+  assert.match(source.scopeNote ?? "", /four accounts shown.*Pines Edge rehab/);
+  assert.match(
+    source.scopeNote ?? "",
+    /broader source.*not.*nursing-unit rating.*score/,
+  );
+  assert.doesNotMatch(
+    source.scopeNote ?? "",
+    /release only|do not assign|copy its aggregate/i,
+  );
   assert.equal(
     record.accounts.filter((a) => a.sourceId === source.id).length,
     4,
