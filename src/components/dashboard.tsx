@@ -122,7 +122,7 @@ function WorkspaceDashboard({
       );
   }
   function submitSearch() {
-    comparison.clear();
+    if (search.draft.zip.trim() !== search.request.zip) comparison.clear();
     search.run();
     navigate("search");
   }
@@ -465,7 +465,7 @@ function WorkspaceDashboard({
           close={() => setProfileOpen(false)}
           save={(profile) => {
             if (update((w) => ({ ...w, profile }))) {
-              comparison.clear();
+              if (profile.zip.trim() !== search.request.zip) comparison.clear();
               search.filter({ zip: profile.zip });
               setProfileOpen(false);
               setToast("Your workspace has been updated.");

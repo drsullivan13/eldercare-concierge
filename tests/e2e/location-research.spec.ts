@@ -5,14 +5,14 @@ import type { LocationResearchResponse } from "../../src/lib/location-research-t
 
 const providers = new Map(catalogue.map((p) => [p.id, p]));
 test.describe.configure({ timeout: 180_000 });
-async function openSearch(page: Page) {
+async function openSearch(page: Page, category = "all") {
   await page.goto("/dashboard?demo=1");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Find care for your family.",
   );
   await page
     .getByRole("combobox", { name: "Care type", exact: true })
-    .selectOption("all");
+    .selectOption(category);
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Search radius" })
@@ -155,6 +155,7 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
             fact.amount.min.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",
+              minimumFractionDigits: 0,
               maximumFractionDigits: 2,
             }),
           );
@@ -353,6 +354,7 @@ test("actual review sources, excluded populations and selected family accounts n
 
 test("research filtering and experience sorting retain category rules and selected comparison records", async ({
   page,
+  request,
 }) => {
   await openSearch(page);
   await page
@@ -405,9 +407,16 @@ test("research filtering and experience sorting retain category rules and select
     await expect(prices).toContainText(
       "Published prices, not a personal quote.",
     );
+    await prices
+      .getByText("Pricing details & sources", { exact: true })
+      .click();
+    const response = await request.get("/api/research", { params: { id } });
+    expect(response.ok()).toBe(true);
+    const research: LocationResearchResponse = await response.json();
+    const firstCost = research.facts.find((fact) => fact.kind === "cost")!;
     await expect(prices.getByRole("link").first()).toHaveAttribute(
       "href",
-      /^https:/,
+      research.sources.find((source) => source.id === firstCost.sourceId)!.url,
     );
     await expect(
       dialog.getByRole("group", {
@@ -507,10 +516,9 @@ test("research filtering and experience sorting retain category rules and select
 test("comparison selections survive an evidence filter that hides their result cards", async ({
   page,
 }) => {
-  await openSearch(page);
+  await openSearch(page, "life-plan");
   const ids = ["lifeplan-brooksby-village", "lifeplan-linden-ponds"];
   for (const id of ids) {
-    await searchName(page, providers.get(id)!.name);
     await card(page, id)
       .getByRole("checkbox", {
         name: `Compare ${providers.get(id)!.name}`,
@@ -584,12 +592,11 @@ test("profile tabs expose one named pane and support arrow, Home, End and Escape
 test("research failures recover on retry and wrong-location payloads never display foreign claims", async ({
   page,
 }) => {
-  let attempt = 0;
+  let unavailable = true;
   await page.route(
     "**/api/research?id=lifeplan-brooksby-village",
     async (route) => {
-      attempt++;
-      if (attempt === 1)
+      if (unavailable)
         await route.fulfill({
           status: 503,
           contentType: "application/json",
@@ -610,6 +617,7 @@ test("research failures recover on retry and wrong-location payloads never displ
   await expect(
     dialog.locator(".location-research").getByRole("alert"),
   ).toContainText("could not be loaded");
+  unavailable = false;
   await dialog.getByRole("button", { name: "Retry location research" }).click();
   await expect(
     dialog.getByRole("region", { name: "Property overview" }),
@@ -657,12 +665,9 @@ test("families see sourced costs and an account preview, with a direct path to c
   const accounts = dialog.locator(".public-reviews article");
   const overview = dialog.locator(".property-overview");
   await expect(
-    overview.getByRole("button", { name: "See this price & what's included" }),
+    overview.getByRole("button", { name: "Price details & source" }),
   ).toBeVisible();
   await expect(overview.locator(".overview-rate")).toContainText("$2,523");
-  await expect(overview).toContainText(
-    "Published price, not a personal quote.",
-  );
   await expect(overview.locator("blockquote")).toBeVisible();
   await overview
     .getByRole("button", { name: "Read concerns", exact: true })
@@ -673,6 +678,7 @@ test("families see sourced costs and an account preview, with a direct path to c
   const unfavorable = accounts.filter({
     hasText: "The food is generally awful.",
   });
+  await expect(unfavorable).toBeFocused();
   await expect(unfavorable.locator("blockquote")).toHaveText(
     "“The food is generally awful.”",
   );
@@ -810,7 +816,7 @@ test("office coverage, a free assessment and aggregate review links stay useful 
   expect(data.reviews).toEqual([]);
   await dialog
     .getByRole("button", {
-      name: "See this price & what's included",
+      name: "Price details & source",
       exact: true,
     })
     .click();
@@ -821,9 +827,7 @@ test("office coverage, a free assessment and aggregate review links stay useful 
     dialog.getByRole("heading", { name: "How care is delivered" }),
   ).toBeVisible();
   await showPane(dialog, "Overview");
-  await dialog
-    .getByRole("button", { name: "Explore daily life & services" })
-    .click();
+  await dialog.getByRole("button", { name: "All perks & services" }).click();
   await expect(
     dialog.getByRole("tabpanel", { name: "Costs & perks", exact: true }),
   ).toBeVisible();
@@ -877,9 +881,7 @@ test("office coverage, a free assessment and aggregate review links stay useful 
   const assessment = dialog
     .locator(".fact-cost")
     .filter({ hasText: "no-cost initial home-care assessment" });
-  await expect(assessment.locator(".offering-price")).toHaveText(
-    "$0.00 one-time",
-  );
+  await expect(assessment.locator(".offering-price")).toHaveText("$0 one-time");
   await expect(dialog).toContainText(
     "No numeric ongoing care rate is established here",
   );

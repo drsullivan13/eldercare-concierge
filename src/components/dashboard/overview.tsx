@@ -1,4 +1,5 @@
 import { ArrowRight, Bookmark, ClipboardList, MapPin } from "lucide-react";
+import Image from "next/image";
 import { CATEGORY_LABELS } from "@/lib/providers";
 import type { Workspace } from "@/lib/workspace";
 import type { CareSearch } from "@/hooks/use-care-search";
@@ -19,14 +20,22 @@ export function Overview({
   ).length;
   return (
     <div className="care-overview">
-      <div className="page-heading compact">
-        <div>
+      <section className="care-search-home" aria-label="Search nearby care">
+        <div className="page-heading compact">
           <h1>
             Find care for <em>your family.</em>
           </h1>
         </div>
-      </div>
-      <section className="care-search-home" aria-label="Search nearby care">
+        <div className="care-welcome-photo">
+          <Image
+            src="/images/porch-conversation.webp"
+            alt="Two women sharing a conversation over mugs on a porch."
+            width={1024}
+            height={683}
+            sizes="(max-width: 760px) 100vw, 50vw"
+            preload
+          />
+        </div>
         <form
           className="quick-search"
           onSubmit={(event) => {
@@ -92,11 +101,11 @@ export function Overview({
           <Bookmark size={22} />
           <span>
             <strong>Your shortlist</strong>
-            <span>
-              {workspace.savedProviderIds.length
-                ? `${workspace.savedProviderIds.length} saved options to compare`
-                : "Keep promising options in one place"}
-            </span>
+            {workspace.savedProviderIds.length > 0 && (
+              <span>
+                {workspace.savedProviderIds.length} saved options to compare
+              </span>
+            )}
           </span>
           <ArrowRight size={18} />
         </button>
@@ -104,11 +113,7 @@ export function Overview({
           <ClipboardList size={22} />
           <span>
             <strong>Your next steps</strong>
-            <span>
-              {pending
-                ? `${pending} steps in your care plan`
-                : "Plan calls, visits, and family decisions"}
-            </span>
+            {pending > 0 && <span>{pending} steps in your care plan</span>}
           </span>
           <ArrowRight size={18} />
         </button>

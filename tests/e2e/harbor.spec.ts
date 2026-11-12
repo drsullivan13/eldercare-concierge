@@ -551,7 +551,20 @@ test("families filter and compare options, then use the place section selector w
       .getByRole("checkbox", { name: `Compare ${provider.name}`, exact: true })
       .check();
   }
+  const researchLoaded = Promise.all(
+    selected.map((provider) =>
+      page.waitForResponse((response) => {
+        const url = new URL(response.url());
+        return (
+          url.pathname === "/api/research" &&
+          url.searchParams.get("id") === provider.id &&
+          response.status() === 200
+        );
+      }),
+    ),
+  );
   await page.getByRole("button", { name: "Compare", exact: true }).click();
+  const researchResponses = await researchLoaded;
   const comparison = page.getByRole("dialog", { name: "Compare places" });
   const tableArea = comparison.getByRole("region", {
     name: "Places comparison",
@@ -564,7 +577,7 @@ test("families filter and compare options, then use the place section selector w
     comparison.getByRole("heading", { name: "A review insight", exact: true }),
   ).toBeVisible();
   await expect(comparison).toContainText("not clinical quality or safety");
-  for (const provider of selected) {
+  for (const [index, provider] of selected.entries()) {
     const prices = comparison.getByRole("group", {
       name: `${provider.name}, published prices`,
       exact: true,
@@ -577,11 +590,10 @@ test("families filter and compare options, then use the place section selector w
       "href",
       /^https?:/,
     );
-    const response = await page.request.get("/api/research", {
-      params: { id: provider.id },
-    });
-    expect(response.status()).toBe(200);
-    const research = (await response.json()) as LocationResearchResponse;
+    const research = (await researchResponses[
+      index
+    ].json()) as LocationResearchResponse;
+    expect(research.providerId).toBe(provider.id);
     const perks = comparison.getByRole("group", {
       name: `${provider.name}, everyday perks`,
       exact: true,
@@ -1064,11 +1076,9 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
   await noDocumentOverflow(page);
   await detail.getByRole("button", { name: "Close dialog" }).click();
 
-  // Deliberately fail one evidence request, then retry against the real server.
-  let failNext = true;
+  let failEvidence = true;
   await page.route("**/api/evidence?*", async (route) => {
-    if (failNext) {
-      failNext = false;
+    if (failEvidence) {
       await route.fulfill({
         status: 503,
         json: { error: "Controlled transient error for recovery test" },
@@ -1087,6 +1097,7 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
       new URL(response.url()).pathname === "/api/evidence" &&
       response.status() === 200,
   );
+  failEvidence = false;
   await history.getByRole("button", { name: "Try again" }).click();
   await retry;
   await expect(history.locator("article.source-item").first()).toContainText(

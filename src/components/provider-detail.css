@@ -80,13 +80,14 @@
 
 .provider-detail .detail-actions {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 22px;
+  flex-wrap: wrap;
+  gap: 0 22px;
   margin-top: 4px;
 }
 
 .provider-detail .detail-actions > * {
   min-width: 0;
+  flex-shrink: 0;
   max-width: 100%;
   min-height: 44px;
   white-space: nowrap;
@@ -102,6 +103,7 @@
 }
 
 .provider-detail .detail-actions > .text-link {
+  width: auto;
   display: inline-flex;
   align-items: center;
   margin: 0;

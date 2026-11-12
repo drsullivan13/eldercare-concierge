@@ -1,13 +1,11 @@
 "use client";
 import "./provider-card.css";
 import { FamilyExperienceCount } from "./family-experience";
+import { providerDisplayName } from "./provider-display-name";
 import {
   ArrowUpRight,
   Bookmark,
-  Building2,
   Check,
-  HeartHandshake,
-  Hospital,
   MapPin,
   ShieldAlert,
   Star,
@@ -29,18 +27,6 @@ const categoryServices: Partial<Record<CareCategory, string[]>> = {
   staffing: ["Staffing"],
 };
 
-export function ProviderIcon({
-  provider,
-  size = 21,
-}: {
-  provider: Provider;
-  size?: number;
-}) {
-  if (provider.category === "home-care" || provider.category === "staffing")
-    return <HeartHandshake size={size} />;
-  if (provider.category === "home-health") return <Hospital size={size} />;
-  return <Building2 size={size} />;
-}
 function Rating({ value }: { value: number | null }) {
   return (
     <span className="rating">
@@ -147,18 +133,10 @@ export function ProviderCard({
         onClick={onOpen}
         aria-label={provider.name}
       >
-        {provider.name === provider.name.toUpperCase()
-          ? provider.name
-              .toLowerCase()
-              .replace(/\b[a-z]/g, (letter) => letter.toUpperCase())
-              .replace(
-                /\b(Llc|Llp|Inc|Cms|Vna|Snf|Nf|Usa|Ii|Iii|Iv)\b/g,
-                (word) => word.toUpperCase(),
-              )
-          : provider.name}
+        {providerDisplayName(provider.name)}
       </button>
       <p className="provider-address">
-        {provider.city}, {provider.state} {provider.zip}
+        {providerDisplayName(provider.city)}, {provider.state} {provider.zip}
       </p>
       {provider.locationKind === "office" && (
         <p className="provider-location-note">

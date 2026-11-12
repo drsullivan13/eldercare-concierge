@@ -26,6 +26,15 @@ const money = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 2,
 });
 
+function priceAmount(amount: NonNullable<OfferingFact["amount"]>) {
+  return (
+    money.format(amount.min) +
+    (amount.max !== null && amount.max !== amount.min
+      ? `–${money.format(amount.max)}`
+      : "")
+  );
+}
+
 type Insight = {
   text: string;
   quoted: boolean;
@@ -132,10 +141,7 @@ function Prices({ data }: { data: LocationResearchResponse }) {
   const rate = (fact: OfferingFact) =>
     fact.amount && (
       <strong className={styles.price}>
-        {money.format(fact.amount.min)}
-        {fact.amount.max !== null && fact.amount.max !== fact.amount.min
-          ? `–${money.format(fact.amount.max)}`
-          : ""}
+        {priceAmount(fact.amount)}
         <span>
           {fact.amount.period === "one-time"
             ? " one time"
@@ -162,6 +168,11 @@ function Prices({ data }: { data: LocationResearchResponse }) {
       " · starting rate",
     )
     .replace(/ starting monthly rate/, " · starting rate")
+    .replace(lead.amount ? priceAmount(lead.amount) : "", "")
+    .replace(/\b(?:are |is )?published at\s*/i, "")
+    .replace(/\bper (?:month|day|hour)\b/, "")
+    .replace(/,\s*(?:separate|effective|FUTURE).*$/i, "")
+    .replace(/:\s*(?=[.;]|$)/, "")
     .split(/[.;](?:\s|$)/)[0];
   const separateFees =
     costs.some(
@@ -195,14 +206,10 @@ function Prices({ data }: { data: LocationResearchResponse }) {
         <p className={styles.muted}>Ask for current rates.</p>
       )}
       {!recurring.length && <small>No ongoing rate verified.</small>}
-      {separateFees && (
-        <small>Separate fees may apply. See pricing details.</small>
-      )}
-      <small className={styles.muted}>
-        Published prices, not a personal quote.
-      </small>
+      {separateFees && <small>Separate fees listed. See details.</small>}
+      <small className={styles.muted}>Published, not a personal quote.</small>
       <details className={styles.more}>
-        <summary>Pricing details & sources</summary>
+        <summary>Rates & sources</summary>
         {costs.map(render)}
       </details>
     </>
@@ -218,7 +225,13 @@ function Perks({ data }: { data: LocationResearchResponse }) {
     "care",
   ];
   const facts = kinds.flatMap((kind) => {
-    const matches = data.facts.filter((fact) => fact.kind === kind);
+    const matches = data.facts.filter(
+      (fact) =>
+        fact.kind === kind &&
+        !data.sources.some(
+          (item) => item.id === fact.sourceId && item.kind === "regulator",
+        ),
+    );
     return (
       matches.find((fact) =>
         data.sources.some(
@@ -234,8 +247,8 @@ function Perks({ data }: { data: LocationResearchResponse }) {
   return facts.slice(0, 1).map((fact) => (
     <div className={styles.fact} key={fact.id}>
       <p>
-        {fact.text.length > 110
-          ? `${fact.text.slice(0, 110).replace(/\s+\S*$/, "")}…`
+        {fact.text.length > 90
+          ? `${fact.text.slice(0, 90).replace(/\s+\S*$/, "")}…`
           : fact.text}
       </p>
       <Source
@@ -245,9 +258,9 @@ function Perks({ data }: { data: LocationResearchResponse }) {
       {/extra|additional|not included/i.test(fact.text) && (
         <small>Some services may cost extra.</small>
       )}
-      {(fact.text.length > 110 || facts.length > 1) && (
+      {(fact.text.length > 90 || facts.length > 1) && (
         <details className={styles.more}>
-          <summary>More everyday details</summary>
+          <summary>Perks & details</summary>
           {facts.map((detail) => (
             <div className={styles.fact} key={detail.id}>
               <p>{detail.text}</p>

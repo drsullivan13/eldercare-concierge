@@ -157,7 +157,11 @@ export function PropertyOverview({
                 .
               </p>
             )}
-            {extraFee && <small>{extraFee.charAt(0).toUpperCase() + extraFee.slice(1)}.</small>}
+            {extraFee && (
+              <small>
+                {extraFee.charAt(0).toUpperCase() + extraFee.slice(1)}.
+              </small>
+            )}
             {(!cost.amount ||
               cost.amount.period === "one-time" ||
               cost.amount.min === 0) && (
@@ -196,9 +200,7 @@ export function PropertyOverview({
         {practical.length ? (
           practical.map((fact) => (
             <div key={fact.id} className="overview-fact">
-              <p>
-                {perkPreview(fact.text)}
-              </p>
+              <p>{perkPreview(fact.text)}</p>
             </div>
           ))
         ) : (

@@ -14,6 +14,7 @@ import {
 import { CATEGORY_LABELS, formatPhone, type Provider } from "@/lib/providers";
 import { Modal } from "./modal";
 import { providerCareAlerts } from "./provider-card";
+import { providerDisplayName } from "./provider-display-name";
 import { InspectionHistory } from "./inspection-history";
 import { HomeHealthEvidence } from "./home-health-evidence";
 import { LocationResearch } from "./location-research";
@@ -85,10 +86,11 @@ export function ProviderDetail({
     }
   };
   const locality = `${provider.city}, ${provider.state} ${provider.zip}`;
+  const displayLocality = `${providerDisplayName(provider.city)}, ${provider.state} ${provider.zip}`;
   const street = provider.address.trim().replace(/,+$/, "");
   const address = street.toLowerCase().endsWith(locality.toLowerCase())
-    ? street
-    : `${street}, ${locality}`;
+    ? `${street.slice(0, -locality.length)}${displayLocality}`
+    : `${street}, ${displayLocality}`;
   const alerts = providerCareAlerts(provider);
   const researchNotes = provider.warnings.filter(
     (warning) => !alerts.includes(warning),
@@ -101,7 +103,7 @@ export function ProviderDetail({
             <span className="eyebrow">
               {CATEGORY_LABELS[provider.category]}
             </span>
-            <h2>{provider.name}</h2>
+            <h2>{providerDisplayName(provider.name)}</h2>
             <p>
               <MapPin size={15} />
               {address}

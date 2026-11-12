@@ -52,13 +52,16 @@ test("experience sorting asks for a care type and comparison keeps one selection
   const response = await sortedResponse;
   expect(response.status()).toBe(200);
   const results: SearchResponse = await response.json();
-  expect(results.providers.length).toBeGreaterThanOrEqual(3);
+  expect(results.providers.length).toBeGreaterThanOrEqual(4);
   expect(
     results.providers.every((provider) => provider.category === "nursing-home"),
   ).toBe(true);
-  await expect(page.locator(".provider-card").first()).toContainText(
-    results.providers[0].name,
-  );
+  await expect(
+    page.locator(".provider-card").first().getByRole("button", {
+      name: results.providers[0].name,
+      exact: true,
+    }),
+  ).toBeVisible();
   await expect(sort).toHaveValue("experience");
   await expect(prompt).not.toBeVisible();
 

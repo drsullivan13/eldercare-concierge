@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Modal } from "../modal";
 import { evidenceDate } from "../evidence-date";
 import { providerCareAlerts } from "../provider-card";
+import { providerDisplayName } from "../provider-display-name";
 import { CATEGORY_LABELS, type Provider } from "@/lib/providers";
 import { ComparePlaceFacts } from "./compare-place-facts";
 import styles from "./family-compare.module.css";
@@ -84,7 +85,6 @@ function CompareDialog({
     .slice(0, 2);
   const warnings = pair.map((provider) => [
     ...new Set([
-      ...provider.warnings,
       ...providerCareAlerts(provider),
       ...(provider.research?.admissionRestriction
         ? [provider.research.admissionRestriction]
@@ -129,6 +129,24 @@ function CompareDialog({
           </small>
         </>
       ),
+    },
+    {
+      label: "Provider research notes",
+      value: (provider) => {
+        const alerts = providerCareAlerts(provider);
+        const notes = provider.warnings.filter(
+          (warning) => !alerts.includes(warning),
+        );
+        return notes.length ? (
+          <ul className={styles.list}>
+            {notes.map((note) => (
+              <li key={note}>{note}</li>
+            ))}
+          </ul>
+        ) : (
+          "No additional research notes."
+        );
+      },
     },
     {
       label: "Records & sources",
@@ -203,14 +221,15 @@ function CompareDialog({
                 <button
                   className={styles.providerName}
                   onClick={() => open(provider)}
+                  aria-label={provider.name}
                 >
-                  {provider.name} <ArrowUpRight size={14} />
+                  {providerDisplayName(provider.name)} <ArrowUpRight size={14} />
                 </button>
                 <span className={styles.category}>
                   {CATEGORY_LABELS[provider.category]}
                 </span>
                 <span className={styles.locality}>
-                  {provider.city}, {provider.state}
+                  {providerDisplayName(provider.city)}, {provider.state}
                   {provider.locationKind === "office"
                     ? " · Office only"
                     : provider.locationKind === "zip"
