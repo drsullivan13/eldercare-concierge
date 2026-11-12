@@ -278,12 +278,13 @@ test("the acquisition boundary rejects semantic, identity and retrieval mismatch
     const captures = JSON.parse(
       readFileSync(path.join(directory, "source-captures.json"), "utf8"),
     );
+    assert.doesNotThrow(run);
     captures["brightview-paramus-pricing"].checkedAt = "2026-02-31";
     writeFileSync(
       path.join(directory, "source-captures.json"),
       JSON.stringify(captures),
     );
-    assert.throws(run, /day is out of range for month/);
+    assert.throws(run, /ValueError:/);
   } finally {
     rmSync(directory, { recursive: true, force: true });
   }
