@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1c291549acd48f24a5320d7c3749840883ba9e82eddd05d7635944f300fd6556.body",
+  "bytes": 1533,
+  "checkedAt": "2026-11-12T15:41:23.174417+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "7 RYERSON AVENUE",
+    "City": "Caldwell",
+    "Postal": "07006",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c2ac590ca16900e06dc411c6b575c0fddc499f4892c39fddaa3329d6e1b461a0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=7+RYERSON+AVENUE&City=Caldwell&Region=NJ&Postal=07006&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

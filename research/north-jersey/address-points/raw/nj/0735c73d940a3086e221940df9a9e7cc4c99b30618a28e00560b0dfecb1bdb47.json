@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0735c73d940a3086e221940df9a9e7cc4c99b30618a28e00560b0dfecb1bdb47.body",
+  "bytes": 1614,
+  "checkedAt": "2026-11-12T15:41:23.271496+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "493 BLACK OAK RIDGE ROAD",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "3945cc351ef32028253586a1cc34c377dc9c89f19dd6279f7d9baddfd4dc5cc4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=493+BLACK+OAK+RIDGE+ROAD&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

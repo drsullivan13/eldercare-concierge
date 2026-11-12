@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8521676b1d2f6825d3b905ee1f18d7c36885cf1393c336f5dbcca6444085cb86.body",
+  "bytes": 3113,
+  "checkedAt": "2026-11-12T15:41:38.988491+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "695 US HIGHWAY 46 WEST",
+    "City": "FAIRFIELD",
+    "Postal": "07004",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e58c7cd625715a4fde8885b5697f47a37ee370253e22cad4cf76a6e359b96f47",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=695+US+HIGHWAY+46+WEST&City=FAIRFIELD&Region=NJ&Postal=07004&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

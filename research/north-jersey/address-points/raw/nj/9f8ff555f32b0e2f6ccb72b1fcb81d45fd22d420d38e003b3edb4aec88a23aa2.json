@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9f8ff555f32b0e2f6ccb72b1fcb81d45fd22d420d38e003b3edb4aec88a23aa2.body",
+  "bytes": 1579,
+  "checkedAt": "2026-11-12T15:41:22.021207+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1213 WESTFIELD AVENUE",
+    "City": "CLARK",
+    "Postal": "07066",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "98a77711e278b8dbf4122c0126306d30efcdb6b7318b951d23bb4a2e790a9077",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1213+WESTFIELD+AVENUE&City=CLARK&Region=NJ&Postal=07066&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

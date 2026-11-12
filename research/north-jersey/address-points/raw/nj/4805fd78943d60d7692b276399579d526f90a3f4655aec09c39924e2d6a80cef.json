@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4805fd78943d60d7692b276399579d526f90a3f4655aec09c39924e2d6a80cef.body",
+  "bytes": 1589,
+  "checkedAt": "2026-11-12T15:41:44.903957+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1064 Clinton Ave",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "04a136a01c06fe89b498930ede5d557707c5316cb638b74edeaa2805f1e542dc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1064+Clinton+Ave&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

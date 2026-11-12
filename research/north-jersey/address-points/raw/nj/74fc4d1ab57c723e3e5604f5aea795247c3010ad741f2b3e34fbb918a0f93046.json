@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/74fc4d1ab57c723e3e5604f5aea795247c3010ad741f2b3e34fbb918a0f93046.body",
+  "bytes": 3125,
+  "checkedAt": "2026-11-12T15:41:38.151822+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "90 E Halsey Rd",
+    "City": "Parsippany",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "afe728df4c3a1ac51dbf74cb6196c7ef9a1ef2fcde2db748ca2578157f27b5de",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=90+E+Halsey+Rd&City=Parsippany&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

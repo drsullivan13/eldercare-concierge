@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0de1cd6d0a9476aff7456a81c468da23e8c9838ad36a5f5da4ee178c155c195a.body",
+  "bytes": 1612,
+  "checkedAt": "2026-11-12T15:41:25.526185+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "95 MT KEMBLE AVENUE",
+    "City": "MORRISTOWN",
+    "Postal": "07960",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a2f3c912b3862c12ecd498c770994fca24c2b2bc27577c8caf402b0fae149e1d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=95+MT+KEMBLE+AVENUE&City=MORRISTOWN&Region=NJ&Postal=07960&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

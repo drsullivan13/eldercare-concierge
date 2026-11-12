@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1b3c6c10f898aaaf5a1a4aab6a0538d238a924e457b5f571cef118356092fb7a.body",
+  "bytes": 1544,
+  "checkedAt": "2026-11-12T15:41:30.043653+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "238 GOFFLE ROAD",
+    "City": "HAWTHORNE",
+    "Postal": "07506",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4ad8d1d157f95f882be274393947aa4a1ffb54016cdfd2bdbace74b5df9c3b15",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=238+GOFFLE+ROAD&City=HAWTHORNE&Region=NJ&Postal=07506&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

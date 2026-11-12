@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0b4d907be75ee579fff3a025ecc8f47cb95d97c64f947839d3a9e41330e5dff4.body",
+  "bytes": 1548,
+  "checkedAt": "2026-11-12T15:41:45.479804+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "73 Park Place",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "98b728e25f687db568c2b90b083205d005f47b2c93c72ad52316c528b5bf0736",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=73+Park+Place&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

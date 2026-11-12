@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7f348e004c597490df62f85f267a0e9e5730be8b451818a711ee2952a00d9d4f.body",
+  "bytes": 1602,
+  "checkedAt": "2026-11-12T15:41:21.424952+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1180 US HIGHWAY 22",
+    "City": "MOUNTAINSIDE",
+    "Postal": "07092",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "38ba03421f7b1bd54dbc17c8f3fc51fb38a6963437f4da36a8241fa6bd4e2cee",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1180+US+HIGHWAY+22&City=MOUNTAINSIDE&Region=NJ&Postal=07092&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

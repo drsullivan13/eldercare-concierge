@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/1d2e35dd42d74f30280bbdde9792067ac640a9a8911ffdf40f6d18179096d9b3.body",
+  "bytes": 4727,
+  "checkedAt": "2026-11-12T15:41:57.114623+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Irvington",
+    "format": "json",
+    "state": "NJ",
+    "street": "698 Chancellor Avenue, Store 2",
+    "vintage": "Current_Current",
+    "zip": "07111"
+  },
+  "sha256": "39a4061d7bf1aab3955874897fcfbd40cf912fb426d532a8ecb0d78aee1dfd26",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=698+Chancellor+Avenue%2C+Store+2&city=Irvington&state=NJ&zip=07111&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

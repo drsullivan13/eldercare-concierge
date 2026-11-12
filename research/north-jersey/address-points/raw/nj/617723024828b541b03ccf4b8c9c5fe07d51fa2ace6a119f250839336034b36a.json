@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/617723024828b541b03ccf4b8c9c5fe07d51fa2ace6a119f250839336034b36a.body",
+  "bytes": 1727,
+  "checkedAt": "2026-11-12T15:41:48.684764+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "600 E Crescent Ave",
+    "City": "Upper Saddle River",
+    "Postal": "07458",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c827f6833b8fdce4f5ae0183a5c94d00b2a8b1e25bb510bc3e00eab40bd65efb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=600+E+Crescent+Ave&City=Upper+Saddle+River&Region=NJ&Postal=07458&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

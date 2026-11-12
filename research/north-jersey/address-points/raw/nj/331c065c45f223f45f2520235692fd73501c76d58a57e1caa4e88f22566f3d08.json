@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/331c065c45f223f45f2520235692fd73501c76d58a57e1caa4e88f22566f3d08.body",
+  "bytes": 1581,
+  "checkedAt": "2026-11-12T15:41:42.964066+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "360 Florence Avenue",
+    "City": "Hillside",
+    "Postal": "07205",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4e02a608dddf5d985c0539c72046743e139f93702a2e956ae0100bf5bfdc7d49",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=360+Florence+Avenue&City=Hillside&Region=NJ&Postal=07205&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

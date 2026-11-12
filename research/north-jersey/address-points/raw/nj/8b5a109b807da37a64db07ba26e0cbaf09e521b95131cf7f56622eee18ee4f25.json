@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8b5a109b807da37a64db07ba26e0cbaf09e521b95131cf7f56622eee18ee4f25.body",
+  "bytes": 3086,
+  "checkedAt": "2026-11-12T15:41:38.110686+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "44 GLENWOOD AVENUE",
+    "City": "EAST ORANGE",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "941814491ee344ed627e650a42742856a4eb073be97957e415272415c3529979",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=44+GLENWOOD+AVENUE&City=EAST+ORANGE&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/69ca3189e7ac1bde6f40382035d6ddc24d43e3075d22673b3132220d605b7138.body",
+  "bytes": 1519,
+  "checkedAt": "2026-11-12T15:41:22.349604+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "305 OLDHAM ROAD",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ae554296c0e3c1c4de05082b2b0d23f055e47c2950e4e4c47a7b875ef7216baf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=305+OLDHAM+ROAD&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

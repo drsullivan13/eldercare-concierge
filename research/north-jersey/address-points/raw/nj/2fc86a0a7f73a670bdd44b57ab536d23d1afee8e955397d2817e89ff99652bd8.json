@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2fc86a0a7f73a670bdd44b57ab536d23d1afee8e955397d2817e89ff99652bd8.body",
+  "bytes": 1618,
+  "checkedAt": "2026-11-12T15:41:23.027765+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "459 PASSAIC AVENUE",
+    "City": "WEST CALDWELL",
+    "Postal": "07006",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4713b67a2756a9e38b4af376ea87c01c45c92526674b1acc951d512c6f81b047",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=459+PASSAIC+AVENUE&City=WEST+CALDWELL&Region=NJ&Postal=07006&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

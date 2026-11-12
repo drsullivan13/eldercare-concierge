@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/694031768e325f766c8944f4b811c69d0d3d2ed253b09c0cb3b7354d0ce7acb4.body",
+  "bytes": 1594,
+  "checkedAt": "2026-11-12T15:41:47.398568+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "440 Market St",
+    "City": "Elmwood Park",
+    "Postal": "07407",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e5c502ec56668817fdf1c8a8a07f4f5c36018169d3ed7b9f76b378a546bd13b0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=440+Market+St&City=Elmwood+Park&Region=NJ&Postal=07407&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

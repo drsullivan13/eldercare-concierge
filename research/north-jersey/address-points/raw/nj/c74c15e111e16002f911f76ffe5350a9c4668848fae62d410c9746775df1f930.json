@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c74c15e111e16002f911f76ffe5350a9c4668848fae62d410c9746775df1f930.body",
+  "bytes": 1629,
+  "checkedAt": "2026-11-12T15:41:31.128630+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5506 BERGENLINE AVENUE",
+    "City": "WEST NEW YORK",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5612f9d663c33c0ecd9850bb3425fee949a830ffb11a5cd9d3602faa8f2e0b0e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5506+BERGENLINE+AVENUE&City=WEST+NEW+YORK&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

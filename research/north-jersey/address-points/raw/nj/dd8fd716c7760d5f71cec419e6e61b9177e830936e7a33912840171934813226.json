@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dd8fd716c7760d5f71cec419e6e61b9177e830936e7a33912840171934813226.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:27.389470+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "10 JACKSON DRIVE",
+    "City": "Cranford",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1d2e282c1beff4f9a5500dd75b0d18a6fd70901439968ced81c2bf442151a496",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=10+JACKSON+DRIVE&City=Cranford&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

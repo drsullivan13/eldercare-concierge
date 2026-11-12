@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/8db94674bd648409846f3b009dd4dcbe70d89e9d1282695421d37e625b490838.body",
+  "bytes": 5244,
+  "checkedAt": "2026-11-12T15:41:58.832194+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SUCCASUNNA",
+    "format": "json",
+    "state": "NJ",
+    "street": "27 HAWTHORNE DRIVE",
+    "vintage": "Current_Current",
+    "zip": "07876"
+  },
+  "sha256": "f61b0b7432be9fe751d553613a2a9ec809f0b2dea21d6ea572a2b4ee8951036c",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=27+HAWTHORNE+DRIVE&city=SUCCASUNNA&state=NJ&zip=07876&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

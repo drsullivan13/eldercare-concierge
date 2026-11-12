@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e26f36654067d415279ac3114f4aac30cb19cd097c337af2da7dd7e6527b1890.body",
+  "bytes": 1575,
+  "checkedAt": "2026-11-12T15:41:21.080227+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "536 RIDGE ROAD",
+    "City": "CEDAR GROVE",
+    "Postal": "07009",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2abdd5ff3510fd0b235108b61e324f8560ccd758c82d314aa4117d1e116ef79d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=536+RIDGE+ROAD&City=CEDAR+GROVE&Region=NJ&Postal=07009&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

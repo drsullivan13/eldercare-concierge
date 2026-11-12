@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2c82eaa84706f2f42d1f25875e910ed96794325049bd5153d9de19bec4bddeac.body",
+  "bytes": 1580,
+  "checkedAt": "2026-11-12T15:41:29.484521+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "930 STUYVESANT AVE.",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2437990e514e224900eb27a95fd2a05158f2010c2504f2d8b7ceda2eb6728910",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=930+STUYVESANT+AVE.&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

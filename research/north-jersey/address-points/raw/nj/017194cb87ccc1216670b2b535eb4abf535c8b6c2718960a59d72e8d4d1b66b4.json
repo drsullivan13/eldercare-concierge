@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/017194cb87ccc1216670b2b535eb4abf535c8b6c2718960a59d72e8d4d1b66b4.body",
+  "bytes": 3131,
+  "checkedAt": "2026-11-12T15:41:28.164730+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "248 MADISON AVENUE",
+    "City": "CRESSKILL",
+    "Postal": "07626",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "25947938012c0ac6534cfbcd9b1f35a4c63dc6268df1cca7aab90bd3b6a2c1ca",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=248+MADISON+AVENUE&City=CRESSKILL&Region=NJ&Postal=07626&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

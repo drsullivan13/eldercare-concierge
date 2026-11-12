@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0e7c8e0dfd553730e7ba0d48d3ea6c3c8ac0e0acb71c6315f76c17346ccacee1.body",
+  "bytes": 1619,
+  "checkedAt": "2026-11-12T15:41:42.044573+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "111 Northfield Avenue",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "609b4e498cae3e87c3378cd49766ae78568db90f7fe3843d8fc823d4c8d3e201",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=111+Northfield+Avenue&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

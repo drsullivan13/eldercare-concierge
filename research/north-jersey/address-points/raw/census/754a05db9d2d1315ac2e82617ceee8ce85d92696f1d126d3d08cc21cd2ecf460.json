@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/754a05db9d2d1315ac2e82617ceee8ce85d92696f1d126d3d08cc21cd2ecf460.body",
+  "bytes": 5212,
+  "checkedAt": "2026-11-12T15:41:50.446345+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "WAYNE",
+    "format": "json",
+    "state": "NJ",
+    "street": "305 OLDHAM ROAD",
+    "vintage": "Current_Current",
+    "zip": "07470"
+  },
+  "sha256": "1de248ec6283642310317c13d9b8cbddb1a566f487d19a97d29fd3b823943e0e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=305+OLDHAM+ROAD&city=WAYNE&state=NJ&zip=07470&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

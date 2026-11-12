@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/71982a40aca8d221b296b565c46be4130a6fcac06401fdc244c6e02570904deb.body",
+  "bytes": 3039,
+  "checkedAt": "2026-11-12T15:41:47.229916+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "451 S 15th St",
+    "City": "Newark",
+    "Postal": "07103",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4f746e7da18ebff93a4dd961cb57940bc4b6933d3a634e0238f83c9c9ede98b4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=451+S+15th+St&City=Newark&Region=NJ&Postal=07103&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

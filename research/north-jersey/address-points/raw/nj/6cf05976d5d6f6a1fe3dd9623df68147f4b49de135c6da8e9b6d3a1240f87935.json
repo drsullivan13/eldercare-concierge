@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6cf05976d5d6f6a1fe3dd9623df68147f4b49de135c6da8e9b6d3a1240f87935.body",
+  "bytes": 3241,
+  "checkedAt": "2026-11-12T15:41:43.043458+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1719 State Route 10",
+    "City": "Parsippany",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "aced2a633ff70c412e07b66c802d5c46a83a3163f9eaa6740cc7ecc93a844933",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1719+State+Route+10&City=Parsippany&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

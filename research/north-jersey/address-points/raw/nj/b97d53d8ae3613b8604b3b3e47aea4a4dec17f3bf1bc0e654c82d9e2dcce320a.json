@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b97d53d8ae3613b8604b3b3e47aea4a4dec17f3bf1bc0e654c82d9e2dcce320a.body",
+  "bytes": 1544,
+  "checkedAt": "2026-11-12T15:41:23.245373+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "10 LINK DRIVE",
+    "City": "ROCKLEIGH",
+    "Postal": "07647",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "509776371aae69a1f7705189ffe11289b0848e7778a186dce7efdc9210d3f44a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=10+LINK+DRIVE&City=ROCKLEIGH&Region=NJ&Postal=07647&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

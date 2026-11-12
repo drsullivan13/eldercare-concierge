@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a3989d4ee6bf2816b4d77a003735e8aca0e545d4984efbbdd0e9a458b7f9432b.body",
+  "bytes": 1617,
+  "checkedAt": "2026-11-12T15:41:34.898243+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1450 ROUTE 22 WEST",
+    "City": "MOUNTAINSIDE",
+    "Postal": "07092",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "28f69e7036f6ccb3c7bf4741ab4d402177973d706f2bde36b40f5041e397eace",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1450+ROUTE+22+WEST&City=MOUNTAINSIDE&Region=NJ&Postal=07092&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

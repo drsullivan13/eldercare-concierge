@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/19af4abd9b75361a3baa646bd5f80432e808e6de8e994962ff6a393cc4716183.body",
+  "bytes": 5221,
+  "checkedAt": "2026-11-12T15:41:59.868682+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Clifton",
+    "format": "json",
+    "state": "NJ",
+    "street": "95 Mountainside Ter",
+    "vintage": "Current_Current",
+    "zip": "07013"
+  },
+  "sha256": "040f15879177ba498f0b3cc8f29dc27a3b0934ec8614e7e39d8a9cd0769dd2bc",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=95+Mountainside+Ter&city=Clifton&state=NJ&zip=07013&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4f60a2dfb1c0259686cf36b14d974049ef768ed4c046258a11d0353427df9c5c.body",
+  "bytes": 3071,
+  "checkedAt": "2026-11-12T15:41:35.933780+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "15 WARREN STREET",
+    "City": "HACKENSACK",
+    "Postal": "07524",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ae7417b0eb589711c943ece1d77352653330440dd4908089566531f21359092e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=15+WARREN+STREET&City=HACKENSACK&Region=NJ&Postal=07524&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

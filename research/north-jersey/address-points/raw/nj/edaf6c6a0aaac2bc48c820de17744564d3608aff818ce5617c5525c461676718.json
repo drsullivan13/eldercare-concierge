@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/edaf6c6a0aaac2bc48c820de17744564d3608aff818ce5617c5525c461676718.body",
+  "bytes": 1621,
+  "checkedAt": "2026-11-12T15:41:41.053221+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "601 Jefferson Road",
+    "City": "Parsippany",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "638e24c1c9ecb7de7a7365f063ff4d6e0ed9df5e742ad4c05399f3bd9fc13ae5",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=601+Jefferson+Road&City=Parsippany&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/77139d4d50ed05fd7b97ca8c3e5e7bf8a5719c9a105a876ee6b4ea871604690b.body",
+  "bytes": 1626,
+  "checkedAt": "2026-11-12T15:41:29.722823+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "40 NORTH VAN BRUNT ST.",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "745d3d8377f674a0817fbc2cf6ebffa51ff29ce57901890f659bdf2392a35694",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=40+NORTH+VAN+BRUNT+ST.&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

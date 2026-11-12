@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9e2bd053bedaae3459e4d1116dd6b8285b086c3127a4122d7bf063d7f0fb016a.body",
+  "bytes": 1642,
+  "checkedAt": "2026-11-12T15:41:44.446085+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "912 Kinderkamack Rd.",
+    "City": "Riveredge",
+    "Postal": "07661",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f4c0997f320f6c53713d36177ac628c3157457a766f517aea8080551b0e93d01",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=912+Kinderkamack+Rd.&City=Riveredge&Region=NJ&Postal=07661&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

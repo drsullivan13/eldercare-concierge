@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2cac7e3abb726442228c4eb0238b9500f75d8bca9dd00958125df734ad4c23c9.body",
+  "bytes": 3189,
+  "checkedAt": "2026-11-12T15:41:24.856957+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "33 MOUNT PLEASANT AVENUE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0c1cbc9c5526c8cc29af8c9f75cda9b25bd76aeb9417cd72a7a951a66a0fdca2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=33+MOUNT+PLEASANT+AVENUE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

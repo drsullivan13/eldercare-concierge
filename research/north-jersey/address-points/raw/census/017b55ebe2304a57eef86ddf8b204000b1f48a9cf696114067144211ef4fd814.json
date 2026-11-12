@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/017b55ebe2304a57eef86ddf8b204000b1f48a9cf696114067144211ef4fd814.body",
+  "bytes": 4746,
+  "checkedAt": "2026-11-12T15:41:55.700438+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SHORT HILLS",
+    "format": "json",
+    "state": "NJ",
+    "street": "51 JFK PARKWAY",
+    "vintage": "Current_Current",
+    "zip": "07078"
+  },
+  "sha256": "27d79d118371cff8a53cf085bb65a9887bf272b4b0133b019c3131210f2f72d7",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=51+JFK+PARKWAY&city=SHORT+HILLS&state=NJ&zip=07078&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

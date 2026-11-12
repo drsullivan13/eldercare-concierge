@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0a7b48f9a650afdf41811b6eb559b993d4e2b10bd45c6e075b1c09f3fc6dd632.body",
+  "bytes": 1564,
+  "checkedAt": "2026-11-12T15:41:39.352023+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1473 CARLSEN DRIVE",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "53679e25784335ef7b41a9079d548febe23714985bb78dae88d69771a82ee8bf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1473+CARLSEN+DRIVE&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

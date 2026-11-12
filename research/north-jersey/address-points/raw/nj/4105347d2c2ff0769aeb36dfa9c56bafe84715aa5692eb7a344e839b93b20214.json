@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4105347d2c2ff0769aeb36dfa9c56bafe84715aa5692eb7a344e839b93b20214.body",
+  "bytes": 1562,
+  "checkedAt": "2026-11-12T15:41:27.173969+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "565 LATHROP AVE",
+    "City": "BOONTON",
+    "Postal": "07005",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4b1e54be250cff2e182ce06624de6a63ce895bf18f19c534faffe8ad8a87c9fd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=565+LATHROP+AVE&City=BOONTON&Region=NJ&Postal=07005&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

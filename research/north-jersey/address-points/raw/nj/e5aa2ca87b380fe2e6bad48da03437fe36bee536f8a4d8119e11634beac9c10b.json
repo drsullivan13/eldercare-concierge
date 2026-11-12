@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e5aa2ca87b380fe2e6bad48da03437fe36bee536f8a4d8119e11634beac9c10b.body",
+  "bytes": 1602,
+  "checkedAt": "2026-11-12T15:41:43.609402+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1050 Wall St W",
+    "City": "Lyndhurst",
+    "Postal": "07071",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "eaf4975844ad0bcf1362c681178101d0136f81acc44af562729da73c336ece54",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1050+Wall+St+W&City=Lyndhurst&Region=NJ&Postal=07071&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

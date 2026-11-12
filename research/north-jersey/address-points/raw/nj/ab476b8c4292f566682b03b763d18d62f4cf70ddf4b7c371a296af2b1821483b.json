@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ab476b8c4292f566682b03b763d18d62f4cf70ddf4b7c371a296af2b1821483b.body",
+  "bytes": 1532,
+  "checkedAt": "2026-11-12T15:41:42.086215+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "78 John Miller Way",
+    "City": "Kearny",
+    "Postal": "07032",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d3eba9bfa11e0bfee265fc6e62c1e55dcb1f0a8b99d2b507c20f0f60c951ae83",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=78+John+Miller+Way&City=Kearny&Region=NJ&Postal=07032&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

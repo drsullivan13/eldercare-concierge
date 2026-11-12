@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/61fa2774577bd7d2d6b2c6d2795790c46d99900df46084a3d99d6553f8c73786.body",
+  "bytes": 3103,
+  "checkedAt": "2026-11-12T15:41:34.337470+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "50 E PALISADE AVENUE",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ee6d88cf2f60524227130f451917ac35dc8c97615c2019d1c7f503f5587952df",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=50+E+PALISADE+AVENUE&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

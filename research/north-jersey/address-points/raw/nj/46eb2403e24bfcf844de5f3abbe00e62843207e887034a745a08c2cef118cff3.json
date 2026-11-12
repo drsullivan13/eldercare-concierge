@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/46eb2403e24bfcf844de5f3abbe00e62843207e887034a745a08c2cef118cff3.body",
+  "bytes": 3247,
+  "checkedAt": "2026-11-12T15:41:39.537896+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "75 W SOUTH ORANGE AVENUE",
+    "City": "SOUTH ORANGE",
+    "Postal": "07079",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "3edafdf21367daa469a282bb354561d44db1354d6cc88725fac132596bd2f5e8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=75+W+SOUTH+ORANGE+AVENUE&City=SOUTH+ORANGE&Region=NJ&Postal=07079&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

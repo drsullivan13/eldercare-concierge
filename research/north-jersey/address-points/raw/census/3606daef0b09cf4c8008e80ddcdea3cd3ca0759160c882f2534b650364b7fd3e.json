@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/3606daef0b09cf4c8008e80ddcdea3cd3ca0759160c882f2534b650364b7fd3e.body",
+  "bytes": 5216,
+  "checkedAt": "2026-11-12T15:41:52.723635+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HACKENSACK",
+    "format": "json",
+    "state": "NJ",
+    "street": "291-A MAIN STREET",
+    "vintage": "Current_Current",
+    "zip": "07601"
+  },
+  "sha256": "fa4274d04047c847eb4c9c341de16157040e1183cc9aa285c32e5417732b9b00",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=291-A+MAIN+STREET&city=HACKENSACK&state=NJ&zip=07601&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

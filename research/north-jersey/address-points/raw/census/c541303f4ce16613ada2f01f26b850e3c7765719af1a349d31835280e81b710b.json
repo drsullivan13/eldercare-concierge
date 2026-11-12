@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c541303f4ce16613ada2f01f26b850e3c7765719af1a349d31835280e81b710b.body",
+  "bytes": 5191,
+  "checkedAt": "2026-11-12T15:41:59.975852+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Weehawken",
+    "format": "json",
+    "state": "NJ",
+    "street": "3 W 18th St",
+    "vintage": "Current_Current",
+    "zip": "07086"
+  },
+  "sha256": "e967d15e4f6fcee64ff3e460edd95c87f5200dc4bbe2e6bfa23c4067f1d5b256",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3+W+18th+St&city=Weehawken&state=NJ&zip=07086&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

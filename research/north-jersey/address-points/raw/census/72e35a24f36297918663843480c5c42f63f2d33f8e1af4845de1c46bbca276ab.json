@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/72e35a24f36297918663843480c5c42f63f2d33f8e1af4845de1c46bbca276ab.body",
+  "bytes": 5208,
+  "checkedAt": "2026-11-12T15:42:00.157030+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Plainfield",
+    "format": "json",
+    "state": "NJ",
+    "street": "705 Park Ave",
+    "vintage": "Current_Current",
+    "zip": "07060"
+  },
+  "sha256": "41dad027afbc5b6bc67fa67a07a9c3475a6f1250ff2ff3cb5d105eb2cdf17d54",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=705+Park+Ave&city=Plainfield&state=NJ&zip=07060&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

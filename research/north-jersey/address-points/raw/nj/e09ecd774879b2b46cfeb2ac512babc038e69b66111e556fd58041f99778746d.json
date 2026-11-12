@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e09ecd774879b2b46cfeb2ac512babc038e69b66111e556fd58041f99778746d.body",
+  "bytes": 1597,
+  "checkedAt": "2026-11-12T15:41:36.763027+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "411 Hackensack Ave",
+    "City": "Hackensack",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2f5e77d76900ce09f8339a2ef427da5a3ba05b32ad93ebde0920de567bc6116f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=411+Hackensack+Ave&City=Hackensack&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

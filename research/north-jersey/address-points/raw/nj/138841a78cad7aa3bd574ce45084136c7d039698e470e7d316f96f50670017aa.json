@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/138841a78cad7aa3bd574ce45084136c7d039698e470e7d316f96f50670017aa.body",
+  "bytes": 1588,
+  "checkedAt": "2026-11-12T15:41:46.678007+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "40 Meckes Street",
+    "City": "Springfield",
+    "Postal": "07081",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a5e65c8982a1604dfcc39dbe83322dc4079746582e176eb8010016d5586ac00d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=40+Meckes+Street&City=Springfield&Region=NJ&Postal=07081&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

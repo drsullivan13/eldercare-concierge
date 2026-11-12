@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/687782a010cb70733cabd12bf985b7707bb185e18c3df1ff1243ded015c32d32.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:20.171106+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "59 BIRCH STREET",
+    "City": "PATERSON",
+    "Postal": "07522",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c1a7897197dae6eb8f1dac734ed4c3609d3f5ce885cab24f5c3ca774f4eef16a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=59+BIRCH+STREET&City=PATERSON&Region=NJ&Postal=07522&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

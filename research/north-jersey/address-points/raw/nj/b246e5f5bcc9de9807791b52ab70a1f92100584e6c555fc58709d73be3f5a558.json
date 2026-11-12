@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b246e5f5bcc9de9807791b52ab70a1f92100584e6c555fc58709d73be3f5a558.body",
+  "bytes": 3024,
+  "checkedAt": "2026-11-12T15:41:30.476308+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "100 SCALES PLAZA",
+    "City": "CLIFTON",
+    "Postal": "07013",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "254cf3add9f3fb05c33777a1383a284cc3ce547f63a1ff0d8b1ef86532b7b985",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=100+SCALES+PLAZA&City=CLIFTON&Region=NJ&Postal=07013&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

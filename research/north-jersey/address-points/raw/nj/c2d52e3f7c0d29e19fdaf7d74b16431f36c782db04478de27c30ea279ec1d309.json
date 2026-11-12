@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c2d52e3f7c0d29e19fdaf7d74b16431f36c782db04478de27c30ea279ec1d309.body",
+  "bytes": 1634,
+  "checkedAt": "2026-11-12T15:41:27.844538+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "110 SUMMIT AVENUE",
+    "City": "MONTVALE",
+    "Postal": "07645",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5b5533e84899ee3a919f6e1d63e0935e3e2263eb60131a03a7d77e85ab324adb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=110+SUMMIT+AVENUE&City=MONTVALE&Region=NJ&Postal=07645&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

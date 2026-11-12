@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f3721e12c53f19d60feca96b26f8b2e47b6fbf3d285d11da79a1611017ab5a2d.body",
+  "bytes": 1584,
+  "checkedAt": "2026-11-12T15:41:45.425909+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1541 Stuyvesant Ave",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "12aa4e7c806244df7146e073d638296e285d044b476dfa29b1056fbae73d8c62",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1541+Stuyvesant+Ave&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

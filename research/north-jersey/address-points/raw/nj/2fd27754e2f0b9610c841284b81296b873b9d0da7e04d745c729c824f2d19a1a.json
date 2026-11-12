@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2fd27754e2f0b9610c841284b81296b873b9d0da7e04d745c729c824f2d19a1a.body",
+  "bytes": 1562,
+  "checkedAt": "2026-11-12T15:41:33.526374+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "147 HALIFAX ROAD",
+    "City": "MAHWAH",
+    "Postal": "07430",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "73a630c8921ba49b754735cc522787bf51439f430191d06243cdf1535e6176f9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=147+HALIFAX+ROAD&City=MAHWAH&Region=NJ&Postal=07430&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/345d74e2e1d7a3f97328323146640228e22fe3e3a69b04069de8ceab09074c44.body",
+  "bytes": 1558,
+  "checkedAt": "2026-11-12T15:41:40.199462+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "50 Harrison Street",
+    "City": "Hoboken",
+    "Postal": "07030",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6963c40d6fe7407923ff18e04b9c0f771fb33243883c1f62a960fcf3c4436837",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=50+Harrison+Street&City=Hoboken&Region=NJ&Postal=07030&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

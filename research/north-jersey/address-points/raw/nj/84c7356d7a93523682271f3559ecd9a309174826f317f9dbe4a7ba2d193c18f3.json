@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/84c7356d7a93523682271f3559ecd9a309174826f317f9dbe4a7ba2d193c18f3.body",
+  "bytes": 1575,
+  "checkedAt": "2026-11-12T15:41:39.588841+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "192 Broad Street",
+    "City": "BLOOMFIELD",
+    "Postal": "07003",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "28e5fed4c106d826e7f399e6707a9ba05a7563644228add596e63d6ea0ae66d5",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=192+Broad+Street&City=BLOOMFIELD&Region=NJ&Postal=07003&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

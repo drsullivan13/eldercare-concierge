@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/6d299a47df303dafe6bfac76ca095e8925178a458e5dc644b34640c5a777df50.body",
+  "bytes": 5246,
+  "checkedAt": "2026-11-12T15:41:52.537816+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "UNION CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "3196 KENNEDY BLVD., KENNEDY MEDICAL CTR",
+    "vintage": "Current_Current",
+    "zip": "07087"
+  },
+  "sha256": "503d69cf715cbe229478ddb40b36a0ddccd1e0b3c55f9a11e6e28889a42fc23e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3196+KENNEDY+BLVD.%2C+KENNEDY+MEDICAL+CTR&city=UNION+CITY&state=NJ&zip=07087&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

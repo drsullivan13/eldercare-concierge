@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2482b8f19afd6c77a67721e8e79af9c87e454361b32a02576459839b82a6ca58.body",
+  "bytes": 1590,
+  "checkedAt": "2026-11-12T15:41:35.660695+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "21 GRAND AVENUE",
+    "City": "PALISADES PARK",
+    "Postal": "07650",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b60b31d8484a713337d999dbd22ef8887abff2aface7ee61549645d88f8a9291",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=21+GRAND+AVENUE&City=PALISADES+PARK&Region=NJ&Postal=07650&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

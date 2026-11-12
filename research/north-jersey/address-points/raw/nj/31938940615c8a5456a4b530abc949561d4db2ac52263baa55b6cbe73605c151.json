@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/31938940615c8a5456a4b530abc949561d4db2ac52263baa55b6cbe73605c151.body",
+  "bytes": 1535,
+  "checkedAt": "2026-11-12T15:41:27.361982+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "330 NINTH STREET",
+    "City": "JERSEY CITY",
+    "Postal": "07302",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0bc969ff3f291d00f64f315a764a202d5807127b0fcfa7a3c2e24b29c37d2bd7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=330+NINTH+STREET&City=JERSEY+CITY&Region=NJ&Postal=07302&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/25cc4d5274f5f86b37b4c643e376b08ff8b6cf201adaa0a19327c264d35e0f65.body",
+  "bytes": 1590,
+  "checkedAt": "2026-11-12T15:41:21.540043+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1400 WOODLAND AVE",
+    "City": "PLAINFIELD",
+    "Postal": "07060",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f55e34982f241ddac16cbf0f1854c117153da1e7b7ee73378bcc3773a5b2a29a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1400+WOODLAND+AVE&City=PLAINFIELD&Region=NJ&Postal=07060&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

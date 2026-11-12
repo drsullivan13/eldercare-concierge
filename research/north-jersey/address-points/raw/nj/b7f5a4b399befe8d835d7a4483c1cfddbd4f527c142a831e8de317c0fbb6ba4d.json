@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b7f5a4b399befe8d835d7a4483c1cfddbd4f527c142a831e8de317c0fbb6ba4d.body",
+  "bytes": 1661,
+  "checkedAt": "2026-11-12T15:41:24.603855+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "151 Graham Avenue",
+    "City": "North Haledon",
+    "Postal": "07508",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0c11f071f061f4183cc2f1cf1900ee4ef8e64bc65d93d7b3bcb85dc60e9b5fea",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=151+Graham+Avenue&City=North+Haledon&Region=NJ&Postal=07508&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

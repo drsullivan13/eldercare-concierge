@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9bb8e250546a828c7e2a752f64eda395e67760842e2b263e6025aececaf9ffc4.body",
+  "bytes": 3233,
+  "checkedAt": "2026-11-12T15:41:48.980815+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "290 W Mount Pleasant Ave",
+    "City": "Livingston",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4fe2b57e94d4049c9e8b950c9d3d916540813af7f9a93ba03e472ee9022f6c07",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=290+W+Mount+Pleasant+Ave&City=Livingston&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b78015c0649ad6e55d36e1842d900c5c2e4986ef864e0bd77c2eb1ebcab21c33.body",
+  "bytes": 1624,
+  "checkedAt": "2026-11-12T15:41:38.781486+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "61 BEECHWOOD LANE",
+    "City": "BERKELEY HEIGHTS",
+    "Postal": "07922",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "51e734c16cbc78d8df6a5c4d6af4e26209f90104c4da8be9c680c8b83af33de1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=61+BEECHWOOD+LANE&City=BERKELEY+HEIGHTS&Region=NJ&Postal=07922&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

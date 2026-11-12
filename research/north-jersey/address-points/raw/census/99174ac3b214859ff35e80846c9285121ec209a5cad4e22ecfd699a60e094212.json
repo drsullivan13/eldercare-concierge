@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/99174ac3b214859ff35e80846c9285121ec209a5cad4e22ecfd699a60e094212.body",
+  "bytes": 5190,
+  "checkedAt": "2026-11-12T15:41:54.551293+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "KEARNY",
+    "format": "json",
+    "state": "NJ",
+    "street": "96 MIDLAND AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07032"
+  },
+  "sha256": "2add8bf5248905d85ee3063202192e162f47df8a37b497cf9fcab142b77c0ee5",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=96+MIDLAND+AVENUE&city=KEARNY&state=NJ&zip=07032&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

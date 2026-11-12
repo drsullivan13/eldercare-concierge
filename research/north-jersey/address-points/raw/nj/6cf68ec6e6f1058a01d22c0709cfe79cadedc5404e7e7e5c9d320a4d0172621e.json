@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6cf68ec6e6f1058a01d22c0709cfe79cadedc5404e7e7e5c9d320a4d0172621e.body",
+  "bytes": 3064,
+  "checkedAt": "2026-11-12T15:41:35.135813+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "374 CLIFTON AVENUE",
+    "City": "CLIFTON",
+    "Postal": "07011",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5f0f4622910dfffb7b48d956dd71ffba41b93a5d2ec57693516e28a995f71f22",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=374+CLIFTON+AVENUE&City=CLIFTON&Region=NJ&Postal=07011&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

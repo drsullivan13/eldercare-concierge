@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4be1143af2a554256271a6b458fc54ecf4f8b44b9c708d3e91e021cf87e56b2c.body",
+  "bytes": 1623,
+  "checkedAt": "2026-11-12T15:41:25.449272+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "348 EAST CEDAR STREET",
+    "City": "LIVINGSTON",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4ada307706506ff59b26910ba657ff01c5205df3f7b057ca8aba37acd36379be",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=348+EAST+CEDAR+STREET&City=LIVINGSTON&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

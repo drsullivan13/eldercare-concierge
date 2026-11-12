@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c411f9cd3d6ae4aed4a6cd37e4e1e4d980cc6d5c17af877b6e1b554a0f19712d.body",
+  "bytes": 1567,
+  "checkedAt": "2026-11-12T15:41:26.519188+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "590 OLD HOOK ROAD",
+    "City": "EMERSON",
+    "Postal": "07630",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6562fbf528601338ffc1fd2842e9f5edc8ba0315a97c38b8ed424a86777968bd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=590+OLD+HOOK+ROAD&City=EMERSON&Region=NJ&Postal=07630&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

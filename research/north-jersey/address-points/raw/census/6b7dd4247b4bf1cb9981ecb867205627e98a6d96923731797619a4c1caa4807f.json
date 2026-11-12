@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/6b7dd4247b4bf1cb9981ecb867205627e98a6d96923731797619a4c1caa4807f.body",
+  "bytes": 5228,
+  "checkedAt": "2026-11-12T15:41:58.088363+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Jersey City",
+    "format": "json",
+    "state": "NJ",
+    "street": "97 Newkirk Street",
+    "vintage": "Current_Current",
+    "zip": "07306"
+  },
+  "sha256": "9770a74ef8510618f001044ed191c14c602cd15953ed8e763fa70b54f29e5ee6",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=97+Newkirk+Street&city=Jersey+City&state=NJ&zip=07306&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

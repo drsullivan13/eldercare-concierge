@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/17b81c604d1270ace66a757946005f3485d10001eee656cd6a5cd3eee25d5f29.body",
+  "bytes": 1598,
+  "checkedAt": "2026-11-12T15:41:26.875830+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "19 POCONO ROAD",
+    "City": "DENVILLE",
+    "Postal": "07834",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "522e23a570a99c998c1cea2352092c3cf5efcd19432520ddf1b1eec157dcb354",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=19+POCONO+ROAD&City=DENVILLE&Region=NJ&Postal=07834&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ea6b64e61f5ee47a965b286810c1ac49d04e7d735a0309afdcbc2040323f5610.body",
+  "bytes": 1619,
+  "checkedAt": "2026-11-12T15:41:43.034051+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "165 Passaic Avenue",
+    "City": "Fairfield",
+    "Postal": "07004",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1b3edfa0d29066526c400ab9f75ba33e2260d4eab5f02f410fdebb7f46f6563b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=165+Passaic+Avenue&City=Fairfield&Region=NJ&Postal=07004&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

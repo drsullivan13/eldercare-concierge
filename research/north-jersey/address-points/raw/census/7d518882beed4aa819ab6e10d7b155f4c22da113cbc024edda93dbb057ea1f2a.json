@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/7d518882beed4aa819ab6e10d7b155f4c22da113cbc024edda93dbb057ea1f2a.body",
+  "bytes": 10049,
+  "checkedAt": "2026-11-12T15:41:55.721664+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "NEWARK",
+    "format": "json",
+    "state": "NJ",
+    "street": "569 MLK BOULEVARD",
+    "vintage": "Current_Current",
+    "zip": "07102"
+  },
+  "sha256": "cf6a9cf2c1bbf09912ed88b35b40aca229c5f77f9951a9436dc262bf488aff5b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=569+MLK+BOULEVARD&city=NEWARK&state=NJ&zip=07102&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

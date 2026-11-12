@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/327f8a5c686ee6e5077a2701efab3e823a7aec96f546fe0334cf2f490949e778.body",
+  "bytes": 1627,
+  "checkedAt": "2026-11-12T15:41:25.392635+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "346 E CEDAR STREET",
+    "City": "LIVINGSTON",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1cf0651b1de8f90d1f0f077dc83179a19542db7b84b2e734b0d3d77a95617474",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=346+E+CEDAR+STREET&City=LIVINGSTON&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

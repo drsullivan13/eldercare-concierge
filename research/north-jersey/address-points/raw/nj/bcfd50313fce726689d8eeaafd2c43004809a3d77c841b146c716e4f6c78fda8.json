@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bcfd50313fce726689d8eeaafd2c43004809a3d77c841b146c716e4f6c78fda8.body",
+  "bytes": 1583,
+  "checkedAt": "2026-11-12T15:41:47.679236+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "576 Central Ave",
+    "City": "East Orange",
+    "Postal": "07018",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cb996457d8afde72d4ac37e56c48e03652340173c100760ad9d86572c5e01041",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=576+Central+Ave&City=East+Orange&Region=NJ&Postal=07018&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/08bba07d46b131f4addaf443efc4ad4091ab36ee2521470bb103c646557983d1.body",
+  "bytes": 1564,
+  "checkedAt": "2026-11-12T15:41:27.255041+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "184 BERDAN AVENUE",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0de18d8696c517298f7113f80fcd47df67f1a3150990e6112a2cc201c8009d89",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=184+BERDAN+AVENUE&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

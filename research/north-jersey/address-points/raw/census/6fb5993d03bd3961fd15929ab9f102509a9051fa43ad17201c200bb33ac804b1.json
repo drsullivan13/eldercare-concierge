@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/6fb5993d03bd3961fd15929ab9f102509a9051fa43ad17201c200bb33ac804b1.body",
+  "bytes": 4700,
+  "checkedAt": "2026-11-12T15:41:54.155191+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "UNION",
+    "format": "json",
+    "state": "NJ",
+    "street": "1600 ROUTE 22 EAST",
+    "vintage": "Current_Current",
+    "zip": "07083"
+  },
+  "sha256": "1902cd78c794e5988f8da46931f3f7123af8553a5fed82434abdc2698374bb6b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1600+ROUTE+22+EAST&city=UNION&state=NJ&zip=07083&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/84f529f383728ad62c01424db44b77c643d68d7bcf25ce47ceb9159f353ff3a2.body",
+  "bytes": 5232,
+  "checkedAt": "2026-11-12T15:41:54.976578+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "BAYONNE",
+    "format": "json",
+    "state": "NJ",
+    "street": "672 JOHN F. KENNEDY BLVD.",
+    "vintage": "Current_Current",
+    "zip": "07002"
+  },
+  "sha256": "26e4d5992238bd03d4b1fbe9676eb7f93ec8b4a374ec7948364f9e8803f1c05d",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=672+JOHN+F.+KENNEDY+BLVD.&city=BAYONNE&state=NJ&zip=07002&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

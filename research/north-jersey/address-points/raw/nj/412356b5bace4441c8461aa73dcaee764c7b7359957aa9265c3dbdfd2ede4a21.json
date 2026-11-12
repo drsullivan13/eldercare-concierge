@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/412356b5bace4441c8461aa73dcaee764c7b7359957aa9265c3dbdfd2ede4a21.body",
+  "bytes": 3071,
+  "checkedAt": "2026-11-12T15:41:41.346689+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "33 South Avenue West",
+    "City": "Cranford",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2a9235f1b1eb35984b062069d06fd3c0300fd6e7b34866ee20dbef0ebcd8a46b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=33+South+Avenue+West&City=Cranford&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

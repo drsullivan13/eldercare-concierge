@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/36df49fa4d808f0dd5c9be79b4f7faf184fd1e853526abfbd434b9061ce99b68.body",
+  "bytes": 1551,
+  "checkedAt": "2026-11-12T15:41:36.658577+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1107 GOFFLE ROAD",
+    "City": "HAWTHORNE",
+    "Postal": "07506",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f0ab9087a4025dbafbd7c9f2f6eaefb7f7014fd3447b90b498d87ac0958769cf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1107+GOFFLE+ROAD&City=HAWTHORNE&Region=NJ&Postal=07506&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

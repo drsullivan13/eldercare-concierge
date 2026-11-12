@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/284395b750f36ebf557e4b1be4fae1ecb6332e341a47263342c845a24d375931.body",
+  "bytes": 1666,
+  "checkedAt": "2026-11-12T15:41:46.655481+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "55 Eagle Rock Ave.",
+    "City": "East Hanover",
+    "Postal": "07936",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e9a0ab552015f412fc870253f81fd0dd00cb9e21c24f677b7405e1e9ee70fb5e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=55+Eagle+Rock+Ave.&City=East+Hanover&Region=NJ&Postal=07936&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

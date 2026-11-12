@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3cbfd71f7ba1b37f0a6abedcbb66b6bf649b52b3d5308065d566b0d8c6cb1df3.body",
+  "bytes": 3116,
+  "checkedAt": "2026-11-12T15:41:22.675741+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "600 LINCOLN PARK EAST",
+    "City": "Cranford",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "46a0fb8be37a66ba0ba9469a9cacd38e836f018f36e08d12f7ba0b266361ea15",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=600+LINCOLN+PARK+EAST&City=Cranford&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

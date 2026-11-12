@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bb3be63045eba3e1553d003b48fcc80e051297978f20ef27808f0320dd56b0a5.body",
+  "bytes": 1543,
+  "checkedAt": "2026-11-12T15:41:34.636448+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "576 MAIN AVENUE",
+    "City": "PASSAIC",
+    "Postal": "07055",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0c6e76fa42169749dd63abc708614fc540d0a266d734e02b78d65c942fff0349",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=576+MAIN+AVENUE&City=PASSAIC&Region=NJ&Postal=07055&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/552938e9e2028ed53fb0e9dcde3caaf60932704496ea74667907da19532daa4e.body",
+  "bytes": 1691,
+  "checkedAt": "2026-11-12T15:41:25.331942+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "369 EAST MT PLEASANT AVENUE",
+    "City": "LIVINGSTON",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f0792849b9a87ce3ae0c8be41c61559c70067ed6356857c6863f794863a3bdd2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=369+EAST+MT+PLEASANT+AVENUE&City=LIVINGSTON&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

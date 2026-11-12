@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/74f59eebf50c83c0af395591a77d9ff93c94710bdfa7b854e3edeb2b38be7fdc.body",
+  "bytes": 1570,
+  "checkedAt": "2026-11-12T15:41:20.388514+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "9020 WALL STREET",
+    "City": "NORTH BERGEN",
+    "Postal": "07047",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "25931329ad619a71aac90143426d642376465da3711abe319cb2518ba5614a3d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=9020+WALL+STREET&City=NORTH+BERGEN&Region=NJ&Postal=07047&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

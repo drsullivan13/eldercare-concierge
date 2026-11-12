@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/a961da80768c27adcc3ef7c049a3de2f351ced44c59e21fd9a1016ceab52fa6c.body",
+  "bytes": 5222,
+  "checkedAt": "2026-11-12T15:41:51.492230+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "FAIR LAWN",
+    "format": "json",
+    "state": "NJ",
+    "street": "15-00 RIVER ROAD",
+    "vintage": "Current_Current",
+    "zip": "07410"
+  },
+  "sha256": "a1011dc23673dc2ce8845e6f781f86a3fb43bda9c68f5d5b69a2199e193ac71b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=15-00+RIVER+ROAD&city=FAIR+LAWN&state=NJ&zip=07410&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

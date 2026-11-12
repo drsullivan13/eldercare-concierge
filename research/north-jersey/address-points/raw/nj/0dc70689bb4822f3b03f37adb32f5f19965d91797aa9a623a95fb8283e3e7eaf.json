@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0dc70689bb4822f3b03f37adb32f5f19965d91797aa9a623a95fb8283e3e7eaf.body",
+  "bytes": 1532,
+  "checkedAt": "2026-11-12T15:41:28.509921+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "70 LAKE STREET",
+    "City": "RAMSEY",
+    "Postal": "07446",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "442353a022d9d6209e12d1e820fff21509cc1f7c87e1d99e87a743feb6bbc923",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=70+LAKE+STREET&City=RAMSEY&Region=NJ&Postal=07446&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

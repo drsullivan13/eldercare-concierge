@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/fe0a5b1fa7574cd6516fe0a8de3a6a004e22387d17d9247b0a283814d262ce40.body",
+  "bytes": 402,
+  "checkedAt": "2026-11-12T15:41:53.832818+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SUCCASUNNA",
+    "format": "json",
+    "state": "NJ",
+    "street": "200 ROUTE 10 WEST",
+    "vintage": "Current_Current",
+    "zip": "07876"
+  },
+  "sha256": "c70ded0b85e565c87abfabed464832fe10fb9837a16b5a1c94af2af3191042ae",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=200+ROUTE+10+WEST&city=SUCCASUNNA&state=NJ&zip=07876&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/698e025939ac5758c4eee776ed8751e6040135ef8fc4c1fe44527bff160ba1c2.body",
+  "bytes": 1561,
+  "checkedAt": "2026-11-12T15:41:21.831476+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "221 COUNTY ROAD",
+    "City": "CRESSKILL",
+    "Postal": "07626",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1b67294e7bbc622c810fd7bb1e7bba08ba6453f59494bd97a4aac1d3100a282d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=221+COUNTY+ROAD&City=CRESSKILL&Region=NJ&Postal=07626&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

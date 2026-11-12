@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5d41b5d85d33172f7c3c95eb77ca863b07a37b829ce65d60ffe7fd7383699d48.body",
+  "bytes": 1562,
+  "checkedAt": "2026-11-12T15:41:23.249047+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "595 COUNTY AVENUE",
+    "City": "SECAUCUS",
+    "Postal": "07094",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ba5488dd7139303eec01ffc0f06753ae06589297fe4e665c11ebb9d1a64eb70a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=595+COUNTY+AVENUE&City=SECAUCUS&Region=NJ&Postal=07094&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

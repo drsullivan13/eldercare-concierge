@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/72a54c93d74f95f195bb10d93d3c7619a383d48d54d6c9c395c1c30a095bac2d.body",
+  "bytes": 5198,
+  "checkedAt": "2026-11-12T15:41:50.603576+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "KEARNY",
+    "format": "json",
+    "state": "NJ",
+    "street": "195 BELGROVE DRIVE",
+    "vintage": "Current_Current",
+    "zip": "07032"
+  },
+  "sha256": "cb2e418eb7fdc3b38c6ff1f5a5f7d42c9764f75eac88ce5b710ff4cf1316b44f",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=195+BELGROVE+DRIVE&city=KEARNY&state=NJ&zip=07032&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

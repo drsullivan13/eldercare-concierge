@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/683ecf9726765433f0110b139cd0f258c5425cb0063159ba4c4702f74b3bc18c.body",
+  "bytes": 1590,
+  "checkedAt": "2026-11-12T15:41:37.612511+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "134 Evergreen Place",
+    "City": "East Orange",
+    "Postal": "07018",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2e73fc20fcd16252706d7bd80d1bf99f1e504b48db4edf0bae003f4a50e5ed6d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=134+Evergreen+Place&City=East+Orange&Region=NJ&Postal=07018&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/db6c589d59258e2759f374dd59460e0916d3fc6fab0ddc609c7262e1da183f09.body",
+  "bytes": 1610,
+  "checkedAt": "2026-11-12T15:41:46.651987+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1000C Stuyvesant Ave",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2b8b9e3938cd57377c1a6c46aa7cd89843cdbb1cde12c629b7aaf4ba0c9c03c0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1000C+Stuyvesant+Ave&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

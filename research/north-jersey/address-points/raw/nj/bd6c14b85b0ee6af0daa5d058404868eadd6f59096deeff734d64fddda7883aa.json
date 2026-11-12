@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bd6c14b85b0ee6af0daa5d058404868eadd6f59096deeff734d64fddda7883aa.body",
+  "bytes": 1587,
+  "checkedAt": "2026-11-12T15:41:31.830858+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "160 PEHLE AVENUE",
+    "City": "SADDLE BROOK",
+    "Postal": "07663",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8119fa6a21b363c7114425e264d2453873c78607c331877058c02a543dd687ed",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=160+PEHLE+AVENUE&City=SADDLE+BROOK&Region=NJ&Postal=07663&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

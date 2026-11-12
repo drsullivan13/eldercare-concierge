@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/12845893c8340f2791e9b9d9259339f9008471e2d23fe1d72a2e5529c6f8afa4.body",
+  "bytes": 1567,
+  "checkedAt": "2026-11-12T15:41:29.207226+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2165 MORRIS AVENUE",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1738545b439fca4600d61f8af29e1a2a09c76ee7e9d857dbaa5d53628abe9521",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2165+MORRIS+AVENUE&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

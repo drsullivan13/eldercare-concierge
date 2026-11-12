@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/83074414b5ae7c575a1ad4d44012b47bc95d3382fc7bb6dbdac2a86535bf3946.body",
+  "bytes": 5198,
+  "checkedAt": "2026-11-12T15:41:57.506327+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Westfield",
+    "format": "json",
+    "state": "NJ",
+    "street": "105 Elm Street",
+    "vintage": "Current_Current",
+    "zip": "07090"
+  },
+  "sha256": "e45e91aa6b6f2ff2f3abafaf7850c35c0660f80e3779659bdc6db63826966408",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=105+Elm+Street&city=Westfield&state=NJ&zip=07090&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

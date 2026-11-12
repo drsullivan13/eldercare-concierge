@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ff81a04a220d0c5af017d1bf26b0afe43a7d5021881e615371eadbd29c7d2981.body",
+  "bytes": 1556,
+  "checkedAt": "2026-11-12T15:41:42.847393+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1238 Roger Ave",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "14c29cf0b26da081e8fe5a9424c1bfea42492f96ffb7480cdea2db98f290f0ec",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1238+Roger+Ave&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

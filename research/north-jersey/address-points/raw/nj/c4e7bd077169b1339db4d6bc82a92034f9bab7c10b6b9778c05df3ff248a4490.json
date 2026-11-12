@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c4e7bd077169b1339db4d6bc82a92034f9bab7c10b6b9778c05df3ff248a4490.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:21.737751+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "800 RIVER ROAD",
+    "City": "NEW MILFORD",
+    "Postal": "07646",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "60d65a09e3b6b712359787c16f50bc78400184d2695324adc47e758e1a6ffd84",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=800+RIVER+ROAD&City=NEW+MILFORD&Region=NJ&Postal=07646&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

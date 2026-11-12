@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f8903e0513365edeb518782331b7c6407b0f80ceb4bdb905b5af57a23085c043.body",
+  "bytes": 3267,
+  "checkedAt": "2026-11-12T15:41:42.817006+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2-A N Washington Avenue",
+    "City": "Bergenfield",
+    "Postal": "07621",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a9cffc8b6bbaf33356cafb4676557e8649f273a17fdfeb3acf4cb4a908c33205",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2-A+N+Washington+Avenue&City=Bergenfield&Region=NJ&Postal=07621&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

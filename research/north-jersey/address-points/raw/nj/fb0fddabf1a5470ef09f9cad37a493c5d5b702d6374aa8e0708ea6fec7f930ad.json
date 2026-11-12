@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fb0fddabf1a5470ef09f9cad37a493c5d5b702d6374aa8e0708ea6fec7f930ad.body",
+  "bytes": 1567,
+  "checkedAt": "2026-11-12T15:41:28.571790+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "36 FANER ROAD",
+    "City": "MIDLAND PARK",
+    "Postal": "07432",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "96f412a88b92d6dae4649c6e3c70640e5d3780324ca47869bcd3627a511851e0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=36+FANER+ROAD&City=MIDLAND+PARK&Region=NJ&Postal=07432&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4b07ab9ec264afbecfd212531c5ef59c7a6780c47471ed85f242ba7386880658.body",
+  "bytes": 3142,
+  "checkedAt": "2026-11-12T15:41:29.285054+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "711-729 Main Avenue",
+    "City": "PASSAIC",
+    "Postal": "07055",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6cf3cd2382ae8fccbcf26f3aae6083ff4c728e55ba6d8deabbf6a032ef9eb8c2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=711-729+Main+Avenue&City=PASSAIC&Region=NJ&Postal=07055&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

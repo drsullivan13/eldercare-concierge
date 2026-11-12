@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/de06a8f1db4addc702f072fccb970da70cea6823940b4e6751798cc67cf3306b.body",
+  "bytes": 1602,
+  "checkedAt": "2026-11-12T15:41:38.366863+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "160 RIVER EDGE ROAD",
+    "City": "BERGENFIELD",
+    "Postal": "07621",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "00ca6d09f38b384a7b2d85c539a848718825679adb5115858ca54133b1e17702",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=160+RIVER+EDGE+ROAD&City=BERGENFIELD&Region=NJ&Postal=07621&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/051a1504024f408da8fe5baca8dfb6dc07a6b7692c84cd3c459274b33e91e8d9.body",
+  "bytes": 1610,
+  "checkedAt": "2026-11-12T15:41:41.354084+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "110 Hillside Avenue",
+    "City": "Springfield",
+    "Postal": "07081",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "64d3be5977742d0107fdba625aea145225d5224dc077f89e25ac1c214c2f3e19",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=110+Hillside+Avenue&City=Springfield&Region=NJ&Postal=07081&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

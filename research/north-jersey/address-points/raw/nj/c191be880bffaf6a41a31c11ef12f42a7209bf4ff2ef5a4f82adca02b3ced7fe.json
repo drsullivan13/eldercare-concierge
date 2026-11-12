@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c191be880bffaf6a41a31c11ef12f42a7209bf4ff2ef5a4f82adca02b3ced7fe.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:30.124423+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "214 MAIN STREET",
+    "City": "MADISON",
+    "Postal": "07940",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e232a3d2e38c0f62da035470583b3115a106e1133fa33326a45441c455d9aecb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=214+MAIN+STREET&City=MADISON&Region=NJ&Postal=07940&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

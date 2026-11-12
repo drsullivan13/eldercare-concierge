@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6c688ad4d73328bbb5c53cc48d4dab816092527ef9f7d6a156e2b41e2a758689.body",
+  "bytes": 1579,
+  "checkedAt": "2026-11-12T15:41:36.166268+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "591 Summit Ave",
+    "City": "JERSEY CITY",
+    "Postal": "07306",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ba446a56cfd264722551ecff078601cdbbd304a1c1561f369e470a2f333ec3b5",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=591+Summit+Ave&City=JERSEY+CITY&Region=NJ&Postal=07306&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

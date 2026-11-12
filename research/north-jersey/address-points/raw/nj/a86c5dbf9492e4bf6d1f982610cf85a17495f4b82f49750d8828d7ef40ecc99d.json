@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a86c5dbf9492e4bf6d1f982610cf85a17495f4b82f49750d8828d7ef40ecc99d.body",
+  "bytes": 3011,
+  "checkedAt": "2026-11-12T15:41:42.703286+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "381 Broadway One",
+    "City": "Westwood",
+    "Postal": "07675",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8b2bd015d0dc42083a6d954588d85d43c698b106692568c4d9fef2823b04ba38",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=381+Broadway+One&City=Westwood&Region=NJ&Postal=07675&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

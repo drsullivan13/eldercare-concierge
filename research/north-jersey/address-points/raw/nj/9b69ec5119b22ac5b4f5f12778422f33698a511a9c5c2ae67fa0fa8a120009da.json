@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9b69ec5119b22ac5b4f5f12778422f33698a511a9c5c2ae67fa0fa8a120009da.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:25.570748+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "245 WYCKOFF AVENUE",
+    "City": "WALDWICK",
+    "Postal": "07463",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "33841f2ebf18cec36346e0784027b7e9438e33a04f212156e12fd5a836b52ad1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=245+WYCKOFF+AVENUE&City=WALDWICK&Region=NJ&Postal=07463&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

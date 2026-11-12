@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b9a2447babe16ff838077b3a418b34877c04e18178287d225b3d4334df2302eb.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:30.487877+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "725 RIVER ROAD",
+    "City": "EDGEWATER",
+    "Postal": "07020",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1a80ccd2b6b64d8c465815f07ff7b7d6654883d0fa845dfbbdac8c4c801c22d0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=725+RIVER+ROAD&City=EDGEWATER&Region=NJ&Postal=07020&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

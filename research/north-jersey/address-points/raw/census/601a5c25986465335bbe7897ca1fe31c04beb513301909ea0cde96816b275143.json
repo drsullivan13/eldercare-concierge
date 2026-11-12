@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/601a5c25986465335bbe7897ca1fe31c04beb513301909ea0cde96816b275143.body",
+  "bytes": 408,
+  "checkedAt": "2026-11-12T15:41:55.813077+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "3000 KENNEDY BOULEVARD",
+    "vintage": "Current_Current",
+    "zip": "07306"
+  },
+  "sha256": "88f8bf501012dee8c3c494d2b651cc81aae645dca22a2fcda303346c84af0a76",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3000+KENNEDY+BOULEVARD&city=JERSEY+CITY&state=NJ&zip=07306&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7d075e488a2bc02f1178b925a05e4484b107e3aded350f8f2ceec5ae6bf1ede3.body",
+  "bytes": 1572,
+  "checkedAt": "2026-11-12T15:41:30.984304+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "812 N Wood Ave",
+    "City": "Linden",
+    "Postal": "07036",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "23f5c0d8e335151fe7e4f6467bf7e61be477d15bcbef34a532be23bf094e740b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=812+N+Wood+Ave&City=Linden&Region=NJ&Postal=07036&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

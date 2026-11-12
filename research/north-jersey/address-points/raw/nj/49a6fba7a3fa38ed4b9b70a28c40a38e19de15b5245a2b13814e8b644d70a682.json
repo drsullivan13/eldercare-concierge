@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/49a6fba7a3fa38ed4b9b70a28c40a38e19de15b5245a2b13814e8b644d70a682.body",
+  "bytes": 6134,
+  "checkedAt": "2026-11-12T15:41:41.845031+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "199 Park Street",
+    "City": "East Orange",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b446ab69f450e1dae5f531ab3a80114d2ddd616570c815c86cc7ff8cac95d5bb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=199+Park+Street&City=East+Orange&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

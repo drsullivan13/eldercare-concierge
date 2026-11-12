@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d32b3ddf5356a1346b9217117c34117bceaeb03ccb16ad1866a831489a6935ae.body",
+  "bytes": 68,
+  "checkedAt": "2026-11-12T15:41:22.480354+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "560 BERKELEY AVENUE",
+    "City": "ORANGE",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "acfae4870440c59a64af2343acab32331eeb8aad84a36e9b5b1b15ec1373f4db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=560+BERKELEY+AVENUE&City=ORANGE&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

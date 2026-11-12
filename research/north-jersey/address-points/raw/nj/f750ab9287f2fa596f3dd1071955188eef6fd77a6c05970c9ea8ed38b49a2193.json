@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f750ab9287f2fa596f3dd1071955188eef6fd77a6c05970c9ea8ed38b49a2193.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:33.426304+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "515 32ND STREET",
+    "City": "UNION CITY",
+    "Postal": "07087",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6c993c94f21ec6eabb41d2d0e5dcc6a58dec544676154494bde6d6f22616aeff",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=515+32ND+STREET&City=UNION+CITY&Region=NJ&Postal=07087&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

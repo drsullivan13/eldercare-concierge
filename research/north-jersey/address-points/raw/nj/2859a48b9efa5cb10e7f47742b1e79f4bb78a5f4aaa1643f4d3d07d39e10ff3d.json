@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2859a48b9efa5cb10e7f47742b1e79f4bb78a5f4aaa1643f4d3d07d39e10ff3d.body",
+  "bytes": 3112,
+  "checkedAt": "2026-11-12T15:41:34.026374+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1600 ROUTE 22 EAST",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a79c27c7bce41dd00f4b099b7bbebca109b590be979ac3b2a461d0cd9028d5f9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1600+ROUTE+22+EAST&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

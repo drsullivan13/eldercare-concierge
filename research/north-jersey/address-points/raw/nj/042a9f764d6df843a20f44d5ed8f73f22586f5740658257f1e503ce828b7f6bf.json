@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/042a9f764d6df843a20f44d5ed8f73f22586f5740658257f1e503ce828b7f6bf.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:23.367740+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "456 RAHWAY AVENUE",
+    "City": "ELIZABETH",
+    "Postal": "07202",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4ed0230adb4af798e3f1550214e3c3c8d4325426f24161f36b0d66a1e7e13922",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=456+RAHWAY+AVENUE&City=ELIZABETH&Region=NJ&Postal=07202&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

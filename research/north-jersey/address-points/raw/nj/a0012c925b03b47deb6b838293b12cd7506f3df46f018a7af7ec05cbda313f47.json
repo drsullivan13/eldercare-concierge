@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a0012c925b03b47deb6b838293b12cd7506f3df46f018a7af7ec05cbda313f47.body",
+  "bytes": 1567,
+  "checkedAt": "2026-11-12T15:41:48.379537+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "765 Clifton Ave",
+    "City": "Clifton",
+    "Postal": "07013",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a3b868c1d74368c8ab3350d51c051200fdf14565642641669bb2110d59b67535",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=765+Clifton+Ave&City=Clifton&Region=NJ&Postal=07013&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/aeec6bc2f9ec066e165453ff8183ad571221fa158a89455986132787b0198c38.body",
+  "bytes": 1628,
+  "checkedAt": "2026-11-12T15:41:41.567151+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "698 Chancellor Avenue, Store 2",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a9cb9e1b26ba0aab8fd08162daae949c0a1075747000a1e3a7c141ad213c1b75",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=698+Chancellor+Avenue%2C+Store+2&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

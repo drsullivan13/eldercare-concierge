@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a9fdc88801668c7045a370e04649ac4b22979908bc0c5c0ef3d7801c2cdd84ed.body",
+  "bytes": 1632,
+  "checkedAt": "2026-11-12T15:41:19.697156+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1155 PLEASANT VALLEY WAY",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1d215a0066729075eadf19370ef58bc7430481bf61d46ad810e717057662cb2e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1155+PLEASANT+VALLEY+WAY&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

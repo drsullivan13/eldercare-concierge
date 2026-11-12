@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/01e9e4bb370ece088295a093627ff3138f30f1585558c99bb4af7384d497a276.body",
+  "bytes": 1491,
+  "checkedAt": "2026-11-12T15:41:37.107454+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3 Bond Drive",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "fe6fb80597fbf2ff418b8822e1f2e3e83159158ede6e8a3d96fc482a6f5be94a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3+Bond+Drive&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

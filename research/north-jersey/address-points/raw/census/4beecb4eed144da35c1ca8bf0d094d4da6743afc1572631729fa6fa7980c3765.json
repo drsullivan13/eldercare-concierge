@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/4beecb4eed144da35c1ca8bf0d094d4da6743afc1572631729fa6fa7980c3765.body",
+  "bytes": 5205,
+  "checkedAt": "2026-11-12T15:41:54.624597+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "EAST ORANGE",
+    "format": "json",
+    "state": "NJ",
+    "street": "7 GLENWOOD AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07018"
+  },
+  "sha256": "3c95f1c82a3fe980101697824ef615e542eae6f946202b6321941d76d19bff60",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=7+GLENWOOD+AVENUE&city=EAST+ORANGE&state=NJ&zip=07018&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

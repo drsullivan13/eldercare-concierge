@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4a85094470ba0902b19ffd6dbf4fabc3643738666e1d8f67ff965ea09c833bf0.body",
+  "bytes": 1658,
+  "checkedAt": "2026-11-12T15:41:32.287763+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "575 STATE ROUTE 10E",
+    "City": "WHIPPANY",
+    "Postal": "07981",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2850d31584b5dfd7f8a7d206b1fb8235b42eefdf962d21cdd14357edfb12d845",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=575+STATE+ROUTE+10E&City=WHIPPANY&Region=NJ&Postal=07981&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

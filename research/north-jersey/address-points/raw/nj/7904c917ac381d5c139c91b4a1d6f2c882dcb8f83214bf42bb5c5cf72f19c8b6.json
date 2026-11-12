@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7904c917ac381d5c139c91b4a1d6f2c882dcb8f83214bf42bb5c5cf72f19c8b6.body",
+  "bytes": 1619,
+  "checkedAt": "2026-11-12T15:41:31.516229+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "111 NORTHFIELD AVENUE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "609b4e498cae3e87c3378cd49766ae78568db90f7fe3843d8fc823d4c8d3e201",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=111+NORTHFIELD+AVENUE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

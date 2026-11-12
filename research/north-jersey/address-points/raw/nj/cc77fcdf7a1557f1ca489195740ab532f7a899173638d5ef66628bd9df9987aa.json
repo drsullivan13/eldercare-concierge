@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/cc77fcdf7a1557f1ca489195740ab532f7a899173638d5ef66628bd9df9987aa.body",
+  "bytes": 1636,
+  "checkedAt": "2026-11-12T15:41:48.583688+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "101 Eisenhower Pkwy",
+    "City": "Roseland",
+    "Postal": "07068",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "75833306227878fdeac3bb03091b860fb3ae4cd3f87d08cac4fb011dae75b1a7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=101+Eisenhower+Pkwy&City=Roseland&Region=NJ&Postal=07068&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

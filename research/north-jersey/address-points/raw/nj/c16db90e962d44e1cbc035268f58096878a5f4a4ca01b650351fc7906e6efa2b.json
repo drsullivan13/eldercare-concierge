@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c16db90e962d44e1cbc035268f58096878a5f4a4ca01b650351fc7906e6efa2b.body",
+  "bytes": 1602,
+  "checkedAt": "2026-11-12T15:41:31.363714+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "356 BLOOMFIELD AVENUE",
+    "City": "MONTCLAIR",
+    "Postal": "07042",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a9066547115b181e845bd2699c47ace11f4ab6e90d9602d7d8e0229bcc45eda8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=356+BLOOMFIELD+AVENUE&City=MONTCLAIR&Region=NJ&Postal=07042&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

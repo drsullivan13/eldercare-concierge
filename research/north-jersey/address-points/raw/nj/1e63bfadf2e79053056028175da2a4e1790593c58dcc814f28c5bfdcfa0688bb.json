@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1e63bfadf2e79053056028175da2a4e1790593c58dcc814f28c5bfdcfa0688bb.body",
+  "bytes": 1574,
+  "checkedAt": "2026-11-12T15:41:35.429738+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "219 South St",
+    "City": "NEW PROVIDENCE",
+    "Postal": "07974",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d66e3954b65c87b196422eff2954d4c7fe7cd06604be35d2364cfad8ab35b055",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=219+South+St&City=NEW+PROVIDENCE&Region=NJ&Postal=07974&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

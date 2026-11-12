@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b4e20e460c67db5ca52db4c01ee0b7ea000c312f0193c7f9bbd99cb8dcf8c8dd.body",
+  "bytes": 1645,
+  "checkedAt": "2026-11-12T15:41:29.181173+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1120 BLOOMFIELD AVENUE",
+    "City": "WEST CALDWELL",
+    "Postal": "07006",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d764b87de36445b110562bb70cdacd06a8a610291b26e04713d98cf9f00ff991",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1120+BLOOMFIELD+AVENUE&City=WEST+CALDWELL&Region=NJ&Postal=07006&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

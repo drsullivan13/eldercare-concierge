@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/aa449dffa2ab43fd9176c1b81e50a7ccb21fb1c9ba238a5a653d9773c6034b43.body",
+  "bytes": 3245,
+  "checkedAt": "2026-11-12T15:41:34.567228+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "26 JOURNAL SQUARE",
+    "City": "JERSEY CITY",
+    "Postal": "07306",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5f54c445d6e14aa59ff4f41beb349ef74fe8e286f80bcd0cffb0151d1a9b8b44",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=26+JOURNAL+SQUARE&City=JERSEY+CITY&Region=NJ&Postal=07306&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/39c27fefd8599b205a9dea2a481bb370c6fd1a7fbb4f56a1c69846cc78bf9e51.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:44.165536+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "645 Essex Street",
+    "City": "Plainfield",
+    "Postal": "07060",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ead17ed01d9efa0f0739d4580a9f4119f4c50d560584a19f3f41aa5df0b7e724",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=645+Essex+Street&City=Plainfield&Region=NJ&Postal=07060&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

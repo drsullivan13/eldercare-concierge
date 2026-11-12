@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/407ff3eaa806c43c55a27bc3aeb71f1e0d3be0adfeb51190e88e90961d8cdd78.body",
+  "bytes": 1620,
+  "checkedAt": "2026-11-12T15:41:20.609218+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1140 BLACK OAK RIDGE ROAD",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "91cba7392bb22e5eaa71bb3a897c2743af3dc56d69e6787374279958b6623b6e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1140+BLACK+OAK+RIDGE+ROAD&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

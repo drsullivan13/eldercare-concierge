@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/193027efe66c9fe3c70c997e73a2b6f05eff99d0aa72dd02ff151687f3e97543.body",
+  "bytes": 1671,
+  "checkedAt": "2026-11-12T15:41:33.905671+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "434 RIDGEDALE AVENUE",
+    "City": "EAST HANOVER",
+    "Postal": "07936",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e2f9d535e2158bdbcd24583c927607e2ffd614775ede944d52fd21c97ad0a4d4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=434+RIDGEDALE+AVENUE&City=EAST+HANOVER&Region=NJ&Postal=07936&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

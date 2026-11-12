@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ea65b4c8892fa2c7ea86e5c6dd1464c2bd4f2f94cf577d46e5111f6b813d5791.body",
+  "bytes": 4665,
+  "checkedAt": "2026-11-12T15:41:44.891003+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "25 Berkeley Terrace",
+    "City": "Livingston",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2b5454d1b019d2a264df8ab74bfa87d6bc9566d3ece59ff7d75bbab0324d94a0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=25+Berkeley+Terrace&City=Livingston&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

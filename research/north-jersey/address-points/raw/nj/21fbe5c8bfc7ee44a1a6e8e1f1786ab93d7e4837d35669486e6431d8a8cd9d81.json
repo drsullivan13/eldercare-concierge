@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/21fbe5c8bfc7ee44a1a6e8e1f1786ab93d7e4837d35669486e6431d8a8cd9d81.body",
+  "bytes": 1620,
+  "checkedAt": "2026-11-12T15:41:28.120552+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "115 ROUTE 206",
+    "City": "CHESTER",
+    "Postal": "07930",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ad1ce45f4c2661bd35b0b8e62836a21804cb3455e8fd08da269761805c230db7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=115+ROUTE+206&City=CHESTER&Region=NJ&Postal=07930&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

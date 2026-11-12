@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/79d1f8014f609ea5a0098b250c2fe6f5c30c42cf4c9773b30cc13e2d33efd44a.body",
+  "bytes": 1540,
+  "checkedAt": "2026-11-12T15:41:27.418563+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "644 GOFFLE ROAD",
+    "City": "HAWTHORNE",
+    "Postal": "07506",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6807444cf1450515a7847efe5791a80f0ae3065581f2d5372303d72840ac2597",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=644+GOFFLE+ROAD&City=HAWTHORNE&Region=NJ&Postal=07506&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

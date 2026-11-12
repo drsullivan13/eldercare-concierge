@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6fad85b8a85f8bd84db18f14b0a08a38b2d3c842fa4f3e3eeae01ce7d8b7b2ad.body",
+  "bytes": 1630,
+  "checkedAt": "2026-11-12T15:41:48.675040+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5601 Bergenline Ave",
+    "City": "West New York",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2631d59f31c904ffb1a823a501e4c17db8dc46cc356c44426773f6923739d07b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5601+Bergenline+Ave&City=West+New+York&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/ae1c13cd3e0c6f049005d118a3d712dba086c808eb158fbc7a7849b7c5ecd899.body",
+  "bytes": 5263,
+  "checkedAt": "2026-11-12T15:41:58.088605+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Jersey City",
+    "format": "json",
+    "state": "NJ",
+    "street": "95 Martin Luther King Jr Drive",
+    "vintage": "Current_Current",
+    "zip": "07305"
+  },
+  "sha256": "76983bb72c3aff4d908f340f99223d732bab19527c778ef6ea2344dec60683f0",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=95+Martin+Luther+King+Jr+Drive&city=Jersey+City&state=NJ&zip=07305&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

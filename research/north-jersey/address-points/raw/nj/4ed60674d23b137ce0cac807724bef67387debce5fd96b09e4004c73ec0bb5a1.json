@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4ed60674d23b137ce0cac807724bef67387debce5fd96b09e4004c73ec0bb5a1.body",
+  "bytes": 1566,
+  "checkedAt": "2026-11-12T15:41:38.903411+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "28 MILLBURN AVENUE",
+    "City": "SPRINGFIELD",
+    "Postal": "07081",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8f1c1a253a7c95825a557bacae7dde4e74b7762daefae1e5895a640823cc9563",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=28+MILLBURN+AVENUE&City=SPRINGFIELD&Region=NJ&Postal=07081&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

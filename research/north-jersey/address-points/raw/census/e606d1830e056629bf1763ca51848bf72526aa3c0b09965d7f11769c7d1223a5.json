@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/e606d1830e056629bf1763ca51848bf72526aa3c0b09965d7f11769c7d1223a5.body",
+  "bytes": 4730,
+  "checkedAt": "2026-11-12T15:41:58.831019+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Maplewood",
+    "format": "json",
+    "state": "NJ",
+    "street": "1574B Springfield Avenue",
+    "vintage": "Current_Current",
+    "zip": "07040"
+  },
+  "sha256": "af42537586c3c6dcfe1ec9ea8ee6c2a9e7a7ff5a9413c20262e0cbf70b00472a",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1574B+Springfield+Avenue&city=Maplewood&state=NJ&zip=07040&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

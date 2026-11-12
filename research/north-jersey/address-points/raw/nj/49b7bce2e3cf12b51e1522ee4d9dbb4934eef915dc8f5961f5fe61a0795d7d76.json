@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/49b7bce2e3cf12b51e1522ee4d9dbb4934eef915dc8f5961f5fe61a0795d7d76.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:36.459122+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3651 HILL ROAD",
+    "City": "PARSIPPANY",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1cd1db0e4016b6d6176dbecbf3654bbc97fde94a25a0bdff7ce8e3b694f10b70",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3651+HILL+ROAD&City=PARSIPPANY&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9852a532c44287935042e1019a0526632263a50db22354faa54238d5433a89d2.body",
+  "bytes": 1590,
+  "checkedAt": "2026-11-12T15:41:32.774386+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "27 CHESTNUT STREET",
+    "City": "RIDGEWOOD",
+    "Postal": "07450",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "28918269a0aae886b2ffaacb2a5e4b76b081620538e961357ee774c36ebf3690",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=27+CHESTNUT+STREET&City=RIDGEWOOD&Region=NJ&Postal=07450&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

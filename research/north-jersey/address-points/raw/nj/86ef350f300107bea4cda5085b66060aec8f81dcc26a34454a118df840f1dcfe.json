@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/86ef350f300107bea4cda5085b66060aec8f81dcc26a34454a118df840f1dcfe.body",
+  "bytes": 1525,
+  "checkedAt": "2026-11-12T15:41:20.868362+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "206 BERGEN AVE",
+    "City": "KEARNY",
+    "Postal": "07032",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f901177ba6fbfb8ffa42d4657eb9bdf5f0e258ae0d2892aea5c8cffd3a703d11",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=206+BERGEN+AVE&City=KEARNY&Region=NJ&Postal=07032&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

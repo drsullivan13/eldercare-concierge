@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a9a5f32d0cb1f4433c0a250c0cba6d54ef30c30e13bbc0a0a61a5e449c20907d.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:26.378457+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "155 HAZEL STREET",
+    "City": "Clifton",
+    "Postal": "07011",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c1bde20962322a4f82f1775d6bdd2ed06349dcd84d94d25ddb56b52c6491484c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=155+HAZEL+STREET&City=Clifton&Region=NJ&Postal=07011&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

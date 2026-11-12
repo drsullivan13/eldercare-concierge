@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/80212f42653a3b5964dcca865076071922023aff857361a21c7f5a9281cc4f01.body",
+  "bytes": 4767,
+  "checkedAt": "2026-11-12T15:41:58.285830+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "North Bergen",
+    "format": "json",
+    "state": "NJ",
+    "street": "7915 John F. Kennedy Blvd",
+    "vintage": "Current_Current",
+    "zip": "07047"
+  },
+  "sha256": "12ba2678f1d9a547c8b7be0702c9bd69987b25ba15d31cb26837527786b46cb7",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=7915+John+F.+Kennedy+Blvd&city=North+Bergen&state=NJ&zip=07047&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

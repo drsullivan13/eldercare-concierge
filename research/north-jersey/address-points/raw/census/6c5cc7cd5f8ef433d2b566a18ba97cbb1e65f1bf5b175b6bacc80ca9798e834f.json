@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/6c5cc7cd5f8ef433d2b566a18ba97cbb1e65f1bf5b175b6bacc80ca9798e834f.body",
+  "bytes": 4742,
+  "checkedAt": "2026-11-12T15:41:59.440828+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "West Orange",
+    "format": "json",
+    "state": "NJ",
+    "street": "2 Schmitt Rd 2 Schmitt Rd",
+    "vintage": "Current_Current",
+    "zip": "07052"
+  },
+  "sha256": "22b5fd80ba3d7119b92745f3f8328fae06bb058eaf73d999dcc51b3018cc7bcc",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2+Schmitt+Rd+2+Schmitt+Rd&city=West+Orange&state=NJ&zip=07052&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/4b25453736ddc3edb536f43c263ad1ae9d5ebe2c5d81c35b32d3659ef054b5be.body",
+  "bytes": 5222,
+  "checkedAt": "2026-11-12T15:42:00.097392+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Englewood",
+    "format": "json",
+    "state": "NJ",
+    "street": "61 W Palisades Ave.",
+    "vintage": "Current_Current",
+    "zip": "07631"
+  },
+  "sha256": "4c417095cd2d0cd893a8de8c45f251412703d920b89850a599840326d2cc6729",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=61+W+Palisades+Ave.&city=Englewood&state=NJ&zip=07631&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

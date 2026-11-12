@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/087c6e60b8e8113bddc127060bde1d63cbabfaba2db634c3a8b540abfe932a33.body",
+  "bytes": 1536,
+  "checkedAt": "2026-11-12T15:41:29.053615+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "32 MAPLE AVENUE",
+    "City": "MORRISTOWN",
+    "Postal": "07960",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5b3ae9d6de7674cac9b9aed136865c9bc06ac02173298f0a12ce037640137aed",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=32+MAPLE+AVENUE&City=MORRISTOWN&Region=NJ&Postal=07960&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

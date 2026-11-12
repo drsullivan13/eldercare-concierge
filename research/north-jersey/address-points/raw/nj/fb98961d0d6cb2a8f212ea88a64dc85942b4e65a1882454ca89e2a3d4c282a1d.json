@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fb98961d0d6cb2a8f212ea88a64dc85942b4e65a1882454ca89e2a3d4c282a1d.body",
+  "bytes": 1561,
+  "checkedAt": "2026-11-12T15:41:22.224236+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "333 GRAND AVE",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "fb84097e9327a52c34ddc62df63b902c42271c105f6639482ac3f69a502c3c88",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=333+GRAND+AVE&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c431be50020ffb79ac613694909fc06a288e28cf63938524a4cf37b4a241b3ff.body",
+  "bytes": 1607,
+  "checkedAt": "2026-11-12T15:41:30.053652+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "71 VALLEY STREET",
+    "City": "SOUTH ORANGE",
+    "Postal": "07079",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "935f255003ac522b5f1613206720f7cb33dd0bb0c957a453248f199688a07dd6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=71+VALLEY+STREET&City=SOUTH+ORANGE&Region=NJ&Postal=07079&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

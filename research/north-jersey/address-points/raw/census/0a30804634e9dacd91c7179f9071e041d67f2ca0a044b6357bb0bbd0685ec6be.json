@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/0a30804634e9dacd91c7179f9071e041d67f2ca0a044b6357bb0bbd0685ec6be.body",
+  "bytes": 4717,
+  "checkedAt": "2026-11-12T15:41:59.086389+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Irvington",
+    "format": "json",
+    "state": "NJ",
+    "street": "33-35 Washington Avenue",
+    "vintage": "Current_Current",
+    "zip": "07111"
+  },
+  "sha256": "8f7479a29e0110ab509ed00fadecd54ab361e6f2dfc820a2c563fe1dc9b0c8a6",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=33-35+Washington+Avenue&city=Irvington&state=NJ&zip=07111&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

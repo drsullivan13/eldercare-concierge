@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/400874aadc3d24337637e55ac501d4f8a5e603c39dc9ce2f4db8337eb0e91aab.body",
+  "bytes": 1577,
+  "checkedAt": "2026-11-12T15:41:41.600684+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1315 Sunnyfield Dr",
+    "City": "Linden",
+    "Postal": "07036",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b2e264c497dc6ee46e05d1d3c60446e9d3dc7e5991a410f9dc245b23fbb1cf84",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1315+Sunnyfield+Dr&City=Linden&Region=NJ&Postal=07036&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

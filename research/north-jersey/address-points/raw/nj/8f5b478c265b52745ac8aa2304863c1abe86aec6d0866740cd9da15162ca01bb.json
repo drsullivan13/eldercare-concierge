@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8f5b478c265b52745ac8aa2304863c1abe86aec6d0866740cd9da15162ca01bb.body",
+  "bytes": 1582,
+  "checkedAt": "2026-11-12T15:41:26.883931+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "18 EDEN LANE",
+    "City": "WHIPPANY",
+    "Postal": "07981",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "30d9788c5d2200b805d031a85a5c0ea2f12250788cfa2a9bca61a47e9d866dd9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=18+EDEN+LANE&City=WHIPPANY&Region=NJ&Postal=07981&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

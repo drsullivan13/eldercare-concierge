@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/780c400e1aed1b54635bdce740f5c0e5a91fdb6f230f828f14a9369a2e3f87ff.body",
+  "bytes": 4726,
+  "checkedAt": "2026-11-12T15:41:56.835927+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Fairfield",
+    "format": "json",
+    "state": "NJ",
+    "street": "695 Route 46 W",
+    "vintage": "Current_Current",
+    "zip": "07004"
+  },
+  "sha256": "f34f6e866ee2494322e2ea65fcd5520e89e0da7093624758d8b046da5fbde210",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=695+Route+46+W&city=Fairfield&state=NJ&zip=07004&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

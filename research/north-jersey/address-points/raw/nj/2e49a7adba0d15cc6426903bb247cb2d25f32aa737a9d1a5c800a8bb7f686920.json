@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2e49a7adba0d15cc6426903bb247cb2d25f32aa737a9d1a5c800a8bb7f686920.body",
+  "bytes": 1605,
+  "checkedAt": "2026-11-12T15:41:39.045566+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "30 Wilson Avenue",
+    "City": "Totowa",
+    "Postal": "07512",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "da91aa3283bc6b888da2d5fd21dd0dd360685a487b13cc7feaad9c67948bdc3a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=30+Wilson+Avenue&City=Totowa&Region=NJ&Postal=07512&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

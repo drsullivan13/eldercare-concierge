@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/f655eedeb20ff253db415adbdc7f04c4abe8a527c66dbf0de380f5452c68ed51.body",
+  "bytes": 5217,
+  "checkedAt": "2026-11-12T15:41:51.125485+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "CLIFTON",
+    "format": "json",
+    "state": "NJ",
+    "street": "777 PASSAIC AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07012"
+  },
+  "sha256": "e8eb699c3a842e6b97052543c8a7f023915d66c0702f2e11a0ede12a7a22d3aa",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=777+PASSAIC+AVENUE&city=CLIFTON&state=NJ&zip=07012&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

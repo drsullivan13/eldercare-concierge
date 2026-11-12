@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5c2888842e880bb2030486f5234c301facc2d62dac29becf51b3fb7eafe6c1c7.body",
+  "bytes": 1609,
+  "checkedAt": "2026-11-12T15:41:19.882108+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "521 PINE BROOK ROAD",
+    "City": "LINCOLN PARK",
+    "Postal": "07035",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cb158ddc8a2ace7d1bb2db58f1f96d781017731f464157c768476065dca3792d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=521+PINE+BROOK+ROAD&City=LINCOLN+PARK&Region=NJ&Postal=07035&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

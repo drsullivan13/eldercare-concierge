@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/36ce7dcd327b44169eff9192808c3b551820f2e477f443c24dc5368a07046b21.body",
+  "bytes": 2987,
+  "checkedAt": "2026-11-12T15:41:45.752976+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2 Custer Avenue",
+    "City": "Newark",
+    "Postal": "07112",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "30ea5a052e90c462b4333b58bdb8359ab441875c9329999d4b4d0afd9999f648",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2+Custer+Avenue&City=Newark&Region=NJ&Postal=07112&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

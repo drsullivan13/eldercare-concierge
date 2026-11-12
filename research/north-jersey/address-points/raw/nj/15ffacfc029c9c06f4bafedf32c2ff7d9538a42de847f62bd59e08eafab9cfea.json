@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/15ffacfc029c9c06f4bafedf32c2ff7d9538a42de847f62bd59e08eafab9cfea.body",
+  "bytes": 1554,
+  "checkedAt": "2026-11-12T15:41:37.577930+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "109 Main St",
+    "City": "Millburn",
+    "Postal": "07041",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0d06adf417fb01cf3895ccfa086af8eca3392da0c469072cf2252a4c1143479e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=109+Main+St&City=Millburn&Region=NJ&Postal=07041&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

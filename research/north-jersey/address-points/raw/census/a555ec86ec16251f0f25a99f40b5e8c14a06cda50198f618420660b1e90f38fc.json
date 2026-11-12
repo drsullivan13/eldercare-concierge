@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/a555ec86ec16251f0f25a99f40b5e8c14a06cda50198f618420660b1e90f38fc.body",
+  "bytes": 5214,
+  "checkedAt": "2026-11-12T15:41:51.613813+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "KENVIL",
+    "format": "json",
+    "state": "NJ",
+    "street": "970 ROUTE 46",
+    "vintage": "Current_Current",
+    "zip": "07847"
+  },
+  "sha256": "a8da4c91f1b764587dd07ba6c21045135da4dc87fb9e07d659cb8c848fe148c0",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=970+ROUTE+46&city=KENVIL&state=NJ&zip=07847&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

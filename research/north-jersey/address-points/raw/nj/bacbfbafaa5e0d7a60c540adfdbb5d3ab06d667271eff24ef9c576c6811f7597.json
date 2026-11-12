@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bacbfbafaa5e0d7a60c540adfdbb5d3ab06d667271eff24ef9c576c6811f7597.body",
+  "bytes": 1564,
+  "checkedAt": "2026-11-12T15:41:43.144201+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "20 Jackson Dr",
+    "City": "Cranford",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e4d3b157c2e903a03172475038f85a033aa6d6a971f1847fcca8d66cd7ea0cb1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=20+Jackson+Dr&City=Cranford&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

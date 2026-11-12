@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7769bb212774b04011cdde295a64f0f521731be69201d5c783c787cd4c0a74bf.body",
+  "bytes": 1543,
+  "checkedAt": "2026-11-12T15:41:49.029318+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "97 Wilson Pl",
+    "City": "Orange",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7de9cd96fb1d1621289c55d5aeb44763f58dfcd9f887f37d08a2f196270b2ec1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=97+Wilson+Pl&City=Orange&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

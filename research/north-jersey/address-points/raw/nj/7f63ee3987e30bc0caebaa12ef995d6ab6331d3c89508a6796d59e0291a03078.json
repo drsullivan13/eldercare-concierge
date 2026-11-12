@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7f63ee3987e30bc0caebaa12ef995d6ab6331d3c89508a6796d59e0291a03078.body",
+  "bytes": 1582,
+  "checkedAt": "2026-11-12T15:41:26.031725+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "970 ROUTE 46",
+    "City": "KENVIL",
+    "Postal": "07847",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "944c0d4e50c6c3a55c21ae06e8142565d813a0a95a55cd2a0fcf76287738bd3f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=970+ROUTE+46&City=KENVIL&Region=NJ&Postal=07847&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

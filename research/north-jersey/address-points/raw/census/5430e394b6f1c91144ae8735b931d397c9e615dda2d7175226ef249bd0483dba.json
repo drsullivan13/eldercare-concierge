@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/5430e394b6f1c91144ae8735b931d397c9e615dda2d7175226ef249bd0483dba.body",
+  "bytes": 5219,
+  "checkedAt": "2026-11-12T15:41:52.648740+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "MORRISTOWN",
+    "format": "json",
+    "state": "NJ",
+    "street": "32 MAPLE AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07960"
+  },
+  "sha256": "b3487295d54e1829f358a3381fea0802509cf03a9711759d9174ef26136206ed",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=32+MAPLE+AVENUE&city=MORRISTOWN&state=NJ&zip=07960&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

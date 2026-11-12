@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/098e212c159715bb89f7dc246e1890153540eaf43ef39e38aa04b3f93b9ed2a9.body",
+  "bytes": 1553,
+  "checkedAt": "2026-11-12T15:41:48.455225+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "28 VALLEY ROAD",
+    "City": "MONTCLAIR",
+    "Postal": "07042",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7a1c46a32e8dc5239009ef8d609c8870942a6ec9363674c9fb3475880f3925ab",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=28+VALLEY+ROAD&City=MONTCLAIR&Region=NJ&Postal=07042&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

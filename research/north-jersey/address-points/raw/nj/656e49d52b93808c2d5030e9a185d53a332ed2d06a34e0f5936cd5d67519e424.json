@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/656e49d52b93808c2d5030e9a185d53a332ed2d06a34e0f5936cd5d67519e424.body",
+  "bytes": 1644,
+  "checkedAt": "2026-11-12T15:41:37.685002+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "51 JFK PARKWAY",
+    "City": "SHORT HILLS",
+    "Postal": "07078",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "153d83477aa011fea37585e76f7c7f3260157157148ab8e08d6a234a8464e5d9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=51+JFK+PARKWAY&City=SHORT+HILLS&Region=NJ&Postal=07078&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

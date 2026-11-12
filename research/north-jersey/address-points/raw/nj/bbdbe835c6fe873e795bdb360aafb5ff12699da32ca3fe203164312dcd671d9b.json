@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bbdbe835c6fe873e795bdb360aafb5ff12699da32ca3fe203164312dcd671d9b.body",
+  "bytes": 1575,
+  "checkedAt": "2026-11-12T15:41:45.022534+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "181 New Rd",
+    "City": "Parsippany",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "3b65113719cbebf908dbd130f5fae1241c8551dbab18ede02ffd4318a2af8c84",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=181+New+Rd&City=Parsippany&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

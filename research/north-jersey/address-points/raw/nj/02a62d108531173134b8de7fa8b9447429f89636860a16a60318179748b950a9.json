@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/02a62d108531173134b8de7fa8b9447429f89636860a16a60318179748b950a9.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:28.962586+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "6 COMMERCE DRIVE",
+    "City": "CRANFORD",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "46aa8f46111f832d771c9deb9a10ff18238385fc3d0f87d0bec670450e4bc90a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=6+COMMERCE+DRIVE&City=CRANFORD&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

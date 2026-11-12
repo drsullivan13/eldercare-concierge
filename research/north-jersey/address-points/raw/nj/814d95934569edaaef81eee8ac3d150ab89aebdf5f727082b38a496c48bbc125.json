@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/814d95934569edaaef81eee8ac3d150ab89aebdf5f727082b38a496c48bbc125.body",
+  "bytes": 1623,
+  "checkedAt": "2026-11-12T15:41:21.997346+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "600 KINDERKAMACK ROAD",
+    "City": "ORADELL",
+    "Postal": "07649",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d0f3b12c10dea5664d110643e844356b2b02fb79cf541938a61a0b4589bf6bc8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=600+KINDERKAMACK+ROAD&City=ORADELL&Region=NJ&Postal=07649&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

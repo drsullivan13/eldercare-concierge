@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/12b49f56a17a8262d5fb13ab6672928e1d07144c326b130c96340120abf1c324.body",
+  "bytes": 1558,
+  "checkedAt": "2026-11-12T15:41:31.873312+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "50 HARRISON STREET",
+    "City": "HOBOKEN",
+    "Postal": "07030",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6963c40d6fe7407923ff18e04b9c0f771fb33243883c1f62a960fcf3c4436837",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=50+HARRISON+STREET&City=HOBOKEN&Region=NJ&Postal=07030&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c7e964710da1356d9e0a734b6d71fb11b1bcce33358f3d850cb096401b7b21bd.body",
+  "bytes": 5221,
+  "checkedAt": "2026-11-12T15:41:56.776129+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Plainfield",
+    "format": "json",
+    "state": "NJ",
+    "street": "120 West 7th Street",
+    "vintage": "Current_Current",
+    "zip": "07040"
+  },
+  "sha256": "a1d6651493854cbdee88f8b8e933859a9e02d0e1e4adda3dd87e046e2b7f20ec",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=120+West+7th+Street&city=Plainfield&state=NJ&zip=07040&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

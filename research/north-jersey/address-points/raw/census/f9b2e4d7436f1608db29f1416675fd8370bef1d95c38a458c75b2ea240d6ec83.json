@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/f9b2e4d7436f1608db29f1416675fd8370bef1d95c38a458c75b2ea240d6ec83.body",
+  "bytes": 4746,
+  "checkedAt": "2026-11-12T15:41:51.393582+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "MORRISTOWN",
+    "format": "json",
+    "state": "NJ",
+    "street": "95 MT KEMBLE AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07960"
+  },
+  "sha256": "227120be78a489269e46212efb0272b6799c1b6fe65c96d8c9db3c8c361cdcf5",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=95+MT+KEMBLE+AVENUE&city=MORRISTOWN&state=NJ&zip=07960&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

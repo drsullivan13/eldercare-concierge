@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/55637d7aa21347bc16a4f949ff32cc56bfcaa9ebb580a57b61a64fb15d16481c.body",
+  "bytes": 5200,
+  "checkedAt": "2026-11-12T15:41:57.947572+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Passaic",
+    "format": "json",
+    "state": "NJ",
+    "street": "636 Main Avenue",
+    "vintage": "Current_Current",
+    "zip": "07055"
+  },
+  "sha256": "493bc5a2bff02868b599c48536173071fb1014bfff4f1638b8d3440c629b7b05",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=636+Main+Avenue&city=Passaic&state=NJ&zip=07055&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/7e86fb8e2bc69283d1ab4feb18c111f80eeb0bbea3551517409440251c967c8c.body",
+  "bytes": 399,
+  "checkedAt": "2026-11-12T15:41:57.557308+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Rutherford",
+    "format": "json",
+    "state": "NJ",
+    "street": "301 Route 17 N",
+    "vintage": "Current_Current",
+    "zip": "07070"
+  },
+  "sha256": "e8b781cd756fc8040ed0863c2cd1fc40d1eeaa4497aeefb319f8ec03bf709963",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=301+Route+17+N&city=Rutherford&state=NJ&zip=07070&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e1b7cf0473d226fbe536b039e40aded82a421e5bf73d73aa87f2778d357a9df2.body",
+  "bytes": 1572,
+  "checkedAt": "2026-11-12T15:41:45.857716+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "291 Windsor Road",
+    "City": "Wood Ridge",
+    "Postal": "07075",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ddd7f66a53e80e06efed5a91f240a855f6b8fdfa4445e7cf50091be43de3d1ee",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=291+Windsor+Road&City=Wood+Ridge&Region=NJ&Postal=07075&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

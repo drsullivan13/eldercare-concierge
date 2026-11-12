@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/35c75b42a26a98c7b5f7faa0e350c4e31b57bd14ed4c95b35edc5e5bd49fe5eb.body",
+  "bytes": 1622,
+  "checkedAt": "2026-11-12T15:41:47.231770+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "59 Beaverbrook Road",
+    "City": "Lincoln Park",
+    "Postal": "07035",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7a5779e4a89b883dda546019f7306aac35df5e28e1907879636d90bd1f3ef37a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=59+Beaverbrook+Road&City=Lincoln+Park&Region=NJ&Postal=07035&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

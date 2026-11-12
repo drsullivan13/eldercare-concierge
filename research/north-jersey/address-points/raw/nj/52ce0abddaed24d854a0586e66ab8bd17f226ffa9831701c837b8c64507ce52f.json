@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/52ce0abddaed24d854a0586e66ab8bd17f226ffa9831701c837b8c64507ce52f.body",
+  "bytes": 1546,
+  "checkedAt": "2026-11-12T15:41:29.409917+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1199 RARITAN ROAD",
+    "City": "CLARK",
+    "Postal": "07066",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "90605d17807b30e4769b0bc49b17a8a8709c12c1397869d1672b73446f38777e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1199+RARITAN+ROAD&City=CLARK&Region=NJ&Postal=07066&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

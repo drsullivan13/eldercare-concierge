@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d6e2a6160bd1dfc0772d2857c5594c00e59704fa4261294fc8d3276743f257e8.body",
+  "bytes": 1595,
+  "checkedAt": "2026-11-12T15:41:28.686352+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "251 NORTH AVENUE WEST",
+    "City": "WESTFIELD",
+    "Postal": "07090",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b3a831a64af3cf7e88ae6b1294be7421db4bd7cd88d089690407e19d6067843c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=251+NORTH+AVENUE+WEST&City=WESTFIELD&Region=NJ&Postal=07090&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

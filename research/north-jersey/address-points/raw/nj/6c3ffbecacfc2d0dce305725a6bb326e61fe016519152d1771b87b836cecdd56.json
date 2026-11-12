@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6c3ffbecacfc2d0dce305725a6bb326e61fe016519152d1771b87b836cecdd56.body",
+  "bytes": 1623,
+  "checkedAt": "2026-11-12T15:41:36.230268+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "151 STATE ROUTE 10 EAST",
+    "City": "SUCCASUNNA",
+    "Postal": "07876",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "27e40958475820bb4bb95b99d80eb82146df644dae7cb38b4929a23f07690dd4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=151+STATE+ROUTE+10+EAST&City=SUCCASUNNA&Region=NJ&Postal=07876&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

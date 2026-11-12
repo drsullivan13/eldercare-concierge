@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/31991a761b581ddc561ea2a974671974d6efa67e30dcaacafe4cc6452fcadf5e.body",
+  "bytes": 1534,
+  "checkedAt": "2026-11-12T15:41:40.685456+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "362 LUM AVENUE",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "936479be73eb5c16880d1b529082d0181c25e921983f453ca666c3a56828d430",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=362+LUM+AVENUE&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/fab94f1b401809983934e27c29e1380720fb55088ef63c1e0575b163f264a9d3.body",
+  "bytes": 5194,
+  "checkedAt": "2026-11-12T15:41:58.350549+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Union",
+    "format": "json",
+    "state": "NJ",
+    "street": "985 A Stuyvesant Avenue",
+    "vintage": "Current_Current",
+    "zip": "07083"
+  },
+  "sha256": "15bbdd5aa063778c154e0dab4a9cdd73af5dc2e255d787072d26aa3b7f68393d",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=985+A+Stuyvesant+Avenue&city=Union&state=NJ&zip=07083&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

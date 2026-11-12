@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/a022b95ac6ed2c3f9ebe38f8a7fa33f19458fd193dbc9f9b2f1e785a059689e7.body",
+  "bytes": 5265,
+  "checkedAt": "2026-11-12T15:41:58.331687+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Parsippany",
+    "format": "json",
+    "state": "NJ",
+    "street": "2001 US-46",
+    "vintage": "Current_Current",
+    "zip": "07054"
+  },
+  "sha256": "57fd8b54b298ab12ffd1d229527dc070d22f75d6f3a1496d8d104857da161879",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2001+US-46&city=Parsippany&state=NJ&zip=07054&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

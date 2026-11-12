@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/520874c5707001b82da5725282ad3a51777d3ac4a78ae0d9e7a19c2ce7d30140.body",
+  "bytes": 1506,
+  "checkedAt": "2026-11-12T15:41:23.594848+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "680 BROADWAY",
+    "City": "PATERSON",
+    "Postal": "07514",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b82cbe0cbaf9db5fc23a6bcd9108777a7edf4b706c7a6fb5891102c23441c71e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=680+BROADWAY&City=PATERSON&Region=NJ&Postal=07514&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

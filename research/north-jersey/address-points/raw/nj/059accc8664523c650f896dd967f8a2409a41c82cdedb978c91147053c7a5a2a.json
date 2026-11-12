@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/059accc8664523c650f896dd967f8a2409a41c82cdedb978c91147053c7a5a2a.body",
+  "bytes": 1547,
+  "checkedAt": "2026-11-12T15:41:38.778728+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "540 NORTH AVENUE",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cb160416abe9b7a3552beaa36fc9c6d6fdbd6210a97b9d2a9e43a765f1019b85",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=540+NORTH+AVENUE&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

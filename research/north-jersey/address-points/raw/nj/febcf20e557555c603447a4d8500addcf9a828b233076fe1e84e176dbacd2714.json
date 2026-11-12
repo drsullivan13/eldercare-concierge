@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/febcf20e557555c603447a4d8500addcf9a828b233076fe1e84e176dbacd2714.body",
+  "bytes": 1590,
+  "checkedAt": "2026-11-12T15:41:44.429252+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "123 Highland Avenue",
+    "City": "Glen Ridge",
+    "Postal": "07028",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c3a2057ea1794e34451fec44ebb92a29b54c1fc57a0db5fc4e64a36e67930cf0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=123+Highland+Avenue&City=Glen+Ridge&Region=NJ&Postal=07028&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

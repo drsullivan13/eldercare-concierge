@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9b3b6c4967d82813817bfe7a39f9f1006b52155a9dfcfa9d1bed4e9de9ce3fe4.body",
+  "bytes": 1557,
+  "checkedAt": "2026-11-12T15:41:35.034715+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "8 EAST MAIN STREET",
+    "City": "RAMSEY",
+    "Postal": "07446",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2e8c9d393a1cbff988ef203e1eed57097e8594fa8e53f8eb95be3c63a6e61943",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=8+EAST+MAIN+STREET&City=RAMSEY&Region=NJ&Postal=07446&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

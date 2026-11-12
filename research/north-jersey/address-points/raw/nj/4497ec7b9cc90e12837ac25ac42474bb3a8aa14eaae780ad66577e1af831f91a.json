@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4497ec7b9cc90e12837ac25ac42474bb3a8aa14eaae780ad66577e1af831f91a.body",
+  "bytes": 1620,
+  "checkedAt": "2026-11-12T15:41:19.697327+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "25 E LINDSLEY ROAD",
+    "City": "CEDAR GROVE",
+    "Postal": "07009",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "35b492333a9c692f3a9b8efc4b0392e904650651e6e6ad8635248b85f14867fc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=25+E+LINDSLEY+ROAD&City=CEDAR+GROVE&Region=NJ&Postal=07009&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

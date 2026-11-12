@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4fe827464f8ef0e68ac4e9b941343dce8dee232796e6fa4df48fabfca8cccba0.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:23.858110+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "29 EAST 29TH STREET",
+    "City": "BAYONNE",
+    "Postal": "07002",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "74038d55b072962171ae60eb65700fafedb70a226b8ebe75b929308ea7c48907",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=29+EAST+29TH+STREET&City=BAYONNE&Region=NJ&Postal=07002&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

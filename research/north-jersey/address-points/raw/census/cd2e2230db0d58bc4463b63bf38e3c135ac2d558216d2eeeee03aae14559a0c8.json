@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/cd2e2230db0d58bc4463b63bf38e3c135ac2d558216d2eeeee03aae14559a0c8.body",
+  "bytes": 5187,
+  "checkedAt": "2026-11-12T15:41:55.410744+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Union",
+    "format": "json",
+    "state": "NJ",
+    "street": "3 Bond Drive",
+    "vintage": "Current_Current",
+    "zip": "07083"
+  },
+  "sha256": "824f0119917c9a621720e2e3fb561f43044af321305b7dc3d998e95b07b5179e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3+Bond+Drive&city=Union&state=NJ&zip=07083&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

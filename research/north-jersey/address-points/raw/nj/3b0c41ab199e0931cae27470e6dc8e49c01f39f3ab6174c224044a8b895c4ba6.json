@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3b0c41ab199e0931cae27470e6dc8e49c01f39f3ab6174c224044a8b895c4ba6.body",
+  "bytes": 1555,
+  "checkedAt": "2026-11-12T15:41:39.844062+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5 Nance Road",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4bf2b1c4bcd514ef8332791fcc97ba6f3f1bed89c4ec2360c64b3f5dc725adc0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5+Nance+Road&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

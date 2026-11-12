@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b65eb949148f6a1bfa36a9b436b16ce708f6d75585a8a22a81bd5c99feaad51d.body",
+  "bytes": 1641,
+  "checkedAt": "2026-11-12T15:41:42.183232+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "271 Mount Pleasant Avenue",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "de50e745fa4a17188c4d5fe09979922f7cdc830194cf117b211f006bbcf63206",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=271+Mount+Pleasant+Avenue&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

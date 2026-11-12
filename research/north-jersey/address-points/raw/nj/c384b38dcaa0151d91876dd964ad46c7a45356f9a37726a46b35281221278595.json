@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c384b38dcaa0151d91876dd964ad46c7a45356f9a37726a46b35281221278595.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:32.051364+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "22 MADISON AVENUE",
+    "City": "PARAMUS",
+    "Postal": "07652",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c59c432866046869daebc901e8ed33bc8e62d6251ebd0b3625a129bd1d79ae79",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=22+MADISON+AVENUE&City=PARAMUS&Region=NJ&Postal=07652&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

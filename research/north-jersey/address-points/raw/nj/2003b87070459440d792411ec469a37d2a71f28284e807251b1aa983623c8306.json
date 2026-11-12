@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2003b87070459440d792411ec469a37d2a71f28284e807251b1aa983623c8306.body",
+  "bytes": 3261,
+  "checkedAt": "2026-11-12T15:41:31.683289+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "111 SOUTH ORANGE AVENUE",
+    "City": "SOUTH ORANGE",
+    "Postal": "07079",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9311a4532072becb4b1df9816bcafe2994bbd0e0dfda3206b2157a2f5738b19c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=111+SOUTH+ORANGE+AVENUE&City=SOUTH+ORANGE&Region=NJ&Postal=07079&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

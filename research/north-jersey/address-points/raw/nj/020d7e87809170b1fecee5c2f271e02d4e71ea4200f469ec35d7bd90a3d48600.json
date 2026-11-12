@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/020d7e87809170b1fecee5c2f271e02d4e71ea4200f469ec35d7bd90a3d48600.body",
+  "bytes": 1588,
+  "checkedAt": "2026-11-12T15:41:48.256842+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "274 Stevens Ave",
+    "City": "Jersey City",
+    "Postal": "07305",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "44d253fe5424101af30e073e4e5e224f400fdf71ff7e78d66eabc554b0671cad",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=274+Stevens+Ave&City=Jersey+City&Region=NJ&Postal=07305&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

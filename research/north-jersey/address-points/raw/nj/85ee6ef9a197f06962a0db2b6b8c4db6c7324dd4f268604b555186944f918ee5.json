@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/85ee6ef9a197f06962a0db2b6b8c4db6c7324dd4f268604b555186944f918ee5.body",
+  "bytes": 68,
+  "checkedAt": "2026-11-12T15:41:20.000663+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "451 SCHOOLEY'S MOUNTAIN RD",
+    "City": "HACKETTSTOWN",
+    "Postal": "07840",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "acfae4870440c59a64af2343acab32331eeb8aad84a36e9b5b1b15ec1373f4db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=451+SCHOOLEY%27S+MOUNTAIN+RD&City=HACKETTSTOWN&Region=NJ&Postal=07840&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

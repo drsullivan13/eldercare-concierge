@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/475bcd1a10edcc2b79523f6c7eee7ef5cd3cd32e36aac4fb0b498b26ce96071c.body",
+  "bytes": 404,
+  "checkedAt": "2026-11-12T15:41:57.756238+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Parsippany",
+    "format": "json",
+    "state": "NJ",
+    "street": "1719 State Route 10",
+    "vintage": "Current_Current",
+    "zip": "07054"
+  },
+  "sha256": "53e6f5967119987af0a46a6c015353dfacd34e5266a084894d08bacd28112913",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1719+State+Route+10&city=Parsippany&state=NJ&zip=07054&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

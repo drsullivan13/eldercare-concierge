@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/ee4c158ea2d18dd892590831482f21ee58079d932bab7195b95a8eb40b6d08a6.body",
+  "bytes": 5245,
+  "checkedAt": "2026-11-12T15:41:54.550211+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "MOUNTAINSIDE",
+    "format": "json",
+    "state": "NJ",
+    "street": "1450 ROUTE 22 WEST",
+    "vintage": "Current_Current",
+    "zip": "07092"
+  },
+  "sha256": "fb42df5aea2ee71a82de90543afbda8986393fcbcead5a6d56318b2ec684447f",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1450+ROUTE+22+WEST&city=MOUNTAINSIDE&state=NJ&zip=07092&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

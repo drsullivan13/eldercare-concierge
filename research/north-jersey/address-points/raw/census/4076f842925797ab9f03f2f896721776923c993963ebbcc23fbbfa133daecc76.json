@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/4076f842925797ab9f03f2f896721776923c993963ebbcc23fbbfa133daecc76.body",
+  "bytes": 5192,
+  "checkedAt": "2026-11-12T15:41:59.122817+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Newark",
+    "format": "json",
+    "state": "NJ",
+    "street": "1225 Raymond Blvd",
+    "vintage": "Current_Current",
+    "zip": "07102"
+  },
+  "sha256": "877d3eb3146e6def67288ca12fd2ca5a53eb2b86241590d49c23f09a5dea0c4d",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1225+Raymond+Blvd&city=Newark&state=NJ&zip=07102&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/865d0b92d4289acdaa5033ab930beefc51d25e43bd2bc3ca8a3fcc683b74dd2b.body",
+  "bytes": 1611,
+  "checkedAt": "2026-11-12T15:41:22.696736+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "250 BLOOMFIELD AVE",
+    "City": "BLOOMFIELD",
+    "Postal": "07003",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "be46c79fad46ee47516ae05bd10bdebb3a9c0b4acf18b0856d4b4d2d420f9e43",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=250+BLOOMFIELD+AVE&City=BLOOMFIELD&Region=NJ&Postal=07003&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

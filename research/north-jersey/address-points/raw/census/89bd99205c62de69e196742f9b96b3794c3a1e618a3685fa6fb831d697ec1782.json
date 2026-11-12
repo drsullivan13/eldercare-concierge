@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/89bd99205c62de69e196742f9b96b3794c3a1e618a3685fa6fb831d697ec1782.body",
+  "bytes": 5201,
+  "checkedAt": "2026-11-12T15:41:53.203194+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "LEONIA",
+    "format": "json",
+    "state": "NJ",
+    "street": "345 GRAND AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07650"
+  },
+  "sha256": "7d1ba9b52d1af12e3dfd4be495fb805d9fe1b1f9744962b1b433f53b8935d781",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=345+GRAND+AVENUE&city=LEONIA&state=NJ&zip=07650&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

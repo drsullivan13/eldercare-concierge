@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0495f1f7a86a55ca23c6ad116d413fb27d85dce825a789cb0f136e90a119fcf7.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:36.645467+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "241 HUDSON STREET",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "477951ce27a7dc50edd09cbd671706a791c3480f3084a45a2e811d5ea7684283",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=241+HUDSON+STREET&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

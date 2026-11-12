@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/5c656b5003800f1868605ceae2949054328fb4f3362a4c22d47ab62a35c1e2c0.body",
+  "bytes": 5269,
+  "checkedAt": "2026-11-12T15:41:51.206939+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "WOODLAND PARK",
+    "format": "json",
+    "state": "NJ",
+    "street": "3 GARRET MOUNTAIN PLAZA",
+    "vintage": "Current_Current",
+    "zip": "07424"
+  },
+  "sha256": "a4d74447c57fcc025e24c0dbe885d9fa450f32b39e732c89f42a107bedd0ae48",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3+GARRET+MOUNTAIN+PLAZA&city=WOODLAND+PARK&state=NJ&zip=07424&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

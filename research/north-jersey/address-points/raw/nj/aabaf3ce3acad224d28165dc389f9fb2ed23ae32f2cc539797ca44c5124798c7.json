@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/aabaf3ce3acad224d28165dc389f9fb2ed23ae32f2cc539797ca44c5124798c7.body",
+  "bytes": 1553,
+  "checkedAt": "2026-11-12T15:41:33.934191+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "95 MAIN STREET",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "19f4e2f6262ff7ad7dec56996b514a40666cf01b49ebab317700fb63046025fd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=95+MAIN+STREET&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

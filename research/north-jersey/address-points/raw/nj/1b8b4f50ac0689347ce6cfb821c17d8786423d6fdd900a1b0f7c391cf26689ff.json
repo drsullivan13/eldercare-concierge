@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1b8b4f50ac0689347ce6cfb821c17d8786423d6fdd900a1b0f7c391cf26689ff.body",
+  "bytes": 1607,
+  "checkedAt": "2026-11-12T15:41:36.455095+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "672 JOHN F. KENNEDY BLVD.",
+    "City": "BAYONNE",
+    "Postal": "07002",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1ebcfabbe55d61ddc0965761e30ce36cb1d7c07f2cafbf077d329ac9574c87e2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=672+JOHN+F.+KENNEDY+BLVD.&City=BAYONNE&Region=NJ&Postal=07002&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

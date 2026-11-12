@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/99a7b43b60397ca454ec984785baf7403929584913b4e3c3b685bee7e256cf74.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:24.983347+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "396 FOREST AVENUE",
+    "City": "PARAMUS",
+    "Postal": "07652",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "21ee902400e1e503216e13f47345f06cc827db37e9e1de76b1a2fd839cb2d0de",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=396+FOREST+AVENUE&City=PARAMUS&Region=NJ&Postal=07652&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f80c3f3320bccb3b885ff0813f90a3f26b50b0748550129e91a7d8dddcf67c03.body",
+  "bytes": 1612,
+  "checkedAt": "2026-11-12T15:41:47.084745+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "104 Beaufort Ave",
+    "City": "Livingston",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7a9415cea8da7a708c3f491968164ed9aa6ca9b20c08cd83d777cab74366746e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=104+Beaufort+Ave&City=Livingston&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

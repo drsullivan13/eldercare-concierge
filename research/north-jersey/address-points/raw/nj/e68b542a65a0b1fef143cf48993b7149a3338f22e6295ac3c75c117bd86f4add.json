@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e68b542a65a0b1fef143cf48993b7149a3338f22e6295ac3c75c117bd86f4add.body",
+  "bytes": 1580,
+  "checkedAt": "2026-11-12T15:41:32.409141+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "443 60TH STREET",
+    "City": "WEST NEW YORK",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0beffd1250e90632e26b13e6a360dbdff1d48606559d6b753048a465ba886894",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=443+60TH+STREET&City=WEST+NEW+YORK&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

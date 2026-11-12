@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/43bd460f23b58a1c988444e603ecb1760a98d0db09959f37d51eca6f76762c6b.body",
+  "bytes": 1621,
+  "checkedAt": "2026-11-12T15:41:47.755796+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "4 Wildwood Ct",
+    "City": "Montvale",
+    "Postal": "07645",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ad8f31f74dc03a5a95ddf59ff3e473ac88c232b636c98012b09f9fbf124632df",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=4+Wildwood+Ct&City=Montvale&Region=NJ&Postal=07645&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

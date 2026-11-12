@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/422bc1d48dc5e4c67f2ca6d91e13a100e412490cfc7b6de2733a658e03b21e19.body",
+  "bytes": 1640,
+  "checkedAt": "2026-11-12T15:41:45.270982+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2 University Plz",
+    "City": "Hackensack",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b6ee1d683ea510bba1c2208d97ecb3b33056de314ca3bad8f622959406fec1f8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2+University+Plz&City=Hackensack&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/82ee6568caed1d354f134504e962e1ae98af7935024601d34378e4d10ba4d007.body",
+  "bytes": 1649,
+  "checkedAt": "2026-11-12T15:41:33.109304+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "14 RIDGEDALE AVENUE",
+    "City": "CEDAR KNOLLS",
+    "Postal": "07927",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e675fbfbd14d4422977900b5eb9a52884c168d602466b3719d69d32d8d142112",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=14+RIDGEDALE+AVENUE&City=CEDAR+KNOLLS&Region=NJ&Postal=07927&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a34f21b4ca0766688ce6cc088d1db839662be6a2e86d6a7891b3c23164d1eb80.body",
+  "bytes": 3243,
+  "checkedAt": "2026-11-12T15:41:29.291235+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "76 SOUTH ORANGE AVENUE",
+    "City": "SOUTH ORANGE",
+    "Postal": "07079",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b0203434250a3cff04d2c785c238cd1818f14c28571dbf44545aecc7c90f8366",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=76+SOUTH+ORANGE+AVENUE&City=SOUTH+ORANGE&Region=NJ&Postal=07079&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

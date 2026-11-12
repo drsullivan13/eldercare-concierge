@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0936f85fb47571e6c7a6fa90c5a19518079d20ea3dc729e7254ed74b8006bbc2.body",
+  "bytes": 1588,
+  "checkedAt": "2026-11-12T15:41:23.007776+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5 BROOK END DRIVE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a525890be9b0b479bc81f95cc054b0f0454604f5fe92c774c641203f9c7d7ee8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5+BROOK+END+DRIVE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/39c6d144ed15c71d44fc5382b5eb48fe14a549ee24f3468edc04a859d94061e2.body",
+  "bytes": 5298,
+  "checkedAt": "2026-11-12T15:41:50.852435+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "POMPTON PLAINS",
+    "format": "json",
+    "state": "NJ",
+    "street": "4 CEDAR CREST VILLAGE DRIVE",
+    "vintage": "Current_Current",
+    "zip": "07444"
+  },
+  "sha256": "35d9b823392b54ce44bf2096806ba2b0df16e4355d07344b466d5ae5f7152961",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=4+CEDAR+CREST+VILLAGE+DRIVE&city=POMPTON+PLAINS&state=NJ&zip=07444&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

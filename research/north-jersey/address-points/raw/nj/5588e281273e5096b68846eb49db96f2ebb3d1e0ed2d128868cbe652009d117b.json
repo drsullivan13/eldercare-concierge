@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5588e281273e5096b68846eb49db96f2ebb3d1e0ed2d128868cbe652009d117b.body",
+  "bytes": 1561,
+  "checkedAt": "2026-11-12T15:41:39.957503+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "10 W. Ivy Lane",
+    "City": "Englewood",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "502f8496d6f20101e53fb6f43894db72a8b035949ab3686e0452c8723a834d93",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=10+W.+Ivy+Lane&City=Englewood&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

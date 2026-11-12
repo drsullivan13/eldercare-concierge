@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1f0e509e3d2fb8d894d9033ef1cf77f52b86d7f12ffdac3d6ae4d6463fdc40a6.body",
+  "bytes": 1557,
+  "checkedAt": "2026-11-12T15:41:38.914747+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "11 STATE STREET",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c3d0c7b2349a7a64d53f8b0a15d8eb8c56282ab8d4b06d4e37e1bc30fffb75f5",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=11+STATE+STREET&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

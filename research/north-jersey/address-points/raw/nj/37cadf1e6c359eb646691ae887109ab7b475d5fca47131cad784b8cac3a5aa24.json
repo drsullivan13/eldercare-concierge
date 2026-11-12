@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/37cadf1e6c359eb646691ae887109ab7b475d5fca47131cad784b8cac3a5aa24.body",
+  "bytes": 1591,
+  "checkedAt": "2026-11-12T15:41:46.135780+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "692 Colonial Arms Rd",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4e4368777eddd1acf8306fd39631f9860edeac03b13122768aecda84c0e8d05f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=692+Colonial+Arms+Rd&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3f8fadd0fcc85c721f1177ed982a3adc37b6ce41cdcea2e2d86262aa40fd3ac9.body",
+  "bytes": 1539,
+  "checkedAt": "2026-11-12T15:41:34.005538+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "40 PARK AVENUE",
+    "City": "RUTHERFORD",
+    "Postal": "07070",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "86a9a413190a207d772110eecae69eef2d5e438df2d9b2e891fb62bbc98fb62c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=40+PARK+AVENUE&City=RUTHERFORD&Region=NJ&Postal=07070&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

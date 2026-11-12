@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7be29e9fc0334e30e9fedfe20399ed889d441c545427c8d59c906c9a269fae12.body",
+  "bytes": 1586,
+  "checkedAt": "2026-11-12T15:41:35.822353+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 KINDERKAMACK ROAD",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8ae8442248d0f09c87777eab13f7e33d5f0654166e8a3acd8f20392c2709dd5a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+KINDERKAMACK+ROAD&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

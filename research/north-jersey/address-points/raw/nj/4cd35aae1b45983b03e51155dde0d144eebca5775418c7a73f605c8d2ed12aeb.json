@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4cd35aae1b45983b03e51155dde0d144eebca5775418c7a73f605c8d2ed12aeb.body",
+  "bytes": 1581,
+  "checkedAt": "2026-11-12T15:41:31.094085+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "879 BERGEN AVENUE",
+    "City": "JERSEY CITY",
+    "Postal": "07306",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d05ba8c712696277e62e1bf4b9dfce4f141506c92c06391dba39370c9b28ab1a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=879+BERGEN+AVENUE&City=JERSEY+CITY&Region=NJ&Postal=07306&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1447e2ba3f1a1d6be1516430ed4e8d3c5faf178379e82f89a3609d0906702296.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:29.095244+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "291-A MAIN STREET",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "37beb6e045422ae311e593603571105015ed1eb6a1966ed832f46c21f006860f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=291-A+MAIN+STREET&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

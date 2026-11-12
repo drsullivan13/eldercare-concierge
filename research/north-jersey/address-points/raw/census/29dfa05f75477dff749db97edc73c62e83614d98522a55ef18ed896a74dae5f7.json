@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/29dfa05f75477dff749db97edc73c62e83614d98522a55ef18ed896a74dae5f7.body",
+  "bytes": 5182,
+  "checkedAt": "2026-11-12T15:41:58.591091+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Linden",
+    "format": "json",
+    "state": "NJ",
+    "street": "211 N Park Ave",
+    "vintage": "Current_Current",
+    "zip": "07036"
+  },
+  "sha256": "2151d2bc96d713743cd6f30370bf110c4a0c44d8092db198c740b8560fe36d4c",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=211+N+Park+Ave&city=Linden&state=NJ&zip=07036&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

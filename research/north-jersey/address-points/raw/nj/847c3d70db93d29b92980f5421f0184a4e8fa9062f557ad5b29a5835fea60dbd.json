@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/847c3d70db93d29b92980f5421f0184a4e8fa9062f557ad5b29a5835fea60dbd.body",
+  "bytes": 1597,
+  "checkedAt": "2026-11-12T15:41:24.187730+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "155 NORTH DEAN STREET",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "39c8b5652e642f222a586c082943bc3b4b24ad8013dff5e380143eb12f044eba",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=155+NORTH+DEAN+STREET&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2132ee9fe9cf2bee1b54260d714bdb9fbce6fcb719e6d8cc81972d77b7433c5b.body",
+  "bytes": 3169,
+  "checkedAt": "2026-11-12T15:41:26.331922+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "165 CHANGEBRIDGE ROAD",
+    "City": "MONTVILLE",
+    "Postal": "07045",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "aff7e05fef227bf70001115b5595d5b69dccf3aa191441bccf67318d0f38b0ee",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=165+CHANGEBRIDGE+ROAD&City=MONTVILLE&Region=NJ&Postal=07045&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

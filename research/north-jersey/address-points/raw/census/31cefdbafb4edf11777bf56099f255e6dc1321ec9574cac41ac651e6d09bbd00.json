@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/31cefdbafb4edf11777bf56099f255e6dc1321ec9574cac41ac651e6d09bbd00.body",
+  "bytes": 5213,
+  "checkedAt": "2026-11-12T15:41:59.634995+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Fort Lee",
+    "format": "json",
+    "state": "NJ",
+    "street": "1 Bridge Plaza",
+    "vintage": "Current_Current",
+    "zip": "07024"
+  },
+  "sha256": "4d9f876a719129173eebe9f6096c9d5f420944805def0dd6e90bd437159da5b0",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1+Bridge+Plaza&city=Fort+Lee&state=NJ&zip=07024&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

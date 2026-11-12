@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/69677f3ad69813487c975f28eb9ab3c5720a99ccc310638c69a21585fdf0edb7.body",
+  "bytes": 1555,
+  "checkedAt": "2026-11-12T15:41:28.273643+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "55 RIVER ROAD",
+    "City": "MONTVILLE",
+    "Postal": "07045",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "bcbbae9f4f092224f1e7e60cc3eaa675d1b9767abbdaafc0b59ff964c317514e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=55+RIVER+ROAD&City=MONTVILLE&Region=NJ&Postal=07045&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

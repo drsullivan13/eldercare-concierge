@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/511b417c43441b4279d0501939d42f67d8ceabd05f96d0d6aab41efaabab2c81.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:23.936249+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "175 SOUTH STREET",
+    "City": "MORRISTOWN",
+    "Postal": "07960",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "200e0955acaf264f3e43e339804e5769a9e3cd4ee57162df59ffc45571e96496",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=175+SOUTH+STREET&City=MORRISTOWN&Region=NJ&Postal=07960&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

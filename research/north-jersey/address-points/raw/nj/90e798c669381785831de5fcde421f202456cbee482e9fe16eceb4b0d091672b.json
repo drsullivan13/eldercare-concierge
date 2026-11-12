@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/90e798c669381785831de5fcde421f202456cbee482e9fe16eceb4b0d091672b.body",
+  "bytes": 3107,
+  "checkedAt": "2026-11-12T15:41:21.457598+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "480 PARKWAY DRIVE",
+    "City": "EAST ORANGE",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d46ca308e43abb07bc61c289d95d390d6dc7427439027458727048e8dc755e4a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=480+PARKWAY+DRIVE&City=EAST+ORANGE&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

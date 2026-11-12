@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f01cce7542a921add4f681ab3d2300fc4cbb66ee28cb4bdfdbfbcf9714eb6caf.body",
+  "bytes": 1549,
+  "checkedAt": "2026-11-12T15:41:48.077037+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "674 11th Ave",
+    "City": "Paterson",
+    "Postal": "07514",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "427c3635426d831473cb6351e0b47142b5deb07e4ce938293306bdbfef1250ab",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=674+11th+Ave&City=Paterson&Region=NJ&Postal=07514&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

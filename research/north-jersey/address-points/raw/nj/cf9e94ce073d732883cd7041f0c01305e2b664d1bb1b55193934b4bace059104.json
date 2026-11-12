@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/cf9e94ce073d732883cd7041f0c01305e2b664d1bb1b55193934b4bace059104.body",
+  "bytes": 1557,
+  "checkedAt": "2026-11-12T15:41:31.753479+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "501 70TH STREET",
+    "City": "GUTTENBERG",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "95d3c9b54eacef7488443febd26ba43a72cf55c29ef7a79a6dee504a47ae6eaa",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=501+70TH+STREET&City=GUTTENBERG&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

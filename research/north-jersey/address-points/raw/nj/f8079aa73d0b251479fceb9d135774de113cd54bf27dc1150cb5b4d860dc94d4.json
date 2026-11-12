@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f8079aa73d0b251479fceb9d135774de113cd54bf27dc1150cb5b4d860dc94d4.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:43.522869+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "97 Newkirk Street",
+    "City": "Jersey City",
+    "Postal": "07306",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "fa9a4f24c71a750f6666bb5372318fab47677b56de9c73876d5e0139db314aa0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=97+Newkirk+Street&City=Jersey+City&Region=NJ&Postal=07306&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

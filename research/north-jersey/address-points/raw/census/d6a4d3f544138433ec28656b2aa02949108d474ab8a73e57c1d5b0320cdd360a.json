@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d6a4d3f544138433ec28656b2aa02949108d474ab8a73e57c1d5b0320cdd360a.body",
+  "bytes": 5279,
+  "checkedAt": "2026-11-12T15:41:51.755277+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "WOODCLIFF LAKE",
+    "format": "json",
+    "state": "NJ",
+    "street": "430 CHESTNUT RIDGE ROAD",
+    "vintage": "Current_Current",
+    "zip": "07675"
+  },
+  "sha256": "059c195f92b154256a97e444042707e27f9c99780e4c501f0cef3d246b36bdf4",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=430+CHESTNUT+RIDGE+ROAD&city=WOODCLIFF+LAKE&state=NJ&zip=07675&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

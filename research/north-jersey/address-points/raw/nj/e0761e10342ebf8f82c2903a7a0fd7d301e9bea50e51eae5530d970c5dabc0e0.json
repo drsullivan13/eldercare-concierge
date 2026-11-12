@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e0761e10342ebf8f82c2903a7a0fd7d301e9bea50e51eae5530d970c5dabc0e0.body",
+  "bytes": 1577,
+  "checkedAt": "2026-11-12T15:41:44.557208+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "38 Main St",
+    "City": "Little Ferry",
+    "Postal": "07643",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "686b18acae7a2e58773cbd80d255f6d392f121e2a0be2e0d668bb92699460d72",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=38+Main+St&City=Little+Ferry&Region=NJ&Postal=07643&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

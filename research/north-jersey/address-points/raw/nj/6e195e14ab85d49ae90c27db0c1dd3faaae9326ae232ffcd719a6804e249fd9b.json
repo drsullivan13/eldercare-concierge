@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6e195e14ab85d49ae90c27db0c1dd3faaae9326ae232ffcd719a6804e249fd9b.body",
+  "bytes": 1556,
+  "checkedAt": "2026-11-12T15:41:21.921693+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "77 EAST 43RD STREET",
+    "City": "PATERSON",
+    "Postal": "07514",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d3489fc37dcd4eb900a19d213a2858840a41ab928c2d4daf9eab74f22d570e75",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=77+EAST+43RD+STREET&City=PATERSON&Region=NJ&Postal=07514&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

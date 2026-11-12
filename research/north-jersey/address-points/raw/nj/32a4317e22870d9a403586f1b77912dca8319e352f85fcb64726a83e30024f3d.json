@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/32a4317e22870d9a403586f1b77912dca8319e352f85fcb64726a83e30024f3d.body",
+  "bytes": 1635,
+  "checkedAt": "2026-11-12T15:41:34.895843+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "120 CHARLOTTE PLACE",
+    "City": "ENGLEWOOD CLIFFS",
+    "Postal": "07632",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "80920ca901aea8b91d55cc82c54a7415262b7244adbae8244b36474625628ebe",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=120+CHARLOTTE+PLACE&City=ENGLEWOOD+CLIFFS&Region=NJ&Postal=07632&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

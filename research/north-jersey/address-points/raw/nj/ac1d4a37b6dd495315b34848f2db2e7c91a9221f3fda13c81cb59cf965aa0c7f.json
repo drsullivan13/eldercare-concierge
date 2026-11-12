@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ac1d4a37b6dd495315b34848f2db2e7c91a9221f3fda13c81cb59cf965aa0c7f.body",
+  "bytes": 68,
+  "checkedAt": "2026-11-12T15:41:38.231305+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "540 W. HANOVER AVENUE",
+    "City": "MORRIS PLAINS",
+    "Postal": "07950",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "acfae4870440c59a64af2343acab32331eeb8aad84a36e9b5b1b15ec1373f4db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=540+W.+HANOVER+AVENUE&City=MORRIS+PLAINS&Region=NJ&Postal=07950&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

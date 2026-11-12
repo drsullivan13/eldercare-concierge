@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/381716ac3fd83458d713fbd54618cf55cf89dab8e8302aa9994f02e9ccecbcda.body",
+  "bytes": 1611,
+  "checkedAt": "2026-11-12T15:41:47.539429+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "137 Evergreen Pl 3D",
+    "City": "East Orange",
+    "Postal": "07018",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4517bbfc8cde205c93bc420af89443a0346a3d21e080cc15c608c705ccb97b08",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=137+Evergreen+Pl+3D&City=East+Orange&Region=NJ&Postal=07018&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

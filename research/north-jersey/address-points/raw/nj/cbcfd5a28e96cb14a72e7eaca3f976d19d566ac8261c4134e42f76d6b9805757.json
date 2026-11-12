@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/cbcfd5a28e96cb14a72e7eaca3f976d19d566ac8261c4134e42f76d6b9805757.body",
+  "bytes": 1607,
+  "checkedAt": "2026-11-12T15:41:34.755271+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "4700 BERGENLINE AVENUE",
+    "City": "UNION CITY",
+    "Postal": "07087",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1d1d59815f691e5f8e2bf2b19ac5a103e1c6df508fce283c6c89d31ce241d3cf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=4700+BERGENLINE+AVENUE&City=UNION+CITY&Region=NJ&Postal=07087&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

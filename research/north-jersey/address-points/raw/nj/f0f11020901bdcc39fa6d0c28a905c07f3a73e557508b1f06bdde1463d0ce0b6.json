@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f0f11020901bdcc39fa6d0c28a905c07f3a73e557508b1f06bdde1463d0ce0b6.body",
+  "bytes": 1639,
+  "checkedAt": "2026-11-12T15:41:36.428414+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "23-00 ROUTE 208",
+    "City": "FAIR LAWN",
+    "Postal": "07410",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "51396c4af073bd05ad50f707b267ff53c0d23c6f5c188a8d9429bb588a834f1b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=23-00+ROUTE+208&City=FAIR+LAWN&Region=NJ&Postal=07410&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

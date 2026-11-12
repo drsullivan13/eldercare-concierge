@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/34af9df84acb19ecfbd015cbf0b87410e5a8b5173b7c4f2db3abbf945dc48580.body",
+  "bytes": 1696,
+  "checkedAt": "2026-11-12T15:41:42.498195+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "577 Chestnut Ridge Road",
+    "City": "Woodcliff Lake",
+    "Postal": "07677",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d8ce9c30f7a7393aeec789c399deac6a9fc5d4ded5f7fc971b6b628bbf102ae8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=577+Chestnut+Ridge+Road&City=Woodcliff+Lake&Region=NJ&Postal=07677&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

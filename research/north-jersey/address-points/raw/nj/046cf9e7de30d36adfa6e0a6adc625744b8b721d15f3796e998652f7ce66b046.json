@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/046cf9e7de30d36adfa6e0a6adc625744b8b721d15f3796e998652f7ce66b046.body",
+  "bytes": 1599,
+  "checkedAt": "2026-11-12T15:41:40.833594+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "614 Frelinghuysen Avenue",
+    "City": "Newark",
+    "Postal": "07114",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "da319d22647964ea33231d3c6461ee06ead97b6e135d95cd613a2c1c23ea322b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=614+Frelinghuysen+Avenue&City=Newark&Region=NJ&Postal=07114&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

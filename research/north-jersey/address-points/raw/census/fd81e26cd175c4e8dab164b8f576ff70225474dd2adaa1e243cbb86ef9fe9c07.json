@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/fd81e26cd175c4e8dab164b8f576ff70225474dd2adaa1e243cbb86ef9fe9c07.body",
+  "bytes": 5236,
+  "checkedAt": "2026-11-12T15:41:52.854624+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HACKENSACK",
+    "format": "json",
+    "state": "NJ",
+    "street": "3 UNIVERSITY PLAZA",
+    "vintage": "Current_Current",
+    "zip": "07601"
+  },
+  "sha256": "61bc9616104461307d257bbe7d6e5dbd9380b7178f2d9b24053bb0d426d66d40",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3+UNIVERSITY+PLAZA&city=HACKENSACK&state=NJ&zip=07601&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

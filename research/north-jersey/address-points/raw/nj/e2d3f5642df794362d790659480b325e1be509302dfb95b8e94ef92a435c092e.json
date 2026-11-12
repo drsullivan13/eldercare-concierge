@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e2d3f5642df794362d790659480b325e1be509302dfb95b8e94ef92a435c092e.body",
+  "bytes": 1556,
+  "checkedAt": "2026-11-12T15:41:35.336724+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1401 VALLEY ROAD",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "eb694d0ecdf9bd4cadf299be651b8abbca804c360d416272db2eb8ca0c4c9606",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1401+VALLEY+ROAD&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

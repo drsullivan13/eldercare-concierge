@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d7cad683407499c8157b821ff178fff37f23271465f877d44b93b24259b83612.body",
+  "bytes": 1664,
+  "checkedAt": "2026-11-12T15:41:34.523499+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "526 WHITE OAK RIDGE RD, ATN:B DIANGELO",
+    "City": "SHORT HILLS",
+    "Postal": "07078",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c7111fc1745c6ab2b7681b55e62e8fb9d57263734a247a60f52dcebbd2460c1a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=526+WHITE+OAK+RIDGE+RD%2C+ATN%3AB+DIANGELO&City=SHORT+HILLS&Region=NJ&Postal=07078&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

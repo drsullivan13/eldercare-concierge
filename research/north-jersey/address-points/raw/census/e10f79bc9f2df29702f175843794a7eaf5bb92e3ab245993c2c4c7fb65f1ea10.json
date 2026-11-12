@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/e10f79bc9f2df29702f175843794a7eaf5bb92e3ab245993c2c4c7fb65f1ea10.body",
+  "bytes": 5223,
+  "checkedAt": "2026-11-12T15:41:51.759533+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "ENGLEWOOD",
+    "format": "json",
+    "state": "NJ",
+    "street": "155-175 WEST HUDSON AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07631"
+  },
+  "sha256": "890f806245767f816a7dbf17bf88a4627aa234358f90525da249f8093d7c8b20",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=155-175+WEST+HUDSON+AVENUE&city=ENGLEWOOD&state=NJ&zip=07631&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

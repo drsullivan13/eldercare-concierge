@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4f5f5db568dfecc0f72006cbb555725e2dec44f72a9f5613bd5bf66261243a91.body",
+  "bytes": 1635,
+  "checkedAt": "2026-11-12T15:41:22.550620+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "301 SICOMAC AVE",
+    "City": "WYCKOFF",
+    "Postal": "07481",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e21c26a7ea21f5454d343325cd234deb3746b5a9b5fb585a3dc1bfed55eccfdc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=301+SICOMAC+AVE&City=WYCKOFF&Region=NJ&Postal=07481&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

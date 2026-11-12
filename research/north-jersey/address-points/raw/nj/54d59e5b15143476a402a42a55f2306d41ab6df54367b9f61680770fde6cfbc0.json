@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/54d59e5b15143476a402a42a55f2306d41ab6df54367b9f61680770fde6cfbc0.body",
+  "bytes": 1707,
+  "checkedAt": "2026-11-12T15:41:26.656023+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "430 CHESTNUT RIDGE ROAD",
+    "City": "WOODCLIFF LAKE",
+    "Postal": "07675",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d4909068a7eadc7073a17b76cd9a51df69d06f3a613d61746fb8f3f3ac96094e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=430+CHESTNUT+RIDGE+ROAD&City=WOODCLIFF+LAKE&Region=NJ&Postal=07675&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

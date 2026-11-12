@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b93a80be5fbca4758b584aba0072518233924499e23e765f0caecb4d6eccedc3.body",
+  "bytes": 4346,
+  "checkedAt": "2026-11-12T15:41:52.276266+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "CHESTER",
+    "format": "json",
+    "state": "NJ",
+    "street": "115 ROUTE 206",
+    "vintage": "Current_Current",
+    "zip": "07930"
+  },
+  "sha256": "3f22fc35e116970110b11179652979c94ee98f7d6848a092f91a9dd4216545bc",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=115+ROUTE+206&city=CHESTER&state=NJ&zip=07930&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/93399d3df85d9f51b159c1e6a795162d886f4dcd8a939d59d7a9e3d836f1a13c.body",
+  "bytes": 1589,
+  "checkedAt": "2026-11-12T15:41:44.574153+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "18 Brighton Ter",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "efe563f243b004d182e9056c521af807a57e54711314edc7464251351ab3461a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=18+Brighton+Ter&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/7e1afdc733d01290348c90bb814b6a0a4b14c722624415c8cc2bcba8ed63e401.body",
+  "bytes": 5196,
+  "checkedAt": "2026-11-12T15:41:59.334019+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Union",
+    "format": "json",
+    "state": "NJ",
+    "street": "1000C Stuyvesant Ave",
+    "vintage": "Current_Current",
+    "zip": "07083"
+  },
+  "sha256": "4ba1e5902fd5b36e31dc2d9ba5dc1b5a7fb57e312854eed39357f826cf53993a",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1000C+Stuyvesant+Ave&city=Union&state=NJ&zip=07083&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

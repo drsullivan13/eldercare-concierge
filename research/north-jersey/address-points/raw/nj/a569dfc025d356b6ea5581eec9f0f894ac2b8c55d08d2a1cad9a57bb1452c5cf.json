@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a569dfc025d356b6ea5581eec9f0f894ac2b8c55d08d2a1cad9a57bb1452c5cf.body",
+  "bytes": 1597,
+  "checkedAt": "2026-11-12T15:41:25.091147+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "545 TAPPAN ROAD",
+    "City": "NORWOOD",
+    "Postal": "07648",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "072cdf73cacff9d2341d6447f03742f9a0a2f25b68ad5d3e5b94edbbe9367dad",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=545+TAPPAN+ROAD&City=NORWOOD&Region=NJ&Postal=07648&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

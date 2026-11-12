@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ca9d10e06a647b03a89a6607effd6822b1674b0c98bbe6166fe579b4234bd64d.body",
+  "bytes": 1692,
+  "checkedAt": "2026-11-12T15:41:44.799299+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "546 High Mountain Rd",
+    "City": "North Haledon",
+    "Postal": "07508",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2df32fa257d356aeb9c59a45175d3e5fca501dde06e8a47a5d14397840661340",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=546+High+Mountain+Rd&City=North+Haledon&Region=NJ&Postal=07508&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

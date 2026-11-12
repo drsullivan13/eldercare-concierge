@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c0cba64861646838a9cff3b434b716c002b3b504ff3fddf04147b10d1726c051.body",
+  "bytes": 1676,
+  "checkedAt": "2026-11-12T15:41:35.924906+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "120 Eagle Rock Ave",
+    "City": "East Hanover",
+    "Postal": "07936",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9e2ccf986e4ca6e8fac02ce2920b3e6017d35da563dc8c89b309476b69b022ee",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=120+Eagle+Rock+Ave&City=East+Hanover&Region=NJ&Postal=07936&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

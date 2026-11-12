@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3aff1e1c613f8d5cc179063444749191c86a0a168c8b407e303bb13d0b597512.body",
+  "bytes": 1619,
+  "checkedAt": "2026-11-12T15:41:24.634625+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "535 Mountain Avenue",
+    "City": "New Providence",
+    "Postal": "07974",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "bcfff4d993ace3b6491cda2ac1bd757994e60bcae63338c97377e5882d413dee",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=535+Mountain+Avenue&City=New+Providence&Region=NJ&Postal=07974&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

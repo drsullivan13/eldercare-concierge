@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/61462d88326dc068d2d7289fb6ef3e7015807054b9938486355840d59b8b80b1.body",
+  "bytes": 1626,
+  "checkedAt": "2026-11-12T15:41:44.791911+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "999 Riverview Dr",
+    "City": "Totowa",
+    "Postal": "07512",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f1ee490608f6bf14e776a220ac9f13368a118499d93c92b48de19fbc2f7aa258",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=999+Riverview+Dr&City=Totowa&Region=NJ&Postal=07512&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

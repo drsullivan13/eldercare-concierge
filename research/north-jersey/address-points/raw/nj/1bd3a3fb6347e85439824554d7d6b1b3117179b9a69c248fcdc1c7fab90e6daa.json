@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1bd3a3fb6347e85439824554d7d6b1b3117179b9a69c248fcdc1c7fab90e6daa.body",
+  "bytes": 3097,
+  "checkedAt": "2026-11-12T15:41:22.740981+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "266 S ORANGE AVE",
+    "City": "NEWARK",
+    "Postal": "07103",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a369b0f65634fdbe5899b5055688dcb8e2a528cf212f73021a32c5c3456105b9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=266+S+ORANGE+AVE&City=NEWARK&Region=NJ&Postal=07103&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

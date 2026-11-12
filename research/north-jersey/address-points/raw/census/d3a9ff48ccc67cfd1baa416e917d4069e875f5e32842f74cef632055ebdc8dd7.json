@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d3a9ff48ccc67cfd1baa416e917d4069e875f5e32842f74cef632055ebdc8dd7.body",
+  "bytes": 5271,
+  "checkedAt": "2026-11-12T15:41:54.220124+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SHORT HILLS",
+    "format": "json",
+    "state": "NJ",
+    "street": "526 WHITE OAK RIDGE RD, ATN:B DIANGELO",
+    "vintage": "Current_Current",
+    "zip": "07078"
+  },
+  "sha256": "e0eea23498e3c074d4a0007cdbf1e87c814c510a4e36d988f5ef5f6197631a8f",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=526+WHITE+OAK+RIDGE+RD%2C+ATN%3AB+DIANGELO&city=SHORT+HILLS&state=NJ&zip=07078&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

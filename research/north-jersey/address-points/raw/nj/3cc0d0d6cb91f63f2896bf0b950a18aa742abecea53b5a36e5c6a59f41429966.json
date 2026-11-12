@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3cc0d0d6cb91f63f2896bf0b950a18aa742abecea53b5a36e5c6a59f41429966.body",
+  "bytes": 1697,
+  "checkedAt": "2026-11-12T15:41:37.813872+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "569 MLK BOULEVARD",
+    "City": "NEWARK",
+    "Postal": "07102",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b8674dbb73e33661cacfa78a00a9af9a53f79aff26d05d07042fbd95aeb7e000",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=569+MLK+BOULEVARD&City=NEWARK&Region=NJ&Postal=07102&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

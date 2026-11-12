@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/848c40915e90b1a65058e69fb02b5326756223d36012aa9806e5abe5c8ade5d5.body",
+  "bytes": 1623,
+  "checkedAt": "2026-11-12T15:41:35.562596+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 UNIVERSITY PLAZA DRIVE",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "514b524e9cc0c42737ef219c98e09c6a932b929d9caa389fa97eb80b33bdf114",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+UNIVERSITY+PLAZA+DRIVE&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e9d61f660a283e2959eaa4ced80e920a6563a4340ba0fc3e880ab73a5fe150a9.body",
+  "bytes": 1611,
+  "checkedAt": "2026-11-12T15:41:34.099518+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1033 TABOR ROAD",
+    "City": "MORRIS PLAINS",
+    "Postal": "07950",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e3f64be5824b3df3748d879a07521c64b085c018c972e4e3c3f6deed2c7a6ece",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1033+TABOR+ROAD&City=MORRIS+PLAINS&Region=NJ&Postal=07950&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ae497237831be6ebb19aac91b5df7b7f42df9fbfe4757f65a369fa0e6a1e6ce0.body",
+  "bytes": 1586,
+  "checkedAt": "2026-11-12T15:41:44.930801+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "376 Hamburg Tpke",
+    "City": "Wayne",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ef222a13f543d94375057735a97c837ca4d6f127d0b4197005f79f6ed6292adc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=376+Hamburg+Tpke&City=Wayne&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b8c18a5bca7cb3689f3776d2cee4fd39f493320c4326319b5ffe2a72c3d0fa96.body",
+  "bytes": 1627,
+  "checkedAt": "2026-11-12T15:41:28.625008+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3196 KENNEDY BLVD., KENNEDY MEDICAL CTR",
+    "City": "UNION CITY",
+    "Postal": "07087",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ed1741772ce434e44b757d730976c0049a9984b10eb32e4fe58308efa3cdbd14",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3196+KENNEDY+BLVD.%2C+KENNEDY+MEDICAL+CTR&City=UNION+CITY&Region=NJ&Postal=07087&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

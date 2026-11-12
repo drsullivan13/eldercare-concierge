@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/99bbd309c3dd9f643f8903112d9eb7b506de42dc2dfbcf6fec918ffde3860f4c.body",
+  "bytes": 3095,
+  "checkedAt": "2026-11-12T15:41:37.230441+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "175 NORTH PARK STREET",
+    "City": "EAST ORANGE",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7898bf89e82ccb5d00791ddd9d3805e86a244ef023b8261279f3e71b7f505b60",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=175+NORTH+PARK+STREET&City=EAST+ORANGE&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

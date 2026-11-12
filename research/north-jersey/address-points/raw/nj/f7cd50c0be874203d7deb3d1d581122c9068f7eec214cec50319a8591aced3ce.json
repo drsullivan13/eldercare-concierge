@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f7cd50c0be874203d7deb3d1d581122c9068f7eec214cec50319a8591aced3ce.body",
+  "bytes": 3129,
+  "checkedAt": "2026-11-12T15:41:20.610631+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "84 COLD HILL ROAD",
+    "City": "MENDHAM",
+    "Postal": "07945",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "aa70b9d5d3c753ac01f1f0eaf93ed117590bbaf82372c32a9cc5d564d1b1b5fe",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=84+COLD+HILL+ROAD&City=MENDHAM&Region=NJ&Postal=07945&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

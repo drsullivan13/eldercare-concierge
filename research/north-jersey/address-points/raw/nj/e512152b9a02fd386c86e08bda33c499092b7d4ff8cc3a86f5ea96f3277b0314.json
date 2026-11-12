@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e512152b9a02fd386c86e08bda33c499092b7d4ff8cc3a86f5ea96f3277b0314.body",
+  "bytes": 1539,
+  "checkedAt": "2026-11-12T15:41:48.085821+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "877 Broad St",
+    "City": "Newark",
+    "Postal": "07102",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6de53ed907e97f1b8a751902abcee1228dd15eda3f56635690dd44be72464105",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=877+Broad+St&City=Newark&Region=NJ&Postal=07102&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

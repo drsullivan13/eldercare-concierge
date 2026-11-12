@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6ccc232d5bbb9313efc4e34cc26f57fddacc9458e86bfb95ecddb27172736aea.body",
+  "bytes": 3229,
+  "checkedAt": "2026-11-12T15:41:41.984594+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "64 Van Ness Ter Fl2",
+    "City": "Maplewood",
+    "Postal": "07040",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c7023b0a28835320db051e39e92fddab7354a4a7b25c855804d4b3887aa5db6e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=64+Van+Ness+Ter+Fl2&City=Maplewood&Region=NJ&Postal=07040&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

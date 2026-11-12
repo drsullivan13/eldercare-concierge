@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/ec5a0b621ebad5097193ed85eeeca27c3006f9a8acac9d4c20b23bde6cdc8d21.body",
+  "bytes": 5234,
+  "checkedAt": "2026-11-12T15:41:58.840137+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Hackensack",
+    "format": "json",
+    "state": "NJ",
+    "street": "2 University Plz",
+    "vintage": "Current_Current",
+    "zip": "07601"
+  },
+  "sha256": "ae1143fa009aa9f46de4f46ab7161f9b3b36494c420f56cd4237f29d5b0d4edc",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2+University+Plz&city=Hackensack&state=NJ&zip=07601&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

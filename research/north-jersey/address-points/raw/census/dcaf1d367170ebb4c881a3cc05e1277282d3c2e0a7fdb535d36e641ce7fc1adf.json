@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/dcaf1d367170ebb4c881a3cc05e1277282d3c2e0a7fdb535d36e641ce7fc1adf.body",
+  "bytes": 5216,
+  "checkedAt": "2026-11-12T15:41:54.816406+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HACKENSACK",
+    "format": "json",
+    "state": "NJ",
+    "street": "15 WARREN STREET",
+    "vintage": "Current_Current",
+    "zip": "07524"
+  },
+  "sha256": "269e2a0dbbc9c25cc65dcc8cb18a8d7f60b7509d0d81fda0891250057e8123dc",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=15+WARREN+STREET&city=HACKENSACK&state=NJ&zip=07524&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

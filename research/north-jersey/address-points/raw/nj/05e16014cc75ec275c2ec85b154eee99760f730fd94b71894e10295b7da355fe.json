@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/05e16014cc75ec275c2ec85b154eee99760f730fd94b71894e10295b7da355fe.body",
+  "bytes": 1632,
+  "checkedAt": "2026-11-12T15:41:32.772485+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2444 MORRIS AVE ROOM 102",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "785ce50b1415409cf6427f885c0f69d8ed703dd1d6e14d237a79c7b02848b613",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2444+MORRIS+AVE+ROOM+102&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/a947efab40cd5179cff9bca951f8d225d44ca58bd6abbd8cc4dbc313fd48f187.body",
+  "bytes": 5214,
+  "checkedAt": "2026-11-12T15:41:50.312525+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PATERSON",
+    "format": "json",
+    "state": "NJ",
+    "street": "77 EAST 43RD STREET",
+    "vintage": "Current_Current",
+    "zip": "07514"
+  },
+  "sha256": "af828280ac4efc48d62f5d0cae1aaf36b97a207f25c5cbc0d888877d482856c2",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=77+EAST+43RD+STREET&city=PATERSON&state=NJ&zip=07514&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

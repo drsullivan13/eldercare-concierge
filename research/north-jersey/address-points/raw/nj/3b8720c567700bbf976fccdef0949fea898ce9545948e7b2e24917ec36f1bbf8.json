@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3b8720c567700bbf976fccdef0949fea898ce9545948e7b2e24917ec36f1bbf8.body",
+  "bytes": 1577,
+  "checkedAt": "2026-11-12T15:41:22.251715+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "65 NORTH SUSSEX STREET",
+    "City": "DOVER",
+    "Postal": "07801",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d9037e0e1d9d94f71ae71ac667bfbb5ee6ccb94c666ae8adf88d340385a02c86",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=65+NORTH+SUSSEX+STREET&City=DOVER&Region=NJ&Postal=07801&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

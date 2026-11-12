@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/04456b14386b8a12df016d47a09165789d2719e2b5d2bdaa0915e8e42de7b14c.body",
+  "bytes": 406,
+  "checkedAt": "2026-11-12T15:41:53.299219+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "MOUNTAIN LAKES",
+    "format": "json",
+    "state": "NJ",
+    "street": "115 ROUTE 46 WEST",
+    "vintage": "Current_Current",
+    "zip": "07046"
+  },
+  "sha256": "7a78efb0d1505c14aaa9456e3cc8dcd3af692debc2f4a00d88a28d1e5505ffd9",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=115+ROUTE+46+WEST&city=MOUNTAIN+LAKES&state=NJ&zip=07046&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

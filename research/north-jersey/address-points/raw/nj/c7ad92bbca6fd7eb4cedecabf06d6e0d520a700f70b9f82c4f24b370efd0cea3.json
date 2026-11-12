@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c7ad92bbca6fd7eb4cedecabf06d6e0d520a700f70b9f82c4f24b370efd0cea3.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:21.117832+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "56 HAMILTON AVENUE",
+    "City": "PASSAIC",
+    "Postal": "07055",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c78007174435e3d44be58e0d5f304bb908325f755c8a42f21a672fd53112329e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=56+HAMILTON+AVENUE&City=PASSAIC&Region=NJ&Postal=07055&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

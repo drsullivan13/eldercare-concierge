@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3678848e79002cde3aacda9f253bd522c351a6a718582f1d29a2431ddc6f6bae.body",
+  "bytes": 1601,
+  "checkedAt": "2026-11-12T15:41:49.258390+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "16-50 Chandler Dr",
+    "City": "Fair Lawn",
+    "Postal": "07410",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7488926c38418229ecb2c41fe78a87da95f724a30540b3178f5e4f8ae5c42264",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=16-50+Chandler+Dr&City=Fair+Lawn&Region=NJ&Postal=07410&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

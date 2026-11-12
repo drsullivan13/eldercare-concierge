@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/30ac9a2bf7ae5924429ce53b8b1d1484fb059e902b6bd6056dd999122d9b5be2.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:46.654482+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "356-358 14th Avenue Flr 1",
+    "City": "Newark",
+    "Postal": "07103",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "3f42a5c75043fd6e32bf0fb6277f77620484efc52d81d873cd5ac6eed545fb33",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=356-358+14th+Avenue+Flr+1&City=Newark&Region=NJ&Postal=07103&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

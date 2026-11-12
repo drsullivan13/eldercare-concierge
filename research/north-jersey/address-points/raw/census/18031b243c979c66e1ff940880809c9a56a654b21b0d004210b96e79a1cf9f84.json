@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/18031b243c979c66e1ff940880809c9a56a654b21b0d004210b96e79a1cf9f84.body",
+  "bytes": 5225,
+  "checkedAt": "2026-11-12T15:41:52.045400+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HAWTHORNE",
+    "format": "json",
+    "state": "NJ",
+    "street": "644 GOFFLE ROAD",
+    "vintage": "Current_Current",
+    "zip": "07506"
+  },
+  "sha256": "25cf268f83e63c8d301214d8d4b108478d23b93f4b06728dfd0bfe03a1b957a0",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=644+GOFFLE+ROAD&city=HAWTHORNE&state=NJ&zip=07506&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

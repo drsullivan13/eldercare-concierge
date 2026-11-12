@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b4e9ff2a67dd6d3865948b03612b362b67cd7ec90691eabadf79b316dbc2c471.body",
+  "bytes": 1630,
+  "checkedAt": "2026-11-12T15:41:24.199853+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5901 WEST SIDE AVENUE",
+    "City": "NORTH BERGEN",
+    "Postal": "07047",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4b5c51ec675423b12c52caac0c81d7864708880cf61edf75a1fd25af8f5abec8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5901+WEST+SIDE+AVENUE&City=NORTH+BERGEN&Region=NJ&Postal=07047&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

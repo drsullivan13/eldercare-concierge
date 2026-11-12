@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/773a144e12fddccef76cdf2af163a54491d603e777e00c782ca9793472817d75.body",
+  "bytes": 1583,
+  "checkedAt": "2026-11-12T15:41:48.024754+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "375 Chapman St",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b7f008ad7c1c59d1d8a6c2972a2a71f548cfcd324adbc85d10c1f2603c85d1b9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=375+Chapman+St&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e51d769c042a667c8e767e4dc2ab789d8b4d89511d3580cbdb03f81ceed037db.body",
+  "bytes": 1600,
+  "checkedAt": "2026-11-12T15:41:35.814570+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "41 SPRING STREET",
+    "City": "NEW PROVIDENCE",
+    "Postal": "07974",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "807311a6a6c1fe136a2e4bae134da692a9fc63be243785d8e475142e08ba936c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=41+SPRING+STREET&City=NEW+PROVIDENCE&Region=NJ&Postal=07974&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

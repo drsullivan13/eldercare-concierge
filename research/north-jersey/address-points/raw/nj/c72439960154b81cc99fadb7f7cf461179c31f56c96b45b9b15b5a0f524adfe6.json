@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c72439960154b81cc99fadb7f7cf461179c31f56c96b45b9b15b5a0f524adfe6.body",
+  "bytes": 3087,
+  "checkedAt": "2026-11-12T15:41:32.252612+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "187 MAIN STREET",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "506603db6a50e91dc003dbcd63bb22c05e35957e01436d14a608e843a919676b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=187+MAIN+STREET&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

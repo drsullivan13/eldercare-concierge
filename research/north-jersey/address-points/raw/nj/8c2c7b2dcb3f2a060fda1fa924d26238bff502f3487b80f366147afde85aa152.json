@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8c2c7b2dcb3f2a060fda1fa924d26238bff502f3487b80f366147afde85aa152.body",
+  "bytes": 1584,
+  "checkedAt": "2026-11-12T15:41:24.160963+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5 REGENT STREET",
+    "City": "LIVINGSTON",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "77c0c8500f13c0c97962e8dbeddbce5c0d2a688a72aec72d19e9c708c08ccd32",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5+REGENT+STREET&City=LIVINGSTON&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4e4071d7b6cff89cf0d06f09233125938c453a83ffa17293cb1b988b7cf2ee06.body",
+  "bytes": 1596,
+  "checkedAt": "2026-11-12T15:41:25.835703+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "205 BIRCHWOOD AVENUE",
+    "City": "Cranford",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "05c6a734150d2a646e43e61922fe1eca619b837e733c3de12906f7ae5abefe87",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=205+BIRCHWOOD+AVENUE&City=Cranford&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

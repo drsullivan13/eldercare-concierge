@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d693d04f4474866b8c92f857a9f40f19334c929d7566573b869fb595f37d9283.body",
+  "bytes": 1575,
+  "checkedAt": "2026-11-12T15:41:21.765213+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "7600 RIVER RD",
+    "City": "NORTH BERGEN",
+    "Postal": "07047",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ed9d8b4043b9127ec7ffbe9df26d6f008f38ed3b834a8edfbfd4795bb4712f33",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=7600+RIVER+RD&City=NORTH+BERGEN&Region=NJ&Postal=07047&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

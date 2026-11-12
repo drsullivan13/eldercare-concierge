@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/256c737e8ce0a6a39b8a0b73410d6dfe2afb4b397da25a3c319af2599dae758e.body",
+  "bytes": 3158,
+  "checkedAt": "2026-11-12T15:41:31.421082+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "115 ROUTE 46 WEST",
+    "City": "MOUNTAIN LAKES",
+    "Postal": "07046",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "efabdb7db140b55502161df33cbc133521903ea05e589f34455408b4dfc3079b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=115+ROUTE+46+WEST&City=MOUNTAIN+LAKES&Region=NJ&Postal=07046&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

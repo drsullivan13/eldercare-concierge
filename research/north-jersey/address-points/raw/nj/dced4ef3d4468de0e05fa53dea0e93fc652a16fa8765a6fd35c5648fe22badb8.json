@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dced4ef3d4468de0e05fa53dea0e93fc652a16fa8765a6fd35c5648fe22badb8.body",
+  "bytes": 1611,
+  "checkedAt": "2026-11-12T15:41:34.495504+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "383 US Highway 46",
+    "City": "FAIRFIELD",
+    "Postal": "07004",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d6c1dc64855c28bdbf45b6a376cee3d7e837e0a477c8b3997587c5f74f8c9a20",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=383+US+Highway+46&City=FAIRFIELD&Region=NJ&Postal=07004&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

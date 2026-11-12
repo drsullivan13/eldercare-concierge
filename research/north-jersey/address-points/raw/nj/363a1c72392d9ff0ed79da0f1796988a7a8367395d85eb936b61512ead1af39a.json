@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/363a1c72392d9ff0ed79da0f1796988a7a8367395d85eb936b61512ead1af39a.body",
+  "bytes": 1577,
+  "checkedAt": "2026-11-12T15:41:48.520260+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "642 Florence Ter",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8423f7021ff1b34729909cd5713355b22e52293b1a29f581d6525a3140ec9902",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=642+Florence+Ter&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

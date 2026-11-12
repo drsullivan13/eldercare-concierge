@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0bde60a13f9814fb39e08961ca3de0d5259031b891608f03d2d2cd1a3080638b.body",
+  "bytes": 1576,
+  "checkedAt": "2026-11-12T15:41:46.580885+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "45 E Milton Ave",
+    "City": "Rahway",
+    "Postal": "07065",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "77470c7173a3e28cdfab31a206300c0d6c5100a034b2104f3258c6cb60312d9a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=45+E+Milton+Ave&City=Rahway&Region=NJ&Postal=07065&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

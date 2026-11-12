@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0631120f70e6396dee59c0e6d1fc71f71a6cb2342ccacb8a0455633009294ad3.body",
+  "bytes": 1601,
+  "checkedAt": "2026-11-12T15:41:26.159058+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "520 PROSPECT AVENUE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f6856918842ee164d8fd5d237064867eed182f0a37b725927c4c8a96ced2a45b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=520+PROSPECT+AVENUE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

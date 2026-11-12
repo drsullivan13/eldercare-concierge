@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/84a765ec04cfa211f0a224c7d1f9a75a2bfcca30b7c4e3eae712712f0a862b82.body",
+  "bytes": 5286,
+  "checkedAt": "2026-11-12T15:41:50.777954+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PARSIPPANY TROY HILL",
+    "format": "json",
+    "state": "NJ",
+    "street": "100 MAZDABROOK ROAD",
+    "vintage": "Current_Current",
+    "zip": "07054"
+  },
+  "sha256": "fb14e0674c4c303eae4a51f94a1af28b56f624b31582ac1fe83035805ddf0436",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=100+MAZDABROOK+ROAD&city=PARSIPPANY+TROY+HILL&state=NJ&zip=07054&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5a7d22e4bcdcd5f174a710a323ad7b65b520b38b022535d8e113fc012e46fd6c.body",
+  "bytes": 1584,
+  "checkedAt": "2026-11-12T15:41:43.690400+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "537 Washington Avenue",
+    "City": "Roselle",
+    "Postal": "07203",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f01ce82ab8caabd1293126cf305d15a39082d026a31a13dbd371349d313ea1d2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=537+Washington+Avenue&City=Roselle&Region=NJ&Postal=07203&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c4e83e3f5d3efd568285c067723b40cd9af5ad35a6406a080241487c66a98b25.body",
+  "bytes": 4760,
+  "checkedAt": "2026-11-12T15:41:50.717585+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "WEST ORANGE",
+    "format": "json",
+    "state": "NJ",
+    "street": "103 PLEASANT VALLEY WAY",
+    "vintage": "Current_Current",
+    "zip": "07052"
+  },
+  "sha256": "0d3ae4903e928a158509db5a880f9540e2139249cecb841cd9cd90e67fa22958",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=103+PLEASANT+VALLEY+WAY&city=WEST+ORANGE&state=NJ&zip=07052&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

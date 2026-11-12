@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/0d7faf003133c1941d90bde855d590348b3474aea7dd66a6c6dbb6fd3fedd1a5.body",
+  "bytes": 399,
+  "checkedAt": "2026-11-12T15:41:57.641707+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Westwood",
+    "format": "json",
+    "state": "NJ",
+    "street": "381 Broadway One",
+    "vintage": "Current_Current",
+    "zip": "07675"
+  },
+  "sha256": "1745ec3d4ea080bb7a4bc2e7049c3ca13261dd3202d548083fa3233abd0948e7",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=381+Broadway+One&city=Westwood&state=NJ&zip=07675&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

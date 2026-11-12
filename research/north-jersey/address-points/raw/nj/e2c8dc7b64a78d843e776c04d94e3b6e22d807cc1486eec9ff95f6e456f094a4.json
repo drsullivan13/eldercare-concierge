@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e2c8dc7b64a78d843e776c04d94e3b6e22d807cc1486eec9ff95f6e456f094a4.body",
+  "bytes": 1537,
+  "checkedAt": "2026-11-12T15:41:44.685359+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "38 Yates Ave",
+    "City": "Newark",
+    "Postal": "07112",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "713b84dceac1683579435bc534bcb7ea3b395bf6305efd8605f2fe34a9ed42f7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=38+Yates+Ave&City=Newark&Region=NJ&Postal=07112&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

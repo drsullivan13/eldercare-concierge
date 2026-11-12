@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/776b74948c0ab44e232f950155fad73f196a55eccb3255578a47cb5718f2c394.body",
+  "bytes": 1574,
+  "checkedAt": "2026-11-12T15:41:34.998478+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "764 PALISADE AVENUE",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "22d2a17d9ff510fd9b309c4cac8eba7f4f0231fabdc08d0d6c57cabd3fb64a66",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=764+PALISADE+AVENUE&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

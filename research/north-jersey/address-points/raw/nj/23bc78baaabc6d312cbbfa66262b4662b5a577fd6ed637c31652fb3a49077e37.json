@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/23bc78baaabc6d312cbbfa66262b4662b5a577fd6ed637c31652fb3a49077e37.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:42.074256+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "128 Engle Street",
+    "City": "Englewood",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1943772d126ef01f86cff2c2fe494763039827cb51426d3ddd4c30bb23ec4622",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=128+Engle+Street&City=Englewood&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

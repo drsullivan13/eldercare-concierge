@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/1e5668195d673d7c8bdd002110c6056ffa9d9e9ceb8a2c2bac6c1dca3ae1fbc4.body",
+  "bytes": 397,
+  "checkedAt": "2026-11-12T15:41:56.733189+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Newark",
+    "format": "json",
+    "state": "NJ",
+    "street": "1 Gateway Center",
+    "vintage": "Current_Current",
+    "zip": "07101"
+  },
+  "sha256": "cc7b76f10e997a3125db2ee8aedd73430ec316dcc65c2dbc271ca6c0f00c83bf",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1+Gateway+Center&city=Newark&state=NJ&zip=07101&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/994faf28fbc199b46e50243803a3105dbaaf6727e79246a658e7f3143cfdd1aa.body",
+  "bytes": 399,
+  "checkedAt": "2026-11-12T15:41:54.024359+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "ELIZABETH",
+    "format": "json",
+    "state": "NJ",
+    "street": "57 Union Street",
+    "vintage": "Current_Current",
+    "zip": "07202"
+  },
+  "sha256": "e87188cd620e63148e032fbde99f3e028cbfe18bafb75b51b78205a77ac84859",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=57+Union+Street&city=ELIZABETH&state=NJ&zip=07202&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

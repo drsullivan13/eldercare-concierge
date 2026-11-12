@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/471070b5ef3b4310917d9ff9d480cdef910e47b3f69da3ed5e4f612630e02767.body",
+  "bytes": 1661,
+  "checkedAt": "2026-11-12T15:41:37.560331+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1801 E 2ND STREET, LOWER LEVEL",
+    "City": "SCOTCH PLAINS",
+    "Postal": "07076",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ee754bfaa46f0e365305c8a4d28c810ae800f2a62d093a2cc97062bb466525b9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1801+E+2ND+STREET%2C+LOWER+LEVEL&City=SCOTCH+PLAINS&Region=NJ&Postal=07076&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

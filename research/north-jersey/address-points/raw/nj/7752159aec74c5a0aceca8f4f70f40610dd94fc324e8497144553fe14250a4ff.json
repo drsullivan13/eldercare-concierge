@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7752159aec74c5a0aceca8f4f70f40610dd94fc324e8497144553fe14250a4ff.body",
+  "bytes": 1597,
+  "checkedAt": "2026-11-12T15:41:47.230653+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2 Schmitt Rd 2 Schmitt Rd",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "139c029bee13e87b2dc5c05cba137b2ff33c6529de3b129bccdb5f814eb9ba11",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2+Schmitt+Rd+2+Schmitt+Rd&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

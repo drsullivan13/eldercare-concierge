@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0a991c7a6aae8eb453bbc43e104c3a1e9ec0bc8d529d265ff4282847960b8a3e.body",
+  "bytes": 1596,
+  "checkedAt": "2026-11-12T15:41:31.205205+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "333 N. BROAD STREET",
+    "City": "ELIZABETH",
+    "Postal": "07208",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a1b6d87370aebe7b586bc75d7f9ba477ec623a2ca48ff023e0b9a773926c3c1b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=333+N.+BROAD+STREET&City=ELIZABETH&Region=NJ&Postal=07208&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

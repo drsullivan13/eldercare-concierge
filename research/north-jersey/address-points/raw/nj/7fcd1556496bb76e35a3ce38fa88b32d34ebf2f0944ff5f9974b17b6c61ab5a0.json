@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7fcd1556496bb76e35a3ce38fa88b32d34ebf2f0944ff5f9974b17b6c61ab5a0.body",
+  "bytes": 1571,
+  "checkedAt": "2026-11-12T15:41:30.575661+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "345 GRAND AVENUE",
+    "City": "LEONIA",
+    "Postal": "07650",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7492860178d610264a20f8d5954fa37e95f992b935f06a9cc26b82aea7ce98a7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=345+GRAND+AVENUE&City=LEONIA&Region=NJ&Postal=07650&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

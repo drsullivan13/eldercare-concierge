@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e6972feddc753aa651c9e170f4005bd0c23af6430dc6596f07cf6676d2d108ea.body",
+  "bytes": 1570,
+  "checkedAt": "2026-11-12T15:41:47.741132+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "632 Newark Ave",
+    "City": "Jersey City",
+    "Postal": "07306",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "656e802f50e0d97333b4481a3838258f52a980320c4125da3da57c1076bbc339",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=632+Newark+Ave&City=Jersey+City&Region=NJ&Postal=07306&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

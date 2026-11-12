@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/090965299307aed4bc6683f813eadba93be8662753791002d31e322292e5d452.body",
+  "bytes": 5226,
+  "checkedAt": "2026-11-12T15:41:53.060295+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HAWTHORNE",
+    "format": "json",
+    "state": "NJ",
+    "street": "238 GOFFLE ROAD",
+    "vintage": "Current_Current",
+    "zip": "07506"
+  },
+  "sha256": "ac0a1caf9e254052e5315d13d67e1653d9115e37306b15ac1ddfe24681e80061",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=238+GOFFLE+ROAD&city=HAWTHORNE&state=NJ&zip=07506&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

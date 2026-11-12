@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b52d0f47d63d576c925e6037334354674f45af70c9909ba942aa6e47faf053b0.body",
+  "bytes": 1573,
+  "checkedAt": "2026-11-12T15:41:43.153898+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "357 Harrison St.",
+    "City": "Nutley",
+    "Postal": "07110",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "af337b477d62879527b251f381e851c08f77310d8625cf6af7280d7235b4f284",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=357+Harrison+St.&City=Nutley&Region=NJ&Postal=07110&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

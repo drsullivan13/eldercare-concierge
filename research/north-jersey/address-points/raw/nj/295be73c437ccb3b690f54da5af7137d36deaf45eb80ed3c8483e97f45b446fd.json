@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/295be73c437ccb3b690f54da5af7137d36deaf45eb80ed3c8483e97f45b446fd.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:20.387024+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "130 TERHUNE DRIVE",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4b082739fee9c9cb9a6db674dcf1a0730b27c6e0b6bf9e4315eba45d4ee12ef3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=130+TERHUNE+DRIVE&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

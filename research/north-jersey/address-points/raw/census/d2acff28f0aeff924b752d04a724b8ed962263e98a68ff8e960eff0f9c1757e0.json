@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d2acff28f0aeff924b752d04a724b8ed962263e98a68ff8e960eff0f9c1757e0.body",
+  "bytes": 4733,
+  "checkedAt": "2026-11-12T15:41:56.049652+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SPRINGFIELD",
+    "format": "json",
+    "state": "NJ",
+    "street": "28 MILLBURN AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07081"
+  },
+  "sha256": "cc4b899d55cba1e34508ad48036f3bc807c0d4cda14866e5432a2666afe0a2b4",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=28+MILLBURN+AVENUE&city=SPRINGFIELD&state=NJ&zip=07081&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

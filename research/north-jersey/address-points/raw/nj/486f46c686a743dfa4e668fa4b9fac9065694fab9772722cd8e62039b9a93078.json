@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/486f46c686a743dfa4e668fa4b9fac9065694fab9772722cd8e62039b9a93078.body",
+  "bytes": 1619,
+  "checkedAt": "2026-11-12T15:41:23.607790+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "101 WHIPPANY ROAD",
+    "City": "WHIPPANY",
+    "Postal": "07981",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a639f95cc06656311e2587612ed2040073e08612143d7bbbcd528708fcf2fc77",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=101+WHIPPANY+ROAD&City=WHIPPANY&Region=NJ&Postal=07981&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

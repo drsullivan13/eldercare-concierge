@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/1fd5eb19ac6f6139152fa6142ffc42ed2a3ce85bb2c778bcdfd63fa20ce6b0e7.body",
+  "bytes": 5229,
+  "checkedAt": "2026-11-12T15:41:56.007115+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "ENGLEWOOD",
+    "format": "json",
+    "state": "NJ",
+    "street": "433 MOUNTAIN VIEW ROAD",
+    "vintage": "Current_Current",
+    "zip": "07631"
+  },
+  "sha256": "632fc3e589222ca58af63ad5d5546ee153589a54cd83fae472742d2e60ef6401",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=433+MOUNTAIN+VIEW+ROAD&city=ENGLEWOOD&state=NJ&zip=07631&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

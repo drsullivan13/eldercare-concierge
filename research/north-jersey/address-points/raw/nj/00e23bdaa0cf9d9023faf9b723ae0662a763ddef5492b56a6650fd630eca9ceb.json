@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/00e23bdaa0cf9d9023faf9b723ae0662a763ddef5492b56a6650fd630eca9ceb.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:47.521820+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "144 Haddon Pl",
+    "City": "Montclair",
+    "Postal": "07043",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c6c873858c39a0ab31c3287bb2786763ee34f0b0d247522ca1d6181c3f8dd445",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=144+Haddon+Pl&City=Montclair&Region=NJ&Postal=07043&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

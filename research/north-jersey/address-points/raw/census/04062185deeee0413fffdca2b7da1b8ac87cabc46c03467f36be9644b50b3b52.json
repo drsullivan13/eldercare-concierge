@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/04062185deeee0413fffdca2b7da1b8ac87cabc46c03467f36be9644b50b3b52.body",
+  "bytes": 5211,
+  "checkedAt": "2026-11-12T15:41:57.238421+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Paramus",
+    "format": "json",
+    "state": "NJ",
+    "street": "275 Route 4 W",
+    "vintage": "Current_Current",
+    "zip": "07652"
+  },
+  "sha256": "c31448db345b70a3e3f6a68f2e2536554e29e0290108e697031ec8de62032590",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=275+Route+4+W&city=Paramus&state=NJ&zip=07652&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fccaff0e46e7e6daefc9438fe6ce88d9abb9564a1fef6ac7ab5f0eaab17eeafe.body",
+  "bytes": 68,
+  "checkedAt": "2026-11-12T15:41:25.915342+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "15-00 RIVER ROAD",
+    "City": "FAIR LAWN",
+    "Postal": "07410",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "acfae4870440c59a64af2343acab32331eeb8aad84a36e9b5b1b15ec1373f4db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=15-00+RIVER+ROAD&City=FAIR+LAWN&Region=NJ&Postal=07410&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

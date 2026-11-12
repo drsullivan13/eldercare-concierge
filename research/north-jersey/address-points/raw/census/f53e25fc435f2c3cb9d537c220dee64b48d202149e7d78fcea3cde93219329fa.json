@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/f53e25fc435f2c3cb9d537c220dee64b48d202149e7d78fcea3cde93219329fa.body",
+  "bytes": 4716,
+  "checkedAt": "2026-11-12T15:41:50.678978+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "ORANGE",
+    "format": "json",
+    "state": "NJ",
+    "street": "560 BERKELEY AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07050"
+  },
+  "sha256": "811cdb71724a30d46c40bca3824af547aa0bc337c08ff59d0e71bbc626da50b0",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=560+BERKELEY+AVENUE&city=ORANGE&state=NJ&zip=07050&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

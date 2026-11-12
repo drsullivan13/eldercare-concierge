@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a01a5ad6bee043c3760f0ffe21bcefc40a92298d2ccd5039a392d1f91439b166.body",
+  "bytes": 1619,
+  "checkedAt": "2026-11-12T15:41:28.846395+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "123 LIBERTY VIEW DRIVE",
+    "City": "JERSEY CITY",
+    "Postal": "07302",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8eefdbed89f5b09e86a20fcd9a4b5e5ba1e6542226e0e0d81b7b6e9496e04cc6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=123+LIBERTY+VIEW+DRIVE&City=JERSEY+CITY&Region=NJ&Postal=07302&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

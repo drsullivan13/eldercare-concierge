@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e3b70bc69f42fb072ecd11cdc853ece862f806288cb823b3bb712468e9fdacd1.body",
+  "bytes": 1600,
+  "checkedAt": "2026-11-12T15:41:27.773728+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "400 WEST STIMPSON AVENUE",
+    "City": "LINDEN",
+    "Postal": "07036",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "278ff825a6d054180b9dad7bbf7d119ebac2d80c5e83c0a7c2cdaca0d48499d3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=400+WEST+STIMPSON+AVENUE&City=LINDEN&Region=NJ&Postal=07036&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

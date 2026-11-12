@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/443e290af0cf7ad81fa3117202ed5d92cdf50f3b92bec8f4ec24fb086df024c3.body",
+  "bytes": 4578,
+  "checkedAt": "2026-11-12T15:41:20.718976+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "77 MADISON AVENUE",
+    "City": "MORRISTOWN",
+    "Postal": "07960",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "45017a0eda74f58f861454824dcc5fb9875f39d699a822add6a5ec57b44f0576",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=77+MADISON+AVENUE&City=MORRISTOWN&Region=NJ&Postal=07960&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

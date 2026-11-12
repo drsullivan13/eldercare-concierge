@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d096bd7b74c5a379f5f660b51da741ce2c7d224667e9a416e3fac8532f98c679.body",
+  "bytes": 1574,
+  "checkedAt": "2026-11-12T15:41:34.279520+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "596 FRANKLIN AVENUE",
+    "City": "NUTLEY",
+    "Postal": "07110",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d975c7e3e9e01979f023fdcb1ae26670632d0f8a5d2ceb87b85b1feba2f3d57a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=596+FRANKLIN+AVENUE&City=NUTLEY&Region=NJ&Postal=07110&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

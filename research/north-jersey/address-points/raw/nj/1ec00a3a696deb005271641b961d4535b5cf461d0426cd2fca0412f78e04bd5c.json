@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1ec00a3a696deb005271641b961d4535b5cf461d0426cd2fca0412f78e04bd5c.body",
+  "bytes": 1641,
+  "checkedAt": "2026-11-12T15:41:38.713088+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "340 W. PASSAIC STREET",
+    "City": "ROCHELLE PARK",
+    "Postal": "07662",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "138ea588d621310d14666e65cc6d47e9af899f8cc71ac8df71d8717802e45b7d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=340+W.+PASSAIC+STREET&City=ROCHELLE+PARK&Region=NJ&Postal=07662&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

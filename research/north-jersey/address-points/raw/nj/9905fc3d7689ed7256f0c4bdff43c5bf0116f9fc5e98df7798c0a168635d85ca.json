@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9905fc3d7689ed7256f0c4bdff43c5bf0116f9fc5e98df7798c0a168635d85ca.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:24.275763+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "465 SOUTH STREET",
+    "City": "MORRISTOWN",
+    "Postal": "07960",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "04bfb160068bd397be28536478e52dd63bab8fc6b6f8e7f8545cfdf04115ce57",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=465+SOUTH+STREET&City=MORRISTOWN&Region=NJ&Postal=07960&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

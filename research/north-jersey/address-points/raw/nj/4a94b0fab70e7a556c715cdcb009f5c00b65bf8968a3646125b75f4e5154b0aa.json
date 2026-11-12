@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4a94b0fab70e7a556c715cdcb009f5c00b65bf8968a3646125b75f4e5154b0aa.body",
+  "bytes": 1627,
+  "checkedAt": "2026-11-12T15:41:44.988994+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1574B Springfield Avenue",
+    "City": "Maplewood",
+    "Postal": "07040",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "dacecf3e8c15db9d9054b721502ade206c5f6650a5f2a47c99d9e2b84421c36e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1574B+Springfield+Avenue&City=Maplewood&Region=NJ&Postal=07040&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

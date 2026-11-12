@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1698f344d81b0b2dbd33a7c3a297905adcea0bd183338cf6cde3b40490735e94.body",
+  "bytes": 1587,
+  "checkedAt": "2026-11-12T15:41:30.468612+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "201 Bloomfield Ave.",
+    "City": "VERONA",
+    "Postal": "07044",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "14099f6d0dd8d75006a14ca34279fc9c33c3578945b66ccad8b91deb958749e8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=201+Bloomfield+Ave.&City=VERONA&Region=NJ&Postal=07044&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

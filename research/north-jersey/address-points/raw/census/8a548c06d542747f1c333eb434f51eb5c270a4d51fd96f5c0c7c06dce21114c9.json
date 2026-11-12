@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/8a548c06d542747f1c333eb434f51eb5c270a4d51fd96f5c0c7c06dce21114c9.body",
+  "bytes": 4730,
+  "checkedAt": "2026-11-12T15:41:56.489189+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "FAIRFIELD",
+    "format": "json",
+    "state": "NJ",
+    "street": "363 ROUTE 46 WEST",
+    "vintage": "Current_Current",
+    "zip": "07004"
+  },
+  "sha256": "23fa1d72f22da603e1d95b0b9315d367f5234b7d4ea092f974f37c546c4ddfad",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=363+ROUTE+46+WEST&city=FAIRFIELD&state=NJ&zip=07004&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

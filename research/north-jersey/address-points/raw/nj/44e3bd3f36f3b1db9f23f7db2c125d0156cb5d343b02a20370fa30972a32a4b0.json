@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/44e3bd3f36f3b1db9f23f7db2c125d0156cb5d343b02a20370fa30972a32a4b0.body",
+  "bytes": 1631,
+  "checkedAt": "2026-11-12T15:41:44.155201+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "510 Terrace Avenue",
+    "City": "Hasbrouck Heights",
+    "Postal": "07604",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e863d299f2e1e92f3478407568c1abd131db9adffa65a914c121fe14c11cf68d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=510+Terrace+Avenue&City=Hasbrouck+Heights&Region=NJ&Postal=07604&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

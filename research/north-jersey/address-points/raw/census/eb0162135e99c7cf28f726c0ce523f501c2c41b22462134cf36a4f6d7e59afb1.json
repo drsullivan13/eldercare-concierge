@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/eb0162135e99c7cf28f726c0ce523f501c2c41b22462134cf36a4f6d7e59afb1.body",
+  "bytes": 5268,
+  "checkedAt": "2026-11-12T15:41:58.609182+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Pompton Lakes",
+    "format": "json",
+    "state": "NJ",
+    "street": "525 Wanaque Ave LL5",
+    "vintage": "Current_Current",
+    "zip": "07442"
+  },
+  "sha256": "3380c8f04215b759bb2dd68ec3a6b39282d944df5c5f1dbd71cdec18413e43a9",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=525+Wanaque+Ave+LL5&city=Pompton+Lakes&state=NJ&zip=07442&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

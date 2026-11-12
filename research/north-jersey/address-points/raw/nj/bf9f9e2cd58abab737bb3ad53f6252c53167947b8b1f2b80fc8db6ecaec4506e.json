@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bf9f9e2cd58abab737bb3ad53f6252c53167947b8b1f2b80fc8db6ecaec4506e.body",
+  "bytes": 1595,
+  "checkedAt": "2026-11-12T15:41:43.649992+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "746 Riverside Ave.",
+    "City": "Lyndhurst",
+    "Postal": "07071",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1926c41cf0d1dc4b40c579d0d8410e35a33ccd3540cce68067b3177526628b15",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=746+Riverside+Ave.&City=Lyndhurst&Region=NJ&Postal=07071&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

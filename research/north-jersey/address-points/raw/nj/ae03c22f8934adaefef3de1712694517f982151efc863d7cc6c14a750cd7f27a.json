@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ae03c22f8934adaefef3de1712694517f982151efc863d7cc6c14a750cd7f27a.body",
+  "bytes": 1611,
+  "checkedAt": "2026-11-12T15:41:40.276018+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "176 US Highway 46",
+    "City": "Parsippany",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "561c1a6ffd2905242c71e2aa41688d6714f3ffc9bc1088a880ee684605be6ecc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=176+US+Highway+46&City=Parsippany&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

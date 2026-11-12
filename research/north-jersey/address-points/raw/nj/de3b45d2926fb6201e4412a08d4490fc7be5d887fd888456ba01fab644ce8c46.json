@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/de3b45d2926fb6201e4412a08d4490fc7be5d887fd888456ba01fab644ce8c46.body",
+  "bytes": 1517,
+  "checkedAt": "2026-11-12T15:41:40.486056+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "420 Broadway",
+    "City": "Bayonne",
+    "Postal": "07002",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4b5d444f23acf608aac4d905364dea6b0135a1a9c68c6c17c32768f90bc4b49f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=420+Broadway&City=Bayonne&Region=NJ&Postal=07002&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

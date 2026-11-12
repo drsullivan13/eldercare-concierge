@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fe8609e8d7ab26d1a23a7a520893336d8a6f5fb88043414c0c2bd1c0b36d1a22.body",
+  "bytes": 1593,
+  "checkedAt": "2026-11-12T15:41:32.462515+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "111 Washington Street",
+    "City": "Paterson",
+    "Postal": "07505",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "39c7b85fdd919035ef04d2355cffdf2bea0344cd0f2c9afdbb061bde7df4ca41",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=111+Washington+Street&City=Paterson&Region=NJ&Postal=07505&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

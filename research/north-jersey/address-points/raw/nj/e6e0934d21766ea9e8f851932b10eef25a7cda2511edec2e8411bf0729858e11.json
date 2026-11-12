@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e6e0934d21766ea9e8f851932b10eef25a7cda2511edec2e8411bf0729858e11.body",
+  "bytes": 3099,
+  "checkedAt": "2026-11-12T15:41:29.541046+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "19 HOLLY STREET",
+    "City": "CRANFORD",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "01f4f1da20be3bed2972970ee6ac703965250a8610cdaf3cef7b99caa66a1cdc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=19+HOLLY+STREET&City=CRANFORD&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

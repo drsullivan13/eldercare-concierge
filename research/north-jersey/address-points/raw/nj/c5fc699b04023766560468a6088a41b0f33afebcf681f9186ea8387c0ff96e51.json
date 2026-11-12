@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c5fc699b04023766560468a6088a41b0f33afebcf681f9186ea8387c0ff96e51.body",
+  "bytes": 1595,
+  "checkedAt": "2026-11-12T15:41:44.668943+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "131 PALISADE AVE APT2",
+    "City": "JERSEY CITY",
+    "Postal": "07306",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d46c3c4b6209cb73190edb15e4d1b09002202edeb2c2dcebf5122a5dff55e218",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=131+PALISADE+AVE+APT2&City=JERSEY+CITY&Region=NJ&Postal=07306&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

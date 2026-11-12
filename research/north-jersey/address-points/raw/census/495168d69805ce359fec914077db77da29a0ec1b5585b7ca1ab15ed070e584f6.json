@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/495168d69805ce359fec914077db77da29a0ec1b5585b7ca1ab15ed070e584f6.body",
+  "bytes": 4403,
+  "checkedAt": "2026-11-12T15:41:49.820068+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HACKETTSTOWN",
+    "format": "json",
+    "state": "NJ",
+    "street": "451 SCHOOLEY'S MOUNTAIN RD",
+    "vintage": "Current_Current",
+    "zip": "07840"
+  },
+  "sha256": "92429363eb8a0c20a5e2ed890404afa983c507699e654ca85be0a5ddea3edf0e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=451+SCHOOLEY%27S+MOUNTAIN+RD&city=HACKETTSTOWN&state=NJ&zip=07840&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

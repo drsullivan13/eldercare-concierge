@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d9351d122c9b4594d3e150ea2fb8eab846198a9c1eff68c5ac38526ef6bce36e.body",
+  "bytes": 5272,
+  "checkedAt": "2026-11-12T15:41:55.083785+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PARSIPPANY",
+    "format": "json",
+    "state": "NJ",
+    "street": "3651 HILL ROAD",
+    "vintage": "Current_Current",
+    "zip": "07054"
+  },
+  "sha256": "969126f852fa5ce74e907ab240462d65b49b5dffb99f413677224b98e3776b07",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3651+HILL+ROAD&city=PARSIPPANY&state=NJ&zip=07054&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

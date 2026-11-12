@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/475921620bbf091bc8c84e8a3a01152a0ec526a482ee8012c115c4fac9bd6af8.body",
+  "bytes": 1564,
+  "checkedAt": "2026-11-12T15:41:46.952580+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2414 Morris Ave.",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1ff72eedec30981b1a7562b89737d47024b3f9c88aba7b036804a4bc5d1fd335",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2414+Morris+Ave.&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/740b64a935eae0b2c6a08dae63c6e91de33ba82e7688a7d4db43b77c2df23d23.body",
+  "bytes": 5204,
+  "checkedAt": "2026-11-12T15:41:51.472348+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Clifton",
+    "format": "json",
+    "state": "NJ",
+    "street": "782 VALLEY ROAD",
+    "vintage": "Current_Current",
+    "zip": "07013"
+  },
+  "sha256": "b04cfdd5d34736b97c06cf543b20885f9eed36d8db48aee310697ad0a42a37ab",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=782+VALLEY+ROAD&city=Clifton&state=NJ&zip=07013&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

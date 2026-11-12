@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/49531e4424c70ddb30547069f1e41b1d504cd42c532e7bd8be77cd9b64575331.body",
+  "bytes": 1592,
+  "checkedAt": "2026-11-12T15:41:38.606926+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "139 HARRISTOWN ROAD",
+    "City": "GLEN ROCK",
+    "Postal": "07452",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d8779509a0a63e3acfbc3310efba53c29c0beccea6e8fe6ec278d0158e079ae0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=139+HARRISTOWN+ROAD&City=GLEN+ROCK&Region=NJ&Postal=07452&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

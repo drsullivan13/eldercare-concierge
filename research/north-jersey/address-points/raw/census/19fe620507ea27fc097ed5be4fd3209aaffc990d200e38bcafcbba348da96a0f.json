@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/19fe620507ea27fc097ed5be4fd3209aaffc990d200e38bcafcbba348da96a0f.body",
+  "bytes": 5197,
+  "checkedAt": "2026-11-12T15:41:55.437452+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PARAMUS",
+    "format": "json",
+    "state": "NJ",
+    "street": "80 ROUTE 4",
+    "vintage": "Current_Current",
+    "zip": "07652"
+  },
+  "sha256": "97061a4869b529f1a1adcc23399745b36ede66404c31754591b47b2d2f526cd2",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=80+ROUTE+4&city=PARAMUS&state=NJ&zip=07652&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6f1d1d11dca31b65b332cda07c876e30cd7188aabf262f2941ff921d465f973c.body",
+  "bytes": 1554,
+  "checkedAt": "2026-11-12T15:41:47.415108+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "469 Union Ave",
+    "City": "Elizabeth",
+    "Postal": "07208",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6492c45701221977735852b3a729dedf684d66acf73196b58baa7729c5701496",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=469+Union+Ave&City=Elizabeth&Region=NJ&Postal=07208&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

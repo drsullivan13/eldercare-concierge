@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e9afa07e7f0987ceefd41c47b639c2457b2c61598c10e606424bc435471a681e.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:46.351444+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1225 Raymond Blvd",
+    "City": "Newark",
+    "Postal": "07102",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "839508f6648baa9c92a52afc493c0ff419224d2769e063fe4e33c844121016e3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1225+Raymond+Blvd&City=Newark&Region=NJ&Postal=07102&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

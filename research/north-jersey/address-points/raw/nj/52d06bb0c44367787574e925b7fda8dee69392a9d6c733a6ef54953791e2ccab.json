@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/52d06bb0c44367787574e925b7fda8dee69392a9d6c733a6ef54953791e2ccab.body",
+  "bytes": 1541,
+  "checkedAt": "2026-11-12T15:41:37.907534+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "58 Ketch Road",
+    "City": "Morristown",
+    "Postal": "07960",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "371339c45d8da8b1779365a09c7e6fb69ee04800f4ec83a7a9fd3e81c91bd9d3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=58+Ketch+Road&City=Morristown&Region=NJ&Postal=07960&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

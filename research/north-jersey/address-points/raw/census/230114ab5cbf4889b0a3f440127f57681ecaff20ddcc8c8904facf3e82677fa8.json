@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/230114ab5cbf4889b0a3f440127f57681ecaff20ddcc8c8904facf3e82677fa8.body",
+  "bytes": 403,
+  "checkedAt": "2026-11-12T15:41:50.112852+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "EAST ORANGE",
+    "format": "json",
+    "state": "NJ",
+    "street": "480 PARKWAY DRIVE",
+    "vintage": "Current_Current",
+    "zip": "07017"
+  },
+  "sha256": "2dd3a020bae1b9c32e23c1dba5906d6dd3b96cb32d33cffeb785011d9fd23618",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=480+PARKWAY+DRIVE&city=EAST+ORANGE&state=NJ&zip=07017&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

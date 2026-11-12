@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5102f20e989ef247b507a49d033aad97b5b087041dd6133a9b71b36c2a265667.body",
+  "bytes": 1611,
+  "checkedAt": "2026-11-12T15:41:26.777886+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "8 JAMES STREET",
+    "City": "FLORHAM PARK",
+    "Postal": "07932",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "092006971cc6c4161ced859611c6c1c511a309e96c25f54a43b17322237197cd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=8+JAMES+STREET&City=FLORHAM+PARK&Region=NJ&Postal=07932&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

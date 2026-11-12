@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1727cb534de9899e9cb24e449af3919e4af4ffb87afa240e275aceb7ffbba119.body",
+  "bytes": 1574,
+  "checkedAt": "2026-11-12T15:41:33.088915+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2125 CENTER AVENUE",
+    "City": "FORT LEE",
+    "Postal": "07024",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4086b4e594da8577950c266287d65dbc89085a1ff90db5487fcf52c4a5d50caa",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2125+CENTER+AVENUE&City=FORT+LEE&Region=NJ&Postal=07024&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

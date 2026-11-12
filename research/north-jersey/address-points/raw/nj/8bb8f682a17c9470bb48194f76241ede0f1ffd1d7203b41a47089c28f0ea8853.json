@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8bb8f682a17c9470bb48194f76241ede0f1ffd1d7203b41a47089c28f0ea8853.body",
+  "bytes": 1608,
+  "checkedAt": "2026-11-12T15:41:27.496307+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "209 LITTLETON ROAD",
+    "City": "MORRIS PLAINS",
+    "Postal": "07950",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "88f5bdb30c4bc17844e54d1d62c17e6d1dceeab3a2865ed3f2de4e2a7d4219f2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=209+LITTLETON+ROAD&City=MORRIS+PLAINS&Region=NJ&Postal=07950&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

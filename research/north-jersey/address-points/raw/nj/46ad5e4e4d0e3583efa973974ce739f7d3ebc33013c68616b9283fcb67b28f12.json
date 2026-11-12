@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/46ad5e4e4d0e3583efa973974ce739f7d3ebc33013c68616b9283fcb67b28f12.body",
+  "bytes": 3060,
+  "checkedAt": "2026-11-12T15:41:28.386395+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "38 NORTH CENTRAL AVENUE",
+    "City": "RAMSEY",
+    "Postal": "07446",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8e6bef8814f5ebf5bed4a69531432c21070587e0c3b49238533256747022bc6c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=38+NORTH+CENTRAL+AVENUE&City=RAMSEY&Region=NJ&Postal=07446&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

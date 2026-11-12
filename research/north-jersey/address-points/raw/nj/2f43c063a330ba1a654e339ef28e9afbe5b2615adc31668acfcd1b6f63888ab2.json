@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2f43c063a330ba1a654e339ef28e9afbe5b2615adc31668acfcd1b6f63888ab2.body",
+  "bytes": 3103,
+  "checkedAt": "2026-11-12T15:41:27.971389+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "25 SOUTH PAULA DRIVE",
+    "City": "BERGENFIELD",
+    "Postal": "07621",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "611c06a223da8ac54d3a09d7356eb7cd95d7862cbd2c472966b12259eb95447a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=25+SOUTH+PAULA+DRIVE&City=BERGENFIELD&Region=NJ&Postal=07621&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

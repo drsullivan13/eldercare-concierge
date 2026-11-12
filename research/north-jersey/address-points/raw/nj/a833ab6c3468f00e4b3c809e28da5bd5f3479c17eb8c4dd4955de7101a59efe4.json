@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a833ab6c3468f00e4b3c809e28da5bd5f3479c17eb8c4dd4955de7101a59efe4.body",
+  "bytes": 1588,
+  "checkedAt": "2026-11-12T15:41:40.573108+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "10 Bellegrove Drive",
+    "City": "Montclair",
+    "Postal": "07043",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b7ad046ff7ed8f8ac4a9cc57b46b4450c0ede669bf8cc0652c3603caee1aa923",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=10+Bellegrove+Drive&City=Montclair&Region=NJ&Postal=07043&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

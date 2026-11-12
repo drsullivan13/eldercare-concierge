@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/802da4da9995bdd5545dc7cb5c49e739855bf3f1025563f5374d2411c09c3341.body",
+  "bytes": 5222,
+  "checkedAt": "2026-11-12T15:41:50.257174+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "178-198 OGDEN AVE",
+    "vintage": "Current_Current",
+    "zip": "07307"
+  },
+  "sha256": "98aeae4418218f000cba072c82ba1d57aa9cd7d044f36f5577af15435de98b71",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=178-198+OGDEN+AVE&city=JERSEY+CITY&state=NJ&zip=07307&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

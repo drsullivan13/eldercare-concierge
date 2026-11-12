@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b6dbb70efd509627f37f34b33389a2de7b5f884c923c0b4341988ac6ec48afc1.body",
+  "bytes": 4734,
+  "checkedAt": "2026-11-12T15:41:56.147848+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "FAIRFIELD",
+    "format": "json",
+    "state": "NJ",
+    "street": "695 US HIGHWAY 46 WEST",
+    "vintage": "Current_Current",
+    "zip": "07004"
+  },
+  "sha256": "a2406214bf1216cff7f82f562cccbc9a519cf4e2fa7540130c676d844354c817",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=695+US+HIGHWAY+46+WEST&city=FAIRFIELD&state=NJ&zip=07004&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

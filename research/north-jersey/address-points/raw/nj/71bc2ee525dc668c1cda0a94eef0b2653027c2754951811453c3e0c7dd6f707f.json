@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/71bc2ee525dc668c1cda0a94eef0b2653027c2754951811453c3e0c7dd6f707f.body",
+  "bytes": 1621,
+  "checkedAt": "2026-11-12T15:41:42.950454+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "140 E. Ridgewood Ave.",
+    "City": "Paramus",
+    "Postal": "07652",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "08648f40a82a9b8db9cc0753421883805c2c6ff69e1d2924c71e5f0ee718e46a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=140+E.+Ridgewood+Ave.&City=Paramus&Region=NJ&Postal=07652&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

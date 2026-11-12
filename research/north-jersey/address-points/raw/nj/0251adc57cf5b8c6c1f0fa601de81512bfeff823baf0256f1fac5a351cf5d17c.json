@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0251adc57cf5b8c6c1f0fa601de81512bfeff823baf0256f1fac5a351cf5d17c.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:47.717844+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2003 Morris Avenue",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9227bded1e4ba35d687b46dc8a3921451fb34295fd0ef8daea0d8727d5f66de8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2003+Morris+Avenue&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

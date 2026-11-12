@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b14bc98ea321c8859b967079f5f1c5c4889df700ccc45228e6c756a16bd35491.body",
+  "bytes": 5252,
+  "checkedAt": "2026-11-12T15:41:58.869197+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "2327 JOHN F KENNEDY BLVD",
+    "vintage": "Current_Current",
+    "zip": "07304"
+  },
+  "sha256": "249cdcbb5de2d812f10a635402c44d726d02bc054e57c0e0e01c3ced5ac350f4",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2327+JOHN+F+KENNEDY+BLVD&city=JERSEY+CITY&state=NJ&zip=07304&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0c2ec40e2f7bfbd789db23a94644edca6d7a20b1c6ac65d53e64cb32833f2491.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:37.270799+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "15 ENGLE STREET",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a5ae0af45848996e1b317483949b6af6bdb95e3f75975af05c88fd8145a66d55",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=15+ENGLE+STREET&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

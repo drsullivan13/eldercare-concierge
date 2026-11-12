@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/98ff9a7039323298c294ed397e4e92dc2e9742b350a2d35014be6622f1c0b6c2.body",
+  "bytes": 5213,
+  "checkedAt": "2026-11-12T15:41:50.101332+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HASKELL",
+    "format": "json",
+    "state": "NJ",
+    "street": "25 FIFTH AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07420"
+  },
+  "sha256": "7050b36c9d1250a4c08e89dedc8a6237b6e9e63e5e8a266758e8cb59dbc707f4",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=25+FIFTH+AVENUE&city=HASKELL&state=NJ&zip=07420&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

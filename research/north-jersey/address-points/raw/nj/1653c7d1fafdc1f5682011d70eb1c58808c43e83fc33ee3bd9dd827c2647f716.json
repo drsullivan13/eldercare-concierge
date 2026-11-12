@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1653c7d1fafdc1f5682011d70eb1c58808c43e83fc33ee3bd9dd827c2647f716.body",
+  "bytes": 1571,
+  "checkedAt": "2026-11-12T15:41:23.837602+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "190 PARK AVENUE",
+    "City": "FLORHAM PARK",
+    "Postal": "07932",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0228284d33df1eda69e7fc9f67a9557563caf610101dacea86133f51fae0de74",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=190+PARK+AVENUE&City=FLORHAM+PARK&Region=NJ&Postal=07932&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

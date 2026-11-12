@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d5f4455f5b7e4a7c2ea510125aac1b3b3ff220c25e4881313aa7617f8da54595.body",
+  "bytes": 1614,
+  "checkedAt": "2026-11-12T15:41:29.691509+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "735 NORTHFIELD AVENUE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e8bfcdd91ef3286014de51d6541aa3db5df78fe193b1859097cdea69377a722a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=735+NORTHFIELD+AVENUE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

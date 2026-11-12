@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3fd7a1129e2446399b416b4194aa43d8732dfba80ea57593b54cc8047788dfc9.body",
+  "bytes": 1642,
+  "checkedAt": "2026-11-12T15:41:25.422125+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "290 SOUTH ORANGE AVENUE",
+    "City": "LIVINGSTON",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4b75d3b5fe03238ff541e7f37214ce336362a46b96d5e39d1d2776e3d8339cb4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=290+SOUTH+ORANGE+AVENUE&City=LIVINGSTON&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

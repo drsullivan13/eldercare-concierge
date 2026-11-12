@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/5bcec61cc132b68de53f0efbd521ef2ab69ef5a6005f491c8b678b880fc3de73.body",
+  "bytes": 5265,
+  "checkedAt": "2026-11-12T15:41:50.937360+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "NEW PROVIDENCE",
+    "format": "json",
+    "state": "NJ",
+    "street": "537 MOUNTAIN AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07974"
+  },
+  "sha256": "5d839a107a2ece17c916e3d49a0f22a45e24b64bdefab84aa25ee5ec6732177b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=537+MOUNTAIN+AVENUE&city=NEW+PROVIDENCE&state=NJ&zip=07974&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

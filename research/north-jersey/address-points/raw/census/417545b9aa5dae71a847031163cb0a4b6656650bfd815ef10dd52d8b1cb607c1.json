@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/417545b9aa5dae71a847031163cb0a4b6656650bfd815ef10dd52d8b1cb607c1.body",
+  "bytes": 10015,
+  "checkedAt": "2026-11-12T15:41:59.106518+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Secaucus",
+    "format": "json",
+    "state": "NJ",
+    "street": "58 Harmon Cove Tower",
+    "vintage": "Current_Current",
+    "zip": "07094"
+  },
+  "sha256": "36d7d898601396ea3e5a481e814d457e61290de8a382c248f1ea592a7dbdda2c",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=58+Harmon+Cove+Tower&city=Secaucus&state=NJ&zip=07094&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

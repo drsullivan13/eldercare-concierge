@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c040f3eee9fed85319378be93d83c5ae82c95a8fd84c0aa8ea71c1ae7119e7cf.body",
+  "bytes": 5250,
+  "checkedAt": "2026-11-12T15:41:54.030498+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "2983 JOHN F KENNEDY BLVD.",
+    "vintage": "Current_Current",
+    "zip": "07306"
+  },
+  "sha256": "af4b07bf18b5699a0e8aabf83ad693c45960b85eee939fe9a88cb97cb8dd7505",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2983+JOHN+F+KENNEDY+BLVD.&city=JERSEY+CITY&state=NJ&zip=07306&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

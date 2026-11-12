@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5649c4660c006abc5b379bb13d9157dd865857447ff021d2736334a7740c7105.body",
+  "bytes": 1534,
+  "checkedAt": "2026-11-12T15:41:44.185569+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "305 Broadway",
+    "City": "Paterson",
+    "Postal": "07501",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e9cc10d78eba4f3271f9046219ecd301c75866c2a9212a200fc9b87fc4251c32",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=305+Broadway&City=Paterson&Region=NJ&Postal=07501&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

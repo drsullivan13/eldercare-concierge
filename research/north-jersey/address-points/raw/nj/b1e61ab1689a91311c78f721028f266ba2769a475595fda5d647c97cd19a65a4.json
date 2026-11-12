@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b1e61ab1689a91311c78f721028f266ba2769a475595fda5d647c97cd19a65a4.body",
+  "bytes": 1657,
+  "checkedAt": "2026-11-12T15:41:43.740704+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "7915 John F. Kennedy Blvd",
+    "City": "North Bergen",
+    "Postal": "07047",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "816a551f4eeae9299b218e2f9dc3442144e46dacbd56e8beaacb00c4810d7b82",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=7915+John+F.+Kennedy+Blvd&City=North+Bergen&Region=NJ&Postal=07047&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

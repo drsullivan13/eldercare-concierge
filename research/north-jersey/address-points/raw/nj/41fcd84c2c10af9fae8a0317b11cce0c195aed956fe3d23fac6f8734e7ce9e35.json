@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/41fcd84c2c10af9fae8a0317b11cce0c195aed956fe3d23fac6f8734e7ce9e35.body",
+  "bytes": 1598,
+  "checkedAt": "2026-11-12T15:41:40.465481+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "830 Morris Tpke",
+    "City": "Short Hills",
+    "Postal": "07078",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "faed5cadb9dace53c5f04cb79b42b4391feceb0b9daaeaaac06113f6f0ff4237",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=830+Morris+Tpke&City=Short+Hills&Region=NJ&Postal=07078&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/cc5caa8dbcd6348bfa7fa719fe03db4d8e3a3c47d0c0c4898e7deb5f08a4a84e.body",
+  "bytes": 1587,
+  "checkedAt": "2026-11-12T15:41:37.352592+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "125 WASHINGTON AVENUE",
+    "City": "DUMONT",
+    "Postal": "07628",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a2787554cd47687dbc832071686fddd0ff73d24de16d9cf7b957b2425eed47d1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=125+WASHINGTON+AVENUE&City=DUMONT&Region=NJ&Postal=07628&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

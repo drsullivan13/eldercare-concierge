@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/69c9e0173a2ec10d0c025278da4336063c2396f02a6a5ff1c7e4beb1b4a73270.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:33.338225+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2333 MORRIS AVENUE",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c61c6e0a617dc2999de9177f3ba086edd6481f5df7f7d0bef417c20d1d964b6a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2333+MORRIS+AVENUE&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

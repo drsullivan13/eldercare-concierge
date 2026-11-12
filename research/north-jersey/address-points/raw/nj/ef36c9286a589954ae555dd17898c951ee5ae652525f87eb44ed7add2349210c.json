@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ef36c9286a589954ae555dd17898c951ee5ae652525f87eb44ed7add2349210c.body",
+  "bytes": 1587,
+  "checkedAt": "2026-11-12T15:41:21.507286+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "120 PARK END PLACE",
+    "City": "EAST ORANGE",
+    "Postal": "07018",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6d0d1014ded2c9e219151cbbd755ab96cbca92c5df942c219537b4ff3f4a21a6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=120+PARK+END+PLACE&City=EAST+ORANGE&Region=NJ&Postal=07018&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

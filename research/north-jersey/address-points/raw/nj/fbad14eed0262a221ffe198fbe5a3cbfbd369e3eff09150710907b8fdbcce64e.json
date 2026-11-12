@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fbad14eed0262a221ffe198fbe5a3cbfbd369e3eff09150710907b8fdbcce64e.body",
+  "bytes": 1619,
+  "checkedAt": "2026-11-12T15:41:29.908656+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "100 W. RIDGEWOOD AVENUE",
+    "City": "PARAMUS",
+    "Postal": "07652",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c3f58e82aadc40850bec4a2475980374c4dd81a6cb93038a4773e48845f1bb90",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=100+W.+RIDGEWOOD+AVENUE&City=PARAMUS&Region=NJ&Postal=07652&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

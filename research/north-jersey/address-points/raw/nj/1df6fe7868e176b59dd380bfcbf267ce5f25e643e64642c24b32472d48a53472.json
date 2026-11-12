@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1df6fe7868e176b59dd380bfcbf267ce5f25e643e64642c24b32472d48a53472.body",
+  "bytes": 1601,
+  "checkedAt": "2026-11-12T15:41:36.551255+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1139 EAST JERSEY STREET",
+    "City": "ELIZABETH",
+    "Postal": "07201",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "03d967ae80ec8ee6275f17547c50cccfddac16a1815e30576b031f6460f95da0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1139+EAST+JERSEY+STREET&City=ELIZABETH&Region=NJ&Postal=07201&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

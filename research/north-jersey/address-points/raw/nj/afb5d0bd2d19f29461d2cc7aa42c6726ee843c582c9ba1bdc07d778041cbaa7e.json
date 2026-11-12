@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/afb5d0bd2d19f29461d2cc7aa42c6726ee843c582c9ba1bdc07d778041cbaa7e.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:34.435887+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1029 TEANECK ROAD",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "163684b382b3d9c9091767c9e4a3f268dffe06623dc9a119d1f02206379d49e4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1029+TEANECK+ROAD&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

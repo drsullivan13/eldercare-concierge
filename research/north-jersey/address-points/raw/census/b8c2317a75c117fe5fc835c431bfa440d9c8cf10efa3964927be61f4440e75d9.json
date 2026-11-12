@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b8c2317a75c117fe5fc835c431bfa440d9c8cf10efa3964927be61f4440e75d9.body",
+  "bytes": 5214,
+  "checkedAt": "2026-11-12T15:41:52.016242+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "330 NINTH STREET",
+    "vintage": "Current_Current",
+    "zip": "07302"
+  },
+  "sha256": "a129e2b394846786f5afb8d3573258c216fa6d1e9cbf8e766a339bf4d1f97d2a",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=330+NINTH+STREET&city=JERSEY+CITY&state=NJ&zip=07302&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

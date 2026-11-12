@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9d986d4772656693882b283de017b49ca19d0f7828742a88ec9cff3286f10fb2.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:27.296950+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "820 HAMBURG TURNPIKE",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "35b68ae55937a5b52930f157b57598af8c9a1f037fcf802cef9e0b01dc5eec3e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=820+HAMBURG+TURNPIKE&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/97c41680ded86bc34d2e83faec17161149885f8287d21189d097c6dbcb42cf11.body",
+  "bytes": 3108,
+  "checkedAt": "2026-11-12T15:41:40.165995+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "61 W Palisade Avenue",
+    "City": "Englewood",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "64e606d3f977d5dbd4cf01f47ffda95b4deebd2e60a00b3166d002dd94e710f6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=61+W+Palisade+Avenue&City=Englewood&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

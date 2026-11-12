@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c180f64b819a8494315f3a9f902da995d1cf700dc3de723364949ace5c033013.body",
+  "bytes": 1576,
+  "checkedAt": "2026-11-12T15:41:43.864226+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1946 Churchill Drive",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "edc76d51619335a08535f079f958f15545b60fd27d2ff586027466bf70725dda",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1946+Churchill+Drive&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

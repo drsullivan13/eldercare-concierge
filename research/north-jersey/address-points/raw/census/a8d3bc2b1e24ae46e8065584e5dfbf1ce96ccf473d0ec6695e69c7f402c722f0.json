@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/a8d3bc2b1e24ae46e8065584e5dfbf1ce96ccf473d0ec6695e69c7f402c722f0.body",
+  "bytes": 5191,
+  "checkedAt": "2026-11-12T15:41:55.535283+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "NEWARK",
+    "format": "json",
+    "state": "NJ",
+    "street": "769 SANFORD AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07106"
+  },
+  "sha256": "8248515958e7c0f44fb8cdd4c97980c3a892ef2abedbf6eb09cdac43ba1dca02",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=769+SANFORD+AVENUE&city=NEWARK&state=NJ&zip=07106&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

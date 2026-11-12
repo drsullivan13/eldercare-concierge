@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8a9e408a76ecbdb795b3ddacf224e7dc0ffbe6eaa8ce2d25b11eb390d8dc90fe.body",
+  "bytes": 1640,
+  "checkedAt": "2026-11-12T15:41:30.797376+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "491 CLOSTER DOCK ROAD",
+    "City": "CLOSTER",
+    "Postal": "07624",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "00491fa5e47e45884d56f16962e00d30a3f8c8a685ee5f2bd723448fe68a3937",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=491+CLOSTER+DOCK+ROAD&City=CLOSTER&Region=NJ&Postal=07624&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

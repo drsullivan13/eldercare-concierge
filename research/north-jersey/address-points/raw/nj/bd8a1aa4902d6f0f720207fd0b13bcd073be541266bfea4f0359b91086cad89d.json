@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bd8a1aa4902d6f0f720207fd0b13bcd073be541266bfea4f0359b91086cad89d.body",
+  "bytes": 1542,
+  "checkedAt": "2026-11-12T15:41:39.629540+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "561 BROAD STREET",
+    "City": "NEWARK",
+    "Postal": "07102",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5c7e592092ca2403738dec37eab4dba3ff8fe9dff7370c8ff56dec05adf827eb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=561+BROAD+STREET&City=NEWARK&Region=NJ&Postal=07102&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

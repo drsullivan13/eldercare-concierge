@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ba910a3f6b14751149521721bfd48f262e02f90a081b08986935beafa1d5cdc2.body",
+  "bytes": 1553,
+  "checkedAt": "2026-11-12T15:41:26.120242+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "300 TEANECK ROAD",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "68307a8cd6c6d2e35991e3948d5c5a20d08732133d360a9126dd5c8165564b54",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=300+TEANECK+ROAD&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

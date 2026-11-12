@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/737322dc8cbfd9118721aaacf6a4cfe1198bff4692ed09bed83a2ff8716f22e6.body",
+  "bytes": 3048,
+  "checkedAt": "2026-11-12T15:41:42.099318+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "175 Cedar Lane",
+    "City": "Teaneck",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8cb1f7e1b99afc644f2800f597123fdb4289ae6a6f2f36b18799c8413cc2e524",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=175+Cedar+Lane&City=Teaneck&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

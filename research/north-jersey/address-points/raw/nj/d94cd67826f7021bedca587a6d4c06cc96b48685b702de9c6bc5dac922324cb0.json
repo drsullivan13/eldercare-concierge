@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d94cd67826f7021bedca587a6d4c06cc96b48685b702de9c6bc5dac922324cb0.body",
+  "bytes": 1592,
+  "checkedAt": "2026-11-12T15:41:22.336019+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "100 KINDERKAMACK ROAD",
+    "City": "EMERSON",
+    "Postal": "07630",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b15b490937fe6bdd17ce4316287df9c65d7b7cf2ba4e83946553164d452332ef",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=100+KINDERKAMACK+ROAD&City=EMERSON&Region=NJ&Postal=07630&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

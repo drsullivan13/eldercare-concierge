@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/5f86f6e27d19b749cb0ab1a6ef36d7cf2de6976858c4461be2bf9ab2ca806105.body",
+  "bytes": 5212,
+  "checkedAt": "2026-11-12T15:41:56.272448+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "BLOOMFIELD",
+    "format": "json",
+    "state": "NJ",
+    "street": "16 ORANGE STREET",
+    "vintage": "Current_Current",
+    "zip": "07003"
+  },
+  "sha256": "72417077f3ef0928e48c1ace3a313579b0d75dd3292b169455d4c9060cb53e1e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=16+ORANGE+STREET&city=BLOOMFIELD&state=NJ&zip=07003&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

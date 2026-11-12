@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/abcb717472c2541c2ca81b646eb75e64cfc6d10302e660c8071424ffa1c56f0e.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:46.381130+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "4 DELMAR RD",
+    "City": "JERSEY CITY",
+    "Postal": "07305",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d878a54aab9a225969ab4c90480f015ba4f277a48b811304517d6c25e936f44e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=4+DELMAR+RD&City=JERSEY+CITY&Region=NJ&Postal=07305&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

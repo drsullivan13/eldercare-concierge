@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3e9b9408035346b251b3857a6de1a55abbb97ef545cd1bc266bddf7a71d83712.body",
+  "bytes": 3105,
+  "checkedAt": "2026-11-12T15:41:31.754007+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "17 S. FRANKLIN TURNPIKE",
+    "City": "RAMSEY",
+    "Postal": "07446",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "55047aaba55179578d1d0fe646048a485e8a063cadcfb2478bde234ccae19ee1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=17+S.+FRANKLIN+TURNPIKE&City=RAMSEY&Region=NJ&Postal=07446&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

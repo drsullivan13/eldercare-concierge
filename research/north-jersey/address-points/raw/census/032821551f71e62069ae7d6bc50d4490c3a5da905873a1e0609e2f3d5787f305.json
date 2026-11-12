@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/032821551f71e62069ae7d6bc50d4490c3a5da905873a1e0609e2f3d5787f305.body",
+  "bytes": 5210,
+  "checkedAt": "2026-11-12T15:41:50.405035+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PARAMUS",
+    "format": "json",
+    "state": "NJ",
+    "street": "1 VETERANS DRIVE",
+    "vintage": "Current_Current",
+    "zip": "07652"
+  },
+  "sha256": "aae42e8930bda6921ddbd102834fe451e56f6598a3e870a844e9f1a05c7f9c72",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1+VETERANS+DRIVE&city=PARAMUS&state=NJ&zip=07652&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

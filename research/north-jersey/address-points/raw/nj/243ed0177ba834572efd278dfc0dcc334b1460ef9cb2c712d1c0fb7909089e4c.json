@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/243ed0177ba834572efd278dfc0dcc334b1460ef9cb2c712d1c0fb7909089e4c.body",
+  "bytes": 1633,
+  "checkedAt": "2026-11-12T15:41:21.351473+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "150 NEW PROVIDENCE ROAD",
+    "City": "MOUNTAINSIDE",
+    "Postal": "07092",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6c93af537fb7cbb09ff8d5e487cd555063a8171c34720f678832f5727619357b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=150+NEW+PROVIDENCE+ROAD&City=MOUNTAINSIDE&Region=NJ&Postal=07092&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

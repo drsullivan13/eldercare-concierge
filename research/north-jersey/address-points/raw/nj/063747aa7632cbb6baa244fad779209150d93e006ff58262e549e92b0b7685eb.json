@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/063747aa7632cbb6baa244fad779209150d93e006ff58262e549e92b0b7685eb.body",
+  "bytes": 1549,
+  "checkedAt": "2026-11-12T15:41:30.343929+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "960 KOEHL AVENUE",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6f4f3c63f5bb5b48afb9442050ae3bf924bf257288be1f0fef64d74bb5bc2112",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=960+KOEHL+AVENUE&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

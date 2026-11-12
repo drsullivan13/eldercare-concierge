@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/500bb9e91eef79dcd242cb4293c056c892289a4f07af1504aecabdd867845ea7.body",
+  "bytes": 1582,
+  "checkedAt": "2026-11-12T15:41:32.896454+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "26 CEDAR ROAD",
+    "City": "POMPTON PLAINS",
+    "Postal": "07444",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a372b811824e3d93e52770000b8ff886fd28ba743578fa3be745ccb1eb4a0a1e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=26+CEDAR+ROAD&City=POMPTON+PLAINS&Region=NJ&Postal=07444&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

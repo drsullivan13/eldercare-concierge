@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/93648421a4d38c15b160c8ecd94d8da7def204bd983181fd0010834a3da07b8f.body",
+  "bytes": 1610,
+  "checkedAt": "2026-11-12T15:41:20.391455+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "415 SOUTHERN BLVD",
+    "City": "CHATHAM",
+    "Postal": "07928",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "521db83d6956df19062c274559560afddf7d1f030e30cb1422f03beffb4b624f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=415+SOUTHERN+BLVD&City=CHATHAM&Region=NJ&Postal=07928&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

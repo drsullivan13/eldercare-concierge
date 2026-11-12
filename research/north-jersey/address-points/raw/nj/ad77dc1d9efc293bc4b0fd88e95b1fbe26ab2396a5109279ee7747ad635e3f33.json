@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ad77dc1d9efc293bc4b0fd88e95b1fbe26ab2396a5109279ee7747ad635e3f33.body",
+  "bytes": 3114,
+  "checkedAt": "2026-11-12T15:41:22.793219+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "198 OLD BERGEN ROAD",
+    "City": "JERSEY CITY",
+    "Postal": "07305",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a50d034f10a51d0fefdd51793f8c489f22f0bd457017999c33bfd7ae3a5f9543",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=198+OLD+BERGEN+ROAD&City=JERSEY+CITY&Region=NJ&Postal=07305&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

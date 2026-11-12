@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d165a9dccf4a9d4b1f5a2ddb5d228dff528db7cb23845e1208c7dc6313a86fe0.body",
+  "bytes": 1640,
+  "checkedAt": "2026-11-12T15:41:27.212508+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "197 CAHILL CROSS ROAD",
+    "City": "WEST MILFORD",
+    "Postal": "07480",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "33ae6739a621248b0b76b789d75f74dce840c8e036c9bb978f93cf9221d216bb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=197+CAHILL+CROSS+ROAD&City=WEST+MILFORD&Region=NJ&Postal=07480&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

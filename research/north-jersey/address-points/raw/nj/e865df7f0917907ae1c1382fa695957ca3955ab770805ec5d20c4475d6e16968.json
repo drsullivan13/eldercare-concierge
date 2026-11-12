@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e865df7f0917907ae1c1382fa695957ca3955ab770805ec5d20c4475d6e16968.body",
+  "bytes": 1575,
+  "checkedAt": "2026-11-12T15:41:22.459760+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "300 OLD HOOK ROAD",
+    "City": "WESTWOOD",
+    "Postal": "07675",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "08a0efe20206b4195bf7d8125fbe41f05b6f5d415503adb513a47d59dc4e2b88",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=300+OLD+HOOK+ROAD&City=WESTWOOD&Region=NJ&Postal=07675&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

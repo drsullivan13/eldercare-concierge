@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/e61f54c3b9337a184075206431ace945a0af50ba6382078c6eb04ed188ac05f3.body",
+  "bytes": 5213,
+  "checkedAt": "2026-11-12T15:41:53.620458+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "ENGLEWOOD",
+    "format": "json",
+    "state": "NJ",
+    "street": "46 NORTH DEAN STREET",
+    "vintage": "Current_Current",
+    "zip": "07631"
+  },
+  "sha256": "5f9d2e20f8df9a6b06d331a492cf6e46b1e252b1ab15bbbd6959646d77f8b17a",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=46+NORTH+DEAN+STREET&city=ENGLEWOOD&state=NJ&zip=07631&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/cecaca200b2ec9d698338fa274317ad71f171a10317f150f8379025922a98f80.body",
+  "bytes": 1732,
+  "checkedAt": "2026-11-12T15:41:26.060209+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "172 EAST CRESCENT AVENUE",
+    "City": "UPPER SADDLE RIVER",
+    "Postal": "07458",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8a7788bfcffea12b9ff7a1c493146bd203f39127e418185a4ea629dc4c105145",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=172+EAST+CRESCENT+AVENUE&City=UPPER+SADDLE+RIVER&Region=NJ&Postal=07458&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

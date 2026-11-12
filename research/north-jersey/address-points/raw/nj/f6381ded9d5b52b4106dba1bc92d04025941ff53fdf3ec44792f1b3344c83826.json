@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f6381ded9d5b52b4106dba1bc92d04025941ff53fdf3ec44792f1b3344c83826.body",
+  "bytes": 1551,
+  "checkedAt": "2026-11-12T15:41:32.342389+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "31 PARK STREET",
+    "City": "MONTCLAIR",
+    "Postal": "07042",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6f3267c29e4390de58c21b72e993dc965180bf11176dda0d8373930eee6bf864",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=31+PARK+STREET&City=MONTCLAIR&Region=NJ&Postal=07042&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

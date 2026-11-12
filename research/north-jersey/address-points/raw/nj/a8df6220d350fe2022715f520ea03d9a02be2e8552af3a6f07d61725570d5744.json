@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a8df6220d350fe2022715f520ea03d9a02be2e8552af3a6f07d61725570d5744.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:42.228642+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "20 Patton Dr",
+    "City": "Bloomfield",
+    "Postal": "07003",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "59f94f00c758e4adf7f2b22db04fe9e618d6423b8ee3fc52744505e2e78549fe",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=20+Patton+Dr&City=Bloomfield&Region=NJ&Postal=07003&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

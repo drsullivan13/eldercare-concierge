@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/58a9114fef71ca87718a582db12266f80c682f218d947d76bcb4c2511a29e4c9.body",
+  "bytes": 1614,
+  "checkedAt": "2026-11-12T15:41:27.996046+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "244 E MAIN STREET",
+    "City": "BERGENFIELD",
+    "Postal": "07621",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "bb798c79ffa6d59f4e5fe424c2d35854a0ff47bd97a965c1d79745d3be7b2f2f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=244+E+MAIN+STREET&City=BERGENFIELD&Region=NJ&Postal=07621&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

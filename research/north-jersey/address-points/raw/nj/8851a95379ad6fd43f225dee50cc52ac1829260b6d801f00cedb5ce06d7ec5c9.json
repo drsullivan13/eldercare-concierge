@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8851a95379ad6fd43f225dee50cc52ac1829260b6d801f00cedb5ce06d7ec5c9.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:41.258094+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "146 Mallory Avenue",
+    "City": "Jersey City",
+    "Postal": "07304",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5e8ba9e7b4a1a25db633b6bdd3d2b695074c998ee1a3cf2326ab893e428a0669",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=146+Mallory+Avenue&City=Jersey+City&Region=NJ&Postal=07304&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

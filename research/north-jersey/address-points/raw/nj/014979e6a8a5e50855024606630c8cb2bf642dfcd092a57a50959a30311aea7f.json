@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/014979e6a8a5e50855024606630c8cb2bf642dfcd092a57a50959a30311aea7f.body",
+  "bytes": 2975,
+  "checkedAt": "2026-11-12T15:41:32.285378+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2 MERCER STREET",
+    "City": "LODI",
+    "Postal": "07644",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "517bdb430c74729aa69e6baeda66c5cef9817a169662b410ac7da984f5a22052",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2+MERCER+STREET&City=LODI&Region=NJ&Postal=07644&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

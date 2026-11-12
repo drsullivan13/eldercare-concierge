@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/68afb8f3223a06286e61eaa308e868b251a0e78308eea86fef9fdf123d8a2f0d.body",
+  "bytes": 1588,
+  "checkedAt": "2026-11-12T15:41:23.492691+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "199 POWERVILLE ROAD",
+    "City": "BOONTON",
+    "Postal": "07005",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ccc13353998663e995b26d3dd8df37c5b76adb168be0dde068a74c969fe732b6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=199+POWERVILLE+ROAD&City=BOONTON&Region=NJ&Postal=07005&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

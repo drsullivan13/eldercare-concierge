@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c210f4af89fcc25af5f1ca04b1c327a2f0fbbf98e7580a131cab406a6bf8bee9.body",
+  "bytes": 1603,
+  "checkedAt": "2026-11-12T15:41:28.258453+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "45 PASCACK ROAD",
+    "City": "HILLSDALE",
+    "Postal": "07642",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ec2f4793e3651db357bc72d7229091080f1166a1b3d6f0b39fdfee52d451c896",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=45+PASCACK+ROAD&City=HILLSDALE&Region=NJ&Postal=07642&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

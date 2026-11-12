@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d7aaa4f6ff9df3328599dbefc05897b13874426caf3f112ffa10d05ba491658e.body",
+  "bytes": 1629,
+  "checkedAt": "2026-11-12T15:41:29.983487+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5700 BERGENLINE AVENUE",
+    "City": "WEST NEW YORK",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5d15e90b36c35fe3d2b5268ae6e3e5af6fca58af73bfef4496da04120fe179a4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5700+BERGENLINE+AVENUE&City=WEST+NEW+YORK&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

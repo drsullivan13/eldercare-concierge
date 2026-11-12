@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1fa25bc39293f1d6e6cf9f88db802f3ed32825c9d9b9daeadef69a897d3c5d10.body",
+  "bytes": 1528,
+  "checkedAt": "2026-11-12T15:41:29.439873+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "640 BROADWAY",
+    "City": "PATERSON",
+    "Postal": "07514",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8d67ffa9efdfe85c2f73e2dae606de6b7515316ba360dcbabd9c70ed021578cc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=640+BROADWAY&City=PATERSON&Region=NJ&Postal=07514&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

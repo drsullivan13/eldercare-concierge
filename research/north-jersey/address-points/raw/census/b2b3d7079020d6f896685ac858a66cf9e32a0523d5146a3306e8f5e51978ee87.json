@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b2b3d7079020d6f896685ac858a66cf9e32a0523d5146a3306e8f5e51978ee87.body",
+  "bytes": 5246,
+  "checkedAt": "2026-11-12T15:41:53.864588+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "CEDAR KNOLLS",
+    "format": "json",
+    "state": "NJ",
+    "street": "48 HORSEHILL ROAD",
+    "vintage": "Current_Current",
+    "zip": "07927"
+  },
+  "sha256": "b554a2a0c0df60e9fa8dace701c17d5cbe5cf2f93948a803975bc354e9db7ffb",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=48+HORSEHILL+ROAD&city=CEDAR+KNOLLS&state=NJ&zip=07927&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

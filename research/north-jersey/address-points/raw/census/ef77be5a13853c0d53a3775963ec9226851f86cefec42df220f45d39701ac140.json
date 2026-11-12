@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/ef77be5a13853c0d53a3775963ec9226851f86cefec42df220f45d39701ac140.body",
+  "bytes": 5268,
+  "checkedAt": "2026-11-12T15:41:52.262501+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "MOUNTAIN LAKES",
+    "format": "json",
+    "state": "NJ",
+    "street": "23 BLOOMFIELD AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07046"
+  },
+  "sha256": "5f236acfab7f4de5c26ee9fd62306af6c94c152cf402fe9fe971b455d31040a6",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=23+BLOOMFIELD+AVENUE&city=MOUNTAIN+LAKES&state=NJ&zip=07046&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

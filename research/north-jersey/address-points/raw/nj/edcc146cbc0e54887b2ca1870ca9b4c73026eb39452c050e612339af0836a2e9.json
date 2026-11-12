@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/edcc146cbc0e54887b2ca1870ca9b4c73026eb39452c050e612339af0836a2e9.body",
+  "bytes": 1604,
+  "checkedAt": "2026-11-12T15:41:47.414731+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "14 Winchester Rd",
+    "City": "Livingston",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "182fe88090301b7ee011038e68da7c7b5e17a145f3d9d10bb2b00af6e88e3322",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=14+Winchester+Rd&City=Livingston&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

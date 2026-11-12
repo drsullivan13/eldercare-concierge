@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/6db89f5d106f6b35499b841327a4e71bb6b1bd5039bb2aa086ad6f8f48c867a7.body",
+  "bytes": 4730,
+  "checkedAt": "2026-11-12T15:41:50.127544+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "WAYNE",
+    "format": "json",
+    "state": "NJ",
+    "street": "2020 ROUTE 23 NORTH",
+    "vintage": "Current_Current",
+    "zip": "07470"
+  },
+  "sha256": "4b320b9fc5d6429a02efe6b64dd189d979deaee895490662c4467d439371aeb3",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2020+ROUTE+23+NORTH&city=WAYNE&state=NJ&zip=07470&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

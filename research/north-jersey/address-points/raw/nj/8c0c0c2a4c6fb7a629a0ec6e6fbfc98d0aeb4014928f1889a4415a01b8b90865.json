@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8c0c0c2a4c6fb7a629a0ec6e6fbfc98d0aeb4014928f1889a4415a01b8b90865.body",
+  "bytes": 1556,
+  "checkedAt": "2026-11-12T15:41:22.097498+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "615 23RD ST",
+    "City": "UNION CITY",
+    "Postal": "07087",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1d341dc4e5f3a57449f5ece0601bf47c7cbe4540f5a78a4d91d852fd31a664ca",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=615+23RD+ST&City=UNION+CITY&Region=NJ&Postal=07087&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

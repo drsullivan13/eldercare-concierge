@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/035b220ac13097571912524a1e0e8c9f155d0f83e81202d16307c672e605f709.body",
+  "bytes": 1627,
+  "checkedAt": "2026-11-12T15:41:45.819662+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5300 Bergenline Ave",
+    "City": "West New York",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0c17d19b2c1ae7b3e7e2be18947e1f8e46f4f3bd5c5c654cec6400fedabc6f1d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5300+Bergenline+Ave&City=West+New+York&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

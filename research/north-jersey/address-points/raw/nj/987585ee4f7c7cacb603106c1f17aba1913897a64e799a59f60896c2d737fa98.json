@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/987585ee4f7c7cacb603106c1f17aba1913897a64e799a59f60896c2d737fa98.body",
+  "bytes": 1595,
+  "checkedAt": "2026-11-12T15:41:22.395568+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "111-115 GATES AVENUE",
+    "City": "MONTCLAIR",
+    "Postal": "07042",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2c7bf2ed76715c4df5b6b9f70f09e0f5e3fea54b38ac8182578207d997d31cdb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=111-115+GATES+AVENUE&City=MONTCLAIR&Region=NJ&Postal=07042&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

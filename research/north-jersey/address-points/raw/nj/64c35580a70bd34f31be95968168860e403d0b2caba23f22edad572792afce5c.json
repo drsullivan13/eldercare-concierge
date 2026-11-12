@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/64c35580a70bd34f31be95968168860e403d0b2caba23f22edad572792afce5c.body",
+  "bytes": 1598,
+  "checkedAt": "2026-11-12T15:41:19.606440+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "400 WEST BLACKWELL ST",
+    "City": "DOVER",
+    "Postal": "07801",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6a311ee802b32387b97df6fb6d1aecf3343042544ee8e032b23137e94552c321",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=400+WEST+BLACKWELL+ST&City=DOVER&Region=NJ&Postal=07801&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

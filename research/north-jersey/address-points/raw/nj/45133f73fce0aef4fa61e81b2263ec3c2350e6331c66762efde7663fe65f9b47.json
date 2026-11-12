@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/45133f73fce0aef4fa61e81b2263ec3c2350e6331c66762efde7663fe65f9b47.body",
+  "bytes": 1670,
+  "checkedAt": "2026-11-12T15:41:21.866586+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "311 S LIVINGSTON AVE",
+    "City": "LIVINGSTON",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1de7a8d824c287c6a7e6f19192396771da4d04a058547aea57c76648328b1d37",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=311+S+LIVINGSTON+AVE&City=LIVINGSTON&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

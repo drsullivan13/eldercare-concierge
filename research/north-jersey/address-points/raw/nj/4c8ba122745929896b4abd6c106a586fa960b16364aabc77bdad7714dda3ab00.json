@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4c8ba122745929896b4abd6c106a586fa960b16364aabc77bdad7714dda3ab00.body",
+  "bytes": 1562,
+  "checkedAt": "2026-11-12T15:41:20.184214+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1340 PARK AVE",
+    "City": "PLAINFIELD",
+    "Postal": "07060",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "023b0954c90084d5fccb4b1343a69d3dcdc709b00c6f2b5aa6245bf0c9fbfa9d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1340+PARK+AVE&City=PLAINFIELD&Region=NJ&Postal=07060&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

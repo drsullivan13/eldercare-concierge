@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4ed64448fe0ec99dfcc44cea23edde1e112e0862fd1e2210558632f1b0736080.body",
+  "bytes": 1632,
+  "checkedAt": "2026-11-12T15:41:46.031233+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "14 Cardinal Ct",
+    "City": "Montvale",
+    "Postal": "07645",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7dec9c03efc9e07ca597b352e4f919d6ca576510f6bd7b2a8fd7bb9786e4ef71",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=14+Cardinal+Ct&City=Montvale&Region=NJ&Postal=07645&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

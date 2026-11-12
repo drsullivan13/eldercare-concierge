@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5e2befb99517ba28c3d7cd02d5ba7276c18dad7968d5dc50260e0b691730e6d8.body",
+  "bytes": 1623,
+  "checkedAt": "2026-11-12T15:41:46.953149+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2 University Plaza Drive",
+    "City": "Hackensack",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "35fb9b9b1c8d515ed09e6b67593e0b6fbdf1e25e8842ac28f2f9730676707f72",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2+University+Plaza+Drive&City=Hackensack&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

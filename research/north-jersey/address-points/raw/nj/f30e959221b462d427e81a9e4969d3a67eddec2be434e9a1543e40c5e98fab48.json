@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f30e959221b462d427e81a9e4969d3a67eddec2be434e9a1543e40c5e98fab48.body",
+  "bytes": 1583,
+  "checkedAt": "2026-11-12T15:41:22.281875+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "110 GROVE AVE",
+    "City": "CEDAR GROVE",
+    "Postal": "07009",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "42c2554440de030c0806a3efd20a6706f84bc962dd9a253bf2a7559bb8a577d2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=110+GROVE+AVE&City=CEDAR+GROVE&Region=NJ&Postal=07009&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

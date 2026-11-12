@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ea8ed0deb2bfc6795590984da74380fa76f23bace4c3ef1069c83d641952c000.body",
+  "bytes": 3206,
+  "checkedAt": "2026-11-12T15:41:27.451216+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "195 OLD TAPPAN ROAD",
+    "City": "OLD TAPPAN",
+    "Postal": "07675",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "72c05f92514d2638cb405a1cb13e79f86b0d3cdda5b8b9b9ad4706ab056d2590",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=195+OLD+TAPPAN+ROAD&City=OLD+TAPPAN&Region=NJ&Postal=07675&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

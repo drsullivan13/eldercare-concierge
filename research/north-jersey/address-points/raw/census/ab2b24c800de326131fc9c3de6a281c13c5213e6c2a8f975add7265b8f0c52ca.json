@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/ab2b24c800de326131fc9c3de6a281c13c5213e6c2a8f975add7265b8f0c52ca.body",
+  "bytes": 396,
+  "checkedAt": "2026-11-12T15:41:57.060433+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Flanders",
+    "format": "json",
+    "state": "NJ",
+    "street": "1 Catan Drive",
+    "vintage": "Current_Current",
+    "zip": "07836"
+  },
+  "sha256": "d3d08bad2cbbd5ea2c58413d016de2897ff69dda3a58eb5718dff0b32b75d04b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1+Catan+Drive&city=Flanders&state=NJ&zip=07836&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

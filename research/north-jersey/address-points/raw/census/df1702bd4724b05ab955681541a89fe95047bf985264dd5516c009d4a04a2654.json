@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/df1702bd4724b05ab955681541a89fe95047bf985264dd5516c009d4a04a2654.body",
+  "bytes": 5208,
+  "checkedAt": "2026-11-12T15:41:54.114537+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "RUTHERFORD",
+    "format": "json",
+    "state": "NJ",
+    "street": "40 PARK AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07070"
+  },
+  "sha256": "aef246b4c719c7b3419add7b0102ce460a7ecd44c1abd64390a1da2772eebcfc",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=40+PARK+AVENUE&city=RUTHERFORD&state=NJ&zip=07070&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

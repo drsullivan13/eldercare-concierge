@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/63cb5f4c384219c80ff7bcf775a5bc367c72ee697c29066f95ea2b453b47a829.body",
+  "bytes": 1683,
+  "checkedAt": "2026-11-12T15:41:44.507228+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "186 Paterson Avenue",
+    "City": "East Rutherford",
+    "Postal": "07073",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "dd6b142444182e97eaa67dfa4db061ee6fe996330a750b3a835c6dadc3ad06ef",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=186+Paterson+Avenue&City=East+Rutherford&Region=NJ&Postal=07073&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

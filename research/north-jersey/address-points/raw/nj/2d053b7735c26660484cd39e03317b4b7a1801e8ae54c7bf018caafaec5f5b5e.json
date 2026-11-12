@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2d053b7735c26660484cd39e03317b4b7a1801e8ae54c7bf018caafaec5f5b5e.body",
+  "bytes": 1610,
+  "checkedAt": "2026-11-12T15:41:43.958132+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1167 Route 23 South",
+    "City": "Kinnelon",
+    "Postal": "07405",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "200f50e2ffc33163019ada9f0a22a0bfb174ae205be050d6417e98abd4f9d2b6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1167+Route+23+South&City=Kinnelon&Region=NJ&Postal=07405&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

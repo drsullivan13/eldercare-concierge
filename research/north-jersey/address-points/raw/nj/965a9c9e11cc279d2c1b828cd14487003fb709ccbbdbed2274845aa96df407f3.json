@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/965a9c9e11cc279d2c1b828cd14487003fb709ccbbdbed2274845aa96df407f3.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:26.478430+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "567 PARAMUS ROAD",
+    "City": "PARAMUS",
+    "Postal": "07652",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "44df85924f85acce8122d060268cc2201d05f7a575c64037416bdac5ddb31a2a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=567+PARAMUS+ROAD&City=PARAMUS&Region=NJ&Postal=07652&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3751d2e9401e1bee17ff2c30a5b0ebc71446ee96ede8bbbaa87906ed4018ac18.body",
+  "bytes": 1555,
+  "checkedAt": "2026-11-12T15:41:44.273272+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "25 Pompton Avenue",
+    "City": "Verona",
+    "Postal": "07044",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d7a0e5d5efdc05ea3f7b27134312dce7a50a5a8dae7addbe54129cd2c7245781",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=25+Pompton+Avenue&City=Verona&Region=NJ&Postal=07044&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

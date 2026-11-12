@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a3d8381ee6b9054f7ada504376597e6c768d63527ec89dca1c7f9b9a978c4746.body",
+  "bytes": 1621,
+  "checkedAt": "2026-11-12T15:41:32.656656+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "271-US 46",
+    "City": "Fairfield",
+    "Postal": "07004",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "706d34dc9bc5b983665eb7acc5c37b7d7c346c20edce3663cc81a01b9af00997",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=271-US+46&City=Fairfield&Region=NJ&Postal=07004&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

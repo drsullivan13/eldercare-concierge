@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8d9abaf66f698cdb44da568f0d5691bffeb70685ced2a054133b7420613272d7.body",
+  "bytes": 1594,
+  "checkedAt": "2026-11-12T15:41:38.505882+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "4516 SMITH AVENUE",
+    "City": "NORTH BERGEN",
+    "Postal": "07047",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7898931e0c3542db60323b59149a3e970068857f3bc295aa740641410e49747a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=4516+SMITH+AVENUE&City=NORTH+BERGEN&Region=NJ&Postal=07047&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

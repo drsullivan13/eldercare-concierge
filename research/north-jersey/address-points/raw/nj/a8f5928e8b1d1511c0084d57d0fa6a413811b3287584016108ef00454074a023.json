@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a8f5928e8b1d1511c0084d57d0fa6a413811b3287584016108ef00454074a023.body",
+  "bytes": 1639,
+  "checkedAt": "2026-11-12T15:41:24.426023+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "201 W PASSAIC ST",
+    "City": "ROCHELLE PARK",
+    "Postal": "07662",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1ce7fc8d4c51e14ea9dafe8e6af05293b1f335f9e7e8ff8015bf11e811ae05a4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=201+W+PASSAIC+ST&City=ROCHELLE+PARK&Region=NJ&Postal=07662&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

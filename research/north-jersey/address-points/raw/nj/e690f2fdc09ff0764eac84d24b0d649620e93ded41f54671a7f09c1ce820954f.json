@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e690f2fdc09ff0764eac84d24b0d649620e93ded41f54671a7f09c1ce820954f.body",
+  "bytes": 1571,
+  "checkedAt": "2026-11-12T15:41:48.194303+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "71 Watson Ave",
+    "City": "East Orange",
+    "Postal": "07018",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a3c40331dfefd8eb756420c888b83a66a5e8c3fd044c919f93557bfd5daed4c2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=71+Watson+Ave&City=East+Orange&Region=NJ&Postal=07018&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

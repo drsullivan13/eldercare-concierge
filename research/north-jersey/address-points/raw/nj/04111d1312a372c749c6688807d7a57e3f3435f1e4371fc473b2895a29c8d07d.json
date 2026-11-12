@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/04111d1312a372c749c6688807d7a57e3f3435f1e4371fc473b2895a29c8d07d.body",
+  "bytes": 1602,
+  "checkedAt": "2026-11-12T15:41:22.240191+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "135 SOUTH CENTER STREET",
+    "City": "ORANGE",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2b21960efbc26446ff489eb2e830d1da6e8131739d28bfdb7394fee030b7d6c7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=135+SOUTH+CENTER+STREET&City=ORANGE&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

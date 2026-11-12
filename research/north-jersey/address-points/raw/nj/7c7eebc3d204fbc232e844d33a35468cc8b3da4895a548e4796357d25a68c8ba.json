@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7c7eebc3d204fbc232e844d33a35468cc8b3da4895a548e4796357d25a68c8ba.body",
+  "bytes": 1591,
+  "checkedAt": "2026-11-12T15:41:45.687342+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1390 Stuyvesant Ave",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "31d765fc2b9d3a902cc21ece5fb774b97f1829dc4fc9a4fc1df9fec8fbe18578",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1390+Stuyvesant+Ave&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

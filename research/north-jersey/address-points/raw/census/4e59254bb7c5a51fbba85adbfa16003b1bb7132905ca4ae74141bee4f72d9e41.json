@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/4e59254bb7c5a51fbba85adbfa16003b1bb7132905ca4ae74141bee4f72d9e41.body",
+  "bytes": 10030,
+  "checkedAt": "2026-11-12T15:41:52.313106+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PARAMUS",
+    "format": "json",
+    "state": "NJ",
+    "street": "143 FAIRVIEW AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07652"
+  },
+  "sha256": "cad88c8b78f35ca26d0687a720f1fd70bf78c1482659249fbae6dee5f45ab077",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=143+FAIRVIEW+AVENUE&city=PARAMUS&state=NJ&zip=07652&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9cea5a0f9b13e8bf81953cd4157f193fb83435d093e11aab6ccd752de81fa8d2.body",
+  "bytes": 1615,
+  "checkedAt": "2026-11-12T15:41:46.059174+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "33-35 Washington Avenue",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f74fd0d78112c09fa0bdd8aada41cc26a007f4644a447a8de85f25a68fcad0f3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=33-35+Washington+Avenue&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

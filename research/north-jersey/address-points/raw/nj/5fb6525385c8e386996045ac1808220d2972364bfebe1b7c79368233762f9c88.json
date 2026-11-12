@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5fb6525385c8e386996045ac1808220d2972364bfebe1b7c79368233762f9c88.body",
+  "bytes": 1555,
+  "checkedAt": "2026-11-12T15:41:27.165978+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "361 MAIN STREET",
+    "City": "CHATHAM",
+    "Postal": "07928",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b7f6f0b7e432458d700f03772439b8203f44199702dd7bb381ccfae1cac41969",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=361+MAIN+STREET&City=CHATHAM&Region=NJ&Postal=07928&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

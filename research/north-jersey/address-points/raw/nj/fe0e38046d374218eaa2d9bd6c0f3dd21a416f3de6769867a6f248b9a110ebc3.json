@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fe0e38046d374218eaa2d9bd6c0f3dd21a416f3de6769867a6f248b9a110ebc3.body",
+  "bytes": 1622,
+  "checkedAt": "2026-11-12T15:41:44.768779+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "560 Sylvan Ave",
+    "City": "Englewood Cliffs",
+    "Postal": "07632",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6ad68782e90be329a9e0009d2c7d7d6efd7b5022522b5a5b89996d0a19ff828a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=560+Sylvan+Ave&City=Englewood+Cliffs&Region=NJ&Postal=07632&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

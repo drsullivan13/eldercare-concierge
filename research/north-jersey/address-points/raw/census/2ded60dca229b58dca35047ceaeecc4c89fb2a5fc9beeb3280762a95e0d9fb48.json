@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/2ded60dca229b58dca35047ceaeecc4c89fb2a5fc9beeb3280762a95e0d9fb48.body",
+  "bytes": 5186,
+  "checkedAt": "2026-11-12T15:41:59.359665+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Newark",
+    "format": "json",
+    "state": "NJ",
+    "street": "356-358 14th Avenue Flr 1",
+    "vintage": "Current_Current",
+    "zip": "07103"
+  },
+  "sha256": "f6996eed7182dd93cbd86172ebd7c6e4bf436e62c393198c38f73ffeca00e8b5",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=356-358+14th+Avenue+Flr+1&city=Newark&state=NJ&zip=07103&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

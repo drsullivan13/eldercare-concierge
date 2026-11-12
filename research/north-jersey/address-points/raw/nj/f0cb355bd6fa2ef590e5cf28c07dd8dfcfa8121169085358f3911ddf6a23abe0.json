@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f0cb355bd6fa2ef590e5cf28c07dd8dfcfa8121169085358f3911ddf6a23abe0.body",
+  "bytes": 4624,
+  "checkedAt": "2026-11-12T15:41:40.754551+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "120 West 7th Street",
+    "City": "Plainfield",
+    "Postal": "07040",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "763e16a4e28f2aee15c8ef6aebc1567cca1784c62869635424b7ae4e794ae4d7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=120+West+7th+Street&City=Plainfield&Region=NJ&Postal=07040&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

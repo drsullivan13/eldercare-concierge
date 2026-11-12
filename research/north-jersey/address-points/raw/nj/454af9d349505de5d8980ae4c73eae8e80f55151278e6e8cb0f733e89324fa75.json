@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/454af9d349505de5d8980ae4c73eae8e80f55151278e6e8cb0f733e89324fa75.body",
+  "bytes": 1601,
+  "checkedAt": "2026-11-12T15:41:26.309407+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "76 PASSAIC AVENUE",
+    "City": "LIVINGSTON",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "3ec1fd475a30e96474bd6ff716dafb03913545222132b5602f16ef4dd7339b94",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=76+PASSAIC+AVENUE&City=LIVINGSTON&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

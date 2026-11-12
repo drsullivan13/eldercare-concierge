@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0d10ad79409e1fb580aa682c9bce3a02c870c59d706d978d05c6a26d09af91b2.body",
+  "bytes": 3001,
+  "checkedAt": "2026-11-12T15:41:38.112423+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "98 PARK STREET",
+    "City": "ORANGE",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b430ac5f86dda54d25eee53cebefc8050e137bfc271ce137adad30831e4880e4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=98+PARK+STREET&City=ORANGE&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

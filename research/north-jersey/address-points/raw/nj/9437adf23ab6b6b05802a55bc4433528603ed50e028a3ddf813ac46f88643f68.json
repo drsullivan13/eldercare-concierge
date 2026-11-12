@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9437adf23ab6b6b05802a55bc4433528603ed50e028a3ddf813ac46f88643f68.body",
+  "bytes": 1541,
+  "checkedAt": "2026-11-12T15:41:45.782419+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "972 Broad St",
+    "City": "Newark",
+    "Postal": "07102",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "140e63aa3b92159e4789e8dd21331e5bce75db5f92822556661d6eac0bc3b8c3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=972+Broad+St&City=Newark&Region=NJ&Postal=07102&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

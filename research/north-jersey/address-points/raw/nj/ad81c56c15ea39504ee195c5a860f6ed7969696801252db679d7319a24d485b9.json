@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ad81c56c15ea39504ee195c5a860f6ed7969696801252db679d7319a24d485b9.body",
+  "bytes": 1596,
+  "checkedAt": "2026-11-12T15:41:28.947243+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "383 WEST BLACKWELL ST",
+    "City": "DOVER",
+    "Postal": "07801",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "47e2e091abd169bdca4463fa07d1ef1a16256d3dc6ad87055194c67e8537da31",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=383+WEST+BLACKWELL+ST&City=DOVER&Region=NJ&Postal=07801&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

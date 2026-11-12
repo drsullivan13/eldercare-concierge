@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4ce71f0929d3ae62896f29b423d78c79ef315be49f85849b357cb91354838879.body",
+  "bytes": 1613,
+  "checkedAt": "2026-11-12T15:41:31.561377+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "640 EAGLE ROCK AVENUE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e3340502b1ffb7045bc57ec05daebe3534372d9fef52c7f5e386bb3234c1c682",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=640+EAGLE+ROCK+AVENUE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

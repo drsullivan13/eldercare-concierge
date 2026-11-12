@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c6c3c84e75f54f41d49c1f8526343efd55615328a4559563f3332f06286edf8e.body",
+  "bytes": 4721,
+  "checkedAt": "2026-11-12T15:41:53.531597+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Fairfield",
+    "format": "json",
+    "state": "NJ",
+    "street": "271-US 46",
+    "vintage": "Current_Current",
+    "zip": "07004"
+  },
+  "sha256": "1873cdd199de44b166c4bf5e9b26894103e625c10b24192c99f13784f5be8447",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=271-US+46&city=Fairfield&state=NJ&zip=07004&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

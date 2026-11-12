@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fdda845078fa46d05c8c97aec5bdd3d84b812e4637f5ca96000ce0adf18a1530.body",
+  "bytes": 3123,
+  "checkedAt": "2026-11-12T15:41:45.267356+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "96 W Union Tpke",
+    "City": "Wharton",
+    "Postal": "07885",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "08c5e2250eb347fb7cea55c47aa3219c7a6945089fb9f4032c628796f8ed6670",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=96+W+Union+Tpke&City=Wharton&Region=NJ&Postal=07885&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

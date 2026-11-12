@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4e47ed3a4dc0045c398273a19a13d9156aa059ab230c013922dfd48cb8087063.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:22.491241+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "497 MT PROSPECT AVE",
+    "City": "NEWARK",
+    "Postal": "07104",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f71192f2a8020d4a81414b5811ec43d6c4e26d1e6216db866a5642c164b65c27",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=497+MT+PROSPECT+AVE&City=NEWARK&Region=NJ&Postal=07104&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

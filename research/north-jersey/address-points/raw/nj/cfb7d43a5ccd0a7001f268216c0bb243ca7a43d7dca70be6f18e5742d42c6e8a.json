@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/cfb7d43a5ccd0a7001f268216c0bb243ca7a43d7dca70be6f18e5742d42c6e8a.body",
+  "bytes": 1578,
+  "checkedAt": "2026-11-12T15:41:45.930438+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "21-23 Oxford Street",
+    "City": "Paterson",
+    "Postal": "07522",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a6a88fae6debbe298770a5aeb2736584cfc4443ca5e1f08733cd39b2b39f216d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=21-23+Oxford+Street&City=Paterson&Region=NJ&Postal=07522&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

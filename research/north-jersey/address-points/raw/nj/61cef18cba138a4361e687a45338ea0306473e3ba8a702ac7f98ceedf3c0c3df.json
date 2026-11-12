@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/61cef18cba138a4361e687a45338ea0306473e3ba8a702ac7f98ceedf3c0c3df.body",
+  "bytes": 1532,
+  "checkedAt": "2026-11-12T15:41:36.764871+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "714 BROADWAY",
+    "City": "PATERSON",
+    "Postal": "07514",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b23ebec05282f30a15437629f600bc6790dd08291fddb720eb89c6e3aacb6172",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=714+BROADWAY&City=PATERSON&Region=NJ&Postal=07514&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

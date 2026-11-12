@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/57794bd7adeca05dc57ac164711afc5486bcac8e852c240473f9c4087ad2d64e.body",
+  "bytes": 1554,
+  "checkedAt": "2026-11-12T15:41:23.498704+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "96 PARKWAY",
+    "City": "ROCHELLE PARK",
+    "Postal": "07662",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5b53e3a16a82662155f195a285ad56bd53c201e4b6dc49466da88e49fb366928",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=96+PARKWAY&City=ROCHELLE+PARK&Region=NJ&Postal=07662&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d9f6859c675183ee4aa0e75a8992e78e998e534c53fabc7886908c9316719579.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:24.956927+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "655 POMANDER WALK",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "adfb9f0327d1f83db33232c901e9f611a58e214f0f31455a59f95ddb3eafb3db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=655+POMANDER+WALK&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

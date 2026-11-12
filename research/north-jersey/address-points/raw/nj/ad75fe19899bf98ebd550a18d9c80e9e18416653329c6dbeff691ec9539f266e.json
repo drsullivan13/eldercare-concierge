@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ad75fe19899bf98ebd550a18d9c80e9e18416653329c6dbeff691ec9539f266e.body",
+  "bytes": 1587,
+  "checkedAt": "2026-11-12T15:41:46.887902+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "118 Mallory Avenue",
+    "City": "Jersey City",
+    "Postal": "07304",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0f22e4ce00d355a14e8bafe09a62ef2e810e768753f68d458c8322ed31a5d678",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=118+Mallory+Avenue&City=Jersey+City&Region=NJ&Postal=07304&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

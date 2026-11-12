@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c6b77c011bebf3b1f2cea34c43c9fc3b9f78111097c056a03baef05cd968ee6d.body",
+  "bytes": 5241,
+  "checkedAt": "2026-11-12T15:41:56.464868+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SOUTH ORANGE",
+    "format": "json",
+    "state": "NJ",
+    "street": "343 TICHENOR AVENUE, SOUTH",
+    "vintage": "Current_Current",
+    "zip": "07079"
+  },
+  "sha256": "cc698ed21dee5d4d06da6443ec55aebc04bafe95b33c77dbcf7b267a1f0067ee",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=343+TICHENOR+AVENUE%2C+SOUTH&city=SOUTH+ORANGE&state=NJ&zip=07079&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

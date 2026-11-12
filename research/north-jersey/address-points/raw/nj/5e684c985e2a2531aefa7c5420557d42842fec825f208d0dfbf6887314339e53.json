@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5e684c985e2a2531aefa7c5420557d42842fec825f208d0dfbf6887314339e53.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:48.856471+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "49 Fisk St PH 81",
+    "City": "Jersey City",
+    "Postal": "07305",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2b0b122e906ac018ad5ae13428b3289406653a40e08e682aed86d8131648fbe8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=49+Fisk+St+PH+81&City=Jersey+City&Region=NJ&Postal=07305&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

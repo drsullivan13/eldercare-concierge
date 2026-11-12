@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1708b11fb2f0ed5c65b8796ba9aa4ad2e5ab955c6fa22c7d95b1f20a9f860680.body",
+  "bytes": 1643,
+  "checkedAt": "2026-11-12T15:41:33.017967+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "151 W. PASSAIC STREET",
+    "City": "ROCHELLE PARK",
+    "Postal": "07662",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "70d4e93d4a24eecd68debab8fe0c3f2580b366c6328963bd00a43cfd4997455b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=151+W.+PASSAIC+STREET&City=ROCHELLE+PARK&Region=NJ&Postal=07662&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

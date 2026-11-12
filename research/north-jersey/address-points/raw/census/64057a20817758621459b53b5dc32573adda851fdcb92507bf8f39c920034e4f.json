@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/64057a20817758621459b53b5dc32573adda851fdcb92507bf8f39c920034e4f.body",
+  "bytes": 5216,
+  "checkedAt": "2026-11-12T15:41:53.347702+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "VAUXHALL",
+    "format": "json",
+    "state": "NJ",
+    "street": "2041 SPRINGFIELD AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07088"
+  },
+  "sha256": "39a4ed4f5fedc27b9eee63a6a041c02959fbb918c253e775f3ecb10cef057eab",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2041+SPRINGFIELD+AVENUE&city=VAUXHALL&state=NJ&zip=07088&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

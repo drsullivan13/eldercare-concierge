@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2b5966df196acde7fc8131c48a33b0ee5cf074833df0c1fd54b1fe74446ae717.body",
+  "bytes": 1570,
+  "checkedAt": "2026-11-12T15:41:48.486652+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "19 Orchard Pl",
+    "City": "Hawthorne",
+    "Postal": "07506",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9c5d587be4d2c32a0f97c9d80a384acbb263a65ad0577978c6751131ef8e201e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=19+Orchard+Pl&City=Hawthorne&Region=NJ&Postal=07506&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

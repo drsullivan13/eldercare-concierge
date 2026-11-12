@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/203b941c3fba875429bedf7d0f3f999dcae5862c27201d2a876e668f39240678.body",
+  "bytes": 1572,
+  "checkedAt": "2026-11-12T15:41:21.440488+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "25 FIFTH AVENUE",
+    "City": "HASKELL",
+    "Postal": "07420",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "106f132fc988b2bb4bcf3b80c2e3ee528f4b1ec0c326a5e505604d718f4f67f2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=25+FIFTH+AVENUE&City=HASKELL&Region=NJ&Postal=07420&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

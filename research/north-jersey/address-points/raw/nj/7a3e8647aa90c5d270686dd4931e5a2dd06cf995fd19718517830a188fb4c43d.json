@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7a3e8647aa90c5d270686dd4931e5a2dd06cf995fd19718517830a188fb4c43d.body",
+  "bytes": 3297,
+  "checkedAt": "2026-11-12T15:41:23.834038+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 SOUTH RIDGEDALE AVENUE",
+    "City": "EAST HANOVER",
+    "Postal": "07936",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e8065b314d092ab025b0ae9452e695e550ac4bb10fa7bb250f8932b5bc68f2e3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+SOUTH+RIDGEDALE+AVENUE&City=EAST+HANOVER&Region=NJ&Postal=07936&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

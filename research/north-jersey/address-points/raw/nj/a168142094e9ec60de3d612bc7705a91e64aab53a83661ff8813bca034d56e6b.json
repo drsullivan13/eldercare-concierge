@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a168142094e9ec60de3d612bc7705a91e64aab53a83661ff8813bca034d56e6b.body",
+  "bytes": 1551,
+  "checkedAt": "2026-11-12T15:41:29.819867+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "15 DYATT PLACE",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "275386a397a46ec9db4c950e28f795061af18703a19b16a749f9ae2c602aa04f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=15+DYATT+PLACE&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b7140b90814d0986132f372444e5f880ec1b2aa5f555b67c6aa8336e9befa1ee.body",
+  "bytes": 1547,
+  "checkedAt": "2026-11-12T15:41:33.002521+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 GATEWAY CENTER",
+    "City": "NEWARK",
+    "Postal": "07102",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "df61120a1d3f39be1a5d0d841fb0231a27adfc3cfdc9ed752d549e5c26140520",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+GATEWAY+CENTER&City=NEWARK&Region=NJ&Postal=07102&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

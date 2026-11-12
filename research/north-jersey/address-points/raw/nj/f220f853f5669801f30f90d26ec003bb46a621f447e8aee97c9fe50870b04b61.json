@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f220f853f5669801f30f90d26ec003bb46a621f447e8aee97c9fe50870b04b61.body",
+  "bytes": 4640,
+  "checkedAt": "2026-11-12T15:41:37.198013+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "153 EAST HIGHLAND PARKWAY",
+    "City": "ROSELLE",
+    "Postal": "07203",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a11f8b956226d68710d98cc8a78285b0a37fbe097dc2ad4dd8374965e0602f72",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=153+EAST+HIGHLAND+PARKWAY&City=ROSELLE&Region=NJ&Postal=07203&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

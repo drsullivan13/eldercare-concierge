@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2966d83febe10871d3bdc63379a11f32ae1b4c6ff5316c9999d6bdb45001ccb5.body",
+  "bytes": 1538,
+  "checkedAt": "2026-11-12T15:41:38.976876+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "48 ARCH STREET",
+    "City": "BUTLER",
+    "Postal": "07405",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "858ab98b16bb413135ab53b22d410553ae708fad206a97d01fe68eff57f7494f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=48+ARCH+STREET&City=BUTLER&Region=NJ&Postal=07405&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

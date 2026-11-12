@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/69606757c0b42de6a0c766e882856e5b486d4c2f2610a64f5a5f0f557aa14f4c.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:36.654045+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1086 TEANECK ROAD",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "628bce26b4ca332215817cf93aed368f85345a1c376deaae2b9c756d56ae37fb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1086+TEANECK+ROAD&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

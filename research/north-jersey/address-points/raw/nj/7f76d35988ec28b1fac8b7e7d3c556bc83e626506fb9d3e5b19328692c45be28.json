@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7f76d35988ec28b1fac8b7e7d3c556bc83e626506fb9d3e5b19328692c45be28.body",
+  "bytes": 1656,
+  "checkedAt": "2026-11-12T15:41:23.721412+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3161 KENNEDY BLVD",
+    "City": "NORTH BERGEN",
+    "Postal": "07047",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "15e2c00ed38258c2fda70bddc78f5c6dcdee70a5524a12f13a0bf547e97cdda2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3161+KENNEDY+BLVD&City=NORTH+BERGEN&Region=NJ&Postal=07047&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a2e64051a4fc73c547805830fe581ac72311196c2faeba44de9f7a65e2fc78a9.body",
+  "bytes": 1562,
+  "checkedAt": "2026-11-12T15:41:48.961323+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "20 Murray Ave",
+    "City": "Mahwah",
+    "Postal": "07430",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "13d6b3f98f6488064a46ec72eaea97597e53099ea506b0a3e3de33f1797d30b6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=20+Murray+Ave&City=Mahwah&Region=NJ&Postal=07430&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

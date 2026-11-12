@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b7271413b15ba44daa28bbc95c955df656df6d2f97e2abbf8998d58f6fb53090.body",
+  "bytes": 4750,
+  "checkedAt": "2026-11-12T15:41:55.177988+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "ROCHELLE PARK",
+    "format": "json",
+    "state": "NJ",
+    "street": "365 WEST PASSAIC STREET",
+    "vintage": "Current_Current",
+    "zip": "07663"
+  },
+  "sha256": "8a119869d7b8d56e69027fcd5beadbf826849c4b534245caf787957a9f765581",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=365+WEST+PASSAIC+STREET&city=ROCHELLE+PARK&state=NJ&zip=07663&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

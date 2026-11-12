@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9e52fe59ba0daef617149a4805b114e898a4704d0d563ff8283d6f7b430e39c7.body",
+  "bytes": 1582,
+  "checkedAt": "2026-11-12T15:41:34.852139+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "45 BROADWAY",
+    "City": "DENVILLE",
+    "Postal": "07834",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "29fea9bdd8e4c56fb02705d3d0572d7560206f49ff0647962b1b2a920be7d9a7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=45+BROADWAY&City=DENVILLE&Region=NJ&Postal=07834&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

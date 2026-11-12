@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/13326e2ba983298ef8a429179261f814d893cd0fdf6faa47bd7203d9939c17e7.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:25.422548+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "285 ROSEVILLE AVENUE",
+    "City": "NEWARK",
+    "Postal": "07107",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "df13f879626ce35669c536d26c466a0a187b7aeaa415741e77db292dc6a82ed8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=285+ROSEVILLE+AVENUE&City=NEWARK&Region=NJ&Postal=07107&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

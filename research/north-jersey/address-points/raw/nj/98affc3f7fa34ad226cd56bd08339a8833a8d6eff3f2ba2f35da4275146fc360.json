@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/98affc3f7fa34ad226cd56bd08339a8833a8d6eff3f2ba2f35da4275146fc360.body",
+  "bytes": 3026,
+  "checkedAt": "2026-11-12T15:41:40.923776+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "535 Park Avenue",
+    "City": "Orange",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "65aac4a3feb9e03f9792ccb62f79f7c7a1e743e9f085eda6977b0bd69c46aad7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=535+Park+Avenue&City=Orange&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5ebe7eb411419780efe0f78b766c5b34de676f451f2b0c2718d261f28546b116.body",
+  "bytes": 1534,
+  "checkedAt": "2026-11-12T15:41:30.712820+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "77 BRANT AVENUE",
+    "City": "CLARK",
+    "Postal": "07066",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b92c8788471863b2e70bacbacdd143bdda0d330bb739c0ea8795aa3bc66e001b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=77+BRANT+AVENUE&City=CLARK&Region=NJ&Postal=07066&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

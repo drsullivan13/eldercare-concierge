@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b9f0f27ba0ca6e0712588e8d98c78371588a68433c987ccfb5e77d9594cb0991.body",
+  "bytes": 1571,
+  "checkedAt": "2026-11-12T15:41:33.255648+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "294 CENTRAL AVENUE",
+    "City": "ORANGE",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "708850411cb3ac24ec2694c77c9158aca85afcb49985a3ee28bcf7b3e4f0aefd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=294+CENTRAL+AVENUE&City=ORANGE&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5e25f4d327524e4ad9ac1d773a45c36fe5a363adc11a06c56b4ebb4d6655e50d.body",
+  "bytes": 1568,
+  "checkedAt": "2026-11-12T15:41:19.892422+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "51 MADISON AVE",
+    "City": "MADISON",
+    "Postal": "07940",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ce7540b271feeefbc433df1f924e06c75ddc67328d980719d8df9b149054dd40",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=51+MADISON+AVE&City=MADISON&Region=NJ&Postal=07940&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

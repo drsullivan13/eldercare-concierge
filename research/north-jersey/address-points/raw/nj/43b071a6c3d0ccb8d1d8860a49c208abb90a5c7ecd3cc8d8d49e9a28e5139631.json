@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/43b071a6c3d0ccb8d1d8860a49c208abb90a5c7ecd3cc8d8d49e9a28e5139631.body",
+  "bytes": 1575,
+  "checkedAt": "2026-11-12T15:41:43.267084+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "194 Harrison Avenue",
+    "City": "Garfield",
+    "Postal": "07026",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1c695dd2cc02c9ff50397a7e13abbd30978e64dd637c0d1efa67fb2bf7ebc724",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=194+Harrison+Avenue&City=Garfield&Region=NJ&Postal=07026&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

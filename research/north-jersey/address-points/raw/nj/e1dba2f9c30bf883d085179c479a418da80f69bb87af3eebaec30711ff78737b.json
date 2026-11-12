@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e1dba2f9c30bf883d085179c479a418da80f69bb87af3eebaec30711ff78737b.body",
+  "bytes": 1630,
+  "checkedAt": "2026-11-12T15:41:22.849062+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "304 S. VAN DIEN AVE",
+    "City": "RIDGEWOOD",
+    "Postal": "07450",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4941347177a2b6352e5cb063a365ccb3e7e76d3d80de87e992f5b17b478e9d60",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=304+S.+VAN+DIEN+AVE&City=RIDGEWOOD&Region=NJ&Postal=07450&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

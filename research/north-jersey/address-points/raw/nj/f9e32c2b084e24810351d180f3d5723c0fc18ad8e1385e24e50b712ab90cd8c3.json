@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f9e32c2b084e24810351d180f3d5723c0fc18ad8e1385e24e50b712ab90cd8c3.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:47.619119+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "384 William St",
+    "City": "East Orange",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "606116463bc1eea1501335da7f33d42bfac1b3dbc85d498a2f52865b9fe2a2db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=384+William+St&City=East+Orange&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

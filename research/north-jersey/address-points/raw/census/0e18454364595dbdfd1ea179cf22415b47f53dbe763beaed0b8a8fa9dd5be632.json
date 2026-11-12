@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/0e18454364595dbdfd1ea179cf22415b47f53dbe763beaed0b8a8fa9dd5be632.body",
+  "bytes": 5249,
+  "checkedAt": "2026-11-12T15:41:54.281272+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "26 JOURNAL SQUARE",
+    "vintage": "Current_Current",
+    "zip": "07306"
+  },
+  "sha256": "4b81c57ff8806c12d1d61d0f159e4ff37330d4ac38bec7f9fc043078d07721cd",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=26+JOURNAL+SQUARE&city=JERSEY+CITY&state=NJ&zip=07306&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

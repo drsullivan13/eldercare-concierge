@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6be41990f8338e6668397b304a9453699344b69f76de9aa0b7f69caae8078c5c.body",
+  "bytes": 1643,
+  "checkedAt": "2026-11-12T15:41:39.814362+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "343 TICHENOR AVENUE, SOUTH",
+    "City": "SOUTH ORANGE",
+    "Postal": "07079",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cad442eb8d4be294cdd41a8394864e8295a1dfcc2769305fa822efcf57aed255",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=343+TICHENOR+AVENUE%2C+SOUTH&City=SOUTH+ORANGE&Region=NJ&Postal=07079&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c9783eec64d20c6ea2e985a04fd0e923a19d0603324a9d054d4bc86443502a25.body",
+  "bytes": 1584,
+  "checkedAt": "2026-11-12T15:41:26.472824+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5 BOROLINE ROAD",
+    "City": "SADDLE RIVER",
+    "Postal": "07458",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2bd341f863e1d80d2678212270291d5556838b8eb07624ac018dbb3c867f2da3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5+BOROLINE+ROAD&City=SADDLE+RIVER&Region=NJ&Postal=07458&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

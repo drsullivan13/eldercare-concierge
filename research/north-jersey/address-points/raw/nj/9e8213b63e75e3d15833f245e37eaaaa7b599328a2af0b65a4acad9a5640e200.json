@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9e8213b63e75e3d15833f245e37eaaaa7b599328a2af0b65a4acad9a5640e200.body",
+  "bytes": 1612,
+  "checkedAt": "2026-11-12T15:41:20.498285+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1515 LAMBERTS MILL ROAD",
+    "City": "WESTFIELD",
+    "Postal": "07090",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1061fa2f332ae5f58f66c509daf2fa9e26e30e1ddefeab5ed3fcaa8e3a3c0b7d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1515+LAMBERTS+MILL+ROAD&City=WESTFIELD&Region=NJ&Postal=07090&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

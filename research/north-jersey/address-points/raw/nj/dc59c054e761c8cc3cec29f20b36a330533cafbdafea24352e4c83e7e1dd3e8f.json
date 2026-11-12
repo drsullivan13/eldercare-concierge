@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dc59c054e761c8cc3cec29f20b36a330533cafbdafea24352e4c83e7e1dd3e8f.body",
+  "bytes": 3049,
+  "checkedAt": "2026-11-12T15:41:44.322229+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "211 N Park Ave",
+    "City": "Linden",
+    "Postal": "07036",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "430562d63aee26328d28237c23d32f29016a9fba1dc832df19fe1eb960bf0481",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=211+N+Park+Ave&City=Linden&Region=NJ&Postal=07036&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

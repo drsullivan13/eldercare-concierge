@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/38860d0401268a21d2371512d8ee5dfee4920a0e6184fea1fec34d6411a8ba95.body",
+  "bytes": 3080,
+  "checkedAt": "2026-11-12T15:41:47.891594+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 Bridge Plaza",
+    "City": "Fort Lee",
+    "Postal": "07024",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a34f57cfc1c92d804a12ca6c5450bacfb5981aa3210c1299656e0306b56fac5b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+Bridge+Plaza&City=Fort+Lee&Region=NJ&Postal=07024&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

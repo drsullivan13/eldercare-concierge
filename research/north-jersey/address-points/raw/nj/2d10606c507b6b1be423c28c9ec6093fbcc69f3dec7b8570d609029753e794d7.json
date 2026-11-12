@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2d10606c507b6b1be423c28c9ec6093fbcc69f3dec7b8570d609029753e794d7.body",
+  "bytes": 1604,
+  "checkedAt": "2026-11-12T15:41:32.388653+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "271 US HIGHWAY 46",
+    "City": "FAIRFIELD",
+    "Postal": "07004",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5201f80f0ae13ca7aaef31c2b6e4861fcda9282bf3170348475d40e4b1020ea5",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=271+US+HIGHWAY+46&City=FAIRFIELD&Region=NJ&Postal=07004&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

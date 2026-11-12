@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/406535b8213121c2dbdf45fd6db50019912def9be758d077ee3591c681a75640.body",
+  "bytes": 1580,
+  "checkedAt": "2026-11-12T15:41:31.957607+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "723 NEWARK AVENUE",
+    "City": "JERSEY CITY",
+    "Postal": "07306",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1456884fc6657bac0d583fcf84c756a77e42bf95d9bb3e804c4d1e65fc075500",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=723+NEWARK+AVENUE&City=JERSEY+CITY&Region=NJ&Postal=07306&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

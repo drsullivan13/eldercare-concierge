@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5bdd4102758d73950804da09e630e545415eae4bdabc0f7b7ce722e7b83035e8.body",
+  "bytes": 3102,
+  "checkedAt": "2026-11-12T15:41:40.322816+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1496 MORRIS AVENUE LOWER LEVEL B",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a6ebcb855c2abd0f2e275bc9ea877fe5d7ee7e9c2927914ac51029f9425c1db3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1496+MORRIS+AVENUE+LOWER+LEVEL+B&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

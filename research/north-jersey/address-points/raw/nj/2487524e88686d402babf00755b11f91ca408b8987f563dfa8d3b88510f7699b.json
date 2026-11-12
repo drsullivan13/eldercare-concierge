@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2487524e88686d402babf00755b11f91ca408b8987f563dfa8d3b88510f7699b.body",
+  "bytes": 1629,
+  "checkedAt": "2026-11-12T15:41:26.215128+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "220 PLEASANT VALLEY WAY",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "937962c5063dc8fa94cd5d0b6dc0671691e286c12bd3e1943e9bc8e08f03a564",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=220+PLEASANT+VALLEY+WAY&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

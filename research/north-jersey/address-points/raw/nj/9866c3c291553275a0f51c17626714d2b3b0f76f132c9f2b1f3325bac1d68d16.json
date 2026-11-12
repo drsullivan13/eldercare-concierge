@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9866c3c291553275a0f51c17626714d2b3b0f76f132c9f2b1f3325bac1d68d16.body",
+  "bytes": 3069,
+  "checkedAt": "2026-11-12T15:41:40.220811+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "7 Glenwood Avenue",
+    "City": "East Orange",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4d127aeabf0c4c2ef9c44b1f95e18fadfabb50b38db890ad3fd0814bec19a316",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=7+Glenwood+Avenue&City=East+Orange&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

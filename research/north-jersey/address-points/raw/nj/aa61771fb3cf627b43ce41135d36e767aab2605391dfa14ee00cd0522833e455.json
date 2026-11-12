@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/aa61771fb3cf627b43ce41135d36e767aab2605391dfa14ee00cd0522833e455.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:39.266261+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "285 GRAND AVE",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "48dc31e687ea8edb64c4487f7a88851929b1cc7aad9c16f857e21af03fd6bc79",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=285+GRAND+AVE&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

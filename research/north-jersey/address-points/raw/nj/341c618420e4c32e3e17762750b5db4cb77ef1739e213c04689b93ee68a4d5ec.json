@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/341c618420e4c32e3e17762750b5db4cb77ef1739e213c04689b93ee68a4d5ec.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:20.859151+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "140 PARK AVE",
+    "City": "EAST ORANGE",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "38d7dccea8ae187f59e72b16ff9c03fc1a7d2631611c1eb0f906cfc8cdaeea80",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=140+PARK+AVE&City=EAST+ORANGE&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

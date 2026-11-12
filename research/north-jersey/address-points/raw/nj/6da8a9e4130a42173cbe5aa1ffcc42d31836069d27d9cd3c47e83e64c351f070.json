@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6da8a9e4130a42173cbe5aa1ffcc42d31836069d27d9cd3c47e83e64c351f070.body",
+  "bytes": 1603,
+  "checkedAt": "2026-11-12T15:41:31.819369+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "470 PROSPECT AVENUE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c334c64e16c474f6770c6803102747b299f7d925ae4e02d51dea588c9a4c6b84",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=470+PROSPECT+AVENUE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

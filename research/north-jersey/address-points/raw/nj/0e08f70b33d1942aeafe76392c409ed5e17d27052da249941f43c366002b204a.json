@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0e08f70b33d1942aeafe76392c409ed5e17d27052da249941f43c366002b204a.body",
+  "bytes": 3194,
+  "checkedAt": "2026-11-12T15:41:43.064372+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "316 Parsippany Rd",
+    "City": "Parsippany",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7713f70d8ca70053ff534ed4619e3fdfac0342e9a4ae8fb828b30d9a6c8f3f3c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=316+Parsippany+Rd&City=Parsippany&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

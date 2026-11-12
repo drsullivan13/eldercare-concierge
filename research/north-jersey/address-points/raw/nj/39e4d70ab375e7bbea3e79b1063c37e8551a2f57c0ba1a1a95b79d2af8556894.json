@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/39e4d70ab375e7bbea3e79b1063c37e8551a2f57c0ba1a1a95b79d2af8556894.body",
+  "bytes": 1641,
+  "checkedAt": "2026-11-12T15:41:39.430686+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "365 W Passaic St",
+    "City": "Rochelle Park",
+    "Postal": "07662",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ad307bb0b700f9e31705528779e3b01ae7bae7bb8a1d7b9f86eab51cd159c454",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=365+W+Passaic+St&City=Rochelle+Park&Region=NJ&Postal=07662&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

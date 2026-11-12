@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bba029670d0838b3c40d08c47b6d765172b31e8c0a7e7f0bcd0652d9de90601a.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:37.782384+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "128 WAYNE AVENUE",
+    "City": "PATERSON",
+    "Postal": "07502",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7b37f5eda96a3f0cbc11e3c6f866c3e6052efe47a2c3681156d1d57bcff676a4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=128+WAYNE+AVENUE&City=PATERSON&Region=NJ&Postal=07502&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

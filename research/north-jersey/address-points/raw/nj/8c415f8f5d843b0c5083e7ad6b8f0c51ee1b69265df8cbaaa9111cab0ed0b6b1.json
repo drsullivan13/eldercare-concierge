@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8c415f8f5d843b0c5083e7ad6b8f0c51ee1b69265df8cbaaa9111cab0ed0b6b1.body",
+  "bytes": 1680,
+  "checkedAt": "2026-11-12T15:41:30.988512+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "64 WEST ALLENDALE AVENUE",
+    "City": "ALLENDALE",
+    "Postal": "07401",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "29fb02d1e6ce5ba331cc503512a7482fe1c036c3b893e4f1c0756e9afc2a220b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=64+WEST+ALLENDALE+AVENUE&City=ALLENDALE&Region=NJ&Postal=07401&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a570854f9e30da5c74d95fefea24d9c3ccef8ca34a2c30fba60a2823ff0c9e8e.body",
+  "bytes": 1599,
+  "checkedAt": "2026-11-12T15:41:26.739474+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "71 CHRISTOPHER ST",
+    "City": "MONTCLAIR",
+    "Postal": "07042",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2e3f05704b5cb371947eca4810aa291252447c41a7b6b7678d8d06ce595e7377",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=71+CHRISTOPHER+ST&City=MONTCLAIR&Region=NJ&Postal=07042&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

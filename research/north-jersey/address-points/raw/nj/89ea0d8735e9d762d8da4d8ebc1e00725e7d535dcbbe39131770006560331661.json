@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/89ea0d8735e9d762d8da4d8ebc1e00725e7d535dcbbe39131770006560331661.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:39.853100+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "14 Bryn Mawr Road",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c773a74c061dff81965c791d0a712da0b08af91d38c033105619bf214caaa570",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=14+Bryn+Mawr+Road&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

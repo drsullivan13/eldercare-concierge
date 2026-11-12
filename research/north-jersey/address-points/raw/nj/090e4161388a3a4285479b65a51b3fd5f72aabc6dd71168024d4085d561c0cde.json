@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/090e4161388a3a4285479b65a51b3fd5f72aabc6dd71168024d4085d561c0cde.body",
+  "bytes": 1579,
+  "checkedAt": "2026-11-12T15:41:30.893892+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "989 SANFORD AVENUE",
+    "City": "IRVINGTON",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "83bc9b22c65aea6f40c5ce3458d100b3d8d83e58328378b0b81794a7a0a7334f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=989+SANFORD+AVENUE&City=IRVINGTON&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

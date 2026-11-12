@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bb730496c02995fc08d427ba3f0a30510f979ab4679147992de36877b7a0d209.body",
+  "bytes": 1549,
+  "checkedAt": "2026-11-12T15:41:36.054917+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "19 PHELPS AVENUE",
+    "City": "TENAFLY",
+    "Postal": "07670",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8534a920529c4c25d3d05defd937516cef080aa7875065e4c0b3d08faf6baba7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=19+PHELPS+AVENUE&City=TENAFLY&Region=NJ&Postal=07670&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

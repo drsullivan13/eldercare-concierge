@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/06adcdb2fc5bd7af9e79693e1e7ac5769a4db7515bd743c69b62ff35b4d19c2c.body",
+  "bytes": 1550,
+  "checkedAt": "2026-11-12T15:41:31.211808+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "520 MAIN STREET",
+    "City": "FORT LEE",
+    "Postal": "07024",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8559e02aa096307f55e08f65650340a2206953706a2fafddbd42c1adef4444f9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=520+MAIN+STREET&City=FORT+LEE&Region=NJ&Postal=07024&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

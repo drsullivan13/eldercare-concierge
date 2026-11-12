@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1cdea8d887ec11a0a732965f98d8603109233fbd87afd271603bc95730d81b36.body",
+  "bytes": 1641,
+  "checkedAt": "2026-11-12T15:41:33.678361+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "336 W. PASSAIC STREET",
+    "City": "ROCHELLE PARK",
+    "Postal": "07662",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "31f978dcad4d9d04790b6196ecd38855ee865268fa85fd893ebef9a2ad615c0a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=336+W.+PASSAIC+STREET&City=ROCHELLE+PARK&Region=NJ&Postal=07662&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

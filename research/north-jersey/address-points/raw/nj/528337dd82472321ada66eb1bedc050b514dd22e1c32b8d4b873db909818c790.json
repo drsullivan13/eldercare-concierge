@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/528337dd82472321ada66eb1bedc050b514dd22e1c32b8d4b873db909818c790.body",
+  "bytes": 1582,
+  "checkedAt": "2026-11-12T15:41:36.015224+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1812 FRONT STREET",
+    "City": "SCOTCH PLAINS",
+    "Postal": "07076",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "057a853279c3de4c26704547f796edf82c96453d75f82badd0f5287c64b9875f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1812+FRONT+STREET&City=SCOTCH+PLAINS&Region=NJ&Postal=07076&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

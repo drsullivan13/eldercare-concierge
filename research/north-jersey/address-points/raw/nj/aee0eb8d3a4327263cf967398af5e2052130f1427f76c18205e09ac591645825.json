@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/aee0eb8d3a4327263cf967398af5e2052130f1427f76c18205e09ac591645825.body",
+  "bytes": 1551,
+  "checkedAt": "2026-11-12T15:41:30.375649+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "765 TEANECK ROAD",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "efb228f3c23d4d8c3dc2498991113fa3cfbc66b19023bd516a716fe2b1a18d86",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=765+TEANECK+ROAD&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

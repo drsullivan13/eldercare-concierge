@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ea29d1849f0a79333ae724f84868204a21cb33da88164e0b8f2516f3588c23bd.body",
+  "bytes": 1623,
+  "checkedAt": "2026-11-12T15:41:31.570813+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "210 SYLVAN AVENUE",
+    "City": "ENGLEWOOD CLIFFS",
+    "Postal": "07632",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "fa31bb7a0cc04523a0c19095dc13cf7cb947641474a85d9133f63f57cfd8e64a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=210+SYLVAN+AVENUE&City=ENGLEWOOD+CLIFFS&Region=NJ&Postal=07632&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

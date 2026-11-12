@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fa1e12ef49cc6fcdea931dce16fbef5cf3c0fb8451584e1af66804b4ccf483d2.body",
+  "bytes": 1613,
+  "checkedAt": "2026-11-12T15:41:19.975064+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "787 NORTHFIELD AVE",
+    "City": "WEST ORANGE",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9831b6fd92ae1a5e22e24e27476ddb435009a20d8d1086d7cf3fa5f167a7f169",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=787+NORTHFIELD+AVE&City=WEST+ORANGE&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

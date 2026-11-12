@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/4ad08a8f94bdd9c69ec191e00af82933b1ae33d729efdf6b88f488246129c933.body",
+  "bytes": 5219,
+  "checkedAt": "2026-11-12T15:41:59.084892+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Paterson",
+    "format": "json",
+    "state": "NJ",
+    "street": "21-23 Oxford Street",
+    "vintage": "Current_Current",
+    "zip": "07522"
+  },
+  "sha256": "770cc6a05ab319c687aaf367550dd07de371ad1586ce87348229d85db139fb11",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=21-23+Oxford+Street&city=Paterson&state=NJ&zip=07522&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

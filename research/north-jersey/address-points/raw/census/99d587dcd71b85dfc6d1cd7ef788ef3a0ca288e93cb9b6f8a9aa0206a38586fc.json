@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/99d587dcd71b85dfc6d1cd7ef788ef3a0ca288e93cb9b6f8a9aa0206a38586fc.body",
+  "bytes": 5201,
+  "checkedAt": "2026-11-12T15:41:52.805287+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PASSAIC",
+    "format": "json",
+    "state": "NJ",
+    "street": "711-729 Main Avenue",
+    "vintage": "Current_Current",
+    "zip": "07055"
+  },
+  "sha256": "de8e5fd9fec4ec977635853c25e07e0210db16be99cc53ef3c31df971e0deba4",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=711-729+Main+Avenue&city=PASSAIC&state=NJ&zip=07055&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

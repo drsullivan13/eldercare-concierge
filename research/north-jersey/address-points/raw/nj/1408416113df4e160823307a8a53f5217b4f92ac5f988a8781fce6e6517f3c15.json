@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1408416113df4e160823307a8a53f5217b4f92ac5f988a8781fce6e6517f3c15.body",
+  "bytes": 1580,
+  "checkedAt": "2026-11-12T15:41:32.502811+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "466 Bloomfield Ave",
+    "City": "Newark",
+    "Postal": "07107",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "3cc48d79f6a569af71874f110b3fad95e05fc8a864b730b981b3b7ae9541e2db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=466+Bloomfield+Ave&City=Newark&Region=NJ&Postal=07107&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

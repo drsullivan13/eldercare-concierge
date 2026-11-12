@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6f2542781b5bc9d0ca614fdb4642c62f306b1e358e6f48257bb30e30900c9e4b.body",
+  "bytes": 1578,
+  "checkedAt": "2026-11-12T15:41:48.573037+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "74 Glen Ave",
+    "City": "Roseland",
+    "Postal": "07068",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8048767f4c5183fbee5064e07db92405dfe679766b42fcafcf4bc90bf4f2e31f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=74+Glen+Ave&City=Roseland&Region=NJ&Postal=07068&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

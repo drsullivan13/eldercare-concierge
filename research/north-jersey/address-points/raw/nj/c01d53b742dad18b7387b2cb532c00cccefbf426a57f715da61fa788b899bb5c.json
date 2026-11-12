@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c01d53b742dad18b7387b2cb532c00cccefbf426a57f715da61fa788b899bb5c.body",
+  "bytes": 1513,
+  "checkedAt": "2026-11-12T15:41:22.037785+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "298 BROADWAY",
+    "City": "NEWARK",
+    "Postal": "07104",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8c30caee384ae85e4a6d4b4770fb577be2117eedeb29d54f612cb3c80b8a2f40",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=298+BROADWAY&City=NEWARK&Region=NJ&Postal=07104&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

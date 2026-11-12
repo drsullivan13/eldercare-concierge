@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dcc9b5223df102101177369345bf67b5915d182c340df7554d1829dcea879f56.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:32.699778+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "46 NORTH DEAN STREET",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "01e0c204d488b826728508054a7d5ccdcd3a46a4f573e1c2af04eb6cfd3ad429",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=46+NORTH+DEAN+STREET&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

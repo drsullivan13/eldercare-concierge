@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/25bf43a6f77a997f8dfbb4875db24f0166091147f529fcd9abb8c4a42916fc1a.body",
+  "bytes": 1570,
+  "checkedAt": "2026-11-12T15:41:21.088092+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "40 NORWOOD AVENUE",
+    "City": "PLAINFIELD",
+    "Postal": "07060",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8b20417627ed06cfb68db4395e55dc78fef29d6ea07ebcd2d4110062a0dc5984",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=40+NORWOOD+AVENUE&City=PLAINFIELD&Region=NJ&Postal=07060&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

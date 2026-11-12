@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bccdbe37567bb9aec5e4c527ed6854951d148463d68c66541d89bbaff5cb1bdb.body",
+  "bytes": 1614,
+  "checkedAt": "2026-11-12T15:41:46.509109+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "642 Eagle Rock Avenue",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ed86068f19e76c38d8bc3b022280f26b86d7a72e36c7db27b26824f6529c48ed",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=642+Eagle+Rock+Avenue&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

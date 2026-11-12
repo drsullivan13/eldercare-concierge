@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a8a36ad460cd0e111fad04b7010eac89bad58f556322c224dfa30a51c429f366.body",
+  "bytes": 1624,
+  "checkedAt": "2026-11-12T15:41:20.592892+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "200 REYNOLDS AVE",
+    "City": "PARSIPPANY",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "44648a8f2a78f0238531cdb2b2fdce93b4e540da59797c303284e336f4481cbc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=200+REYNOLDS+AVE&City=PARSIPPANY&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

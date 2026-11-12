@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/875cbfc48116a12aa67b9b009ec5a1f2ff21dc9eab66de5cf9b0afa43eed4d32.body",
+  "bytes": 1597,
+  "checkedAt": "2026-11-12T15:41:19.507954+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "144 GALES DRIVE",
+    "City": "NEW PROVIDENCE",
+    "Postal": "07974",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "db7429919ab8032507bdafcc60865c896ad7161ecc3324eb7de86883235ae1e4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=144+GALES+DRIVE&City=NEW+PROVIDENCE&Region=NJ&Postal=07974&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/19f8ba2a41b77e6ee2b178e259debea5df4c7cf933a94d32fed2fa27a2d28ea8.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:20.081924+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "198 STEVENS AVE",
+    "City": "JERSEY CITY",
+    "Postal": "07305",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "eac68abc2efaa8231e224d590823f58f0336243ff717687b98fe816add66a2c4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=198+STEVENS+AVE&City=JERSEY+CITY&Region=NJ&Postal=07305&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

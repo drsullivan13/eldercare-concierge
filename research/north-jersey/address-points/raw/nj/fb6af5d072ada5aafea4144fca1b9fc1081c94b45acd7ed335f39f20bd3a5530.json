@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fb6af5d072ada5aafea4144fca1b9fc1081c94b45acd7ed335f39f20bd3a5530.body",
+  "bytes": 1629,
+  "checkedAt": "2026-11-12T15:41:35.305198+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1787 SPRINGFIELD AVENUE",
+    "City": "MAPLEWOOD",
+    "Postal": "07040",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0652f09a7bdaa354bd7a3c736e10b59d1c903f2342ff8eb149dd8e38aa084c7c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1787+SPRINGFIELD+AVENUE&City=MAPLEWOOD&Region=NJ&Postal=07040&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

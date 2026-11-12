@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/77f2d702c5279f762cc810153abd384a70afe097c2e482f9666dd125dda7324c.body",
+  "bytes": 4710,
+  "checkedAt": "2026-11-12T15:41:53.828140+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "UNION",
+    "format": "json",
+    "state": "NJ",
+    "street": "2444 MORRIS AVE ROOM 102",
+    "vintage": "Current_Current",
+    "zip": "07083"
+  },
+  "sha256": "024a21bcd99fef4e7646779eb53f8af892f076dbbd4be83fb57df777bbf7353d",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2444+MORRIS+AVE+ROOM+102&city=UNION&state=NJ&zip=07083&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

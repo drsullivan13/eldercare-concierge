@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f6459a81e77e91e57cc6efe9d832ae5c1bacd804685ef669087473e8ecfdb1b3.body",
+  "bytes": 1555,
+  "checkedAt": "2026-11-12T15:41:38.685042+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "64 KNAPP PLACE",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ee23efb60b5aea1bcc20c73743a36dcf117d968f886656cdfd8427dd24356c19",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=64+KNAPP+PLACE&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

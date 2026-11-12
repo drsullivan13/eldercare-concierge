@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/70f1be146fe1c2b66eee4b7e511d340297e4fe649b6b6b612377d9c8f3e8139e.body",
+  "bytes": 5222,
+  "checkedAt": "2026-11-12T15:41:59.881676+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Jersey City",
+    "format": "json",
+    "state": "NJ",
+    "street": "49 Fisk St PH 81",
+    "vintage": "Current_Current",
+    "zip": "07305"
+  },
+  "sha256": "8a682d4439204ee995a07f6531e89d57b84d4cb471e348728c9762ecb55cd816",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=49+Fisk+St+PH+81&city=Jersey+City&state=NJ&zip=07305&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

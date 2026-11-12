@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/a0e0a7d64f0ac7d046e6a5c42cff260bfa24085eaae1e705db22e89334aabd32.body",
+  "bytes": 4721,
+  "checkedAt": "2026-11-12T15:41:59.805955+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Teaneck",
+    "format": "json",
+    "state": "NJ",
+    "street": "550 Center Pl 550 Center Pl",
+    "vintage": "Current_Current",
+    "zip": "07666"
+  },
+  "sha256": "5a1e01558be3b45b889cd61d9fe32be024e546f7020c4a987ace4c2f1d278f66",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=550+Center+Pl+550+Center+Pl&city=Teaneck&state=NJ&zip=07666&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

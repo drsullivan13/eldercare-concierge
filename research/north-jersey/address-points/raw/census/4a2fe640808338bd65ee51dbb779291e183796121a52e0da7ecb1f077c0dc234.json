@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/4a2fe640808338bd65ee51dbb779291e183796121a52e0da7ecb1f077c0dc234.body",
+  "bytes": 4723,
+  "checkedAt": "2026-11-12T15:41:55.194770+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "IRVINGTON",
+    "format": "json",
+    "state": "NJ",
+    "street": "1395-1399 CLINTON AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07111"
+  },
+  "sha256": "52f6dc0d7165602a629559a1bed4c9076b55bd7cec8e291e8627dc5eb2f81d76",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1395-1399+CLINTON+AVENUE&city=IRVINGTON&state=NJ&zip=07111&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

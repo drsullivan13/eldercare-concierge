@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/38ed4a8a7a61053dcd8cc0973cae13019cc7fdb08ca7f2bee1c7fdc5db2ccce5.body",
+  "bytes": 1642,
+  "checkedAt": "2026-11-12T15:41:25.192961+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3 TENAKILL PARK DRIVE EAST",
+    "City": "CRESSKILL",
+    "Postal": "07626",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "17084c139d3582d313006ddb9c0980efeadc41393d8cbf9ade88b1674f02d8b9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3+TENAKILL+PARK+DRIVE+EAST&City=CRESSKILL&Region=NJ&Postal=07626&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

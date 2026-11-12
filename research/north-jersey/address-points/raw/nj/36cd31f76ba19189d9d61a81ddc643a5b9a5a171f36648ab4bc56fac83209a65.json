@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/36cd31f76ba19189d9d61a81ddc643a5b9a5a171f36648ab4bc56fac83209a65.body",
+  "bytes": 1551,
+  "checkedAt": "2026-11-12T15:41:46.057682+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "70 Clinton Ave",
+    "City": "Newark",
+    "Postal": "07114",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "55fa72a35171b131b6158bafffd1975ff04e0be81367f47e331a907eaa2162b4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=70+Clinton+Ave&City=Newark&Region=NJ&Postal=07114&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

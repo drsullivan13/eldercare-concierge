@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c435592217f5cdd19692b96232a8c73a95bc12d541e9e3572316a0c6ce36d7d6.body",
+  "bytes": 4758,
+  "checkedAt": "2026-11-12T15:41:54.688605+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "LIVINGSTON",
+    "format": "json",
+    "state": "NJ",
+    "street": "513 W. MT. PLEASANT AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07039"
+  },
+  "sha256": "738a09caa2c11fe600a735a352f797e3b00d941712aa2788b0ebc151dcb9b6ef",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=513+W.+MT.+PLEASANT+AVENUE&city=LIVINGSTON&state=NJ&zip=07039&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

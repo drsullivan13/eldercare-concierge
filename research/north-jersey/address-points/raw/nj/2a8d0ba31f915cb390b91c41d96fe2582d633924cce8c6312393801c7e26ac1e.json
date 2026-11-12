@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2a8d0ba31f915cb390b91c41d96fe2582d633924cce8c6312393801c7e26ac1e.body",
+  "bytes": 1566,
+  "checkedAt": "2026-11-12T15:41:22.335846+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "155 40TH STREET",
+    "City": "IRVINGTON",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e89b7fb65fdfcd7e71b111c09751058004a327aa85d2b1162bb6067a23562daf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=155+40TH+STREET&City=IRVINGTON&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b4b4992ba744550d709551c50655dfddd58e83ef751e7d82b763941c8140041a.body",
+  "bytes": 1571,
+  "checkedAt": "2026-11-12T15:41:34.986685+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "202 WALLACE STREET",
+    "City": "ORANGE",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8ec4df52fe46d6619732f333cf663c82a8fa70726a8e280f5f294e8385fd7a26",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=202+WALLACE+STREET&City=ORANGE&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

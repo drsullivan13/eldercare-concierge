@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a43ed5865976458576ff7b8bd5e3e05a1a8f788121cbd85ff85cefe7b3d22cd9.body",
+  "bytes": 1631,
+  "checkedAt": "2026-11-12T15:41:21.352185+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "165 FAIRFIELD AVE",
+    "City": "WEST CALDWELL",
+    "Postal": "07006",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ff875d75dfb43636e1e3d6ef948d193f179703523f3880c4bf327b76a6c78592",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=165+FAIRFIELD+AVE&City=WEST+CALDWELL&Region=NJ&Postal=07006&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

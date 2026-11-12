@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2e99bbe53a161daa8d84bdb671be5a1c70e4e87b68fc2962efc68093ac58e862.body",
+  "bytes": 1605,
+  "checkedAt": "2026-11-12T15:41:35.240531+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "182 South Center Street",
+    "City": "ORANGE",
+    "Postal": "07050",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "21cefcef3fe197018f8a8a26deb9c3999615960675b676c3cd0d09ae38cc6455",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=182+South+Center+Street&City=ORANGE&Region=NJ&Postal=07050&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

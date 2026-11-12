@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a4e0c9e227af8a658ee028265878c84ece30f46cfb68c4b15e6482e2bcf25d3c.body",
+  "bytes": 1539,
+  "checkedAt": "2026-11-12T15:41:22.456511+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "195 BELGROVE DRIVE",
+    "City": "KEARNY",
+    "Postal": "07032",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1924df38f2ae4c1bcb30709fedd4a927234100d2a186ee50dd190fa755fe9448",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=195+BELGROVE+DRIVE&City=KEARNY&Region=NJ&Postal=07032&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

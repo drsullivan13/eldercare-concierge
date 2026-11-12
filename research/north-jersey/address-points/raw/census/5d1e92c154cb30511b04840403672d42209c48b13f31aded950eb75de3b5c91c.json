@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/5d1e92c154cb30511b04840403672d42209c48b13f31aded950eb75de3b5c91c.body",
+  "bytes": 4712,
+  "checkedAt": "2026-11-12T15:41:57.315302+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Maplewood",
+    "format": "json",
+    "state": "NJ",
+    "street": "64 Van Ness Ter Fl2",
+    "vintage": "Current_Current",
+    "zip": "07040"
+  },
+  "sha256": "dbf8e40f8b2b2ae9bb2f103f04d4ed36f1bedc511f0a64d1d25ba99116bd1c6d",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=64+Van+Ness+Ter+Fl2&city=Maplewood&state=NJ&zip=07040&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

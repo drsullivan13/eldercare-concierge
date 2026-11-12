@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6980d87e4b7378b365ceb3c54ecccc31eccaef95a01b0ddacce8d6a7c8579bca.body",
+  "bytes": 1586,
+  "checkedAt": "2026-11-12T15:41:20.277207+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "296 HAMBURG TURNPIKE",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e99e5eaeac798f0ff08781fcd4a6a43bf64408da3612bba856bc40c8912499e5",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=296+HAMBURG+TURNPIKE&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

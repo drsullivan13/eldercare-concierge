@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5e7398880b7f2939b6e78893d66fb77a73f88c9607ecc4fe87d006e9cdbd0a46.body",
+  "bytes": 1631,
+  "checkedAt": "2026-11-12T15:41:41.008671+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "695 Route 46 W",
+    "City": "Fairfield",
+    "Postal": "07004",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "236ece91e055366d985144dd4c61c6a2e3f5270c708ff4a4286d8055d450e3bc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=695+Route+46+W&City=Fairfield&Region=NJ&Postal=07004&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

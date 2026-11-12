@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/50abf7a7039b9db1e18baa3b4f5a7657d63985cbee70c9e28c41a9ae8ff7afc6.body",
+  "bytes": 1576,
+  "checkedAt": "2026-11-12T15:41:47.981166+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3 Marshall St",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "81ea01466d5e6ba9e0eddf6e02576616a423e437d82cf8459cc88a915e0cdfdb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3+Marshall+St&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b87fa71ba92952bc62c6f933af95e760a510e8fa34e2bf8b825763fc7b214f9f.body",
+  "bytes": 409,
+  "checkedAt": "2026-11-12T15:41:55.969886+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "MORRIS PLAINS",
+    "format": "json",
+    "state": "NJ",
+    "street": "540 W. HANOVER AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07950"
+  },
+  "sha256": "4130c35fc5f1263ddbea193fae7cb031e668ef16d43b37d7219feb9b26777dc5",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=540+W.+HANOVER+AVENUE&city=MORRIS+PLAINS&state=NJ&zip=07950&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/638553e9ed1cc396815af66384a5b879178b95c4d3d381dae18358af23c03aaf.body",
+  "bytes": 1570,
+  "checkedAt": "2026-11-12T15:41:20.299792+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "234 CHESTNUT STREET",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "704f3a86aace284509f0f0d8cbc20eb6beb657bf3a6d0c6b5fc0a0665c7dc170",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=234+CHESTNUT+STREET&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

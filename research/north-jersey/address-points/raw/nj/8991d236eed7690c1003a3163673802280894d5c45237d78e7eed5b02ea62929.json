@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8991d236eed7690c1003a3163673802280894d5c45237d78e7eed5b02ea62929.body",
+  "bytes": 1610,
+  "checkedAt": "2026-11-12T15:41:19.899380+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1610 RARITAN ROAD",
+    "City": "SCOTCH PLAINS",
+    "Postal": "07076",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f8a4a451046d35397aac1b04da18ef4bea5b0a58c2b0295dc9a8b13ad275a607",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1610+RARITAN+ROAD&City=SCOTCH+PLAINS&Region=NJ&Postal=07076&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

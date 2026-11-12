@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e912f10150df1bf77dd0cbbfeae118fc0fbcbc98fab6a1782d207afe561f3328.body",
+  "bytes": 1516,
+  "checkedAt": "2026-11-12T15:41:33.205214+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "366 BROADWAY",
+    "City": "BAYONNE",
+    "Postal": "07002",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b4addb47e1060eb228b2af4b33f67a54c5402a4131b67b8680b49627b42ba82c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=366+BROADWAY&City=BAYONNE&Region=NJ&Postal=07002&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a26768341d6d9639b25d50efd2673661cf73676345126958387b0f46062e1e59.body",
+  "bytes": 1572,
+  "checkedAt": "2026-11-12T15:41:37.801231+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "207 MCBRIDE AVENUE",
+    "City": "PATERSON",
+    "Postal": "07501",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7e56a788018758bd864955a4e1d4d81b64d1efce1b260e771ab58d8f2e5640c6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=207+MCBRIDE+AVENUE&City=PATERSON&Region=NJ&Postal=07501&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

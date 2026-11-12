@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c418285e89363a572c24ccf5c81be079713a304558468a583bdb86da24df3f6b.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:25.216288+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "6819 BOULEVARD EAST",
+    "City": "GUTTENBERG",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "68b2d0ce3492ec216f6a1f9fc736769be71a5ff77d029009d36c2516180e1159",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=6819+BOULEVARD+EAST&City=GUTTENBERG&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

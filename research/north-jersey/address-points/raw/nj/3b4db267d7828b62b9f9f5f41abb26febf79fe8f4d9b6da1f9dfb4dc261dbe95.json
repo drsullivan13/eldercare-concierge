@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3b4db267d7828b62b9f9f5f41abb26febf79fe8f4d9b6da1f9dfb4dc261dbe95.body",
+  "bytes": 1558,
+  "checkedAt": "2026-11-12T15:41:33.295488+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "70 LONG STREET",
+    "City": "EAST ORANGE",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "737095eca9498bada63e0bf186d2dfc0af11d90760298631593466f7a35baaaa",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=70+LONG+STREET&City=EAST+ORANGE&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

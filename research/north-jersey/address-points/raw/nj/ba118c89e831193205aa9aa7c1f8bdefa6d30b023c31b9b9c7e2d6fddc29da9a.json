@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ba118c89e831193205aa9aa7c1f8bdefa6d30b023c31b9b9c7e2d6fddc29da9a.body",
+  "bytes": 3138,
+  "checkedAt": "2026-11-12T15:41:19.899733+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "200 RT 10 WEST",
+    "City": "SUCCASUNNA",
+    "Postal": "07876",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4dea0f2f07900bfea3053d7e31bf743c0cb674bd92088f11cebf2ce3a378cd4c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=200+RT+10+WEST&City=SUCCASUNNA&Region=NJ&Postal=07876&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/cda129798560422592e81816962ec44831c51dab588226227b2c69d719be4d78.body",
+  "bytes": 3055,
+  "checkedAt": "2026-11-12T15:41:37.324787+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2 Broad St",
+    "City": "Bloomfield",
+    "Postal": "07003",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e662ce8d31cc49420bd7618c505a0d35abed0a9375bdcd5cd93b1fe8b5fc0ad4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2+Broad+St&City=Bloomfield&Region=NJ&Postal=07003&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

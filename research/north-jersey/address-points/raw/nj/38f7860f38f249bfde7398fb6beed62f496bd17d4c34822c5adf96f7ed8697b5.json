@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/38f7860f38f249bfde7398fb6beed62f496bd17d4c34822c5adf96f7ed8697b5.body",
+  "bytes": 3069,
+  "checkedAt": "2026-11-12T15:41:43.274659+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "636 Main Avenue",
+    "City": "Passaic",
+    "Postal": "07055",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8f090ec22fd67f7eaf3cab23d42e067e220bc5bd3e89cec0b459c18395a29fb4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=636+Main+Avenue&City=Passaic&Region=NJ&Postal=07055&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

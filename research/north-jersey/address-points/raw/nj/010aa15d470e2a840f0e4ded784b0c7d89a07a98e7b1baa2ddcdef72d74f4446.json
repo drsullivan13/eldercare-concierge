@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/010aa15d470e2a840f0e4ded784b0c7d89a07a98e7b1baa2ddcdef72d74f4446.body",
+  "bytes": 1549,
+  "checkedAt": "2026-11-12T15:41:38.412299+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "20 BANTA PLACE",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6266908d416ef993d4f783041384e91b9e8d30e5091a570bbc15b16c07a6fa51",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=20+BANTA+PLACE&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

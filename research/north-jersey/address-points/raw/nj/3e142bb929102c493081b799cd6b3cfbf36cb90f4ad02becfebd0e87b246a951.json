@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3e142bb929102c493081b799cd6b3cfbf36cb90f4ad02becfebd0e87b246a951.body",
+  "bytes": 1605,
+  "checkedAt": "2026-11-12T15:41:48.266124+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1201 Donamy Gln",
+    "City": "Scotch Plains",
+    "Postal": "07076",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ce24f4ff6882a2a7e1c9df99416af06eaa0cc987a2ed4edf24b7b8775695b62b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1201+Donamy+Gln&City=Scotch+Plains&Region=NJ&Postal=07076&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

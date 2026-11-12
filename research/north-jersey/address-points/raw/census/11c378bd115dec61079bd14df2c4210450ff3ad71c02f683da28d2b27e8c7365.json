@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/11c378bd115dec61079bd14df2c4210450ff3ad71c02f683da28d2b27e8c7365.body",
+  "bytes": 4740,
+  "checkedAt": "2026-11-12T15:41:57.812535+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "MORRISTOWN",
+    "format": "json",
+    "state": "NJ",
+    "street": "11 UPPERFIELD ROAD",
+    "vintage": "Current_Current",
+    "zip": "07960"
+  },
+  "sha256": "29fba85b708e15bf31f5040101c87de799bcd2870fbab1939bb0d67b1a3fe909",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=11+UPPERFIELD+ROAD&city=MORRISTOWN&state=NJ&zip=07960&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

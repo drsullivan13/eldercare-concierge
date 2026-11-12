@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7bdaf64701db780a26589deac62054e33561541a8f34d9fb6fd0b1609d5b1f5d.body",
+  "bytes": 1607,
+  "checkedAt": "2026-11-12T15:41:40.805502+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "4808 Bergenline Avenue",
+    "City": "Union City",
+    "Postal": "07087",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2046748ec4788786606ad16361de54da3ef387a24fd8a63aacb70445da426435",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=4808+Bergenline+Avenue&City=Union+City&Region=NJ&Postal=07087&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

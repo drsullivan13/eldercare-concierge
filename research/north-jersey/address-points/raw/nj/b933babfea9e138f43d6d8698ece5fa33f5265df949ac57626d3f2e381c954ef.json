@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b933babfea9e138f43d6d8698ece5fa33f5265df949ac57626d3f2e381c954ef.body",
+  "bytes": 1616,
+  "checkedAt": "2026-11-12T15:41:35.522548+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "545 GOFFLE ROAD",
+    "City": "WYCKOFF",
+    "Postal": "07481",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "04794a33539f1603d3c8ae92fdff2dca9c894713ae3397aca60609dea88930c1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=545+GOFFLE+ROAD&City=WYCKOFF&Region=NJ&Postal=07481&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

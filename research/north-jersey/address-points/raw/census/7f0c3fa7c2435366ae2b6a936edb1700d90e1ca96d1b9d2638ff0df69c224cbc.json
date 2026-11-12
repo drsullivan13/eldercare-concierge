@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/7f0c3fa7c2435366ae2b6a936edb1700d90e1ca96d1b9d2638ff0df69c224cbc.body",
+  "bytes": 5233,
+  "checkedAt": "2026-11-12T15:41:57.062959+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "West Orange",
+    "format": "json",
+    "state": "NJ",
+    "street": "6 Trefoil Pass",
+    "vintage": "Current_Current",
+    "zip": "07052"
+  },
+  "sha256": "28c8269c287bc9d9afab50584a362493b33b57547c249f546ab6cf13ffd12072",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=6+Trefoil+Pass&city=West+Orange&state=NJ&zip=07052&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

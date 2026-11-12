@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5c647af45359bb91090f7b5431b5eda6c6f7dc6ac9b1a4553a87b664427041ac.body",
+  "bytes": 1569,
+  "checkedAt": "2026-11-12T15:41:40.701952+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 Gateway Center",
+    "City": "Newark",
+    "Postal": "07101",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4a6fac2b7ebc3b0de1666512d179d37a4d53e4a6f2dc2059e212eb2117708579",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+Gateway+Center&City=Newark&Region=NJ&Postal=07101&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

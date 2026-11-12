@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d8093a9357dad0e5b4d2412ba879b81841c63f083a93e52f9ee2bff80be3bb65.body",
+  "bytes": 1583,
+  "checkedAt": "2026-11-12T15:41:34.186063+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "655 WESTFIELD AVENUE",
+    "City": "ELIZABETH",
+    "Postal": "07208",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "428e438e119f22dc2e801b5a9b560deb7ccc2dbcdf34efde448070b17621c3c8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=655+WESTFIELD+AVENUE&City=ELIZABETH&Region=NJ&Postal=07208&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

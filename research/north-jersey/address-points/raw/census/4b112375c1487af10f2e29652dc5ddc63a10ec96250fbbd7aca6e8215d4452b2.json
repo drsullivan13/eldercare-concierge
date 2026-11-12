@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/4b112375c1487af10f2e29652dc5ddc63a10ec96250fbbd7aca6e8215d4452b2.body",
+  "bytes": 5231,
+  "checkedAt": "2026-11-12T15:41:52.458122+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "WHIPPANY",
+    "format": "json",
+    "state": "NJ",
+    "street": "905 ROUTE 10 EAST",
+    "vintage": "Current_Current",
+    "zip": "07981"
+  },
+  "sha256": "6f72ed5c37546a77b9f6ac3d3ba8c5dc4336a8789a8668cbac91d5cc07378c8e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=905+ROUTE+10+EAST&city=WHIPPANY&state=NJ&zip=07981&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f631120028ad548652db0bbe35051885876fda0d019490e3500057c54f7dff40.body",
+  "bytes": 1577,
+  "checkedAt": "2026-11-12T15:41:34.074250+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "200 PASSAIC STREET",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d859dbeb2d848f9f84860b47731dab167cf9b7472d00ca97482b5b32eccea583",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=200+PASSAIC+STREET&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

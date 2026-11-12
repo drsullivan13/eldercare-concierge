@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/86234be1595697814b27b6c4acce7b70b14834a2c69f58ec42acdb489f50ed15.body",
+  "bytes": 1541,
+  "checkedAt": "2026-11-12T15:41:49.160234+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "705 Park Ave",
+    "City": "Plainfield",
+    "Postal": "07060",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "792869dfbedbb4c86265b527b05593dbe0ce4eca9231065f125721f713d31541",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=705+Park+Ave&City=Plainfield&Region=NJ&Postal=07060&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

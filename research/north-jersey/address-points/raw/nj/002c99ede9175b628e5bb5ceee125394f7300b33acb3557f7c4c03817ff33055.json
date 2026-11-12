@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/002c99ede9175b628e5bb5ceee125394f7300b33acb3557f7c4c03817ff33055.body",
+  "bytes": 1577,
+  "checkedAt": "2026-11-12T15:41:39.022476+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "17-10 River Rd.",
+    "City": "FAIR LAWN",
+    "Postal": "07410",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "00f4a427441d832d8f7817bb83b33526af805d93d0402c56be53d433eb725d34",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=17-10+River+Rd.&City=FAIR+LAWN&Region=NJ&Postal=07410&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

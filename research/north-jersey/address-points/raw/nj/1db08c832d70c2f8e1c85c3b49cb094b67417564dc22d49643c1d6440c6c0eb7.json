@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1db08c832d70c2f8e1c85c3b49cb094b67417564dc22d49643c1d6440c6c0eb7.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:29.108285+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "136 ESSEX STREET",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8872ca6cd56c7af0fc4ac270a858455bb581c037e69a7ac436919a9170c63980",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=136+ESSEX+STREET&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

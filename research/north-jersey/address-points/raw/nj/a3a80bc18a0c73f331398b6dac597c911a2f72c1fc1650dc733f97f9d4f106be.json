@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a3a80bc18a0c73f331398b6dac597c911a2f72c1fc1650dc733f97f9d4f106be.body",
+  "bytes": 1564,
+  "checkedAt": "2026-11-12T15:41:21.231605+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "261 TERHUNE DRIVE",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "04aca483489402f6c1a1abc611046d0565d9e82137aef5b4fba541d1a26232c1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=261+TERHUNE+DRIVE&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

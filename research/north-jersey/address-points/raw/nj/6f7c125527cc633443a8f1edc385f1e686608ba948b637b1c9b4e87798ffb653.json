@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6f7c125527cc633443a8f1edc385f1e686608ba948b637b1c9b4e87798ffb653.body",
+  "bytes": 1644,
+  "checkedAt": "2026-11-12T15:41:23.384548+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "4 CEDAR CREST VILLAGE DRIVE",
+    "City": "POMPTON PLAINS",
+    "Postal": "07444",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9a8dcfb1fc7df25d367b637f4a2814ab65a6c9357807457491661ff9008f0df8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=4+CEDAR+CREST+VILLAGE+DRIVE&City=POMPTON+PLAINS&Region=NJ&Postal=07444&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ebd3cb0cff35488ca06f95d960ec9ad81d1d37c034938b10f8748035b4971d76.body",
+  "bytes": 1627,
+  "checkedAt": "2026-11-12T15:41:33.986200+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "10 HERRICK DRIVE",
+    "City": "OLD TAPPAN",
+    "Postal": "07675",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "0ffeed256332b8a9f62885d62c3039d4933b37a7bc5b631fc2fb0d8a332011ec",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=10+HERRICK+DRIVE&City=OLD+TAPPAN&Region=NJ&Postal=07675&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/061b4154ff752372093143bc129c5924997a7acf3577d2fe63a45aaab4244e30.body",
+  "bytes": 1589,
+  "checkedAt": "2026-11-12T15:41:48.870812+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "456 Springfield Ave",
+    "City": "Newark",
+    "Postal": "07103",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e64711bf73066a20e318c2ad8fd2040108ee55011a833eea722d664d881911b2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=456+Springfield+Ave&City=Newark&Region=NJ&Postal=07103&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

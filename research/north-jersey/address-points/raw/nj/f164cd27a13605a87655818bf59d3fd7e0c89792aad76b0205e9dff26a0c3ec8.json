@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f164cd27a13605a87655818bf59d3fd7e0c89792aad76b0205e9dff26a0c3ec8.body",
+  "bytes": 1564,
+  "checkedAt": "2026-11-12T15:41:47.818726+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "146 Highland Ave",
+    "City": "Newark",
+    "Postal": "07104",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2504e17ccfced4885facbf21099e19d6127b5a0b24c455b32cb7109bbf2e3214",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=146+Highland+Ave&City=Newark&Region=NJ&Postal=07104&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

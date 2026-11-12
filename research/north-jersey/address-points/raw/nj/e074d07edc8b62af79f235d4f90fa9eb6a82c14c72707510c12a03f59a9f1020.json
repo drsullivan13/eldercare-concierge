@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e074d07edc8b62af79f235d4f90fa9eb6a82c14c72707510c12a03f59a9f1020.body",
+  "bytes": 1626,
+  "checkedAt": "2026-11-12T15:41:42.615793+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "960 Pleasant Valley Way",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f0c80d7a7b7cfb24ac55c0b15770d4f4abe46d04e72b6ce0594b7e2b40b55d0e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=960+Pleasant+Valley+Way&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

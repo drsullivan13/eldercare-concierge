@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d91422253657b60083d85f4b1b94a91e7c95ba5972a23147cf36a5bfc800eade.body",
+  "bytes": 4770,
+  "checkedAt": "2026-11-12T15:41:51.704035+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "NORTH BERGEN",
+    "format": "json",
+    "state": "NJ",
+    "street": "3161 KENNEDY BOULEVARD",
+    "vintage": "Current_Current",
+    "zip": "07047"
+  },
+  "sha256": "30d30b8a59f3e20826dac89f4ea2f4a450833caf43d2a1390d571f216fb28e7a",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3161+KENNEDY+BOULEVARD&city=NORTH+BERGEN&state=NJ&zip=07047&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/208a2156858fe97823e0176402b7eb19927969ae4b02dd93804a7b61518d7900.body",
+  "bytes": 4728,
+  "checkedAt": "2026-11-12T15:41:51.979897+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "RANDOLPH",
+    "format": "json",
+    "state": "NJ",
+    "street": "648 ROUTE 10",
+    "vintage": "Current_Current",
+    "zip": "07869"
+  },
+  "sha256": "aae372ffeee928b8f6376233bbabeb6247613ce1609d81c915954949d327c12b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=648+ROUTE+10&city=RANDOLPH&state=NJ&zip=07869&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

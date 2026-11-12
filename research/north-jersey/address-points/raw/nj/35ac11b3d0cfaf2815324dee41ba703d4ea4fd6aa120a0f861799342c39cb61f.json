@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/35ac11b3d0cfaf2815324dee41ba703d4ea4fd6aa120a0f861799342c39cb61f.body",
+  "bytes": 3102,
+  "checkedAt": "2026-11-12T15:41:30.463144+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "126 State Street",
+    "City": "HACKENSACK",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4d347fdbded82c0572ea227a5cfd48d59a506e2af2d301daf26326b1f5bf3795",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=126+State+Street&City=HACKENSACK&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

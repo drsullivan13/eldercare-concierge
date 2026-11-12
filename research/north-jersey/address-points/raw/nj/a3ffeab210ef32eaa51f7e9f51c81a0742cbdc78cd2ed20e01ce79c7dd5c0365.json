@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a3ffeab210ef32eaa51f7e9f51c81a0742cbdc78cd2ed20e01ce79c7dd5c0365.body",
+  "bytes": 1598,
+  "checkedAt": "2026-11-12T15:41:36.150183+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "172 FRANKLIN AVENUE",
+    "City": "RIDGEWOOD",
+    "Postal": "07450",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "453d83ba901f8a86e873304ea370b3254bea3cd9233bc987df0277966699d506",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=172+FRANKLIN+AVENUE&City=RIDGEWOOD&Region=NJ&Postal=07450&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

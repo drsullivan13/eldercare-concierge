@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e370fed8f048c82d270ffa8639b4b2d006d7b1c66373ff0bb5470d5c77cedaa1.body",
+  "bytes": 1663,
+  "checkedAt": "2026-11-12T15:41:39.744227+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "154 Main Street",
+    "City": "East Rutherford",
+    "Postal": "07073",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "e24993d50036d40f96121f3f6a62e3ac4742aab5dfcb6b8d7b25603cc175ea49",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=154+Main+Street&City=East+Rutherford&Region=NJ&Postal=07073&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

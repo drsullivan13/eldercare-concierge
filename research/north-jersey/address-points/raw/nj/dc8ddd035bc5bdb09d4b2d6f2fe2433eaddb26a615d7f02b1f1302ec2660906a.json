@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dc8ddd035bc5bdb09d4b2d6f2fe2433eaddb26a615d7f02b1f1302ec2660906a.body",
+  "bytes": 4453,
+  "checkedAt": "2026-11-12T15:41:44.306617+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "54 Mapes Avenue",
+    "City": "Newark",
+    "Postal": "07112",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "68fca3f919fac81bdb182d5f836d0cd009880555eff94871ed1ad283bd7b0a06",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=54+Mapes+Avenue&City=Newark&Region=NJ&Postal=07112&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

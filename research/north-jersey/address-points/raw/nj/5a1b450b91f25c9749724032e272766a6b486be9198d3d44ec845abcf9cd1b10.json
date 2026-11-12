@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5a1b450b91f25c9749724032e272766a6b486be9198d3d44ec845abcf9cd1b10.body",
+  "bytes": 1621,
+  "checkedAt": "2026-11-12T15:41:37.228148+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "458 IRVINE TURNER BLVD.",
+    "City": "NEWARK",
+    "Postal": "07108",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "980430bd01075a0cd0fbb0eb2979685e752ec0be7728c620df2dbb09649636f9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=458+IRVINE+TURNER+BLVD.&City=NEWARK&Region=NJ&Postal=07108&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

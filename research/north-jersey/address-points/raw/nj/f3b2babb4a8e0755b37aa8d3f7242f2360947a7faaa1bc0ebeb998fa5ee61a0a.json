@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f3b2babb4a8e0755b37aa8d3f7242f2360947a7faaa1bc0ebeb998fa5ee61a0a.body",
+  "bytes": 1567,
+  "checkedAt": "2026-11-12T15:41:42.429762+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "333 S 7TH STREET",
+    "City": "NEWARK",
+    "Postal": "07103",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b36713f666568d6970d54d5c4a75b681a2545d2bb4daa091620026a27ec133b3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=333+S+7TH+STREET&City=NEWARK&Region=NJ&Postal=07103&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

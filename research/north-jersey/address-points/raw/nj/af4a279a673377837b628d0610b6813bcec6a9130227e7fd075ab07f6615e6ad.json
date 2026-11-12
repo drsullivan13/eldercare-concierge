@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/af4a279a673377837b628d0610b6813bcec6a9130227e7fd075ab07f6615e6ad.body",
+  "bytes": 1600,
+  "checkedAt": "2026-11-12T15:41:41.094317+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1120 S Orange Avenue",
+    "City": "Newark",
+    "Postal": "07106",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "fa06301664214d961df19be0d28d284d7506a73eaa26c1874e8a2193c841f4fe",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1120+S+Orange+Avenue&City=Newark&Region=NJ&Postal=07106&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

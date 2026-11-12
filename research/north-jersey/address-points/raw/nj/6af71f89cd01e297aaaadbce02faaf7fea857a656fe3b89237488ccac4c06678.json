@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6af71f89cd01e297aaaadbce02faaf7fea857a656fe3b89237488ccac4c06678.body",
+  "bytes": 1560,
+  "checkedAt": "2026-11-12T15:41:36.229115+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1605 JOHN STREET",
+    "City": "FORT LEE",
+    "Postal": "07024",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "188598f01f1f61c54a1bd46a6277d1d6290b8bf709c56391d047d43d14bb662c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1605+JOHN+STREET&City=FORT+LEE&Region=NJ&Postal=07024&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

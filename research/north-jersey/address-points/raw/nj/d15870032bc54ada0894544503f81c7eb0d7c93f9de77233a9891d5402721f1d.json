@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d15870032bc54ada0894544503f81c7eb0d7c93f9de77233a9891d5402721f1d.body",
+  "bytes": 1573,
+  "checkedAt": "2026-11-12T15:41:20.987222+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1777 LAWRENCE STREET",
+    "City": "RAHWAY",
+    "Postal": "07065",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "ada90d0a1ddb5ed5c744d16e8e0cfaf91bfe9df73054aaad622a664327d46fbd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1777+LAWRENCE+STREET&City=RAHWAY&Region=NJ&Postal=07065&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

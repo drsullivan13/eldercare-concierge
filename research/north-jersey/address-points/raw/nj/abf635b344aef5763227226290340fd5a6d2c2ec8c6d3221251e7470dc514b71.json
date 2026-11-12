@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/abf635b344aef5763227226290340fd5a6d2c2ec8c6d3221251e7470dc514b71.body",
+  "bytes": 68,
+  "checkedAt": "2026-11-12T15:41:41.183014+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 Catan Drive",
+    "City": "Flanders",
+    "Postal": "07836",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "acfae4870440c59a64af2343acab32331eeb8aad84a36e9b5b1b15ec1373f4db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+Catan+Drive&City=Flanders&Region=NJ&Postal=07836&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ecb1a1a35b35afcf6c960933778ebea2ddf6243469221cf72b9089f7a41c9fe9.body",
+  "bytes": 3101,
+  "checkedAt": "2026-11-12T15:41:43.146002+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "11 UPPERFIELD ROAD",
+    "City": "MORRISTOWN",
+    "Postal": "07960",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "702eea8669d5a111e700bdc797b19139455f6c3d87fa115d19cde3c00564345c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=11+UPPERFIELD+ROAD&City=MORRISTOWN&Region=NJ&Postal=07960&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8dee13b9e3a8891836cd8f98f54adbb518c2c4876850265543be697adf195392.body",
+  "bytes": 3043,
+  "checkedAt": "2026-11-12T15:41:35.108441+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1 BLOOMFIELD AVENUE",
+    "City": "NEWARK",
+    "Postal": "07104",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "011ba77f6ed9cd5d7f7c282db219a6be0a25d6dac59a8ad5a79ca3ea43b23bd2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1+BLOOMFIELD+AVENUE&City=NEWARK&Region=NJ&Postal=07104&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

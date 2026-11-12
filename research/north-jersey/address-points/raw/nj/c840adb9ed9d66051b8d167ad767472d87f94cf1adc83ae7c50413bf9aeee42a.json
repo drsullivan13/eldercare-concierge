@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c840adb9ed9d66051b8d167ad767472d87f94cf1adc83ae7c50413bf9aeee42a.body",
+  "bytes": 1587,
+  "checkedAt": "2026-11-12T15:41:22.119826+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "255 UNION AVE",
+    "City": "BLOOMINGDALE",
+    "Postal": "07403",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c3db8637f9f39d05703aabb57a719e30eaedc331eb0bcae353e368596607c5e8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=255+UNION+AVE&City=BLOOMINGDALE&Region=NJ&Postal=07403&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

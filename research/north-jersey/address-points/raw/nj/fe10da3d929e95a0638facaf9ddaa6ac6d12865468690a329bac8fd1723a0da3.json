@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fe10da3d929e95a0638facaf9ddaa6ac6d12865468690a329bac8fd1723a0da3.body",
+  "bytes": 1601,
+  "checkedAt": "2026-11-12T15:41:46.158024+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "280 Clendenny Ave",
+    "City": "Jersey City",
+    "Postal": "07304",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "07bb11f064dfebe1cca6323b9058771032dde3ba68eb8a8ae62f95bce4739bdc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=280+Clendenny+Ave&City=Jersey+City&Region=NJ&Postal=07304&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

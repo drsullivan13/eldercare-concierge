@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/85250dc71fbd17197c3113d8eea78de771ac6910f46d97e5dd6cd9a73449418d.body",
+  "bytes": 1602,
+  "checkedAt": "2026-11-12T15:41:36.199672+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1111 S Long Ave",
+    "City": "Hillside",
+    "Postal": "07205",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b455e11d2ce13f0957503156570a5bee6d231b90b5c940777ae4453236b6f5cb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1111+S+Long+Ave&City=Hillside&Region=NJ&Postal=07205&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

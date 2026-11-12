@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a380fd33483f4e7123e67490e40ae3cbccb7e01bffb1eb6a71d6e4fd970f504c.body",
+  "bytes": 1572,
+  "checkedAt": "2026-11-12T15:41:25.635478+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "118 MAIN STREET",
+    "City": "SUCCASUNNA",
+    "Postal": "07876",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5054ac2bde40989aeca311b699c6bf015b88dc76b0b9c32b1098880475891b39",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=118+MAIN+STREET&City=SUCCASUNNA&Region=NJ&Postal=07876&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

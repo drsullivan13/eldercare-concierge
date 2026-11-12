@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/33d08046ed1e41ec4e8a199ba4358e2f135316bc9aa0feaa74d37ada2e1362e7.body",
+  "bytes": 1518,
+  "checkedAt": "2026-11-12T15:41:21.312884+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "65 JAY STREET",
+    "City": "NEWARK",
+    "Postal": "07103",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "951d9c88d689fb8c12eed37b81cf93ce93c1a9a3ec6516264ca1e4b242e746d4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=65+JAY+STREET&City=NEWARK&Region=NJ&Postal=07103&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

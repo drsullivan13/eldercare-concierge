@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ac35373a407a3cfa65b273edd17c710cfb14325a4c8cb6e37bbdcdc7632b4e81.body",
+  "bytes": 1567,
+  "checkedAt": "2026-11-12T15:41:40.892168+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2810 Morris Avenue",
+    "City": "Union",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7ca33b14c2ad40ef3297b92a417725720454f5f075d26e519cf3ba707f0ecc0a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2810+Morris+Avenue&City=Union&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

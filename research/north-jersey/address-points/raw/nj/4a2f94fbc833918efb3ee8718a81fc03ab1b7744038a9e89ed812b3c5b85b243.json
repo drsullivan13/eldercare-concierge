@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4a2f94fbc833918efb3ee8718a81fc03ab1b7744038a9e89ed812b3c5b85b243.body",
+  "bytes": 1565,
+  "checkedAt": "2026-11-12T15:41:40.782787+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "175 MARKET STREET",
+    "City": "PATERSON",
+    "Postal": "07505",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "222e8132800f64ba752d00e5e8cf2183f999f617b38c7ab6f74d6d8be6056068",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=175+MARKET+STREET&City=PATERSON&Region=NJ&Postal=07505&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

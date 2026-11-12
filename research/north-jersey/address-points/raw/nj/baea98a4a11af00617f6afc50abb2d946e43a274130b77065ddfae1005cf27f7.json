@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/baea98a4a11af00617f6afc50abb2d946e43a274130b77065ddfae1005cf27f7.body",
+  "bytes": 1579,
+  "checkedAt": "2026-11-12T15:41:40.692219+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "16 Kenz Terrace",
+    "City": "West Orange",
+    "Postal": "07052",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "92196ca7ba09ab8272c33605a5ab299f34c1fbc395e062f924f1738196517e6b",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=16+Kenz+Terrace&City=West+Orange&Region=NJ&Postal=07052&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

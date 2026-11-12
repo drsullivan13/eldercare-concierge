@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ed3d716694b90305dfb5b85c4de4b7c57cc84ae4010f5aa30916bf92d89913e9.body",
+  "bytes": 1618,
+  "checkedAt": "2026-11-12T15:41:21.867415+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "12-15 SADDLE RIVER ROAD",
+    "City": "FAIRLAWN",
+    "Postal": "07410",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f8099bb1e039578226ebaee81de4fb07e69967e12a93da3fd5cbc630f07b614e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=12-15+SADDLE+RIVER+ROAD&City=FAIRLAWN&Region=NJ&Postal=07410&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

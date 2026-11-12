@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/5716fb75ee76c24b77d78c1d04612dc5baa572aeb0f257cf663daaa6fff39a45.body",
+  "bytes": 5168,
+  "checkedAt": "2026-11-12T15:41:56.538264+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Rahway",
+    "format": "json",
+    "state": "NJ",
+    "street": "1 Park Sq",
+    "vintage": "Current_Current",
+    "zip": "07065"
+  },
+  "sha256": "f089138e7f42ec272e5fea3cdfefbb4c7cbd692555dd61702b767f56d647423f",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1+Park+Sq&city=Rahway&state=NJ&zip=07065&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

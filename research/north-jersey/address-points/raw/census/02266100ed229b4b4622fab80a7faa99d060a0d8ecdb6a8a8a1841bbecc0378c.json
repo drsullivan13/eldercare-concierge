@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/02266100ed229b4b4622fab80a7faa99d060a0d8ecdb6a8a8a1841bbecc0378c.body",
+  "bytes": 5228,
+  "checkedAt": "2026-11-12T15:41:52.946812+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "FAIRLAWN",
+    "format": "json",
+    "state": "NJ",
+    "street": "12-18 RIVER ROAD",
+    "vintage": "Current_Current",
+    "zip": "07410"
+  },
+  "sha256": "51e030073061dfe8bfb98fd395fd16c7e01dc399078a74327ec149f7b1811cb2",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=12-18+RIVER+ROAD&city=FAIRLAWN&state=NJ&zip=07410&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

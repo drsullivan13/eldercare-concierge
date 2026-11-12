@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6f0c3be8ccada269c9790a90a8e5435b556e49bba59458e94970100bca760b83.body",
+  "bytes": 1551,
+  "checkedAt": "2026-11-12T15:41:39.064768+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "16 ORANGE STREET",
+    "City": "BLOOMFIELD",
+    "Postal": "07003",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9ce2abc199d7f622039b251e04a62156acc0810541f8baf33c00e007a2be2256",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=16+ORANGE+STREET&City=BLOOMFIELD&Region=NJ&Postal=07003&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

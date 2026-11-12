@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4a5d4c2bb36c5b5f13365d6dc748b8622e6f722dc1f7c6bf740a65170023054d.body",
+  "bytes": 1631,
+  "checkedAt": "2026-11-12T15:41:28.348478+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "143 FAIRVIEW AVENUE",
+    "City": "PARAMUS",
+    "Postal": "07652",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d04ab300bcf36f3a22d62c24194c2ff3b7049e78349157af9452426edca749dd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=143+FAIRVIEW+AVENUE&City=PARAMUS&Region=NJ&Postal=07652&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

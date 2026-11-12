@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6e07eea188c5ad10353368a1eb44a0efca29b30db8ebb19002659bb44859627a.body",
+  "bytes": 1584,
+  "checkedAt": "2026-11-12T15:41:36.762811+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "601 HAMBURG TURNPIKE",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a4775b75758325f16d73c8734d81ef47b2a38044772e4ad1fdc3385a52acf7b2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=601+HAMBURG+TURNPIKE&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

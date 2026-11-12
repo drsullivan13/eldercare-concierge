@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/952604e5bc539c0e7bfe507677c38852e0a08367086dd3569959396338ccfd7a.body",
+  "bytes": 1561,
+  "checkedAt": "2026-11-12T15:41:27.606315+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "295 SOUTH AVENUE",
+    "City": "FANWOOD",
+    "Postal": "07023",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c1c3db73a27dd4e66ac5d6169ecf0714088fa428d9b77f2978380bbd5ce83f2f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=295+SOUTH+AVENUE&City=FANWOOD&Region=NJ&Postal=07023&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

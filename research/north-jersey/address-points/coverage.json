@@ -1,0 +1,430 @@
+{
+  "checkedDates": [
+    "2026-11-12"
+  ],
+  "coverage": {
+    "all": {
+      "census-street-interpolated": 56,
+      "fallback": 121,
+      "matched": 853,
+      "nj-address-point": 784,
+      "nj-street-interpolated": 13,
+      "supplied-coordinate-unverified": 30,
+      "total": 974,
+      "zip-representative-point": 91
+    },
+    "county-setting/Bergen/assisted-living": {
+      "census-street-interpolated": 1,
+      "fallback": 5,
+      "matched": 38,
+      "nj-address-point": 37,
+      "supplied-coordinate-unverified": 5,
+      "total": 43
+    },
+    "county-setting/Bergen/home-care": {
+      "census-street-interpolated": 4,
+      "fallback": 20,
+      "matched": 141,
+      "nj-address-point": 137,
+      "total": 161,
+      "zip-representative-point": 20
+    },
+    "county-setting/Bergen/home-health": {
+      "matched": 5,
+      "nj-address-point": 5,
+      "total": 5
+    },
+    "county-setting/Bergen/nursing-home": {
+      "fallback": 5,
+      "matched": 25,
+      "nj-address-point": 25,
+      "supplied-coordinate-unverified": 5,
+      "total": 30
+    },
+    "county-setting/Essex/assisted-living": {
+      "census-street-interpolated": 1,
+      "fallback": 1,
+      "matched": 19,
+      "nj-address-point": 18,
+      "supplied-coordinate-unverified": 1,
+      "total": 20
+    },
+    "county-setting/Essex/home-care": {
+      "census-street-interpolated": 6,
+      "fallback": 24,
+      "matched": 183,
+      "nj-address-point": 176,
+      "nj-street-interpolated": 1,
+      "total": 207,
+      "zip-representative-point": 24
+    },
+    "county-setting/Essex/home-health": {
+      "matched": 4,
+      "nj-address-point": 4,
+      "total": 4
+    },
+    "county-setting/Essex/life-plan": {
+      "matched": 2,
+      "nj-address-point": 2,
+      "total": 2
+    },
+    "county-setting/Essex/nursing-home": {
+      "census-street-interpolated": 2,
+      "fallback": 2,
+      "matched": 37,
+      "nj-address-point": 34,
+      "nj-street-interpolated": 1,
+      "supplied-coordinate-unverified": 1,
+      "total": 39,
+      "zip-representative-point": 1
+    },
+    "county-setting/Hudson/assisted-living": {
+      "fallback": 2,
+      "supplied-coordinate-unverified": 2,
+      "total": 2
+    },
+    "county-setting/Hudson/home-care": {
+      "census-street-interpolated": 9,
+      "fallback": 10,
+      "matched": 60,
+      "nj-address-point": 51,
+      "total": 70,
+      "zip-representative-point": 10
+    },
+    "county-setting/Hudson/home-health": {
+      "matched": 3,
+      "nj-address-point": 3,
+      "total": 3
+    },
+    "county-setting/Hudson/life-plan": {
+      "fallback": 1,
+      "total": 1,
+      "zip-representative-point": 1
+    },
+    "county-setting/Hudson/nursing-home": {
+      "census-street-interpolated": 1,
+      "fallback": 2,
+      "matched": 16,
+      "nj-address-point": 13,
+      "nj-street-interpolated": 2,
+      "supplied-coordinate-unverified": 2,
+      "total": 18
+    },
+    "county-setting/Morris/assisted-living": {
+      "census-street-interpolated": 4,
+      "fallback": 7,
+      "matched": 23,
+      "nj-address-point": 19,
+      "supplied-coordinate-unverified": 5,
+      "total": 30,
+      "zip-representative-point": 2
+    },
+    "county-setting/Morris/home-care": {
+      "census-street-interpolated": 4,
+      "fallback": 13,
+      "matched": 47,
+      "nj-address-point": 43,
+      "total": 60,
+      "zip-representative-point": 13
+    },
+    "county-setting/Morris/home-health": {
+      "matched": 3,
+      "nj-address-point": 3,
+      "total": 3
+    },
+    "county-setting/Morris/life-plan": {
+      "matched": 2,
+      "nj-address-point": 2,
+      "total": 2
+    },
+    "county-setting/Morris/nursing-home": {
+      "census-street-interpolated": 2,
+      "fallback": 5,
+      "matched": 21,
+      "nj-address-point": 19,
+      "supplied-coordinate-unverified": 4,
+      "total": 26,
+      "zip-representative-point": 1
+    },
+    "county-setting/Passaic/assisted-living": {
+      "census-street-interpolated": 2,
+      "matched": 10,
+      "nj-address-point": 7,
+      "nj-street-interpolated": 1,
+      "total": 10
+    },
+    "county-setting/Passaic/home-care": {
+      "census-street-interpolated": 6,
+      "fallback": 4,
+      "matched": 54,
+      "nj-address-point": 45,
+      "nj-street-interpolated": 3,
+      "total": 58,
+      "zip-representative-point": 4
+    },
+    "county-setting/Passaic/home-health": {
+      "census-street-interpolated": 1,
+      "fallback": 1,
+      "matched": 1,
+      "total": 2,
+      "zip-representative-point": 1
+    },
+    "county-setting/Passaic/life-plan": {
+      "matched": 1,
+      "nj-address-point": 1,
+      "total": 1
+    },
+    "county-setting/Passaic/nursing-home": {
+      "census-street-interpolated": 2,
+      "fallback": 4,
+      "matched": 19,
+      "nj-address-point": 16,
+      "nj-street-interpolated": 1,
+      "supplied-coordinate-unverified": 4,
+      "total": 23
+    },
+    "county-setting/Union/assisted-living": {
+      "census-street-interpolated": 1,
+      "fallback": 1,
+      "matched": 10,
+      "nj-address-point": 9,
+      "supplied-coordinate-unverified": 1,
+      "total": 11
+    },
+    "county-setting/Union/home-care": {
+      "census-street-interpolated": 9,
+      "fallback": 14,
+      "matched": 103,
+      "nj-address-point": 92,
+      "nj-street-interpolated": 2,
+      "total": 117,
+      "zip-representative-point": 14
+    },
+    "county-setting/Union/home-health": {
+      "matched": 1,
+      "nj-address-point": 1,
+      "total": 1
+    },
+    "county-setting/Union/life-plan": {
+      "matched": 1,
+      "nj-address-point": 1,
+      "total": 1
+    },
+    "county-setting/Union/nursing-home": {
+      "census-street-interpolated": 1,
+      "matched": 24,
+      "nj-address-point": 21,
+      "nj-street-interpolated": 2,
+      "total": 24
+    },
+    "county/Bergen": {
+      "census-street-interpolated": 5,
+      "fallback": 30,
+      "matched": 209,
+      "nj-address-point": 204,
+      "supplied-coordinate-unverified": 10,
+      "total": 239,
+      "zip-representative-point": 20
+    },
+    "county/Essex": {
+      "census-street-interpolated": 9,
+      "fallback": 27,
+      "matched": 245,
+      "nj-address-point": 234,
+      "nj-street-interpolated": 2,
+      "supplied-coordinate-unverified": 2,
+      "total": 272,
+      "zip-representative-point": 25
+    },
+    "county/Hudson": {
+      "census-street-interpolated": 10,
+      "fallback": 15,
+      "matched": 79,
+      "nj-address-point": 67,
+      "nj-street-interpolated": 2,
+      "supplied-coordinate-unverified": 4,
+      "total": 94,
+      "zip-representative-point": 11
+    },
+    "county/Morris": {
+      "census-street-interpolated": 10,
+      "fallback": 25,
+      "matched": 96,
+      "nj-address-point": 86,
+      "supplied-coordinate-unverified": 9,
+      "total": 121,
+      "zip-representative-point": 16
+    },
+    "county/Passaic": {
+      "census-street-interpolated": 11,
+      "fallback": 9,
+      "matched": 85,
+      "nj-address-point": 69,
+      "nj-street-interpolated": 5,
+      "supplied-coordinate-unverified": 4,
+      "total": 94,
+      "zip-representative-point": 5
+    },
+    "county/Union": {
+      "census-street-interpolated": 11,
+      "fallback": 15,
+      "matched": 139,
+      "nj-address-point": 124,
+      "nj-street-interpolated": 4,
+      "supplied-coordinate-unverified": 1,
+      "total": 154,
+      "zip-representative-point": 14
+    },
+    "setting/assisted-living": {
+      "census-street-interpolated": 9,
+      "fallback": 16,
+      "matched": 100,
+      "nj-address-point": 90,
+      "nj-street-interpolated": 1,
+      "supplied-coordinate-unverified": 14,
+      "total": 116,
+      "zip-representative-point": 2
+    },
+    "setting/home-care": {
+      "census-street-interpolated": 38,
+      "fallback": 85,
+      "matched": 588,
+      "nj-address-point": 544,
+      "nj-street-interpolated": 6,
+      "total": 673,
+      "zip-representative-point": 85
+    },
+    "setting/home-health": {
+      "census-street-interpolated": 1,
+      "fallback": 1,
+      "matched": 17,
+      "nj-address-point": 16,
+      "total": 18,
+      "zip-representative-point": 1
+    },
+    "setting/life-plan": {
+      "fallback": 1,
+      "matched": 6,
+      "nj-address-point": 6,
+      "total": 7,
+      "zip-representative-point": 1
+    },
+    "setting/nursing-home": {
+      "census-street-interpolated": 8,
+      "fallback": 18,
+      "matched": 142,
+      "nj-address-point": 128,
+      "nj-street-interpolated": 6,
+      "supplied-coordinate-unverified": 16,
+      "total": 160,
+      "zip-representative-point": 2
+    }
+  },
+  "duplicatePolicy": "No provider IDs merged. Only spelling abbreviations share premises keys.",
+  "exceptions": {
+    "city_label_differs_exact_street_and_zip_validate_match": 6,
+    "no_unique_validated_official_street_match": 121,
+    "unit_preserved_but_not_geospatially_verified": 415,
+    "unparseable_or_postal_only_address": 14
+  },
+  "inputs": {
+    "crosswalk.json": {
+      "path": "research/north-jersey/runtime/crosswalk.json",
+      "sha256": "d1c245c73dad30cbd5fb32fe987ab3fb53d02df8ef51378a4663ee54a73caa95"
+    },
+    "meta.json": {
+      "path": "research/north-jersey/runtime/meta.json",
+      "sha256": "b598c0c725af67256322eef0f2947fee32a7c49b0e2fb55a55274ed1e1b6dea0"
+    },
+    "providers.json": {
+      "path": "research/north-jersey/runtime/providers.json",
+      "sha256": "81a1ccbc3d1deaa59c82c30095166e04f8e9b7d0663129ee857e7bf4433acf51"
+    },
+    "zips.json": {
+      "path": "research/north-jersey/runtime/zips.json",
+      "sha256": "d3e20077d709b26d164442ca3ae12e9db07e4a144b2193ff7ae515da9576ebfe"
+    }
+  },
+  "providerCount": 974,
+  "releaseSha256": "0cc9b9344cfe0026d788e920e95d52d5229c4a81a5b2a78b0d228a3ff20bd034",
+  "twoSameZipExamples": [
+    {
+      "providers": [
+        {
+          "coordinateAccuracy": "nj-address-point",
+          "lat": 40.668210000003,
+          "lng": -74.113132500001,
+          "providerId": "cms-315532",
+          "suppliedAddress": {
+            "address": "29 EAST 29TH STREET",
+            "city": "BAYONNE",
+            "state": "NJ",
+            "zip": "07002"
+          },
+          "zipFallback": {
+            "coordinateAccuracy": "zip-representative-point",
+            "lat": 40.662218,
+            "lng": -74.110544
+          }
+        },
+        {
+          "coordinateAccuracy": "nj-address-point",
+          "lat": 40.667751000003,
+          "lng": -74.102499000001,
+          "providerId": "cms-317006",
+          "suppliedAddress": {
+            "address": "149 LEFANTE WAY, STE 144 & 146",
+            "city": "BAYONNE",
+            "state": "NJ",
+            "zip": "07002"
+          },
+          "zipFallback": {
+            "coordinateAccuracy": "zip-representative-point",
+            "lat": 40.662218,
+            "lng": -74.110544
+          }
+        }
+      ],
+      "zip": "07002"
+    },
+    {
+      "providers": [
+        {
+          "coordinateAccuracy": "nj-address-point",
+          "lat": 40.783068000003,
+          "lng": -74.192926500001,
+          "providerId": "cms-315392",
+          "suppliedAddress": {
+            "address": "250 BLOOMFIELD AVE BLOOMFIELD, NJ 07003",
+            "city": "BLOOMFIELD",
+            "state": "NJ",
+            "zip": "07003"
+          },
+          "zipFallback": {
+            "coordinateAccuracy": "zip-representative-point",
+            "lat": 40.809141,
+            "lng": -74.187142
+          }
+        },
+        {
+          "coordinateAccuracy": "nj-address-point",
+          "lat": 40.795452000003,
+          "lng": -74.200113000001,
+          "providerId": "north-jersey-hp-hp0015319",
+          "suppliedAddress": {
+            "address": "650 BLOOMFIELD AVENUE, SUITE 200",
+            "city": "BLOOMFIELD",
+            "state": "NJ",
+            "zip": "07003"
+          },
+          "zipFallback": {
+            "coordinateAccuracy": "zip-representative-point",
+            "lat": 40.809141,
+            "lng": -74.187142
+          }
+        }
+      ],
+      "zip": "07003"
+    }
+  ]
+}

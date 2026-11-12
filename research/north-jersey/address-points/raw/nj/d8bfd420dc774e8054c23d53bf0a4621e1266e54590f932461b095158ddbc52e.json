@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d8bfd420dc774e8054c23d53bf0a4621e1266e54590f932461b095158ddbc52e.body",
+  "bytes": 1530,
+  "checkedAt": "2026-11-12T15:41:42.279547+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "35 Ross Street",
+    "City": "Newark",
+    "Postal": "07114",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "48cab6eb8b367956e5210b28ff589ee2c3a60e9cd5c74150c1b64fac52c9f041",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=35+Ross+Street&City=Newark&Region=NJ&Postal=07114&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

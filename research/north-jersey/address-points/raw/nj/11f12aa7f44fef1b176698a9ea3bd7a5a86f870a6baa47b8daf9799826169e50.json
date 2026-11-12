@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/11f12aa7f44fef1b176698a9ea3bd7a5a86f870a6baa47b8daf9799826169e50.body",
+  "bytes": 1580,
+  "checkedAt": "2026-11-12T15:41:27.665271+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "41 SPRINGFIELD AVENUE",
+    "City": "SUMMIT",
+    "Postal": "07901",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b3ea620b1aba7e168f237f0a0ff621b09d0494af279e69b85d0d005bc767a2d8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=41+SPRINGFIELD+AVENUE&City=SUMMIT&Region=NJ&Postal=07901&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

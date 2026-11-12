@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e3b2c26b2d4dc05b853938f6c850677f9764ae13f2d59c5cfea57a18526938b0.body",
+  "bytes": 1580,
+  "checkedAt": "2026-11-12T15:41:29.592898+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "39 TERHUNE AVENUE",
+    "City": "JERSEY CITY",
+    "Postal": "07305",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2180cfe10faab3aade29cd9d30a9aa45667df8d086bb0bfa007865acab130cbf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=39+TERHUNE+AVENUE&City=JERSEY+CITY&Region=NJ&Postal=07305&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

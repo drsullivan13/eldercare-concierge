@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a76c0912facfeefc6b9eef1679af46967394a1168c3a7d6eaca022341c9ad090.body",
+  "bytes": 3090,
+  "checkedAt": "2026-11-12T15:41:42.789895+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "17-17 Broadway",
+    "City": "Fairlawn",
+    "Postal": "07410",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6651f12dfc5fba7afed970ca33597de7237c901e546e640431165712ba4de917",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=17-17+Broadway&City=Fairlawn&Region=NJ&Postal=07410&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

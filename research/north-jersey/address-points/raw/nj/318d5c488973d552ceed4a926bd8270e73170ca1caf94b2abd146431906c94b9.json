@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/318d5c488973d552ceed4a926bd8270e73170ca1caf94b2abd146431906c94b9.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:38.792361+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2500 MORRIS AVENUE",
+    "City": "UNION",
+    "Postal": "07083",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "800fa2353809b8e0fa5ee468eedc4fd21c74751268461b1c9df5f0349329d71f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2500+MORRIS+AVENUE&City=UNION&Region=NJ&Postal=07083&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

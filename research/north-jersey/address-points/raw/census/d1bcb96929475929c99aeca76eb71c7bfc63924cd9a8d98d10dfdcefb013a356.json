@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d1bcb96929475929c99aeca76eb71c7bfc63924cd9a8d98d10dfdcefb013a356.body",
+  "bytes": 5217,
+  "checkedAt": "2026-11-12T15:41:49.822541+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "PARAMUS",
+    "format": "json",
+    "state": "NJ",
+    "street": "532 FARVIEW AVE",
+    "vintage": "Current_Current",
+    "zip": "07652"
+  },
+  "sha256": "20bb73aa6fad39ae24fe4256782b4830cb054fc0295425a715a0c7384b809e6c",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=532+FARVIEW+AVE&city=PARAMUS&state=NJ&zip=07652&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

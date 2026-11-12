@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7e8819b47f9969e7e05b22d337cbb11758358499b0d2e81d7bebeee892259e9d.body",
+  "bytes": 1677,
+  "checkedAt": "2026-11-12T15:41:33.807601+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "629 NEWARK POMPTON TPKE",
+    "City": "POMPTON PLAINS",
+    "Postal": "07444",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9f8bb73e8bc1839824c7a0b4edd70eaa3bb9eeca32521a52da438af8e8062413",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=629+NEWARK+POMPTON+TPKE&City=POMPTON+PLAINS&Region=NJ&Postal=07444&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

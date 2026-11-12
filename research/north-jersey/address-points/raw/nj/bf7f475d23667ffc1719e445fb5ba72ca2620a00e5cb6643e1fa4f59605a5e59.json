@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bf7f475d23667ffc1719e445fb5ba72ca2620a00e5cb6643e1fa4f59605a5e59.body",
+  "bytes": 1575,
+  "checkedAt": "2026-11-12T15:41:31.873801+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "20 COMMERCE DRIVE",
+    "City": "CRANFORD",
+    "Postal": "07016",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "20a5be5d1965dc09d6914f90f1eae9ea01346c0dfa2632cca84e2a25e8cb16cb",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=20+COMMERCE+DRIVE&City=CRANFORD&Region=NJ&Postal=07016&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

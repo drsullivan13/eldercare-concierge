@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b8e388fe12dd164bdd1a37f13ab778a75675d8ed1b8ede752468e2c1a0a0d590.body",
+  "bytes": 1662,
+  "checkedAt": "2026-11-12T15:41:27.824776+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "200 OLD HOOK ROAD",
+    "City": "HARRINGTON PARK",
+    "Postal": "07640",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2ba3dcd624da37bf9cb31f9c82fb0a1144e9d995a0ff0aa0236bcedaaf39ed25",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=200+OLD+HOOK+ROAD&City=HARRINGTON+PARK&Region=NJ&Postal=07640&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

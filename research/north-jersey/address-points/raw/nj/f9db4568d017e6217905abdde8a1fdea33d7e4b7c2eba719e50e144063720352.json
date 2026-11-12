@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f9db4568d017e6217905abdde8a1fdea33d7e4b7c2eba719e50e144063720352.body",
+  "bytes": 1615,
+  "checkedAt": "2026-11-12T15:41:43.373442+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "37 Brookside Avenue",
+    "City": "Livingston",
+    "Postal": "07039",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "addb517f91bf71a3d27d142d7158144386df153d46fe2ced9399c652ca1667e0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=37+Brookside+Avenue&City=Livingston&Region=NJ&Postal=07039&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

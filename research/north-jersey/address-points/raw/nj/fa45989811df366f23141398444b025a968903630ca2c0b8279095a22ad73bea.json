@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fa45989811df366f23141398444b025a968903630ca2c0b8279095a22ad73bea.body",
+  "bytes": 1546,
+  "checkedAt": "2026-11-12T15:41:20.354539+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1048 GROVE STREET",
+    "City": "ELIZABETH",
+    "Postal": "07202",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "147cb8c0f990f40e84f5525bea0de01acf894c26bb08c2773b43521cfcbd3ebf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1048+GROVE+STREET&City=ELIZABETH&Region=NJ&Postal=07202&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

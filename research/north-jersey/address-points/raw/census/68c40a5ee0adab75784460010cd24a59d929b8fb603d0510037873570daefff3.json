@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/68c40a5ee0adab75784460010cd24a59d929b8fb603d0510037873570daefff3.body",
+  "bytes": 5208,
+  "checkedAt": "2026-11-12T15:41:57.647107+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Westfield",
+    "format": "json",
+    "state": "NJ",
+    "street": "111 Quimby Street",
+    "vintage": "Current_Current",
+    "zip": "07090"
+  },
+  "sha256": "ed229a593d6e943916c05d057f246a6678ca5dcb9f5f744b07c228ad9eeb4688",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=111+Quimby+Street&city=Westfield&state=NJ&zip=07090&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

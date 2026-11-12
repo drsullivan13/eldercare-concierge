@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/083b10f0ee674ccce62aece2bad6a9c7c28ca4d188aefc48b54dfa3582b2fd6b.body",
+  "bytes": 1592,
+  "checkedAt": "2026-11-12T15:41:21.784659+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "178-198 OGDEN AVE",
+    "City": "JERSEY CITY",
+    "Postal": "07307",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b108208b81a65fad35722e7fdcbeb08eae59ab41eb99a1902280a6cbb9fb9d3d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=178-198+OGDEN+AVE&City=JERSEY+CITY&Region=NJ&Postal=07307&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

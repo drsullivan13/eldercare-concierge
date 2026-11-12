@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/375ebd26020e89aec5f00f31148041b57bf4c92c513539b8b5cadaf39a448d4f.body",
+  "bytes": 1576,
+  "checkedAt": "2026-11-12T15:41:28.272966+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "699 WYCKOFF AVENUE",
+    "City": "MAHWAH",
+    "Postal": "07430",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a07d8c264a4cb6161ef6d0dc44195749b4e76b1ea074de0881d78979ae9b2176",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=699+WYCKOFF+AVENUE&City=MAHWAH&Region=NJ&Postal=07430&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

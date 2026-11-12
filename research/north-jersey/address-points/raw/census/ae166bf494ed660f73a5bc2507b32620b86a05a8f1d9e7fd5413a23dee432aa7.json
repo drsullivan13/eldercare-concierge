@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/ae166bf494ed660f73a5bc2507b32620b86a05a8f1d9e7fd5413a23dee432aa7.body",
+  "bytes": 4770,
+  "checkedAt": "2026-11-12T15:41:51.231977+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "North Bergen",
+    "format": "json",
+    "state": "NJ",
+    "street": "3161 Kennedy Boulevard",
+    "vintage": "Current_Current",
+    "zip": "07047"
+  },
+  "sha256": "316bd18d0d8ad199eecc00afea601d3dd4795e589705e7edf94dd77da1d49b13",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=3161+Kennedy+Boulevard&city=North+Bergen&state=NJ&zip=07047&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

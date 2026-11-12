@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/316ed68d86ca0ad4f8770bb92ee9f60ed07bfce25e73af0393a4fc48466f15cf.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:43.142586+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "66 Allen St",
+    "City": "Irvington",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "73b77afd2489e2dd32d024423aa292e821ab06c629176cad97e7c3b98969bd21",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=66+Allen+St&City=Irvington&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b752a06a2d63abba1de59a2d8366dcb744128dafdd151be06bf61bf30d2715c3.body",
+  "bytes": 1547,
+  "checkedAt": "2026-11-12T15:41:45.925852+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "46 Sager Pl",
+    "City": "Hillside",
+    "Postal": "07205",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d0187f957d8b6783eebd2370c9e9ff5b3dc845f4edf32583bf6241c65175c65f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=46+Sager+Pl&City=Hillside&Region=NJ&Postal=07205&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

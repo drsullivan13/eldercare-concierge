@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d5291ab450112eee44a84c5a5d129803ebe547b1aa2fb05c2a94aa1381eb2bcf.body",
+  "bytes": 5196,
+  "checkedAt": "2026-11-12T15:41:52.575293+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "CLIFTON",
+    "format": "json",
+    "state": "NJ",
+    "street": "1117 MAIN AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07011"
+  },
+  "sha256": "9a9d07ae71d39901e69396bda1ceb00bfe311fc984abf1951f14e2519dc2a59b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1117+MAIN+AVENUE&city=CLIFTON&state=NJ&zip=07011&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

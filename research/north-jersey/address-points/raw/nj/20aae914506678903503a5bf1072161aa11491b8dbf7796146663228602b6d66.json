@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/20aae914506678903503a5bf1072161aa11491b8dbf7796146663228602b6d66.body",
+  "bytes": 1643,
+  "checkedAt": "2026-11-12T15:41:45.448960+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2327 JOHN F KENNEDY BLVD",
+    "City": "JERSEY CITY",
+    "Postal": "07304",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4fd9037a58f5a0bda6ff069e790908f2034b2ec4d1ed7decc0b59fac3c714090",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2327+JOHN+F+KENNEDY+BLVD&City=JERSEY+CITY&Region=NJ&Postal=07304&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e475a08b516a51b834e1c1ff7063b70bda84b36d9ffb39b1b2080a731addbcbc.body",
+  "bytes": 4695,
+  "checkedAt": "2026-11-12T15:41:26.681291+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "155-175 WEST HUDSON AVENUE",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a9e21cc0b2a3ab050d6454b8fb66b1f64ecbc7bc3f82dc631b1988790129a15d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=155-175+WEST+HUDSON+AVENUE&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

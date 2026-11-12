@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/001e1839754f0b32bf5f8c27f76037bd39028a7663e4c084193d39c98262dc2e.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:43.376073+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "351 Union Avenue",
+    "City": "Paterson",
+    "Postal": "07502",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "291e5c05bbd3c2762495ec13ce80e54b5e0952a708262df86f02aeff5eff1594",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=351+Union+Avenue&City=Paterson&Region=NJ&Postal=07502&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

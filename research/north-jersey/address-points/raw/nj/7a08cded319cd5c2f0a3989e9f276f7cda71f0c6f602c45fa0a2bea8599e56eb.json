@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7a08cded319cd5c2f0a3989e9f276f7cda71f0c6f602c45fa0a2bea8599e56eb.body",
+  "bytes": 1630,
+  "checkedAt": "2026-11-12T15:41:34.909808+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1453 SPRINGFIELD AVENUE",
+    "City": "MAPLEWOOD",
+    "Postal": "07040",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cb9d65e36518a0d5c25ee4ee9f3df42e0fb93a1ce3d39c22a2ac82e7f4fc3f09",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1453+SPRINGFIELD+AVENUE&City=MAPLEWOOD&Region=NJ&Postal=07040&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

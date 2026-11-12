@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ea4a39ee212c0d9d70b013c18addd714a16039cd4ccf88829c7687cba8fcbd00.body",
+  "bytes": 1604,
+  "checkedAt": "2026-11-12T15:41:32.039897+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "143 LAKESIDE BOULEVARD",
+    "City": "LANDING",
+    "Postal": "07850",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "338dd5f741b4bf7c5d4cc667ac355eafe9bda27aa14bc93d2fcd86a5c6cdf760",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=143+LAKESIDE+BOULEVARD&City=LANDING&Region=NJ&Postal=07850&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

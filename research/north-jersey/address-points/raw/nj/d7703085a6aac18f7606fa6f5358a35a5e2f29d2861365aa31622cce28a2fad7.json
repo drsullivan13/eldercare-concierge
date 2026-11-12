@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/d7703085a6aac18f7606fa6f5358a35a5e2f29d2861365aa31622cce28a2fad7.body",
+  "bytes": 1553,
+  "checkedAt": "2026-11-12T15:41:31.927793+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "18 CLARK STREET",
+    "City": "PATERSON",
+    "Postal": "07505",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "467761b170e6292b32deb637cb3e7c6a1d5235b8bf5693964a55f594ba4233b1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=18+CLARK+STREET&City=PATERSON&Region=NJ&Postal=07505&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

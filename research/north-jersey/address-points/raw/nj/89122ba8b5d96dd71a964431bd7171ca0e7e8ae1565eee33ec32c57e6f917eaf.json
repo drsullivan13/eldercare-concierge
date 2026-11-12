@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/89122ba8b5d96dd71a964431bd7171ca0e7e8ae1565eee33ec32c57e6f917eaf.body",
+  "bytes": 1623,
+  "checkedAt": "2026-11-12T15:41:37.113309+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "80 ROUTE 4",
+    "City": "PARAMUS",
+    "Postal": "07652",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "a6a06b1fe82eb58967b3de74122f9802bf76ac24ddd76007cb0b0b19fcbf5f2c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=80+ROUTE+4&City=PARAMUS&Region=NJ&Postal=07652&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

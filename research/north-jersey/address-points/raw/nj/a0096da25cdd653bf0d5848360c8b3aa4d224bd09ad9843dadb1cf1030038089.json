@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a0096da25cdd653bf0d5848360c8b3aa4d224bd09ad9843dadb1cf1030038089.body",
+  "bytes": 1608,
+  "checkedAt": "2026-11-12T15:41:35.135131+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3807 Bergenline Ave",
+    "City": "Union City",
+    "Postal": "07087",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2e2a083d784754f0ae5ccdcdeda81ddbc09cbee09500bb32bd52e30dc6573d1f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3807+Bergenline+Ave&City=Union+City&Region=NJ&Postal=07087&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

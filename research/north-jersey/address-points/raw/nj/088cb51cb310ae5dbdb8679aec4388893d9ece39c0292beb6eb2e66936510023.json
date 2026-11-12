@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/088cb51cb310ae5dbdb8679aec4388893d9ece39c0292beb6eb2e66936510023.body",
+  "bytes": 1581,
+  "checkedAt": "2026-11-12T15:41:30.670046+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "215 MILLBURN AVENUE",
+    "City": "MILLBURN",
+    "Postal": "07041",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "26fc75849e581ce901f173b3bc50eada5feeb4183717baee5d525f752b0acde6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=215+MILLBURN+AVENUE&City=MILLBURN&Region=NJ&Postal=07041&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

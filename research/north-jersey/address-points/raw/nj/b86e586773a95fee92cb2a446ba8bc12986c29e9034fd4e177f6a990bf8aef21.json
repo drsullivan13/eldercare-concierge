@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b86e586773a95fee92cb2a446ba8bc12986c29e9034fd4e177f6a990bf8aef21.body",
+  "bytes": 1563,
+  "checkedAt": "2026-11-12T15:41:37.921925+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "32 ELIZABETH AVENUE",
+    "City": "NEWARK",
+    "Postal": "07108",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "acb3f914bf80445c71fd476c5e36a46816e092fe87cbdbb6a1c1e14829639bda",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=32+ELIZABETH+AVENUE&City=NEWARK&Region=NJ&Postal=07108&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

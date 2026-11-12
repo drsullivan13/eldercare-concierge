@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dda040cd8fdebac026dab8cd5c46b024293bf56a5388f0fa661d971cbcc72687.body",
+  "bytes": 1614,
+  "checkedAt": "2026-11-12T15:41:42.675297+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "301 Route 17 N",
+    "City": "Rutherford",
+    "Postal": "07070",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "996f5ac5946244ca41852298c7996c590f96f0c8394fea85f0dc3d84b984b2cf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=301+Route+17+N&City=Rutherford&Region=NJ&Postal=07070&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

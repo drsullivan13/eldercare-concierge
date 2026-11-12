@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f297646508720ace9080af7a31b76717059534e44572f3fb3359b066fb8d758b.body",
+  "bytes": 1663,
+  "checkedAt": "2026-11-12T15:41:36.880874+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "365 WEST PASSAIC STREET",
+    "City": "ROCHELLE PARK",
+    "Postal": "07663",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7a48cf1fea594411f5545dfed805c2fdb3632ca819a3f6723389542353489288",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=365+WEST+PASSAIC+STREET&City=ROCHELLE+PARK&Region=NJ&Postal=07663&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

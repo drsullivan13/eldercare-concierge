@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/356e8b0f9f15bb4a3e59dd73a23213371c528efc72dd2624814bcd6387077216.body",
+  "bytes": 1589,
+  "checkedAt": "2026-11-12T15:41:33.000370+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1405 CLINTON AVENUE",
+    "City": "IRVINGTON",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "57aeb7ab444c27611cf8ce1b8da8295144774bdcff5bcfba7e7e4047bce4b572",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1405+CLINTON+AVENUE&City=IRVINGTON&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

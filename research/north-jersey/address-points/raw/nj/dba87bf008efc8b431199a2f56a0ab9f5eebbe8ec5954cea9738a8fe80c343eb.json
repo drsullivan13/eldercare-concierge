@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dba87bf008efc8b431199a2f56a0ab9f5eebbe8ec5954cea9738a8fe80c343eb.body",
+  "bytes": 1554,
+  "checkedAt": "2026-11-12T15:41:29.737678+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "111 WOOD STREET",
+    "City": "ENGLEWOOD",
+    "Postal": "07631",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "28bc5720b2c8ad21b4f1f8e13e1a875ede69e6340a7193da8cebf487da1e1af3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=111+WOOD+STREET&City=ENGLEWOOD&Region=NJ&Postal=07631&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

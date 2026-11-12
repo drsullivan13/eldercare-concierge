@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/005587e00795236ca7a2f73c575bfc5515ae85e12b6f23f327842f99d8def209.body",
+  "bytes": 5215,
+  "checkedAt": "2026-11-12T15:41:59.597349+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "East Orange",
+    "format": "json",
+    "state": "NJ",
+    "street": "137 Evergreen Pl 3D",
+    "vintage": "Current_Current",
+    "zip": "07018"
+  },
+  "sha256": "3951f7dcc6fe823462f24792ea60dab4c2e8c9ffca68b2269696d86c538c8512",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=137+Evergreen+Pl+3D&city=East+Orange&state=NJ&zip=07018&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

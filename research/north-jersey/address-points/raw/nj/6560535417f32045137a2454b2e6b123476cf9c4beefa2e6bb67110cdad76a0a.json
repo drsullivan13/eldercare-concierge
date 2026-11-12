@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/6560535417f32045137a2454b2e6b123476cf9c4beefa2e6bb67110cdad76a0a.body",
+  "bytes": 1611,
+  "checkedAt": "2026-11-12T15:41:27.584669+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "240 SPRINGFIELD AVENUE",
+    "City": "WESTFIELD",
+    "Postal": "07090",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "056e84d3729b486d8a2321994a0916ed1eb96f37ceda405cda7ddd6ba051ede2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=240+SPRINGFIELD+AVENUE&City=WESTFIELD&Region=NJ&Postal=07090&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

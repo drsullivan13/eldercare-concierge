@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/00c9c3c7f78f9fe725bd75ff2e124b4bc3a84ae098117becfaee59d70383a712.body",
+  "bytes": 1680,
+  "checkedAt": "2026-11-12T15:41:25.984098+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "728 FRANKLIN AVENUE",
+    "City": "FRANKLIN LAKES",
+    "Postal": "07417",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f5709f9bf1113e1eb09710eee345a0fea2dc6eebd1b48bed0b01b6332ca91291",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=728+FRANKLIN+AVENUE&City=FRANKLIN+LAKES&Region=NJ&Postal=07417&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

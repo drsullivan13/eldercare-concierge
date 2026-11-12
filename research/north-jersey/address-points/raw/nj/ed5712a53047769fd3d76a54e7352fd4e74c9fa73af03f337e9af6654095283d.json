@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ed5712a53047769fd3d76a54e7352fd4e74c9fa73af03f337e9af6654095283d.body",
+  "bytes": 1648,
+  "checkedAt": "2026-11-12T15:41:24.857859+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "685 WESTWOOD AVENUE",
+    "City": "RIVER VALE",
+    "Postal": "07675",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1638d103b5927836a8511e97ddd3293456fd4ae13cdcf75b6ec3e7b129455c25",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=685+WESTWOOD+AVENUE&City=RIVER+VALE&Region=NJ&Postal=07675&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

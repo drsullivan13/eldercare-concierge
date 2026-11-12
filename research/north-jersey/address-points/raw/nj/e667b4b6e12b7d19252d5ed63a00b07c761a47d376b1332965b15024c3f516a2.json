@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e667b4b6e12b7d19252d5ed63a00b07c761a47d376b1332965b15024c3f516a2.body",
+  "bytes": 3084,
+  "checkedAt": "2026-11-12T15:41:48.483542+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "131 Main St",
+    "City": "Hackensack",
+    "Postal": "07601",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "281d88a3800d9705d8721053ffc9be06fa3727e72a0180f29e40b39d510358da",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=131+Main+St&City=Hackensack&Region=NJ&Postal=07601&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

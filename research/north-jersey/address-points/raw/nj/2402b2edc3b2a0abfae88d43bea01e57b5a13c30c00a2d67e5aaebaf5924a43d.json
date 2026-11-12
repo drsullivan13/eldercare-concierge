@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2402b2edc3b2a0abfae88d43bea01e57b5a13c30c00a2d67e5aaebaf5924a43d.body",
+  "bytes": 1556,
+  "checkedAt": "2026-11-12T15:41:32.880112+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "215 MYRTLE AVENUE",
+    "City": "BOONTON",
+    "Postal": "07005",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d8b872a2ea1d8f1300d05796880a2a363ba1c31ea617f79be1bff2903e4476dc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=215+MYRTLE+AVENUE&City=BOONTON&Region=NJ&Postal=07005&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

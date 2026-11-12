@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/fcdec8200b38fb09b237e3e4e464171d81e25ee19e3f93d99c79c1c0e995ede4.body",
+  "bytes": 1544,
+  "checkedAt": "2026-11-12T15:41:48.756672+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "146 Union Avenue",
+    "City": "Linden",
+    "Postal": "07036",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d69285df0b7ef8c85ecdcca500494eedcbc343433dbcb043c15722ff1feab608",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=146+Union+Avenue&City=Linden&Region=NJ&Postal=07036&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

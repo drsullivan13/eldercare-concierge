@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b1232e4b2e78c493cc0698447e0d5f27423f1bea85d55861e268164386cb42ad.body",
+  "bytes": 1540,
+  "checkedAt": "2026-11-12T15:41:43.387177+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "47 Byrne Court",
+    "City": "Wayne",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "394c681a06b6919f5a863de846a85ead18a5f0091f0751688d7f201d5bfc8bfc",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=47+Byrne+Court&City=Wayne&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

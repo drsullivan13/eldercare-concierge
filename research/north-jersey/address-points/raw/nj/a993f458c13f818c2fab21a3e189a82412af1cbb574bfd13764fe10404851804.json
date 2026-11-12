@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a993f458c13f818c2fab21a3e189a82412af1cbb574bfd13764fe10404851804.body",
+  "bytes": 3092,
+  "checkedAt": "2026-11-12T15:41:34.682978+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "17-17 BROADWAY",
+    "City": "FAIR LAWN",
+    "Postal": "07410",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2af7bda305e6288d9e68b5550df4f40c7e030ed7adcb9bd8de42a0d7bae5ae82",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=17-17+BROADWAY&City=FAIR+LAWN&Region=NJ&Postal=07410&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

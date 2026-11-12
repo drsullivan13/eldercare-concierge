@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8f8d5fc2184915acb694f2364e6ad40b1655c221b7ed0e9d3618b0d9bcdbd857.body",
+  "bytes": 1648,
+  "checkedAt": "2026-11-12T15:41:42.217128+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "5 Cold Hill Road South",
+    "City": "Mendham",
+    "Postal": "07945",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b7a5bcd46b5a7a8021959042a40d16fd61749cf46a42c9e449c2ed0da4ad14d7",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=5+Cold+Hill+Road+South&City=Mendham&Region=NJ&Postal=07945&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

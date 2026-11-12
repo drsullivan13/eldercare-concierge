@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/f30a582111e844ee3839bd1c39e0bc39d73dd787e68cd1b0027584406d5c122b.body",
+  "bytes": 5217,
+  "checkedAt": "2026-11-12T15:41:53.466817+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "TOTOWA",
+    "format": "json",
+    "state": "NJ",
+    "street": "40-D COMMERCE WAY",
+    "vintage": "Current_Current",
+    "zip": "07512"
+  },
+  "sha256": "baee9c1b714e9f7d095f34385a6b3dedc1eea03959b12db9381e9385b0f3a334",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=40-D+COMMERCE+WAY&city=TOTOWA&state=NJ&zip=07512&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

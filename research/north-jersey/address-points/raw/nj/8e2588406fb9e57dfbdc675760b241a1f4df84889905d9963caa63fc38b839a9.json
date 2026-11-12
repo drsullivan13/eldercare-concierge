@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/8e2588406fb9e57dfbdc675760b241a1f4df84889905d9963caa63fc38b839a9.body",
+  "bytes": 1624,
+  "checkedAt": "2026-11-12T15:41:38.312469+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "167 OXFORD TERRACE",
+    "City": "RIVER EDGE",
+    "Postal": "07661",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "215d347cb093462981d6807000254316dca307d99ea22b46ffb09ed1de884165",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=167+OXFORD+TERRACE&City=RIVER+EDGE&Region=NJ&Postal=07661&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/87ba40b9ad1f0d91f0d7dd72b3140b4557180eb6bc93f0946ca65cf220d98866.body",
+  "bytes": 5235,
+  "checkedAt": "2026-11-12T15:41:53.100117+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "35 JOURNAL SQUARE",
+    "vintage": "Current_Current",
+    "zip": "07306"
+  },
+  "sha256": "329b4f6db980f32d9cb7b4c739644e169558f3390b379bf81dc89e4424cf916a",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=35+JOURNAL+SQUARE&city=JERSEY+CITY&state=NJ&zip=07306&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/56ca3826e94cb9cd6abac6daa2cbd9ae9356fe26c5a5657223856f9ef692df73.body",
+  "bytes": 1574,
+  "checkedAt": "2026-11-12T15:41:36.107104+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "225 OCEAN AVENUE",
+    "City": "JERSEY CITY",
+    "Postal": "07305",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "9fab0f76126d5633731fd95572b59aabd42fb8daa73f40e439c06cf0a0084675",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=225+OCEAN+AVENUE&City=JERSEY+CITY&Region=NJ&Postal=07305&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

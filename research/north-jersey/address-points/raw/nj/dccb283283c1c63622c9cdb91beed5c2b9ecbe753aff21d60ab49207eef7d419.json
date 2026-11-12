@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/dccb283283c1c63622c9cdb91beed5c2b9ecbe753aff21d60ab49207eef7d419.body",
+  "bytes": 1622,
+  "checkedAt": "2026-11-12T15:41:39.207609+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "800 Kinderkamack Road",
+    "City": "Oradell",
+    "Postal": "07649",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "8f8e51145cbcbafe6b3bc3274a5e70ac68e828ba01498d8f50d1655994c3efa2",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=800+Kinderkamack+Road&City=Oradell&Region=NJ&Postal=07649&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

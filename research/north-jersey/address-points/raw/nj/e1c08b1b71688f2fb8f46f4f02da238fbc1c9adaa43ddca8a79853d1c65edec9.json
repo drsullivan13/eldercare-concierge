@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e1c08b1b71688f2fb8f46f4f02da238fbc1c9adaa43ddca8a79853d1c65edec9.body",
+  "bytes": 4656,
+  "checkedAt": "2026-11-12T15:41:26.914812+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "51 NORTH MAIN STREET",
+    "City": "BOONTON TOWNSHIP",
+    "Postal": "07005",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6fe008a58cae648f73185e1bfdb9df0777175dc78bad235babee050876002a55",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=51+NORTH+MAIN+STREET&City=BOONTON+TOWNSHIP&Region=NJ&Postal=07005&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

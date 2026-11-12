@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/eea305b30025103f475a4698dfb735ca560bf0f538688f77b19ef0f800724081.body",
+  "bytes": 5229,
+  "checkedAt": "2026-11-12T15:41:53.479427+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "WHIPPANY",
+    "format": "json",
+    "state": "NJ",
+    "street": "575 STATE ROUTE 10E",
+    "vintage": "Current_Current",
+    "zip": "07981"
+  },
+  "sha256": "ef4cec92c5db98dac2d0c12e0ad9a2f38a68d9344908ec956f7966c0822f377e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=575+STATE+ROUTE+10E&city=WHIPPANY&state=NJ&zip=07981&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

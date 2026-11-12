@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b8d2eb82e6046dc0c0a737a288923a4c8c997c7b9e45f795a0e334538d8eb42b.body",
+  "bytes": 1585,
+  "checkedAt": "2026-11-12T15:41:35.800866+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "502 HAMBURG TPKE",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "190a077efd128bcda4f195b13547b80ca893a082b1dfe12651d1e1494f674f68",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=502+HAMBURG+TPKE&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

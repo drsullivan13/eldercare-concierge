@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/86cde957938900876b5c7d84a2edfd726912a64b61337e76fe6301786703f081.body",
+  "bytes": 1531,
+  "checkedAt": "2026-11-12T15:41:41.712637+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "17 Memorial Dr",
+    "City": "Paterson",
+    "Postal": "07505",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "aecdfb1358f59397d7fc6384d96a9cfaad437b1cd57c8a80a7d30202721eb0b9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=17+Memorial+Dr&City=Paterson&Region=NJ&Postal=07505&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

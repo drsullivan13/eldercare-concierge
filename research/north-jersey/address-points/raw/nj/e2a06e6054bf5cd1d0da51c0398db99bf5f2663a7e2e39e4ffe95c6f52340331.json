@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e2a06e6054bf5cd1d0da51c0398db99bf5f2663a7e2e39e4ffe95c6f52340331.body",
+  "bytes": 1558,
+  "checkedAt": "2026-11-12T15:41:34.707725+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "51 Church St",
+    "City": "Paterson",
+    "Postal": "07505",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "1a4055f2cbe4a74397775ffbb61cf6769c3bda0c8fb085165eb9cafae3b45bde",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=51+Church+St&City=Paterson&Region=NJ&Postal=07505&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

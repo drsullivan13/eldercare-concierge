@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/98c2b1bd61e3d9de585c4accb0ae21e2efdf416b1242d1661ed1d2486b1d83a5.body",
+  "bytes": 1598,
+  "checkedAt": "2026-11-12T15:41:39.358569+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "240 W PASSAIC STREET",
+    "City": "MAYWOOD",
+    "Postal": "07607",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "614c3ff02eaed58d1162c48aa9d67ed4082a7c15fdea16f90c53dfed3fb01818",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=240+W+PASSAIC+STREET&City=MAYWOOD&Region=NJ&Postal=07607&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

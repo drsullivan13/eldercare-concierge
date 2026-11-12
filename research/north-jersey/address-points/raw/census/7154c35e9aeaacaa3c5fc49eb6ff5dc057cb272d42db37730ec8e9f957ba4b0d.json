@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/7154c35e9aeaacaa3c5fc49eb6ff5dc057cb272d42db37730ec8e9f957ba4b0d.body",
+  "bytes": 5239,
+  "checkedAt": "2026-11-12T15:41:57.731025+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Bergenfield",
+    "format": "json",
+    "state": "NJ",
+    "street": "2-A N Washington Avenue",
+    "vintage": "Current_Current",
+    "zip": "07621"
+  },
+  "sha256": "03f577f91d196a5d3d5f7790f433aa58d80a7777e59a4b6fbb2dc14e5ae2b588",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=2-A+N+Washington+Avenue&city=Bergenfield&state=NJ&zip=07621&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

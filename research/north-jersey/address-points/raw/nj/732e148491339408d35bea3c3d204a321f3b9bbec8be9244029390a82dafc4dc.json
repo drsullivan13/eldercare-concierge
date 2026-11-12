@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/732e148491339408d35bea3c3d204a321f3b9bbec8be9244029390a82dafc4dc.body",
+  "bytes": 1616,
+  "checkedAt": "2026-11-12T15:41:48.934367+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "6200 Palisade Avenue",
+    "City": "West New York",
+    "Postal": "07093",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "4f4259a6788ea10dddb053167223e560b6fa823d25db2f74cf09444a90d3894a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=6200+Palisade+Avenue&City=West+New+York&Region=NJ&Postal=07093&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

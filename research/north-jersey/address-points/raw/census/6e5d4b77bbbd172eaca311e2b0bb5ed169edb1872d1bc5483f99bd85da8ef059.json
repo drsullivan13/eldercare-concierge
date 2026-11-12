@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/6e5d4b77bbbd172eaca311e2b0bb5ed169edb1872d1bc5483f99bd85da8ef059.body",
+  "bytes": 399,
+  "checkedAt": "2026-11-12T15:41:50.078709+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "HASKELL",
+    "format": "json",
+    "state": "NJ",
+    "street": "1433 RINGWOOD AVE",
+    "vintage": "Current_Current",
+    "zip": "07420"
+  },
+  "sha256": "a7106252d4306525fbc0d03b8bfe4eb444fffd30a72b9f9a5b2d894d63077560",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1433+RINGWOOD+AVE&city=HASKELL&state=NJ&zip=07420&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

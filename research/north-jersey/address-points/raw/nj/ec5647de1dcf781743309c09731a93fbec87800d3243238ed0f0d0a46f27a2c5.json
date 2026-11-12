@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ec5647de1dcf781743309c09731a93fbec87800d3243238ed0f0d0a46f27a2c5.body",
+  "bytes": 1536,
+  "checkedAt": "2026-11-12T15:41:28.846596+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1117 MAIN AVENUE",
+    "City": "CLIFTON",
+    "Postal": "07011",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2dd0f5038cf5be5657d0ae4451dd22d3c10b1289d24017b75162cf058bfb4c1e",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1117+MAIN+AVENUE&City=CLIFTON&Region=NJ&Postal=07011&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

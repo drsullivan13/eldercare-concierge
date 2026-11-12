@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/9cf964d22e9ba7163fd278773ef4112bdf3523f7ee057c7a5906dd85f1b1c4cc.body",
+  "bytes": 1650,
+  "checkedAt": "2026-11-12T15:41:28.491072+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "290 WERIMUS ROAD",
+    "City": "WOODCLIFF LAKE",
+    "Postal": "07677",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f9d593bde35b3ca084bd616f4ed61c774618ab6af43bcd4e30104c3e024f966d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=290+WERIMUS+ROAD&City=WOODCLIFF+LAKE&Region=NJ&Postal=07677&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

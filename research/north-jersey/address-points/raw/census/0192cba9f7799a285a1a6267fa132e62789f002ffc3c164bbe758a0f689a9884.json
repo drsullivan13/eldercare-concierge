@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/0192cba9f7799a285a1a6267fa132e62789f002ffc3c164bbe758a0f689a9884.body",
+  "bytes": 5228,
+  "checkedAt": "2026-11-12T15:41:49.825018+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "RIDGEWOOD",
+    "format": "json",
+    "state": "NJ",
+    "street": "330 FRANKLIN TPK",
+    "vintage": "Current_Current",
+    "zip": "07450"
+  },
+  "sha256": "3de027f64b32660b18a1bf9cb14e306a449930a1900973a34828c0af769942c8",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=330+FRANKLIN+TPK&city=RIDGEWOOD&state=NJ&zip=07450&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

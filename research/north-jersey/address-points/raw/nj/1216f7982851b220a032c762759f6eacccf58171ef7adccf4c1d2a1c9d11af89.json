@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1216f7982851b220a032c762759f6eacccf58171ef7adccf4c1d2a1c9d11af89.body",
+  "bytes": 68,
+  "checkedAt": "2026-11-12T15:41:43.254170+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "30 Union St",
+    "City": "Elizabeth",
+    "Postal": "07202",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "acfae4870440c59a64af2343acab32331eeb8aad84a36e9b5b1b15ec1373f4db",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=30+Union+St&City=Elizabeth&Region=NJ&Postal=07202&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4dab49e0bb9564e2683e2c96f88a576ef8d447f3fe74eb9da4e9e05e5f826510.body",
+  "bytes": 1571,
+  "checkedAt": "2026-11-12T15:41:39.478412+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "651 IRVINGTON AVE",
+    "City": "NEWARK",
+    "Postal": "07106",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cd6e9f4998178fa208fc834a8f638d0a85baf7ea7d1792ae35a0cf6965a8d0b4",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=651+IRVINGTON+AVE&City=NEWARK&Region=NJ&Postal=07106&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

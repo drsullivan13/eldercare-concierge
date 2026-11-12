@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/5ec4c552e4f20eb3fbc669378efc2c9c5c242f95ecc716f333391bdbcbea13a2.body",
+  "bytes": 3152,
+  "checkedAt": "2026-11-12T15:41:20.760893+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "330 FRANKLIN TPK",
+    "City": "RIDGEWOOD",
+    "Postal": "07450",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f48c9ae7f7a563ad274e11cdcaadda68dfe7716739f3a93792e4fc04aa6d62b8",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=330+FRANKLIN+TPK&City=RIDGEWOOD&Region=NJ&Postal=07450&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

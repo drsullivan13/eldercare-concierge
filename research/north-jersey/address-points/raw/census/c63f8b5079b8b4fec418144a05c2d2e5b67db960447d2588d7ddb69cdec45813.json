@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/c63f8b5079b8b4fec418144a05c2d2e5b67db960447d2588d7ddb69cdec45813.body",
+  "bytes": 5230,
+  "checkedAt": "2026-11-12T15:41:58.610694+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "JERSEY CITY",
+    "format": "json",
+    "state": "NJ",
+    "street": "131 PALISADE AVE APT2",
+    "vintage": "Current_Current",
+    "zip": "07306"
+  },
+  "sha256": "1e35e438c07d73afe673c2f07846dbbca7b289874f39bac8316249801293510c",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=131+PALISADE+AVE+APT2&city=JERSEY+CITY&state=NJ&zip=07306&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

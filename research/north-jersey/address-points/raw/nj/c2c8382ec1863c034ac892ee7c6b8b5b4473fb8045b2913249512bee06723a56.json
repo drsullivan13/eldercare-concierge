@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/c2c8382ec1863c034ac892ee7c6b8b5b4473fb8045b2913249512bee06723a56.body",
+  "bytes": 1594,
+  "checkedAt": "2026-11-12T15:41:31.718281+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2041 SPRINGFIELD AVENUE",
+    "City": "VAUXHALL",
+    "Postal": "07088",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "844a13c1ca9d97021a791f4ddfd38c09f815878d821d4d7f4f9959dc2647351f",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2041+SPRINGFIELD+AVENUE&City=VAUXHALL&Region=NJ&Postal=07088&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

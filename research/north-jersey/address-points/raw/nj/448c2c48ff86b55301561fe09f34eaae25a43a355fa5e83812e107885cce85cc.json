@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/448c2c48ff86b55301561fe09f34eaae25a43a355fa5e83812e107885cce85cc.body",
+  "bytes": 1548,
+  "checkedAt": "2026-11-12T15:41:25.646873+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "338 CHESTNUT STREET",
+    "City": "PASSAIC",
+    "Postal": "07055",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "964f6ecd29c99e15c0398888d455f592e9aafea6148a968807e4916aeaf1a2c0",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=338+CHESTNUT+STREET&City=PASSAIC&Region=NJ&Postal=07055&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

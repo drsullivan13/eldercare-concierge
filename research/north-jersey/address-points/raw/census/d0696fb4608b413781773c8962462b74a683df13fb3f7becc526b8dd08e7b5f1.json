@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/d0696fb4608b413781773c8962462b74a683df13fb3f7becc526b8dd08e7b5f1.body",
+  "bytes": 5212,
+  "checkedAt": "2026-11-12T15:41:53.226698+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "CHATHAM",
+    "format": "json",
+    "state": "NJ",
+    "street": "323 MAIN STREET, LOWER LEVEL",
+    "vintage": "Current_Current",
+    "zip": "07928"
+  },
+  "sha256": "0bef5bb51c72ce4365449683a1596fec106c6d1d77690db47a4e3255a78aa7c4",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=323+MAIN+STREET%2C+LOWER+LEVEL&city=CHATHAM&state=NJ&zip=07928&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

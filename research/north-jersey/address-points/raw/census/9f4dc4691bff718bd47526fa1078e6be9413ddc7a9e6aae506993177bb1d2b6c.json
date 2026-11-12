@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/9f4dc4691bff718bd47526fa1078e6be9413ddc7a9e6aae506993177bb1d2b6c.body",
+  "bytes": 4744,
+  "checkedAt": "2026-11-12T15:41:59.734743+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Scotch Plains",
+    "format": "json",
+    "state": "NJ",
+    "street": "1201 Donamy Gln",
+    "vintage": "Current_Current",
+    "zip": "07076"
+  },
+  "sha256": "858aa0275b7d16e63c597e1db88d6f3ef59400c1aac06290717c471486e9c85e",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1201+Donamy+Gln&city=Scotch+Plains&state=NJ&zip=07076&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

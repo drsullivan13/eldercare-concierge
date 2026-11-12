@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/abc8f7b9858dbf1c076572c91caaecaa51f018e74103cdff6b6caf062b34123f.body",
+  "bytes": 1615,
+  "checkedAt": "2026-11-12T15:41:49.162406+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "2001 US Highway 46",
+    "City": "Parsippany",
+    "Postal": "07054",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "6a38d9352c2d61a436c4c88e106151c417d936516b9b6d15f673d09085c6c64a",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=2001+US+Highway+46&City=Parsippany&Region=NJ&Postal=07054&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

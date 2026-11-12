@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/e152e7476d08460d7604cba6063a2620aefbad6f636e1a5af16db9ef54f64359.body",
+  "bytes": 1555,
+  "checkedAt": "2026-11-12T15:41:29.389422+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "9 GENESEE AVENUE",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "7101d24a0920e15ed010ffef52218bef33742b4af796ddb60c14410328fb80dd",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=9+GENESEE+AVENUE&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

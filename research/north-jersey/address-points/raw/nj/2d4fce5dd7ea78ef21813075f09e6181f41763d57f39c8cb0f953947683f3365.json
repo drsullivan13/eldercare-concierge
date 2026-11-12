@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/2d4fce5dd7ea78ef21813075f09e6181f41763d57f39c8cb0f953947683f3365.body",
+  "bytes": 1622,
+  "checkedAt": "2026-11-12T15:41:36.732919+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "375 SYLVAN AVENUE",
+    "City": "ENGLEWOOD CLIFFS",
+    "Postal": "07632",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c2141cc430768edfb1ec95f6615c119b46fe9495788439ff1e88ee3b16e986e3",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=375+SYLVAN+AVENUE&City=ENGLEWOOD+CLIFFS&Region=NJ&Postal=07632&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

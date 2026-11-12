@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/5b2974d53a1fad7da648e7bf22a756041e4f870500449e7d37a50c1b7fd9fd02.body",
+  "bytes": 4750,
+  "checkedAt": "2026-11-12T15:41:55.699028+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SCOTCH PLAINS",
+    "format": "json",
+    "state": "NJ",
+    "street": "1801 E 2ND STREET, LOWER LEVEL",
+    "vintage": "Current_Current",
+    "zip": "07076"
+  },
+  "sha256": "4dbcb49580686fe69f53e80d1db25dcce7213e0053c62e11cfc6f61da2ea5c52",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1801+E+2ND+STREET%2C+LOWER+LEVEL&city=SCOTCH+PLAINS&state=NJ&zip=07076&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

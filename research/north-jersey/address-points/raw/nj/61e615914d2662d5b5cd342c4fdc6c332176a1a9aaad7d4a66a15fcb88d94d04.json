@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/61e615914d2662d5b5cd342c4fdc6c332176a1a9aaad7d4a66a15fcb88d94d04.body",
+  "bytes": 1566,
+  "checkedAt": "2026-11-12T15:41:22.898489+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "120 NOYES DRIVE",
+    "City": "PARK RIDGE",
+    "Postal": "07656",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "abcd0ff94d57c023805265c40a902206d76f9a38817e1cb7ccb18e5325743baf",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=120+NOYES+DRIVE&City=PARK+RIDGE&Region=NJ&Postal=07656&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

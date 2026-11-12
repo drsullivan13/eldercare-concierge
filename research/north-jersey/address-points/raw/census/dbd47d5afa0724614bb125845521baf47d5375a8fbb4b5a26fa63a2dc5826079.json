@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/dbd47d5afa0724614bb125845521baf47d5375a8fbb4b5a26fa63a2dc5826079.body",
+  "bytes": 399,
+  "checkedAt": "2026-11-12T15:41:57.481045+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "ELIZABETH",
+    "format": "json",
+    "state": "NJ",
+    "street": "30 UNION STREET",
+    "vintage": "Current_Current",
+    "zip": "07202"
+  },
+  "sha256": "100c137d06a72933b5a379dc88f104db6112efae9a57af763ace8fa8fab68651",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=30+UNION+STREET&city=ELIZABETH&state=NJ&zip=07202&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

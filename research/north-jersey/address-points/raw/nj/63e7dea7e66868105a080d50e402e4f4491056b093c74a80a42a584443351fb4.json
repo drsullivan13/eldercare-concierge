@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/63e7dea7e66868105a080d50e402e4f4491056b093c74a80a42a584443351fb4.body",
+  "bytes": 1548,
+  "checkedAt": "2026-11-12T15:41:35.561296+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "80 INDUSTRIAL ROAD",
+    "City": "LODI",
+    "Postal": "07644",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "b02735095a9261a023a1839fb866d266c3178b1e31da3e9527f926391f80e999",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=80+INDUSTRIAL+ROAD&City=LODI&Region=NJ&Postal=07644&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

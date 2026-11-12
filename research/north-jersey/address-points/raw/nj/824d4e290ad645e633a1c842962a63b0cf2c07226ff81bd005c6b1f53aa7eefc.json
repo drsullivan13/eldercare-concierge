@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/824d4e290ad645e633a1c842962a63b0cf2c07226ff81bd005c6b1f53aa7eefc.body",
+  "bytes": 1555,
+  "checkedAt": "2026-11-12T15:41:26.672056+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "351 RIVER ROAD",
+    "City": "EDGEWATER",
+    "Postal": "07020",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "91ecc6dc7d593625442c0cc95b64dc985892874759ad6bb32b38c19ff4e18727",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=351+RIVER+ROAD&City=EDGEWATER&Region=NJ&Postal=07020&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

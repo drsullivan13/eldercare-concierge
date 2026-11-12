@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/41c95d0540128aa774543ec8c6b4009f8f64a1bf531010b70a19b2daef213795.body",
+  "bytes": 5250,
+  "checkedAt": "2026-11-12T15:41:56.277891+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "SOUTH ORANGE",
+    "format": "json",
+    "state": "NJ",
+    "street": "75 W SOUTH ORANGE AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07079"
+  },
+  "sha256": "92dc7bdfc3b5360f79ab3627ba9cbab9bc45e5b9f5029d798c40a9de28f70dbb",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=75+W+SOUTH+ORANGE+AVENUE&city=SOUTH+ORANGE&state=NJ&zip=07079&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

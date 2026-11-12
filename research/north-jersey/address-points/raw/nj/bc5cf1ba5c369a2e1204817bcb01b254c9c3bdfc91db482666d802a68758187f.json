@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/bc5cf1ba5c369a2e1204817bcb01b254c9c3bdfc91db482666d802a68758187f.body",
+  "bytes": 3068,
+  "checkedAt": "2026-11-12T15:41:40.670249+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "88 Park Street",
+    "City": "Montclair",
+    "Postal": "07042",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c92258797a3ecd59319fa4444d8f6feb486354e8594618a9430ef3b0892c39f9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=88+Park+Street&City=Montclair&Region=NJ&Postal=07042&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

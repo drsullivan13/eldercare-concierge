@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/a1338e9604e09a18620e73ef9bc5694bade8143980aec9e7ac5cb09759ff68fe.body",
+  "bytes": 1588,
+  "checkedAt": "2026-11-12T15:41:41.698273+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "250 Pehle Avenue",
+    "City": "Saddle Brook",
+    "Postal": "07663",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "77360c113f9521f7de7f43d46050282456c36cfa0c0fe87aaf038c86cbc72c96",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=250+Pehle+Avenue&City=Saddle+Brook&Region=NJ&Postal=07663&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

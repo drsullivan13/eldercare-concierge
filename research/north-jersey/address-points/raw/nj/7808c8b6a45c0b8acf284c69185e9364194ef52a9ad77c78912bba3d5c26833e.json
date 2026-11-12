@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/7808c8b6a45c0b8acf284c69185e9364194ef52a9ad77c78912bba3d5c26833e.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:34.480015+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1169 Main Avenue",
+    "City": "Clifton",
+    "Postal": "07011",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "fa25dfee36b36dfa7a0cbd44fb3fe10cf125c8fb949b16107977438eeea50e75",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1169+Main+Avenue&City=Clifton&Region=NJ&Postal=07011&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

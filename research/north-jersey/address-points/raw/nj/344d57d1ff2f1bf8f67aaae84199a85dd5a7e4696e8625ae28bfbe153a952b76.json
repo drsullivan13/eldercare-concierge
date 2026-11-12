@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/344d57d1ff2f1bf8f67aaae84199a85dd5a7e4696e8625ae28bfbe153a952b76.body",
+  "bytes": 1607,
+  "checkedAt": "2026-11-12T15:41:41.456619+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "111 Town Square Place",
+    "City": "Jersey City",
+    "Postal": "07310",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "87d32a4aa1300c2b2ff826d7c77b93568b2d1f9fbb836c481626b2b603c04332",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=111+Town+Square+Place&City=Jersey+City&Region=NJ&Postal=07310&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

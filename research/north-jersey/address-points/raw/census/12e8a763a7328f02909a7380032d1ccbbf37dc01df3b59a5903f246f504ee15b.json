@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/12e8a763a7328f02909a7380032d1ccbbf37dc01df3b59a5903f246f504ee15b.body",
+  "bytes": 5232,
+  "checkedAt": "2026-11-12T15:41:54.898803+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "FAIR LAWN",
+    "format": "json",
+    "state": "NJ",
+    "street": "23-00 ROUTE 208",
+    "vintage": "Current_Current",
+    "zip": "07410"
+  },
+  "sha256": "39bace4113f8f72335aa08830a66e0d8908a33b96e2d535f3c6d7065690e9679",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=23-00+ROUTE+208&city=FAIR+LAWN&state=NJ&zip=07410&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

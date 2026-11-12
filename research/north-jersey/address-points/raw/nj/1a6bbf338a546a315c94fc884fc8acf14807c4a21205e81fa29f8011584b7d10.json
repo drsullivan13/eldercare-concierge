@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/1a6bbf338a546a315c94fc884fc8acf14807c4a21205e81fa29f8011584b7d10.body",
+  "bytes": 1556,
+  "checkedAt": "2026-11-12T15:41:19.714074+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1104 TEANECK ROAD",
+    "City": "TEANECK",
+    "Postal": "07666",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "2d29ac8fb504c2f6c96cd93cfe4f2ee4e8a3f0de5b4fd13dbf54221a5ff568c9",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1104+TEANECK+ROAD&City=TEANECK&Region=NJ&Postal=07666&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

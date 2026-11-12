@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/4203190078ba9bbd92e64f90e741978bf3ce127ee4165a07cf815fc5a5b508d0.body",
+  "bytes": 3099,
+  "checkedAt": "2026-11-12T15:41:20.707071+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "101 NORTH GROVE STREET",
+    "City": "EAST ORANGE",
+    "Postal": "07017",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "f9434946ddc21b77b053d7563384713be0eb9041f13a5e3530feee7fa10c02c1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=101+NORTH+GROVE+STREET&City=EAST+ORANGE&Region=NJ&Postal=07017&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

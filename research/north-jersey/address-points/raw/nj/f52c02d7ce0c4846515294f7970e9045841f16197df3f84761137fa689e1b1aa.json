@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/f52c02d7ce0c4846515294f7970e9045841f16197df3f84761137fa689e1b1aa.body",
+  "bytes": 1650,
+  "checkedAt": "2026-11-12T15:41:26.812906+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "21 RIDGEDALE AVENUE",
+    "City": "FLORHAM PARK",
+    "Postal": "07932",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "d696de1611d4f802f7bf269a77a1cfde4f7ebcfd2c6868f64907ffe2e5219e5c",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=21+RIDGEDALE+AVENUE&City=FLORHAM+PARK&Region=NJ&Postal=07932&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

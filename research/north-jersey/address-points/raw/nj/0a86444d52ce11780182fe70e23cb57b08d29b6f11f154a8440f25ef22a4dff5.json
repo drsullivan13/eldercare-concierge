@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0a86444d52ce11780182fe70e23cb57b08d29b6f11f154a8440f25ef22a4dff5.body",
+  "bytes": 1559,
+  "checkedAt": "2026-11-12T15:41:49.053423+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "3 W 18th St",
+    "City": "Weehawken",
+    "Postal": "07086",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "daf9202c414958f38cb654450b50be9251206e8d2dcd7cae1a3c5eb05d17e9ff",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=3+W+18th+St&City=Weehawken&Region=NJ&Postal=07086&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/b7e79e2759e62c118b355464b877b307eeef40752621acde0f9ce2a4e3bc2f4b.body",
+  "bytes": 4716,
+  "checkedAt": "2026-11-12T15:41:56.516166+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "UNION",
+    "format": "json",
+    "state": "NJ",
+    "street": "1496 MORRIS AVENUE LOWER LEVEL B",
+    "vintage": "Current_Current",
+    "zip": "07083"
+  },
+  "sha256": "402b199b2132359a80cb66fa4cc7fd44fe6e7744f520663d5027f5064c1e996b",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1496+MORRIS+AVENUE+LOWER+LEVEL+B&city=UNION&state=NJ&zip=07083&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

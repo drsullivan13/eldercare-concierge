@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/ccecbad157dd6559be3ae50f07fd82c2a523746279b63d9b2c87421923aa3952.body",
+  "bytes": 1603,
+  "checkedAt": "2026-11-12T15:41:22.627400+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "100 WEST MAGNOLIA AVENUE",
+    "City": "MAYWOOD",
+    "Postal": "07607",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cc2f53313b619df7c7482d6c50d22d00331d72d814306d711c2fc8090261ebb1",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=100+WEST+MAGNOLIA+AVENUE&City=MAYWOOD&Region=NJ&Postal=07607&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3b50f447108c0367deb7c193774aa14ab7baf7828d5b5ab79dffa4fab86fde8f.body",
+  "bytes": 1542,
+  "checkedAt": "2026-11-12T15:41:21.964112+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1120 ALPS ROAD",
+    "City": "WAYNE",
+    "Postal": "07470",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5fa3f189a83bd486c478296a2200adc9244c9355c8ab3c792b6d75f1ad5e4510",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1120+ALPS+ROAD&City=WAYNE&Region=NJ&Postal=07470&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/349c72b5c6ac152e0fdcad0073ccb31f56cef5d8d422d144604286eaa1a094fb.body",
+  "bytes": 1610,
+  "checkedAt": "2026-11-12T15:41:46.476041+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "110 S Grove St",
+    "City": "East Orange",
+    "Postal": "07018",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "c014173dc7d1cf0130ffc4f7f52423695ab3ee698de167fc9bd6361f974944e6",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=110+S+Grove+St&City=East+Orange&Region=NJ&Postal=07018&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

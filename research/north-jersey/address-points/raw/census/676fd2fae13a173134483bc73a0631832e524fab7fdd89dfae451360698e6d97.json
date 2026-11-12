@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/676fd2fae13a173134483bc73a0631832e524fab7fdd89dfae451360698e6d97.body",
+  "bytes": 5264,
+  "checkedAt": "2026-11-12T15:41:59.534822+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "Lincoln Park",
+    "format": "json",
+    "state": "NJ",
+    "street": "59 Beaverbrook Road",
+    "vintage": "Current_Current",
+    "zip": "07035"
+  },
+  "sha256": "16e11551d049b6cf663a52398a7bff3254e284c69131d0899a4a962cacca8b87",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=59+Beaverbrook+Road&city=Lincoln+Park&state=NJ&zip=07035&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}

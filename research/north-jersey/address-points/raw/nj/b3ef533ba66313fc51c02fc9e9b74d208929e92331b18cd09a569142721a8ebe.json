@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/b3ef533ba66313fc51c02fc9e9b74d208929e92331b18cd09a569142721a8ebe.body",
+  "bytes": 1645,
+  "checkedAt": "2026-11-12T15:41:34.571316+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "611 ROUTE 46 WEST",
+    "City": "HASBROUCK HEIGHTS",
+    "Postal": "07604",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "cc0d3a600f2d2e05cbd1589605162f82f4be14dc1c2a6bdc0e6fe82c969bddee",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=611+ROUTE+46+WEST&City=HASBROUCK+HEIGHTS&Region=NJ&Postal=07604&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

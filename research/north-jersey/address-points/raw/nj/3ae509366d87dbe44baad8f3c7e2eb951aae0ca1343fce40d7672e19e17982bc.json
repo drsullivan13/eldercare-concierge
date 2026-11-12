@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/3ae509366d87dbe44baad8f3c7e2eb951aae0ca1343fce40d7672e19e17982bc.body",
+  "bytes": 1610,
+  "checkedAt": "2026-11-12T15:41:36.983211+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "1395-1399 CLINTON AVENUE",
+    "City": "IRVINGTON",
+    "Postal": "07111",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "5853c817cd1cec255e4ebf9a912c15c41cafde7e40e72dac1fd1f4cf57c81c16",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=1395-1399+CLINTON+AVENUE&City=IRVINGTON&Region=NJ&Postal=07111&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

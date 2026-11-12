@@ -1,0 +1,20 @@
+{
+  "bodyFile": "raw/nj/0597b456da5d7a61b57bf4040c95fe53374baac1bab6f9068d54049996c4bd0d.body",
+  "bytes": 1552,
+  "checkedAt": "2026-11-12T15:41:48.876752+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "Address": "124 Halsey St",
+    "City": "Newark",
+    "Postal": "07102",
+    "Region": "NJ",
+    "f": "json",
+    "locationType": "rooftop",
+    "maxLocations": "10",
+    "outFields": "*",
+    "outSR": "4326"
+  },
+  "sha256": "27bdf230c5fe618260169a56868c9f11d9891422f93d3b6cded78e81a6d1bb1d",
+  "source": "nj",
+  "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?Address=124+Halsey+St&City=Newark&Region=NJ&Postal=07102&outSR=4326&outFields=%2A&locationType=rooftop&maxLocations=10&f=json"
+}

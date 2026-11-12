@@ -1,0 +1,18 @@
+{
+  "bodyFile": "raw/census/e12445640a56a4836e97893d1f9cd62a2bb94c94e3c9e99d89d90274c57121e0.body",
+  "bytes": 5256,
+  "checkedAt": "2026-11-12T15:41:51.066580+00:00",
+  "httpStatus": 200,
+  "parameters": {
+    "benchmark": "Public_AR_Current",
+    "city": "FLORHAM PARK",
+    "format": "json",
+    "state": "NJ",
+    "street": "190 PARK AVENUE",
+    "vintage": "Current_Current",
+    "zip": "07932"
+  },
+  "sha256": "46dc33f071095f99cd3aadffd4f367e78643d8a7245d90bee463efc2b86eb5c0",
+  "source": "census",
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=190+PARK+AVENUE&city=FLORHAM+PARK&state=NJ&zip=07932&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+}
