@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "source": "MyLivingChoice",
+      "family": "google",
+      "hosts": [
+        "www.mylivingchoice.com"
+      ],
+      "allowedPaths": [
+        "/property/"
+      ],
+      "termsAllowed": true,
+      "robotsAllowed": true,
+      "checkedAt": "2026-11-12",
+      "termsUrl": "https://www.mylivingchoice.com/terms-of-service",
+      "robotsUrl": "https://www.mylivingchoice.com/robots.txt",
+      "robotsText": "User-Agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /guidance/\nDisallow: /partners/\nDisallow: /login\nDisallow: /signin\nDisallow: /unsubscribe\n\nUser-Agent: GPTBot\nUser-Agent: OAI-SearchBot\nUser-Agent: ChatGPT-User\nUser-Agent: ClaudeBot\nUser-Agent: Claude-Web\nUser-Agent: anthropic-ai\nUser-Agent: Google-Extended\nUser-Agent: CCBot\nUser-Agent: PerplexityBot\nUser-Agent: Perplexity-User\nUser-Agent: Applebot-Extended\nUser-Agent: Bytespider\nUser-Agent: cohere-ai\nUser-Agent: Meta-ExternalAgent\nUser-Agent: Amazonbot\nUser-Agent: DuckAssistBot\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /guidance/\nDisallow: /partners/\nDisallow: /login\nDisallow: /signin\nDisallow: /unsubscribe\nDisallow: /how-we-work\n\nSitemap: https://www.mylivingchoice.com/sitemap.xml\n",
+      "basis": "Directly retained 2026-11-12 terms and robots. Terms prohibit disruptive-volume scraping, not low-volume public factual checks. At least ten seconds between serial listing checks. No internal API, forms, authentication, private paths or restriction bypass. Family is per actual aggregate attribution, never an extra MyLivingChoice vote.",
+      "minIntervalSeconds": 10
+    }
+  ]
+}
