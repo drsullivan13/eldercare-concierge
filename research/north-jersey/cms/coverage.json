@@ -1,0 +1,318 @@
+{
+  "nursing_nj": 348,
+  "nursing_target": 139,
+  "nursing_counties": {
+    "Union": 23,
+    "Bergen": 29,
+    "Morris": 21,
+    "Passaic": 19,
+    "Essex": 32,
+    "Hudson": 15
+  },
+  "home_health_nj_offices": 38,
+  "home_health_other_state_offices": 5,
+  "home_health_unknown_office_county": 43,
+  "service_zip_target_candidate_edges": 1246,
+  "service_zip_unambiguous_edges": 1012,
+  "service_zip_ambiguous_edges": 234,
+  "home_health_unmatched_service_ccns": [],
+  "service_zip_counties": {
+    "Bergen": {
+      "edges": 441,
+      "agencies": 10
+    },
+    "Essex": {
+      "edges": 153,
+      "agencies": 12
+    },
+    "Hudson": {
+      "edges": 72,
+      "agencies": 11
+    },
+    "Morris": {
+      "edges": 188,
+      "agencies": 9
+    },
+    "Passaic": {
+      "edges": 84,
+      "agencies": 4
+    },
+    "Union": {
+      "edges": 74,
+      "agencies": 5
+    }
+  },
+  "evidence": {
+    "4pq5-n9py": {
+      "role": "nursing_roster_and_pbj_summary",
+      "retained_rows": 348,
+      "target_nursing_rows": 139,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 29,
+        "Essex": 32,
+        "Hudson": 15,
+        "Morris": 21,
+        "Passaic": 19,
+        "Union": 23
+      },
+      "active_target_ccns_without_source_rows": []
+    },
+    "r5ix-sfxw": {
+      "role": "health_deficiencies",
+      "retained_rows": 8214,
+      "target_nursing_rows": 3256,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 746,
+        "Essex": 758,
+        "Hudson": 349,
+        "Morris": 480,
+        "Passaic": 447,
+        "Union": 476
+      },
+      "active_target_ccns_without_source_rows": []
+    },
+    "ifjz-ge4w": {
+      "role": "fire_safety_deficiencies",
+      "retained_rows": 5672,
+      "target_nursing_rows": 2293,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 501,
+        "Essex": 542,
+        "Hudson": 226,
+        "Morris": 406,
+        "Passaic": 262,
+        "Union": 356
+      },
+      "active_target_ccns_without_source_rows": [
+        "315096",
+        "315322"
+      ]
+    },
+    "g6vv-u9sr": {
+      "role": "penalties",
+      "retained_rows": 248,
+      "target_nursing_rows": 107,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 14,
+        "Essex": 28,
+        "Hudson": 21,
+        "Morris": 13,
+        "Passaic": 13,
+        "Union": 18
+      },
+      "active_target_ccns_without_source_rows": [
+        "315010",
+        "315017",
+        "315019",
+        "315021",
+        "315029",
+        "315037",
+        "315038",
+        "315042",
+        "315053",
+        "315057",
+        "315066",
+        "315072",
+        "315083",
+        "315091",
+        "315096",
+        "315101",
+        "315106",
+        "315112",
+        "315120",
+        "315122",
+        "315129",
+        "315133",
+        "315138",
+        "315143",
+        "315146",
+        "315157",
+        "315158",
+        "315164",
+        "315178",
+        "315192",
+        "315194",
+        "315200",
+        "315216",
+        "315217",
+        "315229",
+        "315239",
+        "315247",
+        "315259",
+        "315261",
+        "315268",
+        "315283",
+        "315291",
+        "315295",
+        "315300",
+        "315313",
+        "315322",
+        "315328",
+        "315343",
+        "315346",
+        "315348",
+        "315349",
+        "315357",
+        "315359",
+        "315360",
+        "315363",
+        "315369",
+        "315372",
+        "315376",
+        "315377",
+        "315383",
+        "315386",
+        "315390",
+        "315392",
+        "315413",
+        "315434",
+        "315435",
+        "315442",
+        "315457",
+        "315465",
+        "315468",
+        "315473",
+        "315477",
+        "315479",
+        "315488",
+        "315492",
+        "315494",
+        "315497",
+        "315502",
+        "315507",
+        "315512",
+        "315526",
+        "315527",
+        "315530",
+        "315531",
+        "315532"
+      ]
+    },
+    "djen-97ju": {
+      "role": "mds_quality",
+      "retained_rows": 5916,
+      "target_nursing_rows": 2363,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 493,
+        "Essex": 544,
+        "Hudson": 255,
+        "Morris": 357,
+        "Passaic": 323,
+        "Union": 391
+      },
+      "active_target_ccns_without_source_rows": []
+    },
+    "ijh5-nb2v": {
+      "role": "claims_quality",
+      "retained_rows": 1392,
+      "target_nursing_rows": 556,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 116,
+        "Essex": 128,
+        "Hudson": 60,
+        "Morris": 84,
+        "Passaic": 76,
+        "Union": 92
+      },
+      "active_target_ccns_without_source_rows": []
+    },
+    "tbry-pc2d": {
+      "role": "survey_summary",
+      "retained_rows": 1042,
+      "target_nursing_rows": 415,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 87,
+        "Essex": 96,
+        "Hudson": 44,
+        "Morris": 63,
+        "Passaic": 56,
+        "Union": 69
+      },
+      "active_target_ccns_without_source_rows": []
+    },
+    "svdt-c123": {
+      "role": "inspection_dates",
+      "retained_rows": 2951,
+      "target_nursing_rows": 1161,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 251,
+        "Essex": 251,
+        "Hudson": 126,
+        "Morris": 178,
+        "Passaic": 160,
+        "Union": 195
+      },
+      "active_target_ccns_without_source_rows": []
+    },
+    "fykj-qjee": {
+      "role": "snf_qrp_quality",
+      "retained_rows": 19836,
+      "target_nursing_rows": 7923,
+      "county_rows_via_roster_ccn": {
+        "Bergen": 1653,
+        "Essex": 1824,
+        "Hudson": 855,
+        "Morris": 1197,
+        "Passaic": 1083,
+        "Union": 1311
+      },
+      "active_target_ccns_without_source_rows": []
+    },
+    "qmdc-9999": {
+      "role": "measure_and_staffing_periods",
+      "retained_rows": 47,
+      "target_nursing_rows": 0,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    },
+    "tagd-9999": {
+      "role": "citation_dictionary",
+      "retained_rows": 643,
+      "target_nursing_rows": 0,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    },
+    "hicp-9999": {
+      "role": "inspection_rating_cutpoints",
+      "retained_rows": 1,
+      "target_nursing_rows": 0,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    },
+    "6jpm-sxkc": {
+      "role": "home_health_roster_and_clinical",
+      "retained_rows": 43,
+      "target_nursing_rows": null,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    },
+    "ccn4-8vby": {
+      "role": "hhcahps",
+      "retained_rows": 43,
+      "target_nursing_rows": null,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    },
+    "m5eg-upu5": {
+      "role": "home_health_service_zips",
+      "retained_rows": 2606,
+      "target_nursing_rows": null,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    },
+    "c886-nwpj": {
+      "role": "home_health_measure_periods",
+      "retained_rows": 18,
+      "target_nursing_rows": null,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    },
+    "fa88-6ff2": {
+      "role": "hhcahps_measure_periods",
+      "retained_rows": 5,
+      "target_nursing_rows": null,
+      "county_rows_via_roster_ccn": null,
+      "active_target_ccns_without_source_rows": null
+    }
+  }
+}

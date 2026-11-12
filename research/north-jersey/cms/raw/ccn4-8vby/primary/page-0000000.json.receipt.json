@@ -1,0 +1,11 @@
+{
+  "url": "https://data.cms.gov/provider-data/api/1/datastore/query/ccn4-8vby/0?limit=1000&offset=0&count=true&results=true&conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Boperator%5D=%3E%3D&conditions%5B0%5D%5Bvalue%5D=310000&conditions%5B1%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B1%5D%5Boperator%5D=%3C%3D&conditions%5B1%5D%5Bvalue%5D=319999&sorts%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B0%5D%5Border%5D=asc",
+  "effective_url": "https://data.cms.gov/provider-data/api/1/datastore/query/ccn4-8vby/0?limit=1000&offset=0&count=true&results=true&conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Boperator%5D=%3E%3D&conditions%5B0%5D%5Bvalue%5D=310000&conditions%5B1%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B1%5D%5Boperator%5D=%3C%3D&conditions%5B1%5D%5Bvalue%5D=319999&sorts%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B0%5D%5Border%5D=asc",
+  "retrieved_at": "2026-11-12T15:04:49.703340+00:00",
+  "last_modified": "Thu, 12 Nov 2026 15:04:48 GMT",
+  "content_type": "application/json",
+  "etag": "\"1794495888-gzip\"",
+  "sha256": "31d91d9a23685bfb9be9f4606df06a4ec5bdf59cd264eea5912126ff39e64ffd",
+  "bytes": 64365,
+  "file": "raw/ccn4-8vby/primary/page-0000000.json"
+}

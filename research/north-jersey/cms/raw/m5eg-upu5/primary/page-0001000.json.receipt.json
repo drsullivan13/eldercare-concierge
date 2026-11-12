@@ -1,0 +1,11 @@
+{
+  "url": "https://data.cms.gov/provider-data/api/1/datastore/query/m5eg-upu5/0?limit=1000&offset=1000&count=true&results=true&conditions%5B0%5D%5Bproperty%5D=zip_code&conditions%5B0%5D%5Boperator%5D=%3E%3D&conditions%5B0%5D%5Bvalue%5D=07000&conditions%5B1%5D%5Bproperty%5D=zip_code&conditions%5B1%5D%5Boperator%5D=%3C%3D&conditions%5B1%5D%5Bvalue%5D=08999&sorts%5B0%5D%5Bproperty%5D=state&sorts%5B0%5D%5Border%5D=asc&sorts%5B1%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B1%5D%5Border%5D=asc&sorts%5B2%5D%5Bproperty%5D=zip_code&sorts%5B2%5D%5Border%5D=asc",
+  "effective_url": "https://data.cms.gov/provider-data/api/1/datastore/query/m5eg-upu5/0?limit=1000&offset=1000&count=true&results=true&conditions%5B0%5D%5Bproperty%5D=zip_code&conditions%5B0%5D%5Boperator%5D=%3E%3D&conditions%5B0%5D%5Bvalue%5D=07000&conditions%5B1%5D%5Bproperty%5D=zip_code&conditions%5B1%5D%5Boperator%5D=%3C%3D&conditions%5B1%5D%5Bvalue%5D=08999&sorts%5B0%5D%5Bproperty%5D=state&sorts%5B0%5D%5Border%5D=asc&sorts%5B1%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B1%5D%5Border%5D=asc&sorts%5B2%5D%5Bproperty%5D=zip_code&sorts%5B2%5D%5Border%5D=asc",
+  "retrieved_at": "2026-11-12T15:04:56.475117+00:00",
+  "last_modified": "Thu, 12 Nov 2026 15:04:54 GMT",
+  "content_type": "application/json",
+  "etag": "\"1794495894-gzip\"",
+  "sha256": "32725148ac98430ea999fcd06a31030f1705b5b9c06fb7cb94d4bfe59460174d",
+  "bytes": 74878,
+  "file": "raw/m5eg-upu5/primary/page-0001000.json"
+}

@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "release": {
+    "dataset_type_id": "086e48c4-87a6-4be1-8823-29e8da8f225b",
+    "dataset_version_id": "8b2c0a70-7e47-4b0f-a592-e51eb315cead",
+    "release": "Q3 2026",
+    "release_period_start": "2026-07-01",
+    "page_created_date": "2026-10-14",
+    "page_modified_date": "2026-10-16",
+    "metadata_revision_timestamp": "2026-10-16T18:38:14+00:00",
+    "primary_download_url": "https://data.cms.gov/sites/default/files/2026-10/d7e32873-6bf0-4719-9048-376972900d5c/POS_iQIES.DATA.Q3_2026.csv",
+    "documentation_url": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-internet-quality-improvement-and-evaluation-system/api-docs",
+    "dictionary_url": "https://data.cms.gov/sites/default/files/2026-10/1fea27a3-7603-4fd2-bc2a-3e868934a9bf/iQIES%20POS%20Data%20Dictionary%20Oct2026.xlsx"
+  },
+  "receipts": {
+    "raw/discovery.json": {
+      "url": "https://data.cms.gov/jsonapi/node/dataset?filter%5Bfield_dataset_type.id%5D=086e48c4-87a6-4be1-8823-29e8da8f225b&filter%5Bstatus%5D=1&sort=-field_dataset_version&page%5Blimit%5D=1",
+      "effective_url": "https://data.cms.gov/jsonapi/node/dataset?filter%5Bfield_dataset_type.id%5D=086e48c4-87a6-4be1-8823-29e8da8f225b&filter%5Bstatus%5D=1&sort=-field_dataset_version&page%5Blimit%5D=1",
+      "retrieved_at": "2026-11-12T15:04:45.974670+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:00:22 GMT",
+      "etag": "\"1794495622\"",
+      "content_type": "application/vnd.api+json",
+      "sha256": "51e8148c96d8ee53d08a67379b809d025f4f2a4938f650723681f5b2582f30bf",
+      "bytes": 18045,
+      "file": "raw/discovery.json"
+    },
+    "raw/metadata.json": {
+      "url": "https://data.cms.gov/jsonapi/node/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead",
+      "effective_url": "https://data.cms.gov/jsonapi/node/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead",
+      "retrieved_at": "2026-11-12T15:04:46.039010+00:00",
+      "http_status": 200,
+      "last_modified": "Mon, 09 Nov 2026 14:23:15 GMT",
+      "etag": "\"1794234195\"",
+      "content_type": "application/vnd.api+json",
+      "sha256": "70e34044f6f59aa0b5318630cf40d73edd85c0893c8ba98f040b090021111b37",
+      "bytes": 17628,
+      "file": "raw/metadata.json"
+    },
+    "raw/resources.json": {
+      "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/resources",
+      "effective_url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/resources",
+      "retrieved_at": "2026-11-12T15:04:46.326289+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:04:46 GMT",
+      "etag": "\"1794495886-gzip\"",
+      "content_type": "application/json",
+      "sha256": "2f0c956c38524a1e04c24b0c8b6a7b488b9d25869045f8174664c70bfd3bf237",
+      "bytes": 2310,
+      "file": "raw/resources.json"
+    },
+    "raw/latest-resources.json": {
+      "url": "https://data.cms.gov/data-api/v1/dataset/086e48c4-87a6-4be1-8823-29e8da8f225b/resources",
+      "effective_url": "https://data.cms.gov/data-api/v1/dataset/086e48c4-87a6-4be1-8823-29e8da8f225b/resources",
+      "retrieved_at": "2026-11-12T15:04:46.639158+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:04:46 GMT",
+      "etag": "\"1794495886-gzip\"",
+      "content_type": "application/json",
+      "sha256": "f42014ed529db426e42947b5e76a3b02bde1c092cc943c7fa6fc8a9b996014ea",
+      "bytes": 2310,
+      "file": "raw/latest-resources.json"
+    },
+    "raw/api-docs.html": {
+      "url": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-internet-quality-improvement-and-evaluation-system/api-docs",
+      "effective_url": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file-internet-quality-improvement-and-evaluation-system/api-docs",
+      "retrieved_at": "2026-11-12T15:04:46.717512+00:00",
+      "http_status": 200,
+      "last_modified": "Wed, 04 Nov 2026 18:34:23 GMT",
+      "etag": "\"512e803493ac530cd804c130b4144000:1793817283.499785\"",
+      "content_type": "text/html",
+      "sha256": "971a7734d4568d7122ca26741c66622a72af4c282fc5d02292df0ff4b20edd2d",
+      "bytes": 2974,
+      "file": "raw/api-docs.html"
+    },
+    "raw/dictionary.xlsx": {
+      "url": "https://data.cms.gov/sites/default/files/2026-10/1fea27a3-7603-4fd2-bc2a-3e868934a9bf/iQIES%20POS%20Data%20Dictionary%20Oct2026.xlsx",
+      "effective_url": "https://data.cms.gov/sites/default/files/2026-10/1fea27a3-7603-4fd2-bc2a-3e868934a9bf/iQIES%20POS%20Data%20Dictionary%20Oct2026.xlsx",
+      "retrieved_at": "2026-11-12T15:04:46.799253+00:00",
+      "http_status": 200,
+      "last_modified": "Wed, 14 Oct 2026 18:12:05 GMT",
+      "etag": null,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "bf0fbff48927f8f7ab5cca6a346013b9bf1051ab6fdc08b9d00e391774b9605c",
+      "bytes": 39734,
+      "file": "raw/dictionary.xlsx"
+    },
+    "raw/schema.json": {
+      "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data-viewer?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&size=1&offset=0",
+      "effective_url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data-viewer?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&size=1&offset=0",
+      "retrieved_at": "2026-11-12T15:04:46.915767+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:02:15 GMT",
+      "etag": "\"1794495735-gzip\"",
+      "content_type": "application/json",
+      "sha256": "edc68c4b2a1b90e928fedb0bf140ca67c6b872afe8fbc4ba9a888ac979d9a950",
+      "bytes": 63049,
+      "file": "raw/schema.json"
+    },
+    "raw/home_health/pos-00000.json": {
+      "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0",
+      "effective_url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0",
+      "retrieved_at": "2026-11-12T15:04:47.074658+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:02:15 GMT",
+      "etag": "\"1794495735-gzip\"",
+      "content_type": "application/json",
+      "sha256": "cb6dd2ddea08f18e83a49233ad2b2a8be33fb0e95ef370293c976cdc3f87cb31",
+      "bytes": 457286,
+      "file": "raw/home_health/pos-00000.json"
+    },
+    "raw/home_health/pos-00075.json": {
+      "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=75",
+      "effective_url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=75",
+      "retrieved_at": "2026-11-12T15:04:47.161087+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:02:20 GMT",
+      "etag": "\"1794495740-gzip\"",
+      "content_type": "application/json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "file": "raw/home_health/pos-00075.json"
+    },
+    "raw/home_health/pdc-metadata.json": {
+      "url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/6jpm-sxkc",
+      "effective_url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/6jpm-sxkc",
+      "retrieved_at": "2026-11-12T15:04:47.276255+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 14:26:21 GMT",
+      "etag": "\"1794493581-gzip\"",
+      "content_type": "application/json",
+      "sha256": "f1d477ce3cdb5f53420e5c14c7d6a9a6a8d999879faf9b8021e72ff80305f844",
+      "bytes": 1357,
+      "file": "raw/home_health/pdc-metadata.json"
+    },
+    "raw/home_health/pdc-00000.json": {
+      "url": "https://data.cms.gov/provider-data/api/1/datastore/query/6jpm-sxkc/0?conditions%5B0%5D%5Bproperty%5D=state&conditions%5B0%5D%5Boperator%5D=%3D&conditions%5B0%5D%5Bvalue%5D=NJ&limit=500&offset=0&count=true&results=true&sorts%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B0%5D%5Border%5D=asc",
+      "effective_url": "https://data.cms.gov/provider-data/api/1/datastore/query/6jpm-sxkc/0?conditions%5B0%5D%5Bproperty%5D=state&conditions%5B0%5D%5Boperator%5D=%3D&conditions%5B0%5D%5Bvalue%5D=NJ&limit=500&offset=0&count=true&results=true&sorts%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B0%5D%5Border%5D=asc",
+      "retrieved_at": "2026-11-12T15:04:47.498393+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:03:12 GMT",
+      "etag": "\"1794495792-gzip\"",
+      "content_type": "application/json",
+      "sha256": "06626e719a4045ff7e042510ef43fa4dbabb117809a170f85e9a5ac4b37c0c3d",
+      "bytes": 220826,
+      "file": "raw/home_health/pdc-00000.json"
+    },
+    "raw/nursing/pos-00000.json": {
+      "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=20&limit=500&size=500&offset=0",
+      "effective_url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=20&limit=500&size=500&offset=0",
+      "retrieved_at": "2026-11-12T15:04:47.773101+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:03:15 GMT",
+      "etag": "\"1794495795-gzip\"",
+      "content_type": "application/json",
+      "sha256": "6679c1a48a847563fa3a192cc3d48b56f694c95d2cd7978aae96a705d90abce8",
+      "bytes": 2357997,
+      "file": "raw/nursing/pos-00000.json"
+    },
+    "raw/nursing/pos-00387.json": {
+      "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=20&limit=500&size=500&offset=387",
+      "effective_url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=20&limit=500&size=500&offset=387",
+      "retrieved_at": "2026-11-12T15:04:47.893559+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:03:19 GMT",
+      "etag": "\"1794495799-gzip\"",
+      "content_type": "application/json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "file": "raw/nursing/pos-00387.json"
+    },
+    "raw/nursing/pdc-metadata.json": {
+      "url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/4pq5-n9py",
+      "effective_url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/4pq5-n9py",
+      "retrieved_at": "2026-11-12T15:04:47.975710+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 14:35:36 GMT",
+      "etag": "\"1794494136-gzip\"",
+      "content_type": "application/json",
+      "sha256": "5df6ab90a728e4456a2db798d770eb5d31e1d0744f2cef66140419b1f1018974",
+      "bytes": 1366,
+      "file": "raw/nursing/pdc-metadata.json"
+    },
+    "raw/nursing/pdc-00000.json": {
+      "url": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=state&conditions%5B0%5D%5Boperator%5D=%3D&conditions%5B0%5D%5Bvalue%5D=NJ&limit=500&offset=0&count=true&results=true&sorts%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B0%5D%5Border%5D=asc",
+      "effective_url": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=state&conditions%5B0%5D%5Boperator%5D=%3D&conditions%5B0%5D%5Bvalue%5D=NJ&limit=500&offset=0&count=true&results=true&sorts%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&sorts%5B0%5D%5Border%5D=asc",
+      "retrieved_at": "2026-11-12T15:04:48.194703+00:00",
+      "http_status": 200,
+      "last_modified": "Thu, 12 Nov 2026 15:03:22 GMT",
+      "etag": "\"1794495802-gzip\"",
+      "content_type": "application/json",
+      "sha256": "3d1182d4d4e9ef61a72aa42bcf3e091e68e352a20db7ac4468ad4ecf92ed0b4f",
+      "bytes": 1580909,
+      "file": "raw/nursing/pdc-00000.json"
+    }
+  },
+  "pos_pages": {
+    "home_health": [
+      {
+        "file": "raw/home_health/pos-00000.json",
+        "offset": 0,
+        "rows": 75
+      },
+      {
+        "file": "raw/home_health/pos-00075.json",
+        "offset": 75,
+        "rows": 0
+      }
+    ],
+    "nursing": [
+      {
+        "file": "raw/nursing/pos-00000.json",
+        "offset": 0,
+        "rows": 387
+      },
+      {
+        "file": "raw/nursing/pos-00387.json",
+        "offset": 387,
+        "rows": 0
+      }
+    ]
+  },
+  "pdc_pages": {
+    "home_health": [
+      {
+        "file": "raw/home_health/pdc-00000.json",
+        "offset": 0,
+        "rows": 38
+      }
+    ],
+    "nursing": [
+      {
+        "file": "raw/nursing/pdc-00000.json",
+        "offset": 0,
+        "rows": 348
+      }
+    ]
+  },
+  "pdc_metadata": {
+    "home_health": "raw/home_health/pdc-metadata.json",
+    "nursing": "raw/nursing/pdc-metadata.json"
+  }
+}
