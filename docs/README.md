@@ -2,6 +2,8 @@
 
 | What you need                                | Start here                                                                             |
 | -------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Collect, compare, or verify regional data     | [Regional workflow and Massachusetts comparison](region-workflow.md)                  |
+| Check consumer listings and release a batch  | [Listing review and evidence receipts](../scripts/regions/listing-release.md)         |
 | Run, test or change the code                 | [Contributor guide](../CONTRIBUTING.md)                                                |
 | Understand the modules and data flow         | [Architecture](architecture.md), [domain terms](../GLOSSARY.md)                        |
 | Understand a score                           | [Experience score policy](experience-score.md)                                         |

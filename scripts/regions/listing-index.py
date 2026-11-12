@@ -65,14 +65,19 @@ successful direct observations are cache inputs, including the direct pilot.
 Repeated URLs in one batch are requested at most once, even with --revalidate.
 To materialize older raw caches offline, run:
   python3 scripts/regions/listing-index.py materialize
-The complete pipeline (absolute paths may be supplied to every command) is:
-  python3 scripts/regions/listing-index-discover.py queue
+From the checkout, use the runtime denominator to include every published provider:
+  python3 scripts/regions/listing-index-discover.py plan --denominator runtime
   python3 scripts/regions/listing-index.py refresh --allow-source MyLivingChoice \
-      --policy /absolute/policy.json --requests /absolute/requests.json
-  python3 scripts/regions/listing-index-discover.py ingest
-  python3 scripts/regions/listing-index.py build --as-of 2026-11-12
-Refresh is serial with a minimum 10-second source/host interval. Keep
---revalidate off to reuse retained pilot/pages. Materialize never fetches.
+      --policy research/north-jersey/listing-index/refresh-policy.json \
+      --requests research/north-jersey/listing-index/fetch-plan.json
+  python3 scripts/regions/listing-index-discover.py ingest --denominator runtime
+  python3 scripts/regions/listing-index.py build --denominator runtime --as-of YYYY-MM-DD
+Use the actual assessment date. Refresh the source terms and robots assessment before
+a new collection if the dated access policy is stale. Requests run serially with
+a minimum ten-second interval. Successful pages are reused. On macOS framework
+Python, set SSL_CERT_FILE=/etc/ssl/cert.pem if its default CA bundle is missing;
+after verifying the connection, --retry-transport retries local connection errors.
+The listing-release guide describes the following editorial and scoring steps.
 """
 
 import argparse
