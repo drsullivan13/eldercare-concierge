@@ -7,7 +7,7 @@ export type FacebookFindingKind =
   | "provider-promotion"
   | "employment";
 
-export type FacebookFinding = {
+type FacebookFinding = {
   id: string;
   sourceObservationIds: string[];
   kind: FacebookFindingKind;
@@ -21,7 +21,7 @@ export type FacebookFinding = {
   limitations: string[];
 };
 
-export type FacebookResearchLocation = {
+type FacebookResearchLocation = {
   status: "findings-available" | "no-relevant-result" | "withheld" | "partial";
   searchedAt: string | null;
   foundCount: number;

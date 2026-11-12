@@ -31,10 +31,12 @@
   line-height: 1.6;
 }
 .fb-research .fb-research-caution {
-  border-left: 3px solid var(--teal, #246b61);
-  background: #f0f5f0;
-  padding: 0.7rem 0.85rem;
+  font-size: 0.83rem;
+  color: #4c6060;
+}
+.fb-research .fb-research-intro {
   font-size: 0.86rem;
+  color: #4c6060;
 }
 .fb-research .fb-research-dates,
 .fb-research .fb-research-basis,
@@ -126,9 +128,10 @@
 .fb-research .fb-research-coverage summary,
 .fb-research .fb-research-context summary {
   cursor: pointer;
-  min-height: 36px;
-  padding: 0.5rem 0;
+  min-height: 44px;
+  padding: 0.7rem 0;
   color: #3f5e53;
+  font-weight: 600;
 }
 .fb-research .fb-research-additional a {
   color: #205c51;

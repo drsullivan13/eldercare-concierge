@@ -9,7 +9,7 @@ page.on("pageerror", (error) => errors.push(error.message));
 await page.goto("http://localhost:3000/");
 await page.screenshot({ path: "docs/screenshots/landing.png", fullPage: true });
 await page.goto("http://localhost:3000/dashboard?demo=1");
-await page.getByRole("heading", { name: "A clearer plan." }).waitFor();
+await page.getByRole("heading", { name: /A clearer plan/ }).waitFor();
 await page.screenshot({
   path: "docs/screenshots/dashboard.png",
   fullPage: true,
@@ -39,7 +39,7 @@ await page.screenshot({ path: "docs/screenshots/home-health.png" });
 await page.getByRole("button", { name: "Close dialog", exact: true }).click();
 await page.setViewportSize({ width: 390, height: 844 });
 await page.goto("http://localhost:3000/dashboard?demo=1");
-await page.getByRole("heading", { name: "A clearer plan." }).waitFor();
+await page.getByRole("heading", { name: /A clearer plan/ }).waitFor();
 await page.screenshot({ path: "docs/screenshots/mobile.png", fullPage: true });
 console.log(JSON.stringify({ screenshots: 6, uncaughtErrors: errors }));
 await browser.close();

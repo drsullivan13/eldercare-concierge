@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "knip": "knip",
     "test": "tsx --test tests/*.test.ts",
     "test:e2e": "playwright test",
-    "format": "prettier --write src scripts tests docs README.md next.config.ts playwright.config.ts"
+    "format": "prettier --write src scripts tests docs README.md next.config.ts playwright.config.ts knip.ts"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
@@ -30,6 +31,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "knip": "6.45.1",
     "prettier": "3.10.0",
     "tsx": "4.23.15",
     "typescript": "^5"

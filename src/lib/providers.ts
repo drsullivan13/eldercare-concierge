@@ -14,7 +14,7 @@ export const CATEGORY_LABELS: Record<CareCategory, string> = {
   staffing: "Private staff sourcing",
   "life-plan": "Continuing & tiered care",
 };
-export type Source = {
+type Source = {
   title: string;
   publisher: string;
   url: string;

@@ -1,4 +1,4 @@
-import evidenceData from '@/data/home-health-evidence.json';
+import evidenceData from "@/data/home-health-evidence.json";
 
 export type HomeHealthMetric = {
   value: number | null;
@@ -7,10 +7,10 @@ export type HomeHealthMetric = {
   rawValue: string | null;
   footnoteCodes: string[];
   rawFootnote: string;
-  status: 'published' | 'not published';
+  status: "published" | "not published";
 };
-export type HomeHealthPeriod = { start: string; end: string; label: string };
-export type HomeHealthSource = {
+type HomeHealthPeriod = { start: string; end: string; label: string };
+type HomeHealthSource = {
   url: string;
   publisher: string;
   checkedAt: string;
@@ -20,25 +20,25 @@ export type HomeHealthSource = {
   downloadUrl?: string;
   modified?: string | null;
 };
-export type HomeHealthSurveyMeasure = {
+type HomeHealthSurveyMeasure = {
   id: string;
   label: string;
   percent: HomeHealthMetric;
   starRating?: HomeHealthMetric | null;
 };
-export type HomeHealthClinicalComponent = {
+type HomeHealthClinicalComponent = {
   id: string;
   label: string;
   rate: HomeHealthMetric;
   period: HomeHealthPeriod;
-  betterDirection: 'higher' | 'lower';
+  betterDirection: "higher" | "lower";
   dateSourceMeasureName: string;
   dateSourceRawRange: string;
   publishedNumerator?: HomeHealthMetric;
   publishedDenominator?: HomeHealthMetric;
   calculationNote?: string;
 };
-export type HomeHealthAgency = {
+type HomeHealthAgency = {
   ccn: string;
   organizationId: string;
   organizationName: string;
@@ -72,7 +72,7 @@ export type HomeHealthAgency = {
   sources: HomeHealthSource[];
   warnings: string[];
 };
-export type HomeHealthSurveyComparator = {
+type HomeHealthSurveyComparator = {
   period: HomeHealthPeriod;
   releasedAt: string;
   measures: HomeHealthSurveyMeasure[];
@@ -89,38 +89,65 @@ export type HomeHealthEvidenceResponse = {
   agencies: HomeHealthAgency[];
   clinicalMeasureDateRanges: { measure: string; rawPeriod: string }[];
   surveyMeasureDateRanges: { measure: string; rawPeriod: string }[];
-  patientExperienceComparators: { massachusetts: HomeHealthSurveyComparator; national: HomeHealthSurveyComparator };
+  patientExperienceComparators: {
+    massachusetts: HomeHealthSurveyComparator;
+    national: HomeHealthSurveyComparator;
+  };
   footnoteDefinitions: Record<string, string>;
   interpretationRules: string[];
 };
 
 /** Verified catalog identity -> exact CMS reporting entities; never a network average. */
 export const HOME_HEALTH_PROVIDER_CCNS = {
-  'vna-care': ['227068', '227098'],
-  'south-shore-vna': ['227082'],
-  'mgb-home-care': ['227207'],
-  'croi-health': ['227241'],
-  'all-care': ['227263'],
-  'bilh-at-home': ['227495'],
+  "vna-care": ["227068", "227098"],
+  "south-shore-vna": ["227082"],
+  "mgb-home-care": ["227207"],
+  "croi-health": ["227241"],
+  "all-care": ["227263"],
+  "bilh-at-home": ["227495"],
 } as const;
-export type HomeHealthProviderId = keyof typeof HOME_HEALTH_PROVIDER_CCNS;
+type HomeHealthProviderId = keyof typeof HOME_HEALTH_PROVIDER_CCNS;
 export class HomeHealthEvidenceError extends Error {
-  constructor(message: string, public readonly status: 400 | 404 = 400) {
+  constructor(
+    message: string,
+    public readonly status: 400 | 404 = 400,
+  ) {
     super(message);
-    this.name = 'HomeHealthEvidenceError';
+    this.name = "HomeHealthEvidenceError";
   }
 }
-const snapshot = evidenceData as Omit<HomeHealthEvidenceResponse, 'providerId'>;
+const snapshot = evidenceData as Omit<HomeHealthEvidenceResponse, "providerId">;
 
-export function getHomeHealthEvidence(providerId: string): HomeHealthEvidenceResponse {
-  if (typeof providerId !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(providerId) || providerId.length > 100) {
-    throw new HomeHealthEvidenceError('Supply one exact catalog provider ID.');
+export function getHomeHealthEvidence(
+  providerId: string,
+): HomeHealthEvidenceResponse {
+  if (
+    typeof providerId !== "string" ||
+    !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(providerId) ||
+    providerId.length > 100
+  ) {
+    throw new HomeHealthEvidenceError("Supply one exact catalog provider ID.");
   }
   if (!Object.hasOwn(HOME_HEALTH_PROVIDER_CCNS, providerId)) {
-    throw new HomeHealthEvidenceError('No matched CMS home-health evidence is available for this provider in the retained snapshot.', 404);
+    throw new HomeHealthEvidenceError(
+      "No matched CMS home-health evidence is available for this provider in the retained snapshot.",
+      404,
+    );
   }
-  const expected: readonly string[] = HOME_HEALTH_PROVIDER_CCNS[providerId as HomeHealthProviderId];
-  const agencies = snapshot.agencies.filter(agency => agency.organizationId === providerId && expected.includes(agency.ccn)).sort((a, b) => a.ccn.localeCompare(b.ccn));
-  if (agencies.length !== expected.length || new Set(agencies.map(agency => agency.ccn)).size !== expected.length) throw new Error('Home-health evidence snapshot does not match its verified identity allowlist.');
+  const expected: readonly string[] =
+    HOME_HEALTH_PROVIDER_CCNS[providerId as HomeHealthProviderId];
+  const agencies = snapshot.agencies
+    .filter(
+      (agency) =>
+        agency.organizationId === providerId && expected.includes(agency.ccn),
+    )
+    .sort((a, b) => a.ccn.localeCompare(b.ccn));
+  if (
+    agencies.length !== expected.length ||
+    new Set(agencies.map((agency) => agency.ccn)).size !== expected.length
+  )
+    throw new Error(
+      "Home-health evidence snapshot does not match its verified identity allowlist.",
+    );
   return { ...snapshot, providerId, agencies };
 }

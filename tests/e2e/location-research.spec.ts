@@ -40,7 +40,7 @@ function card(page: Page, id: string) {
 }
 async function openLocation(page: Page, id: string) {
   await searchName(page, providers.get(id)!.name);
-  await card(page, id).getByRole("button", { name: "View evidence" }).click();
+  await card(page, id).getByRole("button", { name: "View details" }).click();
   const dialog = page.getByRole("dialog", {
     name: providers.get(id)!.name,
     exact: true,
@@ -102,10 +102,17 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
         data.sources.find((s) => s.id === fact.sourceId)!.url,
       );
     }
-    if (data.facts.some((f) => f.kind === "capacity"))
-      await expect(panel).toContainText(
+    if (data.facts.some((f) => f.kind === "capacity")) {
+      const capacity = panel
+        .locator("details")
+        .filter({ hasText: "What capacity figures mean" });
+      await expect(capacity.locator("p")).not.toBeVisible();
+      await capacity.locator("summary").click();
+      await expect(capacity.locator("p")).toBeVisible();
+      await expect(capacity).toContainText(
         "They cannot tell us how many rooms are open.",
       );
+    }
     panel = await tab(dialog, "Rooms & costs");
     for (const fact of data.facts.filter((f) =>
       ["room", "cost"].includes(f.kind),
@@ -223,7 +230,12 @@ test("actual review sources, excluded populations and selected family accounts n
   await expect(panel.locator(".experience-number")).toHaveText("7.4/10");
   await expect(panel).toContainText("44 reviews reported");
   await expect(panel).toContainText("1 source family");
-  await expect(panel).toContainText(
+  const method = panel.locator(".experience-method");
+  await expect(method.locator("p").first()).not.toBeVisible();
+  await method.locator("summary").focus();
+  await page.keyboard.press("Enter");
+  await expect(method.locator("p").first()).toBeVisible();
+  await expect(method).toContainText(
     "Reviewers are not independently authenticated",
   );
   await expect(panel.locator(".review-excluded").first()).toBeVisible();
@@ -324,7 +336,7 @@ test("research filtering and experience sorting retain category rules and select
     .selectOption("pricing");
   await expect(page.locator("article.provider-card").first()).toBeVisible();
   for (const item of await page.locator("article.provider-card").all())
-    await expect(item).toContainText("Published cost details");
+    await expect(item).toContainText("Published costs");
   await expect(page.locator(".research-filter-note")).toContainText(
     "Unresearched options may have the same offerings",
   );
@@ -351,7 +363,7 @@ test("research failures recover on retry and wrong-location payloads never displ
   await openSearch(page);
   await searchName(page, providers.get("lifeplan-brooksby-village")!.name);
   await card(page, "lifeplan-brooksby-village")
-    .getByRole("button", { name: "View evidence" })
+    .getByRole("button", { name: "View details" })
     .click();
   let dialog = page.getByRole("dialog", {
     name: providers.get("lifeplan-brooksby-village")!.name,
@@ -374,7 +386,7 @@ test("research failures recover on retry and wrong-location payloads never displ
   );
   await searchName(page, providers.get("lifeplan-linden-ponds")!.name);
   await card(page, "lifeplan-linden-ponds")
-    .getByRole("button", { name: "View evidence" })
+    .getByRole("button", { name: "View details" })
     .click();
   dialog = page.getByRole("dialog", {
     name: providers.get("lifeplan-linden-ponds")!.name,

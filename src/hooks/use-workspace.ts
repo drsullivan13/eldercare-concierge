@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
 import { validateWorkspace, type Workspace } from "@/lib/workspace";
 const DEMO_KEY = "harbor.demo.workspace.v1";
-export function makeWorkspace(name = "", demo = false): Workspace {
+function makeWorkspace(name = "", demo = false): Workspace {
   return {
     profile: {
       name,
@@ -73,7 +73,7 @@ export function useWorkspace(demo: boolean) {
             storedLocally = true;
           } catch {
             setError(
-              "This browser could not restore your demo plan. You can start a new one.",
+              "This browser could not store your plan. Enable site storage to save changes; you can still search for care.",
             );
           }
           if (active) {

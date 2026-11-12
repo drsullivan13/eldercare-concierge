@@ -153,7 +153,7 @@ try {
   const sunrise = page.locator("article.provider-card").filter({
     has: page.getByRole("button", { name: "Sunrise of Newton", exact: true }),
   });
-  await sunrise.getByRole("button", { name: "View evidence" }).click();
+  await sunrise.getByRole("button", { name: "View details" }).click();
   const dialog = page.getByRole("dialog");
   await dialog
     .locator(".research-tabs")
@@ -183,7 +183,7 @@ try {
     has: page.getByRole("button", { name: "Brooksby Village", exact: true }),
   });
   await expect(brooksbyCard).toContainText("Facebook findings");
-  await brooksbyCard.getByRole("button", { name: "View evidence" }).click();
+  await brooksbyCard.getByRole("button", { name: "View details" }).click();
   const facebookDialog = page.getByRole("dialog");
   await facebookDialog
     .locator(".research-tabs")

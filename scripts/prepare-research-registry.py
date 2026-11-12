@@ -1,36 +1,80 @@
 #!/usr/bin/env python3
 """Write an idempotent SQL seed from reviewed catalog data; never connect to a DB."""
+
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-providers = json.loads((ROOT / 'src/data/providers.json').read_text())
-research = json.loads((ROOT / 'src/data/location-research.json').read_text())
-home_health = json.loads((ROOT / 'src/data/home-health-evidence.json').read_text())
+providers = json.loads((ROOT / "src/data/providers.json").read_text())
+research = json.loads((ROOT / "src/data/location-research.json").read_text())
+home_health = json.loads((ROOT / "src/data/home-health-evidence.json").read_text())
 ccns = {}
-for agency in home_health['agencies']:
-    ccns.setdefault(agency['organizationId'], []).append(agency['ccn'])
-records = [dict(provider_id=p['id'], name=p['name'], care_category=p['category'],
-                address=p['address'], city=p['city'], state=p['state'], zip=p['zip'],
-                phone=p.get('phone'), website=p.get('website'),
-                cms_ccns=ccns.get(p['id'], [p['cms']['ccn']] if p.get('cms') else [])) for p in providers]
-manual = [dict(provider_id=p['id'], status='collected' if research[p['id']]['reviewAggregates'] else 'not_checked',
-               metadata={'collection_mode': 'reviewed_manual_snapshot', 'aggregate_sources': len(research[p['id']]['reviewAggregates']),
-                         'observed_date': research[p['id']]['checkedAt']}) for p in providers]
+for agency in home_health["agencies"]:
+    ccns.setdefault(agency["organizationId"], []).append(agency["ccn"])
+records = [
+    dict(
+        provider_id=p["id"],
+        name=p["name"],
+        care_category=p["category"],
+        address=p["address"],
+        city=p["city"],
+        state=p["state"],
+        zip=p["zip"],
+        phone=p.get("phone"),
+        website=p.get("website"),
+        cms_ccns=ccns.get(p["id"], [p["cms"]["ccn"]] if p.get("cms") else []),
+    )
+    for p in providers
+]
+manual = [
+    dict(
+        provider_id=p["id"],
+        status="collected" if research[p["id"]]["reviewAggregates"] else "not_checked",
+        metadata={
+            "collection_mode": "reviewed_manual_snapshot",
+            "aggregate_sources": len(research[p["id"]]["reviewAggregates"]),
+            "observed_date": research[p["id"]]["checkedAt"],
+        },
+    )
+    for p in providers
+]
 sources = []
-for dataset in ['4pq5-n9py', '6jpm-sxkc', 'ccn4-8vby', 'c886-nwpj', 'fa88-6ff2']:
-    sources.append(dict(source_key=f'cms-metadata-{dataset}', config={'dataset': dataset, 'mode': 'metadata', 'repeat': True}))
-for dataset in ['c886-nwpj', 'fa88-6ff2']:
-    sources.append(dict(source_key=f'cms-periods-{dataset}', config={'dataset': dataset, 'mode': 'periods', 'repeat': True}))
+for dataset in ["4pq5-n9py", "6jpm-sxkc", "ccn4-8vby", "c886-nwpj", "fa88-6ff2"]:
+    sources.append(
+        dict(
+            source_key=f"cms-metadata-{dataset}",
+            config={"dataset": dataset, "mode": "metadata", "repeat": True},
+        )
+    )
+for dataset in ["c886-nwpj", "fa88-6ff2"]:
+    sources.append(
+        dict(
+            source_key=f"cms-periods-{dataset}",
+            config={"dataset": dataset, "mode": "periods", "repeat": True},
+        )
+    )
 for provider_id, identities in ccns.items():
     for ccn in identities:
-        for dataset in ['ccn4-8vby', '6jpm-sxkc']:
-            sources.append(dict(source_key=f'cms-{dataset}-{ccn}', config={'dataset': dataset, 'mode': 'record', 'ccn': ccn, 'provider_id': provider_id, 'repeat': True}))
+        for dataset in ["ccn4-8vby", "6jpm-sxkc"]:
+            sources.append(
+                dict(
+                    source_key=f"cms-{dataset}-{ccn}",
+                    config={
+                        "dataset": dataset,
+                        "mode": "record",
+                        "ccn": ccn,
+                        "provider_id": provider_id,
+                        "repeat": True,
+                    },
+                )
+            )
+
 
 def literal(value):
     data = json.dumps(value, ensure_ascii=False)
-    assert '$harbor_seed$' not in data
-    return '$harbor_seed$' + data + '$harbor_seed$::jsonb'
+    assert "$harbor_seed$" not in data
+    return "$harbor_seed$" + data + "$harbor_seed$::jsonb"
+
 
 sql = f"""begin;
 insert into harbor_research.catalog_entities(provider_id,name,care_category,address,city,state,zip,phone,website,cms_ccns)
@@ -63,7 +107,9 @@ as x(source_key text,config jsonb) on conflict(source_key) do nothing;
 select public.harbor_research_enqueue_due_jobs();
 commit;
 """
-output = ROOT / 'artifacts/research-registry-seed.sql'
+output = ROOT / "artifacts/research-registry-seed.sql"
 output.parent.mkdir(exist_ok=True)
 output.write_text(sql)
-print(f'Prepared {len(records)} registry records and {len(sources)} CMS sources in {output}. Yelp sources are disabled by default (free sources only).')
+print(
+    f"Prepared {len(records)} registry records and {len(sources)} CMS sources in {output}. Yelp sources are disabled by default (free sources only)."
+)

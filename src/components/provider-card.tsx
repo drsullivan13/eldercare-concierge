@@ -1,10 +1,10 @@
 "use client";
+import "./provider-card.css";
 import {
   ArrowUpRight,
   Bookmark,
   Building2,
   Check,
-  FileCheck2,
   HeartHandshake,
   Hospital,
   MapPin,
@@ -33,7 +33,7 @@ export function ProviderIcon({
     <Building2 size={size} />
   );
 }
-export function Rating({
+function Rating({
   value,
   label = "CMS overall",
 }: {
@@ -57,6 +57,23 @@ export function Rating({
     </span>
   );
 }
+
+export function providerCareAlerts(provider: Provider) {
+  const alerts = provider.warnings.filter((warning) =>
+    /abuse|special.focus|certification is unverified|ownership change|admission restriction/i.test(
+      warning,
+    ),
+  );
+  if (provider.cms?.abuse && !alerts.some((alert) => /abuse/i.test(alert)))
+    alerts.push("CMS abuse icon is present in this source release.");
+  if (
+    provider.cms?.specialFocus &&
+    !alerts.some((alert) => /special.focus/i.test(alert))
+  )
+    alerts.push(`CMS special-focus status: ${provider.cms.specialFocus}.`);
+  return alerts;
+}
+
 export function ProviderCard({
   provider,
   saved,
@@ -72,6 +89,27 @@ export function ProviderCard({
   compare?: boolean;
   onCompare?: () => void;
 }) {
+  const alerts = providerCareAlerts(provider);
+  const research = provider.research;
+  const availability =
+    research?.availabilityStatus === "opening-published"
+      ? "Openings listed · confirm"
+      : research?.availabilityStatus === "waitlist-published"
+        ? "Waitlist published"
+        : null;
+  const tags = [
+    ...(availability ? [availability] : []),
+    ...(research?.publishedCosts ? ["Published costs"] : []),
+    ...(research?.facebookResearch?.findingCount ? ["Facebook findings"] : []),
+    ...provider.services.filter(
+      (service) =>
+        ![
+          "Nursing facility",
+          "Assisted living",
+          "Skilled home health",
+        ].includes(service),
+    ),
+  ].slice(0, 3);
   return (
     <article className="provider-card">
       <div className="provider-card-top">
@@ -98,6 +136,7 @@ export function ProviderCard({
           className={`icon-button save-button ${saved ? "is-saved" : ""}`}
           onClick={onSave}
           aria-label={`${saved ? "Remove" : "Save"} ${provider.name}`}
+          aria-pressed={saved}
           title={saved ? "Remove from shortlist" : "Save to shortlist"}
         >
           <Bookmark size={19} fill={saved ? "currentColor" : "none"} />
@@ -109,92 +148,64 @@ export function ProviderCard({
       <p className="provider-address">
         {provider.city}, {provider.state} {provider.zip}
       </p>
-      <div className="provider-proof">
-        {provider.cms ? (
-          <Rating value={provider.cms.overall} />
+      <div className="provider-research-summary">
+        {research && research.experience.value !== null ? (
+          <span className="experience-card-score">
+            <strong>
+              {research.experience.value.toFixed(1)}
+              <small>/10</small>
+            </strong>
+            <span>
+              Consumer experience
+              <small>
+                {research.experience.confidence === "moderate"
+                  ? "Moderate"
+                  : "Limited"}{" "}
+                evidence · {research.experience.reviewCount} reviews
+              </small>
+            </span>
+          </span>
         ) : (
-          <span
-            className={`evidence-badge ${provider.officialRecord ? "" : "provider-claim"}`}
-          >
-            <FileCheck2 size={14} />
-            {provider.officialRecord
-              ? "Official record available"
-              : "Provider information"}
+          <span className="experience-card-unrated">
+            <MessageSquare size={18} aria-hidden="true" />
+            <span>
+              Consumer experience
+              <small>Not enough evidence to score</small>
+            </span>
           </span>
         )}
       </div>
-      <p className="provider-description">{provider.description}</p>
-      {provider.research?.admissionRestriction && (
-        <div className="provider-alert">
-          <ShieldAlert size={15} />
-          <span>{provider.research.admissionRestriction}</span>
+      {provider.cms && (
+        <div className="provider-proof">
+          <Rating value={provider.cms.overall} />
         </div>
       )}
-      {provider.research && (
-        <div className="provider-research-summary">
-          {provider.research.experience.value !== null ? (
-            <span className="experience-card-score">
-              <strong>
-                {provider.research.experience.value.toFixed(1)}
-                <small>/10</small>
-              </strong>
-              <span>
-                Consumer experience
-                <small>
-                  {provider.research.experience.confidence} evidence ·{" "}
-                  {provider.research.experience.reviewCount} reviews reported
-                </small>
-              </span>
+      {tags.length > 0 && (
+        <div className="provider-tags">
+          {tags.map((tag) => (
+            <span
+              className={
+                tag === availability ? "provider-availability" : undefined
+              }
+              key={tag}
+            >
+              {tag}
             </span>
-          ) : (
-            <span className="experience-card-unrated">
-              <MessageSquare size={18} aria-hidden="true" />
-              <span>
-                Experience score not yet available
-                <small>
-                  {provider.research.experience.reviewCount > 0
-                    ? `${provider.research.experience.reviewCount} eligible reviews reported · more evidence needed`
-                    : "Rating evidence still needed"}
-                </small>
-              </span>
-            </span>
-          )}
-          <div className="research-coverage-tags">
-            {provider.research.facebookResearch && (
-              <span>
-                {provider.research.facebookResearch.findingCount > 0
-                  ? `Facebook findings · ${provider.research.facebookResearch.findingCount}`
-                  : "Facebook search coverage available"}
-              </span>
-            )}
-            {provider.research.detailsAvailable && (
-              <span>Offerings researched</span>
-            )}
-            {provider.research.publishedCosts > 0 && (
-              <span>Published cost details</span>
-            )}
-            {provider.research.availabilityStatus === "opening-published" && (
-              <span className="opening-claim">
-                Provider lists openings · confirm
-              </span>
-            )}
-            {provider.research.availabilityStatus === "waitlist-published" && (
-              <span>Waitlist published</span>
-            )}
-          </div>
+          ))}
         </div>
       )}
-      <div className="provider-tags">
-        {provider.services.slice(0, 3).map((service) => (
-          <span key={service}>{service}</span>
-        ))}
-      </div>
-      {provider.warnings.length > 0 && (
+      {research?.admissionRestriction && (
         <div className="provider-alert">
-          <ShieldAlert size={15} />
-          <span>{provider.warnings[0]}</span>
+          <ShieldAlert size={16} aria-hidden="true" />
+          <span>{research.admissionRestriction}</span>
         </div>
       )}
+      {alerts.map((alert) => (
+        <div className="provider-alert" key={alert}>
+          <ShieldAlert size={16} aria-hidden="true" />
+          <span>{alert}</span>
+        </div>
+      ))}
       <div className="provider-footer">
         {onCompare ? (
           <label className="compare-check">
@@ -206,13 +217,10 @@ export function ProviderCard({
             <span>{compare ? <Check size={12} /> : null}</span>Compare
           </label>
         ) : (
-          <span className="source-count">
-            {provider.sources.length} source
-            {provider.sources.length === 1 ? "" : "s"}
-          </span>
+          <span />
         )}
         <button className="text-link" onClick={onOpen}>
-          View evidence <ArrowUpRight size={15} />
+          View details <ArrowUpRight size={15} />
         </button>
       </div>
     </article>

@@ -47,7 +47,7 @@ async function open(page: Page, id: string) {
       new URL(r.url()).pathname === "/api/research" &&
       new URL(r.url()).searchParams.get("id") === id,
   );
-  await card.getByRole("button", { name: "View evidence" }).click();
+  await card.getByRole("button", { name: "View details" }).click();
   expect((await (await research).json()).providerId).toBe(id);
   const dialog = page.getByRole("dialog", { name, exact: true });
   await dialog
@@ -91,10 +91,12 @@ test("actual curated Facebook findings show sources, keyboard expansion and kind
   const { dialog, section } = await open(page, id);
   await expect(section).toContainText("Qualitative context only");
   await expect(section).toContainText("not a representative survey");
+  await expect(section.locator(".fb-research-caution")).not.toBeVisible();
   await expect(section.locator(".fb-research-dates")).not.toBeVisible();
   await section
     .getByText("What this Facebook search covered", { exact: true })
     .click();
+  await expect(section.locator(".fb-research-caution")).toBeVisible();
   await expect(section.locator(".fb-research-dates")).toContainText(
     "Editorial review:",
   );
@@ -179,6 +181,11 @@ test("searched empty/withheld coverage is distinct from an actual catalog locati
   ]) {
     const [id, location] = assigned.find(([, v]) => v.status === status)!;
     const result = await open(page, id);
+    const coverage = result.section.locator(".fb-research-coverage");
+    await expect(coverage.locator(".fb-research-dates")).not.toBeVisible();
+    await coverage.locator("summary").focus();
+    await page.keyboard.press("Enter");
+    await expect(coverage.locator(".fb-research-dates")).toBeVisible();
     await expect(result.section).toContainText(location.coverageExplanation);
     await expect(
       result.section.locator(".fb-research-status"),

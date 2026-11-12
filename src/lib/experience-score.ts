@@ -17,7 +17,7 @@ export type ExperienceAggregate = {
   scope: string;
   notes?: string[];
 };
-export type ExperienceReview = {
+type ExperienceReview = {
   id: string;
   sourceId: string;
   date?: string | null;
@@ -54,7 +54,7 @@ export type ExperienceScoreInput = {
   asOfDate: string;
 };
 
-export const EXPERIENCE_SCORE_POLICY = {
+const EXPERIENCE_SCORE_POLICY = {
   version: "1.0",
   minimumReportedReviews: 10,
   moderateCoverageReviews: 30,

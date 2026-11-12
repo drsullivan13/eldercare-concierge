@@ -37,7 +37,7 @@ export type OfferingFact = {
     asOf: string | null;
   } | null;
 };
-export type AvailabilityObservation = {
+type AvailabilityObservation = {
   status:
     | "opening-published"
     | "waitlist-published"
@@ -47,7 +47,7 @@ export type AvailabilityObservation = {
   sourceId: string | null;
   asOf: string | null;
 };
-export type ReviewAggregate = {
+type ReviewAggregate = {
   sourceId: string;
   platform: string;
   sourceFamily: string;
@@ -58,7 +58,7 @@ export type ReviewAggregate = {
   scope: string;
   notes: string[];
 };
-export type PublicReview = {
+type PublicReview = {
   id: string;
   sourceId: string;
   url: string;

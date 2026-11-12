@@ -60,14 +60,14 @@ const MAX_BYTES = 10 * 1024 * 1024;
 const MAX_ROWS = 10000;
 const ID = /^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/;
 type Row = Record<string, string>;
-export type ImportIssue = {
+type ImportIssue = {
   file: "observations" | "coverage" | "batch";
   row: number | null;
   field: string | null;
   code: string;
   message: string;
 };
-export type StagedObservation = {
+type StagedObservation = {
   id: string;
   sourceKey: string;
   contentHash: string;
@@ -105,7 +105,7 @@ export type StagedObservation = {
   publishable: false;
   reviewReasons: string[];
 };
-export type StagedCoverage = {
+type StagedCoverage = {
   id: string;
   runId: string;
   providerId: string;
@@ -118,7 +118,7 @@ export type StagedCoverage = {
   accessLimits: string | null;
   coverageNotes: string | null;
 };
-export type ResearchImportStaging = {
+type ResearchImportStaging = {
   schemaVersion: "harbor-research-import/1";
   batchId: string;
   runId: string;
@@ -146,7 +146,7 @@ export type ResearchImportResult = {
   };
   staging: ResearchImportStaging | null;
 };
-export class CsvValidationError extends Error {
+class CsvValidationError extends Error {
   constructor(
     public readonly line: number,
     message: string,

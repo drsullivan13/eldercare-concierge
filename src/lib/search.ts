@@ -28,7 +28,7 @@ export class SearchInputError extends Error {
   }
 }
 export const BOSTON = { lat: 42.3601, lng: -71.0589 };
-export const PILOT_RADIUS_MILES = 55;
+const PILOT_RADIUS_MILES = 55;
 export const catalog: Provider[] = providerData as Provider[];
 const byId = new Map(catalog.map((provider) => [provider.id, provider]));
 const zips = zipData as Record<
@@ -208,10 +208,4 @@ export function getProvidersByIds(ids: readonly string[]): Provider[] {
       ? [{ ...provider, research: getResearchSummary(provider.id) }]
       : [];
   });
-}
-export function getProviderById(id: string): Provider | undefined {
-  const provider = byId.get(id);
-  return provider
-    ? { ...provider, research: getResearchSummary(provider.id) }
-    : undefined;
 }

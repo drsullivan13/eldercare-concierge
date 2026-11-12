@@ -32,7 +32,7 @@ try {
         exact: true,
       }),
     });
-    await card.getByRole("button", { name: "View evidence" }).click();
+    await card.getByRole("button", { name: "View details" }).click();
     const dialog = page.getByRole("dialog");
     for (const name of [
       "Life here",

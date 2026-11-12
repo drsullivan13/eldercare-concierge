@@ -1,4 +1,4 @@
-export type WorkspaceTask = {
+type WorkspaceTask = {
   id: string;
   title: string;
   category: string;

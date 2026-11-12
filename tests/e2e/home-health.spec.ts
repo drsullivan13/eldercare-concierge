@@ -77,7 +77,7 @@ async function openProvider(page: Page, providerId: string) {
   const card = page.locator("article.provider-card").filter({
     has: page.getByRole("button", { name: provider.name, exact: true }),
   });
-  await card.getByRole("button", { name: "View evidence" }).click();
+  await card.getByRole("button", { name: "View details" }).click();
   return page.getByRole("dialog", { name: provider.name, exact: true });
 }
 

@@ -30,7 +30,7 @@ for (const path of ["/", "/signup", "/login", "/methodology"]) {
   await check(path);
 }
 await page.goto(base + "/dashboard?demo=1");
-await page.getByRole("heading", { name: "A clearer plan." }).waitFor();
+await page.getByRole("heading", { name: /A clearer plan/ }).waitFor();
 await check("overview");
 await page
   .getByRole("button", { name: "Find care", exact: true })
@@ -53,12 +53,12 @@ await page
 await check("task dialog");
 await page.getByRole("button", { name: "Close dialog", exact: true }).click();
 await page
-  .getByRole("button", { name: "Our research standards", exact: true })
+  .getByRole("button", { name: "Research standards", exact: true })
   .click();
 await check("standards");
 await page.setViewportSize({ width: 390, height: 844 });
 await page.goto(base + "/dashboard?demo=1");
-await page.getByRole("heading", { name: "A clearer plan." }).waitFor();
+await page.getByRole("heading", { name: /A clearer plan/ }).waitFor();
 await check("mobile overview");
 await page
   .getByRole("button", { name: "Find care", exact: true })

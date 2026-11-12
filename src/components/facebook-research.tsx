@@ -71,21 +71,29 @@ export function FacebookResearch({ research }: { research?: Research }) {
           {research ? STATUSES[research.status] : "Not searched in this pilot"}
         </span>
       </div>
-      <p className="fb-research-caution">
-        Qualitative context only. These findings do not affect the experience
-        index. Selected posts are not a representative survey, and relationships
-        have not been independently authenticated.
-      </p>
       {!research ? (
-        <p>
-          This location was not included in the Facebook search pilot. That does
-          not mean no relevant posts exist.
-        </p>
+        <details className="fb-research-coverage">
+          <summary>What this Facebook search covered</summary>
+          <p>
+            This location was not included in the Facebook search pilot. That
+            does not mean no relevant posts exist.
+          </p>
+        </details>
       ) : (
         <>
-          <p>{research.coverageExplanation}</p>
+          {research.findings.length > 0 && (
+            <p className="fb-research-intro">
+              Selected public posts. They do not affect the experience score.
+            </p>
+          )}
           <details className="fb-research-coverage">
             <summary>What this Facebook search covered</summary>
+            <p>{research.coverageExplanation}</p>
+            <p className="fb-research-caution">
+              Qualitative context only. These findings do not affect the
+              experience index. Selected posts are not a representative survey,
+              and relationships have not been independently authenticated.
+            </p>
             <p className="fb-research-dates">
               Search: {date(research.searchedAt)} · Editorial review:{" "}
               {date(research.checkedAt)}
@@ -97,6 +105,11 @@ export function FacebookResearch({ research }: { research?: Research }) {
               {research.withheldCount} withheld. Observations are collected
               rows, not a count of people; several can be grouped into one
               finding.
+            </p>
+            <p className="fb-research-source-note">
+              Links point to the attributed Facebook source. Facebook may
+              require sign-in, and a post may have changed or been removed since
+              collection.
             </p>
           </details>
           {research.findings.length > 0 ? (
@@ -235,19 +248,8 @@ export function FacebookResearch({ research }: { research?: Research }) {
                     : `Show all ${findings.length} Facebook findings`}
                 </button>
               )}
-              <p className="fb-research-source-note">
-                Links point to the attributed Facebook source. Facebook may
-                require sign-in, and a post may have changed or been removed
-                since collection.
-              </p>
             </>
-          ) : (
-            <p>
-              {research.status === "withheld"
-                ? "No collected accounts are published here. See the coverage explanation for what was withheld."
-                : "No location-specific findings are published from this search. This is not evidence that no Facebook discussions exist."}
-            </p>
-          )}
+          ) : null}
         </>
       )}
     </section>

@@ -26,6 +26,8 @@ Published offerings and consumer reviews are a research snapshot. Current vacanc
 
 Collection setup and operating queries are in [research automation](docs/research-automation.md). Read [the Facebook publication audit](docs/facebook-publication.md) for the current editorial selection and [the pilot import review](docs/facebook-pilot-review.md) for the original private batch, and [data access](docs/data-access.md) for the requirements and inquiry draft for licensed review analysis.
 
+For a code walkthrough and development checks, start with [CONTRIBUTING](CONTRIBUTING.md), [the architecture map](docs/architecture.md), and [the documentation index](docs/README.md).
+
 ## Run locally
 
 Requires Node 24 and npm. All npm dependencies are locked in `package-lock.json`.

@@ -59,7 +59,7 @@ These are real local database checks. They include a regression against broad de
 
 ## Hosting status
 
-Source is published at [drsullivan13/eldercare-concierge](https://github.com/drsullivan13/eldercare-concierge). The Vercel project is `eldercare-concierge`, with alias `https://eldercare-concierge-one.vercel.app`; deployment protection remains enabled. Application commit `53339fc` deployed successfully as `dpl_DVke2nLQMWk21Z5gswGkwFsyib1B` (production, READY, Next.js, approximately 28-second build). The hosted browser check passed against that deployment. This verification-record update does not change application behavior.
+Source is published at [drsullivan13/eldercare-concierge](https://github.com/drsullivan13/eldercare-concierge). The Vercel project is `eldercare-concierge`, with alias `https://eldercare-concierge-one.vercel.app`; deployment protection remains enabled. An earlier application commit, `53339fc`, deployed successfully as `dpl_DVke2nLQMWk21Z5gswGkwFsyib1B` (production, READY, Next.js, approximately 28-second build). The earlier hosted browser check passed against that deployment. The newest application check is recorded at the top of this document.
 
 A deployment-scoped runtime scan at 10:52 UTC returned no error/fatal logs in the preceding ten minutes. This is a short verification window. The project has no configured log drains or independent continuous error monitoring.
 

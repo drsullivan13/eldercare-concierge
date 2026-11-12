@@ -38,8 +38,9 @@ test("research filters expose Facebook findings and score gaps, with a complete 
   await unrated;
   await expect(page.locator(".experience-card-score")).toHaveCount(0);
   await expect(page.locator(".experience-card-unrated").first()).toContainText(
-    "Experience score not yet available",
+    "Not enough evidence to score",
   );
+  await page.getByText("Research coverage & method", { exact: true }).click();
   const download = page.waitForEvent("download");
   await page
     .getByRole("link", { name: "Download catalog research checklist" })

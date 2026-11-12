@@ -1,0 +1,275 @@
+.sidebar-research-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 30px 10px 0;
+  padding: 12px 0;
+  color: #d1ddc9;
+  font-size: 11px;
+  text-align: left;
+}
+
+.sidebar-research-link svg:last-child {
+  margin-left: auto;
+}
+
+.care-overview .page-heading {
+  margin-bottom: 28px;
+}
+
+.care-overview .page-heading h1 {
+  max-width: 740px;
+  font-size: clamp(30px, 3.1vw, 44px);
+  line-height: 1.14;
+}
+
+.care-search-home.search-hero {
+  padding: 32px;
+}
+
+.care-search-home.search-hero h2 {
+  font-size: 30px;
+  margin: 10px 0 22px;
+}
+
+.care-search-home .quick-search {
+  display: grid;
+  grid-template-columns:
+    minmax(205px, 1.8fr) minmax(95px, 0.8fr) minmax(105px, 0.8fr)
+    auto;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 10px;
+}
+
+.care-search-home .quick-search label {
+  width: auto;
+  min-width: 0;
+  padding: 3px 10px;
+  border: 0;
+}
+
+.care-search-home .quick-search label > span {
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.care-search-home .quick-search input,
+.care-search-home .quick-search select {
+  width: 100%;
+  min-width: 0;
+  height: 30px;
+  font-size: 14px;
+  color: #304d27;
+}
+
+.care-search-home .quick-search .button {
+  min-height: 50px;
+  padding: 13px 22px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.care-search-home .quick-search .button svg {
+  display: block;
+}
+
+.care-search-home .search-home-note {
+  font-size: 12px;
+  margin: 16px 0 0;
+  line-height: 1.6;
+}
+
+.care-workspace-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 22px 0 40px;
+}
+
+.care-workspace-links > button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: #466039;
+  text-align: left;
+}
+
+.care-workspace-links > button:hover {
+  border-color: #93aa7e;
+  background: #fcfdf9;
+}
+
+.care-workspace-links > button > span {
+  display: grid;
+  flex: 1;
+  gap: 6px;
+}
+
+.care-workspace-links strong {
+  font-size: 15px;
+}
+
+.care-workspace-links span span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.care-search-guide h2 {
+  margin: 0 0 22px;
+  color: #3e5632;
+  font-size: 25px;
+}
+
+.care-search-guide > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.care-search-guide p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.care-search-guide strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #3e5632;
+  font-size: 13px;
+}
+
+.care-search-view .category-tabs {
+  margin: 16px 0 20px;
+}
+
+.care-search-view .results-toolbar {
+  flex-wrap: wrap;
+  margin: 20px 0 12px;
+}
+
+.search-research-summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.search-research-summary > p {
+  flex: 1 1 340px;
+  margin: 0;
+}
+
+.search-research-disclosure summary,
+.care-plan-suggestions summary {
+  cursor: pointer;
+  color: #456333;
+  font-weight: 600;
+}
+
+.search-research-disclosure[open] {
+  width: 100%;
+}
+
+.search-research-content {
+  margin-top: 12px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f5f7f0;
+}
+
+.search-research-content p,
+.search-research-content .catalog-note,
+.search-research-content .research-filter-note {
+  margin: 0 0 12px;
+  padding: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.search-research-links {
+  display: flex;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+}
+
+.search-research-links .text-link {
+  font-size: 12px;
+}
+
+.care-plan-suggestions summary {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+@media (max-width: 1100px) {
+  .care-search-home .quick-search {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .care-search-home .quick-care-type {
+    grid-column: 1 / -1;
+  }
+
+  .care-search-home .quick-search .button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .care-search-home.search-hero {
+    padding: 22px 18px;
+  }
+
+  .care-search-home.search-hero h2 {
+    font-size: 25px;
+  }
+
+  .care-search-home .quick-search input,
+  .care-search-home .quick-search select {
+    font-size: 16px;
+  }
+
+  .care-workspace-links {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 16px 0 30px;
+  }
+
+  .care-workspace-links > button {
+    padding: 18px;
+  }
+
+  .care-search-guide > div {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .care-search-guide h2 {
+    font-size: 23px;
+  }
+
+  .search-research-content {
+    padding: 16px;
+  }
+
+  .care-search-view .result-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+}

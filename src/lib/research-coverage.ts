@@ -2,9 +2,9 @@ import catalog from "@/data/providers.json";
 import { getLocationResearch } from "./location-research";
 import type { CareCategory } from "./providers";
 
-export type CoverageStatus =
+type CoverageStatus =
   "scored" | "too-few-reviews" | "source-check-needed" | "no-rating-evidence";
-export type ResearchCoverageRow = {
+type ResearchCoverageRow = {
   providerId: string;
   name: string;
   category: CareCategory;

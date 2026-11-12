@@ -3,7 +3,7 @@ import providerData from "@/data/providers.json";
 import type { Provider } from "./providers";
 
 export const MAX_EVIDENCE_RECORDS = 25;
-export const DEFAULT_EVIDENCE_RECORDS = 5;
+const DEFAULT_EVIDENCE_RECORDS = 5;
 export const SCOPE_SEVERITY_GUIDE_URL =
   "https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/som107c07pdf.pdf#page=42";
 
@@ -65,7 +65,7 @@ type FacilityHistory = {
   healthCitations: Collection<HealthCitation> | null;
   penalties: PenaltyCollection | null;
 };
-export type EvidenceSource = {
+type EvidenceSource = {
   datasetId: string;
   title: string;
   url: string;

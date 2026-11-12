@@ -156,7 +156,7 @@ export function LocationResearch({
   return (
     <section className="location-research" aria-labelledby={`${uid}-title`}>
       <div className="section-title">
-        <h3 id={`${uid}-title`}>A closer look at this option</h3>
+        <h3 id={`${uid}-title`}>Explore this care option</h3>
         {data?.checkedAt && (
           <span>Research checked {date(data.checkedAt)}</span>
         )}
@@ -215,27 +215,32 @@ export function LocationResearch({
             {tab === "life" && (
               <>
                 <h4>Care, amenities & everyday life</h4>
-                <p className="small muted">
-                  Offerings below are described by the linked sources. Ask which
-                  are included in the specific care level and contract you are
-                  considering.
+                <p className="research-intro">
+                  Ask which services are included in your care level and
+                  contract.
                 </p>
                 <Facts
                   facts={facts(["care", "amenity", "activity", "dining"])}
                   sources={data.sources}
-                  empty="Detailed amenities and activities have not been researched for this location yet. Missing detail does not mean the service is unavailable."
-                />
-                <h4>Community size</h4>
-                <Facts
-                  facts={facts(["capacity"])}
-                  sources={data.sources}
-                  empty="No sourced size or resident-count figures are available in this snapshot."
+                  empty="Amenities and activities have not been researched yet. Ask the provider what is available."
                 />
                 {facts(["capacity"]).length > 0 && (
-                  <p className="research-caution">
-                    Capacity and historical resident averages are not today’s
-                    occupancy. They cannot tell us how many rooms are open.
-                  </p>
+                  <>
+                    <h4>Community size</h4>
+                    <Facts
+                      facts={facts(["capacity"])}
+                      sources={data.sources}
+                      empty=""
+                    />
+                    <details className="evidence-disclosure">
+                      <summary>What capacity figures mean</summary>
+                      <p>
+                        Capacity and historical resident averages are not
+                        today’s occupancy. They cannot tell us how many rooms
+                        are open.
+                      </p>
+                    </details>
+                  </>
                 )}
               </>
             )}
@@ -245,18 +250,17 @@ export function LocationResearch({
                 <Facts
                   facts={facts(["room"])}
                   sources={data.sources}
-                  empty="Room layouts and sharing arrangements have not been established in this research. Ask for current floor plans for the relevant care level."
+                  empty="Room layouts have not been researched yet. Ask for current floor plans and sharing arrangements."
                 />
                 <h4>Published costs & what they include</h4>
-                <p className="small muted">
-                  Keep entrance fees, monthly charges and extra care fees
-                  separate. These are published figures, not a personal quote;
-                  dates and conditions can change the bill.
+                <p className="research-intro">
+                  Published prices are not a personal quote. Check the dates and
+                  what is included.
                 </p>
                 <Facts
                   facts={facts(["cost"])}
                   sources={data.sources}
-                  empty="No location-specific published price has been established. We do not substitute a regional estimate. Request an itemized quote for the room and care needed."
+                  empty="Pricing has not been established for this location. Request an itemized quote for the room and care needed."
                 />
                 <div className="research-question">
                   <strong>Ask for the complete bill</strong>
@@ -300,11 +304,13 @@ export function LocationResearch({
                     Source availability date: {date(data.availability.asOf)}
                   </p>
                 )}
-                <Facts
-                  facts={facts(["availability"])}
-                  sources={data.sources}
-                  empty="No additional room-specific availability evidence is published in this snapshot."
-                />
+                {facts(["availability"]).length > 0 && (
+                  <Facts
+                    facts={facts(["availability"])}
+                    sources={data.sources}
+                    empty=""
+                  />
+                )}
                 <div className="research-question">
                   <strong>Confirm the opening that fits</strong>
                   <p>
@@ -354,33 +360,32 @@ export function LocationResearch({
                         ? "Not rated yet"
                         : `${data.experience.confidence === "moderate" ? "Moderate" : "Limited"} evidence · ${data.experience.reviewCount} reviews reported · ${data.experience.independentSourceCount} source ${data.experience.independentSourceCount === 1 ? "family" : "families"}`}
                     </p>
-                    <span className="small muted">
-                      {data.experience.reason}
-                    </span>
                   </div>
                 </div>
-                <p className="research-caution">
-                  A provisional summary of consumer ratings, not a
-                  clinical-quality score. Reviewers are not independently
-                  authenticated. Tour reviews may be included, and counts can
-                  overlap across sites. Read the inspection evidence too.
+                <p className="research-intro">
+                  Consumer ratings, not a clinical-quality score.
                 </p>
-                <Link
-                  href="/methodology#experience"
-                  target="_blank"
-                  className="text-link"
-                >
-                  How this score works <ExternalLink size={13} />
-                </Link>
-                <FacebookResearch
-                  key={providerId}
-                  research={data.facebookResearch}
-                />
+                <details className="evidence-disclosure experience-method">
+                  <summary>How to read this score</summary>
+                  <p>{data.experience.reason}</p>
+                  <p>
+                    A provisional summary of consumer ratings, not a
+                    clinical-quality score. Reviewers are not independently
+                    authenticated. Tour reviews may be included, and counts can
+                    overlap across sites. Read the inspection evidence too.
+                  </p>
+                  <Link
+                    href="/methodology#experience"
+                    target="_blank"
+                    className="text-link"
+                  >
+                    How this score works <ExternalLink size={13} />
+                  </Link>
+                </details>
                 <h4>What each source reports</h4>
                 {!data.reviewAggregates.length && (
                   <p className="research-empty">
-                    No location-matched rating aggregates have been researched
-                    yet. This is not a finding that no reviews exist.
+                    No location-matched ratings have been researched yet.
                   </p>
                 )}
                 <div className="review-platforms">
@@ -401,11 +406,14 @@ export function LocationResearch({
                           (s) => s.id === aggregate.sourceId,
                         )}
                       />
-                      {aggregate.notes.map((note, j) => (
-                        <p className="small muted" key={j}>
-                          {note}
-                        </p>
-                      ))}
+                      {aggregate.notes.length > 0 && (
+                        <details className="evidence-disclosure">
+                          <summary>Source context</summary>
+                          {aggregate.notes.map((note, j) => (
+                            <p key={j}>{note}</p>
+                          ))}
+                        </details>
+                      )}
                       {data.experience.excludedSources
                         .filter((s) => s.sourceId === aggregate.sourceId)
                         .map((s, j) => (
@@ -427,11 +435,14 @@ export function LocationResearch({
                     Family & resident accounts
                   </label>
                 </div>
-                <p className="small muted">
-                  These examples provide context, not a representative survey.
-                  Relationships are self-described. The selected excerpts do not
-                  affect the numerical score.
-                </p>
+                <details className="evidence-disclosure review-method">
+                  <summary>About these selected accounts</summary>
+                  <p>
+                    These examples provide context, not a representative survey.
+                    Relationships are self-described. The selected excerpts do
+                    not affect the numerical score.
+                  </p>
+                </details>
                 {!reviews.length && (
                   <p className="research-empty">
                     No researched excerpts match this view.
@@ -467,11 +478,14 @@ export function LocationResearch({
                           </span>
                         ))}
                       </div>
-                      {review.notes.map((note, i) => (
-                        <p key={i} className="small muted">
-                          {note}
-                        </p>
-                      ))}
+                      {review.notes.length > 0 && (
+                        <details className="evidence-disclosure">
+                          <summary>Account context</summary>
+                          {review.notes.map((note, i) => (
+                            <p key={i}>{note}</p>
+                          ))}
+                        </details>
+                      )}
                       <a
                         className="research-source"
                         href={review.url}
@@ -483,6 +497,10 @@ export function LocationResearch({
                     </article>
                   ))}
                 </div>
+                <FacebookResearch
+                  key={providerId}
+                  research={data.facebookResearch}
+                />
               </>
             )}
           </div>

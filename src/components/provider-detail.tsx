@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { CATEGORY_LABELS, formatPhone, type Provider } from "@/lib/providers";
 import { Modal } from "./modal";
-import { ProviderIcon } from "./provider-card";
+import { ProviderIcon, providerCareAlerts } from "./provider-card";
 import { InspectionHistory } from "./inspection-history";
 import { HomeHealthEvidence } from "./home-health-evidence";
 import { LocationResearch } from "./location-research";
@@ -46,6 +46,10 @@ export function ProviderDetail({
   const [draft, setDraft] = useState(note);
   const [noteSaved, setNoteSaved] = useState(false);
   const [taskAdded, setTaskAdded] = useState(false);
+  const alerts = providerCareAlerts(provider);
+  const researchNotes = provider.warnings.filter(
+    (warning) => !alerts.includes(warning),
+  );
   return (
     <Modal title={provider.name} close={close} wide>
       <div className="detail-header">
@@ -73,7 +77,7 @@ export function ProviderDetail({
               target="_blank"
               rel="noreferrer"
             >
-              Open provider source <ExternalLink size={15} />
+              Visit website <ExternalLink size={15} />
             </a>
           )}
           {provider.phone && (
@@ -88,28 +92,38 @@ export function ProviderDetail({
         </div>
       </div>
       <div className="detail-body">
-        <p className="detail-description">{provider.description}</p>
-        {provider.serviceArea && (
-          <div className="inline-notice">
-            <strong>Service area reported by the provider</strong>
-            <p>{provider.serviceArea}</p>
-            <span>
-              Office proximity does not confirm service at your address or staff
-              availability.
-            </span>
-          </div>
-        )}
-        {provider.warnings.length > 0 && (
+        {alerts.length > 0 && (
           <div className="detail-warnings">
             <ShieldAlert size={20} />
             <div>
-              <strong>Read before making a decision</strong>
-              {provider.warnings.map((w) => (
+              <strong>Important care alerts</strong>
+              {alerts.map((w) => (
                 <p key={w}>{w}</p>
               ))}
             </div>
           </div>
         )}
+        <details className="detail-disclosure provider-background">
+          <summary>About this provider & research notes</summary>
+          <p className="detail-description">{provider.description}</p>
+          {provider.serviceArea && (
+            <div className="inline-notice">
+              <strong>Service area reported by the provider</strong>
+              <p>{provider.serviceArea}</p>
+              <span>
+                Office proximity does not confirm service at your address or
+                staff availability.
+              </span>
+            </div>
+          )}
+          {researchNotes.length > 0 && (
+            <ul className="provider-research-notes">
+              {researchNotes.map((note) => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          )}
+        </details>
         <LocationResearch
           providerId={provider.id}
           providerName={provider.name}
@@ -121,9 +135,8 @@ export function ProviderDetail({
               <h3>Published CMS evidence</h3>
               <span>Data: {provider.cms.dataAsOf}</span>
             </div>
-            <p className="small muted">
-              CMS ratings apply to this certified nursing home. They do not rate
-              every service or building operated by the same organization.
+            <p className="research-intro">
+              Ratings for this certified nursing home.
             </p>
             <div className="cms-ratings">
               {[
@@ -173,25 +186,32 @@ export function ProviderDetail({
                 <strong>{metric(provider.cms.healthDeficiencies)}</strong>
               </div>
             </div>
-            <p className="small muted">
-              {provider.cms.lastInspection
-                ? `Latest listed health inspection: ${provider.cms.lastInspection}. `
-                : ""}
-              Reporting periods vary by measure. Open the CMS source for
-              definitions, inspection details and any newer data. Zero listed
-              penalties is not proof that care is safe.
-            </p>
+            <details className="evidence-disclosure">
+              <summary>Dates, scope & definitions</summary>
+              <p>
+                CMS ratings apply to this certified nursing home. They do not
+                rate every service or building operated by the same
+                organization.
+              </p>
+              <p>
+                {provider.cms.lastInspection
+                  ? `Latest listed health inspection: ${provider.cms.lastInspection}. `
+                  : ""}
+                Reporting periods vary by measure. Open the CMS source for
+                definitions, inspection details and any newer data. Zero listed
+                penalties is not proof that care is safe.
+              </p>
+            </details>
           </section>
         )}
         {provider.cms && <InspectionHistory ccn={provider.cms.ccn} />}
         {provider.category === "home-health" && (
           <HomeHealthEvidence providerId={provider.id} />
         )}
-        <section>
-          <div className="section-title">
-            <h3>The source trail</h3>
-            <span>{provider.sources.length} documented sources</span>
-          </div>
+        <details className="detail-disclosure source-disclosure">
+          <summary>
+            Sources & dates <span>{provider.sources.length} sources</span>
+          </summary>
           <div className="source-list">
             {provider.sources.map((source, i) => (
               <a
@@ -216,7 +236,7 @@ export function ProviderDetail({
               </a>
             ))}
           </div>
-        </section>
+        </details>
         <section className="confirm-section">
           <h3>What to confirm next</h3>
           <ul>
@@ -242,8 +262,7 @@ export function ProviderDetail({
         <section className="detail-notes">
           <h3>Your questions & notes</h3>
           <p className="small muted">
-            Keep this to research questions. Leave out medical records and
-            sensitive personal or financial information.
+            Research questions only. Leave out sensitive personal information.
           </p>
           <textarea
             value={draft}

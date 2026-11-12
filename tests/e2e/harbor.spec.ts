@@ -129,6 +129,99 @@ function card(page: Page, provider: Provider) {
   });
 }
 
+test("care alerts remain visible while source detail is disclosed on demand", async ({
+  page,
+}) => {
+  const provider = actualRecords.find(
+    (record) => record.cms?.abuse && record.cms?.specialFocus,
+  )!;
+  await openDemo(page);
+  await page
+    .getByRole("combobox", { name: "Search radius" })
+    .selectOption("50");
+  await page
+    .locator("form.quick-search")
+    .getByRole("button", { name: "Find care" })
+    .click();
+  await page.getByPlaceholder("Search by name or town").fill(provider.name);
+  await page
+    .locator("form.research-search")
+    .getByRole("button", { name: "Search", exact: true })
+    .click();
+  const option = card(page, provider);
+  await expect(
+    option.locator(".provider-alert").filter({ hasText: /abuse/i }),
+  ).toBeVisible();
+  await expect(
+    option.locator(".provider-alert").filter({ hasText: /special.focus/i }),
+  ).toBeVisible();
+  for (const alert of await option.locator(".provider-alert span").all()) {
+    expect(
+      await alert.evaluate(
+        (element) => element.scrollHeight <= element.clientHeight + 1,
+      ),
+    ).toBe(true);
+  }
+  await option.getByRole("button", { name: "View details" }).click();
+  const dialog = page.getByRole("dialog", { name: provider.name, exact: true });
+  await expect(dialog.locator(".detail-warnings")).toContainText(/abuse/i);
+  await expect(dialog.locator(".detail-warnings")).toBeVisible();
+  await expect(dialog.locator(".source-list")).not.toBeVisible();
+  await dialog.locator(".source-disclosure summary").click();
+  await expect(dialog.locator(".source-list")).toBeVisible();
+});
+
+test("a failed shortlist lookup preserves saved IDs and notes in the downloaded plan and can retry", async ({
+  page,
+}) => {
+  const provider = actualRecords[0];
+  await page.addInitScript(
+    ({ id, key }) => {
+      localStorage.setItem(
+        key,
+        JSON.stringify({
+          profile: {
+            name: "",
+            relationship: "A parent",
+            zip: "02459",
+            careTypes: [],
+          },
+          savedProviderIds: [id],
+          notes: { [id]: "Ask about overnight staffing." },
+          tasks: [],
+          updatedAt: new Date().toISOString(),
+        }),
+      );
+    },
+    { id: provider.id, key: DEMO_KEY },
+  );
+  await page.route("**/api/providers?*", (route) =>
+    route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({ error: "Unavailable" }),
+    }),
+  );
+  await page.goto("/dashboard?demo=1");
+  await navigate(page, "Your shortlist");
+  await expect(page.getByRole("alert")).toContainText(
+    "Your saved providers could not be loaded",
+  );
+  await expect(
+    page.getByText("A good shortlist starts with one option."),
+  ).not.toBeVisible();
+  const pendingDownload = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export plan", exact: true }).click();
+  const path = await (await pendingDownload).path();
+  expect(path).not.toBeNull();
+  const exported = readFileSync(path!, "utf8");
+  expect(exported).toContain(`Provider ID: ${provider.id}`);
+  expect(exported).toContain("Ask about overnight staffing.");
+  await page.unroute("**/api/providers?*");
+  await page.getByRole("button", { name: "Try again", exact: true }).click();
+  await expect(card(page, provider)).toBeVisible();
+});
+
 async function noDocumentOverflow(page: Page) {
   const dimensions = await page.evaluate(() => ({
     viewport: document.documentElement.clientWidth,
@@ -263,13 +356,10 @@ test("landing to demo: search real providers, save two, compare, inspect sources
   ).toContainText("Not confirmed");
   await noDocumentOverflow(page);
   await comparison.getByRole("button", { name: "Close dialog" }).click();
-  await card(page, first)
-    .getByRole("button", { name: "View evidence" })
-    .click();
+  await card(page, first).getByRole("button", { name: "View details" }).click();
   const detail = page.getByRole("dialog", { name: first.name, exact: true });
-  await expect(
-    detail.getByRole("heading", { name: "The source trail" }),
-  ).toBeVisible();
+  await detail.locator(".source-disclosure summary").click();
+  await expect(detail.locator(".source-list")).toBeVisible();
   for (const [index, source] of first.sources.entries()) {
     const link = detail.locator(".source-list a").nth(index);
     await expect(link).toHaveAttribute("href", source.url);
@@ -311,9 +401,7 @@ test("landing to demo: search real providers, save two, compare, inspect sources
   await expect(page.locator(".demo-banner")).toBeVisible();
   await navigate(page, "Your shortlist");
   await expect(page.locator(".provider-card")).toHaveCount(2);
-  await card(page, first)
-    .getByRole("button", { name: "View evidence" })
-    .click();
+  await card(page, first).getByRole("button", { name: "View details" }).click();
   await expect(
     page
       .getByRole("dialog", { name: first.name })
@@ -678,7 +766,7 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
     .click();
   await categoryResponse;
   await card(page, provider)
-    .getByRole("button", { name: "View evidence" })
+    .getByRole("button", { name: "View details" })
     .click();
   const detail = page.getByRole("dialog", { name: provider.name, exact: true });
   const history = detail.locator(".inspection-history");
@@ -740,7 +828,7 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
     } else await route.continue();
   });
   await card(page, provider)
-    .getByRole("button", { name: "View evidence" })
+    .getByRole("button", { name: "View details" })
     .click();
   await expect(history.getByRole("alert")).toContainText("could not be loaded");
   await expect(history.locator("article.source-item")).toHaveCount(0);
@@ -782,7 +870,7 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
     .getByRole("button", { name: "Search", exact: true })
     .click();
   await zeroSearch;
-  await card(page, zero).getByRole("button", { name: "View evidence" }).click();
+  await card(page, zero).getByRole("button", { name: "View details" }).click();
   const emptyHistory = page
     .getByRole("dialog", { name: zero.name, exact: true })
     .locator(".inspection-history");
@@ -825,7 +913,7 @@ test("continuing-care campuses retain separate identities and label ZIP estimate
   const approximate = campuses.providers.find((p) => p.locationKind === "zip")!;
   await expect(card(page, approximate)).toContainText("ZIP estimate");
   await card(page, approximate)
-    .getByRole("button", { name: "View evidence" })
+    .getByRole("button", { name: "View details" })
     .click();
   const detail = page.getByRole("dialog", {
     name: approximate.name,
@@ -869,7 +957,7 @@ test("a browser storage failure never claims a new shortlist item or note was sa
   );
   await expect(page.locator(".toast")).toHaveCount(0);
   await card(page, provider)
-    .getByRole("button", { name: "View evidence" })
+    .getByRole("button", { name: "View details" })
     .click();
   const detail = page.getByRole("dialog", { name: provider.name, exact: true });
   await detail
