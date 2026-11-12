@@ -1,13 +1,13 @@
 # Review data access
 
-The next useful purchase is access to evidence we are allowed to analyze, with enough coverage to improve decisions. Another star-rating widget would not establish that a facility provides good care.
+Harbor is using free data sources for now. Yelp collection is paused, and no paid review feed should be enabled without a new budget decision. Work continues with public CMS data, the Facebook research batches and permitted public-source research.
 
 ## What is available now
 
 | Source                   | Access and limits                                                                                                                                           | Next step                                                                                                                                                                                                      |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CMS                      | Public official data; scheduled collection is active for the sources listed in the automation guide                                                         | Review changed survey/clinical records and extend exact facility refreshes. Keep clinical and regulatory evidence separate from consumer experience.                                                           |
-| Yelp Places              | Key verified for business matching and details. Standard Places access does not permit commercial analysis, and content caching is limited.                 | Keep the current connector to identity/capability evaluation. Request an Insights agreement covering the intended analysis before expanding.                                                                   |
+| Yelp Places              | Key verified for business matching and details. Standard Places access does not permit commercial analysis, and content caching is limited.                 | Paused. Retain the completed evaluation; reconsider licensed analysis only after a new budget decision.                                                                                                        |
 | Facebook pilot           | Collector supplies public observations and a coverage ledger                                                                                                | Validate, resolve provider/unit identities, review sources and reuse restrictions, then decide what can be retained or published. Provider-selected testimonials and employment disputes need distinct labels. |
 | Google Places            | No key configured. Place Details supplies an aggregate and up to five selected reviews, not a complete history. Storage and attribution restrictions apply. | Establish the permitted display/use case and budget before connecting it. Do not assume a Places key permits durable review analytics.                                                                         |
 | Caring / A Place for Mom | Existing reviewed public evidence; no ongoing licensed feed established                                                                                     | Ask about location-level coverage, historical records, rights to summarize and derive scores, duplicates and deletion handling.                                                                                |
@@ -19,7 +19,7 @@ Google references: [Place Details fields](https://developers.google.com/maps/doc
 
 ## Yelp inquiry draft
 
-This is a draft for the operator to send. No message has been sent on Harbor's behalf.
+This draft is retained for a future decision about paid access. It is deferred under the current free-sources-only plan. No message has been sent on Harbor's behalf.
 
 **Subject: Yelp Insights access for elder-care location research**
 
@@ -38,6 +38,6 @@ Please share coverage estimates for these care categories in Greater Boston, his
 
 ## What to decide before expansion
 
-Set a monthly data budget and require a coverage sample from each vendor. Measure exact-location matches, independent resident/family accounts, review age, duplicate distribution and access rights. Count unresolved entities and inaccessible sources explicitly. A provider with no eligible evidence should remain unscored.
+The current budget for paid data feeds is zero. If that changes, require a coverage sample before buying access. Measure exact-location matches, independent resident/family accounts, review age, duplicate distribution and access rights. Count unresolved entities and inaccessible sources explicitly. A provider with no eligible evidence should remain unscored.
 
 The first Facebook batch and CMS feeds can be reviewed without another credential. Further Yelp analysis depends on agreed rights. Google, search and other platform credentials should be added only when their intended use and cost are clear; use server-side secret storage again, never chat or Git.

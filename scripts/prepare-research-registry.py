@@ -7,8 +7,6 @@ ROOT = Path(__file__).resolve().parents[1]
 providers = json.loads((ROOT / 'src/data/providers.json').read_text())
 research = json.loads((ROOT / 'src/data/location-research.json').read_text())
 home_health = json.loads((ROOT / 'src/data/home-health-evidence.json').read_text())
-pilot = ['ma-alr-sunrise-of-newton', 'lifeplan-brooksby-village', 'ma-alr-allerton-house-at-harbor-park']
-assert set(pilot) <= {p['id'] for p in providers}
 ccns = {}
 for agency in home_health['agencies']:
     ccns.setdefault(agency['organizationId'], []).append(agency['ccn'])
@@ -52,9 +50,9 @@ insert into harbor_research.coverage(provider_id,source_key,status)
 select provider_id,'facebook-research','not_checked' from harbor_research.catalog_entities on conflict do nothing;
 
 insert into harbor_research.sources(source_key,connector,enabled,rights_approved,collection_scope,config)
-select 'yelp-'||provider_id,'yelp',provider_id in (select jsonb_array_elements_text({literal(pilot)})),true,'identifiers_capability_only',
+select 'yelp-'||provider_id,'yelp',false,true,'identifiers_capability_only',
 jsonb_build_object('provider_id',provider_id,'repeat',false,'identity',jsonb_build_object('name',name,'address',address,'city',city,'state',state,'zip',zip,'phone',phone),
-'access_mode','standard_places_evaluation','analysis_permitted',false,'content_retention_permitted',false)
+'access_mode','standard_places_evaluation','analysis_permitted',false,'content_retention_permitted',false,'pause_reason','free_sources_only')
 from harbor_research.catalog_entities on conflict(source_key) do nothing;
 insert into harbor_research.coverage(provider_id,source_key,status)
 select provider_id,'yelp-'||provider_id,'not_checked' from harbor_research.catalog_entities on conflict do nothing;
@@ -63,11 +61,9 @@ insert into harbor_research.sources(source_key,connector,enabled,rights_approved
 select source_key,'cms',true,true,'official_public_data',config from jsonb_to_recordset({literal(sources)})
 as x(source_key text,config jsonb) on conflict(source_key) do nothing;
 select public.harbor_research_enqueue_due_jobs();
--- Check configured credentials first using the bounded three-location evaluation.
-update harbor_research.jobs set run_after=now()-interval '1 hour' where source_key like 'yelp-%' and status='queued';
 commit;
 """
 output = ROOT / 'artifacts/research-registry-seed.sql'
 output.parent.mkdir(exist_ok=True)
 output.write_text(sql)
-print(f'Prepared {len(records)} registry records, {len(sources)} CMS sources and {len(pilot)} enabled Yelp evaluation locations in {output}.')
+print(f'Prepared {len(records)} registry records and {len(sources)} CMS sources in {output}. Yelp sources are disabled by default (free sources only).')

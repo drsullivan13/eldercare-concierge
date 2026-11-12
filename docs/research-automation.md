@@ -7,7 +7,7 @@ Harbor now has a private collection service in Supabase. It tracks the 521 catal
 | Source                  | What runs                                                                                                                                          | What the result means                                                                                               |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | CMS                     | Daily checks of five dataset metadata records, two reporting-period datasets, and survey/clinical records for seven certified home-health agencies | A dated official source observation. A changed response needs review before it replaces published evidence.         |
-| Yelp Places             | A three-location evaluation of matching and endpoint access                                                                                        | Listing identity and API capability only. No Yelp ratings, review text or reviewer profiles are retained or scored. |
+| Yelp Places             | Paused; the three-location evaluation is complete                                                                                                  | Listing identity and API capability only. No Yelp ratings, review text or reviewer profiles are retained or scored. |
 | Facebook                | Validation of collector-supplied CSV batches                                                                                                       | Local private staging, with every row pending review. This is not a Facebook API feed or automatic database import. |
 | Existing public reviews | Coverage records for all 521 locations, including the 17 with reviewed aggregate evidence                                                          | A record of the current manual snapshot, not a claim that all sources were searched.                                |
 
@@ -31,7 +31,7 @@ The Edge Function performs its own authentication, so its gateway JWT check is o
 
 This design accounts for a hosted Supabase constraint: `pg_net` request headers are readable by database roles while queued, and the project `postgres` role cannot revoke those platform-owned grants. No Yelp key, project key or reusable worker secret is sent through that queue. A database role that can read a live ticket could still race the intended request once during its short lifetime. The bound operation, one-time consumption and shared request limits constrain that risk; they do not make the queue confidential. Keep `net` outside the exposed Data API schemas and do not add a public SQL proxy. See [Supabase's queue permission explanation](https://supabase.com/kb/troubleshooting/database-roles-can-read-request-headers-queued-by-pg_net-ad6357).
 
-Daily request ceilings are shared across all workers: 25 for Yelp and 1,000 for CMS. Each HTTP attempt reserves its allowance before sending. These are Harbor safety ceilings, not claims about the account's purchased quota or pricing. Only the three evaluation locations are enabled for Yelp, and their jobs do not repeat daily. A failed lookup never means that a provider has no reviews or poor care.
+Yelp collection is paused under the free-sources-only plan: all 521 Yelp sources are disabled, including the three previously evaluated locations. The registry generator also defaults Yelp to disabled. Existing evaluation results are retained. CMS collection remains active. Daily request ceilings in the code are 25 for Yelp if explicitly re-enabled and 1,000 for CMS; a configured ceiling does not enable a source or authorize paid access. Each HTTP attempt reserves its allowance before sending. A failed lookup never means that a provider has no reviews or poor care.
 
 ## Reproduce the setup
 
@@ -41,7 +41,7 @@ Use a dedicated project and inspect it before applying SQL. The files are ordere
 2. Apply `supabase/research-scheduling.sql`, then `supabase/research-worker-tickets.sql`.
 3. For another project, change the fixed worker origin in the ticket migration to that project's origin before applying it.
 4. Run `python scripts/prepare-research-registry.py`. Inspect and apply the generated `artifacts/research-registry-seed.sql`. Existing rows are preserved; this seed does not update an existing registry when the catalog changes.
-5. Add the two Yelp secrets in the Supabase dashboard. CMS needs no key.
+5. CMS needs no key. Yelp secrets are optional and do not enable its paused sources; revisit access and budget before activating them.
 6. Deploy `research-collector` from `supabase/functions/research-collector/index.ts`, including its `deno.json`, `deno.lock` and `../_shared/research-collectors.ts`. Disable gateway JWT verification only because the handler enforces the ticket protocol.
 7. Invoke `status` and `run` as a database operator. Check their HTTP responses and database outcomes; dispatch success alone does not prove that collection succeeded.
 8. Apply `supabase/enable-research-schedule.sql` after those checks.

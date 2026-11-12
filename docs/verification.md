@@ -75,3 +75,7 @@ Hosted `pg_net` queue grants cannot be revoked by the project role. The earlier 
 Production compilation, ESLint, all 102 tests and the pinned Deno type check passed. Eight new PostgreSQL ticket tests cover roles, expiry, replay, operation binding, atomic consumption, pruning and rollback with a mocked transport. The rest of the database pipeline tests cover leases, budgets, snapshot hashes and rollback. No UI component changed in this release; the 34 browser scenarios above are the preceding application check, not a fresh run for this backend change.
 
 The Facebook pilot was read from commit `8b9f8eb7` without merging the research branch. Three deterministic coverage-format corrections allowed private staging. All 71 observations remain review-pending and score-ineligible. The [pilot review](facebook-pilot-review.md) records the counts, source/unit inconsistencies, related-event grouping, hashes and corrections. No Facebook sources were independently revisited during this metadata/import review.
+
+## Free-source configuration · November 12, 2026
+
+After the decision to use free sources only, all 521 Yelp source entries were disabled. A live database check confirmed zero enabled Yelp sources and zero running Yelp jobs, with all 21 CMS sources still enabled and the 15-minute scheduler active. The registry generator now defaults Yelp to disabled as well. No Yelp billing or subscription setting was changed.

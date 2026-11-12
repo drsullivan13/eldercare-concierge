@@ -19,7 +19,7 @@ A Greater Boston elder-care research and coordination proof of concept. Families
 - Research filters, category-specific consumer-score sorting, and separate Life here, Rooms & costs, Availability and Reviews tabs.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
 - A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
-- A private research collection service with a 521-record registry, source coverage, daily CMS checks, retries, request budgets and a review queue. A bounded Yelp evaluation checks listing identity and API access without retaining review content.
+- A private research collection service with a 521-record registry, source coverage, daily CMS checks, retries, request budgets and a review queue. A completed Yelp evaluation checked listing identity and API access without retaining review content; Yelp collection is now paused under the free-sources-only plan.
 - A strict CSV importer for Facebook research batches. The first 71-observation pilot is privately staged for review; it has not changed public evidence or scores.
 
 Published offerings and consumer reviews are a research snapshot. Current vacancies and personalized prices still require confirmation. Individual caregivers have not been vetted, reference checks have not been completed, and no automated social-review feeds are connected. The consumer experience index summarizes eligible published ratings; clinical and regulatory evidence remains separate. See [location research coverage](docs/location-research.md) and [the score policy](docs/experience-score.md).
