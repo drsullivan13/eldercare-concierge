@@ -53,8 +53,7 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
   expect(search.status()).toBe(200);
   const result: SearchResponse = await search.json();
   const provider = result.providers.find(
-    (provider) =>
-      !provider.research && provider.sources.length > 0,
+    (provider) => !provider.research && provider.sources.length > 0,
   );
   expect(provider).toBeDefined();
   const response = await request.get(`/api/research?id=${provider!.id}`);
@@ -75,18 +74,11 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
     evidence.getByRole("button", { name: "Retry location research" }),
   ).toHaveCount(0);
   await expect(evidence).not.toContainText("Research checked");
-  await evidence
-    .getByRole("button", { name: "Rooms & costs", exact: true })
-    .click();
   await expect(evidence).toContainText("Pricing has not been established");
-  await evidence
-    .getByRole("button", { name: "Availability", exact: true })
-    .click();
   await expect(evidence).toContainText(
     "Current availability is not established",
   );
   await expect(evidence).toContainText("not been researched");
-  await evidence.getByRole("button", { name: "Reviews", exact: true }).click();
   await expect(evidence).toContainText("Not rated yet");
   await expect(evidence).toContainText(
     "No location-matched ratings have been researched yet",
@@ -100,8 +92,13 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
   for (const source of provider!.sources) expect(links).toContain(source.url);
 });
 
-test("Morristown care detail displays its published location-matched experience score", async ({ page, request }) => {
-  const response = await request.get("/api/search?zip=07960&category=nursing-home&q=CareOne");
+test("Morristown care detail displays its published location-matched experience score", async ({
+  page,
+  request,
+}) => {
+  const response = await request.get(
+    "/api/search?zip=07960&category=nursing-home&q=CareOne",
+  );
   const result: SearchResponse = await response.json();
   const provider = result.providers.find((entry) => entry.id === "cms-315488");
   expect(provider?.research?.experience.value).toBe(8);
@@ -109,7 +106,6 @@ test("Morristown care detail displays its published location-matched experience 
   await openSearch(page, "07960");
   const detail = await openProvider(page, provider!);
   const evidence = detail.locator(".location-research");
-  await evidence.getByRole("button", { name: "Reviews", exact: true }).click();
   await expect(evidence.locator(".experience-number")).toContainText("8");
   await expect(evidence).toContainText("185");
   await expect(evidence).toContainText("MyLivingChoice");
@@ -162,14 +158,13 @@ test("Facebook-only detail responses display retained findings and original link
   await expect(evidence).toContainText(
     "Amenities and activities have not been researched yet",
   );
-  await evidence.getByRole("button", { name: "Reviews", exact: true }).click();
   await expect(evidence).toContainText("Not rated yet");
   await expect(evidence.locator(".experience-number")).not.toContainText("/10");
   await expect(evidence.locator(".fb-research")).toContainText(
     retained.facebookResearch!.findings[0].summary,
   );
   await expect(evidence.locator(".fb-research")).toContainText(
-    "They do not affect the experience score",
+    "When experience scores tie",
   );
   await expect(
     evidence

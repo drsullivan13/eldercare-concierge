@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/complete-care-at-chestnut-hill-llc",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315085",
+  "officialId": "NJ61605",
+  "identity": {
+    "address": "360 Chestnut Street",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Passaic",
+    "name": "Complete Care At Chestnut Hill",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "cf338b308e8904c9e69b1a7777ca02d5f5b9a114b05389359c852c0fb18eef26",
+  "parentCacheReceiptSha256": "7ea024752cfa62158e199c8ab28740012b5a74cd5787887802bada11021c0126",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "608521",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGSVJERk5iMjB5VFdkRFNXWndPR3h3YXpsbVQwRRAB!2m1!1s0x89c2fedaa68e21cd:0x3e23178e0070e766",
+      "sourcePublishedText": "Jul 2026",
+      "publishedAt": "2026-07",
+      "originalBodySha256": "dd7ab1b6780346992b37d9cc8c9f18647d317891ec8598469423a64ded6871f8",
+      "originalExcerpt": "This facility is clean and very well organized and has an amazing staff on board.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "608523",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25SRmF6aERhV3RoYzB4NFdUVjRhMFpVUnpCMVpWRRAB!2m1!1s0x89c2fedaa68e21cd:0x3e23178e0070e766",
+      "sourcePublishedText": "May 2026",
+      "publishedAt": "2026-05",
+      "originalBodySha256": "0dc8b1ba3659881c0fac473f12b4ddf5a7c29da928ca16786f9931c578c428d1",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "not-consumer"
+      ]
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "608525",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25oa1RtNXdhRlpzTWxWS1J6UlJjak40WmtSclpWRRAB!2m1!1s0x89c2fedaa68e21cd:0x3e23178e0070e766",
+      "sourcePublishedText": "Mar 2026",
+      "publishedAt": "2026-03",
+      "originalBodySha256": "07cbc78cef30ee68cd2c1cee86e2c117278c8be4847fa51e0d9879046beb30bf",
+      "originalExcerpt": "It needs remolding in my opinion but never judge a book by its cover.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "608522",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pacVkzWk5TVXhxYlUxbk1FUlVXSHAzVVVFdFFrRRAB!2m1!1s0x89c2fedaa68e21cd:0x3e23178e0070e766",
+      "sourcePublishedText": "Feb 2026",
+      "publishedAt": "2026-02",
+      "originalBodySha256": "6353c36e5d18a3c62792cf76d476befbb39c33de064c6da457782ed5a1f36c09",
+      "originalExcerpt": "The place is very clean and also has nice activities for patients.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "608524",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25WM2NGUlpVSHAxVVZGSmVVODBiaTAyVm01MVkxRRAB!2m1!1s0x89c2fedaa68e21cd:0x3e23178e0070e766",
+      "sourcePublishedText": "Feb 2026",
+      "publishedAt": "2026-02",
+      "originalBodySha256": "1de6d943c3c1185a06fd8b7350a76a7d93ece2cd91aae5366f6f1dc0111f59cb",
+      "originalExcerpt": "I loved seeing most people out of their rooms.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

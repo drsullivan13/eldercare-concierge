@@ -154,8 +154,11 @@ function CompareDialog({
                 label: "Consumer experience index",
                 value: (p: Provider) =>
                   p.research?.experience.value != null
-                    ? `${p.research.experience.value.toFixed(1)} / 10 · ${p.research.experience.confidence} evidence`
-                    : "Not rated",
+                    ? `${p.research.experience.value.toFixed(1)} / 10 · ${p.research.experience.publicationStatus === "single-source-estimate" ? "Single-source estimate · " + p.research.experience.singleSourceLabel : p.research.experience.confidence + " evidence"}`
+                    : p.research?.experience.publicationStatus ===
+                        "sources-disagree"
+                      ? "Harbor score withheld · Sources disagree"
+                      : "Not rated",
               },
             ].map((row) => (
               <tr key={row.label}>

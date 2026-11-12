@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/health-center-at-bloomingdale",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315348",
+  "officialId": "NJ61631",
+  "identity": {
+    "address": "255 Union Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Bloomingdale",
+    "name": "Health Center At Bloomingdale",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "e4ec43a1c8ba81240fc6b3e07a7f51b9613aa151432ac4c0e22ba886cc39b0da",
+  "parentCacheReceiptSha256": "2323ea90a11046fbc67a14aa39f13861123435c0ba75dffa945a3681d543439c",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "609136",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xKcVpYWnJhVzQwUkZOSVJuQkpPSFZtTFVWdE9IYxAB!2m1!1s0x89c31bf0a94110b3:0x903149625c052485",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "04cefb889100be0aace9c43143ca95dc9498565b17f709b79aceca9127249528",
+      "originalExcerpt": "The food was good and the facility was clean.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "609138",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21ONlRuWjJURkF3YWpCRk9EUjZUbTlzUW5GSWIzYxAB!2m1!1s0x89c31bf0a94110b3:0x903149625c052485",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "f111d0b4129ae780207830c2c72c19e5d6dce547cf27340d12549584db9c195d",
+      "originalExcerpt": "Trash left in the room for 4 to 5 days",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "609137",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tOTmVVbFRTamQ0ZFhCc1ZqZEVRamxDWDIweVprRRAB!2m1!1s0x89c31bf0a94110b3:0x903149625c052485",
+      "sourcePublishedText": "Apr 2026",
+      "publishedAt": "2026-04",
+      "originalBodySha256": "7ca02edf73771f78843687773a089ce8d42e9236236e68a435f33c2cf8d2aba7",
+      "originalExcerpt": "The aids and healthcare professionals are very compassionate.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "609139",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnTURvblk2SXJRRRAB!2m1!1s0x89c31bf0a94110b3:0x903149625c052485",
+      "sourcePublishedText": "Apr 2025",
+      "publishedAt": "2025-04",
+      "originalBodySha256": "e693cde0d6373809aa92ad574be3f540295802102b6e0343f21c919f0df15eef",
+      "originalExcerpt": "This place cares for her as if she was their family.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "609140",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURuODlYMm9BRRAB!2m1!1s0x89c31bf0a94110b3:0x903149625c052485",
+      "sourcePublishedText": "Oct 2024",
+      "publishedAt": "2024-10",
+      "originalBodySha256": "4e075eb9976c1a3879404a03b02ad943efa57eb4f3401643d7fe83a70302984a",
+      "originalExcerpt": "I have to say that the workers at this facility were wonderful!",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

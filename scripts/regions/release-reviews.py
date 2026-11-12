@@ -10,6 +10,7 @@ import subprocess
 import sys
 from dataclasses import dataclass
 from datetime import date
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -20,8 +21,14 @@ ADDENDUM = REGION / "listing-index/release"
 OUTPUTS = (
     "locationResearch.json", "approvals-audit.json", "exclusions.json",
     "staging.json", "observation-registry.json", "experience-verification.json",
-    "manifest.json",
+    "manifest.json", "excerpt-audit.json",
 )
+EXCERPTS = REGION / "review-excerpts/observations.json"
+EXCERPT_ALGORITHM = "newest-per-provider-sentiment-v1"
+EXCERPT_REASONS = {
+    "privacy", "not-consumer", "wrong-care-unit", "no-safe-excerpt",
+    "unsupported-sentiment", "duplicate-review",
+}
 STREET_WORDS = {
     "avenue": "ave", "av": "ave", "street": "st", "road": "rd", "drive": "dr",
     "boulevard": "blvd", "lane": "ln", "place": "pl", "court": "ct",
@@ -484,8 +491,503 @@ def score(records, assessment_date):
     return parse_json(result.stdout)
 
 
-def build(root=ROOT, approvals_path=None):
+def normalized_whitespace(value):
+    return " ".join(value.split())
+
+
+class PublicReviewHTML(HTMLParser):
+    voids = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
+             "meta", "param", "source", "track", "wbr"}
+    blocks = {"article", "p", "div", "section", "br", "li", "h1", "h2", "h3", "address"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.hidden, self.parts, self.articles = [], [], []
+        self.article = None
+        self.body_paragraph = False
+        self.headings, self.heading_parts = [], None
+
+    def handle_starttag(self, tag, attributes):
+        attrs = dict(attributes)
+        hidden = (tag in {"script", "style", "head", "template", "noscript", "svg"}
+                  or "hidden" in attrs or attrs.get("aria-hidden") == "true"
+                  or re.search(r"display\s*:\s*none|visibility\s*:\s*hidden",
+                               attrs.get("style", ""), re.I))
+        if hidden or self.hidden:
+            if tag not in self.voids:
+                self.hidden.append(tag)
+            return
+        if tag in self.blocks:
+            self.parts.append(" ")
+        if tag == "h1":
+            self.heading_parts = []
+        if tag == "article":
+            require(self.article is None, "Nested review articles are unsupported")
+            self.article = {"id": f"article-{len(self.articles) + 1}", "sourceId": None, "body": [],
+                            "metadata": [], "links": [], "dateAttributes": [], "bodyCount": 0}
+            self.articles.append(self.article)
+        if self.article is None:
+            return
+        if tag in self.blocks and self.body_paragraph:
+            self.article["body"].append(" ")
+        if tag == "p":
+            self.body_paragraph = (attrs.get("itemprop") == "reviewBody"
+                                   or "leading-6" in attrs.get("class", "").split())
+            if self.body_paragraph:
+                self.article["bodyCount"] += 1
+        if tag == "a" and attrs.get("href"):
+            link = attrs["href"]
+            parsed = urlsplit(link)
+            if parsed.hostname in {"google.com", "www.google.com", "maps.google.com"} and parsed.path.startswith("/maps/reviews"):
+                self.article["links"].append(link)
+            article_id = re.fullmatch(r"/reviews/report/external/(\d+)", parsed.path)
+            if article_id:
+                require(self.article["sourceId"] is None or self.article["sourceId"] == article_id[1],
+                        "Ambiguous source review article ID")
+                self.article["sourceId"] = article_id[1]
+        if tag == "time" and attrs.get("datetime"):
+            self.article["dateAttributes"].append(attrs["datetime"])
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag not in self.voids:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        if self.hidden:
+            if tag in self.hidden:
+                del self.hidden[len(self.hidden) - 1 - self.hidden[::-1].index(tag):]
+            return
+        if tag in self.blocks:
+            self.parts.append(" ")
+            if self.article is not None:
+                self.article["body" if self.body_paragraph else "metadata"].append(" ")
+        if tag == "p":
+            self.body_paragraph = False
+        if tag == "h1" and self.heading_parts is not None:
+            self.headings.append(normalized_whitespace("".join(self.heading_parts)))
+            self.heading_parts = None
+        if tag == "article":
+            self.article = None
+
+    def handle_data(self, value):
+        if not self.hidden:
+            self.parts.append(value)
+            if self.heading_parts is not None:
+                self.heading_parts.append(value)
+            if self.article is not None:
+                self.article["body" if self.body_paragraph else "metadata"].append(value)
+
+    def reviews(self):
+        require(self.article is None and not self.hidden, "Incomplete retained review HTML")
+        result = {}
+        months = {name: number for number, name in enumerate(
+            ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), 1)}
+        for article in self.articles:
+            require(article["bodyCount"] == 1, "Unrecognized original review article body")
+            require(article["sourceId"] is not None and article["id"] not in result,
+                    "Missing or duplicate source review article ID")
+            published = set(article["dateAttributes"])
+            metadata = normalized_whitespace("".join(article["metadata"]))
+            for month, year in re.findall(
+                    r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b", metadata):
+                published.add(f"{year}-{months[month]:02}")
+            require(len(published) <= 1, "Ambiguous original review publication date")
+            links = set(article["links"])
+            require(len(links) <= 1, "Ambiguous original review permalink")
+            result[article["id"]] = {
+                "text": normalized_whitespace("".join(article["body"])),
+                "sourceReviewId": article["sourceId"],
+                "publishedAt": next(iter(published), None), "reviewUrl": next(iter(links), None),
+            }
+        return result
+
+
+def published_order(value):
+    return date.fromisoformat(value + "-01" if len(value) == 7 else value).toordinal()
+
+
+def public_release_text(value):
+    require(text_value(value), "Missing excerpt or paraphrase")
+    require(not re.search(
+        r"https?://|[\w.+-]+@[\w.-]+\.\w+|\b\d{3}[-. ]\d{2}[-. ]\d{4}\b|"
+        r"(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}\b|"
+        r"\b(?:diagnos\w*|medicat\w*|prescri\w*|surgery|cancer|diabetes|"
+        r"alzheimer\w*|dementia|medical record|patient id)\b", value, re.I),
+        "Excerpt privacy screening failed")
+
+
+def markdown_excerpt_articles(markdown, observed_name):
+    sections = list(re.finditer(r"^## Reviews of (.+?)\s*$", markdown, re.M))
+    matches = [section for section in sections if section[1] == observed_name]
+    require(len(matches) == 1, "Missing or ambiguous exact Markdown reviews section")
+    start = matches[0].end()
+    end = re.search(r"^## ", markdown[start:], re.M)
+    section = markdown[start:start + end.start()] if end else markdown[start:]
+    images = list(re.finditer(r"^!\[\]\([^\s)]+\)[ \t]*$", section, re.M))
+    require(images, "Missing Markdown review headers")
+    require(not re.search(r"\[via Google|\[Report\]|/reviews/report/external/", section[:images[0].start()]),
+            "Malformed Markdown review block")
+    months = {name: number for number, name in enumerate(
+        ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), 1)}
+    result, source_ids, links = {}, set(), set()
+    for index, image in enumerate(images):
+        stop = images[index + 1].start() if index + 1 < len(images) else len(section)
+        block = section[image.end():stop].lstrip("\n")
+        header = re.match(
+            r"([^\n]+)\n\s*\n([^\n]+)\n\s*\n"
+            r"\[via Google(?: ↗)?\]\(([^\s)]+)\)[ \t]*·[ \t]*"
+            r"\[Report\]\(([^\s)]+)\)[ \t]*(?:\n|$)", block)
+        require(header is not None, "Malformed Markdown review block")
+        author, publication, permalink, report = header.groups()
+        require(not re.search(r"[\[\]<>!#]", author), "Malformed Markdown reviewer header")
+        month = re.fullmatch(r"(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+                             r"Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) (\d{4})",
+                             publication.strip())
+        unknown = re.fullmatch(
+            r"(?:(?:\d+|a|an) (?:day|week|month|year)s? ago|Yesterday|Today|Unknown)",
+            publication.strip(), re.I)
+        require(month is not None or unknown is not None, "Malformed Markdown publication date")
+        published = f"{month[2]}-{months[month[1][:3]]:02}" if month else None
+        google = urlsplit(permalink)
+        native = urlsplit(report)
+        source_id = re.fullmatch(r"/reviews/report/external/(\d+)", native.path)
+        require(google.scheme == "https" and google.hostname in
+                {"google.com", "www.google.com", "maps.google.com"}
+                and google.path.startswith("/maps/reviews") and not google.username
+                and not google.password and native.scheme == "https"
+                and native.hostname in {"www.mylivingchoice.com", "mylivingchoice.com"}
+                and not native.username and not native.password and not native.query
+                and not native.fragment and source_id is not None,
+                "Malformed Markdown original review links")
+        require(source_id[1] not in source_ids and permalink not in links,
+                "Duplicate Markdown source review identity")
+        source_ids.add(source_id[1])
+        links.add(permalink)
+        body = block[header.end():]
+        require(not re.search(r"\[via Google|\[Report\]|/reviews/report/external/|^!\[\]", body, re.M),
+                "Malformed Markdown review body boundary")
+        result[f"article-{index + 1}"] = {
+            "text": normalized_whitespace(body), "sourceReviewId": source_id[1],
+            "publishedAt": published, "reviewUrl": permalink,
+        }
+    return result
+
+
+def original_excerpt_articles(inputs, page, category):
+    raw = inputs.bound(page["retainedPage"])
+    require(page["receipt"]["path"] != page["retainedPage"]["path"],
+            "Excerpt receipt must be separate from capture")
+    inputs.bound(page["receipt"])
+    receipt = inputs.json(page["receipt"]["path"])
+    require(isinstance(receipt, dict) and receipt.get("url") == page["url"]
+            and type(receipt.get("httpStatus")) is int and receipt["httpStatus"] == 200
+            and text_value(receipt.get("observedAt"))
+            and receipt["observedAt"][:10] == page["checkedAt"]
+            and receipt.get("source") == page["source"] and receipt.get("sha256") == digest(raw)
+            and type(receipt.get("bytes")) is int and receipt["bytes"] == len(raw)
+            and receipt.get("status") != "access_restricted",
+        "Excerpt page receipt mismatch")
+    try:
+        capture = raw.decode("utf-8")
+    except UnicodeError as error:
+        raise ReleaseError("Excerpt capture must be UTF-8") from error
+    if capture.lstrip().startswith("{"):
+        fetched = parse_json(capture)
+        metadata = fetched.get("metadata")
+        require(isinstance(metadata, dict) and isinstance(fetched.get("markdown"), str)
+                and type(metadata.get("statusCode")) is int and metadata["statusCode"] == 200
+                and metadata.get("error") is None and metadata.get("url") == page["url"]
+                and fetched.get("effectiveUrl") == page["url"],
+                "Unverified original FetchUrl capture")
+        body = fetched["markdown"]
+        headings = re.findall(r"^# (.+?)\s*$", body, re.M)
+        original_rows = markdown_excerpt_articles(body, page["identity"]["name"])
+    else:
+        parser = PublicReviewHTML()
+        parser.feed(capture)
+        parser.close()
+        original_rows = parser.reviews()
+        body = normalized_whitespace(" ".join(parser.parts))
+        headings = parser.headings
+
+    require(any(comparable_name(heading, category) == comparable_name(page["identity"]["name"], category)
+                for heading in headings), "Excerpt capture location heading mismatch")
+    for key in ("name", "address", "city", "state", "zip", "careUnit"):
+        value = page["identity"][key]
+        require(value is None or words(value).replace("new jersey", "nj") in
+                words(body).replace("new jersey", "nj"),
+                "Excerpt capture identity evidence mismatch")
+    for item in original_rows.values():
+        item["bodySha256"] = digest(item["text"].encode())
+    return original_rows
+
+
+def public_excerpt_articles(inputs, page, ref):
+    receipt = parse_json(inputs.bound(ref))
+    require(receipt.get("schemaVersion") == 1 and receipt.get("kind") == "privacy-safe-derived-article-receipt",
+            "Invalid public excerpt receipt")
+    require(all(receipt.get(k) == page[k] for k in ("providerId", "officialId", "source", "sourceFamily",
+                "url", "checkedAt", "identity", "population")), "Public excerpt receipt location or population mismatch")
+    require(receipt.get("parentHtmlSha256") == page["retainedPage"]["sha256"]
+            and receipt.get("parentCacheReceiptSha256") == page["receipt"]["sha256"], "Public excerpt parent mismatch")
+    decisions = {row["articleId"]: row for row in page["rows"]}
+    original_rows = {}
+    for row in receipt["rows"]:
+        aid = row["articleId"]
+        require(aid in decisions and aid not in original_rows, "Invalid public excerpt article membership")
+        decision = decisions[aid]
+        native_id = row["externalReviewId"]
+        require(isinstance(native_id, str) and native_id and decision["id"] == "mlc-external-" + native_id,
+                "Public receipt source-native review identity mismatch")
+        require(re.fullmatch(r"[0-9a-f]{64}", row["originalBodySha256"]) and
+                row["originalExcerpt"] == decision["originalExcerpt"] and row["exclusionReasons"] == decision["exclusionReasons"],
+                "Public excerpt fragment or exclusion mismatch")
+        require(row["originalReviewUrl"] == decision["reviewUrl"] and row["publishedAt"] == decision["publishedAt"],
+                "Public excerpt permalink or publication precision mismatch")
+        original_rows[aid] = {"sourceReviewId": native_id, "text": row["originalExcerpt"] or "",
+                              "bodySha256": row["originalBodySha256"], "reviewUrl": row["originalReviewUrl"],
+                              "publishedAt": row["publishedAt"]}
+    require(len(original_rows) == len(decisions) == page["population"]["retainedRowCount"],
+            "Public excerpt receipt article count mismatch")
+    return original_rows
+
+
+def excerpt_release(inputs, providers, crosswalk, aliases, records, assessment_date, audit_private=False):
+    relative = EXCERPTS.as_posix()
+    if not (inputs.root / relative).exists():
+        return None
+    document = inputs.json(relative)
+    fields(document, "schemaVersion assessmentDate pages", "excerpt input")
+    require(type(document["schemaVersion"]) is int and document["schemaVersion"] == 1
+            and valid_date(document["assessmentDate"])
+            and assessment_date <= document["assessmentDate"] <= date.today().isoformat()
+            and isinstance(document["pages"], list), "Malformed excerpt input")
+    policy = inputs.json((REGION / "reviews/source-access.json").as_posix())
+    require(isinstance(policy, dict) and isinstance(policy.get("sources"), list),
+            "Malformed excerpt source policy")
+    public_index = (EXCERPTS.parent / "source-checks-manifest.json").as_posix()
+    receipt_refs = None
+    if (inputs.root / public_index).is_file():
+        index = inputs.json(public_index)
+        require(index["schemaVersion"] == 1 and index["observationsSha256"] == digest(inputs.read(relative))
+                and set(index["pages"]) == {page["id"] for page in document["pages"]},
+                "Public excerpt receipt manifest mismatch")
+        receipt_refs = index["pages"]
+    else:
+        require(not any(p["retainedPage"]["path"].startswith((REGION / "listing-index/raw").as_posix() + "/")
+                        for p in document["pages"]), "Missing published excerpt receipt manifest")
+    population, candidates, audit, seen_pages, seen_rows = [], [], [], set(), set()
+    owners, duplicate_bodies, duplicate_links = {}, {}, {}
+    for page in sorted(document["pages"], key=lambda p: str(p.get("id", "")) if isinstance(p, dict) else ""):
+        fields(page, "id providerId officialId source sourceFamily url checkedAt identity "
+               "retainedPage receipt population rows", "excerpt page")
+        require(text_value(page["id"]) and re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", page["id"])
+                and page["id"] not in seen_pages, "Malformed or duplicate excerpt page ID")
+        seen_pages.add(page["id"])
+        permitted = [p for p in policy["sources"] if p.get("source") == page["source"]]
+        require(len(permitted) == 1
+                and str(permitted[0].get("access_decision", "")).startswith("permitted")
+                and permitted[0].get("retain_as_eligible") is not False, "Forbidden excerpt source")
+        access = permitted[0]
+        host = access.get("host") or urlsplit(access.get("terms_url", "")).hostname
+        page_url = canonical_url(page["url"])
+        require(host and page_url.split("/")[0] == re.sub(r"^www\.", "", host.lower()),
+                "Excerpt source host mismatch")
+        family = "google" if page["source"] == "MyLivingChoice" else access.get("review_source_family")
+        require(text_value(family) and page["sourceFamily"] == family,
+                "Excerpt source family is not established")
+        require(valid_date(page["checkedAt"]) and page["checkedAt"] <= document["assessmentDate"],
+                "Invalid excerpt check date")
+        observed = {"providerId": page["providerId"], "officialId": page["officialId"],
+                    "identity": page["identity"]}
+        validate_identity(page, observed, providers, crosswalk, aliases)
+        require(page_url not in owners or owners[page_url] == page["providerId"],
+                "Excerpt page assigned to multiple care units")
+        owners[page_url] = page["providerId"]
+        category = providers[page["providerId"]]["category"]
+        if receipt_refs is None:
+            original_rows = original_excerpt_articles(inputs, page, category)
+        else:
+            original_rows = public_excerpt_articles(inputs, page, receipt_refs[page["id"]])
+            if audit_private:
+                # Private evidence is independently checked and never enters the public dependency manifest.
+                private = original_excerpt_articles(Inputs(inputs.root), page, category)
+                require(private.keys() == original_rows.keys(), "Public and private article sets differ")
+                for aid, public in original_rows.items():
+                    original = private[aid]
+                    require(all(public[k] == original[k] for k in ("sourceReviewId", "bodySha256", "reviewUrl", "publishedAt"))
+                            and normalized_whitespace(public["text"]) in original["text"],
+                            "Public receipt differs from private source article")
+        fields(page["population"], "scope complete retainedRowCount", "excerpt population")
+        require(isinstance(page["rows"], list)
+                and page["population"]["scope"] == "all-review-rows-in-retained-page"
+                and page["population"]["complete"] is True
+                and type(page["population"]["retainedRowCount"]) is int
+                and page["population"]["retainedRowCount"] == len(page["rows"]),
+                "Incomplete excerpt candidate population")
+        require(len(page["rows"]) == len(original_rows)
+                and all(isinstance(r, dict) and isinstance(r.get("articleId"), str) for r in page["rows"])
+                and {r["articleId"] for r in page["rows"]} == set(original_rows),
+                "Excerpt population does not match every retained article")
+        population.append({**page, "rows": sorted(page["rows"], key=lambda r: str(r.get("id", "")) if isinstance(r, dict) else "")})
+        sample_observations = []
+        for row in population[-1]["rows"]:
+            fields(row, "id articleId reviewUrl publishedAt role sentiment experienceStage "
+                   "originalExcerpt paraphrase exclusionReasons privacyRelease", "excerpt candidate")
+            require(text_value(row["id"]) and re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", row["id"])
+                    and row["id"] not in seen_rows, "Malformed or duplicate excerpt row ID")
+            seen_rows.add(row["id"])
+            original = original_rows[row["articleId"]]
+            require(row["reviewUrl"] == original["reviewUrl"],
+                    "Review permalink differs from original article")
+            if row["reviewUrl"] is not None:
+                canonical_url(row["reviewUrl"])
+            require(row["publishedAt"] is None or (
+                isinstance(row["publishedAt"], str)
+                and (valid_date(row["publishedAt"]) or
+                     (re.fullmatch(r"\d{4}-\d{2}", row["publishedAt"])
+                      and valid_date(row["publishedAt"] + "-01")))
+                and published_order(row["publishedAt"]) <= date.fromisoformat(page["checkedAt"]).toordinal()),
+                "Invalid review published date")
+            require(row["publishedAt"] == original["publishedAt"],
+                    "Review publication precision differs from original article")
+            require(row["role"] in ("family", "resident", "staff", "visitor", "unknown")
+                    and row["sentiment"] in ("positive", "critical", "mixed", "unknown")
+                    and row["experienceStage"] in ("tour", "move-in", "current-resident",
+                                                   "former-resident", "discharge", "unknown"),
+                    "Unsupported excerpt role, sentiment or experience stage")
+            reasons = row["exclusionReasons"]
+            require(isinstance(reasons, list) and all(isinstance(r, str) and r in EXCERPT_REASONS for r in reasons)
+                    and len(reasons) == len(set(reasons)), "Malformed excerpt exclusion reasons")
+            require(original["bodySha256"] != digest(b"") or "no-safe-excerpt" in reasons,
+                    "Empty original body requires no-safe-excerpt exclusion")
+            privacy = row["privacyRelease"]
+            fields(privacy, "reviewed containsNames containsMedicalInformation containsIdentifiers publicConsumerReview",
+                   "excerpt privacy attestation")
+            require(all(type(v) is bool for v in privacy.values()), "Malformed excerpt privacy attestation")
+            safe = privacy == dict(reviewed=True, containsNames=False,
+                                   containsMedicalInformation=False, containsIdentifiers=False,
+                                   publicConsumerReview=True)
+            require(safe or bool(reasons), "Missing privacy release attestation")
+            require(row["sentiment"] != "unknown" or bool(reasons),
+                    "Unknown sentiment requires exclusion")
+            require(row["role"] != "staff" or "not-consumer" in reasons, "Staff review requires exclusion")
+            quote = row["originalExcerpt"]
+            if quote is not None:
+                require(text_value(quote), "Malformed original excerpt")
+                quote = normalized_whitespace(quote)
+                require(quote in original["text"], "Original excerpt is not a quoted substring")
+                require(len(quote) <= 240 and len(quote.split()) <= 40, "Original excerpt exceeds cap")
+            require(bool(reasons) or (quote is not None and text_value(row["paraphrase"])),
+                    "Eligible row needs separate original excerpt and paraphrase")
+            require(not reasons or (row["originalExcerpt"] is None and row["paraphrase"] is None),
+                    "Excluded rows must not retain private narrative text")
+            if not reasons:
+                public_release_text(quote)
+                public_release_text(row["paraphrase"])
+                body_key = (page["providerId"], original["bodySha256"])
+                link_key = row["reviewUrl"]
+                require(body_key not in duplicate_bodies, "Duplicate eligible review body")
+                require(not link_key or link_key not in duplicate_links, "Duplicate eligible review permalink")
+                duplicate_bodies[body_key] = row["id"]
+                if link_key:
+                    duplicate_links[link_key] = row["id"]
+            entry = {
+                "rowId": row["id"], "articleId": row["articleId"],
+                "sourceReviewId": original["sourceReviewId"],
+                "pageId": page["id"], "providerId": page["providerId"],
+                "officialId": page["officialId"], "identity": page["identity"],
+                "source": page["source"], "sourceFamily": family, "sourceUrl": page["url"],
+                "reviewUrl": row["reviewUrl"], "publishedAt": row["publishedAt"],
+                "checkedAt": page["checkedAt"], "role": row["role"], "sentiment": row["sentiment"],
+                "experienceStage": row["experienceStage"], "retainedPage": page["retainedPage"],
+                "receipt": page["receipt"], "privacyRelease": privacy,
+                "disposition": "excluded" if reasons else "eligible", "reasons": sorted(reasons),
+                "scoreEligible": False,
+            }
+            # Eligibility to expose sentiment metadata is distinct from permission to quote a passage.
+            if (privacy["reviewed"] and privacy["publicConsumerReview"] and row["role"] != "staff"
+                    and row["sentiment"] in {"positive", "critical", "mixed"}
+                    and not (set(reasons) - {"privacy", "no-safe-excerpt"})):
+                sample_observations.append({
+                    "id": row["id"], "date": row["publishedAt"],
+                    "sentiment": "negative" if row["sentiment"] == "critical" else row["sentiment"],
+                })
+            audit.append(entry)
+            if not reasons:
+                candidates.append((page, row, quote, entry))
+        record = records.get(page["providerId"])
+        if record is not None:
+            urls = {s["id"]: canonical_url(s["url"]) for s in record["sources"]}
+            matches = [a["sourceId"] for a in record["reviewAggregates"]
+                       if a["sourceFamily"] == family and urls[a["sourceId"]] == page_url]
+            require(len(matches) <= 1, "Visible sample has ambiguous aggregate source")
+            if matches:
+                record.setdefault("reviewSamples", []).append({
+                    "sourceId": matches[0], "sourceFamily": family, "selection": "all-visible-before-highlighting",
+                    "visibleCount": len(original_rows), "observations": sample_observations,
+                })
+    population_digest = digest(encoded(population))
+    ranks = {}
+    for page, row, quote, entry in sorted(candidates, key=lambda c: (
+            c[0]["providerId"], c[1]["sentiment"],
+            -published_order(c[1]["publishedAt"]) if c[1]["publishedAt"] else 0,
+            c[1]["id"])):
+        group = (page["providerId"], row["sentiment"])
+        ranks[group] = ranks.get(group, 0) + 1
+        entry["selection"] = {"algorithm": EXCERPT_ALGORITHM, "populationSha256": population_digest,
+                              "rowId": row["id"], "stratum": row["sentiment"], "rank": ranks[group]}
+        if ranks[group] > 1:
+            entry.update(disposition="not-selected", reasons=["older-in-stratum"])
+            continue
+        entry["disposition"] = "published"
+        pid = page["providerId"]
+        record = records.setdefault(pid, {
+            "providerId": pid, "checkedAt": page["checkedAt"], "providerDetailsReviewed": False,
+            "sources": [], "facts": [], "reviews": [], "reviewAggregates": [],
+            "availability": {"status": "not-published", "sourceId": None, "asOf": None,
+                             "text": "Current availability has not been independently researched. Contact the provider."},
+            "notes": ["Selected original public consumer excerpts are qualitative, not clinical evidence or a prevalence sample."],
+        })
+        source_id = "review-excerpt-" + page["id"]
+        if not any(source["id"] == source_id for source in record["sources"]):
+            record["sources"].append({
+                "id": source_id, "url": page["url"], "title": page["source"] + " public consumer reviews",
+                "publisher": "Google via MyLivingChoice" if page["source"] == "MyLivingChoice" and page["sourceFamily"] == "google" else page["source"],
+                "kind": "review-platform", "checkedAt": page["checkedAt"],
+                "publishedAt": None, "access": "full-page",
+            })
+        record["checkedAt"] = max(record["checkedAt"], page["checkedAt"])
+        record["notes"] = [n for n in record["notes"] if
+                           n != "No provider offerings, prices, individual reviews or availability claims are released by this transformer."]
+        record["reviews"].append({
+            "id": "review-excerpt-" + row["id"], "sourceId": source_id,
+            "url": row["reviewUrl"] or page["url"],
+            "date": row["publishedAt"],
+            "rating": None, "scale": None, "relationship": row["role"], "excerpt": quote,
+            "summary": row["paraphrase"], "aspects": [{
+                "aspect": "consumer experience", "sentiment": "negative" if row["sentiment"] == "critical" else row["sentiment"],
+            }],
+            "notes": [
+                "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+                "Selected from the complete retained visible population, not a representative sample.",
+                f"Source family is {page['sourceFamily']}. {page['source']} is the carrier, not an additional independent source.",
+                ("Published " + ("month " if len(row["publishedAt"]) == 7 else "date ")
+                 + row["publishedAt"] + ".") if row["publishedAt"] else "Publication date is unknown.",
+                "Supported experience stage is " + row["experienceStage"].replace("-", " ") + ".",
+            ],
+        })
+    return {"schemaVersion": 1, "assessmentDate": document["assessmentDate"],
+            "algorithm": EXCERPT_ALGORITHM, "populationSha256": population_digest,
+            "populationScope": "all-review-rows-in-retained-pages", "scoreEligible": False,
+            "rows": sorted(audit, key=lambda r: r["rowId"])}
+
+
+def build(root=ROOT, approvals_path=None, audit_private=False):
     inputs = Inputs(root)
+    scorer_path = ROOT / "src/lib/experience-score.ts"
+    scorer_bytes = scorer_path.read_bytes()
     approvals_path = approvals_path or (RELEASE / "approvals.json").as_posix()
     ledger = inputs.json(approvals_path)
     fields(ledger, "schemaVersion assessmentDate approvals", "approval ledger")
@@ -582,6 +1084,22 @@ def build(root=ROOT, approvals_path=None):
                 and summary["reviewCount"] == verification[provider_id]["reviewCount"]
                 and summary["value"] == verification[provider_id]["value"]
                 and not summary["excludedSources"], "Released score changed after exclusion")
+    excerpt_audit = excerpt_release(inputs, providers, crosswalk, aliases, records, assessment_date, audit_private)
+    if excerpt_audit is not None:
+        with_excerpts = score(records, assessment_date)
+        numeric_fields = ("reviewCount", "independentSourceCount", "platformCount", "includedSources")
+        require(all(all(with_excerpts[pid][key] == summary[key] for key in numeric_fields)
+                    for pid, summary in released_verification.items()),
+                "Visible observations or excerpts changed aggregate votes")
+        require(all(with_excerpts[pid]["value"] == summary["value"] or
+                    (with_excerpts[pid]["value"] is None and any(s["conflicts"] for s in
+                     with_excerpts[pid].get("sampleDiagnostics", [])))
+                    for pid, summary in released_verification.items()), "Unexplained change in released score")
+        require(all(summary["value"] is None and summary["reviewCount"] == 0
+                    and summary["independentSourceCount"] == 0
+                    for pid, summary in with_excerpts.items() if pid not in released_verification),
+                "Original-only provider was scored")
+        released_verification = with_excerpts
     normalized = [o.normalized(inputs) for _, o in sorted(observations.items())]
     approved_groups = {
         (a["providerId"], canonical_url(a["url"]), token(a["aggregate"]["sourceFamily"]))
@@ -633,7 +1151,12 @@ def build(root=ROOT, approvals_path=None):
             "releasedOutput": released_verification,
         },
     }
-    scorer_path = ROOT / "src/lib/experience-score.ts"
+    outputs["excerpt-audit.json"] = excerpt_audit or {
+        "schemaVersion": 1, "assessmentDate": assessment_date, "algorithm": EXCERPT_ALGORITHM,
+        "populationSha256": digest(encoded([])), "populationScope": "all-review-rows-in-retained-pages",
+        "scoreEligible": False, "rows": [],
+    }
+    require(scorer_path.read_bytes() == scorer_bytes, "Scorer changed during release; rerun")
     outputs["manifest.json"] = {
         "schemaVersion": 1, "assessmentDate": assessment_date,
         "inputs": [{"path": path, "sha256": digest(data), "bytes": len(data)}
@@ -641,13 +1164,16 @@ def build(root=ROOT, approvals_path=None):
         "rosterIdentitySha256": digest(encoded([{k:p[k] for k in ("id","name","address","city","state","zip","category")}
             for p in sorted(providers.values(),key=lambda p:p["id"])])),
         "collectionInventory": inventory,
-        "scorer": {"path": "src/lib/experience-score.ts", "sha256": digest(scorer_path.read_bytes())},
+        "scorer": {"path": "src/lib/experience-score.ts", "sha256": digest(scorer_bytes)},
         "transformer": {"path": "scripts/regions/release-reviews.py",
                         "sha256": digest(Path(__file__).read_bytes())},
         "outputs": {name: digest(encoded(value)) for name, value in sorted(outputs.items())},
         "counts": {"approved": len(audit), "included": len(included),
                    "excluded": len(exclusions), "providers": len(records),
-                   "observations": len(normalized), "pendingOrInventory": len(staging)},
+                   "observations": len(normalized), "pendingOrInventory": len(staging),
+                   "excerptCandidates": len(outputs["excerpt-audit.json"]["rows"]),
+                   "publishedExcerpts": sum(r["disposition"] == "published"
+                                            for r in outputs["excerpt-audit.json"]["rows"])},
     }
     for path, data in inputs.bytes.items():
         require((inputs.root / path).read_bytes() == data,
@@ -660,13 +1186,14 @@ def main(argv=None):
     parser.add_argument("--approvals", type=Path, default=ROOT / RELEASE / "approvals.json")
     parser.add_argument("--output-dir", type=Path, default=ROOT / RELEASE)
     parser.add_argument("--check", action="store_true", help="Verify outputs without writing")
+    parser.add_argument("--audit-private-captures", action="store_true", help="Also compare public excerpt receipts with every original private capture")
     args = parser.parse_args(argv)
     try:
         destination = args.output_dir.resolve()
         require(destination.is_relative_to((ROOT / RELEASE).resolve()),
                 "Outputs must stay inside review-release")
         approval_path = args.approvals.resolve().relative_to(ROOT).as_posix()
-        outputs = build(ROOT, approval_path)
+        outputs = build(ROOT, approval_path, audit_private=args.audit_private_captures)
         for name in OUTPUTS:
             path = destination / name
             require(not path.is_symlink(), f"Refusing output symlink: {path}")

@@ -1,4 +1,7 @@
-import type { ExperienceSummary } from "./experience-score";
+import type {
+  ExperienceReviewSample,
+  ExperienceSummary,
+} from "./experience-score";
 import type {
   FacebookResearch,
   FacebookSummary,
@@ -84,6 +87,8 @@ export type LocationResearch = {
   availability: AvailabilityObservation;
   reviewAggregates: ReviewAggregate[];
   reviews: PublicReview[];
+  reviewSamples?: ExperienceReviewSample[];
+  reviewLinks?: { publisher: string; url: string }[];
   notes: string[];
   admissionRestriction?: { text: string; sourceId: string };
 };
@@ -97,7 +102,13 @@ export type ResearchSummary = {
   admissionRestriction?: string;
   experience: Pick<
     ExperienceSummary,
-    "value" | "reviewCount" | "confidence" | "independentSourceCount"
+    | "value"
+    | "reviewCount"
+    | "confidence"
+    | "independentSourceCount"
+    | "publicationStatus"
+    | "selectedConcerns"
+    | "singleSourceLabel"
   >;
 };
 export type LocationResearchResponse = LocationResearch & {

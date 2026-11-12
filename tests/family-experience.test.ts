@@ -264,7 +264,7 @@ test("experience sorting uses family evidence only for scored ties in the select
           sourceFamily: "Synthetic",
           rating: spec.rating,
           scale: 5,
-          count: 20,
+          count: 30,
           asOf: null,
           scope: "consumer",
           notes: [],

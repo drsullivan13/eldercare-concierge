@@ -57,10 +57,7 @@ async function open(page: Page, id: string) {
   await card.getByRole("button", { name: "View details" }).click();
   expect((await (await research).json()).providerId).toBe(id);
   const dialog = page.getByRole("dialog", { name, exact: true });
-  await dialog
-    .locator(".research-tabs")
-    .getByRole("button", { name: "Reviews", exact: true })
-    .click();
+  await expect(dialog.locator(".research-tabs")).toHaveCount(0);
   if (count) {
     await expect(dialog.locator(".family-experience")).toHaveText(familyText);
     await dialog

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/arbor-ridge-rehabilitation-and-healthcare-center",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315234",
+  "officialId": "NJ61625",
+  "identity": {
+    "address": "261 Terhune Drive",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Wayne",
+    "name": "Arbor Ridge Rehabilitation & Healthcare Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "05bd9253b0ef8047c9f1b5850db3ebf51e64399223e5ff2f81a3ee59e53c23fb",
+  "parentCacheReceiptSha256": "af2949cf6725c734ad623b5459c9647f88f2cd81c99fa156ad541c19147c86aa",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "608823",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sUlZEazFaMUpDY1RaNVQwTktWWFY0YzB0blNsRRAB!2m1!1s0x89c31cd3cccf5195:0xd922cd06b3d910c2",
+      "sourcePublishedText": "Jul 2026",
+      "publishedAt": "2026-07",
+      "originalBodySha256": "efd2a9fc2fa1ffda12c6d3ce5ed370bc07ba75ce8ef03131e9a85ccddca39b3c",
+      "originalExcerpt": "The staff is phenomenal.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "608821",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21JMmNVRm5VbkJLY0VNMFl6ZEliMUo2T1ZWYWVHYxAB!2m1!1s0x89c31cd3cccf5195:0xd922cd06b3d910c2",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "7138eb1cb774d4eef3dda2ded0e5c0b163e3cc0efb11845e5cef0d4f75716eb7",
+      "originalExcerpt": "The staff is very caring.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "608827",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tGa1RVWnhXbVpaYkZKa2RHWldSMUZZUjJGaFpXYxAB!2m1!1s0x89c31cd3cccf5195:0xd922cd06b3d910c2",
+      "sourcePublishedText": "Apr 2026",
+      "publishedAt": "2026-04",
+      "originalBodySha256": "fb6fc8bc06cf1b5850c6b54c8ab569aeea645a2d4e6b8127d2ad5ae15e2b2318",
+      "originalExcerpt": "The facility was very clean, and all the staff members were kind and attentive, which made my mother’s stay comfortable and stress-free.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "608829",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t0dk1rNUNiM0JuY1ZsVFQwdFJVVlV4TFhkd1QyYxAB!2m1!1s0x89c31cd3cccf5195:0xd922cd06b3d910c2",
+      "sourcePublishedText": "Feb 2026",
+      "publishedAt": "2026-02",
+      "originalBodySha256": "32053eee63cf211b3bde3e81bbd1993d3459e0c4cb61b9b842de5e4750e39797",
+      "originalExcerpt": "If any family are looking for a home style nursing home, this place is a must.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "608825",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25wVlNVeExTVkJpZG5SUlZYaFFNV1ZYWTBNd1JWRRAB!2m1!1s0x89c31cd3cccf5195:0xd922cd06b3d910c2",
+      "sourcePublishedText": "Jan 2026",
+      "publishedAt": "2026-01",
+      "originalBodySha256": "100ed1ce5e9c0c622ba0e161340ca35825067aa45d5199ba538aa58f3726defd",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "not-consumer"
+      ]
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

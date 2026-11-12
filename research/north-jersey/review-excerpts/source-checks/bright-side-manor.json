@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/bright-side-manor",
+  "checkedAt": "2026-11-12",
+  "providerId": "north-jersey-doh-nj30225",
+  "officialId": "NJ30225",
+  "identity": {
+    "address": "300 Teaneck Road",
+    "careUnit": "Assisted Living",
+    "city": "Teaneck",
+    "name": "Bright Side Manor",
+    "state": "NJ",
+    "zip": "07666"
+  },
+  "parentHtmlSha256": "df3c255b9a3b7a201bbf81961dfd5acb869ee66ecfd46fadb85b8d9b35d3ec73",
+  "parentCacheReceiptSha256": "cf138555affed1edd57a2ee0a7ecadd8e2c7c0ab0079b8371572e8a1b0d07eb2",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 4
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "426151",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tORVlXeG1RamRHZVdKUWJHUnBaalpvU2xCbmNtYxAB!2m1!1s0x89c2f70065fe6c4f:0x71769c616c90fc13",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "1361701074c02bdea2dd41dc4ab82bce78e301fe335e8181d24393da7cd1eee8",
+      "originalExcerpt": "The people that work there are so kind and helped my dad adjust.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "426152",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2twTFZESlNXazFCTTBkVmQyVkVSVjh3VTJVd1NIYxAB!2m1!1s0x89c2f70065fe6c4f:0x71769c616c90fc13",
+      "sourcePublishedText": "Apr 2026",
+      "publishedAt": "2026-04",
+      "originalBodySha256": "7ebebd6abe36c34d2e1cac83c7ae0dab300949958f39c5beb186189413286b69",
+      "originalExcerpt": "The residents get excellent care and the staff are attentive and supportive.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "426154",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25SVmMwSlVaVUpRYjIwelVFNWhXR3hZVldvMk4wRRAB!2m1!1s0x89c2f70065fe6c4f:0x71769c616c90fc13",
+      "sourcePublishedText": "Dec 2025",
+      "publishedAt": "2025-12",
+      "originalBodySha256": "26efe84407144389f936842dfba9d6486de33cf69878d82ad11b86285c425036",
+      "originalExcerpt": "Great place. Caring and attentive staff.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "426153",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VKX0I5dnVRdjhLM193RRAB!2m1!1s0x89c2f70065fe6c4f:0x71769c616c90fc13",
+      "sourcePublishedText": "May 2025",
+      "publishedAt": "2025-05",
+      "originalBodySha256": "7db8b12ad2d933c5f285a79f0f82a197ed0dd43742608b972be583c4cb7c8862",
+      "originalExcerpt": "What a friendly, caring & accommodating staff.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

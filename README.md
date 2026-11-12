@@ -10,7 +10,7 @@ An elder-care research and coordination proof of concept for North Jersey and Gr
 
 Enter **07960** for Morristown or **07083** for Union in the care workspace. The six-county catalog covers Union, Morris, Essex, Bergen, Hudson and Passaic. Each record represents a licensed unit, campus or service office. For home care, use the office address for location and the separately sourced service area for coverage.
 
-The app shows dated published prices, clinical evidence and consumer ratings on the provider detail page. Consumer scores require a verified location match and at least ten eligible reported reviews. The market coverage export includes the source family and next research action for each provider. Run the following command to compare current coverage with Massachusetts.
+The app shows dated published prices, clinical evidence and consumer ratings on the provider detail page. For an exact location, Harbor labels an estimate from one source family with at least 30 reported reviews. Two independent source families can qualify with at least five each. When the published averages or recent review accounts materially disagree, families can inspect the underlying ratings and accounts directly. The market coverage export includes the source family and next research action for each provider. Run the following command to compare current coverage with Massachusetts.
 
 ```sh
 python3 -B scripts/regions/workflow-evidence.py comparison
@@ -27,8 +27,8 @@ The [regional workflow](docs/region-workflow.md) covers refreshing source data, 
 - Source links, source dates, published staffing metrics, actual CMS inspection findings and penalty events, explicit unknowns and provider follow-up questions.
 - Massachusetts CMS home-health clinical-quality ratings and patient surveys for seven certified agencies across six organizations, with response counts, response rates, five experience measures and separate clinical measures.
 - The Massachusetts baseline includes location details for 86 providers, published prices with billing periods at 35, and dated observations of public opening and waitlist claims.
-- The Massachusetts baseline includes public review aggregates at 311 locations, with 122 provisional consumer experience scores out of ten. All currently have limited source coverage; source links and exclusions accompany each score.
-- Research filters, category-specific consumer-score sorting, and separate Life here, Rooms & costs, Availability and Reviews tabs. Facebook and unrated filters plus a downloadable 521-location checklist make research gaps visible.
+- As of November 12, 2026, 21 of 521 Massachusetts locations and 56 of 974 North Jersey locations qualify for a numeric experience score under version 2. Provider details show source ratings and review counts even when Harbor withholds its own score.
+- Research filters, category-specific score sorting, and a property overview with rooms, pricing, amenities and attributed resident or family accounts. Facebook and unrated filters plus a downloadable 521-location checklist make research gaps visible.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
 - A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
 - A private research collection service with a 521-record registry, source coverage, daily CMS checks, retries, request budgets and a review queue. A completed Yelp evaluation checked listing identity and API access without retaining review content; Yelp collection is now paused under the free-sources-only plan.

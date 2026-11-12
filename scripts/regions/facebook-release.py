@@ -26,7 +26,7 @@ CEDAR = "north-jersey-campus-cedar-crest-village-07444"
 APPROVAL = "facebook/reconciliation/reviewed-family-threads.json"
 RECEIPT = "facebook/reconciliation/cedar-crest-public-source-check-2026-11-12.json"
 PINNED_REVIEWS = {
-    APPROVAL: "c227899ffc5082393b1f1caa54a864bcf2cb65dff9abb09aa00d00941a1add6b",
+    APPROVAL: "51dc231ca167830b30cd866785a1f8ce3c339ba0658176219b1ac0f4a8a3c909",
     RECEIPT: "eb1c16d298c9b06f186147511be18422e4a5f7d1c7923ac6263d144cdc7ac899",
 }
 TRUSTED_INPUTS = ["facebook/kit/kit.csv", "facebook/first-facility-assignments.csv",
@@ -79,6 +79,7 @@ def finding_projection(selection):
         **{key: selection[key] for key in
            ("id", "sourceObservationIds", "summary", "date", "threadUrl", "topics")},
         "kind": "resident-family", "relationship": "family", "sourceUrl": selection["threadUrl"],
+        "excerpt": selection["quote"]["text"],
         "limitations": selection["limitations"] + [
             "Relationships are self-reported in the reviewed source, not independently authenticated.",
             "Selected qualitative context only. This finding never contributes to a numeric experience score.",
@@ -150,6 +151,10 @@ def reviewed_threads(selections, receipt, raw_rows, rows, coverage, source_notes
                           and raw["thread_url"] == selection["threadUrl"]
                           and raw["source_url"].split("?")[0] == selection["threadUrl"],
                           "reviewed_thread_not_exact_firsthand_post_care")
+        quote = selection["quote"]
+        batch.require(quote["observationId"] in ids and 1 <= len(quote["text"].split()) <= 12
+                      and quote["text"] in raw_rows[quote["observationId"]].get("supporting_public_excerpt", ""),
+                      "selected_quote_does_not_match_original")
         aid = raw_rows[ids[0]]["provider_id"]
         text = json.dumps(coverage[aid]).casefold()
         if pid == CEDAR:

@@ -1,5 +1,5 @@
 {
-  "comparableRates": 37,
+  "comparableRates": 108,
   "countyAndSetting": [
     {
       "category": "assisted-living",
@@ -164,7 +164,7 @@
       "identityDiscrepancies": 0,
       "locationsWithComparableRate": 0,
       "locationsWithPrice": 0,
-      "operatorPagesChecked": 0,
+      "operatorPagesChecked": 1,
       "publishedPriorityLists": 0,
       "records": 18,
       "regulatoryCoverage": 16
@@ -176,7 +176,7 @@
       "identityDiscrepancies": 1,
       "locationsWithComparableRate": 6,
       "locationsWithPrice": 6,
-      "operatorPagesChecked": 6,
+      "operatorPagesChecked": 7,
       "publishedPriorityLists": 0,
       "records": 30,
       "regulatoryCoverage": 30
@@ -209,13 +209,13 @@
       "category": "life-plan",
       "county": "Morris",
       "datedVacancies": 0,
-      "identityDiscrepancies": 1,
-      "locationsWithComparableRate": 0,
-      "locationsWithPrice": 0,
-      "operatorPagesChecked": 0,
-      "publishedPriorityLists": 0,
+      "identityDiscrepancies": 0,
+      "locationsWithComparableRate": 1,
+      "locationsWithPrice": 1,
+      "operatorPagesChecked": 1,
+      "publishedPriorityLists": 1,
       "records": 2,
-      "regulatoryCoverage": 0
+      "regulatoryCoverage": 1
     },
     {
       "category": "nursing-home",
@@ -351,21 +351,23 @@
     }
   ],
   "inputs": {
-    "offerings/provider-page-checks.json": "d82d221106963f3a5265f38f3ff9bb22fa5fe8b4e89886f289f2d1329c5c27a3",
+    "offerings/directory-amenities.json": "025ced47f89cefc71a91c8f3d178257689266dde5a6a79d6c79910217651bc45",
+    "offerings/provider-page-checks.json": "a454ce8ccfe757f47690b985a56913ddc7479698b7e7495b9e1ccaa9a30474ec",
+    "review-release/locationResearch.json": "67f500842cde225f1d9549b4e4c33ac8f289aff930104e7bedcd206ac19e2e0a",
     "rosterIdentityAndRegulatoryFactsSha256": "c143ce6d26cde85f00d8b3ff93eb3ad6c3e9c547e8aca4cd1000acb29736090a",
     "runtime/crosswalk.json": "d1c245c73dad30cbd5fb32fe987ab3fb53d02df8ef51378a4663ee54a73caa95"
   },
-  "matchedPages": 28,
+  "matchedPages": 31,
   "outputs": {
     "coverage.json": {
-      "sha256": "86fb5797efaade9b8d2107b63a4ee111d32fc96735a47c9bacbd8c3153a0cacc"
+      "sha256": "f9ed3cc0b45dc3813048fa1b5b65fa7d25a38c3750e51b5dc3fc85c88692330a"
     },
     "locationResearch.json": {
-      "sha256": "1e874f5ae40f00df7734b5df3cdb6575fc76c02ad3f0f3869820728742bc4548"
+      "sha256": "a779d135e33204cccca76fc0231f41c9139c35d8daa1e105dc20e41bc3c02881"
     }
   },
-  "providerPriceLocations": 26,
+  "providerPriceLocations": 27,
   "roster": 974,
-  "rowsWithFacts": 282,
-  "sourcePages": 32
+  "rowsWithFacts": 283,
+  "sourcePages": 34
 }

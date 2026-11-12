@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/mill-gardens-at-midland-park",
+  "checkedAt": "2026-11-12",
+  "providerId": "north-jersey-doh-njlrr782",
+  "officialId": "NJLRR782",
+  "identity": {
+    "address": "36 Faner Road",
+    "careUnit": "Assisted Living",
+    "city": "Midland Park",
+    "name": "Mill Gardens at Midland Park",
+    "state": "NJ",
+    "zip": "07432"
+  },
+  "parentHtmlSha256": "d0b7ae737b6c152b5121a7468a4d853ad876bd1319525195112128eccd0face6",
+  "parentCacheReceiptSha256": "c4f1f5e66fab477196e543c895a54307e4637bba8472f5134b484d25cc761f9c",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "656247",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25OT1pEUnRRV3BLVW5kWFkzTnRaWGt3Y1U5Nk5FRRAB!2m1!1s0x0:0xfe88e1547637f39d!3m1!1s2@1:CAIQACodChtycF9oOnNOZDRtQWpKUndXY3NtZXkwcU96NEE%7C%7C?hl=en-US",
+      "sourcePublishedText": "Sep 2026",
+      "publishedAt": "2026-09",
+      "originalBodySha256": "31ae9929a851f35f5e765e30ef7d8ecd61c1f288a3f7fe5e0296745c79474231",
+      "originalExcerpt": "Severely toxic environment!",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "656248",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pkVGJrWmpPSE5RTjJjeVRrVmtUM1F3ZUdOaU1IYxAB!2m1!1s0x0:0xfe88e1547637f39d!3m1!1s2@1:CAIQACodChtycF9oOjdTbkZjOHNQN2cyTkVkT3QweGNiMHc%7C%7C?hl=en-US",
+      "sourcePublishedText": "Aug 2026",
+      "publishedAt": "2026-08",
+      "originalBodySha256": "82a6ff2775442e3d879075610f12b4d5df217bbe45ccfa05e8b36ddaf5510361",
+      "originalExcerpt": "Very nice and clean place.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "560797",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VMZW90SXJNdXZHZ2VBEAE!2m1!1s0x0:0xfe88e1547637f39d!3m1!1s2@1:CIHM0ogKELeotIrMuvGgeA%7C%7C?hl=en-US",
+      "sourcePublishedText": "Jun 2025",
+      "publishedAt": "2025-06",
+      "originalBodySha256": "dfd9236bda8423f7f47efa4cb04c925d7303fb7c34a1c5aab1e717d60c602b36",
+      "originalExcerpt": "Very very good",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "560798",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNUN1p1V1VBEAE!2m1!1s0x0:0xfe88e1547637f39d!3m1!1s2@1:CIHM0ogKEICAgICT7ZuWUA%7C%7C?hl=en-US",
+      "sourcePublishedText": "May 2024",
+      "publishedAt": "2024-05",
+      "originalBodySha256": "b9ee417141e43679919386f6c92921dd96ad25304f27166ca6451af69a1a7235",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "wrong-care-unit"
+      ]
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "560799",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUN1NGUtNzVBRRAB!2m1!1s0x0:0xfe88e1547637f39d!3m1!1s2@1:CIHM0ogKEICAgICu4e-75AE%7C%7C?hl=en-US",
+      "sourcePublishedText": "Jul 2022",
+      "publishedAt": "2022-07",
+      "originalBodySha256": "57ad6755f51dd9629088e5b2c4e3a26aeb667b4d44c2aef1e4d5a4a643548418",
+      "originalExcerpt": "It is a comfortable, homey environment on a quiet suburban cul-de-sac.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

@@ -327,7 +327,8 @@ test("actual consumer scores preserve source scope, no-review missingness and so
     assert.equal(getLocationResearch(id, asOf).experience.value, null, id);
   }
   const foxHill = getLocationResearch("lifeplan-fox-hill-village", asOf);
-  assert.equal(foxHill.experience.value, 8.8);
+  assert.equal(foxHill.experience.value, null);
+  assert.equal(foxHill.experience.confidence, "unrated");
   assert.equal(foxHill.experience.reviewCount, 12);
   assert.ok(
     foxHill.experience.excludedSources.some((source) =>

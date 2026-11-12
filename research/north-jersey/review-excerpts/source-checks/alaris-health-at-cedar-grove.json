@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/alaris-health-at-cedar-grove",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315357",
+  "officialId": "NJ60705",
+  "identity": {
+    "address": "110 Grove Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Cedar Grove",
+    "name": "Alaris Health At Cedar Grove",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "391f45aed1b184e9e5dd3caffc00ae877b786d94ace49ae686c85a3db5692c86",
+  "parentCacheReceiptSha256": "6f5f4c4ddc6c2d258631f6b65300ff75cc71e63675c1870ad1de23931313165c",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "609162",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pOTFgyWktZMEZWUWpWZkxXeFZVVFI1YUhSVFFtYxAB!2m1!1s0x89c30015930474e1:0xb5b25334dd4d01dd",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "1585c1a7c95f5ede1c7450d30dcbb5534a229675929116397656e0daaf9d6845",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "wrong-care-unit"
+      ]
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "609161",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xCRVFWOVlTR2xzWkRSYWRFRnpkbFpmWTNGNVVYYxAB!2m1!1s0x89c30015930474e1:0xb5b25334dd4d01dd",
+      "sourcePublishedText": "May 2026",
+      "publishedAt": "2026-05",
+      "originalBodySha256": "75c3c8085856d991cb294aabe077769b3c9db29f7771545566b1315200461728",
+      "originalExcerpt": "Every staff member I encountered was friendly, compassionate, and treated residents with dignity and respect.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "609164",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tOV2RHOXpWMFF4WTBSVE5YQnhkemQ0TldONFRWRRAB!2m1!1s0x89c30015930474e1:0xb5b25334dd4d01dd",
+      "sourcePublishedText": "Apr 2026",
+      "publishedAt": "2026-04",
+      "originalBodySha256": "2e2192701829882d7627aaf9b16552ecd062221d204a923857f68f30895f3902",
+      "originalExcerpt": "Very disappointed.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "609163",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pKVFltMTZZMWMzUjFkR1ZqQjNWR0ZMTm5CQlJIYxAB!2m1!1s0x89c30015930474e1:0xb5b25334dd4d01dd",
+      "sourcePublishedText": "Mar 2026",
+      "publishedAt": "2026-03",
+      "originalBodySha256": "94888934403cb80699c104ec71b7471ffa50b0b8b457d47efd16b6c5a024ea56",
+      "originalExcerpt": "In the meantime, Alaris continue to take good care of everyone there.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "609165",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURBX2IyU3hRRRAB!2m1!1s0x89c30015930474e1:0xb5b25334dd4d01dd",
+      "sourcePublishedText": "Oct 2018",
+      "publishedAt": "2018-10",
+      "originalBodySha256": "dcde0aefc51ca3c1204f63087c571e9807ee917a812407814f440dbb790c4374",
+      "originalExcerpt": "Everything that I said in the review I was I was mistaken.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

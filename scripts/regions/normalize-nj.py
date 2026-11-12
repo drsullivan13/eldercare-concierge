@@ -429,6 +429,39 @@ def publish_address_points(inputs, providers, county_by_id, counties):
     return release
 
 
+def add_public_review_context(inputs, records, roster, counties):
+    """Project the checked-in editorial decisions. Restricted profiles supply links only."""
+    for pid, decision in inputs.json("review-excerpts/reviewed.json").items():
+        require(pid in roster and roster[pid]["suppliedAddress"]["address"] == decision["catalogAddress"],
+                f"Review context provider identity changed: {pid}")
+        if roster[pid]["county"] not in counties:
+            continue
+        require(pid in records, f"Missing researched location for reviewed context: {pid}")
+        record = records[pid]
+        if links := decision.get("reviewLinks"):
+            record["reviewLinks"] = links
+        page = decision.get("testimonials")
+        if not page:
+            continue
+        require(re.fullmatch(r"[0-9a-f]{64}", page["retrievedPageSha256"]), f"Missing testimonial receipt: {pid}")
+        excerpts = page["excerpts"]
+        require(0 < sum(len(row["excerpt"].split()) for row in excerpts) <= 25,
+                f"Invalid total excerpt length for {pid}")
+        source_id = pid + "-operator-testimonials"
+        record["sources"].append({"id": source_id, "title": "Patient and family testimonials",
+                                  "publisher": page["publisher"], "url": page["url"], "kind": "provider",
+                                  "checkedAt": page["checkedAt"], "publishedAt": None, "access": "full-page"})
+        for row in excerpts:
+            record["reviews"].append({
+                "id": row["id"], "sourceId": source_id, "url": page["url"], "date": None,
+                "relationship": row["relationship"], "excerpt": row["excerpt"], "summary": row["summary"],
+                "rating": None, "scale": None, "aspects": [],
+                "notes": ["Selected by the operator. The page gives no review date or rating.",
+                          "The relationship is self-reported. This account does not contribute to the experience score."],
+            })
+        record["checkedAt"] = max(record["checkedAt"], page["checkedAt"])
+
+
 def released_research(inputs, roster, counties):
     combined = {}
     for origin in ("offerings", "review-release"):
@@ -453,6 +486,9 @@ def released_research(inputs, roster, counties):
                 for item in record[field]:
                     if item not in target[field]:
                         target[field].append(item)
+            if "reviewSamples" in record:
+                require("reviewSamples" not in target, f"Duplicate review sample producer for {pid}")
+                target["reviewSamples"] = record["reviewSamples"]
             for field in ("availability", "admissionRestriction"):
                 value = record.get(field)
                 if value and value.get("sourceId"):
@@ -461,6 +497,7 @@ def released_research(inputs, roster, counties):
                     target[field] = value
             target["checkedAt"] = max(target["checkedAt"], record["checkedAt"])
             target["providerDetailsReviewed"] |= record["providerDetailsReviewed"]
+    add_public_review_context(inputs, combined, roster, counties)
     return combined
 
 

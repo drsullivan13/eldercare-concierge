@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/park-crescent-healthcare-rehabilitation-center",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315266",
+  "officialId": "NJ60733",
+  "identity": {
+    "address": "480 Parkway Drive",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "East Orange",
+    "name": "Park Crescent Healthcare and Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "7a2221bd92b155747c79058aa56647dc304ca87248827845b0ca2cb1fe4173a4",
+  "parentCacheReceiptSha256": "601981b2f5b5a570b4d853c81b867826ffd4fd6bfa182099fd73b50f2cef4041",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "608906",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4b1ZXMVRNRTAzY21obFduTktaV1JIYWtKVlZrRRAB!2m1!1s0x89c254dc9f6719b3:0x36acccbfb7314367",
+      "sourcePublishedText": "Jan 2026",
+      "publishedAt": "2026-01",
+      "originalBodySha256": "2b71bf29c6ebb0845b7adfe29798c785c5b47b1d811412f8134e8b8b5f920419",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "privacy"
+      ]
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "608908",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT201dFMyZG5PVU10TjBOZmJqZElialk0TmtOT2IzYxAB!2m1!1s0x89c254dc9f6719b3:0x36acccbfb7314367",
+      "sourcePublishedText": "Sep 2025",
+      "publishedAt": "2025-09",
+      "originalBodySha256": "db063ac5899ed77fed480dad38b0280d59b7103ba47262a62f3371c74eaa2313",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "no-safe-excerpt"
+      ]
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "608907",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21ORU5UWnZhazl1Ylc1d04xODRVSFZoUm01aVpHYxAB!2m1!1s0x89c254dc9f6719b3:0x36acccbfb7314367",
+      "sourcePublishedText": "Sep 2025",
+      "publishedAt": "2025-09",
+      "originalBodySha256": "73bc8b9bd246590eaac29465e77839a9b00af45b78e077c1bae7db80ea1d47d0",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "no-safe-excerpt"
+      ]
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "608910",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUR6NG8yeTFRRRAB!2m1!1s0x89c254dc9f6719b3:0x36acccbfb7314367",
+      "sourcePublishedText": "Jun 2024",
+      "publishedAt": "2024-06",
+      "originalBodySha256": "734170fb9aa2f904b2382614b06bf0e755b6c000520cd7b38a75bf0a5032fa6b",
+      "originalExcerpt": "Very clean and polite staff.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "608909",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSURWcmZ1OFlnEAE!2m1!1s0x89c254dc9f6719b3:0x36acccbfb7314367",
+      "sourcePublishedText": "Dec 2023",
+      "publishedAt": "2023-12",
+      "originalBodySha256": "ec21debfc676cb6d5a3626750483a62ae83bfeb7907ae4f801bee1b8920e8d4e",
+      "originalExcerpt": "Very nice nursing home but I have only one negative thing to say about this place.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

@@ -894,8 +894,45 @@
       "known_gaps": []
     },
     {
+      "id": "release-reviews",
+      "depends_on": [
+        "reviews",
+        "listings"
+      ],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "release-reviews"
+          ]
+        },
+        "rebuild": {
+          "argv": [
+            "python3",
+            "scripts/regions/release-reviews.py"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/review-release/manifest.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/review-release/locationResearch.json",
+          "role": "output"
+        }
+      ],
+      "known_gaps": [
+        "The verifier checks release outputs, source inputs and scorer hashes. For a full rescore run release-reviews.py --check with Node and tsx available."
+      ]
+    },
+    {
       "id": "offerings",
-      "depends_on": [],
+      "depends_on": [
+        "release-reviews"
+      ],
       "commands": {
         "verify": {
           "argv": [
@@ -926,35 +963,6 @@
         }
       ],
       "known_gaps": []
-    },
-    {
-      "id": "release-reviews",
-      "depends_on": [
-        "reviews",
-        "listings"
-      ],
-      "commands": {
-        "verify": {
-          "argv": [
-            "python3",
-            "scripts/regions/workflow-evidence.py",
-            "release-reviews"
-          ]
-        }
-      },
-      "artifacts": [
-        {
-          "path": "research/north-jersey/review-release/manifest.json",
-          "role": "output"
-        },
-        {
-          "path": "research/north-jersey/review-release/locationResearch.json",
-          "role": "output"
-        }
-      ],
-      "known_gaps": [
-        "The verifier checks release outputs, source inputs and scorer hashes. For a full rescore run release-reviews.py --check with Node and tsx available."
-      ]
     },
     {
       "id": "facebook-release",

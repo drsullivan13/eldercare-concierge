@@ -3875,36 +3875,48 @@ em {
 }
 
 /* Source-linked location offerings and consumer experience. */
-.research-tabs {
+.location-research {
+  overflow-wrap: anywhere;
+}
+.research-panel > section {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.research-panel > section:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.catalog-services ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  padding: 5px;
-  border-radius: 11px;
+  gap: 8px;
+  padding: 0;
+  margin: 12px 0;
+  list-style: none;
+}
+.catalog-services li {
+  padding: 7px 11px;
+  border-radius: 6px;
   background: var(--teal-pale);
-  margin: 17px 0 20px;
-  margin-top: 17px;
-}
-.research-tabs button {
-  flex: 1;
-  white-space: nowrap;
-  padding: 11px 13px;
-  border-radius: 8px;
   color: var(--teal-dark);
-  font-weight: 600;
-  font-size: 14px;
-  min-height: 44px;
+  font-size: 13px;
 }
-.research-tabs button.active {
-  background: white;
-  box-shadow: 0 1px 4px #1c343714;
+.catalog-services .research-source {
+  margin-right: 12px;
+}
+.cost-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 600;
 }
 .research-panel h4 {
   margin: 20px 0 10px;
   font-size: 16px;
   line-height: 1.5;
 }
-.research-panel > h4:first-child {
+.research-panel > section > h4:first-child {
   margin-top: 0;
 }
 .offering-facts {
@@ -3921,7 +3933,8 @@ em {
   min-width: 0;
 }
 .offering-fact p {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.7;
 }
 .offering-price {
   display: block;
@@ -4072,7 +4085,7 @@ em {
   justify-content: space-between;
   gap: 8px;
   font-size: 11px;
-  color: var(--muted);
+  color: #53674f;
 }
 .public-reviews blockquote {
   margin: 14px 0;
@@ -4135,10 +4148,6 @@ em {
   .offering-facts,
   .review-platforms {
     grid-template-columns: 1fr;
-  }
-  .research-tabs button {
-    flex: 1 1 40%;
-    padding: 10px;
   }
   .experience-overview {
     gap: 12px;

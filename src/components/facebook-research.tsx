@@ -83,16 +83,14 @@ export function FacebookResearch({ research }: { research?: Research }) {
         <>
           {research.findings.length > 0 && (
             <p className="fb-research-intro">
-              Selected public posts. They do not affect the experience score.
+              Selected public posts. When experience scores tie, Harbor lists the location with more distinct resident or family discussions first.
             </p>
           )}
           <details className="fb-research-coverage">
             <summary>What this Facebook search covered</summary>
             <p>{research.coverageExplanation}</p>
             <p className="fb-research-caution">
-              Qualitative context only. These findings do not affect the
-              experience index. Selected posts are not a representative survey,
-              and relationships have not been independently authenticated.
+              Qualitative context only. Each discussion counts once when sorting tied scores. A post adds no stars or points. Selected posts are not a representative survey. Relationships are self-described.
             </p>
             <p className="fb-research-dates">
               Search: {date(research.searchedAt)} · Editorial review:{" "}
@@ -155,13 +153,19 @@ export function FacebookResearch({ research }: { research?: Research }) {
                         <span>{date(finding.date)}</span>
                       </div>
                       <p className="fb-research-relationship">
-                        Relationship:{" "}
+                        Self-described relationship:{" "}
                         {finding.relationship &&
                         finding.relationship !== "unknown"
                           ? finding.relationship.replace(/[-_]/g, " ")
                           : "not established"}
                       </p>
-                      <p>{finding.summary}</p>
+                      {finding.excerpt ? (
+                        <blockquote>“{finding.excerpt}”</blockquote>
+                      ) : (
+                        <p>
+                          <strong>Research summary</strong> · {finding.summary}
+                        </p>
+                      )}
                       {finding.topics.length > 0 && (
                         <ul className="fb-research-topics" aria-label="Topics">
                           {finding.topics.map((topic) => (
@@ -169,9 +173,15 @@ export function FacebookResearch({ research }: { research?: Research }) {
                           ))}
                         </ul>
                       )}
-                      {finding.limitations.length > 0 && (
+                      {(finding.limitations.length > 0 || finding.excerpt) && (
                         <details className="fb-research-context">
                           <summary>Context and limits</summary>
+                          {finding.excerpt && (
+                            <p>
+                              <strong>Research summary</strong> ·{" "}
+                              {finding.summary}
+                            </p>
+                          )}
                           <ul className="fb-research-limits">
                             {finding.limitations.map((limit, i) => (
                               <li key={i}>{limit}</li>

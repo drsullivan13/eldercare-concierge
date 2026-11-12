@@ -50,7 +50,7 @@ The source-specific tools retain their schemas and measure definitions. The work
 
 ## Lessons from Massachusetts and North Jersey
 
-| Published coverage, November 12, 2026 | Massachusetts | North Jersey |
+| Historical release at `8c33374c01be`, November 12, 2026 | Massachusetts | North Jersey |
 |---|---:|---:|
 | Catalog records | 521 | 974 |
 | Recognized ZIPs | 685 | 270 |

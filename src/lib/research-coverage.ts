@@ -9,7 +9,11 @@ import { getFacebookResearch } from "./facebook-research";
 import type { CareCategory } from "./providers";
 
 type CoverageStatus =
-  "scored" | "too-few-reviews" | "source-check-needed" | "no-rating-evidence";
+  | "scored"
+  | "sources-disagree"
+  | "too-few-reviews"
+  | "source-check-needed"
+  | "no-rating-evidence";
 type ResearchCoverageRow = {
   providerId: string;
   name: string;
@@ -31,8 +35,10 @@ type ResearchCoverageRow = {
 const nextActionByStatus: Record<CoverageStatus, string> = {
   scored:
     "Add independent sources and dated resident/family context; check for duplicates.",
+  "sources-disagree":
+    "Review the original ratings and conflicting evidence for this location before publishing an index.",
   "too-few-reviews":
-    "Find additional exact-location published rating averages and counts; at least 10 eligible reviews are needed.",
+    "Find additional exact-location published rating averages and counts; 30 reviews from one family, or two families with at least five each, are needed.",
   "source-check-needed":
     "Inspect the original rating page, confirm the exact care unit, population, count and date; resolve the recorded exclusions.",
   "no-rating-evidence":
@@ -42,6 +48,8 @@ const nextActionByStatus: Record<CoverageStatus, string> = {
 function coverageStatus(
   research: ReturnType<typeof getLocationResearch> | undefined,
 ): CoverageStatus {
+  if (research?.experience.publicationStatus === "sources-disagree")
+    return "sources-disagree";
   if (research?.experience.value != null) return "scored";
   if (research && research.experience.reviewCount > 0) return "too-few-reviews";
   if (research?.reviewAggregates.length) return "source-check-needed";

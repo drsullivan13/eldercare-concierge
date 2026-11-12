@@ -190,9 +190,15 @@ class ReleaseTests(unittest.TestCase):
                             "source_visibility": "public", "concern_type": "none",
                             "posted_at": selection["date"], "retrieved_at_utc": "2026-11-12T16:13:00Z"}
                 next(row for row in rows if row["observationId"] == oid)["disposition"] = "withheld"
+            quote = selection["quote"]
+            raw[quote["observationId"]]["supporting_public_excerpt"] = quote["text"]
         notes = "complete (13/13)"
         self.assertEqual(set(release.reviewed_threads(
             selections, receipt, raw, deepcopy(rows), coverage, notes)), set(selections))
+        incorrect_excerpt = deepcopy(raw)
+        incorrect_excerpt["fb-njfu-b-006"]["supporting_public_excerpt"] = "Two unrelated words"
+        with self.assertRaisesRegex(ValueError, "selected_quote_does_not_match_original"):
+            release.reviewed_threads(selections, receipt, incorrect_excerpt, deepcopy(rows), coverage, notes)
         for key, value in (("account_type", "provider_promotion"), ("relationship", "other"),
                            ("relationship", "staff"),
                            ("experience_stage", "employment"), ("experience_stage", "touring"),

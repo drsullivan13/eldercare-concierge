@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/peace-care-st-ann-s",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315413",
+  "officialId": "NJ30904",
+  "identity": {
+    "address": "198 Old Bergen Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Jersey City",
+    "name": "Peace Care St Ann'S",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "f7bb4f3b4f2e0319e3a348829ff6ef886c1a8b9fe64701fcac58f5a3715a43a1",
+  "parentCacheReceiptSha256": "8eec6a8819e7f5b9ddc5238b2ad2c90214cb970ca7e82e432829a573c0d7171e",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "609301",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWQ1dEWkZNRzlRVlUweFYyTkhVMFp3VDNGWVNsRRAB!2m1!1s0x89c2510949323cd9:0x137209e592cd691f",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "b1aea20e6b7d34b98a6dab51398832681c00a1f2f341f59d137d89a1b7c246d4",
+      "originalExcerpt": "However, many of the nursing assistants and some nurses were rude, inattentive, and incompetent.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "609302",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pRdGQxTnRkRXBrZFhwRlNVRnhhREJhYm5ReWIzYxAB!2m1!1s0x89c2510949323cd9:0x137209e592cd691f",
+      "sourcePublishedText": "May 2026",
+      "publishedAt": "2026-05",
+      "originalBodySha256": "1a98fcc2f4beceebfa2366e9d3d90e23e49dc3b45e881622c7007c077bb3c15e",
+      "originalExcerpt": "Every interaction has demonstrated a sincere commitment to the residents and their well-being.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "609303",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xVdFVGOTRPVU14WjJaV05XTjNWeTFsVlc4MWRWRRAB!2m1!1s0x89c2510949323cd9:0x137209e592cd691f",
+      "sourcePublishedText": "Apr 2026",
+      "publishedAt": "2026-04",
+      "originalBodySha256": "5d8fd539b93fad6a27b95bac699968cf723c7bf2631c95945749ae9e63385815",
+      "originalExcerpt": "Love lovw love them.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "609304",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25KTVRrVm5XR2hvWVdkdVVYUmtRVUZxUkVwdmQxRRAB!2m1!1s0x89c2510949323cd9:0x137209e592cd691f",
+      "sourcePublishedText": "Dec 2025",
+      "publishedAt": "2025-12",
+      "originalBodySha256": "35c9945ed8a5c2071dca2c7a58e876f254e246efdcced966c90eab58e6be1556",
+      "originalExcerpt": "The nurses and aides showed incredible patience, kindness, and genuine affection, treating them like family.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "609305",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21GMmNtWnBOVko1VW5aVlNtaGlNMHR1UVRSNFJsRRAB!2m1!1s0x89c2510949323cd9:0x137209e592cd691f",
+      "sourcePublishedText": "Oct 2025",
+      "publishedAt": "2025-10",
+      "originalBodySha256": "43e3abbe83df51a30fe9dc8f1df2154b4a6b20bf3cda886d1e2c111de4e588c8",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "wrong-care-unit"
+      ]
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/careone-at-oradell",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315339",
+  "officialId": "NJ60234",
+  "identity": {
+    "address": "600 Kinderkamack Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Oradell",
+    "name": "Careone At Oradell",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "0e84c89bfcda5ed9d05a2e865820ad105d2783dcb26b15a1ac42be9955c64aa7",
+  "parentCacheReceiptSha256": "0c188920896facacf38e370cd41fa8d211da5ae332c4ec2962ca234ee13e2b10",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "609113",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25oVVpHcExTalZZV1RNd09HRXhNVkZyUkRjNVJIYxAB!2m1!1s0x89c2e55542d67c6f:0x511f8d97e97618ea",
+      "sourcePublishedText": "Jul 2026",
+      "publishedAt": "2026-07",
+      "originalBodySha256": "ad9fed10335c003767c47c2fe1e6d74992380c3f82c5673081187e03ac11db34",
+      "originalExcerpt": "My Mom is a resident at Care One in Oradell and is very happy there.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "609111",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21kQlZ6QXhha0ZLTFRsdFprWm9kV05xU210SVIxRRAB!2m1!1s0x89c2e55542d67c6f:0x511f8d97e97618ea",
+      "sourcePublishedText": "Jul 2026",
+      "publishedAt": "2026-07",
+      "originalBodySha256": "2bb36a5a69c35a44915d00be35c9c5e424b4602dfc28a7184e9886c17b550109",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "not-consumer"
+      ]
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "609107",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2paMWNuUm1OVGxaZVRjeVkzaERiMHhLTTJ0TVdFRRAB!2m1!1s0x89c2e55542d67c6f:0x511f8d97e97618ea",
+      "sourcePublishedText": "Jul 2026",
+      "publishedAt": "2026-07",
+      "originalBodySha256": "2042d123afc95018e5aa444c38765a8895dde82f2f70a9a80be31345ad4e84ae",
+      "originalExcerpt": "His room was cozy and comfortable, and the common areas provided a warm and pleasant environment to relax, socialize, or participate in activities.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "609115",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tJNFREbEVOVkpQVVV3elVTMHhjSEIwZDBSemExRRAB!2m1!1s0x89c2e55542d67c6f:0x511f8d97e97618ea",
+      "sourcePublishedText": "Jul 2026",
+      "publishedAt": "2026-07",
+      "originalBodySha256": "c592a11574918eb0b3328a0fd578eec845953b719a3dee4f9718f1a553e3ff36",
+      "originalExcerpt": "The facility is clean, well organized, and the staff are consistently kind and attentive.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "609109",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2twSExVcFNXVGRWVlc4d1RTMU9TemxEYVd0U2JYYxAB!2m1!1s0x89c2e55542d67c6f:0x511f8d97e97618ea",
+      "sourcePublishedText": "Feb 2026",
+      "publishedAt": "2026-02",
+      "originalBodySha256": "d4f72f6d76c9cd7813f54bf67a207d73297d44b92a2bab3e15a2bc56578afa48",
+      "originalExcerpt": "They were so friendly and gracious and assured we had everything we needed.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

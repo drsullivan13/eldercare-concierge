@@ -99,8 +99,14 @@ export function ProviderDetail({
       <div className="detail-body">
         {provider.locationKind === "office" && (
           <div className="inline-notice">
-            Office location only. Confirm service coverage at your address and
-            staff availability directly.
+            <strong>Office location only</strong>
+            {provider.serviceArea && (
+              <p>Provider-reported service area. {provider.serviceArea}</p>
+            )}
+            <p>
+              Confirm service coverage at your address and staff availability
+              directly.
+            </p>
           </div>
         )}
         {alerts.length > 0 && (
@@ -114,42 +120,28 @@ export function ProviderDetail({
             </div>
           </div>
         )}
-        <details className="detail-disclosure provider-background">
-          <summary>About this provider & research notes</summary>
-          <p className="detail-description">{provider.description}</p>
-          {provider.services.length > 0 && (
-            <>
-              <h4>Listed services and care settings</h4>
-              <ul className="provider-research-notes">
-                {provider.services.map((service) => (
-                  <li key={service}>{service}</li>
-                ))}
-              </ul>
-            </>
-          )}
-          {provider.serviceArea && (
-            <div className="inline-notice">
-              <strong>Service area reported by the provider</strong>
-              <p>{provider.serviceArea}</p>
-              <span>
-                Office proximity does not confirm service at your address or
-                staff availability.
-              </span>
-            </div>
-          )}
-          {researchNotes.length > 0 && (
+        <LocationResearch provider={provider} onTask={onTask} />
+        <p className="detail-description">{provider.description}</p>
+        {provider.locationKind !== "office" && provider.serviceArea && (
+          <div className="inline-notice">
+            <strong>Service area reported by the provider</strong>
+            <p>{provider.serviceArea}</p>
+            <span>
+              Office proximity does not confirm service at your address or staff
+              availability.
+            </span>
+          </div>
+        )}
+        {researchNotes.length > 0 && (
+          <details className="detail-disclosure provider-background">
+            <summary>Provider research notes</summary>
             <ul className="provider-research-notes">
               {researchNotes.map((note) => (
                 <li key={note}>{note}</li>
               ))}
             </ul>
-          )}
-        </details>
-        <LocationResearch
-          providerId={provider.id}
-          providerName={provider.name}
-          onTask={onTask}
-        />
+          </details>
+        )}
         {provider.category === "nursing-home" && provider.cms && (
           <section>
             <div className="section-title">

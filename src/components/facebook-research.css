@@ -30,6 +30,14 @@
   margin: 0.65rem 0;
   line-height: 1.6;
 }
+.fb-research blockquote {
+  margin: 14px 0;
+  padding-left: 13px;
+  border-left: 2px solid #a7bdae;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.5;
+}
 .fb-research .fb-research-caution {
   font-size: 0.83rem;
   color: #4c6060;

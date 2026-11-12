@@ -56,8 +56,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315066",
@@ -77,7 +76,67 @@
         "sourceId": "review-release-additional-stratford-manor-rehabilitation-and-care-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-608506",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-external-608507",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-01",
+            "id": "mlc-external-608508",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608509",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2024-11",
+            "id": "mlc-external-608510",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-stratford-manor-rehabilitation-and-care-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "My overall experience has been excellent!!!",
+        "id": "review-excerpt-mlc-external-608509",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "resident",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-stratford-manor-rehabilitation-and-care-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xCcFJIcERjRlUyVW05RU5tbFJUblJVTmpaWk1YYxAB!2m1!1s0x89c3abee8fc080d9:0x2db2d227e3a46d47"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -87,6 +146,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/stratford-manor-rehabilitation-and-care-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-stratford-manor-rehabilitation-and-care-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/stratford-manor-rehabilitation-and-care-center"
       }
     ]
@@ -102,8 +171,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315085",
@@ -123,7 +191,86 @@
         "sourceId": "review-release-additional-complete-care-at-chestnut-hill-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608521",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608522",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608524",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608525",
+            "sentiment": "mixed"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-chestnut-hill-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "It needs remolding in my opinion but never judge a book by its cover.",
+        "id": "review-excerpt-mlc-external-608525",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-chestnut-hill-llc",
+        "summary": "The reviewer reports satisfaction with service while saying the building needs remodeling.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25oa1RtNXdhRlpzTWxWS1J6UlJjak40WmtSclpWRRAB!2m1!1s0x89c2fedaa68e21cd:0x3e23178e0070e766"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "This facility is clean and very well organized and has an amazing staff on board.",
+        "id": "review-excerpt-mlc-external-608521",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-chestnut-hill-llc",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGSVJERk5iMjB5VFdkRFNXWndPR3h3YXpsbVQwRRAB!2m1!1s0x89c2fedaa68e21cd:0x3e23178e0070e766"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -133,6 +280,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-chestnut-hill-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-chestnut-hill-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-chestnut-hill-llc"
       }
     ]
@@ -194,8 +351,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315103",
@@ -215,7 +371,91 @@
         "sourceId": "review-release-additional-excel-care-at-wayne"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-608541",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608542",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608543",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-608544",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608545",
+            "sentiment": "negative"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-excel-care-at-wayne",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "Don’t send your family here they manipulate vulnerable elderly patients.",
+        "id": "review-excerpt-mlc-external-608543",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is discharge."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-excel-care-at-wayne",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tvME5rZG1lV3MxV1d4UFN6STNTMHd6YlZCZlJXYxAB!2m1!1s0x89c2fdd9d36b9809:0x392bfeb93c149156"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "The facility is clean, it doesn't smell, but it might be a little understaffed at times.",
+        "id": "review-excerpt-mlc-external-608541",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-excel-care-at-wayne",
+        "summary": "The reviewer praises reception and cleanliness but raises a staffing concern.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xOYWIzbDRTR0U0YUVjdE1tWjVXbVZLTmxOb1FXYxAB!2m1!1s0x89c2fdd9d36b9809:0x392bfeb93c149156"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -225,6 +465,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/excel-care-at-wayne"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-excel-care-at-wayne",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/excel-care-at-wayne"
       }
     ]
@@ -378,8 +628,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315133",
@@ -399,7 +648,91 @@
         "sourceId": "review-release-additional-woodcliff-lake-health-rehabilitation-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2025-09",
+            "id": "mlc-external-608600",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-608602",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608603",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608604",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608605",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-woodcliff-lake-health-rehabilitation-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2025-09",
+        "excerpt": "Community room is a bit small but the patio is nice as is the other areas.",
+        "id": "review-excerpt-mlc-external-608600",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2025-09.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-woodcliff-lake-health-rehabilitation-center",
+        "summary": "The reviewer praises staff and outdoor areas but finds the community room small.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21SNFJVSnVjV3B1YUdwclIwWmhjRlF4TUU5b2VWRRAB!2m1!1s0x89c2e67f120e4c9f:0x7445555ef9592396"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "I can rest easy when I leave my wife here knowing that she’s cared for with love!",
+        "id": "review-excerpt-mlc-external-608605",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-woodcliff-lake-health-rehabilitation-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tsZk4yUnlWRVo2TFZWaldHTXRlRzAyWVRkeFdXYxAB!2m1!1s0x89c2e67f120e4c9f:0x7445555ef9592396"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -409,6 +742,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/woodcliff-lake-health-rehabilitation-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-woodcliff-lake-health-rehabilitation-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/woodcliff-lake-health-rehabilitation-center"
       }
     ]
@@ -470,8 +813,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315147",
@@ -491,7 +833,115 @@
         "sourceId": "review-release-additional-grove-park-healthcare-and-rehabilitation-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608641",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608642",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-608643",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-external-608644",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-01",
+            "id": "mlc-external-608646",
+            "sentiment": "mixed"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-grove-park-healthcare-and-rehabilitation-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "Based on our experience, I cannot recommend this facility.",
+        "id": "review-excerpt-mlc-external-608641",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-grove-park-healthcare-and-rehabilitation-center",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21kblVrMUpVbE14VlVGMU4ycEVSSEJ1UldaWlZsRRAB!2m1!1s0x89c254ba49046697:0x6c12ab963bff5473"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-01",
+        "excerpt": "I'm definitely not impressed with this place.",
+        "id": "review-excerpt-mlc-external-608646",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-01.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "resident",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-grove-park-healthcare-and-rehabilitation-center",
+        "summary": "The reviewer praises therapy but criticizes repairs, service and meals.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25SVlpVZElNMDAzWDIwNGRqVmhaSFkzWVhGQlgwRRAB!2m1!1s0x89c254ba49046697:0x6c12ab963bff5473"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2025-12",
+        "excerpt": "From the time you enter the place you are greeted by smiling staff.",
+        "id": "review-excerpt-mlc-external-608644",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2025-12.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "visitor",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-grove-park-healthcare-and-rehabilitation-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWMVJtTXRNR3BIZFhjdE5XOHhXbFpTV2xnd1RIYxAB!2m1!1s0x89c254ba49046697:0x6c12ab963bff5473"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -501,6 +951,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/grove-park-healthcare-and-rehabilitation-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-grove-park-healthcare-and-rehabilitation-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/grove-park-healthcare-and-rehabilitation-center"
       }
     ]
@@ -516,8 +976,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315152",
@@ -537,7 +996,67 @@
         "sourceId": "review-release-additional-careone-at-wellington"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-608651",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-608652",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608653",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608654",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608655",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-careone-at-wellington",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "The building is extremely clean, well kept and recently renovated.",
+        "id": "review-excerpt-mlc-external-608651",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-careone-at-wellington",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xjM1RrUjBaM0JsUjNaUFdraGFWM1JyU1doeFZWRRAB!2m1!1s0x89c2fa1b9e06c805:0x637bcf31bc977caf"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -547,6 +1066,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/careone-at-wellington"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-careone-at-wellington",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/careone-at-wellington"
       }
     ]
@@ -608,8 +1137,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315171",
@@ -629,7 +1157,67 @@
         "sourceId": "review-release-additional-oakland-rehabilitation-and-healthcare-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608681",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608682",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-608683",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608684",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608685",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-oakland-rehabilitation-and-healthcare-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "I had a wonderful experience during my visits at this rehabilitation facility.",
+        "id": "review-excerpt-mlc-external-608681",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-oakland-rehabilitation-and-healthcare-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21kcVRscGlSbVEyZWs1Uk1UWkJkRkV0VmkxeWFXYxAB!2m1!1s0x89c31d3a1f2b19c1:0xb167cab31a3101cc"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -639,6 +1227,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/oakland-rehabilitation-and-healthcare-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-oakland-rehabilitation-and-healthcare-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/oakland-rehabilitation-and-healthcare-center"
       }
     ]
@@ -654,8 +1252,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315178",
@@ -675,7 +1272,91 @@
         "sourceId": "review-release-additional-complete-care-at-orange-park"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-08",
+            "id": "mlc-external-608687",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2024-03",
+            "id": "mlc-external-608689",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608691",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608694",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-608695",
+            "sentiment": "negative"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-orange-park",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-08",
+        "excerpt": "I don't even believe they need a star.....",
+        "id": "review-excerpt-mlc-external-608687",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-08.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-orange-park",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tsdFNEVlZObWxDU0ZrNVRVMUxSREZmZW13NWQxRRAB!2m1!1s0x89c2550b3b9015c9:0xe4bcdcf1fe6b4b1"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-02",
+        "excerpt": "While the lobby looks clean, the upper floors did not reflect the same standard.",
+        "id": "review-excerpt-mlc-external-608691",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-02.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-orange-park",
+        "summary": "The reviewer contrasts a clean lobby with concerns about cleanliness and maintenance upstairs.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT210RU4yd3pTakZaVkhONFkyMW5lREZ6WmpOb2RHYxAB!2m1!1s0x89c2550b3b9015c9:0xe4bcdcf1fe6b4b1"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -685,6 +1366,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-orange-park"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-orange-park",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-orange-park"
       }
     ]
@@ -700,8 +1391,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315192",
@@ -721,7 +1411,62 @@
         "sourceId": "review-release-additional-alaris-health-at-kearny"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2025-10",
+            "id": "mlc-external-608718",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-608720",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-608722",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-608724",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-alaris-health-at-kearny",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2025-10",
+        "excerpt": "The facility is exceptionally clean, convenient, elegant, and welcoming.",
+        "id": "review-excerpt-mlc-external-608718",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2025-10.",
+          "Supported experience stage is tour."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-kearny",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tNMlJYRklPR1ZZZVhab2JsRmlSamhEU0ZnemVFRRAB!2m1!1s0x89c2546a9665d769:0x5547f853bfd9e24"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -731,6 +1476,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/alaris-health-at-kearny"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-alaris-health-at-kearny",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/alaris-health-at-kearny"
       }
     ]
@@ -746,8 +1501,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315194",
@@ -767,7 +1521,86 @@
         "sourceId": "review-release-additional-complete-care-at-st-vincents-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608730",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-608732",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608733",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608735",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-st-vincents-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-02",
+        "excerpt": "This was a terrible experience.",
+        "id": "review-excerpt-mlc-external-608730",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-02.",
+          "Supported experience stage is discharge."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-st-vincents-llc",
+        "summary": "The reviewer describes acceptable initial care but criticizes later communication and discharge support.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pKQ1JrazRaV3h0YWpNM1owNXpkbXBhZVcxWVNtYxAB!2m1!1s0x89c3018854c44029:0x7ab9d962bbe96c88"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "This is the place to go if you or family members need Rehab.",
+        "id": "review-excerpt-mlc-external-608732",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-st-vincents-llc",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xaR1JFZDFkVGxsTm5weGR6WlZPVUZRVTBGYVRWRRAB!2m1!1s0x89c3018854c44029:0x7ab9d962bbe96c88"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -777,6 +1610,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-st-vincents-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-st-vincents-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-st-vincents-llc"
       }
     ]
@@ -884,8 +1727,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315216",
@@ -905,7 +1747,115 @@
         "sourceId": "review-release-additional-complete-care-at-cedar-grove"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-external-608766",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608767",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608768",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-608769",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608771",
+            "sentiment": "mixed"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-cedar-grove",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "The rooms are covered in dirt and dust.",
+        "id": "review-excerpt-mlc-external-608766",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-cedar-grove",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tSRWQwRnZWbUpaWW1GUVVuRjVSM2wzWTJ0aldFRRAB!2m1!1s0x89c3017fec09bcb7:0x87064d427d3c5b6f"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-02",
+        "excerpt": "Beautiful place, clean but care, aside from nursing was non existent.",
+        "id": "review-excerpt-mlc-external-608771",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-02.",
+          "Supported experience stage is discharge."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-cedar-grove",
+        "summary": "The reviewer praises cleanliness and nurses but criticizes other services, food and administration.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWNFpFVnRXRzlLVEdaclpFNU1SR1ZUUkhCTWMyYxAB!2m1!1s0x89c3017fec09bcb7:0x87064d427d3c5b6f"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "This dosent just happen, it takes a lot of work and discipine.",
+        "id": "review-excerpt-mlc-external-608769",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-cedar-grove",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pKblFpMWhSMGhYYTJvNFlXNTJlRXRyTVZoQmNFRRAB!2m1!1s0x89c3017fec09bcb7:0x87064d427d3c5b6f"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -915,6 +1865,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-cedar-grove"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-cedar-grove",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-cedar-grove"
       }
     ]
@@ -976,8 +1936,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315234",
@@ -997,7 +1956,62 @@
         "sourceId": "review-release-additional-arbor-ridge-rehabilitation-and-healthcare-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-608821",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608823",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608827",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608829",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-arbor-ridge-rehabilitation-and-healthcare-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "The staff is phenomenal.",
+        "id": "review-excerpt-mlc-external-608823",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-arbor-ridge-rehabilitation-and-healthcare-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sUlZEazFaMUpDY1RaNVQwTktWWFY0YzB0blNsRRAB!2m1!1s0x89c31cd3cccf5195:0xd922cd06b3d910c2"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1007,6 +2021,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/arbor-ridge-rehabilitation-and-healthcare-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-arbor-ridge-rehabilitation-and-healthcare-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/arbor-ridge-rehabilitation-and-healthcare-center"
       }
     ]
@@ -1114,8 +2138,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315266",
@@ -1135,7 +2158,91 @@
         "sourceId": "review-release-additional-park-crescent-healthcare-rehabilitation-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-01",
+            "id": "mlc-external-608906",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2025-09",
+            "id": "mlc-external-608907",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2025-09",
+            "id": "mlc-external-608908",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2023-12",
+            "id": "mlc-external-608909",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2024-06",
+            "id": "mlc-external-608910",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-park-crescent-healthcare-rehabilitation-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2023-12",
+        "excerpt": "Very nice nursing home but I have only one negative thing to say about this place.",
+        "id": "review-excerpt-mlc-external-608909",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2023-12.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-park-crescent-healthcare-rehabilitation-center",
+        "summary": "The reviewer calls the home nice but raises an entrance-maintenance concern.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSURWcmZ1OFlnEAE!2m1!1s0x89c254dc9f6719b3:0x36acccbfb7314367"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2024-06",
+        "excerpt": "Very clean and polite staff.",
+        "id": "review-excerpt-mlc-external-608910",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2024-06.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-park-crescent-healthcare-rehabilitation-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUR6NG8yeTFRRRAB!2m1!1s0x89c254dc9f6719b3:0x36acccbfb7314367"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1145,6 +2252,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/park-crescent-healthcare-rehabilitation-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-park-crescent-healthcare-rehabilitation-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/park-crescent-healthcare-rehabilitation-center"
       }
     ]
@@ -1206,8 +2323,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315276",
@@ -1227,7 +2343,91 @@
         "sourceId": "review-release-additional-complete-care-at-milford-manor-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608922",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608924",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608926",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-11",
+            "id": "mlc-external-608928",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608930",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-milford-manor-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-04",
+        "excerpt": "Place is a little dated but my mom is getting great care there.",
+        "id": "review-excerpt-mlc-external-608922",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-04.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-milford-manor-llc",
+        "summary": "The reviewer describes a dated building but praises care, activities and responsiveness.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2psRlNtbDNhMGxPU0VseGVVd3pRM0pCV21oM1pFRRAB!2m1!1s0x89c31a6c8bfa6c9d:0x3b7a46f3e8f29263"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "One thing that really makes me smile is the way the staff engages in a kind and thoughtful manner with the residents!",
+        "id": "review-excerpt-mlc-external-608926",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-milford-manor-llc",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tvMFFWQlpVREZ1VnpaTFZEVm1jRkYzWDBKalYwRRAB!2m1!1s0x89c31a6c8bfa6c9d:0x3b7a46f3e8f29263"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1237,6 +2437,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-milford-manor-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-milford-manor-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-milford-manor-llc"
       }
     ]
@@ -1252,8 +2462,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315295",
@@ -1273,7 +2482,91 @@
         "sourceId": "review-release-additional-complete-care-at-regent-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608976",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-608977",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-608978",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-608979",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-608980",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-regent-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "One of my primary concerns is that the elevator seems to work one day and not the next.",
+        "id": "review-excerpt-mlc-external-608978",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-regent-llc",
+        "summary": "The reviewer praises some staff but criticizes maintenance, cleanliness and the care experience.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21scVFVMVBlbFp2WkRORVFUQk9ibGRwVHkweE1uYxAB!2m1!1s0x89c2f9d36f48da41:0x79b6291f53d52f71"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "However, both were treated with extraordinary kindness, respect and professionalism.",
+        "id": "review-excerpt-mlc-external-608977",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-regent-llc",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20xR1VFWTBRWGhZWjB0WVFtNWpSbXhHWVc5TFVFRRAB!2m1!1s0x89c2f9d36f48da41:0x79b6291f53d52f71"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1283,6 +2576,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-regent-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-regent-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-regent-llc"
       }
     ]
@@ -1298,8 +2601,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315300",
@@ -1319,7 +2621,91 @@
         "sourceId": "review-release-additional-alaris-health-at-hamilton-park"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608991",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-external-608992",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608993",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-608994",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-608995",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-alaris-health-at-hamilton-park",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2025-12",
+        "excerpt": "Please don’t waste your time in sending your loved ones here.",
+        "id": "review-excerpt-mlc-external-608992",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2025-12.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-hamilton-park",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xKcFQwdHRVMmRPYlRoeGRuUnFiWEl0VDJ4aVJIYxAB!2m1!1s0x89c2574bef141e0f:0x1ab88a0ab4f38c49"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "The place was beautiful and perfect for our sister.",
+        "id": "review-excerpt-mlc-external-608995",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-hamilton-park",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25GbmVIQXdWRVF6VEdaYU1WOUJVbUo0U25relRFRRAB!2m1!1s0x89c2574bef141e0f:0x1ab88a0ab4f38c49"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1329,6 +2715,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/alaris-health-at-hamilton-park"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-alaris-health-at-hamilton-park",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/alaris-health-at-hamilton-park"
       }
     ]
@@ -1390,8 +2786,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315307",
@@ -1411,7 +2806,91 @@
         "sourceId": "review-release-additional-complete-care-at-harborage-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609012",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609014",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609016",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609019",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609022",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-harborage-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "I cannot overlook the serious lack of transparency and communication this facility demonstrated with my family.",
+        "id": "review-excerpt-mlc-external-609016",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-harborage-llc",
+        "summary": "The reviewer praises floor staff but criticizes admission communication, transparency and family involvement.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tKMWRUUlpRbEpZV0dKTVR6TndiakI2UVVsYWNVRRAB!2m1!1s0x89c2599a57daf8d5:0xcb2c5832f4336fd5"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "My mother-in-law is very happy at the Complete Care at Harborage.",
+        "id": "review-excerpt-mlc-external-609012",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-harborage-llc",
+        "summary": "The reviewer describes a happy resident and appreciates the social environment and activities.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWcU1UUkhWRWgyUVRCT1NHeDViVUpKTTNKNVVuYxAB!2m1!1s0x89c2599a57daf8d5:0xcb2c5832f4336fd5"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1421,6 +2900,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-harborage-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-harborage-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-harborage-llc"
       }
     ]
@@ -1436,8 +2925,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315310",
@@ -1457,7 +2945,91 @@
         "sourceId": "review-release-additional-optima-care-harborview"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609026",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-609027",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609028",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-external-609029",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-609030",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-optima-care-harborview",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2025-12",
+        "excerpt": "I truly appreciated the call and feel so much better that someone actually listened to feedback and was grateful for it in the spirit of correcting errors and doing better going forward.",
+        "id": "review-excerpt-mlc-external-609029",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2025-12.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-optima-care-harborview",
+        "summary": "The reviewer reports unanswered calls and later appreciates an administrator responding to the complaint.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xkWGQweFZha0ZOUm05cFEySkxNWFpuTW5vNVNrRRAB!2m1!1s0x89c2574396fa0ef9:0xae57a8f9c14c93a6"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "The food is excellent and the rehabilitation department is amazing!",
+        "id": "review-excerpt-mlc-external-609026",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "resident",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-optima-care-harborview",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t0TFZIZGFOSEZwTkdwSU9GWlNRMWR1VHpOclkxRRAB!2m1!1s0x89c2574396fa0ef9:0xae57a8f9c14c93a6"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1467,6 +3039,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/optima-care-harborview"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-optima-care-harborview",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/optima-care-harborview"
       }
     ]
@@ -1482,8 +3064,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315313",
@@ -1503,7 +3084,91 @@
         "sourceId": "review-release-additional-careone-at-cresskill"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609041",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-609042",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-08",
+            "id": "mlc-external-609043",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609044",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609045",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-careone-at-cresskill",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-08",
+        "excerpt": "Never again. Look somewhere else.",
+        "id": "review-excerpt-mlc-external-609043",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-08.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-careone-at-cresskill",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21WT05uTlhUaTF3VTIxbE9XcEZOelZTTTI0d1RHYxAB!2m1!1s0x89c2f1e711abb005:0xb1428a920b2dfac0"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "The staff are incredibly kind, attentive, and genuinely caring.",
+        "id": "review-excerpt-mlc-external-609041",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-careone-at-cresskill",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xsZlgwVk9TRmR1VjFaTVVIUmxUVTVKTFdaMFozYxAB!2m1!1s0x89c2f1e711abb005:0xb1428a920b2dfac0"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1513,6 +3178,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/careone-at-cresskill"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-careone-at-cresskill",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/careone-at-cresskill"
       }
     ]
@@ -1528,8 +3203,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315331",
@@ -1549,7 +3223,91 @@
         "sourceId": "review-release-additional-complete-care-at-fair-lawn-edge"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609096",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609097",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609098",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609099",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2025-01",
+            "id": "mlc-external-609100",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-fair-lawn-edge",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "I went in, lobby personnel we're very polite.",
+        "id": "review-excerpt-mlc-external-609099",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-fair-lawn-edge",
+        "summary": "The reviewer describes polite reception and both good and bad days.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tKdGVEZzRWR2R2VW01aGVXb3lhVGM0UWt0ZmFHYxAB!2m1!1s0x89c2fc73dba9224b:0x5e20c885785a1f39"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "They are a wonderful set of residence and we love them all so very much.",
+        "id": "review-excerpt-mlc-external-609096",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "visitor",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-fair-lawn-edge",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25kVE5qbFpOWE5vYVRaU1RuaEthRVZDTUhZMFJFRRAB!2m1!1s0x89c2fc73dba9224b:0x5e20c885785a1f39"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1559,6 +3317,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-fair-lawn-edge"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-fair-lawn-edge",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-fair-lawn-edge"
       }
     ]
@@ -1574,8 +3342,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315339",
@@ -1595,7 +3362,62 @@
         "sourceId": "review-release-additional-careone-at-oradell"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609107",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-609109",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609113",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609115",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-careone-at-oradell",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "His room was cozy and comfortable, and the common areas provided a warm and pleasant environment to relax, socialize, or participate in activities.",
+        "id": "review-excerpt-mlc-external-609107",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is discharge."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-careone-at-oradell",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2paMWNuUm1OVGxaZVRjeVkzaERiMHhLTTJ0TVdFRRAB!2m1!1s0x89c2e55542d67c6f:0x511f8d97e97618ea"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1605,6 +3427,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/careone-at-oradell"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-careone-at-oradell",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/careone-at-oradell"
       }
     ]
@@ -1666,8 +3498,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315343",
@@ -1687,7 +3518,91 @@
         "sourceId": "review-release-additional-broadway-house-for-continuing-care"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2025-12",
+            "id": "mlc-external-609121",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-07",
+            "id": "mlc-external-609122",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2016-08",
+            "id": "mlc-external-609123",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2020-07",
+            "id": "mlc-external-609124",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2019-10",
+            "id": "mlc-external-609125",
+            "sentiment": "negative"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-broadway-house-for-continuing-care",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2019-10",
+        "excerpt": "They contradict themselves all the time, my brother was send there n they didn’t even give him the proper treatment!",
+        "id": "review-excerpt-mlc-external-609125",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2019-10.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-broadway-house-for-continuing-care",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUMweGVDSDRBRRAB!2m1!1s0x89c254606679eefd:0x5645825e903a0154"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2025-12",
+        "excerpt": "We continue to be grateful and thankful for your continued support and partnership in caring for our loved one.",
+        "id": "review-excerpt-mlc-external-609121",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2025-12.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-broadway-house-for-continuing-care",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT214b1pIZGZiMWRPVVdwdU9XWTBZV1V0TFZwNVExRRAB!2m1!1s0x89c254606679eefd:0x5645825e903a0154"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1697,6 +3612,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/broadway-house-for-continuing-care"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-broadway-house-for-continuing-care",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/broadway-house-for-continuing-care"
       }
     ]
@@ -1712,8 +3637,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315344",
@@ -1733,7 +3657,91 @@
         "sourceId": "review-release-additional-optima-care-castle-hill"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609126",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2024-10",
+            "id": "mlc-external-609127",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-01",
+            "id": "mlc-external-609128",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-02",
+            "id": "mlc-external-609129",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-06",
+            "id": "mlc-external-609130",
+            "sentiment": "negative"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-optima-care-castle-hill",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-04",
+        "excerpt": "This facility is terrible, Do not trust them with your loved ones.",
+        "id": "review-excerpt-mlc-external-609126",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-04.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-optima-care-castle-hill",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pJNWVXMUhaalI0WmpsNWRXUTRiVGxhWWxFM1owRRAB!2m1!1s0x89c257cc58712c23:0x15e3ef0a96a95c6d"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-01",
+        "excerpt": "Castle Hill has been very helpful for me and my family when it comes to elderly care.",
+        "id": "review-excerpt-mlc-external-609128",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-01.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-optima-care-castle-hill",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pSZlptZzBSbXRPVjFoZk0zcFRjbFpVWjNoaGNrRRAB!2m1!1s0x89c257cc58712c23:0x15e3ef0a96a95c6d"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1743,6 +3751,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/optima-care-castle-hill"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-optima-care-castle-hill",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/optima-care-castle-hill"
       }
     ]
@@ -1758,8 +3776,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315348",
@@ -1779,7 +3796,91 @@
         "sourceId": "review-release-additional-health-center-at-bloomingdale"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609136",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609137",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609138",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2025-04",
+            "id": "mlc-external-609139",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2024-10",
+            "id": "mlc-external-609140",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-health-center-at-bloomingdale",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "Trash left in the room for 4 to 5 days",
+        "id": "review-excerpt-mlc-external-609138",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is discharge."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-health-center-at-bloomingdale",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21ONlRuWjJURkF3YWpCRk9EUjZUbTlzUW5GSWIzYxAB!2m1!1s0x89c31bf0a94110b3:0x903149625c052485"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "The food was good and the facility was clean.",
+        "id": "review-excerpt-mlc-external-609136",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-health-center-at-bloomingdale",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xKcVpYWnJhVzQwUkZOSVJuQkpPSFZtTFVWdE9IYxAB!2m1!1s0x89c31bf0a94110b3:0x903149625c052485"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1789,6 +3890,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/health-center-at-bloomingdale"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-health-center-at-bloomingdale",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/health-center-at-bloomingdale"
       }
     ]
@@ -1804,8 +3915,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315349",
@@ -1825,7 +3935,115 @@
         "sourceId": "review-release-additional-complete-care-at-inglemoor-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-305897",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-305898",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-305899",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-305900",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-305901",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-inglemoor-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "I was not even provided a made bed with not even one pillow.",
+        "id": "review-excerpt-mlc-external-305899",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "resident",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-inglemoor-llc",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tsRFlsODVVbDlQYUd3eGFWaHJTRlZaVkhKb1kxRRAB!2m1!1s0x89c2f128a50cec61:0x4ddac6754b9180f1"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-02",
+        "excerpt": "She takes the time to ensure residents are comfortable, listens to their concerns, and treats them with genuine dignity and respect.",
+        "id": "review-excerpt-mlc-external-305900",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-02.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-inglemoor-llc",
+        "summary": "The reviewer praises an individual staff member while criticizing the food.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pWbU5VeDJOR1IzT1c1b2Vra3hhblZ5ZFhkVVpFRRAB!2m1!1s0x89c2f128a50cec61:0x4ddac6754b9180f1"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "Residents and patients all well groomed and engaged, staff all friendly and responsive.",
+        "id": "review-excerpt-mlc-external-305897",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-inglemoor-llc",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21sVFFuTnJOVTF5TVdWcFZubEdPR0p3ZDNWc2FsRRAB!2m1!1s0x89c2f128a50cec61:0x4ddac6754b9180f1"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1835,6 +4053,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-inglemoor-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-inglemoor-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-inglemoor-llc"
       }
     ]
@@ -1896,8 +4124,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315357",
@@ -1917,7 +4144,86 @@
         "sourceId": "review-release-additional-alaris-health-at-cedar-grove"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609161",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609163",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609164",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2018-10",
+            "id": "mlc-external-609165",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-alaris-health-at-cedar-grove",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-04",
+        "excerpt": "Very disappointed.",
+        "id": "review-excerpt-mlc-external-609164",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-04.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-cedar-grove",
+        "summary": "The reviewer praises the initial environment but reports dissatisfaction with later care.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tOV2RHOXpWMFF4WTBSVE5YQnhkemQ0TldONFRWRRAB!2m1!1s0x89c30015930474e1:0xb5b25334dd4d01dd"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "Every staff member I encountered was friendly, compassionate, and treated residents with dignity and respect.",
+        "id": "review-excerpt-mlc-external-609161",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-cedar-grove",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xCRVFWOVlTR2xzWkRSYWRFRnpkbFpmWTNGNVVYYxAB!2m1!1s0x89c30015930474e1:0xb5b25334dd4d01dd"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1927,6 +4233,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/alaris-health-at-cedar-grove"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-alaris-health-at-cedar-grove",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/alaris-health-at-cedar-grove"
       }
     ]
@@ -1942,8 +4258,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315359",
@@ -1963,7 +4278,67 @@
         "sourceId": "review-release-additional-alliance-care-rehabilitation-and-nursing-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609166",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609167",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-01",
+            "id": "mlc-external-609168",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609170",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609172",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-alliance-care-rehabilitation-and-nursing-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "I’d definitely trust my family members to be cared for with dignity and respect at alliance in Irvington.",
+        "id": "review-excerpt-mlc-external-609167",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alliance-care-rehabilitation-and-nursing-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xaVVVsRjRURmh0T1dzMVNqbHpXRkY0UmxSU04yYxAB!2m1!1s0x89c3ad3c1a9bb4df:0x2cda44a429dbc15b"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -1973,6 +4348,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/alliance-care-rehabilitation-and-nursing-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-alliance-care-rehabilitation-and-nursing-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/alliance-care-rehabilitation-and-nursing-center"
       }
     ]
@@ -1988,8 +4373,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315361",
@@ -2009,7 +4393,67 @@
         "sourceId": "review-release-additional-preakness-healthcare-center"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-01",
+            "id": "mlc-external-609176",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-02",
+            "id": "mlc-external-609177",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2021-02",
+            "id": "mlc-external-609178",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2021-07",
+            "id": "mlc-external-609179",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2022-12",
+            "id": "mlc-external-609180",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-preakness-healthcare-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-01",
+        "excerpt": "The staff were always supportive, friendly, and attentive to not only her needs but those of our family.",
+        "id": "review-excerpt-mlc-external-609176",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-01.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-preakness-healthcare-center",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2w5Uk1ESnBVMFZOVEdNMVoyaHRObUZQVWpnMGNWRRAB!2m1!1s0x89c2fd8e0329db29:0x18be5e7b557ac056"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2019,6 +4463,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/preakness-healthcare-center"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-preakness-healthcare-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/preakness-healthcare-center"
       }
     ]
@@ -2034,8 +4488,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315366",
@@ -2055,7 +4508,115 @@
         "sourceId": "review-release-additional-alaris-health-at-belgrove"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609201",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-609202",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609203",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609204",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-609205",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-alaris-health-at-belgrove",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "They changed his room and did not update the front desk, meanwhile I walked into the wrong room and had to search for my son.",
+        "id": "review-excerpt-mlc-external-609203",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-belgrove",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21rNGFWWXRlbHAyVTFOMlNYWXlXbUp1ZUZKcFNXYxAB!2m1!1s0x89c2546815855d2b:0x7928c73a781f1e78"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-04",
+        "excerpt": "The experience there was not a good one.",
+        "id": "review-excerpt-mlc-external-609201",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-04.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-belgrove",
+        "summary": "The reviewer praises nursing and therapy but criticizes maintenance and the overall stay.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pjNVpGTjZTRlV5ZW1JemN6SmxWVFoyWkVoWVVYYxAB!2m1!1s0x89c2546815855d2b:0x7928c73a781f1e78"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-04",
+        "excerpt": "The staff and faculty have great service.",
+        "id": "review-excerpt-mlc-external-609204",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-04.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-belgrove",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tSdmNGSmlVVTlrT1d4M2EydGpSVE5NTmxWUVdHYxAB!2m1!1s0x89c2546815855d2b:0x7928c73a781f1e78"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2065,6 +4626,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/alaris-health-at-belgrove"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-alaris-health-at-belgrove",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/alaris-health-at-belgrove"
       }
     ]
@@ -2172,8 +4743,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315413",
@@ -2193,7 +4763,86 @@
         "sourceId": "review-release-additional-peace-care-st-ann-s"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609301",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609302",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609303",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-external-609304",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-peace-care-st-ann-s",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "However, many of the nursing assistants and some nurses were rude, inattentive, and incompetent.",
+        "id": "review-excerpt-mlc-external-609301",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is discharge."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-peace-care-st-ann-s",
+        "summary": "The reviewer praises activities and social interaction but criticizes staff behavior and responsiveness.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWQ1dEWkZNRzlRVlUweFYyTkhVMFp3VDNGWVNsRRAB!2m1!1s0x89c2510949323cd9:0x137209e592cd691f"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "Every interaction has demonstrated a sincere commitment to the residents and their well-being.",
+        "id": "review-excerpt-mlc-external-609302",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-peace-care-st-ann-s",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pRdGQxTnRkRXBrZFhwRlNVRnhhREJhYm5ReWIzYxAB!2m1!1s0x89c2510949323cd9:0x137209e592cd691f"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2203,6 +4852,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/peace-care-st-ann-s"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-peace-care-st-ann-s",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/peace-care-st-ann-s"
       }
     ]
@@ -2218,8 +4877,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315426",
@@ -2239,7 +4897,67 @@
         "sourceId": "review-release-additional-careone-at-ridgewood-avenue"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-external-305959",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-305960",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-305961",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-305962",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-305963",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-careone-at-ridgewood-avenue",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "Throughout my entire stay, every member of the team was warm, welcoming, engaging, kind, and compassionate.",
+        "id": "review-excerpt-mlc-external-305961",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "resident",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-careone-at-ridgewood-avenue",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT201NExWUXlRall6Y2xaeU5FaDBabmxZV0ZwVFpHYxAB!2m1!1s0x89c2e4d3ad2bbf5f:0x335fc34183692601"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2249,6 +4967,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/careone-at-ridgewood-avenue"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-careone-at-ridgewood-avenue",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/careone-at-ridgewood-avenue"
       }
     ]
@@ -2264,8 +4992,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315449",
@@ -2285,7 +5012,115 @@
         "sourceId": "review-release-additional-alaris-health-at-west-orange"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609381",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609382",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-609383",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609384",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609385",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-alaris-health-at-west-orange",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "Please, please, please think twice before placing your loved one here.",
+        "id": "review-excerpt-mlc-external-609381",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-west-orange",
+        "summary": "The reviewer contrasts an earlier favorable family experience with a current negative experience.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tWVFlYZGZVM2RJVms1UWRWTnFVMEZDVUZGQldWRRAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "Best thing was the PT. And leaving that place.",
+        "id": "review-excerpt-mlc-external-609384",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-west-orange",
+        "summary": "The reviewer praises therapy but criticizes other parts of the stay.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25KVmMyMWxTamxQTldSaVpGRkhOalZaWkcxdExWRRAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "The staff was also very friendly and welcoming and they made sure that I was properly accommodated.",
+        "id": "review-excerpt-mlc-external-609382",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-west-orange",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21NM1VXWldZbVpzTVZaUVpsUkpTR1pDWTJacGFtYxAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2295,6 +5130,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/alaris-health-at-west-orange"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-alaris-health-at-west-orange",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/alaris-health-at-west-orange"
       }
     ]
@@ -2310,8 +5155,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315452",
@@ -2331,7 +5175,67 @@
         "sourceId": "review-release-additional-peace-care-st-joseph-s"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609391",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609392",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-01",
+            "id": "mlc-external-609393",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-external-609395",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609397",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-peace-care-st-joseph-s",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "Staff was very helpful and friendly.",
+        "id": "review-excerpt-mlc-external-609397",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-peace-care-st-joseph-s",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tOQ2VWYzRTbWxmUlVwVlpucFZOVUY1VWtwQlRuYxAB!2m1!1s0x89c257369f7d9c5f:0x6c9e9626d0168807"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2341,6 +5245,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/peace-care-st-joseph-s"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-peace-care-st-joseph-s",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/peace-care-st-joseph-s"
       }
     ]
@@ -2356,8 +5270,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315460",
@@ -2377,7 +5290,91 @@
         "sourceId": "review-release-additional-complete-care-at-prospect-heights-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609408",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609410",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609412",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609414",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-08",
+            "id": "mlc-external-609415",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-complete-care-at-prospect-heights-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "Please give the patients better food to eat…didn’t look too appealing…these folks deserve nice food!",
+        "id": "review-excerpt-mlc-external-609412",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "visitor",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-prospect-heights-llc",
+        "summary": "The reviewer reports a pleasant visit and a clean facility but criticizes the food.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tKdlIycHdYMHQwWm5wU2NVMVVWVXBxYjBWSWRIYxAB!2m1!1s0x89c2fb23049f8fb7:0x84767d1ccfd551b5"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-08",
+        "excerpt": "The people there is very nice and helpful, I appreciate everything the staffs have treated one of mine family member.",
+        "id": "review-excerpt-mlc-external-609415",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-08.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-complete-care-at-prospect-heights-llc",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4V09IVjRkVzF0ZVRnNU0xcFVOakZvY0ZNMGNsRRAB!2m1!1s0x89c2fb23049f8fb7:0x84767d1ccfd551b5"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2387,6 +5384,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-prospect-heights-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-complete-care-at-prospect-heights-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/complete-care-at-prospect-heights-llc"
       }
     ]
@@ -2448,8 +5455,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315494",
@@ -2469,7 +5475,115 @@
         "sourceId": "review-release-additional-alaris-health-at-the-chateau"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-03",
+            "id": "mlc-external-609487",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609488",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-609489",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609490",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-external-609491",
+            "sentiment": "negative"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-alaris-health-at-the-chateau",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-05",
+        "excerpt": "I would strongly recommend against sending your loved one to this facility.",
+        "id": "review-excerpt-mlc-external-609491",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-05.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-the-chateau",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21sVVFUZFpaak0zZDNodWRUWndURU5OTjFGQ1RuYxAB!2m1!1s0x89c2fa325f9a6cd1:0x37e3f6c79e2a73e5"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "mixed"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "Food options ok but repetitive and not great.",
+        "id": "review-excerpt-mlc-external-609488",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-the-chateau",
+        "summary": "The reviewer praises therapy and some nurses but criticizes rooms, meals, activities and response times.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xCZmFHMXFZMll4ZDJrd1gzVmpVVVZHYnpReFJVRRAB!2m1!1s0x89c2fa325f9a6cd1:0x37e3f6c79e2a73e5"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "The staff is very sincere with their care towards my mother.",
+        "id": "review-excerpt-mlc-external-609489",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-alaris-health-at-the-chateau",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xaTVIyUkZOSEZrWkZCRmVtOWpWbkZvTWkxbVdXYxAB!2m1!1s0x89c2fa325f9a6cd1:0x37e3f6c79e2a73e5"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2479,6 +5593,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/alaris-health-at-the-chateau"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-alaris-health-at-the-chateau",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/alaris-health-at-the-chateau"
       }
     ]
@@ -2494,8 +5618,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "cms-315507",
@@ -2515,7 +5638,67 @@
         "sourceId": "review-release-additional-barnert-subacute-rehabilitation-center-llc"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-04",
+            "id": "mlc-external-609509",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-external-609511",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2023-02",
+            "id": "mlc-external-609513",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-07",
+            "id": "mlc-external-609515",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-06",
+            "id": "mlc-external-609516",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-barnert-subacute-rehabilitation-center-llc",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "Staff was great.",
+        "id": "review-excerpt-mlc-external-609516",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "resident",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-barnert-subacute-rehabilitation-center-llc",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25jNU5Xb3lVMGt3WVRjdFJERjVUUzF0WjFCRmRIYxAB!2m1!1s0x89c2fc6b01f7a2e7:0x319d492ef330e7b1"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2525,6 +5708,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/barnert-subacute-rehabilitation-center-llc"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-barnert-subacute-rehabilitation-center-llc",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/barnert-subacute-rehabilitation-center-llc"
       }
     ]
@@ -2632,8 +5825,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "north-jersey-doh-nj13a012",
@@ -2653,7 +5845,67 @@
         "sourceId": "review-release-release-arbor-terrace-morris-plains"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-08",
+            "id": "mlc-external-628887",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-08",
+            "id": "mlc-external-628888",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-08",
+            "id": "mlc-external-628889",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-08",
+            "id": "mlc-external-628890",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-628891",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-release-arbor-terrace-morris-plains",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-08",
+        "excerpt": "They take such a great care of my grandma.",
+        "id": "review-excerpt-mlc-external-628887",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-08.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-arbor-terrace-morris-plains",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25WS1VETnNNM3BzYjAxcE9HNXBaV1pVYjBkdFpYYxAB!2m1!1s0x0:0xf6be9150c722c8a6!3m1!1s2@1:CAIQACodChtycF9oOnVKUDNsM3psb01pOG5pZWZUb0dtZXc%7C%7C?hl=en-US"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2663,6 +5915,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/arbor-terrace-morris-plains"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-arbor-terrace-morris-plains",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/arbor-terrace-morris-plains"
       }
     ]
@@ -2724,8 +5986,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "north-jersey-doh-nj30225",
@@ -2745,7 +6006,62 @@
         "sourceId": "review-release-additional-bright-side-manor"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-06",
+            "id": "mlc-external-426151",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-426152",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-05",
+            "id": "mlc-external-426153",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-external-426154",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-bright-side-manor",
+        "visibleCount": 4
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-06",
+        "excerpt": "The people that work there are so kind and helped my dad adjust.",
+        "id": "review-excerpt-mlc-external-426151",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-06.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-bright-side-manor",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tORVlXeG1RamRHZVdKUWJHUnBaalpvU2xCbmNtYxAB!2m1!1s0x89c2f70065fe6c4f:0x71769c616c90fc13"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2755,6 +6071,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/bright-side-manor"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-bright-side-manor",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/bright-side-manor"
       }
     ]
@@ -2770,8 +6096,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "north-jersey-doh-nj60a001",
@@ -2791,7 +6116,67 @@
         "sourceId": "review-release-release-brighton-gardens-of-florham-park"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-external-628917",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-628918",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-628919",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-02",
+            "id": "mlc-external-628920",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-05",
+            "id": "mlc-external-628921",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-release-brighton-gardens-of-florham-park",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-03",
+        "excerpt": "Even though, unfortunately, my aunt needed to be moved to a skilled nursing facility, it is a great comfort to know that the time she lived at Sunrise Brighton Gardens, she was well-care for.",
+        "id": "review-excerpt-mlc-external-628918",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-03.",
+          "Supported experience stage is former resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-brighton-gardens-of-florham-park",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2psVWNtd3RUbWhuVjFObFgwaFNOekoyZW0xWlJFRRAB!2m1!1s0x0:0x4ab3a5416d10ae4!3m1!1s2@1:CAIQACodChtycF9oOjlUcmwtTmhnV1NlX0hSNzJ2em1ZREE%7C%7C?hl=en-US"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2801,6 +6186,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-florham-park"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-brighton-gardens-of-florham-park",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-florham-park"
       }
     ]
@@ -2816,8 +6211,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "north-jersey-doh-nj60a004",
@@ -2837,7 +6231,67 @@
         "sourceId": "review-release-additional-victoria-mews-assisted-living"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-external-426353",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-426354",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-external-426355",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-external-426356",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-external-426357",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-victoria-mews-assisted-living",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-07",
+        "excerpt": "I have honestly never seen a friendlier place.",
+        "id": "review-excerpt-mlc-external-426355",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-07.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "visitor",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-victoria-mews-assisted-living",
+        "summary": "The reviewer describes a friendly environment and kind staff during visits to a friend.",
+        "url": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2paRVdVczVTMDB3ZDNWM01YWlVSM2hNWWsxc2RIYxAB!2m1!1s0x89c3089654bfdd33:0xfc1696df943e6098"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -2847,6 +6301,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/victoria-mews-assisted-living"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-victoria-mews-assisted-living",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/victoria-mews-assisted-living"
       }
     ]
@@ -3138,8 +6602,7 @@
     "facts": [],
     "notes": [
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
-      "Reported counts are not unique people. Unknown cross-posting may remain.",
-      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+      "Reported counts are not unique people. Unknown cross-posting may remain."
     ],
     "providerDetailsReviewed": false,
     "providerId": "north-jersey-doh-njlrr782",
@@ -3159,7 +6622,86 @@
         "sourceId": "review-release-additional-mill-gardens-at-midland-park"
       }
     ],
-    "reviews": [],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2025-06",
+            "id": "mlc-external-560797",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2022-07",
+            "id": "mlc-external-560799",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-09",
+            "id": "mlc-external-656247",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-08",
+            "id": "mlc-external-656248",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-additional-mill-gardens-at-midland-park",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "negative"
+          }
+        ],
+        "date": "2026-09",
+        "excerpt": "Severely toxic environment!",
+        "id": "review-excerpt-mlc-external-656247",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-09.",
+          "Supported experience stage is unknown."
+        ],
+        "rating": null,
+        "relationship": "unknown",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-mill-gardens-at-midland-park",
+        "summary": "The reviewer gives a critical account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25OT1pEUnRRV3BLVW5kWFkzTnRaWGt3Y1U5Nk5FRRAB!2m1!1s0x0:0xfe88e1547637f39d!3m1!1s2@1:CAIQACodChtycF9oOnNOZDRtQWpKUndXY3NtZXkwcU96NEE%7C%7C?hl=en-US"
+      },
+      {
+        "aspects": [
+          {
+            "aspect": "consumer experience",
+            "sentiment": "positive"
+          }
+        ],
+        "date": "2026-08",
+        "excerpt": "Very nice and clean place.",
+        "id": "review-excerpt-mlc-external-656248",
+        "notes": [
+          "Original public consumer quotation. Summary is a separate editorial paraphrase. Not scored.",
+          "Selected from the complete retained visible population, not a representative sample.",
+          "Source family is google. MyLivingChoice is the carrier, not an additional independent source.",
+          "Published month 2026-08.",
+          "Supported experience stage is current resident."
+        ],
+        "rating": null,
+        "relationship": "family",
+        "scale": null,
+        "sourceId": "review-excerpt-mlc-mill-gardens-at-midland-park",
+        "summary": "The reviewer gives a positive account of the location.",
+        "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pkVGJrWmpPSE5RTjJjeVRrVmtUM1F3ZUdOaU1IYxAB!2m1!1s0x0:0xfe88e1547637f39d!3m1!1s2@1:CAIQACodChtycF9oOjdTbkZjOHNQN2cyTkVkT3QweGNiMHc%7C%7C?hl=en-US"
+      }
+    ],
     "sources": [
       {
         "access": "full-page",
@@ -3169,6 +6711,16 @@
         "publishedAt": null,
         "publisher": "MyLivingChoice",
         "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/mill-gardens-at-midland-park"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-12",
+        "id": "review-excerpt-mlc-mill-gardens-at-midland-park",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "Google via MyLivingChoice",
+        "title": "MyLivingChoice public consumer reviews",
         "url": "https://www.mylivingchoice.com/property/mill-gardens-at-midland-park"
       }
     ]

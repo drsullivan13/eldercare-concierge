@@ -13,15 +13,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 6000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 8700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 9300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 12000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 13100,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 9600,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The operator describes three meals a day and snacks at the bistro."
   },
   {
     "providerId": "north-jersey-doh-nj20a014",
@@ -35,15 +81,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 8700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 10400,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 11100,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 13600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 14800,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 11000,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The operator describes three meals a day and snacks at the bistro."
   },
   {
     "providerId": "north-jersey-doh-nj90117",
@@ -59,15 +151,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 4800,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 5300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 5900,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 10600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 11500,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 8900,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj60a009",
@@ -82,15 +220,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 7700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 8700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 10300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 12200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 13100,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 9400,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj60a012",
@@ -106,15 +290,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 6500,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 7600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 9200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 11300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 13200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 10000,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-njal14003",
@@ -128,15 +358,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
-        "min": 5800,
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
+        "min": 6200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 8000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 9200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 10900,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 12600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 9600,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The operator describes three meals a day and snacks at the bistro."
   },
   {
     "providerId": "north-jersey-doh-nj90122",
@@ -160,7 +436,14 @@
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "dining": "The operator describes three meals a day and snacks at the bistro.",
+    "practicalFacts": [
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ]
   },
   {
     "providerId": "north-jersey-doh-nj60a001",
@@ -175,15 +458,43 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 4500,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 6300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 10000,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj70a001",
@@ -199,15 +510,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 4200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 4600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 4800,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 9500,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 9700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 7700,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj05a200",
@@ -223,15 +580,49 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
-        "min": 5100,
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
+        "min": 5300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 7900,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 9700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 9600,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj07a030",
@@ -245,15 +636,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
-        "min": 6900,
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
+        "min": 7900,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 9600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 11700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 11300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 13600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 10200,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj25284",
@@ -267,15 +704,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
-        "min": 5900,
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
+        "min": 6000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 10200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 10700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 12000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 13600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 10200,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj30a004",
@@ -290,15 +773,43 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 4200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 6200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 10800,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj5a002",
@@ -313,15 +824,49 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
-        "min": 5200,
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
+        "min": 5300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 6100,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 10100,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 8200,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj5a007",
@@ -337,15 +882,61 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 3900,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 4000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 5000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 9300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care one bedroom starting room rate before separately assessed care fees",
+        "min": 10000,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 8000,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, one bedroom, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj5a008",
@@ -361,15 +952,55 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 7900,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 8200,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living two bedroom starting room rate before separately assessed care fees",
+        "min": 8600,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care studio starting room rate before separately assessed care fees",
+        "min": 10700,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 9500,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom, two bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: studio, companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj90103",
@@ -385,15 +1016,43 @@
     ],
     "rates": [
       {
-        "label": "Starting suite price, care charges may be additional",
+        "label": "Assisted Living studio starting room rate before separately assessed care fees",
         "min": 3300,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Assisted Living one bedroom starting room rate before separately assessed care fees",
+        "min": 4100,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory Care companion suite starting room rate before separately assessed care fees",
+        "min": 7000,
         "period": "month",
         "type": "base-rent"
       }
     ],
     "inquiry": true,
     "checkedAt": "2026-11-12",
-    "asOf": null
+    "asOf": null,
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Assisted Living floor plans with published room rates: studio, one bedroom."
+      },
+      {
+        "kind": "room",
+        "text": "Memory Care floor plans with published room rates: companion suite."
+      },
+      {
+        "kind": "amenity",
+        "text": "The location lists an on-site beauty salon."
+      }
+    ],
+    "rateNote": "These are starting room rates. Care charges depend on an assessment and availability; request an itemized quote.",
+    "dining": "The location lists tableside dining with dietary preferences and a bistro for snacks."
   },
   {
     "providerId": "north-jersey-doh-nj5a004",
@@ -697,7 +1356,7 @@
     "publisher": "Erickson Senior Living",
     "title": "Cedar Crest independent living pricing in Pompton Plains",
     "url": "https://www.ericksonseniorliving.com/cedar-crest/pricing",
-    "address": "1 Cedar Crest Drive, Pompton Plains, NJ 07444",
+    "address": "1 Cedar Crest Village Drive, Pompton Plains, NJ 07444",
     "identityUrl": "https://development.ericksonseniorliving.com/portfolio/cedar-crest",
     "priorityUrl": "https://www.ericksonseniorliving.com/cedar-crest/pricing/priority-list",
     "services": [
@@ -705,7 +1364,7 @@
     ],
     "rates": [
       {
-        "label": "Independent living Studio entrance fee",
+        "label": "Independent living Studio entrance fee (90% refundable under the residence agreement)",
         "min": 164000,
         "max": 239000,
         "period": "one-time",
@@ -719,7 +1378,7 @@
         "type": "other"
       },
       {
-        "label": "Independent living 1 Bedroom, 1 Bath entrance fee",
+        "label": "Independent living 1 Bedroom, 1 Bath entrance fee (90% refundable under the residence agreement)",
         "min": 179000,
         "max": 377000,
         "period": "one-time",
@@ -733,7 +1392,7 @@
         "type": "other"
       },
       {
-        "label": "Independent living Large 1 Bedroom, 1 or 1.5 Bath entrance fee",
+        "label": "Independent living Large 1 Bedroom, 1 or 1.5 Bath entrance fee (90% refundable under the residence agreement)",
         "min": 316000,
         "max": 561000,
         "period": "one-time",
@@ -747,7 +1406,7 @@
         "type": "other"
       },
       {
-        "label": "Independent living 1 Bedroom, 1 or 1.5 Bath With Den entrance fee",
+        "label": "Independent living 1 Bedroom, 1 or 1.5 Bath With Den entrance fee (90% refundable under the residence agreement)",
         "min": 337000,
         "max": 446000,
         "period": "one-time",
@@ -761,7 +1420,7 @@
         "type": "other"
       },
       {
-        "label": "Independent living 2 Bedroom, 1 or 1.5 Bath entrance fee",
+        "label": "Independent living 2 Bedroom, 1 or 1.5 Bath entrance fee (90% refundable under the residence agreement)",
         "min": 374000,
         "max": 563000,
         "period": "one-time",
@@ -775,7 +1434,7 @@
         "type": "other"
       },
       {
-        "label": "Independent living 2 Bedroom, 2 Bath entrance fee",
+        "label": "Independent living 2 Bedroom, 2 Bath entrance fee (90% refundable under the residence agreement)",
         "min": 475000,
         "max": 820000,
         "period": "one-time",
@@ -789,7 +1448,7 @@
         "type": "other"
       },
       {
-        "label": "Independent living Luxury 2 Bedroom, 2 Bath with Balcony, Sunroom, and/or Den entrance fee",
+        "label": "Independent living Luxury 2 Bedroom, 2 Bath with Balcony, Sunroom, and/or Den entrance fee (90% refundable under the residence agreement)",
         "min": 728000,
         "max": 1343000,
         "period": "one-time",
@@ -801,12 +1460,36 @@
         "max": 6263,
         "period": "month",
         "type": "other"
+      },
+      {
+        "label": "Independent living second-person monthly service fee",
+        "min": 1486,
+        "period": "month",
+        "type": "other",
+        "exact": true
       }
     ],
     "inquiry": false,
-    "rateNote": "The operator states that these reference fees change January 1, 2027. Independent living prices apply to apartments on the campus. Continuing-care units have separate pricing.",
+    "rateNote": "Independent living entrance fees are 90% refundable under the residence agreement. Each apartment requires both an entrance fee and a monthly package. This operator schedule changes January 1, 2027. Continuing care is priced separately.",
     "asOf": null,
-    "checkedAt": "2026-11-12"
+    "checkedAt": "2026-11-12",
+    "operatorAddress": "1 Cedar Crest Drive, Pompton Plains, NJ 07444",
+    "identityEvidence": {
+      "publisher": "New Jersey Department of Community Affairs",
+      "title": "Continuing care retirement community guide, Morris County campus listings",
+      "url": "https://www.nj.gov/dca/codes/publications/pdf_ccrc/ccrc2011.pdf"
+    },
+    "dining": "The independent living monthly service package includes a meal plan at campus restaurants.",
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Independent living apartments include studios and one- or two-bedroom layouts. Some offer a den, balcony or sunroom."
+      },
+      {
+        "kind": "amenity",
+        "text": "The campus monthly package includes utilities, home maintenance, scheduled transportation, fitness center and pool access."
+      }
+    ]
   },
   {
     "providerId": "north-jersey-hp-hp0427400",
@@ -922,5 +1605,127 @@
     "checkedAt": "2026-11-12",
     "asOf": "2026-11-10",
     "inquiry": false
+  },
+  {
+    "providerId": "cms-315307",
+    "category": "nursing-home",
+    "title": "Complete Care at Harborage – What to Expect",
+    "publisher": "Complete Care at Harborage",
+    "url": "https://ccharborage.com/what-to-expect",
+    "address": "7600 River Rd, North Bergen, NJ 07047",
+    "services": [
+      "Physical therapy",
+      "Occupational therapy",
+      "Speech therapy"
+    ],
+    "rates": [],
+    "inquiry": false,
+    "checkedAt": "2026-11-12",
+    "asOf": null,
+    "dining": "The operator describes restaurant-style meals approved by a dietitian.",
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Private and semi-private rooms are listed with complimentary Wi-Fi."
+      },
+      {
+        "kind": "amenity",
+        "text": "The operator lists housekeeping, laundry, a nearby therapy gym and beauty/barber services."
+      },
+      {
+        "kind": "activity",
+        "text": "The operator lists daily activities, tailored recreation and live entertainment."
+      }
+    ],
+    "directoryOverlap": [
+      "Private Rooms",
+      "Housekeeping",
+      "Laundry Service",
+      "Social Activities",
+      "Salon / Barber",
+      "Restaurant style Dining Room",
+      "Wi-Fi / High-Speed Internet",
+      "Live Performances"
+    ],
+    "captureChecks": [
+      {
+        "url": "https://ccharborage.com/what-to-expect",
+        "sha256": "a7e64dc710066098c0c9cb64f4515c4ef91ceb4efec8dd5f5a40654d9f923995"
+      },
+      {
+        "url": "https://ccharborage.com/",
+        "sha256": "77ee02b2bb1566ca5c598c1dd580c0af727ed385ddd1cdb433eec7deafaa0fb9"
+      }
+    ]
+  },
+  {
+    "providerId": "north-jersey-doh-nj60a004",
+    "category": "assisted-living",
+    "title": "Victoria Mews Assisted Living – Amenities",
+    "publisher": "Victoria Mews Assisted Living",
+    "url": "https://victoriamews.net/services/amenities/",
+    "address": "51 North Main Street, Boonton Township, NJ 07005",
+    "services": [],
+    "rates": [],
+    "inquiry": false,
+    "checkedAt": "2026-11-12",
+    "asOf": null,
+    "operatorAddress": "51 N Main St, Boonton, NJ 07005",
+    "identityEvidence": {
+      "url": "https://healthapps.nj.gov/facilities/fsFacilityDetailsPrint.aspx?item=NJ60A004",
+      "title": "Victoria Mews Assisted Living, license 60a004",
+      "publisher": "New Jersey Department of Health"
+    },
+    "dining": "The operator lists three chef-prepared meals daily and a 24-hour bistro with complimentary snacks and drinks.",
+    "practicalFacts": [
+      {
+        "kind": "amenity",
+        "text": "The operator lists weekly housekeeping and laundry, a library, chapel, salon and transportation for medical visits and recreation."
+      }
+    ],
+    "additionalPages": [
+      {
+        "url": "https://victoriamews.net/services/suites/",
+        "title": "Victoria Mews assisted living suites",
+        "facts": [
+          {
+            "kind": "room",
+            "text": "The provider shows six private suite layouts and lists studios, one-bedroom and two-bedroom suites. Typical features include a kitchenette, private bathroom and emergency call system."
+          }
+        ]
+      },
+      {
+        "url": "https://victoriamews.net/services/memory-care/",
+        "title": "Victoria Mews Connections memory care",
+        "facts": [
+          {
+            "kind": "care",
+            "text": "The operator describes a secure Connections memory-care program for residents with dementia."
+          }
+        ]
+      }
+    ],
+    "directoryOverlap": [
+      "Housekeeping",
+      "Laundry Service",
+      "Private Rooms",
+      "Private Bathroom",
+      "Salon / Barber",
+      "Restaurant style Dining Room",
+      "Chapel / Religious Services",
+      "Professional Chef",
+      "Transportation Services"
+    ],
+    "rateNote": "The operator bases individual quotes on suite size and care needs. No dollar rate was verified on its suite page.",
+    "captureChecks": [
+      {
+        "url": "https://victoriamews.net/services/amenities/",
+        "sha256": "453a6bd4d400d701bc5927d01b2462297b7b5cb677b36ebdcca3318a238e41b9"
+      },
+      {
+        "url": "https://victoriamews.net/",
+        "sha256": "54eeb7b38a391b0960e79d540b0ca6eff2652e3b96e5e58c5caa68ed59179d24"
+      }
+    ]
   }
 ]

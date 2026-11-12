@@ -13,6 +13,7 @@ type FacebookFinding = {
   kind: FacebookFindingKind;
   relationship: string | null;
   summary: string;
+  excerpt?: string;
   date: string | null;
   sourceUrl: string;
   sourceUrls?: string[];

@@ -1,0 +1,90 @@
+.property-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+  border-block: 1px solid var(--line);
+  gap: 16px;
+  padding: 16px 0;
+  margin-bottom: 16px;
+}
+.property-overview > div {
+  min-width: 0;
+}
+.property-overview h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+.property-overview a {
+  color: #24594c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.property-overview p,
+.property-overview blockquote {
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.property-overview blockquote {
+  font-family: var(--serif);
+  font-size: 17px;
+}
+.property-overview small,
+.property-overview .overview-more {
+  display: block;
+  font-size: 12px;
+}
+.property-overview small {
+  color: var(--muted);
+}
+.overview-more {
+  margin-top: 5px;
+}
+.offering-more > summary {
+  cursor: pointer;
+  padding-block: 10px;
+  color: #24594c;
+}
+@media (max-width: 560px) {
+  .property-overview {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .detail-header {
+    padding-bottom: 14px;
+  }
+  .detail-header > .provider-symbol {
+    display: none;
+  }
+  .detail-header h2 {
+    margin: 6px 0;
+    padding-top: 0;
+    padding-right: 16px;
+  }
+  .detail-header .detail-actions {
+    margin-top: 12px;
+  }
+  .detail-header .detail-actions > .text-link {
+    width: auto;
+    min-height: 44px;
+    margin: 0;
+  }
+  .detail-body {
+    padding-top: 12px;
+  }
+  .detail-body .detail-warnings {
+    padding: 12px;
+    margin: 0 0 14px;
+  }
+  .detail-body .location-research {
+    margin-top: 12px;
+  }
+  .detail-body .location-research > .section-title {
+    margin-bottom: 6px;
+  }
+  .property-overview {
+    padding-top: 10px;
+  }
+}

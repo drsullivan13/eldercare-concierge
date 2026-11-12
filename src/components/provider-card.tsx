@@ -162,7 +162,10 @@ export function ProviderCard({
               <small>/10</small>
             </strong>
             <span>
-              Consumer experience
+              {research.experience.publicationStatus ===
+              "single-source-estimate"
+                ? `Single-source estimate · ${research.experience.singleSourceLabel}`
+                : "Consumer experience"}
               <small>
                 {research.experience.confidence === "moderate"
                   ? "Moderate"
@@ -176,11 +179,18 @@ export function ProviderCard({
             <MessageSquare size={18} aria-hidden="true" />
             <span>
               Consumer experience
-              <small>Not enough evidence to score</small>
+              <small>
+                {research?.experience.publicationStatus === "sources-disagree"
+                  ? "Harbor score withheld · Sources disagree"
+                  : "Not enough evidence to score"}
+              </small>
             </span>
           </span>
         )}
       </div>
+      {research?.experience.selectedConcerns && (
+        <p className="small">Selected reviews include concerns.</p>
+      )}
       <FamilyExperienceCount evidence={research?.familyExperience} />
       {provider.category === "nursing-home" && provider.cms && (
         <div className="provider-proof">

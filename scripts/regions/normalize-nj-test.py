@@ -107,6 +107,26 @@ class ActualSourceTests(unittest.TestCase):
             self.assertIn("January 2018", provider["description"])
             self.assertTrue(provider["warnings"])
 
+    def test_operator_testimonials_and_manual_profile_links(self):
+        research = json.loads(self.files["locationResearch.json"])
+        for pid in ("cms-315307", "cms-315101"):
+            record = research[pid]
+            sources = {s["id"]: s for s in record["sources"]}
+            quotes = [r for r in record["reviews"] if sources[r["sourceId"]]["kind"] == "provider"]
+            self.assertEqual({r["relationship"] for r in quotes}, {"family", "resident"})
+            self.assertEqual(len(quotes), 2)
+            self.assertLessEqual(sum(len(r["excerpt"].split()) for r in quotes), 25)
+            for quote in quotes:
+                self.assertEqual(quote["url"], sources[quote["sourceId"]]["url"])
+                self.assertEqual(quote["aspects"], [])
+                self.assertEqual((quote["rating"], quote["scale"], quote["date"]), (None, None, None))
+        for pid in ("cms-315307", "north-jersey-doh-nj60a004"):
+            record = research[pid]
+            link, = record["reviewLinks"]
+            self.assertEqual(set(link), {"publisher", "url"})
+            self.assertEqual(link["publisher"], "Caring.com")
+            self.assertNotIn(link["url"], [s["url"] for s in record["sources"]])
+
     def test_no_source_candidates_become_published_reviews(self):
         research = json.loads(self.files["locationResearch.json"])
         findings = json.loads((adapter.RESEARCH / "offerings/locationResearch.json").read_bytes())
@@ -334,6 +354,13 @@ if (ratingRows.length) {
   assert.equal(ratingRows.length, Object.keys(verified.releasedOutput).length);
   for (const row of ratingRows) {
     const score = computeExperienceScore({...row, asOfDate: verified.assessmentDate});
+    const operatorIds = new Set(row.sources.filter(s => s.kind === "provider").map(s => s.id));
+    const noOperatorQuotes = row.reviews.filter(r => !operatorIds.has(r.sourceId));
+    if (noOperatorQuotes.length < row.reviews.length) {
+      const before = computeExperienceScore({...row, reviews: noOperatorQuotes, asOfDate: verified.assessmentDate});
+      for (const key of ["value", "reviewCount", "independentSourceCount", "confidence"])
+        assert.equal(score[key], before[key], key);
+    }
     assert.equal(score.value, verified.releasedOutput[row.providerId].value);
     assert.equal(score.reviewCount, verified.releasedOutput[row.providerId].reviewCount);
   }

@@ -36,7 +36,7 @@ class ReleaseTests(unittest.TestCase):
                 "observed_zip": None, "observed_care_unit": "Skilled Nursing / Long Term Care",
             },
             "aggregate": {
-                "rating": 4.4, "scale": 5, "review_count": 12,
+                "rating": 4.4, "scale": 5, "review_count": 40,
                 "published_as_of": None, "scope": "consumer", "source_family": "google",
             },
         }
@@ -57,7 +57,7 @@ class ReleaseTests(unittest.TestCase):
         })
         self.write_observation()
         material = f"{self.url}\n# Example Home\n151 Madison Avenue Morristown New Jersey\n"
-        material += "Skilled Nursing / Long Term Care\n4.4 out of 5 from 12 Google reviews\n"
+        material += "Skilled Nursing / Long Term Care\n4.4 out of 5 from 40 Google reviews\n"
         self.write(self.material_path, material)
         self.approval = {
             "id": "independent-example", "providerId": "cms-315488", "officialId": "NJ60921",
@@ -67,7 +67,7 @@ class ReleaseTests(unittest.TestCase):
             "identity": {"name": "Example Home", "address": "151 Madison Avenue",
                          "city": "Morristown", "state": "New Jersey", "zip": None,
                          "careUnit": "Skilled Nursing / Long Term Care"},
-            "aggregate": {"rating": 4.4, "scale": 5, "count": 12, "asOf": None,
+            "aggregate": {"rating": 4.4, "scale": 5, "count": 40, "asOf": None,
                           "scope": "consumer", "sourceFamily": "google"},
             "reason": "Independent full-page check matches the single official nursing unit.",
         }
@@ -109,7 +109,7 @@ class ReleaseTests(unittest.TestCase):
         record = output["locationResearch.json"]["cms-315488"]
         summary = output["experience-verification.json"]["releasedOutput"]["cms-315488"]
         self.assertEqual(summary["value"], 8.8)
-        self.assertEqual(summary["reviewCount"], 12)
+        self.assertEqual(summary["reviewCount"], 40)
         self.assertEqual(summary["confidence"], "limited")
         self.assertFalse(record["providerDetailsReviewed"])
         self.assertEqual(record["facts"], [])
@@ -163,7 +163,7 @@ class ReleaseTests(unittest.TestCase):
         self.assert_fails("cannot be the observation registry")
 
     def test_material_must_contain_url_name_and_aggregate(self):
-        for page in ("Example Home 4.4 12", self.url + "\nWrong Name 4.4 12",
+        for page in ("Example Home 4.4 40", self.url + "\nWrong Name 4.4 40",
                      self.url + "\nExample Home 4.4 99"):
             with self.subTest(page=page):
                 self.write(self.material_path, page)
@@ -286,6 +286,16 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(summary["reviewCount"], 9)
         self.assertIn("cms-315488", output["locationResearch.json"])
 
+    def test_twelve_reviews_from_one_family_stays_unrated(self):
+        self.observation["aggregate"]["review_count"] = 12
+        self.approval["aggregate"]["count"] = 12
+        self.update_observation()
+        self.write(self.material_path, f"{self.url}\nExample Home 4.4 out of 5 from 12 Google reviews")
+        self.approval["material"] = self.reference(self.material_path)
+        summary = self.build()["experience-verification.json"]["releasedOutput"]["cms-315488"]
+        self.assertIsNone(summary["value"])
+        self.assertEqual(summary["reviewCount"], 12)
+
     def test_duplicate_approvals_do_not_double_count(self):
         duplicate = copy.deepcopy(self.approval)
         duplicate["id"] = "second-independent-check"
@@ -293,7 +303,7 @@ class ReleaseTests(unittest.TestCase):
         record = output["locationResearch.json"]["cms-315488"]
         summary = output["experience-verification.json"]["releasedOutput"]["cms-315488"]
         self.assertEqual(len(record["reviewAggregates"]), 1)
-        self.assertEqual(summary["reviewCount"], 12)
+        self.assertEqual(summary["reviewCount"], 40)
         self.assertEqual(len(output["exclusions.json"]), 1)
 
     def test_duplicate_approval_id_fails(self):
@@ -359,7 +369,7 @@ class ReleaseTests(unittest.TestCase):
         output = self.build()
         self.assertEqual(len(output["approvals-audit.json"]["approvals"]),2)
         score = output["experience-verification.json"]["releasedOutput"]["cms-315488"]
-        self.assertEqual(score["reviewCount"],12)
+        self.assertEqual(score["reviewCount"],40)
         self.assertEqual(score["independentSourceCount"],1)
 
     def test_notes_cannot_resolve_unrelated_brand(self):

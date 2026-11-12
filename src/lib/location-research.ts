@@ -36,6 +36,7 @@ function scoreLocation(
     sources,
     reviewAggregates,
     reviews,
+    reviewSamples: record.reviewSamples,
     asOfDate,
   });
 }
@@ -103,8 +104,15 @@ export function getResearchSummary(
   }
   validateProviderId(providerId);
   const record = records[providerId];
-  const { value, reviewCount, confidence, independentSourceCount } =
-    scoreLocation(record);
+  const {
+    value,
+    reviewCount,
+    confidence,
+    independentSourceCount,
+    publicationStatus,
+    selectedConcerns,
+    singleSourceLabel,
+  } = scoreLocation(record);
   const source = record.sources.find(
     (s) => s.id === record.availability.sourceId,
   );
@@ -118,6 +126,14 @@ export function getResearchSummary(
     availabilityStatus: record.availability.status,
     availabilityCheckedAt: source?.checkedAt ?? null,
     admissionRestriction: record.admissionRestriction?.text,
-    experience: { value, reviewCount, confidence, independentSourceCount },
+    experience: {
+      value,
+      reviewCount,
+      confidence,
+      independentSourceCount,
+      publicationStatus,
+      selectedConcerns,
+      singleSourceLabel,
+    },
   };
 }

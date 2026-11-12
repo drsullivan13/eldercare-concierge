@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/alaris-health-at-kearny",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315192",
+  "officialId": "NJ10909L",
+  "identity": {
+    "address": "206 Bergen Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Kearny",
+    "name": "Alaris Health at Kearny Member of Excelsior Care Group",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "c129e5d5425e26a95c2148d7717113bf37ef8c9041301f6481763474ace15b2a",
+  "parentCacheReceiptSha256": "08c8e184dd91ba6581da6fe491d18f028c8eef8d09bf1d5fde38e1beb9841fa9",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "608716",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25GeGQxSm5PV2RXY0dwS1EwZE5PVGh6VjFOVFEwRRAB!2m1!1s0x89c2546a9665d769:0x5547f853bfd9e24",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "014d497693dbce68a4ca3aee71fdacaf7ba40d43e13e03df8abf2080deba711b",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "wrong-care-unit"
+      ]
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "608718",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tNMlJYRklPR1ZZZVhab2JsRmlSamhEU0ZnemVFRRAB!2m1!1s0x89c2546a9665d769:0x5547f853bfd9e24",
+      "sourcePublishedText": "Oct 2025",
+      "publishedAt": "2025-10",
+      "originalBodySha256": "619bc625bed9f42f8fb30adc812191d54956063a4efe7477a6c9c681b4bf09c0",
+      "originalExcerpt": "The facility is exceptionally clean, convenient, elegant, and welcoming.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "608720",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT201NE5GWTJWVE54VVhGNFFUbFdSV2hDVDA1emEzYxAB!2m1!1s0x89c2546a9665d769:0x5547f853bfd9e24",
+      "sourcePublishedText": "Oct 2025",
+      "publishedAt": "2025-10",
+      "originalBodySha256": "e375f06bc5e731d2742ab6cbc644c01061deaed221c80ac9d7d785e373e5a977",
+      "originalExcerpt": "The staff were all so nice and attentive, and the place looked clean and well cared for.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "608724",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2paVFZrUlBUR1ZMTFhwTFdrcHlUbVV0UjA1SVZIYxAB!2m1!1s0x89c2546a9665d769:0x5547f853bfd9e24",
+      "sourcePublishedText": "Oct 2025",
+      "publishedAt": "2025-10",
+      "originalBodySha256": "0f74b7c66ca7c5c66a472f60625135d75ea1097790ddc961856dcf258960abd9",
+      "originalExcerpt": "The nursing staff were incredibly kind, efficient, and attentive.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "608722",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pCU2NVWm5hVlJaUjJSS09WRkZjbXBHTUVWNE1IYxAB!2m1!1s0x89c2546a9665d769:0x5547f853bfd9e24",
+      "sourcePublishedText": "Oct 2025",
+      "publishedAt": "2025-10",
+      "originalBodySha256": "c7e965cf6b105368941dfb75e22222fefd461bda7a8c7040dc3cd734cd844bfe",
+      "originalExcerpt": "The team keeps me informed about her progress and always takes the time to answer my questions.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

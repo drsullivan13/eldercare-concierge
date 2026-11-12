@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "kind": "privacy-safe-derived-article-receipt",
+  "source": "MyLivingChoice",
+  "sourceFamily": "google",
+  "url": "https://www.mylivingchoice.com/property/alaris-health-at-west-orange",
+  "checkedAt": "2026-11-12",
+  "providerId": "cms-315449",
+  "officialId": "NJ306001",
+  "identity": {
+    "address": "5 Brook End Drive",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "West Orange",
+    "name": "Alaris Health at West Orange Member of Excelsior Care Group",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "parentHtmlSha256": "94eab957d1aaba9a69afe1807278cb6a70009cc45afa3a1ce0bcdc1c55edde8b",
+  "parentCacheReceiptSha256": "547bf41a87c5d0afcdd1815c3a89313c144cccc6018fcfbe150f3f0f3d9d0cc8",
+  "population": {
+    "scope": "all-review-rows-in-retained-page",
+    "complete": true,
+    "retainedRowCount": 5
+  },
+  "rows": [
+    {
+      "articleId": "article-1",
+      "externalReviewId": "609385",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2prMFNUUjNjMWhNUVVoSlZWVmtTVzkzU0ZWTWFuYxAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97",
+      "sourcePublishedText": "Jun 2026",
+      "publishedAt": "2026-06",
+      "originalBodySha256": "a645019197ccff458d74d83ebd174b3ce27d2cc8474cfb1b5eb244b84c4bcc22",
+      "originalExcerpt": null,
+      "exclusionReasons": [
+        "no-safe-excerpt"
+      ]
+    },
+    {
+      "articleId": "article-2",
+      "externalReviewId": "609381",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tWVFlYZGZVM2RJVms1UWRWTnFVMEZDVUZGQldWRRAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97",
+      "sourcePublishedText": "May 2026",
+      "publishedAt": "2026-05",
+      "originalBodySha256": "e8c9eb6a1cb4c5a7fbc6264ef32af312ce2e7be1ee8b549fe25968636c2543b2",
+      "originalExcerpt": "Please, please, please think twice before placing your loved one here.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-3",
+      "externalReviewId": "609384",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25KVmMyMWxTamxQTldSaVpGRkhOalZaWkcxdExWRRAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97",
+      "sourcePublishedText": "Mar 2026",
+      "publishedAt": "2026-03",
+      "originalBodySha256": "b4852c114f33a19c757bced5fac94e70892fa34f2a6c61f4fc268fa554ff3348",
+      "originalExcerpt": "Best thing was the PT. And leaving that place.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-4",
+      "externalReviewId": "609382",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21NM1VXWldZbVpzTVZaUVpsUkpTR1pDWTJacGFtYxAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97",
+      "sourcePublishedText": "Mar 2026",
+      "publishedAt": "2026-03",
+      "originalBodySha256": "9fe81edd1b85ab3ddfbfa65f84ec0e40ee8a2e5d0f6f764eabc61fb0962693fe",
+      "originalExcerpt": "The staff was also very friendly and welcoming and they made sure that I was properly accommodated.",
+      "exclusionReasons": []
+    },
+    {
+      "articleId": "article-5",
+      "externalReviewId": "609383",
+      "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21nMWJXdE5TelZJVUVWWFh6WXRiWFY1Ym5KQ05IYxAB!2m1!1s0x89c3ab915eeb3f6d:0x84da2ec9e0ffbd97",
+      "sourcePublishedText": "Feb 2026",
+      "publishedAt": "2026-02",
+      "originalBodySha256": "778af450b006aaf33ded97bbbc3272f05d6f2ed5f6cb73e4bfcd1d0dd8460ca3",
+      "originalExcerpt": "The food was horrible.",
+      "exclusionReasons": []
+    }
+  ],
+  "limitations": [
+    "Derived receipt only. The immutable original HTML remains private and is not reproduced here.",
+    "Excerpts are selected consumer accounts, not clinical evidence or a prevalence sample.",
+    "MyLivingChoice carries Google material and is not another independent source family."
+  ]
+}

@@ -58,6 +58,11 @@ def iso_date(value, path):
     require(calendar_date <= date.today(), f"{path}: future source date")
 
 
+def publication_date(value, path):
+    # Month-only metadata remains a month in the published artifact.
+    iso_date(value + "-01" if isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}", value) else value, path)
+
+
 def url(value, path):
     text(value, path)
     parsed = urlparse(value)
@@ -166,7 +171,7 @@ AGGREGATE = shape({
     "count": nullable(count), "asOf": D, "scope": text, "notes": STRINGS,
 })
 REVIEW = shape({
-    "id": text, "sourceId": text, "url": url, "date": D, "rating": N, "scale": N,
+    "id": text, "sourceId": text, "url": url, "date": nullable(publication_date), "rating": N, "scale": N,
     "relationship": choice("family", "resident", "staff", "visitor", "unknown"),
     "excerpt": text, "summary": text,
     "aspects": array(shape({"aspect": text, "sentiment": choice("positive", "negative", "mixed")})),
@@ -177,12 +182,19 @@ LOCATION = shape({
     "sources": array(RESEARCH_SOURCE), "facts": array(FACT), "availability": AVAILABILITY,
     "reviewAggregates": array(AGGREGATE), "reviews": array(REVIEW), "notes": STRINGS,
     "admissionRestriction?": shape({"text": text, "sourceId": text}),
+    "reviewSamples?": array(shape({
+        "sourceId": text, "sourceFamily": text, "selection": choice("all-visible-before-highlighting"),
+        "visibleCount": count, "observations": array(shape({
+            "id": text, "date": nullable(publication_date), "sentiment": choice("positive", "negative", "mixed", "neutral"),
+        })),
+    })),
+    "reviewLinks?": array(shape({"publisher": text, "url": url})),
 })
 FINDING = shape({
     "id": text, "sourceObservationIds": array(text),
     "kind": choice("resident-family", "recommendation", "tour", "provider-promotion", "employment"),
     "relationship": S, "summary": text, "date": D, "sourceUrl": url,
-    "sourceUrls?": array(url), "threadUrl": url, "topics": STRINGS, "limitations": STRINGS,
+    "excerpt?": text, "sourceUrls?": array(url), "threadUrl": url, "topics": STRINGS, "limitations": STRINGS,
 })
 FACEBOOK = shape({
     "schemaVersion": choice(1), "runId": text, "checkedAt": iso_date, "reviewBasis": text,
@@ -325,7 +337,7 @@ def point(lat, lng, path):
         require(-90 <= lat <= 90 and -180 <= lng <= 180, f"{path}: coordinates out of range")
 
 
-def dates(value, ceiling, path):
+def dates(value, ceiling, path, publication_months=False):
     if isinstance(value, dict):
         for key, item in value.items():
             if key in {
@@ -333,13 +345,14 @@ def dates(value, ceiling, path):
                 "released", "releasedAt", "modified", "date", "surveyDate", "processingDate",
                 "lastInspection", "correctionDate", "paymentDenialStartDate",
             } and item is not None:
-                iso_date(item, f"{path}.{key}")
+                validator = publication_date if key == "date" and publication_months else iso_date
+                validator(item, f"{path}.{key}")
                 require(item <= ceiling, f"{path}.{key}: source date after snapshot asOf")
             else:
-                dates(item, ceiling, f"{path}.{key}")
+                dates(item, ceiling, f"{path}.{key}", publication_months or key in {"reviews", "reviewSamples"})
     elif isinstance(value, list):
         for index, item in enumerate(value):
-            dates(item, ceiling, f"{path}[{index}]")
+            dates(item, ceiling, f"{path}[{index}]", publication_months)
 
 
 def validate_market(market, review, prefixes):
@@ -391,6 +404,13 @@ def validate_market(market, review, prefixes):
         for item in linked:
             source = item["sourceId"]
             require(source in sources or (source is None and item is research["availability"]), f"{pid}: unknown research sourceId")
+        aggregates = {(a["sourceId"], a["sourceFamily"]) for a in research["reviewAggregates"]}
+        samples = research.get("reviewSamples", [])
+        unique([s["sourceId"] for s in samples], f"{pid}.reviewSamples")
+        unique([o["id"] for s in samples for o in s["observations"]], f"{pid}.sampleObservations")
+        for sample in samples:
+            require((sample["sourceId"], sample["sourceFamily"]) in aggregates and
+                    len(sample["observations"]) <= sample["visibleCount"], f"{pid}: invalid visible review sample")
         for item in research["reviewAggregates"] + research["reviews"]:
             rating, scale = item["rating"], item["scale"]
             require(rating is None or (scale is not None and scale > 0 and 0 <= rating <= scale), f"{pid}: invalid rating scale")

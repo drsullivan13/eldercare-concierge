@@ -36,7 +36,7 @@ def check_identity(provider, page):
     return None
 
 
-def release(provider, page):
+def release(provider, page, directory=None):
     pid = provider["id"]
     record = dict(providerId=pid, checkedAt=None, providerDetailsReviewed=False,
                   facts=[], sources=[], availability=dict(status="not-published",
@@ -69,6 +69,14 @@ def release(provider, page):
             fact("care", f"The provider lists {service.lower()}.", sid, page["asOf"])
         if page.get("dining"):
             fact("dining", page["dining"], sid, page["asOf"])
+        for detail in page.get("practicalFacts", []):
+            fact(detail["kind"], detail["text"], sid, page["asOf"])
+        for detail_page in page.get("additionalPages", []):
+            detail_id = source({**page, **detail_page}, "provider", page["asOf"])
+            for detail in detail_page["facts"]:
+                fact(detail["kind"], detail["text"], detail_id, page["asOf"])
+        if page.get("identityEvidence"):
+            source({**page, **page["identityEvidence"]}, "regulator", None)
         for rate in page["rates"]:
             if not isinstance(rate["min"], int) or rate["min"] <= 0:
                 raise ValueError(f"Invalid published rate for {pid}")
@@ -80,6 +88,8 @@ def release(provider, page):
             amount = dict(min=rate["min"], max=maximum, period=period, currency="USD",
                           type=rate["type"], asOf=page["asOf"]) if period else None
             price_text = f"from ${rate['min']:,}" if maximum is None else f"${rate['min']:,}–${maximum:,}"
+            if rate.get("exact") and maximum is None:
+                price_text = f"${rate['min']:,}"
             fact("cost", f"{rate['label']}: {price_text}{period_text}. Confirm the current quote.",
                  sid, page["asOf"], amount=amount)
         if page.get("rateNote"):
@@ -94,6 +104,21 @@ def release(provider, page):
             record["availability"] = dict(status="waitlist-published", sourceId=priority, asOf=None,
                 text="Independent living priority list advertised with a refundable $1,000 deposit. Wait time, openings and individual priority are unconfirmed.")
         record["providerDetailsReviewed"] = True
+    if directory:
+        overlaps = set(page.get("directoryOverlap", [])) if page else set()
+        if page and any("salon" in item["text"].lower() for item in page.get("practicalFacts", [])):
+            overlaps.add("Salon / Barber")
+        retained = defaultdict(list)
+        for item in directory["facts"]:
+            if item["kind"] not in ("amenity", "dining", "room") or not item["text"].strip():
+                raise ValueError(f"Invalid directory amenity for {pid}")
+            if item["text"] not in overlaps and item["text"] not in retained[item["kind"]]:
+                retained[item["kind"]].append(item["text"])
+        if retained:
+            sid = source(directory, "review-platform", None)
+            for kind, items in retained.items():
+                fact(kind, "MyLivingChoice lists: " + "; ".join(items) +
+                     ". Confirm these details with the location.", sid)
     if record["sources"]:
         record["checkedAt"] = max(s["checkedAt"] for s in record["sources"])
     return record
@@ -101,9 +126,18 @@ def release(provider, page):
 
 def build(market, additional_pages=None):
     paths = [market / "runtime/providers.json", market / "runtime/crosswalk.json",
-             market / "offerings/provider-page-checks.json"]
+             market / "offerings/provider-page-checks.json", market / "offerings/directory-amenities.json",
+             market / "review-release/locationResearch.json"]
     inputs = [p.read_bytes() for p in paths]
-    providers, crosswalk, pages = map(json.loads, inputs)
+    providers, crosswalk, pages, listings, approved_reviews = map(json.loads, inputs)
+    directories = {}
+    for listing in listings:
+        pid = listing["providerId"]
+        approved = {src["url"] for src in approved_reviews.get(pid, {}).get("sources", [])
+                    if src["kind"] == "review-platform"}
+        if pid in directories or listing["url"] not in approved or not re.fullmatch(r"[0-9a-f]{64}", listing["captureSha256"]):
+            raise ValueError(f"Invalid or unapproved exact-location directory source: {pid}")
+        directories[pid] = listing
     county_map = defaultdict(set)
     for r in crosswalk:
         if r["status"].startswith("included"):
@@ -132,13 +166,15 @@ def build(market, additional_pages=None):
         page = by_id.get(pid)
         issue = check_identity(p,page) if page else None
         reviewed = page if page and not issue else None
-        r = release(p,reviewed)
+        r = release(p,reviewed,directories.get(pid))
         if r["facts"] or reviewed:
             records[pid] = r
         costs = [f for f in r["facts"] if f["kind"] == "cost"]
         status = issue or ("checked" if reviewed else "unsearched")
         row = dict(providerId=pid, county=county, category=p["category"], providerPageStatus=status,
                    providerPage=page["url"] if page else None, regulatedFacts=any(s["kind"]=="regulator" for s in r["sources"]),
+                   directoryPracticalFacts=sum(s["kind"]=="review-platform" for s in r["sources"]) > 0,
+                   practicalKinds=sorted({f["kind"] for f in r["facts"] if f["kind"] in ("room","amenity","dining","activity")}),
                    publishedPriceFacts=len(costs), comparableRates=sum(f["amount"] is not None for f in costs),
                    availability=r["availability"]["status"] if reviewed else "unverified")
         coverage.append(row)
@@ -155,7 +191,7 @@ def build(market, additional_pages=None):
     outputs = {"locationResearch.json":records, "coverage.json":coverage}
     summary = dict(inputs={"rosterIdentityAndRegulatoryFactsSha256":hashlib.sha256(encode(projection)).hexdigest(),
                           str(paths[1].relative_to(market)):hashlib.sha256(inputs[1]).hexdigest(),
-                          str(paths[2].relative_to(market)):hashlib.sha256(inputs[2]).hexdigest()},
+                          **{str(path.relative_to(market)):hashlib.sha256(body).hexdigest() for path,body in zip(paths[2:], inputs[2:])}},
         outputs={name:{"sha256":hashlib.sha256(encode(value)).hexdigest()} for name,value in outputs.items()},
         roster=len(providers), sourcePages=len(pages), matchedPages=sum(r["providerPageStatus"]=="checked" for r in coverage),
         rowsWithFacts=len(records), comparableRates=sum(r["comparableRates"] for r in coverage),

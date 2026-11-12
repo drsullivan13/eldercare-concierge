@@ -22,7 +22,7 @@ export default function Methodology() {
         <Link href="/" className="text-link">
           <ArrowLeft size={16} /> Harbor home
         </Link>
-        <span className="eyebrow">OUR RESEARCH STANDARDS · VERSION 1</span>
+        <span className="eyebrow">OUR RESEARCH STANDARDS · EXPERIENCE V2</span>
         <h1>
           Good care deserves <br />
           <em>more than a star average.</em>
@@ -75,10 +75,12 @@ export default function Methodology() {
               Public location reviews and discussions are attributed to their
               sources, with known reviewer relationships and dates. Selected
               excerpts provide context and do not enter the numerical index.
-              Matched home-health agencies also include CMS patient surveys,
-              which remain separate from public review ratings and clinical
-              measures. Independent references and visits still need to be
-              completed.
+              Eligible independent primary resident and family accounts also
+              qualify its confidence explanation, without turning anecdotes into
+              star ratings. Matched home-health agencies also include CMS
+              patient surveys, which remain separate from public review ratings
+              and clinical measures. Independent references and visits still
+              need to be completed.
             </p>
           </article>
           <article>
@@ -109,20 +111,43 @@ export default function Methodology() {
             keep the newest eligible representation, not the highest rating.
           </p>
           <p>
-            At least 10 eligible reported reviews are required. One source
-            family, or fewer than 30 reported reviews, means limited evidence.
-            Two or more source groups and at least 30 reviews means moderate
-            coverage. These are initial product rules, not statistical
-            confidence levels. Counts may overlap across sites; reviewers are
-            not independently authenticated.
+            A single source family needs at least 30 reported reviews. Two
+            independent families can support a score with at least five each and
+            ten total. Otherwise the location stays unrated, while its published
+            averages remain available to inspect. A large single source still
+            means limited evidence, not independent confirmation. Counts may
+            overlap across sites.
+          </p>
+          <p>
+            Harbor withholds its number when two independent sources with at
+            least ten reviews each differ by two or more points on the ten-point
+            scale. The original platform averages and review counts remain
+            visible. A rating from just one source is labeled as a single-source
+            estimate.
           </p>
           <p>
             Employee, sales-only, brand-level and unresolved care-unit
             aggregates are excluded. Search snippets cannot supply a score.
             Sources checked more than 180 days ago, or known aggregate snapshots
             older than a year, expire from the index. A recent page check does
-            not establish that its underlying reviews are recent. Individual
-            selected posts never change the score.
+            not establish that its underlying reviews are recent.
+          </p>
+          <p>
+            A platform chooses which reviews it displays. We examine each
+            eligible review visible in the retained sample before choosing
+            highlights. If a source average is at least 8/10 and at least three
+            recent, distinct critical reviews form a majority of that sample, we
+            withhold the Harbor score. We apply the same rule to favorable
+            accounts when the average is 4/10 or lower. Reviews must have known
+            dates within two years and cannot be counted twice. These counts
+            describe the visible reviews only.
+          </p>
+          <p>
+            Two independent primary sources can also give reason to withhold a
+            headline when recent resident or family accounts from both
+            contradict a strong rating in the same direction. The source ratings
+            stay visible. Neither selected accounts nor Facebook posts add to
+            the platform’s reported review count.
           </p>
           <p>
             Missing or ambiguous evidence leaves a location unrated. Official

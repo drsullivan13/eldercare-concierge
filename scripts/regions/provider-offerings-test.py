@@ -89,6 +89,32 @@ class OfferingEvidenceTests(unittest.TestCase):
         self.assertFalse(any(f.get("amount") for f in clifton["facts"]))
         self.assertTrue(any("4,275" in f["text"] for f in clifton["facts"]))
 
+    def test_sources_and_rates_stay_with_the_named_care_setting(self):
+        campus = self.records["north-jersey-campus-cedar-crest-village-07444"]
+        costs = [fact for fact in campus["facts"] if fact.get("amount")]
+        self.assertEqual(15, len(costs))
+        self.assertTrue(all("independent living" in f["text"].lower() for f in costs))
+        self.assertTrue(any(f["amount"]["min"] == 1486 and "from" not in f["text"] for f in costs))
+        for pid in ("cms-315491", "north-jersey-doh-nj60a011", "cms-317092"):
+            self.assertFalse(any(f.get("amount") for f in self.records[pid]["facts"]))
+        rooms = [f for f in self.records["north-jersey-doh-nj90144"]["facts"] if f.get("amount")]
+        self.assertEqual(6, len(rooms))
+        self.assertTrue(any("Memory Care companion suite" in f["text"] and f["amount"]["min"] == 9600 for f in rooms))
+
+    def test_directory_amenities_preserve_provenance_without_creating_costs_or_scores(self):
+        record = self.records["cms-315307"]
+        sources = {s["id"]:s for s in record["sources"]}
+        directory = [f for f in record["facts"] if sources[f["sourceId"]]["kind"] == "review-platform"]
+        self.assertTrue(any("Private Bathroom" in f["text"] for f in directory))
+        self.assertTrue(all("Private Rooms" not in f["text"] for f in directory))
+        self.assertFalse(any(f.get("amount") for f in record["facts"]))
+        self.assertEqual([], record["reviewAggregates"])
+        self.assertEqual("not-published", record["availability"]["status"])
+        victoria = self.records["north-jersey-doh-nj60a004"]
+        rooms = [f for f in victoria["facts"] if "six private suite layouts" in f["text"]]
+        self.assertEqual(1, len(rooms))
+        self.assertEqual("https://victoriamews.net/services/suites/", next(s["url"] for s in victoria["sources"] if s["id"] == rooms[0]["sourceId"]))
+
     def test_generated_hashes_match_actual_bytes(self):
         for name, info in self.release["manifest.json"]["outputs"].items():
             body=(offerings.DEFAULT/"offerings"/name).read_bytes()
