@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 REGION = Path("research/north-jersey")
 RELEASE = REGION / "review-release"
-ASSESSMENT_DATE = "2026-11-12"
+ADDENDUM = REGION / "listing-index/release"
 OUTPUTS = (
     "locationResearch.json", "approvals-audit.json", "exclusions.json",
     "staging.json", "observation-registry.json", "experience-verification.json",
@@ -230,9 +230,14 @@ def registry(inputs):
 
     frozen_path = (RELEASE / "source-observations.json").as_posix()
     if (inputs.root / frozen_path).is_file():
-        data = inputs.read(frozen_path)
-        walk(inputs.json(frozen_path), frozen_path)
-        inventory.append({"path": frozen_path, "sha256": digest(data), "bytes": len(data)})
+        frozen_paths = [frozen_path]
+        extra = (ADDENDUM / "source-observations.json").as_posix()
+        if (inputs.root / extra).exists():
+            frozen_paths.append(extra)
+        for relative in frozen_paths:
+            data = inputs.read(relative)
+            walk(inputs.json(relative), relative)
+            inventory.append({"path": relative, "sha256": digest(data), "bytes": len(data)})
         return observations, inventory
     for folder in ("reviews", "listing-index"):
         base = inputs.root / REGION / folder
@@ -368,7 +373,7 @@ def raw_listing_observation(approval, original, inputs):
                 aggregate=aggregate)
 
 
-def validate_approval(approval, inputs, observations, providers, crosswalk, aliases=()):
+def validate_approval(approval, inputs, observations, providers, crosswalk, aliases, assessment_date):
     fields(approval, "id providerId officialId observation material url checkedAt access "
            "platform identity aggregate reason" + (" reconciliation" if "reconciliation" in approval else ""), "approval")
     if "reconciliation" in approval:
@@ -396,7 +401,7 @@ def validate_approval(approval, inputs, observations, providers, crosswalk, alia
             and text_value(approval["aggregate"]["sourceFamily"]), "Missing scope or source family")
     require(approval["aggregate"]["asOf"] is None or
             valid_date(approval["aggregate"]["asOf"]), "Malformed aggregate snapshot date")
-    require(valid_date(approval["checkedAt"]) and approval["checkedAt"] <= ASSESSMENT_DATE,
+    require(valid_date(approval["checkedAt"]) and approval["checkedAt"] <= assessment_date,
             "Invalid or future independent check date")
     require(valid_date(observed["checkedAt"]) and
             observed["checkedAt"] <= approval["checkedAt"], "Invalid observation check chronology")
@@ -463,16 +468,16 @@ def validate_approval(approval, inputs, observations, providers, crosswalk, alia
     return observed, resolution
 
 
-def score(records):
+def score(records, assessment_date):
     program = (
         "import {readFileSync} from 'node:fs';"
         "import {computeExperienceScore} from './src/lib/experience-score.ts';"
         "const records=JSON.parse(readFileSync(0,'utf8'));"
         "console.log(JSON.stringify(Object.fromEntries(Object.entries(records).map("
-        "([id,r])=>[id,computeExperienceScore({...r,asOfDate:'2026-11-12'})]))));"
+        "([id,r])=>[id,computeExperienceScore({...r,asOfDate:process.argv[1]})]))));"
     )
     result = subprocess.run(
-        ["node", "--import", "tsx", "--input-type=module", "-e", program],
+        ["node", "--import", "tsx", "--input-type=module", "-e", program, assessment_date],
         input=json.dumps(records), text=True, capture_output=True, cwd=ROOT, timeout=60,
     )
     require(result.returncode == 0, f"TypeScript scorer failed: {result.stderr.strip()}")
@@ -485,8 +490,21 @@ def build(root=ROOT, approvals_path=None):
     ledger = inputs.json(approvals_path)
     fields(ledger, "schemaVersion assessmentDate approvals", "approval ledger")
     require(type(ledger["schemaVersion"]) is int and ledger["schemaVersion"] == 1
-            and ledger["assessmentDate"] == ASSESSMENT_DATE
+            and valid_date(ledger["assessmentDate"])
             and isinstance(ledger["approvals"], list), "Malformed approval ledger")
+    assessment_date = ledger["assessmentDate"]
+    extra_ledger = ADDENDUM / "approvals.json"
+    extra_rows = ADDENDUM / "source-observations.json"
+    require((root / extra_ledger).exists() == (root / extra_rows).exists(),
+            "Incomplete listing review addendum")
+    if (root / extra_ledger).exists():
+        extra = inputs.json(str(extra_ledger))
+        fields(extra, "schemaVersion assessmentDate approvals", "listing review addendum")
+        require(extra["schemaVersion"] == ledger["schemaVersion"] and
+                extra["assessmentDate"] == assessment_date and isinstance(extra["approvals"], list)
+                and all(a["observation"]["path"] == str(extra_rows) for a in extra["approvals"]),
+                "Invalid listing addendum date or evidence path")
+        ledger = {**ledger, "approvals": ledger["approvals"] + extra["approvals"]}
     provider_rows = inputs.json((REGION / "runtime/providers.json").as_posix())
     crosswalk = inputs.json((REGION / "runtime/crosswalk.json").as_posix())
     require(isinstance(provider_rows, list) and isinstance(crosswalk, list),
@@ -500,7 +518,7 @@ def build(root=ROOT, approvals_path=None):
     seen_ids = set()
     url_owners = {}
     for approval in sorted(ledger["approvals"], key=lambda a: str(a.get("id", "")) if isinstance(a, dict) else ""):
-        observed, resolution = validate_approval(approval, inputs, observations, providers, crosswalk, aliases)
+        observed, resolution = validate_approval(approval, inputs, observations, providers, crosswalk, aliases, assessment_date)
         require(approval["id"] not in seen_ids, f"Duplicate approval ID: {approval['id']}")
         seen_ids.add(approval["id"])
         approved_keys.add(observed["key"])
@@ -537,7 +555,7 @@ def build(root=ROOT, approvals_path=None):
         record["reviewAggregates"].append(aggregate)
         audit.append({"approval": approval, "sourceId": source_id,
                       "identityResolution": resolution, "observationKey": observed["key"]})
-    verification = score(records)
+    verification = score(records, assessment_date)
     included = {source["sourceId"] for summary in verification.values()
                 for source in summary["includedSources"]}
     excluded_reasons = {row["sourceId"]: row["reason"] for summary in verification.values()
@@ -558,7 +576,7 @@ def build(root=ROOT, approvals_path=None):
             del records[provider_id]
         else:
             record["checkedAt"] = max(s["checkedAt"] for s in record["sources"])
-    released_verification = score(records)
+    released_verification = score(records, assessment_date)
     for provider_id, summary in released_verification.items():
         require(summary["includedSources"] == verification[provider_id]["includedSources"]
                 and summary["reviewCount"] == verification[provider_id]["reviewCount"]
@@ -606,18 +624,18 @@ def build(root=ROOT, approvals_path=None):
             staging.append(item)
     outputs = {
         "locationResearch.json": records,
-        "approvals-audit.json": {"assessmentDate": ASSESSMENT_DATE, "approvals": audit},
+        "approvals-audit.json": {"assessmentDate": assessment_date, "approvals": audit},
         "exclusions.json": exclusions,
         "staging.json": staging,
         "observation-registry.json": {"schemaVersion": 1, "observations": normalized},
         "experience-verification.json": {
-            "assessmentDate": ASSESSMENT_DATE, "approvedInput": verification,
+            "assessmentDate": assessment_date, "approvedInput": verification,
             "releasedOutput": released_verification,
         },
     }
     scorer_path = ROOT / "src/lib/experience-score.ts"
     outputs["manifest.json"] = {
-        "schemaVersion": 1, "assessmentDate": ASSESSMENT_DATE,
+        "schemaVersion": 1, "assessmentDate": assessment_date,
         "inputs": [{"path": path, "sha256": digest(data), "bytes": len(data)}
                    for path, data in sorted(inputs.bytes.items()) if not path.endswith("/runtime/providers.json")],
         "rosterIdentitySha256": digest(encoded([{k:p[k] for k in ("id","name","address","city","state","zip","category")}

@@ -5,17 +5,122 @@
       "bytes": 21531,
       "path": "research/north-jersey/review-release/source-observations.json",
       "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+    },
+    {
+      "bytes": 17378,
+      "path": "research/north-jersey/listing-index/release/source-observations.json",
+      "sha256": "db5691219d5786ccb38dcf54552896ba266b91aa6a7dbf8efe907e1e3f87ceff"
     }
   ],
   "counts": {
-    "approved": 22,
+    "approved": 40,
     "excluded": 0,
-    "included": 22,
-    "observations": 22,
+    "included": 40,
+    "observations": 40,
     "pendingOrInventory": 10,
-    "providers": 22
+    "providers": 40
   },
   "inputs": [
+    {
+      "bytes": 30800,
+      "path": "research/north-jersey/listing-index/release/approvals.json",
+      "sha256": "cd64763952929374ec1565eb904c0751b7bff7fd260b68d938d136f6428dbbc2"
+    },
+    {
+      "bytes": 1167,
+      "path": "research/north-jersey/listing-index/release/source-checks/adroit-care-rehabilitation-and-nursing-center.json",
+      "sha256": "e71dc9c6da191e57d0555213ba92267c4c7df6b2252b78ea16b026c8a1539b56"
+    },
+    {
+      "bytes": 1161,
+      "path": "research/north-jersey/listing-index/release/source-checks/alaris-health-at-cedar-grove.json",
+      "sha256": "3947202ff524150cefe3ff2ad4f31b2383f4241d648012799af8f3d1f149eaab"
+    },
+    {
+      "bytes": 1232,
+      "path": "research/north-jersey/listing-index/release/source-checks/alaris-health-at-west-orange.json",
+      "sha256": "a511dae15d103389a47a7d610362b8ffeb70a4616650aea3047e9ad1e6de1508"
+    },
+    {
+      "bytes": 1218,
+      "path": "research/north-jersey/listing-index/release/source-checks/alliance-care-rehabilitation-and-nursing-center.json",
+      "sha256": "e568ed45a82dd7ff534ebd2484104e403c21f2e0700fa4a5238bff5bd2afcb5a"
+    },
+    {
+      "bytes": 1163,
+      "path": "research/north-jersey/listing-index/release/source-checks/broadway-house-for-continuing-care.json",
+      "sha256": "0bde7abd8c1636d06eef9f672eaf82be0a2aaef088becf056cd7d08b636a71c2"
+    },
+    {
+      "bytes": 1130,
+      "path": "research/north-jersey/listing-index/release/source-checks/chatham-hills-subacute-care-center.json",
+      "sha256": "d737e956ee6f1e44bef7c5da7bf5eaeab945958acb87631e85bef88ba4625a50"
+    },
+    {
+      "bytes": 1069,
+      "path": "research/north-jersey/listing-index/release/source-checks/cheshire-home.json",
+      "sha256": "b0f411f5b3b885445e960796c63a6ee0318a08b5733d093eb9e61d3d2855f2ce"
+    },
+    {
+      "bytes": 1163,
+      "path": "research/north-jersey/listing-index/release/source-checks/complete-care-at-cedar-grove.json",
+      "sha256": "1a3429344e99270b09a58b4b299d61fff447d26afa2c45e1bdbb6302b0f48b35"
+    },
+    {
+      "bytes": 1158,
+      "path": "research/north-jersey/listing-index/release/source-checks/complete-care-at-orange-park.json",
+      "sha256": "c4367554eebd295ba6cd25f4bb69a1556c5c9522a856b6ef93f987bb935f817f"
+    },
+    {
+      "bytes": 1183,
+      "path": "research/north-jersey/listing-index/release/source-checks/complete-care-at-st-vincents-llc.json",
+      "sha256": "db69b33fdeaebd298a6d0100e524d3fd5c030fb4df9d7bd38a25aaa3db6c74a2"
+    },
+    {
+      "bytes": 1126,
+      "path": "research/north-jersey/listing-index/release/source-checks/complete-care-at-westfield-llc.json",
+      "sha256": "3566d9aef8e94660529c19bfecdda9d1aae71feacd15515d0e2ac4c339ebde33"
+    },
+    {
+      "bytes": 1111,
+      "path": "research/north-jersey/listing-index/release/source-checks/complete-care-at-woodlands.json",
+      "sha256": "8b8cbce62afef88aaba06cdc0832175c34e4126e9ca2ac6607e0abb1cfc65e19"
+    },
+    {
+      "bytes": 1089,
+      "path": "research/north-jersey/listing-index/release/source-checks/excel-care-at-dover.json",
+      "sha256": "39470d3a035d038a0fb98315806f9cfa577b69568fd27ee11c81e518556f271f"
+    },
+    {
+      "bytes": 1236,
+      "path": "research/north-jersey/listing-index/release/source-checks/grove-park-healthcare-and-rehabilitation-center.json",
+      "sha256": "5e7e97b75acc7f7742967784d07e4afaf0a48d52b524e75cccc1622453afb43b"
+    },
+    {
+      "bytes": 1114,
+      "path": "research/north-jersey/listing-index/release/source-checks/lincoln-park-care-center.json",
+      "sha256": "41553236d931857ae05cb010c01828e7410b70ebfc95d2f5f7f9d1f154f19740"
+    },
+    {
+      "bytes": 1154,
+      "path": "research/north-jersey/listing-index/release/source-checks/mountainside-skilled-nursing-and-rehab.json",
+      "sha256": "9aa4f789900bc8e13e73253e72f55277cde8601c85438cd1f261492827fef76a"
+    },
+    {
+      "bytes": 1227,
+      "path": "research/north-jersey/listing-index/release/source-checks/park-crescent-healthcare-rehabilitation-center.json",
+      "sha256": "5ceeef7b22a3ce5222b501a3f55a3eb6c22c4115bca438e58e10af516f23ec0f"
+    },
+    {
+      "bytes": 1181,
+      "path": "research/north-jersey/listing-index/release/source-checks/spring-grove-rehabilitation-and-healthcare-center.json",
+      "sha256": "871186f2eb8b9194a3215274e6d8b65882f4a8a1a0067e8e33429e080720dc12"
+    },
+    {
+      "bytes": 17378,
+      "path": "research/north-jersey/listing-index/release/source-observations.json",
+      "sha256": "db5691219d5786ccb38dcf54552896ba266b91aa6a7dbf8efe907e1e3f87ceff"
+    },
     {
       "bytes": 35356,
       "path": "research/north-jersey/review-release/approvals.json",
@@ -153,11 +258,11 @@
     }
   ],
   "outputs": {
-    "approvals-audit.json": "e3bc8db51eeb273a8f8eec33f1cc2df20515f22da02b90b2558a42887f97ad06",
+    "approvals-audit.json": "b6e22df1386576fa598216b6e796c182f54694bbf6b8c20678d780a6ef0855dc",
     "exclusions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-    "experience-verification.json": "fd215dc5e90e1b2035b44864fc44197b05508bd421eede41106e874d0e4e1001",
-    "locationResearch.json": "292b0d8dd54e4cd79e346f7c5c34707999995d65c14cd9c9e837b88828bda2d9",
-    "observation-registry.json": "d17786d8c49d86929f99234a4facec3591d0d7f4c8af30f81f060f945e5b3e31",
+    "experience-verification.json": "112cc771619207a029a03ef584b6e68965ea388ddbc304997ceddcacb7383cb7",
+    "locationResearch.json": "e920dce7b32c058b2d4ad976ad21fea83985c078c5ad7d3f773196d1ae1920bb",
+    "observation-registry.json": "7c7bba96ac6c65b56c90cebee54f4ddeef750c93f157a4d048a4af4ead3477fd",
     "staging.json": "0cfbb4798aca802800de9ce15d361a7320525f87b350339dbd12a0241a84a5e1"
   },
   "rosterIdentitySha256": "b24190dbd11b8963658f41fa3b12eaed1adf9a65f4f031ee953229e1a45882c7",
@@ -168,6 +273,6 @@
   },
   "transformer": {
     "path": "scripts/regions/release-reviews.py",
-    "sha256": "8980628aae4f462d437bc528143b0f0a8b0ed77ffaaab4bf5f570da7150cc9cb"
+    "sha256": "ce04b96f4ede4aa7575005a90693c11bbb161d108d51494d3a316eee0b86e5fd"
   }
 }

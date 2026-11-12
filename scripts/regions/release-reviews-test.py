@@ -342,6 +342,26 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(len(inventory),1)
         self.assertTrue(inventory[0]["path"].endswith("/source-observations.json"))
 
+    def test_listing_addendum_incomplete_fails_closed(self):
+        self.write(str(release.ADDENDUM / "approvals.json"),
+                   {"schemaVersion":1,"assessmentDate":"2026-11-12","approvals":[]})
+        self.assert_fails("Incomplete listing review addendum")
+
+    def test_listing_addendum_uses_same_authority_and_deduplicates_sources(self):
+        base = str(release.RELEASE / "source-observations.json")
+        extra = str(release.ADDENDUM / "source-observations.json")
+        self.write(base, {"observations":[self.observation]})
+        self.write(extra, {"observations":[self.observation]})
+        self.approval["observation"] = self.reference(base, "/observations/0")
+        additional = {**self.approval, "id":"second-check", "observation":self.reference(extra,"/observations/0")}
+        self.write(str(release.ADDENDUM / "approvals.json"), {
+            "schemaVersion":1,"assessmentDate":"2026-11-12","approvals":[additional]})
+        output = self.build()
+        self.assertEqual(len(output["approvals-audit.json"]["approvals"]),2)
+        score = output["experience-verification.json"]["releasedOutput"]["cms-315488"]
+        self.assertEqual(score["reviewCount"],12)
+        self.assertEqual(score["independentSourceCount"],1)
+
     def test_notes_cannot_resolve_unrelated_brand(self):
         self.approval["reconciliation"] = {"name":"Brand declared equivalent.", "address":None}
         self.observation["identity"]["observed_name"] = "Unrelated Senior Services"
