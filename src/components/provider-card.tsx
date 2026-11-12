@@ -161,7 +161,7 @@ export function ProviderCard({
                 {research.experience.confidence === "moderate"
                   ? "Moderate"
                   : "Limited"}{" "}
-                evidence · {research.experience.reviewCount} reviews
+                evidence · {research.experience.reviewCount} reviews reported
               </small>
             </span>
           </span>

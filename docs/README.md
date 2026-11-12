@@ -13,5 +13,6 @@
 | Operate the private collector                | [Research automation](research-automation.md)                                          |
 | Review data access and future quality work   | [Data access](data-access.md), [quality roadmap](quality-roadmap.md)                   |
 | See what was actually tested                 | [Verification record](verification.md)                                                 |
+| Review the code cleanup and its findings     | [November 12 code review](code-review-2026-11-12.md)                                   |
 
 The [initial Facebook pilot review](facebook-pilot-review.md) is a historical import audit. The publication audit describes the later, separate editorial selection used by the dashboard.

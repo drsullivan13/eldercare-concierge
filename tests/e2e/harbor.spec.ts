@@ -166,9 +166,11 @@ test("care alerts remain visible while source detail is disclosed on demand", as
   const dialog = page.getByRole("dialog", { name: provider.name, exact: true });
   await expect(dialog.locator(".detail-warnings")).toContainText(/abuse/i);
   await expect(dialog.locator(".detail-warnings")).toBeVisible();
-  await expect(dialog.locator(".source-list")).not.toBeVisible();
+  await expect(
+    dialog.locator(".source-disclosure .source-list"),
+  ).not.toBeVisible();
   await dialog.locator(".source-disclosure summary").click();
-  await expect(dialog.locator(".source-list")).toBeVisible();
+  await expect(dialog.locator(".source-disclosure .source-list")).toBeVisible();
 });
 
 test("a failed shortlist lookup preserves saved IDs and notes in the downloaded plan and can retry", async ({
@@ -203,8 +205,11 @@ test("a failed shortlist lookup preserves saved IDs and notes in the downloaded 
     }),
   );
   await page.goto("/dashboard?demo=1");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "A clearer plan",
+  );
   await navigate(page, "Your shortlist");
-  await expect(page.getByRole("alert")).toContainText(
+  await expect(page.locator(".form-error[role=alert]")).toContainText(
     "Your saved providers could not be loaded",
   );
   await expect(

@@ -46,6 +46,11 @@ export function ProviderDetail({
   const [draft, setDraft] = useState(note);
   const [noteSaved, setNoteSaved] = useState(false);
   const [taskAdded, setTaskAdded] = useState(false);
+  const locality = `${provider.city}, ${provider.state} ${provider.zip}`;
+  const street = provider.address.trim().replace(/,+$/, "");
+  const address = street.toLowerCase().endsWith(locality.toLowerCase())
+    ? street
+    : `${street}, ${locality}`;
   const alerts = providerCareAlerts(provider);
   const researchNotes = provider.warnings.filter(
     (warning) => !alerts.includes(warning),
@@ -60,7 +65,7 @@ export function ProviderDetail({
         <h2>{provider.name}</h2>
         <p>
           <MapPin size={15} />
-          {provider.address}, {provider.city}, {provider.state} {provider.zip}
+          {address}
         </p>
         <div className="detail-actions">
           <button

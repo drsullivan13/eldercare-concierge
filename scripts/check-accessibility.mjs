@@ -1,8 +1,12 @@
 import { chromium } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 const base = process.env.BASE_URL || "http://localhost:3000";
-const browser = await chromium.launch();
+const browser = await chromium.launch({
+  executablePath:
+    process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
+    (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
+});
 const context = await browser.newContext({
   viewport: { width: 1440, height: 1000 },
 });
@@ -66,6 +70,7 @@ await page
   .click();
 await page.locator(".provider-card").first().waitFor();
 await check("mobile search");
+mkdirSync("artifacts", { recursive: true });
 writeFileSync("artifacts/accessibility.json", JSON.stringify(reports, null, 2));
 console.log(
   JSON.stringify(
@@ -79,3 +84,5 @@ console.log(
   ),
 );
 await browser.close();
+if (reports.some((report) => report.violations.length > 0))
+  process.exitCode = 1;

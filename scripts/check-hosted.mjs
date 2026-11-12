@@ -1,5 +1,5 @@
 import { chromium, expect } from "@playwright/test";
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 // Use a Vercel-authorized share URL when the deployment is protected. The URL
 // stays in this process; neither the share value nor cookies enter the report.
@@ -138,6 +138,21 @@ try {
     JSON.parse(localStorage.getItem("harbor.demo.workspace.v1")),
   );
   expect(stored.savedProviderIds.length).toBe(1);
+  await page
+    .locator(".side-nav")
+    .getByRole("button", { name: /^Your shortlist/ })
+    .click();
+  await expect(page.locator("article.provider-card").first()).toContainText(
+    name,
+  );
+  const downloadReady = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export plan", exact: true }).click();
+  const planPath = await (await downloadReady).path();
+  expect(readFileSync(planPath, "utf8")).toContain(name);
+  await page
+    .locator(".side-nav")
+    .getByRole("button", { name: "Overview", exact: true })
+    .click();
 
   await page
     .locator("form.quick-search")
@@ -153,13 +168,22 @@ try {
   const sunrise = page.locator("article.provider-card").filter({
     has: page.getByRole("button", { name: "Sunrise of Newton", exact: true }),
   });
+  await expect(sunrise).toContainText("44 reviews reported");
+  mkdirSync("artifacts", { recursive: true });
+  await page.screenshot({ path: "artifacts/hosted-care-search.png" });
   await sunrise.getByRole("button", { name: "View details" }).click();
   const dialog = page.getByRole("dialog");
+  await expect(dialog.locator(".detail-header p")).toHaveText(
+    "431 Washington Street, Newton, MA 02458",
+  );
   await dialog
     .locator(".research-tabs")
     .getByRole("button", { name: "Reviews", exact: true })
     .click();
   await expect(dialog.locator(".experience-number")).toHaveText("8.2/10");
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: "artifacts/hosted-mobile-reviews.png" });
+  await page.setViewportSize({ width: 1440, height: 1000 });
   await dialog
     .locator(".research-tabs")
     .getByRole("button", { name: "Rooms & costs", exact: true })
@@ -254,6 +278,7 @@ try {
     anonymousWorkspaceStatus: anonymous.status,
     appSignInRequired: false,
     localSaveReload: true,
+    planExport: true,
     mobileOverflow: false,
     uncaughtErrors: errors,
   };

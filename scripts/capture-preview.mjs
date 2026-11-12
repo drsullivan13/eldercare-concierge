@@ -1,5 +1,10 @@
 import { chromium } from "@playwright/test";
-const browser = await chromium.launch();
+import { existsSync } from "node:fs";
+const browser = await chromium.launch({
+  executablePath:
+    process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
+    (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
+});
 const context = await browser.newContext({
   viewport: { width: 1440, height: 1000 },
 });
