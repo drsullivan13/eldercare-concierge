@@ -1,0 +1,100 @@
+{
+  "captureMethod": "FetchUrl JSON extracted from returned Markdown, not original HTTP bytes",
+  "checkedAt": "2026-11-12",
+  "url": "https://data.cms.gov/provider-data/api/1/datastore/query/m5jg-jg7i/0?limit=100&conditions%5B0%5D%5Bproperty%5D=state&conditions%5B0%5D%5Bvalue%5D=NJ&conditions%5B0%5D%5Boperator%5D=%3D",
+  "statusCode": 200,
+  "body": {
+    "results": [
+      {
+        "state": "NJ",
+        "percent_of_patients_who_reported_that_their_home_health_tea_c7be": "88",
+        "percent_of_patients_who_reported_that_their_home_health_tea_7896": "85",
+        "percent_of_patients_who_reported_that_their_home_health_tea_7ba5": "82",
+        "percent_of_patients_who_gave_their_home_health_agency_a_rat_187c": "85",
+        "percent_of_patients_who_reported_yes_they_would_definitely__2707": "77",
+        "number_of_completed_surveys": "14477",
+        "survey_response_rate": "22"
+      }
+    ],
+    "count": 1,
+    "schema": {
+      "6395960c-c8c9-5f8e-a103-92f6faad365e": {
+        "fields": {
+          "state": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "State"
+          },
+          "percent_of_patients_who_reported_that_their_home_health_tea_c7be": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "Percent of patients who reported that their home health team gave care in a professional way"
+          },
+          "percent_of_patients_who_reported_that_their_home_health_tea_7896": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "Percent of patients who reported that their home health team communicated well with them"
+          },
+          "percent_of_patients_who_reported_that_their_home_health_tea_7ba5": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "Percent of patients who reported that their home health team discussed medicines, pain, and home safety with them"
+          },
+          "percent_of_patients_who_gave_their_home_health_agency_a_rat_187c": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "Percent of patients who gave their home health agency a rating of 9 or 10 on a scale from 0 (lowest) to 10 (highest)"
+          },
+          "percent_of_patients_who_reported_yes_they_would_definitely__2707": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "Percent of patients who reported YES, they would definitely recommend the home health agency to friends and family"
+          },
+          "number_of_completed_surveys": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "Number of completed Surveys"
+          },
+          "survey_response_rate": {
+            "type": "text",
+            "mysql_type": "text",
+            "description": "Survey response rate"
+          }
+        }
+      }
+    },
+    "query": {
+      "limit": 100,
+      "conditions": [
+        {
+          "property": "state",
+          "value": "NJ",
+          "operator": "="
+        }
+      ],
+      "resources": [
+        {
+          "id": "6395960c-c8c9-5f8e-a103-92f6faad365e",
+          "alias": "t"
+        }
+      ],
+      "offset": 0,
+      "count": true,
+      "results": true,
+      "schema": true,
+      "keys": true,
+      "format": "json",
+      "rowIds": false,
+      "properties": [
+        "state",
+        "percent_of_patients_who_reported_that_their_home_health_tea_c7be",
+        "percent_of_patients_who_reported_that_their_home_health_tea_7896",
+        "percent_of_patients_who_reported_that_their_home_health_tea_7ba5",
+        "percent_of_patients_who_gave_their_home_health_agency_a_rat_187c",
+        "percent_of_patients_who_reported_yes_they_would_definitely__2707",
+        "number_of_completed_surveys",
+        "survey_response_rate"
+      ]
+    }
+  }
+}

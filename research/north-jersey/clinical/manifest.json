@@ -1,0 +1,554 @@
+{
+  "cmsManifest": "research/north-jersey/cms/manifest.json",
+  "consumedArtifacts": {
+    "research/north-jersey/clinical/sources/capture-receipts.json": {
+      "bytes": 475,
+      "sha256": "5b6fb7f0d444a045c1b57137c91f21291e4e3611fc6d1e42bb5008104e3c3d01"
+    },
+    "research/north-jersey/clinical/sources/m5jg-jg7i.metadata.json": {
+      "bytes": 1748,
+      "sha256": "801de5676f8432002cf241b8a1a970f2ef50c7e72c9e840abc218cc7281c6b1c"
+    },
+    "research/north-jersey/clinical/sources/m5jg-jg7i.rows.json": {
+      "bytes": 3910,
+      "sha256": "da0cf53d478f1dcb6795636583fc08c571bf938e81e094c4f8c76b5fe37ca09f"
+    },
+    "research/north-jersey/clinical/sources/vxub-6swi.metadata.json": {
+      "bytes": 1760,
+      "sha256": "c7b86e058635168ee84bc06b8afa38ca2430c534073e1a0f70ce13107fc39204"
+    },
+    "research/north-jersey/clinical/sources/vxub-6swi.rows.json": {
+      "bytes": 3682,
+      "sha256": "c24afe857ec570df0a1c7a2cf473327eabaff8a5cd1cb7c8821f58e5b2d7d757"
+    },
+    "research/north-jersey/cms/datasets/4pq5-n9py.json": {
+      "bytes": 1778976,
+      "sha256": "1fda42064691feaa96613f2fa741d7dd5644f6b23a9c753c2c62ad6b484df13b"
+    },
+    "research/north-jersey/cms/datasets/6jpm-sxkc.json": {
+      "bytes": 253110,
+      "sha256": "119bfd238103016178fd0f9457af95c509950c6c25d36662ca3ece07c2f2b7df"
+    },
+    "research/north-jersey/cms/datasets/c886-nwpj.json": {
+      "bytes": 3178,
+      "sha256": "4398f881d15ffa9296ec2b948034914397f0d9cf83088649435c5e5bd3c919f3"
+    },
+    "research/north-jersey/cms/datasets/ccn4-8vby.json": {
+      "bytes": 72625,
+      "sha256": "e30810fbb2c667d7a2b648ea9c09718b45739814c1f76e5efb8fa764bb53e873"
+    },
+    "research/north-jersey/cms/datasets/djen-97ju.json": {
+      "bytes": 5874227,
+      "sha256": "9d9116850a752599a26e6613507ad0ccaa4a7ef96303fd32080a6edd94916e20"
+    },
+    "research/north-jersey/cms/datasets/fa88-6ff2.json": {
+      "bytes": 802,
+      "sha256": "c18c810efbc944573c8823738c1807682e52c438c2c33967bf2d292bf5e9d059"
+    },
+    "research/north-jersey/cms/datasets/fykj-qjee.json": {
+      "bytes": 11207185,
+      "sha256": "933db0934bc207847f12e65914c3eb168b2b73e7516a8d1268487b84829badac"
+    },
+    "research/north-jersey/cms/datasets/g6vv-u9sr.json": {
+      "bytes": 128303,
+      "sha256": "f2ea16aa008e961bf4f970a863271949b50c94fe068f8aa8775e42f6a32bc63e"
+    },
+    "research/north-jersey/cms/datasets/hicp-9999.json": {
+      "bytes": 182,
+      "sha256": "586d7b521b513a114ff1bbdfdbbf5f756cb2bf94dc0960d0bd7e829f87ed6b13"
+    },
+    "research/north-jersey/cms/datasets/ifjz-ge4w.json": {
+      "bytes": 5683990,
+      "sha256": "03d01de4c8a1d5432d8828ea874cf33254964e7f1a6e2ac9bfad43255a72684b"
+    },
+    "research/north-jersey/cms/datasets/ijh5-nb2v.json": {
+      "bytes": 1010701,
+      "sha256": "58bc0d4b616652cb5d567a807e018dbbc237cc7ca92a1798aaffd2a0d8e98449"
+    },
+    "research/north-jersey/cms/datasets/m5eg-upu5.json": {
+      "bytes": 255391,
+      "sha256": "f84b01e89700c1e8702c489766534cee7ad82773044fa0bcb4c2cfb27bacaf0f"
+    },
+    "research/north-jersey/cms/datasets/qmdc-9999.json": {
+      "bytes": 15450,
+      "sha256": "5b8d697ef3b923760b7cf1c1ee6201ad63f418e3494a906b8b0a10a1dcc21577"
+    },
+    "research/north-jersey/cms/datasets/r5ix-sfxw.json": {
+      "bytes": 8634915,
+      "sha256": "3e3af69d7b577fced575e5a8b206d8fb65214a969ede0f27439d5498bbaf30ea"
+    },
+    "research/north-jersey/cms/datasets/svdt-c123.json": {
+      "bytes": 646668,
+      "sha256": "f7a29c20175e4d4851b14ca7cc138e4e1b06433a4a98011dc548298ebded4584"
+    },
+    "research/north-jersey/cms/datasets/tagd-9999.json": {
+      "bytes": 198830,
+      "sha256": "8ac272ff9eff1872c796eb81097ab17b36e8523023f6c2b8dc022c59db569198"
+    },
+    "research/north-jersey/cms/datasets/tbry-pc2d.json": {
+      "bytes": 2201459,
+      "sha256": "d6e1f22a4c31e87288dbe99c2ed2106c7faded05afde9733199dfd8fd619af15"
+    },
+    "research/north-jersey/cms/home_health_service_zip_edges.json": {
+      "bytes": 577264,
+      "sha256": "1ddb8268621ed84810e42c3e55a4ea4fb7fe142a35fc02519b8f9c9a4633c27f"
+    },
+    "research/north-jersey/cms/manifest.json": {
+      "bytes": 290304,
+      "sha256": "71732828b15579c85b6f8bcebb8058940e51cd6a497682536545472724e622d8"
+    },
+    "research/north-jersey/cms/pos/latest.json": {
+      "bytes": 53,
+      "sha256": "f712a7e377d851b3459f41a18b0243262ae26588775135b5733706f64afe9be1"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/manifest.json": {
+      "bytes": 13225,
+      "sha256": "1167f962cf81895bcbcd31f5b23c3cc048f052afb229ab80db0ed1da96e2c48a"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/api-docs.html": {
+      "bytes": 2974,
+      "sha256": "971a7734d4568d7122ca26741c66622a72af4c282fc5d02292df0ff4b20edd2d"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/dictionary.xlsx": {
+      "bytes": 39734,
+      "sha256": "bf0fbff48927f8f7ab5cca6a346013b9bf1051ab6fdc08b9d00e391774b9605c"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/discovery.json": {
+      "bytes": 18045,
+      "sha256": "51e8148c96d8ee53d08a67379b809d025f4f2a4938f650723681f5b2582f30bf"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/home_health/pdc-00000.json": {
+      "bytes": 220826,
+      "sha256": "06626e719a4045ff7e042510ef43fa4dbabb117809a170f85e9a5ac4b37c0c3d"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/home_health/pdc-metadata.json": {
+      "bytes": 1357,
+      "sha256": "f1d477ce3cdb5f53420e5c14c7d6a9a6a8d999879faf9b8021e72ff80305f844"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/home_health/pos-00000.json": {
+      "bytes": 457286,
+      "sha256": "cb6dd2ddea08f18e83a49233ad2b2a8be33fb0e95ef370293c976cdc3f87cb31"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/home_health/pos-00075.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/latest-resources.json": {
+      "bytes": 2310,
+      "sha256": "f42014ed529db426e42947b5e76a3b02bde1c092cc943c7fa6fc8a9b996014ea"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/metadata.json": {
+      "bytes": 17628,
+      "sha256": "70e34044f6f59aa0b5318630cf40d73edd85c0893c8ba98f040b090021111b37"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/nursing/pdc-00000.json": {
+      "bytes": 1580909,
+      "sha256": "3d1182d4d4e9ef61a72aa42bcf3e091e68e352a20db7ac4468ad4ecf92ed0b4f"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/nursing/pdc-metadata.json": {
+      "bytes": 1366,
+      "sha256": "5df6ab90a728e4456a2db798d770eb5d31e1d0744f2cef66140419b1f1018974"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/nursing/pos-00000.json": {
+      "bytes": 2357997,
+      "sha256": "6679c1a48a847563fa3a192cc3d48b56f694c95d2cd7978aae96a705d90abce8"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/nursing/pos-00387.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/resources.json": {
+      "bytes": 2310,
+      "sha256": "2f0c956c38524a1e04c24b0c8b6a7b488b9d25869045f8174664c70bfd3bf237"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/raw/schema.json": {
+      "bytes": 63049,
+      "sha256": "edc68c4b2a1b90e928fedb0bf140ca67c6b872afe8fbc4ba9a888ac979d9a950"
+    },
+    "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z/supplement.json": {
+      "bytes": 4158846,
+      "sha256": "e8cd3646116e6a73c9a0f6c7eda153640b492d1712aee9879bb0aa0dbe405ddc"
+    },
+    "research/north-jersey/cms/raw/4pq5-n9py/primary/page-0000000.json": {
+      "bytes": 1581037,
+      "sha256": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c"
+    },
+    "research/north-jersey/cms/raw/6jpm-sxkc/primary/page-0000000.json": {
+      "bytes": 220827,
+      "sha256": "825e78610ad2b430aff4b295cc02015937af5697f81c70e7abe03d620bceb2a1"
+    },
+    "research/north-jersey/cms/raw/6jpm-sxkc/service-office-397125/page-0000000.json": {
+      "bytes": 25093,
+      "sha256": "835b9c1c6ff3b9489b84d09494276c5297390400501aa61ea38f88fab9444064"
+    },
+    "research/north-jersey/cms/raw/6jpm-sxkc/service-office-397481/page-0000000.json": {
+      "bytes": 25817,
+      "sha256": "41df8d495b285132efd9ec87b22d8e1560ed1f4ce7e3271b0098363e1526443c"
+    },
+    "research/north-jersey/cms/raw/6jpm-sxkc/service-office-397736/page-0000000.json": {
+      "bytes": 25003,
+      "sha256": "67c7665751a06bbc5d80fc13b9ae11d2c60f792047189f533ab25110eede81f1"
+    },
+    "research/north-jersey/cms/raw/6jpm-sxkc/service-office-398034/page-0000000.json": {
+      "bytes": 25021,
+      "sha256": "a42bff46dc4948754909eb9c6c0a0b7eac3f46af305e567d6e2c32274ae4c96f"
+    },
+    "research/north-jersey/cms/raw/6jpm-sxkc/service-office-398186/page-0000000.json": {
+      "bytes": 24962,
+      "sha256": "273ad10b454bf72b61c37006850f04c85b71f30b7abc43ca0c57af8e260ff9f8"
+    },
+    "research/north-jersey/cms/raw/c886-nwpj/primary/page-0000000.json": {
+      "bytes": 3483,
+      "sha256": "d35143b9381e6687456d2f97cff7f7f21c7b47121c32a4b2da8ea7f7f675a132"
+    },
+    "research/north-jersey/cms/raw/ccn4-8vby/primary/page-0000000.json": {
+      "bytes": 64365,
+      "sha256": "31d91d9a23685bfb9be9f4606df06a4ec5bdf59cd264eea5912126ff39e64ffd"
+    },
+    "research/north-jersey/cms/raw/ccn4-8vby/service-office-397125/page-0000000.json": {
+      "bytes": 7989,
+      "sha256": "3dc78ae95315c983e13c5dd7e4c224beab425b10dd45968ded46a7ef70cfed72"
+    },
+    "research/north-jersey/cms/raw/ccn4-8vby/service-office-397481/page-0000000.json": {
+      "bytes": 8150,
+      "sha256": "47864cc2a13d0fa5196669614e8fca0eeed9b1f8116c9fa946d771f521adde0f"
+    },
+    "research/north-jersey/cms/raw/ccn4-8vby/service-office-397736/page-0000000.json": {
+      "bytes": 7988,
+      "sha256": "b2488057308fe76ee92af59503a43e7cb5e0d58adf6123dca8707e022a2c3c01"
+    },
+    "research/north-jersey/cms/raw/ccn4-8vby/service-office-398034/page-0000000.json": {
+      "bytes": 7988,
+      "sha256": "2b2e7b081c1c2c2cca027745292e5b2548f55d07278bc6f13e250d036e3ad9b6"
+    },
+    "research/north-jersey/cms/raw/ccn4-8vby/service-office-398186/page-0000000.json": {
+      "bytes": 8073,
+      "sha256": "889d77ba9b26371d4d69a093b28f444663111453cbff9a648d9259d088b36be2"
+    },
+    "research/north-jersey/cms/raw/djen-97ju/primary/page-0000000.json": {
+      "bytes": 856949,
+      "sha256": "b004c7697f5fb68ba0df571b7188a30e15a05a5b583f8dde824b069aa31adbb1"
+    },
+    "research/north-jersey/cms/raw/djen-97ju/primary/page-0001000.json": {
+      "bytes": 854466,
+      "sha256": "45e0dee3235d337f39246c88b55b733f274315a116b54c5c13809d1648eb88e9"
+    },
+    "research/north-jersey/cms/raw/djen-97ju/primary/page-0002000.json": {
+      "bytes": 854881,
+      "sha256": "a69e0f2e56c711e1d62b3ab37adf212fbfd56e1486ef3080f991562c588b0933"
+    },
+    "research/north-jersey/cms/raw/djen-97ju/primary/page-0003000.json": {
+      "bytes": 848731,
+      "sha256": "511fa8e67e8d20f1e986d22df445c6169129d1dfc8d832cb92478eb4e443bbaf"
+    },
+    "research/north-jersey/cms/raw/djen-97ju/primary/page-0004000.json": {
+      "bytes": 852138,
+      "sha256": "3a30c152b5f6da20896519ef8cb57acdab0aa5de8e467619bab8f35975045eaf"
+    },
+    "research/north-jersey/cms/raw/djen-97ju/primary/page-0005000.json": {
+      "bytes": 778681,
+      "sha256": "032f70dfa0f16f1749fe8490f80dc9d6d2db5cac757a9509d0c212cf6f6558a3"
+    },
+    "research/north-jersey/cms/raw/fa88-6ff2/primary/page-0000000.json": {
+      "bytes": 1309,
+      "sha256": "64a487c2c4f686642d7571f545e74461f17ca5a1dd69b73ed542b1e371356f9c"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0000000.json": {
+      "bytes": 471568,
+      "sha256": "24d6382daa1d780020c8f62f25f6a6fc1c2e300bf5e663e876419949ab3bff18"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0001000.json": {
+      "bytes": 473950,
+      "sha256": "ea39b754b651d2ce2169be66bcb040c43e4fd8bb5bea3860f671e7f86a2eaa68"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0002000.json": {
+      "bytes": 471805,
+      "sha256": "1346a84c86e9bf16ea9be7e64f7cdb55f69b14f86ca4bea3ffa5135649289282"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0003000.json": {
+      "bytes": 475064,
+      "sha256": "2ed39a3a4a16db84b9c2a903625b1b93e3baef51db8b4d627f5ff5911ba2923b"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0004000.json": {
+      "bytes": 465181,
+      "sha256": "bc6e97d2e223828dd4fa9e2b542325bad291809d7b14617ac0c3ce4972927434"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0005000.json": {
+      "bytes": 469554,
+      "sha256": "31eaaf60b6a33348e703b95b6bbce02b55db9b416ac8d95aef6d059836e4e251"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0006000.json": {
+      "bytes": 473164,
+      "sha256": "eeb581be44fbd9b911dbb9252f1b6b3aad8a9bd6b00c5d712257e12122778a1e"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0007000.json": {
+      "bytes": 474632,
+      "sha256": "c8924a009859d940314716ae562c4621037c1a116e27e7b01e96163250a9b214"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0008000.json": {
+      "bytes": 472563,
+      "sha256": "b43e7eac2b5162af8b7669f657961a8a76839c6c5c5cc75aa2da564a5c0f67e8"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0009000.json": {
+      "bytes": 464036,
+      "sha256": "e84c059ba2c6bcd49d84bb0999b7e66f51caaa02a656108d11a076d2f193f958"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0010000.json": {
+      "bytes": 464845,
+      "sha256": "2b18b585e9bc4159f8a2419fe5af5fbb3ce8a07207199af4f464e542f96cd325"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0011000.json": {
+      "bytes": 466075,
+      "sha256": "6e3ca9076682071a59bafae723d087f2cdecb51c8e516244211d7c391d67f58e"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0012000.json": {
+      "bytes": 461289,
+      "sha256": "3c0bdb518edf3d08027a4d25b58f44633577527bd327ee7f4c76f126fd481585"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0013000.json": {
+      "bytes": 466385,
+      "sha256": "90c138edfabf0df82c0d4913a5d2d7a5095efc010b586526d49da465a8d90e0a"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0014000.json": {
+      "bytes": 468199,
+      "sha256": "e0d24de9a9c1bee75714a0e8994616f9794d1349ea62cee13e86dd91e69d405c"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0015000.json": {
+      "bytes": 471280,
+      "sha256": "90e95981cf0c6918f9d48147c35bf5ec5b0dcf6a6ef9750120056bd4f3b8c551"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0016000.json": {
+      "bytes": 470573,
+      "sha256": "d676ea00a5df6027ff466c2d1cabd3d68d13f232ba67bffb72b47e0eecf0edf3"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0017000.json": {
+      "bytes": 464308,
+      "sha256": "13edc17c6b248296b35f3b7529da0101770d2e668350c2dcd0ff424bbf5142c4"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0018000.json": {
+      "bytes": 472778,
+      "sha256": "c436d8f6ba4fc43085eb661f71f4846c3f3857c60d0734d679eab4168555cf45"
+    },
+    "research/north-jersey/cms/raw/fykj-qjee/primary/page-0019000.json": {
+      "bytes": 400731,
+      "sha256": "6889d030cc53769372fc75c6b431ddbe41f9d8d75fb10744c8d8cc2495ce80c9"
+    },
+    "research/north-jersey/cms/raw/g6vv-u9sr/primary/page-0000000.json": {
+      "bytes": 108402,
+      "sha256": "551835625659b7175d12ddd5a9496f820441d2fc4b22f143aac7c2e62d0b2d8d"
+    },
+    "research/north-jersey/cms/raw/hicp-9999/primary/page-0000000.json": {
+      "bytes": 1198,
+      "sha256": "35955bdf878ec6e0f47a8246c792d61597e71a295ed12841c18778f240da1acb"
+    },
+    "research/north-jersey/cms/raw/ifjz-ge4w/primary/page-0000000.json": {
+      "bytes": 858099,
+      "sha256": "ac9ad23ef876fd106b599087ea995b16531ff5c2d83bf48ed04ae876d3c7c162"
+    },
+    "research/north-jersey/cms/raw/ifjz-ge4w/primary/page-0001000.json": {
+      "bytes": 855374,
+      "sha256": "baa7b5962084fe22af684a262c7004be2ebde65ff1140877d3c59824a47387ae"
+    },
+    "research/north-jersey/cms/raw/ifjz-ge4w/primary/page-0002000.json": {
+      "bytes": 860648,
+      "sha256": "99315ea2262c466be3a77d07b19c6f7f1b265cd579f4670dad5c6e331506ddf0"
+    },
+    "research/north-jersey/cms/raw/ifjz-ge4w/primary/page-0003000.json": {
+      "bytes": 850848,
+      "sha256": "964fb8fd94f10af08daeb40bfdb876ec3162f3fc7f4525099493bb7a9654ed4f"
+    },
+    "research/north-jersey/cms/raw/ifjz-ge4w/primary/page-0004000.json": {
+      "bytes": 856970,
+      "sha256": "df4d378a01348e04c328f08b5d256b4b5df39b1b5978e2e621cdb5fb7f6cce3d"
+    },
+    "research/north-jersey/cms/raw/ifjz-ge4w/primary/page-0005000.json": {
+      "bytes": 578461,
+      "sha256": "40793402f9ece374dc5b4ff2164e5252bb513456963b08238dc52bfea9dc2010"
+    },
+    "research/north-jersey/cms/raw/ijh5-nb2v/primary/page-0000000.json": {
+      "bytes": 621093,
+      "sha256": "86c42453aa87d4f000fc20aec67a5853c0b85cdae25c5d5e1917336f596aa7dc"
+    },
+    "research/north-jersey/cms/raw/ijh5-nb2v/primary/page-0001000.json": {
+      "bytes": 244846,
+      "sha256": "5bc0a975d919f4b937bacb30c8644e762e89f196c5b4517e8f12017423f93cb0"
+    },
+    "research/north-jersey/cms/raw/m5eg-upu5/nj-offices/page-0000000.json": {
+      "bytes": 74802,
+      "sha256": "def26608b6681556aabc6f5f688b5b9aff0a3467eaefc7c96d2ffd5a0537f2e7"
+    },
+    "research/north-jersey/cms/raw/m5eg-upu5/nj-offices/page-0001000.json": {
+      "bytes": 74805,
+      "sha256": "2ca3f4efa7f8c8732cfd4064f1ba00cb30196cb71318e51ab5915a2f96479bb9"
+    },
+    "research/north-jersey/cms/raw/m5eg-upu5/nj-offices/page-0002000.json": {
+      "bytes": 44613,
+      "sha256": "417b869695f87c09ea4e3fd766128bb95b8b27aad57240263255f9919b85f9fc"
+    },
+    "research/north-jersey/cms/raw/m5eg-upu5/primary/page-0000000.json": {
+      "bytes": 74875,
+      "sha256": "4883692d8d94ec90c18ab8facdbe681a33d3f0f3ef6df75c5ccff64bff9e420c"
+    },
+    "research/north-jersey/cms/raw/m5eg-upu5/primary/page-0001000.json": {
+      "bytes": 74878,
+      "sha256": "32725148ac98430ea999fcd06a31030f1705b5b9c06fb7cb94d4bfe59460174d"
+    },
+    "research/north-jersey/cms/raw/m5eg-upu5/primary/page-0002000.json": {
+      "bytes": 45204,
+      "sha256": "52416536ef1cf563e30e3a276ea0d4004013d63461dca71f15a4815ce8e08790"
+    },
+    "research/north-jersey/cms/raw/qmdc-9999/primary/page-0000000.json": {
+      "bytes": 15024,
+      "sha256": "53e8a2b7ea220602bea95978465bbd9fa5f2c18e8d6da6d1f6c82602bacfe20c"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0000000.json": {
+      "bytes": 908483,
+      "sha256": "87b8714b06f80be35cfb22a5343354c6df6e86c2e8eed332acf6432f7f5cfcf0"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0001000.json": {
+      "bytes": 908883,
+      "sha256": "92a34db1b2dfe503d1e57e6d05cccb2e9670158f7552685ef9f792acd77fd97d"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0002000.json": {
+      "bytes": 910466,
+      "sha256": "c71effacae0af3775d0b83b8f4ecaf7b6825b32fc9b0215cd9da23889a9e66ee"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0003000.json": {
+      "bytes": 913232,
+      "sha256": "46ee5c03ebd63aa05c2815e465b3b8a7d2d58d58845b363a355fa4e08583c4a5"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0004000.json": {
+      "bytes": 902004,
+      "sha256": "94b446b984eedc76a5e6ace35974e34dfde65779d1bebe33a5cfab9a477062a2"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0005000.json": {
+      "bytes": 900529,
+      "sha256": "33ac9952991cb7f6536009f5b76767ab034a6ce589cfc4361e06b7362b6c43a9"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0006000.json": {
+      "bytes": 902734,
+      "sha256": "2420fb33cbe0269cd3ab7071b248253b0e0a4d1932fbda6f916c6fc3a8685119"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0007000.json": {
+      "bytes": 904326,
+      "sha256": "a2634f3d483aaac7b54de21959f2252afaa85018c44b01e7280c376bcaf14e7c"
+    },
+    "research/north-jersey/cms/raw/r5ix-sfxw/primary/page-0008000.json": {
+      "bytes": 197548,
+      "sha256": "ad69f0ba47ec317b83424df8b936444552cff7d48a44e9575a8e3c4108c2da2a"
+    },
+    "research/north-jersey/cms/raw/svdt-c123/primary/page-0000000.json": {
+      "bytes": 178529,
+      "sha256": "f46aee1f7160ef47cb08ad69e52cf62eb710dcc09391628274480336f17fb683"
+    },
+    "research/north-jersey/cms/raw/svdt-c123/primary/page-0001000.json": {
+      "bytes": 178509,
+      "sha256": "fee863c6a27554e2273e241c93377da754d33b6686ed8f49d0f4fa7c7c74199f"
+    },
+    "research/north-jersey/cms/raw/svdt-c123/primary/page-0002000.json": {
+      "bytes": 169891,
+      "sha256": "80808af6f71896ee1b93a7a980da6cb4e0c1455e22177f0e58c74d0070c7358f"
+    },
+    "research/north-jersey/cms/raw/tagd-9999/primary/page-0000000.json": {
+      "bytes": 177491,
+      "sha256": "5d2c75fb37b26d001f308648cca5cce323702c9da780a4a3812a1331f779edb0"
+    },
+    "research/north-jersey/cms/raw/tbry-pc2d/primary/page-0000000.json": {
+      "bytes": 1862436,
+      "sha256": "340313fde91df40e25e85bb470a146bbb08292c306a90c083a592603983a6e17"
+    },
+    "research/north-jersey/cms/raw/tbry-pc2d/primary/page-0001000.json": {
+      "bytes": 85684,
+      "sha256": "7231ccd93a6fb8db54a76b040eb5dbe6e34ccd549a835e8cfb722c92e1cde197"
+    }
+  },
+  "counts": {
+    "allHomeHealthClinicalAgencies": 43,
+    "certifiedTargetHomeHealthOffices": 18,
+    "cmsDatasets": 17,
+    "healthCitations": 3256,
+    "nursingCcns": 139,
+    "penalties": 107,
+    "retainedRuntimeCitations": 2722,
+    "serviceOnlyAgencies": 8,
+    "serviceTargetAgencies": 26,
+    "serviceZipEdges": 1246,
+    "targetCandidateEdges": 1246,
+    "verifiedCmsArtifacts": 362
+  },
+  "datasetIds": [
+    "4pq5-n9py",
+    "6jpm-sxkc",
+    "c886-nwpj",
+    "ccn4-8vby",
+    "djen-97ju",
+    "fa88-6ff2",
+    "fykj-qjee",
+    "g6vv-u9sr",
+    "hicp-9999",
+    "ifjz-ge4w",
+    "ijh5-nb2v",
+    "m5eg-upu5",
+    "qmdc-9999",
+    "r5ix-sfxw",
+    "svdt-c123",
+    "tagd-9999",
+    "tbry-pc2d"
+  ],
+  "outputs": {
+    "home-health-agency-evidence.json": {
+      "bytes": 2546318,
+      "sha256": "e712973a33327819b9b7c6fbbe9e8a4fc6c94df40469aa9b1c5e19ac0d26f690"
+    },
+    "home-health-certified-offices.json": {
+      "bytes": 324618,
+      "sha256": "ee1e771a4451dc7e6c0ba4839b1c7e0a5d6440cec7dbb026eb80abfc8b498e66"
+    },
+    "home-health-evidence.json": {
+      "bytes": 700109,
+      "sha256": "59884c3e9fc35f773c80985aee1f909d57d87dd3ea1919f1a5b8ea84dff48d82"
+    },
+    "home-health-service-only.json": {
+      "bytes": 472797,
+      "sha256": "d4195062cd55a1788576dbc27964dabc4b46fbb7e5de1d58d6f32862c51279a1"
+    },
+    "home-health-service-zip-edges.json": {
+      "bytes": 618647,
+      "sha256": "09a279235922528fc96df80813daefd5ee0e97c22ba5254baca40d347231d71f"
+    },
+    "inspection-history.json": {
+      "bytes": 2202900,
+      "sha256": "d28297aef2b562b46669acb5f845e1437239f4bbc516ed039e0d9306dc973838"
+    },
+    "nursing-cms-by-ccn.json": {
+      "bytes": 55395,
+      "sha256": "50b7d60e0ad70470c85e1177f6ffe4d831d6f9f27d88f851b37cf51294a9915d"
+    },
+    "nursing-evidence-by-ccn.json": {
+      "bytes": 27309036,
+      "sha256": "c9a337900266d0d4ab9485e9e4aaa173296589b59ef33081693aa65d1f7aa353"
+    },
+    "source-periods-and-definitions.json": {
+      "bytes": 507414,
+      "sha256": "9564816d82d0cea5333be06cc2cd7e03437aabeb821997335ff3598dbadb289b"
+    }
+  },
+  "posSnapshot": "research/north-jersey/cms/pos/snapshots/20261112T150611097460Z",
+  "runtimeArtifactReferences": {
+    "homeHealthEvidence": {
+      "count": 18,
+      "path": "clinical/home-health-evidence.json",
+      "sha256": "59884c3e9fc35f773c80985aee1f909d57d87dd3ea1919f1a5b8ea84dff48d82"
+    },
+    "inspectionHistory": {
+      "count": 139,
+      "path": "clinical/inspection-history.json",
+      "sha256": "d28297aef2b562b46669acb5f845e1437239f4bbc516ed039e0d9306dc973838"
+    }
+  },
+  "schemaVersion": 1,
+  "supplementalDatasetIds": [
+    "m5jg-jg7i",
+    "vxub-6swi"
+  ]
+}

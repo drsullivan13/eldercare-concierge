@@ -1,0 +1,53 @@
+{
+  "captureMethod": "FetchUrl JSON extracted from returned Markdown, not original HTTP bytes",
+  "checkedAt": "2026-11-12",
+  "url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/vxub-6swi",
+  "statusCode": 200,
+  "body": {
+    "@type": "dcat:Dataset",
+    "accessLevel": "public",
+    "bureauCode": [
+      "009:38"
+    ],
+    "contactPoint": {
+      "@type": "vcard:Contact",
+      "fn": "Home Health CAHPS Helpdesk",
+      "hasEmail": "mailto:hhcahps@rti.org"
+    },
+    "description": "National Data for Home Health Care - Patient Survey (HHCAHPS) for 2025Q2 to 2026Q1",
+    "distribution": [
+      {
+        "@type": "dcat:Distribution",
+        "downloadURL": "https://data.cms.gov/provider-data/sites/default/files/resources/33cdc93b296f79f0c3e57e6e8edd5d3e_1791237947/HHCAHPS_National_Oct2026.csv",
+        "mediaType": "text/csv",
+        "describedBy": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/home_health/HHS_Data_Dictionary.pdf",
+        "describedByType": "application/pdf"
+      }
+    ],
+    "identifier": "vxub-6swi",
+    "issued": "2026-09-16",
+    "keyword": [
+      "Patient Survey",
+      "National",
+      "Average",
+      "CAHPS",
+      "Medicare",
+      "Patient Experience of Care"
+    ],
+    "landingPage": "https://data.cms.gov/provider-data/dataset/vxub-6swi",
+    "modified": "2026-09-16",
+    "nextUpdateDate": "2027-01-13",
+    "programCode": [
+      "009:000"
+    ],
+    "publisher": {
+      "@type": "org:Organization",
+      "name": "Centers for Medicare & Medicaid Services (CMS)"
+    },
+    "released": "2026-10-21",
+    "theme": [
+      "Home health services"
+    ],
+    "title": "Home Health Care - Patient Survey (HHCAHPS) National Data 2025Q2 to 2026Q1"
+  }
+}
