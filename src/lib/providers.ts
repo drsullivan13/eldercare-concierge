@@ -1,3 +1,4 @@
+import type { ResearchSummary } from "./location-research-types";
 export type CareCategory =
   | "nursing-home"
   | "assisted-living"
@@ -69,6 +70,7 @@ export type Provider = {
   sources: Source[];
   warnings: string[];
   limitations: string[];
+  research?: ResearchSummary;
 };
 export type SearchProvider = Provider & { distanceMiles: number | null };
 export type SearchResponse = {

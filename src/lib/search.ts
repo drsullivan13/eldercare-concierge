@@ -3,6 +3,7 @@ import providerData from "@/data/providers.json";
 import zipData from "@/data/ma-zips.json";
 import prefixData from "@/data/us-zip-prefix-states.json";
 import meta from "@/data/catalog-meta.json";
+import { getResearchSummary } from "./location-research";
 import {
   CATEGORY_LABELS,
   type CareCategory,
@@ -17,6 +18,7 @@ export type SearchOptions = {
   category?: string;
   sort?: string;
   q?: string;
+  evidence?: string;
 };
 export class SearchInputError extends Error {
   readonly status = 400;
@@ -27,7 +29,7 @@ export class SearchInputError extends Error {
 }
 export const BOSTON = { lat: 42.3601, lng: -71.0589 };
 export const PILOT_RADIUS_MILES = 55;
-export const catalog = providerData as Provider[];
+export const catalog: Provider[] = providerData as Provider[];
 const byId = new Map(catalog.map((provider) => [provider.id, provider]));
 const zips = zipData as Record<
   string,
@@ -81,13 +83,22 @@ export function searchProviders(
   if (category !== "all" && !categoryKeys.includes(category as CareCategory))
     throw new SearchInputError("Choose a supported care category.");
   const sort = opts.sort ?? "distance";
-  if (sort !== "distance" && sort !== "cms-rating")
-    throw new SearchInputError("Sort must be distance or cms-rating.");
+  if (!["distance", "cms-rating", "experience"].includes(sort))
+    throw new SearchInputError(
+      "Choose distance, cms-rating or experience sorting.",
+    );
+  if (sort === "experience" && category === "all")
+    throw new SearchInputError(
+      "Choose a care category before comparing consumer experience scores.",
+    );
   if (sort === "cms-rating" && category !== "nursing-home")
     throw new SearchInputError(
       "CMS rating sorting is available only for the nursing-home category.",
     );
   const query = (opts.q ?? "").trim().toLocaleLowerCase("en-US");
+  const evidence = opts.evidence ?? "all";
+  if (!["all", "details", "pricing", "openings", "reviews"].includes(evidence))
+    throw new SearchInputError("Choose a supported research filter.");
   if (query.length > 200)
     throw new SearchInputError("Search text must be 200 characters or fewer.");
   const categories: Record<string, number> = Object.fromEntries(
@@ -95,7 +106,18 @@ export function searchProviders(
   );
   const providers: SearchProvider[] = [];
   let excludedWithoutCoordinates = 0;
-  for (const provider of records) {
+  for (const original of records) {
+    const provider = { ...original, research: getResearchSummary(original.id) };
+    if (evidence === "details" && !provider.research?.detailsAvailable)
+      continue;
+    if (evidence === "pricing" && !provider.research?.publishedCosts) continue;
+    if (
+      evidence === "openings" &&
+      provider.research?.availabilityStatus !== "opening-published"
+    )
+      continue;
+    if (evidence === "reviews" && provider.research?.experience.value == null)
+      continue;
     if (
       query &&
       !`${provider.name} ${provider.city}`
@@ -103,8 +125,12 @@ export function searchProviders(
         .includes(query)
     )
       continue;
-    const searchableCategories = [...new Set([provider.category, ...(provider.searchCategories ?? [])])];
-    const matchesCategory = category === "all" || searchableCategories.includes(category as CareCategory);
+    const searchableCategories = [
+      ...new Set([provider.category, ...(provider.searchCategories ?? [])]),
+    ];
+    const matchesCategory =
+      category === "all" ||
+      searchableCategories.includes(category as CareCategory);
     if (
       provider.lat === null ||
       provider.lng === null ||
@@ -130,7 +156,10 @@ export function searchProviders(
   providers.sort((a, b) =>
     sort === "cms-rating"
       ? (b.cms?.overall ?? -1) - (a.cms?.overall ?? -1) || byDistanceName(a, b)
-      : byDistanceName(a, b),
+      : sort === "experience"
+        ? (b.research?.experience.value ?? -1) -
+            (a.research?.experience.value ?? -1) || byDistanceName(a, b)
+        : byDistanceName(a, b),
   );
   return {
     providers,
@@ -146,9 +175,14 @@ export function searchProviders(
 export function getProvidersByIds(ids: readonly string[]): Provider[] {
   return [...new Set(ids)].flatMap((id) => {
     const provider = byId.get(id);
-    return provider ? [provider] : [];
+    return provider
+      ? [{ ...provider, research: getResearchSummary(provider.id) }]
+      : [];
   });
 }
 export function getProviderById(id: string): Provider | undefined {
-  return byId.get(id);
+  const provider = byId.get(id);
+  return provider
+    ? { ...provider, research: getResearchSummary(provider.id) }
+    : undefined;
 }

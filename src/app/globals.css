@@ -2394,6 +2394,14 @@ em {
   right: 16px;
   top: 14px;
   z-index: 3;
+  background: white;
+  box-shadow: 0 0 0 3px white;
+}
+.modal-controls {
+  position: sticky;
+  top: 0;
+  height: 0;
+  z-index: 10;
 }
 .modal h2 {
   font-size: 31px;
@@ -5160,4 +5168,302 @@ em {
 }
 .detail-warnings {
   color: #765222;
+}
+
+/* Source-linked location offerings and consumer experience. */
+.research-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 11px;
+  background: var(--teal-pale);
+  margin: 17px 0 20px;
+}
+.research-tabs button {
+  flex: 1;
+  white-space: nowrap;
+  padding: 11px 13px;
+  border-radius: 8px;
+  color: var(--teal-dark);
+  font-weight: 600;
+}
+.research-tabs button.active {
+  background: white;
+  box-shadow: 0 1px 4px #1c343714;
+}
+.research-panel h4 {
+  margin: 20px 0 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.research-panel > h4:first-child {
+  margin-top: 0;
+}
+.offering-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 15px 0;
+}
+.offering-fact {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  min-width: 0;
+}
+.offering-fact p {
+  font-size: 13px;
+}
+.offering-price {
+  display: block;
+  color: var(--teal-dark);
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+.research-source {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  color: var(--teal-dark);
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.research-empty,
+.research-caution {
+  padding: 14px 16px;
+  margin: 14px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+.research-caution {
+  background: #f8f3e9;
+  border-color: #e8dfcd;
+  color: #625033;
+}
+.research-question {
+  margin-top: 18px;
+  padding: 19px;
+  background: var(--teal-pale);
+  border-radius: 10px;
+}
+.research-question p {
+  font-size: 13px;
+  margin: 7px 0 14px;
+}
+.availability-observation {
+  display: flex;
+  gap: 13px;
+  padding: 18px;
+  background: var(--teal-pale);
+  border-radius: 11px;
+}
+.availability-observation h4 {
+  margin-top: 0;
+}
+.availability-observation p {
+  font-size: 13px;
+}
+.experience-overview {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 18px 0;
+}
+.experience-overview h4 {
+  margin: 0 0 5px;
+}
+.experience-overview p {
+  font-size: 13px;
+}
+.experience-number {
+  display: flex;
+  flex-shrink: 0;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  padding: 20px 13px;
+  border-radius: 12px;
+  background: var(--teal-dark);
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  min-width: 100px;
+}
+.experience-number small {
+  font-size: 14px;
+  font-weight: 400;
+}
+.review-platforms {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.review-platforms article,
+.public-reviews article {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 17px;
+  background: white;
+  min-width: 0;
+}
+.review-platforms article > strong,
+.review-platforms article > span {
+  display: block;
+  margin-bottom: 5px;
+}
+.review-platforms article p {
+  margin-top: 8px;
+}
+.review-excluded {
+  color: #6b4938;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.review-section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.review-section-title label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 12px;
+}
+.review-section-title input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--teal);
+}
+.public-reviews {
+  display: grid;
+  gap: 12px;
+  margin-top: 15px;
+}
+.review-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.public-reviews blockquote {
+  margin: 14px 0;
+  padding-left: 13px;
+  border-left: 2px solid #a7bdae;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.public-reviews p {
+  font-size: 13px;
+}
+.public-reviews p.small {
+  font-size: 11px;
+  margin-top: 7px;
+}
+.review-aspects,
+.research-coverage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.review-aspects span,
+.research-coverage-tags > span {
+  background: var(--teal-pale);
+  color: var(--teal-dark);
+  border-radius: 5px;
+  padding: 4px 7px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.review-aspects .sentiment-negative {
+  background: #f8eae5;
+  color: #804637;
+}
+.review-aspects .sentiment-mixed,
+.research-coverage-tags .opening-claim {
+  background: #f5eddd;
+  color: #6a542d;
+}
+.research-notes {
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.research-notes summary {
+  color: var(--teal-dark);
+  cursor: pointer;
+  font-weight: 600;
+}
+.research-notes li + li {
+  margin-top: 8px;
+}
+.experience-card-score {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+.experience-card-score > strong {
+  background: var(--teal-dark);
+  border-radius: 7px;
+  color: white;
+  font-size: 20px;
+  padding: 8px 10px;
+}
+.experience-card-score > strong small {
+  font-size: 11px;
+  font-weight: 400;
+}
+.experience-card-score > span {
+  font-size: 11px;
+}
+.experience-card-score > span small {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.research-filter-note {
+  margin: 0 0 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+@media (max-width: 700px) {
+  .offering-facts,
+  .review-platforms {
+    grid-template-columns: 1fr;
+  }
+  .research-tabs button {
+    flex: 1 1 40%;
+    padding: 10px;
+  }
+  .experience-overview {
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .experience-number {
+    min-width: 80px;
+    font-size: 27px;
+  }
+  .results-toolbar .result-controls {
+    flex-wrap: wrap;
+  }
 }

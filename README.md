@@ -14,10 +14,13 @@ A Greater Boston elder-care research and coordination proof of concept. Families
 - List and map views, care-category filters, name/town search and nursing-home-only CMS rating order.
 - Source links, source dates, published staffing metrics, actual CMS inspection findings and penalty events, explicit unknowns and provider follow-up questions.
 - CMS home-health clinical-quality ratings and patient surveys for seven certified agencies across six organizations, with response counts, response rates, five experience measures and separate clinical measures.
+- Location details for 86 providers, published prices with billing periods at 35, and dated observations of public opening and waitlist claims.
+- Public review evidence at 17 locations, with six provisional consumer experience scores out of ten. Source links, exclusions and limited-coverage labels accompany the scores.
+- Research filters, category-specific consumer-score sorting, and separate Life here, Rooms & costs, Availability and Reviews tabs.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
 - A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
 
-There are no live vacancy feeds, price quotes, independently vetted individual caregivers, completed reference checks or connected Google/Yelp/review feeds. A provider record is not an endorsement. Public reviews are not blended into a fabricated quality score.
+Published offerings and consumer reviews are a research snapshot. Current vacancies and personalized prices still require confirmation. Individual caregivers have not been vetted, reference checks have not been completed, and no automated social-review feeds are connected. The consumer experience index summarizes eligible published ratings; clinical and regulatory evidence remains separate. See [location research coverage](docs/location-research.md) and [the score policy](docs/experience-score.md).
 
 ## Run locally
 
@@ -64,12 +67,15 @@ Distances use published Census/GeoNames ZIP points, not an exact home location o
 
 Default order is distance. Nursing-home searches can sort by published CMS overall rating, with missing ratings last and distance/name/ID as tie-breakers. Assisted living and home services never receive CMS nursing-home stars. Counts, zero values and missing values stay distinct.
 
+Within a selected care category, families can also sort by the consumer experience index. At least ten eligible reported reviews are required. Missing scores sort after rated records without becoming zeroes. Source-family deduplication, freshness checks and exclusions are described in the score policy.
+
 Read [`docs/data-sources.md`](docs/data-sources.md) for provenance, licenses, field meanings and known gaps. GeoNames postal data is used under CC BY 4.0; Census coordinates are US government data. Maps credit OpenStreetMap contributors.
 
 ```bash
 python scripts/prepare-data.py
 python scripts/prepare-inspections.py
 python scripts/prepare-home-health.py
+python scripts/prepare-location-research.py
 ```
 
 This rebuilds the catalog from retained, reviewed input snapshots. It does not refresh upstream sources or change their dates. Review source changes and matching before replacing those inputs. Do not change a retrieval date without retrieving the underlying source.
@@ -86,6 +92,7 @@ npm run test:e2e
 For E2E tests, start the production server first, or use `PLAYWRIGHT_START_SERVER=1 npm run test:e2e`. Install the browser once with `npx playwright install chromium`. Desktop and mobile cases use the actual provider API and data.
 
 `node scripts/check-accessibility.mjs` checks public and demo screens with axe against a running server and writes a local report under `artifacts/`.
+`node scripts/check-location-research.mjs` checks the four research sections on desktop and mobile, verifies the close control after scrolling, and captures review/price screenshots.
 
 ## Structure
 

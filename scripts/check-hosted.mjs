@@ -77,6 +77,28 @@ try {
   expect(anonymous.status).toBe(401);
   expect(anonymous.headers["cache-control"]).toContain("no-store");
 
+  const research = await get("/api/research?id=lifeplan-brooksby-village");
+  expect(research.status).toBe(200);
+  expect(research.body.experience.value).toBe(7.4);
+  expect(research.body.experience.confidence).toBe("limited");
+  expect(research.body.experience.reviewCount).toBe(44);
+  expect(research.body.availability.status).toBe("waitlist-published");
+  expect(
+    research.body.facts.some(
+      (f) => f.amount?.period === "one-time" && f.amount.min === 113000,
+    ),
+  ).toBe(true);
+  const reviewed = await get(
+    "/api/search?zip=02459&radius=50&category=assisted-living&evidence=reviews&sort=experience",
+  );
+  expect(reviewed.status).toBe(200);
+  expect(reviewed.body.providers.length).toBeGreaterThan(0);
+  expect(
+    reviewed.body.providers.every(
+      (p) => p.distanceMiles <= 50 && p.research.experience.value !== null,
+    ),
+  ).toBe(true);
+
   await page
     .locator("form.quick-search")
     .getByRole("button", { name: "Find care" })
@@ -93,6 +115,36 @@ try {
     JSON.parse(localStorage.getItem("harbor.demo.workspace.v1")),
   );
   expect(stored.savedProviderIds.length).toBe(1);
+
+  await page
+    .locator("form.quick-search")
+    .getByRole("button", { name: "Find care" })
+    .click();
+  await page
+    .getByPlaceholder("Search by name or town")
+    .fill("Sunrise of Newton");
+  await page
+    .locator("form.research-search")
+    .getByRole("button", { name: "Search", exact: true })
+    .click();
+  const sunrise = page
+    .locator("article.provider-card")
+    .filter({
+      has: page.getByRole("button", { name: "Sunrise of Newton", exact: true }),
+    });
+  await sunrise.getByRole("button", { name: "View evidence" }).click();
+  const dialog = page.getByRole("dialog");
+  await dialog
+    .locator(".research-tabs")
+    .getByRole("button", { name: "Reviews", exact: true })
+    .click();
+  await expect(dialog.locator(".experience-number")).toHaveText("8.2/10");
+  await dialog
+    .locator(".research-tabs")
+    .getByRole("button", { name: "Rooms & costs", exact: true })
+    .click();
+  await expect(dialog.locator(".offering-price").first()).toBeVisible();
+  await dialog.getByRole("button", { name: "Close dialog" }).click();
 
   for (const path of ["/signup", "/login", "/dashboard"]) {
     await page.goto(origin + path);
@@ -131,6 +183,13 @@ try {
     catalogTotal: results.catalogTotal,
     nursingResultsWithin10Miles: results.providers.length,
     homeHealthCcns: evidence.agencies.map((a) => a.ccn),
+    locationResearch: {
+      score: research.body.experience.value,
+      reportedReviews: research.body.experience.reviewCount,
+      availability: research.body.availability.status,
+      categoryReviewResults: reviewed.body.providers.length,
+      tabsVerified: true,
+    },
     anonymousWorkspaceStatus: anonymous.status,
     appSignInRequired: false,
     localSaveReload: true,

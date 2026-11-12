@@ -28,7 +28,7 @@ export function Modal({
       }}
       aria-label={title}
     >
-      <div className="modal-inner">
+      <div className="modal-controls">
         <button
           className="icon-button modal-close"
           onClick={close}
@@ -36,8 +36,8 @@ export function Modal({
         >
           <X size={21} />
         </button>
-        {children}
       </div>
+      <div className="modal-inner">{children}</div>
     </dialog>
   );
 }

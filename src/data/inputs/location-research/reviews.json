@@ -1,0 +1,1553 @@
+[
+  {
+    "providerId": "lifeplan-brooksby-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "brooksby-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/peabody/brooksby-village-peabody-massachusetts-01960",
+        "title": "Brooksby Village - 44 Reviews",
+        "publisher": "Caring.com",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "3.7(44 reviews)"
+      },
+      {
+        "id": "brooksby-apfm",
+        "url": "https://www.aplaceformom.com/community/brooksby-village-77329",
+        "title": "Brooksby Village reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "4 reviews with an average \"overall experience\" of 2.6 out of 5."
+      },
+      {
+        "id": "brooksby-reddit",
+        "url": "https://www.reddit.com/r/SalemMA/comments/1c6njun/assisted_living/",
+        "title": "Assisted living — r/SalemMA",
+        "publisher": "Reddit",
+        "kind": "public-discussion",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "My grandparents lived in Brooksby Village for years and loved it."
+      },
+      {
+        "id": "brooksby-birdeye",
+        "url": "https://reviews.birdeye.com/brooksby-village-157269641387486",
+        "title": "Brooksby Village - 130 reviews",
+        "publisher": "Birdeye",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "4.1 130 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review pages do not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "brooksby-caring",
+        "platform": "Caring.com",
+        "sourceFamily": "caring",
+        "rating": 3.7,
+        "scale": 5,
+        "count": 44,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact campus address 100 Brooksby Village Drive. Listing combines independent living, assisted living and continuing-care experiences; not a clinical or nursing-unit score.",
+          "Aggregate publication date is not stated; checked date is an observation date."
+        ]
+      },
+      {
+        "sourceId": "brooksby-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 2.6,
+        "scale": 5,
+        "count": 4,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "APFM tags all four reviews Memory Care although listing uses the main campus address; applicability to the full campus versus a care unit is uncertain.",
+          "APFM reports no reviews within the last two years; its displayed proprietary zero/10 is not a consumer zero rating.",
+          "SeniorAdvisor shows the same 2.6/5 and four reviews; do not add it as an independent source family."
+        ]
+      },
+      {
+        "sourceId": "brooksby-birdeye",
+        "platform": "Birdeye",
+        "sourceFamily": "birdeye-mixed",
+        "rating": 4.1,
+        "scale": 5,
+        "count": 130,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "Mixed syndicated aggregate includes Facebook, Insider Pages and Wellness, with Google link also present. Origin-specific numeric ratings are not observed.",
+          "Not an independent Google or Facebook aggregate; exclude until origins and population are resolved."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "brooksby-caring-2026-tour",
+        "sourceId": "brooksby-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/peabody/brooksby-village-peabody-massachusetts-01960",
+        "date": "2026-06-03",
+        "rating": 4,
+        "scale": 5,
+        "relationship": "visitor",
+        "excerpt": "I liked the apartments.",
+        "summary": "A tour visitor liked the apartments, grounds and location and described the sales staff positively.",
+        "aspects": [
+          {
+            "aspect": "rooms",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Independent-living tour, not evidence of care delivered."
+        ]
+      },
+      {
+        "id": "brooksby-caring-2025-family",
+        "sourceId": "brooksby-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/peabody/brooksby-village-peabody-massachusetts-01960",
+        "date": "2025-09-29",
+        "rating": 2,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "The food is generally awful.",
+        "summary": "A family reviewer criticized meal quality and long distances across the campus, while describing emergency-response staff positively.",
+        "aspects": [
+          {
+            "aspect": "food",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": [
+          "Specific personal/medical details omitted. Selected account, not representative prevalence."
+        ]
+      },
+      {
+        "id": "brooksby-reddit-family",
+        "sourceId": "brooksby-reddit",
+        "url": "https://www.reddit.com/r/SalemMA/comments/1c6njun/assisted_living/",
+        "date": null,
+        "rating": null,
+        "scale": null,
+        "relationship": "family",
+        "excerpt": "",
+        "summary": "A self-described grandchild reported that grandparents enjoyed living at Brooksby for years, while expressly saying they did not know its cost.",
+        "aspects": [],
+        "notes": [
+          "Public comment's exact date not shown, only relative age. No rating or aggregate inferred.",
+          "Self-reported family connection; not resident-verified."
+        ]
+      },
+      {
+        "id": "brooksby-facebook-family-via-birdeye",
+        "sourceId": "brooksby-birdeye",
+        "url": "https://reviews.birdeye.com/brooksby-village-157269641387486",
+        "date": null,
+        "rating": null,
+        "scale": null,
+        "relationship": "family",
+        "excerpt": "Lots of opportunities to choose from in terms of activities.",
+        "summary": "A Facebook account displayed through Birdeye described a mother's enjoyment of activities and food.",
+        "aspects": [
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "food",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Origin labeled Facebook by Birdeye; original Facebook permalink unavailable. This is syndicated evidence, not a connected Facebook feed.",
+          "Only relative age displayed, about seven years; date remains unknown."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public reviews are not independently authenticated or representative of all residents.",
+      "Do not attach these campus experiences to separate nursing record cms-225767 as its clinical rating."
+    ]
+  },
+  {
+    "providerId": "lifeplan-linden-ponds",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "linden-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/hingham/linden-ponds-02043",
+        "title": "Linden Ponds - 42 Reviews",
+        "publisher": "Caring.com",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "4.1(42 reviews)"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review pages do not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "linden-caring",
+        "platform": "Caring.com",
+        "sourceFamily": "caring",
+        "rating": 4.1,
+        "scale": 5,
+        "count": 42,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact campus address 300 Linden Ponds Way. Aggregate spans campus consumer experiences and care levels, not the separate nursing home's quality.",
+          "Aggregate publication date not stated."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "linden-caring-2026-tour",
+        "sourceId": "linden-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/hingham/linden-ponds-02043",
+        "date": "2026-06-03",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "visitor",
+        "excerpt": "I like the multiple restaurants that they have.",
+        "summary": "An independent-living visitor praised the campus, apartments, dining choices and activities but found it far from family.",
+        "aspects": [
+          {
+            "aspect": "food",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "rooms",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Tour account, not an assessment of ongoing care."
+        ]
+      },
+      {
+        "id": "linden-caring-2024-resident",
+        "sourceId": "linden-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/hingham/linden-ponds-02043",
+        "date": "2024-01-09",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "resident",
+        "excerpt": "A huge number of clubs.",
+        "summary": "A self-described resident praised management and the range of clubs and on-site services.",
+        "aspects": [
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Relationship self-reported on the platform; not independently verified."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected excerpts are not representative sampling.",
+      "Do not map the campus aggregate to nursing record cms-225773 at 400 Linden Ponds Way."
+    ]
+  },
+  {
+    "providerId": "lifeplan-carleton-willard-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "carleton-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/bedford/carleton-willard-village-01730",
+        "title": "Carleton-Willard Village - 10 Reviews",
+        "publisher": "Caring.com",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "3.6(10 reviews)"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Reviews do not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "carleton-caring",
+        "platform": "Caring.com",
+        "sourceFamily": "caring",
+        "rating": 3.6,
+        "scale": 5,
+        "count": 10,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "Address matches 100 Old Billerica Road but Caring combines Continuing Care Communities and Nursing Homes; many individual accounts specifically describe the nursing or Ross Worthen unit.",
+          "Excluded from whole-campus score until unit-versus-campus applicability is resolved."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "carleton-caring-2025-family-nursing",
+        "sourceId": "carleton-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/bedford/carleton-willard-village-01730",
+        "date": "2025-03-03",
+        "rating": 1,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "poorly run and understaffed nursing unit",
+        "summary": "A family reviewer criticized management and staffing specifically in the nursing unit.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "negative"
+          }
+        ],
+        "notes": [
+          "Explicit nursing-unit account; not generalized to independent-living campus."
+        ]
+      },
+      {
+        "id": "carleton-caring-2021-memory-unit",
+        "sourceId": "carleton-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/bedford/carleton-willard-village-01730",
+        "date": "2021-10-13",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "The staff are invested in their work",
+        "summary": "A reviewer describing a relative's Ross Worthen care praised staff, premises, activities and communication from managers.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "cleanliness",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "communication",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Platform labels the person a visitor, while review explicitly describes a relative receiving care; relationship assigned from the stated family connection.",
+          "Older care-unit account."
+        ]
+      }
+    ],
+    "notes": [
+      "Mixed reviews retained without inferring current conditions or prevalence."
+    ]
+  },
+  {
+    "providerId": "lifeplan-fox-hill-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "foxhill-apfm",
+        "url": "https://www.aplaceformom.com/community/fox-hill-village-60568",
+        "title": "Fox Hill Village reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "There are currently no reviews for this community"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "No current inventory established by this review listing.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "foxhill-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": null,
+        "scale": 5,
+        "count": 0,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact campus address 10 Longwood Drive. No reviews is missing consumer evidence, not a zero quality score."
+        ]
+      }
+    ],
+    "reviews": [],
+    "notes": [
+      "Third-party sites surface other aggregate numbers but origin/duplication not yet verified."
+    ]
+  },
+  {
+    "providerId": "ma-alr-evans-park-at-newton-corner",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "evans-apfm",
+        "url": "https://www.aplaceformom.com/community/evans-park-at-newton-corner-77111",
+        "title": "Evans Park at Newton Corner reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "58 reviews"
+      },
+      {
+        "id": "evans-google-syndicated",
+        "url": "https://www.assistedlivingcenter.com/facilities/ma/newton/evans-park-at-newton-corner-02458/",
+        "title": "Evans Park at Newton Corner — reviews labeled Google",
+        "publisher": "Assisted Living Center",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The staff are kind and caring"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "evans-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 3.9,
+        "scale": 5,
+        "count": 58,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact address 430 Centre Street. Broad resident/family/tour population; no industry reviewers in displayed filters.",
+          "Use all-time overall experience 3.9/5, not APFM proprietary recency score. Current full-page count 58 differs from cached search result 57.",
+          "SeniorAdvisor republishes APFM reviews; one source family."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "evans-apfm-2026-family",
+        "sourceId": "evans-apfm",
+        "url": "https://www.aplaceformom.com/community/evans-park-at-newton-corner-77111",
+        "date": "2026-07-27",
+        "rating": 4,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "Staff is helpful and kind.",
+        "summary": "Family reviewer praised spacious apartments, cleanliness, daily activities and flexible dining.",
+        "aspects": [
+          {
+            "aspect": "rooms",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "cleanliness",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "food",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": []
+      },
+      {
+        "id": "evans-apfm-2025-family",
+        "sourceId": "evans-apfm",
+        "url": "https://www.aplaceformom.com/community/evans-park-at-newton-corner-77111",
+        "date": "2025-08-12",
+        "rating": 3,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "some nurses that were wonderful",
+        "summary": "Family reviewer described mixed staff responsiveness and concerns with administration communication.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "mixed"
+          },
+          {
+            "aspect": "communication",
+            "sentiment": "negative"
+          }
+        ],
+        "notes": [
+          "Personal medical details omitted; account is not a verified care finding."
+        ]
+      },
+      {
+        "id": "evans-google-family-2026",
+        "sourceId": "evans-google-syndicated",
+        "url": "https://www.assistedlivingcenter.com/facilities/ma/newton/evans-park-at-newton-corner-02458/",
+        "date": null,
+        "rating": null,
+        "scale": null,
+        "relationship": "family",
+        "excerpt": "the facility lovely and clean.",
+        "summary": "A Google-labeled family account syndicated on this page praised staff kindness, cleanliness and help during a move.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "cleanliness",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "communication",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Page shows April 2026 without exact day; date and numeric rating remain null.",
+          "Origin labeled Google by the syndicator; original review permalink not available. No independent Google aggregate inferred.",
+          "Personal identity, age and medical details omitted."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents.",
+      "Assisted Living Center page's headline and review section disagree (4.7 versus 4.8/5); mixed aggregate origin cannot be verified. No additional numeric aggregate retained."
+    ]
+  },
+  {
+    "providerId": "ma-alr-maplewood-at-weston",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "maplewood-apfm",
+        "url": "https://www.aplaceformom.com/community/maplewood-at-weston-139819",
+        "title": "Maplewood at Weston reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "73 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "maplewood-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 4.6,
+        "scale": 5,
+        "count": 73,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "Exact address 99 Norumbega Road.",
+          "Displayed filters include 10 industry reviewers among 73; aggregate is not a clean consumer-only population. Excluded pending population resolution.",
+          "Do not use APFM proprietary 8.6/10 as raw review average."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "maplewood-apfm-2026-tour",
+        "sourceId": "maplewood-apfm",
+        "url": "https://www.aplaceformom.com/community/maplewood-at-weston-139819",
+        "date": "2026-08-04",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "visitor",
+        "excerpt": "Many interesting activities.",
+        "summary": "A tour visitor described friendly, knowledgeable staff and numerous activities.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Tour experience, not delivered care."
+        ]
+      },
+      {
+        "id": "maplewood-apfm-2026-family",
+        "sourceId": "maplewood-apfm",
+        "url": "https://www.aplaceformom.com/community/maplewood-at-weston-139819",
+        "date": "2026-07-15",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "Apartment sizes are great.",
+        "summary": "A family reviewer praised apartment space and porches and requested more orientation.",
+        "aspects": [
+          {
+            "aspect": "rooms",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "communication",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": []
+      },
+      {
+        "id": "maplewood-apfm-2025-family",
+        "sourceId": "maplewood-apfm",
+        "url": "https://www.aplaceformom.com/community/maplewood-at-weston-139819",
+        "date": "2025-01-22",
+        "rating": 4,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "slow to respond to inquiries",
+        "summary": "Family reviewer liked rooms and amenities but reported slow initial inquiry responses.",
+        "aspects": [
+          {
+            "aspect": "rooms",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "communication",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": []
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "ma-alr-waterstone-at-wellesley",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "waterstone-apfm",
+        "url": "https://www.aplaceformom.com/community/waterstone-at-wellesley-1329228",
+        "title": "Waterstone at Wellesley reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "10 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "waterstone-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 4,
+        "scale": 5,
+        "count": 10,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "Marketplace address 27 Washington Street 02481 differs from catalog ALR address 23 Washington Street 02482.",
+          "Eight reviews tagged independent living and two assisted living. Do not treat as a resolved ALR-only aggregate."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "waterstone-apfm-2025-resident",
+        "sourceId": "waterstone-apfm",
+        "url": "https://www.aplaceformom.com/community/waterstone-at-wellesley-1329228",
+        "date": "2025-09-02",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "resident",
+        "excerpt": "A very warm, welcoming community!",
+        "summary": "Self-described residents praised the welcoming social community.",
+        "aspects": [],
+        "notes": [
+          "Independent-living account."
+        ]
+      },
+      {
+        "id": "waterstone-apfm-2024-tour",
+        "sourceId": "waterstone-apfm",
+        "url": "https://www.aplaceformom.com/community/waterstone-at-wellesley-1329228",
+        "date": "2024-02-09",
+        "rating": 1,
+        "scale": 5,
+        "relationship": "visitor",
+        "excerpt": "Corporate was also unresponsive",
+        "summary": "An inquiry/tour reviewer reported poor follow-up during attempted admission.",
+        "aspects": [
+          {
+            "aspect": "communication",
+            "sentiment": "negative"
+          }
+        ],
+        "notes": [
+          "Admission experience; sensitive family eligibility details omitted."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "lifeplan-north-hill",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "northhill-birdeye",
+        "url": "https://reviews.birdeye.com/north-hill-139178652",
+        "title": "North Hill - 59 reviews",
+        "publisher": "Birdeye",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "4.1 59 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "northhill-birdeye",
+        "platform": "Birdeye",
+        "sourceFamily": "birdeye-mixed",
+        "rating": 4.1,
+        "scale": 5,
+        "count": 59,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "Page lists Google 45, Facebook 13 and Birdeye 1; mixed syndication is not an independent Google aggregate.",
+          "Street address 865 Central Avenue matches campus but page specifies Suite I306 and unit scope is unresolved.",
+          "Visible Birdeye account has ambiguous employee/consumer relationship; not included as consumer excerpt."
+        ]
+      }
+    ],
+    "reviews": [],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents.",
+      "Do not assign this mixed aggregate to a separate nursing unit."
+    ]
+  },
+  {
+    "providerId": "lifeplan-newbridge-on-the-charles",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "newbridge-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/dedham/newbridge-on-the-charles-02026",
+        "title": "NewBridge on the Charles - 16 reviews",
+        "publisher": "Caring.com",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "search-result",
+        "excerpt": "3.4 (16 reviews)"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "newbridge-caring",
+        "platform": "Caring.com",
+        "sourceFamily": "caring",
+        "rating": 3.4,
+        "scale": 5,
+        "count": 16,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "Search-result observation only; full-page content unavailable in this research session.",
+          "Main-campus address matches but reviews appear to mix campus and nursing experiences; unit scope unresolved."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "newbridge-caring-2023-tour",
+        "sourceId": "newbridge-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/dedham/newbridge-on-the-charles-02026",
+        "date": "2023-11-18",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "visitor",
+        "excerpt": "the community was vibrant.",
+        "summary": "Tour visitor praised exercise, swimming and dining facilities, maintenance and staff responsiveness.",
+        "aspects": [
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Search-result excerpt only; not score-eligible."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "lifeplan-lasell-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "lasell-reddit",
+        "url": "https://www.reddit.com/r/u_andy02494/comments/1siuvv6/rindependent_living_massachusetts/",
+        "title": "r/Independent Living Massachusetts",
+        "publisher": "Reddit",
+        "kind": "public-discussion",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "search-result",
+        "excerpt": "devoted direct support staff"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [],
+    "reviews": [
+      {
+        "id": "lasell-reddit-2026-family",
+        "sourceId": "lasell-reddit",
+        "url": "https://www.reddit.com/r/u_andy02494/comments/1siuvv6/rindependent_living_massachusetts/",
+        "date": "2026-04-11",
+        "rating": null,
+        "scale": null,
+        "relationship": "family",
+        "excerpt": "devoted direct support staff",
+        "summary": "A self-described long-term resident's family member praised frontline staff while criticizing leadership's safety policies and response to feedback.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "communication",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": [
+          "Public indexed post; direct page returned 404 when opened. Not a currently accessible full-page source.",
+          "Specific personal/medical events omitted. Allegations reflect the poster's account, not independently verified findings."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents.",
+      "Exact campus identified by name and independent-living context; no aggregate inferred.",
+      "Potential duplicate of a Caring account about the same long family residence; not independent prevalence."
+    ]
+  },
+  {
+    "providerId": "ma-alr-sunrise-of-newton",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "sunrise-apfm",
+        "url": "https://www.aplaceformom.com/community/sunrise-of-newton-1445204",
+        "title": "Sunrise of Newton reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "44 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "sunrise-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 4.1,
+        "scale": 5,
+        "count": 44,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact location 431 Washington Street.",
+          "Current all-time header count 44; displayed reviewer filters total 43, suggesting asynchronous fields. No industry reviewers shown.",
+          "Do not use proprietary recency score as raw review average."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "sunrise-apfm-0",
+        "sourceId": "sunrise-apfm",
+        "url": "https://www.aplaceformom.com/community/sunrise-of-newton-1445204",
+        "date": "2025-03-07",
+        "rating": 4,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "Nice homey feel.",
+        "summary": "Family reviewer praised the home-like atmosphere, supportive staff and clear explanation of the contract.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "communication",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": []
+      },
+      {
+        "id": "sunrise-apfm-1",
+        "sourceId": "sunrise-apfm",
+        "url": "https://www.aplaceformom.com/community/sunrise-of-newton-1445204",
+        "date": "2025-02-13",
+        "rating": 3,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "Lots and lots of turnover at management level.",
+        "summary": "Family reviewer described friendly staff but reported staffing shortages and unstable management.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "mixed"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "negative"
+          }
+        ],
+        "notes": [
+          "Alleged staffing conditions are the reviewer's report, not independently verified."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-falls-at-cordingly-dam",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "falls-apfm",
+        "url": "https://www.aplaceformom.com/community/the-falls-at-cordingly-dam-60660",
+        "title": "The Falls at Cordingly Dam reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "30 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "falls-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 4,
+        "scale": 5,
+        "count": 30,
+        "asOf": null,
+        "scope": "ambiguous",
+        "notes": [
+          "Exact 2300 Washington Street address.",
+          "Displayed population includes one industry reviewer; no separate consumer-only aggregate observed.",
+          "All-time overall experience 4.0/5 differs in method from proprietary 8/10."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "falls-apfm-0",
+        "sourceId": "falls-apfm",
+        "url": "https://www.aplaceformom.com/community/the-falls-at-cordingly-dam-60660",
+        "date": "2024-12-20",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "Dining/meals - surprisingly good and nice variety.",
+        "summary": "Family reviewer praised meals, activity choices and location while questioning the high cost.",
+        "aspects": [
+          {
+            "aspect": "food",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "value",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": [
+          "Sensitive personal details omitted."
+        ]
+      },
+      {
+        "id": "falls-apfm-1",
+        "sourceId": "falls-apfm",
+        "url": "https://www.aplaceformom.com/community/the-falls-at-cordingly-dam-60660",
+        "date": "2024-12-05",
+        "rating": 4,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "it always felt rushed and incomplete.",
+        "summary": "Family reviewer recommended the community overall but described hurried communication and a subsequent move as needs changed.",
+        "aspects": [
+          {
+            "aspect": "communication",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": [
+          "No personal medical details retained."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "ma-alr-adelaide-of-newton-centre",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "adelaide-apfm",
+        "url": "https://www.aplaceformom.com/community/adelaide-of-newton-centre-1421910",
+        "title": "Adelaide of Newton Centre reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "6 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "adelaide-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 4.7,
+        "scale": 5,
+        "count": 6,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact 157 Herrick Road location; all six accounts tagged memory care, matching this memory-care residence.",
+          "Five family/friend and one tour reviewer; no industry reviewers displayed.",
+          "Small sample below 10-review score threshold. Proprietary 0/10 reflects no recent reviews, not zero satisfaction."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "adelaide-apfm-0",
+        "sourceId": "adelaide-apfm",
+        "url": "https://www.aplaceformom.com/community/adelaide-of-newton-centre-1421910",
+        "date": "2024-11-05",
+        "rating": 4,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "it is extremely expensive",
+        "summary": "Family reviewer described the residence as among the better options but questioned the value of care relative to price.",
+        "aspects": [
+          {
+            "aspect": "value",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": []
+      },
+      {
+        "id": "adelaide-apfm-1",
+        "sourceId": "adelaide-apfm",
+        "url": "https://www.aplaceformom.com/community/adelaide-of-newton-centre-1421910",
+        "date": "2023-04-24",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "it was open and spacious.",
+        "summary": "Family reviewer liked the spacious layout and private rooms while stressing the need to understand limits of medical services.",
+        "aspects": [
+          {
+            "aspect": "rooms",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": [
+          "Medical and family details omitted."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "ma-alr-allerton-house-at-harbor-park",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "allerton-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/hingham/allerton-house-at-harbor-park-02043",
+        "title": "Allerton House at Harbor Park reviews",
+        "publisher": "Caring.com",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "6 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "allerton-caring",
+        "platform": "Caring.com",
+        "sourceFamily": "caring",
+        "rating": 4.3,
+        "scale": 5,
+        "count": 6,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact 15 Condito Road location; broad consumer residence reviews.",
+          "Six reviews below 10-review score threshold. Most visible accounts are old."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "allerton-caring-0",
+        "sourceId": "allerton-caring",
+        "url": "https://www.caring.com/senior-living/massachusetts/hingham/allerton-house-at-harbor-park-02043",
+        "date": "2015-01-29",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "resident",
+        "excerpt": "I like the staff; they are wonderful.",
+        "summary": "Self-described resident praised staff, activities and trips but described variable food quality.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "food",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": [
+          "Historical experience from 2015, not evidence of present conditions."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-residence-at-vinnin-square",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "vinnin-apfm",
+        "url": "https://www.aplaceformom.com/community/the-residence-at-vinnin-square-1393748",
+        "title": "The Residence at Vinnin Square reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "15 reviews"
+      },
+      {
+        "id": "vinnin-reddit",
+        "url": "https://www.reddit.com/r/SalemMA/comments/1c6njun/assisted_living/",
+        "title": "Assisted living — r/SalemMA",
+        "publisher": "Reddit",
+        "kind": "public-discussion",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "they had activities going on and it was very clean."
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "vinnin-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 4.3,
+        "scale": 5,
+        "count": 15,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact 224 Salem Street location.",
+          "Broad family/resident/tour population; no industry reviewers displayed.",
+          "Use 4.3/5 all-time experience, not 8.6/10 proprietary recent score."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "vinnin-apfm-0",
+        "sourceId": "vinnin-apfm",
+        "url": "https://www.aplaceformom.com/community/the-residence-at-vinnin-square-1393748",
+        "date": "2026-06-02",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "visitor",
+        "excerpt": "Residents and staff were all very friendly and welcoming.",
+        "summary": "A tour visitor liked cleanliness, dining and activities but found the apartments lacked the full kitchen and in-unit laundry they wanted.",
+        "aspects": [
+          {
+            "aspect": "staff",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "cleanliness",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "rooms",
+            "sentiment": "mixed"
+          }
+        ],
+        "notes": [
+          "Tour experience, not delivered care."
+        ]
+      },
+      {
+        "id": "vinnin-apfm-1",
+        "sourceId": "vinnin-apfm",
+        "url": "https://www.aplaceformom.com/community/the-residence-at-vinnin-square-1393748",
+        "date": "2022-03-29",
+        "rating": 3,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "Food isn’t great, hardly any activities.",
+        "summary": "Family reviewer reported disappointment with meals and the amount of activity.",
+        "aspects": [
+          {
+            "aspect": "food",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "activities",
+            "sentiment": "negative"
+          }
+        ],
+        "notes": [
+          "Historical account; no assumption that conditions persist."
+        ]
+      },
+      {
+        "id": "vinnin-reddit-family",
+        "sourceId": "vinnin-reddit",
+        "url": "https://www.reddit.com/r/SalemMA/comments/1c6njun/assisted_living/",
+        "date": null,
+        "rating": null,
+        "scale": null,
+        "relationship": "family",
+        "excerpt": "",
+        "summary": "A self-described relative described positive visits, ongoing activities and cleanliness, while calling it expensive.",
+        "aspects": [
+          {
+            "aspect": "activities",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "cleanliness",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "value",
+            "sentiment": "negative"
+          }
+        ],
+        "notes": [
+          "Exact residence identified by distinctive name; comment does not provide street address.",
+          "Selected public comment with self-reported relationship; exact comment date unavailable."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  },
+  {
+    "providerId": "ma-alr-bridges-by-epoch-at-hingham",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "bridges-apfm",
+        "url": "https://www.aplaceformom.com/community/bridges-by-epoch-at-hingham-1348462",
+        "title": "Bridges by EPOCH at Hingham reviews",
+        "publisher": "A Place for Mom",
+        "kind": "review-platform",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "10 reviews"
+      }
+    ],
+    "facts": [],
+    "availability": {
+      "status": "not-published",
+      "text": "Review evidence does not establish current availability.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "reviewAggregates": [
+      {
+        "sourceId": "bridges-apfm",
+        "platform": "A Place for Mom",
+        "sourceFamily": "aplaceformom",
+        "rating": 4.2,
+        "scale": 5,
+        "count": 10,
+        "asOf": null,
+        "scope": "consumer",
+        "notes": [
+          "Exact 1 Sgt. William B. Terry Drive location.",
+          "Memory-care community; displayed population nine family accounts and one unclassified account, with no industry reviewers.",
+          "No reviews within past two years according to source; newest selected account 2024. Proprietary 0/10is not zero consumer experience."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "bridges-apfm-0",
+        "sourceId": "bridges-apfm",
+        "url": "https://www.aplaceformom.com/community/bridges-by-epoch-at-hingham-1348462",
+        "date": "2024-05-04",
+        "rating": 3,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "Nice facility, poor care",
+        "summary": "Family reviewer praised the physical surroundings and food while criticizing staff training, supervision and value.",
+        "aspects": [
+          {
+            "aspect": "rooms",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "food",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "staff",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "negative"
+          },
+          {
+            "aspect": "value",
+            "sentiment": "negative"
+          }
+        ],
+        "notes": [
+          "Staffing allegations are the reviewer's account, not a regulatory finding."
+        ]
+      },
+      {
+        "id": "bridges-apfm-1",
+        "sourceId": "bridges-apfm",
+        "url": "https://www.aplaceformom.com/community/bridges-by-epoch-at-hingham-1348462",
+        "date": "2023-04-28",
+        "rating": 5,
+        "scale": 5,
+        "relationship": "family",
+        "excerpt": "The problem is resolved",
+        "summary": "Family reviewer said a prior concern had been resolved after staff explained the situation and described being on good terms.",
+        "aspects": [
+          {
+            "aspect": "communication",
+            "sentiment": "positive"
+          },
+          {
+            "aspect": "care",
+            "sentiment": "positive"
+          }
+        ],
+        "notes": [
+          "Text explicitly mentions in-laws although relationship field is absent; relationship derives from account."
+        ]
+      }
+    ],
+    "notes": [
+      "Selected public accounts are not independently authenticated or representative of all residents."
+    ]
+  }
+]

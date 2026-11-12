@@ -16,6 +16,7 @@ import { Modal } from "./modal";
 import { ProviderIcon } from "./provider-card";
 import { InspectionHistory } from "./inspection-history";
 import { HomeHealthEvidence } from "./home-health-evidence";
+import { LocationResearch } from "./location-research";
 function metric(value: number | null | undefined, suffix = "") {
   return value === null || value === undefined
     ? "Not published"
@@ -109,6 +110,11 @@ export function ProviderDetail({
             </div>
           </div>
         )}
+        <LocationResearch
+          providerId={provider.id}
+          providerName={provider.name}
+          onTask={onTask}
+        />
         {provider.cms && (
           <section>
             <div className="section-title">

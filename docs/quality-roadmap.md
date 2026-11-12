@@ -6,7 +6,7 @@ The first useful outcome is a shortlist a family can investigate with less repea
 
 A ZIP search, documented provider identity, care-setting-specific public evidence and a place to organize follow-up. CMS nursing-home data adds inspections, staffing, turnover and penalties beyond public review averages. Matched home-health agencies include clinical-quality measures and a separate patient survey, with participation and reporting dates. Massachusetts assisted-living records establish a different kind of regulatory record. Agency service descriptions are attributed to the agency.
 
-The app does not establish live staffing, admission suitability, openings, total cost or individual caregiver competence. No amount of interface polish should turn a source link into a claim that those checks happened.
+The November 12 expansion adds source-linked offerings, prices and public availability claims, plus a provisional consumer experience index. [Coverage and limitations](location-research.md) are documented by evidence type. Live staffing, admission suitability, current openings, total cost and individual caregiver competence still require direct checks.
 
 ## Next evidence work
 
@@ -19,9 +19,9 @@ The app does not establish live staffing, admission suitability, openings, total
 
 ## Ranking that can be defended
 
-Keep care fit, travel burden, published quality, availability and evidence coverage separate. The current distance and CMS-rating sorts are transparent. A later recommendation system needs a written objective, category-specific inputs, missing-data rules, source-age rules, explicit risk flags and an explanation attached to each result.
+Keep care fit, travel burden, published quality, availability and evidence coverage separate. Distance, CMS-rating and consumer-experience sorts now have explicit rules. The [experience index](experience-score.md) includes source-age limits, deduplication, missing-data rules and exclusions. It summarizes consumer ratings and has not been validated as a care recommendation model. A later recommendation system needs a written objective, category-specific inputs, explicit risk flags and an explanation attached to each result.
 
-Before using a weighted score, evaluate it against independent care-manager reviews across care settings and neighborhoods. Test whether it rewards large online marketing footprints or penalizes providers serving people with higher needs. Preserve severe findings and unresolved discrepancies even when a composite result would otherwise look strong. A family should be able to change priorities without hiding risk evidence.
+Before using the index to recommend care, evaluate it against independent care-manager reviews across care settings and neighborhoods. Test whether it rewards large online marketing footprints or penalizes providers serving people with higher needs. Preserve severe findings and unresolved discrepancies even when consumer reviews look favorable. A family should be able to change priorities without hiding risk evidence.
 
 ## Build sequence after the POC
 

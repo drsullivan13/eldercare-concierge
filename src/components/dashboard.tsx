@@ -118,10 +118,12 @@ function WorkspaceDashboard({
   );
   const [sort, setSort] = useState("distance");
   const [query, setQuery] = useState("");
+  const [evidence, setEvidence] = useState("all");
   const [data, setData] = useState<SearchResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchError, setSearchError] = useState("");
   const [request, setRequest] = useState({
+    evidence: "all",
     zip: workspace.profile.zip || "02459",
     radius: "25",
     category:
@@ -139,6 +141,7 @@ function WorkspaceDashboard({
     workspace.savedProviderIds.includes(p.id),
   );
   const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [compareRecords, setCompareRecords] = useState<Provider[]>([]);
   const [compareOpen, setCompareOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(
     !demo && !workspace.profile.zip,
@@ -232,7 +235,14 @@ function WorkspaceDashboard({
   function submitSearch(e?: FormEvent) {
     e?.preventDefault();
     setCompareIds([]);
-    requestSearch({ zip: zip.trim(), radius, category, sort, q: query.trim() });
+    requestSearch({
+      zip: zip.trim(),
+      radius,
+      category,
+      sort,
+      q: query.trim(),
+      evidence,
+    });
     navigate("search");
   }
   function changeCategory(value: string) {
@@ -243,6 +253,14 @@ function WorkspaceDashboard({
     requestSearch({ ...request, category: value, sort: nextSort });
   }
   function toggleCompare(id: string) {
+    const candidate = [...(data?.providers ?? []), ...savedProviders].find(
+      (p) => p.id === id,
+    );
+    if (candidate)
+      setCompareRecords((records) => [
+        ...records.filter((p) => p.id !== id),
+        candidate,
+      ]);
     setCompareIds((ids) =>
       ids.includes(id)
         ? ids.filter((value) => value !== id)
@@ -343,7 +361,9 @@ function WorkspaceDashboard({
     ));
   const compareProviders = Array.from(
     new Map(
-      [...(data?.providers || []), ...savedProviders].map((p) => [p.id, p]),
+      [...compareRecords, ...(data?.providers || []), ...savedProviders].map(
+        (p) => [p.id, p],
+      ),
     ).values(),
   ).filter((p) => compareIds.includes(p.id));
 
@@ -862,6 +882,23 @@ function WorkspaceDashboard({
                 </div>
                 <div className="result-controls">
                   <label className="sort-label">
+                    Research
+                    <select
+                      aria-label="Research filter"
+                      value={evidence}
+                      onChange={(e) => {
+                        setEvidence(e.target.value);
+                        requestSearch({ ...request, evidence: e.target.value });
+                      }}
+                    >
+                      <option value="all">All options</option>
+                      <option value="details">Offerings researched</option>
+                      <option value="pricing">Published costs</option>
+                      <option value="openings">Published opening claims</option>
+                      <option value="reviews">Has experience score</option>
+                    </select>
+                  </label>
+                  <label className="sort-label">
                     Sort by
                     <select
                       aria-label="Sort results"
@@ -872,6 +909,11 @@ function WorkspaceDashboard({
                       }}
                     >
                       <option value="distance">Distance</option>
+                      {category !== "all" && (
+                        <option value="experience">
+                          Consumer experience index
+                        </option>
+                      )}
                       {category === "nursing-home" && (
                         <option value="cms-rating">CMS overall rating</option>
                       )}
@@ -901,6 +943,13 @@ function WorkspaceDashboard({
                 <div role="alert" className="form-error">
                   {searchError}
                 </div>
+              )}
+              {!loading && (sort === "experience" || evidence !== "all") && (
+                <p className="research-filter-note">
+                  Research coverage is still growing. Unresearched options may
+                  have the same offerings. Consumer scores summarize public
+                  ratings; published opening claims need direct confirmation.
+                </p>
               )}
               {loading ? (
                 <div className="result-skeleton">
@@ -1558,6 +1607,29 @@ function CompareDialog({
                   "No flags surfaced in this snapshot. This is not clearance.",
               },
               { label: "Current availability", value: () => "Not confirmed" },
+              {
+                label: "Availability evidence",
+                value: (p: Provider) =>
+                  p.research?.availabilityStatus === "opening-published"
+                    ? "Provider publishes an opening claim; confirm room and date"
+                    : p.research?.availabilityStatus === "waitlist-published"
+                      ? "Published waitlist; confirm timing"
+                      : "Inquiry needed",
+              },
+              {
+                label: "Published cost details",
+                value: (p: Provider) =>
+                  p.research?.publishedCosts
+                    ? `${p.research.publishedCosts} sourced fee entries; open room & cost details`
+                    : "Not established in this research",
+              },
+              {
+                label: "Consumer experience index",
+                value: (p: Provider) =>
+                  p.research?.experience.value != null
+                    ? `${p.research.experience.value.toFixed(1)} / 10 · ${p.research.experience.confidence} evidence`
+                    : "Not rated",
+              },
             ].map((row) => (
               <tr key={row.label}>
                 <th>{row.label}</th>
@@ -1632,9 +1704,9 @@ function EvidenceStandards() {
           },
           {
             n: "04",
-            title: "Patient experience",
-            text: "Matched home-health agencies include CMS patient surveys, response counts and reporting periods. Broader review feeds, reference checks and direct family feedback still need to be added.",
-            tag: "CMS home-health surveys available",
+            title: "Experience, with context",
+            text: "Public review averages and selected accounts show different perspectives. The provisional 10-point index groups syndicated sources and leaves thin or ambiguous evidence unrated. CMS patient surveys stay separate.",
+            tag: "Sources, dates and exclusions visible",
           },
         ].map((item) => (
           <article key={item.n}>
@@ -1652,8 +1724,10 @@ function EvidenceStandards() {
           <p>
             Results start with distance. Nursing-home searches can also use the
             published CMS overall rating, with distance breaking ties and
-            missing ratings last. We do not create a universal care-quality
-            score, sell placement or infer provider quality from missing data.
+            missing ratings last. Within a care category, you can also sort the
+            consumer experience index. It summarizes eligible public ratings,
+            not clinical quality or safety. Missing evidence is not a poor
+            rating, and no provider pays for placement.
           </p>
           <Link className="text-link" href="/methodology" target="_blank">
             Read the full methodology & source library{" "}

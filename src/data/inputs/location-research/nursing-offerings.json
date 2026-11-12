@@ -1,0 +1,1111 @@
+[
+  {
+    "providerId": "cms-225268",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "newton-location",
+        "url": "https://www.care-one.com/locations/careone-at-newton-rehabilitation-center/",
+        "title": "Newton Rehabilitation Center | CareOne at Newton",
+        "publisher": "CareOne",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "2101 Washington Street"
+      },
+      {
+        "id": "newton-shortstay",
+        "url": "https://ma.care-one.com/locations/careone-at-newton/",
+        "title": "Skilled Nursing Facility in Newton, MA | Senior Living | CareOne",
+        "publisher": "CareOne",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "We are proud to offer private rooms to our patients looking for short term rehabilitation"
+      }
+    ],
+    "facts": [
+      {
+        "id": "private-shortstay",
+        "kind": "room",
+        "text": "CareOne at Newton advertises private rooms for short-term rehabilitation patients; this does not establish that every long-term room is private or that a room is available.",
+        "sourceId": "newton-shortstay",
+        "amount": null
+      },
+      {
+        "id": "rehab-programs",
+        "kind": "care",
+        "text": "The Newton location page advertises subacute/orthopedic rehabilitation, stroke recovery, cardiac management, pulmonary rehabilitation and wound-care management.",
+        "sourceId": "newton-location",
+        "amount": null
+      },
+      {
+        "id": "longterm",
+        "kind": "care",
+        "text": "The Newton-specific page also advertises traditional long-term care with resident activities.",
+        "sourceId": "newton-shortstay",
+        "amount": null
+      },
+      {
+        "id": "payments",
+        "kind": "cost",
+        "text": "The location page lists Medicare, MassHealth, private pay and managed-care plans; no numeric private-pay rate is published in the inspected pages. Coverage remains individual.",
+        "sourceId": "newton-shortstay",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The location offers admissions/tour inquiry; no current private-room vacancy, bed inventory or admission date is published.",
+      "sourceId": "newton-location",
+      "asOf": null
+    },
+    "notes": [
+      "Exact Newton address identifies the location; services elsewhere in the CareOne network were not assigned here.",
+      "Marketing CMS-star statements were not reused; Harbor retains its separate dated CMS snapshot."
+    ]
+  },
+  {
+    "providerId": "cms-225222",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "wellesley-services",
+        "url": "https://adviniacare.com/communities/newton-wellesley/services/",
+        "title": "Services — Advinia Care Newton-Wellesley",
+        "publisher": "Advinia Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Physical, occupational, and speech therapy"
+      },
+      {
+        "id": "wellesley-amenities",
+        "url": "https://adviniacare.com/communities/newton-wellesley/amenities/",
+        "title": "Amenities — Advinia Care Newton-Wellesley",
+        "publisher": "Advinia Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Enclosed Courtyard With Gazebo"
+      }
+    ],
+    "facts": [
+      {
+        "id": "care-types",
+        "kind": "care",
+        "text": "The Newton-Wellesley location advertises rehabilitation, long-term care, hospice, respite/short stays, nursing and medication management.",
+        "sourceId": "wellesley-services",
+        "amount": null
+      },
+      {
+        "id": "therapy",
+        "kind": "care",
+        "text": "Physical, occupational and speech therapy are advertised as delivered in-house through Advinia Care Therapy Services, with a dedicated rehab center/gym.",
+        "sourceId": "wellesley-services",
+        "amount": null
+      },
+      {
+        "id": "memory-environment",
+        "kind": "care",
+        "text": "The location advertises a memory-care floor with an immersive environment; individual dementia-care suitability and room placement require assessment.",
+        "sourceId": "wellesley-amenities",
+        "amount": null
+      },
+      {
+        "id": "dining",
+        "kind": "dining",
+        "text": "Three daily restaurant-style meals, dietary texture/preferences accommodation and seasonal outdoor barbecues are advertised.",
+        "sourceId": "wellesley-amenities",
+        "amount": null
+      },
+      {
+        "id": "amenities",
+        "kind": "amenity",
+        "text": "The location advertises patios, an enclosed landscaped courtyard with gazebo, lounges, barber/beauty and multifaith services.",
+        "sourceId": "wellesley-amenities",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The location invites inquiry about care, availability and costs; no live room inventory or numeric price is published.",
+      "sourceId": "wellesley-services",
+      "asOf": null
+    },
+    "notes": [
+      "Exact location page identifies Newton-Wellesley in Wellesley, rather than a network-wide claim.",
+      "No private versus semi-private configuration was established from these pages."
+    ]
+  },
+  {
+    "providerId": "cms-225281",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "pines-edge",
+        "url": "https://northhill.org/neighborhoods/skilled-nursing-long-term-care/",
+        "title": "Skilled Nursing & Long Term Care | Long Term Care Needham",
+        "publisher": "North Hill",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Pines Edge is a state-of-the-art skilled nursing community"
+      },
+      {
+        "id": "pines-brochure",
+        "url": "https://northhill.org/wp-content/uploads/2026/04/North-Hill-Pines-Edge.pdf",
+        "title": "P I N E S E D G E | 865 CENTRAL AVE, NEEDHAM, MA 02492 • 781-433-6229 • NORTHHILL.ORG",
+        "publisher": "North Hill",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "pdf",
+        "excerpt": "THE SKILLED NURSING FACILIT Y"
+      }
+    ],
+    "facts": [
+      {
+        "id": "room-model",
+        "kind": "room",
+        "text": "Pines Edge advertises private suites with private showers in small households surrounding shared kitchens/common areas; the unit page describes seven households of 10–12 suites.",
+        "sourceId": "pines-edge",
+        "amount": null
+      },
+      {
+        "id": "care-programs",
+        "kind": "care",
+        "text": "The skilled-nursing setting advertises short-term rehabilitation/subacute and long-term care, with physical/occupational/speech therapy, restorative nursing, wound/IV care and pain management.",
+        "sourceId": "pines-edge",
+        "amount": null
+      },
+      {
+        "id": "rehab-modalities",
+        "kind": "care",
+        "text": "The unit brochure names Korebalance balance training and LSVT for Parkinson-related communication/swallowing support, alongside orthopedic, stroke and cardiac rehabilitation.",
+        "sourceId": "pines-brochure",
+        "amount": null
+      },
+      {
+        "id": "social-dining",
+        "kind": "dining",
+        "text": "The unit advertises dining choices, kitchens/fireplaces, pastoral services and recreational programming for nursing residents.",
+        "sourceId": "pines-edge",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The unit page invites care inquiries; no private-suite opening or public daily price is established.",
+      "sourceId": "pines-edge",
+      "asOf": null
+    },
+    "notes": [
+      "This is Pines Edge, the skilled nursing unit, rather than a transfer of independent-campus prices/amenities.",
+      "North Hill independent-living entrance/monthly tables are not direct-admission nursing quotes.",
+      "Brochure URL has an April 2026 upload folder but no explicit service effective date."
+    ]
+  },
+  {
+    "providerId": "cms-225755",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "lasell-house",
+        "url": "https://lasellvillage.com/lasell-house/",
+        "title": "Lasell House Rehab | Skilled Nursing Facility Newton MA",
+        "publisher": "Lasell Village / Lasell House",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Serving both the residents of Lasell Village and the Greater Boston community"
+      }
+    ],
+    "facts": [
+      {
+        "id": "scope",
+        "kind": "care",
+        "text": "Lasell House explicitly serves Lasell Village residents and the Greater Boston community; it is the separate skilled-nursing setting.",
+        "sourceId": "lasell-house",
+        "amount": null
+      },
+      {
+        "id": "rehab",
+        "kind": "care",
+        "text": "The unit advertises short-term orthopedic/joint-replacement rehabilitation, cardiac/pulmonary rehabilitation, stroke recovery and medical management.",
+        "sourceId": "lasell-house",
+        "amount": null
+      },
+      {
+        "id": "other-care",
+        "kind": "care",
+        "text": "Advertised services include long-term skilled nursing, wound/pain care, IV therapy, respite and end-of-life/hospice care.",
+        "sourceId": "lasell-house",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The unit page does not establish a current opening, room inventory or numeric direct-admission price.",
+      "sourceId": "lasell-house",
+      "asOf": null
+    },
+    "notes": [
+      "Independent Lasell Village apartment fees and campus amenities were not assigned to this unit.",
+      "Private/semi-private configuration was not established. Proposed renovations/historical contracts do not prove current rooms.",
+      "Marketing bed counts and CMS-star claims were not reused as current evidence."
+    ]
+  },
+  {
+    "providerId": "cms-225656",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "health-wellness",
+        "url": "https://www.campioncenter.org/about-health-wellness/",
+        "title": "About Health & Wellness Campion Center",
+        "publisher": "Campion Center",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Campion Health & Wellness Center is a highly regarded health care facility that has been providing comprehensive and compassionate integrative health care to Jesuits"
+      }
+    ],
+    "facts": [
+      {
+        "id": "admission-scope",
+        "kind": "care",
+        "text": "The official center describes nursing/rehabilitative healthcare in a Jesuit community for Jesuits; general-public admission is not established by the page.",
+        "sourceId": "health-wellness",
+        "amount": null
+      },
+      {
+        "id": "integrated-team",
+        "kind": "care",
+        "text": "The center describes physical, occupational and speech rehabilitation alongside nursing, medicine, nutrition, chaplaincy, social services and therapeutic activities.",
+        "sourceId": "health-wellness",
+        "amount": null
+      },
+      {
+        "id": "wellness",
+        "kind": "amenity",
+        "text": "Advertised integrative modalities may include chair yoga, a fitness center, therapeutic pool, demonstration kitchen and prayer rooms. These are the center's described offerings, not a general-public service booking.",
+        "sourceId": "health-wellness",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "not-published",
+      "text": "This is described as a Jesuit healthcare community. Public admission criteria, current openings and room inventory are not published on the inspected page.",
+      "sourceId": "health-wellness",
+      "asOf": null
+    },
+    "notes": [
+      "Do not present Campion as a confirmed general-public nursing option solely because it appears in CMS.",
+      "A 2020 proposed-renovation notice on the page is not proof that room work was completed or that beds are available.",
+      "No private/semi-private configuration or price was established."
+    ],
+    "admissionRestriction": {
+      "text": "The official center describes healthcare for Jesuits. General-public admission is not established by this page; ask admissions about eligibility.",
+      "sourceId": "health-wellness"
+    }
+  },
+  {
+    "providerId": "cms-225683",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "newton-location",
+        "url": "https://www.stonerehabandseniorliving.com/",
+        "title": "Stone Rehabilitation & Senior Living | Skilled Nursing Care",
+        "publisher": "Stone Rehabilitation & Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Newton Upper Falls residential neighborhood."
+      },
+      {
+        "id": "newton-rehabilitation",
+        "url": "https://www.stonerehabandseniorliving.com/rehabilitation/",
+        "title": "Short & Long-Term Rehabilitation Facility in Newton, MA",
+        "publisher": "Stone Rehabilitation & Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Physical Therapy, Occupational Therapy and Speech Language Pathology"
+      },
+      {
+        "id": "nursing-rooms",
+        "url": "https://www.stonerehabandseniorliving.com/skilled-nursing/",
+        "title": "Skilled Nursing Care Center in Newton Upper Falls, MA",
+        "publisher": "Stone Rehabilitation & Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Residents enjoy a private or semi-private room"
+      },
+      {
+        "id": "nursing-services",
+        "url": "https://www.stonerehabandseniorliving.com/skilled-nursing/services/",
+        "title": "Skilled Nursing Care Services in Newton, MA",
+        "publisher": "Stone Rehabilitation & Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "We are proud to offer rehabilitative services 7 days per week"
+      },
+      {
+        "id": "nursing-admissions",
+        "url": "https://www.stonerehabandseniorliving.com/skilled-nursing/admissions/",
+        "title": "Admissions | Skilled Nursing Center in Newton, MA",
+        "publisher": "Stone Rehabilitation & Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Admission to the Skilled Nursing Center depends on bed availability and clinical appropriateness."
+      }
+    ],
+    "facts": [
+      {
+        "id": "skilled-care",
+        "kind": "care",
+        "text": "The Newton facility advertises post-surgical care, short-/long-term rehabilitation, skilled nursing and complex medical management.",
+        "sourceId": "newton-rehabilitation",
+        "amount": null
+      },
+      {
+        "id": "therapy",
+        "kind": "care",
+        "text": "Physical therapy, occupational therapy and speech-language pathology are advertised in-house for short- and long-term residents, with individualized treatment planning.",
+        "sourceId": "newton-rehabilitation",
+        "amount": null
+      },
+      {
+        "id": "settings",
+        "kind": "care",
+        "text": "The official location distinguishes the Skilled Nursing Center from The Pettee House rest-home setting; room types and fees must remain attached to the appropriate setting.",
+        "sourceId": "newton-location",
+        "amount": null
+      },
+      {
+        "id": "nursing-room-types",
+        "kind": "room",
+        "text": "The correct Newton Skilled Nursing Center advertises both private and semi-private rooms, with dining rooms on each floor; families may personalize rooms.",
+        "sourceId": "nursing-rooms",
+        "amount": null
+      },
+      {
+        "id": "therapy-days",
+        "kind": "care",
+        "text": "The skilled-nursing services page advertises rehabilitation seven days weekly, including physical, occupational and speech therapy, plus restorative and skin-integrity care.",
+        "sourceId": "nursing-services",
+        "amount": null
+      },
+      {
+        "id": "connectivity",
+        "kind": "amenity",
+        "text": "Wi-Fi is advertised free to residents/guests; telephone and cable are available through an outside vendor and billed separately.",
+        "sourceId": "nursing-services",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Skilled-nursing admission depends on clinical appropriateness and bed availability after assessment. A generic tour message says accepting new residents, but no nursing-room opening or dated inventory is identified.",
+      "sourceId": "nursing-admissions",
+      "asOf": null
+    },
+    "notes": [
+      "The unrelated stonerehab.com is Virginia Beach; none of its all-private-room/full-bath/tablet claims were assigned here.",
+      "The correct Newton unit advertises both private and semi-private rooms. Pettee House rest-home private rooms are a different setting.",
+      "No numeric nursing price or dated live vacancy was established."
+    ]
+  },
+  {
+    "providerId": "cms-225266",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "family",
+        "url": "https://www.elizabethseton.org/patients-and-family/",
+        "title": "Patients and Family | Elizabeth Seton Residence",
+        "publisher": "Elizabeth Seton Residence",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Sunny spaces, private rooms, engaging activities, and daily Mass"
+      },
+      {
+        "id": "home",
+        "url": "https://www.elizabethseton.org/",
+        "title": "Elizabeth Seton Residence | Compassionate Care in a Catholic Setting",
+        "publisher": "Elizabeth Seton Residence",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "125 Oakland Street"
+      },
+      {
+        "id": "short-rehab",
+        "url": "https://www.elizabethseton.org/short-term-rehabilitation/",
+        "title": "Short-Term Rehabilitation | Elizabeth Seton Residence",
+        "publisher": "Elizabeth Seton Residence",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "All rooms in the dedicated rehabilitation unit are private with bathroom"
+      },
+      {
+        "id": "amenities",
+        "url": "https://www.elizabethseton.org/amenities/",
+        "title": "Amenities | Elizabeth Seton Residence",
+        "publisher": "Elizabeth Seton Residence",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Large Courtyard and Accessible Patio"
+      }
+    ],
+    "facts": [
+      {
+        "id": "rooms",
+        "kind": "room",
+        "text": "The residence advertises private rooms; the inspected page does not establish that all rooms or care units are private.",
+        "sourceId": "family",
+        "amount": null
+      },
+      {
+        "id": "care",
+        "kind": "care",
+        "text": "Advertised services include long-term care, palliative/hospice and respite stays, short-term skilled rehabilitation, and outpatient physical/occupational/speech therapy.",
+        "sourceId": "family",
+        "amount": null
+      },
+      {
+        "id": "faith",
+        "kind": "activity",
+        "text": "Daily Mass and resident activities are advertised; the residence explicitly welcomes men and women of all faiths.",
+        "sourceId": "family",
+        "amount": null
+      },
+      {
+        "id": "outpatient",
+        "kind": "care",
+        "text": "The official home page describes outpatient rehabilitation for adults 65 and older, separate from inpatient stays.",
+        "sourceId": "home",
+        "amount": null
+      },
+      {
+        "id": "rehab-rooms",
+        "kind": "room",
+        "text": "The dedicated short-term rehabilitation unit specifically advertises all-private rooms with bathroom, smart television and telephone; this is narrower than an all-facility claim.",
+        "sourceId": "short-rehab",
+        "amount": null
+      },
+      {
+        "id": "rehab-amenities",
+        "kind": "amenity",
+        "text": "The short-term unit advertises Wi-Fi, personal laundry, a courtyard/sunny solarium, hair/barber services and therapeutic/leisure activities.",
+        "sourceId": "short-rehab",
+        "amount": null
+      },
+      {
+        "id": "dining",
+        "kind": "dining",
+        "text": "Meals are served in resident neighborhoods or in rooms by choice; personal meal choices/therapeutic diets and dietitian support are advertised.",
+        "sourceId": "amenities",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "No current room inventory, admission opening, waitlist or numeric price is published on these pages.",
+      "sourceId": "family",
+      "asOf": null
+    },
+    "notes": [
+      "Facts identify Elizabeth Seton Residence at 125 Oakland Street.",
+      "Room assignment, unit eligibility and any private-room charge require an individual quote."
+    ]
+  },
+  {
+    "providerId": "cms-225437",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "amenities",
+        "url": "https://briarwoodrehab.com/amenities/",
+        "title": "Our Community Amenities | Briarwood Rehab",
+        "publisher": "Briarwood Rehabilitation & Healthcare Center",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "150 Lincoln St, Needham, MA 02492"
+      },
+      {
+        "id": "cardiopro",
+        "url": "https://briarwoodrehab.com/care/cardiopro-cardiac-rehab/",
+        "title": "CardioPro | Cardiac Rehab Program in Needham, MA",
+        "publisher": "Briarwood Rehabilitation & Healthcare Center",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Therapy services available 7 days a week, tailored to recovery goals"
+      },
+      {
+        "id": "respiracare",
+        "url": "https://briarwoodrehab.com/care/respiracare-pulmonary-rehab/",
+        "title": "RespiraCare | Pulmonary Rehab Program in Needham, MA",
+        "publisher": "Briarwood Rehabilitation & Healthcare Center",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Pulmonary Rehabilitation program"
+      }
+    ],
+    "facts": [
+      {
+        "id": "rooms",
+        "kind": "room",
+        "text": "The Needham facility advertises private and semi-private rooms; requested room category/current vacancy is not confirmed.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "room-tech",
+        "kind": "amenity",
+        "text": "In-room phone/TV, Wi-Fi, video-call/device help, library access, lounges and outdoor spaces are advertised.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "family",
+        "kind": "amenity",
+        "text": "Published family amenities include extended visiting, extra family meals on request, pet visits and holiday/family gatherings. Confirm charges and current policies.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "transport",
+        "kind": "amenity",
+        "text": "The facility advertises medical-appointment shuttle/bus services, local outings and errand/transport coordination; included versus extra charges are not specified.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "personal-services",
+        "kind": "amenity",
+        "text": "Barber/beauty, manicure, notary/postal, laundry and spiritual-care services are advertised; they are not established as all included in the daily rate.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "cardiac-program",
+        "kind": "care",
+        "text": "The location's CardioPro program advertises cardiologist/cardiac-practitioner consults, therapy seven days weekly, medically appropriate cardiac monitoring and cardiac diet planning. Individual treatment eligibility must be assessed.",
+        "sourceId": "cardiopro",
+        "amount": null
+      },
+      {
+        "id": "pulmonary-program",
+        "kind": "care",
+        "text": "The location's RespiraCare program advertises pulmonary rehabilitation led by a multidisciplinary team of specialists and therapists.",
+        "sourceId": "respiracare",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The page invites admissions/tour inquiry; no current room opening or numeric price is published.",
+      "sourceId": "amenities",
+      "asOf": null
+    },
+    "notes": [
+      "Exact Needham address 150 Lincoln Street distinguishes this from unrelated Briarwood providers."
+    ]
+  },
+  {
+    "providerId": "cms-225201",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "admissions-accommodations",
+        "url": "https://www.sherrillhouse.org/admissions-accommodations",
+        "title": "Short Term Care Rehabilitation Center | Boston",
+        "publisher": "Sherrill House",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "135 South Huntington Avenue"
+      },
+      {
+        "id": "rehab",
+        "url": "https://www.sherrillhouse.org/short-term-care-rehabilitation",
+        "title": "Short Term Care Rehabilitation Center | Boston",
+        "publisher": "Sherrill House",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "We offer rehabilitation support seven days a week by our in-house team"
+      },
+      {
+        "id": "nursing",
+        "url": "https://www.sherrillhouse.org/skilled-nursing-care",
+        "title": "Short Term Care Rehabilitation Center | Boston",
+        "publisher": "Sherrill House",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "We have a Sensory Room on our Memory Care Unit"
+      }
+    ],
+    "facts": [
+      {
+        "id": "rooms",
+        "kind": "room",
+        "text": "Private and semi-private rooms are advertised for both rehabilitation patients and long-term residents. No specific room assignment or vacancy is confirmed.",
+        "sourceId": "admissions-accommodations",
+        "amount": null
+      },
+      {
+        "id": "family-spaces",
+        "kind": "amenity",
+        "text": "The facility advertises sunlit common/dining rooms, a garden and tented patio, free onsite parking, room telephones, television/internet, housekeeping/laundry and a hair salon.",
+        "sourceId": "admissions-accommodations",
+        "amount": null
+      },
+      {
+        "id": "therapy",
+        "kind": "care",
+        "text": "In-house physical/occupational/speech rehabilitation is advertised seven days weekly in a gym overlooking the Jamaicaway, with family/caregiver training.",
+        "sourceId": "rehab",
+        "amount": null
+      },
+      {
+        "id": "rehab-needs",
+        "kind": "care",
+        "text": "Listed rehabilitation areas include joint replacement/shoulder repair, amputations/prosthetics, stroke, heart failure/COPD and pneumonia/asthma.",
+        "sourceId": "rehab",
+        "amount": null
+      },
+      {
+        "id": "memory-care",
+        "kind": "care",
+        "text": "Alongside traditional skilled-nursing units, Sherrill House advertises a dedicated Alzheimer's/dementia unit with a sensory room and specialized staff training.",
+        "sourceId": "nursing",
+        "amount": null
+      },
+      {
+        "id": "palliative",
+        "kind": "care",
+        "text": "Palliative and hospice care are advertised in partnership with Longwood Hospice.",
+        "sourceId": "nursing",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Admissions inquiry/application is offered; no current room opening, wait duration or numeric private-pay schedule is published.",
+      "sourceId": "admissions-accommodations",
+      "asOf": null
+    },
+    "notes": [
+      "Exact 135 South Huntington Avenue location was matched.",
+      "Proposed healthcare-project material is not treated as completed new rooms or current inventory."
+    ]
+  },
+  {
+    "providerId": "cms-225509",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "brookline-location",
+        "url": "https://www.care-one.com/locations/careone-at-brookline/",
+        "title": "Rehab Centers in Mass I CareOne at Brookline",
+        "publisher": "CareOne",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "99 Park Street"
+      }
+    ],
+    "facts": [
+      {
+        "id": "therapy",
+        "kind": "care",
+        "text": "The Brookline location advertises physical, occupational and speech therapy seven days weekly and medical-specialist support.",
+        "sourceId": "brookline-location",
+        "amount": null
+      },
+      {
+        "id": "programs",
+        "kind": "care",
+        "text": "The location-specific service section advertises cardiac management, complex medical care, pulmonary rehabilitation, stroke recovery, wound care and respite.",
+        "sourceId": "brookline-location",
+        "amount": null
+      },
+      {
+        "id": "amenities",
+        "kind": "amenity",
+        "text": "The location lists dedicated subacute units, fitness/wellness facilities and restaurant-style dining.",
+        "sourceId": "brookline-location",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Admissions inquiry is offered, but no room inventory or numeric price is published on the inspected location page.",
+      "sourceId": "brookline-location",
+      "asOf": null
+    },
+    "notes": [
+      "The broad CareOne form menu covers many centers; services were taken from the Brookline-specific section, not that menu.",
+      "A current private/semi-private configuration was not established from this page."
+    ]
+  },
+  {
+    "providerId": "cms-225770",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "amenities",
+        "url": "https://brightonrehabhc.com/amenities/",
+        "title": "Our Community Amenities | Brighton Post Acute",
+        "publisher": "Brighton Post Acute",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "170 Corey Rd, Brighton, MA 02135"
+      },
+      {
+        "id": "faq",
+        "url": "https://brightonrehabhc.com/faqs/",
+        "title": "FAQ'S - Get Answers to All Your Questions | Brighton Post Acute",
+        "publisher": "Brighton Post Acute",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "We offer physical, occupational, speech, and respiratory therapy"
+      }
+    ],
+    "facts": [
+      {
+        "id": "rooms",
+        "kind": "room",
+        "text": "The location advertises both private and semi-private rooms; no specific category or vacancy is confirmed.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "technology-outdoors",
+        "kind": "amenity",
+        "text": "In-room phone/TV, Wi-Fi, video-call/device assistance, lounges, library access, walking paths/courtyards and outdoor spaces are advertised.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "therapy",
+        "kind": "care",
+        "text": "The FAQ advertises personalized physical, occupational, speech and respiratory therapy up to seven days weekly, based on clinical evaluation.",
+        "sourceId": "faq",
+        "amount": null
+      },
+      {
+        "id": "family-visits",
+        "kind": "amenity",
+        "text": "The FAQ states visits have no set hours if they do not interfere with care/well-being, and leashed pets may visit except in the main dining area. Confirm current policies before visiting.",
+        "sourceId": "faq",
+        "amount": null
+      },
+      {
+        "id": "laundry",
+        "kind": "amenity",
+        "text": "The FAQ advertises complimentary laundry; family-event space and extra meals are offered by arrangement, with any charges not specified.",
+        "sourceId": "faq",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The location offers admissions/tour inquiry; no current opening or numeric private-pay price is published.",
+      "sourceId": "amenities",
+      "asOf": null
+    },
+    "notes": [
+      "Exact 170 Corey Road identifies the facility now called Brighton Post Acute; historic Brighton House names are not a separate location."
+    ]
+  },
+  {
+    "providerId": "cms-225469",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "rehabilitation",
+        "url": "https://laurelridgerehab.com/rehabilitation-services/",
+        "title": "Rehabilitation Services - Laurel Ridge Rehabilitation and Skilled Care Center",
+        "publisher": "Laurel Ridge Rehabilitation & Skilled Care Center",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "174 Forest Hills Street"
+      },
+      {
+        "id": "nursing",
+        "url": "https://laurelridgerehab.com/skilled-nursing-services/",
+        "title": "Skilled Nursing Services - Laurel Ridge Rehabilitation and Skilled Care Center",
+        "publisher": "Laurel Ridge Rehabilitation & Skilled Care Center",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Vascular/amputee management"
+      }
+    ],
+    "facts": [
+      {
+        "id": "therapies",
+        "kind": "care",
+        "text": "The Jamaica Plain facility advertises physical, occupational and speech therapies seven days weekly when indicated, with an onsite rehabilitation manager.",
+        "sourceId": "rehabilitation",
+        "amount": null
+      },
+      {
+        "id": "functional-gym",
+        "kind": "amenity",
+        "text": "The rehabilitation gym advertises therapeutic modality equipment and a kitchenette for daily-task practice.",
+        "sourceId": "rehabilitation",
+        "amount": null
+      },
+      {
+        "id": "home-transition",
+        "kind": "care",
+        "text": "Advertised transition support includes family/caregiver education, safety/home-management assessment and home evaluations before discharge when indicated.",
+        "sourceId": "rehabilitation",
+        "amount": null
+      },
+      {
+        "id": "nursing",
+        "kind": "care",
+        "text": "Advertised skilled services include wound and vascular/amputee management, enteral-feeding/nutritional management, postsurgical care and discharge case management.",
+        "sourceId": "nursing",
+        "amount": null
+      },
+      {
+        "id": "dining-activities",
+        "kind": "dining",
+        "text": "Restaurant-style dining and recreational, educational and social activities are advertised.",
+        "sourceId": "nursing",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The site invites care inquiries; no current room opening or numeric fee schedule is established.",
+      "sourceId": "rehabilitation",
+      "asOf": null
+    },
+    "notes": [
+      "Exact 174 Forest Hills Street identifies this Boston/Jamaica Plain facility, not same-name facilities elsewhere.",
+      "A room photo is not used to infer the full private/semi-private mix; configuration remains unestablished."
+    ]
+  },
+  {
+    "providerId": "cms-225540",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "home-unit",
+        "url": "https://www.germancentre.org/communities/german-centre/",
+        "title": "German Centre in Boston, MA | Long & Short Term Senior Care",
+        "publisher": "German Centre",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Spacious private and semi-private rooms"
+      },
+      {
+        "id": "care-scope",
+        "url": "https://www.germancentre.org/care-options/short-term-rehab-long-term-care/",
+        "title": "Short-Term Rehab & Long-Term Care | German Centre",
+        "publisher": "German Centre",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Schrafft Pavilion Memory Support Neighborhood"
+      }
+    ],
+    "facts": [
+      {
+        "id": "rooms",
+        "kind": "room",
+        "text": "German Centre Home for Extended Care advertises private and semi-private rooms, distinct from Edelweiss Village assisted living.",
+        "sourceId": "home-unit",
+        "amount": null
+      },
+      {
+        "id": "therapy",
+        "kind": "care",
+        "text": "The nursing unit advertises short-term rehabilitation and long-term care, physical/occupational/speech therapies seven days weekly, and physician/nurse-practitioner visits.",
+        "sourceId": "home-unit",
+        "amount": null
+      },
+      {
+        "id": "amenities",
+        "kind": "amenity",
+        "text": "Advertised unit amenities include music therapy, a chapel, sunrooms, outside porch/patios and resident activities.",
+        "sourceId": "home-unit",
+        "amount": null
+      },
+      {
+        "id": "memory-support",
+        "kind": "care",
+        "text": "Long-term care includes the Schrafft Pavilion Memory Support Neighborhood for residents with Alzheimer's or memory loss.",
+        "sourceId": "care-scope",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The nursing unit invites care inquiries; no current private/shared-room vacancy or numeric rate is published.",
+      "sourceId": "home-unit",
+      "asOf": null
+    },
+    "notes": [
+      "German Centre Home nursing, Edelweiss Village assisted living and Senior Place adult day health are separate services; campus-wide claims were not assigned indiscriminately."
+    ]
+  },
+  {
+    "providerId": "cms-225014",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "brighton-unit",
+        "url": "https://www.massgeneralbrigham.org/en/locations/allston-ma/spaulding-rehabilitation-nursing-and-therapy-center-brighton-loc0000280881",
+        "title": "Spaulding Rehabilitation Nursing and Therapy Center (Brighton) | Mass General Brigham",
+        "publisher": "Mass General Brigham / Spaulding",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "100 North Beacon Street"
+      }
+    ],
+    "facts": [
+      {
+        "id": "specialty-rehab",
+        "kind": "care",
+        "text": "The Brighton inpatient skilled-nursing center advertises rehabilitation for amputations, burns, heart conditions, stroke, spinal-cord injuries and neurological disorders.",
+        "sourceId": "brighton-unit",
+        "amount": null
+      },
+      {
+        "id": "other-support",
+        "kind": "care",
+        "text": "The specific center also advertises behavioral/mental-health services and spiritual care.",
+        "sourceId": "brighton-unit",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The specific-center page lists contact details but no room openings, waitlist or numeric private-pay price.",
+      "sourceId": "brighton-unit",
+      "asOf": null
+    },
+    "notes": [
+      "Exact address 100 North Beacon Street identifies the Brighton/Allston center.",
+      "Room/bath details from Spaulding Cape Cod or other network patient guides were not assigned here.",
+      "Current private/semi-private configuration was not established from the specific-center page."
+    ]
+  },
+  {
+    "providerId": "cms-225417",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "boston-location",
+        "url": "https://armenian-nursing.org/",
+        "title": "ANRC - Armenian Nursing and Rehabilitation Center",
+        "publisher": "Armenian Nursing & Rehabilitation Center",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Jamaica Plain, Massachusetts"
+      },
+      {
+        "id": "owner-services",
+        "url": "https://awwainc.org/armenian-nursing-rehabilitation-center-anrc/",
+        "title": "Armenian Nursing & Rehabilitation Center (ANRC) - AWWAInc",
+        "publisher": "Armenian Women's Welfare Association",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "431 Pond Street"
+      }
+    ],
+    "facts": [
+      {
+        "id": "care-services",
+        "kind": "care",
+        "text": "The Boston-specific owner page advertises short-term rehabilitation/recovery after surgery or illness and long-term care for older adults needing continuous support.",
+        "sourceId": "owner-services",
+        "amount": null
+      },
+      {
+        "id": "cultural-care",
+        "kind": "care",
+        "text": "The owner advertises culturally relevant programming including Armenian language support, while explicitly serving Armenian and non-Armenian residents.",
+        "sourceId": "owner-services",
+        "amount": null
+      },
+      {
+        "id": "grounds",
+        "kind": "amenity",
+        "text": "The actual Jamaica Plain center advertises a three-acre campus and community-oriented setting; room privacy and specific bath configuration were not established.",
+        "sourceId": "boston-location",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "The Boston owner/location pages invite admission and tour inquiries; no dated room opening, waitlist or numeric price is published.",
+      "sourceId": "owner-services",
+      "asOf": null
+    },
+    "notes": [
+      "The exact Boston address is 431 Pond Street. The similarly named anrcenter.org is Emerson, New Jersey and was excluded, including its private/semi-private rooms, gym and dining claims.",
+      "AWWA fundraising donation illustrations are not resident fees and were not treated as prices.",
+      "Renovations described as underway do not establish completed new rooms or live bed inventory."
+    ]
+  }
+]

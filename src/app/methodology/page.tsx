@@ -70,12 +70,13 @@ export default function Methodology() {
             <MessageSquare />
             <h2>Keep lived experience in context</h2>
             <p>
-              Matched home-health agencies include CMS patient-experience
-              surveys, with response counts, response rates and reporting
-              periods. These are separate from clinical-quality ratings and
-              apply to the identified Medicare-certified agency, which may cover
-              several offices. Broader review feeds and a structured
-              reference-check process are planned; they are not connected today.
+              Public location reviews and discussions are attributed to their
+              sources, with known reviewer relationships and dates. Selected
+              excerpts provide context and do not enter the numerical index.
+              Matched home-health agencies also include CMS patient surveys,
+              which remain separate from public review ratings and clinical
+              measures. Independent references and visits still need to be
+              completed.
             </p>
           </article>
           <article>
@@ -89,6 +90,64 @@ export default function Methodology() {
             </p>
           </article>
         </div>
+        <section className="method-callout" id="experience">
+          <h2>A score you can inspect</h2>
+          <p>
+            The consumer experience index puts eligible published review
+            averages on a 10-point scale. It is a provisional summary of
+            consumer sentiment, not a clinical-quality or safety rating. It does
+            not use Expedia’s algorithm or verified-stay system.
+          </p>
+          <p>
+            Each source average becomes 10 × rating ÷ its original scale. Source
+            weight is the square root of its reported review count, capped at
+            100 reviews. We combine those weighted averages and round to one
+            decimal. A Place for Mom and SeniorAdvisor count as one source
+            family; duplicate pages and known syndicated sources are grouped. We
+            keep the newest eligible representation, not the highest rating.
+          </p>
+          <p>
+            At least 10 eligible reported reviews are required. One source
+            family, or fewer than 30 reported reviews, means limited evidence.
+            Two or more source groups and at least 30 reviews means moderate
+            coverage. These are initial product rules, not statistical
+            confidence levels. Counts may overlap across sites; reviewers are
+            not independently authenticated.
+          </p>
+          <p>
+            Employee, sales-only, brand-level and unresolved care-unit
+            aggregates are excluded. Search snippets cannot supply a score.
+            Sources checked more than 180 days ago, or known aggregate snapshots
+            older than a year, expire from the index. A recent page check does
+            not establish that its underlying reviews are recent. Individual
+            selected posts never change the score.
+          </p>
+          <p>
+            Missing or ambiguous evidence leaves a location unrated. Official
+            inspection findings, abuse flags, staffing and other regulatory
+            evidence remain visible separately. Favorable reviews do not cancel
+            those findings.
+          </p>
+        </section>
+        <section className="method-callout">
+          <h2>Offers, prices and openings have different meanings</h2>
+          <p>
+            Provider pages describe amenities, activities and rooms; they do not
+            prove that every service is included in a particular contract. We
+            distinguish monthly charges, entrance fees, cooperative shares,
+            deposits, care fees and daily or hourly rates. Future-effective and
+            conflicting prices stay labeled; a regional estimate is never
+            presented as a location’s quote.
+          </p>
+          <p>
+            A provider’s public opening claim is a lead to confirm, with its
+            source and check date. A floor plan, contact form or published
+            capacity is not an opening. Historical resident averages and
+            capacity-minus-occupancy figures cannot establish current
+            availability. Waitlists and priority programs need their own timing
+            and deposit questions.
+          </p>
+        </section>
         <section className="method-callout">
           <h2>What still needs a person</h2>
           <p>

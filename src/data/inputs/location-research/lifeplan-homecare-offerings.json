@@ -1,0 +1,2096 @@
+[
+  {
+    "providerId": "houseworks",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "services",
+        "url": "https://house-works.com/home-care-services",
+        "title": "Senior Care & In-Home Assistance Greater Boston | HouseWorks",
+        "publisher": "HouseWorks",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "We offer a range of options, from a few hours a week to live in care in Greater Boston."
+      },
+      {
+        "id": "cost",
+        "url": "https://house-works.com/cost-of-home-care",
+        "title": "Cost Home Care Payment Options Greater Boston | HouseWorks",
+        "publisher": "HouseWorks",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Our pricing is based on client needs"
+      }
+    ],
+    "facts": [
+      {
+        "id": "personal-care",
+        "kind": "care",
+        "text": "Private in-home personal care, dementia care, respite and transition-home support are advertised, from a few weekly hours to live-in care.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "transition",
+        "kind": "care",
+        "text": "Transition-home support includes medication assistance, prescription pickup and meal preparation after hospital or rehabilitation discharge.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "careteam",
+        "kind": "care",
+        "text": "The provider advertises family access to a CareTeam 24/7, care coordination, supervision and backup; this is not a promise of a dedicated caregiver at every hour.",
+        "sourceId": "cost",
+        "amount": null
+      },
+      {
+        "id": "rates",
+        "kind": "cost",
+        "text": "Hourly and live-in services have weekday/weekend rates; the provider quotes individually according to client needs. No numeric rate is published on the inspected cost page.",
+        "sourceId": "cost",
+        "amount": null
+      },
+      {
+        "id": "billing",
+        "kind": "cost",
+        "text": "Bills are issued every two weeks; the provider says it can manage long-term-care insurance claims.",
+        "sourceId": "cost",
+        "amount": null
+      },
+      {
+        "id": "startup",
+        "kind": "availability",
+        "text": "HouseWorks advertises the ability to reach a home within 24 hours, sometimes the same day; an individual staffed start is not confirmed by this page.",
+        "sourceId": "services",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "services",
+      "asOf": null
+    },
+    "notes": [
+      "Home-service office; residential rooms and floor plans are not applicable.",
+      "No exact minimum shift length or live shift inventory was found on these pages."
+    ]
+  },
+  {
+    "providerId": "privatus-boston",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "pricing",
+        "url": "https://www.privatuscare.com/pricing/",
+        "title": "Pricing - Privatus Care Solutions | Private Nursing & Home Health Aides",
+        "publisher": "Privatus Care Solutions",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "CNA/Home Health Aide\nGreater Boston\n$44-55"
+      },
+      {
+        "id": "boston-services",
+        "url": "https://www.privatuscare.com/location/boston/",
+        "title": "Boston, MA | Private Nursing and Care Management | Privatus Care",
+        "publisher": "Privatus Care Solutions",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Qualified Registered Nurses and Home Health Aides"
+      },
+      {
+        "id": "faq",
+        "url": "https://www.privatuscare.com/resources/faqs/",
+        "title": "FAQ | Private Nursing Services in Boston & New York | Privatus Care",
+        "publisher": "Privatus Care Solutions",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "While we ask for 24 hours notice to start services"
+      }
+    ],
+    "facts": [
+      {
+        "id": "aide-rate",
+        "kind": "cost",
+        "text": "Greater Boston CNA/Home Health Aide hourly rate is published at $44–$55; no effective date is stated.",
+        "sourceId": "pricing",
+        "amount": {
+          "min": 44,
+          "max": 55,
+          "currency": "USD",
+          "period": "hour",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "nursing-hourly",
+        "kind": "cost",
+        "text": "Greater Boston private-nursing hourly rate is published at $135; the one-hour visit is a separate rate.",
+        "sourceId": "pricing",
+        "amount": {
+          "min": 135,
+          "max": null,
+          "currency": "USD",
+          "period": "hour",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "nursing-visit",
+        "kind": "cost",
+        "text": "A Greater Boston one-hour private-nursing visit is published at $200.",
+        "sourceId": "pricing",
+        "amount": {
+          "min": 200,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "deposit-cancellation",
+        "kind": "cost",
+        "text": "The service agreement permits changes/cancellation on 24 hours notice; a one-week deposit is applied to the last service week and billing is weekly.",
+        "sourceId": "pricing",
+        "amount": null
+      },
+      {
+        "id": "privatepay",
+        "kind": "cost",
+        "text": "Services are advertised as private pay, with possible long-term-care insurance reimbursement; Privatus says it invoices clients directly rather than insurers.",
+        "sourceId": "pricing",
+        "amount": null
+      },
+      {
+        "id": "care-offerings",
+        "kind": "care",
+        "text": "The Boston team advertises registered nurses and home health aides for short-term bedside/post-hospital help, clinically complex needs, ongoing home care and travel assistance.",
+        "sourceId": "boston-services",
+        "amount": null
+      },
+      {
+        "id": "aide-boundary",
+        "kind": "care",
+        "text": "Aides may give medication reminders for prefilled pill cassettes; medication judgment and assessment are assigned to registered nurses.",
+        "sourceId": "faq",
+        "amount": null
+      },
+      {
+        "id": "transport",
+        "kind": "care",
+        "text": "Caregivers may accompany/drive clients to appointments in the client or caregiver vehicle; caregiver-car mileage can add a charge.",
+        "sourceId": "faq",
+        "amount": null
+      },
+      {
+        "id": "start",
+        "kind": "availability",
+        "text": "The FAQ requests 24 hours notice and says same-day starts are often possible for immediate need; this is a provider claim, not confirmed staffing.",
+        "sourceId": "faq",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "faq",
+      "asOf": null
+    },
+    "notes": [
+      "Greater Boston-specific rates were selected from the Massachusetts pricing tab; rates from Cape Cod, islands and other states were not assigned here.",
+      "No numeric minimum aide shift was established; a listed one-hour nursing visit is not a one-hour aide minimum.",
+      "Published rates are undated; confirm the applicable agreement and any additional charges."
+    ]
+  },
+  {
+    "providerId": "north-river",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "services",
+        "url": "https://northriverhc.com/home-care-services/",
+        "title": "Senior Home Care Services | North River Home Care",
+        "publisher": "North River Home Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "We have a four-hour minimum service requirement."
+      },
+      {
+        "id": "cost-faq",
+        "url": "https://northriverhc.com/home-care-services/faq/",
+        "title": "Frequently Asked Questions - North River Home Care",
+        "publisher": "North River Home Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The average range for home care is $35-45/hour with a minimum of four hours per shift."
+      },
+      {
+        "id": "cost-explainer",
+        "url": "https://northriverhc.com/resources/cost-of-home-care-ma/",
+        "title": "Home Care Cost in Massachusetts (2026): Rates & Options",
+        "publisher": "North River Home Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Statewide, As of 2026, the average cost of non-medical home care in Massachusetts is about $40 per hour"
+      }
+    ],
+    "facts": [
+      {
+        "id": "care",
+        "kind": "care",
+        "text": "Nonmedical personal/companionship care, dementia support, respite, post-rehabilitation support and 24-hour care are advertised.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "minimum",
+        "kind": "cost",
+        "text": "The provider publishes a four-hour minimum shift. A care consultation includes a rate quote; weekends and holidays have different rates from weekdays.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "upfront",
+        "kind": "cost",
+        "text": "The FAQ says there is no initial assessment fee or upfront deposit.",
+        "sourceId": "cost-faq",
+        "amount": null
+      },
+      {
+        "id": "family-updates",
+        "kind": "care",
+        "text": "A client service manager provides regular visits and family communication; an online Family Portal gives designated family access to care notes.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "transportation",
+        "kind": "care",
+        "text": "Caregivers may provide transportation during care, including medical appointments and grocery shopping.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "start",
+        "kind": "availability",
+        "text": "The provider says starts may be possible within a few hours after evaluation and contract, or may take days depending on location, needed services and timing; no individual shift is confirmed.",
+        "sourceId": "services",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "services",
+      "asOf": null
+    },
+    "notes": [
+      "The FAQ gives $35–$45/hour as an average range, and the 2026 cost explainer gives a statewide $40 survey average. Neither is treated here as a verified current client-specific rate.",
+      "The FAQ contains December 19, 2023 entry timestamps; no effective date for a current rate schedule was found.",
+      "Wellesley serves MetroWest; Norwell serves the South Shore. Confirm exact household coverage."
+    ]
+  },
+  {
+    "providerId": "vna-care",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "homehealth",
+        "url": "https://vnacare.org/patients/by-service/home-health-care",
+        "title": "Home Health Care | VNA Care",
+        "publisher": "VNA Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Patients whose needs exceed our staffing capacity"
+      },
+      {
+        "id": "private-care",
+        "url": "https://vnacare.org/patients/by-service/private-care",
+        "title": "Private Care | VNA Care",
+        "publisher": "VNA Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "At Home Private Care's caregivers are available from four hours to 24 hours a day"
+      }
+    ],
+    "facts": [
+      {
+        "id": "skilled",
+        "kind": "care",
+        "text": "Certified home-health services advertise skilled nursing, physical/occupational/speech therapy, medical social work, nutrition support and home health aides. A physician order and skilled-care need apply.",
+        "sourceId": "homehealth",
+        "amount": null
+      },
+      {
+        "id": "specialties",
+        "kind": "care",
+        "text": "Advertised programs include falls prevention, IV therapy, medication management, joint replacement support, telehealth and wound/ostomy care.",
+        "sourceId": "homehealth",
+        "amount": null
+      },
+      {
+        "id": "private-division",
+        "kind": "care",
+        "text": "At Home Private Care is a separate division offering personal care, companionship, meals/light housekeeping, errands and appointment transportation, with nurse/social-worker care planning and supervision.",
+        "sourceId": "private-care",
+        "amount": null
+      },
+      {
+        "id": "private-schedule",
+        "kind": "cost",
+        "text": "At Home Private Care advertises four to 24 hours daily, including live-in care, throughout Worcester County and MetroWest; no numeric rate is published on this page.",
+        "sourceId": "private-care",
+        "amount": null
+      },
+      {
+        "id": "private-payment",
+        "kind": "cost",
+        "text": "The private-care division is commonly paid privately or through long-term-care insurance and may supplement certified home health, hospice or palliative care.",
+        "sourceId": "private-care",
+        "amount": null
+      },
+      {
+        "id": "acceptance",
+        "kind": "availability",
+        "text": "Certified home health explicitly excludes needs beyond staffing capacity, certain insurance plans, custodial-only care and needs unsafe for intermittent short-term visits; intake must assess acceptance.",
+        "sourceId": "homehealth",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "homehealth",
+      "asOf": null
+    },
+    "notes": [
+      "Private-care geography/hours must not be projected onto every certified home-health office or service.",
+      "The two separate certified reporting entities (227068/227098) are not the private-care division.",
+      "No live caregiver availability or numeric private-care price is established."
+    ]
+  },
+  {
+    "providerId": "south-shore-vna",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "vna-program",
+        "url": "https://www.southshorehealth.org/services-care/home-care/south-shore-vna",
+        "title": "South Shore Health VNA | Visiting Nurses Association",
+        "publisher": "South Shore Health",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Our specialty programs target specific health needs"
+      },
+      {
+        "id": "division-homecare",
+        "url": "https://www.southshorehealth.org/services-care/home-care",
+        "title": "Home Care | South Shore Health VNA | Visiting Nurse Association",
+        "publisher": "South Shore Health",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "A Medicare-certified agency providing skilled nursing care"
+      }
+    ],
+    "facts": [
+      {
+        "id": "vna-services",
+        "kind": "care",
+        "text": "South Shore VNA advertises skilled nursing, specialty disease-management programs, physical/occupational/speech therapy, home health aides and medical social work for adults and children at home.",
+        "sourceId": "division-homecare",
+        "amount": null
+      },
+      {
+        "id": "specialties",
+        "kind": "care",
+        "text": "Advertised VNA specialties include heart disease, diabetes, wound/ostomy/continence, infusion therapy, COPD, geriatrics/Alzheimer support and rehabilitation.",
+        "sourceId": "vna-program",
+        "amount": null
+      },
+      {
+        "id": "hours",
+        "kind": "care",
+        "text": "The provider advertises caregivers available 24/7/365. This is an agency service statement, not confirmation that a particular patient receives continuous round-the-clock bedside care.",
+        "sourceId": "vna-program",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "vna-program",
+      "asOf": null
+    },
+    "notes": [
+      "Home-based outpatient rehabilitation and other Home Care Division services are not automatically the same service or payer arrangement as certified VNA care.",
+      "No numeric rate, exact visit minimum or live staffing inventory was established by these pages."
+    ]
+  },
+  {
+    "providerId": "lifeplan-north-hill",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "floorplans-pricing",
+        "url": "https://northhill.org/independent-living/floor-plans-pricing/",
+        "title": "Floor Plans & Pricing | Senior Living North Hill Needham MA",
+        "publisher": "North Hill",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Prices below are valid until March 31, 2027."
+      },
+      {
+        "id": "heights-waitlist",
+        "url": "https://northhill.org/independent-living/wait-lists/",
+        "title": "Wait List | North Hill Senior Living Needham, MA",
+        "publisher": "North Hill",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Our Heights Club Waitlist gives you priority when the style of apartment you prefer becomes available"
+      },
+      {
+        "id": "lifecare",
+        "url": "https://northhill.org/the-lifecare-advantage/",
+        "title": "The Lifecare Advantage | North Hill Senior Living Needham",
+        "publisher": "North Hill",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "your monthly fee stays the same (adjusted only for routine cost of living increases)"
+      }
+    ],
+    "facts": [
+      {
+        "id": "broadmoor-layout",
+        "kind": "room",
+        "text": "Broadmoor studio floor plans are listed at 426–578 square feet. The page lists additional one- and two-bedroom collections.",
+        "sourceId": "floorplans-pricing",
+        "amount": null
+      },
+      {
+        "id": "broadmoor-entrance",
+        "kind": "cost",
+        "text": "Broadmoor studio entrance fees are published at $181,624–$320,584. Prices are stated valid until March 31, 2027 and subject to change.",
+        "sourceId": "floorplans-pricing",
+        "amount": {
+          "min": 181624,
+          "max": 320584,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "broadmoor-monthly",
+        "kind": "cost",
+        "text": "Broadmoor studio monthly fees are published at $4,250–$5,657, separate from the entrance fee; prices are stated valid until March 31, 2027 and subject to change.",
+        "sourceId": "floorplans-pricing",
+        "amount": {
+          "min": 4250,
+          "max": 5657,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "lifecare-contract",
+        "kind": "cost",
+        "text": "The Lifecare contract advertises the independent-living monthly rate continuing when a resident needs Vista Terrace enhanced living or Pines Edge skilled nursing, apart from routine cost-of-living increases; confirm the actual contract and inclusions.",
+        "sourceId": "lifecare",
+        "amount": null
+      },
+      {
+        "id": "campus-levels",
+        "kind": "care",
+        "text": "The campus identifies Crescent Heights independent living, Vista Terrace enhanced living, and Pines Edge skilled nursing/long-term care as distinct neighborhoods.",
+        "sourceId": "lifecare",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "waitlist-published",
+      "text": "The Heights Club Waitlist gives priority when a preferred apartment style becomes available. No live apartment count or wait duration is published.",
+      "sourceId": "heights-waitlist",
+      "asOf": null
+    },
+    "notes": [
+      "The price table does not by itself establish unit inventory, contract refund terms or a particular person's eligibility."
+    ]
+  },
+  {
+    "providerId": "lifeplan-carleton-willard-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "residential-pricing",
+        "url": "https://www.cwvillage.org/independent-living/pricing/",
+        "title": "Residential Living | Carleton-Willard | Pricing",
+        "publisher": "Carleton-Willard Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Entrance Fees effective January 1, 2026."
+      },
+      {
+        "id": "amenities",
+        "url": "https://www.cwvillage.org/independent-living/services-and-amenities/",
+        "title": "Independent Living | Carleton-Willard | Services and Amenities",
+        "publisher": "Carleton-Willard Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "One meal a day in the Abbott Room, the Brass Rail, Victoria Café, or “meals to go”"
+      },
+      {
+        "id": "supportive-care",
+        "url": "https://www.cwvillage.org/nursing-and-supporting-care/asistance-in-living/",
+        "title": "Assistance in Living & Supportive Care | Carleton-Willard Village | Overview",
+        "publisher": "Carleton-Willard Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Llewsac Lodge"
+      },
+      {
+        "id": "memory-care",
+        "url": "https://www.cwvillage.org/nursing-and-supporting-care/memory-care/",
+        "title": "Memory and Alzheimer’s Care | Carleton-Willard Village | Overview",
+        "publisher": "Carleton-Willard Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Ross-Worthen Center for Dementia Care"
+      },
+      {
+        "id": "nursing-rehab",
+        "url": "https://www.cwvillage.org/nursing-and-supporting-care/nursing-and-rehabilitation/",
+        "title": "Nursing and Rehabilitation | Carleton-Willard Village | Overview",
+        "publisher": "Carleton-Willard Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "skilled nursing and rehabilitation center"
+      }
+    ],
+    "facts": [
+      {
+        "id": "badger-layout",
+        "kind": "room",
+        "text": "Badger Terrace independent-living apartments range from studios to two bedrooms plus study; the building has elevators and apartments have full kitchens.",
+        "sourceId": "residential-pricing",
+        "amount": null
+      },
+      {
+        "id": "badger-entrance",
+        "kind": "cost",
+        "text": "Badger Terrace published entrance-fee range: $157,427–$579,716, effective January 1, 2026. A second person adds $56,183.",
+        "sourceId": "residential-pricing",
+        "amount": {
+          "min": 157427,
+          "max": 579716,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": "2026-01-01"
+        }
+      },
+      {
+        "id": "badger-monthly",
+        "kind": "cost",
+        "text": "Badger Terrace published monthly-fee range: $4,803–$6,347, effective May 1, 2026. A second person adds $2,050 per month. Entrance fees are separate.",
+        "sourceId": "residential-pricing",
+        "amount": {
+          "min": 4803,
+          "max": 6347,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": "2026-05-01"
+        }
+      },
+      {
+        "id": "cottages-layout",
+        "kind": "room",
+        "text": "Cottages offer single-level one-bedroom, two-bedroom and two-bedroom-plus-study layouts, with kitchens, washers/dryers and attic storage; most have decks or patios.",
+        "sourceId": "residential-pricing",
+        "amount": null
+      },
+      {
+        "id": "monthly-includes",
+        "kind": "amenity",
+        "text": "The monthly fee covers one meal daily, housekeeping, utilities, property taxes, grounds maintenance, home repair and the Learning in Retirement program.",
+        "sourceId": "residential-pricing",
+        "amount": null
+      },
+      {
+        "id": "supportive-setting",
+        "kind": "care",
+        "text": "Llewsac Lodge provides residential supportive care with nursing assistance according to the provider; it is distinct from the independent-living residences.",
+        "sourceId": "supportive-care",
+        "amount": null
+      },
+      {
+        "id": "memory-setting",
+        "kind": "care",
+        "text": "The Ross-Worthen Center for Dementia Care is a separate on-campus memory-care setting with a homelike design and individualized activities.",
+        "sourceId": "memory-care",
+        "amount": null
+      },
+      {
+        "id": "nursing-setting",
+        "kind": "care",
+        "text": "A separate skilled nursing/rehabilitation center advertises long-term care and post-surgical recovery. Its prices are not established by the independent-living price table.",
+        "sourceId": "nursing-rehab",
+        "amount": null
+      },
+      {
+        "id": "dining",
+        "kind": "dining",
+        "text": "The independent-living monthly package advertises one daily meal in the Abbott Room, Brass Rail, Victoria Café or as meals to go.",
+        "sourceId": "amenities",
+        "amount": null
+      },
+      {
+        "id": "amenities",
+        "kind": "amenity",
+        "text": "Advertised amenities include weekly housekeeping/linen service, transportation, exercise facilities, walking paths, studios and a woodworking shop; the page explicitly adds fees for pool access/personal trainers and excludes phone/internet/cable utilities.",
+        "sourceId": "amenities",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "not-published",
+      "text": "The inspected official pages do not publish live openings or an inventory count.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "notes": [
+      "These are residential independent-living prices, not rates for the separately advertised memory-care or nursing units.",
+      "Refundability is not established by the inspected pricing page."
+    ]
+  },
+  {
+    "providerId": "lifeplan-newbridge-on-the-charles",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "independent-costs",
+        "url": "https://www.hebrewseniorlife.org/newbridge/types-residences/independent-living/independent-living-costs",
+        "title": "Independent Living Costs, Pricing | Hebrew SeniorLife",
+        "publisher": "Hebrew SeniorLife",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "which is then 90% refundable to them or their estate when leaving the community."
+      },
+      {
+        "id": "apartments",
+        "url": "https://www.hebrewseniorlife.org/newbridge/types-residences/independent-living/independent-living-apartments-newbridge-charles",
+        "title": "Independent Living Apartments in Dedham, MA – NewBridge on the Charles | Hebrew SeniorLife",
+        "publisher": "Hebrew SeniorLife",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "choice of one- and two-bedroom floor plans."
+      },
+      {
+        "id": "assisted-living",
+        "url": "https://www.hebrewseniorlife.org/newbridge/types-residences/assisted-living-newbridge-charles",
+        "title": "Assisted Living in Dedham, MA - NewBridge on the Charles | Hebrew SeniorLife",
+        "publisher": "Hebrew SeniorLife",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "one- or two-bedroom rental apartments"
+      },
+      {
+        "id": "memory-care",
+        "url": "https://www.hebrewseniorlife.org/newbridge/types-residences/memory-care-assisted-living-newbridge-charles",
+        "title": "Memory Care Assisted Living in Dedham, MA – NewBridge on the Charles | Hebrew SeniorLife",
+        "publisher": "Hebrew SeniorLife",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "early- and mid-stage Alzheimer’s and/or a related dementia"
+      },
+      {
+        "id": "assisted-waitlist",
+        "url": "https://www.hebrewseniorlife.org/newbridge/types-residences/assisted-living/apply-assisted-living-newbridge-charles",
+        "title": "Apply for Assisted Living in Dedham, MA – NewBridge on the Charles | Hebrew SeniorLife",
+        "publisher": "Hebrew SeniorLife",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "join our brief waitlist by completing a quick form."
+      },
+      {
+        "id": "campus-identity",
+        "url": "https://www.hebrewseniorlife.org/newbridge/contact-us",
+        "title": "Contact NewBridge on the Charles | Hebrew SeniorLife",
+        "publisher": "Hebrew SeniorLife",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "7000 Great Meadow Road, Dedham, MA 02026"
+      }
+    ],
+    "facts": [
+      {
+        "id": "independent-apartments",
+        "kind": "room",
+        "text": "Independent living advertises one-/two-bedroom apartments with 20 floor plans, nearly 1,000 to just over 2,000 sq ft, kitchens, full-size washer/dryer, underground parking and storage; most have screened porches.",
+        "sourceId": "apartments",
+        "amount": null
+      },
+      {
+        "id": "entrance-structure",
+        "kind": "cost",
+        "text": "Independent living has a separate entrance fee described as 90% refundable on leaving, plus a monthly fee. The inspected official page gives no numeric entrance/monthly schedule.",
+        "sourceId": "independent-costs",
+        "amount": null
+      },
+      {
+        "id": "modifiedlife",
+        "kind": "cost",
+        "text": "Medically qualified residents may choose a Modified Life Care Plan with a higher entrance fee and reduced future assisted-living/long-term chronic-care costs; this is an optional contract, not included universally.",
+        "sourceId": "independent-costs",
+        "amount": null
+      },
+      {
+        "id": "monthly-inclusions",
+        "kind": "amenity",
+        "text": "Independent monthly fees advertise weekly housekeeping, utilities/internet, dining credits, scheduled/campus transport, fitness/aquatic centers and programs. Medical appointment transport includes a five-mile radius and Newton-Wellesley Hospital.",
+        "sourceId": "independent-costs",
+        "amount": null
+      },
+      {
+        "id": "dining",
+        "kind": "dining",
+        "text": "Independent living advertises monthly dining credits usable at Centro, Copper Beech Room and Nosh, including guest meals, takeout and catering.",
+        "sourceId": "independent-costs",
+        "amount": null
+      },
+      {
+        "id": "assisted-apartments",
+        "kind": "room",
+        "text": "The separate Jack Satter Assisted Living Residences offer one-/two-bedroom rental apartments with living rooms, kitchenettes and walk-in showers. These are not the independent-living purchase/entrance-fee plans.",
+        "sourceId": "assisted-living",
+        "amount": null
+      },
+      {
+        "id": "memory-setting",
+        "kind": "care",
+        "text": "The separate Gilda and Alfred A. Slifka Memory Care Assisted Living Residences advertise care for early-/mid-stage Alzheimer's or related dementia, with purpose-designed spaces and programming.",
+        "sourceId": "memory-care",
+        "amount": null
+      },
+      {
+        "id": "unit-identity",
+        "kind": "care",
+        "text": "The official contact page separates independent living (5000 Great Meadow Road), assisted/memory care (6000), and Hebrew Rehabilitation Center short-term/long-term chronic care (7000).",
+        "sourceId": "campus-identity",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "waitlist-published",
+      "text": "The current assisted-living application page offers a waitlist and says residents are contacted as homes become available. It publishes no current duration or actual vacancy count; this status refers to assisted living.",
+      "sourceId": "assisted-waitlist",
+      "asOf": null
+    },
+    "notes": [
+      "The January 2023 blog's historical two-to-five-month assisted-living wait estimate was not treated as current availability.",
+      "Campus services and prices must remain attached to the named residence/care unit; no CMS nursing-home score applies to the whole campus.",
+      "No numeric price was inferred from the phrase comparable home in the area."
+    ]
+  },
+  {
+    "providerId": "lifeplan-fox-hill-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "cooperative",
+        "url": "https://www.foxhillvillage.com/independent-living/cooperative-model/",
+        "title": "Cooperative Model - Foxhill Village",
+        "publisher": "Fox Hill Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "When you leave Fox Hill, you or your estate will receive 85 percent of the selling price of your stock"
+      },
+      {
+        "id": "monthly-2026",
+        "url": "https://www.foxhillvillage.com/wp-content/uploads/2025/12/Fox-Hill-FEES-Sheet-2026-FINAL.pdf",
+        "title": "2026 MONTHLY FEE SCHEDULE",
+        "publisher": "Fox Hill Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "pdf",
+        "excerpt": "2026 MONTHLY FEE SCHEDULE"
+      },
+      {
+        "id": "direct-care",
+        "url": "https://www.foxhillvillage.com/health-services/direct-admission/",
+        "title": "Direct Admission - Foxhill Village",
+        "publisher": "Fox Hill Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Birch Grove’s inclusive rate is set once a year"
+      },
+      {
+        "id": "health-services",
+        "url": "https://www.foxhillvillage.com/health-services/",
+        "title": "Health Services - Foxhill Village",
+        "publisher": "Fox Hill Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Inpatient Rehabilitation."
+      }
+    ],
+    "facts": [
+      {
+        "id": "stock-model",
+        "kind": "cost",
+        "text": "Independent living uses cooperative stock plus an apartment lease, not a conventional entrance-fee contract. The provider says the resident/estate receives 85% of the stock selling price on exit, which may differ from the original purchase price.",
+        "sourceId": "cooperative",
+        "amount": null
+      },
+      {
+        "id": "onebed-purchase",
+        "kind": "cost",
+        "text": "One-bedroom cooperative shares are advertised starting at $400,000; two-bedroom shares start at $900,000 and larger apartments at $1,300,000. Monthly fees are additional; share prices vary with market conditions.",
+        "sourceId": "cooperative",
+        "amount": {
+          "min": 400000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "onebed-monthly",
+        "kind": "cost",
+        "text": "The 2026 schedule lists Quincy (584 sq ft) and Ashton (615 sq ft) one-bedroom apartments at $3,775 per month for one person, or $5,275 for two. Cooperative-share purchase is separate.",
+        "sourceId": "monthly-2026",
+        "amount": {
+          "min": 3775,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": "2026-01-01"
+        }
+      },
+      {
+        "id": "twobed-monthly",
+        "kind": "cost",
+        "text": "The 2026 schedule lists Exeter/Fairfax/Raleigh two-bedroom models at $4,806 monthly for one person or $6,306 for two; these are published floor-plan fees, not available units.",
+        "sourceId": "monthly-2026",
+        "amount": {
+          "min": 4806,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": "2026-01-01"
+        }
+      },
+      {
+        "id": "birch-rate",
+        "kind": "cost",
+        "text": "Birch Grove assisted living advertises $13,200 per month plus a one-time $3,500 admission fee. The page says common services are included but intensive one-to-one care, advanced healthcare and some outings can cost extra.",
+        "sourceId": "direct-care",
+        "amount": {
+          "min": 13200,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "whiteoak-rate",
+        "kind": "cost",
+        "text": "White Oak Cottages memory care advertises $14,100 per month plus a one-time $3,500 admission fee; stated exceptions include intensive one-to-one care and advanced healthcare.",
+        "sourceId": "direct-care",
+        "amount": {
+          "min": 14100,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "dining-credits",
+        "kind": "dining",
+        "text": "The 2026 independent-living fee sheet includes $750 in monthly meal credits, plus biweekly housekeeping, utilities, wellness center, fitness/indoor pool and activities. Telephone, internet and cable are excluded on the cooperative-model page.",
+        "sourceId": "monthly-2026",
+        "amount": null
+      },
+      {
+        "id": "health-scope",
+        "kind": "care",
+        "text": "On-campus services include wellness care, outpatient physical therapy, personal support, Birch Grove assisted living and White Oak Cottages memory care. The provider describes choosing an external short-term rehabilitation center when inpatient rehabilitation is needed.",
+        "sourceId": "health-services",
+        "amount": null
+      },
+      {
+        "id": "independent-layouts",
+        "kind": "room",
+        "text": "Independent living offers 16 one-/two-bedroom layouts as well as combined apartments; cooperative-share purchase and monthly fees are separate.",
+        "sourceId": "cooperative",
+        "amount": null
+      },
+      {
+        "id": "care-suite-layouts",
+        "kind": "room",
+        "text": "Birch Grove assisted living has private three-room suites with a tea kitchen, bedroom and bathroom. White Oak Cottages memory care has private bedroom/bathroom suites.",
+        "sourceId": "direct-care",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Direct admission to Birch Grove and White Oak is advertised only on a space-available basis, with existing Fox Hill residents receiving priority. No actual vacancy or move-in date is published.",
+      "sourceId": "direct-care",
+      "asOf": null
+    },
+    "notes": [
+      "Independent cooperative-share prices, independent monthly fees and separate assisted/memory-care direct-admission rates are different financial products.",
+      "The assisted/memory-care webpage is undated; it says rates reset January 1 each year but does not state the year of the displayed amounts.",
+      "The monthly PDF is expressly labeled 2026; the corporate webpage says new monthly fees take effect January 1 annually.",
+      "No on-campus skilled-nursing or inpatient-rehabilitation bed is inferred from the wider continuum language."
+    ]
+  },
+  {
+    "providerId": "abc-home-healthcare",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "services",
+        "url": "https://www.abchhp.com/abc-home-healthcare-professionals-home-care-agency-serving-private-pay-and-state-funded-clients/home-care-services/",
+        "title": "Home Care Services | ABC Home Healthcare",
+        "publisher": "ABC Home Healthcare Professionals",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Our home care services are available from a few hours a week up to 24 hours a day, 7 days a week and include nurse case management."
+      },
+      {
+        "id": "home",
+        "url": "https://www.abchhp.com/",
+        "title": "ABC Home Healthcare Professionals | Medical and Non-medical Home Care Agency",
+        "publisher": "ABC Home Healthcare Professionals",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "From homemaking to skilled nursing"
+      },
+      {
+        "id": "affording",
+        "url": "https://www.abchhp.com/affording-home-care/",
+        "title": "Affording Home Care Services",
+        "publisher": "ABC Home Healthcare Professionals",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Indicate approximate figures for the state of MA"
+      },
+      {
+        "id": "private-nursing",
+        "url": "https://www.abchhp.com/abc-home-healthcare-professionals-home-care-agency-serving-private-pay-and-state-funded-clients/home-care-services/nursing-care/",
+        "title": "Skilled Nursing",
+        "publisher": "ABC Home Healthcare Professionals",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "ABC's private duty nursing care is available from 1-24 hours a day."
+      },
+      {
+        "id": "livein",
+        "url": "https://www.abchhp.com/abc-home-healthcare-professionals-home-care-agency-serving-private-pay-and-state-funded-clients/home-care-services/live-in-caregiver/",
+        "title": "Live-in Caregiver services",
+        "publisher": "ABC Home Healthcare Professionals",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "A live-in caregiver has immediate access to a nurse at ABC Home Healthcare"
+      }
+    ],
+    "facts": [
+      {
+        "id": "medical-nonmedical",
+        "kind": "care",
+        "text": "ABC advertises medical and nonmedical home care managed by nurses and certified geriatric care managers, including homemaking, companionship, personal care, dementia support and nursing.",
+        "sourceId": "home",
+        "amount": null
+      },
+      {
+        "id": "assessment",
+        "kind": "cost",
+        "text": "The provider advertises a no-cost initial home-care assessment and nurse case management included with its services.",
+        "sourceId": "services",
+        "amount": {
+          "min": 0,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "rates-inclusions",
+        "kind": "cost",
+        "text": "Advertised rates include staff training/nursing supervision, employment taxes, liability/workers compensation insurance and 24-hour on-call care-manager access.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "schedule",
+        "kind": "care",
+        "text": "Services are advertised from a few hours weekly through 24 hours daily; this does not specify an exact minimum shift or guarantee staffing.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "nursing-duration",
+        "kind": "care",
+        "text": "Private-duty nursing is advertised from one to 24 hours daily, hourly or per visit, at home or in hospitals, nursing/rehabilitation and assisted-living settings; this is a nursing-specific schedule, not an aide shift minimum.",
+        "sourceId": "private-nursing",
+        "amount": null
+      },
+      {
+        "id": "nursing-services",
+        "kind": "care",
+        "text": "A physician-informed nursing plan may include ostomy care, medication administration, monitoring and pain control.",
+        "sourceId": "private-nursing",
+        "amount": null
+      },
+      {
+        "id": "live-in-support",
+        "kind": "care",
+        "text": "The live-in program advertises personal care, meals, errands and companionship, with caregiver access to an ABC nurse.",
+        "sourceId": "livein",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "services",
+      "asOf": null
+    },
+    "notes": [
+      "Home-service office; residential rooms/floor plans are not applicable.",
+      "The affordability page's $39/hour is a Massachusetts approximate survey figure, not an established ABC rate; it was excluded from structured pricing.",
+      "No exact client-specific numeric rate or minimum shift was established."
+    ]
+  },
+  {
+    "providerId": "all-care",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "private-care",
+        "url": "https://allcare.org/private-care/",
+        "title": "Private Care | All Care",
+        "publisher": "All Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Live-in services tend to be some of our highest sought requests and cannot always be filled immediately."
+      },
+      {
+        "id": "private-flyer",
+        "url": "https://allcare.org/wp-content/uploads/2025/07/Private-Care-Services-Flyer-7.25.pdf",
+        "title": "                                    Private Care",
+        "publisher": "All Care",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "pdf",
+        "excerpt": "2 to 24-Hour Care"
+      }
+    ],
+    "facts": [
+      {
+        "id": "private-personal",
+        "kind": "care",
+        "text": "The separate Private Care program advertises bathing/dressing/toileting help, walking/transfers, meal preparation, medication reminders, companionship and household tasks.",
+        "sourceId": "private-care",
+        "amount": null
+      },
+      {
+        "id": "private-practical",
+        "kind": "care",
+        "text": "Private Care also advertises appointment scheduling/transport, errands, prescription pickup and nursing/case management or rehabilitation services according to the plan of care.",
+        "sourceId": "private-care",
+        "amount": null
+      },
+      {
+        "id": "livein",
+        "kind": "care",
+        "text": "Live-in aides require a separate room and bed, eight hours sleep and designated breaks; more than occasional overnight assistance may require a separate overnight aide.",
+        "sourceId": "private-care",
+        "amount": null
+      },
+      {
+        "id": "assessment",
+        "kind": "cost",
+        "text": "The Private Care page offers a complimentary assessment; services may be paid out of pocket or sometimes through long-term-care insurance. Traditional health insurance does not typically pay for these private-care services.",
+        "sourceId": "private-care",
+        "amount": {
+          "min": 0,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "livein-availability",
+        "kind": "availability",
+        "text": "All Care explicitly says requested live-in services cannot always be filled immediately; no household placement or start date is confirmed.",
+        "sourceId": "private-care",
+        "amount": null
+      },
+      {
+        "id": "duration-offer",
+        "kind": "care",
+        "text": "A July 2025 official Private Care flyer advertises two- to 24-hour care, overnight awake options, live-in care and caregiver respite; this is the published service range, not a guaranteed available shift.",
+        "sourceId": "private-flyer",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "private-care",
+      "asOf": null
+    },
+    "notes": [
+      "These facts describe All Care Private Care, not a promise of equivalent services, insurance coverage or staffing by certified VNA CCN 227263.",
+      "No numeric private-care rate was found on the inspected page.",
+      "The flyer's July 2025 date comes from its filename/path; no explicit current effective-through date is printed."
+    ]
+  },
+  {
+    "providerId": "croi-health",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "homecare",
+        "url": "https://www.croihealth.org/services/home-care/",
+        "title": "Home Care Services Near You | Croí Health",
+        "publisher": "Croí Health",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "In many cases, we can begin services within 24-48 hours of a referral."
+      },
+      {
+        "id": "private-pt",
+        "url": "https://www.croihealth.org/services/private-duty/",
+        "title": "Private Duty Services | Croí Connect | Croí Health",
+        "publisher": "Croí Health",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Croí Connect is the private duty physical therapy division of Croí Health."
+      }
+    ],
+    "facts": [
+      {
+        "id": "skilled-services",
+        "kind": "care",
+        "text": "Home care advertises skilled nursing, medication/post-surgical/disease support, physical/occupational/speech therapy, medical social work and clinician-directed home health aides.",
+        "sourceId": "homecare",
+        "amount": null
+      },
+      {
+        "id": "eligibility",
+        "kind": "care",
+        "text": "A referring physician/facility order and need for skilled home care are required; family input does not replace physician orders.",
+        "sourceId": "homecare",
+        "amount": null
+      },
+      {
+        "id": "coverage",
+        "kind": "cost",
+        "text": "The provider says it accepts Medicare, Medicaid and many private plans for qualifying home-care services; no numeric self-pay fee is published here. Individual coverage must be confirmed.",
+        "sourceId": "homecare",
+        "amount": null
+      },
+      {
+        "id": "private-pt",
+        "kind": "care",
+        "text": "The current home-care page identifies Croí Connect as its private-duty physical-therapy division for one-to-one therapy at home.",
+        "sourceId": "homecare",
+        "amount": null
+      },
+      {
+        "id": "start",
+        "kind": "availability",
+        "text": "The provider says services can begin within 24–48 hours of referral in many cases; this is a conditional advertised timeframe, not a confirmed opening.",
+        "sourceId": "homecare",
+        "amount": null
+      },
+      {
+        "id": "private-pt-services",
+        "kind": "care",
+        "text": "Croí Connect private physical therapy may include balance/fall prevention, strength/gait/transfer training, post-surgical rehabilitation, home-safety/mobility assessment and patient/caregiver education. The provider says it does not replace medically necessary ordered certified home health.",
+        "sourceId": "private-pt",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "homecare",
+      "asOf": null
+    },
+    "notes": [
+      "The current home-care page's private-duty offer is physical therapy. Older search snippets describing generic companion/homemaker private care were not substituted for current page text.",
+      "No current hourly minimum or numeric private-duty therapy rate was established."
+    ]
+  },
+  {
+    "providerId": "bilh-at-home",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "services",
+        "url": "https://bilhathome.org/services",
+        "title": "Services | Beth Israel Lahey Health At Home",
+        "publisher": "Beth Israel Lahey Health At Home",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Expert home health services in eastern Massachusetts"
+      },
+      {
+        "id": "nursing",
+        "url": "https://bilhathome.org/services/skilled-nursing",
+        "title": "Skilled Nursing | Beth Israel Lahey Health At Home",
+        "publisher": "Beth Israel Lahey Health At Home",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "What to Expect During Your First Visit"
+      },
+      {
+        "id": "rehab",
+        "url": "https://bilhathome.org/services/rehabilitation",
+        "title": "Rehabilitation | Beth Israel Lahey Health At Home",
+        "publisher": "Beth Israel Lahey Health At Home",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Physical Therapy"
+      },
+      {
+        "id": "eligibility-cost",
+        "url": "https://bilhathome.org/why-choose-us/get-care",
+        "title": "Get Care | Beth Israel Lahey Health At Home",
+        "publisher": "Beth Israel Lahey Health At Home",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Home health care does not provide services such as cooking or cleaning, but does provide assistance with bathing."
+      }
+    ],
+    "facts": [
+      {
+        "id": "clinical-services",
+        "kind": "care",
+        "text": "The organization advertises skilled nursing, in-home rehabilitation, palliative care, home infusion therapy and hospice through its clinical programs.",
+        "sourceId": "services",
+        "amount": null
+      },
+      {
+        "id": "nursing-specialties",
+        "kind": "care",
+        "text": "Visiting nurses advertise post-surgical/wound/ostomy support, medication education, chronic-disease management and medical social work; first-visit assessment includes medication history, daily tasks, mobility and household support.",
+        "sourceId": "nursing",
+        "amount": null
+      },
+      {
+        "id": "rehab-types",
+        "kind": "care",
+        "text": "In-home rehabilitation advertises physical, occupational and speech-language therapy, fall-prevention assessment and stroke/neurological rehabilitation. Care may be delivered at home or in an assisted-living residence.",
+        "sourceId": "rehab",
+        "amount": null
+      },
+      {
+        "id": "service-boundary",
+        "kind": "care",
+        "text": "The clinical home-health program provides medically necessary ordered services and bathing assistance; its FAQ expressly excludes cooking and cleaning.",
+        "sourceId": "eligibility-cost",
+        "amount": null
+      },
+      {
+        "id": "insurance-cost",
+        "kind": "cost",
+        "text": "The provider says it accepts several insurance plans and many cover home health without patient cost. It publishes no universal price or guarantee of coverage; individual benefits require confirmation.",
+        "sourceId": "eligibility-cost",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "services",
+      "asOf": null
+    },
+    "notes": [
+      "Clinical-service evidence is organization/program-level, not a promise that every service comes from one office or CCN.",
+      "No private-pay aide shift, numeric self-pay rate or current staffed opening is established."
+    ]
+  },
+  {
+    "providerId": "mgb-home-care",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "homecare",
+        "url": "https://www.massgeneralbrigham.org/en/services/home-care",
+        "title": "Home Care | Mass General Brigham",
+        "publisher": "Mass General Brigham",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Professional home health care"
+      },
+      {
+        "id": "qualify",
+        "url": "https://www.massgeneralbrigham.org/en/services/home-care/qualify",
+        "title": "How to Qualify and Pay for Home Care | Mass General Brigham",
+        "publisher": "Mass General Brigham",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Your doctor will need to order certified home health care services for you."
+      },
+      {
+        "id": "care-options",
+        "url": "https://www.massgeneralbrigham.org/en/services/home-care/care-options",
+        "title": "Home Care Services | Mass General Brigham",
+        "publisher": "Mass General Brigham",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The services listed below are delivered by our Mass General Brigham-owned and operated home care team."
+      }
+    ],
+    "facts": [
+      {
+        "id": "home-care",
+        "kind": "care",
+        "text": "Home Care advertises nursing and home-health support for recovery, medical management and therapy at home; this is a clinical service, not a continuous private-duty aide booking.",
+        "sourceId": "homecare",
+        "amount": null
+      },
+      {
+        "id": "doctororder",
+        "kind": "care",
+        "text": "A doctor orders certified home health; the doctor or hospital case manager helps determine whether treatment/therapy is appropriate at home.",
+        "sourceId": "qualify",
+        "amount": null
+      },
+      {
+        "id": "payment",
+        "kind": "cost",
+        "text": "Medicare and many private insurers may cover physician-ordered home health; the provider works with the insurer to explain coverage/payment. No numeric self-pay rate is published here.",
+        "sourceId": "qualify",
+        "amount": null
+      },
+      {
+        "id": "therapy",
+        "kind": "care",
+        "text": "Home Care advertises in-home physical/occupational therapy, speech-language support for communication/swallowing/cognitive difficulties, nutrition advice and social work.",
+        "sourceId": "care-options",
+        "amount": null
+      },
+      {
+        "id": "case-management",
+        "kind": "care",
+        "text": "The primary clinician provides case management, including identifying needs, matching resources, advocacy and updating services; social workers assist with community resources and insurance/payment documentation.",
+        "sourceId": "care-options",
+        "amount": null
+      },
+      {
+        "id": "aide-plan",
+        "kind": "care",
+        "text": "Home health aides support bathing/grooming, meal preparation/eating, mobility, medication reminders and physician-prescribed exercise as part of the home-health plan of care.",
+        "sourceId": "care-options",
+        "amount": null
+      },
+      {
+        "id": "home-technology",
+        "kind": "amenity",
+        "text": "Medication-dispensing support and personal emergency-response systems are advertised as distinct Home Care technology services; no numeric equipment/service price is established here.",
+        "sourceId": "care-options",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Services are advertised, but staffing and acceptance for a particular address or shift require inquiry; no live inventory is published.",
+      "sourceId": "qualify",
+      "asOf": null
+    },
+    "notes": [
+      "Home Hospital and Home-Based Palliative Care are separately linked programs, not automatically included in every Home Care visit.",
+      "No exact aide shift minimum or confirmed current start date is established."
+    ]
+  },
+  {
+    "providerId": "lifeplan-brooksby-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "independent-pricing",
+        "url": "https://www.ericksonseniorliving.com/brooksby-village/pricing",
+        "title": "Cost of Senior Living at Brooksby Village on the North Shore",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The fee schedule will change on January 1, 2027."
+      },
+      {
+        "id": "priority-list",
+        "url": "https://www.ericksonseniorliving.com/brooksby-village/pricing/priority-list",
+        "title": "Join the Priority List on the North Shore | Brooksby Village",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Your $1,000 Priority List fee is fully refundable"
+      },
+      {
+        "id": "assisted-care",
+        "url": "https://www.ericksonseniorliving.com/brooksby-village/health/assisted-care",
+        "title": "Continuing Care & Assisted Living in Peabody, MA | Brooksby Village",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "There are two costs associated with assisted care"
+      },
+      {
+        "id": "nursing-pricing",
+        "url": "https://www.ericksonseniorliving.com/brooksby-village/health/long-term-care",
+        "title": "Long Term Senior Care in North Shore | Brooksby Village",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The long-term care daily rate is $639 per day"
+      }
+    ],
+    "facts": [
+      {
+        "id": "studio-room",
+        "kind": "room",
+        "text": "Brooksby Village publishes independent-living studio, one-bedroom and two-bedroom floor-plan styles; the price list is not current inventory.",
+        "sourceId": "independent-pricing",
+        "amount": null
+      },
+      {
+        "id": "studio-entrance",
+        "kind": "cost",
+        "text": "Independent-living studio entrance fee: $113,000–$226,000; provider describes 90% as refundable under its Residence and Care Agreement. Separate monthly fees apply.",
+        "sourceId": "independent-pricing",
+        "amount": {
+          "min": 113000,
+          "max": 226000,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "studio-monthly",
+        "kind": "cost",
+        "text": "Independent-living studio Monthly Service Package: $2,523 per month. This is separate from the entrance fee; pricing is for reference and the schedule changes January 1, 2027.",
+        "sourceId": "independent-pricing",
+        "amount": {
+          "min": 2523,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "second-person",
+        "kind": "cost",
+        "text": "Second-person Monthly Service Fee: $1,277 per month, additional to the published unit package.",
+        "sourceId": "independent-pricing",
+        "amount": {
+          "min": 1277,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "included-services",
+        "kind": "amenity",
+        "text": "The independent-living package advertises a meal plan, maintenance/home repairs, fitness center and pool, scheduled transportation, and 24-hour security/emergency response.",
+        "sourceId": "independent-pricing",
+        "amount": null
+      },
+      {
+        "id": "priority-deposit",
+        "kind": "cost",
+        "text": "The independent-living Priority List has a fully refundable $1,000 fee; this is a reservation-planning deposit, not rent or an entrance fee.",
+        "sourceId": "priority-list",
+        "amount": {
+          "min": 1000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "assisted-room",
+        "kind": "room",
+        "text": "The separate assisted-care neighborhood advertises a private full bath and a patio on select homes.",
+        "sourceId": "assisted-care",
+        "amount": null
+      },
+      {
+        "id": "assisted-entrance",
+        "kind": "cost",
+        "text": "For new residents entering assisted care from outside the community, the separate refundable entrance fee starts at $125,000, under the Residence and Care Agreement. The page does not state the refund percentage here.",
+        "sourceId": "assisted-care",
+        "amount": {
+          "min": 125000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "assisted-monthly",
+        "kind": "cost",
+        "text": "The separate assisted-care monthly service fee starts at $7,160. The provider says it varies with floor plan and care needs. Entrance fees are additional.",
+        "sourceId": "assisted-care",
+        "amount": {
+          "min": 7160,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "assisted-services",
+        "kind": "care",
+        "text": "Assisted care advertises help with daily activities, meal service, nurse wellness visits and access to nurse/care-associate staff 24 hours daily, with an individualized assessment.",
+        "sourceId": "assisted-care",
+        "amount": null
+      },
+      {
+        "id": "nursing-room",
+        "kind": "room",
+        "text": "The separate long-term nursing setting advertises all-private suites with a private half bath; furnishings may be personalized.",
+        "sourceId": "nursing-pricing",
+        "amount": null
+      },
+      {
+        "id": "nursing-daily",
+        "kind": "cost",
+        "text": "Long-term nursing care is published at $639 per day for a private suite. New nonresident admissions also require a separate $125,000 refundable entrance fee under the agreement.",
+        "sourceId": "nursing-pricing",
+        "amount": {
+          "min": 639,
+          "max": null,
+          "currency": "USD",
+          "period": "day",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "nursing-entrance",
+        "kind": "cost",
+        "text": "Long-term nursing new nonresidents pay a separate $125,000 refundable entrance fee, additional to the daily rate. This page does not state the refund percentage.",
+        "sourceId": "nursing-pricing",
+        "amount": {
+          "min": 125000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      }
+    ],
+    "availability": {
+      "status": "waitlist-published",
+      "text": "An independent-living Priority List is publicly offered, with priority over members of the public. No wait duration, apartment vacancy or assisted-care opening is confirmed.",
+      "sourceId": "priority-list",
+      "asOf": null
+    },
+    "notes": [
+      "Independent-living prices must not be assigned to assisted living, memory care, rehabilitation or nursing units.",
+      "Published rates have no explicit effective-from date; page says schedule changes January 1, 2027.",
+      "Assisted-care page is undated. Its refundable entrance fee must not inherit the independent-living 90% figure without the applicable agreement.",
+      "Long-term nursing prices are an undated published schedule for that care unit, not independent-living rent or a Medicare coverage determination."
+    ]
+  },
+  {
+    "providerId": "lifeplan-linden-ponds",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "independent-pricing",
+        "url": "https://www.ericksonseniorliving.com/linden-ponds/pricing",
+        "title": "Cost of Senior Living at Linden Ponds on the South Shore",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The fee schedule will change on January 1, 2027."
+      },
+      {
+        "id": "priority-list",
+        "url": "https://www.ericksonseniorliving.com/linden-ponds/pricing/priority-list",
+        "title": "Join the Priority List on the South Shore | Linden Ponds",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Your $1,000 Priority List fee is fully refundable"
+      },
+      {
+        "id": "assisted-care",
+        "url": "https://www.ericksonseniorliving.com/linden-ponds/health/assisted-care",
+        "title": "Continuing Care & Assisted Living in Hingham, Massachusetts | Linden Ponds",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "There are two costs associated with assisted care"
+      },
+      {
+        "id": "nursing-pricing",
+        "url": "https://www.ericksonseniorliving.com/linden-ponds/health/long-term-care",
+        "title": "Long Term Senior Care in Hingham, Massachusetts | Linden Ponds",
+        "publisher": "Erickson Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The long-term care daily rate is $687 per day"
+      }
+    ],
+    "facts": [
+      {
+        "id": "studio-room",
+        "kind": "room",
+        "text": "Linden Ponds publishes independent-living studio, one-bedroom and two-bedroom floor-plan styles; the price list is not current inventory.",
+        "sourceId": "independent-pricing",
+        "amount": null
+      },
+      {
+        "id": "studio-entrance",
+        "kind": "cost",
+        "text": "Independent-living studio entrance fee: $192,000–$244,000; provider describes 90% as refundable under its Residence and Care Agreement. Separate monthly fees apply.",
+        "sourceId": "independent-pricing",
+        "amount": {
+          "min": 192000,
+          "max": 244000,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "studio-monthly",
+        "kind": "cost",
+        "text": "Independent-living studio Monthly Service Package: $2,686 per month. This is separate from the entrance fee; pricing is for reference and the schedule changes January 1, 2027.",
+        "sourceId": "independent-pricing",
+        "amount": {
+          "min": 2686,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "second-person",
+        "kind": "cost",
+        "text": "Second-person Monthly Service Fee: $1,366 per month, additional to the published unit package.",
+        "sourceId": "independent-pricing",
+        "amount": {
+          "min": 1366,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "included-services",
+        "kind": "amenity",
+        "text": "The independent-living package advertises a meal plan, maintenance/home repairs, fitness center and pool, scheduled transportation, and 24-hour security/emergency response.",
+        "sourceId": "independent-pricing",
+        "amount": null
+      },
+      {
+        "id": "priority-deposit",
+        "kind": "cost",
+        "text": "The independent-living Priority List has a fully refundable $1,000 fee; this is a reservation-planning deposit, not rent or an entrance fee.",
+        "sourceId": "priority-list",
+        "amount": {
+          "min": 1000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "assisted-room",
+        "kind": "room",
+        "text": "The separate assisted-care neighborhood advertises an all-private room with a private half bath.",
+        "sourceId": "assisted-care",
+        "amount": null
+      },
+      {
+        "id": "assisted-entrance",
+        "kind": "cost",
+        "text": "For new residents entering assisted care from outside the community, the separate refundable entrance fee is $149,000, under the Residence and Care Agreement. The page does not state the refund percentage here.",
+        "sourceId": "assisted-care",
+        "amount": {
+          "min": 149000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "assisted-monthly",
+        "kind": "cost",
+        "text": "The separate assisted-care monthly service fee starts at $5,434. This is a starting service fee, not a confirmed personal quote. Entrance fees are additional.",
+        "sourceId": "assisted-care",
+        "amount": {
+          "min": 5434,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "assisted-services",
+        "kind": "care",
+        "text": "Assisted care advertises help with daily activities, meal service, nurse wellness visits and access to nurse/care-associate staff 24 hours daily, with an individualized assessment.",
+        "sourceId": "assisted-care",
+        "amount": null
+      },
+      {
+        "id": "nursing-room",
+        "kind": "room",
+        "text": "The separate long-term nursing setting advertises all-private rooms with a private half bath; furnishings may be personalized.",
+        "sourceId": "nursing-pricing",
+        "amount": null
+      },
+      {
+        "id": "nursing-daily",
+        "kind": "cost",
+        "text": "Long-term nursing care is published at $687 per day for a private room. New nonresident admissions also require a separate $149,000 refundable entrance fee under the agreement.",
+        "sourceId": "nursing-pricing",
+        "amount": {
+          "min": 687,
+          "max": null,
+          "currency": "USD",
+          "period": "day",
+          "type": "care-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "nursing-entrance",
+        "kind": "cost",
+        "text": "Long-term nursing new nonresidents pay a separate $149,000 refundable entrance fee, additional to the daily rate. This page does not state the refund percentage.",
+        "sourceId": "nursing-pricing",
+        "amount": {
+          "min": 149000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      }
+    ],
+    "availability": {
+      "status": "waitlist-published",
+      "text": "An independent-living Priority List is publicly offered, with priority over members of the public. No wait duration, apartment vacancy or assisted-care opening is confirmed.",
+      "sourceId": "priority-list",
+      "asOf": null
+    },
+    "notes": [
+      "Independent-living prices must not be assigned to assisted living, memory care, rehabilitation or nursing units.",
+      "Published rates have no explicit effective-from date; page says schedule changes January 1, 2027.",
+      "Assisted-care page is undated. Its refundable entrance fee must not inherit the independent-living 90% figure without the applicable agreement.",
+      "Long-term nursing prices are an undated published schedule for that care unit, not independent-living rent or a Medicare coverage determination."
+    ]
+  },
+  {
+    "providerId": "lifeplan-lasell-village",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "waitlist",
+        "url": "https://lasellvillage.com/about/waitlist-for-lasell-village/",
+        "title": "Waitlist For Lasell Village | Retirement Community Newton",
+        "publisher": "Lasell Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "we currently have a waitlist to join our community."
+      },
+      {
+        "id": "care-contract",
+        "url": "https://lasellvillage.com/continuing-care-retirement-community-ccrc-newton-boston/lasell-village-continuing-care/",
+        "title": "Lasell Village | Continuing Care Retirement Community Newton",
+        "publisher": "Lasell Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "With our standard contract, you or your estate will receive 90% of the entrance fee"
+      },
+      {
+        "id": "residences",
+        "url": "https://lasellvillage.com/community/residences/",
+        "title": "Residences | Senior Living, Independent Living Newton",
+        "publisher": "Lasell Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "One-bedroom apartments range from 640 to 1,080 square feet"
+      },
+      {
+        "id": "faq",
+        "url": "https://lasellvillage.com/faq/",
+        "title": "FAQ | Senior Living Community, Independent Living Newton",
+        "publisher": "Lasell Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "After 100 months, just over eight years of residency, there is no refund."
+      },
+      {
+        "id": "campus-lifestyle",
+        "url": "https://lasellvillage.com/continuing-care-retirement-community-ccrc-newton-boston/",
+        "title": "Continuing Care Retirement Community, CCRC | Newton, Boston",
+        "publisher": "Lasell Village",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Each year, each resident also commits to a personalized plan of learning and fitness activities."
+      }
+    ],
+    "facts": [
+      {
+        "id": "apartments",
+        "kind": "room",
+        "text": "Independent-living one-bedroom plans range 640–1,080 sq ft; two-bedroom plans 875–1,933 sq ft, with den options, full kitchens and washers/dryers. Some homes have balconies/patios; layouts do not establish vacancies.",
+        "sourceId": "residences",
+        "amount": null
+      },
+      {
+        "id": "contract",
+        "kind": "cost",
+        "text": "The standard entrance-fee contract advertises a 90% refund on exit/death. A separate declining-balance contract has a smaller initial payment and a declining refund, reaching no refund after 100 months per the FAQ. No numeric entrance or monthly rate is published on these inspected pages.",
+        "sourceId": "faq",
+        "amount": null
+      },
+      {
+        "id": "monthly-includes",
+        "kind": "amenity",
+        "text": "Independent-living monthly fees include an apartment, meal plan, housekeeping, utilities, amenities/activities and up to 60 annual hours from the on-site wellness center; additional hours can be purchased.",
+        "sourceId": "care-contract",
+        "amount": null
+      },
+      {
+        "id": "supportive",
+        "kind": "care",
+        "text": "Lasell Studios supportive living advertises three daily meals, daily-living help and 24-hour supervision for residents including those with memory impairment; its monthly fee is higher than independent living and requires a separate quote.",
+        "sourceId": "care-contract",
+        "amount": null
+      },
+      {
+        "id": "nursing",
+        "kind": "care",
+        "text": "Lasell House is the separate on-campus skilled nursing/rehabilitation setting. The provider describes eligible community residents receiving higher care at the independent-living rate plus meal fees, subject to the actual agreement and coverage.",
+        "sourceId": "care-contract",
+        "amount": null
+      },
+      {
+        "id": "application",
+        "kind": "cost",
+        "text": "Joining the Lasell Village apartment waitlist requires a nonrefundable $2,500 application fee. Applicants may decline an offered apartment without losing their place.",
+        "sourceId": "waitlist",
+        "amount": {
+          "min": 2500,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "eligibility",
+        "kind": "care",
+        "text": "Independent-living applicants undergo financial review and cognitive/physical assessment; the provider says applicants must be able to live independently.",
+        "sourceId": "faq",
+        "amount": null
+      },
+      {
+        "id": "learning",
+        "kind": "activity",
+        "text": "The university-based community shares a campus with Lasell University; residents may take college classes and commit annually to a personalized learning/fitness plan.",
+        "sourceId": "campus-lifestyle",
+        "amount": null
+      },
+      {
+        "id": "dining",
+        "kind": "dining",
+        "text": "Independent living advertises a staffed dining room, café and takeout meals.",
+        "sourceId": "campus-lifestyle",
+        "amount": null
+      },
+      {
+        "id": "amenities",
+        "kind": "amenity",
+        "text": "Advertised campus amenities include a fitness center, heated indoor pool, art studio and raised-bed gardening area.",
+        "sourceId": "campus-lifestyle",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "waitlist-published",
+      "text": "Lasell Village expressly publishes an apartment waitlist. Timing depends on apartment type and location; no current wait duration or available-unit count is published.",
+      "sourceId": "waitlist",
+      "asOf": null
+    },
+    "notes": [
+      "Waitlist page is undated and does not establish immediate inventory.",
+      "Lasell Studios supportive living and Lasell House skilled nursing are distinct from independent-living apartment rates and admission scope.",
+      "The provider's historical CMS-star claim on its marketing page was not copied into this offerings record."
+    ]
+  }
+]

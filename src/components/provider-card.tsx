@@ -123,6 +123,47 @@ export function ProviderCard({
         )}
       </div>
       <p className="provider-description">{provider.description}</p>
+      {provider.research?.admissionRestriction && (
+        <div className="provider-alert">
+          <ShieldAlert size={15} />
+          <span>{provider.research.admissionRestriction}</span>
+        </div>
+      )}
+      {provider.research && (
+        <div className="provider-research-summary">
+          {provider.research.experience.value !== null && (
+            <span className="experience-card-score">
+              <strong>
+                {provider.research.experience.value.toFixed(1)}
+                <small>/10</small>
+              </strong>
+              <span>
+                Consumer experience
+                <small>
+                  {provider.research.experience.confidence} evidence ·{" "}
+                  {provider.research.experience.reviewCount} reviews reported
+                </small>
+              </span>
+            </span>
+          )}
+          <div className="research-coverage-tags">
+            {provider.research.detailsAvailable && (
+              <span>Offerings researched</span>
+            )}
+            {provider.research.publishedCosts > 0 && (
+              <span>Published cost details</span>
+            )}
+            {provider.research.availabilityStatus === "opening-published" && (
+              <span className="opening-claim">
+                Provider lists openings · confirm
+              </span>
+            )}
+            {provider.research.availabilityStatus === "waitlist-published" && (
+              <span>Waitlist published</span>
+            )}
+          </div>
+        </div>
+      )}
       <div className="provider-tags">
         {provider.services.slice(0, 3).map((service) => (
           <span key={service}>{service}</span>

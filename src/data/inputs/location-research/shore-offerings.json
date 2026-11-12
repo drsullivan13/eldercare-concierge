@@ -1,0 +1,2959 @@
+[
+  {
+    "providerId": "ma-alr-allerton-house-at-central-park",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "wey-pricing",
+        "url": "https://www.allertonhouseweymouth.com/pricing/",
+        "title": "Allerton House Weymouth pricing",
+        "publisher": "Allerton House Weymouth",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Includes one hour of care per day (applies to all room sizes)."
+      },
+      {
+        "id": "wey-care",
+        "url": "https://www.allertonhouseweymouth.com/living-options/assisted-living/",
+        "title": "Assisted Living at Allerton House Weymouth",
+        "publisher": "Allerton House Weymouth",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "On-demand chef-prepared meals served in our dining room from 7 a.m. to 7 p.m."
+      }
+    ],
+    "facts": [
+      {
+        "id": "wey-al-studio",
+        "kind": "cost",
+        "text": "Published AL studio starting monthly rate; includes one daily care hour. Extra care may cost more.",
+        "sourceId": "wey-pricing",
+        "amount": {
+          "min": 9415,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2025-12-01"
+        }
+      },
+      {
+        "id": "wey-al-one",
+        "kind": "cost",
+        "text": "Published AL one-bedroom starting monthly rate; includes one daily care hour.",
+        "sourceId": "wey-pricing",
+        "amount": {
+          "min": 10315,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2025-12-01"
+        }
+      },
+      {
+        "id": "wey-al-two",
+        "kind": "cost",
+        "text": "Published AL two-bedroom starting monthly rate; includes one daily care hour.",
+        "sourceId": "wey-pricing",
+        "amount": {
+          "min": 11800,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2025-12-01"
+        }
+      },
+      {
+        "id": "wey-mc-studio",
+        "kind": "cost",
+        "text": "Published memory-care studio starting monthly rate.",
+        "sourceId": "wey-pricing",
+        "amount": {
+          "min": 13020,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2025-12-01"
+        }
+      },
+      {
+        "id": "wey-mc-companion",
+        "kind": "cost",
+        "text": "Published memory-care companion-suite starting monthly rate.",
+        "sourceId": "wey-pricing",
+        "amount": {
+          "min": 11575,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2025-12-01"
+        }
+      },
+      {
+        "id": "wey-room",
+        "kind": "room",
+        "text": "Provider describes private studios, one- and two-bedroom AL residences with bathrooms and kitchenettes.",
+        "sourceId": "wey-care",
+        "amount": null
+      },
+      {
+        "id": "wey-dining",
+        "kind": "dining",
+        "text": "Provider advertises made-to-order dining between 7am and 7pm.",
+        "sourceId": "wey-care",
+        "amount": null
+      },
+      {
+        "id": "wey-activity",
+        "kind": "activity",
+        "text": "Exercise/trainer sessions, educational talks, music, art, clubs and games are advertised.",
+        "sourceId": "wey-care",
+        "amount": null
+      },
+      {
+        "id": "wey-services",
+        "kind": "amenity",
+        "text": "Laundry, housekeeping, local scheduled transport, Wi-Fi and an emergency response system are advertised.",
+        "sourceId": "wey-care",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites pricing/availability inquiries; no dated openings or waitlist established by the inspected page.",
+      "sourceId": "wey-pricing",
+      "asOf": null
+    },
+    "notes": [
+      "Exact address on provider pages is 43 School House Road, Weymouth; matches catalog Central Park name.",
+      "Pricing page says effective December 1, 2025. Separate assisted-living FAQ still states $8,965; conflicting provider copy must be resolved before relying on a quote.",
+      "No current vacancy confirmed; published rates are not a full individualized care quote."
+    ]
+  },
+  {
+    "providerId": "ma-alr-allerton-house-at-harbor-park",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "hing-floor",
+        "url": "https://www.allertonhousehingham.com/lifestyle-and-amenities/floor-plans/",
+        "title": "Allerton House Hingham floor plans",
+        "publisher": "Allerton House Hingham",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Independent/Assisted Living"
+      },
+      {
+        "id": "hing-price",
+        "url": "https://www.allertonhousehingham.com/pricing/",
+        "title": "Allerton House Hingham pricing",
+        "publisher": "Allerton House Hingham",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Exceptions may apply; pricing effective December 1, 2026"
+      },
+      {
+        "id": "hing-life",
+        "url": "https://www.allertonhousehingham.com/lifestyle-and-amenities/",
+        "title": "Hingham lifestyle and amenities",
+        "publisher": "Allerton House Hingham",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The Fitness Center boasts state-of-the-art equipment designed to support older adults"
+      },
+      {
+        "id": "hing-dining",
+        "url": "https://www.allertonhousehingham.com/lifestyle-and-amenities/dining/",
+        "title": "Hingham dining",
+        "publisher": "Allerton House Hingham",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "open from 7 a.m. until 7 p.m. every day"
+      }
+    ],
+    "facts": [
+      {
+        "id": "hing-rooms",
+        "kind": "room",
+        "text": "Provider lists studios, one-bedroom and two-bedroom IL/AL apartments, each with one bathroom.",
+        "sourceId": "hing-floor",
+        "amount": null
+      },
+      {
+        "id": "hing-mc-rooms",
+        "kind": "room",
+        "text": "Memory care lists studio apartments and two-bedroom companion suites.",
+        "sourceId": "hing-floor",
+        "amount": null
+      },
+      {
+        "id": "hing-studio",
+        "kind": "cost",
+        "text": "Published IL/AL studio monthly range, FUTURE effective December 1, 2026; not established as today's quote.",
+        "sourceId": "hing-price",
+        "amount": {
+          "min": 9128,
+          "max": 10128,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-12-01"
+        }
+      },
+      {
+        "id": "hing-one",
+        "kind": "cost",
+        "text": "Published IL/AL one-bedroom monthly range, FUTURE effective December 1, 2026.",
+        "sourceId": "hing-price",
+        "amount": {
+          "min": 10575,
+          "max": 11575,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-12-01"
+        }
+      },
+      {
+        "id": "hing-two",
+        "kind": "cost",
+        "text": "Published IL/AL two-bedroom monthly range, FUTURE effective December 1, 2026.",
+        "sourceId": "hing-price",
+        "amount": {
+          "min": 11900,
+          "max": 12900,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-12-01"
+        }
+      },
+      {
+        "id": "hing-mc-studio",
+        "kind": "cost",
+        "text": "Published memory-care studio monthly price, FUTURE effective December 1, 2026.",
+        "sourceId": "hing-price",
+        "amount": {
+          "min": 14024,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-12-01"
+        }
+      },
+      {
+        "id": "hing-mc-companion",
+        "kind": "cost",
+        "text": "Published memory-care companion monthly price, FUTURE effective December 1, 2026.",
+        "sourceId": "hing-price",
+        "amount": {
+          "min": 12635,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-12-01"
+        }
+      },
+      {
+        "id": "hing-second",
+        "kind": "cost",
+        "text": "Published second-person monthly add-on is $1,000 without care or $1,800 with assisted-living care; future December 2026 schedule.",
+        "sourceId": "hing-price",
+        "amount": {
+          "min": 1000,
+          "max": 1800,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": "2026-12-01"
+        }
+      },
+      {
+        "id": "hing-dine",
+        "kind": "dining",
+        "text": "Provider offers on-demand dining 7am–7pm in the dining room/Garden Pub, seasonal menus and dietary substitutions.",
+        "sourceId": "hing-dining",
+        "amount": null
+      },
+      {
+        "id": "hing-activity",
+        "kind": "activity",
+        "text": "Clubs, games, on-site entertainment/culture, lifelong learning, excursions and fitness classes are advertised.",
+        "sourceId": "hing-life",
+        "amount": null
+      },
+      {
+        "id": "hing-amenity",
+        "kind": "amenity",
+        "text": "Provider describes a fitness center and local/excursion transportation.",
+        "sourceId": "hing-life",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites pricing/availability inquiries; no dated openings or waitlist established by the inspected page.",
+      "sourceId": "hing-price",
+      "asOf": null
+    },
+    "notes": [
+      "Provider address 15 Condito Road matches catalog Harbor Park name.",
+      "Published rate effective date is in the future relative to November 12 check. Exceptions and personalized care terms require confirmation.",
+      "Floor plans and memory-care apartment counts are not live vacancies."
+    ]
+  },
+  {
+    "providerId": "ma-alr-atria-marina-place",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "atria-apts",
+        "url": "https://www.atriaseniorliving.com/retirement-communities/atria-marina-place-north-quincy-ma/apartments",
+        "title": "Atria Marina Place apartment homes and pricing",
+        "publisher": "Atria Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Only 3 Available!"
+      }
+    ],
+    "facts": [
+      {
+        "id": "atria-rooms",
+        "kind": "room",
+        "text": "AL/IL studios are 366–451 sq ft; one-bedrooms 500–614; two-bedrooms 684. Memory studios are 297–372 and one-bedrooms 566–607 sq ft.",
+        "sourceId": "atria-apts",
+        "amount": null
+      },
+      {
+        "id": "atria-studio",
+        "kind": "cost",
+        "text": "AL/IL studio starts at $4,995/month; care and medication management excluded.",
+        "sourceId": "atria-apts",
+        "amount": {
+          "min": 4995,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "atria-one",
+        "kind": "cost",
+        "text": "AL/IL one-bedroom starts at $6,795/month; care and medication management excluded.",
+        "sourceId": "atria-apts",
+        "amount": {
+          "min": 6795,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "atria-two",
+        "kind": "cost",
+        "text": "AL/IL two-bedroom starts at $9,395/month; care and medication management excluded.",
+        "sourceId": "atria-apts",
+        "amount": {
+          "min": 9395,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "atria-mc-studio",
+        "kind": "cost",
+        "text": "Memory-care studio published starting monthly price; request itemized scope.",
+        "sourceId": "atria-apts",
+        "amount": {
+          "min": 8995,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "atria-mc-one",
+        "kind": "cost",
+        "text": "Memory-care one-bedroom published starting monthly price; request itemized scope.",
+        "sourceId": "atria-apts",
+        "amount": {
+          "min": 12595,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "atria-features",
+        "kind": "amenity",
+        "text": "Kitchenettes, walk-in showers, individual thermostats, housekeeping, linens and maintenance are advertised; rate exclusions may include phone/cable/internet.",
+        "sourceId": "atria-apts",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "opening-published",
+      "text": "Undated provider page labels AL/IL one-bedroom 'Only 3 Available!', two-bedroom 'Waitlist', and memory-care one-bedroom 'Only 1 Available!'. Specific apartment availability is not guaranteed before deposit; none independently confirmed.",
+      "sourceId": "atria-apts",
+      "asOf": null
+    },
+    "notes": [
+      "Official page matches 4 Seaport Drive, North Quincy.",
+      "Inventory labels and prices are undated published claims observed November 12; must be reconfirmed."
+    ]
+  },
+  {
+    "providerId": "ma-alr-benchmark-senior-living-at-hanover",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "hanover-main",
+        "url": "https://www.benchmarkseniorliving.com/senior-living/ma/hanover/benchmark-at-hanover/",
+        "title": "Benchmark at Hanover",
+        "publisher": "Benchmark Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Art studio, gallery, Bocce court and more to help nurture every interest"
+      }
+    ],
+    "facts": [
+      {
+        "id": "hanover-care",
+        "kind": "care",
+        "text": "Location advertises assisted living, memory care and respite; care follows a nursing assessment.",
+        "sourceId": "hanover-main",
+        "amount": null
+      },
+      {
+        "id": "hanover-room",
+        "kind": "room",
+        "text": "AL floor plans include studio, one-bedroom, companion and two-bedroom; memory care lists studio and companion layouts.",
+        "sourceId": "hanover-main",
+        "amount": null
+      },
+      {
+        "id": "hanover-dining",
+        "kind": "dining",
+        "text": "Seasonal chef menus, private dining and modified-diet options are advertised.",
+        "sourceId": "hanover-main",
+        "amount": null
+      },
+      {
+        "id": "hanover-amenity",
+        "kind": "amenity",
+        "text": "Provider lists art studio, library, bistro, fitness/wellness centers, movie room, walking path, bocce and patio with outdoor kitchen/fireplace.",
+        "sourceId": "hanover-main",
+        "amount": null
+      },
+      {
+        "id": "hanover-activity",
+        "kind": "activity",
+        "text": "Music, crafts, exercise, outings and individual/group activities are advertised.",
+        "sourceId": "hanover-main",
+        "amount": null
+      },
+      {
+        "id": "hanover-price",
+        "kind": "cost",
+        "text": "Official floor-plan cards show 'GET PRICING'; no numeric location price established by this page.",
+        "sourceId": "hanover-main",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites pricing/availability inquiries; no dated openings or waitlist established by the inspected page.",
+      "sourceId": "hanover-main",
+      "asOf": null
+    },
+    "notes": [
+      "Provider page address matches 1143 Washington Street.",
+      "No floor-plan or request form treated as vacancy; no generic Benchmark sample price applied."
+    ]
+  },
+  {
+    "providerId": "ma-alr-benchmark-senior-living-at-putnam-farm",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "putnam",
+        "url": "https://www.benchmarkseniorliving.com/senior-living/ma/danvers/benchmark-senior-living-at-putnam-farm/",
+        "title": "Benchmark Senior Living at Putnam Farm",
+        "publisher": "Benchmark Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Aquatic Hydrotherapy Baths"
+      }
+    ],
+    "facts": [
+      {
+        "id": "put-care",
+        "kind": "care",
+        "text": "Assisted living, memory care and respite are listed at this location.",
+        "sourceId": "putnam",
+        "amount": null
+      },
+      {
+        "id": "put-room",
+        "kind": "room",
+        "text": "Location floor plans list AL one- and two-bedroom apartments with kitchenette/private bath, plus memory-care studios.",
+        "sourceId": "putnam",
+        "amount": null
+      },
+      {
+        "id": "put-amenity",
+        "kind": "amenity",
+        "text": "Courtyards, walking paths, hydrotherapy baths, wellness center, salon, library, games tables, computer room and general store are advertised.",
+        "sourceId": "putnam",
+        "amount": null
+      },
+      {
+        "id": "put-dine",
+        "kind": "dining",
+        "text": "Chef-prepared seasonal menus, private dining and modified diets are advertised.",
+        "sourceId": "putnam",
+        "amount": null
+      },
+      {
+        "id": "put-act",
+        "kind": "activity",
+        "text": "Music, arts/crafts, exercise, outings and group/individual programming are advertised.",
+        "sourceId": "putnam",
+        "amount": null
+      },
+      {
+        "id": "put-cost",
+        "kind": "cost",
+        "text": "Floor-plan cards require pricing inquiry; no location-specific numeric rate established here.",
+        "sourceId": "putnam",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider offers inquiries; inspected public material establishes no dated opening or waitlist.",
+      "sourceId": "putnam",
+      "asOf": null
+    },
+    "notes": [
+      "Address 9 Summer Street matches catalog. Some third-party clinical services may carry separate charges."
+    ]
+  },
+  {
+    "providerId": "ma-alr-bertram-house-of-swampscott",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "swampscott",
+        "url": "https://johnbertramhomes.org/swampscott",
+        "title": "John Bertram House of Swampscott",
+        "publisher": "John Bertram Homes",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Companion Residences"
+      }
+    ],
+    "facts": [
+      {
+        "id": "swamp-room",
+        "kind": "room",
+        "text": "One-bedroom apartments have separate living space, kitchenette and bath; studios have kitchenette/bath; companion rooms are specifically in memory care.",
+        "sourceId": "swampscott",
+        "amount": null
+      },
+      {
+        "id": "swamp-amenity",
+        "kind": "amenity",
+        "text": "Sunroom, library with fireplace, courtyard/patios, on-site salon and emergency pendants are advertised; pets have restrictions.",
+        "sourceId": "swampscott",
+        "amount": null
+      },
+      {
+        "id": "swamp-dining",
+        "kind": "dining",
+        "text": "Provider lists three daily meals plus snacks; dietary needs form part of the service plan.",
+        "sourceId": "swampscott",
+        "amount": null
+      },
+      {
+        "id": "swamp-service",
+        "kind": "amenity",
+        "text": "Weekly housekeeping/laundry, daily bed-making, utilities and Wi-Fi are advertised as included.",
+        "sourceId": "swampscott",
+        "amount": null
+      },
+      {
+        "id": "swamp-care",
+        "kind": "care",
+        "text": "Individual service plans cover personal care, medication support, mobility and family communication; a dedicated memory neighborhood is listed.",
+        "sourceId": "swampscott",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider offers inquiries; inspected public material establishes no dated opening or waitlist.",
+      "sourceId": "swampscott",
+      "asOf": null
+    },
+    "notes": [
+      "Official operator page matches 565 Humphrey Street/781-595-1991; former Sunrise pages may remain indexed.",
+      "No numeric current rate observed."
+    ]
+  },
+  {
+    "providerId": "ma-alr-bridges-by-epoch-at-hingham",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "bridge-suites",
+        "url": "https://www.bridgesbyepoch.com/communities/hingham-ma/suites/",
+        "title": "Memory Care Suites at Hingham",
+        "publisher": "Bridges by EPOCH",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "search-result",
+        "excerpt": "Bare Cove, Cushing and Shipyard"
+      },
+      {
+        "id": "bridge-design",
+        "url": "https://www.bridgesbyepoch.com/communities/hingham-ma/about/purposeful-design/",
+        "title": "Hingham purposeful design",
+        "publisher": "Bridges by EPOCH",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "search-result",
+        "excerpt": "spacious private suites and companion suites"
+      },
+      {
+        "id": "bridge-dining",
+        "url": "https://www.bridgesbyepoch.com/communities/hingham-ma/lifestyle/dining/",
+        "title": "Hingham dining experience",
+        "publisher": "Bridges by EPOCH",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "search-result",
+        "excerpt": "healthy, chef-prepared meals every day"
+      }
+    ],
+    "facts": [
+      {
+        "id": "bridge-room",
+        "kind": "room",
+        "text": "Official indexed purposeful-design page describes private and companion memory-care suites.",
+        "sourceId": "bridge-design",
+        "amount": null
+      },
+      {
+        "id": "bridge-dining",
+        "kind": "dining",
+        "text": "Official indexed dining page advertises daily chef-prepared meals with snacks available.",
+        "sourceId": "bridge-dining",
+        "amount": null
+      },
+      {
+        "id": "bridge-care",
+        "kind": "care",
+        "text": "Provider describes the Hingham community as memory-care assisted living designed for dementia support.",
+        "sourceId": "bridge-design",
+        "amount": null
+      },
+      {
+        "id": "bridge-households",
+        "kind": "amenity",
+        "text": "Official indexed suites page names three secure residential households: Bare Cove, Cushing and Shipyard.",
+        "sourceId": "bridge-suites",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "not-published",
+      "text": "No live opening or waitlist established from accessible public evidence.",
+      "sourceId": null,
+      "asOf": null
+    },
+    "notes": [
+      "Full suites page returned 403; evidence is limited to directly observed official search excerpts, not a full-page inspection.",
+      "No provider price or current inventory established."
+    ]
+  },
+  {
+    "providerId": "ma-alr-brightview-danvers",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "bright-price",
+        "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-danvers/pricing",
+        "title": "Brightview Danvers pricing",
+        "publisher": "Brightview Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Included in the rate is 5 hours of personal care each week"
+      }
+    ],
+    "facts": [
+      {
+        "id": "bright-al",
+        "kind": "care",
+        "text": "Provider says AL rate includes five weekly personal-care hours; Wellspring memory rate includes 20 weekly hours.",
+        "sourceId": "bright-price",
+        "amount": null
+      },
+      {
+        "id": "bright-room",
+        "kind": "room",
+        "text": "AL lists one-bedroom styles; IL lists deluxe studios through two-bedrooms with full kitchens; memory care lists a one-bedroom apartment.",
+        "sourceId": "bright-price",
+        "amount": null
+      },
+      {
+        "id": "bright-dining",
+        "kind": "dining",
+        "text": "Three daily chef-prepared meals are listed for AL and memory care.",
+        "sourceId": "bright-price",
+        "amount": null
+      },
+      {
+        "id": "bright-amenity",
+        "kind": "amenity",
+        "text": "AL includes weekly housekeeping/linens, transport and utilities; memory care also lists a secure courtyard.",
+        "sourceId": "bright-price",
+        "amount": null
+      },
+      {
+        "id": "bright-act",
+        "kind": "activity",
+        "text": "Community activity calendar is listed; IL description mentions yoga, art, clubs and a pub.",
+        "sourceId": "bright-price",
+        "amount": null
+      },
+      {
+        "id": "bright-cost",
+        "kind": "cost",
+        "text": "Numeric prices are behind an 'Access Pricing Information' inquiry; none recorded as an actual location rate.",
+        "sourceId": "bright-price",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider offers inquiries; inspected public material establishes no dated opening or waitlist.",
+      "sourceId": "bright-price",
+      "asOf": null
+    },
+    "notes": [
+      "Care-hour inclusions are provider claims, not assurance of eligibility or individualized total price."
+    ]
+  },
+  {
+    "providerId": "ma-alr-charter-senior-living-of-danvers",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "charter-floor",
+        "url": "https://www.charterofdanvers.com/floor-plans/",
+        "title": "Danvers floor plans and pricing",
+        "publisher": "Charter Senior Living of Danvers",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Prices begin at $5,395/month"
+      }
+    ],
+    "facts": [
+      {
+        "id": "charter-room",
+        "kind": "room",
+        "text": "AL lists studios (333 sq ft) and one-bedrooms (422 sq ft); memory care lists private studios and friendship suites by an enclosed courtyard.",
+        "sourceId": "charter-floor",
+        "amount": null
+      },
+      {
+        "id": "charter-al",
+        "kind": "cost",
+        "text": "AL studio published starting monthly price; total personalized care fees require an itemized quote.",
+        "sourceId": "charter-floor",
+        "amount": {
+          "min": 5395,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "charter-one",
+        "kind": "cost",
+        "text": "AL one-bedroom published starting monthly price.",
+        "sourceId": "charter-floor",
+        "amount": {
+          "min": 7295,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "charter-mc",
+        "kind": "cost",
+        "text": "Memory-care published starting monthly price.",
+        "sourceId": "charter-floor",
+        "amount": {
+          "min": 7295,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "charter-feat",
+        "kind": "amenity",
+        "text": "Kitchenette/minifridge/microwave, walk-in shower, walk-in closet and climate controls are advertised.",
+        "sourceId": "charter-floor",
+        "amount": null
+      },
+      {
+        "id": "charter-serv",
+        "kind": "amenity",
+        "text": "Weekly housekeeping, laundry, bed-making, transport, emergency calls and concierge 8am–8pm are advertised.",
+        "sourceId": "charter-floor",
+        "amount": null
+      },
+      {
+        "id": "charter-dining",
+        "kind": "dining",
+        "text": "Three daily meals are listed.",
+        "sourceId": "charter-floor",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Public material offers inquiries but does not establish a dated vacancy or waitlist.",
+      "sourceId": "charter-floor",
+      "asOf": null
+    },
+    "notes": [
+      "Full-page prices differ from older search snippets ($5,295/$6,695); full inspected page used. No effective date supplied.",
+      "Available floor-plan styles do not establish vacant apartments."
+    ]
+  },
+  {
+    "providerId": "ma-alr-discovery-village-quincy",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "discovery-main",
+        "url": "https://discoveryvillagequincybay.seniorlivingnearme.com/",
+        "title": "Discovery Village Quincy Bay",
+        "publisher": "Discovery Management Group",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "weekly housekeeping and convenient scheduled transportation"
+      },
+      {
+        "id": "discovery-floor",
+        "url": "https://discoveryvillagequincybay.seniorlivingnearme.com/floor-plans-pricing",
+        "title": "Discovery Village Quincy Bay floor plans and pricing",
+        "publisher": "Discovery Management Group",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "To reveal detailed pricing information, please fill out the form."
+      }
+    ],
+    "facts": [
+      {
+        "id": "discovery-care",
+        "kind": "care",
+        "text": "Location advertises active independent living and assisted living.",
+        "sourceId": "discovery-main",
+        "amount": null
+      },
+      {
+        "id": "discovery-room",
+        "kind": "room",
+        "text": "AL plan examples include American Linden/Ginkgo suites, American Beech one-bedroom and Northern Red Oak/Red Maple two-bedroom, each with one bathroom.",
+        "sourceId": "discovery-floor",
+        "amount": null
+      },
+      {
+        "id": "discovery-cost",
+        "kind": "cost",
+        "text": "Numeric prices require an inquiry form; no actual location rate extracted.",
+        "sourceId": "discovery-floor",
+        "amount": null
+      },
+      {
+        "id": "discovery-dining",
+        "kind": "dining",
+        "text": "Chef-made dining uses seasonal menus and resident input under the Sensations program.",
+        "sourceId": "discovery-main",
+        "amount": null
+      },
+      {
+        "id": "discovery-act",
+        "kind": "activity",
+        "text": "Celebrations programming advertises art, lectures, games, outings and live music; fitness programming is also described.",
+        "sourceId": "discovery-main",
+        "amount": null
+      },
+      {
+        "id": "discovery-serv",
+        "kind": "amenity",
+        "text": "Housekeeping, concierge and scheduled transportation are advertised.",
+        "sourceId": "discovery-main",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Public material offers inquiries but does not establish a dated vacancy or waitlist.",
+      "sourceId": "discovery-main",
+      "asOf": null
+    },
+    "notes": [
+      "Official provider footer confirms 99 Brackett Street; current branding adds 'Bay' to catalog name.",
+      "Promotional satisfaction guarantee concerns refund of community fee under stated first-90-day condition; not all costs or suitability."
+    ]
+  },
+  {
+    "providerId": "ma-alr-fenno-house",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "fenno-care",
+        "url": "https://fennohouse.org/assisted-living/",
+        "title": "Assisted Living at Fenno House",
+        "publisher": "Fenno House",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "search-result",
+        "excerpt": "Prices include up to an hour of personal care daily"
+      }
+    ],
+    "facts": [
+      {
+        "id": "fenno-room",
+        "kind": "room",
+        "text": "Official indexed page describes private studio and one-bedroom AL apartments, with full kitchens and individual heat/AC.",
+        "sourceId": "fenno-care",
+        "amount": null
+      },
+      {
+        "id": "fenno-care",
+        "kind": "care",
+        "text": "Provider says its service fee includes up to one daily personal-care hour, medication reminders and 24-hour aide/nursing oversight arrangements.",
+        "sourceId": "fenno-care",
+        "amount": null
+      },
+      {
+        "id": "fenno-dining",
+        "kind": "dining",
+        "text": "Two onsite restaurant-style meals daily with entrée choices are listed; staff can prepare light breakfast in the apartment as needed.",
+        "sourceId": "fenno-care",
+        "amount": null
+      },
+      {
+        "id": "fenno-act",
+        "kind": "activity",
+        "text": "Social, educational, religious and recreational activities are scheduled daily.",
+        "sourceId": "fenno-care",
+        "amount": null
+      },
+      {
+        "id": "fenno-amenity",
+        "kind": "amenity",
+        "text": "Assisted-living common spaces include dining room, solarium/activity room and beauty salon; transport appointments can be coordinated.",
+        "sourceId": "fenno-care",
+        "amount": null
+      },
+      {
+        "id": "fenno-cost",
+        "kind": "cost",
+        "text": "Provider describes all-inclusive/below-market service pricing but publishes no numeric rate in the inspected excerpt.",
+        "sourceId": "fenno-care",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Public material offers inquiries but does not establish a dated vacancy or waitlist.",
+      "sourceId": "fenno-care",
+      "asOf": null
+    },
+    "notes": [
+      "Official indexed page address matches 540 Hancock Street. Full-page fetch failed following redirect; access is search-result evidence.",
+      "Do not transfer the separate HUD-subsidized independent-living rent rules to AL pricing without confirmation."
+    ]
+  },
+  {
+    "providerId": "ma-alr-glen-at-grove-manor",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "glen-floor",
+        "url": "https://www.grovemanorestates.com/floor-plans",
+        "title": "The Glen independent living floor plans",
+        "publisher": "Grove Manor Estates",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "The Glen at Grove Manor offers several rooming options"
+      },
+      {
+        "id": "glen-amen",
+        "url": "https://www.grovemanorestates.com/amenities",
+        "title": "The Glen independent living services and amenities",
+        "publisher": "Grove Manor Estates",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Dinner served daily, restaurant style, in our elegant Dining Room"
+      }
+    ],
+    "facts": [
+      {
+        "id": "glen-room",
+        "kind": "room",
+        "text": "Provider describes The Glen as IL: 450-sq-ft studios, 700-sq-ft one-bedrooms and 1,125-sq-ft two-bedrooms, with full kitchens; two-bedrooms have two baths and washer/dryer.",
+        "sourceId": "glen-floor",
+        "amount": null
+      },
+      {
+        "id": "glen-studio",
+        "kind": "cost",
+        "text": "The Glen published starting IL studio monthly rate, not an AL care-inclusive quote.",
+        "sourceId": "glen-floor",
+        "amount": {
+          "min": 4795,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "glen-one",
+        "kind": "cost",
+        "text": "The Glen published starting IL one-bedroom monthly rate.",
+        "sourceId": "glen-floor",
+        "amount": {
+          "min": 5260,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "glen-two",
+        "kind": "cost",
+        "text": "The Glen published starting IL two-bedroom monthly rate.",
+        "sourceId": "glen-floor",
+        "amount": {
+          "min": 6690,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "glen-second",
+        "kind": "cost",
+        "text": "Published second-occupant monthly fee.",
+        "sourceId": "glen-floor",
+        "amount": {
+          "min": 800,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "glen-dining",
+        "kind": "dining",
+        "text": "Provider lists daily restaurant-style dinner and continental breakfast in the pub/cafe.",
+        "sourceId": "glen-amen",
+        "amount": null
+      },
+      {
+        "id": "glen-amenity",
+        "kind": "amenity",
+        "text": "Library, pub/cafe, exercise room, patio/walking trail, storage, parking and shared-campus cinema/chapel/salon are advertised.",
+        "sourceId": "glen-amen",
+        "amount": null
+      },
+      {
+        "id": "glen-activity",
+        "kind": "activity",
+        "text": "Social, educational, devotional and exercise programs plus scheduled transport are advertised.",
+        "sourceId": "glen-amen",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Public material offers inquiries but does not establish a dated vacancy or waitlist.",
+      "sourceId": "glen-floor",
+      "asOf": null
+    },
+    "notes": [
+      "Catalog separately lists Glen at 180 Grove Street; provider explicitly identifies The Glen IL within the campus whose office address is 160 Grove. Do not conflate its IL rates with The Grove AL rates.",
+      "Operator says personal-care services may be available; exact licensed scope and add-on care charges need confirmation."
+    ]
+  },
+  {
+    "providerId": "ma-alr-grove-manor-estates",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "grove-floor",
+        "url": "https://www.grovemanorestates.com/al-floor-plans",
+        "title": "Grove Manor assisted-living floor plans",
+        "publisher": "Grove Manor Estates",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Monthly rent includes three daily meals"
+      },
+      {
+        "id": "grove-amen",
+        "url": "https://www.grovemanorestates.com/al-amenities",
+        "title": "Grove Manor assisted-living amenities",
+        "publisher": "Grove Manor Estates",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Daily personal assistance and/or medication reminders up to one (1) hour per day"
+      }
+    ],
+    "facts": [
+      {
+        "id": "grove-room",
+        "kind": "room",
+        "text": "AL offers 375-sq-ft private studios and 530-sq-ft one-bedrooms with kitchenettes and emergency calls.",
+        "sourceId": "grove-floor",
+        "amount": null
+      },
+      {
+        "id": "grove-studio",
+        "kind": "cost",
+        "text": "Published starting monthly AL studio rate; includes three meals and up to one daily assistance/reminder hour.",
+        "sourceId": "grove-floor",
+        "amount": {
+          "min": 6735,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "grove-one",
+        "kind": "cost",
+        "text": "Published starting monthly AL one-bedroom rate.",
+        "sourceId": "grove-floor",
+        "amount": {
+          "min": 7140,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "grove-second",
+        "kind": "cost",
+        "text": "Published monthly second occupant is $1,600 with care or $800 without care.",
+        "sourceId": "grove-floor",
+        "amount": {
+          "min": 800,
+          "max": 1600,
+          "currency": "USD",
+          "period": "month",
+          "type": "other",
+          "asOf": null
+        }
+      },
+      {
+        "id": "grove-amenity",
+        "kind": "amenity",
+        "text": "Tavern, cinema, chapel, salon, sunroom/activity room, library and patio/gazebo/fountain are advertised.",
+        "sourceId": "grove-amen",
+        "amount": null
+      },
+      {
+        "id": "grove-dining",
+        "kind": "dining",
+        "text": "Three meals and dietary consultation are listed; private dining room has a fireplace.",
+        "sourceId": "grove-amen",
+        "amount": null
+      },
+      {
+        "id": "grove-care",
+        "kind": "care",
+        "text": "Personal assistance/medication reminders are included up to one hour daily; additional clinical/rehab services may be separate.",
+        "sourceId": "grove-amen",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Public material offers inquiries but does not establish a dated vacancy or waitlist.",
+      "sourceId": "grove-floor",
+      "asOf": null
+    },
+    "notes": [
+      "160 Grove Street matches catalog; IL Glen and memory-care Woodlands are separate campus neighborhoods.",
+      "Starting fees are undated provider claims, not current signed quotes."
+    ]
+  },
+  {
+    "providerId": "ma-alr-harriett-and-ralph-kaplan-estates",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "kaplan-main",
+        "url": "https://chelseajewish.org/communities/harriett-and-ralph-kaplan-estates/",
+        "title": "Kaplan Estates community",
+        "publisher": "Chelsea Jewish Lifecare",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Traditional Assisted Living Starting at $6,960"
+      },
+      {
+        "id": "kaplan-floor",
+        "url": "https://chelseajewish.org/communities/harriett-and-ralph-kaplan-estates/virtual-tour-assisted-living/",
+        "title": "Kaplan Estates floor plans",
+        "publisher": "Chelsea Jewish Lifecare",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Studio Apartment 375-455 sq. feet"
+      }
+    ],
+    "facts": [
+      {
+        "id": "kaplan-room",
+        "kind": "room",
+        "text": "Traditional AL sample studios are 375–455 sq ft; one-bedrooms are 455–525 or 570–615 sq ft.",
+        "sourceId": "kaplan-floor",
+        "amount": null
+      },
+      {
+        "id": "kaplan-cost",
+        "kind": "cost",
+        "text": "Main page advertises AL starting $6,960 and memory support $9,960; billing period, effective date and care inclusions are not stated there, so no monthly amount inferred.",
+        "sourceId": "kaplan-main",
+        "amount": null
+      },
+      {
+        "id": "kaplan-dine",
+        "kind": "dining",
+        "text": "Kosher restaurant-style dining, anytime self-service cafe, private dining and family kitchen are advertised.",
+        "sourceId": "kaplan-main",
+        "amount": null
+      },
+      {
+        "id": "kaplan-amen",
+        "kind": "amenity",
+        "text": "Salon, fireplace lounge, library, gym, games room, patios/porches and gardens are advertised.",
+        "sourceId": "kaplan-main",
+        "amount": null
+      },
+      {
+        "id": "kaplan-activity",
+        "kind": "activity",
+        "text": "Daily enrichment, weekly outings/shopping/restaurant trips and religious services are listed.",
+        "sourceId": "kaplan-main",
+        "amount": null
+      },
+      {
+        "id": "kaplan-mc",
+        "kind": "care",
+        "text": "Legacy memory support lists a secure neighborhood, supervised outings, secure garden and small-group dining.",
+        "sourceId": "kaplan-main",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Inspected pages invite inquiries; no dated opening or waitlist established.",
+      "sourceId": "kaplan-main",
+      "asOf": null
+    },
+    "notes": [
+      "240 Lynnfield Street matches catalog.",
+      "Older linked floor-plan page advertises $4,900 traditional AL; main community page says $6,960. Resolve conflicting provider copy before quoting.",
+      "No page-derived rate treated as a complete personalized cost."
+    ]
+  },
+  {
+    "providerId": "ma-alr-herrick-house",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "herrick-care",
+        "url": "https://theherrickhouse.org/services/assisted-living",
+        "title": "Herrick House assisted living",
+        "publisher": "The Herrick House",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Apartment fees at The Herrick House are priced on a per day basis"
+      },
+      {
+        "id": "herrick-floor",
+        "url": "https://theherrickhouse.org/residence/apartment-floor-plans",
+        "title": "Herrick House apartment floor plans",
+        "publisher": "The Herrick House",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Please call 978-922-1999 to find out about the availability of specific units"
+      }
+    ],
+    "facts": [
+      {
+        "id": "herrick-room",
+        "kind": "room",
+        "text": "Studios: Wenham 360 and Gloucester 417 sq ft; one-bedrooms: Beverly 417 and Manchester 516; Rockport two-bedroom is 834 sq ft with two baths.",
+        "sourceId": "herrick-floor",
+        "amount": null
+      },
+      {
+        "id": "herrick-feat",
+        "kind": "amenity",
+        "text": "Apartments have kitchenette with fridge/microwave and individual heat/AC; provider describes garden views.",
+        "sourceId": "herrick-floor",
+        "amount": null
+      },
+      {
+        "id": "herrick-cost",
+        "kind": "cost",
+        "text": "Provider charges by day based on apartment size/style; no numeric daily quote established.",
+        "sourceId": "herrick-care",
+        "amount": null
+      },
+      {
+        "id": "herrick-care",
+        "kind": "care",
+        "text": "Provider advertises 24-hour onsite licensed nursing and resident aides on Beverly Hospital's upper campus.",
+        "sourceId": "herrick-care",
+        "amount": null
+      },
+      {
+        "id": "herrick-dining",
+        "kind": "dining",
+        "text": "Chef-prepared meals served at tables in dining rooms are advertised.",
+        "sourceId": "herrick-care",
+        "amount": null
+      },
+      {
+        "id": "herrick-act",
+        "kind": "activity",
+        "text": "Exercise, social/spiritual/cultural programs and holiday events are described.",
+        "sourceId": "herrick-care",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Inspected pages invite inquiries; no dated opening or waitlist established.",
+      "sourceId": "herrick-care",
+      "asOf": null
+    },
+    "notes": [
+      "Official address 89 Herrick Street matches catalog. Availability wording requires contact, not a published specific opening."
+    ]
+  },
+  {
+    "providerId": "ma-alr-john-bertram-house",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "salem",
+        "url": "https://johnbertramhomes.org/salem",
+        "title": "John Bertram House of Salem",
+        "publisher": "John Bertram Homes",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Contact us directly to learn about availability, layouts, and pricing"
+      }
+    ],
+    "facts": [
+      {
+        "id": "salem-room",
+        "kind": "room",
+        "text": "Provider describes individually different residences in a restored Federalist house; no standardized studio/one-bedroom sizes or numeric rents established.",
+        "sourceId": "salem",
+        "amount": null
+      },
+      {
+        "id": "salem-amen",
+        "kind": "amenity",
+        "text": "Historic dining room, library, parlors, outdoor spaces, salon, Wi-Fi, pendants and pets with restrictions are described.",
+        "sourceId": "salem",
+        "amount": null
+      },
+      {
+        "id": "salem-dine",
+        "kind": "dining",
+        "text": "Three meals plus snacks are listed; lunch is the main meal, with a lighter dinner and dietary accommodations.",
+        "sourceId": "salem",
+        "amount": null
+      },
+      {
+        "id": "salem-act",
+        "kind": "activity",
+        "text": "Chair fitness/walking, crafts, lectures, live music, scenic drives and restaurant/theater/library trips are advertised.",
+        "sourceId": "salem",
+        "amount": null
+      },
+      {
+        "id": "salem-care",
+        "kind": "care",
+        "text": "Individual service plans include personal-care routines, medication support, mobility and family communication; residents retain outside physicians.",
+        "sourceId": "salem",
+        "amount": null
+      },
+      {
+        "id": "salem-cost",
+        "kind": "cost",
+        "text": "Pricing/layouts require inquiry; no numeric actual rate extracted.",
+        "sourceId": "salem",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Inspected pages invite inquiries; no dated opening or waitlist established.",
+      "sourceId": "salem",
+      "asOf": null
+    },
+    "notes": [
+      "Official operator confirms 29 Washington Square, Salem; catalog includes N in street name. Do not confuse Swampscott site."
+    ]
+  },
+  {
+    "providerId": "ma-alr-seasons-of-danvers",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "seasons-floor",
+        "url": "https://seasonsofdanvers.com/floor-plans/",
+        "title": "Seasons of Danvers memory-care floor plans",
+        "publisher": "Seasons of Danvers / Sona Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "one-time, non-refundable assessment and entrance fee: $5,000."
+      },
+      {
+        "id": "seasons-life",
+        "url": "https://seasonsofdanvers.com/explore-the-community/",
+        "title": "Seasons of Danvers community",
+        "publisher": "Seasons of Danvers / Sona Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "arts and crafts, such as painting, jewelry making, themed crafts and more"
+      }
+    ],
+    "facts": [
+      {
+        "id": "seasons-room",
+        "kind": "room",
+        "text": "Provider lists standard, deluxe, garden-view and accessible studios, plus companion apartments; private and semi-private choices.",
+        "sourceId": "seasons-floor",
+        "amount": null
+      },
+      {
+        "id": "seasons-deluxe",
+        "kind": "cost",
+        "text": "Deluxe studio is consistently listed at $12,000/month; no effective date or individualized assessment.",
+        "sourceId": "seasons-floor",
+        "amount": {
+          "min": 12000,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "seasons-garden",
+        "kind": "cost",
+        "text": "Top pricing section lists garden-view studio starting $10,000/month.",
+        "sourceId": "seasons-floor",
+        "amount": {
+          "min": 10000,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "seasons-conflict",
+        "kind": "cost",
+        "text": "Same page conflicts: standard studio $9,500 versus $9,000; companion $8,500 versus $8,000 monthly. Current applicable price unresolved.",
+        "sourceId": "seasons-floor",
+        "amount": null
+      },
+      {
+        "id": "seasons-entry",
+        "kind": "cost",
+        "text": "Provider states nonrefundable one-time assessment/entrance fee.",
+        "sourceId": "seasons-floor",
+        "amount": {
+          "min": 5000,
+          "max": null,
+          "currency": "USD",
+          "period": "one-time",
+          "type": "entrance-fee",
+          "asOf": null
+        }
+      },
+      {
+        "id": "seasons-included",
+        "kind": "care",
+        "text": "Monthly inclusions list up to 60 minutes personal care, SAMM medication support, housekeeping/linens/laundry and utilities except phone/cable.",
+        "sourceId": "seasons-floor",
+        "amount": null
+      },
+      {
+        "id": "seasons-activity",
+        "kind": "activity",
+        "text": "Montessori-informed sensory programming, painting, jewelry-making, trivia and word games are described.",
+        "sourceId": "seasons-life",
+        "amount": null
+      },
+      {
+        "id": "seasons-amen",
+        "kind": "amenity",
+        "text": "Indoor garden, programming room and courtyard are described.",
+        "sourceId": "seasons-life",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Inspected pages invite inquiries; no dated opening or waitlist established.",
+      "sourceId": "seasons-floor",
+      "asOf": null
+    },
+    "notes": [
+      "Exact street is 44 Summer Street, Danvers; provider ZIP 01923 conflicts with catalog 01844. Entity matched by street/name/phone.",
+      "Conflicting duplicate pricing sections are retained as uncertainty, not resolved by guessing."
+    ]
+  },
+  {
+    "providerId": "ma-alr-sunrise-of-braintree",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "sun-braintree",
+        "url": "https://www.sunriseseniorliving.com/communities/ma/sunrise-of-braintree",
+        "title": "Sunrise of Braintree",
+        "publisher": "Sunrise Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Limited Availability"
+      }
+    ],
+    "facts": [
+      {
+        "id": "sb-studio",
+        "kind": "cost",
+        "text": "AL studio published from $6,100/month; care level and some services cost extra.",
+        "sourceId": "sun-braintree",
+        "amount": {
+          "min": 6100,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sb-one",
+        "kind": "cost",
+        "text": "AL one-bedroom published from $6,100/month; individualized care extra.",
+        "sourceId": "sun-braintree",
+        "amount": {
+          "min": 6100,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sb-mc-studio",
+        "kind": "cost",
+        "text": "Memory studio published from $9,900/month; request individualized total.",
+        "sourceId": "sun-braintree",
+        "amount": {
+          "min": 9900,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sb-mc-one",
+        "kind": "cost",
+        "text": "Memory one-bedroom published from $11,200/month.",
+        "sourceId": "sun-braintree",
+        "amount": {
+          "min": 11200,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sb-mc-comp",
+        "kind": "cost",
+        "text": "Memory companion suite published from $8,600/month.",
+        "sourceId": "sun-braintree",
+        "amount": {
+          "min": 8600,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sb-room",
+        "kind": "room",
+        "text": "Provider lists AL studios/one-bedrooms and memory studios/one-bedrooms/companions; kitchenettes and emergency alerts are advertised.",
+        "sourceId": "sun-braintree",
+        "amount": null
+      },
+      {
+        "id": "sb-dine",
+        "kind": "dining",
+        "text": "Provider offers dining-room or in-suite meals, dietary-tailored tableside ordering and bistro snacks.",
+        "sourceId": "sun-braintree",
+        "amount": null
+      },
+      {
+        "id": "sb-act",
+        "kind": "activity",
+        "text": "Art, fitness, learning, movies/clubs and AL/memory calendars are advertised.",
+        "sourceId": "sun-braintree",
+        "amount": null
+      },
+      {
+        "id": "sb-amen",
+        "kind": "amenity",
+        "text": "Courtyard/patios and reservable private dining space are described.",
+        "sourceId": "sun-braintree",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "opening-published",
+      "text": "Provider page displays undated 'Limited Availability'; no unit type/count, admission fit or date is established, and no vacancy independently confirmed.",
+      "sourceId": "sun-braintree",
+      "asOf": null
+    },
+    "notes": [
+      "Address 618 Granite Street matches catalog.",
+      "Prices are undated starting suite costs; nursing assessment sets additional care price; medication services may be extra. Search snippets displayed different rates.",
+      "General 'Limited Availability' is marketing inventory wording, not an exact opening or verified admission."
+    ]
+  },
+  {
+    "providerId": "ma-alr-sunrise-of-cohasset",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "sun-cohasset",
+        "url": "https://www.sunriseseniorliving.com/communities/ma/sunrise-of-cohasset",
+        "title": "Sunrise of Cohasset",
+        "publisher": "Sunrise Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Limited Availability"
+      }
+    ],
+    "facts": [
+      {
+        "id": "sc-studio",
+        "kind": "cost",
+        "text": "AL studio published from $7,900/month; assessed care and some services additional.",
+        "sourceId": "sun-cohasset",
+        "amount": {
+          "min": 7900,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sc-one",
+        "kind": "cost",
+        "text": "AL one-bedroom published from $8,500/month.",
+        "sourceId": "sun-cohasset",
+        "amount": {
+          "min": 8500,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sc-mc-studio",
+        "kind": "cost",
+        "text": "Memory studio published from $12,100/month.",
+        "sourceId": "sun-cohasset",
+        "amount": {
+          "min": 12100,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sc-mc-one",
+        "kind": "cost",
+        "text": "Memory one-bedroom published from $12,800/month.",
+        "sourceId": "sun-cohasset",
+        "amount": {
+          "min": 12800,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sc-mc-comp",
+        "kind": "cost",
+        "text": "Memory companion suite published from $9,600/month.",
+        "sourceId": "sun-cohasset",
+        "amount": {
+          "min": 9600,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sc-room",
+        "kind": "room",
+        "text": "AL also lists a two-bedroom without numeric rate; studios/one-bedrooms and memory companions have kitchenettes and emergency alerts.",
+        "sourceId": "sun-cohasset",
+        "amount": null
+      },
+      {
+        "id": "sc-dine",
+        "kind": "dining",
+        "text": "Dining-room/in-suite meals, dietary-sensitive tableside ordering and bistro snacks are described.",
+        "sourceId": "sun-cohasset",
+        "amount": null
+      },
+      {
+        "id": "sc-act",
+        "kind": "activity",
+        "text": "Fitness, art/music, book/walking clubs, movie/game nights, live entertainment and outings are advertised.",
+        "sourceId": "sun-cohasset",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "opening-published",
+      "text": "Provider page displays undated 'Limited Availability'; no unit type/count, admission fit or date is established, and no vacancy independently confirmed.",
+      "sourceId": "sun-cohasset",
+      "asOf": null
+    },
+    "notes": [
+      "Exact 125 King Street matches catalog. Prices varied between indexed excerpts and inspected page; full-page observation used.",
+      "Care price is added to suite cost; medication services can be separate. No dated unit count established."
+    ]
+  },
+  {
+    "providerId": "ma-alr-sunrise-of-gardner-park",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "sun-gardner",
+        "url": "https://www.sunriseseniorliving.com/communities/ma/sunrise-at-gardner-park",
+        "title": "Sunrise at Gardner Park",
+        "publisher": "Sunrise Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Your care level price is added to your chosen suite cost."
+      }
+    ],
+    "facts": [
+      {
+        "id": "sg-studio",
+        "kind": "cost",
+        "text": "AL studio published from $6,500/month; individualized care/services added.",
+        "sourceId": "sun-gardner",
+        "amount": {
+          "min": 6500,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sg-one",
+        "kind": "cost",
+        "text": "AL one-bedroom published from $8,500/month.",
+        "sourceId": "sun-gardner",
+        "amount": {
+          "min": 8500,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sg-two",
+        "kind": "cost",
+        "text": "AL two-bedroom published from $8,700/month.",
+        "sourceId": "sun-gardner",
+        "amount": {
+          "min": 8700,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sg-mc-studio",
+        "kind": "cost",
+        "text": "Memory studio published from $11,100/month.",
+        "sourceId": "sun-gardner",
+        "amount": {
+          "min": 11100,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sg-mc-comp",
+        "kind": "cost",
+        "text": "Memory companion published from $9,500/month.",
+        "sourceId": "sun-gardner",
+        "amount": {
+          "min": 9500,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "sg-features",
+        "kind": "room",
+        "text": "Floor plans advertise kitchenettes, closet space, safety-designed bathrooms and emergency alerts.",
+        "sourceId": "sun-gardner",
+        "amount": null
+      },
+      {
+        "id": "sg-dine",
+        "kind": "dining",
+        "text": "Fresh seasonal meals with dietary customization and bistro snacks are described.",
+        "sourceId": "sun-gardner",
+        "amount": null
+      },
+      {
+        "id": "sg-activity",
+        "kind": "activity",
+        "text": "Music, continued learning, drama, walking and gardening clubs are described.",
+        "sourceId": "sun-gardner",
+        "amount": null
+      },
+      {
+        "id": "sg-amen",
+        "kind": "amenity",
+        "text": "Beauty salon, scheduled transportation, social common areas, pets and family engagement app are advertised.",
+        "sourceId": "sun-gardner",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "opening-published",
+      "text": "Provider page displays undated 'Limited Availability'; no unit type/count, admission fit or date is established, and no vacancy independently confirmed.",
+      "sourceId": "sun-gardner",
+      "asOf": null
+    },
+    "notes": [
+      "Provider uses 'at' Gardner Park; exact 73 Margin Street matches catalog 'of' name.",
+      "Prices are undated suite minimums; care assessment/medication fees extra. General limited-availability label does not identify an available room."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-assisted-living-residences-at-hancock-park",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "hancock",
+        "url": "https://www.banecare.com/assisted-living-residences-at-hancock-park/",
+        "title": "Assisted Living Residences at Hancock Park",
+        "publisher": "BaneCare",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "rates start at $4,000 per month"
+      }
+    ],
+    "facts": [
+      {
+        "id": "hp-rate",
+        "kind": "cost",
+        "text": "Published starting $4,000/month covers private apartment, meals, housekeeping/linens, activities and medication monitoring; more hands-on care may cost extra.",
+        "sourceId": "hancock",
+        "amount": {
+          "min": 4000,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "hp-room",
+        "kind": "room",
+        "text": "Provider lists private studio and one-bedroom layouts.",
+        "sourceId": "hancock",
+        "amount": null
+      },
+      {
+        "id": "hp-dine",
+        "kind": "dining",
+        "text": "Chef-prepared breakfast/lunch/dinner are served restaurant-style.",
+        "sourceId": "hancock",
+        "amount": null
+      },
+      {
+        "id": "hp-amen",
+        "kind": "amenity",
+        "text": "Deck, flower gardens, housekeeping and linen service are advertised.",
+        "sourceId": "hancock",
+        "amount": null
+      },
+      {
+        "id": "hp-activity",
+        "kind": "activity",
+        "text": "Social, recreational, educational, spiritual, wellness and fitness programs are described.",
+        "sourceId": "hancock",
+        "amount": null
+      },
+      {
+        "id": "hp-care",
+        "kind": "care",
+        "text": "AL/respite are offered; nursing/rehab is a separate center in the same building, not the AL license itself.",
+        "sourceId": "hancock",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider directs availability inquiries; no dated unit opening or waitlist established.",
+      "sourceId": "hancock",
+      "asOf": null
+    },
+    "notes": [
+      "164 Parkingway and phone match catalog. Current individual care assessment and total pricing require inquiry.",
+      "Apartments 'available' in descriptive room-style copy is not treated as vacant inventory."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-atrium-at-faxon-woods",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "faxon",
+        "url": "https://www.benchmarkseniorliving.com/senior-living/ma/quincy/the-atrium-at-faxon-woods/",
+        "title": "The Atrium at Faxon Woods",
+        "publisher": "Benchmark Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Memory Care Studio"
+      }
+    ],
+    "facts": [
+      {
+        "id": "fax-care",
+        "kind": "care",
+        "text": "Location focuses on memory care and respite; some on-site clinical/hospice services are delivered by third parties.",
+        "sourceId": "faxon",
+        "amount": null
+      },
+      {
+        "id": "fax-studio",
+        "kind": "cost",
+        "text": "Published memory studio starting monthly rate; specific model and care additions must be confirmed.",
+        "sourceId": "faxon",
+        "amount": {
+          "min": 6995,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "fax-deluxe",
+        "kind": "cost",
+        "text": "Published memory studio deluxe starting monthly rate.",
+        "sourceId": "faxon",
+        "amount": {
+          "min": 7605,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "fax-comp",
+        "kind": "cost",
+        "text": "Published memory companion suite starting monthly rate.",
+        "sourceId": "faxon",
+        "amount": {
+          "min": 6235,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "fax-dine",
+        "kind": "dining",
+        "text": "Sensory dining advertises homemade choices, music/aromas and nutrition-adapted meals.",
+        "sourceId": "faxon",
+        "amount": null
+      },
+      {
+        "id": "fax-amen",
+        "kind": "amenity",
+        "text": "Secure courtyards/walking paths, library/internet, recreation room, salon and scheduled transport are listed.",
+        "sourceId": "faxon",
+        "amount": null
+      },
+      {
+        "id": "fax-act",
+        "kind": "activity",
+        "text": "Fitness, arts/music, gardening, education, reminiscence and cooking/baking programs are advertised.",
+        "sourceId": "faxon",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites pricing/availability inquiries; no dated opening or waitlist established.",
+      "sourceId": "faxon",
+      "asOf": null
+    },
+    "notes": [
+      "2003 Falls Boulevard matches catalog. Prices are undated starting rates subject to model differences/change; request itemized total."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-atrium-at-veronica-drive",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "veronica",
+        "url": "https://www.benchmarkseniorliving.com/senior-living/ma/danvers/the-atrium-at-veronica-drive/",
+        "title": "The Atrium at Veronica Drive",
+        "publisher": "Benchmark Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Memory Care Companion Suite"
+      }
+    ],
+    "facts": [
+      {
+        "id": "ver-care",
+        "kind": "care",
+        "text": "Provider describes a community built for memory loss with needs-based 24-hour personal support and respite.",
+        "sourceId": "veronica",
+        "amount": null
+      },
+      {
+        "id": "ver-room",
+        "kind": "room",
+        "text": "Memory-care studio and companion suite floor plans are listed.",
+        "sourceId": "veronica",
+        "amount": null
+      },
+      {
+        "id": "ver-cost",
+        "kind": "cost",
+        "text": "Floor-plan cards show 'GET PRICING'; no numeric location rate established here.",
+        "sourceId": "veronica",
+        "amount": null
+      },
+      {
+        "id": "ver-amen",
+        "kind": "amenity",
+        "text": "Secure outdoor courtyards, walking paths, salon/barber, transport, internet and pets are advertised.",
+        "sourceId": "veronica",
+        "amount": null
+      },
+      {
+        "id": "ver-dine",
+        "kind": "dining",
+        "text": "Sensory/adaptive dining is described with homemade choices and nutrition modifications.",
+        "sourceId": "veronica",
+        "amount": null
+      },
+      {
+        "id": "ver-act",
+        "kind": "activity",
+        "text": "Fitness, arts/music, gardening, education, reminiscence and cooking/baking are advertised.",
+        "sourceId": "veronica",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites pricing/availability inquiries; no dated opening or waitlist established.",
+      "sourceId": "veronica",
+      "asOf": null
+    },
+    "notes": [
+      "Address 1 Veronica Drive matches catalog. Third-party healthcare/hospice and marked amenities may incur additional charges."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-cordwainer",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "cord-price",
+        "url": "https://cordwainermemorycare.com/pricing/",
+        "title": "Cordwainer memory-care pricing",
+        "publisher": "The Cordwainer",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "up to three (3) hours per day of individualized supportive services"
+      },
+      {
+        "id": "cord-suites",
+        "url": "https://cordwainermemorycare.com/suites/",
+        "title": "Cordwainer suites and floor plans",
+        "publisher": "The Cordwainer",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "354–384 square feet"
+      },
+      {
+        "id": "cord-amenities",
+        "url": "https://cordwainermemorycare.com/health-safety/",
+        "title": "Cordwainer community amenities",
+        "publisher": "The Cordwainer",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "two-story indoor sensory garden"
+      },
+      {
+        "id": "cord-life",
+        "url": "https://cordwainermemorycare.com/what-makes-us-different/",
+        "title": "Cordwainer distinctive activities and spaces",
+        "publisher": "The Cordwainer",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Cordwainer Choir"
+      }
+    ],
+    "facts": [
+      {
+        "id": "cord-room",
+        "kind": "room",
+        "text": "Private suites are 354–384 sq ft with bedroom, bath/living area; companion suites are 510–529 sq ft with two private bedrooms and shared sitting/bath.",
+        "sourceId": "cord-suites",
+        "amount": null
+      },
+      {
+        "id": "cord-cost",
+        "kind": "cost",
+        "text": "No numeric suite/service quote published in inspected pricing page. Apartment fee and resident-services fee are separate components.",
+        "sourceId": "cord-price",
+        "amount": null
+      },
+      {
+        "id": "cord-care",
+        "kind": "care",
+        "text": "Resident-services fee includes up to three daily supportive-service hours and SAMM; enhanced care above that and LMA medication service cost extra.",
+        "sourceId": "cord-price",
+        "amount": null
+      },
+      {
+        "id": "cord-dine",
+        "kind": "dining",
+        "text": "Three chef-made meals plus snacks/beverages are listed in resident services.",
+        "sourceId": "cord-price",
+        "amount": null
+      },
+      {
+        "id": "cord-amen",
+        "kind": "amenity",
+        "text": "Housekeeping/laundry, wellness coordination, medical-appointment transportation and garden/common-space access are described.",
+        "sourceId": "cord-price",
+        "amount": null
+      },
+      {
+        "id": "cord-act",
+        "kind": "activity",
+        "text": "The Learned Environment therapeutic programming is listed.",
+        "sourceId": "cord-price",
+        "amount": null
+      },
+      {
+        "id": "cord-amen-specific",
+        "kind": "amenity",
+        "text": "Provider advertises indoor/outdoor sensory gardens, sunroom, terrace, art/performance spaces, family suite with kitchen, salon, fiber internet and EV charging.",
+        "sourceId": "cord-amenities",
+        "amount": null
+      },
+      {
+        "id": "cord-activity-specific",
+        "kind": "activity",
+        "text": "Choir, walking group, art studio, Baking Buddies, concerts, photography/sewing/gardening and interactive Tovertafel games are advertised.",
+        "sourceId": "cord-life",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites pricing/availability inquiries; no dated opening or waitlist established.",
+      "sourceId": "cord-price",
+      "asOf": null
+    },
+    "notes": [
+      "555 Cordwainer Drive and phone match catalog. A generic regional memory-care discussion is not a location price.",
+      "Care-hour inclusion and extra fees need service-plan confirmation."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-current-beverly",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "beverly-main",
+        "url": "https://www.monarchcommunities.com/the-current-beverly-ma",
+        "title": "The Current Beverly",
+        "publisher": "Monarch Communities",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Starting at $6,000 per month"
+      },
+      {
+        "id": "beverly-al",
+        "url": "https://www.monarchcommunities.com/the-current-beverly-ma/care/assisted-living",
+        "title": "Current Beverly assisted living",
+        "publisher": "Monarch Communities",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "rooftop deck with ocean views"
+      }
+    ],
+    "facts": [
+      {
+        "id": "bev-al",
+        "kind": "cost",
+        "text": "Provider publishes AL starting at $6,000/month; individual suite/care quote required.",
+        "sourceId": "beverly-main",
+        "amount": {
+          "min": 6000,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "bev-mc",
+        "kind": "cost",
+        "text": "Provider publishes memory care starting at $8,500/month; respite pricing by request.",
+        "sourceId": "beverly-main",
+        "amount": {
+          "min": 8500,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "bev-room",
+        "kind": "room",
+        "text": "AL studios, one- and two-bedrooms are listed; memory-care studios and companion two-bedroom layouts are listed.",
+        "sourceId": "beverly-main",
+        "amount": null
+      },
+      {
+        "id": "bev-amen",
+        "kind": "amenity",
+        "text": "Rooftop deck, club room, fitness center, bistro/pub, library/fireplace lounges, salon, courtyard and pet-friendly paths are advertised.",
+        "sourceId": "beverly-main",
+        "amount": null
+      },
+      {
+        "id": "bev-dine",
+        "kind": "dining",
+        "text": "Seasonal dietitian-guided dining includes cafe breakfast items and penthouse dining.",
+        "sourceId": "beverly-main",
+        "amount": null
+      },
+      {
+        "id": "bev-act",
+        "kind": "activity",
+        "text": "Fitness, lectures, gardening, cards/dominoes, rooftop socials and cornhole are advertised.",
+        "sourceId": "beverly-main",
+        "amount": null
+      },
+      {
+        "id": "bev-care",
+        "kind": "care",
+        "text": "Provider describes personalized AL assistance, memory care and respite, with housekeeping/transport coordination.",
+        "sourceId": "beverly-al",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites pricing/availability inquiries; no dated opening or waitlist established.",
+      "sourceId": "beverly-main",
+      "asOf": null
+    },
+    "notes": [
+      "Official 1 Essex Street matches catalog. Starting prices are undated; no itemized care fee or vacant unit verified."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-current-south-shore",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "southshore",
+        "url": "https://www.monarchcommunities.com/the-current-southshore",
+        "title": "The Current South Shore",
+        "publisher": "Monarch Communities",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Starting at $6,500 per month"
+      }
+    ],
+    "facts": [
+      {
+        "id": "ss-il",
+        "kind": "cost",
+        "text": "Provider publishes IL starting monthly rate; individual quote required.",
+        "sourceId": "southshore",
+        "amount": {
+          "min": 3500,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "ss-al",
+        "kind": "cost",
+        "text": "Provider publishes AL starting monthly rate; itemized care/suite quote needed.",
+        "sourceId": "southshore",
+        "amount": {
+          "min": 6500,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "ss-mc",
+        "kind": "cost",
+        "text": "Provider publishes memory-care starting monthly rate; respite price by request.",
+        "sourceId": "southshore",
+        "amount": {
+          "min": 7400,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "ss-room",
+        "kind": "room",
+        "text": "IL studio/one-/two-bedroom layouts have full kitchens; AL studio/one-bedroom and memory studio layouts are published.",
+        "sourceId": "southshore",
+        "amount": null
+      },
+      {
+        "id": "ss-amen",
+        "kind": "amenity",
+        "text": "Fitness center with Peloton/weights, yoga studio, courtyard, lounges, pub, 24-hour concierge and emergency-response technology are advertised.",
+        "sourceId": "southshore",
+        "amount": null
+      },
+      {
+        "id": "ss-dine",
+        "kind": "dining",
+        "text": "Chef dining uses seasonal dietitian-informed menus with resident customization and private dining.",
+        "sourceId": "southshore",
+        "amount": null
+      },
+      {
+        "id": "ss-activity",
+        "kind": "activity",
+        "text": "Chef socials, rooftop karaoke, strength classes, music, creative workshops, garden club and wine tasting are advertised.",
+        "sourceId": "southshore",
+        "amount": null
+      },
+      {
+        "id": "ss-care",
+        "kind": "care",
+        "text": "Provider lists IL, AL, memory care/respite and onsite FOX rehabilitation; clinical service costs need confirmation.",
+        "sourceId": "southshore",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites availability inquiries; floor plans and general furnished-suite offers do not establish a dated specific vacancy.",
+      "sourceId": "southshore",
+      "asOf": null
+    },
+    "notes": [
+      "1435 Main Street matches catalog. Fees are undated starting offers, not total individualized costs."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-mariner-marblehead",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "mariner",
+        "url": "https://northbridgecommunities.com/mariner-marblehead-rates-floorplans/",
+        "title": "Mariner Marblehead rates and floor plans",
+        "publisher": "Northbridge Communities",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Life Is Better Shared. Featuring Companion Apartments"
+      }
+    ],
+    "facts": [
+      {
+        "id": "mar-il-studio",
+        "kind": "cost",
+        "text": "Published IL studio monthly range.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 9010,
+          "max": 9515,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-il-one",
+        "kind": "cost",
+        "text": "Published IL one-bedroom monthly range.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 11440,
+          "max": 11720,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-al-studio",
+        "kind": "cost",
+        "text": "Published AL studio monthly range; confirm care inclusions/add-ons.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 9510,
+          "max": 10015,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-al-one",
+        "kind": "cost",
+        "text": "Published AL one-bedroom monthly range.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 11940,
+          "max": 12220,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-al-den",
+        "kind": "cost",
+        "text": "Published AL one-bedroom plus den monthly range.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 12700,
+          "max": 13345,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-al-two",
+        "kind": "cost",
+        "text": "Published AL two-bedroom monthly range.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 13415,
+          "max": 14000,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-mc-comp",
+        "kind": "cost",
+        "text": "Published Avita companion monthly range.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 10155,
+          "max": 10530,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-mc-studio",
+        "kind": "cost",
+        "text": "Published Avita studio monthly range.",
+        "sourceId": "mariner",
+        "amount": {
+          "min": 12635,
+          "max": 12895,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": null
+        }
+      },
+      {
+        "id": "mar-room",
+        "kind": "room",
+        "text": "IL/AL layouts include studio, one-bedroom, one-bedroom plus den and two-bedroom; Avita offers studio/companion.",
+        "sourceId": "mariner",
+        "amount": null
+      },
+      {
+        "id": "mar-dining",
+        "kind": "dining",
+        "text": "Provider lists three meals daily and Eat Fresh, Eat Local menus.",
+        "sourceId": "mariner",
+        "amount": null
+      },
+      {
+        "id": "mar-service",
+        "kind": "amenity",
+        "text": "Provider says monthly rate includes utilities, scheduled transport and weekly housekeeping.",
+        "sourceId": "mariner",
+        "amount": null
+      },
+      {
+        "id": "mar-activity",
+        "kind": "activity",
+        "text": "Creative/holistic social programs are advertised.",
+        "sourceId": "mariner",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites availability inquiries; floor plans and general furnished-suite offers do not establish a dated specific vacancy.",
+      "sourceId": "mariner",
+      "asOf": null
+    },
+    "notes": [
+      "265 Pleasant Street and phone match catalog. Ranges are undated published provider pricing, not guaranteed current/available units.",
+      "Room-specific care or other extras require contract review."
+    ]
+  },
+  {
+    "providerId": "ma-alr-the-residence-at-penniman-hill",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "penn-main",
+        "url": "https://www.lcbseniorliving.com/communities/residence-at-penniman-hill/",
+        "title": "The Residence at Penniman Hill",
+        "publisher": "LCB Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Memory Care Companion"
+      },
+      {
+        "id": "penn-pdf",
+        "url": "https://www.lcbseniorliving.com/wp-content/uploads/2025/07/Penniman-Pocket_web-2024.pdf",
+        "title": "Penniman Hill community brochure",
+        "publisher": "LCB Senior Living",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "pdf",
+        "excerpt": "Every resident has a private apartment with kitchenette,"
+      }
+    ],
+    "facts": [
+      {
+        "id": "penn-care",
+        "kind": "care",
+        "text": "Location lists IL, AL, memory care and temporary/respite stays; advanced clinical needs may involve third parties.",
+        "sourceId": "penn-main",
+        "amount": null
+      },
+      {
+        "id": "penn-room",
+        "kind": "room",
+        "text": "Provider lists two-bedroom, one-bedroom, studio, memory companion and memory studio plans; furnished apartments are offered by inquiry.",
+        "sourceId": "penn-main",
+        "amount": null
+      },
+      {
+        "id": "penn-cost",
+        "kind": "cost",
+        "text": "Monthly-rent inclusions are described but no numeric location rent or care-price schedule is established.",
+        "sourceId": "penn-main",
+        "amount": null
+      },
+      {
+        "id": "penn-amen",
+        "kind": "amenity",
+        "text": "Bistro, library, salon, entertainment/private dining, patio, fitness space and Alexa technology are listed.",
+        "sourceId": "penn-main",
+        "amount": null
+      },
+      {
+        "id": "penn-dining",
+        "kind": "dining",
+        "text": "Brochure lists three daily chef meals and dining 7am–7pm, with seasonal ingredients and dietary accommodation.",
+        "sourceId": "penn-pdf",
+        "amount": null
+      },
+      {
+        "id": "penn-act",
+        "kind": "activity",
+        "text": "Brochure lists concerts, lectures, book discussions, gardening, exercise, crafts, intergenerational events and cultural trips.",
+        "sourceId": "penn-pdf",
+        "amount": null
+      },
+      {
+        "id": "penn-service",
+        "kind": "amenity",
+        "text": "Housekeeping/linens, scheduled transport, maintenance and 24-hour staffing/security are described.",
+        "sourceId": "penn-main",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites availability inquiries; floor plans and general furnished-suite offers do not establish a dated specific vacancy.",
+      "sourceId": "penn-main",
+      "asOf": null
+    },
+    "notes": [
+      "Official 276 Whiting Street matches catalog. Brochure URL is in 2025/07 and filename says 2024; actual publication/effective date not established.",
+      "Furnished-apartment offer is not treated as available inventory."
+    ]
+  },
+  {
+    "providerId": "ma-alr-windrose-at-weymouth",
+    "checkedAt": "2026-11-12",
+    "sources": [
+      {
+        "id": "wind-price",
+        "url": "https://windroseweymouth.com/pricing/",
+        "title": "Windrose at Weymouth pricing",
+        "publisher": "Windrose at Weymouth",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "All prices as of February 2026 – subject to change."
+      },
+      {
+        "id": "wind-care",
+        "url": "https://windroseweymouth.com/memory-care-weymouth/",
+        "title": "Windrose Weymouth memory care",
+        "publisher": "Windrose at Weymouth",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Chef-prepared meals and snacks"
+      },
+      {
+        "id": "wind-main",
+        "url": "https://windroseweymouth.com/",
+        "title": "Windrose at Weymouth",
+        "publisher": "Windrose at Weymouth",
+        "kind": "provider",
+        "checkedAt": "2026-11-12",
+        "publishedAt": null,
+        "access": "full-page",
+        "excerpt": "Move-In Ready Furnished Memory Care Suites"
+      }
+    ],
+    "facts": [
+      {
+        "id": "wind-full",
+        "kind": "cost",
+        "text": "Private studio/full bath starts monthly; provider says base rent includes 60 daily personal-care minutes and medication administration.",
+        "sourceId": "wind-price",
+        "amount": {
+          "min": 9195,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-02"
+        }
+      },
+      {
+        "id": "wind-half",
+        "kind": "cost",
+        "text": "Private studio/half bath published starting monthly rate.",
+        "sourceId": "wind-price",
+        "amount": {
+          "min": 8795,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-02"
+        }
+      },
+      {
+        "id": "wind-comp",
+        "kind": "cost",
+        "text": "Companion suite published starting monthly rate.",
+        "sourceId": "wind-price",
+        "amount": {
+          "min": 7995,
+          "max": null,
+          "currency": "USD",
+          "period": "month",
+          "type": "base-rent",
+          "asOf": "2026-02"
+        }
+      },
+      {
+        "id": "wind-room",
+        "kind": "room",
+        "text": "Private full-/half-bath studios and companion suites are listed; furnished suites are separately offered with price by inquiry.",
+        "sourceId": "wind-price",
+        "amount": null
+      },
+      {
+        "id": "wind-care",
+        "kind": "care",
+        "text": "Specialized dementia care with individual plans and a secure environment is advertised.",
+        "sourceId": "wind-care",
+        "amount": null
+      },
+      {
+        "id": "wind-dining",
+        "kind": "dining",
+        "text": "Chef meals and snacks are listed.",
+        "sourceId": "wind-care",
+        "amount": null
+      },
+      {
+        "id": "wind-amen",
+        "kind": "amenity",
+        "text": "Sunroom, courtyard, activity room, housekeeping/laundry and secure outdoor spaces are advertised.",
+        "sourceId": "wind-care",
+        "amount": null
+      },
+      {
+        "id": "wind-activity",
+        "kind": "activity",
+        "text": "Life enrichment, social/cognitive engagement, creativity, movement and wellness opportunities are described.",
+        "sourceId": "wind-care",
+        "amount": null
+      }
+    ],
+    "availability": {
+      "status": "inquiry-only",
+      "text": "Provider invites availability inquiries; floor plans and general furnished-suite offers do not establish a dated specific vacancy.",
+      "sourceId": "wind-price",
+      "asOf": null
+    },
+    "notes": [
+      "Exact 670 Main Street/phone matches catalog; official ZIP is 02190 versus catalog 02188.",
+      "Pricing explicitly as of February 2026 and subject to change; furnished-suite promotion is not independently confirmed inventory."
+    ]
+  }
+]

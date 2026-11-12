@@ -5,12 +5,13 @@ The current user flow is landing → browser-local workspace without sign-in →
 ## Latest check results · November 12, 2026
 
 - Production build and ESLint: pass.
-- 39 data, input-validation and actual local SQL tests: pass.
-- 24 desktop/mobile browser scenarios: pass, including direct entry without sign-in, old account URLs redirecting to the local workspace, real evidence, save/reload and failed-request recovery.
+- 59 data, scoring, input-validation and actual local SQL tests: pass.
+- 34 desktop/mobile browser scenarios: pass, including direct entry without sign-in, old account URLs redirecting to the local workspace, real evidence, save/reload, research filters, review scores, pricing periods, future effective dates and failed-request recovery.
+- Eight additional research-tab accessibility states: no violations returned. The close control remains visible after scrolling long details; desktop and mobile screenshots were visually reviewed.
 - Twelve public/dashboard accessibility checks plus eight scrolled evidence, comparison and map states: no violations returned after contrast fixes.
 - Production dependency audit: no known vulnerabilities reported.
 - Catalog, inspection and home-health evidence rebuilds: byte-identical.
-- Hosted Vercel smoke check: pass at 01:56 UTC. Direct dashboard access, 521-record catalog, 57 nursing-home results within 10 miles of 02459, inspection and home-health endpoints, shortlist save/reload, legacy account redirects, mobile layout and anonymous workspace denial all passed with no uncaught browser errors.
+- Previous hosted baseline: pass at 01:56 UTC. Direct dashboard access, 521-record catalog, 57 nursing-home results within 10 miles of 02459, inspection and home-health endpoints, shortlist save/reload, legacy account redirects, mobile layout and anonymous workspace denial all passed with no uncaught browser errors. The expanded hosted check also covers the research endpoint, consumer score, availability evidence, category sorting and review/price tabs; its latest result is written to the local `artifacts/hosted-smoke.json` report.
 
 ## Completed locally
 
@@ -20,6 +21,7 @@ The current user flow is landing → browser-local workspace without sign-in →
 - Care-category separation, missing/zero preservation and nursing-only CMS sorting.
 - Campus identities remain separate from licensed care units. No campus CMS rating is inferred. Two approximate campus points use the exact published Census ZIP values with explicit labels.
 - Bounded inspection APIs use real CMS records, preserve dates and codes, sort newest first and distinguish absent data from a published zero.
+- Location research validates exact catalog identities and linked sources. Tests cover score eligibility, source deduplication, stale evidence, exclusion of snippets/ambiguous populations, missing prices, availability status and retry behavior. Selected review excerpts cannot alter numerical scores.
 - Home-health evidence preserves seven exact agency identities, clinical half stars, five survey measures, seven clinical measures and actual reporting periods. VNA's two agency results remain separate. Synthetic missing values, long footnotes, stale responses and retry states were also checked in the browser.
 - Workspace validation rejects forged ownership, malformed dates, unsupported statuses, duplicate IDs, prototype keys and oversized input.
 - Callback redirects remain on the current app origin. Same-origin writes are accepted at the origin gate; cross-site writes are rejected.
