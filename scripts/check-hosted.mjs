@@ -1,12 +1,16 @@
 import { chromium, expect } from "@playwright/test";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 
 // Use a Vercel-authorized share URL when the deployment is protected. The URL
 // stays in this process; neither the share value nor cookies enter the report.
 const entry = process.env.HARBOR_PREVIEW_URL;
 if (!entry)
   throw new Error("Set HARBOR_PREVIEW_URL to the authorized preview URL.");
-const browser = await chromium.launch();
+const browser = await chromium.launch({
+  executablePath:
+    process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
+    (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
+});
 const context = await browser.newContext({
   viewport: { width: 1440, height: 1000 },
 });
@@ -82,6 +86,7 @@ try {
   expect(research.body.experience.value).toBe(7.4);
   expect(research.body.experience.confidence).toBe("limited");
   expect(research.body.experience.reviewCount).toBe(44);
+  expect(research.body.facebookResearch.findings.length).toBe(5);
   expect(research.body.availability.status).toBe("waitlist-published");
   expect(
     research.body.facts.some(
@@ -98,6 +103,24 @@ try {
       (p) => p.distanceMiles <= 50 && p.research.experience.value !== null,
     ),
   ).toBe(true);
+  const coverage = await get("/api/research-coverage");
+  expect(coverage.status).toBe(200);
+  expect(coverage.body.total).toBe(521);
+  expect(coverage.body.scored).toBe(122);
+  expect(coverage.body.unscored).toBe(399);
+  expect(coverage.body.facebookCovered).toBe(22);
+  expect(coverage.body.facebookWithFindings).toBe(10);
+  const checklist = await page.evaluate(async () => {
+    const response = await fetch("/api/research-coverage?format=csv");
+    return {
+      status: response.status,
+      text: await response.text(),
+      disposition: response.headers.get("content-disposition"),
+    };
+  });
+  expect(checklist.status).toBe(200);
+  expect(checklist.disposition).toContain("attachment;");
+  expect(checklist.text.split("\r\n").length).toBe(523);
 
   await page
     .locator("form.quick-search")
@@ -127,11 +150,9 @@ try {
     .locator("form.research-search")
     .getByRole("button", { name: "Search", exact: true })
     .click();
-  const sunrise = page
-    .locator("article.provider-card")
-    .filter({
-      has: page.getByRole("button", { name: "Sunrise of Newton", exact: true }),
-    });
+  const sunrise = page.locator("article.provider-card").filter({
+    has: page.getByRole("button", { name: "Sunrise of Newton", exact: true }),
+  });
   await sunrise.getByRole("button", { name: "View evidence" }).click();
   const dialog = page.getByRole("dialog");
   await dialog
@@ -145,6 +166,40 @@ try {
     .click();
   await expect(dialog.locator(".offering-price").first()).toBeVisible();
   await dialog.getByRole("button", { name: "Close dialog" }).click();
+
+  await page.goto(origin + "/dashboard?demo=1");
+  await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
+  await page
+    .getByRole("combobox", { name: "Search radius" })
+    .selectOption("50");
+  await page
+    .locator("form.quick-search")
+    .getByRole("button", { name: "Find care" })
+    .click();
+  await page
+    .getByRole("combobox", { name: "Research filter" })
+    .selectOption("facebook");
+  const brooksbyCard = page.locator("article.provider-card").filter({
+    has: page.getByRole("button", { name: "Brooksby Village", exact: true }),
+  });
+  await expect(brooksbyCard).toContainText("Facebook findings");
+  await brooksbyCard.getByRole("button", { name: "View evidence" }).click();
+  const facebookDialog = page.getByRole("dialog");
+  await facebookDialog
+    .locator(".research-tabs")
+    .getByRole("button", { name: "Reviews", exact: true })
+    .click();
+  const facebook = facebookDialog.locator(".fb-research");
+  await expect(facebook.locator(".fb-research-finding")).toHaveCount(3);
+  await facebook.getByRole("button", { name: /Show all/ }).click();
+  await expect(facebook.locator(".fb-research-finding")).toHaveCount(5);
+  await expect(facebook).toContainText("These findings do not affect");
+  mkdirSync("artifacts", { recursive: true });
+  await page.screenshot({
+    path: "artifacts/hosted-facebook.png",
+    fullPage: true,
+  });
+  await facebookDialog.getByRole("button", { name: "Close dialog" }).click();
 
   for (const path of ["/signup", "/login", "/dashboard"]) {
     await page.goto(origin + path);
@@ -189,6 +244,12 @@ try {
       availability: research.body.availability.status,
       categoryReviewResults: reviewed.body.providers.length,
       tabsVerified: true,
+      scoredLocations: coverage.body.scored,
+      unratedLocations: coverage.body.unscored,
+      facebookCovered: coverage.body.facebookCovered,
+      facebookWithFindings: coverage.body.facebookWithFindings,
+      facebookExpansionVerified: true,
+      csvLocations: 521,
     },
     anonymousWorkspaceStatus: anonymous.status,
     appSignInRequired: false,

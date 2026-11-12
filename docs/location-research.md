@@ -9,13 +9,15 @@ The November 12, 2026 research pass adds four sections to each location: Life he
 | At least one sourced fact                                     |       521 |
 | Provider pages reviewed for detailed offerings                |        86 |
 | Published positive dollar amounts with a known billing period |        35 |
-| Review aggregates found, including excluded sources           |        17 |
+| Review aggregates found, including excluded sources           |       311 |
 | Selected public review accounts                               |        16 |
-| Eligible consumer experience score                            |         6 |
+| Eligible consumer experience score                            |       122 |
 | Published opening claims                                      |         7 |
 | Published waitlist or priority-list claims                    |         8 |
 
-These groups overlap. The six scores all have limited evidence under the current policy. The remaining locations are unrated. Counts reflect this snapshot, and score eligibility changes as sources age.
+These groups overlap. All 122 scores have limited evidence under the current policy: 87 assisted-living residences, 32 nursing homes and three continuing-care campuses. The other 399 locations remain unrated: 122 have fewer than ten eligible reported reviews, 67 need source or identity checks, and 210 have no retained rating aggregate. These are evidence gaps, not judgments about care. Counts reflect November 12, 2026 and change as sources age.
+
+The free-source expansion attempted all 521 catalog locations. It concentrated on Caring.com and A Place for Mom with selected additional public sources; this was not an exhaustive search of every platform. The dashboard also has 31 curated Facebook findings across ten locations and coverage explanations for 22 entities. See the [Facebook publication audit](facebook-publication.md) and [research coverage record](review-coverage-2026-11-12.md).
 
 The broad baseline includes CMS capacity and historical resident averages for 280 nursing homes, plus state capacity figures for 221 assisted-living residences. Three assisted-living records lack a matching capacity row. Those facts help describe a location's size; they cannot establish open rooms. Detailed provider research covers western suburbs, selected North and South Shore residences, seven continuing-care campuses, ten home-service organizations and fifteen nursing homes. Coverage is incomplete and is not a random sample of providers.
 
@@ -49,8 +51,10 @@ Selected accounts keep a source link, date where known and self-described relati
 
 ## Rebuild and next steps
 
-`src/data/inputs/location-research/` retains seven reviewed input files. `python scripts/prepare-location-research.py` validates references and exact catalog IDs, then writes the combined snapshot and coverage counts. This is an offline rebuild. Running it does not retrieve new evidence or advance source dates.
+`src/data/inputs/location-research/` retains source-linked research inputs, including four partitioned expansion files. `python scripts/prepare-location-research.py` validates references and exact catalog IDs, then writes the combined snapshot and coverage counts. This is an offline rebuild. Running it does not retrieve new evidence or advance source dates.
 
-`GET /api/research?id=<catalog-id>` returns one location and its score calculated for the request's UTC date. Search and saved-provider responses include a compact summary. Research filters select reviewed details, published prices, opening claims or eligible review scores. Experience sorting requires a care category and always preserves the geographic radius. Missing scores remain discoverable.
+`GET /api/research?id=<catalog-id>` returns one location and its score calculated for the request's UTC date. Search and saved-provider responses include a compact summary. Research filters select reviewed details, published prices, opening claims, eligible review scores, Facebook findings or locations still needing a score. Experience sorting requires a care category and always preserves the geographic radius. Missing scores remain discoverable.
 
-The next pass should broaden exact-location review coverage, reconcile address discrepancies and retain rating distributions when a permitted source provides them. A refresh service needs source checksums, separate retrieval and effective dates, and a review queue for changed identities or contradictory claims. Before using sentiment extraction to recommend care, evaluate it against care-manager assessments and test for differences in source coverage across neighborhoods and care settings.
+`GET /api/research-coverage` returns the current state of every catalog location; `?format=csv` downloads the same checklist, including source URLs and a next research action. Missing scores stay blank. The Facebook data is a separate editorial projection in `src/data/facebook-research.json`; rebuilding location research does not publish pending raw observations.
+
+The next pass should add independent sources for scored locations, resolve the checklist’s identity/access gaps, and retain rating distributions when a permitted source provides them. A refresh service needs source checksums, separate retrieval and effective dates, and a review queue for changed identities or contradictory claims. Before using sentiment extraction to recommend care, evaluate it against care-manager assessments and test for differences in source coverage across neighborhoods and care settings.

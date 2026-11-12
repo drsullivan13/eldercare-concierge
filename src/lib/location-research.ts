@@ -1,5 +1,6 @@
 import researchData from "@/data/location-research.json";
 import { computeExperienceScore } from "./experience-score";
+import { getFacebookResearch, getFacebookSummary } from "./facebook-research";
 import type {
   LocationResearch,
   LocationResearchResponse,
@@ -29,6 +30,7 @@ export function getLocationResearch(
   const record = records[providerId];
   return {
     ...record,
+    facebookResearch: getFacebookResearch(providerId),
     experience: computeExperienceScore({
       sources: record.sources,
       reviewAggregates: record.reviewAggregates,
@@ -48,6 +50,7 @@ export function getResearchSummary(
     (s) => s.id === record.availability.sourceId,
   );
   return {
+    facebookResearch: getFacebookSummary(providerId),
     detailsAvailable: record.providerDetailsReviewed,
     publishedCosts: record.facts.filter(
       (f) => f.kind === "cost" && f.amount && f.amount.min > 0,

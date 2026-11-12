@@ -1,0 +1,166 @@
+.fb-research {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line, #e4e7e1);
+  color: var(--ink, #1c3437);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.fb-research .fb-research-heading,
+.fb-research .fb-research-finding-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.fb-research .fb-research-heading h4 {
+  margin: 0;
+}
+.fb-research .fb-research-status,
+.fb-research .fb-research-topics li {
+  background: var(--teal-pale, #eaf2ee);
+  border: 1px solid #c8d9d1;
+  border-radius: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.78rem;
+  color: #254c44;
+}
+.fb-research p {
+  margin: 0.65rem 0;
+  line-height: 1.6;
+}
+.fb-research .fb-research-caution {
+  border-left: 3px solid var(--teal, #246b61);
+  background: #f0f5f0;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.86rem;
+}
+.fb-research .fb-research-dates,
+.fb-research .fb-research-basis,
+.fb-research .fb-research-counts,
+.fb-research .fb-research-result-count,
+.fb-research .fb-research-relationship,
+.fb-research .fb-research-source-note,
+.fb-research .fb-research-finding-meta span,
+.fb-research .fb-research-limits {
+  color: #4c6060;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.fb-research .fb-research-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.8rem;
+  margin-top: 1rem;
+}
+.fb-research .fb-research-controls label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.fb-research select {
+  min-height: 44px;
+  max-width: 100%;
+  border: 1px solid #899d94;
+  border-radius: 0.45rem;
+  background: white;
+  color: #1c3437;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  font-size: 0.85rem;
+}
+.fb-research .fb-research-findings {
+  display: grid;
+  gap: 0.8rem;
+}
+.fb-research .fb-research-finding {
+  padding: 1rem;
+  border: 1px solid #d9e1d9;
+  border-radius: 0.65rem;
+  background: white;
+  min-width: 0;
+}
+.fb-research .fb-research-finding-meta strong {
+  font-size: 0.85rem;
+}
+.fb-research .fb-research-topics {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0;
+  margin: 0.7rem 0;
+}
+.fb-research .fb-research-limits {
+  padding-left: 1.1rem;
+  margin: 0.6rem 0;
+}
+.fb-research .fb-research-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+.fb-research .fb-research-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 36px;
+  color: #205c51;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.83rem;
+}
+.fb-research .fb-research-additional {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+.fb-research .fb-research-additional summary {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.fb-research .fb-research-coverage,
+.fb-research .fb-research-context {
+  font-size: 0.83rem;
+}
+.fb-research .fb-research-coverage summary,
+.fb-research .fb-research-context summary {
+  cursor: pointer;
+  min-height: 36px;
+  padding: 0.5rem 0;
+  color: #3f5e53;
+}
+.fb-research .fb-research-additional a {
+  color: #205c51;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0;
+}
+.fb-research .fb-research-toggle {
+  margin-top: 1rem;
+  min-height: 44px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #647f72;
+  border-radius: 0.45rem;
+  background: white;
+  color: #205c51;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.fb-research :is(a, button, select, summary):focus-visible {
+  outline: 3px solid #246b61;
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .fb-research .fb-research-controls {
+    display: grid;
+  }
+  .fb-research select {
+    width: 100%;
+  }
+  .fb-research .fb-research-finding {
+    padding: 0.8rem;
+  }
+}

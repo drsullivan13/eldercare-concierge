@@ -8,6 +8,7 @@ import {
   HeartHandshake,
   Hospital,
   MapPin,
+  MessageSquare,
   ShieldAlert,
   Star,
 } from "lucide-react";
@@ -131,7 +132,7 @@ export function ProviderCard({
       )}
       {provider.research && (
         <div className="provider-research-summary">
-          {provider.research.experience.value !== null && (
+          {provider.research.experience.value !== null ? (
             <span className="experience-card-score">
               <strong>
                 {provider.research.experience.value.toFixed(1)}
@@ -145,8 +146,27 @@ export function ProviderCard({
                 </small>
               </span>
             </span>
+          ) : (
+            <span className="experience-card-unrated">
+              <MessageSquare size={18} aria-hidden="true" />
+              <span>
+                Experience score not yet available
+                <small>
+                  {provider.research.experience.reviewCount > 0
+                    ? `${provider.research.experience.reviewCount} eligible reviews reported · more evidence needed`
+                    : "Rating evidence still needed"}
+                </small>
+              </span>
+            </span>
           )}
           <div className="research-coverage-tags">
+            {provider.research.facebookResearch && (
+              <span>
+                {provider.research.facebookResearch.findingCount > 0
+                  ? `Facebook findings · ${provider.research.facebookResearch.findingCount}`
+                  : "Facebook search coverage available"}
+              </span>
+            )}
             {provider.research.detailsAvailable && (
               <span>Offerings researched</span>
             )}

@@ -15,16 +15,16 @@ A Greater Boston elder-care research and coordination proof of concept. Families
 - Source links, source dates, published staffing metrics, actual CMS inspection findings and penalty events, explicit unknowns and provider follow-up questions.
 - CMS home-health clinical-quality ratings and patient surveys for seven certified agencies across six organizations, with response counts, response rates, five experience measures and separate clinical measures.
 - Location details for 86 providers, published prices with billing periods at 35, and dated observations of public opening and waitlist claims.
-- Public review evidence at 17 locations, with six provisional consumer experience scores out of ten. Source links, exclusions and limited-coverage labels accompany the scores.
-- Research filters, category-specific consumer-score sorting, and separate Life here, Rooms & costs, Availability and Reviews tabs.
+- Public review aggregates at 311 locations, with 122 provisional consumer experience scores out of ten. All currently have limited source coverage; source links and exclusions accompany each score.
+- Research filters, category-specific consumer-score sorting, and separate Life here, Rooms & costs, Availability and Reviews tabs. Facebook and unrated filters plus a downloadable 521-location checklist make research gaps visible.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
 - A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
 - A private research collection service with a 521-record registry, source coverage, daily CMS checks, retries, request budgets and a review queue. A completed Yelp evaluation checked listing identity and API access without retaining review content; Yelp collection is now paused under the free-sources-only plan.
-- A strict CSV importer for Facebook research batches. The first 71-observation pilot is privately staged for review; it has not changed public evidence or scores.
+- A strict CSV importer for Facebook research batches, plus 31 curated findings across 10 locations in the Reviews tab. Promotion, recommendations, tours and resident/family accounts are labeled separately; 32 unresolved or unsuitable observations remain withheld. Facebook findings never change scores.
 
 Published offerings and consumer reviews are a research snapshot. Current vacancies and personalized prices still require confirmation. Individual caregivers have not been vetted, reference checks have not been completed, and no automated social-review feeds are connected. The consumer experience index summarizes eligible published ratings; clinical and regulatory evidence remains separate. See [location research coverage](docs/location-research.md) and [the score policy](docs/experience-score.md).
 
-Collection setup and operating queries are in [research automation](docs/research-automation.md). Read [the Facebook pilot review](docs/facebook-pilot-review.md) before using that batch, and [data access](docs/data-access.md) for the requirements and inquiry draft for licensed review analysis.
+Collection setup and operating queries are in [research automation](docs/research-automation.md). Read [the Facebook publication audit](docs/facebook-publication.md) for the current editorial selection and [the pilot import review](docs/facebook-pilot-review.md) for the original private batch, and [data access](docs/data-access.md) for the requirements and inquiry draft for licensed review analysis.
 
 ## Run locally
 
@@ -63,7 +63,7 @@ The app fails closed when account infrastructure is unavailable. Signup is disab
 
 ## Data and ordering
 
-The catalog is a **November 11, 2026 research snapshot**. CMS nursing-home processing date is October 1; its release date is October 28. Massachusetts directory records and the June 25 certified-residence spreadsheet are separate evidence. Home-health records and agency websites have their own dates.
+The catalog starts with a **November 11, 2026 research snapshot**, with eight provider-confirmed address corrections dated November 12. Original state records and map coordinates are retained. CMS nursing-home processing date is October 1; its release date is October 28. Massachusetts directory records and the June 25 certified-residence spreadsheet are separate evidence. Home-health records and agency websites have their own dates.
 
 Facility coverage is Massachusetts locations within 55 straight-line miles of central Boston. Search origins are Massachusetts ZIPs inside that pilot region, and the selectable radius is 1–50 miles. A search near the boundary is clipped by the catalog's coverage; no result is not proof that no care exists.
 

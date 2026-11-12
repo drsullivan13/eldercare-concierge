@@ -108,6 +108,14 @@ def main():
   out+=[adapt_home(r) for r in extra['providers']]
  lifeplan=INPUTS/'lifeplan.json'
  if lifeplan.exists():out+=[adapt_lifeplan(r) for r in load(lifeplan)['providers']]
+ corrections=INPUTS/'provider-corrections.json'
+ if corrections.exists():
+  by_id={p['id']:p for p in out}
+  for correction in load(corrections):
+   p=by_id[correction['providerId']]
+   if p['zip'] != correction['originalZip'] or p['address'] != correction['originalAddress']:raise ValueError('Address correction needs re-review: '+p['id'])
+   p['zip']=correction['zip'];p['address']=correction['address']
+   p['sources'].append(correction['source']);p['limitations'].append(correction['note'])
  ids=[p['id'] for p in out]
  if len(ids)!=len(set(ids)):raise ValueError('Duplicate provider IDs')
  for p in out:

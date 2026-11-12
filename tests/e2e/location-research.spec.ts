@@ -249,7 +249,7 @@ test("actual review sources, excluded populations and selected family accounts n
   for (const id of [
     "lifeplan-carleton-willard-village",
     "ma-alr-maplewood-at-weston",
-    "lifeplan-fox-hill-village",
+    "ma-alr-adelaide-of-newton-centre",
   ]) {
     dialog = await openLocation(page, id);
     panel = await tab(dialog, "Reviews");
@@ -298,14 +298,12 @@ test("research filtering and experience sorting retain category rules and select
         exact: true,
       }),
     ).toBeVisible();
-  const availability = dialog
-    .getByRole("row")
-    .filter({
-      has: page.getByRole("rowheader", {
-        name: "Current availability",
-        exact: true,
-      }),
-    });
+  const availability = dialog.getByRole("row").filter({
+    has: page.getByRole("rowheader", {
+      name: "Current availability",
+      exact: true,
+    }),
+  });
   await expect(availability.getByRole("cell")).toHaveText([
     "Not confirmed",
     "Not confirmed",

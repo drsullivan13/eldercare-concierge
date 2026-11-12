@@ -8,6 +8,7 @@ import {
   Plus,
 } from "lucide-react";
 import Link from "next/link";
+import { FacebookResearch } from "./facebook-research";
 import type {
   LocationResearchResponse,
   OfferingFact,
@@ -371,6 +372,10 @@ export function LocationResearch({
                 >
                   How this score works <ExternalLink size={13} />
                 </Link>
+                <FacebookResearch
+                  key={providerId}
+                  research={data.facebookResearch}
+                />
                 <h4>What each source reports</h4>
                 {!data.reviewAggregates.length && (
                   <p className="research-empty">

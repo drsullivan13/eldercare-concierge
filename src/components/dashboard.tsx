@@ -896,6 +896,8 @@ function WorkspaceDashboard({
                       <option value="pricing">Published costs</option>
                       <option value="openings">Published opening claims</option>
                       <option value="reviews">Has experience score</option>
+                      <option value="facebook">Facebook findings</option>
+                      <option value="unrated">Needs experience score</option>
                     </select>
                   </label>
                   <label className="sort-label">
@@ -942,6 +944,35 @@ function WorkspaceDashboard({
               {searchError && (
                 <div role="alert" className="form-error">
                   {searchError}
+                </div>
+              )}
+              {!loading && data?.experienceCoverage && (
+                <div
+                  className="experience-coverage"
+                  aria-label="Experience research coverage"
+                >
+                  <div>
+                    <strong>
+                      {data.experienceCoverage.scored} of {data.total}
+                    </strong>
+                    <span> results have an experience score</span>
+                  </div>
+                  <div>
+                    <strong>{data.experienceCoverage.facebookFindings}</strong>
+                    <span> locations with Facebook findings</span>
+                  </div>
+                  <p>
+                    Unrated means more evidence is needed. Facebook findings add
+                    context; selected posts do not change the score.
+                  </p>
+                  <a
+                    className="text-link"
+                    href="/api/research-coverage?format=csv"
+                    download
+                  >
+                    Download catalog research checklist{" "}
+                    <ArrowUpRight size={14} />
+                  </a>
                 </div>
               )}
               {!loading && (sort === "experience" || evidence !== "all") && (

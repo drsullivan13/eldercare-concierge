@@ -97,7 +97,17 @@ export function searchProviders(
     );
   const query = (opts.q ?? "").trim().toLocaleLowerCase("en-US");
   const evidence = opts.evidence ?? "all";
-  if (!["all", "details", "pricing", "openings", "reviews"].includes(evidence))
+  if (
+    ![
+      "all",
+      "details",
+      "pricing",
+      "openings",
+      "reviews",
+      "facebook",
+      "unrated",
+    ].includes(evidence)
+  )
     throw new SearchInputError("Choose a supported research filter.");
   if (query.length > 200)
     throw new SearchInputError("Search text must be 200 characters or fewer.");
@@ -117,6 +127,13 @@ export function searchProviders(
     )
       continue;
     if (evidence === "reviews" && provider.research?.experience.value == null)
+      continue;
+    if (evidence === "unrated" && provider.research?.experience.value != null)
+      continue;
+    if (
+      evidence === "facebook" &&
+      !provider.research?.facebookResearch?.findingCount
+    )
       continue;
     if (
       query &&
@@ -170,6 +187,18 @@ export function searchProviders(
     asOf: meta.asOf,
     categories,
     excludedWithoutCoordinates,
+    experienceCoverage: {
+      scored: providers.filter((p) => p.research?.experience.value != null)
+        .length,
+      unscored: providers.filter((p) => p.research?.experience.value == null)
+        .length,
+      facebookFindings: providers.filter(
+        (p) => (p.research?.facebookResearch?.findingCount ?? 0) > 0,
+      ).length,
+      facebookCovered: providers.filter((p) =>
+        Boolean(p.research?.facebookResearch),
+      ).length,
+    },
   };
 }
 export function getProvidersByIds(ids: readonly string[]): Provider[] {

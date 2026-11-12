@@ -2,7 +2,18 @@
 
 The current user flow is landing → browser-local workspace without sign-in → ZIP/radius search → actual provider evidence → shortlist/comparison/notes → coordination tasks → persisted reload. Accounts are deferred and hidden behind `NEXT_PUBLIC_ENABLE_ACCOUNTS=false`.
 
-## Latest check results · November 12, 2026
+## Facebook and score expansion · November 12, 2026
+
+- Production build and TypeScript: pass, including the final plain-language Facebook copy. ESLint: pass.
+- All 110 data, API, scoring, import, collection and actual local PostgreSQL tests passed. The four Facebook tests passed again after the copy edit.
+- All 40 desktop/mobile browser scenarios passed: 34 existing flows plus six Facebook/coverage cases. The new cases exercise live local APIs, finding filters, keyboard expansion, source links, distinct missing states, the geographic filters and the 521-row CSV download.
+- Scoped axe checks returned zero violations across five Facebook states on desktop/mobile. Expanded findings screenshots were visually inspected; neither viewport had horizontal overflow. A duplicate-name test selector was corrected to distinguish a campus from its separate assisted-living unit; no application behavior was changed for that test fix.
+- Independently reviewed frozen research inputs produce 122 numerical scores, all with limited source coverage. Known wrong-unit, industry-mixed, snippet-only and syndicated populations remain excluded. The same source-family rules and ten-review threshold apply.
+- The Facebook projection contains 31 findings from 39 observations across ten locations, with 32 observations withheld and coverage for 22 entities. The original importer still treats all 71 raw observations as pending; the separate [publication audit](facebook-publication.md) records the editorial projection and its limits.
+- Eight provider-confirmed address corrections were applied to both the local catalog and private Supabase registry. The database check confirmed zero enabled Yelp sources afterward.
+- The hosted check for this release is recorded below after publication.
+
+## Earlier baseline checks · November 12, 2026
 
 - Production build and ESLint: pass.
 - 102 data, scoring, import, collection, worker-ticket, input-validation and actual local SQL tests: pass.
@@ -12,7 +23,7 @@ The current user flow is landing → browser-local workspace without sign-in →
 - Production dependency audit: no known vulnerabilities reported.
 - Catalog, inspection and home-health evidence rebuilds: byte-identical.
 - Hosted Vercel smoke check: pass at 10:52 UTC. Direct dashboard access, 521-record catalog, 57 nursing-home results within 10 miles of 02459, inspection and home-health endpoints, shortlist save/reload, legacy account redirects, mobile layout and anonymous workspace denial all passed with no uncaught browser errors. The research endpoint returned Brooksby's 7.4/10 score, 44 reported reviews and published waitlist; category sorting and Sunrise's review/price tabs also passed. The local report is `artifacts/hosted-smoke.json`.
-- Location-research snapshot rebuild: byte-identical. All six current numerical scores have limited evidence.
+- Location-research snapshot rebuild: byte-identical. All six numerical scores in that earlier snapshot had limited evidence.
 
 ## Completed locally
 

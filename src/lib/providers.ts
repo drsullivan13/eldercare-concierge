@@ -82,6 +82,12 @@ export type SearchResponse = {
   asOf: string;
   categories: Record<string, number>;
   excludedWithoutCoordinates: number;
+  experienceCoverage: {
+    scored: number;
+    unscored: number;
+    facebookFindings: number;
+    facebookCovered: number;
+  };
 };
 export function formatPhone(phone?: string) {
   if (!phone) return "";

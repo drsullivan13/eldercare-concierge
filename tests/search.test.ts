@@ -21,6 +21,36 @@ const raw = JSON.parse(
 );
 const origin = { lat: 42.350979, lng: -71.076591 }; // Published Census point for Boston 02116.
 
+test("provider-confirmed address corrections retain the state record and map point", () => {
+  const corrections = JSON.parse(
+    readFileSync(
+      new URL("../src/data/inputs/provider-corrections.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  for (const correction of corrections) {
+    const original = raw.find(
+      (row: { id: string }) => row.id === correction.providerId,
+    );
+    const provider = catalog.find((row) => row.id === correction.providerId)!;
+    assert.equal(original.address, correction.originalAddress);
+    assert.equal(original.zip, correction.originalZip);
+    assert.equal(provider.address, correction.address);
+    assert.equal(provider.zip, correction.zip);
+    assert.equal(provider.lat, original.latitude);
+    assert.equal(provider.lng, original.longitude);
+    assert.ok(
+      provider.sources.some(
+        (source) => source.url === original.source.facilityUrl,
+      ),
+    );
+    assert.ok(
+      provider.sources.some((source) => source.url === correction.source.url),
+    );
+    assert.ok(provider.limitations.includes(correction.note));
+  }
+});
+
 test("published Boston/Weston points give plausible symmetric straight-line miles", () => {
   const weston = { lat: 42.360068, lng: -71.303599 };
   const distance = distanceMiles(BOSTON, weston);
@@ -183,7 +213,7 @@ test("catalog retains source coverage, CMS flags and null/zero numeric meaning",
       provider.sources.every(
         (source) =>
           source.url.startsWith("https://") &&
-          source.checkedAt === "2026-11-11",
+          ["2026-11-11", "2026-11-12"].includes(source.checkedAt),
       ),
     );
     if (provider.category !== "nursing-home")

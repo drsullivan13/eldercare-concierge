@@ -218,12 +218,19 @@ test("actual consumer scores preserve source scope, no-review missingness and so
   assert.equal(brooksby.experience.confidence, "limited");
   for (const id of [
     "lifeplan-carleton-willard-village",
-    "lifeplan-fox-hill-village",
     "ma-alr-maplewood-at-weston",
     "ma-alr-waterstone-at-wellesley",
   ]) {
     assert.equal(getLocationResearch(id, asOf).experience.value, null, id);
   }
+  const foxHill = getLocationResearch("lifeplan-fox-hill-village", asOf);
+  assert.equal(foxHill.experience.value, 8.8);
+  assert.equal(foxHill.experience.reviewCount, 12);
+  assert.ok(
+    foxHill.experience.excludedSources.some((source) =>
+      /positive whole-number review count/.test(source.reason),
+    ),
+  );
   for (const record of Object.values(snapshot)) {
     const result = getLocationResearch(record.providerId, asOf).experience;
     assert.equal(

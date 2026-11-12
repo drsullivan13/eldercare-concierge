@@ -1,0 +1,5563 @@
+{
+  "checkedAt": "2026-11-12",
+  "catalogCount": 521,
+  "attemptedLocations": 521,
+  "scope": "Caring.com-directed research, A Place for Mom and selected other public pages. Exact-source opens count as attempts. Not an exhaustive platform search or a statement that unscored providers lack reviews.",
+  "inputHashes": [
+    {
+      "file": "src/data/inputs/location-research/expansion-boston-living.json",
+      "sha256": "fe52800408594d10637de7179809195fb5a1a2a0c8fd0bde18eb3e2d70f11204"
+    },
+    {
+      "file": "src/data/inputs/location-research/expansion-boston-nursing.json",
+      "sha256": "ac3fed2e3272549bc702571966a8ce426f4faf58fe65e9cd2f85c6579a13b27c"
+    },
+    {
+      "file": "src/data/inputs/location-research/expansion-region-living.json",
+      "sha256": "a3f122a9c9510d8d46063ca2e5c7e3e3aabbd34934c1a9db42644a1cc84f7e66"
+    },
+    {
+      "file": "src/data/inputs/location-research/expansion-region-nursing.json",
+      "sha256": "c37545adf12fba1f0014754f58e5e94ae58d87656f68894d13d2b2c63e431554"
+    }
+  ],
+  "locations": [
+    {
+      "providerId": "abc-home-healthcare",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "all-care",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-care/massachusetts/lynn/all-care-vna-hospice-home-care"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "bilh-at-home",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Beth Israel Lahey Health At Home\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "cms-225002",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Holden\" nursing reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225009",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hermitage\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/worcester/golden-livingcenter-the-hermitage-01602"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225014",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Spaulding Nursing\" \"Brighton\" reviews rating",
+        "site:caring.com \"Spaulding\" \"Brighton\" \"reviews\""
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched"
+    },
+    {
+      "providerId": "cms-225016",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Knollwood\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225038",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center\" \"Leominster\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225048",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Pilgrim\" \"Peabody\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/peabody/pilgrim-rehabilitation-and-skilled-nursing-center-01960"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225049",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Pine Knoll\" Lexington reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lexington/pine-knoll-nursing-center-02420"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225054",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"John Scott House\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/braintree/john-scott-house-nursing-and-rehabilitation-center-02184"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225058",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Royal Braintree\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/braintree/royal-braintree-nursing-and-rehabilitation-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225063",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Marlborough Hills\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/marlborough/marlborough-hills-healthcare-center-01752"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225067",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Wedgemere\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225080",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Rivercrest\" \"Concord\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225110",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Veterans Home\" \"Chelsea\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225117",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Royal Fairhaven\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225133",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Blueberry Hill\" \"Beverly\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/beverly/blueberry-hill-rehabilitation-healthcare-center"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225134",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sharon\" \"259 Norwood\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225137",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Dexter House\" \"Malden\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/malden/golden-livingcenter-dexter-house-02148"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225145",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Oakhill\" \"Middleboro\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225147",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:carelistings.com \"Saugus Center\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225154",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Mary Immaculate\" \"Lawrence\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225173",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Jewish Healthcare\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225179",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Casa de Ramana\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225184",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Webster Park\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/rockland/webster-park-rehabilitation-and-healthcare-center-rockland"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225185",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Country Gardens\" \"Swansea\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/swansea/country-gardens-skilled-nursing-and-rehabilitation-center-02777"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225191",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care\" \"Acton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/acton/life-care-center-of-acton-01720"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225194",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Kimwell\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225196",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Gardner\" \"59 Eastwood\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225198",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Twin Oaks\" \"Danvers\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/danvers/twin-oaks-care-and-rehabilitation-center-01923"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225199",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"119 Providence\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225201",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sherrill House\" reviews Boston"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/jamaica-plain/sherrill-house"
+      ],
+      "collectorOutcome": "searched_full_page_aggregate_blocked"
+    },
+    {
+      "providerId": "cms-225207",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Plymouth\" \"123 South\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225208",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Charlwell\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/norwood/charlwell-house-02062"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225210",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"River Terrace\" \"Lancaster\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225211",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Ellis Nursing\" \"Norwood\" reviews Caring"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/norwood/the-ellis-rehabilitation-and-nursing-center"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225215",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Southshore\" \"Rockland\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225216",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Fitchburg\" \"1199\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225218",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Oxford\" \"Haverhill\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225219",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"59 Acton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225221",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Champion\" \"Brockton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225222",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Newton Wellesley\" \"694\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225223",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Brentwood\" \"Danvers\" reviews Caring"
+      ],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/brentwood-rehabilitation-and-healthcare-center-77309",
+        "https://www.mylivingchoice.com/property/brentwood-rehabilitation-and-healthcare-ctr-the"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225224",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Care One\" \"Lowell\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225225",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Southeast Rehabilitation\" \"Easton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-easton/southeast-rehabilitation-and-skilled-care-center-02356"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225227",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"94 Summer\" \"Fitchburg\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225229",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Maplewood Center\" \"Amesbury\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/amesbury/maplewood-center-01913"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225233",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brandon Woods\" \"Dartmouth\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225242",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Westborough Healthcare\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/westborough/westborough-healthcare"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225248",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"85 Beaumont\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225254",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Queen Anne Nursing\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hingham/queen-anne-nursing-home-inc-02043"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225259",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"West Acres\" \"Brockton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225260",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Blaire House\" \"Milford\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milford/blaire-house-of-milford-adult-day-health-program",
+        "https://www.caring.com/senior-living/massachusetts/milford/blaire-house-of-milford-assisted-living-01757"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225264",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brandon Woods\" \"New Bedford\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225266",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Elizabeth Seton\" \"Wellesley\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225267",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Garden Place\" \"Attleboro\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225268",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Care One at Newton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newton/careone-at-newton-02462"
+      ],
+      "collectorOutcome": "searched_candidate_full_page_blocked"
+    },
+    {
+      "providerId": "cms-225270",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Essex Park\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/beverly/essex-park-rehabilitation-and-nursing-center-01915"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225271",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Port\" \"6 Hale\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225272",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Bear Hill\" \"Stoneham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/stoneham/bear-hill-healthcare-and-rehabilitation-center"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225273",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Carleton Willard\" reviews nursing"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/bedford/carleton-willard-village-01730"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225274",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:aplaceformom.com/community \"Brush Hill\"",
+        "site:caring.com \"Brush Hill\" \"Milton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milton/cooperative-elder-services-inc"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225275",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Beaumont\" \"Westborough\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/westborough/beaumont-rehab-and-skilled-nursing-ctr-westboro-01581"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225279",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Bay Path\" \"Duxbury\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/duxbury/bay-path-skilled-nursing-home-rehabilitation"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225281",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"North Hill\" \"Needham\" reviews nursing"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/needham/north-hill"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225282",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center\" \"South Shore\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/scituate/life-care-center-of-the-south-shore-02066"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225283",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Webster Manor\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/webster/webster-manor-rehabilitation-health-care-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225284",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Plymouth\" \"19 Obery\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225288",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Care One at Lexington\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lexington/lexington-health-care-center-lexington-ma-02420"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225290",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Haverhill\" \"126 Monument\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/haverhill/hannah-duston-healthcare-center-01832"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225293",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Southbridge Rehabilitation\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225294",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"89 Morton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/andover/academy-manor-01810"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225297",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lighthouse\" \"Revere\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/revere/lighthouse-nursing-care-center-02151"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225298",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Northwood\" \"Lowell\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lowell/northwood-rehabilitation-and-healthcare-center-01854"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225300",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Everett Nursing\" \"289\" Birdeye reviews",
+        "site:aplaceformom.com/community \"Everett\" \"289 Elm\"",
+        "site:caring.com \"Rehabilitation Nursing Center\" \"Everett\" \"Elm\"",
+        "site:reviews.birdeye.com \"Everett\" \"289 Elm\""
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225305",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"St Mary\" \"39 Queen\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225309",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Ledgewood\" \"Beverly\" reviews Caring"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/beverly/ledgewood-rehabilitation-skilled-nursing-center-beverly-01915",
+        "https://www.mylivingchoice.com/property/ledgewood-rehabilitation-and-nursing-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225312",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"447 Hill\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/whitinsville/blackstone-valley-health-and-rehabilitation-01588"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225315",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Highlands\" \"Fitchburg\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225317",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Fall River Jewish\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225318",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"22 Maple\" \"Amesbury\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/amesbury/mill-town-health-and-rehabilitation-01913"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225322",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sachem Center\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/east-bridgewater/sachem-center-for-health-rehabilitation"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225323",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Care One\" \"Peabody\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/peabody/careone-at-peabody-peabody-01960"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225324",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"West Newton\" \"Armory\""
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newton/golden-livingcenter-west-newton-02465"
+      ],
+      "collectorOutcome": "searched_candidate_full_page_blocked"
+    },
+    {
+      "providerId": "cms-225326",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Reservoir Center\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225328",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Oaks\" \"New Bedford\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/new-bedford/the-oaks-02745"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225329",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Melrose Healthcare\" reviews"
+      ],
+      "sourceUrls": [
+        "https://carelistings.com/skilled-nursing-facilities/melrose-ma/melrose-healthcare/5ace885a93efd2372f9821b6"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225332",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"180 Low Street\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225333",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Cedar View\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225334",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Oakdale\" \"Boylston\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225337",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Cape Heritage\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225339",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Medford Rehabilitation\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/medford/medford-rehabilitation-and-nursing-center"
+      ],
+      "collectorOutcome": "searched_opened_no_published_aggregate"
+    },
+    {
+      "providerId": "cms-225343",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Norwood Healthcare\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225344",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Abbott\" \"Lynn\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225348",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Bourne Manor\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225355",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"44 Keystone\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/leominster/leominster-rehabilitation-and-nursing-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225356",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Careone at Randolph\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225357",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:carelistings.com \"Winchester Rehabilitation\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225366",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hathaway Manor\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/new-bedford/hathaway-manor-extended-care-02740"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225367",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brookhaven\" \"Lexington\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lexington/brookhaven-at-lexington-02421"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225370",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:carelistings.com \"Chestnut Woods\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225376",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Penacook Place\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/haverhill/penacook-place-inc-01830"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225378",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Neville Center\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/cambridge/neville-center-at-fresh-pond-for-nursing-and-rehab-02138"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225379",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lutheran\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225382",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Guardian Center\" \"Brockton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/brockton/guardian-center-02301"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225385",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Christopher House\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/worcester/christopher-house-of-worcester-01605"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225387",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Alden Court\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225388",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Baldwinville\" reviews nursing"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225389",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sacred Heart\" \"New Bedford\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225390",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Parsons Hill\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225394",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Woburn Rehabilitation\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/woburn/woburn-rehabilitation-and-nursing-center-01801"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225395",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lanessa\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225398",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Devereux\" \"Marblehead\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225400",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"One Bathol\" reviews nursing",
+        "site:caring.com \"RegalCare\" \"Wakefield\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225401",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lakeview House\" \"Haverhill\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225402",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Clifton Rehabilitation\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/somerset/clifton-rehabilitation-nursing-center-02725"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225403",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Coleman\" \"Northborough\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225404",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Aspen Hill\" \"Haverhill\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225408",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Maristhill\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/waltham/maristhill-nursing-and-rehabilitation-center"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225409",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Nevins\" \"Methuen\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225411",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lafayette\" \"Marblehead\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225412",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Medway Country Manor\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/medway/medway-country-manor-skilled-nursing-and-rehabilitation-02053"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225413",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"111 Orient\" reviews nursing Caring",
+        "\"The Center at Advocate\" reviews",
+        "site:aplaceformom.com/community \"Center at Advocate\"",
+        "site:caring.com \"Center at Advocate\" nursing reviews",
+        "site:reviews.birdeye.com \"The Center at Advocate\""
+      ],
+      "sourceUrls": [
+        "https://www.mylivingchoice.com/property/the-center-at-advocate"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225414",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"St Joseph Manor\" \"Brockton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/brockton/st-joseph-manor-health-care"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225417",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Armenian Nursing\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/boston/armenian-nursing-and-rehabilitation-center-02130"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225418",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hellenic\" \"Canton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/canton/hellenic-nursing-and-rehabilitation-center-02021"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225419",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Belmont Manor\" \"Belmont\" reviews Birdeye",
+        "site:caring.com \"Belmont Manor\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/belmont/belmont-manor-nursing-home"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225421",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Ayer\" \"400 Groton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/ayer/ayer-valley-rehab-nursing"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225425",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Watertown Rehabilitation\" nursing reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/watertown/watertown-health-center"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225430",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Saint Patrick\" \"Manor\" \"Framingham\" reviews caring",
+        "site:caring.com \"St Patrick\" \"Manor\" \"Framingham\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225431",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Reading\" \"1364 Main\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225433",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Aberjona\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/winchester/aberjon-nursing-center-inc-01890"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225434",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Boston Home\" \"2049\" reviews",
+        "site:aplaceformom.com/community \"Boston Home\" \"2049\"",
+        "site:caring.com \"Boston Home\" \"Dorchester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225435",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Colony Center\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225436",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Bostonian\" nursing home reviews Caring",
+        "site:caring.com \"Bostonian\" \"337\" reviews"
+      ],
+      "sourceUrls": [
+        "https://reviews.birdeye.com/the-bostonian-skilled-nursing-rehab-165900847303146"
+      ],
+      "collectorOutcome": "inspected-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225437",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Briarwood\" \"Needham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/needham/briarwood-rehabilitation-healthcare-center"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225438",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"St Francis\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225439",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Odd Fellows\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225440",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Meadow Green\" \"Waltham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/waltham/meadow-green-rehabilitation-and-nursing-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225443",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Blaire House\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225444",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Blue Hills\" \"Stoughton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/stoughton/blue-hills-health-and-rehabilitation-center-02072"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225445",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Affinity Healthcare\" \"Braintree\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225448",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Catholic Memorial\" \"Fall River\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225449",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hathorne Hill\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/danvers/hathorne-hill-01923"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225451",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Katzman Family Center\" reviews",
+        "site:reviews.birdeye.com \"Katzman\" nursing"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/chelsea/katzman-family-center-for-living"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225452",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sterling Village\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/sterling/sterling-healthcare-nursing-and-rehab-center-01564"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225453",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Carvalho\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225456",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Oceanside\" \"Rockport\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225458",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Fairhaven\" \"Lowell\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lowell/fairhaven-healthcare-center-lowell"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225461",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Cedarwood\" \"Franklin\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225463",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Countryside\" \"Milford\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milford/countryside-health-care-of-milford-01757"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225467",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"25 Oriol\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/worcester/autumn-village-skilled-nursing-and-rehabilitation-center-01605"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225469",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Laurel Ridge\" \"Jamaica Plain\" reviews Birdeye",
+        "site:aplaceformom.com/community \"Laurel Ridge\" \"Jamaica Plain\"",
+        "site:caring.com \"Laurel Ridge\" \"Forest Hills\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/jamaica-plain/laurel-ridge-rehab-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225471",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Jesmond\" \"Nahant\" reviews Caring",
+        "site:aplaceformom.com/community \"Jesmond\"",
+        "site:caring.com \"Jesmond\" \"Nahant\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225472",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brudnick\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225474",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Taunton\" \"68 Dean\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225475",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Madonna Manor\" \"Attleboro\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-attleboro/madonna-manor-nursing-home-02760"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225476",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Maples\" \"Wrentham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wrentham/maples-rehabilitation-and-nursing-center-02093"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225477",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Marian Manor\" \"Taunton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225478",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Meadow View\" \"North Reading\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225481",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"200 Hawthorn\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225482",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Royal Norwell\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225483",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brookside\" \"Webster\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225485",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Our Lady\" \"Fairhaven\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225486",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Presentation\" \"10 Bellamy\" caring reviews",
+        "site:caring.com \"Presentation\" \"Brighton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225488",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Tremont\" \"Wareham\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225489",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"500 Wentworth\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225491",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Southgate\" \"40 Julio\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225493",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"321 Centre\" \"St Joseph\" reviews",
+        "\"St Joseph\" \"Dorchester\" reviews Birdeye",
+        "site:aplaceformom.com/community \"St Joseph\" \"Dorchester\"",
+        "site:caring.com \"St Joseph\" \"321 Centre\" nursing",
+        "site:reviews.birdeye.com \"St. Joseph\" \"Dorchester\""
+      ],
+      "sourceUrls": [
+        "https://www.mylivingchoice.com/property/st-joseph-rehab-nursing-care-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225494",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sunny Acres\" \"Chelmsford\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/chelmsford/sunny-acres-nursing-home-01824"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225497",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"1190 VFW\" reviews nursing",
+        "site:caring.com \"Care Village at Parkway\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225499",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"5060\" \"Washington\""
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225500",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"West Side House\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225504",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Care One\" \"Wilmington\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wilmington/careone-at-wilmington-wilmington"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225505",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Wood Mill\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225506",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"North End\" \"70 Fulton\" reviews nursing",
+        "site:caring.com \"North End Rehabilitation\" \"Boston\" reviews"
+      ],
+      "sourceUrls": [
+        "https://trustanalytica.org/us/ma/boston/reviews/north-end-rehabilitation-healthcare-center",
+        "https://www.aplaceformom.com/community/north-end-rehabilitation-and-healthcare-center-60570"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225508",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"40 Parkhurst\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225509",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Brookline Healthcare Center\" reviews caring",
+        "\"Care One at Brookline\" reviews rating",
+        "site:caring.com \"Care One\" \"Brookline\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.carelistings.com/skilled-nursing-facilities/brookline-ma/care-one-at-brookline/5ace885b93efd2372f9822b5"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225510",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Prescott House\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-andover/prescott-house-01845"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225511",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lowell\" \"30 Princeton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225513",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Beaumont\" \"Northboro\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225514",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"South Cove Manor\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/quincy/south-cove-manor-nursing-rehabilitation-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225515",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Youville\" \"Lowell\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225516",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Eliot\" \"Natick\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/natick/eliot-center-for-health-rehabilitation"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225518",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sippican\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/marion/sippican-long-term-healthcare-center-02738"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225520",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Cambridge Rehabilitation\" \"8 Dana\" reviews",
+        "\"Cambridge\" \"8 Dana\" consumer reviews",
+        "site:caring.com \"Cambridge Rehabilitation\" \"Dana\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_exact_result"
+    },
+    {
+      "providerId": "cms-225522",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Regalcare\" \"Quincy\""
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225523",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Glen Ridge\" \"Medford\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/medford/glen-ridge-nursing-care-center-02155"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225529",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center\" \"North Shore\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lynn/life-care-center-of-the-north-shore-01902"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225530",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"1801 Turnpike\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-andover/sutton-hill-center-01845"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225531",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sudbury Pines\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/sudbury/sudbury-pines-extended-care-01776"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225532",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"405 River\" \"Mattapan\""
+      ],
+      "sourceUrls": [
+        "https://havenforseniors.com/facility/care-village-at-mattapan-mattapan"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225533",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Wachusett Manor\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/gardner/wachusett-rehabilitation-and-nursing-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225535",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Bethany\" \"Framingham\" reviews nursing"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225536",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Harrington\" \"Walpole\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/walpole/walpole-healthcare"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225538",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Royal Cape Cod\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225540",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:carelistings.com \"German Center\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/west-roxbury/german-center-for-extended-care-02132"
+      ],
+      "collectorOutcome": "searched_candidate_full_page_blocked"
+    },
+    {
+      "providerId": "cms-225541",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Carlyle House\" \"Framingham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/framingham/carlyle-house-01701"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225544",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Wingate\" \"Silver Lake\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225545",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Courtyard\" \"200 Governors\" reviews",
+        "\"RegalCare\" \"Courtyard\" reviews Birdeye",
+        "site:aplaceformom.com/community \"RegalCare\" \"Courtyard\"",
+        "site:caring.com \"Courtyard\" \"Medford\" reviews",
+        "site:reviews.birdeye.com \"RegalCare\" \"Courtyard\""
+      ],
+      "sourceUrls": [
+        "https://www.mylivingchoice.com/property/regalcare-at-courtyard-medford"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225546",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center\" \"Merrimack Valley\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-billerica/life-care-center-of-merrimack-valley-01862-2"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225547",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hannah\" \"Shaw\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/middleboro/the-hannah-b-g-shaw-home"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225548",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Blaire House\" \"Tewksbury\" reviews nursing"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/tewksbury/blaire-house-of-tewksbury"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225549",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brigham\" \"Newburyport\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225555",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Mary Ann Morse\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/natick/mary-ann-morse-nursing-and-rehabilitation-01760"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225557",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Highland Park Rehabilitation\" \"Chelsea\" Birdeye reviews",
+        "site:caring.com \"Highland Park\" \"Chelsea\" nursing reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/chelsea/highland-park-rehabilitation-and-healthcare-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225558",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"80 Andover\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/andover/wingate-at-andover-rehab-skilled-nursing-01810"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225562",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"10 Veterans\" \"Milford\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milford/milford-care-and-rehabilitation-center-01757"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225564",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care\" \"Attleboro\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225567",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Seacoast\" \"Gloucester\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/gloucester/seacoast-nursing-rehabilitation-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225568",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Willow\" \"90 West\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225569",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Nashoba Valley\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/littleton/life-care-center-of-nashoba-valley-01460"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225573",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sancta Maria\" Cambridge reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225577",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Notre Dame\" \"Worcester\" reviews nursing"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225584",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"146 Park\" \"Arlington\" reviews nursing",
+        "site:caring.com \"Park Avenue Health Center\" \"Arlington\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/park-avenue-health-center-77122"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225586",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Westford\" \"3 Park\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/westford/westford-house-01886"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225589",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sarah Brayton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/fall-river/sarah-s-brayton-nursing-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225591",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Royal Wayland\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wayland/royal-wayland-nursing-and-rehabilitation"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225597",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Southwood\" \"Norwell\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/norwell/southwood-at-norwell-nursing-02061"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225598",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Waterview Lodge\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225603",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"100 Amity\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/fall-river/southpointe-rehab-and-skilled-nursing-02721"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225608",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Victoria Haven\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/norwood/victoria-haven-nursing-facility-02062"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225613",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Pope Nursing Home\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/weymouth/pope-rehabilitation-skilled-nursing-center"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225615",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Riverbend\" \"Natick\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225619",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Marie Esther\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225622",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Nemasket\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225634",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Careone at Weymouth\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225637",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Provincetown\" nursing reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225643",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Overlook\" \"Charlton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225644",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Salem Rehab\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225645",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Thomas Upham\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225648",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Holy Trinity\" \"Worcester\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225650",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Care One\" \"New Bedford\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/new-bedford/care-one-at-new-bedford"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225651",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Alliance Health\" \"Rosewood\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/peabody/rosewood-nursing-and-rehabilitation-center-01961"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225653",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Copley\" \"Stoughton\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225654",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Benjamin Healthcare\" reviews Boston"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/boston/edgar-p-benjamin-healthcare-center"
+      ],
+      "collectorOutcome": "searched_full_page_aggregate_blocked"
+    },
+    {
+      "providerId": "cms-225655",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center\" \"Raynham\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225656",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Campion\" \"Weston\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225659",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Elmhurst\" \"Melrose\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/melrose/golden-livingcenter-the-elmhurst-02176"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225661",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center\" \"Auburn\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225662",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Harbor House\" \"Hingham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hingham/harbor-house-adult-day-care-center-02043"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_ambiguous_scope"
+    },
+    {
+      "providerId": "cms-225663",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Careone\" \"Concord\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225666",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care\" \"Plymouth\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/plymouth/life-care-center-of-plymouth-plymouth"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225668",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Meadows\" \"Rochdale\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225679",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Royal Megansett\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225680",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Alliance Health at Marina Bay\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/quincy/alliance-health-at-marina-bay"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225682",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Oak Knoll\" \"Framingham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/framingham/oak-knoll-healthcare-center-01701"
+      ],
+      "collectorOutcome": "full_page_consumer_aggregate_eligible"
+    },
+    {
+      "providerId": "cms-225683",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Stone Rehabilitation\" \"Newton\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newton-upper-falls/stone-rehabilitation-senior-living"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225690",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brockton\" \"50 Christy\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/brockton/baypointe-rehabilitation-and-skilled-care-center-02301"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225704",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center\" \"West Bridgewater\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/west-bridgewater/life-care-center-of-west-bridgewater-02379"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225709",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Timothy Daniels\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225710",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Regalcare\" \"Sudbury\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225718",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hancock Park\" reviews nursing"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/quincy/hancock-park-rehabilitation-and-nursing-center"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225720",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Care One\" \"Millbury\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/millbury/care-one-at-millbury"
+      ],
+      "collectorOutcome": "eligible-found"
+    },
+    {
+      "providerId": "cms-225722",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Cardigan\" \"Scituate\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/scituate/cardigan-nursing-home-02066"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225723",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Fall River Healthcare\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/fall-river/fall-river-healthcare"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225724",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Meadows\" \"North Andover\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225727",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"Beaumont\" \"Natick\" reviews Caring"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/natick/beaumont-rehab-and-skilled-nursing-ctr-natick-01760"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225732",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Life Care Center of Stoneham\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/stoneham/life-care-center-of-stoneham-02180"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225736",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Greenwood Nursing\" \"Wakefield\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wakefield/greenwood-nursing-rehabilitation-center-wakefield"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225739",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Dwyer Home\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "cms-225740",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hunt Nursing\" reviews Danvers"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/danvers/hunt-nursing-and-rehab-center-01923"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225743",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Baker Katz\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225747",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Somerset Ridge\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225750",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Masconomet\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/topsfield/masconomet-healthcare-center-01983"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225752",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Serenity Hill\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wrentham/serenity-hill-nursing-center-02093"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225755",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lasell House\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_campus_aggregate_not_separate_nursing_unit"
+    },
+    {
+      "providerId": "cms-225759",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Hebrew Rehabilitation Center\" \"1200\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/boston/hebrew-seniorlife"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225760",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Lydia Taft\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/uxbridge/lydia-taft-house-uxbridge"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225767",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Brooksby Village\" \"Continuing\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_campus_aggregate_not_separate_nursing_unit"
+    },
+    {
+      "providerId": "cms-225768",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"New England Homes\" \"Deaf\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/danvers/new-england-homes-for-the-deaf-inc-01923"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225769",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Alliance Health at Braintree\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225770",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "\"170 Corey\" nursing reviews Caring",
+        "\"Brighton Post Acute\" reviews Birdeye",
+        "site:aplaceformom.com/community \"Brighton Post Acute\"",
+        "site:caring.com \"Brighton\" \"170 Corey\" reviews",
+        "site:reviews.birdeye.com \"Brighton Post Acute\""
+      ],
+      "sourceUrls": [
+        "https://brightonpostacute.net/"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225773",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Linden Ponds\" reviews nursing"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hingham/linden-ponds-02043",
+        "https://www.caring.com/senior-living/massachusetts/hingham/renaissance-gardens-at-linden-ponds-02043"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225774",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"NewBridge\" \"7000\""
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/dedham/hebrew-rehabilitation-center-newbridge-dedham-02026"
+      ],
+      "collectorOutcome": "full_page_aggregate_excluded_below_10_reviews"
+    },
+    {
+      "providerId": "cms-225775",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Leonard Florence Center\" reviews Chelsea"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/chelsea/leonard-florence-center-for-living-02150-4"
+      ],
+      "collectorOutcome": "searched_full_page_aggregate_blocked"
+    },
+    {
+      "providerId": "cms-225777",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"D Youville\" \"Lowell\" reviews nursing"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225778",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Whittier\" \"Westborough\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225781",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Seven Hills Pediatric\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225782",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Commons\" \"Lincoln\" nursing reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lincoln/benchmark-snr-living-at-the-commons-in-lincoln-snf",
+        "https://www.caring.com/senior-living/massachusetts/lincoln/the-commons-01773"
+      ],
+      "collectorOutcome": "inspected-or-discovered-no-eligible-aggregate"
+    },
+    {
+      "providerId": "cms-225783",
+      "researchPartition": "region-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Whittier\" \"Bradford\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched_no_eligible_full_page_aggregate_saved"
+    },
+    {
+      "providerId": "cms-225785",
+      "researchPartition": "boston-nursing",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"New England Pediatric\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "searched-no-usable-direct-match-in-returned-results"
+    },
+    {
+      "providerId": "croi-health",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Croí Health\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "houseworks",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com HouseWorks reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-care/massachusetts/newton/houseworks-newton-ma",
+        "https://www.caring.com/senior-care/massachusetts/waltham/houseworks-waltham-ma"
+      ],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "lifeplan-brooksby-village",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/peabody/brooksby-village-peabody-massachusetts-01960"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "lifeplan-carleton-willard-village",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/bedford/carleton-willard-village-01730"
+      ],
+      "collectorOutcome": "identity-population-ambiguous-unresolved"
+    },
+    {
+      "providerId": "lifeplan-fox-hill-village",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/westwood/fox-hill-village-02090"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "lifeplan-lasell-village",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newton/lasell-village-02466"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "lifeplan-linden-ponds",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hingham/linden-ponds-02043"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "lifeplan-newbridge-on-the-charles",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/dedham/newbridge-on-the-charles-02026"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "lifeplan-north-hill",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/needham/north-hill"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-adelaide-of-newton-centre",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newton-centre/adelaide-of-newton-centre"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-all-american-assisted-living-at-hanson",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hanson/all-american-assisted-living-02341"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-all-american-assisted-living-at-raynham",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/raynham/all-american-assisted-living-at-raynham"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-all-american-assisted-living-at-wareham",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/all-american-assisted-living-at-wareham-1403492"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-all-american-assisted-living-at-wrentham",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wrentham/all-american-assisted-living-at-wrentham-wrentham"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "ma-alr-allerton-house-at-central-park",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/weymouth/allerton-house-at-central-park-02188"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-allerton-house-at-harbor-park",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hingham/allerton-house-at-harbor-park-02043"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-allerton-house-at-proprietors-green",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/marshfield/allerton-house-at-proprietors-green"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-allerton-house-at-the-village-at-duxbury",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/duxbury/allerton-house-at-the-village-at-duxbury"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-artis-senior-living-of-lexington",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com/senior-living Artis Senior Living of Lexington reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "ma-alr-artis-senior-living-of-reading",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/artis-senior-living-of-reading-1399109"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-artisan-at-hudson",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hudson/artisan-at-hudson-01749"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-assisted-living-center-of-salisbury",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Assisted Living Center of Salisbury\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-atria-draper-place",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hopedale/atria-draper-place-01747"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-atria-fairhaven",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/fairhaven/atria-fairhaven-02719"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-atria-longmeadow-place",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/burlington/atria-longmeadow-place-01803"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-atria-maplewood-place",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/malden/atria-maplewood-place-malden"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-atria-marina-place",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-quincy/atria-marina-place-02171"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-atria-marland-place",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/andover/atria-marland-place-01810"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "ma-alr-atria-merrimack-place",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newburyport/atria-merrimack-place-01950"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-autumn-glen-at-dartmouth",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-dartmouth/autumn-glen-at-dartmouth-02747"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-avita-of-needham",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/needham/avita-of-needham-02492"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-avita-of-newburyport",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newburyport/avita-of-newburyport-01950"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-aviva-country-club-heights",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/aviva-country-club-heights-100984",
+        "https://www.caring.com/senior-living/massachusetts/woburn/aviva-country-club-heights"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-bayberry-at-emerald-court",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/tewksbury/bayberry-at-emerald-court-01876"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-benchmark-at-north-andover",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com/senior-living Benchmark North Andover reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "ma-alr-benchmark-at-tatnuck-park",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/worcester/benchmark-at-tatnuck-park"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-clapboardtree",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/benchmark-senior-living-on-clapboardtree-1395309"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-forge-hill",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/franklin/benchmark-senior-living-at-forge-hill-02038"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-hanover",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-haverhill-crossings",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/haverhill/benchmark-at-haverhill-crossings"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-leominster-crossings",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/leominster/benchmark-senior-living-at-leominster-crossings"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-putnam-farm",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/danvers/benchmark-senior-living-at-putnam-farm"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-robbins-brook",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/acton/benchmark-senior-living-at-robbins-brook-01720"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-the-commons-in-lincoln",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lincoln/the-commons-01773"
+      ],
+      "collectorOutcome": "identity-scope-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-benchmark-senior-living-at-woburn",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/woburn/benchmark-senior-living-at-woburn-01801"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-bertram-house-of-swampscott",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/swampscott/bertram-house-of-swampscott-01907"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-billerica-crossings",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/billerica/benchmark-at-billerica-crossings"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-birch-grove-at-fox-hill-village",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Birch Grove at Fox Hill Village\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-blaire-house-of-milford",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milford/blaire-house-of-milford-assisted-living-01757"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-blaire-house-of-tewksbury",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/tewksbury/blaire-house-of-tewksbury"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-bridges-by-epoch-at-andover",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/andover/bridges-by-epoch-at-andover"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-bridges-by-epoch-at-hingham",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hingham/bridges-by-epoch-at-hingham-02043"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-bridges-by-epoch-at-lexington",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/bridges-by-epoch-at-lexington-1451464"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-bridges-by-epoch-at-pembroke",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/pembroke/bridges-by-epoch-at-pembroke"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-bridges-by-epoch-at-sudbury",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/bridges-by-epoch-at-sudbury-1411166"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-bridges-by-epoch-at-westford",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/westford/bridges-by-epoch-at-westford-01886"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-bridges-by-epoch-at-westwood",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/westwood/bridges-by-epoch-at-westwood-02090"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-brigham-house",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/brigham-house-100201",
+        "https://www.caring.com/senior-living/massachusetts/watertown/brigham-house-02472"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-brightview-arlington",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/arlington/brightview-arlington-02474"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-brightview-canton",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/canton/brightview-canton"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-brightview-concord-river",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/brightview-concord-river-155437",
+        "https://www.caring.com/senior-living/massachusetts/billerica/brightview-concord-river"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-brightview-danvers",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/danvers/brightview-danvers-01923"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-brightview-north-andover",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-andover/brightview-north-andover-01845"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-brightview-wakefield",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wakefield/brightview-wakefield"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-brookdale-attleboro",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/attleboro/brookdale-attleboro"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-brookdale-cushing-park",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/framingham/brookdale-cushing-park"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-brookdale-eddy-pond-east",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/auburn/brookdale-eddy-pond-east"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-brookdale-eddy-pond-west",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/auburn/brookdale-eddy-pond-west"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-brookmeadow-at-cobb-corner-assisted-living-residence",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/stoughton/brookmeadow-at-cobb-corner",
+        "https://www.seniorlivingresidences.com/communities/brookmeadow-cobb-corner/senior-living-options/"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-cadbury-commons",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/cadbury-commons-77432",
+        "https://www.caring.com/senior-living/massachusetts/cambridge/cadbury-commons-02140"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-cambridge-homes",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.assistedlivingcenter.com/facilities/ma/cambridge/the-cambridge-homes-02138/"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-cape-cod-senior-residences-at-pocasset",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/bourne/cape-cod-senior-residences"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-careone-at-sharon",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/care-one-at-sharon-1407046"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-carmel-terrace",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/framingham/carmel-terrace-assisted-living"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-carriage-house-at-lees-farm-0",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com/senior-living Carriage House at Lees Farm reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "ma-alr-charter-senior-living-of-danvers",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/charter-senior-living-of-danvers-77307"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-charter-senior-living-of-dedham",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/charter-senior-living-of-dedham-77345"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-chelmsford-crossings",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/chelmsford/benchmark-senior-living-at-chelmsford-crossings"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-chestnut-park-at-cleveland-circle",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/brighton/chestnut-park-at-cleveland-circle-02135"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-christopher-heights-of-attleboro",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/attleboro/christopher-heights-of-attleboro-02703"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-christopher-heights-of-marlborough",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/marlborough/christopher-heights-of-marlborough-01752-3"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-christopher-heights-of-webster",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/webster/christopher-heights-of-webster-01570"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-christopher-heights-of-worcester",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/worcester/christopher-heights-of-worcester-01605-3"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-clifton-assisted-living-community",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Clifton Assisted Living Community\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-cohen-florence-levine-estates",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/chelsea/the-estates-on-admiral-s-hill"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-coleman-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Coleman House\" reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/northborough/coleman-house-01532"
+      ],
+      "collectorOutcome": "no-verified-overall-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-compass-on-the-bay",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/compass-on-the-bay-101812",
+        "https://www.assistedlivingcenter.com/facilities/ma/boston/compass-on-the-bay-02127/"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-concord-park",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/concord/concord-park-01742",
+        "https://www.seniorlivingresidences.com/communities/concord-park/contact/"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-corcoran-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/clinton/corcoran-house-01510"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-cornerstone-at-canton",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/cornerstone-at-canton-1371550"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-cornerstone-at-milford",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milford/cornerstone-at-milford-assisted-living-01757"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-decatur-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/sandwich/decatur-house-02563"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-discovery-village-quincy",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/quincy/discovery-village-quincy"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "ma-alr-du-charme-estates-ltd",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-duxbury-house-at-the-village-memory-care-residence",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/duxbury/duxbury-house-at-the-village-memory-care-residence"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-edelweiss-village",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/edelweiss-village-139885"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-eisenberg-assisted-living-residences",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Eisenberg Assisted Living Residences\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-elizabeth-calsey-house",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-elizabeth-calsey-house-at-lions-mouth-road",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Elizabeth Calsey House at Lions Mouth Road\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-evans-park-at-newton-corner",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newton/evans-park-at-newton-corner-02458"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "ma-alr-fenno-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/quincy/fenno-house"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-fieldstone-at-the-overlook",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/charlton/the-overlook-01507-3"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-florence-chafetz-home-for-specialized-care",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-forestdale-park-assisted-living",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/malden/forestdale-park"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-gabriel-house-of-fall-river",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Gabriel House of Fall River\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-giving-tree-senior-living",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/dracut/giving-tree-senior-living"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-glen-at-grove-manor",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-goddard-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/brookline/goddard-house-assisted-living-brookline-02445-1"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-golden-pond",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/hopkinton/golden-pond-assisted-living"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-grace-morgan-house",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/methuen/grace-morgan-house-01844"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-grove-manor-estates",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/grove-manor-estates-139069"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-harriett-and-ralph-kaplan-estates",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/peabody/harriett-and-ralph-kaplan-estates-peabody"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-heights-crossing",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/brockton/heights-crossing-assisted-living-02301"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-herrick-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/beverly/herrick-house-01915"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-heywood-wakefied-commons",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/gardner/heywood-wakefield-commons-01440"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-john-bertram-house",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/salem/john-bertram-house-01970"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-keystone-place-at-buzzards-bay",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/buzzards-bay/keystone-place-at-buzzards-bay-02532"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-laurelwood-at-the-pinehills",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/plymouth/laurelwood-at-the-pinehills-02360"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-laurentide-at-mashpee-commons",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/laurentide-at-mashpee-commons-1409546"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-life-care-center-of-stoneham",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/stoneham/life-care-center-of-stoneham-02180"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-manor-on-the-hill",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/leominster/manor-on-the-hill-01453"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-maplewood-at-weston",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/maplewood-at-weston-139819",
+        "https://www.caring.com/senior-living/massachusetts/weston/maplewood-at-weston-02493"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-marguerites-house",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-mary-ann-morse-at-heritage",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/framingham/mary-ann-morse-at-heritage"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "ma-alr-merrivista-assisted-living",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/haverhill/merrivista-bethany-community-01830"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-methuen-village-at-riverwalk-park",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/methuen/methuen-village-assisted-living-and-compass-memory-support-01844"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-nashoba-park",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/ayer/nashoba-park-assisted-living"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-neville-place",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/neville-place-60595"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-new-horizons-at-choate",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/woburn/new-horizons-at-choate"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-new-horizons-at-marlborough",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/marlborough/new-horizons-at-marlborough"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-new-pond-village",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/walpole/new-pond-village-02081"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-newbridge-on-the-charles",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com/senior-living NewBridge on the Charles assisted living reviews"
+      ],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/dedham/newbridge-on-the-charles-02026"
+      ],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "ma-alr-notre-dame-du-lac",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/worcester/notre-dame-du-lac-01605"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-orchard-hill",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/sudbury/orchard-hill-sudbury-01776"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-plymouth-crossings",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/plymouth/benchmark-senior-living-at-plymouth-crossings"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-providence-house",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/providence-house-99250",
+        "https://www.caring.com/senior-living/massachusetts/brighton/providence-house-assisted-living"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-river-falls-senior-living",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/fall-river/river-falls-senior-living"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-rivercourt-residences",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/west-groton/rivercourt-residences-01450"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-robbies-place",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Robbie's Place\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-rogerson-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/jamaica-plain/rogerson-house-boston"
+      ],
+      "collectorOutcome": "no-published-header-aggregate"
+    },
+    {
+      "providerId": "ma-alr-ruggles-assisted-living",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com Ruggles Assisted Living reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "ma-alr-scandinavian-living-center",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/west-newton/scandinavian-living-center"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-seasons-of-danvers",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/seasons-of-danvers-1381774"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-shrewsbury-crossings",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/shrewsbury/benchmark-senior-living-at-shrewsbury-crossings"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-southgate-at-shrewsbury-hampton-suites",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/shrewsbury/southgate-at-shrewsbury-01545"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-springhouse",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/boston/springhouse-senior-living"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-stafford-hill-assisted-living",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/plymouth/stafford-hill-02360"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-standish-village-at-lower-mills",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/standish-village-77391",
+        "https://www.caring.com/senior-living/massachusetts/boston/standish-village"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-stone-hill-at-andover",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/stone-hill-at-andover-1421747"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-stonebridge-at-burlington",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/burlington/stonebridge-at-burlington-01803"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunny-acres-legacy-care",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Sunny Acres-Legacy Care\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-arlington",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/arlington/sunrise-of-arlington-ma-02476"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-braintree",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/braintree/sunrise-of-braintree-02184"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-burlington",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/burlington/sunrise-of-burlington-ma-01803"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-cohasset",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/sunrise-of-cohasset-77344"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-gardner-park",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/peabody/sunrise-at-gardner-park-01960"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-leominster",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/leominster/sunrise-of-leominster-01453"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-lynnfield",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lynnfield/sunrise-of-lynnfield-01940"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-newton",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/sunrise-of-newton-1445204",
+        "https://www.caring.com/senior-living/massachusetts/newton/sunrise-of-newton"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-norwood",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/norwood/sunrise-of-norwood-02062"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-plymouth-beach",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/plymouth/sunrise-of-plymouth-beach"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-sunrise-of-wayland",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wayland/sunrise-of-wayland-01778"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-susan-s-bailis-assisted-living-community",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/susan-bailis-assisted-living-community-139262",
+        "https://www.caring.com/senior-living/massachusetts/boston/susan-bailis-assisted-living-02115"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-swan-brook",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-arbors-at-dracut",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/dracut/the-arbors-at-dracut"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-arbors-at-stoneham",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/stoneham/the-arbors-at-stoneham-02180"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-arbors-at-taunton",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/taunton/the-arbors-at-taunton-massachusetts-02780"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-the-assisted-living-residences-at-hancock-park",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/quincy/the-assisted-living-residences-at-hancock-park"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-atrium-at-drum-hill",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-atrium-at-drum-hill-140218",
+        "https://www.caring.com/senior-living/massachusetts/north-chelmsford/the-atrium-at-drum-hill-01863"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-atrium-at-faxon-woods",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-atrium-at-faxon-woods-140219",
+        "https://www.caring.com/senior-living/massachusetts/quincy/the-atrium-at-faxon-woods-02169"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-atrium-at-veronica-drive",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/danvers/the-atrium-at-veronica-drive-01923"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-branches-of-framingham",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-branches-of-framingham-1437849"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-branches-of-marlboro",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/marlboro/the-branches-of-marlboro"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-branches-of-north-attleboro",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/attleboro-falls/the-branches-of-north-attleboro"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-the-cordwainer",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/norwell/the-cordwainer"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-cottages-at-dartmouth-village",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com/senior-living The Cottages at Dartmouth Village reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "ma-alr-the-current-beverly",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/beverly/the-current-beverly"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-the-current-south-shore",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-current-south-shore-1457033"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-delaney-at-the-vale",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/delaney-at-the-vale-1455923"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-elms-at-briarwood",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"The Elms at Briarwood\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-enclave-of-franklin",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/franklin/enclave-of-franklin"
+      ],
+      "collectorOutcome": "identity-population-ambiguous"
+    },
+    {
+      "providerId": "ma-alr-the-evergreens",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-falls-at-cordingly-dam",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/newton-lower-falls/the-falls-at-cordingly-dam-02462",
+        "https://www.seniorhomes.com/massachusetts/newton-lower-falls/the-falls-at-cordingly-dam-02462"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-the-gables-at-winchester",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/winchester/the-gables-at-winchester-01890"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-gables-of-fitchburg",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/fitchburg/the-gables-of-fitchburg-01420"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-gardens-at-newbury-court",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/concord/newbury-court-concord"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-mariner-marblehead",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-newbury-of-brookline",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/brookline/the-newbury-of-brookline"
+      ],
+      "collectorOutcome": "no-published-header-aggregate"
+    },
+    {
+      "providerId": "ma-alr-the-parc-at-harbor-view-senior-living",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/winthrop/the-parc-at-harbor-view"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-adviniacare-northbridge",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"The Residence at AdviniaCare Northbridge\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-bedford",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"The Residence at Bedford\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-boylston-place",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/chestnut-hill/the-residence-at-boylston-place"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-cedar-dell",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-residence-at-cedar-dell-99783"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-charles-meadow",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-residence-at-charles-meadow-1452321"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-five-corners",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/easton/the-residence-at-five-corners"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-freeman-lake",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/north-chelmsford/the-residence-at-freeman-lake"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-great-woods",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/norton/the-residence-at-great-woods"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-melrose-station",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-residence-at-melrose-station-1403346",
+        "https://www.caring.com/senior-living/massachusetts/melrose/the-residence-at-melrose-station"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-natick-south",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/natick/the-residence-at-natick-south"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-orchard-grove",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/shrewsbury/the-residence-at-orchard-grove-shrewsbury"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-paine-estate",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-residence-at-paine-estate-140487"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-pearl-street",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/reading/the-residence-at-pearl-street-01867"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-penniman-hill",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-residence-at-penniman-hill-1415413"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-riverbend",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/ipswich/the-residence-at-riverbend-01938"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-valley-farm",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/the-residence-at-valley-farm-1383513"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-vinnin-square",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/swampscott/the-residence-at-vinnin-square"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-watertown-square",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/watertown/the-residence-at-watertown-square-02472"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-the-residence-at-whitcomb-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milford/the-residence-at-whitcomb-house"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-the-rubin-home-assisted-living",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/saugus/the-rubin-home-assisted-living"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-sabb-residence",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-the-woodlands-inn-at-edgewood",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-traditions-of-dedham",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/dedham/traditions-of-dedham"
+      ],
+      "collectorOutcome": "search-result-only"
+    },
+    {
+      "providerId": "ma-alr-village-at-willow-crossings",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/mansfield/willow-crossings"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-waltham-crossings",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/waltham/benchmark-senior-living-at-waltham-crossings"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-waterstone-at-lexington",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com Waterstone at Lexington reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "ma-alr-waterstone-at-wellesley",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wellesley/waterstone-at-wellesley-02481",
+        "https://www.seniorhomes.com/massachusetts/wellesley/waterstone-at-wellesley-02481"
+      ],
+      "collectorOutcome": "no-access-upgrade"
+    },
+    {
+      "providerId": "ma-alr-whalers-cove",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-white-oak-cottages-at-fox-hill-village",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"White Oak Cottages at Fox Hill Village\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-whitney-place-at-medway",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Whitney Place at Medway\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-whitney-place-at-natick",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/natick/whitney-place-at-natick-01760"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-whitney-place-at-northborough",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/northborough/whitney-place-at-northborough-01532"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-whitney-place-at-westborough",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/westborough/whitney-place-at-westborough-01581"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-whitney-suites-at-westborough",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Whitney Suites at Westborough\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "ma-alr-winchester-mount-vernon-house",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/winchester/winchester-mount-vernon-house-01890"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-windrose-at-weymouth",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://windroseweymouth.com/",
+        "https://windroseweymouth.com/contact/",
+        "https://www.caring.com/senior-living/massachusetts/south-weymouth/windrose-at-weymouth-south-weymouth"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-windrose-at-woburn",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.aplaceformom.com/community/windrose-at-woburn-1358978"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-windsor-place-of-wilmington",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/wilmington/windsor-place-of-wilmington"
+      ],
+      "collectorOutcome": "new-eligible-full-page"
+    },
+    {
+      "providerId": "ma-alr-wingate-residences-at-haverhill",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/haverhill/wingate-residences-at-haverhill"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-wingate-residences-at-needham",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/needham/wingate-residences-at-needham"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-wingate-residences-at-silver-lake",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/kingston/wingate-residences-at-silver-lake"
+      ],
+      "collectorOutcome": "source-results-recorded"
+    },
+    {
+      "providerId": "ma-alr-winter-valley-residences",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/milton/winter-valley-residences-inc-02186"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-youville-house-assisted-living-residence-inc",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/cambridge/youville-house-assisted-living"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "ma-alr-youville-place",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [
+        "https://www.caring.com/senior-living/massachusetts/lexington/youville-place"
+      ],
+      "collectorOutcome": "below-threshold"
+    },
+    {
+      "providerId": "mgb-home-care",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com Mass General Brigham Home Care reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-observed"
+    },
+    {
+      "providerId": "north-river",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "privatus-boston",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"Privatus Care Solutions — Boston\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "south-shore-vna",
+      "researchPartition": "boston-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [
+        "site:caring.com \"South Shore Visiting Nurse Association\" reviews"
+      ],
+      "sourceUrls": [],
+      "collectorOutcome": "no-eligible-aggregate-recorded"
+    },
+    {
+      "providerId": "vna-care",
+      "researchPartition": "region-living",
+      "attemptedAt": "2026-11-12",
+      "queries": [],
+      "sourceUrls": [],
+      "collectorOutcome": "source-results-recorded"
+    }
+  ]
+}
