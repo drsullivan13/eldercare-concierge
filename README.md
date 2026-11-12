@@ -1,21 +1,33 @@
 # Harbor
 
-A Greater Boston elder-care research and coordination proof of concept. Families can search by ZIP and radius, inspect public evidence, compare resources, save a shortlist, and build a transition plan.
+An elder-care research and coordination proof of concept for North Jersey and Greater Boston. Families can search by ZIP and radius, inspect public evidence, compare resources, save a shortlist, and build a transition plan.
 
 **Status:** the POC opens directly into a browser-local workspace, with no app sign-in required. Source is published to GitHub and a protected Vercel preview is available. Shortlists, notes and tasks stay in the current browser; export is available. Accounts are deliberately disabled for this phase. See [the verification record](docs/verification.md) for the latest hosted checks.
 
 ![Harbor care workspace](docs/screenshots/dashboard.png)
 
+## North Jersey research
+
+Enter **07960** for Morristown or **07083** for Union in the care workspace. The six-county catalog covers Union, Morris, Essex, Bergen, Hudson and Passaic. Each record represents a licensed unit, campus or service office. For home care, use the office address for location and the separately sourced service area for coverage.
+
+The app shows dated published prices, clinical evidence and consumer ratings on the provider detail page. Consumer scores require a verified location match and at least ten eligible reported reviews. The market coverage export includes the source family and next research action for each provider. Run the following command to compare current coverage with Massachusetts.
+
+```sh
+python3 -B scripts/regions/workflow-evidence.py comparison
+```
+
+The [regional workflow](docs/region-workflow.md) covers refreshing source data, reproducing a release, checking both markets and onboarding another geography. The [Facebook handoff](research/north-jersey/facebook/reconciliation/followup-agent-prompt.md) identifies the seven remaining original assignments.
+
 ## What is built
 
 - Public landing page and immediate dashboard access. Account screens and care-preferences setup are retained for a later activation.
 - A family dashboard with a 90-day planning outline, saved options and next steps.
-- Real ZIP/radius search across 521 resource records: 280 nursing homes, 224 assisted-living residences, 10 home-service organizations and 7 continuing-care campuses.
+- The Massachusetts baseline includes ZIP/radius search across 521 resource records: 280 nursing homes, 224 assisted-living residences, 10 home-service organizations and 7 continuing-care campuses.
 - List and map views, care-category filters, name/town search and nursing-home-only CMS rating order.
 - Source links, source dates, published staffing metrics, actual CMS inspection findings and penalty events, explicit unknowns and provider follow-up questions.
-- CMS home-health clinical-quality ratings and patient surveys for seven certified agencies across six organizations, with response counts, response rates, five experience measures and separate clinical measures.
-- Location details for 86 providers, published prices with billing periods at 35, and dated observations of public opening and waitlist claims.
-- Public review aggregates at 311 locations, with 122 provisional consumer experience scores out of ten. All currently have limited source coverage; source links and exclusions accompany each score.
+- Massachusetts CMS home-health clinical-quality ratings and patient surveys for seven certified agencies across six organizations, with response counts, response rates, five experience measures and separate clinical measures.
+- The Massachusetts baseline includes location details for 86 providers, published prices with billing periods at 35, and dated observations of public opening and waitlist claims.
+- The Massachusetts baseline includes public review aggregates at 311 locations, with 122 provisional consumer experience scores out of ten. All currently have limited source coverage; source links and exclusions accompany each score.
 - Research filters, category-specific consumer-score sorting, and separate Life here, Rooms & costs, Availability and Reviews tabs. Facebook and unrated filters plus a downloadable 521-location checklist make research gaps visible.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
 - A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
@@ -65,9 +77,9 @@ The app fails closed when account infrastructure is unavailable. Signup is disab
 
 ## Data and ordering
 
-The catalog starts with a **November 11, 2026 research snapshot**, with eight provider-confirmed address corrections dated November 12. Original state records and map coordinates are retained. CMS nursing-home processing date is October 1; its release date is October 28. Massachusetts directory records and the June 25 certified-residence spreadsheet are separate evidence. Home-health records and agency websites have their own dates.
+The Massachusetts catalog starts with a **November 11, 2026 research snapshot**, with eight provider-confirmed address corrections dated November 12. Original state records and map coordinates are retained. CMS nursing-home processing date is October 1; its release date is October 28. Massachusetts directory records and the June 25 certified-residence spreadsheet are separate evidence. Home-health records and agency websites have their own dates.
 
-Facility coverage is Massachusetts locations within 55 straight-line miles of central Boston. Search origins are Massachusetts ZIPs inside that pilot region, and the selectable radius is 1–50 miles. A search near the boundary is clipped by the catalog's coverage; no result is not proof that no care exists.
+Massachusetts facility coverage extends to locations within 55 straight-line miles of central Boston. Search origins are Massachusetts ZIPs inside that pilot region, and the selectable radius is 1–50 miles. A search near the boundary is clipped by the catalog's coverage; no result is not proof that no care exists.
 
 Distances use published Census/GeoNames ZIP points, not an exact home location or driving time. Home-service distances refer to offices, not confirmed service availability. One agency without a reliable coordinate remains in the catalog but is excluded from radius and map results. Two continuing-care campuses use explicitly labeled published Census ZIP-area estimates, not borrowed nursing-unit coordinates. Categories keep each record’s primary service; four agencies with documented private-care services also appear under Help at home. Campus and licensed-unit records are separate resources, not a count of unique parent organizations.
 
