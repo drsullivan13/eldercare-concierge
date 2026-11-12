@@ -334,12 +334,12 @@ class ReleaseTests(unittest.TestCase):
         inputs = release.Inputs(ROOT)
         observations, inventory = release.registry(inputs)
         verified = [o.normalized(inputs) for o in observations.values() if o.value.get("aggregate")]
-        self.assertEqual(22,len(verified))
+        self.assertEqual(22, sum(o["observation"]["path"].endswith("review-release/source-observations.json") for o in verified))
         self.assertTrue(all(o["aggregate"]["sourceFamily"] == "google" for o in verified))
         pilot = next(o for o in verified if o["url"].endswith("/careone-at-madison-avenue"))
         self.assertEqual(pilot["aggregate"]["count"],185)
         self.assertIsNone(pilot["identity"]["zip"])
-        self.assertEqual(len(inventory),1)
+        self.assertEqual(len(inventory),1 + int((ROOT / release.ADDENDUM / "source-observations.json").is_file()))
         self.assertTrue(inventory[0]["path"].endswith("/source-observations.json"))
 
     def test_listing_addendum_incomplete_fails_closed(self):
