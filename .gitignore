@@ -45,3 +45,14 @@ next-env.d.ts
 /test-results/
 /artifacts/
 !.env.example
+
+# Regional collector work files. The reviewed release and compact source receipts are tracked.
+__pycache__/
+/research/north-jersey/listing-index/cache/
+/research/north-jersey/listing-index/raw/
+/research/north-jersey/listing-index/discovery/pages/
+/research/north-jersey/listing-index/runs/
+/research/north-jersey/listing-index/discovery/normalized-observations.json
+/research/north-jersey/listing-index/refresh-state.json
+/research/north-jersey/reviews/runs/
+/research/north-jersey/clinical/*-test-output.txt
