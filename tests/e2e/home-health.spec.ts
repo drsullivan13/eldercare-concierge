@@ -56,18 +56,19 @@ function rawFor(rows: RawRow[], ccn: string) {
 
 async function openHomeHealth(page: Page) {
   await page.goto("/dashboard?demo=1");
-  await expect(page.locator(".demo-banner")).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Find care for",
+  );
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
   await page
-    .locator("form.quick-search")
-    .getByRole("button", { name: "Find care" })
-    .click();
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("home-health");
   await page
-    .locator(".category-tabs")
-    .getByRole("button", { name: "Skilled home health", exact: true })
+    .getByRole("region", { name: "Search nearby care" })
+    .getByRole("button", { name: "Find care", exact: true })
     .click();
   await expect(page.locator("article.provider-card")).toHaveCount(6);
 }
@@ -78,7 +79,12 @@ async function openProvider(page: Page, providerId: string) {
     has: page.getByRole("button", { name: provider.name, exact: true }),
   });
   await card.getByRole("button", { name: "View details" }).click();
-  return page.getByRole("dialog", { name: provider.name, exact: true });
+  const dialog = page.getByRole("dialog", { name: provider.name, exact: true });
+  await dialog.getByRole("tab", { name: "Details", exact: true }).click();
+  await dialog
+    .getByText("Care quality & patient surveys", { exact: true })
+    .click();
+  return dialog;
 }
 
 async function noHorizontalOverflow(page: Page) {
@@ -198,12 +204,12 @@ test("home-health API preserves all seven CMS identities, values and reporting p
   }
 });
 
-test("families can inspect separate agency results, five patient measures and dated clinical detail without nursing-home evidence", async ({
-  page,
-  request,
-}) => {
-  await openHomeHealth(page);
-  for (const [providerId, ccns] of Object.entries(matches)) {
+for (const [providerId, ccns] of Object.entries(matches)) {
+  test(`families can inspect ${providerId} agency results, patient measures and dated clinical detail without nursing-home evidence`, async ({
+    page,
+    request,
+  }) => {
+    await openHomeHealth(page);
     const response = await request.get("/api/home-health-evidence", {
       params: { providerId },
     });
@@ -307,13 +313,15 @@ test("families can inspect separate agency results, five patient measures and da
     ).toHaveAttribute("href", /HHS_Data_Dictionary\.pdf$/);
     await noHorizontalOverflow(page);
     await dialog.getByRole("button", { name: "Close dialog" }).click();
-  }
-});
+  });
+}
 
 test("a temporary home-health evidence failure offers a retry and recovers the actual snapshot", async ({
   page,
 }) => {
   let attempts = 0;
+  let failing = true;
+  let recovered = 0;
   await page.route("**/api/home-health-evidence?*", async (route) => {
     if (
       new URL(route.request().url()).searchParams.get("providerId") !==
@@ -321,13 +329,14 @@ test("a temporary home-health evidence failure offers a retry and recovers the a
     )
       return route.continue();
     attempts += 1;
-    if (attempts === 1) {
+    if (failing) {
       await route.fulfill({
         status: 503,
         contentType: "application/json",
         body: JSON.stringify({ error: "Controlled temporary failure" }),
       });
     } else {
+      recovered += 1;
       await route.continue();
     }
   });
@@ -338,6 +347,8 @@ test("a temporary home-health evidence failure offers a retry and recovers the a
     "snapshot could not be loaded",
   );
   await expect(panel.locator(".hh-agency")).toHaveCount(0);
+  expect(attempts).toBeGreaterThan(0);
+  failing = false;
   await panel.getByRole("button", { name: "Try again", exact: true }).click();
   await expect(panel.locator('[data-ccn="227082"]')).toBeVisible();
   await expect(panel.locator(".hh-ratings > div").nth(0)).toContainText(
@@ -347,6 +358,6 @@ test("a temporary home-health evidence failure offers a retry and recovers the a
     "4 / 5",
   );
   await expect(panel.getByRole("alert")).toHaveCount(0);
-  expect(attempts).toBe(2);
+  expect(recovered).toBe(1);
   await noHorizontalOverflow(page);
 });

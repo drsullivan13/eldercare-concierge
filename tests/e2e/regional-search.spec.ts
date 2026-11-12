@@ -95,6 +95,17 @@ async function navigate(page: Page, name: string) {
     .click();
 }
 
+async function openCoverage(page: Page) {
+  const sources = page.locator("details.search-evidence");
+  if ((await sources.getAttribute("open")) === null)
+    await sources.getByText("Sources & evidence", { exact: true }).click();
+  const method = page.locator("details.search-research-disclosure");
+  if ((await method.getAttribute("open")) === null)
+    await method
+      .getByText("Research coverage & method", { exact: true })
+      .click();
+}
+
 async function mockSearch(page: Page) {
   const zips: string[] = [];
   await page.route("**/api/search?**", async (route) => {
@@ -114,24 +125,19 @@ test("restored NJ ZIP drives the first search without seeding MA records", async
   await expect(
     page.getByRole("textbox", { name: "Search ZIP code" }),
   ).toHaveValue("07030");
-  await expect(page.locator(".care-search-home .eyebrow")).toHaveText(
-    "North Jersey",
-  );
+  await expect(page.locator(".sidebar-bottom")).toContainText("North Jersey");
   expect(zips.length).toBeGreaterThan(0);
   expect(zips.every((zip) => zip === "07030")).toBe(true);
-  await expect(page.locator(".sidebar-bottom")).toContainText("North Jersey");
   await navigate(page, "Find care");
-  await expect(page.locator(".results-toolbar")).toContainText(
-    "Hoboken, NJ 07030",
-  );
+  await expect(page.locator(".search-summary")).toContainText("Hoboken, 07030");
   const card = page.locator(".provider-card");
   await expect(card).toContainText("Hoboken, NJ 07030");
   await expect(card).toContainText("1.2 mi · office");
   await expect(card).toContainText("Service at your address is not confirmed");
+  await openCoverage(page);
   await expect(page.locator(".search-research-summary")).toContainText(
     "Office distances do not confirm service coverage",
   );
-  await page.getByText("Research coverage & method", { exact: true }).click();
   await expect(page.locator(".catalog-note")).toContainText(
     "North Jersey catalog as of 2026-11-10. 7 records in this market",
   );
@@ -167,9 +173,7 @@ test("restored NJ ZIP drives the first search without seeding MA records", async
   expect(stored.savedProviderIds).toEqual([]);
   expect(stored.tasks).toEqual([]);
   await page.reload();
-  await expect(page.locator(".care-search-home .eyebrow")).toHaveText(
-    "North Jersey",
-  );
+  await expect(page.locator(".sidebar-bottom")).toContainText("North Jersey");
   expect(zips.every((zip) => zip === "07030")).toBe(true);
 });
 
@@ -179,11 +183,9 @@ test("ZIP submission switches market labels, source dates and checklist scope", 
   await restoreWorkspace(page, "02459");
   await mockSearch(page);
   await page.goto("/dashboard?demo=1");
-  await expect(page.locator(".care-search-home .eyebrow")).toHaveText(
-    "Massachusetts",
-  );
+  await expect(page.locator(".sidebar-bottom")).toContainText("Massachusetts");
   await navigate(page, "Find care");
-  await page.getByText("Research coverage & method", { exact: true }).click();
+  await openCoverage(page);
   await expect(page.locator(".catalog-note")).toContainText(
     "Massachusetts catalog as of 2026-11-01. 521 records in this market",
   );
@@ -197,16 +199,19 @@ test("ZIP submission switches market labels, source dates and checklist scope", 
     "Newton Center, MA 02459",
   );
   await expect(page.locator(".provider-card")).not.toContainText("office");
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
+  const zipField = page.getByRole("textbox", { name: "Search ZIP code" });
+  await expect(zipField).toHaveAttribute("inputmode", "numeric");
+  await expect(zipField).toHaveAttribute("pattern", "[0-9]{5}");
+  await expect(zipField).toHaveAttribute("maxlength", "5");
+  await expect(zipField).toHaveAttribute("required", "");
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("07030");
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
-  await expect(page.locator(".care-search-view .eyebrow").first()).toHaveText(
-    "North Jersey",
-  );
   await expect(page.locator(".sidebar-bottom")).toContainText("North Jersey");
-  await page.getByText("Research coverage & method", { exact: true }).click();
+  await openCoverage(page);
   await expect(page.locator(".catalog-note")).toContainText(
     "North Jersey catalog as of 2026-11-10. 7 records in this market",
   );
@@ -232,9 +237,7 @@ test("profile ZIP updates search and survives reopening the demo", async ({
   await restoreWorkspace(page, "02459");
   const zips = await mockSearch(page);
   await page.goto("/dashboard?demo=1");
-  await expect(page.locator(".care-search-home .eyebrow")).toHaveText(
-    "Massachusetts",
-  );
+  await expect(page.locator(".sidebar-bottom")).toContainText("Massachusetts");
   const menu = page.getByRole("button", { name: "Open navigation" });
   if (await menu.isVisible()) await menu.click();
   await page.locator(".profile-button").click();
@@ -246,17 +249,13 @@ test("profile ZIP updates search and survives reopening the demo", async ({
     .getByRole("button", { name: "Close menu", exact: true })
     .first();
   if (await closeMenu.isVisible()) await closeMenu.click();
-  await expect(page.locator(".care-search-home .eyebrow")).toHaveText(
-    "North Jersey",
-  );
+  await expect(page.locator(".sidebar-bottom")).toContainText("North Jersey");
   await expect(
     page.getByRole("textbox", { name: "Search ZIP code" }),
   ).toHaveValue("07030");
   zips.length = 0;
   await page.reload();
-  await expect(page.locator(".care-search-home .eyebrow")).toHaveText(
-    "North Jersey",
-  );
+  await expect(page.locator(".sidebar-bottom")).toContainText("North Jersey");
   expect(zips.length).toBeGreaterThan(0);
   expect(zips.every((zip) => zip === "07030")).toBe(true);
 });
@@ -267,9 +266,7 @@ test("failed market changes do not retain the previous market or catalog", async
   await restoreWorkspace(page, "02459");
   await mockSearch(page);
   await page.goto("/dashboard?demo=1");
-  await expect(page.locator(".care-search-home .eyebrow")).toHaveText(
-    "Massachusetts",
-  );
+  await expect(page.locator(".sidebar-bottom")).toContainText("Massachusetts");
   await navigate(page, "Find care");
   await page.route("**/api/search?**", async (route) => {
     await route.fulfill({
@@ -277,15 +274,16 @@ test("failed market changes do not retain the previous market or catalog", async
       json: { error: "Unsupported ZIP test fixture" },
     });
   });
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("00000");
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   await expect(page.getByRole("main").getByRole("alert")).toContainText(
     "Unsupported ZIP test fixture",
   );
-  await expect(page.locator(".care-search-view .eyebrow").first()).toHaveText(
+  await expect(page.locator(".sidebar-bottom")).toContainText(
     "ZIP-SELECTED CARE SEARCH",
   );
   await expect(page.locator(".sidebar-bottom")).not.toContainText(
@@ -295,12 +293,12 @@ test("failed market changes do not retain the previous market or catalog", async
   await expect(page.locator(".catalog-note")).toHaveCount(0);
 });
 
-test("live NJ search shows reviewed market results or an honest coverage gap", async ({
+test("live NJ search shows published market results and catalog provenance", async ({
   page,
   request,
 }) => {
   const response = await request.get("/api/search?zip=07030&radius=25");
-  expect([200, 400]).toContain(response.status());
+  expect(response.status()).toBe(200);
   const result = await response.json();
   await restoreWorkspace(page, "07030");
   await page.goto("/dashboard?demo=1");
@@ -308,33 +306,24 @@ test("live NJ search shows reviewed market results or an honest coverage gap", a
     page.getByRole("textbox", { name: "Search ZIP code" }),
   ).toHaveValue("07030");
   await navigate(page, "Find care");
-  if (response.ok()) {
-    expect(result.market.id).toBe("north-jersey");
-    expect(result.market.state).toBe("NJ");
-    expect(result.origin.zip).toBe("07030");
-    expect(
-      result.providers.every(
-        (provider: SearchProvider) => provider.state === "NJ",
-      ),
-    ).toBe(true);
-    await expect(page.locator(".care-search-view .eyebrow").first()).toHaveText(
-      result.market.label,
-    );
-    await expect(page.locator(".results-toolbar")).toContainText(
-      `${result.total} care ${result.total === 1 ? "option" : "options"}`,
-    );
-    await page.getByText("Research coverage & method", { exact: true }).click();
-    await expect(page.locator(".catalog-note")).toContainText(
-      `${result.market.label} catalog as of ${result.asOf}. ${result.catalogTotal} records in this market`,
-    );
-  } else {
-    expect(result.error).toMatch(/North Jersey coverage is pending/);
-    await expect(page.getByRole("main").getByRole("alert")).toHaveText(
-      result.error,
-    );
-    await expect(page.locator(".provider-card")).toHaveCount(0);
-    await expect(page.locator(".catalog-note")).toHaveCount(0);
-  }
+  expect(result.market.id).toBe("north-jersey");
+  expect(result.market.state).toBe("NJ");
+  expect(result.origin.zip).toBe("07030");
+  expect(
+    result.providers.every(
+      (provider: SearchProvider) => provider.state === "NJ",
+    ),
+  ).toBe(true);
+  await expect(page.locator(".sidebar-bottom")).toContainText(
+    result.market.label,
+  );
+  await expect(page.locator(".results-toolbar")).toContainText(
+    `${result.total} care ${result.total === 1 ? "option" : "options"}`,
+  );
+  await openCoverage(page);
+  await expect(page.locator(".catalog-note")).toContainText(
+    `${result.market.label} catalog as of ${result.asOf}. ${result.catalogTotal} records in this market`,
+  );
   const stored = await page.evaluate(
     (key) => JSON.parse(localStorage.getItem(key)!),
     DEMO_KEY,
@@ -413,6 +402,10 @@ test("home-health records cannot publish nursing ratings or request inspections 
   await expect(nursingCard).toContainText("CMS special-focus status");
   await homeCard.getByRole("button", { name: "View details" }).click();
   const detail = page.getByRole("dialog", { name: home.name, exact: true });
+  await detail.getByRole("tab", { name: "Details", exact: true }).click();
+  await detail
+    .getByText("Care quality & patient surveys", { exact: true })
+    .click();
   await expect(detail.locator(".home-health-evidence")).toContainText(
     "No matched CMS home-health evidence",
   );
@@ -424,25 +417,48 @@ test("home-health records cannot publish nursing ratings or request inspections 
   expect(inspectionRequests).toEqual([]);
   await detail.getByRole("button", { name: "Close dialog" }).click();
   await homeCard
-    .getByRole("checkbox", { name: "Compare", exact: true })
+    .getByRole("checkbox", { name: `Compare ${home.name}`, exact: true })
     .check();
   await nursingCard
-    .getByRole("checkbox", { name: "Compare", exact: true })
+    .getByRole("checkbox", { name: `Compare ${nursing.name}`, exact: true })
     .check();
-  await page
-    .getByRole("button", { name: "Compare options", exact: true })
+  await page.getByRole("button", { name: "Compare", exact: true }).click();
+  const comparison = page.getByRole("dialog", { name: "Compare places" });
+  await expect(
+    comparison.getByRole("region", { name: "Places comparison" }),
+  ).toBeVisible();
+  await expect(
+    comparison.getByRole("group", {
+      name: `${home.name}, warnings`,
+      exact: true,
+    }),
+  ).toContainText("Not a safety clearance");
+  await expect(
+    comparison.getByRole("group", {
+      name: `${nursing.name}, warnings`,
+      exact: true,
+    }),
+  ).toContainText("CMS abuse icon");
+  await comparison
+    .getByText("Clinical ratings, availability & records", { exact: true })
     .click();
-  const comparison = page.getByRole("dialog", { name: "Compare care options" });
   for (const [label, rating] of [
     ["CMS overall", "5 / 5"],
     ["CMS health inspections", "4 / 5"],
     ["CMS staffing", "3 / 5"],
   ]) {
-    const row = comparison.getByRole("row").filter({
-      has: page.getByRole("rowheader", { name: label, exact: true }),
-    });
-    await expect(row.getByRole("cell").nth(0)).toHaveText("Not applicable");
-    await expect(row.getByRole("cell").nth(1)).toHaveText(rating);
+    await expect(
+      comparison.getByRole("group", {
+        name: `${home.name}, ${label}`,
+        exact: true,
+      }),
+    ).toHaveText("Not applicable to this care setting");
+    await expect(
+      comparison.getByRole("group", {
+        name: `${nursing.name}, ${label}`,
+        exact: true,
+      }),
+    ).toContainText(rating);
   }
   await comparison.getByRole("button", { name: "Close dialog" }).click();
   await nursingCard.getByRole("button", { name: "View details" }).click();
@@ -450,6 +466,12 @@ test("home-health records cannot publish nursing ratings or request inspections 
     name: nursing.name,
     exact: true,
   });
+  await nursingDetail
+    .getByRole("tab", { name: "Details", exact: true })
+    .click();
+  await nursingDetail
+    .getByText("Care quality & inspections", { exact: true })
+    .click();
   await expect(nursingDetail.locator(".cms-ratings")).toBeVisible();
   await expect(nursingDetail.locator(".metrics-grid")).toBeVisible();
   await expect.poll(() => inspectionRequests.length).toBeGreaterThan(0);

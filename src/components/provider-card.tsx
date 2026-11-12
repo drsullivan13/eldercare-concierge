@@ -9,7 +9,6 @@ import {
   HeartHandshake,
   Hospital,
   MapPin,
-  MessageSquare,
   ShieldAlert,
   Star,
 } from "lucide-react";
@@ -106,17 +105,17 @@ export function ProviderCard({
   const tags = [
     ...(availability ? [availability] : []),
     ...(research?.publishedCosts ? ["Published costs"] : []),
-    ...(research?.facebookResearch?.findingCount ? ["Facebook findings"] : []),
+    ...(research?.facebookResearch?.findingCount &&
+    !research.familyExperience?.distinctThreadCount
+      ? ["Facebook findings"]
+      : []),
     ...provider.services.filter(
       (service) => !categoryServices[provider.category]?.includes(service),
     ),
   ].slice(0, 3);
   return (
-    <article className="provider-card">
+    <article className={`provider-card${compare ? " is-compared" : ""}`}>
       <div className="provider-card-top">
-        <div className={`provider-symbol symbol-${provider.category}`}>
-          <ProviderIcon provider={provider} />
-        </div>
         <div className="provider-label">
           <span className="eyebrow">{CATEGORY_LABELS[provider.category]}</span>
           <span className="distance">
@@ -143,14 +142,26 @@ export function ProviderCard({
           <Bookmark size={19} fill={saved ? "currentColor" : "none"} />
         </button>
       </div>
-      <button className="provider-title" onClick={onOpen}>
-        {provider.name}
+      <button
+        className="provider-title"
+        onClick={onOpen}
+        aria-label={provider.name}
+      >
+        {provider.name === provider.name.toUpperCase()
+          ? provider.name
+              .toLowerCase()
+              .replace(/\b[a-z]/g, (letter) => letter.toUpperCase())
+              .replace(
+                /\b(Llc|Llp|Inc|Cms|Vna|Snf|Nf|Usa|Ii|Iii|Iv)\b/g,
+                (word) => word.toUpperCase(),
+              )
+          : provider.name}
       </button>
       <p className="provider-address">
         {provider.city}, {provider.state} {provider.zip}
       </p>
       {provider.locationKind === "office" && (
-        <p className="small muted">
+        <p className="provider-location-note">
           Office location. Service at your address is not confirmed.
         </p>
       )}
@@ -162,21 +173,23 @@ export function ProviderCard({
               <small>/10</small>
             </strong>
             <span>
-              {research.experience.publicationStatus ===
-              "single-source-estimate"
-                ? `Single-source estimate · ${research.experience.singleSourceLabel}`
-                : "Consumer experience"}
+              Consumer experience
               <small>
+                {research.experience.publicationStatus ===
+                "single-source-estimate"
+                  ? `Single-source estimate · ${research.experience.singleSourceLabel} · `
+                  : ""}
                 {research.experience.confidence === "moderate"
                   ? "Moderate"
                   : "Limited"}{" "}
-                evidence · {research.experience.reviewCount} reviews reported
+                evidence
+                {" · "}
+                {research.experience.reviewCount} reviews reported
               </small>
             </span>
           </span>
         ) : (
           <span className="experience-card-unrated">
-            <MessageSquare size={18} aria-hidden="true" />
             <span>
               Consumer experience
               <small>
@@ -187,11 +200,21 @@ export function ProviderCard({
             </span>
           </span>
         )}
+        {research?.experience.selectedConcerns && (
+          <p className="provider-review-concern">
+            Selected reviews include concerns.
+          </p>
+        )}
+        {Boolean(research?.familyExperience?.distinctThreadCount) && (
+          <div className="provider-family-insight">
+            <FamilyExperienceCount evidence={research?.familyExperience} />
+            <p>
+              Selected accounts, not a representative sample or part of the
+              score.
+            </p>
+          </div>
+        )}
       </div>
-      {research?.experience.selectedConcerns && (
-        <p className="small">Selected reviews include concerns.</p>
-      )}
-      <FamilyExperienceCount evidence={research?.familyExperience} />
       {provider.category === "nursing-home" && provider.cms && (
         <div className="provider-proof">
           <Rating value={provider.cms.overall} />
@@ -223,6 +246,7 @@ export function ProviderCard({
             <input
               type="checkbox"
               checked={compare || false}
+              aria-label={`Compare ${provider.name}`}
               onChange={onCompare}
             />
             <span>{compare ? <Check size={12} /> : null}</span>Compare

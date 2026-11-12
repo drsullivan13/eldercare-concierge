@@ -9,6 +9,7 @@ import catalogue from "../../src/data/providers.json";
 import zipPoints from "../../src/data/ma-zips.json";
 import type { Provider, SearchResponse } from "../../src/lib/providers";
 import type { InspectionEvidence } from "../../src/lib/inspections";
+import type { LocationResearchResponse } from "../../src/lib/location-research-types";
 
 const DEMO_KEY = "harbor.demo.workspace.v1";
 const actualRecords = catalogue as Provider[];
@@ -59,22 +60,29 @@ async function searchAPI(
   return (await response.json()) as SearchResponse;
 }
 
-async function openDemo(page: Page) {
-  await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "next chapter",
-  );
-  await page
-    .getByRole("link", {
-      name: /^(Open your care workspace|Explore the demo)$/,
-    })
-    .click();
+async function openDemo(page: Page, fromLanding = false) {
+  await page.goto(fromLanding ? "/" : "/dashboard?demo=1");
+  if (fromLanding) {
+    await expect(page.getByRole("heading", { level: 1 })).toContainText(
+      "next chapter",
+    );
+    await page
+      .getByRole("link", {
+        name: /^(Open your care workspace|Explore the demo)$/,
+      })
+      .click();
+  }
   await expect(page).toHaveURL(/\/dashboard\?demo=1/);
-  await expect(page.locator(".demo-banner")).toContainText(
-    "Real provider records. Your plan stays in this browser.",
-  );
+  await expect(
+    page.getByRole("banner").getByRole("link", { name: "Harbor home" }),
+  ).toBeVisible();
+  await page.getByText("About your workspace", { exact: true }).click();
+  await expect(
+    page.getByText(/Real provider records\. Your plan stays in this browser\./),
+  ).toBeVisible();
+  await page.getByText("About your workspace", { exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "A clearer plan",
+    "Find care for",
   );
 }
 
@@ -98,9 +106,12 @@ async function searchTenMiles(page: Page) {
   const response = await result;
   expect(response.status()).toBe(200);
   const body = (await response.json()) as SearchResponse;
-  await expect(page.locator(".results-toolbar")).toContainText(
-    "within 10 miles of Newton Center, MA 02459",
+  await expect(page.locator(".search-summary")).toContainText(
+    "Newton Center, 02459",
   );
+  await expect(
+    page.getByRole("button", { name: "Filters", exact: true }),
+  ).toHaveAttribute("aria-expanded", "false");
   await expect(page.locator(".provider-card").first()).toContainText(
     body.providers[0].name,
   );
@@ -143,10 +154,11 @@ test("care alerts remain visible while source detail is disclosed on demand", as
     .locator("form.quick-search")
     .getByRole("button", { name: "Find care" })
     .click();
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page.getByPlaceholder("Search by name or town").fill(provider.name);
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   const option = card(page, provider);
   await expect(
@@ -169,6 +181,7 @@ test("care alerts remain visible while source detail is disclosed on demand", as
   await expect(
     dialog.locator(".source-disclosure .source-list"),
   ).not.toBeVisible();
+  await dialog.getByRole("tab", { name: "Details", exact: true }).click();
   await dialog.locator(".source-disclosure summary").click();
   await expect(dialog.locator(".source-disclosure .source-list")).toBeVisible();
 });
@@ -206,14 +219,14 @@ test("a failed shortlist lookup preserves saved IDs and notes in the downloaded 
   );
   await page.goto("/dashboard?demo=1");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "A clearer plan",
+    "Find care for",
   );
   await navigate(page, "Your shortlist");
-  await expect(page.locator(".form-error[role=alert]")).toContainText(
+  await expect(page.getByRole("main").getByRole("alert")).toContainText(
     "Your saved providers could not be loaded",
   );
   await expect(
-    page.getByText("A good shortlist starts with one option."),
+    page.getByRole("heading", { name: "No saved places yet." }),
   ).not.toBeVisible();
   const pendingDownload = page.waitForEvent("download");
   await page.getByRole("button", { name: "Export plan", exact: true }).click();
@@ -315,7 +328,7 @@ test("real search API respects coordinates, radius, evidence and nursing-home-on
 test("landing to demo: search real providers, save two, compare, inspect sources and persist a bounded note", async ({
   page,
 }) => {
-  await openDemo(page);
+  await openDemo(page, true);
   await noDocumentOverflow(page);
   const body = await searchTenMiles(page);
   const [first, second] = body.providers;
@@ -339,30 +352,43 @@ test("landing to demo: search real providers, save two, compare, inspect sources
       }),
     ).toBeVisible();
     await result
-      .getByRole("checkbox", { name: "Compare", exact: true })
+      .getByRole("checkbox", { name: `Compare ${provider.name}`, exact: true })
       .check();
   }
-  await page
-    .getByRole("button", { name: "Compare options", exact: true })
-    .click();
-  const comparison = page.getByRole("dialog", { name: "Compare care options" });
+  await page.getByRole("button", { name: "Compare", exact: true }).click();
+  const comparison = page.getByRole("dialog", { name: "Compare places" });
   await expect(comparison).toBeVisible();
+  for (const provider of [first, second]) {
+    await expect(
+      comparison.getByRole("button", { name: provider.name, exact: true }),
+    ).toBeVisible();
+    await expect(
+      comparison.getByRole("group", {
+        name: `${provider.name}, consumer experience`,
+        exact: true,
+      }),
+    ).toBeVisible();
+  }
+  await comparison
+    .getByText("Clinical ratings, availability & records", { exact: true })
+    .click();
   await expect(
-    comparison.getByRole("columnheader", { name: first.name, exact: true }),
-  ).toBeVisible();
-  await expect(
-    comparison.getByRole("columnheader", { name: second.name, exact: true }),
-  ).toBeVisible();
-  await expect(
-    comparison.getByRole("row", { name: /CMS overall/ }),
+    comparison.getByRole("group", {
+      name: `${first.name}, CMS overall`,
+      exact: true,
+    }),
   ).toContainText("Not applicable");
   await expect(
-    comparison.getByRole("row", { name: /Current availability/ }),
-  ).toContainText("Not confirmed");
+    comparison.getByRole("group", {
+      name: `${first.name}, Availability`,
+      exact: true,
+    }),
+  ).toContainText("Not confirmed live");
   await noDocumentOverflow(page);
   await comparison.getByRole("button", { name: "Close dialog" }).click();
   await card(page, first).getByRole("button", { name: "View details" }).click();
   const detail = page.getByRole("dialog", { name: first.name, exact: true });
+  await detail.getByRole("tab", { name: "Details", exact: true }).click();
   await detail.locator(".source-disclosure summary").click();
   await expect(detail.locator(".source-list")).toBeVisible();
   for (const [index, source] of first.sources.entries()) {
@@ -373,6 +399,7 @@ test("landing to demo: search real providers, save two, compare, inspect sources
     await expect(link).toContainText(`Retrieved ${source.checkedAt}`);
     await expect(link).toHaveAttribute("target", "_blank");
   }
+  await detail.getByText("Your questions & notes", { exact: true }).click();
   const notes = detail.getByRole("textbox", {
     name: `Notes about ${first.name}`,
   });
@@ -403,10 +430,16 @@ test("landing to demo: search real providers, save two, compare, inspect sources
     )
     .toEqual([first.id, second.id]);
   await page.reload();
-  await expect(page.locator(".demo-banner")).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Find care for",
+  );
   await navigate(page, "Your shortlist");
   await expect(page.locator(".provider-card")).toHaveCount(2);
   await card(page, first).getByRole("button", { name: "View details" }).click();
+  await page
+    .getByRole("dialog", { name: first.name })
+    .getByText("Your questions & notes", { exact: true })
+    .click();
   await expect(
     page
       .getByRole("dialog", { name: first.name })
@@ -424,9 +457,12 @@ test("CMS sort is exposed only for nursing homes and the map keeps actual result
       new URL(response.url()).pathname === "/api/search" &&
       new URL(response.url()).searchParams.get("category") === "nursing-home",
   );
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page
-    .locator(".category-tabs")
-    .getByRole("button", { name: "Nursing & rehabilitation", exact: true })
+    .getByRole("combobox", { name: "Care category", exact: true })
+    .selectOption("nursing-home");
+  await page
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   expect((await nursingResponse).status()).toBe(200);
   const sort = page.getByRole("combobox", { name: "Sort results" });
@@ -453,9 +489,12 @@ test("CMS sort is exposed only for nursing homes and the map keeps actual result
       new URL(response.url()).searchParams.get("category") ===
         "assisted-living",
   );
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page
-    .locator(".category-tabs")
-    .getByRole("button", { name: "Assisted living", exact: true })
+    .getByRole("combobox", { name: "Care category", exact: true })
+    .selectOption("assisted-living");
+  await page
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   const assisted = (await (await assistedResponse).json()) as SearchResponse;
   expect(
@@ -469,6 +508,189 @@ test("CMS sort is exposed only for nursing homes and the map keeps actual result
   await expect(page.locator(".leaflet-overlay-pane path")).toHaveCount(
     assisted.providers.length + 2,
   );
+});
+
+test("families filter and compare options, then use the place section selector with a keyboard", async ({
+  page,
+}) => {
+  await openDemo(page);
+  await page
+    .getByRole("combobox", { name: "Search radius" })
+    .selectOption("50");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("life-plan");
+  await page
+    .getByRole("region", { name: "Search nearby care" })
+    .getByRole("button", { name: "Find care", exact: true })
+    .click();
+  await page
+    .getByRole("combobox", { name: "Sort results" })
+    .selectOption("experience");
+  const filtered = page.waitForResponse((response) => {
+    const url = new URL(response.url());
+    return (
+      url.pathname === "/api/search" &&
+      url.searchParams.get("category") === "life-plan" &&
+      url.searchParams.get("sort") === "experience" &&
+      url.searchParams.get("evidence") === "pricing"
+    );
+  });
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Research filter" })
+    .selectOption("pricing");
+  await page
+    .getByRole("button", { name: "Apply filters", exact: true })
+    .click();
+  const results = (await (await filtered).json()) as SearchResponse;
+  expect(results.providers.length).toBeGreaterThanOrEqual(2);
+  const selected = results.providers.slice(0, 2);
+  for (const provider of selected) {
+    await card(page, provider)
+      .getByRole("checkbox", { name: `Compare ${provider.name}`, exact: true })
+      .check();
+  }
+  await page.getByRole("button", { name: "Compare", exact: true }).click();
+  const comparison = page.getByRole("dialog", { name: "Compare places" });
+  const tableArea = comparison.getByRole("region", {
+    name: "Places comparison",
+  });
+  await expect(tableArea).toHaveAttribute("tabindex", "0");
+  await expect(
+    comparison.getByRole("heading", { name: "Published prices", exact: true }),
+  ).toBeVisible();
+  await expect(
+    comparison.getByRole("heading", { name: "A review insight", exact: true }),
+  ).toBeVisible();
+  await expect(comparison).toContainText("not clinical quality or safety");
+  for (const provider of selected) {
+    const prices = comparison.getByRole("group", {
+      name: `${provider.name}, published prices`,
+      exact: true,
+    });
+    await expect(prices).not.toHaveAttribute("aria-busy", "true");
+    await expect(prices).toContainText(
+      "Published prices, not a personal quote.",
+    );
+    await expect(prices.getByRole("link").first()).toHaveAttribute(
+      "href",
+      /^https?:/,
+    );
+    const response = await page.request.get("/api/research", {
+      params: { id: provider.id },
+    });
+    expect(response.status()).toBe(200);
+    const research = (await response.json()) as LocationResearchResponse;
+    const perks = comparison.getByRole("group", {
+      name: `${provider.name}, everyday perks`,
+      exact: true,
+    });
+    const publishedPerks = research.facts
+      .filter((fact) =>
+        ["dining", "amenity", "activity", "room", "care"].includes(fact.kind),
+      )
+      .map((fact) => fact.text);
+    expect(publishedPerks.length).toBeGreaterThan(0);
+    await expect(perks.locator("p").first()).toBeVisible();
+    for (const text of await perks.locator("p").allTextContents()) {
+      expect(publishedPerks).toContain(text);
+    }
+    const morePrices = prices.getByText(/^More prices \(/);
+    if (await morePrices.isVisible()) await morePrices.click();
+    const costs = research.facts.filter((fact) => fact.kind === "cost");
+    expect(costs.length).toBeGreaterThan(0);
+    for (const cost of costs) {
+      await expect(prices).toContainText(cost.text);
+      if (cost.amount) {
+        await expect(prices).toContainText(
+          new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            maximumFractionDigits: 2,
+          }).format(cost.amount.min),
+        );
+      }
+    }
+    const insight = comparison.getByRole("group", {
+      name: `${provider.name}, a review insight`,
+      exact: true,
+    });
+    await expect(insight).toContainText(
+      "One selected account, not a survey. Relationship unverified.",
+    );
+    const accountLink = insight.getByRole("link").first();
+    const accountUrls = [
+      ...research.reviews.map((review) => review.url),
+      ...research.sources.map((source) => source.url),
+      ...(research.facebookResearch?.findings.map(
+        (finding) => finding.sourceUrl,
+      ) ?? []),
+    ];
+    expect(accountUrls).toContain(await accountLink.getAttribute("href"));
+    await expect(accountLink).toHaveAttribute("target", "_blank");
+    const quote = insight.getByRole("blockquote");
+    await expect(quote).toBeVisible();
+    const selectedText = (await quote.innerText())
+      .slice(1, -1)
+      .replace(/…$/, "");
+    const publishedAccounts = [
+      ...research.reviews.map((review) => review.excerpt),
+      ...(research.facebookResearch?.findings.map(
+        (finding) => finding.excerpt ?? "",
+      ) ?? []),
+    ];
+    expect(
+      publishedAccounts.some((text) => text.startsWith(selectedText)),
+    ).toBe(true);
+  }
+  await tableArea.focus();
+  await expect(tableArea).toBeFocused();
+  await tableArea.press("ArrowRight");
+  if (
+    await tableArea.evaluate(
+      (element) => element.scrollWidth > element.clientWidth,
+    )
+  ) {
+    await expect
+      .poll(() => tableArea.evaluate((element) => element.scrollLeft))
+      .toBeGreaterThan(0);
+  }
+  await noDocumentOverflow(page);
+  await comparison
+    .getByRole("button", { name: selected[0].name, exact: true })
+    .click();
+  await expect(comparison).toHaveCount(0);
+  const detail = page.getByRole("dialog", {
+    name: selected[0].name,
+    exact: true,
+  });
+  const sections = detail.getByRole("tablist", { name: "Provider profile" });
+  await expect(sections.getByRole("tab", { selected: true })).toHaveText(
+    "Overview",
+  );
+  const overview = sections.getByRole("tab", { name: "Overview", exact: true });
+  await overview.focus();
+  for (const [key, label, content] of [
+    ["ArrowRight", "Costs & perks", "Care, amenities & everyday life"],
+    ["ArrowRight", "Reviews", "Selected public experiences"],
+    ["End", "Details", "About this provider"],
+    ["Home", "Overview", "At a glance"],
+  ]) {
+    await page.keyboard.press(key);
+    const tab = sections.getByRole("tab", { name: label, exact: true });
+    await expect(tab).toBeFocused();
+    await expect(tab).toHaveAttribute("aria-selected", "true");
+    await expect(tab).toHaveAttribute("tabindex", "0");
+    const panel = detail.getByRole("tabpanel", { name: label, exact: true });
+    await expect(panel).toHaveAttribute(
+      "id",
+      (await tab.getAttribute("aria-controls"))!,
+    );
+    await expect(panel).toContainText(content);
+    await expect(sections.getByRole("tab", { selected: true })).toHaveCount(1);
+  }
+  await noDocumentOverflow(page);
 });
 
 test("personal planning tasks add, toggle, persist and delete in the local demo", async ({
@@ -512,7 +734,9 @@ test("personal planning tasks add, toggle, persist and delete in the local demo"
     )
     .toBe("done");
   await page.reload();
-  await expect(page.locator(".demo-banner")).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Find care for",
+  );
   await navigate(page, "Your plan");
   await expect(
     task.getByRole("button", { name: `Reopen ${title}`, exact: true }),
@@ -547,6 +771,7 @@ test("empty and unsupported searches are honest errors, with working mobile navi
 }) => {
   await openDemo(page);
   await searchTenMiles(page);
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   const input = page.getByPlaceholder("Search by name or town");
   await input.fill("NoSuchHarborProvider_7c84");
   const empty = page.waitForResponse(
@@ -557,13 +782,14 @@ test("empty and unsupported searches are honest errors, with working mobile navi
   );
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   expect((await empty).status()).toBe(200);
   await expect(
     page.getByRole("heading", { name: "No matching options in this search." }),
   ).toBeVisible();
   await expect(page.locator(".provider-card")).toHaveCount(0);
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await input.fill("");
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("01103");
   const outside = page.waitForResponse(
@@ -573,7 +799,7 @@ test("empty and unsupported searches are honest errors, with working mobile navi
   );
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   expect((await outside).status()).toBe(400);
   await expect(page.getByRole("main").getByRole("alert")).toContainText(
@@ -593,12 +819,12 @@ test("empty and unsupported searches are honest errors, with working mobile navi
   await navigate(page, "Your shortlist");
   await expect(
     page.getByRole("heading", {
-      name: "A good shortlist starts with one option.",
+      name: "No saved places yet.",
     }),
   ).toBeVisible();
   await navigate(page, "Overview");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "A clearer plan",
+    "Find care for",
   );
   await noDocumentOverflow(page);
 });
@@ -648,9 +874,12 @@ test("protected API never returns a workspace to an anonymous browser or silentl
   const accountsDisabled = new URL(page.url()).pathname === "/dashboard";
   if (accountsDisabled) {
     // Backend configuration and account activation are separate: the current product needs neither sign-in nor SMTP.
-    await expect(page.locator(".demo-banner")).toContainText(
-      "Your plan stays in this browser.",
-    );
+    await page.getByText("About your workspace", { exact: true }).click();
+    await expect(
+      page.getByText(
+        /Real provider records\. Your plan stays in this browser\./,
+      ),
+    ).toContainText("Your plan stays in this browser.");
     await expect(
       page.locator('a[href="/signup"], a[href="/login"]'),
     ).toHaveCount(0);
@@ -662,7 +891,9 @@ test("protected API never returns a workspace to an anonymous browser or silentl
       page.getByRole("link", { name: "Open your care workspace", exact: true }),
     ).toHaveAttribute("href", "/dashboard?demo=1");
     await expect(
-      page.getByRole("link", { name: /Get started/ }),
+      page
+        .getByRole("navigation", { name: "Main navigation" })
+        .getByRole("link", { name: "Find care", exact: true }),
     ).toHaveAttribute("href", "/dashboard?demo=1");
     await expect(
       page.getByRole("link", { name: "Log in", exact: true }),
@@ -675,9 +906,14 @@ test("protected API never returns a workspace to an anonymous browser or silentl
     for (const entry of ["/signup", "/login", "/dashboard"]) {
       await page.goto(entry);
       await expect(page).toHaveURL(/\/dashboard\?demo=1$/);
-      await expect(page.locator(".demo-banner")).toBeVisible();
+      await page.getByText("About your workspace", { exact: true }).click();
+      await expect(
+        page.getByText(
+          /Real provider records\. Your plan stays in this browser\./,
+        ),
+      ).toBeVisible();
       await expect(page.getByRole("heading", { level: 1 })).toContainText(
-        "A clearer plan",
+        "Find care for",
       );
       await expect(
         page.locator('a[href="/signup"], a[href="/login"]'),
@@ -767,9 +1003,12 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
       new URL(response.url()).pathname === "/api/search" &&
       new URL(response.url()).searchParams.get("category") === "nursing-home",
   );
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page
-    .locator(".category-tabs")
-    .getByRole("button", { name: "Nursing & rehabilitation", exact: true })
+    .getByRole("combobox", { name: "Care category", exact: true })
+    .selectOption("nursing-home");
+  await page
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   await categoryResponse;
   await card(page, provider)
@@ -777,6 +1016,8 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
     .click();
   const detail = page.getByRole("dialog", { name: provider.name, exact: true });
   const history = detail.locator(".inspection-history");
+  await detail.getByRole("tab", { name: "Details", exact: true }).click();
+  await detail.getByText("Care quality & inspections", { exact: true }).click();
   await expect(
     history.getByRole("heading", { name: "Inspection findings & penalties" }),
   ).toBeVisible();
@@ -837,6 +1078,8 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
   await card(page, provider)
     .getByRole("button", { name: "View details" })
     .click();
+  await detail.getByRole("tab", { name: "Details", exact: true }).click();
+  await detail.getByText("Care quality & inspections", { exact: true }).click();
   await expect(history.getByRole("alert")).toContainText("could not be loaded");
   await expect(history.locator("article.source-item")).toHaveCount(0);
   const retry = page.waitForResponse(
@@ -866,6 +1109,7 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
   expect(empty.healthCitations.available).toBe(true);
   expect(empty.healthCitations.total).toBe(0);
   expect(empty.healthCitations.records).toEqual([]);
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page.getByPlaceholder("Search by name or town").fill(zero.name);
   const zeroSearch = page.waitForResponse(
     (response) =>
@@ -874,10 +1118,18 @@ test("nursing-home detail shows actual CMS findings, bounded history, published 
   );
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   await zeroSearch;
   await card(page, zero).getByRole("button", { name: "View details" }).click();
+  await page
+    .getByRole("dialog", { name: zero.name, exact: true })
+    .getByRole("tab", { name: "Details", exact: true })
+    .click();
+  await page
+    .getByRole("dialog", { name: zero.name, exact: true })
+    .getByText("Care quality & inspections", { exact: true })
+    .click();
   const emptyHistory = page
     .getByRole("dialog", { name: zero.name, exact: true })
     .locator(".inspection-history");
@@ -908,8 +1160,12 @@ test("continuing-care campuses retain separate identities and label ZIP estimate
     .locator("form.quick-search")
     .getByRole("button", { name: "Find care" })
     .click();
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page
-    .getByRole("button", { name: "Continuing & tiered care", exact: true })
+    .getByRole("combobox", { name: "Care category", exact: true })
+    .selectOption("life-plan");
+  await page
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   await expect(page.locator(".provider-card")).toHaveCount(7);
   await expect(
@@ -927,6 +1183,8 @@ test("continuing-care campuses retain separate identities and label ZIP estimate
     exact: true,
   });
   await expect(detail.locator(".cms-ratings")).toHaveCount(0);
+  await detail.getByRole("tab", { name: "Details", exact: true }).click();
+  await detail.locator(".source-disclosure summary").click();
   await expect(detail.locator(".source-list")).toContainText("Census");
   await expect(detail).toContainText("ZIP");
   await noDocumentOverflow(page);
@@ -947,7 +1205,9 @@ test("a browser storage failure never claims a new shortlist item or note was sa
     };
   });
   await openDemo(page);
+  await page.getByText("About your workspace", { exact: true }).click();
   await expect(page.locator(".save-status")).toHaveText("Demo not saved");
+  await page.getByText("About your workspace", { exact: true }).click();
   const body = await searchTenMiles(page);
   const provider = body.providers[0];
   await card(page, provider)
@@ -967,6 +1227,7 @@ test("a browser storage failure never claims a new shortlist item or note was sa
     .getByRole("button", { name: "View details" })
     .click();
   const detail = page.getByRole("dialog", { name: provider.name, exact: true });
+  await detail.getByText("Your questions & notes", { exact: true }).click();
   await detail
     .getByRole("textbox", { name: `Notes about ${provider.name}` })
     .fill("Ask about visiting hours.");

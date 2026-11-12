@@ -1,0 +1,103 @@
+.grid {
+  display: grid;
+  width: 100%;
+  color: var(--ink, #233c39);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.band {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 10px 12px;
+  border-block: 1px solid #dce4dc;
+  background: var(--teal-pale, #f1f6f1);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.cell {
+  min-width: 0;
+  padding: 10px 12px 12px;
+  border-inline-end: 1px solid #e4e9e2;
+  overflow-wrap: anywhere;
+}
+
+.cell p,
+.cell blockquote {
+  margin: 0 0 5px;
+}
+
+.cell blockquote {
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  font-style: normal;
+}
+
+.cell small {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.fact + .fact {
+  margin-top: 14px;
+}
+
+.price {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.price span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.muted,
+.source {
+  color: var(--muted, #586861);
+}
+
+.source a,
+.more summary {
+  color: var(--teal-dark, #205b50);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.more {
+  margin-top: 4px;
+}
+
+.more summary {
+  display: list-item;
+  min-height: 44px;
+  padding-block: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.retry {
+  min-height: 44px;
+  margin-top: 6px;
+  padding: 8px 12px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--teal-dark, #205b50);
+  font: inherit;
+  cursor: pointer;
+}
+
+.retry:focus-visible,
+.source a:focus-visible,
+.more summary:focus-visible {
+  outline: 2px solid var(--teal, #287465);
+  outline-offset: 3px;
+}

@@ -27,16 +27,17 @@ export function FamilyExperienceEvidence({
       <details className="evidence-disclosure family-experience-method">
         <summary>How Harbor uses these accounts</summary>
         <p>
-          Each thread counts once, even when several people comment. Harbor
-          includes selected accounts about this location. Their authors’
-          relationships have not been independently verified.
+          Selected accounts, not a representative survey. Relationships are not
+          independently verified. Thread counts do not measure positivity,
+          quality or prevalence.
         </p>
         <p>
-          Exact-provider scope means editorial assignment to a catalog record,
-          which can be a campus rather than a separately licensed care unit.
-          Campus findings cannot transfer to separate nursing or assisted-living
-          units. Selected accounts do not measure positivity, quality or
-          prevalence.
+          Findings apply to this catalog location, which may be a campus. Campus
+          findings cannot transfer to separate nursing or assisted-living units.
+        </p>
+        <p>
+          Each thread counts once, even when several people comment. Harbor
+          includes selected accounts about this location.
         </p>
         <p>
           These accounts do not change the experience score. When you sort by

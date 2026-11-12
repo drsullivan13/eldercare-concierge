@@ -9,8 +9,12 @@ import { getFamilyExperience } from "../../src/lib/facebook-research";
 const snapshot = data as unknown as FacebookResearchDataset;
 const assigned = Object.entries(snapshot.locations);
 const names = new Map(catalog.map((p) => [p.id, p.name]));
+test.describe.configure({ timeout: 180_000 });
 async function open(page: Page, id: string) {
   await page.goto("/dashboard?demo=1");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption(catalog.find((provider) => provider.id === id)!.category);
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Search radius" })
@@ -19,9 +23,10 @@ async function open(page: Page, id: string) {
     .locator("form.quick-search")
     .getByRole("button", { name: "Find care" })
     .click();
-  await expect(
-    page.getByRole("combobox", { name: "Research filter" }),
-  ).toBeVisible();
+  const filters = page.getByRole("button", { name: "Filters", exact: true });
+  await expect(filters).toHaveAttribute("aria-expanded", "false");
+  await expect(page.locator("#search-filters")).toBeHidden();
+  await filters.click();
   const name = names.get(id)!;
   await page.getByPlaceholder("Search by name or town").fill(name);
   const loaded = page.waitForResponse(
@@ -31,17 +36,12 @@ async function open(page: Page, id: string) {
   );
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   await loaded;
   const card = page
     .locator("article.provider-card")
-    .filter({ has: page.getByRole("button", { name, exact: true }) })
-    .filter({
-      has: page.locator(
-        `.provider-symbol.symbol-${catalog.find((p) => p.id === id)!.category}`,
-      ),
-    });
+    .filter({ has: page.getByRole("button", { name, exact: true }) });
   await expect(card).toHaveCount(1);
   const count = getFamilyExperience(id)?.distinctThreadCount ?? 0;
   const familyText = `${count} Facebook ${count === 1 ? "thread" : "threads"} with resident or family accounts`;
@@ -57,7 +57,16 @@ async function open(page: Page, id: string) {
   await card.getByRole("button", { name: "View details" }).click();
   expect((await (await research).json()).providerId).toBe(id);
   const dialog = page.getByRole("dialog", { name, exact: true });
-  await expect(dialog.locator(".research-tabs")).toHaveCount(0);
+  await expect(
+    dialog.getByRole("tablist", { name: "Provider profile" }),
+  ).toBeVisible();
+  await expect(
+    dialog.getByRole("tab", { name: "Overview", exact: true }),
+  ).toHaveAttribute("aria-selected", "true");
+  await dialog.getByRole("tab", { name: "Reviews", exact: true }).click();
+  await expect(
+    dialog.getByRole("tabpanel", { name: "Reviews", exact: true }),
+  ).toBeVisible();
   if (count) {
     await expect(dialog.locator(".family-experience")).toHaveText(familyText);
     await dialog

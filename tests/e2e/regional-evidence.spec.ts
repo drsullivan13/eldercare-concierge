@@ -29,12 +29,13 @@ async function openSearch(page: Page, zip: string) {
 }
 
 async function openProvider(page: Page, provider: SearchProvider) {
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page
     .getByRole("textbox", { name: "Provider or town" })
     .fill(provider.name);
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   const card = page.locator(".provider-card").filter({
     has: page.getByRole("button", { name: provider.name, exact: true }),
@@ -67,6 +68,19 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
   await openSearch(page, "07083");
   const detail = await openProvider(page, provider!);
   const evidence = detail.locator(".location-research");
+  const tabs = detail.getByRole("tablist", { name: "Provider profile" });
+  const overview = tabs.getByRole("tab", { name: "Overview", exact: true });
+  await expect(overview).toHaveAttribute("aria-selected", "true");
+  await overview.focus();
+  await overview.press("ArrowRight");
+  const costs = tabs.getByRole("tab", { name: "Costs & perks", exact: true });
+  await expect(costs).toBeFocused();
+  await expect(costs).toHaveAttribute("aria-selected", "true");
+  await expect(overview).toHaveAttribute("tabindex", "-1");
+  await expect(detail.getByRole("tabpanel")).toHaveAttribute(
+    "aria-labelledby",
+    await costs.evaluate((tab) => tab.id),
+  );
   await expect(evidence).toContainText(
     "Amenities and activities have not been researched yet",
   );
@@ -75,16 +89,26 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
   ).toHaveCount(0);
   await expect(evidence).not.toContainText("Research checked");
   await expect(evidence).toContainText("Pricing has not been established");
+  await costs.press("End");
+  await expect(
+    tabs.getByRole("tab", { name: "Details", exact: true }),
+  ).toBeFocused();
   await expect(evidence).toContainText(
     "Current availability is not established",
   );
-  await expect(evidence).toContainText("not been researched");
+  await tabs
+    .getByRole("tab", { name: "Details", exact: true })
+    .press("ArrowLeft");
+  await expect(
+    tabs.getByRole("tab", { name: "Reviews", exact: true }),
+  ).toBeFocused();
   await expect(evidence).toContainText("Not rated yet");
   await expect(evidence).toContainText(
     "No location-matched ratings have been researched yet",
   );
   await expect(evidence.locator(".experience-number")).not.toContainText("/10");
 
+  await detail.getByRole("tab", { name: "Details", exact: true }).click();
   await detail.locator(".source-disclosure summary").click();
   const links = await detail
     .locator(".source-list a")
@@ -106,6 +130,7 @@ test("Morristown care detail displays its published location-matched experience 
   await openSearch(page, "07960");
   const detail = await openProvider(page, provider!);
   const evidence = detail.locator(".location-research");
+  await detail.getByRole("tab", { name: "Reviews", exact: true }).click();
   await expect(evidence.locator(".experience-number")).toContainText("8");
   await expect(evidence).toContainText("185");
   await expect(evidence).toContainText("MyLivingChoice");
@@ -150,14 +175,18 @@ test("Facebook-only detail responses display retained findings and original link
   );
 
   await openSearch(page, "02459");
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
+  await page.getByRole("button", { name: "Apply filters" }).click();
   const detail = await openProvider(page, provider);
   const evidence = detail.locator(".location-research");
+  await detail.getByRole("tab", { name: "Costs & perks", exact: true }).click();
   await expect(evidence).toContainText(
     "Amenities and activities have not been researched yet",
   );
+  await detail.getByRole("tab", { name: "Reviews", exact: true }).click();
   await expect(evidence).toContainText("Not rated yet");
   await expect(evidence.locator(".experience-number")).not.toContainText("/10");
   await expect(evidence.locator(".fb-research")).toContainText(
@@ -193,10 +222,11 @@ test("published NJ coverage rejects excluded or unrecognized ZIPs without a pend
     );
   }
   await openSearch(page, "07083");
+  await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("08002");
   await page
     .locator("form.research-search")
-    .getByRole("button", { name: "Search", exact: true })
+    .getByRole("button", { name: "Apply filters", exact: true })
     .click();
   const error = page.getByRole("main").getByRole("alert");
   await expect(error).toContainText("published North Jersey coverage");

@@ -8,6 +8,7 @@ import {
   Map as MapIcon,
   MapPin,
   Search,
+  SlidersHorizontal,
 } from "lucide-react";
 import {
   CATEGORY_LABELS,
@@ -34,35 +35,99 @@ const careCategories = Object.entries({
 export function CareSearchView({
   search,
   submit,
-  changeCategory,
   cards,
   openProvider,
 }: {
   search: CareSearch;
   submit: () => void;
-  changeCategory: (category: string) => void;
   cards: (providers: SearchProvider[]) => ReactNode;
   openProvider: (provider: Provider) => void;
 }) {
   const [showMap, setShowMap] = useState(false);
-  const { draft, data, loading, error, displayCount } = search;
+  const [panel, setPanel] = useState<"closed" | "filters" | "experience">(
+    "closed",
+  );
+  const { draft, request, data, loading, error, displayCount } = search;
   return (
     <div className="care-search-view">
       <div className="page-heading compact">
         <div>
-          <span className="eyebrow">
-            {data?.market.label || "ZIP-SELECTED CARE SEARCH"}
-          </span>
           <h1>
             Find care <em>nearby.</em>
           </h1>
         </div>
       </div>
+      <div className="search-summary">
+        <div>
+          <MapPin size={18} aria-hidden="true" />
+          <span>
+            <strong>
+              {data ? `${data.origin.city}, ${data.origin.zip}` : request.zip}
+            </strong>
+            <small>
+              {request.radius} miles ·{" "}
+              {careCategories.find(([id]) => id === request.category)?.[1]}
+            </small>
+          </span>
+        </div>
+        <button
+          className="button button-outline"
+          aria-expanded={panel === "filters"}
+          aria-controls="search-filters"
+          onClick={() => setPanel(panel === "filters" ? "closed" : "filters")}
+        >
+          <SlidersHorizontal size={16} /> Filters
+        </button>
+      </div>
+      {panel === "experience" && (
+        <section
+          className="experience-category-prompt"
+          aria-labelledby="experience-category-heading"
+        >
+          <h2 id="experience-category-heading">
+            Choose a care type to rank by experience
+          </h2>
+          <p>
+            Consumer reviews, not clinical quality or safety. Compare scores
+            within one care type.
+          </p>
+          <label className="search-filter-field">
+            Care type
+            <select
+              autoFocus
+              aria-label="Care type for experience"
+              defaultValue=""
+              onChange={(event) => {
+                search.filter({
+                  category: event.target.value,
+                  sort: "experience",
+                });
+                setPanel("closed");
+              }}
+            >
+              <option value="" disabled>
+                Choose care type
+              </option>
+              {Object.entries(CATEGORY_LABELS).map(([id, label]) => (
+                <option key={id} value={id}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button className="text-link" onClick={() => setPanel("closed")}>
+            Cancel
+          </button>
+        </section>
+      )}
       <form
+        id="search-filters"
+        hidden={panel !== "filters"}
         className="research-search"
         onSubmit={(event) => {
           event.preventDefault();
           submit();
+          setPanel("closed");
         }}
       >
         <label>
@@ -106,22 +171,72 @@ export function CareSearchView({
             />
           </div>
         </label>
+        <label>
+          <span>Care type</span>
+          <select
+            aria-label="Care category"
+            value={draft.category}
+            onChange={(event) => search.edit("category", event.target.value)}
+          >
+            {careCategories.map(([id, label]) => (
+              <option key={id} value={id}>
+                {label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          <span>Evidence</span>
+          <select
+            aria-label="Research filter"
+            value={draft.evidence}
+            onChange={(event) => search.edit("evidence", event.target.value)}
+          >
+            <option value="all">All options</option>
+            <option value="details">Offerings researched</option>
+            <option value="pricing">Published costs</option>
+            <option value="openings">Published opening claims</option>
+            <option value="reviews">Has experience score</option>
+            <option value="facebook">Facebook findings</option>
+            <option value="unrated">Needs experience score</option>
+          </select>
+        </label>
         <button type="submit" className="button button-primary">
-          Search <ArrowRight size={16} />
+          Apply filters <ArrowRight size={16} />
         </button>
       </form>
-      <div className="category-tabs" role="group" aria-label="Care category">
-        {careCategories.map(([id, label]) => (
-          <button
-            key={id}
-            className={draft.category === id ? "active" : ""}
-            aria-pressed={draft.category === id}
-            onClick={() => changeCategory(id)}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
+      <label className="search-sort">
+        Sort
+        <select
+          aria-label="Sort results"
+          value={request.sort}
+          onChange={(event) => {
+            if (
+              event.target.value === "experience" &&
+              request.category === "all"
+            ) {
+              setPanel("experience");
+            } else {
+              search.filter({ sort: event.target.value });
+              if (
+                (event.target.value === "experience" &&
+                  draft.category === "all") ||
+                (event.target.value === "cms-rating" &&
+                  draft.category !== "nursing-home")
+              ) {
+                search.edit("sort", "distance");
+              }
+              setPanel("closed");
+            }
+          }}
+        >
+          <option value="distance">Nearest first</option>
+          <option value="experience">Highest experience</option>
+          {request.category === "nursing-home" && (
+            <option value="cms-rating">Highest CMS rating</option>
+          )}
+        </select>
+      </label>
       <div className="results-toolbar">
         <div aria-live="polite">
           <strong>
@@ -131,48 +246,8 @@ export function CareSearchView({
                 ? `${data.total} care ${data.total === 1 ? "option" : "options"}`
                 : "No results to show"}
           </strong>
-          {data && !loading && (
-            <span>
-              within {data.radius} miles of {data.origin.city},{" "}
-              {data.market.state} {data.origin.zip}
-            </span>
-          )}
         </div>
         <div className="result-controls">
-          <label className="sort-label">
-            Research
-            <select
-              aria-label="Research filter"
-              value={draft.evidence}
-              onChange={(event) =>
-                search.filter({ evidence: event.target.value })
-              }
-            >
-              <option value="all">All options</option>
-              <option value="details">Offerings researched</option>
-              <option value="pricing">Published costs</option>
-              <option value="openings">Published opening claims</option>
-              <option value="reviews">Has experience score</option>
-              <option value="facebook">Facebook findings</option>
-              <option value="unrated">Needs experience score</option>
-            </select>
-          </label>
-          <label className="sort-label">
-            Sort by
-            <select
-              aria-label="Sort results"
-              value={draft.sort}
-              onChange={(event) => search.filter({ sort: event.target.value })}
-            >
-              <option value="distance">Distance</option>
-              {draft.category !== "all" && (
-                <option value="experience">Experience score</option>
-              )}
-              {draft.category === "nursing-home" && (
-                <option value="cms-rating">CMS overall rating</option>
-              )}
-            </select>
-          </label>
           <div className="view-toggle">
             <button
               className={!showMap ? "active" : ""}
@@ -211,13 +286,16 @@ export function CareSearchView({
       ) : (
         data && (
           <>
-            <ResearchDisclosure
-              data={data}
-              filtered={
-                search.request.sort === "experience" ||
-                search.request.evidence !== "all"
-              }
-            />
+            <details className="search-evidence">
+              <summary>Sources & evidence</summary>
+              <ResearchDisclosure
+                data={data}
+                filtered={
+                  search.request.sort === "experience" ||
+                  search.request.evidence !== "all"
+                }
+              />
+            </details>
             {showMap && (
               <CareMap
                 providers={data.providers}

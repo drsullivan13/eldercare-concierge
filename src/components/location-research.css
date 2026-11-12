@@ -1,0 +1,62 @@
+.provider-detail .location-research > .section-title {
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.provider-detail .location-research > .section-title h3 {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.provider-detail .location-research > .section-title > span {
+  max-width: none;
+  text-align: left;
+  font-size: 11px;
+}
+
+.provider-detail .offering-facts {
+  display: block;
+  margin-block: 12px;
+}
+
+.provider-detail .offering-fact {
+  padding: 16px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.provider-detail .offering-fact:focus,
+.provider-detail .public-reviews article:focus {
+  background: #f3f6ed;
+}
+
+.provider-detail .offering-more > summary {
+  cursor: pointer;
+  padding-block: 12px;
+  color: #24594c;
+}
+
+.provider-detail .catalog-services li {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.provider-detail .catalog-services li:not(:last-child)::after {
+  content: " ·";
+}
+
+.provider-detail .research-panel > section + section {
+  margin-top: 24px;
+}
+
+.provider-detail .family-experience-method {
+  margin-bottom: 20px;
+}

@@ -1,8 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
-  Check,
-  MapPin,
   ShieldCheck,
   ClipboardList,
   Bookmark,
@@ -16,7 +15,7 @@ export default function Home() {
     <div className="landing">
       <header className="landing-nav">
         <Brand />
-        <nav>
+        <nav aria-label="Main navigation">
           <Link href="/methodology">How we research care</Link>
           {ACCOUNTS_ENABLED && (
             <Link href="/login" className="login-link">
@@ -25,27 +24,21 @@ export default function Home() {
           )}
           <Link
             href={ACCOUNTS_ENABLED ? "/signup" : "/dashboard?demo=1"}
-            className="button button-dark"
+            className="landing-start"
           >
-            Get started <ArrowUpRight size={16} />
+            Find care <ArrowUpRight size={16} aria-hidden="true" />
           </Link>
         </nav>
       </header>
-      <main>
+      <main id="main-content">
         <section className="landing-hero">
           <div className="hero-copy">
-            <span className="eyebrow">
-              <span className="live-dot" /> CARE RESEARCH, STARTING WITH YOUR
-              ZIP
-            </span>
             <h1>
-              A clearer path <br />
-              to your parent’s <br />
-              <em>next chapter.</em>
+              A clearer path to your parent’s <em>next chapter.</em>
             </h1>
             <p>
-              Find care you can look into properly. Keep the evidence, the
-              options, and the next steps together.
+              Explore nearby care options, compare source-linked research, and
+              keep your shortlist and next steps together.
             </p>
             <div className="hero-actions">
               <Link
@@ -55,7 +48,7 @@ export default function Home() {
                 {ACCOUNTS_ENABLED
                   ? "Create your care workspace"
                   : "Open your care workspace"}{" "}
-                <ArrowRight size={18} />
+                <ArrowRight size={18} aria-hidden="true" />
               </Link>
               {ACCOUNTS_ENABLED && (
                 <Link href="/dashboard?demo=1" className="text-link">
@@ -64,66 +57,30 @@ export default function Home() {
               )}
             </div>
             <div className="hero-footnote">
-              <ShieldCheck size={16} />{" "}
+              <ShieldCheck size={18} aria-hidden="true" />{" "}
               {ACCOUNTS_ENABLED
                 ? "Official records. Visible sources. Room for questions."
                 : "No sign-in needed. Your plan stays in this browser."}
             </div>
           </div>
-          <div
-            className="hero-visual"
-            aria-label="A preview of the Harbor care workspace"
-          >
-            <div className="visual-kicker">
-              <span className="live-dot" /> YOUR CARE WORKSPACE{" "}
-              <span>01 / RESEARCH</span>
-            </div>
-            <div className="visual-title">
-              A little more clarity. <br />
-              One step at a time.
-            </div>
-            <div className="abstract-harbor" aria-hidden="true">
-              <div className="arch arch-one" />
-              <div className="arch arch-two" />
-              <div className="arch arch-three" />
-              <svg viewBox="0 0 500 200">
-                <path
-                  d="M-20 150 Q120 80 250 140 T520 110M-20 170 Q120 100 250 160 T520 130M-20 190 Q120 120 250 180 T520 150"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                />
-              </svg>
-            </div>
-            <div className="preview-note">
-              <div className="icon-box">
-                <MapPin size={22} />
-              </div>
-              <div>
-                <strong>Close to the people who matter.</strong>
-                <span>Search by ZIP. Confirm care and service coverage.</span>
-              </div>
-            </div>
-            <div className="preview-check">
-              <span>
-                <Check size={15} />
-              </span>{" "}
-              Know what’s documented—and what to ask next.
-            </div>
-          </div>
+          <Image
+            className="hero-photo"
+            src="/images/porch-conversation.webp"
+            alt="Two women talking over mugs on a porch."
+            width={1120}
+            height={747}
+            sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1200px) calc((100vw - 128px) / 2), (max-width: 1280px) calc((100vw - 160px) / 2), 560px"
+            loading="eager"
+          />
         </section>
         <section className="landing-value">
           <div>
-            <span className="eyebrow">THE FIRST PART OF A BIGGER PLAN</span>
-            <h2>
-              You don’t have to hold <br />
-              all of it in your head.
-            </h2>
+            <span className="eyebrow">A place to begin</span>
+            <h2>You don’t have to hold it all in your head.</h2>
           </div>
           <div className="value-grid">
             <article>
-              <span className="value-number">01</span>
-              <ShieldCheck />
+              <ShieldCheck aria-hidden="true" />
               <h3>Understand the evidence</h3>
               <p>
                 Look beyond a star average. Read inspection, staffing and
@@ -131,8 +88,7 @@ export default function Home() {
               </p>
             </article>
             <article>
-              <span className="value-number">02</span>
-              <Bookmark />
+              <Bookmark aria-hidden="true" />
               <h3>Keep a thoughtful shortlist</h3>
               <p>
                 Compare care settings, save questions and keep track of the
@@ -140,8 +96,7 @@ export default function Home() {
               </p>
             </article>
             <article>
-              <span className="value-number">03</span>
-              <ClipboardList />
+              <ClipboardList aria-hidden="true" />
               <h3>Make the next step clear</h3>
               <p>
                 Build your plan for visits, care, equipment, travel and the
@@ -152,15 +107,14 @@ export default function Home() {
         </section>
         <section className="landing-bottom">
           <div>
-            <span className="eyebrow">A CAREFUL START</span>
             <h2>Research first. Decisions together.</h2>
             <p>
               Harbor is an early research and planning product. Provider
               availability and individual fit still need a conversation.
             </p>
           </div>
-          <Link href="/dashboard?demo=1" className="button button-outline">
-            Take a look around <ArrowRight size={18} />
+          <Link href="/methodology" className="text-link">
+            How we research care <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </section>
       </main>

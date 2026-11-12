@@ -8,6 +8,7 @@ import {
   CheckCircle2,
   ChevronDown,
   ClipboardList,
+  Columns2,
   Info,
   LayoutDashboard,
   Loader2,
@@ -125,10 +126,6 @@ function WorkspaceDashboard({
     search.run();
     navigate("search");
   }
-  function changeCategory(category: string) {
-    comparison.clear();
-    search.changeCategory(category);
-  }
   function addTask(
     title: string,
     providerId?: string,
@@ -204,9 +201,48 @@ function WorkspaceDashboard({
         }}
       />
     ));
+  const comparisonEntry = (
+    <section className="comparison-entry" aria-label="Compare care options">
+      <Columns2 size={21} aria-hidden="true" />
+      <div>
+        <strong>Compare care options</strong>
+        <p aria-live="polite">
+          {comparison.providers.length
+            ? `${comparison.providers.length} of 3 selected. Choose at least 2 to compare.`
+            : "Select Compare on 2–3 cards to see them side by side."}
+        </p>
+      </div>
+      <button
+        className="button button-outline"
+        disabled={
+          view === "search"
+            ? search.loading || !data?.providers.length
+            : savedProviders.length === 0
+        }
+        onClick={() => {
+          const target =
+            document.querySelector<HTMLElement>(
+              ".provider-card .compare-check input:not(:checked)",
+            ) ??
+            document.querySelector<HTMLElement>(
+              ".provider-card .compare-check input",
+            );
+          if (target) {
+            target.scrollIntoView({ block: "center", behavior: "smooth" });
+            target.focus({ preventScroll: true });
+          }
+        }}
+      >
+        {comparison.providers.length ? "Change selection" : "Choose options"}
+        <ArrowUpRight size={15} />
+      </button>
+    </section>
+  );
 
   return (
-    <div className="app-shell">
+    <div
+      className={`app-shell${comparison.providers.length && ["search", "shortlist"].includes(view) ? " has-comparison" : ""}`}
+    >
       <aside className={`sidebar ${mobileMenu ? "sidebar-open" : ""}`}>
         <Brand dark />
         <button
@@ -284,53 +320,22 @@ function WorkspaceDashboard({
       )}
       <div className="app-main">
         <header className="app-topbar">
-          <div>
-            <button
-              className="icon-button mobile-menu"
-              onClick={() => setMobileMenu(true)}
-              aria-label="Open navigation"
-            >
-              <Menu />
-            </button>
-            <span className="breadcrumb">
-              Your workspace <span>/</span>{" "}
-              <strong>
-                {view === "standards"
-                  ? "Research standards"
-                  : NAV.find((n) => n.id === view)?.label}
-              </strong>
-            </span>
-          </div>
-          <div className="topbar-actions">
-            <span className="save-status">
-              <span className="live-dot" />
-              {saveStatus}
-            </span>
-            <button
-              className="icon-button"
-              onClick={signOut}
-              disabled={saveStatus === "Saving…"}
-              aria-label={demo ? "Leave demo" : "Sign out"}
-              title={demo ? "Leave demo" : "Sign out"}
-            >
-              <LogOut size={17} />
-            </button>
-          </div>
+          <Brand />
+          <span className="masthead-context">
+            {view === "standards"
+              ? "Research standards"
+              : NAV.find((n) => n.id === view)?.label}
+          </span>
+          <button
+            className="mobile-menu"
+            onClick={() => setMobileMenu(true)}
+            aria-label="Open navigation"
+            aria-expanded={mobileMenu}
+          >
+            <Menu size={21} aria-hidden="true" />
+            Menu
+          </button>
         </header>
-        {demo && (
-          <div className="demo-banner">
-            <Info size={14} />
-            <span>
-              Demo workspace · Real provider records. Your plan stays in this
-              browser.
-            </span>
-            {ACCOUNTS_ENABLED && (
-              <Link href="/signup">
-                Create an account <ArrowUpRight size={13} />
-              </Link>
-            )}
-          </div>
-        )}
         <main id="main-content" className="dashboard-content">
           {(error || saveStatus === "Changes not saved") && (
             <div role="alert" className="form-error page-error">
@@ -360,19 +365,21 @@ function WorkspaceDashboard({
             <CareSearchView
               search={search}
               submit={submitSearch}
-              changeCategory={changeCategory}
               cards={cards}
               openProvider={openProvider}
             />
           )}
           {view === "shortlist" && (
-            <ShortlistView
-              saved={saved}
-              origin={data?.origin}
-              cards={cards}
-              findCare={() => navigate("search")}
-              exportPlan={exportPlan}
-            />
+            <>
+              {comparisonEntry}
+              <ShortlistView
+                saved={saved}
+                origin={data?.origin}
+                cards={cards}
+                findCare={() => navigate("search")}
+                exportPlan={exportPlan}
+              />
+            </>
           )}
           {view === "plan" && (
             <PlanView
@@ -384,6 +391,37 @@ function WorkspaceDashboard({
           )}
           {view === "standards" && <EvidenceStandards />}
         </main>
+        <details className="workspace-details">
+          <summary>
+            <Info size={18} aria-hidden="true" /> About your workspace
+          </summary>
+          <div className="workspace-details-content">
+            {demo && (
+              <p className="demo-banner">
+                Demo workspace · Real provider records. Your plan stays in this
+                browser.
+              </p>
+            )}
+            <p className="save-status" role="status">
+              {saveStatus}
+            </p>
+            <div className="workspace-details-actions">
+              {demo && ACCOUNTS_ENABLED && (
+                <Link href="/signup" className="text-link">
+                  Create an account <ArrowUpRight size={16} />
+                </Link>
+              )}
+              <button
+                className="text-link"
+                onClick={signOut}
+                disabled={saveStatus === "Saving…"}
+              >
+                <LogOut size={17} aria-hidden="true" />
+                {demo ? "Leave demo" : "Sign out"}
+              </button>
+            </div>
+          </div>
+        </details>
         <footer className="app-footer">
           <span>
             harbor. <span>A clearer path to care.</span>

@@ -21,28 +21,12 @@ export function Overview({
     <div className="care-overview">
       <div className="page-heading compact">
         <div>
-          <span className="eyebrow">
-            {workspace.profile.name
-              ? `WELCOME, ${workspace.profile.name.toUpperCase()}`
-              : "HERE FOR YOUR FAMILY"}
-          </span>
           <h1>
-            A clearer plan, <em>starting with care.</em>
+            Find care for <em>your family.</em>
           </h1>
-          <p>
-            Find nearby care, compare the details, and keep your next steps
-            together.
-          </p>
         </div>
       </div>
-      <section
-        className="search-hero care-search-home"
-        aria-labelledby="care-search-heading"
-      >
-        <span className="eyebrow">
-          {search.data?.market.label || "SEARCH BY ZIP"}
-        </span>
-        <h2 id="care-search-heading">What care are you looking for?</h2>
+      <section className="care-search-home" aria-label="Search nearby care">
         <form
           className="quick-search"
           onSubmit={(event) => {
@@ -99,10 +83,6 @@ export function Overview({
             Find care <ArrowRight size={18} />
           </button>
         </form>
-        <p className="search-home-note">
-          Real provider records. No paid placement. Save the options you want to
-          explore.
-        </p>
       </section>
       <div className="care-workspace-links">
         <button
@@ -133,28 +113,6 @@ export function Overview({
           <ArrowRight size={18} />
         </button>
       </div>
-      <section
-        className="care-search-guide"
-        aria-labelledby="search-guide-heading"
-      >
-        <h2 id="search-guide-heading">
-          A little clarity for the next conversation.
-        </h2>
-        <div>
-          <p>
-            <strong>Explore nearby care</strong>Choose a care setting or help at
-            home. You can refine your search as you learn.
-          </p>
-          <p>
-            <strong>Look at the details</strong>Compare services, public
-            records, and family experiences, with sources attached.
-          </p>
-          <p>
-            <strong>Make a connection</strong>Save your questions and confirm
-            costs, availability, and care needs with the provider.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }
