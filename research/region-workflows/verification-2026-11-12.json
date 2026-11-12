@@ -1,7 +1,7 @@
 {
   "date": "2026-11-12",
-  "dataCommit": "b00e3b00be995d87acbdf14804bce55ae6433e2c",
-  "checks": "Full local verification and fresh git-archive verification with the workflow files identified below installed. The fresh checkout reconstructed supplemental clinical sidecars offline before using shared verification. Local discovery archives and private review observations were excluded from shared verification.",
+  "dataCommit": "8c33374c01be55ad83b8bb5668192c0fdb35f9cd",
+  "checks": "Verified Massachusetts and North Jersey in local full and shared scopes, and in a fresh git archive of the pinned data commit in shared scope after offline clinical regeneration. Shared checks exclude local acquisition archives and include retained inputs for the released review and pricing records.",
   "workflowFiles": {
     "scripts/regions/workflow.py": "9b61052c39bf220596f39fc55440a67c00f23bece0ec62a483bbceed4db490ac",
     "scripts/regions/workflow-evidence.py": "2552cad4c2ac4069fa47e29dc2f6274fd26f7f16567f47a68bf9c34f8e13b7f2",
@@ -15,11 +15,12 @@
   },
   "reports": [
     {
+      "checkout": "local",
       "market": "massachusetts-baseline",
       "scope": "all",
-      "startedAt": "2026-11-12T16:05:32.499309+00:00",
+      "startedAt": "2026-11-12T16:47:38.948428+00:00",
       "configSha256": "a8d7ce46d5fdd23d682f6156e37df745f793bae72cc1747f8297bd9046ee6dcb",
-      "reportSha256": "a3b10382aad9949fd38ff4047b2c78783ddb8c485432f7a8912fd60ba97a87d4",
+      "reportSha256": "a18d57d6e27ba79bfa9ad5ca6e28ef9a0799593f962cb4c48da1dc30c4e68ae1",
       "verified": [
         "catalog",
         "geography",
@@ -32,11 +33,12 @@
       }
     },
     {
+      "checkout": "local",
       "market": "north-jersey",
       "scope": "all",
-      "startedAt": "2026-11-12T16:06:37.399150+00:00",
+      "startedAt": "2026-11-12T16:47:39.216136+00:00",
       "configSha256": "657e1a11d8827eaf10ffd5a50ffac153b5f35f18c71ba7e2e9f5407a9f35ae14",
-      "reportSha256": "d4811ec7740774b4633ca053575d19f5fde2091020a24726de5a317fa67de571",
+      "reportSha256": "3f0fa78138f0aba84e905f5b333c2d74ad831dde1f7081bfec6f39b589da242c",
       "verified": [
         "state",
         "geography",
@@ -57,15 +59,16 @@
       "artifactCounts": {
         "absent_optional": 2,
         "hash_verified": 7,
-        "verified": 114
+        "verified": 115
       }
     },
     {
+      "checkout": "local",
       "market": "massachusetts-baseline",
       "scope": "shared",
-      "startedAt": "2026-11-12T16:07:03.528647+00:00",
+      "startedAt": "2026-11-12T16:48:07.507752+00:00",
       "configSha256": "a8d7ce46d5fdd23d682f6156e37df745f793bae72cc1747f8297bd9046ee6dcb",
-      "reportSha256": "0a66fa2b245b5c96fa1409e3ca8b04d092388b4e11f1147c94e5537f0bb7dee6",
+      "reportSha256": "50d51bd182d61b6e3b042d5dea0d7b61a8fa0c98fcd4408a111d2c05c9c56d5a",
       "verified": [
         "catalog",
         "geography",
@@ -78,11 +81,61 @@
       }
     },
     {
+      "checkout": "local",
       "market": "north-jersey",
       "scope": "shared",
-      "startedAt": "2026-11-12T16:06:43.183657+00:00",
+      "startedAt": "2026-11-12T16:48:07.761402+00:00",
       "configSha256": "657e1a11d8827eaf10ffd5a50ffac153b5f35f18c71ba7e2e9f5407a9f35ae14",
-      "reportSha256": "00b7498d7cd6cbb43d09764fc35dd125dda29711a7c4de7035ad6fce8838e0bb",
+      "reportSha256": "6fda3baf042e61bd777f3ffd70f364c5b2641c3c8ad3db2d7316ba7a1c92f696",
+      "verified": [
+        "state",
+        "geography",
+        "cms",
+        "pos",
+        "qcor",
+        "clinical",
+        "address-points",
+        "offerings",
+        "release-reviews",
+        "normalize",
+        "runtime",
+        "facebook-kit"
+      ],
+      "notSelected": [
+        "reviews",
+        "listings"
+      ],
+      "artifactCounts": {
+        "absent_optional": 2,
+        "hash_verified": 7,
+        "verified": 97
+      }
+    },
+    {
+      "checkout": "archive",
+      "market": "massachusetts-baseline",
+      "scope": "shared",
+      "startedAt": "2026-11-12T16:47:38.948452+00:00",
+      "configSha256": "a8d7ce46d5fdd23d682f6156e37df745f793bae72cc1747f8297bd9046ee6dcb",
+      "reportSha256": "de5e96eb06c15e01e8474fb4dddca427fb71248bf3535012f7835df6f99bc019",
+      "verified": [
+        "catalog",
+        "geography",
+        "evidence"
+      ],
+      "notSelected": [],
+      "artifactCounts": {
+        "hash_verified": 2,
+        "verified": 10
+      }
+    },
+    {
+      "checkout": "archive",
+      "market": "north-jersey",
+      "scope": "shared",
+      "startedAt": "2026-11-12T16:47:39.217394+00:00",
+      "configSha256": "657e1a11d8827eaf10ffd5a50ffac153b5f35f18c71ba7e2e9f5407a9f35ae14",
+      "reportSha256": "e553dc4555d07f1999bdfdbaa5349c9202dae0211002dcf372e8269193246353",
       "verified": [
         "state",
         "geography",
@@ -147,18 +200,18 @@
       "supportedZips": 270,
       "waitlistClaims": 1,
       "withFacts": 282,
-      "withPositivePrice": 20,
-      "withReviewAggregate": 40
+      "withPositivePrice": 22,
+      "withReviewAggregate": 70
     }
   },
   "reviewRelease": {
-    "approved": 40,
+    "approved": 70,
     "excluded": 0,
-    "included": 40,
-    "observations": 40,
+    "included": 70,
+    "observations": 70,
     "pendingOrInventory": 10,
-    "providers": 40,
-    "withNumericExperienceScore": 37
+    "providers": 70,
+    "withNumericExperienceScore": 66
   },
   "addressPrecision": {
     "census-street-interpolated": 56,
@@ -178,7 +231,9 @@
     "historicalArchiveOnly": [
       "2026-11-12-b96ab1f1902a"
     ],
-    "reproducibleWithCurrentTool": [],
+    "reproducibleWithCurrentTool": [
+      "2026-11-12-6eda22b96f59"
+    ],
     "runtimeProviderCount": 974,
     "uninspectedDiscoveryOnly": false
   },
@@ -192,5 +247,251 @@
       "20261112T150138591700Z",
       "20261112T150214087676Z"
     ]
+  },
+  "listingReleaseCoverage": {
+    "baseApprovedProviders": 22,
+    "catalogLocations": 974,
+    "catalogLocationsWithoutReleasedAggregate": 904,
+    "coverageByCountyAndSetting": {
+      "Bergen/assisted-living": {
+        "additional_approved": 2,
+        "baseline_approved": 1,
+        "candidate_page_checked_no_release": 33,
+        "no_candidate_page_checked": 7
+      },
+      "Bergen/home-care": {
+        "candidate_page_checked_no_release": 17,
+        "no_candidate_page_checked": 144
+      },
+      "Bergen/home-health": {
+        "candidate_page_checked_no_release": 4,
+        "no_candidate_page_checked": 1
+      },
+      "Bergen/nursing-home": {
+        "additional_approved": 10,
+        "candidate_page_checked_no_release": 16,
+        "no_candidate_page_checked": 4
+      },
+      "Essex/assisted-living": {
+        "candidate_page_checked_no_release": 18,
+        "no_candidate_page_checked": 2
+      },
+      "Essex/home-care": {
+        "candidate_page_checked_no_release": 41,
+        "no_candidate_page_checked": 166
+      },
+      "Essex/home-health": {
+        "candidate_page_checked_no_release": 3,
+        "no_candidate_page_checked": 1
+      },
+      "Essex/life-plan": {
+        "candidate_page_checked_no_release": 2
+      },
+      "Essex/nursing-home": {
+        "additional_approved": 10,
+        "candidate_page_checked_no_release": 20,
+        "no_candidate_page_checked": 9
+      },
+      "Hudson/assisted-living": {
+        "candidate_page_checked_no_release": 2
+      },
+      "Hudson/home-care": {
+        "candidate_page_checked_no_release": 10,
+        "no_candidate_page_checked": 60
+      },
+      "Hudson/home-health": {
+        "candidate_page_checked_no_release": 3
+      },
+      "Hudson/life-plan": {
+        "candidate_page_checked_no_release": 1
+      },
+      "Hudson/nursing-home": {
+        "additional_approved": 8,
+        "candidate_page_checked_no_release": 7,
+        "no_candidate_page_checked": 3
+      },
+      "Morris/assisted-living": {
+        "additional_approved": 1,
+        "baseline_approved": 3,
+        "candidate_page_checked_no_release": 21,
+        "no_candidate_page_checked": 5
+      },
+      "Morris/home-care": {
+        "baseline_approved": 1,
+        "candidate_page_checked_no_release": 8,
+        "no_candidate_page_checked": 51
+      },
+      "Morris/home-health": {
+        "candidate_page_checked_no_release": 2,
+        "no_candidate_page_checked": 1
+      },
+      "Morris/life-plan": {
+        "candidate_page_checked_no_release": 2
+      },
+      "Morris/nursing-home": {
+        "additional_approved": 4,
+        "baseline_approved": 3,
+        "candidate_page_checked_no_release": 13,
+        "no_candidate_page_checked": 6
+      },
+      "Passaic/assisted-living": {
+        "candidate_page_checked_no_release": 9,
+        "no_candidate_page_checked": 1
+      },
+      "Passaic/home-care": {
+        "candidate_page_checked_no_release": 12,
+        "no_candidate_page_checked": 46
+      },
+      "Passaic/home-health": {
+        "candidate_page_checked_no_release": 2
+      },
+      "Passaic/life-plan": {
+        "no_candidate_page_checked": 1
+      },
+      "Passaic/nursing-home": {
+        "additional_approved": 8,
+        "candidate_page_checked_no_release": 8,
+        "no_candidate_page_checked": 7
+      },
+      "Union/assisted-living": {
+        "baseline_approved": 6,
+        "candidate_page_checked_no_release": 4,
+        "no_candidate_page_checked": 1
+      },
+      "Union/home-care": {
+        "candidate_page_checked_no_release": 20,
+        "no_candidate_page_checked": 97
+      },
+      "Union/home-health": {
+        "baseline_approved": 1
+      },
+      "Union/life-plan": {
+        "candidate_page_checked_no_release": 1
+      },
+      "Union/nursing-home": {
+        "additional_approved": 5,
+        "baseline_approved": 7,
+        "candidate_page_checked_no_release": 8,
+        "no_candidate_page_checked": 4
+      }
+    },
+    "dispositions": {
+      "category_mismatch": 12,
+      "missing_direct_google_panel": 4,
+      "mixed_or_unknown_care_units": 84,
+      "no_exact_official_address": 30,
+      "official_name_or_scope_mismatch": 40,
+      "overlapping_official_units": 21,
+      "page_access": 1,
+      "pending_editorial_review": 49,
+      "possible_employee_population": 3,
+      "previously_released": 8,
+      "reused_verified_baseline_page": 2,
+      "unconfirmed_page_header": 138
+    },
+    "inspectedPages": 392,
+    "locationsByStatus": {
+      "additional_approved": 48,
+      "baseline_approved": 22,
+      "candidate_page_checked_no_release": 287,
+      "no_candidate_page_checked": 617
+    },
+    "newProviderIds": [
+      "cms-315005",
+      "cms-315066",
+      "cms-315085",
+      "cms-315103",
+      "cms-315120",
+      "cms-315122",
+      "cms-315133",
+      "cms-315147",
+      "cms-315152",
+      "cms-315171",
+      "cms-315178",
+      "cms-315192",
+      "cms-315194",
+      "cms-315198",
+      "cms-315216",
+      "cms-315234",
+      "cms-315249",
+      "cms-315259",
+      "cms-315266",
+      "cms-315273",
+      "cms-315276",
+      "cms-315295",
+      "cms-315300",
+      "cms-315307",
+      "cms-315310",
+      "cms-315313",
+      "cms-315331",
+      "cms-315339",
+      "cms-315343",
+      "cms-315344",
+      "cms-315348",
+      "cms-315349",
+      "cms-315355",
+      "cms-315357",
+      "cms-315359",
+      "cms-315361",
+      "cms-315366",
+      "cms-315383",
+      "cms-315413",
+      "cms-315426",
+      "cms-315449",
+      "cms-315452",
+      "cms-315460",
+      "cms-315494",
+      "cms-315507",
+      "north-jersey-doh-nj30225",
+      "north-jersey-doh-nj60a004",
+      "north-jersey-doh-njlrr782"
+    ],
+    "pageDispositionsAfterReview": {
+      "additional_approved": 48,
+      "category_mismatch": 12,
+      "editorial_hold": 1,
+      "missing_direct_google_panel": 4,
+      "mixed_or_unknown_care_units": 84,
+      "no_exact_official_address": 30,
+      "official_name_or_scope_mismatch": 40,
+      "overlapping_official_units": 21,
+      "page_access": 1,
+      "possible_employee_population": 3,
+      "previously_released": 8,
+      "reused_verified_baseline_page": 2,
+      "unconfirmed_page_header": 138
+    },
+    "priorityUrls": {
+      "missing": 0,
+      "retainedCurrentPages": 379,
+      "reusedVerifiedPages": 2,
+      "total": 381
+    },
+    "stillPendingEditorialCandidates": 0,
+    "totalLocationsWithAggregate": 70
+  },
+  "historicalListingWaves": [
+    {
+      "id": "831c1ed0afd88afd",
+      "approvals": 48,
+      "manifestSha256": "831c1ed0afd88afd174f4dd501f858fec510445dde2eb0a2f71a40931515a4d9"
+    },
+    {
+      "id": "c0fc5f2160fdf4a6",
+      "approvals": 18,
+      "manifestSha256": "c0fc5f2160fdf4a65319e838ca7bb38539edac6af71d908677c54da6d354632e"
+    }
+  ],
+  "runtimeExperienceScores": {
+    "massachusetts": {
+      "catalog": 521,
+      "numericScores": 122,
+      "withoutNumericScore": 399
+    },
+    "north-jersey": {
+      "catalog": 974,
+      "numericScores": 66,
+      "withoutNumericScore": 908
+    }
   }
 }
