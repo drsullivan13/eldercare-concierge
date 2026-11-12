@@ -146,6 +146,6 @@ These are new geography checks, not the application's existing MA search tests.
 See [rebuild instructions](REBUILD.md).
 
 Application integration remains outside this task.
-The current search module still imports the MA lookup and applies Boston pilot limits.
-An integrator must add region-aware search, preserve coordinate-source disclosure, and avoid inferring provider service coverage from county membership.
+The integration owner must verify regional search through the application entry points.
+Integration must preserve coordinate-source disclosure and avoid inferring provider service coverage from county membership.
 Current USPS validity, address-level county assignment, and delivery-type classification remain unverified.

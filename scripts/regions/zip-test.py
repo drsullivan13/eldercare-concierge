@@ -102,10 +102,33 @@ class ZipAcceptanceTests(unittest.TestCase):
                 fips = {"34" + row[6] for row in records}
             if fips & TARGETS:
                 included.add(code)
+                item = self.provenance[code]
                 self.assertEqual(
-                    {part["countyFips"] for part in self.provenance[code]["countyMemberships"]},
+                    {part["countyFips"] for part in item["countyMemberships"]},
                     fips,
                 )
+                self.assertEqual(item["targetCountyFips"], sorted(fips & TARGETS))
+                if code in self.points:
+                    for part in item["countyMemberships"]:
+                        source = next(
+                            row for row in parts if row["GEOID_COUNTY_20"] == part["countyFips"]
+                        )
+                        self.assertEqual(part["landAreaM2"], int(source["AREALAND_PART"]))
+                        self.assertEqual(part["waterAreaM2"], int(source["AREAWATER_PART"]))
+                        self.assertEqual(part["zctaLandAreaM2"], int(source["AREALAND_ZCTA5_20"]))
+                        self.assertEqual(
+                            part["county"], source["NAMELSAD_COUNTY_20"].removesuffix(" County")
+                        )
+                    primary = max(
+                        parts,
+                        key=lambda row: (int(row["AREALAND_PART"]), row["GEOID_COUNTY_20"]),
+                    )
+                    self.assertEqual(item["primaryCountyFips"], primary["GEOID_COUNTY_20"])
+                    self.assertEqual(
+                        {part["countyFips"] for part in item["waterOnlyCountyOverlaps"]},
+                        {row["GEOID_COUNTY_20"] for row in self.parts[code]
+                         if int(row["AREALAND_PART"]) == 0},
+                    )
                 for target in fips & TARGETS:
                     expected[target].add(code)
             else:
