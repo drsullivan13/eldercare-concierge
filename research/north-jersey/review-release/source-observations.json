@@ -1,0 +1,643 @@
+{
+  "observations": [
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 185,
+        "rating": 4.0,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "151 Madison Avenue",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Morristown",
+        "name": "Careone At Madison Avenue",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/reviews/pilot-direct-check.json",
+        "pointer": "/direct_observation",
+        "sha256": "ac764f1d5acb3d9a70a74b6caf4de006836b467e68565b6805fe1cbebad68ee3"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/careone-at-madison-avenue"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 11,
+        "rating": 4.3,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "685 Westwood Avenue",
+        "careUnit": "Assisted Living",
+        "city": "River Vale",
+        "name": "Jewish Home Assisted Living",
+        "state": "New Jersey",
+        "zip": "07675"
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/reviews/remaining/observations.json",
+        "pointer": "/observations/7",
+        "sha256": "d3b4b27535fb355b698e109f67f15c109281d13c46897ace38240504cc67e594"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/jewish-home-assisted-living"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 24,
+        "rating": 4.2,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "1350 Route 22 West",
+        "careUnit": "Assisted Living, Memory Care, Respite / Short-Term Care",
+        "city": "Mountainside",
+        "name": "Brighton Gardens of Mountainside",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/reviews/union-morris/observations.json",
+        "pointer": "/observations/9",
+        "sha256": "c05bf21627a1bac686f443039e9acc7f67d27ff3e70a9ddff1f7b649a4fba972"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-mountainside"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 25,
+        "rating": 4.6,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "240 Springfield Avenue",
+        "careUnit": "Assisted Living, Memory Care, Respite / Short-Term Care",
+        "city": "Westfield",
+        "name": "Sunrise of Westfield",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/reviews/union-morris/observations.json",
+        "pointer": "/observations/15",
+        "sha256": "c05bf21627a1bac686f443039e9acc7f67d27ff3e70a9ddff1f7b649a4fba972"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/sunrise-of-westfield"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 120,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "361 Speedwell Avenue",
+        "careUnit": "Assisted Living, Memory Care",
+        "city": "Morris Plains",
+        "name": "Arbor Terrace Morris Plains",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/reviews/union-morris/observations.json",
+        "pointer": "/observations/29",
+        "sha256": "c05bf21627a1bac686f443039e9acc7f67d27ff3e70a9ddff1f7b649a4fba972"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/arbor-terrace-morris-plains"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 30,
+        "rating": 4.6,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "21 Ridgedale Avenue",
+        "careUnit": "Assisted Living, Memory Care, Respite / Short-Term Care",
+        "city": "Florham Park",
+        "name": "Brighton Gardens of Florham Park",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/reviews/union-morris/observations.json",
+        "pointer": "/observations/30",
+        "sha256": "c05bf21627a1bac686f443039e9acc7f67d27ff3e70a9ddff1f7b649a4fba972"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-florham-park"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 74,
+        "rating": 4.7,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "1050 Springfield Ave",
+        "careUnit": "Assisted LivingMemory Care",
+        "city": "Mountainside",
+        "name": "Arbor Terrace Mountainside",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/arbor-terrace-mountainside.json",
+        "pointer": "",
+        "sha256": "1a1d35f53e683f833f0a066c4e817632fdc30a2928c0695da952699ce0110502"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/arbor-terrace-mountainside"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 2,
+        "rating": 5.0,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "1155 E Jersey St",
+        "careUnit": "Assisted Living",
+        "city": "Elizabeth",
+        "name": "Amber Court of Elizabeth",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/amber-court-of-elizabeth.json",
+        "pointer": "",
+        "sha256": "c2763deabfb62a2811e51d8de65d51903e4ab65c803856856935d1f07b360e6f"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/amber-court-of-elizabeth"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 244,
+        "rating": 4.5,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "35 Cottage Street",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Berkeley Heights",
+        "name": "Autumn Lake Healthcare At Berkeley Heights",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/autumn-lake-healthcare-at-berkeley-heights.json",
+        "pointer": "",
+        "sha256": "76658ee9d27a60c906c8f3517564436252a513e687128a95449a079772a192c4"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/autumn-lake-healthcare-at-berkeley-heights"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 21,
+        "rating": 3.4,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "865 Stone Street",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Rahway",
+        "name": "Care Connection Rahway Member of Excelsior Care Group",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/care-connection-rahway.json",
+        "pointer": "",
+        "sha256": "702ae60664193c3100af9364448521d15f035146f65539f08dabbd16188b1cd1"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/care-connection-rahway"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 270,
+        "rating": 4.4,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "540 West Hanover Avenue",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Morristown",
+        "name": "Morris View Healthcare Center: Nursing Home In New Jersey",
+        "state": "NJ",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/morris-view-healthcare-center.json",
+        "pointer": "",
+        "sha256": "cb415734f068a62e242672b0c8ea10c6a751b5469111ab9e8a777c347d24766c"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/morris-view-healthcare-center"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 359,
+        "rating": 4.7,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "40 Norwood Avenue",
+        "careUnit": "Memory CareSkilled Nursing / Long Term Care",
+        "city": "Plainfield",
+        "name": "Aristacare At Norwood Terrace",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/aristacare-at-norwood-terrace.json",
+        "pointer": "",
+        "sha256": "be270db787a5827ca99eb221e59cec2f17fd7b4edda5b7efcba160fac626f525"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/aristacare-at-norwood-terrace"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 290,
+        "rating": 4.3,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "77 Madison Avenue",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Morristown",
+        "name": "Morristown Post Acute Rehabilitation and Nursing Center In New Jersey",
+        "state": "NJ",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/morristown-post-acute-rehab-and-nursing-center.json",
+        "pointer": "",
+        "sha256": "df46397fc38f5823a99ba5f4c9081c393ebd491942188a405f9bfa1240dd0d79"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/morristown-post-acute-rehab-and-nursing-center"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 149,
+        "rating": 4.1,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "234 Chestnut Street",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Union",
+        "name": "Cornell Care & Rehabilitation Center managed by Autumn Lake Healthcare at Union",
+        "state": "NJ",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/cornell-hall-care-rehabilitation-center.json",
+        "pointer": "",
+        "sha256": "11315a90c08e193d4e14657c66a495e35d0986068af8f6da4400ab7cd1cd98e6"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/cornell-hall-care-rehabilitation-center"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 106,
+        "rating": 4.3,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "600 Lincoln Park East",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Cranford",
+        "name": "Cranford Park Care",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/cranford-park-care.json",
+        "pointer": "",
+        "sha256": "d3a8e8b8f52a0f5eedf98e879fa2c4e6b61a771d34f55ec46443678bb11e700e"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/cranford-park-care"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 192,
+        "rating": 4.7,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "1340 Park Ave",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Plainfield",
+        "name": "Complete Care at Plainfield",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/complete-care-at-plainfield-llc.json",
+        "pointer": "",
+        "sha256": "07f8c4ac1731fd6f4b6dc20f7db515beb2efbef27f3d83def48fe66920220dc6"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/complete-care-at-plainfield-llc"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 179,
+        "rating": 3.9,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "1213 Westfield Avenue",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Clark",
+        "name": "Complete Care At Clark",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/complete-care-at-clark-llc.json",
+        "pointer": "",
+        "sha256": "bc911d4f43d9247652e4cb2d68f07c28e8aa12dd963a6669d142f42bf0e12ce4"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/complete-care-at-clark-llc"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 6,
+        "rating": 5.0,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "32 Maple Ave 1st Floor",
+        "careUnit": "At-Home Care",
+        "city": "Morristown",
+        "name": "BAYADA Assistive Care",
+        "state": "NJ",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/bayada-assistive-care-morristown.json",
+        "pointer": "",
+        "sha256": "c3dd41a454897d24b4e96a41ba4d7b2f03f492dfbc5adc8847302cd9e3b73186"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/bayada-assistive-care-morristown"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 1,
+        "rating": 1.0,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "11 Commerce Drive",
+        "careUnit": "Home Health",
+        "city": "Cranford",
+        "name": "Bayada Home Health Care, INC.",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/bayada-home-health-care-inc-cranford.json",
+        "pointer": "",
+        "sha256": "823e8c47247e4487e1f18b524cc5e3001a1e7c569d47e680eb26d428f238d8b6"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/bayada-home-health-care-inc-cranford"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 95,
+        "rating": 4.5,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "10 Jackson Dr",
+        "careUnit": "Assisted LivingIndependent LivingMemory Care",
+        "city": "Cranford",
+        "name": "Atria Cranford",
+        "state": "New Jersey",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/atria-cranford.json",
+        "pointer": "",
+        "sha256": "1e5e90edbc25ecf140adf92c938276769405606eb8bf1d416178689c8085fdcb"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/atria-cranford"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 28,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "41 Springfield Avenue",
+        "careUnit": "Assisted Living",
+        "city": "Summit",
+        "name": "Brandywine Summit by Monarch",
+        "state": "Nj",
+        "zip": "07901"
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/brandywine-living-at-summit.json",
+        "pointer": "",
+        "sha256": "6f5e95053d5e8953f52a79da0dfa417d0277323374a400695fee2d98ca824e90"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/brandywine-living-at-summit"
+    },
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 28,
+        "rating": 4.3,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-12",
+      "identity": {
+        "address": "17 Spring Pl",
+        "careUnit": "Assisted Living, Independent Living",
+        "city": "Morristown",
+        "name": "Spring Hills Morristown - Assisted Senior Living Facility in New Jersey",
+        "state": "NJ",
+        "zip": null
+      },
+      "inspection": "full-page",
+      "originalReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/spring-hills-morristown-assisted-senior-living-facility-in-new-jersey.json",
+        "pointer": "",
+        "sha256": "75f4a6fbf9a109eff591a98535d39cf4facd49e7e13e8af35e591aa8427e276f"
+      },
+      "platform": "MyLivingChoice",
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/spring-hills-morristown-assisted-senior-living-facility-in-new-jersey"
+    }
+  ],
+  "schemaVersion": 1
+}

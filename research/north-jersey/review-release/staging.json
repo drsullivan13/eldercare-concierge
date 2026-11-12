@@ -1,0 +1,92 @@
+[
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Pending. Same name and address host separate licensed assisted-living and nursing units. Page lists Memory Care and Skilled Nursing. Exact aggregate population across the units remains unresolved.",
+    "sourceFile": "aristacare-at-parkside.json",
+    "sourceSha256": "e5b8e2dfdcfcc1832bae032640c91c9307806ee77cc8dcf12efe792e4ce2a1c9",
+    "status": "pending",
+    "url": "https://www.mylivingchoice.com/property/aristacare-at-parkside"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Excluded. Displayed reviews combine long-term care with outpatient evaluation and therapy. The certified long-term care unit's population cannot be isolated.",
+    "sourceFile": "childrens-specialized-hospital-mountainside.json",
+    "sourceSha256": "62cf02980e511ec2bc72fc18b24f680ecb1a9427ee60d8a7a1ae778077d29381",
+    "status": "excluded",
+    "url": "https://www.mylivingchoice.com/property/childrens-specialized-hospital-mountainside"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Excluded. Displayed feedback explicitly includes an employee reporting years of work for this agency. Exact runtime office identity is also unresolved.",
+    "sourceFile": "confident-care-corp-elizabeth.json",
+    "sourceSha256": "c0677e7811be3d5d4dbca5ace8c66a7dba7aa55cad5a41eaad79f1d4e5415ee0",
+    "status": "excluded",
+    "url": "https://www.mylivingchoice.com/property/confident-care-corp-elizabeth"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Excluded. Page heading and displayed independent-living accounts concern the broader Lantern Hill campus. Runtime has separate assisted-living and certified nursing units at this address.",
+    "sourceFile": "continuing-care-at-lantern-hill.json",
+    "sourceSha256": "d10c72819eb951193ba57c6c232cb4aee408db5064e03a7e20a6ac20f4e4f697",
+    "status": "excluded",
+    "url": "https://www.mylivingchoice.com/property/continuing-care-at-lantern-hill"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Pending. Street and suite align with a registered home-care office, but page labels it Assisted Living rather than At-Home Care. Care-setting identity needs resolution.",
+    "sourceFile": "homewell-care-services-union.json",
+    "sourceSha256": "5c392dcaa4658b526e4339c5493fbfb730c408f1cb72a4536ccc75a8825559a1",
+    "status": "pending",
+    "url": "https://www.mylivingchoice.com/property/homewell-care-services-union"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Pending. No exact 30 W Park Place Suite 302 Morristown office exists in current runtime. Mixed Independent Living and At-Home Care label also requires resolution.",
+    "sourceFile": "life-home-care-senior-home-care-agency-morristown.json",
+    "sourceSha256": "18d84e4cd44e7d4a0db71aa48ec8d463e069fe0c4385d243175968d28ae578bd",
+    "status": "pending",
+    "url": "https://www.mylivingchoice.com/property/life-home-care-senior-home-care-agency-morristown"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Pending. No exact 55 Madison Avenue Suite 400 Morristown office exists in current runtime.",
+    "sourceFile": "live-easy-home-care.json",
+    "sourceSha256": "a70d22f8f79e837b57e6c6ffd4af3801f0bfbfe7d3009a6bc6a2c07a4f6a46ad",
+    "status": "pending",
+    "url": "https://www.mylivingchoice.com/property/live-easy-home-care"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Excluded. Displayed review names Sunrise of Madison, a different community. Exact-location population is unresolved.",
+    "sourceFile": "sunrise-of-summit.json",
+    "sourceSha256": "91b5e4e543a7d7571262c59c15e8602ee2cf913d811d15fff68edac920c9f814",
+    "status": "excluded",
+    "url": "https://www.mylivingchoice.com/property/sunrise-of-summit"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Pending. No exact 152 Speedwell Avenue Morristown office exists in the current runtime. Do not attach to another TheKey branch.",
+    "sourceFile": "thekey-formerly-home-care-assistance-morristown.json",
+    "sourceSha256": "a2e92ae7bce50005eb5462fbf1dfc8a100f2bf9180917ca2d3d1012bd20f6683",
+    "status": "pending",
+    "url": "https://www.mylivingchoice.com/property/thekey-formerly-home-care-assistance-morristown"
+  },
+  {
+    "checkedAt": "2026-11-12",
+    "providerId": null,
+    "reason": "Excluded. Displayed feedback explicitly includes agency employees reviewing their employment. Aggregate employee and consumer populations cannot be separated without reconstructing it.",
+    "sourceFile": "visiting-angels-scotch-plains.json",
+    "sourceSha256": "71fb8ff1e271102250c1bf1a466655a19eacd6fcda862e004f7afc51e0484cac",
+    "status": "excluded",
+    "url": "https://www.mylivingchoice.com/property/visiting-angels-scotch-plains"
+  }
+]

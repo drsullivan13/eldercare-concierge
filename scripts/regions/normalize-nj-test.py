@@ -321,6 +321,18 @@ const {getHomeHealthEvidence} = require('./src/lib/home-health.ts');
 const {getInspectionEvidence} = require('./src/lib/inspections.ts');
 const {getLocationResearch} = require('./src/lib/location-research.ts');
 const registry = createMarketRegistry(JSON.parse(readFileSync(0, 'utf8')));
+const locationRows = registry[0].locationResearch;
+const ratingRows = Object.values(locationRows).filter(r => r.reviewAggregates.length);
+if (ratingRows.length) {
+  const {computeExperienceScore} = require('./src/lib/experience-score.ts');
+  const verified = JSON.parse(readFileSync('research/north-jersey/review-release/experience-verification.json', 'utf8'));
+  assert.equal(ratingRows.length, Object.keys(verified.releasedOutput).length);
+  for (const row of ratingRows) {
+    const score = computeExperienceScore({...row, asOfDate: verified.assessmentDate});
+    assert.equal(score.value, verified.releasedOutput[row.providerId].value);
+    assert.equal(score.reviewCount, verified.releasedOutput[row.providerId].reviewCount);
+  }
+}
 for (const [zip, expected] of [['07960', 'cms-317002'], ['07083', 'cms-317020']]) {
   const result = searchProviders({zip, radius: 10, category: 'home-health'}, undefined, registry);
   assert.equal(result.market.id, 'north-jersey');

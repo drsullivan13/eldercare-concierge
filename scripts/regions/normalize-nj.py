@@ -433,8 +433,6 @@ def released_research(inputs, roster, counties):
         name = "locationResearch.json"
         relative = f"{origin}/{name}"
         manifest_path = f"{origin}/manifest.json"
-        if origin == "review-release" and not (inputs.root / relative).exists() and not (inputs.root / manifest_path).exists():
-            continue
         records = inputs.json(relative)
         manifest = inputs.json(manifest_path)
         expected = manifest["outputs"][name]

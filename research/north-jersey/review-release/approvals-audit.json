@@ -1,0 +1,1039 @@
+{
+  "approvals": [
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 2,
+          "rating": 5,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-amber-court-of-elizabeth",
+        "identity": {
+          "address": "1155 E Jersey St",
+          "careUnit": "Assisted Living",
+          "city": "Elizabeth",
+          "name": "Amber Court of Elizabeth",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/amber-court-of-elizabeth.json",
+          "sha256": "eea661f7cd9d6deaf1edd914103a2018dc54a39a01801fab7df1dc8df94b9d67"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/7",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ90A120",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj90a120",
+        "reason": "Independent full-page check confirms exact street, city and assisted-living unit with 5/5 from 2 Google ratings. Eligible published aggregate; the count is below the scoring threshold, so the provider remains unrated rather than excluded.",
+        "reconciliation": {
+          "address": "Listing abbreviates EAST JERSEY STREET as 'E Jersey St'; street number, city and care unit match exactly.",
+          "name": "Official name carries the ', LLC' suffix; the listing name is otherwise identical."
+        },
+        "url": "https://www.mylivingchoice.com/property/amber-court-of-elizabeth"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07201",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/7",
+      "sourceId": "review-release-release-amber-court-of-elizabeth"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 120,
+          "rating": 4.9,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-arbor-terrace-morris-plains",
+        "identity": {
+          "address": "361 Speedwell Avenue",
+          "careUnit": "Assisted Living, Memory Care",
+          "city": "Morris Plains",
+          "name": "Arbor Terrace Morris Plains",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/arbor-terrace-morris-plains.json",
+          "sha256": "c7b6c0af941f6dd9df6f74a24988bb02627e3a4ce264b7d0ad141d23218c5d64"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/4",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ13A012",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj13a012",
+        "reason": "Independent full-page check confirms exact name, street, city and assisted-living unit with 4.9/5 from 120 Google ratings. The page's AI summary says 111 reviews, but the heading, Reviews section and FAQ all publish 120; the AI summary is not evidence and is disregarded.",
+        "url": "https://www.mylivingchoice.com/property/arbor-terrace-morris-plains"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07950",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/4",
+      "sourceId": "review-release-release-arbor-terrace-morris-plains"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 74,
+          "rating": 4.7,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-arbor-terrace-mountainside",
+        "identity": {
+          "address": "1050 Springfield Ave",
+          "careUnit": "Assisted LivingMemory Care",
+          "city": "Mountainside",
+          "name": "Arbor Terrace Mountainside",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/arbor-terrace-mountainside.json",
+          "sha256": "ae5139a44de276a1e3e1093dc9c00671ac796e93c34f51667aeef7f3cc5c38af"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/6",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ20A013",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj20a013",
+        "reason": "Independent full-page check confirms exact name, street, city and assisted-living unit with 4.7/5 from 74 Google ratings in the Reviews section and FAQ. A displayed reviewer works for a resident, not for this community, so that is consumer context. The AI summary's 4.6/70 conflicts with the published Reviews and FAQ values and is disregarded.",
+        "url": "https://www.mylivingchoice.com/property/arbor-terrace-mountainside"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07092",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/6",
+      "sourceId": "review-release-release-arbor-terrace-mountainside"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 359,
+          "rating": 4.7,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-aristacare-at-norwood-terrace",
+        "identity": {
+          "address": "40 Norwood Avenue",
+          "careUnit": "Memory CareSkilled Nursing / Long Term Care",
+          "city": "Plainfield",
+          "name": "Aristacare At Norwood Terrace",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/aristacare-at-norwood-terrace.json",
+          "sha256": "dea310c08ab851b2b533d36e7bb72b9fb9dbfe095b480b2c875179313dddb2bc"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/11",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ62020",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315217",
+        "reason": "Independent full-page check confirms exact name, street, city and skilled-nursing unit with 4.7/5 from 359 Google ratings, resolving to CMS CCN 315217. The only other same-name candidate, Arbor Terrace Norwood (NJ02A026), is a different facility at 545 Tappan Road, Norwood, and is not this listing; no separate licensed care unit shares 40 Norwood Avenue.",
+        "url": "https://www.mylivingchoice.com/property/aristacare-at-norwood-terrace"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07060",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/11",
+      "sourceId": "review-release-release-aristacare-at-norwood-terrace"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 95,
+          "rating": 4.5,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-atria-cranford",
+        "identity": {
+          "address": "10 Jackson Dr",
+          "careUnit": "Assisted LivingIndependent LivingMemory Care",
+          "city": "Cranford",
+          "name": "Atria Cranford",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/atria-cranford.json",
+          "sha256": "3cbd58349cdb6fa7bd04e0cd326b8b6cc55a7a1fa37f1b09a1d3a6bd79442909"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/19",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ82472",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj82472",
+        "reason": "Independent full-page check confirms exact name, street, city and assisted-living unit with 4.5/5 from 95 Google ratings. Independent living and memory care are services of the same single licensed community at 10 Jackson Drive.",
+        "url": "https://www.mylivingchoice.com/property/atria-cranford"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07016",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/19",
+      "sourceId": "review-release-release-atria-cranford"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 244,
+          "rating": 4.5,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-autumn-lake-healthcare-at-berkeley-heights",
+        "identity": {
+          "address": "35 Cottage Street",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Berkeley Heights",
+          "name": "Autumn Lake Healthcare At Berkeley Heights",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/autumn-lake-healthcare-at-berkeley-heights.json",
+          "sha256": "1ae7d9a11c80464a3869f5d2c0079dda6991a0ff72e41101eeb7235ec9f66f82"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/8",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ62016",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315195",
+        "reason": "Independent full-page check confirms exact name, street, city and skilled-nursing unit with 4.5/5 from 244 Google ratings, resolving to CMS CCN 315195 through the official crosswalk.",
+        "url": "https://www.mylivingchoice.com/property/autumn-lake-healthcare-at-berkeley-heights"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07922",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/8",
+      "sourceId": "review-release-release-autumn-lake-healthcare-at-berkeley-heights"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 6,
+          "rating": 5,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-bayada-assistive-care-morristown",
+        "identity": {
+          "address": "32 Maple Ave 1st Floor",
+          "careUnit": "At-Home Care",
+          "city": "Morristown",
+          "name": "BAYADA Assistive Care",
+          "state": "NJ",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/bayada-assistive-care-morristown.json",
+          "sha256": "571f53030c0e49d3ec553dfa7ec0e76e395134e4c48f0e08787f1683c0f52598"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/17",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "HP0015347",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-hp-hp0015347",
+        "reason": "Independent full-page check confirms exact street, first-floor office, city and at-home care unit with 5/5 from 6 Google ratings, resolving to registered firm HP0015347 at 32 Maple Avenue. Eligible aggregate below the scoring threshold, so the provider stays unrated.",
+        "reconciliation": {
+          "address": "Listing writes '1st Floor' where the registry writes '1ST FL'; same street, floor, city.",
+          "name": "BAYADA Assistive Care is the service-line brand of the registered firm BAYADA HOME HEALTH CARE, INC. at the same office."
+        },
+        "url": "https://www.mylivingchoice.com/property/bayada-assistive-care-morristown"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07960",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/17",
+      "sourceId": "review-release-release-bayada-assistive-care-morristown"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 1,
+          "rating": 1,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-bayada-home-health-care-inc-cranford",
+        "identity": {
+          "address": "11 Commerce Drive",
+          "careUnit": "Home Health",
+          "city": "Cranford",
+          "name": "Bayada Home Health Care, INC.",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/bayada-home-health-care-inc-cranford.json",
+          "sha256": "e210a1b5c3517f03291d2757f6da0d85cdc92047571e0bba2f71f5d91198fd8d"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/18",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "317020",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-317020",
+        "reason": "Independent full-page check confirms exact name, street, city and Home Health unit with 1/5 from 1 Google rating, resolving to CMS home-health agency CCN 317020 at 11 Commerce Drive. The registered home-care office at 6 Commerce Drive (HP0015342) is a different address and not this listing. Eligible aggregate below the scoring threshold, so the provider stays unrated; a low published rating is released as evidence, not suppressed.",
+        "url": "https://www.mylivingchoice.com/property/bayada-home-health-care-inc-cranford"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07016",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/18",
+      "sourceId": "review-release-release-bayada-home-health-care-inc-cranford"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 28,
+          "rating": 4.9,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-brandywine-living-at-summit",
+        "identity": {
+          "address": "41 Springfield Avenue",
+          "careUnit": "Assisted Living",
+          "city": "Summit",
+          "name": "Brandywine Summit by Monarch",
+          "state": "Nj",
+          "zip": "07901"
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/brandywine-living-at-summit.json",
+          "sha256": "2e1ee4a558e247987395b66a0caae812529f6b08d3962fd881068a8820dd2931"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/20",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ90A001",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj90a001",
+        "reason": "Independent full-page check confirms the rebranded name at 41 Springfield Avenue, Summit, visible ZIP 07901, assisted-living unit, with 4.9/5 from 28 Google ratings.",
+        "reconciliation": {
+          "address": "Page address link shows '41 Springfield Avenue Summit, Nj 07901' without a comma after the street; street, city, state abbreviation and visible ZIP all match.",
+          "name": "Current operator brand 'Brandywine Summit by Monarch' vs official BRANDYWINE LIVING AT SUMMIT; identical street, city, ZIP and care unit."
+        },
+        "url": "https://www.mylivingchoice.com/property/brandywine-living-at-summit"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": "07901",
+        "officialZip": "07901",
+        "zipResolution": "observed"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/20",
+      "sourceId": "review-release-release-brandywine-living-at-summit"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 30,
+          "rating": 4.6,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-brighton-gardens-of-florham-park",
+        "identity": {
+          "address": "21 Ridgedale Avenue",
+          "careUnit": "Assisted Living, Memory Care, Respite / Short-Term Care",
+          "city": "Florham Park",
+          "name": "Brighton Gardens of Florham Park",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/brighton-gardens-of-florham-park.json",
+          "sha256": "ded47884dcc7a4e1778db646397a835aaf513ad3af65727f0b9f43ec40b2e1ef"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/5",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ60A001",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj60a001",
+        "reason": "Independent full-page check confirms exact name, street, city and assisted-living unit with 4.6/5 from 30 Google ratings. The displayed phrase 'I worked with' describes a family arranging care with a sales contact, not employment; the population is broad consumer feedback.",
+        "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-florham-park"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07932",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/5",
+      "sourceId": "review-release-release-brighton-gardens-of-florham-park"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 24,
+          "rating": 4.2,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-brighton-gardens-of-mountainside",
+        "identity": {
+          "address": "1350 Route 22 West",
+          "careUnit": "Assisted Living, Memory Care, Respite / Short-Term Care",
+          "city": "Mountainside",
+          "name": "Brighton Gardens of Mountainside",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/brighton-gardens-of-mountainside.json",
+          "sha256": "3b71a0d63907913bba28c699ec2d40d7389f22d2bf5b70f48d652d618a041a0a"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/2",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ90122",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj90122",
+        "reason": "Independent full-page check confirms exact name, street, city and assisted-living unit with DOH-cited capacity 141 matching the roster, and 4.2/5 from 24 Google ratings. Memory care and respite are services of the same single licensed unit at this address.",
+        "url": "https://www.mylivingchoice.com/property/brighton-gardens-of-mountainside"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07092",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/2",
+      "sourceId": "review-release-release-brighton-gardens-of-mountainside"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 21,
+          "rating": 3.4,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-care-connection-rahway",
+        "identity": {
+          "address": "865 Stone Street",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Rahway",
+          "name": "Care Connection Rahway Member of Excelsior Care Group",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/care-connection-rahway.json",
+          "sha256": "4b5f11ec284639fe1ef700e34986c7fbe878ea1d6c27e1fab4a1400f5ff6d3ea"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/9",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ12006L",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315146",
+        "reason": "Independent full-page check confirms exact street, city and skilled-nursing unit with 3.4/5 from 21 Google ratings, resolving to CMS CCN 315146.",
+        "reconciliation": {
+          "address": null,
+          "name": "Page heading appends the operator phrase 'Member of Excelsior Care Group' to the official CARE CONNECTION RAHWAY."
+        },
+        "url": "https://www.mylivingchoice.com/property/care-connection-rahway"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07065",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/9",
+      "sourceId": "review-release-release-care-connection-rahway"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 185,
+          "rating": 4,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-careone-at-madison-avenue",
+        "identity": {
+          "address": "151 Madison Avenue",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Morristown",
+          "name": "Careone At Madison Avenue",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/careone-at-madison-avenue.json",
+          "sha256": "f1627b7eb6cac7700dfd44c0ee9e74426e41be77bb158e977ad796abbc3ae7ee"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/0",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ60921",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315488",
+        "reason": "Independently re-fetched full page on 2026-11-12 confirms exact name, street, city and skilled-nursing unit plus a published 4.0/5 from 185 Google reviews. The page shows no ZIP; identity resolves through the single included official crosswalk (DOH NJ60921, CMS CCN 315488) at 151 Madison Avenue, Morristown. Earlier exclusion for missing observed ZIP is superseded by this explicit exact-unit resolution; no ZIP was copied from official records into the observed identity.",
+        "url": "https://www.mylivingchoice.com/property/careone-at-madison-avenue"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07960",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/0",
+      "sourceId": "review-release-release-careone-at-madison-avenue"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 179,
+          "rating": 3.9,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-complete-care-at-clark-llc",
+        "identity": {
+          "address": "1213 Westfield Avenue",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Clark",
+          "name": "Complete Care At Clark",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/complete-care-at-clark-llc.json",
+          "sha256": "352a60e3d003939affd0e90301f90458f1cde5da3d439dc00a20af8dc27d1717"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/16",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ62026",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315341",
+        "reason": "Independent full-page check confirms exact street, city and skilled-nursing unit with 3.9/5 from 179 Google ratings, resolving to CMS CCN 315341.",
+        "reconciliation": {
+          "address": null,
+          "name": "Official name carries the 'LLC' suffix; the listing name is otherwise identical."
+        },
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-clark-llc"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07066",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/16",
+      "sourceId": "review-release-release-complete-care-at-clark-llc"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 192,
+          "rating": 4.7,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-complete-care-at-plainfield-llc",
+        "identity": {
+          "address": "1340 Park Ave",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Plainfield",
+          "name": "Complete Care at Plainfield",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/complete-care-at-plainfield-llc.json",
+          "sha256": "fe7926b9653e7a8e73160f8e8d94a9e998eb57a6560904ed3d6f2858b0a170dc"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/15",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ62009",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315101",
+        "reason": "Independent full-page check confirms exact street, city and skilled-nursing unit with 4.7/5 from 192 Google ratings, resolving to CMS CCN 315101 at 1340 Park Avenue. Complete Care at Woodlands (cms-315273) is a different facility at 1400 Woodland Avenue and is not this listing.",
+        "reconciliation": {
+          "address": null,
+          "name": "Official name carries the 'LLC' suffix; the listing name is otherwise identical."
+        },
+        "url": "https://www.mylivingchoice.com/property/complete-care-at-plainfield-llc"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07060",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/15",
+      "sourceId": "review-release-release-complete-care-at-plainfield-llc"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 149,
+          "rating": 4.1,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-cornell-hall-care-rehabilitation-center",
+        "identity": {
+          "address": "234 Chestnut Street",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Union",
+          "name": "Cornell Care & Rehabilitation Center managed by Autumn Lake Healthcare at Union",
+          "state": "NJ",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/cornell-hall-care-rehabilitation-center.json",
+          "sha256": "d3d3b8c75177a6d8241f154512cbfd243e88c48200d0bbddb91f2a7ca81257c4"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/13",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ62004",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315104",
+        "reason": "Independent full-page check confirms exact street, city and skilled-nursing unit with 4.1/5 from 149 Google ratings, resolving to CMS CCN 315104, the single nursing unit at 234 Chestnut Street, Union.",
+        "reconciliation": {
+          "address": null,
+          "name": "Page brand drops 'Hall' from CORNELL HALL CARE & REHABILITATION CENTER and appends the operator 'managed by Autumn Lake Healthcare at Union'."
+        },
+        "url": "https://www.mylivingchoice.com/property/cornell-hall-care-rehabilitation-center"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07083",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/13",
+      "sourceId": "review-release-release-cornell-hall-care-rehabilitation-center"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 106,
+          "rating": 4.3,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-cranford-park-care",
+        "identity": {
+          "address": "600 Lincoln Park East",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Cranford",
+          "name": "Cranford Park Care",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/cranford-park-care.json",
+          "sha256": "ddacbb73a30de5dc9f627cf57efbf8d20098c8c54ba4366c624310e7791fabf9"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/14",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ62005",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315390",
+        "reason": "Independent full-page check confirms exact name, street, city and skilled-nursing unit with 4.3/5 from 106 Google ratings, resolving to CMS CCN 315390.",
+        "url": "https://www.mylivingchoice.com/property/cranford-park-care"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07016",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/14",
+      "sourceId": "review-release-release-cranford-park-care"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 11,
+          "rating": 4.3,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-jewish-home-assisted-living",
+        "identity": {
+          "address": "685 Westwood Avenue",
+          "careUnit": "Assisted Living",
+          "city": "River Vale",
+          "name": "Jewish Home Assisted Living",
+          "state": "New Jersey",
+          "zip": "07675"
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/jewish-home-assisted-living.json",
+          "sha256": "a6eb23f23e34f1a51b6752e2ed969ac1f477a4f023d2aabe199fff696bfb5c4b"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/1",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ02A00",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj02a00",
+        "reason": "Independent full-page check confirms exact name, street, city, visible ZIP 07675 and assisted-living unit matching DOH row 196, with 4.3/5 from 11 Google ratings. All displayed review links share one Google place identifier and no different community is named.",
+        "url": "https://www.mylivingchoice.com/property/jewish-home-assisted-living"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": "07675",
+        "officialZip": "07675",
+        "zipResolution": "observed"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/1",
+      "sourceId": "review-release-release-jewish-home-assisted-living"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 270,
+          "rating": 4.4,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-morris-view-healthcare-center",
+        "identity": {
+          "address": "540 West Hanover Avenue",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Morristown",
+          "name": "Morris View Healthcare Center: Nursing Home In New Jersey",
+          "state": "NJ",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/morris-view-healthcare-center.json",
+          "sha256": "d622eb7f0288c502b347f2dc721a90f880b60c82dd4ec658f332d24e8dc7c6e8"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/10",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ61411",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315303",
+        "reason": "Independent full-page check confirms exact street, city and skilled-nursing unit with 4.4/5 from 270 Google ratings, resolving to CMS CCN 315303.",
+        "reconciliation": {
+          "address": "Runtime address carries the 'PO BOX 437' mail drop after the street; the physical street, city and unit match exactly.",
+          "name": "Page heading appends the descriptor ': Nursing Home In New Jersey' to the official MORRIS VIEW HEALTHCARE CENTER."
+        },
+        "url": "https://www.mylivingchoice.com/property/morris-view-healthcare-center"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07960",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/10",
+      "sourceId": "review-release-release-morris-view-healthcare-center"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 290,
+          "rating": 4.3,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-morristown-post-acute-rehab-and-nursing-center",
+        "identity": {
+          "address": "77 Madison Avenue",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Morristown",
+          "name": "Morristown Post Acute Rehabilitation and Nursing Center In New Jersey",
+          "state": "NJ",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/morristown-post-acute-rehab-and-nursing-center.json",
+          "sha256": "221dbcacd62ecf370ca94bbee4153bb83327c821b46ec9562753d31cb6890f64"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/12",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ61417",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315157",
+        "reason": "Independent full-page check confirms exact street, city and skilled-nursing unit with 4.3/5 from 290 Google ratings, resolving to CMS CCN 315157.",
+        "reconciliation": {
+          "address": null,
+          "name": "Page spells 'Rehabilitation' where the official name uses 'REHAB' and appends 'In New Jersey'."
+        },
+        "url": "https://www.mylivingchoice.com/property/morristown-post-acute-rehab-and-nursing-center"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07960",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/12",
+      "sourceId": "review-release-release-morristown-post-acute-rehab-and-nursing-center"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 28,
+          "rating": 4.3,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-spring-hills-morristown",
+        "identity": {
+          "address": "17 Spring Pl",
+          "careUnit": "Assisted Living, Independent Living",
+          "city": "Morristown",
+          "name": "Spring Hills Morristown - Assisted Senior Living Facility in New Jersey",
+          "state": "NJ",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/spring-hills-morristown-assisted-senior-living-facility-in-new-jersey.json",
+          "sha256": "5857035c46ac2a3a67ad02ca52b3b9d9fc15adfd5a7a8c23deef0b8b25a382fd"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/21",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ60A005",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj60a005",
+        "reason": "Independent full-page check confirms exact street, city and assisted-living unit with 4.3/5 from 28 Google ratings. Independent living is a service of the same single licensed community at 17 Spring Place.",
+        "reconciliation": {
+          "address": "Listing abbreviates SPRING PLACE as 'Spring Pl'.",
+          "name": "Page name appends the descriptor '- Assisted Senior Living Facility in New Jersey' to SPRING HILLS MORRISTOWN; the official name is SPRING HILLS AT MORRISTOWN."
+        },
+        "url": "https://www.mylivingchoice.com/property/spring-hills-morristown-assisted-senior-living-facility-in-new-jersey"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07960",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/21",
+      "sourceId": "review-release-release-spring-hills-morristown"
+    },
+    {
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 25,
+          "rating": 4.6,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-12",
+        "id": "release-sunrise-of-westfield",
+        "identity": {
+          "address": "240 Springfield Avenue",
+          "careUnit": "Assisted Living, Memory Care, Respite / Short-Term Care",
+          "city": "Westfield",
+          "name": "Sunrise of Westfield",
+          "state": "New Jersey",
+          "zip": null
+        },
+        "material": {
+          "path": "research/north-jersey/review-release/source-checks/sunrise-of-westfield.json",
+          "sha256": "85ac113634ffcc1bfeb74f51b195210370f56888ea577a1e72e03428499034cb"
+        },
+        "observation": {
+          "path": "research/north-jersey/review-release/source-observations.json",
+          "pointer": "/observations/3",
+          "sha256": "d728c5a5703346eb90a29b6aab22ac6d87f1b3a627aa42a531a1e97c4c2957b5"
+        },
+        "officialId": "NJ90144",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj90144",
+        "reason": "Independent full-page check confirms the brand-variant name at 240 Springfield Avenue, Westfield, assisted-living unit, with 4.6/5 from 25 Google ratings. All displayed reviews concern this community.",
+        "reconciliation": {
+          "address": null,
+          "name": "Listing brand name drops the official words 'Assisted Living' from SUNRISE ASSISTED LIVING OF WESTFIELD; identical street, city, care unit and cited DOH capacity make the brand variant unambiguous."
+        },
+        "url": "https://www.mylivingchoice.com/property/sunrise-of-westfield"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": null,
+        "officialZip": "07090",
+        "zipResolution": "exact-official-crosswalk"
+      },
+      "observationKey": "research/north-jersey/review-release/source-observations.json#/observations/3",
+      "sourceId": "review-release-release-sunrise-of-westfield"
+    }
+  ],
+  "assessmentDate": "2026-11-12"
+}

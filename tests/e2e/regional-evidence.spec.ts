@@ -48,13 +48,13 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
   request,
 }) => {
   const search = await request.get(
-    "/api/search?zip=07083&radius=25&category=assisted-living",
+    "/api/search?zip=07083&radius=10&category=home-care",
   );
   expect(search.status()).toBe(200);
   const result: SearchResponse = await search.json();
   const provider = result.providers.find(
     (provider) =>
-      !provider.research?.detailsAvailable && provider.sources.length > 0,
+      !provider.research && provider.sources.length > 0,
   );
   expect(provider).toBeDefined();
   const response = await request.get(`/api/research?id=${provider!.id}`);
@@ -100,6 +100,21 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
   for (const source of provider!.sources) expect(links).toContain(source.url);
 });
 
+test("Morristown care detail displays its published location-matched experience score", async ({ page, request }) => {
+  const response = await request.get("/api/search?zip=07960&category=nursing-home&q=CareOne");
+  const result: SearchResponse = await response.json();
+  const provider = result.providers.find((entry) => entry.id === "cms-315488");
+  expect(provider?.research?.experience.value).toBe(8);
+  expect(provider?.research?.experience.reviewCount).toBe(185);
+  await openSearch(page, "07960");
+  const detail = await openProvider(page, provider!);
+  const evidence = detail.locator(".location-research");
+  await evidence.getByRole("button", { name: "Reviews", exact: true }).click();
+  await expect(evidence.locator(".experience-number")).toContainText("8");
+  await expect(evidence).toContainText("185");
+  await expect(evidence).toContainText("MyLivingChoice");
+});
+
 test("Facebook-only detail responses display retained findings and original links without inventing a score", async ({
   page,
   request,
@@ -116,13 +131,13 @@ test("Facebook-only detail responses display retained findings and original link
   const retained: LocationResearchResponse = await response.json();
   expect(retained.facebookResearch?.findings.length).toBeGreaterThan(0);
   const gapSearch = await request.get(
-    "/api/search?zip=07083&radius=25&category=assisted-living",
+    "/api/search?zip=07083&radius=10&category=home-care",
   );
   expect(gapSearch.status()).toBe(200);
   const gaps: SearchResponse = await gapSearch.json();
-  const gapResponse = await request.get(
-    `/api/research?id=${gaps.providers[0].id}`,
-  );
+  const unresearched = gaps.providers.find((entry) => !entry.research);
+  expect(unresearched).toBeDefined();
+  const gapResponse = await request.get(`/api/research?id=${unresearched!.id}`);
   expect(gapResponse.status()).toBe(200);
   const gap: LocationResearchResponse = await gapResponse.json();
   expect(gap.sources).toEqual([]);
