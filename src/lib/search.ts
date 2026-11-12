@@ -216,6 +216,14 @@ export function searchProviders(
       ratingDifference =
         (b.research?.experience.value ?? -1) -
         (a.research?.experience.value ?? -1);
+      if (
+        ratingDifference === 0 &&
+        a.research?.experience.value != null &&
+        b.research?.experience.value != null
+      )
+        ratingDifference =
+          (b.research?.familyExperience?.distinctThreadCount ?? 0) -
+          (a.research?.familyExperience?.distinctThreadCount ?? 0);
     }
     return ratingDifference || byDistanceName(a, b);
   });

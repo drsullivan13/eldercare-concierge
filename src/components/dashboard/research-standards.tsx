@@ -76,6 +76,14 @@ export function EvidenceStandards() {
             not clinical quality or safety. Missing evidence is not a poor
             rating, and no provider pays for placement.
           </p>
+          <p>
+            In experience sorting, if two locations have the same published
+            score, the one with more Facebook threads containing resident or
+            family accounts appears first. The accounts do not change the score.{" "}
+            <a href="/methodology#family-accounts">
+              Read how Harbor counts accounts.
+            </a>
+          </p>
           <Link className="text-link" href="/methodology" target="_blank">
             Read the full methodology & source library{" "}
             <ExternalLink size={15} />

@@ -957,6 +957,36 @@
       ]
     },
     {
+      "id": "facebook-release",
+      "depends_on": [],
+      "commands": {
+        "verify": {
+          "argv": [
+            "python3",
+            "scripts/regions/workflow-evidence.py",
+            "facebook-release"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "path": "research/north-jersey/facebook/reconciliation/release-manifest.json",
+          "role": "manifest"
+        },
+        {
+          "path": "research/north-jersey/facebook/reconciliation/reviewed-coverage.json",
+          "role": "output"
+        },
+        {
+          "path": "research/north-jersey/facebook/reconciliation/release-audit.json",
+          "role": "coverage"
+        }
+      ],
+      "known_gaps": [
+        "The shared checkout verifies the public editorial decisions, coverage and audit. Full collection replay also requires the pinned research Git objects."
+      ]
+    },
+    {
       "id": "normalize",
       "depends_on": [
         "state",
@@ -966,7 +996,8 @@
         "clinical",
         "address-points",
         "offerings",
-        "release-reviews"
+        "release-reviews",
+        "facebook-release"
       ],
       "commands": {
         "verify": {

@@ -1,5 +1,9 @@
 import type { ExperienceSummary } from "./experience-score";
-import type { FacebookResearch, FacebookSummary } from "./facebook-research";
+import type {
+  FacebookResearch,
+  FacebookSummary,
+  FamilyExperience,
+} from "./facebook-research";
 
 export type ResearchSource = {
   id: string;
@@ -84,6 +88,7 @@ export type LocationResearch = {
   admissionRestriction?: { text: string; sourceId: string };
 };
 export type ResearchSummary = {
+  familyExperience?: FamilyExperience;
   facebookResearch?: FacebookSummary;
   detailsAvailable: boolean;
   publishedCosts: number;
@@ -96,6 +101,7 @@ export type ResearchSummary = {
   >;
 };
 export type LocationResearchResponse = LocationResearch & {
+  familyExperience?: FamilyExperience;
   experience: ExperienceSummary;
   facebookResearch?: FacebookResearch;
 };

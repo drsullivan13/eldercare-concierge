@@ -3,9 +3,11 @@
 
 import argparse
 from collections import Counter, defaultdict
+import csv
 from datetime import datetime, timedelta
 import hashlib
 import importlib.util
+import io
 import json
 from pathlib import Path
 import re
@@ -462,6 +464,66 @@ def released_research(inputs, roster, counties):
     return combined
 
 
+def reviewed_facebook(inputs, providers):
+    directory = "facebook/reconciliation/"
+    spec = importlib.util.spec_from_file_location("facebook_release", ROOT / "scripts/regions/facebook-release.py")
+    release = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(release)
+    manifest = inputs.json(directory + "release-manifest.json")
+    require(manifest["schemaVersion"] == 1 and manifest["publication"] == "reviewed_qualitative"
+            and manifest["scoreEligible"] is False, "Unreviewed Facebook release")
+    expected_inputs = set(release.TRUSTED_INPUTS)
+    require(set(manifest["trustedInputs"]) == expected_inputs, "Facebook trusted input set mismatch")
+    for name, expected in manifest["trustedInputs"].items():
+        require(digest(inputs.read(name)) == expected, "Facebook trusted input hash mismatch")
+    require(set(manifest["outputs"]) == {"reviewed-coverage.json", "release-audit.json"},
+            "Facebook output set mismatch")
+    for name, expected in manifest["outputs"].items():
+        require(digest(inputs.read(directory + name)) == expected, "Facebook release hash mismatch")
+    dataset = inputs.json(directory + "reviewed-coverage.json")
+    catalog = list(csv.DictReader(io.StringIO(inputs.read("facebook/kit/kit.csv").decode())))
+    require(len(catalog) == 20 and len({row["provider_id"] for row in catalog}) == 20,
+            "Facebook assignment roster mismatch")
+    require(set(dataset["locations"]) == {row["provider_id"] for row in catalog},
+            "Facebook coverage assignment mismatch")
+    by_id = {provider["id"]: provider for provider in providers}
+    for row in catalog:
+        pid = row["provider_id"]
+        if pid not in by_id:
+            continue
+        provider = by_id[pid]
+        require(all(row[key] == provider[key] for key in ("name", "address", "city", "state", "zip"))
+                and row["care_category"] == provider["category"], "Facebook provider identity changed")
+    selections, _ = release.approved_inputs(inputs.read)
+    audit = inputs.json(directory + "release-audit.json")
+    approved = {(pid, oid) for pid, selection in selections.items()
+                for oid in selection["sourceObservationIds"]}
+    rows = audit["rows"]
+    require(set(selections) <= set(dataset["locations"])
+            and audit["publication"] == manifest["publication"] and audit["scoreEligible"] is False
+            and len(rows) == len({row["observationId"] for row in rows}) == 84
+            and all(row["scoreEligible"] is False for row in rows)
+            and {(row["providerId"], row["observationId"]) for row in rows
+                 if row["disposition"] == "published"} == approved,
+            "Facebook audit differs from reviewed selection")
+    retained_counts = Counter(row["providerId"] for row in rows)
+    for pid, location in dataset["locations"].items():
+        expected = [release.finding_projection(selections[pid])] if pid in selections else []
+        require(location["findings"] == expected, "Facebook finding differs from reviewed selection")
+        published = sum(len(finding["sourceObservationIds"]) for finding in expected)
+        statuses = {"findings-available"} if published else {"withheld", "partial", "no-relevant-result"}
+        require(location["publishedObservationCount"] == published
+                and location["foundCount"] == retained_counts[pid]
+                and location["status"] in statuses
+                and location["withheldCount"] >= 0
+                and location["foundCount"] == published + location["withheldCount"],
+                "Facebook reviewed counts or status invalid")
+        require(location["status"] != "no-relevant-result" or location["foundCount"] == 0,
+                "Facebook no-result state has observations")
+    dataset["locations"] = {pid: row for pid, row in dataset["locations"].items() if pid in by_id}
+    return dataset
+
+
 def evidence_coverage(inputs, providers, addresses, research):
     scores = {}
     if "review-release/manifest.json" in inputs.hashes:
@@ -826,6 +888,8 @@ def normalize(root, counties, *, source_only=False):
         artifacts["locationResearch"] = research
         as_of = max(as_of, max(row["checkedAt"] for row in research.values()))
         meta["asOf"] = as_of
+    if not source_only:
+        artifacts["facebookResearch"] = reviewed_facebook(inputs, providers)
     files = {f"{key}.json": encode(value) for key, value in artifacts.items()}
     manifest = {
         "schemaVersion": 1,
@@ -836,7 +900,8 @@ def normalize(root, counties, *, source_only=False):
             "artifacts": {key: {"path": f"runtime/{key}.json", "sha256": digest(files[f"{key}.json"]),
                                 "count": value["catalogTotal"] if key == "meta" else
                                 len(value["facilities"]) if key == "inspectionHistory" else
-                                len(value["agencies"]) if key == "homeHealthEvidence" else len(value)}
+                                len(value["agencies"]) if key == "homeHealthEvidence" else
+                                len(value["locations"]) if key == "facebookResearch" else len(value)}
                           for key, value in artifacts.items()},
         }],
     }

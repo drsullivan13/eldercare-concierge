@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-12",
+  "providerId": "north-jersey-campus-cedar-crest-village-07444",
+  "threadUrl": "https://www.facebook.com/groups/226332979096/permalink/10161753433779097/",
+  "scope": "campus_only",
+  "checks": {
+    "httpFetch": "blocked_http_403",
+    "renderedBrowser": "public_thread_and_underlying_comments_visible",
+    "authenticationUsed": false,
+    "privateGroupAccessUsed": false,
+    "commentPaginationExpanded": true,
+    "retainedExcerptMatchedRenderedSource": true
+  },
+  "qualitativeSelection": {
+    "observationIds": [
+      "fb-njfu-b-003",
+      "fb-njfu-b-004",
+      "fb-njfu-b-005",
+      "fb-njfu-b-006",
+      "fb-njfu-b-010",
+      "fb-njfu-b-012",
+      "fb-njfu-b-013"
+    ],
+    "originalThreadCount": 1,
+    "basis": "Independent review of the retained exact firsthand family rows, receiving-care or previous-care stages, and collection notes recording direct comment access and complete pagination. A separate public browser check confirmed that the underlying thread and comments render without authentication.",
+    "limits": "The browser check corroborates underlying source access. It does not authenticate relationships, establish separate households, or assert an exhaustive present-day row-by-row revalidation."
+  },
+  "numericScoreEligible": false,
+  "privacy": "No author identities, medical details, source narratives, or raw quotations are retained in this receipt.",
+  "publicationLimits": [
+    "Use a neutral paraphrase at campus scope.",
+    "Group the seven selected rows as one original discussion.",
+    "Keep the account with relationship other excluded.",
+    "Exclude recommendations without firsthand detail, employment material, promotion, and unclear event accounts.",
+    "Do not infer current care quality, licensed-unit performance, availability, or a consumer rating."
+  ]
+}

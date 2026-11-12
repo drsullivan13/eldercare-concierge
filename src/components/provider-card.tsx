@@ -1,5 +1,6 @@
 "use client";
 import "./provider-card.css";
+import { FamilyExperienceCount } from "./family-experience";
 import {
   ArrowUpRight,
   Bookmark,
@@ -180,6 +181,7 @@ export function ProviderCard({
           </span>
         )}
       </div>
+      <FamilyExperienceCount evidence={research?.familyExperience} />
       {provider.category === "nursing-home" && provider.cms && (
         <div className="provider-proof">
           <Rating value={provider.cms.overall} />

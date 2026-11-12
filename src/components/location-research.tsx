@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { FacebookResearch } from "./facebook-research";
+import { FamilyExperienceEvidence } from "./family-experience";
 import type {
   LocationResearchResponse,
   OfferingFact,
@@ -337,6 +338,7 @@ export function LocationResearch({
                 <p className="research-intro">
                   Consumer ratings, not a clinical-quality score.
                 </p>
+                <FamilyExperienceEvidence evidence={data.familyExperience} />
                 <details className="evidence-disclosure experience-method">
                   <summary>How to read this score</summary>
                   <p>{data.experience.reason}</p>

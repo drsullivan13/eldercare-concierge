@@ -229,6 +229,16 @@ def released_reviews():
     return {**counts, "withNumericExperienceScore": sum(v["value"] is not None for v in verification.values())}
 
 
+def facebook_release():
+    owner = module("normalize-nj")
+    providers = read(NJ / "runtime/providers.json")
+    dataset = owner.reviewed_facebook(owner.Inputs(NJ), providers)
+    check(dataset == read(NJ / "runtime/facebookResearch.json"), "runtime Facebook evidence differs from release")
+    rows = dataset["locations"].values()
+    return {"locations": len(rows), "findings": sum(len(row["findings"]) for row in rows),
+            "publishedObservations": sum(row["publishedObservationCount"] for row in rows)}
+
+
 def comparison():
     ma = {"providers": read(DATA / "providers.json"), "zips": read(DATA / "ma-zips.json"),
           "locationResearch": read(DATA / "location-research.json"),
@@ -256,5 +266,5 @@ def comparison():
 if __name__ == "__main__":
     checks = {"catalog": catalog, "geography": geography, "evidence": evidence, "state": state,
               "pos": pos, "reviews": reviews, "listings": listings, "address-points": addresses,
-              "release-reviews": released_reviews, "comparison": comparison}
+              "release-reviews": released_reviews, "facebook-release": facebook_release, "comparison": comparison}
     print(json.dumps(checks[sys.argv[1]](), sort_keys=True))

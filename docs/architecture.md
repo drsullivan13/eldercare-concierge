@@ -27,18 +27,20 @@ Provider cards show the information needed to choose which options to investigat
 
 ## Search and evidence
 
-| Module                         | Responsibility and test surface                                                                                                                           |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/lib/search.ts`            | Validates ZIP, radius, care category and sorting; returns actual catalog matches. Search tests verify geography, missing values and category constraints. |
-| `src/lib/location-research.ts` | Builds one provider's research response and compact search summary. Tests verify exact source provenance and exclusions.                                  |
-| `src/lib/experience-score.ts`  | Computes the experience score from eligible aggregates, freshness and source families. Its policy and tests are separate from UI layout.                  |
-| `src/lib/inspections.ts`       | Returns bounded inspection and penalty history for an allowlisted nursing-home CCN.                                                                       |
-| `src/lib/home-health.ts`       | Keeps agency clinical measures and patient surveys separate, including periods, units and suppression.                                                    |
-| `src/lib/facebook-research.ts` | Supplies only the curated qualitative projection; it does not feed score calculation.                                                                     |
-| `src/lib/research-coverage.ts` | Produces a complete catalog checklist with missing-score reasons and a spreadsheet-safe CSV export.                                                       |
-| `src/lib/workspace.ts`         | Validates the complete plan and its limits; callers do not bypass that validation.                                                                        |
+| Module                         | Responsibility and test surface                                                                                                                                              |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/lib/search.ts`            | Validates ZIP, radius, care category and sorting; returns actual catalog matches. Search tests verify geography, missing values and category constraints.                    |
+| `src/lib/location-research.ts` | Builds one provider's research response and compact search summary. Tests verify exact source provenance and exclusions.                                                     |
+| `src/lib/experience-score.ts`  | Computes the experience score from eligible aggregates, freshness and source families. Its policy and tests are separate from UI layout.                                     |
+| `src/lib/inspections.ts`       | Returns bounded inspection and penalty history for an allowlisted nursing-home CCN.                                                                                          |
+| `src/lib/home-health.ts`       | Keeps agency clinical measures and patient surveys separate, including periods, units and suppression.                                                                       |
+| `src/lib/facebook-research.ts` | Supplies the curated qualitative projection and deduplicates eligible original threads into separate family-experience evidence. It does not feed numeric score calculation. |
+| `src/lib/research-coverage.ts` | Produces a complete catalog checklist with missing-score reasons and a spreadsheet-safe CSV export.                                                                          |
+| `src/lib/workspace.ts`         | Validates the complete plan and its limits; callers do not bypass that validation.                                                                                           |
 
 The route handlers under `src/app/api/` validate request shape and delegate to these modules. They are intentionally small. The published registry indexes stable provider IDs once for search and coverage lookups. The scorer evaluates freshness against the requested date, defaulting to the current UTC date.
+
+`location-research` exposes the same optional `familyExperience` object in detail and compact research. It counts only editorially released exact-provider resident-family findings with recognized original thread links. Missing coverage stays unsearched, distinct from a covered zero. Search uses this qualitative count only to break equal non-null numeric experience scores within the selected care category. Unrated, unequal-score, distance and CMS ordering remain unchanged. Cards and detail disclose the selected scope and lack of prevalence or positivity inference. See [the experience policy](experience-score.md#family-experience-evidence-and-tie-only-ordering).
 
 ## Research collection and publication
 

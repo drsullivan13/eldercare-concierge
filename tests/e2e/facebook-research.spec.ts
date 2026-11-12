@@ -4,6 +4,7 @@ import data from "../../src/data/facebook-research.json";
 import catalog from "../../src/data/providers.json";
 import type { FacebookResearchDataset } from "../../src/lib/facebook-research";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
+import { getFamilyExperience } from "../../src/lib/facebook-research";
 
 const snapshot = data as unknown as FacebookResearchDataset;
 const assigned = Object.entries(snapshot.locations);
@@ -42,6 +43,12 @@ async function open(page: Page, id: string) {
       ),
     });
   await expect(card).toHaveCount(1);
+  const count = getFamilyExperience(id)?.distinctThreadCount ?? 0;
+  const familyText = `${count} Facebook ${count === 1 ? "thread" : "threads"} with resident or family accounts`;
+  if (count)
+    await expect(card.locator(".family-experience")).toHaveText(familyText);
+  else await expect(card.locator(".family-experience")).toHaveCount(0);
+  await expect(card.locator(".family-experience-method")).toHaveCount(0);
   const research = page.waitForResponse(
     (r) =>
       new URL(r.url()).pathname === "/api/research" &&
@@ -54,12 +61,26 @@ async function open(page: Page, id: string) {
     .locator(".research-tabs")
     .getByRole("button", { name: "Reviews", exact: true })
     .click();
+  if (count) {
+    await expect(dialog.locator(".family-experience")).toHaveText(familyText);
+    await dialog
+      .getByText("How Harbor uses these accounts", { exact: true })
+      .click();
+    await expect(dialog.locator(".family-experience-method")).toContainText(
+      "the same published score",
+    );
+    await expect(dialog.locator(".family-experience-method")).toContainText(
+      "Each thread counts once",
+    );
+  } else {
+    await expect(dialog.locator(".family-experience")).toHaveCount(0);
+  }
   const section = dialog.getByRole("region", {
     name: "Facebook findings",
     exact: true,
   });
   await expect(section).toBeVisible();
-  return { dialog, section };
+  return { card, dialog, section };
 }
 async function noOverflow(page: Page) {
   const size = await page.evaluate(() => ({
@@ -73,6 +94,24 @@ async function noOverflow(page: Page) {
   for (const s of size.sections)
     expect(s.scroll).toBeLessThanOrEqual(s.client + 1);
 }
+
+test("public methodology explains family-experience tie-only ordering and campus scope", async ({
+  page,
+}) => {
+  await page.goto("/methodology");
+  const policy = page.locator("#family-accounts");
+  await expect(
+    policy.getByRole("heading", {
+      name: "How resident and family accounts affect ordering",
+    }),
+  ).toBeVisible();
+  await expect(policy).toContainText("Each thread counts once");
+  await expect(policy).toContainText("the same published score");
+  await expect(policy).toContainText("These accounts do not change that score");
+  await expect(policy).toContainText(
+    "separately licensed nursing and assisted-living units have their own records",
+  );
+});
 
 test("actual curated Facebook findings show sources, keyboard expansion and kind filters without changing the numerical score", async ({
   page,
@@ -134,6 +173,8 @@ test("actual curated Facebook findings show sources, keyboard expansion and kind
   });
   const accessibility = await new AxeBuilder({ page })
     .include(".fb-research")
+    .include("dialog .family-experience")
+    .include("dialog .family-experience-method")
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
     .analyze();
   expect(accessibility.violations).toEqual([]);
@@ -197,6 +238,8 @@ test("searched empty/withheld coverage is distinct from an actual catalog locati
       await expect(result.section.getByRole("combobox")).toHaveCount(0);
     const accessibility = await new AxeBuilder({ page })
       .include(".fb-research")
+      .include("dialog .family-experience")
+      .include("dialog .family-experience-method")
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
       .analyze();
     expect(accessibility.violations).toEqual([]);
@@ -218,6 +261,8 @@ test("searched empty/withheld coverage is distinct from an actual catalog locati
   await noOverflow(page);
   const accessibility = await new AxeBuilder({ page })
     .include(".fb-research")
+    .include("dialog .family-experience")
+    .include("dialog .family-experience-method")
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
     .analyze();
   expect(accessibility.violations).toEqual([]);

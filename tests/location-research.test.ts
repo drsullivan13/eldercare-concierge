@@ -29,12 +29,14 @@ const asOf = "2026-11-12";
 
 test("retained Massachusetts location records are returned unchanged alongside computed evidence", () => {
   for (const [id, record] of Object.entries(snapshot)) {
-    const { experience, facebookResearch, ...detail } = getLocationResearch(
-      id,
-      asOf,
-    );
+    const { experience, facebookResearch, familyExperience, ...detail } =
+      getLocationResearch(id, asOf);
     assert.deepEqual(detail, record, id);
     assert.ok(experience);
+    assert.deepEqual(
+      familyExperience,
+      getResearchSummary(id)?.familyExperience,
+    );
     assert.deepEqual(facebookResearch, getFacebookResearch(id), id);
   }
 });
@@ -71,6 +73,8 @@ test("Facebook-only catalog records remain accessible through the getter and res
     assert.equal(detail.availability.asOf, null);
     assert.equal(detail.availability.status, "not-published");
     const summary = getResearchSummary(id)!;
+    assert.deepEqual(summary.familyExperience, detail.familyExperience);
+    assert.ok(detail.familyExperience);
     assert.equal(
       summary.facebookResearch?.findingCount,
       facebook.findings.length,

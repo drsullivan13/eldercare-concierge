@@ -34,6 +34,12 @@ export function ResearchDisclosure({
               Unrated means more evidence is needed. Facebook findings add
               context; selected posts do not change the score.
             </p>
+            <p>
+              When you sort by experience within a care category, locations with
+              the same published score are ordered by the number of Facebook
+              threads with resident or family accounts, highest first. Locations
+              without a score are ordered by distance, then name.
+            </p>
           </div>
           {filtered && (
             <p className="research-filter-note">
@@ -49,9 +55,9 @@ export function ResearchDisclosure({
             does not establish service coverage.
           </p>
           <p className="catalog-note">
-            {data.market.label} catalog as of {data.asOf}.{" "}
-            {data.catalogTotal} records in this market. The catalog is not a
-            complete inventory of local care.
+            {data.market.label} catalog as of {data.asOf}. {data.catalogTotal}{" "}
+            records in this market. The catalog is not a complete inventory of
+            local care.
             {data.excludedWithoutCoordinates > 0
               ? ` ${data.excludedWithoutCoordinates} records without usable location coordinates are excluded from radius results.`
               : ""}{" "}

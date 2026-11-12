@@ -119,7 +119,12 @@ class ActualSourceTests(unittest.TestCase):
         for pid, record in research.items():
             self.assertEqual(record["reviewAggregates"], reviewed.get(pid, {}).get("reviewAggregates", []))
         self.assertFalse(any(k.startswith("reviews/") for k in json.loads(self.files["source-inputs.json"])["files"]))
-        self.assertNotIn("facebookResearch", self.manifest["markets"][0]["artifacts"])
+        facebook = json.loads(self.files["facebookResearch.json"])
+        self.assertEqual(len(facebook["locations"]), 20)
+        self.assertEqual(sum(len(row["findings"]) for row in facebook["locations"].values()), 2)
+        self.assertEqual(sum(row["publishedObservationCount"] for row in facebook["locations"].values()), 8)
+        self.assertTrue(all(finding["kind"] == "resident-family"
+                            for row in facebook["locations"].values() for finding in row["findings"]))
         for provider in self.providers:
             self.assertNotIn("price", provider)
             self.assertNotIn("availability", provider)

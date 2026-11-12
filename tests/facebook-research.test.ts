@@ -6,6 +6,7 @@ import locationData from "../src/data/location-research.json";
 import {
   getFacebookResearch,
   getFacebookSummary,
+  getFamilyExperience,
   type FacebookResearchDataset,
 } from "../src/lib/facebook-research";
 import {
@@ -230,6 +231,11 @@ test("real research API attaches only the requested curated location and omits F
   assert.equal(response.status, 200);
   const result = await response.json();
   assert.deepEqual(result.facebookResearch, getFacebookResearch(id));
+  assert.deepEqual(result.familyExperience, getFamilyExperience(id));
+  assert.deepEqual(
+    result.familyExperience,
+    getResearchSummary(id)?.familyExperience,
+  );
   const outside = catalog.find(
     (p) => !Object.hasOwn(snapshot.locations, p.id),
   )!.id;
@@ -237,8 +243,72 @@ test("real research API attaches only the requested curated location and omits F
     new Request(`http://localhost/api/research?id=${outside}`),
   );
   assert.equal(unsearched.status, 200);
-  assert.equal(
-    Object.hasOwn(await unsearched.json(), "facebookResearch"),
-    false,
+  const unsearchedBody = await unsearched.json();
+  assert.equal(Object.hasOwn(unsearchedBody, "facebookResearch"), false);
+  assert.equal(Object.hasOwn(unsearchedBody, "familyExperience"), false);
+});
+
+test("real detail and search APIs distinguish covered zero family evidence from unsearched", async () => {
+  const [id] = locations.find(
+    ([, location]) => location.status === "no-relevant-result",
+  )!;
+  const response = await GET(
+    new Request(`http://localhost/api/research?id=${id}`),
   );
+  const body = await response.json();
+  assert.equal(body.familyExperience.distinctThreadCount, 0);
+  assert.equal(body.familyExperience.scope, "exact-provider");
+  const { GET: searchGET } = await import("../src/app/api/search/route");
+  const search = await searchGET(
+    new Request("http://localhost/api/search?zip=02459&radius=50"),
+  );
+  assert.equal(search.status, 200);
+  const results = await search.json();
+  assert.deepEqual(
+    results.providers.find((provider: { id: string }) => provider.id === id)
+      .research.familyExperience,
+    body.familyExperience,
+  );
+});
+
+test("released campus, separate nursing and Wareham counts match the reviewed original threads", async () => {
+  const campus = "lifeplan-newbridge-on-the-charles";
+  assert.deepEqual(
+    snapshot.locations[campus].findings
+      .filter((finding) => finding.kind === "resident-family")
+      .map((finding) => finding.threadUrl),
+    [
+      "https://facebook.com/groups/dedham.westwood/permalink/2531799013655921/",
+      "https://facebook.com/groups/dedham.westwood/permalink/2531799013655921/",
+    ],
+  );
+  const wareham = "ma-alr-all-american-assisted-living-at-wareham";
+  assert.ok(
+    snapshot.locations[wareham].findings.some(
+      (finding) =>
+        finding.kind === "resident-family" &&
+        finding.threadUrl === "https://facebook.com/reel/973004339157573/",
+    ),
+  );
+  for (const [id, expected] of [
+    [campus, 1],
+    ["cms-225774", 2],
+    [wareham, 3],
+  ] as const) {
+    assert.equal(getFamilyExperience(id)?.distinctThreadCount, expected, id);
+    assert.equal(
+      getResearchSummary(id)?.familyExperience?.distinctThreadCount,
+      expected,
+      id,
+    );
+    const response = await GET(
+      new Request(`http://localhost/api/research?id=${id}`),
+    );
+    assert.equal(response.status, 200);
+    assert.equal(
+      (await response.json()).familyExperience.distinctThreadCount,
+      expected,
+      id,
+    );
+  }
 });

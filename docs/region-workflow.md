@@ -73,6 +73,12 @@ The [verification capture](../research/region-workflows/verification-2026-11-12.
 
 **Clinical evidence.** Keep CMS measured quality separate from consumer experience. A nursing-home citation, home-health survey response rate, provider-level count and consumer review have different subjects and reporting periods. POS verification checks current office certification against the latest retained supplement. Earlier snapshots are checked against their archived receipts and source rows. Partial historical attempts are reported separately. Only exact office CCNs enter published home-health clinical records; reported service ZIPs remain a separate relationship.
 
+### Union and Morris Facebook release
+
+The November 12 comparison table above is a historical checkpoint. Harbor subsequently reviewed the two Facebook batches covering 20 Union and Morris assignments. The dashboard's Facebook findings filter shows the approved public discussions for Cedar Crest Village and Victoria Mews. The retained decision record identifies the original thread, selected observation IDs, post date and limits for each finding. [Reviewed family discussions](../research/north-jersey/facebook/reconciliation/reviewed-family-threads.json)
+
+To verify the private research decisions in a checkout containing the pinned research commits, run `python3 -B scripts/regions/facebook-release.py --check`. The regional build consumes the reviewed release. Families can inspect the evidence by opening the provider's details and choosing the reviews section. [Experience scoring policy](experience-score.md)
+
 ## Adding another geography
 
 1. Choose a precise inclusion policy for physical locations and record whether broader ZIPs are search origins, county overlaps or service-area evidence. Freeze the geographic boundary and publish its limitations.

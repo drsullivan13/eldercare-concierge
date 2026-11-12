@@ -1,6 +1,247 @@
 [
   {
     "defaultZip": "07960",
+    "facebookResearch": {
+      "checkedAt": "2026-11-12",
+      "locations": {
+        "cms-315009": {
+          "coverageExplanation": "2 exact-location candidate observations were retained. None is cleared for publication. Original first-person evidence remains unverified, or the material is promotional, employment-related, or ambiguous. Facebook never contributes to the numeric experience score.",
+          "findings": [],
+          "foundCount": 2,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 2
+        },
+        "cms-315120": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        },
+        "cms-315195": {
+          "coverageExplanation": "9 exact-location candidate observations were retained. None is cleared for publication. Original first-person evidence remains unverified, or the material is promotional, employment-related, or ambiguous. Facebook never contributes to the numeric experience score.",
+          "findings": [],
+          "foundCount": 9,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 9
+        },
+        "cms-315329": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        },
+        "cms-317002": {
+          "coverageExplanation": "1 exact-location candidate observations were retained. None is cleared for publication. Original first-person evidence remains unverified, or the material is promotional, employment-related, or ambiguous. Facebook never contributes to the numeric experience score.",
+          "findings": [],
+          "foundCount": 1,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 1
+        },
+        "cms-317020": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        },
+        "north-jersey-campus-cedar-crest-village-07444": {
+          "coverageExplanation": "16 exact-location candidate observations were retained. 7 reviewed family observations are grouped into one original discussion. Other candidates remain unpublished. A shared thread does not establish independent households. No Facebook material contributes to a numeric score. Twelve of the sixteen candidates share one thread, not twelve independent sources. The seven published family accounts concern the campus in 2022. A public-browser check corroborated access to the underlying thread and comments. Campus material does not establish evidence for a licensed care unit.",
+          "findings": [
+            {
+              "date": "2022-06-06",
+              "id": "nj-facebook-cedar-crest-community-thread",
+              "kind": "resident-family",
+              "limitations": [
+                "Seven family accounts appeared in one public community discussion. Their independence was not established.",
+                "The accounts concern the campus. They do not establish conditions at any separately licensed unit or describe current care.",
+                "The collector recorded the original thread and its comments. A later public-browser check confirmed the thread and comments could be viewed without signing in.",
+                "Relationships are self-reported in the reviewed source, not independently authenticated.",
+                "Selected qualitative context only. This finding never contributes to a numeric experience score."
+              ],
+              "relationship": "family",
+              "sourceObservationIds": [
+                "fb-njfu-b-003",
+                "fb-njfu-b-004",
+                "fb-njfu-b-005",
+                "fb-njfu-b-006",
+                "fb-njfu-b-010",
+                "fb-njfu-b-012",
+                "fb-njfu-b-013"
+              ],
+              "sourceUrl": "https://facebook.com/groups/226332979096/permalink/10161753433779097/",
+              "summary": "In a 2022 discussion, family members described relatives’ experiences of living at Cedar Crest. Their comments mentioned activities, dining and friendships on the campus.",
+              "threadUrl": "https://facebook.com/groups/226332979096/permalink/10161753433779097/",
+              "topics": [
+                "activities",
+                "dining",
+                "social connections"
+              ]
+            }
+          ],
+          "foundCount": 16,
+          "publishedObservationCount": 7,
+          "searchedAt": "2026-11-12",
+          "status": "findings-available",
+          "withheldCount": 9
+        },
+        "north-jersey-campus-lantern-hill-07974": {
+          "coverageExplanation": "2 exact-location candidate observations were retained. None is cleared for publication. Original first-person evidence remains unverified, or the material is promotional, employment-related, or ambiguous. Facebook never contributes to the numeric experience score.",
+          "findings": [],
+          "foundCount": 2,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 2
+        },
+        "north-jersey-doh-nj14c014": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        },
+        "north-jersey-doh-nj20a013": {
+          "coverageExplanation": "7 exact-location candidate observations were retained. None is cleared for publication. Original first-person evidence remains unverified, or the material is promotional, employment-related, or ambiguous. Facebook never contributes to the numeric experience score.",
+          "findings": [],
+          "foundCount": 7,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 7
+        },
+        "north-jersey-doh-nj60a002": {
+          "coverageExplanation": "The search retained ambiguous or non-family candidates, with no exactly linked observation. These candidates remain unassigned. No finding or rating is published.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "partial",
+          "withheldCount": 0
+        },
+        "north-jersey-doh-nj60a004": {
+          "coverageExplanation": "16 exact-location candidate observations were retained. 1 reviewed family observations are grouped into one original discussion. Other candidates remain unpublished. A shared thread does not establish independent households. No Facebook material contributes to a numeric score.",
+          "findings": [
+            {
+              "date": "2026-10-06",
+              "id": "nj-facebook-victoria-mews-community-thread",
+              "kind": "resident-family",
+              "limitations": [
+                "The source is one family comment in a public community discussion. The collector retrieved 16 of the 22 comments indicated by the thread.",
+                "October 6, 2026 is the post date. The dates of the stay were not recorded.",
+                "Relationships are self-reported in the reviewed source, not independently authenticated.",
+                "Selected qualitative context only. This finding never contributes to a numeric experience score."
+              ],
+              "relationship": "family",
+              "sourceObservationIds": [
+                "fb-njm-a-012"
+              ],
+              "sourceUrl": "https://www.facebook.com/groups/765406577175744/permalink/2904082416641472/",
+              "summary": "A family member described a relative’s stay at Victoria Mews and expressed appreciation for the staff.",
+              "threadUrl": "https://www.facebook.com/groups/765406577175744/permalink/2904082416641472/",
+              "topics": [
+                "staff"
+              ]
+            }
+          ],
+          "foundCount": 16,
+          "publishedObservationCount": 1,
+          "searchedAt": "2026-11-12",
+          "status": "findings-available",
+          "withheldCount": 15
+        },
+        "north-jersey-doh-nj60a006": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        },
+        "north-jersey-doh-nj82472": {
+          "coverageExplanation": "Family accounts were retrieved from a personal-profile thread. Its permalink identifies the individual account, so Harbor is withholding those accounts from public display.",
+          "findings": [],
+          "foundCount": 7,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 7
+        },
+        "north-jersey-doh-nj90a000": {
+          "coverageExplanation": "3 exact-location candidate observations were retained. None is cleared for publication. Original first-person evidence remains unverified, or the material is promotional, employment-related, or ambiguous. Facebook never contributes to the numeric experience score.",
+          "findings": [],
+          "foundCount": 3,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 3
+        },
+        "north-jersey-doh-nj90a120": {
+          "coverageExplanation": "2 exact-location candidate observations were retained. None is cleared for publication. Original first-person evidence remains unverified, or the material is promotional, employment-related, or ambiguous. Facebook never contributes to the numeric experience score.",
+          "findings": [],
+          "foundCount": 2,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "withheld",
+          "withheldCount": 2
+        },
+        "north-jersey-hp-hp0015347": {
+          "coverageExplanation": "The search retained ambiguous or non-family candidates, with no exactly linked observation. These candidates remain unassigned. No finding or rating is published.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "partial",
+          "withheldCount": 0
+        },
+        "north-jersey-hp-hp0254700": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        },
+        "north-jersey-hp-hp0364600": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        },
+        "north-jersey-hp-hp0414500": {
+          "coverageExplanation": "The retained location-specific search reported no relevant public result. This limited search does not establish an absence of reviews or describe care quality.",
+          "findings": [],
+          "foundCount": 0,
+          "publishedObservationCount": 0,
+          "searchedAt": "2026-11-12",
+          "status": "no-relevant-result",
+          "withheldCount": 0
+        }
+      },
+      "reviewBasis": "Reviewed exact assignment identities and redacted row dispositions from the retained original and corrected follow-up batches. Public visibility labels are collector metadata alone, not verification of original comments. Selected exact firsthand family rows have separate retained direct-source review. Cedar Crest public browser access corroborates underlying comments without authenticating relationships or households. One finding per original thread. No numeric scoring.",
+      "runId": "nj-facebook-reviewed-coverage-2026-11-12",
+      "schemaVersion": 1
+    },
     "homeHealthEvidence": {
       "agencies": [
         {

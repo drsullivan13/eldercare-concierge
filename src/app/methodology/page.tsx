@@ -131,6 +131,28 @@ export default function Methodology() {
             those findings.
           </p>
         </section>
+        <section className="method-callout" id="family-accounts">
+          <h2>How resident and family accounts affect ordering</h2>
+          <p>
+            Harbor counts Facebook threads with selected resident or family
+            accounts about the specific location. Each thread counts once.
+            Tours, recommendations, promotions and accounts from employees are
+            excluded.
+          </p>
+          <p>
+            When you sort by experience within one care category, the location
+            with more threads appears first if two locations have the same
+            published score. These accounts do not change that score. Locations
+            without a score are ordered by distance, then name.
+          </p>
+          <p>
+            Search coverage and editorial choices affect which accounts you see.
+            These accounts cannot tell you how common an experience is or
+            establish the quality of care. A comment about a campus such as
+            NewBridge applies only to that campus entry. Its separately licensed
+            nursing and assisted-living units have their own records.
+          </p>
+        </section>
         <section className="method-callout">
           <h2>Offers, prices and openings have different meanings</h2>
           <p>

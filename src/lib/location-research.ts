@@ -3,7 +3,11 @@ import {
   computeExperienceScore,
   type ExperienceSummary,
 } from "./experience-score";
-import { getFacebookResearch, getFacebookSummary } from "./facebook-research";
+import {
+  getFacebookResearch,
+  getFacebookSummary,
+  getFamilyExperience,
+} from "./facebook-research";
 import type {
   LocationResearch,
   LocationResearchResponse,
@@ -69,6 +73,7 @@ export function getLocationResearch(
         };
   return {
     ...record,
+    familyExperience: getFamilyExperience(providerId, registry),
     facebookResearch: getFacebookResearch(providerId, registry),
     experience: scoreLocation(record, asOfDate),
   };
@@ -82,6 +87,7 @@ export function getResearchSummary(
     const facebookResearch = getFacebookSummary(providerId, registry);
     if (!facebookResearch) return undefined;
     return {
+      familyExperience: getFamilyExperience(providerId, registry),
       facebookResearch,
       detailsAvailable: false,
       publishedCosts: 0,
@@ -103,6 +109,7 @@ export function getResearchSummary(
     (s) => s.id === record.availability.sourceId,
   );
   return {
+    familyExperience: getFamilyExperience(providerId, registry),
     facebookResearch: getFacebookSummary(providerId, registry),
     detailsAvailable: record.providerDetailsReviewed,
     publishedCosts: record.facts.filter(
