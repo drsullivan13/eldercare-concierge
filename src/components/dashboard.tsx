@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -29,6 +29,7 @@ import type { Provider, SearchProvider } from "@/lib/providers";
 import { Brand } from "./brand";
 import { ProviderCard } from "./provider-card";
 import { ProviderDetail } from "./provider-detail";
+import type { ProfilePane } from "./profile-pane";
 import { Overview } from "./dashboard/overview";
 import { CareSearchView } from "./dashboard/care-search";
 import { ShortlistView } from "./dashboard/shortlist";
@@ -83,6 +84,8 @@ function WorkspaceDashboard({
   const saved = useSavedProviders(workspace.savedProviderIds);
   const savedProviders = saved.providers;
   const [selected, setSelected] = useState<Provider | null>(null);
+  const [initialPane, setInitialPane] = useState<ProfilePane>("overview");
+  const providerReturnFocus = useRef<HTMLElement | null>(null);
   const comparison = useComparison();
   const [profileOpen, setProfileOpen] = useState(
     !demo && !workspace.profile.zip,
@@ -95,7 +98,19 @@ function WorkspaceDashboard({
   }, [toast]);
   const selectedProvider = selected;
   const openProvider = useCallback(
-    (provider: Provider) => setSelected(provider),
+    (
+      provider: Provider,
+      pane: ProfilePane = "overview",
+      trigger?: HTMLElement,
+    ) => {
+      providerReturnFocus.current =
+        trigger ??
+        (document.activeElement instanceof HTMLElement
+          ? document.activeElement
+          : null);
+      setInitialPane(pane);
+      setSelected(provider);
+    },
     [],
   );
   const savedSet = useMemo(
@@ -193,7 +208,8 @@ function WorkspaceDashboard({
         provider={provider}
         saved={savedSet.has(provider.id)}
         onSave={() => saveProvider(provider)}
-        onOpen={() => setSelected(provider)}
+        onOpen={() => openProvider(provider)}
+        onReviews={(trigger) => openProvider(provider, "reviews", trigger)}
         compare={comparison.contains(provider.id)}
         onCompare={() => {
           if (!comparison.toggle(provider))
@@ -444,6 +460,7 @@ function WorkspaceDashboard({
         <ProviderDetail
           key={selectedProvider.id}
           provider={selectedProvider}
+          initialPane={initialPane}
           saved={savedSet.has(selectedProvider.id)}
           note={workspace.notes[selectedProvider.id] || ""}
           saveStatus={saveStatus}
@@ -456,7 +473,13 @@ function WorkspaceDashboard({
             }))
           }
           onTask={(title) => addTask(title, selectedProvider.id)}
-          close={() => setSelected(null)}
+          close={() => {
+            setSelected(null);
+            requestAnimationFrame(() => {
+              if (providerReturnFocus.current?.isConnected)
+                providerReturnFocus.current.focus({ preventScroll: true });
+            });
+          }}
         />
       )}
       {profileOpen && (

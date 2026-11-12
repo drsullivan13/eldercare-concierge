@@ -1,4 +1,8 @@
 import { getProviderMarket, markets, type MarketRegistry } from "./markets";
+import { getReviewCatalog } from "./review-catalog";
+import { getDailyLifeResearch } from "./daily-life";
+import { getNursingStaffingResearch } from "./nursing-staffing";
+import { individualReviews, reviewAccountCounts } from "./individual-reviews";
 import {
   computeExperienceScore,
   type ExperienceSummary,
@@ -41,6 +45,39 @@ function scoreLocation(
   });
 }
 
+const individualReviewCountCache = new Map<
+  string,
+  {
+    record: LocationResearch | undefined;
+    counts: ResearchSummary["individualReviews"];
+  }
+>();
+
+function individualReviewSummary(
+  providerId: string,
+  record: LocationResearch | undefined,
+  registry: MarketRegistry,
+): ResearchSummary["individualReviews"] {
+  if (registry !== markets) {
+    return record
+      ? reviewAccountCounts(individualReviews(record, null).accounts)
+      : undefined;
+  }
+  const cached = individualReviewCountCache.get(providerId);
+  if (cached && cached.record === record)
+    return cached.counts && { ...cached.counts };
+  const catalog = getReviewCatalog(providerId);
+  const counts =
+    record || catalog
+      ? reviewAccountCounts(
+          individualReviews(record ?? getLocationResearch(providerId), catalog)
+            .accounts,
+        )
+      : undefined;
+  individualReviewCountCache.set(providerId, { record, counts });
+  return counts && { ...counts };
+}
+
 export function getLocationResearch(
   providerId: string,
   asOfDate?: string,
@@ -74,6 +111,10 @@ export function getLocationResearch(
         };
   return {
     ...record,
+    ...(registry === markets && {
+      dailyLife: getDailyLifeResearch(providerId) ?? undefined,
+      nursingStaffing: getNursingStaffingResearch(providerId) ?? undefined,
+    }),
     familyExperience: getFamilyExperience(providerId, registry),
     facebookResearch: getFacebookResearch(providerId, registry),
     experience: scoreLocation(record, asOfDate),
@@ -83,11 +124,23 @@ export function getResearchSummary(
   providerId: string,
   registry: MarketRegistry = markets,
 ): ResearchSummary | undefined {
-  const records = getProviderMarket(providerId, registry)?.locationResearch;
-  if (!records || !Object.hasOwn(records, providerId)) {
+  const market = getProviderMarket(providerId, registry);
+  if (!market) return undefined;
+  const records = market.locationResearch;
+  const record =
+    records && Object.hasOwn(records, providerId)
+      ? records[providerId]
+      : undefined;
+  const individualReviewCounts = individualReviewSummary(
+    providerId,
+    record,
+    registry,
+  );
+  if (!record) {
     const facebookResearch = getFacebookSummary(providerId, registry);
-    if (!facebookResearch) return undefined;
+    if (!facebookResearch && !individualReviewCounts) return undefined;
     return {
+      individualReviews: individualReviewCounts,
       familyExperience: getFamilyExperience(providerId, registry),
       facebookResearch,
       detailsAvailable: false,
@@ -103,7 +156,6 @@ export function getResearchSummary(
     };
   }
   validateProviderId(providerId);
-  const record = records[providerId];
   const {
     value,
     reviewCount,
@@ -117,6 +169,7 @@ export function getResearchSummary(
     (s) => s.id === record.availability.sourceId,
   );
   return {
+    individualReviews: individualReviewCounts,
     familyExperience: getFamilyExperience(providerId, registry),
     facebookResearch: getFacebookSummary(providerId, registry),
     detailsAvailable: record.providerDetailsReviewed,

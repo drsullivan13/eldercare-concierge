@@ -320,6 +320,29 @@
   margin: 8px 0 0;
   font-weight: 600;
 }
+.provider-review-entry {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 4px 0;
+  text-align: left;
+  color: #24594c;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.provider-review-entry svg {
+  flex-shrink: 0;
+}
+.provider-rating-count {
+  margin: 4px 0 0;
+  color: #526153;
+  font-size: 14px;
+  line-height: 1.5;
+}
 .provider-family-insight {
   margin-top: 9px;
   color: #58685c;

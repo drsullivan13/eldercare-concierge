@@ -2,6 +2,7 @@ import { test, expect, type Locator, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import catalogue from "../../src/data/providers.json";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
+import type { IndividualReviewsResponse } from "../../src/lib/individual-reviews";
 
 const providers = new Map(catalogue.map((p) => [p.id, p]));
 test.describe.configure({ timeout: 180_000 });
@@ -90,6 +91,44 @@ async function expandFacts(dialog: Locator) {
     if ((await disclosure.getAttribute("open")) === null)
       await disclosure.locator("summary").click();
   }
+}
+async function findAccount(dialog: Locator, account: Locator) {
+  const previous = dialog.getByRole("button", {
+    name: "Previous accounts",
+    exact: true,
+  });
+  while ((await previous.count()) && (await previous.isEnabled()))
+    await previous.click();
+  const next = dialog.getByRole("button", {
+    name: "Next accounts",
+    exact: true,
+  });
+  for (let page = 0; page < 100; page++) {
+    if (await account.count()) return account;
+    if (!(await next.count()) || (await next.isDisabled())) break;
+    await next.click();
+  }
+  await expect(account).toHaveCount(1);
+  return account;
+}
+async function accountLinks(dialog: Locator) {
+  const links: string[] = [];
+  const next = dialog.getByRole("button", {
+    name: "Next accounts",
+    exact: true,
+  });
+  for (let page = 0; page < 100; page++) {
+    links.push(
+      ...(await dialog
+        .locator(".public-reviews article a")
+        .evaluateAll((nodes) =>
+          nodes.map((node) => node.getAttribute("href")!),
+        )),
+    );
+    if (!(await next.count()) || (await next.isDisabled())) return links;
+    await next.click();
+  }
+  throw new Error("Individual review pagination did not terminate.");
 }
 async function noOverflow(page: Page) {
   const dimensions = await page.evaluate(() => ({
@@ -313,7 +352,7 @@ test("actual review sources, excluded populations and selected family accounts n
   await showPane(dialog, "Reviews");
   let panel = dialog.locator(".research-panel");
   await expect(panel.locator(".experience-number")).toHaveText("7.4/10");
-  await expect(panel).toContainText("44 reviews reported");
+  await expect(panel).toContainText("44 source-reported ratings");
   await expect(panel).toContainText("1 source family");
   const method = panel.locator(".experience-method");
   const quote = panel.locator(".public-reviews blockquote").first();
@@ -329,22 +368,22 @@ test("actual review sources, excluded populations and selected family accounts n
     "Reviewers are not independently authenticated",
   );
   await expect(panel.locator(".review-excluded").first()).toBeVisible();
-  await expect(panel.locator(".public-reviews article")).toHaveCount(
-    data.reviews.length,
+  const catalogResponse = await request.get("/api/reviews", {
+    params: { id: data.providerId },
+  });
+  expect(catalogResponse.status()).toBe(200);
+  const catalog: IndividualReviewsResponse = await catalogResponse.json();
+  expect((await accountLinks(dialog)).sort()).toEqual(
+    catalog.accounts.map(({ url }) => url).sort(),
   );
   await panel
     .getByRole("checkbox", { name: "Family & resident accounts" })
     .check();
-  const selected = data.reviews.filter((r) =>
+  const selected = catalog.accounts.filter((r) =>
     ["family", "resident"].includes(r.relationship),
   );
-  await expect(panel.locator(".public-reviews article")).toHaveCount(
-    selected.length,
-  );
-  for (const review of selected)
-    await expect(
-      panel.locator(`a[href="${review.url}"]`).first(),
-    ).toBeVisible();
+  const selectedLinks = await accountLinks(dialog);
+  expect(selectedLinks.sort()).toEqual(selected.map(({ url }) => url).sort());
   await expect(panel.locator(".experience-number")).toHaveText("7.4/10");
   await noOverflow(page);
   await dialog.getByRole("button", { name: "Close dialog" }).click();
@@ -689,7 +728,7 @@ test("families see sourced costs and an account preview, with a direct path to c
   ).toBeVisible();
   await expect(overview.locator(".overview-rate")).toContainText("$2,523");
   await expect(overview.locator("blockquote")).toBeVisible();
-  const caveat = overview.locator("details");
+  const caveat = overview.locator(".overview-caveat");
   await expect(caveat.locator("p")).toBeHidden();
   await caveat.locator("summary").click();
   await expect(caveat.locator("p")).toBeVisible();
@@ -724,7 +763,9 @@ test("families see sourced costs and an account preview, with a direct path to c
     "Sep 29, 2025",
   );
   await expect(
-    unfavorable.locator(".review-meta").getByText("Caring.com", { exact: true }),
+    unfavorable
+      .locator(".review-meta")
+      .getByText("Caring.com", { exact: true }),
   ).toBeVisible();
   await expect(
     unfavorable.locator(".review-meta").getByText(/Sep 29, 2025/),
@@ -738,7 +779,14 @@ test("families see sourced costs and an account preview, with a direct path to c
     data.reviews.find((review) => review.rating === 2)!.url,
   );
 
-  const reddit = accounts.filter({ hasText: "Reddit" });
+  const reddit = await findAccount(
+    dialog,
+    accounts.filter({
+      has: page.locator(
+        'a[href="https://www.reddit.com/r/SalemMA/comments/1c6njun/assisted_living/"]',
+      ),
+    }),
+  );
   await expect(reddit.locator("blockquote")).toHaveCount(0);
   await expect(reddit.locator(".review-summary")).toContainText(
     "Research summary",
@@ -754,7 +802,12 @@ test("families see sourced costs and an account preview, with a direct path to c
     "https://www.reddit.com/r/SalemMA/comments/1c6njun/assisted_living/",
   );
 
-  const syndicated = accounts.filter({ hasText: "Birdeye" });
+  const syndicated = await findAccount(
+    dialog,
+    accounts.filter({
+      hasText: "Lots of opportunities to choose from in terms of activities.",
+    }),
+  );
   await expect(syndicated.locator("blockquote")).toHaveText(
     "“Lots of opportunities to choose from in terms of activities.”",
   );
@@ -770,9 +823,12 @@ test("families see sourced costs and an account preview, with a direct path to c
     "https://reviews.birdeye.com/brooksby-village-157269641387486",
   );
   for (const review of data.reviews) {
-    const account = accounts
-      .filter({ has: page.locator(`a[href="${review.url}"]`) })
-      .filter({ hasText: review.excerpt || review.summary });
+    const account = await findAccount(
+      dialog,
+      accounts
+        .filter({ has: page.locator(`a[href="${review.url}"]`) })
+        .filter({ hasText: review.excerpt || review.summary }),
+    );
     await expect(account).toHaveCount(1);
     if (review.excerpt)
       await expect(account.locator("blockquote")).toHaveText(

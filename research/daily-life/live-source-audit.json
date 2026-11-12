@@ -1,0 +1,590 @@
+{
+  "checkedAt": "2026-11-12",
+  "method": "Independent second FetchUrl read of every retained provider-page capture. Initial full-page source reads preceded the reviewed input. Fresh access failures do not establish removed services.",
+  "checks": [
+    {
+      "capture": "brightview-paramus-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-paramus/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 11,
+      "missing": []
+    },
+    {
+      "capture": "brightview-paramus-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-paramus/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "brightview-tenafly-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-tenafly/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 10,
+      "missing": []
+    },
+    {
+      "capture": "brightview-tenafly-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-tenafly/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "brightview-randolph-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-randolph/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 11,
+      "missing": []
+    },
+    {
+      "capture": "brightview-randolph-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-randolph/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "brightview-wayne-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-wayne/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 11,
+      "missing": []
+    },
+    {
+      "capture": "brightview-wayne-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-wayne/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "brightview-arlington-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-arlington/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 9,
+      "missing": []
+    },
+    {
+      "capture": "brightview-arlington-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-arlington/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "brightview-canton-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-canton/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "brightview-canton-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-canton/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "brightview-concord-river-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-concord-river/community-pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 11,
+      "missing": []
+    },
+    {
+      "capture": "brightview-concord-river-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-concord-river/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 2,
+      "missing": []
+    },
+    {
+      "capture": "brightview-north-andover-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-north-andover/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 11,
+      "missing": []
+    },
+    {
+      "capture": "brightview-north-andover-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-north-andover/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "brightview-wakefield-pricing",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-wakefield/pricing",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 11,
+      "missing": []
+    },
+    {
+      "capture": "brightview-wakefield-social",
+      "url": "https://www.brightviewseniorliving.com/find-a-community/brightview-wakefield/social-life-and-dining",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "bristal-woodcliff-lake",
+      "url": "https://thebristal.com/collection/woodcliff-lake/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 9,
+      "missing": []
+    },
+    {
+      "capture": "bristal-englewood",
+      "url": "https://thebristal.com/collection/englewood/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 9,
+      "missing": []
+    },
+    {
+      "capture": "bristal-waldwick",
+      "url": "https://thebristal.com/collection/waldwick/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 9,
+      "missing": []
+    },
+    {
+      "capture": "bristal-wayne",
+      "url": "https://thebristal.com/collection/wayne/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 9,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-chester",
+      "url": "https://foxtrailmemorycare.com/location/chester-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-cresskill",
+      "url": "https://foxtrailmemorycare.com/location/cresskill-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-hillsdale",
+      "url": "https://foxtrailmemorycare.com/location/hillsdale-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-hillsdale-west",
+      "url": "https://foxtrailmemorycare.com/location/hillsdale-west-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-mahwah",
+      "url": "https://foxtrailmemorycare.com/location/mahwah-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-montville",
+      "url": "https://foxtrailmemorycare.com/location/montville-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-paramus",
+      "url": "https://foxtrailmemorycare.com/location/paramus-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-park-ridge",
+      "url": "https://foxtrailmemorycare.com/location/park-ridge-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-ramsey",
+      "url": "https://foxtrailmemorycare.com/location/ramsey-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "fox-trail-ramsey-lake-street",
+      "url": "https://foxtrailmemorycare.com/location/ramsey-lake-street-nj/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "mira-vie-montville",
+      "url": "https://miravieseniorliving.com/communities/mira-vie-at-montville/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 6,
+      "missing": []
+    },
+    {
+      "capture": "mira-vie-fanwood",
+      "url": "https://miravieseniorliving.com/communities/mira-vie-at-fanwood/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 6,
+      "missing": []
+    },
+    {
+      "capture": "mira-vie-clifton",
+      "url": "https://miravieseniorliving.com/communities/mira-vie-at-clifton/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 6,
+      "missing": []
+    },
+    {
+      "capture": "mira-vie-west-milford",
+      "url": "https://miravieseniorliving.com/communities/mira-vie-at-west-milford/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 6,
+      "missing": []
+    },
+    {
+      "capture": "monarch-paramus",
+      "url": "https://www.monarchcommunities.com/paramus-new-jersey",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "benchmark-roseland",
+      "url": "https://www.benchmarkseniorliving.com/senior-living/nj/roseland/benchmark-at-roseland/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 10,
+      "missing": []
+    },
+    {
+      "capture": "chelsea-fair-lawn",
+      "url": "https://chelseaseniorliving.com/locations/the-chelsea-at-fair-lawn/lifestyle/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "chelsea-fair-lawn-identity",
+      "url": "https://chelseaseniorliving.com/locations/the-chelsea-at-fair-lawn/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "chelsea-west-orange",
+      "url": "https://chelseaseniorliving.com/locations/the-chelsea-at-west-orange/lifestyle/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "chelsea-west-orange-identity",
+      "url": "https://chelseaseniorliving.com/locations/the-chelsea-at-west-orange/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-plainfield",
+      "url": "https://ccplainfield.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-plainfield-identity",
+      "url": "https://ccplainfield.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-westfield",
+      "url": "https://ccwestfield.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-westfield-identity",
+      "url": "https://ccwestfield.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-st-vincents",
+      "url": "https://ccstvincents.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-stvincents-identity",
+      "url": "https://ccstvincents.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-cedar-grove",
+      "url": "https://cccedargrove.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-cedargrove-identity",
+      "url": "https://cccedargrove.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-regent",
+      "url": "https://ccregent.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-regent-identity",
+      "url": "https://ccregent.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-clark",
+      "url": "https://completecareclark.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-clark-identity",
+      "url": "https://completecareclark.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-prospect-heights",
+      "url": "https://ccprospectheights.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "complete-care-prospectheights-identity",
+      "url": "https://ccprospectheights.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "spring-grove",
+      "url": "https://springgroverehab.com/amenities/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "arbor-ridge-rehab",
+      "url": "https://arborridgerehab.com/amenities/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "woodcliff-rehab",
+      "url": "https://familyofcaring.com/woodcliff-health-rehabilitation-center/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 8,
+      "missing": []
+    },
+    {
+      "capture": "orangepark",
+      "url": "https://ccorangepark.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "orangepark-identity",
+      "url": "https://ccorangepark.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "milfordmanor",
+      "url": "https://ccmilfordmanor.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "milfordmanor-identity",
+      "url": "https://ccmilfordmanor.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "inglemoor",
+      "url": "https://ccinglemoor.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "inglemoor-identity",
+      "url": "https://ccinglemoor.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "fairlawnedge",
+      "url": "https://ccfairlawnedge.com/what-to-expect",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "fairlawnedge-identity",
+      "url": "https://ccfairlawnedge.com/contact",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "hamilton-park",
+      "url": "https://www.hamiltonparknursing.com/amenities/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 3,
+      "missing": []
+    },
+    {
+      "capture": "hamilton-park-identity",
+      "url": "https://www.hamiltonparknursing.com/contact/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "optima-harborview",
+      "url": "https://www.optimacareharborview.com/amenities/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 2,
+      "missing": []
+    },
+    {
+      "capture": "optima-harborview-identity",
+      "url": "https://www.optimacareharborview.com/contact/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    },
+    {
+      "capture": "optima-castle-hill",
+      "url": "https://www.optimacarecastlehill.com/amenities/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 2,
+      "missing": []
+    },
+    {
+      "capture": "optima-castle-hill-identity",
+      "url": "https://www.optimacarecastlehill.com/contact/",
+      "status": "confirmed",
+      "httpStatus": 200,
+      "checkedExcerpts": 4,
+      "missing": []
+    }
+  ]
+}

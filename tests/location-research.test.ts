@@ -29,9 +29,17 @@ const asOf = "2026-11-12";
 
 test("retained Massachusetts location records are returned unchanged alongside computed evidence", () => {
   for (const [id, record] of Object.entries(snapshot)) {
-    const { experience, facebookResearch, familyExperience, ...detail } =
-      getLocationResearch(id, asOf);
+    const {
+      experience,
+      facebookResearch,
+      familyExperience,
+      dailyLife,
+      nursingStaffing,
+      ...detail
+    } = getLocationResearch(id, asOf);
     assert.deepEqual(detail, record, id);
+    assert.equal(dailyLife?.providerId ?? id, id);
+    assert.ok(!nursingStaffing || id === `cms-${nursingStaffing.ccn}`);
     assert.ok(experience);
     assert.deepEqual(
       familyExperience,

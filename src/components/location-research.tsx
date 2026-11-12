@@ -5,14 +5,13 @@ import {
   CalendarClock,
   Check,
   ExternalLink,
-  MessageSquare,
   Plus,
 } from "lucide-react";
-import Link from "next/link";
 import { evidenceDate as date } from "./evidence-date";
 import { PropertyOverview } from "./property-overview";
-import { FacebookResearch } from "./facebook-research";
-import { FamilyExperienceEvidence } from "./family-experience";
+import { DailyLife } from "./daily-life";
+import { IndividualReviewList } from "./individual-review-list";
+import { ExperienceExplanation } from "./experience-explanation";
 import type {
   LocationResearchResponse,
   OfferingFact,
@@ -168,7 +167,6 @@ export function LocationResearch({
   const { pane, targetId } = navigation;
   const targetRef = useRef<HTMLElement>(null);
   const [taskAdded, setTaskAdded] = useState(false);
-  const [familyOnly, setFamilyOnly] = useState(false);
   const { data, error, loading, retry } =
     useProviderEvidence<LocationResearchResponse>(providerId, source);
   useEffect(() => {
@@ -183,13 +181,6 @@ export function LocationResearch({
   );
   const reviews =
     data?.reviews
-      .filter(
-        (r) =>
-          !familyOnly ||
-          targetId === `${uid}-account-${r.id}` ||
-          r.relationship === "family" ||
-          r.relationship === "resident",
-      )
       .toSorted(
         (a, b) =>
           Number(b.aspects.some(({ sentiment }) => sentiment !== "positive")) -
@@ -230,7 +221,7 @@ export function LocationResearch({
         <div className="section-title">
           <h3 id={`${uid}-title`}>
             {pane === "costs"
-              ? "Make yourself at home"
+              ? "Daily life, staffing & costs"
               : "Availability & services"}
           </h3>
           {data?.checkedAt && (
@@ -299,9 +290,13 @@ export function LocationResearch({
       )}
       {data && (
         <>
-          <div className="research-panel">
+          <div className={`research-panel${pane === "costs" ? " daily-life-costs" : ""}`}>
             {pane === "costs" && (
               <>
+                <section aria-labelledby={`${uid}-life`}>
+                  <h4 id={`${uid}-life`}>Care, amenities & everyday life</h4>
+                  <DailyLife data={data} provider={provider} />
+                </section>
                 <section aria-labelledby={`${uid}-costs`}>
                   <h4 id={`${uid}-costs`}>
                     Published costs & what they include
@@ -338,20 +333,6 @@ export function LocationResearch({
                         : "Room or rent, assessed care, medication support, second-person fees, deposits, annual increases, refund terms and any minimum stay."}
                     </p>
                   </div>
-                </section>
-                <section aria-labelledby={`${uid}-life`}>
-                  <h4 id={`${uid}-life`}>Care, amenities & everyday life</h4>
-                  <p className="research-intro">
-                    Ask which services are included in your care level and
-                    contract.
-                  </p>
-                  <Facts
-                    facts={careFacts.filter(
-                      (fact) => !licensingFacts.includes(fact),
-                    )}
-                    sources={data.sources}
-                    empty="Amenities and activities have not been researched yet. Ask the provider what is available."
-                  />
                 </section>
                 <section aria-labelledby={`${uid}-rooms`}>
                   <h4 id={`${uid}-rooms`}>
@@ -453,272 +434,12 @@ export function LocationResearch({
             )}
             {pane === "reviews" && (
               <>
-                <section aria-labelledby={`${uid}-reviews`}>
-                  <div className="review-section-title" id={`${uid}-reviews`}>
-                    <h3 id={`${uid}-title`}>What people say</h3>
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={familyOnly}
-                        onChange={(e) => setFamilyOnly(e.target.checked)}
-                      />{" "}
-                      Family & resident accounts
-                    </label>
-                  </div>
-                  {!reviews.length && (
-                    <p className="research-empty">
-                      No excerpts to show
-                      {familyOnly ? " for this filter" : " yet"}.{" "}
-                      {data.reviewAggregates.length
-                        ? "Use the review-page links below to read available reviews."
-                        : ""}{" "}
-                      Missing excerpts do not mean no reviews exist.
-                    </p>
-                  )}
-                  <div className="public-reviews">
-                    {reviews.map((review) => {
-                      const reviewSource = data.sources.find(
-                        (source) => source.id === review.sourceId,
-                      );
-                      const hasConcerns = review.aspects.some(
-                        ({ sentiment }) => sentiment !== "positive",
-                      );
-                      return (
-                        <article
-                          id={uid + "-account-" + review.id}
-                          key={review.id}
-                          tabIndex={-1}
-                          ref={
-                            targetId === `${uid}-account-${review.id}`
-                              ? targetRef
-                              : undefined
-                          }
-                        >
-                          {review.excerpt ? (
-                            <blockquote>“{review.excerpt}”</blockquote>
-                          ) : (
-                            <p className="review-summary">
-                              <strong>Research summary</strong> ·{" "}
-                              {review.summary}
-                            </p>
-                          )}
-                          <div className="review-meta">
-                            <strong>
-                              {reviewSource?.publisher ??
-                                "Source not established"}
-                              {reviewSource?.kind === "provider" &&
-                                " · Provider-selected testimonial"}
-                            </strong>
-                            <span>
-                              {review.relationship === "unknown"
-                                ? "Relationship not established"
-                                : `Self-described ${review.relationship}`}
-                            </span>
-                            <span>
-                              {date(review.date)}
-                              {review.rating !== null
-                                ? ` · ${review.rating}/${review.scale}`
-                                : ""}
-                            </span>
-                          </div>
-                          {review.excerpt && hasConcerns && (
-                            <p className="review-concern">
-                              {review.summary ||
-                                "This account also raises concerns."}
-                            </p>
-                          )}
-                          <details className="evidence-disclosure">
-                            <summary>Account context</summary>
-                            <div className="review-aspects">
-                              {review.aspects.map((aspect, i) => (
-                                <span
-                                  key={i}
-                                  className={`sentiment-${aspect.sentiment}`}
-                                >
-                                  {aspect.aspect} · {aspect.sentiment}
-                                </span>
-                              ))}
-                            </div>
-                            {review.excerpt &&
-                              review.summary &&
-                              !hasConcerns && (
-                                <p>
-                                  <strong>Research summary</strong> ·{" "}
-                                  {review.summary}
-                                </p>
-                              )}
-                            {review.notes.map((note, i) => (
-                              <p key={i}>{note}</p>
-                            ))}
-                            {reviewSource?.access === "search-result" && (
-                              <p>
-                                Search result only. The full page was not
-                                reviewed.
-                              </p>
-                            )}
-                          </details>
-                          <a
-                            className="research-source"
-                            href={review.url}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Read the original account
-                            {reviewSource
-                              ? ` on ${reviewSource.publisher}`
-                              : ""}
-                            <ExternalLink size={12} />
-                          </a>
-                        </article>
-                      );
-                    })}
-                  </div>
-                  <details className="evidence-disclosure review-sampling">
-                    <summary>How these accounts were selected</summary>
-                    {data.checkedAt && (
-                      <p>Research checked {date(data.checkedAt)}.</p>
-                    )}
-                    <p>
-                      Selected accounts, not a representative survey.
-                      Relationships are self-described, not verified. An unknown
-                      relationship does not establish firsthand experience.
-                    </p>
-                    <p>
-                      Accounts with negative or mixed aspects appear first,
-                      including when the excerpt itself is positive. Within each
-                      group, the most recent dated accounts appear first.
-                    </p>
-                    <FamilyExperienceEvidence
-                      evidence={data.familyExperience}
-                    />
-                  </details>
-                  <FacebookResearch
-                    key={providerId}
-                    research={data.facebookResearch}
-                  />
-                </section>
-                <section aria-labelledby={`${uid}-ratings`}>
-                  <h4 id={`${uid}-ratings`}>
-                    Review ratings & source coverage
-                  </h4>
-                  <div className="experience-overview">
-                    <div className="experience-number">
-                      {data.experience.value === null ? (
-                        <MessageSquare size={28} />
-                      ) : (
-                        <>
-                          {data.experience.value.toFixed(1)}
-                          <small>/10</small>
-                        </>
-                      )}
-                    </div>
-                    <div>
-                      <h4>{data.experience.label}</h4>
-                      <p>
-                        {data.experience.publicationStatus ===
-                        "sources-disagree"
-                          ? "Harbor score withheld · Sources disagree"
-                          : data.experience.value === null
-                            ? "Not rated yet"
-                            : `${data.experience.confidence === "moderate" ? "Moderate" : "Limited"} evidence · ${data.experience.reviewCount} reviews reported · ${data.experience.independentSourceCount} source ${data.experience.independentSourceCount === 1 ? "family" : "families"}`}
-                      </p>
-                    </div>
-                  </div>
-                  {data.experience.publicationStatus ===
-                    "single-source-estimate" && (
-                    <p>
-                      Single-source estimate ·{" "}
-                      {data.experience.singleSourceLabel}
-                    </p>
-                  )}
-                  {data.experience.selectedConcerns && (
-                    <p>Selected reviews include concerns.</p>
-                  )}
-                  <p className="research-intro">
-                    Consumer ratings, not a clinical-quality score.
-                  </p>
-                  <details className="evidence-disclosure experience-method">
-                    <summary>How to read this score</summary>
-                    <p>{data.experience.reason}</p>
-                    <p>
-                      A provisional summary of consumer ratings, not a
-                      clinical-quality score. Reviewers are not independently
-                      authenticated. Tour reviews may be included, and counts
-                      can overlap across sites. Read the inspection evidence
-                      too.
-                    </p>
-                    <Link
-                      href="/methodology#experience"
-                      target="_blank"
-                      className="text-link"
-                    >
-                      How this score works <ExternalLink size={13} />
-                    </Link>
-                  </details>
-                  {data.reviewLinks && data.reviewLinks.length > 0 && (
-                    <div className="search-research-links">
-                      {data.reviewLinks.map((link) => (
-                        <a
-                          className="research-source"
-                          key={link.url}
-                          href={link.url}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Read independent reviews on {link.publisher}{" "}
-                          <ExternalLink size={12} />
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                  <h4>What each source reports</h4>
-                  {!data.reviewAggregates.length && (
-                    <p className="research-empty">
-                      No location-matched ratings have been researched yet.
-                    </p>
-                  )}
-                  <div className="review-platforms">
-                    {data.reviewAggregates.map((aggregate, i) => (
-                      <article key={`${aggregate.sourceId}-${i}`}>
-                        <strong>{aggregate.platform}</strong>
-                        <span>
-                          {aggregate.rating === null
-                            ? "Rating not established"
-                            : `${aggregate.rating} / ${aggregate.scale}`}{" "}
-                          ·{" "}
-                          {aggregate.count === null
-                            ? "Count unknown"
-                            : `${aggregate.count} reviews`}
-                        </span>
-                        <p className="small">
-                          {aggregate.scope} · Rating as of{" "}
-                          {date(aggregate.asOf)}
-                        </p>
-                        <SourceLink
-                          label={`Read reviews on ${aggregate.platform}`}
-                          source={data.sources.find(
-                            (s) => s.id === aggregate.sourceId,
-                          )}
-                        />
-                        {aggregate.notes.length > 0 && (
-                          <details className="evidence-disclosure">
-                            <summary>Source context</summary>
-                            {aggregate.notes.map((note, j) => (
-                              <p key={j}>{note}</p>
-                            ))}
-                          </details>
-                        )}
-                        {data.experience.excludedSources
-                          .filter((s) => s.sourceId === aggregate.sourceId)
-                          .map((s, j) => (
-                            <p className="review-excluded" key={j}>
-                              Excluded from index: {s.reason}
-                            </p>
-                          ))}
-                      </article>
-                    ))}
-                  </div>
-                </section>
+                <IndividualReviewList
+                  research={data}
+                  uid={uid}
+                  targetId={targetId}
+                />
+                <ExperienceExplanation data={data} uid={uid} />
               </>
             )}
             {pane === "details" && licensingFacts.length > 0 && (

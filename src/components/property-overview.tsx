@@ -5,6 +5,7 @@ import type {
 import type { Provider } from "@/lib/providers";
 import type { NavigateProfile } from "./profile-pane";
 import { evidenceDate } from "./evidence-date";
+import { DailyLife } from "./daily-life";
 import "./property-overview.css";
 
 type Account = LocationResearchResponse["reviews"][number];
@@ -41,19 +42,6 @@ const money = (value: number) =>
     maximumFractionDigits: 2,
   });
 
-function perkPreview(text: string) {
-  const preview = text
-    .split(/\.\s/)[0]
-    .replace(/^The independent-living package advertises /, "")
-    .split(/,\s/)
-    .slice(0, 2)
-    .join(", ")
-    .replace(/^./, (letter) => letter.toUpperCase());
-  return preview.length > 110
-    ? preview.slice(0, 110).replace(/\s+\S*$/, "") + "…"
-    : preview.replace(/\.?$/, ".");
-}
-
 export function PropertyOverview({
   data,
   provider,
@@ -73,7 +61,7 @@ export function PropertyOverview({
   const entrance = data.facts.find(
     (fact) => fact.amount?.type === "entrance-fee",
   );
-  const office = provider.locationKind === "office";
+  const office = provider.locationKind !== "facility";
   const costLabel = cost?.amount
     ? cost.text
         .split(/\$\s*\d/)[0]
@@ -93,21 +81,6 @@ export function PropertyOverview({
   const extraFee = cost?.text.match(
     /plus\s+(?:an?\s+)?(?:one-time\s+)?\$[\d,.]+[^.;]*/i,
   )?.[0];
-  const practical = (
-    office ? ["care", "amenity"] : ["dining", "amenity", "activity"]
-  )
-    .flatMap((kind) => {
-      const matches = data.facts.filter(
-        (fact) =>
-          fact.kind === kind && sourceFor(fact.sourceId)?.kind !== "regulator",
-      );
-      return (
-        matches.find((fact) => sourceFor(fact.sourceId)?.kind === "provider") ??
-        matches[0] ??
-        []
-      );
-    })
-    .slice(0, 2);
   const quotes = reviews.filter((review) => review.excerpt);
   const family = quotes.filter(
     (review) =>
@@ -125,6 +98,14 @@ export function PropertyOverview({
   const concern = reviews.find((review) =>
     review.aspects.some(({ sentiment }) => sentiment !== "positive"),
   );
+  const catalog = !account ? provider.research?.individualReviews : undefined;
+  const reviewLink = account
+    ? "Full review & context"
+    : catalog?.withText
+      ? `Read ${catalog.withText} review${catalog.withText === 1 ? "" : "s"}`
+      : catalog?.total
+        ? `Browse ${catalog.total} review link${catalog.total === 1 ? "" : "s"}`
+        : "Explore reviews & family discussions";
 
   return (
     <div
@@ -132,6 +113,16 @@ export function PropertyOverview({
       role="region"
       aria-label="Property overview"
     >
+      <div className="overview-life">
+        <h4>{office ? "Daily help & care team" : "Daily life & care team"}</h4>
+        <DailyLife data={data} provider={provider} compact />
+        <button
+          className="overview-more"
+          onClick={() => onNavigate({ pane: "costs" })}
+        >
+          All perks & services
+        </button>
+      </div>
       <div className="overview-price">
         <h4>{costLabel}</h4>
         {cost ? (
@@ -199,28 +190,8 @@ export function PropertyOverview({
           {cost ? "Price details & source" : "Explore costs & perks"}
         </button>
       </div>
-      <div className="overview-life">
-        {practical.length ? (
-          practical.map((fact) => (
-            <div key={fact.id} className="overview-fact">
-              <p>{perkPreview(fact.text)}</p>
-            </div>
-          ))
-        ) : (
-          <p>
-            {office
-              ? "Ask which services are available at your address."
-              : "Ask about meals, activities and everyday help."}
-          </p>
-        )}
-        <button
-          className="overview-more"
-          onClick={() => onNavigate({ pane: "costs" })}
-        >
-          All perks & services
-        </button>
-      </div>
       <div className="overview-experience">
+        <h4>What people say</h4>
         {excerpt && account ? (
           <>
             <blockquote>“{excerpt}”</blockquote>
@@ -238,11 +209,15 @@ export function PropertyOverview({
           </>
         ) : (
           <p>
-            No review excerpt yet. See available sources and family discussions.
+            {catalog?.withText
+              ? "Selected accounts with review text or research summaries."
+              : catalog?.total
+                ? "Open the original sources to read these individual accounts."
+                : "See available review sources and family discussions."}
           </p>
         )}
         <button
-          className="overview-more"
+          className={`overview-more${catalog?.total ? " overview-catalog-link" : ""}`}
           onClick={() =>
             onNavigate({
               pane: "reviews",
@@ -250,10 +225,17 @@ export function PropertyOverview({
             })
           }
         >
-          {account
-            ? "Full review & context"
-            : "Explore reviews & family discussions"}
+          {reviewLink}
         </button>
+        {catalog && catalog.withText > 0 && catalog.total > catalog.withText && (
+          <button
+            className="overview-more"
+            onClick={() => onNavigate({ pane: "reviews" })}
+          >
+            Browse {catalog.total - catalog.withText} more review link
+            {catalog.total - catalog.withText === 1 ? "" : "s"}
+          </button>
+        )}
         {account && (
           <details className="overview-caveat">
             <summary>About this review</summary>

@@ -5,6 +5,7 @@ import { evidenceDate } from "../evidence-date";
 import { providerCareAlerts } from "../provider-card";
 import { providerDisplayName } from "../provider-display-name";
 import { CATEGORY_LABELS, type Provider } from "@/lib/providers";
+import type { ProfilePane } from "../profile-pane";
 import { ComparePlaceFacts } from "./compare-place-facts";
 import styles from "./family-compare.module.css";
 
@@ -34,7 +35,7 @@ export function ComparisonTray({
   openProvider,
 }: {
   comparison: ReturnType<typeof useComparison>;
-  openProvider: (provider: Provider) => void;
+  openProvider: (provider: Provider, pane?: ProfilePane) => void;
 }) {
   const [open, setOpen] = useState(false);
   if (!comparison.providers.length) return null;
@@ -59,9 +60,9 @@ export function ComparisonTray({
         <CompareDialog
           providers={comparison.providers}
           close={() => setOpen(false)}
-          open={(provider) => {
+          open={(provider, pane) => {
             setOpen(false);
-            openProvider(provider);
+            openProvider(provider, pane);
           }}
         />
       )}
@@ -76,7 +77,7 @@ function CompareDialog({
 }: {
   providers: Provider[];
   close: () => void;
-  open: (p: Provider) => void;
+  open: (p: Provider, pane?: ProfilePane) => void;
 }) {
   const uid = useId();
   const [omittedId, setOmittedId] = useState(providers[2]?.id);
@@ -223,7 +224,8 @@ function CompareDialog({
                   onClick={() => open(provider)}
                   aria-label={provider.name}
                 >
-                  {providerDisplayName(provider.name)} <ArrowUpRight size={14} />
+                  {providerDisplayName(provider.name)}{" "}
+                  <ArrowUpRight size={14} />
                 </button>
                 <span className={styles.category}>
                   {CATEGORY_LABELS[provider.category]}
@@ -314,8 +316,8 @@ function CompareDialog({
                   )}
                   {experience && experience.independentSourceCount > 0 && (
                     <small>
-                      {experience.reviewCount.toLocaleString()} reviews reported
-                      · {experience.independentSourceCount} source{" "}
+                      {experience.reviewCount.toLocaleString()} source-reported
+                      ratings · {experience.independentSourceCount} source{" "}
                       {experience.independentSourceCount === 1
                         ? "family"
                         : "families"}
@@ -323,14 +325,22 @@ function CompareDialog({
                       Harbor.
                     </small>
                   )}
+                  {provider.research?.individualReviews && (
+                    <p>
+                      {provider.research.individualReviews.total} individual
+                      accounts available here,{" "}
+                      {provider.research.individualReviews.withText} with text
+                      or a research summary. Separate from source rating counts.
+                    </p>
+                  )}
                   {experience?.selectedConcerns && (
                     <small>Selected reviews include concerns.</small>
                   )}
                   <button
                     className={styles.link}
-                    onClick={() => open(provider)}
+                    onClick={() => open(provider, "reviews")}
                   >
-                    Review sources <ArrowUpRight size={14} />
+                    Read accounts & rating sources <ArrowUpRight size={14} />
                   </button>
                 </div>
               );

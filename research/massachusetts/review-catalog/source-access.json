@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-12",
+  "purpose": "Low-volume public individual-account research. No forms, accounts, internal APIs or external writes.",
+  "sources": [
+    {
+      "publisher": "MyLivingChoice",
+      "robotsUrl": "https://www.mylivingchoice.com/robots.txt",
+      "termsUrl": "https://www.mylivingchoice.com/terms-of-service",
+      "termsEffective": "2026-10-30",
+      "robotsStatus": 200,
+      "termsStatus": 200,
+      "decision": "permitted-low-volume-public-pages",
+      "basis": "Robots allows public property pages for all agents and named AI user agents. It disallows /api/ and account paths. Terms prohibit scraping at disruptive volume, fake inquiries, false affiliation and unauthorized access. Public-page requests and rendered-page inspection only. No robots-disallowed URL fetched.",
+      "publication": "No redistribution license inferred. Publish only brief independently reviewed paraphrases, original links, dates, native IDs and content hashes. Do not retain original review bodies or author names.",
+      "receipt": "Factory Script call_43958c1bbf77c73a_1.log, FetchUrl robots and terms results."
+    },
+    {
+      "publisher": "Caring.com",
+      "decision": "blocked-existing-no-automation-policy",
+      "pagesFetched": 0,
+      "basis": "Existing source-access assessment prohibits automated gathering without written permission. Only existing reviewed records may be reused. No new Caring location requests.",
+      "policyReceipt": "research/north-jersey/reviews/source-access.json"
+    },
+    {
+      "publisher": "A Place for Mom",
+      "decision": "blocked-existing-no-automation-policy",
+      "pagesFetched": 0,
+      "basis": "Task explicitly excludes automation. No new location requests. Existing reviewed retained accounts are eligible only as already released provenance."
+    },
+    {
+      "publisher": "Yelp",
+      "decision": "disabled-existing-policy",
+      "pagesFetched": 0,
+      "basis": "Existing Harbor collector policy disables Yelp."
+    },
+    {
+      "publisher": "Google",
+      "decision": "original-links-only-no-direct-collection",
+      "pagesFetched": 0,
+      "basis": "Underlying individual permalinks and native IDs are supplied by MyLivingChoice. Original Google pages were not directly fetched; original-receipt verification means the publicly displayed individual article on the permitted syndicator, not independent verification of the author's claims."
+    }
+  ],
+  "limits": {
+    "requests": "Acquisition fetches and rendered checks run sequentially. Initial access and identity assessment used bounded concurrent public reads.",
+    "pagination": "Follow explicit visible review next/older/load-more links or controls only. No guessed page parameters, cursors or internal APIs.",
+    "boundary": "26 assessed listing pages; not a claim to exhaustive Massachusetts provider coverage."
+  }
+}

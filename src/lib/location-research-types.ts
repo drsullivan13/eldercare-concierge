@@ -7,6 +7,8 @@ import type {
   FacebookSummary,
   FamilyExperience,
 } from "./facebook-research";
+import type { DailyLifeResearch } from "./daily-life-types";
+import type { NursingStaffingResearch } from "./nursing-staffing-types";
 
 export type ResearchSource = {
   id: string;
@@ -93,6 +95,7 @@ export type LocationResearch = {
   admissionRestriction?: { text: string; sourceId: string };
 };
 export type ResearchSummary = {
+  individualReviews?: { total: number; withText: number };
   familyExperience?: FamilyExperience;
   facebookResearch?: FacebookSummary;
   detailsAvailable: boolean;
@@ -112,6 +115,8 @@ export type ResearchSummary = {
   >;
 };
 export type LocationResearchResponse = LocationResearch & {
+  dailyLife?: DailyLifeResearch;
+  nursingStaffing?: NursingStaffingResearch;
   familyExperience?: FamilyExperience;
   experience: ExperienceSummary;
   facebookResearch?: FacebookResearch;

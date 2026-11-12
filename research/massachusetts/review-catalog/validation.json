@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-12",
+  "results": {
+    "listingPages": 26,
+    "visibleArticles": 123,
+    "acquiredAccounts": 101,
+    "withParaphrase": 98,
+    "linkOnly": 3,
+    "previouslyUnseen": 99,
+    "knownRetainedMatches": 2,
+    "excludedArticles": 22,
+    "providerRecords": 25,
+    "providersWithAccounts": 23,
+    "renderedPagesWithPaginationControls": 0,
+    "paraphrasesCheckedAgainstOriginals": 98,
+    "maximumConsecutiveCopiedWords": 4
+  },
+  "checks": [
+    {
+      "command": "python3 research/massachusetts/review-catalog/test_generate.py",
+      "kind": "new",
+      "passed": 9
+    },
+    {
+      "command": "python3 scripts/regions/review-catalog-test.py",
+      "kind": "existing",
+      "passed": 11
+    },
+    {
+      "command": "node_modules/.bin/tsx --test tests/review-catalog.test.ts",
+      "kind": "existing",
+      "passed": 7
+    },
+    {
+      "command": "python3 research/massachusetts/review-catalog/generate.py check",
+      "result": "passed deterministic offline replay"
+    },
+    {
+      "command": "python3 research/massachusetts/review-catalog/generate.py verify-originals --input-dir /tmp",
+      "result": "passed against all original FetchUrl receipts before temporary narrative files were removed"
+    },
+    {
+      "surface": "26 rendered MyLivingChoice review sections",
+      "result": "All native-ID sets match FetchUrl article receipts. No review pagination controls present."
+    },
+    {
+      "command": "node_modules/.bin/tsx --test research/massachusetts/review-catalog/test_integrated.ts",
+      "kind": "new",
+      "passed": 1,
+      "assertions": "All 101 MA acquired native IDs resolve exactly once with the approved date and summary through getReviewCatalog. North Hill has four nursing-unit accounts and a source scope note. Falls has nine merged accounts."
+    }
+  ],
+  "notRun": "Full frontend build, lint and end-to-end suites. This owner changed research artifacts and their offline generator only.",
+  "publicationBoundary": "No review bodies, author names, medical details, copied page summaries, scores or aggregate changes.",
+  "handoff": "/tmp/harbor-ma-catalog-interface.txt",
+  "principles": {
+    "Build the Lever": "The deterministic generator rebuilds and checks the feed from retained redacted evidence.",
+    "Model the Domain": "Source receipts, editorial decisions, aliases and published accounts have separate explicit shapes.",
+    "Prove It Works": "Original article hashes and native IDs were checked against raw receipts and every rendered review section."
+  }
+}

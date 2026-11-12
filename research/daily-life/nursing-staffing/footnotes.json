@@ -1,0 +1,24 @@
+{
+  "sourceUrl": "https://data.cms.gov/provider-data/sites/default/files/data_dictionaries/nursing_home/NH_Data_Dictionary.pdf",
+  "sourceFile": "research/north-jersey/cms/raw/reference/dictionary-1.payload",
+  "sourceSha256": "e768b80e2a0d4e4738c1178d838bc741d645f1c5e30e9c783439d2be80d0a860",
+  "section": "October 2026 dictionary, Table 15, page 25",
+  "codes": {
+    "1": "Newly certified nursing home with less than 12-15 months of data available or the nursing opened less than 6 months ago, and there were no data to submit or claims for this measure.",
+    "2": "Not enough data available to calculate a star rating.",
+    "6": "This facility submitted data that did not meet the criteria required to calculate a staffing measure.",
+    "7": "CMS determined that the percentage was not accurate, or data suppressed by CMS for one or more quarters.",
+    "9": "The number of residents or resident stays is too small to report. Call the facility to discuss this quality measure.",
+    "10": "The data for this measure is missing or was not submitted. Call the facility to discuss this quality measure.",
+    "13": "Results are based on a shorter time period than required.",
+    "18": "This facility is not rated due to a history of serious quality issues and is included in the special focus facility program.",
+    "20": "The accuracy of the data for this rating could not be validated by CMS.",
+    "21": "The accuracy of the data for this measure could not be validated by CMS.",
+    "23": "This facility did not submit staffing data.",
+    "24": "This facility reported a high number of days without a registered nurse onsite.",
+    "25": "The accuracy of the staffing data for this measure could not be validated by CMS.",
+    "26": "This facility did not submit staffing data or submitted staffing data that is considered to be invalid for the purpose of calculating turnover. This measure will receive the minimum points for calculating the overall staffing score and rating.",
+    "27": "This facility submitted staffing data that did not meet the criteria required to calculate a turnover measure. This measure will be excluded from the staffing rating and the staffing score will be rescaled.",
+    "28": "This is an annual measure. Data for individual quarters is not available."
+  }
+}

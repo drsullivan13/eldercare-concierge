@@ -1,0 +1,122 @@
+.provider-detail .daily-life {
+  display: block;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.provider-detail .daily-life .daily-life-group {
+  margin: 0;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.provider-detail .daily-life h5 {
+  margin: 0 0 8px;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.provider-detail .daily-life p,
+.provider-detail .daily-life .research-source,
+.provider-detail .daily-life summary,
+.provider-detail .daily-life dt,
+.provider-detail .daily-life dd {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.provider-detail .daily-life p {
+  margin: 4px 0 8px;
+  color: var(--ink);
+}
+
+.provider-detail .daily-life .daily-life-fact {
+  padding: 0;
+  border: 0;
+  margin-top: 12px;
+}
+
+.provider-detail .daily-life .research-source {
+  display: flex;
+  width: fit-content;
+  min-height: 44px;
+  align-items: center;
+  color: #24594c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.provider-detail .daily-life .research-source:hover {
+  text-decoration-thickness: 2px;
+}
+
+.provider-detail .daily-life summary {
+  min-height: 44px;
+  padding-block: 8px;
+  cursor: pointer;
+  color: #24594c;
+}
+
+.provider-detail .daily-life :is(a, summary):focus-visible {
+  outline: 2px solid #24594c;
+  outline-offset: 3px;
+}
+
+.provider-detail .daily-life dl {
+  margin: 8px 0 16px;
+}
+
+.provider-detail .daily-life dl > div + div {
+  margin-top: 12px;
+}
+
+.provider-detail .daily-life dd {
+  margin: 0;
+}
+
+.provider-detail .daily-life dd strong {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.provider-detail .daily-life .daily-life-gaps {
+  padding-block: 16px 0;
+}
+
+.provider-detail .daily-life .daily-life-date {
+  color: #53674f;
+}
+
+.provider-detail .daily-life-compact .daily-life-group {
+  padding-block: 12px;
+}
+
+.provider-detail
+  .daily-life-costs
+  :is(p, .small, .research-source, .cost-label, summary) {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.provider-detail .daily-life-costs h4 {
+  font-size: 20px;
+}
+
+.provider-detail .daily-life-costs :is(.research-source, summary) {
+  min-height: 44px;
+}
+
+.provider-detail .location-research:has(.daily-life-costs) > .section-title h3 {
+  font-size: 24px;
+}
+
+.provider-detail
+  .location-research:has(.daily-life-costs)
+  > .section-title
+  > span {
+  font-size: 16px;
+}

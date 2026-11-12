@@ -1,0 +1,36 @@
+.provider-detail .daily-life .staffing-evidence .staffing-roles > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 4px 16px;
+  margin: 0;
+  padding-block: 6px;
+}
+
+.provider-detail .daily-life .staffing-evidence .staffing-roles dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.provider-detail
+  .daily-life
+  .staffing-evidence
+  .staffing-roles
+  .staffing-total {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 4px;
+}
+
+.staffing-evidence [role="note"] {
+  padding-left: 12px;
+  border-left: 3px solid #8c613b;
+}
+
+@media (max-width: 420px) {
+  .provider-detail .daily-life .staffing-evidence .staffing-roles > div {
+    grid-template-columns: minmax(0, 1fr) minmax(64px, 35%);
+    gap: 8px;
+  }
+}

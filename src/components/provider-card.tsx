@@ -68,6 +68,7 @@ export function ProviderCard({
   saved,
   onSave,
   onOpen,
+  onReviews,
   compare,
   onCompare,
 }: {
@@ -75,6 +76,7 @@ export function ProviderCard({
   saved: boolean;
   onSave: () => void;
   onOpen: () => void;
+  onReviews: (trigger: HTMLButtonElement) => void;
   compare?: boolean;
   onCompare?: () => void;
 }) {
@@ -153,16 +155,11 @@ export function ProviderCard({
             <span>
               Consumer experience
               <small>
-                {research.experience.publicationStatus ===
-                "single-source-estimate"
-                  ? `Single-source estimate · ${research.experience.singleSourceLabel} · `
-                  : ""}
-                {research.experience.confidence === "moderate"
-                  ? "Moderate"
-                  : "Limited"}{" "}
-                evidence
-                {" · "}
-                {research.experience.reviewCount} reviews reported
+                Based on {research.experience.reviewCount}{" "}
+                {research.experience.independentSourceCount === 1
+                  ? research.experience.singleSourceLabel
+                  : "source"}{" "}
+                ratings
               </small>
             </span>
           </span>
@@ -178,6 +175,26 @@ export function ProviderCard({
             </span>
           </span>
         )}
+        {research?.experience.value == null &&
+          Boolean(research?.experience.reviewCount) && (
+            <p className="provider-rating-count">
+              {research!.experience.reviewCount} source-reported ratings
+            </p>
+          )}
+        <button
+          className="provider-review-entry"
+          onClick={(event) => onReviews(event.currentTarget)}
+        >
+          {research?.individualReviews?.total
+            ? research.individualReviews.withText === 0
+              ? `Browse ${research.individualReviews.total} review links`
+              : research.individualReviews.withText ===
+                  research.individualReviews.total
+                ? `Read ${research.individualReviews.withText} reviews`
+                : `Read ${research.individualReviews.withText} reviews, browse ${research.individualReviews.total - research.individualReviews.withText} links`
+            : "Explore review sources"}
+          <ArrowUpRight size={15} />
+        </button>
         {research?.experience.selectedConcerns && (
           <p className="provider-review-concern">
             Selected reviews include concerns.

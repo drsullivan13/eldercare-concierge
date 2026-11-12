@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-12",
+  "purpose": "Bounded exact-location catalog metadata acquisition. No redistribution license is inferred.",
+  "sources": [
+    {
+      "host": "www.mylivingchoice.com",
+      "robotsUrl": "https://www.mylivingchoice.com/robots.txt",
+      "termsUrl": "https://www.mylivingchoice.com/terms-of-service",
+      "termsEffective": "2026-10-30",
+      "decision": "permitted-low-volume-public-pages",
+      "basis": "Direct FetchUrl checks allow public property paths and prohibit disruptive scraping. Requests are sequential per host. Internal /api/, account, guidance, claim, report-action and inquiry paths are not used.",
+      "rights": "Source terms do not grant Harbor a review-text redistribution license. New acquisition retains only original review links, native IDs, dates and exclusions. Previously approved short excerpts and independently approved editorial paraphrases keep their distinct representations.",
+      "sourceFamily": "google"
+    },
+    {
+      "host": "www.caring.com",
+      "termsUrl": "https://www.caring.com/about/terms",
+      "decision": "restricted-no-automation",
+      "basis": "Existing reviewed source-access registry prohibits automated extraction without written permission. No new location fetch.",
+      "reference": "research/north-jersey/reviews/source-access.json"
+    },
+    {
+      "host": "www.aplaceformom.com",
+      "robotsUrl": "https://www.aplaceformom.com/robots.txt",
+      "decision": "restricted-no-automation",
+      "basis": "Existing direct robots assessment disallows AI crawlers. No new location fetch.",
+      "reference": "research/north-jersey/review-excerpts/additional-source-access.json"
+    },
+    {
+      "host": "reviews.birdeye.com",
+      "robotsUrl": "https://reviews.birdeye.com/robots.txt",
+      "termsUrl": "https://birdeye.com/terms/",
+      "termsEffective": "2026-05-13",
+      "decision": "restricted-no-automation",
+      "basis": "Direct FetchUrl check of section 1.9 prohibits crawler/data-mining access. Robots also excludes individual review and API paths. No location fetch."
+    },
+    {
+      "host": "findcandor.org",
+      "robotsUrl": "https://findcandor.org/robots.txt",
+      "termsUrl": "https://findcandor.org/terms",
+      "termsEffective": "2026-10-15",
+      "decision": "restricted-no-automation",
+      "basis": "Direct FetchUrl checks show GPTBot/ClaudeBot disallow and terms section 8 forbids automated harvesting and competing datasets without written permission. No location fetch."
+    },
+    {
+      "host": "trustanalytica.org",
+      "robotsUrl": "https://trustanalytica.org/robots.txt",
+      "termsUrl": "https://trustanalytica.org/terms-and-conditions",
+      "decision": "restricted-no-automation",
+      "basis": "The homepage exposed the actual terms link after /terms-of-service returned 404. Directly checked terms section 21.6 prohibits automated access, retrieval, scraping and indexing. No location fetch."
+    },
+    {
+      "hosts": ["carelistings.com", "www.carelistings.com"],
+      "checkedPolicyUrls": [
+        "https://carelistings.com/robots.txt",
+        "https://carelistings.com/terms",
+        "https://www.carelistings.com/robots.txt",
+        "https://www.carelistings.com/"
+      ],
+      "decision": "withheld-incomplete-access-assessment",
+      "basis": "FetchUrl policy and homepage attempts failed with extraction-service HTTP 500. No location request or alternate-transport bypass."
+    },
+    {
+      "host": "havenforseniors.com",
+      "robotsUrl": "https://havenforseniors.com/robots.txt",
+      "checkedTermsUrl": "https://havenforseniors.com/terms-of-service",
+      "checkedLocationUrl": "https://havenforseniors.com/facility/care-village-at-mattapan-mattapan",
+      "decision": "withheld-incomplete-access-assessment",
+      "basis": "Robots explicitly allows public paths and excludes APIs. The terms URL returned 404 and the homepage exposed no policy link. One low-volume public location inspection found 40 reported Google reviews with retrieval date 2026-08-03 and an outbound original Google listing. No individual original-review permalinks or native review IDs were observed, so no original account was manufactured from this aggregate."
+    }
+  ],
+  "limits": {
+    "maxPagesPerSource": 20,
+    "maxPageBytes": 2000000,
+    "pagination": "Only explicit next links to the identical public location path with bounded numeric page parameters.",
+    "stops": ["no-public-next-link", "reported-total-reached", "repeated-url", "repeated-page-content", "no-new-review-ids", "page-limit", "page-byte-limit", "fetch-error", "identity-mismatch", "review-parser-mismatch", "redirect-outside-approved-location", "pagination-outside-permitted-location"],
+    "transport": "FetchUrl. No internal endpoints, browser-login workarounds or paid sources.",
+    "coverageMeaning": "Exhausted-visible-pages means reachable permitted public pages, not the full underlying Google review corpus."
+  }
+}

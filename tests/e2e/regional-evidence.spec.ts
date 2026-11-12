@@ -2,6 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 import retainedNJZips from "../../research/north-jersey/geography/nj-zips.json";
 import type { SearchProvider, SearchResponse } from "../../src/lib/providers";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
+import type { IndividualReviewsResponse } from "../../src/lib/individual-reviews";
 
 async function openSearch(page: Page, zip: string) {
   await page.addInitScript((zip) => {
@@ -81,9 +82,10 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
     "aria-labelledby",
     await costs.evaluate((tab) => tab.id),
   );
-  await expect(evidence).toContainText(
-    "Amenities and activities have not been researched yet",
+  await expect(evidence.locator(".daily-life-gaps")).toContainText(
+    /not established|not researched/i,
   );
+  await expect(evidence.locator(".daily-life .offering-fact")).toHaveCount(0);
   await expect(
     evidence.getByRole("button", { name: "Retry location research" }),
   ).toHaveCount(0);
@@ -134,6 +136,19 @@ test("Morristown care detail displays its published location-matched experience 
   await expect(evidence.locator(".experience-number")).toContainText("8");
   await expect(evidence).toContainText("185");
   await expect(evidence).toContainText("MyLivingChoice");
+  const accountsResponse = await request.get("/api/reviews", {
+    params: { id: provider!.id },
+  });
+  expect(accountsResponse.status()).toBe(200);
+  const accounts: IndividualReviewsResponse = await accountsResponse.json();
+  const withText = accounts.accounts.filter(
+    ({ excerpt, summary }) => excerpt || summary,
+  ).length;
+  await expect(evidence.locator(".review-count-clarity")).toContainText(
+    new RegExp(`\\b${withText || accounts.accounts.length}\\b`),
+  );
+  await expect(evidence.locator(".review-count-clarity")).toContainText("185");
+  await expect(evidence.locator(".experience-number")).toHaveText("8.0/10");
 });
 
 test("Facebook-only detail responses display retained findings and original links without inventing a score", async ({
@@ -183,9 +198,10 @@ test("Facebook-only detail responses display retained findings and original link
   const detail = await openProvider(page, provider);
   const evidence = detail.locator(".location-research");
   await detail.getByRole("tab", { name: "Costs & perks", exact: true }).click();
-  await expect(evidence).toContainText(
-    "Amenities and activities have not been researched yet",
+  await expect(evidence.locator(".daily-life-gaps")).toContainText(
+    /not established|not researched/i,
   );
+  await expect(evidence.locator(".daily-life .offering-fact")).toHaveCount(0);
   await detail.getByRole("tab", { name: "Reviews", exact: true }).click();
   await expect(evidence).toContainText("Not rated yet");
   await expect(evidence.locator(".experience-number")).not.toContainText("/10");

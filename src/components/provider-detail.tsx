@@ -43,6 +43,7 @@ export function ProviderDetail({
   close,
   saveStatus,
   saveError,
+  initialPane = "overview",
 }: {
   provider: Provider;
   saved: boolean;
@@ -53,13 +54,14 @@ export function ProviderDetail({
   close: () => void;
   saveStatus: string;
   saveError: string;
+  initialPane?: ProfilePane;
 }) {
   const [draft, setDraft] = useState(note);
   const [noteSaved, setNoteSaved] = useState(false);
   const [taskAdded, setTaskAdded] = useState(false);
   const uid = useId();
   const [navigation, setNavigation] = useState<ProfileNavigation>({
-    pane: "overview",
+    pane: initialPane,
   });
   const tabs = useRef<Partial<Record<ProfilePane, HTMLButtonElement | null>>>(
     {},

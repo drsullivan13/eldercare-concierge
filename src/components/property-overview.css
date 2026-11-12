@@ -1,7 +1,7 @@
 .property-overview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px 28px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
   padding-block: 0 12px;
   overflow-wrap: anywhere;
 }
@@ -10,16 +10,20 @@
   min-width: 0;
 }
 
-.property-overview > div:last-child {
-  grid-column: 1 / -1;
-  padding-top: 10px;
+.property-overview > .overview-life {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.property-overview > .overview-experience {
+  padding-top: 20px;
   border-top: 1px solid var(--line);
 }
 
 .property-overview h4 {
   margin: 0 0 4px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .property-overview .overview-more {
@@ -36,8 +40,12 @@
 .property-overview p,
 .property-overview blockquote {
   margin: 6px 0;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.provider-detail .property-overview .small {
+  font-size: 16px;
 }
 
 .property-overview blockquote {
@@ -52,7 +60,7 @@
 .property-overview .overview-more,
 .property-overview .overview-caveat {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -61,14 +69,15 @@
   color: #53674f;
 }
 
-.property-overview .overview-fact + .overview-fact {
-  margin-top: 4px;
-}
-
 .property-overview .overview-more {
   width: fit-content;
-  min-height: 32px;
+  min-height: 44px;
   padding: 5px 0;
+}
+
+.property-overview .overview-catalog-link {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .property-overview .overview-rate {
@@ -84,12 +93,12 @@
   display: inline;
   margin-left: 8px;
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0;
 }
 
 .property-overview .overview-concern {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .property-overview .overview-concern .overview-more {
@@ -97,7 +106,18 @@
 }
 
 .property-overview .overview-caveat > summary {
+  min-height: 44px;
+  padding-block: 8px;
   cursor: pointer;
+}
+
+.property-overview .overview-more:hover {
+  text-decoration-thickness: 2px;
+}
+
+.property-overview .overview-more:focus-visible {
+  outline: 2px solid #24594c;
+  outline-offset: 3px;
 }
 
 @media (max-width: 560px) {
