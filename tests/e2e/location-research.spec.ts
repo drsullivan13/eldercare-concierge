@@ -127,8 +127,11 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
     await expect(
       panel.getByRole("heading", { name: "Care, amenities & everyday life" }),
     ).toBeVisible();
-    for (const fact of data.facts.filter((f) =>
-      ["care", "amenity", "activity", "dining"].includes(f.kind),
+    for (const fact of data.facts.filter(
+      (f) =>
+        ["care", "amenity", "activity", "dining"].includes(f.kind) &&
+        data.sources.find((source) => source.id === f.sourceId)?.kind !==
+          "regulator",
     )) {
       const article = panel
         .locator(".offering-fact")
@@ -178,7 +181,13 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
     }
     await showPane(dialog, "Details");
     await expandFacts(dialog);
-    for (const fact of data.facts.filter((f) => f.kind === "capacity")) {
+    for (const fact of data.facts.filter(
+      (f) =>
+        f.kind === "capacity" ||
+        (["care", "amenity", "activity", "dining"].includes(f.kind) &&
+          data.sources.find((source) => source.id === f.sourceId)?.kind ===
+            "regulator"),
+    )) {
       const article = panel
         .locator(".offering-fact")
         .filter({ has: page.locator("p", { hasText: fact.text }) });

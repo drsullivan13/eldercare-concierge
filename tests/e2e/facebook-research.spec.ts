@@ -68,16 +68,33 @@ async function open(page: Page, id: string) {
     dialog.getByRole("tabpanel", { name: "Reviews", exact: true }),
   ).toBeVisible();
   if (count) {
+    const selection = dialog.getByText("How these accounts were selected", {
+      exact: true,
+    });
+    const method = dialog.locator(".family-experience-method");
+    await expect(selection).toBeVisible();
+    await expect(method).toBeHidden();
+    await selection.focus();
+    await page.keyboard.press("Enter");
+    await expect(method).toBeVisible();
     await expect(dialog.locator(".family-experience")).toHaveText(familyText);
     await dialog
       .getByText("How Harbor uses these accounts", { exact: true })
       .click();
+    await expect(method.locator("p").first()).toBeVisible();
     await expect(dialog.locator(".family-experience-method")).toContainText(
       "the same published score",
     );
     await expect(dialog.locator(".family-experience-method")).toContainText(
       "Each thread counts once",
     );
+    await selection.focus();
+    await page.keyboard.press("Space");
+    await expect(method).toBeHidden();
+    await selection.focus();
+    await page.keyboard.press("Enter");
+    await expect(method.locator("p").first()).toBeVisible();
+    await expect(dialog.locator(".family-experience")).toBeVisible();
   } else {
     await expect(dialog.locator(".family-experience")).toHaveCount(0);
   }
