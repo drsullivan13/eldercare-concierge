@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "census-2020-zcta-county.txt": {
+      "bytes": 6821287,
+      "effectiveUrl": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt",
+      "retrievedAt": "2026-11-12T14:50:45+00:00",
+      "sha256": "3ed41278d637dc249e0323306f68be8a6c234e3090f4de88ef328dee71aeaaaf",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    },
+    "census-2026-zcta.zip": {
+      "bytes": 952131,
+      "effectiveUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_zcta_national.zip",
+      "retrievedAt": "2026-11-12T14:50:44+00:00",
+      "sha256": "f1e9046b91f6e60686a99343cb2752834c02b0764939403b331c78c017e2c54c",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_zcta_national.zip"
+    },
+    "geonames-US.zip": {
+      "bytes": 634328,
+      "effectiveUrl": "https://download.geonames.org/export/zip/US.zip",
+      "retrievedAt": "2026-11-12T14:50:44+00:00",
+      "sha256": "8143066cdca36f13bf956692750e8d14797a3968c0c87d026e95fa7b0e080c26",
+      "url": "https://download.geonames.org/export/zip/US.zip"
+    },
+    "geonames-readme.txt": {
+      "bytes": 2893,
+      "effectiveUrl": "https://download.geonames.org/export/zip/readme.txt",
+      "retrievedAt": "2026-11-12T14:50:44+00:00",
+      "sha256": "fff60148da20f4d182859d926518efa5b0f3949f3c3273a284901325f1f8f008",
+      "url": "https://download.geonames.org/export/zip/readme.txt"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "censusCoordinateCount": 224,
+  "countyZipCounts": {
+    "Bergen": 71,
+    "Essex": 45,
+    "Hudson": 23,
+    "Morris": 64,
+    "Passaic": 43,
+    "Union": 31
+  },
+  "crossCountyZips": [
+    "07009",
+    "07043",
+    "07060",
+    "07062",
+    "07063",
+    "07110",
+    "07421",
+    "07435",
+    "07436",
+    "07438",
+    "07460",
+    "07830",
+    "07840",
+    "07849",
+    "07865",
+    "07920",
+    "07931",
+    "07934",
+    "08812"
+  ],
+  "examples": {
+    "07083": {
+      "point": {
+        "city": "Union",
+        "lat": 40.695266,
+        "lng": -74.269078
+      },
+      "provenance": {
+        "citySource": "geonames_US_postal_export",
+        "coordinateSource": "census_2026_zcta_representative_point",
+        "countyMembershipBasis": "census_2020_zcta_positive_land_overlap",
+        "countyMemberships": [
+          {
+            "county": "Union",
+            "countyFips": "34039",
+            "landAreaM2": 22600387,
+            "waterAreaM2": 81707,
+            "zctaLandAreaM2": 22600387
+          }
+        ],
+        "geonamesRecords": [
+          {
+            "accuracy": 4,
+            "city": "Union",
+            "county": "Union",
+            "countyFips": "34039",
+            "lat": 40.6952,
+            "lng": -74.2677,
+            "sourceLine": 24350
+          }
+        ],
+        "hasZcta": true,
+        "primaryCountyFips": "34039",
+        "primaryCountyRule": "largest_zcta_land_overlap",
+        "targetCountyFips": [
+          "34039"
+        ],
+        "waterOnlyCountyOverlaps": [],
+        "zcta": "07083"
+      }
+    },
+    "07960": {
+      "point": {
+        "city": "Morristown",
+        "lat": 40.779235,
+        "lng": -74.502462
+      },
+      "provenance": {
+        "citySource": "geonames_US_postal_export",
+        "coordinateSource": "census_2026_zcta_representative_point",
+        "countyMembershipBasis": "census_2020_zcta_positive_land_overlap",
+        "countyMemberships": [
+          {
+            "county": "Morris",
+            "countyFips": "34027",
+            "landAreaM2": 89655792,
+            "waterAreaM2": 888990,
+            "zctaLandAreaM2": 89655792
+          }
+        ],
+        "geonamesRecords": [
+          {
+            "accuracy": 4,
+            "city": "Morristown",
+            "county": "Morris",
+            "countyFips": "34027",
+            "lat": 40.7952,
+            "lng": -74.4873,
+            "sourceLine": 24190
+          }
+        ],
+        "hasZcta": true,
+        "primaryCountyFips": "34027",
+        "primaryCountyRule": "largest_zcta_land_overlap",
+        "targetCountyFips": [
+          "34027"
+        ],
+        "waterOnlyCountyOverlaps": [],
+        "zcta": "07960"
+      }
+    }
+  },
+  "excludedByReason": {
+    "outside_target_counties": 453
+  },
+  "geonamesCountyOutsideCensusLandMembership": [],
+  "includedZipCount": 270,
+  "njPostalZipCount": 723,
+  "postalFallbackCoordinateCount": 46,
+  "schemaVersion": 1,
+  "targetZctasWithoutPostalRecords": []
+}
