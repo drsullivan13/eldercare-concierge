@@ -122,6 +122,7 @@ async function navigate(
   page: Page,
   name: "Overview" | "Find care" | "Your shortlist" | "Your plan",
 ) {
+  await expect(page.locator(".app-shell")).toBeVisible();
   const menu = page.getByRole("button", { name: "Open navigation" });
   if (await menu.isVisible()) await menu.click();
   // The shortlist's accessible name includes its current count.
