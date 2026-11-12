@@ -161,6 +161,19 @@ def scan(root=ROOT):
         except Ineligible as e:
             row["status"] = str(e)
         disposition.append(row)
+    present = {r["url"] for r in disposition}
+    priority = {r["url"] for r in read(INDEX / "fetch-plan.json")["requests"]}
+    for existing in baseline["approvals"]:
+        url = existing["url"]
+        if url in present or url not in priority:
+            continue
+        ref = existing["material"]
+        material = (root / ref["path"]).read_bytes()
+        need(sha(material) == ref["sha256"] and
+             review.checked_listing_aggregate(existing, json.loads(material)) == existing["aggregate"],
+             "baseline_source_check_drift")
+        disposition.append({"url":url, "capture":ref["path"], "sha256":ref["sha256"],
+                            "providerId":existing["providerId"], "status":"reused_verified_baseline_page"})
     return providers, base, candidates, disposition
 
 
@@ -207,18 +220,41 @@ def run(mode, destination=None):
     plan = read(INDEX / "discovery-queue.json")
     attempted = {r["providerId"] for r in plan["requests"] if r["url"] in searched_urls}
     grouped = defaultdict(Counter)
-    counties = {r["providerId"]: r["county"] for r in plan["coverage"]}
+    counties = defaultdict(set)
+    for row in read(REGION / "runtime/crosswalk.json"):
+        if row.get("providerId") in providers and row.get("status", "").startswith("included") and row.get("county"):
+            counties[row["providerId"]].add(row["county"])
+    dispositions_by_id = {}
     for pid, provider in providers.items():
         status = ("additional_approved" if pid in accepted else "baseline_approved" if pid in base
                   else "candidate_page_checked_no_release" if pid in attempted else "no_candidate_page_checked")
-        grouped[counties.get(pid, "outside_discovery_scope") + "/" + provider["category"]][status] += 1
-    report["coverageByDiscoveryCountyAndSetting"] = {k: dict(v) for k,v in sorted(grouped.items())}
+        need(len(counties[pid]) == 1, "ambiguous_catalog_county:" + pid)
+        county = next(iter(counties[pid]))
+        grouped[county + "/" + provider["category"]][status] += 1
+        dispositions_by_id[pid] = {"county":county, "setting":provider["category"], "status":status}
+    store(directory / "provider-coverage.json", dispositions_by_id)
+    report["coverageByCountyAndSetting"] = {k: dict(v) for k,v in sorted(grouped.items())}
     report["locationsByStatus"] = dict(sum(grouped.values(), Counter()))
-    report["stillPendingEditorialCandidates"] = len(set(candidates) - {a["url"] for a in approvals})
+    priority = {r["url"] for r in read(INDEX / "fetch-plan.json")["requests"]}
+    reused = {r["url"] for r in rows if r["status"] == "reused_verified_baseline_page"}
+    report["priorityUrls"] = {"total":len(priority), "retainedCurrentPages":len((priority & searched_urls) - reused),
+                              "reusedVerifiedPages":len(priority & reused), "missing":len(priority - searched_urls)}
+    approved_urls = {a["url"] for a in approvals}
+    hold_path = ROOT / OUT / "held.json"
+    holds = {r["url"]: r for r in json.loads(hold_path.read_bytes())} if hold_path.exists() else {}
+    for u, hold in holds.items():
+        need(u not in approved_urls and u in candidates, "held_decision_changed")
+        pid, _, _, _, _, original = candidates[u]
+        need(hold["providerId"] == pid and hold["captureSha256"] == original["sha256"]
+             and hold["reason"], "held_decision_stale")
+    report["pageDispositionsAfterReview"] = dict(Counter(
+        "additional_approved" if r["url"] in approved_urls else "editorial_hold" if r["url"] in holds
+        else r["status"] for r in rows))
+    report["stillPendingEditorialCandidates"] = len(set(candidates) - approved_urls - set(holds))
     store(directory / "coverage.json", report)
     if mode == "verify":
         for f in sorted(directory.rglob("*.json")):
-            if f.name != "coverage.json":
+            if f.name not in {"coverage.json", "provider-coverage.json"}:
                 need(f.read_bytes() == (ROOT / OUT / f.relative_to(directory)).read_bytes(),
                      "published_addendum_drift: " + f.name)
     print(json.dumps(report))
@@ -231,8 +267,9 @@ def archive_wave():
     observations = read(OUT / "source-observations.json")["observations"]
     artifacts = {name: (directory / name).read_bytes()
                  for name in ("approvals.json", "source-observations.json", "decisions.json")}
-    if (directory / "coverage.json").exists():
-        artifacts["coverage.json"] = (directory / "coverage.json").read_bytes()
+    for name in ("coverage.json", "provider-coverage.json", "held.json"):
+        if (directory / name).exists():
+            artifacts[name] = (directory / name).read_bytes()
     for approval in ledger["approvals"]:
         material_path = Path(approval["material"]["path"])
         name = material_path.relative_to(OUT).as_posix()
