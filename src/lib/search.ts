@@ -115,26 +115,14 @@ export function searchProviders(
     categoryKeys.map((key) => [key, 0]),
   );
   const providers: SearchProvider[] = [];
+  const experienceCoverage = {
+    scored: 0,
+    unscored: 0,
+    facebookFindings: 0,
+    facebookCovered: 0,
+  };
   let excludedWithoutCoordinates = 0;
-  for (const original of records) {
-    const provider = { ...original, research: getResearchSummary(original.id) };
-    if (evidence === "details" && !provider.research?.detailsAvailable)
-      continue;
-    if (evidence === "pricing" && !provider.research?.publishedCosts) continue;
-    if (
-      evidence === "openings" &&
-      provider.research?.availabilityStatus !== "opening-published"
-    )
-      continue;
-    if (evidence === "reviews" && provider.research?.experience.value == null)
-      continue;
-    if (evidence === "unrated" && provider.research?.experience.value != null)
-      continue;
-    if (
-      evidence === "facebook" &&
-      !provider.research?.facebookResearch?.findingCount
-    )
-      continue;
+  for (const provider of records) {
     if (
       query &&
       !`${provider.name} ${provider.city}`
@@ -148,23 +136,43 @@ export function searchProviders(
     const matchesCategory =
       category === "all" ||
       searchableCategories.includes(category as CareCategory);
-    if (
+    const distance =
       provider.lat === null ||
       provider.lng === null ||
       !Number.isFinite(provider.lat) ||
       !Number.isFinite(provider.lng)
-    ) {
-      if (matchesCategory) excludedWithoutCoordinates++;
+        ? null
+        : distanceMiles(point, { lat: provider.lat, lng: provider.lng });
+    if (distance === null && !matchesCategory) continue;
+    if (distance !== null && distance > radius) continue;
+    const research =
+      evidence !== "all" || (matchesCategory && distance !== null)
+        ? getResearchSummary(provider.id)
+        : undefined;
+    if (evidence === "details" && !research?.detailsAvailable) continue;
+    if (evidence === "pricing" && !research?.publishedCosts) continue;
+    if (
+      evidence === "openings" &&
+      research?.availabilityStatus !== "opening-published"
+    )
+      continue;
+    if (evidence === "reviews" && research?.experience.value == null) continue;
+    if (evidence === "unrated" && research?.experience.value != null) continue;
+    if (evidence === "facebook" && !research?.facebookResearch?.findingCount)
+      continue;
+    if (distance === null) {
+      excludedWithoutCoordinates++;
       continue;
     }
-    const distance = distanceMiles(point, {
-      lat: provider.lat,
-      lng: provider.lng,
-    });
-    if (distance > radius) continue;
     for (const key of searchableCategories) categories[key]++;
-    if (matchesCategory)
-      providers.push({ ...provider, distanceMiles: distance });
+    if (matchesCategory) {
+      providers.push({ ...provider, research, distanceMiles: distance });
+      if (research?.experience.value != null) experienceCoverage.scored++;
+      else experienceCoverage.unscored++;
+      if ((research?.facebookResearch?.findingCount ?? 0) > 0)
+        experienceCoverage.facebookFindings++;
+      if (research?.facebookResearch) experienceCoverage.facebookCovered++;
+    }
   }
   const byDistanceName = (a: SearchProvider, b: SearchProvider) =>
     a.distanceMiles! - b.distanceMiles! ||
@@ -187,18 +195,7 @@ export function searchProviders(
     asOf: meta.asOf,
     categories,
     excludedWithoutCoordinates,
-    experienceCoverage: {
-      scored: providers.filter((p) => p.research?.experience.value != null)
-        .length,
-      unscored: providers.filter((p) => p.research?.experience.value == null)
-        .length,
-      facebookFindings: providers.filter(
-        (p) => (p.research?.facebookResearch?.findingCount ?? 0) > 0,
-      ).length,
-      facebookCovered: providers.filter((p) =>
-        Boolean(p.research?.facebookResearch),
-      ).length,
-    },
+    experienceCoverage,
   };
 }
 export function getProvidersByIds(ids: readonly string[]): Provider[] {

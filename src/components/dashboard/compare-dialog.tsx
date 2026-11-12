@@ -105,33 +105,20 @@ function CompareDialog({
                 value: (p: Provider) =>
                   `${p.city}, ${p.zip}${p.locationKind === "office" ? " (office)" : ""}`,
               },
-              {
-                label: "CMS overall",
-                value: (p: Provider) =>
-                  p.cms
-                    ? p.cms.overall === null
-                      ? "Not published"
-                      : `${p.cms.overall} / 5`
-                    : "Not applicable",
-              },
-              {
-                label: "CMS health inspections",
-                value: (p: Provider) =>
-                  p.cms
-                    ? p.cms.inspections === null
-                      ? "Not published"
-                      : `${p.cms.inspections} / 5`
-                    : "Not applicable",
-              },
-              {
-                label: "CMS staffing",
-                value: (p: Provider) =>
-                  p.cms
-                    ? p.cms.staffing === null
-                      ? "Not published"
-                      : `${p.cms.staffing} / 5`
-                    : "Not applicable",
-              },
+              ...(
+                [
+                  ["CMS overall", "overall"],
+                  ["CMS health inspections", "inspections"],
+                  ["CMS staffing", "staffing"],
+                ] as const
+              ).map(([label, field]) => ({
+                label,
+                value(p: Provider) {
+                  if (!p.cms) return "Not applicable";
+                  const rating = p.cms[field];
+                  return rating === null ? "Not published" : `${rating} / 5`;
+                },
+              })),
               {
                 label: "Public record",
                 value: (p: Provider) =>
