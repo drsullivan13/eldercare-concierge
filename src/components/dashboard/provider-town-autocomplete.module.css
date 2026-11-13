@@ -1,0 +1,87 @@
+.field {
+  flex: 1;
+  min-width: 0;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.field input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  z-index: 120;
+  width: var(--anchor-width);
+  max-width: min(440px, calc(100vw - 24px));
+  max-height: min(340px, var(--available-height, 340px));
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 8px 24px #1c34371f;
+  font-family: var(--sans);
+}
+
+.list {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.item[data-highlighted] {
+  background: var(--teal-pale);
+  outline: 2px solid var(--teal);
+  outline-offset: -2px;
+}
+
+.item small,
+.message {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.message {
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -1556,24 +1556,6 @@ em {
   max-width: 145px;
   padding: 8px 4px;
 }
-.view-toggle {
-  display: flex;
-  border: 1px solid #dfe7d5;
-  border-radius: 5px;
-  background: #fbfdf7;
-  padding: 3px;
-  gap: 2px;
-}
-.view-toggle button {
-  display: flex;
-  padding: 5px 6px;
-  color: #b0bca2;
-  border-radius: 3px;
-}
-.view-toggle button.active {
-  background: #e8f0de;
-  color: #7e9a62;
-}
 .provider-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2793,12 +2775,6 @@ em {
     max-width: 125px;
     padding: 4px 0;
     display: block;
-  }
-  .view-toggle button {
-    padding: 5px;
-  }
-  .view-toggle svg {
-    width: 15px;
   }
   .provider-grid {
     gap: 12px;

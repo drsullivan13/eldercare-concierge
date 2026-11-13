@@ -1,9 +1,5 @@
 import { distanceMiles } from "./distance";
-import { legacyMarket, marketRegistrations } from "./market-registration";
-import prefixData from "@/data/us-zip-prefix-states.json";
 import {
-  BOSTON,
-  MASSACHUSETTS_ORIGIN_RADIUS_MILES,
   getMarket,
   getProviderMarket,
   marketIdentity,
@@ -18,6 +14,7 @@ import {
   type SearchProvider,
   type SearchResponse,
 } from "./providers";
+import { resolveSearchScope, SearchInputError } from "./search-scope";
 
 export type SearchOptions = {
   zip?: string;
@@ -27,16 +24,9 @@ export type SearchOptions = {
   q?: string;
   evidence?: string;
 };
-export class SearchInputError extends Error {
-  readonly status = 400;
-  constructor(message: string) {
-    super(message);
-    this.name = "SearchInputError";
-  }
-}
+export { SearchInputError } from "./search-scope";
 export { BOSTON } from "./markets";
 export const catalog: Provider[] = getMarket()!.providers;
-const prefixes = prefixData as Record<string, string[]>;
 const categoryKeys = Object.keys(CATEGORY_LABELS) as CareCategory[];
 
 export { distanceMiles } from "./distance";
@@ -61,53 +51,10 @@ export function searchProviders(
   registry: MarketRegistry = markets,
 ): SearchResponse {
   const opts = optionsFrom(input);
-  const zip =
-    opts.zip === undefined ? legacyMarket.defaultZip : opts.zip.trim();
-  if (!/^\d{5}$/.test(zip))
-    throw new SearchInputError(
-      "Enter a five-digit ZIP code, including its leading zero.",
-    );
-  const market = registry.find((entry) => Object.hasOwn(entry.zips, zip));
-  if (!market) {
-    const states = prefixes[zip.slice(0, 3)];
-    const regional = marketRegistrations.find(
-      (r) => r.id !== legacyMarket.id && states?.includes(r.state),
-    );
-    if (regional)
-      throw new SearchInputError(
-        getMarket(regional.id, registry)
-          ? `This ZIP is not recognized in the published ${regional.label} coverage. It may be invalid or outside the covered counties. Check it or try a nearby covered ZIP.`
-          : `${regional.label} coverage is pending for this ZIP. No reviewed ZIP and provider snapshot is available for it.`,
-      );
-    if (states && !states.includes(legacyMarket.state))
-      throw new SearchInputError(
-        `This ZIP is outside the supported ${new Intl.ListFormat("en-US").format(marketRegistrations.map((r) => r.label))} markets.`,
-      );
-    throw new SearchInputError(
-      "This ZIP is not recognized in the reviewed market ZIP datasets. Check it or try a nearby ZIP.",
-    );
-  }
-  const point = market.zips[zip];
-  if (
-    market.id === "massachusetts" &&
-    distanceMiles(BOSTON, point) > MASSACHUSETTS_ORIGIN_RADIUS_MILES
-  )
-    throw new SearchInputError(
-      "This ZIP is outside the Boston pilot area (55 straight-line miles from Boston).",
-    );
-  const rawRadius =
-    opts.radius === undefined ? "25" : String(opts.radius).trim();
-  const radius = Number(rawRadius);
-  if (
-    !/^\d+(?:\.\d+)?$/.test(rawRadius) ||
-    !Number.isFinite(radius) ||
-    radius < 1 ||
-    radius > 50
-  )
-    throw new SearchInputError("Radius must be a number from 1 to 50 miles.");
-  const category = opts.category ?? "all";
-  if (category !== "all" && !categoryKeys.includes(category as CareCategory))
-    throw new SearchInputError("Choose a supported care category.");
+  const { zip, market, point, radius, category } = resolveSearchScope(
+    opts,
+    registry,
+  );
   const sort = opts.sort ?? "distance";
   if (!["distance", "cms-rating", "experience"].includes(sort))
     throw new SearchInputError(

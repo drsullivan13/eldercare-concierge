@@ -91,6 +91,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
     error,
     displayCount,
     edit,
+    discardDraft: () => setDraft(request),
     run,
     filter,
     changeCategory(category: string) {

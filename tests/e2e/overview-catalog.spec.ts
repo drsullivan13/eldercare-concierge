@@ -17,7 +17,7 @@ async function openOverview(page: Page, zip: string, name: string) {
     .getByRole("button", { name: "Find care", exact: true })
     .click();
   await page.getByRole("button", { name: "Filters", exact: true }).click();
-  await page.getByRole("textbox", { name: "Provider or town" }).fill(name);
+  await page.getByRole("combobox", { name: "Provider or town" }).fill(name);
   await page
     .getByRole("button", { name: "Apply filters", exact: true })
     .click();

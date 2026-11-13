@@ -167,8 +167,8 @@ test("collapsed filters apply care types and mobile controls remain usable witho
     const controls = [
       filters,
       page.getByRole("combobox", { name: "Sort results" }),
-      page.getByRole("button", { name: "Map view", exact: true }),
-      page.getByRole("button", { name: "List view", exact: true }),
+      page.getByRole("radio", { name: "Map view", exact: true }),
+      page.getByRole("radio", { name: "List view", exact: true }),
       page
         .locator(".provider-card")
         .first()

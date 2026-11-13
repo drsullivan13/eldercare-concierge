@@ -479,7 +479,7 @@ test("CMS sort is exposed only for nursing homes and the map keeps actual result
   await expect(page.locator(".provider-card").first()).toContainText(
     sorted.providers[0].name,
   );
-  await page.getByRole("button", { name: "Map view", exact: true }).click();
+  await page.getByRole("radio", { name: "Map view", exact: true }).click();
   await expect(page.getByLabel("Map of care locations")).toBeVisible();
   await expect(page.locator(".leaflet-overlay-pane path")).toHaveCount(
     sorted.providers.length + 2,

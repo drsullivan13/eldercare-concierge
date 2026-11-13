@@ -740,7 +740,7 @@ test("comparison selections survive an evidence filter that hides their result c
     page.getByRole("button", { name: "Compare", exact: true }),
   ).toBeEnabled();
   await page.getByRole("button", { name: "Filters", exact: true }).click();
-  await page.getByRole("textbox", { name: "Provider or town" }).fill("");
+  await page.getByRole("combobox", { name: "Provider or town" }).fill("");
   await page
     .getByRole("combobox", { name: "Research filter" })
     .selectOption("openings");

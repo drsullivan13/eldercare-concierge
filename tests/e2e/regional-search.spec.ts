@@ -159,7 +159,7 @@ test("restored NJ ZIP drives the first search without seeding MA records", async
     page.getByRole("dialog").locator(".inline-notice").first(),
   ).toContainText("Confirm service coverage at your address");
   await page.getByRole("button", { name: "Close dialog" }).click();
-  await page.getByRole("button", { name: "Map view", exact: true }).click();
+  await page.getByRole("radio", { name: "Map view", exact: true }).click();
   const markers = page.locator(".leaflet-overlay-pane path");
   await expect(markers).toHaveCount(3);
   await markers.last().hover();

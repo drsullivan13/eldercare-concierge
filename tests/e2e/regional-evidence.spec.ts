@@ -32,7 +32,7 @@ async function openSearch(page: Page, zip: string) {
 async function openProvider(page: Page, provider: SearchProvider) {
   await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page
-    .getByRole("textbox", { name: "Provider or town" })
+    .getByRole("combobox", { name: "Provider or town" })
     .fill(provider.name);
   await page
     .locator("form.research-search")

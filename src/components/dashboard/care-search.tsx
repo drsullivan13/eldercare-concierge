@@ -1,11 +1,14 @@
-import { useState, type ReactNode } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 import dynamic from "next/dynamic";
 import {
-  ArrowRight,
   ChevronDown,
-  List,
   Loader2,
-  Map as MapIcon,
   MapPin,
   Search,
   SlidersHorizontal,
@@ -16,7 +19,29 @@ import {
   type SearchProvider,
 } from "@/lib/providers";
 import type { CareSearch } from "@/hooks/use-care-search";
+import { ResultViewControl } from "./result-view-control";
 import { ResearchDisclosure } from "./research-disclosure";
+import { CareSearchFilters } from "./care-search-filters";
+import "./care-search-filters.css";
+
+const CareSearchDrawer = dynamic(() => import("./care-search-drawer"), {
+  ssr: false,
+  loading: () => (
+    <p className="care-filter-loading" role="status">
+      Opening filters…
+    </p>
+  ),
+});
+
+function subscribeMobile(listener: () => void) {
+  const query = window.matchMedia("(max-width: 760px)");
+  query.addEventListener("change", listener);
+  return () => query.removeEventListener("change", listener);
+}
+
+function mobileSnapshot() {
+  return window.matchMedia("(max-width: 760px)").matches;
+}
 
 const CareMap = dynamic(() => import("../care-map"), {
   ssr: false,
@@ -48,6 +73,42 @@ export function CareSearchView({
     "closed",
   );
   const { draft, request, data, loading, error, displayCount } = search;
+  const mobile = useSyncExternalStore(
+    subscribeMobile,
+    mobileSnapshot,
+    () => false,
+  );
+  const [drawerLoaded, setDrawerLoaded] = useState(false);
+  const filterTrigger = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (panel === "filters" && !mobile) {
+      document
+        .querySelector<HTMLInputElement>("#search-filters input")
+        ?.focus();
+    }
+  }, [panel, mobile]);
+
+  function discardFilters() {
+    search.discardDraft();
+    setPanel("closed");
+  }
+
+  const filters = (
+    <CareSearchFilters
+      search={search}
+      active={panel === "filters"}
+      onApply={() => {
+        submit();
+        setPanel("closed");
+        filterTrigger.current?.focus();
+      }}
+      onCancel={() => {
+        discardFilters();
+        filterTrigger.current?.focus();
+      }}
+    />
+  );
   return (
     <div className="care-search-view">
       <div className="page-heading compact">
@@ -71,10 +132,19 @@ export function CareSearchView({
           </span>
         </div>
         <button
+          ref={filterTrigger}
           className="button button-outline"
+          aria-haspopup={mobile ? "dialog" : undefined}
           aria-expanded={panel === "filters"}
-          aria-controls="search-filters"
-          onClick={() => setPanel(panel === "filters" ? "closed" : "filters")}
+          aria-controls={panel === "filters" ? "search-filters" : undefined}
+          onClick={() => {
+            if (panel === "filters") {
+              discardFilters();
+            } else {
+              setDrawerLoaded(true);
+              setPanel("filters");
+            }
+          }}
         >
           <SlidersHorizontal size={16} /> Filters
         </button>
@@ -120,91 +190,36 @@ export function CareSearchView({
           </button>
         </section>
       )}
-      <form
-        id="search-filters"
-        hidden={panel !== "filters"}
-        className="research-search"
-        onSubmit={(event) => {
-          event.preventDefault();
-          submit();
-          setPanel("closed");
-        }}
-      >
-        <label>
-          <span>ZIP code</span>
-          <div className="input-icon">
-            <MapPin size={17} />
-            <input
-              value={draft.zip}
-              onChange={(event) => search.edit("zip", event.target.value)}
-              aria-label="Search ZIP code"
-              inputMode="numeric"
-              pattern="[0-9]{5}"
-              maxLength={5}
-              required
-            />
-          </div>
-        </label>
-        <label>
-          <span>Within</span>
-          <select
-            value={draft.radius}
-            onChange={(event) => search.edit("radius", event.target.value)}
-            aria-label="Search radius"
+      {mobile ? (
+        drawerLoaded && (
+          <CareSearchDrawer
+            open={panel === "filters"}
+            onDismiss={discardFilters}
+            trigger={filterTrigger}
           >
-            {[5, 10, 15, 25, 50].map((radius) => (
-              <option key={radius} value={radius}>
-                {radius} miles
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="name-search">
-          <span>Provider or town</span>
-          <div className="input-icon">
-            <Search size={17} />
-            <input
-              value={draft.q}
-              onChange={(event) => search.edit("q", event.target.value)}
-              placeholder="Search by name or town"
-              maxLength={100}
-            />
-          </div>
-        </label>
-        <label>
-          <span>Care type</span>
-          <select
-            aria-label="Care category"
-            value={draft.category}
-            onChange={(event) => search.edit("category", event.target.value)}
-          >
-            {careCategories.map(([id, label]) => (
-              <option key={id} value={id}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          <span>Evidence</span>
-          <select
-            aria-label="Research filter"
-            value={draft.evidence}
-            onChange={(event) => search.edit("evidence", event.target.value)}
-          >
-            <option value="all">All options</option>
-            <option value="details">Offerings researched</option>
-            <option value="pricing">Published costs</option>
-            <option value="openings">Published opening claims</option>
-            <option value="reviews">Has experience score</option>
-            <option value="facebook">Facebook findings</option>
-            <option value="unrated">Needs experience score</option>
-          </select>
-        </label>
-        <button type="submit" className="button button-primary">
-          Apply filters <ArrowRight size={16} />
-        </button>
-      </form>
+            {filters}
+          </CareSearchDrawer>
+        )
+      ) : (
+        <div
+          hidden={panel !== "filters"}
+          onKeyDown={(event) => {
+            const suggestionsOpen =
+              event.target instanceof HTMLElement &&
+              event.target.closest('[role="combobox"][aria-expanded="true"]');
+            if (
+              event.key === "Escape" &&
+              !event.defaultPrevented &&
+              !suggestionsOpen
+            ) {
+              discardFilters();
+              filterTrigger.current?.focus();
+            }
+          }}
+        >
+          {filters}
+        </div>
+      )}
       <label className="search-sort">
         Sort
         <select
@@ -248,24 +263,7 @@ export function CareSearchView({
           </strong>
         </div>
         <div className="result-controls">
-          <div className="view-toggle">
-            <button
-              className={!showMap ? "active" : ""}
-              aria-label="List view"
-              aria-pressed={!showMap}
-              onClick={() => setShowMap(false)}
-            >
-              <List size={18} />
-            </button>
-            <button
-              className={showMap ? "active" : ""}
-              aria-label="Map view"
-              aria-pressed={showMap}
-              onClick={() => setShowMap(true)}
-            >
-              <MapIcon size={18} />
-            </button>
-          </div>
+          <ResultViewControl showMap={showMap} onChange={setShowMap} />
         </div>
       </div>
       {error && (
