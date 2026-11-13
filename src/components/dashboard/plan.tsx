@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import type { Workspace } from "@/lib/workspace";
 import type { useWorkspace } from "@/hooks/use-workspace";
+import type { DashboardNotification } from "./dashboard-notifications";
 import { TaskDialog } from "./task-dialog";
 
 export function PlanView({
@@ -17,6 +18,7 @@ export function PlanView({
   update,
   addTask,
   exportPlan,
+  notify,
 }: {
   workspace: Workspace;
   update: ReturnType<typeof useWorkspace>["update"];
@@ -27,8 +29,41 @@ export function PlanView({
     dueDate?: string,
   ) => boolean;
   exportPlan: () => void;
+  notify: (
+    title: string,
+    options?: Omit<DashboardNotification, "id" | "title">,
+  ) => void;
 }) {
   const [taskOpen, setTaskOpen] = useState(false);
+  function deleteTask(task: Workspace["tasks"][number]) {
+    let originalIndex = -1;
+    let removedTask = task;
+    const accepted = update((w) => {
+      originalIndex = w.tasks.findIndex((t) => t.id === task.id);
+      if (originalIndex < 0) return w;
+      removedTask = w.tasks[originalIndex];
+      return { ...w, tasks: w.tasks.filter((t) => t.id !== task.id) };
+    });
+    if (!accepted || originalIndex < 0) return;
+    let undone = false;
+    notify("Removed from your plan", {
+      description: `${removedTask.title}. Undo is available.`,
+      action: {
+        label: "Undo",
+        onAction: () => {
+          if (undone) return true;
+          const restored = update((w) => {
+            if (w.tasks.some((t) => t.id === removedTask.id)) return w;
+            const tasks = [...w.tasks];
+            tasks.splice(Math.min(originalIndex, tasks.length), 0, removedTask);
+            return { ...w, tasks };
+          });
+          if (restored) undone = true;
+          return restored;
+        },
+      },
+    });
+  }
   const completed = workspace.tasks.filter(
     (task) => task.status === "done",
   ).length;
@@ -132,12 +167,7 @@ export function PlanView({
               <button
                 className="icon-button"
                 aria-label={`Delete ${task.title}`}
-                onClick={() =>
-                  update((w) => ({
-                    ...w,
-                    tasks: w.tasks.filter((t) => t.id !== task.id),
-                  }))
-                }
+                onClick={() => deleteTask(task)}
               >
                 <Trash2 size={15} />
               </button>

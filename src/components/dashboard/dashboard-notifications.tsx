@@ -130,7 +130,7 @@ export default function DashboardNotifications({
                     duration: Infinity,
                     description: [
                       description,
-                      "Could not restore this place. Try Undo again.",
+                      "Could not restore this item. Try Undo again.",
                     ]
                       .filter(Boolean)
                       .join(" "),

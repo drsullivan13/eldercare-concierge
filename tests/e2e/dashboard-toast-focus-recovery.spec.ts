@@ -52,6 +52,7 @@ for (const { savedCount, removedIndex, closeWithEscape } of [
   { savedCount: 2, removedIndex: 0, closeWithEscape: false },
   { savedCount: 2, removedIndex: 1, closeWithEscape: true },
   { savedCount: 3, removedIndex: 1, closeWithEscape: false },
+  { savedCount: 3, removedIndex: 2, closeWithEscape: false },
 ]) {
   test(`closing a provider removed at position ${removedIndex + 1} of ${savedCount} restores shortlist focus`, async ({
     page,
@@ -97,6 +98,7 @@ for (const { savedCount, removedIndex, closeWithEscape } of [
       : page.getByRole("heading", { name: "Your shortlist", exact: true });
     await expect(target).toBeVisible();
     await expect(target).toBeFocused();
+    await expect(target).toBeInViewport();
     expect(
       await target.evaluate((element) => Boolean(element.closest("[inert]"))),
     ).toBe(false);
@@ -104,6 +106,34 @@ for (const { savedCount, removedIndex, closeWithEscape } of [
       await expect(
         page.getByRole("heading", { name: "No saved places yet." }),
       ).toBeVisible();
+  });
+}
+
+for (const savedCount of [1, 3]) {
+  test(`keyboard removal of the last card of ${savedCount} restores visible shortlist focus`, async ({
+    page,
+  }) => {
+    const providers = await openWorkspace(page, savedCount);
+    await openShortlist(page);
+    const removed = providers[savedCount - 1];
+    const remove = card(page, removed).getByRole("button", {
+      name: `Remove ${removed.name}`,
+      exact: true,
+    });
+    await remove.focus();
+    await expect(remove).toBeInViewport();
+    await page.keyboard.press("Enter");
+    await expect(card(page, removed)).toHaveCount(0);
+    await expect(page.locator("article.provider-card")).toHaveCount(
+      savedCount - 1,
+    );
+    const target = page.getByRole("heading", {
+      name: "Your shortlist",
+      exact: true,
+    });
+    await expect(target).toBeVisible();
+    await expect(target).toBeFocused();
+    await expect(target).toBeInViewport();
   });
 }
 

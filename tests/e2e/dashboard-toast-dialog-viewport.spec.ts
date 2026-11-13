@@ -244,7 +244,7 @@ test("failed dialog Undo reports an accessible SDK error and retries once storag
   );
   await expect(toast).toHaveAttribute("data-type", "error");
   await expect(toast).toContainText(provider.name);
-  const failure = "Could not restore this place. Try Undo again.";
+  const failure = "Could not restore this item. Try Undo again.";
   await expect(toast).toContainText(failure);
   await expect(toast).toHaveAccessibleDescription(new RegExp(failure));
   await expect(toast).toHaveCount(1);

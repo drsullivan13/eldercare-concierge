@@ -221,7 +221,7 @@ function WorkspaceDashboard({
       );
       if (target) {
         if (target.tabIndex < 0) target.tabIndex = -1;
-        target.focus({ preventScroll: true });
+        target.focus();
       }
     });
   }, []);
@@ -276,7 +276,7 @@ function WorkspaceDashboard({
         );
         if (target) {
           target.tabIndex = target.matches("button") ? 0 : -1;
-          target.focus({ preventScroll: true });
+          target.focus();
         }
       });
     }
@@ -619,6 +619,7 @@ function WorkspaceDashboard({
               update={update}
               addTask={addTask}
               exportPlan={exportPlan}
+              notify={notify}
             />
           )}
           {view === "standards" && <EvidenceStandards />}
