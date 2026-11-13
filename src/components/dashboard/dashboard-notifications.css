@@ -25,6 +25,10 @@
   color: #203c36;
 }
 
+.dashboard-notifications:not([role="region"]) {
+  pointer-events: none;
+}
+
 .dashboard-notifications[data-comparison-active] {
   --comparison-clearance: 112px;
 }

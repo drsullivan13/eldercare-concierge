@@ -449,6 +449,39 @@ test("updates queued during the first notification chunk load arrive once withou
   await expect(notifications(page)).toHaveCount(0);
 });
 
+test("dismissing the final notice leaves the dashboard clickable and later notices actionable", async ({
+  page,
+}) => {
+  await openWorkspace(page, 0);
+  await navigate(page, "Your plan");
+  await page.getByText("Ideas for your next steps", { exact: true }).click();
+  const trigger = page.getByRole("button", {
+    name: "Agree on a family update routine",
+    exact: true,
+  });
+  const region = page.locator('[data-slot="toast-region"]');
+
+  for (let delivery = 0; delivery < 2; delivery++) {
+    await trigger.click();
+    const toast = notice(page, PLAN_ADDED);
+    await expect(toast).toBeVisible();
+    await toast.getByRole("button", { name: "Dismiss", exact: true }).click();
+    await expect(notifications(page)).toHaveCount(0);
+    await expect
+      .poll(() =>
+        region.evaluate((host) => {
+          const bounds = host.getBoundingClientRect();
+          const target = document.elementFromPoint(
+            bounds.x + bounds.width / 2,
+            bounds.y + bounds.height / 2,
+          );
+          return target !== null && !host.contains(target);
+        }),
+      )
+      .toBe(true);
+  }
+});
+
 for (const kind of ["plan", "export"] as const) {
   test(`identical ${kind} messages create separate notices with a fresh five-second lifetime`, async ({
     page,
