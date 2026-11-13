@@ -306,7 +306,7 @@ function WorkspaceDashboard({
   function submitSearch() {
     if (search.draft.zip.trim() !== search.request.zip) comparison.clear();
     search.run();
-    navigate("search");
+    if (view !== "search") navigate("search");
   }
   function addTask(
     title: string,
