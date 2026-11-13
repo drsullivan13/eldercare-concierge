@@ -126,6 +126,7 @@ test("Brooksby keeps its attributed excerpt and concerns in Reviews", async ({
 
 test("destination tabs keep a long supplied excerpt and decimal-price conditions intact", async ({
   page,
+  request,
 }) => {
   const excerpt =
     "This is a deliberately long review fixture, not a published review. The final sentence explains that this account concerns only a short respite stay, not a permanent residence or a different care unit.";
@@ -154,16 +155,26 @@ test("destination tabs keep a long supplied excerpt and decimal-price conditions
     ];
     await route.fulfill({ response, json: data });
   });
-  await page.route("**/api/reviews?**", async (route) => {
-    const response = await route.fetch();
-    const data: IndividualReviewsResponse = await response.json();
-    data.accounts = [{ ...data.accounts[0], excerpt, relationship: "family" }];
-    await route.fulfill({ response, json: data });
+  const catalogResponse = await request.get("/api/reviews", {
+    params: { id: "lifeplan-brooksby-village" },
   });
+  expect(catalogResponse.ok()).toBe(true);
+  const catalog: IndividualReviewsResponse = await catalogResponse.json();
+  catalog.accounts = [
+    { ...catalog.accounts[0], excerpt, relationship: "family" },
+  ];
+  await page.route("**/api/reviews?**", (route) =>
+    route.fulfill({ json: catalog }),
+  );
   const dialog = await openOverview(page, "02459", "Brooksby Village");
   const overview = dialog.getByRole("region", { name: "Property overview" });
   await expect(overview.locator("blockquote")).toHaveCount(0);
   await dialog.getByRole("tab", { name: "Reviews", exact: true }).click();
+  await expect(
+    dialog.getByText("Checking for additional individual records…", {
+      exact: true,
+    }),
+  ).toHaveCount(0);
   await expect(dialog.locator(".public-reviews blockquote")).toHaveText([
     `“${excerpt}”`,
   ]);
