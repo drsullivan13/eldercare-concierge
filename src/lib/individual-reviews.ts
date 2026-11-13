@@ -6,7 +6,8 @@ export type IndividualReview = RetainedReview & {
   publisher: string;
   providerSelected: boolean;
   searchResultOnly: boolean;
-  representation: "licensed-excerpt" | "reviewed-excerpt" | "link-only";
+  representation:
+    "licensed-excerpt" | "reviewed-excerpt" | "original-summary" | "link-only";
 };
 export type IndividualReviewsResponse = {
   providerId: string;
@@ -106,4 +107,19 @@ export function reviewAccountCounts(accounts: IndividualReview[]) {
       (account) => account.excerpt.trim() || account.summary.trim(),
     ).length,
   };
+}
+
+export function reviewPageGroups(accounts: IndividualReview[]) {
+  const narratives: IndividualReview[] = [];
+  const sourceLinks = new Map<string, IndividualReview[]>();
+  for (const account of accounts) {
+    if (account.excerpt.trim() || account.summary.trim()) {
+      narratives.push(account);
+    } else {
+      const group = sourceLinks.get(account.sourceId) ?? [];
+      group.push(account);
+      sourceLinks.set(account.sourceId, group);
+    }
+  }
+  return { narratives, sourceLinks: [...sourceLinks.values()] };
 }

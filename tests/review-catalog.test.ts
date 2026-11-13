@@ -60,6 +60,12 @@ test("sources distinguish reported ratings from acquired original records", () =
         assert.equal(account.excerpt, null);
         assert.equal(account.summary, null);
       } else {
+        if (account.representation === "original-summary") {
+          assert.equal(record.providerId, "cms-315120");
+          assert.equal(account.excerpt, null);
+          assert.ok(account.summary && account.summary.length <= 240);
+          continue;
+        }
         assert.equal(account.representation, "reviewed-excerpt");
         if (account.provenance === "new-public-page") {
           assert.equal(account.excerpt, null);
@@ -159,6 +165,23 @@ test("new readable accounts contain only their exact approved provider-linked pa
     for (const account of record.accounts) {
       if (account.provenance !== "new-public-page" || !account.summary)
         continue;
+      if (account.representation === "original-summary") {
+        const release = JSON.parse(
+          readFileSync(
+            resolve("research/review-catalog/chatham-hills-release.json"),
+            "utf8",
+          ),
+        );
+        assert.equal(pid, release.providerId);
+        assert.equal(
+          account.summary,
+          release.accounts.find(
+            (row: { nativeReviewId: string }) =>
+              row.nativeReviewId === account.nativeReviewId,
+          )?.summary,
+        );
+        continue;
+      }
       assert.equal(account.excerpt, null);
       assert.ok(account.nativeReviewId);
       const summary = approved.get(`${pid}|${account.nativeReviewId}`);
@@ -172,4 +195,28 @@ test("new readable accounts contain only their exact approved provider-linked pa
       }
     }
   }
+});
+
+test("Chatham publishes four original summaries without claiming all 224 ratings or staff independence", () => {
+  const record = getReviewCatalog("cms-315120")!;
+  assert.equal(record.accounts.length, 5);
+  assert.equal(record.sources[0].reportedCount, 224);
+  assert.equal(record.checkedAt, "2026-11-13");
+  assert.match(record.sources[0].scopeNote!, /employee and a family member/);
+  assert.equal(
+    record.accounts.filter(
+      (account) => account.representation === "original-summary",
+    ).length,
+    4,
+  );
+  assert.ok(record.accounts.every((account) => account.excerpt === null));
+  const concern = record.accounts.find(
+    (account) => account.nativeReviewId === "mlc-external-305695",
+  )!;
+  assert.match(concern.summary!, /building needs updating/);
+  const staff = record.accounts.find(
+    (account) => account.nativeReviewId === "mlc-external-305696",
+  )!;
+  assert.equal(staff.relationship, "staff");
+  assert.equal(staff.representation, "link-only");
 });

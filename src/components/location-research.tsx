@@ -12,8 +12,9 @@ import type {
   OfferingFact,
   ResearchSource,
 } from "@/lib/location-research-types";
-import type { Provider } from "@/lib/providers";
-import type { NavigateProfile, ProfileNavigation } from "./profile-pane";
+import { dailyLife } from "@/lib/daily-life-display";
+import { isServiceProvider, type Provider } from "@/lib/providers";
+import type { ProfileNavigation } from "./profile-pane";
 import "./location-research.css";
 
 const COST_LABELS = {
@@ -166,16 +167,15 @@ export function LocationResearch({
   provider,
   onTask,
   navigation,
-  onNavigate,
   uid,
 }: {
   provider: Provider;
   onTask: (title: string) => boolean;
   navigation: ProfileNavigation;
-  onNavigate: NavigateProfile;
   uid: string;
 }) {
   const { id: providerId, name: providerName } = provider;
+  const office = isServiceProvider(provider);
   const { pane, targetId } = navigation;
   const targetRef = useRef<HTMLLIElement>(null);
   const [taskAdded, setTaskAdded] = useState(false);
@@ -191,22 +191,23 @@ export function LocationResearch({
   const availabilitySource = data?.sources.find(
     (s) => s.id === data.availability.sourceId,
   );
-  const reviews =
-    data?.reviews.toSorted(
-      (a, b) =>
-        Number(b.aspects.some(({ sentiment }) => sentiment !== "positive")) -
-          Number(a.aspects.some(({ sentiment }) => sentiment !== "positive")) ||
-        (b.date ?? "").localeCompare(a.date ?? ""),
-    ) ?? [];
-  const careFacts = facts(["care", "amenity", "activity", "dining"]);
-  const licensingFacts = careFacts.filter(
+  const offeringFacts = facts(["care", "amenity", "activity", "dining"]);
+  const displayedFacts = [
+    ...offeringFacts,
+    ...(data
+      ? dailyLife(data, provider).groups.flatMap((group) =>
+          group.facts.map(({ fact }) => fact),
+        )
+      : []),
+  ];
+  const licensingFacts = offeringFacts.filter(
     (fact) =>
       data?.sources.find((source) => source.id === fact.sourceId)?.kind ===
       "regulator",
   );
   const catalogServices = provider.services.filter(
     (service) =>
-      !careFacts.some((fact) =>
+      !displayedFacts.some((fact) =>
         ` ${normalized(fact.text)} `.includes(` ${normalized(service)} `),
       ),
   );
@@ -223,8 +224,8 @@ export function LocationResearch({
   const costFacts = facts(["cost"]);
   const amenities = data && (
     <section aria-labelledby={`${uid}-life`}>
-      <h4 id={`${uid}-life`}>Care, amenities & everyday life</h4>
-      <DailyLife data={data} provider={provider} />
+      <h4 id={`${uid}-life`}>Amenities & everyday life</h4>
+      <DailyLife data={data} provider={provider} section="amenities" />
     </section>
   );
 
@@ -236,7 +237,7 @@ export function LocationResearch({
     >
       {pane === "costs" && (
         <h3 id={`${uid}-title`} className="research-title-hidden">
-          Daily life, staffing & costs
+          Amenities & costs
         </h3>
       )}
       {pane === "details" && (
@@ -271,15 +272,7 @@ export function LocationResearch({
           />
         </div>
       )}
-      {data && pane === "overview" && (
-        <PropertyOverview
-          data={data}
-          provider={provider}
-          uid={uid}
-          reviews={reviews}
-          onNavigate={onNavigate}
-        />
-      )}
+      {pane === "overview" && <PropertyOverview provider={provider} />}
       {pane === "details" && catalogServices.length > 0 && (
         <div className="catalog-services">
           <h4>Listed services and care settings</h4>
@@ -347,7 +340,7 @@ export function LocationResearch({
                   <div className="research-question">
                     <h5>Ask for the complete bill</h5>
                     <ul className="research-specifics">
-                      {(provider.locationKind === "office"
+                      {(office
                         ? [
                             "Hourly or visit rates and minimum shifts.",
                             "Overnight or live-in charges and nursing fees.",
@@ -367,7 +360,7 @@ export function LocationResearch({
                 {costFacts.length > 0 && amenities}
                 <section aria-labelledby={`${uid}-rooms`}>
                   <h4 id={`${uid}-rooms`}>
-                    {provider.locationKind === "office"
+                    {office
                       ? "How care is delivered"
                       : "Room types & living arrangements"}
                   </h4>
@@ -375,7 +368,7 @@ export function LocationResearch({
                     facts={facts(["room"])}
                     sources={data.sources}
                     empty={
-                      provider.locationKind === "office"
+                      office
                         ? "Care is arranged through an office, not a residential room. Confirm visits, shifts and service at your address."
                         : "Room layouts have not been researched yet. Ask for current floor plans and sharing arrangements."
                     }
@@ -437,7 +430,7 @@ export function LocationResearch({
                 <div className="research-question">
                   <h5>Confirm the opening that fits</h5>
                   <ul className="research-specifics">
-                    {(provider.locationKind === "office"
+                    {(office
                       ? [
                           "Service at your address and care needs.",
                           "Staff availability, start date and minimum shifts.",
@@ -458,7 +451,7 @@ export function LocationResearch({
                     onClick={() =>
                       setTaskAdded(
                         onTask(
-                          `Ask ${providerName} for ${provider.locationKind === "office" ? "staff availability, start dates" : "room availability, waitlist timing"} and an itemized quote`.slice(
+                          `Ask ${providerName} for ${office ? "staff availability, start dates" : "room availability, waitlist timing"} and an itemized quote`.slice(
                             0,
                             200,
                           ),
@@ -483,6 +476,12 @@ export function LocationResearch({
                 />
                 <ExperienceExplanation data={data} uid={uid} />
               </>
+            )}
+            {pane === "details" && (
+              <section aria-labelledby={`${uid}-care-team`}>
+                <h4 id={`${uid}-care-team`}>Care team & daily support</h4>
+                <DailyLife data={data} provider={provider} section="care" />
+              </section>
             )}
             {pane === "details" && licensingFacts.length > 0 && (
               <section aria-labelledby={`${uid}-licensing`}>

@@ -90,12 +90,7 @@ export function ProviderDetail({
   const navigate = (destination: ProfileNavigation) => {
     setNavigation(destination);
   };
-  const locality = `${provider.city}, ${provider.state} ${provider.zip}`;
   const displayLocality = `${providerDisplayName(provider.city)}, ${provider.state} ${provider.zip}`;
-  const street = provider.address.trim().replace(/,+$/, "");
-  const address = street.toLowerCase().endsWith(locality.toLowerCase())
-    ? `${street.slice(0, -locality.length)}${displayLocality}`
-    : `${street}, ${displayLocality}`;
   const alerts = providerCareAlerts(provider);
   const researchNotes = provider.warnings.filter(
     (warning) => !alerts.includes(warning),
@@ -118,7 +113,7 @@ export function ProviderDetail({
             <h2>{providerDisplayName(provider.name)}</h2>
             <p>
               <MapPin size={15} />
-              {address}
+              {displayLocality}
             </p>
             <div className="detail-actions">
               <button
@@ -162,18 +157,6 @@ export function ProviderDetail({
           </TabsList>
         </div>
         <div className="detail-body">
-          {provider.locationKind === "office" && (
-            <div className="inline-notice">
-              <strong>Office location only</strong>
-              {provider.serviceArea && (
-                <p>Provider-reported service area. {provider.serviceArea}</p>
-              )}
-              <p>
-                Confirm service coverage at your address and staff availability
-                directly.
-              </p>
-            </div>
-          )}
           {alerts.length > 0 && (
             <div className="detail-warnings">
               <ShieldAlert size={20} />
@@ -190,23 +173,12 @@ export function ProviderDetail({
               provider={provider}
               onTask={onTask}
               navigation={navigation}
-              onNavigate={navigate}
               uid={uid}
             />
             {navigation.pane === "details" && (
               <div>
                 <h3 className="place-details-heading">About this provider</h3>
                 <p className="detail-description">{provider.description}</p>
-                {provider.locationKind !== "office" && provider.serviceArea && (
-                  <div className="inline-notice">
-                    <strong>Service area reported by the provider</strong>
-                    <p>{provider.serviceArea}</p>
-                    <span>
-                      Office proximity does not confirm service at your address
-                      or staff availability.
-                    </span>
-                  </div>
-                )}
                 {researchNotes.length > 0 && (
                   <details className="detail-disclosure provider-background">
                     <summary>Provider research notes</summary>

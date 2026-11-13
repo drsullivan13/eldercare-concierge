@@ -343,6 +343,55 @@ def merge_massachusetts_catalog(output, coverage):
         row.update(sources[(row["providerId"], row["id"])])
 
 
+def apply_original_summaries(output, coverage, pages, current_plan):
+    if "cms-315120" not in output:
+        return
+    release = read(WORK / "chatham-hills-release.json")
+    target = next((t for t in current_plan["targets"] if t["id"] == release["sourceId"]), None)
+    if target is None:
+        raise ValueError("Original summary release has an unknown source")
+    receipt = pages[target["url"]]
+    if (release["schemaVersion"] != 1
+            or set(release["identity"]) != {"name", "address", "city", "careUnit"}
+            or release["providerId"] != target["providerId"] or release["url"] != target["url"]
+            or release["sourceId"] != receipt["sourceId"]
+            or release["providerId"] != receipt["providerId"]
+            or release["receiptSha256"] != receipt["pageSha256"]
+            or release["reportedCount"] != receipt["reportedCount"]
+            or release["visibleCount"] != len(receipt["rows"])
+            or release["stopReason"] != receipt["stopReason"]
+            or release["access"]["publication"] != "original-summary-only"
+            or precision(release["checkedAt"]) != "day"):
+        raise ValueError("Original summary release does not match its source receipt")
+    for key, value in release["identity"].items():
+        if normalized(value) != normalized(target["identity"][key]):
+            raise ValueError("Original summary release has a different care-unit identity")
+    record = output[release["providerId"]]
+    rows = {"mlc-external-" + r["nativeId"]: r for r in receipt["rows"]}
+    decisions = release["accounts"]
+    if (len({r["nativeReviewId"] for r in decisions}) != len(decisions)
+            or {r["nativeReviewId"] for r in decisions} != set(rows)):
+        raise ValueError("Original summary release must assess each visible account exactly once")
+    for decision in decisions:
+        row = rows[decision["nativeReviewId"]]
+        account = next(a for a in record["accounts"]
+                       if a.get("nativeReviewId") == decision["nativeReviewId"])
+        summary = decision["summary"]
+        if (decision["date"] != row["date"] or account["url"] != row["url"]
+                or account["sourceId"] != release["sourceId"]
+                or decision["relationship"] not in {"family", "resident", "staff", "visitor", "unknown"}
+                or (summary is not None and (not summary.strip() or len(summary) > 240))
+                or account["excerpt"] or account["summary"]):
+            raise ValueError("Original summary release has a mismatched or already released account")
+        account["relationship"] = decision["relationship"]
+        if summary is not None:
+            account.update(summary=summary, representation="original-summary")
+    source = next(s for s in record["sources"] if s["id"] == release["sourceId"])
+    source["scopeNote"] = release["scopeNote"]
+    next(c for c in coverage if c["id"] == source["id"]).update(source)
+    record["checkedAt"] = max(record["checkedAt"], release["checkedAt"])
+
+
 def build(current_plan, pages):
     targets = current_plan["targets"]
     observations = read(ROOT / "research/north-jersey/review-excerpts/observations.json")
@@ -450,6 +499,7 @@ def build(current_plan, pages):
                          "observedDistinctIds": len(all_keys), "excludedRows": len(excluded),
                          "pendingUrls": pending})
     merge_massachusetts_catalog(output, coverage)
+    apply_original_summaries(output, coverage, pages, current_plan)
     for record in output.values():
         unique = {}
         for a in record["accounts"]:
@@ -508,13 +558,14 @@ def manifest(output, coverage):
         "research/massachusetts/review-catalog/browser-pagination.json",
         "scripts/regions/review-catalog.py",
         "research/review-catalog/access.json", "research/review-catalog/plan.json",
+        "research/review-catalog/chatham-hills-release.json",
     ]
     receipt_paths = sorted((WORK / "pages").glob("*.json"))
     inputs.extend(str(path.relative_to(ROOT)) for path in receipt_paths)
     accounts = [a for r in output.values() for a in r["accounts"]]
     ma_coverage = read(ROOT / "research/massachusetts/review-catalog/coverage.json")
     return {
-        "schemaVersion": 1, "assessmentDate": "2026-11-12",
+        "schemaVersion": 1, "assessmentDate": max(record["checkedAt"] for record in output.values()),
         "counts": {
             "providerRecords": len(output),
             "providersWithAccounts": sum(bool(r["accounts"]) for r in output.values()),

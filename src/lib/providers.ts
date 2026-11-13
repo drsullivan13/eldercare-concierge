@@ -74,6 +74,14 @@ export type Provider = {
   research?: ResearchSummary;
 };
 export type SearchProvider = Provider & { distanceMiles: number | null };
+export function isServiceProvider(provider: Pick<Provider, "category">) {
+  return (
+    provider.category === "home-care" ||
+    provider.category === "home-health" ||
+    provider.category === "staffing"
+  );
+}
+
 export type SearchResponse = {
   market: Market;
   providers: SearchProvider[];

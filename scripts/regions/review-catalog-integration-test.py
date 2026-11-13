@@ -15,6 +15,7 @@ class EditorialIntegrationTests(unittest.TestCase):
         cls.release = catalog.editorial_release()
         cls.plan = catalog.plan()
         pages = {p["requestedUrl"]: p for path in (catalog.WORK / "pages").glob("*.json") for p in [catalog.read(path)]}
+        cls.pages = pages
         cls.output, cls.coverage = catalog.build(cls.plan, pages)
 
     def test_each_released_paraphrase_reaches_its_exact_provider_source_and_original_receipt(self):
@@ -83,6 +84,48 @@ class EditorialIntegrationTests(unittest.TestCase):
         self.assertEqual(source["pagesChecked"], 1)
         self.assertEqual(source["stopReason"], "editorial-page-reviewed-pagination-not-assessed")
         self.assertEqual(coverage[0]["pendingUrls"], [])
+
+    def test_original_summaries_keep_exact_receipts_and_staff_conflict(self):
+        release = catalog.read(catalog.WORK / "chatham-hills-release.json")
+        record = self.output[release["providerId"]]
+        self.assertEqual(record["sources"][0]["reportedCount"], 224)
+        self.assertEqual(len(record["accounts"]), 5)
+        self.assertEqual(sum(a["representation"] == "original-summary" for a in record["accounts"]), 4)
+        for decision in release["accounts"]:
+            account = next(a for a in record["accounts"] if a["nativeReviewId"] == decision["nativeReviewId"])
+            self.assertEqual(account["summary"], decision["summary"])
+            self.assertEqual(account["relationship"], decision["relationship"])
+            self.assertIsNone(account["excerpt"])
+        staff = next(a for a in record["accounts"] if a["nativeReviewId"] == "mlc-external-305696")
+        self.assertEqual(staff["relationship"], "staff")
+        self.assertIsNone(staff["summary"])
+
+    def test_original_summary_release_rejects_wrong_identity_receipt_date_or_duplicate_decisions(self):
+        original_read = catalog.read
+        release = original_read(catalog.WORK / "chatham-hills-release.json")
+        variants = []
+        for field, value in [("providerId", "cms-315101"), ("receiptSha256", "0" * 64),
+                             ("reportedCount", 5), ("visibleCount", 224),
+                             ("sourceId", "wrong-source"), ("url", "https://example.org/wrong")]:
+            changed = copy.deepcopy(release)
+            changed[field] = value
+            variants.append(changed)
+        changed = copy.deepcopy(release)
+        changed["identity"]["address"] = "999 Other Road"
+        variants.append(changed)
+        changed = copy.deepcopy(release)
+        changed["accounts"][0]["date"] = "2026-03-01"
+        variants.append(changed)
+        changed = copy.deepcopy(release)
+        changed["accounts"].append(changed["accounts"][0])
+        variants.append(changed)
+        for changed in variants:
+            output = copy.deepcopy(self.output)
+            for account in output[release["providerId"]]["accounts"]:
+                account["summary"] = None
+            with self.subTest(changed=changed), patch.object(catalog, "read", side_effect=lambda path: changed if path.name == "chatham-hills-release.json" else original_read(path)):
+                with self.assertRaises(ValueError):
+                    catalog.apply_original_summaries(output, copy.deepcopy(self.coverage), self.pages, self.plan)
 
 
 if __name__ == "__main__":

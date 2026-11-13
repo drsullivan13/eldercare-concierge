@@ -10,16 +10,6 @@
   min-width: 0;
 }
 
-.property-overview > .overview-life {
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--line);
-}
-
-.property-overview > .overview-experience {
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-}
-
 .property-overview h4 {
   margin: 0 0 4px;
   font-size: 20px;
@@ -35,98 +25,29 @@
   cursor: pointer;
   text-align: left;
   font-family: inherit;
-}
-
-.property-overview p,
-.property-overview li,
-.property-overview blockquote {
-  margin: 6px 0;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.property-overview .overview-terms {
-  margin: 12px 0;
-  padding-left: 20px;
-}
-
-.property-overview .overview-terms li {
-  padding-left: 4px;
-  margin-block: 8px;
-}
-
-.provider-detail .property-overview .small {
-  font-size: 16px;
-}
-
-.property-overview blockquote {
-  margin-block: 4px 8px;
-  padding-left: 14px;
-  border-left: 2px solid #a7bdae;
-  font-family: var(--serif);
-  font-size: 19px;
-}
-
-.property-overview small,
-.property-overview .overview-more,
-.property-overview .overview-caveat {
   display: block;
   font-size: 16px;
   line-height: 1.6;
-}
-
-.property-overview small,
-.property-overview .overview-caveat {
-  color: #53674f;
-}
-
-.property-overview .overview-more {
   width: fit-content;
   min-height: 44px;
   padding: 5px 0;
 }
 
-.property-overview .overview-catalog-link {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.property-overview .overview-rate {
-  margin-block: 4px 8px;
-  font-family: var(--serif);
-  font-size: clamp(30px, 5vw, 40px);
-  color: #315c44;
-  line-height: 1.2;
-  letter-spacing: -1px;
-}
-
-.property-overview .overview-rate span {
-  display: inline;
-  margin-left: 8px;
-  font-family: var(--sans);
+.property-overview p {
+  margin: 6px 0;
   font-size: 16px;
-  letter-spacing: 0;
+  line-height: 1.6;
 }
 
-.property-overview .overview-concern {
-  font-size: 16px;
-}
-
-.property-overview .overview-concern .overview-more {
-  display: inline;
-}
-
-.property-overview .overview-caveat > summary {
-  min-height: 44px;
-  padding-block: 8px;
-  cursor: pointer;
+.property-overview .overview-source {
+  font-size: 13px;
 }
 
 .property-overview .overview-more:hover {
   text-decoration-thickness: 2px;
 }
 
-.property-overview :is(.overview-more, summary):focus-visible {
+.property-overview .overview-more:focus-visible {
   outline: 2px solid #24594c;
   outline-offset: 3px;
 }

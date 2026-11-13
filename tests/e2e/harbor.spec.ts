@@ -689,10 +689,10 @@ test("families filter and compare options, then use the place section selector w
   const overview = sections.getByRole("tab", { name: "Overview", exact: true });
   await overview.focus();
   for (const [key, label, content] of [
-    ["ArrowRight", "Costs & perks", "Care, amenities & everyday life"],
+    ["ArrowRight", "Costs & perks", "Amenities & everyday life"],
     ["ArrowRight", "Reviews", "What people say"],
     ["End", "Details", "About this provider"],
-    ["Home", "Overview", "Price details & source"],
+    ["Home", "Overview", "Location & access"],
   ]) {
     await page.keyboard.press(key);
     const tab = sections.getByRole("tab", { name: label, exact: true });

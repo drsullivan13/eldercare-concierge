@@ -1,8 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { dailyLife } from "../src/lib/daily-life-display";
+import { getLocationResearch } from "../src/lib/location-research";
 import { getProviderMarket } from "../src/lib/markets";
 import type { OfferingFact } from "../src/lib/location-research-types";
+import { isServiceProvider, type CareCategory } from "../src/lib/providers";
 
 function retainedProfile(id: string) {
   const market = getProviderMarket(id)!;
@@ -11,6 +13,60 @@ function retainedProfile(id: string) {
     provider: market.providers.find((provider) => provider.id === id)!,
   };
 }
+
+test("care category defines the service setting without coordinate information", () => {
+  for (const category of [
+    "home-care",
+    "home-health",
+    "staffing",
+  ] satisfies CareCategory[])
+    assert.equal(isServiceProvider({ category }), true);
+  for (const category of [
+    "assisted-living",
+    "nursing-home",
+    "life-plan",
+  ] satisfies CareCategory[])
+    assert.equal(isServiceProvider({ category }), false);
+});
+
+test("ZIP precision does not change service agencies into residences or Brooksby into an office", () => {
+  for (const [id, office] of [
+    ["cms-317058", true],
+    ["north-jersey-hp-hp0144800", true],
+    ["lifeplan-brooksby-village", false],
+  ] as const) {
+    const provider = getProviderMarket(id)!.providers.find(
+      (provider) => provider.id === id,
+    )!;
+    assert.equal(provider.locationKind, "zip");
+    const data = getLocationResearch(id);
+    const result = dailyLife(data, provider);
+    assert.equal(result.office, office, id);
+    assert.equal(result.gaps.includes("meal preparation"), office, id);
+    const source = retainedProfile(
+      "ma-alr-evans-park-at-newton-corner",
+    ).data.sources.find((source) => source.kind === "provider")!;
+    const meals = dailyLife(
+      {
+        facts: [
+          {
+            id: "published-meals",
+            kind: "dining",
+            sourceId: source.id,
+            text: "Meal preparation is offered.",
+          },
+        ],
+        sources: [{ ...source, kind: "provider" }],
+      },
+      provider,
+    );
+    assert.equal(
+      meals.groups[0].title,
+      office ? "Help with meals at home" : "Meals & dining",
+      id,
+    );
+  }
+});
 
 test("real MA dining, outings and transport preserve complete published facts and sources", () => {
   const id = "ma-alr-evans-park-at-newton-corner";

@@ -111,15 +111,25 @@ test("profile tab switches reveal the pane start by click and keyboard after dee
     dialog.getByRole("tab", { name: "Overview", exact: true }),
   ).toBeFocused();
   await expectPaneStart(dialog, "Overview");
-  await readDeeply(dialog);
   await page.keyboard.press("ArrowRight");
   await expect(
     dialog.getByRole("tab", { name: "Costs & perks", exact: true }),
   ).toBeFocused();
   await expectPaneStart(dialog, "Costs & perks");
+  await readDeeply(dialog);
+  await dialog
+    .getByRole("tab", { name: "Costs & perks", exact: true })
+    .evaluate((element) =>
+      (element as HTMLElement).focus({ preventScroll: true }),
+    );
+  await page.keyboard.press("ArrowLeft");
+  await expect(
+    dialog.getByRole("tab", { name: "Overview", exact: true }),
+  ).toBeFocused();
+  await expectPaneStart(dialog, "Overview");
 });
 
-test("profile shortcuts keep the original price and review targets visible and focused", async ({
+test("profile tabs retain original price conditions and review concerns", async ({
   page,
 }) => {
   const dialog = await openProfile(page, "02459", "Brooksby Village");
@@ -129,11 +139,15 @@ test("profile shortcuts keep the original price and review targets visible and f
   });
   for (let attempt = 0; attempt < 2; attempt++) {
     await dialog
-      .getByRole("button", { name: "Price details & source", exact: true })
+      .getByRole("tab", { name: "Costs & perks", exact: true })
       .click();
-    await expect(monthly).toBeFocused();
+    await expectPaneStart(dialog, "Costs & perks");
+    for (const summary of await dialog
+      .locator(".offering-more > summary")
+      .all())
+      await summary.click();
+    await expect(monthly).toBeVisible();
     await expect(monthly).toContainText("schedule changes January 1, 2027");
-    await expectTargetVisible(monthly);
     const atPrice = await dialog.evaluate((element) => element.scrollTop);
     await clickInPlace(
       page,
@@ -143,30 +157,15 @@ test("profile shortcuts keep the original price and review targets visible and f
     await overview.click();
     await expectPaneStart(dialog, "Overview");
   }
-  for (const name of ["Read concerns", "Full review & context"]) {
-    await dialog.getByRole("button", { name, exact: true }).click();
-    const target = dialog.locator(".public-reviews article:focus");
-    await expect(target).toHaveCount(1);
-    if (name === "Read concerns")
-      await expect(target).toContainText("The food is generally awful.");
-    await expectTargetVisible(target);
-    await overview.click();
-    await expectPaneStart(dialog, "Overview");
-  }
+  await dialog.getByRole("tab", { name: "Reviews", exact: true }).click();
+  await expectPaneStart(dialog, "Reviews");
+  const account = dialog.locator(".public-reviews article").filter({
+    hasText: "The food is generally awful.",
+  });
+  await expect(account.locator("blockquote")).toHaveText(
+    "“The food is generally awful.”",
+  );
+  await expect(account.locator(".review-concern")).toBeVisible();
+  await overview.click();
+  await expectPaneStart(dialog, "Overview");
 });
-
-async function expectTargetVisible(target: Locator) {
-  await expect
-    .poll(() =>
-      target.evaluate((element) => {
-        const dialog = element.closest("dialog")!;
-        const header = dialog.querySelector(".profile-top")!;
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top >= header.getBoundingClientRect().bottom &&
-          rect.top < dialog.getBoundingClientRect().bottom
-        );
-      }),
-    )
-    .toBe(true);
-}

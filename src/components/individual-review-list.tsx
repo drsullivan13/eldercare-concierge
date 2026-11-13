@@ -5,6 +5,7 @@ import { useProviderEvidence } from "@/hooks/use-provider-evidence";
 import {
   individualReviews,
   reviewAccountCounts,
+  reviewPageGroups,
   type IndividualReviewsResponse,
 } from "@/lib/individual-reviews";
 import type { LocationResearchResponse } from "@/lib/location-research-types";
@@ -83,6 +84,7 @@ export function IndividualReviewList({
     currentPage * PAGE_SIZE,
     (currentPage + 1) * PAGE_SIZE,
   );
+  const groups = reviewPageGroups(visible);
 
   useEffect(() => {
     if (requestedFocus.current) {
@@ -119,7 +121,7 @@ export function IndividualReviewList({
                 ? `${counts.total} review links here`
                 : "No individual accounts here"}
             {counts.withText > 0 && counts.total > counts.withText
-              ? ` + ${counts.total - counts.withText} links`
+              ? ` + ${counts.total - counts.withText} ${counts.total - counts.withText === 1 ? "link" : "links"}`
               : ""}
           </strong>
           {" · "}
@@ -183,7 +185,7 @@ export function IndividualReviewList({
         role="list"
         aria-labelledby={`${uid}-reviews`}
       >
-        {visible.map((review) => {
+        {groups.narratives.map((review) => {
           const hasConcerns = review.aspects.some(
             ({ sentiment }) => sentiment !== "positive",
           );
@@ -191,6 +193,7 @@ export function IndividualReviewList({
           return (
             <article
               id={id}
+              data-review-account
               key={review.id}
               role="listitem"
               tabIndex={-1}
@@ -201,17 +204,14 @@ export function IndividualReviewList({
             >
               {review.excerpt ? (
                 <blockquote>“{review.excerpt}”</blockquote>
-              ) : review.summary ? (
-                <p className="review-summary">
-                  <strong>Research summary</strong> · {review.summary}
-                </p>
               ) : (
-                <p className="review-link-only">
-                  <strong>Individual review on {review.publisher}</strong>
-                  <span>
-                    Text is not republished here. Open the source to read this
-                    record. The source may require access or remove a review.
-                  </span>
+                <p className="review-summary">
+                  <strong>
+                    {review.representation === "original-summary"
+                      ? "Harbor summary"
+                      : "Research summary"}
+                  </strong>{" "}
+                  · {review.summary}
                 </p>
               )}
               <div className="review-meta">
@@ -276,12 +276,92 @@ export function IndividualReviewList({
                 target="_blank"
                 rel="noreferrer"
               >
-                Read the original account on {review.publisher}
+                Read the original account linked by {review.publisher}
                 <ExternalLink size={14} />
               </a>
             </article>
           );
         })}
+        {groups.sourceLinks.map((reviews) => (
+          <article role="listitem" key={reviews[0].sourceId}>
+            <h5>{reviews[0].publisher} source links</h5>
+            <p className="review-link-only">
+              {reviews.length} linked{" "}
+              {reviews.length === 1 ? "account" : "accounts"} on this page. Text
+              is not republished here. Links do not establish reuse rights. The
+              source may require access or remove a review.
+            </p>
+            <details
+              className="evidence-disclosure"
+              open={
+                followTarget &&
+                reviews.some(
+                  (review) => `${uid}-account-${review.id}` === targetId,
+                )
+                  ? true
+                  : undefined
+              }
+            >
+              <summary>
+                Browse {reviews.length} original{" "}
+                {reviews.length === 1 ? "account" : "accounts"}
+              </summary>
+              <ul className="research-specifics">
+                {reviews.map((review) => {
+                  const id = `${uid}-account-${review.id}`;
+                  return (
+                    <li
+                      id={id}
+                      data-review-account
+                      key={review.id}
+                      tabIndex={-1}
+                      ref={(element) => {
+                        if (element) accountRefs.current.set(id, element);
+                        else accountRefs.current.delete(id);
+                      }}
+                    >
+                      <a
+                        className="research-source"
+                        href={review.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Original account linked by {review.publisher} ·{" "}
+                        {evidenceDate(review.date)}
+                        <ExternalLink size={14} />
+                      </a>
+                      <div className="review-meta">
+                        {review.relationship === "unknown"
+                          ? "Relationship not established"
+                          : `Self-described ${review.relationship}`}
+                        {review.providerSelected &&
+                          " · Provider-selected testimonial"}
+                        {review.rating !== null &&
+                          ` · ${review.rating}/${review.scale}`}
+                      </div>
+                      {review.aspects.map((aspect, index) => (
+                        <p
+                          key={index}
+                          className={`sentiment-${aspect.sentiment}`}
+                        >
+                          {aspect.aspect} · {aspect.sentiment}
+                        </p>
+                      ))}
+                      {review.notes.map((note, index) => (
+                        <p key={index}>{note}</p>
+                      ))}
+                      {review.searchResultOnly && (
+                        <p>
+                          Search result only. The full page was not reviewed.
+                        </p>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
+          </article>
+        ))}
       </div>
       {pages > 1 && (
         <nav className="review-pagination" aria-label="Individual review pages">
@@ -325,8 +405,9 @@ export function IndividualReviewList({
           </li>
           <li>
             Selected accounts, not a representative survey. Relationships are
-            self-described, not independently verified. Concerns appear first,
-            then the most recent dates. Unknown dates stay unknown.
+            self-described, not independently verified. Pages prioritize
+            concerns, then recent dates. Text-free records are grouped by source
+            within each page. Unknown dates stay unknown.
           </li>
         </ul>
         {sourceReports.length > 0 && (

@@ -7,7 +7,7 @@ import type {
   DailyLifeFact as AcquiredFact,
   DailyLifeNumeric,
 } from "./daily-life-types";
-import type { Provider } from "./providers";
+import { isServiceProvider, type Provider } from "./providers";
 
 type DailyLifeCategory =
   "dining" | "activity" | "amenity" | "staffing" | "care";
@@ -65,7 +65,7 @@ export function dailyLife(
   data: Pick<LocationResearchResponse, "facts" | "sources" | "dailyLife">,
   provider: Provider,
 ) {
-  const office = provider.locationKind !== "facility";
+  const office = isServiceProvider(provider);
   const sources = new Map(data.sources.map((source) => [source.id, source]));
   const groups = new Map<DailyLifeCategory, DailyLifeFact[]>();
   for (const fact of data.facts) {

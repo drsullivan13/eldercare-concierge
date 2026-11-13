@@ -168,6 +168,11 @@ class CatalogTests(unittest.TestCase):
                     self.assertIsNone(a["excerpt"])
                     self.assertIsNone(a["summary"])
                 else:
+                    if a["representation"] == "original-summary":
+                        self.assertEqual(record["providerId"], "cms-315120")
+                        self.assertIsNone(a["excerpt"])
+                        self.assertLessEqual(len(a["summary"]), 240)
+                        continue
                     self.assertEqual(a["representation"], "reviewed-excerpt")
                     if a["provenance"] == "new-public-page":
                         self.assertIsNone(a["excerpt"])

@@ -32,7 +32,7 @@ async function openOverview(page: Page, zip: string, name: string) {
   return dialog;
 }
 
-test("catalog-only Overview offers readable reviews without fetching their text until navigation", async ({
+test("location-only Overview defers readable reviews to the Reviews tab", async ({
   page,
   request,
 }, testInfo) => {
@@ -53,23 +53,17 @@ test("catalog-only Overview offers readable reviews without fetching their text 
   });
   const dialog = await openOverview(page, "07068", "BENCHMARK AT ROSELAND");
   const overview = dialog.getByRole("region", { name: "Property overview" });
-  const entry = overview.getByRole("button", {
-    name: `Read ${readable.length} reviews`,
-    exact: true,
-  });
-  await expect(entry).toBeVisible();
-  await expect(overview).not.toContainText("No review excerpt yet");
+  await expect(overview.getByRole("button")).toHaveCount(0);
   await expect(overview.locator("blockquote")).toHaveCount(0);
-  await expect(overview).toContainText("research summaries");
+  await expect(overview).not.toContainText(/review|research summaries/i);
   expect(reviewRequests).toBe(0);
-  await entry.scrollIntoViewIfNeeded();
   const widths = await dialog.evaluate((element) => ({
     width: element.clientWidth,
     contents: element.scrollWidth,
   }));
   expect(widths.contents).toBeLessThanOrEqual(widths.width + 1);
   await page.screenshot({ path: testInfo.outputPath("roseland-overview.png") });
-  await entry.click();
+  await dialog.getByRole("tab", { name: "Reviews", exact: true }).click();
   await expect(
     dialog.getByRole("tab", { name: "Reviews", exact: true }),
   ).toHaveAttribute("aria-selected", "true");
@@ -91,51 +85,46 @@ test("catalog-only Overview offers readable reviews without fetching their text 
   }
 });
 
-test("Brooksby keeps its attributed excerpt, concerns and direct account navigation", async ({
+test("Brooksby keeps its attributed excerpt and concerns in Reviews", async ({
   page,
 }, testInfo) => {
   const dialog = await openOverview(page, "02459", "Brooksby Village");
   const overview = dialog.getByRole("region", { name: "Property overview" });
-  await expect(overview.locator("blockquote")).toHaveText(
-    "“The food is generally awful.”",
+  await expect(overview.locator("blockquote")).toHaveCount(0);
+  await expect(overview).not.toContainText(
+    /What people say|Selected reviews include concerns/,
   );
-  await expect(overview).toContainText("Self-described family · Caring.com");
-  await expect(overview).toContainText("Selected reviews include concerns.");
-  await expect(overview.locator(".overview-terms li").first()).toHaveText(
-    "Independent-living studio Monthly Service Package: $2,523 per month. This is separate from the entrance fee; pricing is for reference and the schedule changes January 1, 2027.",
-  );
-  await expect(overview.locator(".overview-terms li").nth(1)).toHaveText(
-    "Independent-living studio entrance fee: $113,000–$226,000; provider describes 90% as refundable under its Residence and Care Agreement. Separate monthly fees apply.",
-  );
-  await overview.locator(".overview-caveat summary").click();
-  await expect(overview.locator(".overview-caveat")).toContainText(
-    "Sep 29, 2025",
-  );
-  await expect(overview.locator(".overview-caveat")).toContainText(
-    "Relationships are not independently verified.",
-  );
-  const entry = overview.getByRole("button", { name: "Full review & context" });
-  await entry.scrollIntoViewIfNeeded();
   await page.screenshot({ path: testInfo.outputPath("brooksby-overview.png") });
-  await entry.click();
+  await dialog.getByRole("tab", { name: "Reviews", exact: true }).click();
   const account = dialog.locator(".public-reviews article").filter({
     hasText: "The food is generally awful.",
   });
-  await expect(account).toBeFocused();
+  await expect(account).toBeVisible();
+  await expect(account.locator("blockquote")).toHaveText(
+    "“The food is generally awful.”",
+  );
+  await expect(account.locator(".review-concern")).toBeVisible();
+  await account.getByText("Account context", { exact: true }).click();
+  await expect(account.locator(".review-meta")).toContainText(
+    "Self-described family",
+  );
+  await expect(account.locator(".review-meta")).toContainText("Caring.com");
+  await expect(account.locator(".review-meta")).toContainText("Sep 29, 2025");
+  await dialog
+    .getByText("How these accounts were selected", { exact: true })
+    .click();
+  await expect(dialog.locator(".review-sampling")).toContainText(
+    "Relationships are self-described, not independently verified.",
+  );
   await expect(
     account.getByRole("link", { name: /Read the original account/ }),
   ).toHaveAttribute(
     "href",
     "https://www.caring.com/senior-living/massachusetts/peabody/brooksby-village-peabody-massachusetts-01960",
   );
-  await dialog.getByRole("tab", { name: "Overview", exact: true }).click();
-  await overview
-    .getByRole("button", { name: "Read concerns", exact: true })
-    .click();
-  await expect(account).toBeFocused();
 });
 
-test("Overview keeps a long supplied excerpt and decimal-price conditions intact", async ({
+test("destination tabs keep a long supplied excerpt and decimal-price conditions intact", async ({
   page,
 }) => {
   const excerpt =
@@ -165,30 +154,39 @@ test("Overview keeps a long supplied excerpt and decimal-price conditions intact
     ];
     await route.fulfill({ response, json: data });
   });
+  await page.route("**/api/reviews?**", async (route) => {
+    const response = await route.fetch();
+    const data: IndividualReviewsResponse = await response.json();
+    data.accounts = [{ ...data.accounts[0], excerpt, relationship: "family" }];
+    await route.fulfill({ response, json: data });
+  });
   const dialog = await openOverview(page, "02459", "Brooksby Village");
   const overview = dialog.getByRole("region", { name: "Property overview" });
-  await expect(overview.locator("blockquote")).toHaveText(`“${excerpt}”`);
-  await expect(overview.locator(".overview-rate")).toHaveText(
-    "$2,523.5per month",
-  );
-  await expect(overview.locator(".overview-terms li")).toHaveText(price);
-  await expect(overview.locator(".overview-terms li")).toBeVisible();
+  await expect(overview.locator("blockquote")).toHaveCount(0);
+  await dialog.getByRole("tab", { name: "Reviews", exact: true }).click();
+  await expect(dialog.locator(".public-reviews blockquote")).toHaveText([
+    `“${excerpt}”`,
+  ]);
+  await dialog.getByRole("tab", { name: "Overview", exact: true }).click();
+  await expect(overview).not.toContainText(price);
+  await dialog.getByRole("tab", { name: "Costs & perks", exact: true }).click();
+  const cost = dialog.locator(".fact-cost");
+  await expect(cost.locator("p")).toHaveText(price);
+  await expect(cost).toBeVisible();
 });
 
 for (const scenario of [
   {
     name: "link-only",
     counts: { total: 3, withText: 0 },
-    label: "Browse 3 review links",
   },
-  { name: "mixed", counts: { total: 3, withText: 2 }, label: "Read 2 reviews" },
+  { name: "mixed", counts: { total: 3, withText: 2 } },
   {
     name: "unknown",
     counts: undefined,
-    label: "Explore reviews & family discussions",
   },
 ]) {
-  test(`Overview distinguishes ${scenario.name} coverage from readable review counts`, async ({
+  test(`Overview omits ${scenario.name} review coverage and counts`, async ({
     page,
   }) => {
     await page.route("**/api/search?**", async (route) => {
@@ -203,22 +201,296 @@ for (const scenario of [
     });
     const dialog = await openOverview(page, "07068", "BENCHMARK AT ROSELAND");
     const overview = dialog.getByRole("region", { name: "Property overview" });
-    await expect(
-      overview.getByRole("button", { name: scenario.label, exact: true }),
-    ).toBeVisible();
+    await expect(overview.getByRole("button")).toHaveCount(0);
+    await expect(overview.locator("blockquote")).toHaveCount(0);
     await expect(overview).not.toContainText(
-      /Read 0 reviews|0 reviews available/,
+      /review|research summaries|What people say/i,
     );
-    if (scenario.name === "link-only") {
-      await expect(overview).not.toContainText("research summaries");
+  });
+}
+
+for (const location of [
+  {
+    name: "VISITING HEALTH SERVICES OF NEW JERSEY",
+    zip: "07960",
+    address: "3 GARRET MOUNTAIN PLAZA, SUITE 400, WOODLAND PARK, NJ 07424",
+    street: "3 GARRET MOUNTAIN PLAZA",
+    office: true,
+  },
+  {
+    name: "Brooksby Village",
+    zip: "02459",
+    address: "100 Brooksby Village Drive, Peabody, MA 01960",
+    street: "100 Brooksby Village Drive",
+    office: false,
+  },
+  {
+    name: "All Care VNA, Hospice and Private Care",
+    zip: "02459",
+    address: "210 Market Street, Lynn, MA 01901",
+    street: "210 Market Street",
+    office: true,
+  },
+]) {
+  test(`Overview starts with the published location and useful directions for ${location.name}`, async ({
+    page,
+  }) => {
+    const dialog = await openOverview(page, location.zip, location.name);
+    const overview = dialog.getByRole("region", { name: "Property overview" });
+    await expect(overview.locator(":scope > div").first()).toHaveClass(
+      "overview-location",
+    );
+    await expect(overview.locator(".overview-address")).toHaveText(
+      location.address,
+    );
+    await expect(dialog.locator(".detail-header")).not.toContainText(
+      location.street,
+    );
+    const directions = overview.getByRole("link", {
+      name: location.office ? "Get directions to the office" : "Get directions",
+      exact: true,
+    });
+    await expect(directions).toHaveAttribute(
+      "href",
+      `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location.address)}`,
+    );
+    await expect(directions).toHaveAttribute("target", "_blank");
+    const dimensions = await directions.evaluate((element) => ({
+      height: element.getBoundingClientRect().height,
+      fontSize: parseFloat(getComputedStyle(element).fontSize),
+    }));
+    expect(dimensions.height).toBeGreaterThanOrEqual(44);
+    expect(dimensions.fontSize).toBeGreaterThanOrEqual(16);
+    if (location.office) {
+      await expect(overview).toContainText(
+        "An office that arranges care, not a residential community.",
+      );
+    } else {
+      await expect(overview).toContainText(
+        "Directions use the published street address.",
+      );
+      await expect(overview).not.toContainText("not a residential");
     }
-    if (scenario.name === "mixed") {
+    await expect(overview).not.toContainText(
+      /entrances|visitor transport|travel times|travel charges/i,
+    );
+    await expect(overview.getByRole("button")).toHaveCount(0);
+    const source = overview.getByRole("link", { name: /Location source/ });
+    await expect(source).toHaveCSS("font-size", "13px");
+    await expect(overview.locator(".overview-address")).toHaveCSS(
+      "font-size",
+      "16px",
+    );
+    await expect(
+      overview.locator(
+        ".daily-life, .fact-cost, .fact-room, .overview-terms, .overview-rate",
+      ),
+    ).toHaveCount(0);
+  });
+}
+
+test("a missing street address never becomes directions to an inferred locality", async ({
+  page,
+}) => {
+  await page.route("**/api/search?**", async (route) => {
+    const response = await route.fetch();
+    const result: SearchResponse = await response.json();
+    for (const provider of result.providers) {
+      if (provider.id === "all-care") provider.address = "";
+    }
+    await route.fulfill({ response, json: result });
+  });
+  const dialog = await openOverview(
+    page,
+    "02459",
+    "All Care VNA, Hospice and Private Care",
+  );
+  const location = dialog.locator(".overview-location");
+  await expect(location).toContainText("A street address is not established.");
+  await expect(
+    location.getByRole("link", { name: /Get directions/ }),
+  ).toHaveCount(0);
+});
+
+for (const entry of [
+  { id: "cms-317058", zip: "07960", office: true },
+  { id: "north-jersey-hp-hp0144800", zip: "07632", office: true },
+  { id: "lifeplan-brooksby-village", zip: "02459", office: false },
+]) {
+  test(`ZIP precision preserves the care setting across tabs for ${entry.id}`, async ({
+    page,
+    request,
+  }) => {
+    const results: SearchResponse = await (
+      await request.get("/api/search", {
+        params: { zip: entry.zip, radius: "50" },
+      })
+    ).json();
+    const provider = results.providers.find(({ id }) => id === entry.id)!;
+    expect(provider).toBeDefined();
+    expect(provider.locationKind).toBe("zip");
+    const dialog = await openOverview(page, entry.zip, provider.name);
+    const location = dialog.locator(".overview-location");
+    await expect(
+      location.getByRole("heading", {
+        name: entry.office ? "Service location & access" : "Location & access",
+        exact: true,
+      }),
+    ).toBeVisible();
+    await expect(location).toContainText(
+      "Exact location point not confirmed; distance and map use ZIP area estimate.",
+    );
+    await expect(location).not.toContainText("campus");
+    await dialog
+      .getByRole("tab", { name: "Costs & perks", exact: true })
+      .click();
+    await expect(
+      dialog.getByRole("heading", {
+        name: entry.office
+          ? "How care is delivered"
+          : "Room types & living arrangements",
+        exact: true,
+      }),
+    ).toBeVisible();
+    await expect(dialog.locator(".research-question li")).toHaveText(
+      entry.office
+        ? [
+            "Hourly or visit rates and minimum shifts.",
+            "Overnight or live-in charges and nursing fees.",
+            "Cancellation terms and what insurance covers.",
+          ]
+        : [
+            "Room or rent, assessed care and medication support.",
+            "Second-person fees, deposits and annual increases.",
+            "Refund terms and any minimum stay.",
+          ],
+    );
+    if (entry.office) {
+      await expect(dialog).toContainText(
+        "Care is arranged through an office, not a residential room.",
+      );
+      await expect(dialog.locator(".daily-life-gaps")).toContainText(
+        "meal preparation; companionship & outings; transport arrangements",
+      );
+    } else {
       await expect(
-        overview.getByRole("button", {
-          name: "Browse 1 more review link",
-          exact: true,
-        }),
+        dialog.getByRole("heading", { name: "Everyday comforts & transport" }),
       ).toBeVisible();
+      await expect(dialog).not.toContainText(
+        "Care is arranged through an office",
+      );
+    }
+    await dialog.getByRole("tab", { name: "Details", exact: true }).click();
+    await expect(
+      dialog
+        .getByRole("region", { name: "Availability", exact: true })
+        .locator(".research-question li"),
+    ).toHaveText(
+      entry.office
+        ? [
+            "Service at your address and care needs.",
+            "Staff availability, start date and minimum shifts.",
+            "Assessment requirements.",
+          ]
+        : [
+            "Care level, room type and move-in window.",
+            "Assessment requirements and waitlist position.",
+            "Refundable deposit and how long a room can be held.",
+          ],
+    );
+    await expect(dialog.locator(".daily-life-gaps")).toContainText(
+      entry.office
+        ? "Confirm the assigned roles, visit length and backup coverage."
+        : "Ask for staffing by role and shift, including overnight coverage.",
+    );
+  });
+}
+
+test("a published PO box is preserved without directions to a guessed office", async ({
+  page,
+}) => {
+  const dialog = await openOverview(
+    page,
+    "07632",
+    "GARDEN STATE HOME CARE SERVICES LLC",
+  );
+  const location = dialog.locator(".overview-location");
+  await expect(location).toContainText(
+    "P.O. BOX 1131, ENGLEWOOD CLIFFS, NJ 07632",
+  );
+  await expect(location).toContainText("Mailing address only.");
+  await expect(location).toContainText(
+    "A service-area listing, not a verified residential location.",
+  );
+  await expect(location).not.toContainText("campus");
+  await expect(
+    location.getByRole("link", { name: /Get directions/ }),
+  ).toHaveCount(0);
+});
+
+for (const state of ["loading", "failed", "wrong-provider"] as const) {
+  test(`published location stays useful when research is ${state}`, async ({
+    page,
+  }) => {
+    let release = () => {};
+    const gate = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    await page.route(
+      "**/api/research?id=lifeplan-brooksby-village",
+      async (route) => {
+        if (state === "failed") {
+          await route.fulfill({
+            status: 503,
+            json: { error: "Controlled research failure" },
+          });
+        } else {
+          const response = await route.fetch();
+          const data: LocationResearchResponse = await response.json();
+          if (state === "loading") await gate;
+          else data.providerId = "another-provider";
+          await route.fulfill({ response, json: data });
+        }
+      },
+    );
+    const dialog = await openOverview(page, "02459", "Brooksby Village");
+    const location = dialog.locator(".overview-location");
+    await expect(location.locator(".overview-address")).toHaveText(
+      "100 Brooksby Village Drive, Peabody, MA 01960",
+    );
+    await expect(
+      location.getByRole("link", { name: "Get directions", exact: true }),
+    ).toHaveAttribute(
+      "href",
+      "https://www.google.com/maps/dir/?api=1&destination=100%20Brooksby%20Village%20Drive%2C%20Peabody%2C%20MA%2001960",
+    );
+    await expect(
+      dialog
+        .getByRole("region", { name: "Property overview" })
+        .getByRole("button"),
+    ).toHaveCount(0);
+    await expect(
+      dialog.locator(".overview-experience, .property-overview blockquote"),
+    ).toHaveCount(0);
+    if (state === "loading") {
+      await expect(
+        dialog.locator(".location-research [role=status]"),
+      ).toContainText("Loading");
+      release();
+      await expect(
+        dialog.locator(".location-research [role=status]"),
+      ).toHaveCount(0);
+      await expect(location.locator(".overview-address")).toHaveText(
+        "100 Brooksby Village Drive, Peabody, MA 01960",
+      );
+    } else {
+      await expect(
+        dialog.locator(".location-research [role=alert]"),
+      ).toContainText(
+        state === "failed"
+          ? "could not be loaded"
+          : "did not match this location",
+      );
     }
   });
 }

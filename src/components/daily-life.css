@@ -124,40 +124,8 @@
   color: #53674f;
 }
 
-.provider-detail .daily-life-compact .daily-life-group {
-  padding-block: 12px;
-}
-
-.provider-detail
-  .location-research
-  .research-panel.daily-life-costs
-  :is(p, li, .small, .research-source, .cost-label, summary):not(.daily-life *) {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.provider-detail .daily-life-costs h4 {
-  font-size: 20px;
-}
-
-.provider-detail .daily-life-costs :is(.research-source, summary) {
-  min-height: 44px;
-}
-
-.provider-detail .location-research:has(.daily-life-costs) > .section-title h3 {
-  font-size: 24px;
-}
-
-.provider-detail
-  .location-research:has(.daily-life-costs)
-  > .section-title
-  > span {
-  font-size: 16px;
-}
-
 .provider-detail .daily-life .daily-life-sources :is(p, a, summary),
-.provider-detail .daily-life .daily-life-date,
-.provider-detail .daily-life .daily-life-more summary {
+.provider-detail .daily-life .daily-life-date {
   font-size: 13px;
   line-height: 1.5;
 }

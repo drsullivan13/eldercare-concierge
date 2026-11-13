@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   individualReviews,
   reviewAccountCounts,
+  reviewPageGroups,
 } from "../src/lib/individual-reviews";
 import type { LocationResearch } from "../src/lib/location-research-types";
 import type { ReviewCatalog } from "../src/lib/review-catalog-types";
@@ -248,4 +249,40 @@ test("an alias with the wrong prior URL cannot replace a retained account", () =
   const merged = individualReviews(research, input);
   assert.equal(merged.accounts.length, 1);
   assert.equal(merged.accounts[0].url, research.reviews[0].url);
+});
+
+test("a page keeps readable narratives and groups only empty records by exact source", () => {
+  const accounts = individualReviews(research, catalog()).accounts;
+  accounts.push({
+    ...accounts[1],
+    id: "other-source-link",
+    sourceId: "different-source",
+  });
+  const groups = reviewPageGroups(accounts);
+  assert.deepEqual(
+    groups.narratives.map((account) => account.id),
+    ["retained-account"],
+  );
+  assert.deepEqual(
+    groups.sourceLinks.map((group) => group.map((account) => account.id)),
+    [["new-link", "second-link"], ["other-source-link"]],
+  );
+  assert.deepEqual(reviewAccountCounts(accounts), { total: 4, withText: 1 });
+});
+
+test("whitespace-only records are grouped but original summaries remain readable narratives", () => {
+  const accounts = individualReviews(research, catalog()).accounts;
+  accounts[1].excerpt = "  ";
+  accounts[1].summary = "\n";
+  accounts[2].summary = "An attributed original summary.";
+  accounts[2].representation = "original-summary";
+  const groups = reviewPageGroups(accounts);
+  assert.deepEqual(
+    groups.narratives.map((account) => account.id),
+    ["retained-account", "second-link"],
+  );
+  assert.deepEqual(
+    groups.sourceLinks[0].map((account) => account.id),
+    ["new-link"],
+  );
 });

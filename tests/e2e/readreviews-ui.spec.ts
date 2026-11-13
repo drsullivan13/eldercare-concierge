@@ -86,7 +86,7 @@ test("direct card entry separates source counts, reads actual individual records
   await expect(dialog.locator(".review-count-clarity")).toContainText(
     `${evidence.experience.reviewCount} source ratings used`,
   );
-  const visible = dialog.locator(".public-reviews article");
+  const visible = dialog.locator(".public-reviews [data-review-account]");
   expect(await visible.count()).toBeLessThanOrEqual(6);
   expect(await visible.count()).toBeGreaterThan(0);
   if (catalog.accounts.length > 6) {
@@ -248,7 +248,9 @@ test("actual North Hill source keeps 38 mixed-campus ratings distinct from four 
   const catalog: IndividualReviewsResponse = await response.json();
   const source = catalog.sources.find((item) => item.reportedCount === 38)!;
   expect(source).toBeTruthy();
-  expect(source.scopeNote).toContain("38 ratings across North Hill and Pines Edge");
+  expect(source.scopeNote).toContain(
+    "38 ratings across North Hill and Pines Edge",
+  );
   expect(catalog.accounts).toHaveLength(4);
   const evidence: LocationResearchResponse = await (
     await request.get("/api/research", { params: { id } })
@@ -355,7 +357,11 @@ test("review paging keeps the family filter and returns keyboard focus after rec
   await expect(dialog.locator(".review-page-heading")).toContainText(
     "Accounts 7–8 of 8",
   );
-  await expect(dialog.locator(".public-reviews article")).toHaveCount(2);
+  await expect(dialog.locator(".public-reviews article")).toHaveCount(1);
+  await expect(
+    dialog.locator(".public-reviews [data-review-account]"),
+  ).toHaveCount(2);
+  await dialog.locator(".public-reviews details > summary").click();
   await expect(
     dialog.getByRole("checkbox", { name: "Family & resident accounts" }),
   ).toBeChecked();
@@ -366,4 +372,88 @@ test("review paging keeps the family filter and returns keyboard focus after rec
     dialog.locator(".public-reviews .review-meta").first(),
   ).toContainText("Self-described family");
   await checkLayout(page);
+});
+
+test("actual Chatham source shows original summaries, keeps the building concern and groups the staff link", async ({
+  page,
+  request,
+}, testInfo) => {
+  const id = "cms-315120";
+  const response = await request.get("/api/reviews", { params: { id } });
+  expect(response.ok()).toBe(true);
+  const catalog: IndividualReviewsResponse = await response.json();
+  expect(catalog.accounts).toHaveLength(5);
+  const summaries = catalog.accounts.filter(
+    (account) => account.representation === "original-summary",
+  );
+  expect(summaries).toHaveLength(4);
+  await search(page, "07928", "CHATHAM HILLS");
+  const card = page.locator("article.provider-card").filter({
+    has: page.getByRole("button", {
+      name: "CHATHAM HILLS SUBACUTE CARE CENTER",
+      exact: true,
+    }),
+  });
+  await card.locator("button.provider-review-entry").click();
+  const dialog = page.getByRole("dialog");
+  await expect(
+    dialog.getByText("Checking for additional individual records…"),
+  ).toHaveCount(0);
+  await expect(dialog.locator(".review-count-clarity")).toContainText(
+    "4 reviews here + 1 link",
+  );
+  await expect(dialog.locator(".review-count-clarity")).toContainText(
+    "224 source ratings used",
+  );
+  await expect(dialog.locator(".review-source-scope")).toContainText(
+    "both an employee and a family member",
+  );
+  await expect(dialog.locator(".public-reviews blockquote")).toHaveCount(0);
+  await expect(dialog.locator(".public-reviews .review-summary")).toHaveCount(
+    4,
+  );
+  for (const account of summaries) {
+    const narrative = dialog.locator(
+      `[data-review-account][id$="-account-${account.id}"]`,
+    );
+    await expect(narrative).toContainText(account.summary);
+    await expect(narrative).toContainText("Harbor summary");
+    await expect(narrative.getByRole("link")).toHaveAttribute(
+      "href",
+      account.url,
+    );
+  }
+  await expect(dialog.locator(".public-reviews")).toContainText(
+    "building needs updating",
+  );
+  const browse = dialog.getByText("Browse 1 original account", { exact: true });
+  await expect(browse).toBeVisible();
+  await browse.click();
+  const staff = catalog.accounts.find(
+    (account) => account.relationship === "staff",
+  )!;
+  const staffRow = dialog.locator(
+    `[data-review-account][id$="-account-${staff.id}"]`,
+  );
+  await expect(staffRow).toBeVisible();
+  await expect(staffRow).toContainText("Self-described staff");
+  await expect(staffRow.getByRole("link")).toHaveAttribute("href", staff.url);
+  await checkLayout(page);
+  await dialog.locator(".review-count-clarity").scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: testInfo.outputPath("chatham-original-summaries.png"),
+  });
+  await dialog
+    .getByRole("checkbox", { name: "Family & resident accounts" })
+    .check();
+  await expect(dialog.locator(".review-page-heading")).toBeFocused();
+  await expect(
+    dialog.locator(".public-reviews [data-review-account]"),
+  ).toHaveCount(4);
+  await expect(
+    dialog.getByText("Browse 1 original account", { exact: true }),
+  ).toHaveCount(0);
+  await expect(dialog.locator(".review-count-clarity")).toContainText(
+    "224 source ratings used",
+  );
 });

@@ -8,7 +8,8 @@ type ReviewCatalogAccount = {
   relationship: "family" | "resident" | "staff" | "visitor" | "unknown";
   excerpt: string | null;
   summary: string | null;
-  representation: "licensed-excerpt" | "reviewed-excerpt" | "link-only";
+  representation:
+    "licensed-excerpt" | "reviewed-excerpt" | "original-summary" | "link-only";
   provenance: "retained-reviewed" | "new-public-page";
   nativeReviewId?: string;
   retainedReview?: { id: string; url: string };

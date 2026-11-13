@@ -164,13 +164,13 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
     await expandFacts(dialog);
     const panel = dialog.locator(".research-panel");
     await expect(
-      panel.getByRole("heading", { name: "Care, amenities & everyday life" }),
+      panel.getByRole("heading", { name: "Amenities & everyday life" }),
     ).toBeVisible();
     const dailySources = panel.locator(".daily-life-sources");
     await dailySources.locator("summary").click();
     for (const fact of data.facts.filter(
       (f) =>
-        ["care", "amenity", "activity", "dining"].includes(f.kind) &&
+        ["amenity", "activity", "dining"].includes(f.kind) &&
         data.sources.find((source) => source.id === f.sourceId)?.kind !==
           "regulator",
     )) {
@@ -293,7 +293,7 @@ test("Costs & perks prioritizes real prices or amenities without repeating the i
     ).toHaveAccessibleName(
       costs.length
         ? "Published costs & what they include"
-        : "Care, amenities & everyday life",
+        : "Amenities & everyday life",
     );
     await expect(
       dialog.locator(".location-research > .section-title"),
@@ -880,7 +880,7 @@ test("research failures recover on retry and wrong-location payloads never displ
   await expect(dialog.locator(".research-panel")).toHaveCount(0);
 });
 
-test("families see sourced costs and an account preview, with a direct path to concerns", async ({
+test("families see sourced costs and attributed accounts with concerns in destination tabs", async ({
   page,
   request,
 }, testInfo) => {
@@ -892,37 +892,20 @@ test("families see sourced costs and an account preview, with a direct path to c
   const dialog = await openLocation(page, data.providerId);
   const accounts = dialog.locator(".public-reviews article");
   const overview = dialog.locator(".property-overview");
-  await expect(
-    overview.getByRole("button", { name: "Price details & source" }),
-  ).toBeVisible();
-  await expect(overview.locator(".overview-rate")).toContainText("$2,523");
-  await overview
-    .getByRole("button", { name: "Price details & source" })
-    .click();
+  await expect(overview.getByRole("button")).toHaveCount(0);
+  await expect(overview.locator("blockquote")).toHaveCount(0);
+  await showPane(dialog, "Costs & perks");
+  await expandFacts(dialog);
   const monthly = dialog.locator(".fact-cost").filter({
     hasText: "Independent-living studio Monthly Service Package",
   });
-  await expect(monthly).toBeFocused();
+  await expect(monthly).toBeVisible();
   await expect(monthly).toContainText("schedule changes January 1, 2027");
-  await showPane(dialog, "Overview");
-  await expect(overview.locator("blockquote")).toBeVisible();
-  const caveat = overview.locator(".overview-caveat");
-  await expect(caveat.locator("p")).toBeHidden();
-  await caveat.locator("summary").click();
-  await expect(caveat.locator("p")).toBeVisible();
-  await expect(caveat).toContainText(
-    "Relationships are not independently verified",
-  );
-  await overview
-    .getByRole("button", { name: "Read concerns", exact: true })
-    .click();
-  await expect(
-    dialog.getByRole("tab", { name: "Reviews", exact: true }),
-  ).toHaveAttribute("aria-selected", "true");
+  await showPane(dialog, "Reviews");
   const unfavorable = accounts.filter({
     hasText: "The food is generally awful.",
   });
-  await expect(unfavorable).toBeFocused();
+  await expect(unfavorable).toBeVisible();
   await expect(unfavorable.locator("blockquote")).toHaveText(
     "“The food is generally awful.”",
   );
@@ -974,7 +957,10 @@ test("families see sourced costs and an account preview, with a direct path to c
     "Date not published",
   );
   await expect(
-    reddit.getByRole("link", { name: "Read the original account on Reddit" }),
+    reddit.getByRole("link", {
+      name: "Read the original account linked by Reddit",
+      exact: true,
+    }),
   ).toHaveAttribute(
     "href",
     "https://www.reddit.com/r/SalemMA/comments/1c6njun/assisted_living/",
@@ -994,7 +980,8 @@ test("families see sourced costs and an account preview, with a direct path to c
   await expect(syndicated).toContainText("Research summary");
   await expect(
     syndicated.getByRole("link", {
-      name: "Read the original account on Birdeye",
+      name: "Read the original account linked by Birdeye",
+      exact: true,
     }),
   ).toHaveAttribute(
     "href",
@@ -1051,9 +1038,7 @@ test("families can open concerns even when a mixed account has a favorable excer
 }) => {
   await openSearch(page);
   const dialog = await openLocation(page, "ma-alr-evans-park-at-newton-corner");
-  await dialog
-    .getByRole("button", { name: "Read concerns", exact: true })
-    .click();
+  await showPane(dialog, "Reviews");
   const first = dialog
     .locator(".public-reviews article")
     .filter({ hasText: "some nurses that were wonderful" });
@@ -1091,12 +1076,7 @@ test("office coverage, a free assessment and aggregate review links stay useful 
   const response = await request.get("/api/research?id=all-care");
   const data: LocationResearchResponse = await response.json();
   expect(data.reviews).toEqual([]);
-  await dialog
-    .getByRole("button", {
-      name: "Price details & source",
-      exact: true,
-    })
-    .click();
+  await showPane(dialog, "Costs & perks");
   await expect(
     dialog.getByRole("tabpanel", { name: "Costs & perks", exact: true }),
   ).toBeVisible();
@@ -1104,14 +1084,12 @@ test("office coverage, a free assessment and aggregate review links stay useful 
     dialog.getByRole("heading", { name: "How care is delivered" }),
   ).toBeVisible();
   await showPane(dialog, "Overview");
-  await dialog.getByRole("button", { name: "All perks & services" }).click();
+  await showPane(dialog, "Costs & perks");
   await expect(
     dialog.getByRole("tabpanel", { name: "Costs & perks", exact: true }),
   ).toBeVisible();
   await showPane(dialog, "Overview");
-  await dialog
-    .getByRole("button", { name: "Explore reviews & family discussions" })
-    .click();
+  await showPane(dialog, "Reviews");
   await expect(
     dialog.getByRole("tabpanel", { name: "Reviews", exact: true }),
   ).toBeVisible();
@@ -1139,14 +1117,28 @@ test("office coverage, a free assessment and aggregate review links stay useful 
     "href",
     `tel:${provider.phone!.replace(/[^+\d]/g, "")}`,
   );
-  await expect(dialog).toContainText("Office location only");
-  if (provider.serviceArea)
+  await showPane(dialog, "Overview");
+  await expect(dialog).toContainText(
+    "An office that arranges care, not a residential community.",
+  );
+  if (provider.serviceArea) {
+    const area = dialog.getByRole("region", { name: "Property overview" });
     await expect(
       dialog.getByText(
         `Provider-reported service area. ${provider.serviceArea}`,
         { exact: true },
       ),
-    ).toBeVisible();
+    ).toHaveCount(1);
+    await expect(area).toContainText(provider.serviceArea);
+    await expect(area).toContainText(
+      "Office proximity does not confirm service at your address or staff availability.",
+    );
+    await showPane(dialog, "Details");
+    await expect(dialog).not.toContainText(provider.serviceArea);
+    await expect(dialog).not.toContainText(
+      "Office proximity does not confirm service at your address or staff availability.",
+    );
+  }
   await showPane(dialog, "Costs & perks");
   await expect(dialog).not.toContainText(
     "Room layouts have not been researched",
@@ -1162,6 +1154,7 @@ test("office coverage, a free assessment and aggregate review links stay useful 
   await expect(dialog).toContainText(
     "No numeric ongoing care rate is established here",
   );
+  await showPane(dialog, "Details");
   await expect(
     dialog
       .locator(".catalog-services li")

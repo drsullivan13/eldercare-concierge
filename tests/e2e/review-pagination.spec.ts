@@ -60,7 +60,11 @@ async function collectAccounts(page: Page, dialog: Locator) {
     exact: true,
   });
   for (let count = 0; count < 100; count++) {
-    const articles = dialog.locator(".public-reviews article");
+    const closed = dialog.locator(
+      ".public-reviews details:not([open]) > summary",
+    );
+    while (await closed.count()) await closed.first().click();
+    const articles = dialog.locator(".public-reviews [data-review-account]");
     expect(await articles.count()).toBeGreaterThan(0);
     expect(await articles.count()).toBeLessThanOrEqual(6);
     for (const article of await articles.all()) {
