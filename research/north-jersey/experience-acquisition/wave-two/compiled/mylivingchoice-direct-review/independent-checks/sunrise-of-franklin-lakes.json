@@ -1,0 +1,85 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 51,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-receipts.json",
+      "sha256": "8801fadea804f8f9a4bcc4d2149ef55403ed29260045db07c539aef4f3a9d78b"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/batch.json",
+      "sha256": "b655552f47597c57f719c2e7dd6de4b7358bbc409583448b66e60bfcf076ef73"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-ledger.json",
+      "sha256": "4ea4e1819f737f84b2fd650aef45c3bcb44cbb3a56ba0e6da3400842a0227de5"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/reviewed.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/sunrise-of-franklin-lakes.json",
+      "sha256": "ebccd4b3ef24fe96224ff29b61e49a6d540afa1347b6a93eb98948b74cf0001c"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "728 Franklin Avenue",
+    "careUnit": "Assisted LivingMemory Care",
+    "city": "Franklin Lakes",
+    "name": "Sunrise of Franklin Lakes",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ25284",
+  "platform": "MyLivingChoice",
+  "providerId": "north-jersey-doh-nj25284",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-04",
+        "id": "mlc-google-525408",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-525409",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-525410",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2025-11",
+        "id": "mlc-google-525411",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2025-10",
+        "id": "mlc-google-525412",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/sunrise-of-franklin-lakes"
+}

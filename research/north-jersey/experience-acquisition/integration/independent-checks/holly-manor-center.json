@@ -1,0 +1,73 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 136,
+    "rating": 4.2,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/source-checks/holly-manor-center.json",
+      "sha256": "13bc06358820b2edd1ca274e9345e04e6d2cb42b70c75deb5165e50a8e20cc21"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/integration/reviewed-mylivingchoice.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "84 Cold Hill Road",
+    "careUnit": "Memory CareSkilled Nursing / Long Term CareRespite / Short-Term Care",
+    "city": "Mendham",
+    "name": "Holly Manor Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ61406",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315143",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608629",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608633",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-608631",
+        "sentiment": "mixed"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-608627",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2025-09",
+        "id": "mlc-google-608634",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/holly-manor-center"
+}

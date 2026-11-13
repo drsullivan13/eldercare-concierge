@@ -3,34 +3,46 @@ import assert from "node:assert/strict";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import Methodology from "../src/app/methodology/page";
+import { EvidenceStandards } from "../src/components/dashboard/research-standards";
+import { ExperienceExplanation } from "../src/components/experience-explanation";
+import { FamilyExperienceEvidence } from "../src/components/family-experience";
+import { ResearchDisclosure } from "../src/components/dashboard/research-disclosure";
+import { searchProviders } from "../src/lib/search";
+import { getLocationResearch } from "../src/lib/location-research";
+import { publicLocationResearch } from "../src/lib/public-location-research";
 
-test("public methodology explains sparse samples, disagreement and narrative independence without replacing the family-thread policy", () => {
-  const text = renderToStaticMarkup(createElement(Methodology))
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ");
-  assert.match(text, /EXPERIENCE V2/);
-  assert.match(
-    text,
-    /single source family needs at least 30 reported reviews/i,
+test("public research explanations retain source context without disclosing scoring rules", () => {
+  const detail = publicLocationResearch(
+    getLocationResearch("lifeplan-brooksby-village", "2026-11-12"),
   );
-  assert.match(text, /at least five each and ten total/);
-  assert.match(
-    text,
-    /withholds its number when two independent sources with at least ten reviews each differ by two or more points/,
+  const surfaces = [
+    createElement(Methodology),
+    createElement(EvidenceStandards),
+    createElement(ExperienceExplanation, { data: detail, uid: "test" }),
+    createElement(FamilyExperienceEvidence, {
+      evidence: detail.familyExperience,
+    }),
+    createElement(ResearchDisclosure, {
+      data: searchProviders({ zip: "02459", radius: 50 }),
+      filtered: true,
+    }),
+  ];
+  for (const surface of surfaces) {
+    const text = renderToStaticMarkup(surface)
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ");
+    assert.doesNotMatch(
+      text,
+      /square root|weighted|threshold|EXPERIENCE V2|The calculation|Publication requirements|180 days|365 days|730 days|30 reported|five each|two or more points|ordered by thread count|scores tie|sorting tied scores|same published score/i,
+    );
+  }
+  const text = renderToStaticMarkup(
+    createElement(ExperienceExplanation, { data: detail, uid: "test" }),
   );
-  assert.match(
-    text,
-    /original platform averages and review counts remain visible/,
-  );
-  assert.match(
-    text,
-    /at least three recent, distinct critical reviews form a majority/,
-  );
-  assert.match(text, /same rule to favorable accounts/);
-  assert.match(
-    text,
-    /Neither selected accounts nor Facebook posts add to the platform’s reported review count/,
-  );
-  assert.match(text, /These accounts do not change that score/);
-  assert.match(text, /separately licensed nursing and assisted-living units/);
+  assert.match(text, /44 source-reported ratings/);
+  assert.match(text, /Published rating/);
+  assert.match(text, /Rating scope/);
+  assert.match(text, /Reviewers are not independently authenticated/);
+  assert.match(text, /not a clinical-quality or safety score/);
+  assert.match(text, /href="https:/);
 });

@@ -12,12 +12,12 @@ export type IndividualReview = RetainedReview & {
 export type IndividualReviewsResponse = {
   providerId: string;
   accounts: IndividualReview[];
-  sources: ReviewCatalog["sources"];
+  sources: Omit<ReviewCatalog["sources"][number], "sourceFamily">[];
   notes: string[];
 };
 
 export function individualReviews(
-  research: LocationResearch,
+  research: Pick<LocationResearch, "providerId" | "sources" | "reviews">,
   catalog: ReviewCatalog | null,
 ): IndividualReviewsResponse {
   if (catalog && catalog.providerId !== research.providerId)

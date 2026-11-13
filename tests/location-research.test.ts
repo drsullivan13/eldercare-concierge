@@ -12,6 +12,7 @@ import { getMarket } from "../src/lib/markets";
 import { getFacebookResearch } from "../src/lib/facebook-research";
 import { searchProviders, getProvidersByIds } from "../src/lib/search";
 import { GET } from "../src/app/api/research/route";
+import { publicLocationResearch } from "../src/lib/public-location-research";
 import type { LocationResearch } from "../src/lib/location-research-types";
 
 const snapshot = merged as Record<string, LocationResearch>;
@@ -92,10 +93,15 @@ test("Facebook-only catalog records remain accessible through the getter and res
     const response = GET(new Request(`http://localhost/api/research?id=${id}`));
     assert.equal(response.status, 200);
     const body = await response.json();
-    assert.deepEqual(body.facebookResearch, facebook);
+    assert.deepEqual(
+      body.facebookResearch,
+      JSON.parse(
+        JSON.stringify(publicLocationResearch(detail).facebookResearch),
+      ),
+    );
     assert.equal(body.providerId, id);
     assert.equal(body.experience.value, null);
-    assert.deepEqual(body.experience.includedSources, []);
+    assert.equal(Object.hasOwn(body.experience, "includedSources"), false);
   } finally {
     market.locationResearch = original;
   }

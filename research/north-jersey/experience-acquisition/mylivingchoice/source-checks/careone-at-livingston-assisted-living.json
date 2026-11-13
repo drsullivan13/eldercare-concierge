@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 32,
+    "rating": 4.5,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_370bf0777fe7b22e_1.log",
+    "section": "r82",
+    "sha256": "28666cd3860246f258dc6b63c9e8425b89be46ca5fcff4061ee6c260ccdf9584"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x0:0x524da8a3718c0c84"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "76 Passaic Ave",
+    "careUnit": "Assisted LivingMemory Care",
+    "city": "Livingston",
+    "name": "CareOne at Livingston Assisted Living",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "9dabab399aef8673b81d85b23bb0b6db778752f9d29986314e74cafdfc7b3579",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Assisted LivingMemory Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-03",
+        "id": "mlc-google-628907",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xSTVZGSmxhelJCWWtaS01uWTJWV1l4TlhFM2RXYxAB!2m1!1s0x0:0x524da8a3718c0c84!3m1!1s2@1:CAIQACodChtycF9oOlRMVFJlazRBYkZKMnY2VWYxNXE3dWc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "8dc9f5d7890363f890d88a589e37455298325b09aabd9bf43c052d96126dfe74",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-628908",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pndFVHRnVkV1pCYTNBMk5HaE1SMGsxU25VM2EzYxAB!2m1!1s0x0:0x524da8a3718c0c84!3m1!1s2@1:CAIQACodChtycF9oOjgtUGFudWZBa3A2NGhMR0k1SnU3a3c%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "32dacef5e3bc9ad93ca84c8f4dad7894b663f86ff47f0c521cb7ba88e59d0d24",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-628909",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT201V1RsOWxTSFJ0VGt4bGRFaGljemxhTkZsRk4zYxAB!2m1!1s0x0:0x524da8a3718c0c84!3m1!1s2@1:CAIQACodChtycF9oOm5WTl9lSHRtTkxldEhiczlaNFlFN3c%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "bc32a776995896791dbe08b6144c8bb75ca0d62b8b2ceadd9d31b902e1369dfc",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-628910",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pCQ1duUXlWV0ZHV0RKc2JGVkdhM2hVYUVaemNtYxAB!2m1!1s0x0:0x524da8a3718c0c84!3m1!1s2@1:CAIQACodChtycF9oOjBCWnQyVWFGWDJsbFVGa3hUaEZzcmc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "caa14a37223c1300e5dfd21945e6178d03e51e66d46d20b8c3576f8c2bcb2327",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-628911",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tSeFJrMVVMWEZXYmtWVVFtNWlNell6ZVhwcGFIYxAB!2m1!1s0x0:0x524da8a3718c0c84!3m1!1s2@1:CAIQACodChtycF9oOkRxRk1ULXFWbkVUQm5iMzYzeXppaHc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "384069802dde909af538039577d085b87c3bedc9d05bd45b57dfc1bde4cac791",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/careone-at-livingston-assisted-living"
+}

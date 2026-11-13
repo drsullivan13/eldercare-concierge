@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 173,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_7aacc8540bc7fb41_1.log",
+    "section": "r67",
+    "sha256": "31571337d13f7b6dfb274f225a22be4ccac94f3ebc07981739364b934e4ca76e"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2fb125c13ae3f:0x39a419cb1b8ae724"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "12-15 Saddle River Road",
+    "careUnit": "Skilled Nursing / Long Term CareRespite / Short-Term Care",
+    "city": "Fair Lawn",
+    "name": "Maple Glen Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "6ab2a53a60d77c7e597df351cdac1545331b748bb25377422b7cd0f555527280",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term CareRespite / Short-Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-04",
+        "id": "mlc-google-305869",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tOTk5FSktRblJoUjFwTVdFaFZXV0pGVUU1aGEyYxAB!2m1!1s0x89c2fb125c13ae3f:0x39a419cb1b8ae724",
+        "privateWindowSegmentSha256": "ff1d3862eabc33168cee57029937f3e9a03e6810c34a85fc19cb877ab80be6b1",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-305868",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2w5bGVuZEpSRkJ1UWpCVE5YSjBkbWhFWDNoRGRrRRAB!2m1!1s0x89c2fb125c13ae3f:0x39a419cb1b8ae724",
+        "privateWindowSegmentSha256": "d761e2b8d280a80583fd166646e8dc11fffd43d85574f97d4de96fd1da505647",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305871",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pKa1FWbDZabVJqTkhKbVJGQkdUbmhvVDI1MFUyYxAB!2m1!1s0x89c2fb125c13ae3f:0x39a419cb1b8ae724",
+        "privateWindowSegmentSha256": "26c7eee9e49a1773950ede12aa39df5103b0a60c43f18e72400be6cd0e0ee071",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-305870",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25wbFgwMWpVRkZ6VFMxUVlubGZVM0p6WkU5TWNVRRAB!2m1!1s0x89c2fb125c13ae3f:0x39a419cb1b8ae724",
+        "privateWindowSegmentSha256": "338f1cf5245bc75e2a06dc2067d90dbebcae55146393a3513e12539c2dc8a7d3",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jan 2026"
+      },
+      {
+        "date": "2025-11",
+        "id": "mlc-google-305872",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2paTVZIaG5Va2x1UlU4NVZHY3pVa2RtV2pJNWVuYxAB!2m1!1s0x89c2fb125c13ae3f:0x39a419cb1b8ae724",
+        "privateWindowSegmentSha256": "f99730f98eb11da3809bd1e328b4ba2069c473c17bf22fefda56de0dbf09990e",
+        "sentiment": "positive",
+        "sourcePublishedText": "Nov 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/maple-glen-center"
+}

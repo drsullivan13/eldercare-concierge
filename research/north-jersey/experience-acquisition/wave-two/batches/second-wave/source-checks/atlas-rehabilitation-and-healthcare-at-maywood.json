@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 214,
+    "rating": 4.2,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_370bf0777fe7b22e_1.log",
+    "section": "r88",
+    "sha256": "28666cd3860246f258dc6b63c9e8425b89be46ca5fcff4061ee6c260ccdf9584"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2fa31343bc00b:0xe37775dbd6bd1f6c"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "100 West Magnolia Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Maywood",
+    "name": "Atlas Healthcare at Maywood",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "401c7882880fd4181dbdb3459efc94a6d2b5860e1789374b4dd0f32cdce77a10",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609256",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT200emVXZzVUMWcxY0RkVVFXdEpjMWwwVm5JM1YwRRAB!2m1!1s0x89c2fa31343bc00b:0xe37775dbd6bd1f6c",
+        "privateWindowSegmentSha256": "73abdc4dba318e198c932c372083537eaa305d9726ca4d7ded8175f8ed99108c",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609257",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pCelpXSnhhbE50TFUxaGVYQnRiM0Z1TjBocFpXYxAB!2m1!1s0x89c2fa31343bc00b:0xe37775dbd6bd1f6c",
+        "privateWindowSegmentSha256": "2c699adfff48e3884319ec1ff163ef80266243a58825687650e45589fd7487bd",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609258",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21relYyUldTa3QyTkd4aVMzbDNiR2wzVUdaUmVGRRAB!2m1!1s0x89c2fa31343bc00b:0xe37775dbd6bd1f6c",
+        "privateWindowSegmentSha256": "a96c1179f25919ffd203b8bef60b7af4ea28d1589b78ae96592c1a61a2a30671",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-609259",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21KNVR6bGxhRGRKVTB4TlpIaE5SRmN5WTFoT1FYYxAB!2m1!1s0x89c2fa31343bc00b:0xe37775dbd6bd1f6c",
+        "privateWindowSegmentSha256": "8b73fcc51b34930a3f7c909576be7dc01e3b6a3643a7ecd1a953aea2d6596e54",
+        "sentiment": "negative",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-609260",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pkSVJYTkthbXhLUm1WQ09YTXRNMnBSWDNFd1RsRRAB!2m1!1s0x89c2fa31343bc00b:0xe37775dbd6bd1f6c",
+        "privateWindowSegmentSha256": "c29cf635c503babe08fc33236912a59e0a7f3e251b9fff4b9791eca5f34bc134",
+        "sentiment": "negative",
+        "sourcePublishedText": "Feb 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/atlas-rehabilitation-and-healthcare-at-maywood"
+}

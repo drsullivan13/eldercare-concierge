@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 86,
+    "rating": 4.0,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_7aacc8540bc7fb41_1.log",
+    "section": "r66",
+    "sha256": "31571337d13f7b6dfb274f225a22be4ccac94f3ebc07981739364b934e4ca76e"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2f07762254045:0x1ee33c848142928c"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "800 River Road",
+    "careUnit": "Memory CareSkilled Nursing / Long Term Care",
+    "city": "New Milford",
+    "name": "Careone At New Milford",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "fb4de1b72cff7529776c698e9ec901e16a8505c4008444e11283fef4c822b4be",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Memory CareSkilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609011",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21KNUxVWlBiemxhVnpjMGRXUjZZVUpoWVU0elprRRAB!2m1!1s0x89c2f07762254045:0x1ee33c848142928c",
+        "privateWindowSegmentSha256": "250dab4bc91b614533203cc21e3cb61217480c9e9a88a88ac6929c35aa6bd589",
+        "sentiment": "mixed",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609018",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2toM2N6aDJOMnhQYlROU05GSnZZVGx5Tm5aeE1FRRAB!2m1!1s0x89c2f07762254045:0x1ee33c848142928c",
+        "privateWindowSegmentSha256": "3c0103555340348c5ebf43bc86b682cfbbb0651fa7f1193d393a8c8bfdde3469",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609013",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2trd1ltbDNPWGRmVkdGc2JUQTFhM04yTUZkdlpGRRAB!2m1!1s0x89c2f07762254045:0x1ee33c848142928c",
+        "privateWindowSegmentSha256": "720c0f3901d0b28b403ba9115460bc7555fbbbb4d4cd4138d1412497acfd8b25",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609015",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21oU05HTlllRnAyVUZoV2NWbDVWMmgzUkdsRmNIYxAB!2m1!1s0x89c2f07762254045:0x1ee33c848142928c",
+        "privateWindowSegmentSha256": "72f7f7c3505d9269b1e9200760b32c33c08c0a0238f47cd69d0d3756097177c1",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-609021",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pCcFh6QXlXRkJDYWpKMVJGaHRjbFUwWXpOb1FtYxAB!2m1!1s0x89c2f07762254045:0x1ee33c848142928c",
+        "privateWindowSegmentSha256": "78a560d0872b6db330ff92cfc5274b96ec9702bfcf54d7c29c0ac367e4ee23a4",
+        "sentiment": "negative",
+        "sourcePublishedText": "Feb 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/careone-at-new-milford"
+}

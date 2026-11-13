@@ -1,0 +1,73 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 47,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/source-checks/brookdale-emerson.json",
+      "sha256": "94c3a46f08f91d99e589b28d2e48cda6acf817254048256b36b46bd20b17044d"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/integration/reviewed-mylivingchoice.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "590 Old Hook Road",
+    "careUnit": "Assisted LivingMemory Care",
+    "city": "Emerson",
+    "name": "Brookdale Emerson",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ5A004",
+  "platform": "MyLivingChoice",
+  "providerId": "north-jersey-doh-nj5a004",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-529072",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-529073",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-529074",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-529075",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-529076",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/brookdale-emerson"
+}

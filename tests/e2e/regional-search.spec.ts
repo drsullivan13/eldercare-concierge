@@ -103,7 +103,7 @@ async function openCoverage(page: Page) {
   const method = page.locator("details.search-research-disclosure");
   if ((await method.getAttribute("open")) === null)
     await method
-      .getByText("Research coverage & method", { exact: true })
+      .getByText("Research coverage & sources", { exact: true })
       .click();
 }
 

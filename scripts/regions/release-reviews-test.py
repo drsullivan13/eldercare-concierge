@@ -104,6 +104,231 @@ class ReleaseTests(unittest.TestCase):
         with self.assertRaisesRegex(release.ReleaseError, message):
             self.build(approvals)
 
+    def acquisition(self, *, family="caring", day="2026-11-13", batch_day="2026-11-13"):
+        approval = copy.deepcopy(self.approval)
+        approval.update(id="new-acquisition", checkedAt=day, platform="Caring.com",
+                        url="https://www.caring.com/senior-living/new-jersey/morristown/example-home")
+        approval["aggregate"].update(rating=4.2, count=30, sourceFamily=family)
+        receipt = {
+            key: copy.deepcopy(approval[key]) for key in
+            ("providerId", "officialId", "url", "platform", "checkedAt", "identity", "aggregate")
+        }
+        receipt.update(sourceType="review-platform", inspection="full-page",
+                       access_decision="permitted_public_page", httpStatus=200,
+                       evidence=[], reviewSample={
+                           "sourceFamily": family, "selection": "all-visible-before-highlighting",
+                           "visibleCount": 0, "observations": [],
+                       })
+        base = str(release.ACQUISITION)
+        observation_path = base + "/original-sources/receipts.json"
+        material_path = base + "/integration/check.json"
+        self.write(observation_path, {"receipts": [receipt]})
+        self.write(material_path, receipt)
+        approval["observation"] = self.reference(observation_path, "/receipts/0")
+        approval["material"] = self.reference(material_path)
+        self.write(str(release.ACQUISITION_LEDGER), {
+            "schemaVersion": 1,
+            "batches": [{"id": "original-batch", "assessmentDate": batch_day, "approvals": [approval]}],
+        })
+        return approval, receipt
+
+    def test_acquisition_empty_is_byte_identical_and_unlisted_files_are_not_read(self):
+        before = self.build()
+        self.write(str(release.ACQUISITION / "original-sources/unreviewed.json"), "not valid JSON")
+        for batches in ([], [{"id": "empty-batch", "assessmentDate": "2026-11-13", "approvals": []}]):
+            self.write(str(release.ACQUISITION_LEDGER), {"schemaVersion": 1, "batches": batches})
+            self.assertEqual(release.encoded(before), release.encoded(self.build()))
+
+    def test_acquisition_adds_original_mean_count_without_overwriting_legacy(self):
+        before = self.build()
+        approval, _ = self.acquisition()
+        output = self.build()
+        record = output["locationResearch.json"]["cms-315488"]
+        old = before["locationResearch.json"]["cms-315488"]
+        self.assertIn(old["sources"][0], record["sources"])
+        self.assertIn(old["reviewAggregates"][0], record["reviewAggregates"])
+        added = next(a for a in record["reviewAggregates"] if a["platform"] == "Caring.com")
+        for key, value in approval["aggregate"].items():
+            self.assertEqual(added[key], value)
+        summary = output["experience-verification.json"]["releasedOutput"]["cms-315488"]
+        self.assertEqual(summary["reviewCount"], 70)
+        self.assertEqual(summary["independentSourceCount"], 2)
+        self.assertEqual(record["facts"], [])
+        self.assertEqual(record["reviews"], [])
+        audit = next(a for a in output["approvals-audit.json"]["approvals"]
+                     if a["approval"]["id"] == approval["id"])
+        self.assertEqual(audit["acquisitionBatch"],
+                         {"id": "original-batch", "assessmentDate": "2026-11-13"})
+        self.assertEqual(old["sources"][0]["checkedAt"], "2026-11-12")
+        self.assertEqual(release.encoded(output), release.encoded(self.build()))
+        paths = {r["path"] for r in output["manifest.json"]["inputs"]}
+        self.assertTrue({str(release.ACQUISITION_LEDGER), approval["observation"]["path"],
+                         approval["material"]["path"]}.issubset(paths))
+        self.assertEqual(len(record["sources"]), len({s["id"] for s in record["sources"]}))
+
+    def test_acquisition_batch_dates_do_not_relax_legacy_dates(self):
+        self.acquisition()
+        self.approval["checkedAt"] = "2026-11-13"
+        self.assert_fails("future independent check date")
+
+    def test_acquisition_validates_each_batch_date_independently(self):
+        self.acquisition(batch_day="2026-11-12")
+        self.assert_fails("exceeds its batch date")
+        self.acquisition(batch_day="2999-01-01")
+        self.assert_fails("Invalid acquisition batch date")
+
+    def test_acquisition_duplicate_ids_fail_instead_of_overwriting(self):
+        approval, _ = self.acquisition()
+        approval["id"] = self.approval["id"]
+        ledger_path = str(release.ACQUISITION_LEDGER)
+        ledger = json.loads((self.root / ledger_path).read_bytes())
+        ledger["batches"][0]["approvals"] = [approval]
+        self.write(ledger_path, ledger)
+        self.assert_fails("Duplicate approval ID")
+
+    def test_acquisition_requires_explicit_ids_and_observed_address(self):
+        for field, value, message in (
+            ("providerId", None, "explicit exact-unit"),
+            ("officialId", None, "explicit exact-unit"),
+            ("identity", {**self.approval["identity"], "address": "152 Madison Avenue"}, "identity mismatch"),
+        ):
+            with self.subTest(field=field):
+                approval, receipt = self.acquisition()
+                approval[field] = receipt[field] = value
+                self.write(approval["observation"]["path"], {"receipts": [receipt]})
+                self.write(approval["material"]["path"], receipt)
+                approval["observation"] = self.reference(approval["observation"]["path"], "/receipts/0")
+                approval["material"] = self.reference(approval["material"]["path"])
+                self.write(str(release.ACQUISITION_LEDGER), {
+                    "schemaVersion": 1, "batches": [
+                        {"id": "exact-unit", "assessmentDate": "2026-11-13", "approvals": [approval]}],
+                })
+                self.assert_fails(message)
+
+    def test_acquisition_rejects_check_disagreement_access_failures_and_sample_injection(self):
+        for field, value, message in (
+            ("identity", {**self.approval["identity"], "address": "Wrong"}, "disagrees"),
+            ("aggregate", {**self.approval["aggregate"], "count": 99}, "disagrees"),
+            ("access_decision", "restricted", "permitted"),
+            ("httpStatus", 403, "successful full-page"),
+            ("inspection", "search-result", "successful full-page"),
+            ("checkedAt", "2026-11-14", "batch date"),
+            ("reviews", [], "Malformed acquisition independent check"),
+        ):
+            with self.subTest(field=field):
+                approval, receipt = self.acquisition()
+                receipt[field] = value
+                self.write(approval["material"]["path"], receipt)
+                ledger_path = str(release.ACQUISITION_LEDGER)
+                ledger = json.loads((self.root / ledger_path).read_bytes())
+                ledger["batches"][0]["approvals"][0]["material"] = self.reference(approval["material"]["path"])
+                self.write(ledger_path, ledger)
+                self.assert_fails(message)
+
+    def test_acquisition_receipt_and_check_hash_drift_fail(self):
+        for field in ("observation", "material"):
+            with self.subTest(field=field):
+                approval, _ = self.acquisition()
+                self.write(approval[field]["path"], "{}")
+                self.assert_fails("Source hash drift")
+
+    def test_acquisition_family_dedup_uses_the_real_scorer(self):
+        approval, receipt = self.acquisition(family="google")
+        receipt.update(platform="MyLivingChoice",
+                       url="https://www.mylivingchoice.com/property/example-home-second-reading")
+        receipt["aggregate"] = copy.deepcopy(self.approval["aggregate"])
+        approval.update(platform=receipt["platform"], url=receipt["url"], aggregate=receipt["aggregate"])
+        self.write(approval["observation"]["path"], {"receipts": [receipt]})
+        self.write(approval["material"]["path"], receipt)
+        approval["observation"] = self.reference(approval["observation"]["path"], "/receipts/0")
+        approval["material"] = self.reference(approval["material"]["path"])
+        self.write(str(release.ACQUISITION_LEDGER), {
+            "schemaVersion": 1,
+            "batches": [{"id": "google-repeat", "assessmentDate": "2026-11-13", "approvals": [approval]}],
+        })
+        output = self.build()
+        summary = output["experience-verification.json"]["releasedOutput"]["cms-315488"]
+        self.assertEqual(summary["value"], 8.8)
+        self.assertEqual(summary["reviewCount"], 40)
+        self.assertEqual(summary["independentSourceCount"], 1)
+        self.assertEqual(len(output["exclusions.json"]), 1)
+
+    def test_acquisition_invalid_receipt_pointer_fails(self):
+        for pointer in ("/receipts/01", "/receipts/99", "/missing", "/~invalid", 1):
+            with self.subTest(pointer=pointer):
+                self.acquisition()
+                path = str(release.ACQUISITION_LEDGER)
+                ledger = json.loads((self.root / path).read_bytes())
+                ledger["batches"][0]["approvals"][0]["observation"]["pointer"] = pointer
+                self.write(path, ledger)
+                self.assert_fails("receipt pointer")
+
+    def acquisition_sample(self, observations):
+        approval, receipt = self.acquisition()
+        receipt["reviewSample"].update(visibleCount=len(observations), observations=observations)
+        self.write(approval["observation"]["path"], {"receipts": [receipt]})
+        self.write(approval["material"]["path"], receipt)
+        approval["observation"] = self.reference(approval["observation"]["path"], "/receipts/0")
+        approval["material"] = self.reference(approval["material"]["path"])
+        self.write(str(release.ACQUISITION_LEDGER), {
+            "schemaVersion": 1, "batches": [
+                {"id": "complete-window", "assessmentDate": "2026-11-13", "approvals": [approval]}],
+        })
+        return approval, receipt
+
+    def test_acquisition_contrary_majority_withholds_headline_without_changing_votes(self):
+        observations = [
+            {"id": f"visible-{i}", "date": "2026-10", "sentiment": sentiment}
+            for i, sentiment in enumerate(["negative"] * 3 + ["mixed", "positive"])
+        ]
+        self.acquisition_sample(observations)
+        output = self.build()
+        record = output["locationResearch.json"]["cms-315488"]
+        summary = output["experience-verification.json"]["releasedOutput"]["cms-315488"]
+        self.assertIsNone(summary["value"])
+        self.assertEqual(summary["reviewCount"], 70)
+        self.assertTrue(any(s["conflicts"] for s in summary["sampleDiagnostics"]))
+        self.assertEqual(record["reviewSamples"][0]["observations"], observations)
+        self.assertEqual(record["reviews"], [])
+        self.assertEqual(release.encoded(output), release.encoded(self.build()))
+
+    def test_acquisition_sample_rejects_incomplete_duplicate_future_and_injected_rows(self):
+        row = {"id": "row-one", "date": "2026-10", "sentiment": "mixed"}
+        for observations, changes, message in (
+            ([row], {"visibleCount": 2}, "complete visible review window"),
+            ([row, row], {}, "duplicate acquisition sample"),
+            ([{**row, "date": "2026-13"}], {}, "observation date"),
+            ([{**row, "date": "2026-11-14"}], {}, "observation date"),
+            ([{**row, "sentiment": "critical"}], {}, "sample sentiment"),
+            ([{**row, "excerpt": "must not publish"}], {}, "Malformed acquisition sample"),
+            ([row], {"sourceFamily": "google"}, "complete visible review window"),
+        ):
+            with self.subTest(message=message, changes=changes):
+                approval, receipt = self.acquisition_sample(observations)
+                receipt["reviewSample"].update(changes)
+                self.write(approval["observation"]["path"], {"receipts": [receipt]})
+                self.write(approval["material"]["path"], receipt)
+                approval["observation"] = self.reference(approval["observation"]["path"], "/receipts/0")
+                approval["material"] = self.reference(approval["material"]["path"])
+                self.write(str(release.ACQUISITION_LEDGER), {
+                    "schemaVersion": 1, "batches": [
+                        {"id": "invalid-window", "assessmentDate": "2026-11-13", "approvals": [approval]}],
+                })
+                self.assert_fails(message)
+
+    def test_acquisition_independent_window_disagreement_fails(self):
+        approval, receipt = self.acquisition_sample([
+            {"id": "visible-one", "date": None, "sentiment": "neutral"},
+        ])
+        receipt["reviewSample"]["observations"][0]["sentiment"] = "positive"
+        self.write(approval["material"]["path"], receipt)
+        approval["material"] = self.reference(approval["material"]["path"])
+        self.write(str(release.ACQUISITION_LEDGER), {
+            "schemaVersion": 1, "batches": [
+                {"id": "window-disagreement", "assessmentDate": "2026-11-13", "approvals": [approval]}],
+        })
+        self.assert_fails("review window disagrees")
+
     def test_real_typescript_score_and_missing_zip_resolution(self):
         output = self.build()
         record = output["locationResearch.json"]["cms-315488"]

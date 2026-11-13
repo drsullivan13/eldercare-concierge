@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 79,
+    "rating": 4.7,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_8fe5c435e78e055a_1.log",
+    "section": "r108",
+    "sha256": "4b0fc80cb3954ed9291fc83572e5274ff4710e9a20dbe9237858595dc255aaa9"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x0:0x893797688b086a7a"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "55 Hudson Ave.",
+    "careUnit": "Assisted LivingMemory Care",
+    "city": "Tenafly",
+    "name": "Brightview Tenafly - Senior Assisted Living & Memory Care",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "f2f13e1349137550d79f8786d3d4221a94b545366ef9e18c3e6f166c60322c8f",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Assisted LivingMemory Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-05",
+        "id": "mlc-google-625730",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKUU9UWjVXa2x4VVdGWk9XWnBVbVppY1hWWWQyYxAB!2m1!1s0x0:0x893797688b086a7a!3m1!1s2@1:CAIQACodChtycF9oOkJQOTZ5WklxUWFZOWZpUmZicXVYd2c%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "dd4e3dab059b5b1b14e03c87e4a5bc0bb7631b26cd75aef4f6da7ca702c11280",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-625731",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tOMVlXbDFSRWs0VXkxTU1YVjZWMVZxUVZCQlpsRRAB!2m1!1s0x0:0x893797688b086a7a!3m1!1s2@1:CAIQACodChtycF9oOkN1YWl1REk4Uy1MMXV6V1VqQVBBZlE%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "32bc37382b9ba148995499799d58a466a6571a6489570295eb75e126d6847fb1",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-625732",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pKSGNFTXlOMmg1WTFNeU9WQnZVMTlhWkRCeVVrRRAB!2m1!1s0x0:0x893797688b086a7a!3m1!1s2@1:CAIQACodChtycF9oOjJHcEMyN2h5Y1MyOVBvU19aZDByUkE%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "f0b5f0203abcee9c8e846a6b703f399d8d09a48278ec9f06901b1238f9b47479",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-625733",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Vd0xWaFhXVGh4V1RsUWNXcEpOamxVYm10T1RHYxAB!2m1!1s0x0:0x893797688b086a7a!3m1!1s2@1:CAIQACodChtycF9oOnUwLVhXWThxWTlQcWpJNjlUbmtOTGc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "32d1d37664d18a4b700029bde06abccec01b6680031f75762cbc81f595107f9d",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-625734",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xKU1EzUTJhWEJwTWtOVE9WWjNhMW94ZVc0MGRIYxAB!2m1!1s0x0:0x893797688b086a7a!3m1!1s2@1:CAIQACodChtycF9oOlJSQ3Q2aXBpMkNTOVZ3a1oxeW40dHc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "836756b705292cf4f9792dc6ac183395a3290e5c2063a56b4c9548c3280acf1c",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/brightview-tenafly-senior-assisted-living-and-memory-care"
+}

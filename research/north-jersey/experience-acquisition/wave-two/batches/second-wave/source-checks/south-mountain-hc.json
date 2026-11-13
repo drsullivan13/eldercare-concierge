@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 350,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_8fe5c435e78e055a_1.log",
+    "section": "r101",
+    "sha256": "4b0fc80cb3954ed9291fc83572e5274ff4710e9a20dbe9237858595dc255aaa9"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3ad12e463fdff:0x8e6fa3d4485b9680"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "2385 Springfield Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Vauxhall",
+    "name": "South Mountain Healthcare and Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "6a116b86a1fc768cb26dee9e5374e0d1a17969cbd9365f62686b8dcf0e4d9e23",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608936",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tkUExUTnBOWFJJYUU1eGRHaGFjWEpwWjFseGFrRRAB!2m1!1s0x89c3ad12e463fdff:0x8e6fa3d4485b9680",
+        "privateWindowSegmentSha256": "38d59f847ada3ab756509edaddd93a354d7e9abb1ca9eacdf666ac3b0773113b",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608939",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tkVFdXRjVObGxITUZWRE1VOHdibXhTVDNSdlNuYxAB!2m1!1s0x89c3ad12e463fdff:0x8e6fa3d4485b9680",
+        "privateWindowSegmentSha256": "1c4e1893212d09ac61984c36bafbb5c178669f19230e968183c9321483224802",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608938",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xsSU5VOWpXamhHZG1GYVRHUnlXVk5QYUVocGVXYxAB!2m1!1s0x89c3ad12e463fdff:0x8e6fa3d4485b9680",
+        "privateWindowSegmentSha256": "769827ac949c47de5c878962d56d2425a01f0f70a912bb48fd55b1f81cb12dcc",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608937",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pSa05URmFYMjkxYmpoRmNXVkZZMDFQVGpaQ2VtYxAB!2m1!1s0x89c3ad12e463fdff:0x8e6fa3d4485b9680",
+        "privateWindowSegmentSha256": "1aca92769102c0297113118930a5aec2d6053d6cae00699fe8142c4e9451418b",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608940",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21GaVVreFVMVEpmWDBaNFRIaHNUbFUzTXpsU2NuYxAB!2m1!1s0x89c3ad12e463fdff:0x8e6fa3d4485b9680",
+        "privateWindowSegmentSha256": "05de2581b32ebc40e719cbb38d6c7d5f9d611399620c1490958f786544c8e512",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/south-mountain-hc"
+}

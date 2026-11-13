@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 214,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_ecccae4b5565921a_1.log",
+    "section": "r17",
+    "sha256": "9c465b86a46f2423143e99d1cecb8b412c9ac8ecde40c9c8941270fc34232361"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3abbbc10fb94b:0x3b30b08c8a60d7e5"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "42 North Mountain Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Montclair",
+    "name": "Family of Caring at Montclair",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "576f91274c70a149c38767e3575856282f00593ec062fe784292cb391fcadfb1",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609336",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tkMmFUTTNVRUZ3Y1V4dlJFSkZUa2haZVU5dFVYYxAB!2m1!1s0x89c3abbbc10fb94b:0x3b30b08c8a60d7e5",
+        "privateWindowSegmentSha256": "3af3dd5ee8994135a2cb853c9808d174d92ce7082376b06793f01e14535c41e7",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609344",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xCV1IydFFiR3BOZVhkRVMxUjNOMmhVU0ZoTFUwRRAB!2m1!1s0x89c3abbbc10fb94b:0x3b30b08c8a60d7e5",
+        "privateWindowSegmentSha256": "19e7ddcf7ca60d01ec26e89b4bd66e3415f0cf28d5d96fe4274286f6775ef98f",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609340",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xJNVJHOVpXVVIwUlcwMFJEUnpjbGxPVEhwTVQzYxAB!2m1!1s0x89c3abbbc10fb94b:0x3b30b08c8a60d7e5",
+        "privateWindowSegmentSha256": "85cfa297f93481d997dd8b81cb64ffb876e83a071b9eae04810c8ac212df5cc3",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609338",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sdmJqRlBZbnBoVDNGa09XNW1UR0pNUTJoalZYYxAB!2m1!1s0x89c3abbbc10fb94b:0x3b30b08c8a60d7e5",
+        "privateWindowSegmentSha256": "f0f2ee1dbd700572857d2c94c3ab0e29427c5562e36d2ba85f1d5048ee9363d6",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-609342",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25VelNXVlJVV3RITkRaRk5tRk1XR0V4UW5aWVJsRRAB!2m1!1s0x89c3abbbc10fb94b:0x3b30b08c8a60d7e5",
+        "privateWindowSegmentSha256": "8474c5687a3dc43180fdfee9adcc46a5d88e8ce76307db4fa48bc94d6027f9fd",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/family-of-caring-healthcare-at-montclair"
+}

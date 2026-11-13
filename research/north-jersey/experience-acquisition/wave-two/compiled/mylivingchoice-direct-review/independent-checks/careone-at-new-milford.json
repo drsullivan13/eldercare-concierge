@@ -1,0 +1,85 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 86,
+    "rating": 4.0,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-receipts.json",
+      "sha256": "8801fadea804f8f9a4bcc4d2149ef55403ed29260045db07c539aef4f3a9d78b"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/batch.json",
+      "sha256": "b655552f47597c57f719c2e7dd6de4b7358bbc409583448b66e60bfcf076ef73"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-ledger.json",
+      "sha256": "4ea4e1819f737f84b2fd650aef45c3bcb44cbb3a56ba0e6da3400842a0227de5"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/reviewed.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/careone-at-new-milford.json",
+      "sha256": "3494ebb7ee5693db02725ae758245bc10502d0f3a84760f4a56e712bbf263870"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "800 River Road",
+    "careUnit": "Memory CareSkilled Nursing / Long Term Care",
+    "city": "New Milford",
+    "name": "Careone At New Milford",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ60222",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315306",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609011",
+        "sentiment": "mixed"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609018",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609013",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609015",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-609021",
+        "sentiment": "negative"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/careone-at-new-milford"
+}

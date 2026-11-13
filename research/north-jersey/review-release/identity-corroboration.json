@@ -1,23 +1,423 @@
 [
   {
-    "providerId":"cms-315104", "officialId":"NJ62004",
-    "listingName":"Cornell Care & Rehabilitation Center managed by Autumn Lake Healthcare at Union",
-    "operatorName":"Cornell Care and Rehabilitation", "officeOrFacility":"234 Chestnut St", "city":"Union", "state":"NJ", "zip":"07083", "category":"nursing-home",
-    "sourceUrl":"https://autumnlakeunion.com/contact/", "checkedAt":"2026-11-12",
-    "basis":"Operator contact page identifies Cornell Care and Rehabilitation as the care provider, confirms use of the Autumn Lake Healthcare at Union name and lists the facility street."
+    "basis": "Operator contact page identifies Cornell Care and Rehabilitation as the care provider, confirms use of the Autumn Lake Healthcare at Union name and lists the facility street.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-12",
+    "city": "Union",
+    "listingName": "Cornell Care & Rehabilitation Center managed by Autumn Lake Healthcare at Union",
+    "officeOrFacility": "234 Chestnut St",
+    "officialId": "NJ62004",
+    "operatorName": "Cornell Care and Rehabilitation",
+    "providerId": "cms-315104",
+    "sourceUrl": "https://autumnlakeunion.com/contact/",
+    "state": "NJ",
+    "zip": "07083"
   },
   {
-    "providerId":"north-jersey-hp-hp0015347", "officialId":"HP0015347",
-    "listingName":"BAYADA Assistive Care", "operatorName":"BAYADA Personal and Companion Care",
-    "officeOrFacility":"32 Maple Avenue, 1st Floor", "city":"Morristown", "state":"NJ", "zip":"07960", "category":"home-care",
-    "sourceUrl":"https://www.bayada.com/office/nj/morristown/personal-and-companion-care/morris-county-10005", "checkedAt":"2026-11-12",
-    "basis":"The local office page identifies personal and companion home-care services at the exact first-floor address. The listing is limited to at-home care for that office, separate from the certified agency in Cranford."
+    "basis": "The local office page identifies personal and companion home-care services at the exact first-floor address. The listing is limited to at-home care for that office, separate from the certified agency in Cranford.",
+    "category": "home-care",
+    "checkedAt": "2026-11-12",
+    "city": "Morristown",
+    "listingName": "BAYADA Assistive Care",
+    "officeOrFacility": "32 Maple Avenue, 1st Floor",
+    "officialId": "HP0015347",
+    "operatorName": "BAYADA Personal and Companion Care",
+    "providerId": "north-jersey-hp-hp0015347",
+    "sourceUrl": "https://www.bayada.com/office/nj/morristown/personal-and-companion-care/morris-county-10005",
+    "state": "NJ",
+    "zip": "07960"
   },
   {
-    "providerId":"north-jersey-doh-nj90a001", "officialId":"NJ90A001",
-    "listingName":"Brandywine Summit by Monarch", "operatorName":"Brandywine Living at Summit",
-    "officeOrFacility":"41 Springfield Ave", "city":"Summit", "state":"NJ", "zip":"07901", "category":"assisted-living",
-    "sourceUrl":"https://www.monarchcommunities.com/company/locations/nj", "aliasSourceUrl":"https://www.hcanj.org/facility-finder/brandywine-living-at-summit-as/", "checkedAt":"2026-11-12",
-    "basis":"The operator's community listing uses the licensed name at this street and municipality. The state industry association independently lists the exact review-page name at the identical address."
+    "aliasSourceUrl": "https://www.hcanj.org/facility-finder/brandywine-living-at-summit-as/",
+    "basis": "The operator's community listing uses the licensed name at this street and municipality. The state industry association independently lists the exact review-page name at the identical address.",
+    "category": "assisted-living",
+    "checkedAt": "2026-11-12",
+    "city": "Summit",
+    "listingName": "Brandywine Summit by Monarch",
+    "officeOrFacility": "41 Springfield Ave",
+    "officialId": "NJ90A001",
+    "operatorName": "Brandywine Living at Summit",
+    "providerId": "north-jersey-doh-nj90a001",
+    "sourceUrl": "https://www.monarchcommunities.com/company/locations/nj",
+    "state": "NJ",
+    "zip": "07901"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "JERSEY CITY",
+    "listingName": "Acclaim Rehabilitation and Care Center",
+    "officeOrFacility": "198 stevens ave",
+    "officialId": "60909",
+    "operatorName": "Acclaim Rehabilitation & Care Center",
+    "providerId": "cms-315083",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/acclaim-rehabilitation-and-nursing-center.json",
+      "sha256": "8e1242cd5246677aae214fd57abe482c51a82152f40a9c6851343e546da59931"
+    },
+    "sourceUrl": "https://acclaimrehab.com/contact/",
+    "state": "NJ",
+    "zip": "07305"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "home-health",
+    "checkedAt": "2026-11-13",
+    "city": "HACKENSACK",
+    "listingName": "Amedisys Home Health Care",
+    "officeOrFacility": "21 main st ste 252",
+    "officialId": "317047",
+    "operatorName": "Amedisys Home Health Care (4201)",
+    "providerId": "cms-317047",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/amedisys-home-health-care-hackensack.json",
+      "sha256": "254627db42bff65fdaaa4fabee7ea79ea6ba3273cea1ddee6f141f61402411c9"
+    },
+    "sourceUrl": "https://locations.amedisys.com/nj/hackensack/home-health-4201/",
+    "state": "NJ",
+    "zip": "07601"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "MAYWOOD",
+    "listingName": "Atlas Healthcare at Maywood",
+    "officeOrFacility": "100 w magnolia ave",
+    "officialId": "NJ60203",
+    "operatorName": "Atlas Healthcare",
+    "providerId": "cms-315386",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/atlas-rehabilitation-and-healthcare-at-maywood.json",
+      "sha256": "734538892931704e502bb0595122e68acaf882cfbbee1bcbe1371696445934e0"
+    },
+    "sourceUrl": "https://www.maywoodrehab.com/contact/",
+    "state": "NJ",
+    "zip": "07607"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "EAST ORANGE",
+    "listingName": "Brookhaven Center for Rehabilitation and Healthcare",
+    "officeOrFacility": "120 park end pl",
+    "officialId": "NJ60732",
+    "operatorName": "Brookhaven Center for Rehabilitation and Healthcare",
+    "providerId": "cms-315268",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/brookhaven-health-care-center.json",
+      "sha256": "b681c602b4ad7056980c163aeed676692266ef4c24cb725545c37725bbe91162"
+    },
+    "sourceUrl": "https://brookhavencare.com/contact-us/",
+    "state": "NJ",
+    "zip": "07018"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "PARSIPPANY TROY HILL",
+    "listingName": "CareOne at Parsippany Skilled Nursing",
+    "officeOrFacility": "100 mazdabrook rd",
+    "officialId": "NJPSIFQU",
+    "operatorName": "CareOne at Parsippany",
+    "providerId": "cms-315468",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/careone-at-parsippany.json",
+      "sha256": "4c791b4e89f0141f8685b9c4a8209d499efb2158514111810b86002d3f23d38a"
+    },
+    "sourceUrl": "https://parsippanychamber.org/business/care-one-parsippany/",
+    "state": "NJ",
+    "zip": "07054"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "PASSAIC",
+    "listingName": "Complete Care at Hamilton Plaza",
+    "officeOrFacility": "56 hamilton ave",
+    "officialId": "NJ61627",
+    "operatorName": "Complete Care at Hamilton Plaza",
+    "providerId": "cms-315221",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/complete-care-at-hamilton-llc.json",
+      "sha256": "7e1ad085468cab4330fca9339d5d8e8c2ecfb685dd5b84102236471bf07d6ce8"
+    },
+    "sourceUrl": "https://www.hcanj.org/facility-finder/complete-care-at-hamilton/",
+    "state": "NJ",
+    "zip": "07055"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "WAYNE",
+    "listingName": "Complete Care at Wayne Hills",
+    "officeOrFacility": "130 terhune dr",
+    "officialId": "NJ61610",
+    "operatorName": "Complete Care at Wayne Hills Rehab and Respiratory Center",
+    "providerId": "cms-315110",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/complete-care-at-wayne-hills-rehab-resp-center.json",
+      "sha256": "08dbcf8aa27fb07b3c808395b63f3ea73dbddd485a49f37bee225ba97350a5dc"
+    },
+    "sourceUrl": "https://ccwaynehills.com/contact",
+    "state": "NJ",
+    "zip": "07470"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "WEST ORANGE",
+    "listingName": "Daughters of Israel Home",
+    "officeOrFacility": "1155 pleasant valley way",
+    "officialId": "NJ70770",
+    "operatorName": "Daughters Of Israel",
+    "providerId": "cms-315029",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/daughters-of-israel-pleasant-valley-home.json",
+      "sha256": "752cb635c0e3b50af046747a8d3dfc32e5819ac07cfb8714224bb0b2d4a0010e"
+    },
+    "sourceUrl": "https://www.daughtersofisrael.org/contactus/contact-us",
+    "state": "NJ",
+    "zip": "07052"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "ELIZABETH",
+    "listingName": "Elmora Hills Healthcare & Rehabilitation Center",
+    "officeOrFacility": "225 w jersey st",
+    "officialId": "NJ32003",
+    "operatorName": "Elmora Hills Healthcare and Rehabilitation",
+    "providerId": "cms-315010",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/elmora-hills-health-rehabilitation-center.json",
+      "sha256": "02807c25651e98eaffdc3ec28e34d934b1800f3e5a08b9f6d77debe031674b32"
+    },
+    "sourceUrl": "https://elmorahills.com/contact-us/",
+    "state": "NJ",
+    "zip": "07202"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "EMERSON",
+    "listingName": "Emerson Health and Rehabilitation Center",
+    "officeOrFacility": "100 kinderkamack rd",
+    "officialId": "NJ60202",
+    "operatorName": "Emerson Health & Rehab Center",
+    "providerId": "cms-315360",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/emerson-health-care-center.json",
+      "sha256": "ae28e2e9fb70eaa78d34ad464ca48ddd9e67c03c99e34c07a2b707305b88ed1e"
+    },
+    "sourceUrl": "https://www.hcanj.org/facility-finder/emerson-health-rehab-center/",
+    "state": "NJ",
+    "zip": "07630"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "MONTCLAIR",
+    "listingName": "Family of Caring at Montclair",
+    "officeOrFacility": "42 n mountain ave",
+    "officialId": "NJ60719",
+    "operatorName": "Family of Caring at Montclair",
+    "providerId": "cms-315435",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/family-of-caring-healthcare-at-montclair.json",
+      "sha256": "694c61451a63ca0a5edfaa9ec089b98c6b20368736282ff52da582d754c71c83"
+    },
+    "sourceUrl": "https://familyofcaring.com/our-locations/",
+    "state": "NJ",
+    "zip": "07042"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "RIDGEWOOD",
+    "listingName": "Family of Caring",
+    "officeOrFacility": "304 s van dien ave",
+    "officialId": "NJ60227",
+    "operatorName": "Family of Caring at Ridgewood",
+    "providerId": "cms-315434",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/family-of-caring-healthcare-at-ridgewood.json",
+      "sha256": "aec3705a3644382f8b0e0acfa131da7cc3240f4fe556baa178406dfc473a9408"
+    },
+    "sourceUrl": "https://familyofcaring.com/our-locations/",
+    "state": "NJ",
+    "zip": "07450"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "TENAFLY",
+    "listingName": "Family of Caring at Tenafly",
+    "officeOrFacility": "133 county rd",
+    "officialId": "NJ60206",
+    "operatorName": "Family of Caring at Tenafly",
+    "providerId": "cms-315164",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/family-of-caring-healthcare-at-tenafly-llc.json",
+      "sha256": "d6332c8c1f4b1fd2f98760c15e389717117bc67eed7f93652d181fec317c97dd"
+    },
+    "sourceUrl": "https://familyofcaring.com/our-locations/",
+    "state": "NJ",
+    "zip": "07670"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "NEWARK",
+    "listingName": "Forest Hill Center for Rehabilitation and Healing",
+    "officeOrFacility": "497 mt prospect ave",
+    "officialId": "NJ62203",
+    "operatorName": "Forest Hill Center for Rehabilitation and Healing",
+    "providerId": "cms-315375",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/forest-hills-center-for-rehabilitation-and-healing.json",
+      "sha256": "eeff3884981f6a73c9b46c1395c5b40e57520152ae83b8d187ae7a4a814cc736"
+    },
+    "sourceUrl": "https://foresthillcr.com/contact/",
+    "state": "NJ",
+    "zip": "07104"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "NORTH BERGEN",
+    "listingName": "Hudsonview Center for Rehabilitation and Healthcare",
+    "officeOrFacility": "9020 wall st",
+    "officialId": "NJ60902",
+    "operatorName": "Hudsonview Center for Rehabilitation and Healthcare",
+    "providerId": "cms-315112",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/hudsonview-health-care-center.json",
+      "sha256": "478836fa9e96f9b3e4584ffa90ba4fddc890266cbf9998dfc9e62909deef7e75"
+    },
+    "sourceUrl": "https://hudsonviewrehab.com/contact-us/",
+    "state": "NJ",
+    "zip": "07047"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "WAYNE",
+    "listingName": "Llanfair Care & Rehabilitation Center",
+    "officeOrFacility": "1140 black oak ridge rd",
+    "officialId": "NJ61611",
+    "operatorName": "Llanfair House Care & Rehabilitation Center",
+    "providerId": "cms-315142",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/llanfair-house-care-rehabilitation-center.json",
+      "sha256": "eb0b85245d7bab5c29096a690eb67c060221261320e19637ef27a274597f4111"
+    },
+    "sourceUrl": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ61611",
+    "state": "NJ",
+    "zip": "07470"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "NEWARK",
+    "listingName": "New Community Extended Care",
+    "officeOrFacility": "266 s orange ave",
+    "officialId": "NJ60731",
+    "operatorName": "New Community Extended Care Facility",
+    "providerId": "cms-315393",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/new-community-extended-care-facility.json",
+      "sha256": "f78005a29a9304d5ceeff74371b68aa7f2af587e134f6551afaa29eb40b9553d"
+    },
+    "sourceUrl": "https://newcommunity.org/category/extended-care/",
+    "state": "NJ",
+    "zip": "07103"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "NEWARK",
+    "listingName": "New Vista Nursing and Rehabilitation Center",
+    "officeOrFacility": "300 broadway",
+    "officialId": "NJ60730",
+    "operatorName": "New Vista Nursing and Rehabilitation",
+    "providerId": "cms-315458",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/new-vista-nursing-rehabilitation-ctr.json",
+      "sha256": "77bc9b6972609ba34f2f971e771862da4f2bdc8eaf8c51bbd0617730a6b96768"
+    },
+    "sourceUrl": "https://newvistanursing.com/about-us/",
+    "state": "NJ",
+    "zip": "07104"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "MADISON",
+    "listingName": "Pine Acres Healthcare & Rehabilitation Center",
+    "officeOrFacility": "51 madison ave",
+    "officialId": "NJ61413",
+    "operatorName": "Pine Acres Healthcare & Rehab Center",
+    "providerId": "cms-315053",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/pine-acres-rehabilitation-and-healthcare.json",
+      "sha256": "ac7f8b4673048551ff0bce3c30e2d466c448bd8daad08f663ea4747ea6297a6f"
+    },
+    "sourceUrl": "https://www.hcanj.org/facility-finder/pine-acres-healthcare-rehab-center/",
+    "state": "NJ",
+    "zip": "07940"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "VAUXHALL",
+    "listingName": "South Mountain Healthcare and Rehabilitation Center",
+    "officeOrFacility": "2385 springfield ave",
+    "officialId": "NJ62023",
+    "operatorName": "South Mountain Healthcare and Rehabilitation Center",
+    "providerId": "cms-315283",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/south-mountain-hc.json",
+      "sha256": "4ec2d87fff69fc71f35ce593ec38f5fd89ac0f6322c6c51d3f99255a07f6e75b"
+    },
+    "sourceUrl": "https://southmountainhrc.com/contact/",
+    "state": "NJ",
+    "zip": "07088"
+  },
+  {
+    "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-13",
+    "city": "ORANGE",
+    "listingName": "White House Healthcare Center",
+    "officeOrFacility": "560 berkeley ave",
+    "officialId": "NJ60721",
+    "operatorName": "White House Healthcare",
+    "providerId": "cms-315372",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/white-house-healthcare-and-rehabilitation-center.json",
+      "sha256": "a67806fa04462327b62a871f04cdf951e1785d39f441f7c5b67423ed26c4a294"
+    },
+    "sourceUrl": "https://whitehousehealthcare.com/contact/",
+    "state": "NJ",
+    "zip": "07050"
   }
 ]

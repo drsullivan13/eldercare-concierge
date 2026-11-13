@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 181,
+    "rating": 4.5,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_370bf0777fe7b22e_1.log",
+    "section": "r85",
+    "sha256": "28666cd3860246f258dc6b63c9e8425b89be46ca5fcff4061ee6c260ccdf9584"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3013490b2e6ad:0x1b7c5a8c245aa11"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "165 Fairfield Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "West Caldwell",
+    "name": "Complete Care At West Caldwell",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "7f1d353a3ed068bda2621869fce721cc665b0d464d8fa06ba9df1ce3f3b7a5d2",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-08",
+        "id": "mlc-google-608854",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xKMlgxWnRUbWhzVUhGZk5YRXRMVFF5U3pSaWRIYxAB!2m1!1s0x89c3013490b2e6ad:0x1b7c5a8c245aa11",
+        "privateWindowSegmentSha256": "747741ac860c371a27f782ca662664ccd0234debf756ac01dd9d1ac6a149ec9c",
+        "sentiment": "negative",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608851",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2kxSlVtWk9RMEpOVVZGQmQwMTZlVmh3UjBzelNHYxAB!2m1!1s0x89c3013490b2e6ad:0x1b7c5a8c245aa11",
+        "privateWindowSegmentSha256": "57a665ed3c2203f4026f0a40119f028dc2c12ab2456846cb335ead71722ceed0",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608856",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21aeU1IVkdkMkZRU1c5Q1RXZzNPVU5LVTAxcGVuYxAB!2m1!1s0x89c3013490b2e6ad:0x1b7c5a8c245aa11",
+        "privateWindowSegmentSha256": "adc723ce0841f98e87a368eaef19d52ae57749f0f7f16daa426139aa3d6d8635",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608852",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWSE5VVnZWMFpGVjNWSFVqWjZTa3RpUm1kWmJYYxAB!2m1!1s0x89c3013490b2e6ad:0x1b7c5a8c245aa11",
+        "privateWindowSegmentSha256": "192edeab6cd1b79de3ef4021d47ee70e62d1fe3b049d1d0c73879d2c8da5da6d",
+        "sentiment": "mixed",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608853",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xoQ2JFUXRlbW8yVG1GTVFVTXhhRkpaUW1kaVRVRRAB!2m1!1s0x89c3013490b2e6ad:0x1b7c5a8c245aa11",
+        "privateWindowSegmentSha256": "099e0baec1addcd2d86bd5a36f312303795d42c95874cf925a8c2f83f2047d66",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Apr 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/complete-care-at-west-caldwell-llc"
+}

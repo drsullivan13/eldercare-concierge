@@ -7,6 +7,7 @@ import {
   computeExperienceScore,
   type ExperienceSummary,
 } from "./experience-score";
+import { publicExperience } from "./public-experience";
 import {
   getFacebookResearch,
   getFacebookSummary,
@@ -14,7 +15,7 @@ import {
 } from "./facebook-research";
 import type {
   LocationResearch,
-  LocationResearchResponse,
+  InternalLocationResearchResponse,
   ResearchSummary,
 } from "./location-research-types";
 
@@ -82,7 +83,7 @@ export function getLocationResearch(
   providerId: string,
   asOfDate?: string,
   registry: MarketRegistry = markets,
-): LocationResearchResponse {
+): InternalLocationResearchResponse {
   validateProviderId(providerId);
   const market = getProviderMarket(providerId, registry);
   if (!market)
@@ -148,6 +149,7 @@ export function getResearchSummary(
       availabilityStatus: "not-published",
       availabilityCheckedAt: null,
       experience: {
+        label: "Consumer experience index",
         value: null,
         reviewCount: 0,
         confidence: "unrated",
@@ -156,15 +158,7 @@ export function getResearchSummary(
     };
   }
   validateProviderId(providerId);
-  const {
-    value,
-    reviewCount,
-    confidence,
-    independentSourceCount,
-    publicationStatus,
-    selectedConcerns,
-    singleSourceLabel,
-  } = scoreLocation(record);
+  const experience = publicExperience(scoreLocation(record));
   const source = record.sources.find(
     (s) => s.id === record.availability.sourceId,
   );
@@ -179,14 +173,6 @@ export function getResearchSummary(
     availabilityStatus: record.availability.status,
     availabilityCheckedAt: source?.checkedAt ?? null,
     admissionRestriction: record.admissionRestriction?.text,
-    experience: {
-      value,
-      reviewCount,
-      confidence,
-      independentSourceCount,
-      publicationStatus,
-      selectedConcerns,
-      singleSourceLabel,
-    },
+    experience,
   };
 }

@@ -1,0 +1,947 @@
+{
+  "cmsProvenance": {
+    "cms-315021": {
+      "markdownSha256": "9c0f96270c0ddc35bb54508235ac8e28a62fcca90d5a71d7ce7f8429f5a57cc4",
+      "receipt": "official/cms-315021-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315021&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315106": {
+      "markdownSha256": "5e484547547793f3a9dc13e968c08d8a71948370ea4270a03613ff84a6230179",
+      "receipt": "official/cms-315106-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315106&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315138": {
+      "markdownSha256": "60cc30bc9da4041861b7cd88f318152b2b13b4dfacd92196de79830c2a05d102",
+      "receipt": "official/cms-315138-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315138&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315204": {
+      "markdownSha256": "e30c7c468651a65974e85fe56ce52af446c508326ffdc9515133368add7a2c46",
+      "receipt": "official/cms-315204-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315204&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315236": {
+      "markdownSha256": "2679ac947f2585018a18928b8466cbffbf99ea34161be5c03b2559c7169de599",
+      "receipt": "official/cms-315236-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315236&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315261": {
+      "markdownSha256": "5eec887b58035850a01ec6ca0dc85c74f97112d693b915728360b50fcc89e370",
+      "receipt": "official/cms-315261-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315261&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315322": {
+      "markdownSha256": "cdbfef588ab5481ccbbfe717d3e9834e9dea2359d7d9d303d4f4f1d19accd913",
+      "receipt": "official/cms-315322-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315322&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315335": {
+      "markdownSha256": "395e7886d062c5e66790d795bf786e32ecb2f9475351714a12257fa20002eabb",
+      "receipt": "official/cms-315335-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315335&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315346": {
+      "markdownSha256": "0906de090ceef8e86c619edbf064b90e9e489a837e066b38505080419b538017",
+      "receipt": "official/cms-315346-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315346&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315476": {
+      "markdownSha256": "6f6498caf8f1b15bc08b47a43b24559c52d985ca6b08616a796dbfed42f47d43",
+      "receipt": "official/cms-315476-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315476&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315526": {
+      "markdownSha256": "06a529bfc6947d33cc25f11650e72b3dff6894295366773b403eacc644ae0765",
+      "receipt": "official/cms-315526-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315526&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315529": {
+      "markdownSha256": "16657776ed29e34dbf6844725a267299c3c4d3886c992947fab75c3340465d98",
+      "receipt": "official/cms-315529-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315529&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315531": {
+      "markdownSha256": "8f15b8b0c09b26638124afc773b5b4d327f5845b43cef0346b94c97cb4e590aa",
+      "receipt": "official/cms-315531-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315531&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-315532": {
+      "markdownSha256": "881ca483cfe46a3cda11300a0603d56e671a42626f8c734e31808861f6752605",
+      "receipt": "official/cms-315532-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315532&limit=2&size=2&offset=0"
+      }
+    },
+    "cms-317002": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317006": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317008": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317009": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317017": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317020": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317021": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317022": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317047": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317050": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317054": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317058": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317060": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317061": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317064": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317077": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317082": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    },
+    "cms-317092": {
+      "markdownSha256": "f1d1ac427b7f0fcd1c6720214743f9a9132fd83f3f2c931b565143efca1b0362",
+      "receipt": "official/cms-alternate-receipt.json",
+      "source": {
+        "checkedAt": "2026-11-13",
+        "publisher": "Centers for Medicare & Medicaid Services",
+        "title": "Provider of Services file — exact certification record",
+        "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+      }
+    }
+  },
+  "cmsSupplement": {
+    "cms-315021": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315021",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315021&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists ATLAS REHABILITATION AND HEALTHCARE AT DAUGHTERS OF MOSES in CLIFTON as a certified nursing unit under CCN 315021."
+    },
+    "cms-315106": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315106",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315106&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists ELIZABETH NURSING AND REHAB CENTER in ELIZABETH as a certified nursing unit under CCN 315106."
+    },
+    "cms-315138": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315138",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315138&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists TROY HILLS CENTER in PARSIPPANY as a certified nursing unit under CCN 315138."
+    },
+    "cms-315204": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315204",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315204&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists CANTERBURY AT CEDAR GROVE in CEDAR GROVE as a certified nursing unit under CCN 315204."
+    },
+    "cms-315236": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315236",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315236&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists SINAI POST-ACUTE NURSING & REHAB CENTER in NEWARK as a certified nursing unit under CCN 315236."
+    },
+    "cms-315261": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315261",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315261&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists LAKELAND NURSING & REHAB in HASKELL as a certified nursing unit under CCN 315261."
+    },
+    "cms-315322": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315322",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315322&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists INGLEMOOR REHABILITATION AND CARE CENTER in LIVINGSTON as a certified nursing unit under CCN 315322."
+    },
+    "cms-315335": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315335",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315335&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists ATRIUM POST ACUTE CARE OF WAYNE in WAYNE as a certified nursing unit under CCN 315335."
+    },
+    "cms-315346": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315346",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315346&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists NEW JERSEY VETERANS MEMORIAL HOME AT PARAMUS in PARAMUS as a certified nursing unit under CCN 315346."
+    },
+    "cms-315476": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315476",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315476&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists OPTIMA CARE FOUNTAINS in SECAUCUS as a certified nursing unit under CCN 315476."
+    },
+    "cms-315526": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315526",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315526&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists LIVINGSTON POST ACUTE CARE in LIVINGSTON as a certified nursing unit under CCN 315526."
+    },
+    "cms-315529": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315529",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315529&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists LIVIA HEALTH AND SENIOR LIVING in EAST HANOVER as a certified nursing unit under CCN 315529."
+    },
+    "cms-315531": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315531",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315531&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists WINDMERE in NORTH HALEDON as a certified nursing unit under CCN 315531."
+    },
+    "cms-315532": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-315532",
+      "scope": "facility",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bprvdr_num%5D=315532&limit=2&size=2&offset=0"
+        }
+      ],
+      "summary": "CMS lists BAYONNE UNIVERSITY HOSPITAL in BAYONNE as a certified nursing unit under CCN 315532."
+    },
+    "cms-317002": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317002",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists VISITING NURSE ASSOC OF NORTHERN NEW JERSEY, INC in MORRISTOWN as a certified home-health agency office under CCN 317002."
+    },
+    "cms-317006": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317006",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists ADORATION HOME HEALTH in BAYONNE as a certified home-health agency office under CCN 317006."
+    },
+    "cms-317008": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317008",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists VALLEY HOME CARE INC. in PARAMUS as a certified home-health agency office under CCN 317008."
+    },
+    "cms-317009": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317009",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists PROMISE CARE NJ in EAST ORANGE as a certified home-health agency office under CCN 317009."
+    },
+    "cms-317017": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317017",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists Adoration Home Health in CLIFTON as a certified home-health agency office under CCN 317017."
+    },
+    "cms-317020": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317020",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists Bayada Home Health Care, Inc. in Cranford as a certified home-health agency office under CCN 317020."
+    },
+    "cms-317021": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317021",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists BAYADA HOME HEALTH CARE, INC in LIVINGSTON as a certified home-health agency office under CCN 317021."
+    },
+    "cms-317022": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317022",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists VISITING NURSE ASSOCIATION OF ENGLEWOOD, INC in ENGLEWOOD as a certified home-health agency office under CCN 317022."
+    },
+    "cms-317047": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317047",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists AMEDISYS HOME HEALTH in HACKENSACK as a certified home-health agency office under CCN 317047."
+    },
+    "cms-317050": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317050",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists BAYADA HOME HEALTH CARE INC in NORTH BERGEN as a certified home-health agency office under CCN 317050."
+    },
+    "cms-317054": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317054",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists ATLANTIC VISITING NURSE in MORRISTOWN as a certified home-health agency office under CCN 317054."
+    },
+    "cms-317058": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317058",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists VISITING HEALTH SERVICES OF NEW JERSEY in WOODLAND PARK as a certified home-health agency office under CCN 317058."
+    },
+    "cms-317060": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317060",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists PATIENT CARE in WEST ORANGE as a certified home-health agency office under CCN 317060."
+    },
+    "cms-317061": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317061",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists BARNABAS HEALTH HOME CARE AND HOSPICE in WEST ORANGE as a certified home-health agency office under CCN 317061."
+    },
+    "cms-317064": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317064",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists PROMISE CARE NJ in West New York as a certified home-health agency office under CCN 317064."
+    },
+    "cms-317077": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317077",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists HOLY NAME HOME CARE in TEANECK as a certified home-health agency office under CCN 317077."
+    },
+    "cms-317082": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317082",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists ASCEND HOME HEALTH in ROCHELLE PARK as a certified home-health agency office under CCN 317082."
+    },
+    "cms-317092": {
+      "basis": "official-listing",
+      "limitations": [
+        "The CMS file was processed on 2026-10-01; certification is reported as of that file, not a live operating-status check.",
+        "This record applies only to the named unit or agency, not to an entire campus or another branch.",
+        "The listing does not establish amenities, current admissions, service at your address, or staff availability."
+      ],
+      "providerId": "cms-317092",
+      "scope": "agency-office",
+      "sources": [
+        {
+          "checkedAt": "2026-11-13",
+          "publisher": "Centers for Medicare & Medicaid Services",
+          "title": "Provider of Services file — exact certification record",
+          "url": "https://data.cms.gov/data-api/v1/dataset/8b2c0a70-7e47-4b0f-a592-e51eb315cead/data?filter%5Bstate_cd%5D=NJ&filter%5Bprvdr_type_id%5D=3&limit=500&size=500&offset=0"
+        }
+      ],
+      "summary": "CMS lists CEDAR CREST VILLAGE, INC HOME HEALTH DEPARTMENT in POMPTON PLAINS as a certified home-health agency office under CCN 317092."
+    }
+  },
+  "cmsSupplementSha256": "ce5fc9ec11ce22da26bf9781eedc0652ea50da37f409c478ddf3a633f65879d0",
+  "hashRepresentation": "SHA-256 of UTF-8 JSON with sorted object keys, no ASCII escaping and compact separators.",
+  "inputs": {
+    "official/baseline.json": "1cd94aacc0d23eb53a49809217f746c8cdabde5489fb3c04d0b04bd53a5770b2",
+    "official/capture.json": "61042a8151a51d37ffb1f203f549ea49b37b0a8526d7b00e0c960c02b162b8bd",
+    "official/coverage.json": "a73508f6f10e9a00d318c71884d59d8e6ee4c423296af4d910564fb38ef6bf3d",
+    "provider-offices.json": "d60b87c19499bd62e05746d8d3f42cd79c04fdbff48257ce0e0fda9bcf14cc4e",
+    "provider-residential.json": "d15ef24665a5ccc41132c9197ce6cb0bb9863b7bb17cab1a5dd664da0878e557"
+  },
+  "inventoryIdentitySha256": "a4e6a7d4b67501bec7ae3fd102e7fea9fbc1c1131ee5774bda25191f339d844a",
+  "marketId": "north-jersey",
+  "meaning": "Audited normalized inputs and exact active inventory for public offline replay. Hashes detect unreviewed input changes, not the truth of source claims. Original bodies remain private; run LOCATION_DESCRIPTIONS_PRIVATE_SOURCES=1 npx tsx --test tests/location-descriptions-build.test.ts in the local acquisition checkout to verify them.",
+  "schemaVersion": 1
+}

@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 235,
+    "rating": 4.7,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_8fe5c435e78e055a_1.log",
+    "section": "r100",
+    "sha256": "4b0fc80cb3954ed9291fc83572e5274ff4710e9a20dbe9237858595dc255aaa9"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2f1c91a9f2d99:0xa33bf4611d6d9bf8"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "1104 Teaneck Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Teaneck",
+    "name": "Family Of Caring At Teaneck",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "d012c2a881ca666a3f60464f015da736d04b57f3f265397d4ac108a997ab0af3",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-608464",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25Ga1J6ZFJWalJrTm5ST2NuZzVXVXBoWTJwUWMxRRAB!2m1!1s0x89c2f1c91a9f2d99:0xa33bf4611d6d9bf8",
+        "privateWindowSegmentSha256": "9cdf30dc7ef1b5af74a68584d84f9aadf179b88fc792301bf2bf1160eda7ee64",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608463",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xobFRqVXlNWE5XTUZKaExWbHpRVlExUzB3MFYxRRAB!2m1!1s0x89c2f1c91a9f2d99:0xa33bf4611d6d9bf8",
+        "privateWindowSegmentSha256": "d599ed696a4dafe7901633568ff00cd4af83a10e9d608dafd55fe31e874462ac",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608461",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2toRGFFbExTMFUwY21aeU5FTTFlazlyVkV4NVgyYxAB!2m1!1s0x89c2f1c91a9f2d99:0xa33bf4611d6d9bf8",
+        "privateWindowSegmentSha256": "15fc0cb82171db7e95a679270ef81e2436537a350ccb023726aa9c24e3c6d3d2",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-608462",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21sR1JtRjBTa2gyWjNacU1WODRWbmQyVjJ3d1kxRRAB!2m1!1s0x89c2f1c91a9f2d99:0xa33bf4611d6d9bf8",
+        "privateWindowSegmentSha256": "a92fdfcda9bf2c2e30330d66ef60aecfabcebed61d79dd50d5dd63df18817072",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-608465",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2swNFVEbHJNalJJT0U4emFtTmxTV3MwVnpaTFltYxAB!2m1!1s0x89c2f1c91a9f2d99:0xa33bf4611d6d9bf8",
+        "privateWindowSegmentSha256": "d62c8e32574381c8cc1711fc1ceda292426be0c2137e291bf89eee1cda4ad5d7",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jan 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/family-of-caring-at-teaneck-llc"
+}

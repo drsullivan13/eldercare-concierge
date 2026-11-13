@@ -24,6 +24,8 @@ OUTPUTS = (
     "manifest.json", "excerpt-audit.json",
 )
 EXCERPTS = REGION / "review-excerpts/observations.json"
+ACQUISITION = REGION / "experience-acquisition"
+ACQUISITION_LEDGER = ACQUISITION / "integration/approved-batches.json"
 EXCERPT_ALGORITHM = "newest-per-provider-sentiment-v1"
 EXCERPT_REASONS = {
     "privacy", "not-consumer", "wrong-care-unit", "no-safe-excerpt",
@@ -489,6 +491,121 @@ def score(records, assessment_date):
     )
     require(result.returncode == 0, f"TypeScript scorer failed: {result.stderr.strip()}")
     return parse_json(result.stdout)
+
+
+def receipt_at(document, pointer):
+    require(isinstance(pointer, str) and (not pointer or pointer.startswith("/")),
+            "Malformed acquisition receipt pointer")
+    value = document
+    for part in pointer.split("/")[1:] if pointer else ():
+        require(not re.search(r"~(?![01])", part), "Malformed acquisition receipt pointer")
+        key = part.replace("~1", "/").replace("~0", "~")
+        if isinstance(value, list):
+            require(re.fullmatch(r"0|[1-9][0-9]*", key) is not None
+                    and int(key) < len(value), "Unknown acquisition receipt pointer")
+            value = value[int(key)]
+        else:
+            require(isinstance(value, dict) and key in value, "Unknown acquisition receipt pointer")
+            value = value[key]
+    return value
+
+
+def acquisition_approvals(inputs, observations, inventory):
+    path = ACQUISITION_LEDGER.as_posix()
+    if not (inputs.root / path).exists():
+        return []
+    pending = Inputs(inputs.root)
+    ledger = pending.json(path)
+    fields(ledger, "schemaVersion batches", "acquisition ledger")
+    require(type(ledger["schemaVersion"]) is int and ledger["schemaVersion"] == 1
+            and isinstance(ledger["batches"], list), "Malformed acquisition ledger")
+    approvals, batch_ids, receipt_paths = [], set(), set()
+    for batch in ledger["batches"]:
+        fields(batch, "id assessmentDate approvals", "acquisition batch")
+        require(text_value(batch["id"]) and re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", batch["id"])
+                and batch["id"] not in batch_ids, "Invalid or duplicate acquisition batch ID")
+        batch_ids.add(batch["id"])
+        require(valid_date(batch["assessmentDate"]) and batch["assessmentDate"] <= date.today().isoformat()
+                and isinstance(batch["approvals"], list), "Invalid acquisition batch date or approvals")
+        for approval in batch["approvals"]:
+            require(isinstance(approval, dict), "Malformed acquisition approval")
+            for name in ("observation", "material"):
+                reference = approval.get(name)
+                pending.bound(reference, pointer=name == "observation")
+                require(Path(reference["path"]).is_relative_to(ACQUISITION),
+                        "Acquisition evidence must stay inside experience-acquisition")
+            reference = approval["observation"]
+            receipt = receipt_at(pending.json(reference["path"]), reference["pointer"])
+            check = pending.json(approval["material"]["path"])
+            require(reference["path"] != approval["material"]["path"],
+                    "Acquisition requires a separate independent check")
+            for label, row in (("receipt", receipt), ("independent check", check)):
+                fields(row, "providerId officialId url platform sourceType inspection checkedAt "
+                       "access_decision httpStatus identity aggregate reviewSample evidence",
+                       f"acquisition {label}")
+                require(row["providerId"] == approval.get("providerId")
+                        and row["officialId"] == approval.get("officialId")
+                        and text_value(row["providerId"]) and text_value(row["officialId"]),
+                        "Acquisition requires explicit exact-unit IDs")
+                require(canonical_url(row["url"]) == canonical_url(approval.get("url"))
+                        and row["platform"] == approval.get("platform")
+                        and row["identity"] == approval.get("identity")
+                        and row["aggregate"] == approval.get("aggregate"),
+                        "Acquisition source check disagrees with approval")
+                require(row["sourceType"] == "review-platform" and row["inspection"] == "full-page"
+                        and type(row["httpStatus"]) is int and row["httpStatus"] == 200,
+                        "Acquisition requires successful full-page source checks")
+                require(isinstance(row["access_decision"], str)
+                        and row["access_decision"].startswith("permitted"),
+                        "Acquisition lacks permitted source access")
+                require(valid_date(row["checkedAt"]) and row["checkedAt"] <= batch["assessmentDate"],
+                        "Acquisition source check exceeds its batch date")
+                sample = row["reviewSample"]
+                fields(sample, "sourceFamily selection visibleCount observations", "acquisition review sample")
+                require(sample["sourceFamily"] == row["aggregate"]["sourceFamily"]
+                        and sample["selection"] == "all-visible-before-highlighting"
+                        and type(sample["visibleCount"]) is int and sample["visibleCount"] >= 0
+                        and isinstance(sample["observations"], list)
+                        and sample["visibleCount"] == len(sample["observations"]),
+                        "Acquisition requires the complete visible review window")
+                ids = set()
+                for item in sample["observations"]:
+                    fields(item, "id date sentiment", "acquisition sample observation")
+                    require(text_value(item["id"]) and item["id"] not in ids,
+                            "Invalid or duplicate acquisition sample observation ID")
+                    ids.add(item["id"])
+                    published = item["date"]
+                    require(published is None or (isinstance(published, str)
+                            and re.fullmatch(r"\d{4}(?:-\d{2}(?:-\d{2})?)?", published)
+                            and valid_date(published + {4: "-01-01", 7: "-01", 10: ""}[len(published)])
+                            and published <= row["checkedAt"]),
+                            "Invalid acquisition sample observation date")
+                    require(item["sentiment"] in ("positive", "negative", "mixed", "neutral"),
+                            "Invalid acquisition sample sentiment")
+                require(isinstance(row["evidence"], list), "Invalid acquisition evidence references")
+                for evidence in row["evidence"]:
+                    pending.bound(evidence)
+                    require(Path(evidence["path"]).is_relative_to(ACQUISITION),
+                            "Acquisition evidence must stay inside experience-acquisition")
+            require(receipt["reviewSample"] == check["reviewSample"],
+                    "Acquisition independent review window disagrees with receipt")
+            require(check["checkedAt"] == approval.get("checkedAt")
+                    and receipt["checkedAt"] <= check["checkedAt"],
+                    "Acquisition independent check chronology mismatch")
+            require(receipt["access_decision"] == check["access_decision"],
+                    "Acquisition source access checks disagree")
+            observation = Observation(reference["path"], reference["pointer"], receipt, {})
+            require(observation.key not in observations or observations[observation.key] == observation,
+                    "Conflicting acquisition receipt")
+            observations[observation.key] = observation
+            receipt_paths.add(reference["path"])
+            approvals.append((approval, batch["assessmentDate"], batch["id"]))
+    if approvals:
+        inputs.bytes.update(pending.bytes)
+        for relative in sorted(receipt_paths):
+            data = inputs.read(relative)
+            inventory.append({"path": relative, "sha256": digest(data), "bytes": len(data)})
+    return approvals
 
 
 def normalized_whitespace(value):
@@ -1016,11 +1133,18 @@ def build(root=ROOT, approvals_path=None, audit_private=False):
     alias_path = (RELEASE / "identity-corroboration.json").as_posix()
     aliases = inputs.json(alias_path) if (root / alias_path).is_file() else []
     observations, inventory = registry(inputs)
+    acquisition = acquisition_approvals(inputs, observations, inventory)
+    approval_dates = [(approval, assessment_date, None) for approval in ledger["approvals"]]
+    approval_dates.extend(acquisition)
+    legacy_assessment_date = assessment_date
+    assessment_date = max([assessment_date] + [day for _, day, _ in acquisition])
+    ledger = {**ledger, "approvals": [approval for approval, _, _ in approval_dates]}
     records, audit, approved_keys = {}, [], set()
     seen_ids = set()
     url_owners = {}
-    for approval in sorted(ledger["approvals"], key=lambda a: str(a.get("id", "")) if isinstance(a, dict) else ""):
-        observed, resolution = validate_approval(approval, inputs, observations, providers, crosswalk, aliases, assessment_date)
+    for approval, approval_date, batch_id in sorted(
+            approval_dates, key=lambda row: str(row[0].get("id", "")) if isinstance(row[0], dict) else ""):
+        observed, resolution = validate_approval(approval, inputs, observations, providers, crosswalk, aliases, approval_date)
         require(approval["id"] not in seen_ids, f"Duplicate approval ID: {approval['id']}")
         seen_ids.add(approval["id"])
         approved_keys.add(observed["key"])
@@ -1055,8 +1179,15 @@ def build(root=ROOT, approvals_path=None, audit_private=False):
             if resolution["observedZip"] is None else "Observed ZIP matches the exact official care unit.",
         ])
         record["reviewAggregates"].append(aggregate)
+        if batch_id is not None:
+            receipt = observations[observed["key"]].value
+            record.setdefault("reviewSamples", []).append({
+                **receipt["reviewSample"], "sourceId": source_id,
+            })
         audit.append({"approval": approval, "sourceId": source_id,
                       "identityResolution": resolution, "observationKey": observed["key"]})
+        if batch_id is not None:
+            audit[-1]["acquisitionBatch"] = {"id": batch_id, "assessmentDate": approval_date}
     verification = score(records, assessment_date)
     included = {source["sourceId"] for summary in verification.values()
                 for source in summary["includedSources"]}
@@ -1074,6 +1205,8 @@ def build(root=ROOT, approvals_path=None, audit_private=False):
     for provider_id, record in list(records.items()):
         record["sources"] = [s for s in record["sources"] if s["id"] in included]
         record["reviewAggregates"] = [a for a in record["reviewAggregates"] if a["sourceId"] in included]
+        if "reviewSamples" in record:
+            record["reviewSamples"] = [s for s in record["reviewSamples"] if s["sourceId"] in included]
         if not record["reviewAggregates"]:
             del records[provider_id]
         else:
@@ -1084,7 +1217,7 @@ def build(root=ROOT, approvals_path=None, audit_private=False):
                 and summary["reviewCount"] == verification[provider_id]["reviewCount"]
                 and summary["value"] == verification[provider_id]["value"]
                 and not summary["excludedSources"], "Released score changed after exclusion")
-    excerpt_audit = excerpt_release(inputs, providers, crosswalk, aliases, records, assessment_date, audit_private)
+    excerpt_audit = excerpt_release(inputs, providers, crosswalk, aliases, records, legacy_assessment_date, audit_private)
     if excerpt_audit is not None:
         with_excerpts = score(records, assessment_date)
         numeric_fields = ("reviewCount", "independentSourceCount", "platformCount", "includedSources")

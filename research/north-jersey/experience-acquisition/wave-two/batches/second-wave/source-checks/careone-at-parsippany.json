@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 225,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_8fe5c435e78e055a_1.log",
+    "section": "r103",
+    "sha256": "4b0fc80cb3954ed9291fc83572e5274ff4710e9a20dbe9237858595dc255aaa9"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c307fc4564455f:0x1cba1d6d5e72f17d"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "100 Mazdabrook Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Parsippany Troy Hill",
+    "name": "CareOne at Parsippany Skilled Nursing",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "f2d0ac0c6d0b60fb67284f466491490194c0f617acf50ce89741da86b69d7d14",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-305991",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tScU5YQjZhMlYzWDJWemJGWlFUR0l6UTFZMlNGRRAB!2m1!1s0x89c307fc4564455f:0x1cba1d6d5e72f17d",
+        "privateWindowSegmentSha256": "68dd6368acdc24595dbb1169b49fee0b780a4fb83d24d06dfd7ac20af8e06468",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-305993",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21wVlNWaExUbkZPTW5KWU1VSkVZVTQ1TmpkbFQxRRAB!2m1!1s0x89c307fc4564455f:0x1cba1d6d5e72f17d",
+        "privateWindowSegmentSha256": "e198ebe5bda16a5afc25f19f547cb262b28e83457b11cc92ba35e12c2ee91e96",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-305992",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20xdE1XUTJXRUZIZFZJMmJtaDNTbE16TlUxSGExRRAB!2m1!1s0x89c307fc4564455f:0x1cba1d6d5e72f17d",
+        "privateWindowSegmentSha256": "f37f29c9cdb929c627479d1dfece6cf62a67e72e1c5883706a8cecc24167c9c7",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-305994",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xCb2VVMTVWRXRDTTJvek9GazBSekY1UTNaVU1tYxAB!2m1!1s0x89c307fc4564455f:0x1cba1d6d5e72f17d",
+        "privateWindowSegmentSha256": "17eb3a9c3d782e1700f229b16fd11ff78d7357a9b98cd55f12d10ec3af8cdfad",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-305990",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25GNU4yTXpWREU0ZDBSUlgxWjVhV05oUzB0b05XYxAB!2m1!1s0x89c307fc4564455f:0x1cba1d6d5e72f17d",
+        "privateWindowSegmentSha256": "33c70e33a5baa480248a5733c2058e747c0c4d4d1843b909a05c838d8b388c4f",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/careone-at-parsippany"
+}

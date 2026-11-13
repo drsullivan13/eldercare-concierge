@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 76,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_ffd79818892541b9_1.log",
+    "section": "r23",
+    "sha256": "87467faca7fde9d1516deec1c92ddc7e20ad10eb8fa6e0b6d476324245e004f0"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c30324f9697f73:0x767239697a6e34a9"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "1140 Black Oak Ridge Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Wayne",
+    "name": "Llanfair Care & Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "2f7e40cbddb5849b456c365238c374db388ce7dbb6288b678c93f5c3c2847a16",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-03",
+        "id": "mlc-google-608628",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21OdmRrSnRTbTFXTUVkTFZuUmlla3B6VWxoSFUyYxAB!2m1!1s0x89c30324f9697f73:0x767239697a6e34a9",
+        "privateWindowSegmentSha256": "6ae6a35574289812015ea865020e2c712d3e3ec6292b7a270edac41947bfb10d",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2025-07",
+        "id": "mlc-google-608626",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25WTloxUnhRVWhxTUZwVVRWbFBjMnd6TWt0RGRsRRAB!2m1!1s0x89c30324f9697f73:0x767239697a6e34a9",
+        "privateWindowSegmentSha256": "dde9a5c96b7d6b15975f2beab477bd466cfd2300050513f897a13e0c79f56927",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2025"
+      },
+      {
+        "date": "2024-04",
+        "id": "mlc-google-608632",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUNqLVpXRzlBRRAB!2m1!1s0x89c30324f9697f73:0x767239697a6e34a9",
+        "privateWindowSegmentSha256": "4d74e6198817f0bd80828ccbc919662e167dc555535bf7ab975f7eb04b688cdb",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2024"
+      },
+      {
+        "date": "2024-03",
+        "id": "mlc-google-608635",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUQ5NUozWXBnRRAB!2m1!1s0x89c30324f9697f73:0x767239697a6e34a9",
+        "privateWindowSegmentSha256": "5b6c4041d405548654b74229e557842fee0379ed6bc44b37437bc8940567a29b",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2024"
+      },
+      {
+        "date": "2023-11",
+        "id": "mlc-google-608630",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNsbll6UUJREAE!2m1!1s0x89c30324f9697f73:0x767239697a6e34a9",
+        "privateWindowSegmentSha256": "e6da332e4513d4c1488d5aeaa3bff56d40112fec09811907f6bbadceb87a97ee",
+        "sentiment": "positive",
+        "sourcePublishedText": "Nov 2023"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/llanfair-house-care-rehabilitation-center"
+}

@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 283,
+    "rating": 4.3,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_370bf0777fe7b22e_1.log",
+    "section": "r84",
+    "sha256": "28666cd3860246f258dc6b63c9e8425b89be46ca5fcff4061ee6c260ccdf9584"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3abb0629df0d3:0x346cee3c518dcca7"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "20 Summit Street",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "West Orange",
+    "name": "Complete Care At Summit Ridge",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "b216618183ca18aaba04e51e9ecf319a8577c194b047f80bbbcf261694a32c9b",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608470",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25Rd2RXZDZlRGRuUTA1TWEwSkRORGxvVkVsQ1JFRRAB!2m1!1s0x89c3abb0629df0d3:0x346cee3c518dcca7",
+        "privateWindowSegmentSha256": "5ae72bb00f2fba53a88d660a207a8c63ad4beefd662e4c4a680d16c4e48a792e",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608467",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pWc1IyZzNUV1Y2UjJjMU5YcFBTblJEVDJOdFNFRRAB!2m1!1s0x89c3abb0629df0d3:0x346cee3c518dcca7",
+        "privateWindowSegmentSha256": "3a6de4420b86cbe40f68915cf419bc803fcade530b19976758a365aa69f37ecb",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608468",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20xRVluRkNVR0ZYYjE4MWNtcE5Wbmd0UjFCWFNrRRAB!2m1!1s0x89c3abb0629df0d3:0x346cee3c518dcca7",
+        "privateWindowSegmentSha256": "f1157382a067a3182f1970eac64a9a38d0aa5d6f45f276155ee39d4ca832cf12",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-608469",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21aRWQyczNiSFV4WlZGUFQyOXFTbUpFTnpSbE9VRRAB!2m1!1s0x89c3abb0629df0d3:0x346cee3c518dcca7",
+        "privateWindowSegmentSha256": "8eb2e7f8f2122e7bb6337e7d09854b31b000eb637de7e074642dbac8e1f7f325",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-608466",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s5aGJIbFdMV3RtVVV4b2NXSlZZM0Z6UTNoMVpuYxAB!2m1!1s0x89c3abb0629df0d3:0x346cee3c518dcca7",
+        "privateWindowSegmentSha256": "e7f3988f56564978e4ef606aeb40771c9b755f34d552350e4af791fab25a1b0f",
+        "sentiment": "negative",
+        "sourcePublishedText": "Feb 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/complete-care-at-summit-ridge"
+}

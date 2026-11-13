@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 51,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_7aacc8540bc7fb41_1.log",
+    "section": "r69",
+    "sha256": "31571337d13f7b6dfb274f225a22be4ccac94f3ebc07981739364b934e4ca76e"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x0:0xb99b05252c1394fe"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "728 Franklin Avenue",
+    "careUnit": "Assisted LivingMemory Care",
+    "city": "Franklin Lakes",
+    "name": "Sunrise of Franklin Lakes",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "ccc0549f516b40ed7b44687c0be5d2eec92bf12ccf3ec5eec61a157264088ce9",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Assisted LivingMemory Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-04",
+        "id": "mlc-google-525408",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2toaWNtWTFOWEJyT1VGQlRsOVNOMmM1U0ZwYU4yYxAB!2m1!1s0x0:0xb99b05252c1394fe!3m1!1s2@1:CAIQACodChtycF9oOkhicmY1NXBrOUFBTl9SN2c5SFpaN2c%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "0f0de52b11a29e834fcce69bbebf2ad7d9b4cbdbd10e2ef6053dad4cd4a44a5a",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-525409",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21ST1EwdGFha1JNVVhOa1VHZGhXVU5NVjE4MVdrRRAB!2m1!1s0x0:0xb99b05252c1394fe!3m1!1s2@1:CAIQACodChtycF9oOmROQ0taakRMUXNkUGdhWUNMV181WkE%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "f2fe89c4d177da265086592349d6be85e47103141e93da0f77fd3130a6657030",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-525410",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKb1YzWnhXbnBqZVd4WVduWlNaRGRaUldoV2RGRRAB!2m1!1s0x0:0xb99b05252c1394fe!3m1!1s2@1:CAIQACodChtycF9oOkJoV3ZxWnpjeWxYWnZSZDdZRWhWdFE%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "fb309e194047d669e45687a25abbe46c4ff7946810be1efdf4b202046d8cb005",
+        "sentiment": "negative",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2025-11",
+        "id": "mlc-google-525411",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t0ZkxUVmpVbkV6UldGZmFUWjJUMFo0T1RONlluYxAB!2m1!1s0x0:0xb99b05252c1394fe!3m1!1s2@1:CAIQACodChtycF9oOktfLTVjUnEzRWFfaTZ2T0Z4OTN6Ync%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "7c6931cff6936de44310dcd369bb133c4d87c744e5b43dc860a86b07d3c4593a",
+        "sentiment": "positive",
+        "sourcePublishedText": "Nov 2025"
+      },
+      {
+        "date": "2025-10",
+        "id": "mlc-google-525412",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25ZNWRUWkZUVWx5UW5CdWRIQkJUMnRrTkhsVFJXYxAB!2m1!1s0x0:0xb99b05252c1394fe!3m1!1s2@1:CAIQACodChtycF9oOnY5dTZFTUlyQnBudHBBT2tkNHlTRWc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "3c6054130454f7fbca5b508e4d217db5f11e9b0e13ac090d8c5753ab651566e8",
+        "sentiment": "positive",
+        "sourcePublishedText": "Oct 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/sunrise-of-franklin-lakes"
+}

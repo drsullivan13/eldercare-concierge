@@ -43,6 +43,20 @@
   font-size: 13px;
 }
 
+.overview-description-notes summary {
+  width: fit-content;
+  min-height: 44px;
+  padding-block: 10px;
+  cursor: pointer;
+  color: #24594c;
+  font-size: 14px;
+}
+
+.overview-description-notes summary:focus-visible {
+  outline: 2px solid #24594c;
+  outline-offset: 3px;
+}
+
 .property-overview .overview-more:hover {
   text-decoration-thickness: 2px;
 }

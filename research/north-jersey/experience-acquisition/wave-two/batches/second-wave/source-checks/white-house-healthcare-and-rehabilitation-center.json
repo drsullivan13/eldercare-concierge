@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 406,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_ffd79818892541b9_1.log",
+    "section": "r28",
+    "sha256": "87467faca7fde9d1516deec1c92ddc7e20ad10eb8fa6e0b6d476324245e004f0"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3ab5d8a7025dd:0x20344c1ef6634309"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "560 Berkeley Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Orange",
+    "name": "White House Healthcare Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "de85df91358f7af8050745ce2e5ca7c904ea06cd9856451371975f71ba652d05",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-305923",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tOUFdtVlNhV3BuVjB0M1h6bGtPVlJzY0VObldVRRAB!2m1!1s0x89c3ab5d8a7025dd:0x20344c1ef6634309",
+        "privateWindowSegmentSha256": "4f6861059b8939ef95c113de6feb5364473d3c0c784c9b6f3d0f282bc7674e73",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-305926",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21Gb1JVOXJhRnBrYVY5V2FHd3ROMjluUkc5TlJuYxAB!2m1!1s0x89c3ab5d8a7025dd:0x20344c1ef6634309",
+        "privateWindowSegmentSha256": "3b2910df2d079528aaa251f9cd85109f7b2070fd74f00deb0bcb0361413b79ea",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-305922",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2w5WmFtMVhiekpqYjNGVVIzSjNkVXhXWldOVmVGRRAB!2m1!1s0x89c3ab5d8a7025dd:0x20344c1ef6634309",
+        "privateWindowSegmentSha256": "a4e0c9759ba125fb8696ceed4f84068cfb368df74117b59c2a7bc62fa3bdf808",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305924",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xwaFVIbENaVnAwYXpOVVpVaFpWMTg1ZWs1VU9XYxAB!2m1!1s0x89c3ab5d8a7025dd:0x20344c1ef6634309",
+        "privateWindowSegmentSha256": "e977fb4254b14c06a1375ea5b60789d7e32e23b04c3ab38103a0be2fb9141c26",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2025-11",
+        "id": "mlc-google-305925",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2twVk1EUndiVjh6ZFhONFQyNVdXazE1VDNsVmNVRRAB!2m1!1s0x89c3ab5d8a7025dd:0x20344c1ef6634309",
+        "privateWindowSegmentSha256": "cfc323a781d2497537d8f97c527eff3d9ed53ceb296f797e8458072477d65131",
+        "sentiment": "positive",
+        "sourcePublishedText": "Nov 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/white-house-healthcare-and-rehabilitation-center"
+}

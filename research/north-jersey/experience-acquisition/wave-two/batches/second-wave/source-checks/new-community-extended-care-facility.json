@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 54,
+    "rating": 3.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_370bf0777fe7b22e_1.log",
+    "section": "r90",
+    "sha256": "28666cd3860246f258dc6b63c9e8425b89be46ca5fcff4061ee6c260ccdf9584"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2535d93abb979:0x8117c995119711c1"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "266 S Orange Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Newark",
+    "name": "New Community Extended Care",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "7d8621b7c9673543c6763b0661c1531323a99a45e6efaecbea83a8fecf814349",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2025-04",
+        "id": "mlc-google-609271",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnTURJMXFQazZBRRAB!2m1!1s0x89c2535d93abb979:0x8117c995119711c1",
+        "privateWindowSegmentSha256": "b5b67b4db5df2ab1dccdea3ce9394d744361acf1c8c1794d4622a4f55d9329bb",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Apr 2025"
+      },
+      {
+        "date": "2024-07",
+        "id": "mlc-google-609272",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNydHFQSkJREAE!2m1!1s0x89c2535d93abb979:0x8117c995119711c1",
+        "privateWindowSegmentSha256": "002aacf6b5199c85b461338c2d4a3afee44ad7ae6b7d42c45df1f93ff1ffc709",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jul 2024"
+      },
+      {
+        "date": "2019-09",
+        "id": "mlc-google-609275",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUMwM29MOVFBEAE!2m1!1s0x89c2535d93abb979:0x8117c995119711c1",
+        "privateWindowSegmentSha256": "5096cd8dd9b9dab78990c7e16db1a1f4b82a0c0c40b03802b6747579642e0020",
+        "sentiment": "negative",
+        "sourcePublishedText": "Sep 2019"
+      },
+      {
+        "date": "2019-04",
+        "id": "mlc-google-609273",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNZbXBfVkhREAE!2m1!1s0x89c2535d93abb979:0x8117c995119711c1",
+        "privateWindowSegmentSha256": "27426f885139d3342eae08743676de19ce4ebf0f5e24995f6255370b59ba0e1c",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Apr 2019"
+      },
+      {
+        "date": "2016-07",
+        "id": "mlc-google-609274",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSURncjhUbU1REAE!2m1!1s0x89c2535d93abb979:0x8117c995119711c1",
+        "privateWindowSegmentSha256": "baaec5b1478e53f9753a037a129dd04825c9c0fe9df4089fc691ede8437561a6",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jul 2016"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/new-community-extended-care-facility"
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "artifact": {
+      "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_4af1b34fac166702_0.log",
+      "section": "r14",
+      "sha256": "fb7d894726ab2d5b184c8b7954408d94a63e6b085515ac3f564984550f9fd2a9"
+    },
+    "checkedAt": "2026-11-13",
+    "httpStatus": 200,
+    "propertyPathAllowed": true,
+    "restrictedPaths": [
+      "/admin",
+      "/api/",
+      "/guidance/",
+      "/partners/",
+      "/login",
+      "/signin",
+      "/unsubscribe",
+      "/how-we-work"
+    ],
+    "url": "https://www.mylivingchoice.com/robots.txt"
+  },
+  {
+    "artifact": {
+      "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_f10f6108526b4bcf_0.log",
+      "section": "r31",
+      "sha256": "3f551832eacbed2e73e381ad54f10d4b53d287001d84e04529925c23130286a8"
+    },
+    "bounds": "Serial public property fetches only. No API, login, form submission, or access-control bypass.",
+    "checkedAt": "2026-11-13",
+    "decision": "permitted_low_volume",
+    "effectiveDate": "2026-10-30",
+    "httpStatus": 200,
+    "minimalAccessText": "no scraping at disruptive volume",
+    "url": "https://www.mylivingchoice.com/terms-of-service"
+  }
+]

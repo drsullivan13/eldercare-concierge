@@ -11,10 +11,6 @@ export function ExperienceExplanation({
   uid: string;
 }) {
   const score = data.experience;
-  const weighted = score.includedSources.reduce(
-    (sum, source) => sum + source.normalizedRating * source.weight,
-    0,
-  );
   return (
     <section
       className="review-score-explanation"
@@ -58,93 +54,25 @@ export function ExperienceExplanation({
         <strong>
           Ratings measure reported consumer experience, not the amenities.
         </strong>{" "}
-        Published prices, rooms and perks do not add points. This is not a
-        clinical-quality or safety score.
+        This is not a clinical-quality or safety score. Read the original
+        ratings alongside inspection evidence and your own follow-up.
       </p>
-      <p className="score-publication-reason">{score.reason}</p>
       <details className="evidence-disclosure experience-method">
         <summary>How to read this score</summary>
-        <h5>The calculation</h5>
-        <ol className="research-specifics">
-          <li>
-            Convert each eligible source average to ten points by dividing its
-            rating by its scale and multiplying by 10.
-          </li>
-          <li>
-            Give each source a raw weight equal to the square root of its review
-            count, capped at 100 reviews.
-          </li>
-          <li>Divide each raw weight by the total raw weight.</li>
-          <li>Add the weighted ten-point averages and round to one decimal.</li>
-        </ol>
-        {score.includedSources.length > 0 && (
-          <>
-            <ul className="score-source-weights">
-              {score.includedSources.map((item) => (
-                <li key={item.sourceId}>
-                  <strong>{item.platform}</strong>
-                  <span>
-                    {item.rating}/{item.scale} becomes{" "}
-                    {item.normalizedRating.toFixed(2)}/10. {item.count} reported
-                    ratings give a raw weight of √{Math.min(item.count, 100)} ={" "}
-                    {Math.sqrt(Math.min(item.count, 100)).toFixed(4)}.
-                  </span>
-                  <span>
-                    {(item.weight * 100).toFixed(2)}% of the calculation.{" "}
-                    {item.normalizedRating.toFixed(2)} ×{" "}
-                    {item.weight.toFixed(6)} ={" "}
-                    {(item.normalizedRating * item.weight).toFixed(4)} points.
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <p>
-              Weighted result before rounding is {weighted.toFixed(4)}/10.{" "}
-              {score.value === null
-                ? "This is not a published Harbor score because the publication requirements are not met."
-                : `Rounded Harbor score is ${score.value.toFixed(1)}/10.`}{" "}
-              Displayed weights are rounded; the calculation uses full
-              precision.
-            </p>
-          </>
-        )}
-        <h5>Publication requirements</h5>
-        <ul className="research-specifics">
-          <li>
-            Publish only with 30 reported ratings from one source family, or at
-            least 10 across two families with five each. Shared or syndicated
-            sources contribute once. Checks must be within 180 days and
-            aggregate snapshots within 365 days.
-          </li>
-          <li>
-            Withhold when two source families with at least ten ratings each
-            differ by two or more points out of ten, or when eligible recent
-            accounts trigger the disagreement rules. Two independent families
-            with opposing accounts can withhold a score. So can at least three
-            contrary accounts that form a majority of the recent eligible
-            accounts in a reviewed visible sample. A recent account must be
-            within 730 days.
-          </li>
-          <li>
-            Moderate coverage requires at least 30 ratings and two source
-            families with ten each, without substantial disagreement. Otherwise
-            a published score has limited coverage. Missing or excluded evidence
-            is not a negative rating.
-          </li>
-        </ul>
         <h5>What the score cannot establish</h5>
         <p>
           Reviewers are not independently authenticated. Tour reviews may be
-          included, and counts can overlap across sites. Selected accounts and
-          Facebook findings never add numeric points or ratings to the total.
-          Read the inspection evidence too.
+          included, and counts can overlap across sites. A recent source check
+          does not mean the care experiences are recent. Missing evidence is not
+          a negative rating. Selected accounts are not representative of every
+          resident or family. Read the inspection evidence too.
         </p>
         <Link
           href="/methodology#experience"
           target="_blank"
           className="text-link"
         >
-          How this score works <ExternalLink size={14} />
+          Review sources and limitations <ExternalLink size={14} />
         </Link>
       </details>
       {Boolean(data.reviewLinks?.length) && (
@@ -173,9 +101,6 @@ export function ExperienceExplanation({
         {data.reviewAggregates.map((aggregate, index) => {
           const source = data.sources.find(
             (item) => item.id === aggregate.sourceId,
-          );
-          const included = score.includedSources.find(
-            (item) => item.sourceId === aggregate.sourceId,
           );
           return (
             <article key={`${aggregate.sourceId}-${index}`}>
@@ -206,13 +131,6 @@ export function ExperienceExplanation({
                   <dd>{evidenceDate(aggregate.asOf)}</dd>
                 </div>
               </dl>
-              {included && (
-                <p className="review-included">
-                  Eligible source · {(included.weight * 100).toFixed(2)}% of the
-                  weighted calculation
-                  {score.value === null ? ", not a published score" : ""}.
-                </p>
-              )}
               {aggregate.notes.length > 0 && (
                 <details className="evidence-disclosure">
                   <summary>Source context</summary>
@@ -223,13 +141,6 @@ export function ExperienceExplanation({
                   </ul>
                 </details>
               )}
-              {score.excludedSources
-                .filter((item) => item.sourceId === aggregate.sourceId)
-                .map((item, excludedIndex) => (
-                  <p className="review-excluded" key={excludedIndex}>
-                    Excluded from index: {item.reason}
-                  </p>
-                ))}
               {source && (
                 <a
                   className="research-source"

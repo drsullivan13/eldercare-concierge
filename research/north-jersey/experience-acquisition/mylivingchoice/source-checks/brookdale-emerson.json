@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 47,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_7aacc8540bc7fb41_1.log",
+    "section": "r65",
+    "sha256": "31571337d13f7b6dfb274f225a22be4ccac94f3ebc07981739364b934e4ca76e"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x0:0xb7b86f5684e1aa6"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "590 Old Hook Road",
+    "careUnit": "Assisted LivingMemory Care",
+    "city": "Emerson",
+    "name": "Brookdale Emerson",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "273c7c628659457c5ad2835c9bea338215dd0b5137bbaad48b443f4db04b2f87",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Assisted LivingMemory Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-529072",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xacGFYQmpPVlJtZWpWemVYUTVkRnAyYlV3M00wRRAB!2m1!1s0x0:0xb7b86f5684e1aa6!3m1!1s2@1:CAIQACodChtycF9oOlZpaXBjOVRmejVzeXQ5dFp2bUw3M0E%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "8b4286316a1f608241cb50a1c2cf25ab03761db4928aa6bc25dd7365d2aa1d17",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-529073",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tGVE1FWXhWRVpGTFZCVVZuRlJNM1Y1VG1VeFZtYxAB!2m1!1s0x0:0xb7b86f5684e1aa6!3m1!1s2@1:CAIQACodChtycF9oOkFTMEYxVEZFLVBUVnFRM3V5TmUxVmc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "c2afe5a05e1bffd216deb63e5f9be7e64c47a1a52ef1b9da9ae630c854e4d0da",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-529074",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pneFpYTTFWbmROVUdNeFVXMVJWVFk1WjJWWmNYYxAB!2m1!1s0x0:0xb7b86f5684e1aa6!3m1!1s2@1:CAIQACodChtycF9oOjgxZXM1VndNUGMxUW1RVTY5Z2VZcXc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "f44af34386196ecb8f410e7cbaf52c7e6080b4873d5333b9d62ef4b6c29b0b11",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-529075",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT214M2VVcHdSbTVRVm10TlJHdDBjVXBCWmxaMVVIYxAB!2m1!1s0x0:0xb7b86f5684e1aa6!3m1!1s2@1:CAIQACodChtycF9oOmx3eUpwRm5QVmtNRGt0cUpBZlZ1UHc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "2be38c88473dd070075578a68e8b4b9c1b5d8c47b37294b29b6b3fb46f2c1af4",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-529076",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xkRFFsTTBjMlU1Vm5CR2VHWndUWEZpWkRKVVExRRAB!2m1!1s0x0:0xb7b86f5684e1aa6!3m1!1s2@1:CAIQACodChtycF9oOldDQlM0c2U5VnBGeGZwTXFiZDJUQ1E%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "e81b79767da172871952a5b165607557f683b80ae1a85d4d0f234407b3c61a18",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/brookdale-emerson"
+}

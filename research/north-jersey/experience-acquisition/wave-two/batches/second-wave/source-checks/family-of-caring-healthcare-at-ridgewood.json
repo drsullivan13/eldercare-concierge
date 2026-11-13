@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 275,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_ecccae4b5565921a_1.log",
+    "section": "r18",
+    "sha256": "9c465b86a46f2423143e99d1cecb8b412c9ac8ecde40c9c8941270fc34232361"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2fb55b2e8bcad:0x4fade0b84095fff5"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "304 S. Van Dien Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Ridgewood",
+    "name": "Family of Caring",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "9f0e8a37c29df8f8cb592b4300648485ac9c312047449e74326a2b0498b0f193",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609345",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21kdGFGTTNaVEZpUlVOQ1h5MUdUekJwVkdGM1RIYxAB!2m1!1s0x89c2fb55b2e8bcad:0x4fade0b84095fff5",
+        "privateWindowSegmentSha256": "0e32638f37f7e915dcb44273f9a57a6dfab570a1ed39b99a682a5fa836f6d6b8",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609339",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xKTE1FUnRhVVpHUjBoak5uQlZUVFo1VG1WSVpIYxAB!2m1!1s0x89c2fb55b2e8bcad:0x4fade0b84095fff5",
+        "privateWindowSegmentSha256": "9a9e8f02fe7e8c4b6ad29c277f4cd46b3bbc6f1d155bebec2fafe3943fa6375c",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609337",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21zNU1VTlpjVzV4ZGpVMWVVNHdjM2xyVXpGVk1sRRAB!2m1!1s0x89c2fb55b2e8bcad:0x4fade0b84095fff5",
+        "privateWindowSegmentSha256": "f90fe89058f9e5a9ccd80b820c28780e65dbca8e2fa6c36dece48269bcc6b73f",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609341",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21SWlJGRm5ZMGxaTnpkQmVUVmpjbEpFYzFaeFYwRRAB!2m1!1s0x89c2fb55b2e8bcad:0x4fade0b84095fff5",
+        "privateWindowSegmentSha256": "a95e11f8b35f61ff6d685df6e22c83b5ade47a5613cbc5c9f305fc79cf2dd273",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-609343",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2kxU1dtUmlVRWx5TUUxSFN6bFVaM0k0YWxaUWNVRRAB!2m1!1s0x89c2fb55b2e8bcad:0x4fade0b84095fff5",
+        "privateWindowSegmentSha256": "7c9f96b6e67f7b6f7ae6384184ed4149f802e9c0231a44c59375f5e812cbf9bc",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/family-of-caring-healthcare-at-ridgewood"
+}

@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 197,
+    "rating": 4.5,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_8fe5c435e78e055a_1.log",
+    "section": "r109",
+    "sha256": "4b0fc80cb3954ed9291fc83572e5274ff4710e9a20dbe9237858595dc255aaa9"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2eff6054479ff:0xe8e00bbd146f7271"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "100 Kinderkamack Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Emerson",
+    "name": "Emerson Health and Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "9db14d5da881926c2fb6724b5f2f4f0b6967a4cef47294da35a5b8c328268b89",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-08",
+        "id": "mlc-google-609173",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21oR1ZuVXRkRmRhZFdkcGRrNXBiM0Z2ZDJaM1QyYxAB!2m1!1s0x89c2eff6054479ff:0xe8e00bbd146f7271",
+        "privateWindowSegmentSha256": "7046270ca9c47462154957bca29881d70ffb0360df5ac317fd8eb665629557fe",
+        "sentiment": "positive",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609171",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s0dGNHOXdaM3AzU0hsc09XOVhhVGhuTVdaeWVtYxAB!2m1!1s0x89c2eff6054479ff:0xe8e00bbd146f7271",
+        "privateWindowSegmentSha256": "0a242ad2ebb937140cb435a7f6cfb1c76bb68d3b727e7f84915708f4c1f2572f",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609174",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s5Zk0yVmthbWhZTUVwWFVYcFNUazVoUTFkelRFRRAB!2m1!1s0x89c2eff6054479ff:0xe8e00bbd146f7271",
+        "privateWindowSegmentSha256": "749de8742fd0ab436807ce0a364864d2515caa1a1891915a9f025f12bc7bd606",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609169",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xabGIxbEpWMWhDVFhabGRHd3lOelJKVWtGNlozYxAB!2m1!1s0x89c2eff6054479ff:0xe8e00bbd146f7271",
+        "privateWindowSegmentSha256": "89904837432019b9639f7bf8c65d3eac0369a0aaaaaf9063dfe7974fda2bdf15",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609175",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tabGFXVmtNVGhRYVdjMFFWTmxRbHB0VEROVGEzYxAB!2m1!1s0x89c2eff6054479ff:0xe8e00bbd146f7271",
+        "privateWindowSegmentSha256": "c7677a509668f1ca5fc03e1363b9ea21f5e04650d52eda5fe06c22786c67e138",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/emerson-health-care-center"
+}

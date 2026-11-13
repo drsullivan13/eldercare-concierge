@@ -1,0 +1,89 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 133,
+    "rating": 3.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/new-vista-nursing-rehabilitation-ctr.json",
+      "sha256": "affa115fb610d98e5e5c8470095e440768fdf9ac21e0cfc9d441b0819fd2ad4c"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/batch.json",
+      "sha256": "c7891906341b99218cb80f85d8330a0b04b0668756e0fa1b4edf1cd05998dd44"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/proposals.json",
+      "sha256": "a7a364d601c5b8f2410b72221d4ad0a8fc7e6a280d980de3fd4af43139a71c45"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/reviewed.json",
+      "sha256": "008123040452919d50be4bce0f463c1389bfe4d79bd86da95a281926e662886f"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/new-vista-nursing-rehabilitation-ctr.json",
+      "sha256": "77bc9b6972609ba34f2f971e771862da4f2bdc8eaf8c51bbd0617730a6b96768"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/aliases.json",
+      "sha256": "b784b5b83a8fb1fc71215beeb709b840d34330e94c2578913f69ad4197785814"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "300 Broadway",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Newark",
+    "name": "New Vista Nursing and Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ60730",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315458",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609405",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609402",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609403",
+        "sentiment": "mixed"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609404",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609400",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/new-vista-nursing-rehabilitation-ctr"
+}

@@ -1,0 +1,20 @@
+{
+  "assessmentDate": "2026-11-13",
+  "reviewer": "coordinator-direct-review",
+  "method": "Second reading of the original retained full FetchUrl responses, including About, care labels, exact address, original Google panel and every visible review. No new retrieval date is asserted. Professional relationships and conflicting setting descriptions are held in mylivingchoice/batches.json. No narrative or reviewer identity is released.",
+  "columns": ["slug", "providerId", "name", "address", "city", "careUnit", "rating", "count", "rows"],
+  "rowColumns": ["originalRowId", "publishedMonth", "sentiment"],
+  "approvals": [
+    ["brookdale-emerson", "north-jersey-doh-nj5a004", "Brookdale Emerson", "590 Old Hook Road", "Emerson", "Assisted LivingMemory Care", 4.6, 47, [["529072","2026-06","positive"],["529073","2026-05","positive"],["529074","2026-05","positive"],["529075","2026-04","positive"],["529076","2026-04","positive"]]],
+    ["careone-at-new-milford", "cms-315306", "Careone At New Milford", "800 River Road", "New Milford", "Memory CareSkilled Nursing / Long Term Care", 4.0, 86, [["609011","2026-05","mixed"],["609018","2026-03","positive"],["609013","2026-03","positive"],["609015","2026-03","positive"],["609021","2026-02","negative"]]],
+    ["maple-glen-center", "cms-315328", "Maple Glen Center", "12-15 Saddle River Road", "Fair Lawn", "Skilled Nursing / Long Term CareRespite / Short-Term Care", 4.4, 173, [["305869","2026-04","positive"],["305868","2026-03","positive"],["305871","2026-02","positive"],["305870","2026-01","negative"],["305872","2025-11","positive"]]],
+    ["sunrise-of-franklin-lakes", "north-jersey-doh-nj25284", "Sunrise of Franklin Lakes", "728 Franklin Avenue", "Franklin Lakes", "Assisted LivingMemory Care", 4.4, 51, [["525408","2026-04","positive"],["525409","2026-02","positive"],["525410","2026-02","negative"],["525411","2025-11","positive"],["525412","2025-10","positive"]]],
+    ["careone-at-livingston-assisted-living", "north-jersey-doh-nj30a009", "CareOne at Livingston Assisted Living", "76 Passaic Ave", "Livingston", "Assisted LivingMemory Care", 4.5, 32, [["628907","2026-03","positive"],["628908","2026-03","positive"],["628909","2026-03","positive"],["628910","2026-03","positive"],["628911","2026-03","positive"]]],
+    ["complete-care-at-summit-ridge", "cms-315038", "Complete Care At Summit Ridge", "20 Summit Street", "West Orange", "Skilled Nursing / Long Term Care", 4.3, 283, [["608470","2026-07","negative"],["608467","2026-05","positive"],["608468","2026-05","positive"],["608469","2026-02","positive"],["608466","2026-02","negative"]]],
+    ["complete-care-at-west-caldwell-llc", "cms-315247", "Complete Care At West Caldwell", "165 Fairfield Ave", "West Caldwell", "Skilled Nursing / Long Term Care", 4.5, 181, [["608854","2026-08","negative"],["608851","2026-07","mixed"],["608856","2026-07","positive"],["608852","2026-05","mixed"],["608853","2026-04","mixed"]]],
+    ["montclair-care-center", "cms-315363", "Montclair Care Center", "111-115 Gates Avenue", "Montclair", "Skilled Nursing / Long Term Care", 4.3, 100, [["609187","2026-06","negative"],["609188","2026-06","positive"],["609186","2026-06","positive"],["609190","2026-04","positive"],["609189","2026-01","positive"]]],
+    ["promise-care-nj", "cms-317064", "Promise Care Nj", "4914 Kennedy Boulevard, Suite #203", "West New York", "Home Health", 4.1, 35, []],
+    ["family-of-caring-at-teaneck-llc", "cms-315037", "Family Of Caring At Teaneck", "1104 Teaneck Road", "Teaneck", "Skilled Nursing / Long Term Care", 4.7, 235, [["608464","2026-06","mixed"],["608463","2026-05","positive"],["608461","2026-04","positive"],["608462","2026-02","positive"],["608465","2026-01","positive"]]],
+    ["holly-manor-center", "cms-315143", "Holly Manor Center", "84 Cold Hill Road", "Mendham", "Memory CareSkilled Nursing / Long Term CareRespite / Short-Term Care", 4.2, 136, [["608629","2026-04","negative"],["608633","2026-04","negative"],["608631","2026-03","mixed"],["608627","2026-01","positive"],["608634","2025-09","positive"]]]
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 92,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/amedisys-home-health-care-hackensack.json",
+      "sha256": "598cf7e3562b4c98e22799e2109652c20c8661f07b1c1fff933c830406f27e54"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/batch.json",
+      "sha256": "c7891906341b99218cb80f85d8330a0b04b0668756e0fa1b4edf1cd05998dd44"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/proposals.json",
+      "sha256": "a7a364d601c5b8f2410b72221d4ad0a8fc7e6a280d980de3fd4af43139a71c45"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/reviewed.json",
+      "sha256": "008123040452919d50be4bce0f463c1389bfe4d79bd86da95a281926e662886f"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/amedisys-home-health-care-hackensack.json",
+      "sha256": "254627db42bff65fdaaa4fabee7ea79ea6ba3273cea1ddee6f141f61402411c9"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/aliases.json",
+      "sha256": "b784b5b83a8fb1fc71215beeb709b840d34330e94c2578913f69ad4197785814"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "21 Main Street, Suite 252",
+    "careUnit": "Home Health",
+    "city": "Hackensack",
+    "name": "Amedisys Home Health Care",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "317047",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-317047",
+  "reviewSample": {
+    "observations": [],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 0
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/amedisys-home-health-care-hackensack"
+}

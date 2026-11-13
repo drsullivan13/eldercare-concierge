@@ -498,7 +498,11 @@ def released_research(inputs, roster, counties):
             target["checkedAt"] = max(target["checkedAt"], record["checkedAt"])
             target["providerDetailsReviewed"] |= record["providerDetailsReviewed"]
     add_public_review_context(inputs, combined, roster, counties)
-    return combined
+    spec = importlib.util.spec_from_file_location(
+        "nj_supplemental", ROOT / "scripts/regions/nj_supplemental.py")
+    supplemental = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(supplemental)
+    return supplemental.load_release(inputs, combined, roster, counties)
 
 
 def reviewed_facebook(inputs, providers):

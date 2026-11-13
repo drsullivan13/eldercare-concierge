@@ -2,6 +2,7 @@ import type {
   ExperienceReviewSample,
   ExperienceSummary,
 } from "./experience-score";
+import type { PublicExperience } from "./public-experience";
 import type {
   FacebookResearch,
   FacebookSummary,
@@ -103,21 +104,19 @@ export type ResearchSummary = {
   availabilityStatus: AvailabilityObservation["status"];
   availabilityCheckedAt: string | null;
   admissionRestriction?: string;
-  experience: Pick<
-    ExperienceSummary,
-    | "value"
-    | "reviewCount"
-    | "confidence"
-    | "independentSourceCount"
-    | "publicationStatus"
-    | "selectedConcerns"
-    | "singleSourceLabel"
-  >;
+  experience: PublicExperience;
 };
-export type LocationResearchResponse = LocationResearch & {
+export type InternalLocationResearchResponse = LocationResearch & {
   dailyLife?: DailyLifeResearch;
   nursingStaffing?: NursingStaffingResearch;
   familyExperience?: FamilyExperience;
   experience: ExperienceSummary;
   facebookResearch?: FacebookResearch;
+};
+export type LocationResearchResponse = Omit<
+  InternalLocationResearchResponse,
+  "experience" | "reviewSamples" | "reviewAggregates"
+> & {
+  experience: PublicExperience;
+  reviewAggregates: Omit<ReviewAggregate, "sourceFamily">[];
 };

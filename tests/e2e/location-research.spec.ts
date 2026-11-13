@@ -463,8 +463,8 @@ test("actual review sources, excluded populations and selected family accounts n
   );
   await expect(
     method.getByRole("heading", { name: "The calculation" }),
-  ).toBeVisible();
-  await expect(method.locator("ol > li")).toHaveCount(4);
+  ).toHaveCount(0);
+  await expect(method.locator("ol > li")).toHaveCount(0);
   for (const [index, aggregate] of data.reviewAggregates.entries()) {
     const reported = panel.locator(".review-platforms article").nth(index);
     await expect(
@@ -487,7 +487,7 @@ test("actual review sources, excluded populations and selected family accounts n
       await expect(reported.getByRole("listitem")).toHaveText(aggregate.notes);
     }
   }
-  await expect(panel.locator(".review-excluded").first()).toBeVisible();
+  await expect(panel.locator(".review-excluded")).toHaveCount(0);
   const catalogResponse = await request.get("/api/reviews", {
     params: { id: data.providerId },
   });
@@ -545,7 +545,7 @@ test("actual review sources, excluded populations and selected family accounts n
       "Not rated yet",
     );
     await expect(panel.locator(".experience-number")).not.toContainText("0.0");
-    await expect(panel.locator(".review-excluded").first()).toBeVisible();
+    await expect(panel.locator(".review-excluded")).toHaveCount(0);
     await noOverflow(page);
     await dialog.getByRole("button", { name: "Close dialog" }).click();
   }

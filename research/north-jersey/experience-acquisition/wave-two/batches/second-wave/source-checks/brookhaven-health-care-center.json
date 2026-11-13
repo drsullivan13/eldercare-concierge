@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 191,
+    "rating": 4.2,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_3a2fcab1afb82b4e_1.log",
+    "section": "r11",
+    "sha256": "57da5138bcfe2a8617ed46a15c071d08b2a593bd9adacdbe52826733e2e4d073"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x0:0x4cf39d11ffef4706"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "120 Park End Place",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "East Orange",
+    "name": "Brookhaven Center for Rehabilitation and Healthcare",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "f7b1e1fe92bdf980a4e944300dc2208e191234c3c02c72d438ea9e7bfc81d01f",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-09",
+        "id": "mlc-google-678409",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21nMlZFOXpMV05VTldKTmFIcEdTbmRpYjJoS1pXYxAB!2m1!1s0x0:0x4cf39d11ffef4706!3m1!1s2@1:CAIQACodChtycF9oOmg2VE9zLWNUNWJNaHpGSndib2hKZWc%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "fb796b1843751b60a0f28179f0f12ebe5a5842b1608751bbc4919143dc9872a1",
+        "sentiment": "positive",
+        "sourcePublishedText": "Sep 2026"
+      },
+      {
+        "date": "2026-08",
+        "id": "mlc-google-678410",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Sd2NWRnhibnBuU2sxQ2FIVmhjbGhWYWw5V2JWRRAB!2m1!1s0x0:0x4cf39d11ffef4706!3m1!1s2@1:CAIQACodChtycF9oOnRwcVFxbnpnSk1CaHVhclhVal9WbVE%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "0aa5b9c0a2cba2be8ecccd624c29c7a725244322e5c9b3b758272908ac3d20ca",
+        "sentiment": "positive",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-08",
+        "id": "mlc-google-678411",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21WbVoydFNOWEpoYjBJNVRHNXpWMUZvY0RGbFRVRRAB!2m1!1s0x0:0x4cf39d11ffef4706!3m1!1s2@1:CAIQACodChtycF9oOmVmZ2tSNXJhb0I5TG5zV1FocDFlTUE%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "9b4bc7dff7d112c658785f021386eb38b7d0203d1f88bc5edfa3fc0a0bc778aa",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-08",
+        "id": "mlc-google-678412",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25oVWRHdEhNblkzV0hWcGNrRTVUVXhJYTNwbVJsRRAB!2m1!1s0x0:0x4cf39d11ffef4706!3m1!1s2@1:CAIQACodChtycF9oOnhUdGtHMnY3WHVpckE5TUxIa3pmRlE%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "26d46130d74bb04adc1cfad84f99e1963dc9b4105cfff878df3c19f0ef2ada12",
+        "sentiment": "positive",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-08",
+        "id": "mlc-google-678413",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t4a09FSlBaalV3UW1GeWNqbFJTakpoUmswMmIwRRAB!2m1!1s0x0:0x4cf39d11ffef4706!3m1!1s2@1:CAIQACodChtycF9oOkxkOEJPZjUwQmFycjlRSjJhRk02b0E%7C%7C?hl=en-US",
+        "privateWindowSegmentSha256": "833fa1e9c329196116b9095e5bf8dd98ee5f705a7279e183efea183022ccc2cd",
+        "sentiment": "positive",
+        "sourcePublishedText": "Aug 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/brookhaven-health-care-center"
+}

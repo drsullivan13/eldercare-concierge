@@ -5,17 +5,26 @@ import catalog from "../../src/data/providers.json";
 import type { FacebookResearchDataset } from "../../src/lib/facebook-research";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
 import { getFamilyExperience } from "../../src/lib/facebook-research";
+import { markets } from "../../src/lib/markets";
+import { publicResearchNotes } from "../../src/lib/public-location-research";
 
 const snapshot = data as unknown as FacebookResearchDataset;
 const assigned = Object.entries(snapshot.locations);
-const names = new Map(catalog.map((p) => [p.id, p.name]));
+const providers = markets.flatMap((market) => market.providers);
+const names = new Map(providers.map((p) => [p.id, p.name]));
 test.describe.configure({ timeout: 180_000 });
 async function open(page: Page, id: string) {
   await page.goto("/dashboard?demo=1");
   await page
     .getByRole("combobox", { name: "Care type", exact: true })
-    .selectOption(catalog.find((provider) => provider.id === id)!.category);
-  await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
+    .selectOption(providers.find((provider) => provider.id === id)!.category);
+  await page
+    .getByRole("textbox", { name: "Search ZIP code" })
+    .fill(
+      providers.find((provider) => provider.id === id)!.state === "NJ"
+        ? "07960"
+        : "02459",
+    );
   await page
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
@@ -29,6 +38,7 @@ async function open(page: Page, id: string) {
   await filters.click();
   const name = names.get(id)!;
   await page.getByPlaceholder("Search by name or town").fill(name);
+  await page.getByPlaceholder("Search by name or town").press("Tab");
   const loaded = page.waitForResponse(
     (r) =>
       new URL(r.url()).pathname === "/api/search" &&
@@ -83,7 +93,7 @@ async function open(page: Page, id: string) {
       .click();
     await expect(method.locator("p").first()).toBeVisible();
     await expect(dialog.locator(".family-experience-method")).toContainText(
-      "the same published score",
+      "not a representative survey",
     );
     await expect(dialog.locator(".family-experience-method")).toContainText(
       "Each thread counts once",
@@ -118,19 +128,105 @@ async function noOverflow(page: Page) {
     expect(s.scroll).toBeLessThanOrEqual(s.client + 1);
 }
 
-test("public methodology explains family-experience tie-only ordering and campus scope", async ({
+test("North Jersey family findings expose the summary, original thread and observation provenance", async ({
+  page,
+}) => {
+  for (const id of [
+    "north-jersey-campus-cedar-crest-village-07444",
+    "north-jersey-doh-nj60a004",
+  ]) {
+    const location = markets.find((market) => market.id === "north-jersey")!
+      .facebookResearch!.locations[id];
+    const finding = location.findings[0];
+    const { section } = await open(page, id);
+    const article = section.locator(".fb-research-finding");
+    await expect(article).toHaveCount(1);
+    await expect(
+      article.getByText(finding.summary, { exact: false }),
+    ).toBeVisible();
+    await expect(article.locator("blockquote")).toHaveText(
+      `“${finding.excerpt}”`,
+    );
+    await expect(article).toContainText("Post date:");
+    await expect(
+      article.getByRole("link", { name: "Facebook source", exact: true }),
+    ).toHaveAttribute("href", finding.threadUrl);
+    const provenance = article.locator(".fb-research-provenance");
+    await expect(provenance.locator("p").first()).not.toBeVisible();
+    await provenance.locator("summary").focus();
+    await page.keyboard.press("Enter");
+    await expect(provenance.locator("p").first()).toBeVisible();
+    for (const observationId of finding.sourceObservationIds)
+      await expect(provenance).toContainText(observationId);
+    await expect(provenance).toContainText(
+      "Collected rows, not independent people or households.",
+    );
+    await expect(provenance).toContainText("Editorial review:");
+    await article.getByText("Context and limits", { exact: true }).click();
+    for (const limit of publicResearchNotes(finding.limitations))
+      await expect(article.getByText(limit, { exact: true })).toBeVisible();
+    await noOverflow(page);
+    const accessibility = await new AxeBuilder({ page })
+      .include(".fb-research")
+      .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+      .analyze();
+    expect(accessibility.violations).toEqual([]);
+  }
+});
+
+test("North Jersey held, unresolved, empty and unsearched coverage remain distinct", async ({
+  page,
+}) => {
+  const market = markets.find((item) => item.id === "north-jersey")!;
+  const locations = market.facebookResearch!.locations;
+  const unsearched = market.providers.find(
+    (provider) =>
+      provider.category === "nursing-home" &&
+      !Object.hasOwn(locations, provider.id),
+  )!;
+  for (const [id, label] of [
+    ["north-jersey-campus-lantern-hill-07974", "Collected material withheld"],
+    ["north-jersey-doh-nj60a002", "Partial coverage"],
+    ["cms-315329", "No relevant result in this search"],
+    [unsearched.id, "Not searched in this pilot"],
+  ]) {
+    const { section } = await open(page, id);
+    await expect(section.locator(".fb-research-status")).toHaveText(label);
+    await expect(section.locator(".fb-research-finding")).toHaveCount(0);
+    await expect(section.getByRole("combobox")).toHaveCount(0);
+    await section
+      .getByText("What this Facebook search covered", { exact: true })
+      .click();
+    if (Object.hasOwn(locations, id)) {
+      await expect(section).toContainText(
+        publicResearchNotes([locations[id].coverageExplanation]).join(" "),
+      );
+      await expect(section.locator(".fb-research-counts")).toContainText(
+        `${locations[id].withheldCount} withheld`,
+      );
+    } else {
+      await expect(section).toContainText(
+        "does not mean no relevant posts exist",
+      );
+      await expect(section.locator(".fb-research-counts")).toHaveCount(0);
+    }
+    await noOverflow(page);
+  }
+});
+
+test("public methodology explains qualitative family accounts and campus scope", async ({
   page,
 }) => {
   await page.goto("/methodology");
   const policy = page.locator("#family-accounts");
   await expect(
     policy.getByRole("heading", {
-      name: "How resident and family accounts affect ordering",
+      name: "Resident and family accounts",
     }),
   ).toBeVisible();
-  await expect(policy).toContainText("Each thread counts once");
-  await expect(policy).toContainText("the same published score");
-  await expect(policy).toContainText("These accounts do not change that score");
+  await expect(policy).toContainText("qualitative context");
+  await expect(policy).toContainText("not a rating");
+  await expect(policy).not.toContainText("the same published score");
   await expect(policy).toContainText(
     "separately licensed nursing and assisted-living units have their own records",
   );
@@ -165,7 +261,9 @@ test("actual curated Facebook findings show sources, keyboard expansion and kind
   await expect(section.locator(".fb-research-counts")).toContainText(
     `${location.publishedObservationCount} published`,
   );
-  await expect(section).toContainText(location.coverageExplanation);
+  await expect(section).toContainText(
+    publicResearchNotes([location.coverageExplanation]).join(" "),
+  );
   await expect(section.locator(".fb-research-finding")).toHaveCount(3);
   const first = section.locator(".fb-research-finding").first();
   await expect(first).toContainText(location.findings[0].summary);
@@ -250,7 +348,9 @@ test("searched empty/withheld coverage is distinct from an actual catalog locati
     await coverage.locator("summary").focus();
     await page.keyboard.press("Enter");
     await expect(coverage.locator(".fb-research-dates")).toBeVisible();
-    await expect(result.section).toContainText(location.coverageExplanation);
+    await expect(result.section).toContainText(
+      publicResearchNotes([location.coverageExplanation]).join(" "),
+    );
     await expect(
       result.section.locator(".fb-research-status"),
     ).not.toContainText("Not searched");

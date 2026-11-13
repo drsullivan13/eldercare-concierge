@@ -1,0 +1,73 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 235,
+    "rating": 4.7,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/source-checks/family-of-caring-at-teaneck-llc.json",
+      "sha256": "b718f07572fcb6b4826d32b963e8fd1a6a4f877abbb79ec7fd3803a9489a834d"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/integration/reviewed-mylivingchoice.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "1104 Teaneck Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Teaneck",
+    "name": "Family Of Caring At Teaneck",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ60217",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315037",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-608464",
+        "sentiment": "mixed"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608463",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608461",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-608462",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-608465",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/family-of-caring-at-teaneck-llc"
+}

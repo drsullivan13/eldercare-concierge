@@ -39,12 +39,6 @@ export function FamilyExperienceEvidence({
           Each thread counts once, even when several people comment. Harbor
           includes selected accounts about this location.
         </p>
-        <p>
-          These accounts do not change the experience score. When you sort by
-          experience within a care category, locations with the same published
-          score are ordered by thread count, highest first. Locations without a
-          score are ordered by distance, then name.
-        </p>
       </details>
     </>
   );

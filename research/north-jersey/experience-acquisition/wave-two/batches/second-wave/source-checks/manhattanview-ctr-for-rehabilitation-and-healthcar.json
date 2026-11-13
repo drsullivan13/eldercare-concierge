@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 208,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_c1c41290dddd2021_1.log",
+    "section": "r59",
+    "sha256": "dd77caef6fbadfe11988fa11c73f9c4aafe8665eba74daaccb70d32a32789a82"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c25828f16a777d:0x62712f5b0abde6f"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "3200 Hudson Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Union City",
+    "name": "ManhattanView Center for Rehabilitation and Healthcare",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "60312f2b2e000bda41b90f9bb9d93898a7c7340cd9ddce69e27598f64bf1a0e2",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609436",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2twVU1rdEhaV2R5UzBkWk1GbGpSRVJRYUhWMlVXYxAB!2m1!1s0x89c25828f16a777d:0x62712f5b0abde6f",
+        "privateWindowSegmentSha256": "20155498372298a5ae9c5c30afeb466f03328c4d01ed67b034e3f7b00e773f1c",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-609437",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25WeFl6WTFUSEpyUlhCelVIZDRjM2hKWlRCWFVsRRAB!2m1!1s0x89c25828f16a777d:0x62712f5b0abde6f",
+        "privateWindowSegmentSha256": "378ae6f5864def4bee814dc2d76fc6430c9ccc8832c1401df6b62f3a955c67fa",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609439",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25SRVF6bHZTMU5tTUhSMGFFSnVSMjFYZFZoQ2NFRRAB!2m1!1s0x89c25828f16a777d:0x62712f5b0abde6f",
+        "privateWindowSegmentSha256": "e81e94db01ae66161b9140689acc70be4b446bf8ab9c99ca5842d45a159b9ff5",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609441",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2poalpDMTJlbkpVYnpSVVUyc3hibVk0VG5OUU0zYxAB!2m1!1s0x89c25828f16a777d:0x62712f5b0abde6f",
+        "privateWindowSegmentSha256": "5293524d4f3ac398bcb8406ba9ef0fe173899bdb494daa88a398cb67a851d643",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-609443",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21neWJETkNZMjVIWVRaelVHdENhSE5EVG10amQxRRAB!2m1!1s0x89c25828f16a777d:0x62712f5b0abde6f",
+        "privateWindowSegmentSha256": "8f88723bf18ef14c1195cb178292c58b7e59e7fb1bd6b58c012c4b47b9ca916b",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jan 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/manhattanview-ctr-for-rehabilitation-and-healthcar"
+}

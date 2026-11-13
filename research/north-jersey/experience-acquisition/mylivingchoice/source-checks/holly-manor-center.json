@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 136,
+    "rating": 4.2,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_8fe5c435e78e055a_1.log",
+    "section": "r106",
+    "sha256": "4b0fc80cb3954ed9291fc83572e5274ff4710e9a20dbe9237858595dc255aaa9"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3a1f0c0b6fa1f:0xded2f8d52b4267e4"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "84 Cold Hill Road",
+    "careUnit": "Memory CareSkilled Nursing / Long Term CareRespite / Short-Term Care",
+    "city": "Mendham",
+    "name": "Holly Manor Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "43a77360a8214289623c2dd2a54791d79c423f4e170975efd808ade544e8169e",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Memory CareSkilled Nursing / Long Term CareRespite / Short-Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608629",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT214Wk1qVTFPVVl3VEcxNExURTRTWGxRWmtGTFRFRRAB!2m1!1s0x89c3a1f0c0b6fa1f:0xded2f8d52b4267e4",
+        "privateWindowSegmentSha256": "37b787077392cc59b6261ddf71f45f232d77706977d2bd6724c7f21f203cce1c",
+        "sentiment": "negative",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608633",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xab1pXdHVjek16VVZscmFFaFRTRWhRZURSdFgzYxAB!2m1!1s0x89c3a1f0c0b6fa1f:0xded2f8d52b4267e4",
+        "privateWindowSegmentSha256": "e17fc360aaa939b6895ae5d26c5e38327a66b6a8ade3f1e6f8fbfdeb2cc22a51",
+        "sentiment": "negative",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-608631",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2poNGVuaFVRME5qVTJGMWNtRlpWREpHUVZWd1ltYxAB!2m1!1s0x89c3a1f0c0b6fa1f:0xded2f8d52b4267e4",
+        "privateWindowSegmentSha256": "79d32dd57f4574987b3fcd98c6e8f4a45643df474113c447813a17e11c16a65a",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-608627",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tkTGJHRXlPVkpLUzJWU09HdDNXVXN4Tmt4NGFsRRAB!2m1!1s0x89c3a1f0c0b6fa1f:0xded2f8d52b4267e4",
+        "privateWindowSegmentSha256": "330f9181dcec54784031953a37944fca9f126c8f53bca069f714d901710f192a",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jan 2026"
+      },
+      {
+        "date": "2025-09",
+        "id": "mlc-google-608634",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURkcE1IMmlnRRAB!2m1!1s0x89c3a1f0c0b6fa1f:0xded2f8d52b4267e4",
+        "privateWindowSegmentSha256": "d89d30fad2aab13297dcd33d39c1c54d72c8b22a8d00ebb1086b60a5c7b0cce9",
+        "sentiment": "positive",
+        "sourcePublishedText": "Sep 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/holly-manor-center"
+}

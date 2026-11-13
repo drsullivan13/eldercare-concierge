@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 133,
+    "rating": 3.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_ffd79818892541b9_1.log",
+    "section": "r24",
+    "sha256": "87467faca7fde9d1516deec1c92ddc7e20ad10eb8fa6e0b6d476324245e004f0"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2546065d22e99:0x749c3e21051220a3"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "300 Broadway",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Newark",
+    "name": "New Vista Nursing and Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "7086a330afc764d78fcd7ab248801ad9bebd0aabd8d11e9157ad80485e768704",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609405",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pObE9USnpMVkp6TnpFeldqaFdYemhFTWxKclMzYxAB!2m1!1s0x89c2546065d22e99:0x749c3e21051220a3",
+        "privateWindowSegmentSha256": "0ab31395af7ab9896ad20a47ebc43c4d7d0e89f6be6d9f3c94c78bb61f2e75b9",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609402",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21GS2N6SlhhakU0VldsNFJHMVlTME5RTkRRNWRsRRAB!2m1!1s0x89c2546065d22e99:0x749c3e21051220a3",
+        "privateWindowSegmentSha256": "75295c92553e99c0bcd25454a25b35bae0251956e2a39c56795c826f7954abba",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609403",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21sRlpuaHRhbEZTVjFoS2JtOVdTR0ZzYlZrNVVGRRAB!2m1!1s0x89c2546065d22e99:0x749c3e21051220a3",
+        "privateWindowSegmentSha256": "7fb8e52d491767a9428350bc60a6cf8b0005dbd33a7284cb206a747604583c90",
+        "sentiment": "mixed",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609404",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xkU1VGcDZiVzlvWjJ3eVZFTk1XRTVzVWxkbk9IYxAB!2m1!1s0x89c2546065d22e99:0x749c3e21051220a3",
+        "privateWindowSegmentSha256": "45d1f0a48eff578ade9cdd03f2d157f2a4a2acf752cc3e35948217987163333f",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609400",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGdk1XRkJlbGx2Y2tSTFJYWklSbVI0Y3pSTU9YYxAB!2m1!1s0x89c2546065d22e99:0x749c3e21051220a3",
+        "privateWindowSegmentSha256": "cade8487117a31d635189e9fc904e1db154d53154ff60c01b67afa8b6753774e",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/new-vista-nursing-rehabilitation-ctr"
+}

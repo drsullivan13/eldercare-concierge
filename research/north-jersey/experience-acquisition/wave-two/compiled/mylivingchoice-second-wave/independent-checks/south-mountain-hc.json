@@ -1,0 +1,89 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 350,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/south-mountain-hc.json",
+      "sha256": "69d8753384ea67b97dea1e9e6fe34d93c5daf2a53b0d51714e03b640c0d8ff52"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/batch.json",
+      "sha256": "c7891906341b99218cb80f85d8330a0b04b0668756e0fa1b4edf1cd05998dd44"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/proposals.json",
+      "sha256": "a7a364d601c5b8f2410b72221d4ad0a8fc7e6a280d980de3fd4af43139a71c45"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/reviewed.json",
+      "sha256": "008123040452919d50be4bce0f463c1389bfe4d79bd86da95a281926e662886f"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/south-mountain-hc.json",
+      "sha256": "4ec2d87fff69fc71f35ce593ec38f5fd89ac0f6322c6c51d3f99255a07f6e75b"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/aliases.json",
+      "sha256": "b784b5b83a8fb1fc71215beeb709b840d34330e94c2578913f69ad4197785814"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "2385 Springfield Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Vauxhall",
+    "name": "South Mountain Healthcare and Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ62023",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315283",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608936",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608939",
+        "sentiment": "mixed"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608938",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608937",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608940",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/south-mountain-hc"
+}

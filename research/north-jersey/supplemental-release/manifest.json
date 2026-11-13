@@ -1,0 +1,2920 @@
+{
+  "identities": {
+    "cms-315120": {
+      "address": "415 SOUTHERN BLVD CHATHAM, NJ 07928",
+      "category": "nursing-home",
+      "city": "CHATHAM",
+      "name": "CHATHAM HILLS SUBACUTE CARE CENTER",
+      "state": "NJ",
+      "zip": "07928"
+    },
+    "cms-317009": {
+      "address": "576 CENTRAL AVENUE, SUITE 304",
+      "category": "home-health",
+      "city": "EAST ORANGE",
+      "name": "PROMISE CARE NJ",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "cms-317058": {
+      "address": "3 GARRET MOUNTAIN PLAZA, SUITE 400",
+      "category": "home-health",
+      "city": "WOODLAND PARK",
+      "name": "VISITING HEALTH SERVICES OF NEW JERSEY",
+      "state": "NJ",
+      "zip": "07424"
+    },
+    "cms-317082": {
+      "address": "201 W PASSAIC ST, STE 202",
+      "category": "home-health",
+      "city": "ROCHELLE PARK",
+      "name": "ASCEND HOME HEALTH",
+      "state": "NJ",
+      "zip": "07662"
+    },
+    "north-jersey-campus-cedar-crest-village-07444": {
+      "address": "1 Cedar Crest Village Drive",
+      "category": "life-plan",
+      "city": "Pompton Plains",
+      "name": "Cedar Crest Village",
+      "state": "NJ",
+      "zip": "07444"
+    },
+    "north-jersey-campus-crane-s-mill-07006": {
+      "address": "459 Passaic Avenue",
+      "category": "life-plan",
+      "city": "West Caldwell",
+      "name": "Crane’s Mill",
+      "state": "NJ",
+      "zip": "07006"
+    },
+    "north-jersey-campus-holland-christian-home-07508": {
+      "address": "151 Graham Avenue",
+      "category": "life-plan",
+      "city": "North Haledon",
+      "name": "Holland Christian Home",
+      "state": "NJ",
+      "zip": "07508"
+    },
+    "north-jersey-campus-lantern-hill-07974": {
+      "address": "535 Mountain Avenue",
+      "category": "life-plan",
+      "city": "New Providence",
+      "name": "Lantern Hill",
+      "state": "NJ",
+      "zip": "07974"
+    },
+    "north-jersey-campus-the-oaks-at-denville-07834": {
+      "address": "19 Pocono Road",
+      "category": "life-plan",
+      "city": "Denville",
+      "name": "The Oaks at Denville",
+      "state": "NJ",
+      "zip": "07834"
+    },
+    "north-jersey-campus-winchester-gardens-07040": {
+      "address": "333 Elmwood Avenue",
+      "category": "life-plan",
+      "city": "Maplewood",
+      "name": "Winchester Gardens",
+      "state": "NJ",
+      "zip": "07040"
+    },
+    "north-jersey-hp-hp0000216": {
+      "address": "286 UNION STREET, 2ND FLOOR",
+      "category": "home-care",
+      "city": "HACKENSACK",
+      "name": "EASTERN NURSING SVCS I, INC DBA PRIORITY NURSING",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0015318": {
+      "address": "3196 KENNEDY BLVD., KENNEDY MEDICAL CTR",
+      "category": "home-care",
+      "city": "UNION CITY",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07087"
+    },
+    "north-jersey-hp-hp0015319": {
+      "address": "650 BLOOMFIELD AVENUE, SUITE 200",
+      "category": "home-care",
+      "city": "BLOOMFIELD",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07003"
+    },
+    "north-jersey-hp-hp0015320": {
+      "address": "251 NORTH AVENUE WEST, SUITE 201",
+      "category": "home-care",
+      "city": "WESTFIELD",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07090"
+    },
+    "north-jersey-hp-hp0015321": {
+      "address": "1117 MAIN AVENUE, SUITE 101",
+      "category": "home-care",
+      "city": "CLIFTON",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07011"
+    },
+    "north-jersey-hp-hp0015325": {
+      "address": "383 WEST BLACKWELL ST, 1ST FL, STE 1A",
+      "category": "home-care",
+      "city": "DOVER",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07801"
+    },
+    "north-jersey-hp-hp0015340": {
+      "address": "651 OLD MOUNT PLEASANT AVENUE, SUITE 175",
+      "category": "home-care",
+      "city": "LIVINGSTON",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07039"
+    },
+    "north-jersey-hp-hp0015343": {
+      "address": "163 EAST MAIN STREET, 2ND FL, SUITE B",
+      "category": "home-care",
+      "city": "LITTLE FALLS",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07424"
+    },
+    "north-jersey-hp-hp0015347": {
+      "address": "32 MAPLE AVENUE,1ST FL",
+      "category": "home-care",
+      "city": "MORRISTOWN",
+      "name": "BAYADA HOME HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07960"
+    },
+    "north-jersey-hp-hp0022500": {
+      "address": "136 ESSEX STREET",
+      "category": "home-care",
+      "city": "HACKENSACK",
+      "name": "BERGEN HOME CARE AND NURSING INC.",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0024800": {
+      "address": "2165 MORRIS AVENUE, SUITE 1A",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "AMAZING GRACE NURSING CARE SERVICE",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0035001": {
+      "address": "711-729 Main Avenue Suite 201, 203, and 205",
+      "category": "home-care",
+      "city": "PASSAIC",
+      "name": "ACCREDITED HEALTH SERVICES, INC DBA ELARA CARING",
+      "state": "NJ",
+      "zip": "07055"
+    },
+    "north-jersey-hp-hp0038100": {
+      "address": "9 GENESEE AVENUE",
+      "category": "home-care",
+      "city": "TEANECK",
+      "name": "AWCA HOMECARE AGENCY, INC.",
+      "state": "NJ",
+      "zip": "07666"
+    },
+    "north-jersey-hp-hp0045700": {
+      "address": "10 FAIRMOUNT AVENUE",
+      "category": "home-care",
+      "city": "CHATHAM",
+      "name": "NUSOURCE TECH,INC DBA RIGHT AT HOME MORRIS COUNTY",
+      "state": "NJ",
+      "zip": "07928"
+    },
+    "north-jersey-hp-hp0049900": {
+      "address": "930 STUYVESANT AVE. STE 10",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "ACE HOME HEALTHCARE INC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0056900": {
+      "address": "39 TERHUNE AVENUE",
+      "category": "home-care",
+      "city": "JERSEY CITY",
+      "name": "PRIME HEALTH CARE, LLC",
+      "state": "NJ",
+      "zip": "07305"
+    },
+    "north-jersey-hp-hp0057100": {
+      "address": "26 JOURNAL SQUARE PLAZA, SUITE 305",
+      "category": "home-care",
+      "city": "JERSEY CITY",
+      "name": "ACCESS NURSING SERVICES OF NEW JERSEY, INC.",
+      "state": "NJ",
+      "zip": "07306"
+    },
+    "north-jersey-hp-hp0058900": {
+      "address": "735 NORTHFIELD AVENUE",
+      "category": "home-care",
+      "city": "WEST ORANGE",
+      "name": "MOSES SCOTT ASSOC DBA RIGHT AT HOME OF ESSEX CTY",
+      "state": "NJ",
+      "zip": "07052"
+    },
+    "north-jersey-hp-hp0059400": {
+      "address": "25 SOUTH PAULA DRIVE",
+      "category": "home-care",
+      "city": "BERGENFIELD",
+      "name": "LA PAULA HEALTH CARE SERVICES CORP.",
+      "state": "NJ",
+      "zip": "07621"
+    },
+    "north-jersey-hp-hp0065000": {
+      "address": "485 MORRIS AVENUE, SUITE 201",
+      "category": "home-care",
+      "city": "SPRINGFIELD",
+      "name": "ALANGAD & ASSOCIATES INC. DBA VISITING ANGELS",
+      "state": "NJ",
+      "zip": "07081"
+    },
+    "north-jersey-hp-hp0076201": {
+      "address": "3 UNIVERSITY PLAZA, SUITE 124",
+      "category": "home-care",
+      "city": "HACKENSACK",
+      "name": "LOVING CARE AGENCY INC DBA AVEANNA HEALTHCARE",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0077800": {
+      "address": "15 DYATT PLACE",
+      "category": "home-care",
+      "city": "HACKENSACK",
+      "name": "CENTURION ENTERPRISES, LLC DBA HOMEWELL CARE SERVICES",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0081200": {
+      "address": "333 SYLVAN AVENUE, SUITE 205",
+      "category": "home-care",
+      "city": "ENGLEWOOD CLIFFS",
+      "name": "GENTLE HEART CARE, LLC",
+      "state": "NJ",
+      "zip": "07632"
+    },
+    "north-jersey-hp-hp0082500": {
+      "address": "2 BROAD STREET, SUITE 208",
+      "category": "home-care",
+      "city": "BLOOMFIELD",
+      "name": "SERENITY SENIOR CARE",
+      "state": "NJ",
+      "zip": "07003"
+    },
+    "north-jersey-hp-hp0091902": {
+      "address": "100 W. RIDGEWOOD AVENUE",
+      "category": "home-care",
+      "city": "PARAMUS",
+      "name": "CAREONE AT HOME",
+      "state": "NJ",
+      "zip": "07652"
+    },
+    "north-jersey-hp-hp0092900": {
+      "address": "24 Merchant Street",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "AMEFIL HEALTHCARE SERVICES, INC",
+      "state": "NJ",
+      "zip": "07105"
+    },
+    "north-jersey-hp-hp0097200": {
+      "address": "238 GOFFLE ROAD",
+      "category": "home-care",
+      "city": "HAWTHORNE",
+      "name": "CARING SOLUTIONS HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07506"
+    },
+    "north-jersey-hp-hp0104400": {
+      "address": "214 MAIN STREET, 2ND FLOOR",
+      "category": "home-care",
+      "city": "MADISON",
+      "name": "HM SARROW, INC. D/B/A SENIOR HELPERS",
+      "state": "NJ",
+      "zip": "07940"
+    },
+    "north-jersey-hp-hp0104800": {
+      "address": "290 BROAD STREET",
+      "category": "home-care",
+      "city": "SUMMIT",
+      "name": "SAGE ELDERCARE, INC.",
+      "state": "NJ",
+      "zip": "07901"
+    },
+    "north-jersey-hp-hp0105200": {
+      "address": "5810 BERGENLINE AVENUE",
+      "category": "home-care",
+      "city": "WEST NEW YORK",
+      "name": "ALWAYS CARING HEALTH CARE SERVICES, LLC",
+      "state": "NJ",
+      "zip": "07093"
+    },
+    "north-jersey-hp-hp0107600": {
+      "address": "960 KOEHL AVENUE",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "GRACIOUS HOME CARE, LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0115500": {
+      "address": "201 Bloomfield Ave.",
+      "category": "home-care",
+      "city": "VERONA",
+      "name": "CHRILL CARE, INC.",
+      "state": "NJ",
+      "zip": "07044"
+    },
+    "north-jersey-hp-hp0116100": {
+      "address": "100 SCALES PLAZA, SUITE 100",
+      "category": "home-care",
+      "city": "CLIFTON",
+      "name": "CASA HOME CARE, INC.",
+      "state": "NJ",
+      "zip": "07013"
+    },
+    "north-jersey-hp-hp0116500": {
+      "address": "725 RIVER ROAD, SUITE 32-302",
+      "category": "home-care",
+      "city": "EDGEWATER",
+      "name": "AT EASE HOME CARE LLC DBA HOME HELPERS",
+      "state": "NJ",
+      "zip": "07020"
+    },
+    "north-jersey-hp-hp0118200": {
+      "address": "215 MILLBURN AVENUE, SUITE 2B",
+      "category": "home-care",
+      "city": "MILLBURN",
+      "name": "BARON-QUEEN, INC. DBA HOME INSTEAD SENIOR CARE",
+      "state": "NJ",
+      "zip": "07041"
+    },
+    "north-jersey-hp-hp0119000": {
+      "address": "7 CLEVELAND STREET",
+      "category": "home-care",
+      "city": "CALDWELL",
+      "name": "MARIAN CARE DBA VISITING ANGELS OF SUBURBAN ESSEX",
+      "state": "NJ",
+      "zip": "07006"
+    },
+    "north-jersey-hp-hp0120800": {
+      "address": "77 BRANT AVENUE, SUITE 320",
+      "category": "home-care",
+      "city": "CLARK",
+      "name": "EPIC HEALTH SERVICES INC DBA AVEANNA HEALTHCARE",
+      "state": "NJ",
+      "zip": "07066"
+    },
+    "north-jersey-hp-hp0121600": {
+      "address": "289 REYNOLDS TERRACE",
+      "category": "home-care",
+      "city": "ORANGE",
+      "name": "ROSES HOME CARE SERVICES, INC.",
+      "state": "NJ",
+      "zip": "07050"
+    },
+    "north-jersey-hp-hp0124500": {
+      "address": "491 CLOSTER DOCK ROAD, SUITE #4",
+      "category": "home-care",
+      "city": "CLOSTER",
+      "name": "BERGEN HOME CARE LLC DBA COMFORT KEEPERS",
+      "state": "NJ",
+      "zip": "07624"
+    },
+    "north-jersey-hp-hp0126900": {
+      "address": "989 SANFORD AVENUE",
+      "category": "home-care",
+      "city": "IRVINGTON",
+      "name": "CROSSLINKS DBA CROSSLINKS HOME HEALTH & STAFFING",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0131300": {
+      "address": "64 WEST ALLENDALE AVENUE",
+      "category": "home-care",
+      "city": "ALLENDALE",
+      "name": "KJ SHUTE HOME CARE, INC, DBA HOME HELPERS",
+      "state": "NJ",
+      "zip": "07401"
+    },
+    "north-jersey-hp-hp0131500": {
+      "address": "70 KINDERKAMACK ROAD",
+      "category": "home-care",
+      "city": "EMERSON",
+      "name": "IKHAYA WORLD, INC. DBA BRIGHTSTAR HEALTHCARE",
+      "state": "NJ",
+      "zip": "07630"
+    },
+    "north-jersey-hp-hp0131701": {
+      "address": "5506 BERGENLINE AVENUE, 2ND FLOOR",
+      "category": "home-care",
+      "city": "WEST NEW YORK",
+      "name": "BEST HOME CARE, INC.",
+      "state": "NJ",
+      "zip": "07093"
+    },
+    "north-jersey-hp-hp0131702": {
+      "address": "333 N. BROAD STREET, SUITE 2A",
+      "category": "home-care",
+      "city": "ELIZABETH",
+      "name": "BEST HOME CARE, INC.",
+      "state": "NJ",
+      "zip": "07208"
+    },
+    "north-jersey-hp-hp0132200": {
+      "address": "181 NEW ROAD, SUITE 313",
+      "category": "home-care",
+      "city": "PARSIPPANY",
+      "name": "Home Care of NJ DBA Synergy HomeCare Metro NJ",
+      "state": "NJ",
+      "zip": "07054"
+    },
+    "north-jersey-hp-hp0133800": {
+      "address": "356 BLOOMFIELD AVENUE, SUITE 4",
+      "category": "home-care",
+      "city": "MONTCLAIR",
+      "name": "CEDAS HOME CARE SERVICES, LLC",
+      "state": "NJ",
+      "zip": "07042"
+    },
+    "north-jersey-hp-hp0149300": {
+      "address": "111 SOUTH ORANGE AVENUE, SUITE 21",
+      "category": "home-care",
+      "city": "SOUTH ORANGE",
+      "name": "TENDER HANDS HOME CARE LLC DBA GRISWOLD HOME CARE",
+      "state": "NJ",
+      "zip": "07079"
+    },
+    "north-jersey-hp-hp0151500": {
+      "address": "17 S. FRANKLIN TURNPIKE, 1ST FL #3",
+      "category": "home-care",
+      "city": "RAMSEY",
+      "name": "KTF ENTERPRISES, LLC DBA VISITING ANGELS",
+      "state": "NJ",
+      "zip": "07446"
+    },
+    "north-jersey-hp-hp0153400": {
+      "address": "160 PEHLE AVENUE, SUITE 203",
+      "category": "home-care",
+      "city": "SADDLE BROOK",
+      "name": "STARLIGHT HOME CARE DBA STAR PEDIATRIC HOME CARE",
+      "state": "NJ",
+      "zip": "07663"
+    },
+    "north-jersey-hp-hp0154800": {
+      "address": "50 HARRISON STREET, SUITE 211A",
+      "category": "home-care",
+      "city": "HOBOKEN",
+      "name": "ANGEL ON THE HUDSON INC DBA VISITING ANGELS",
+      "state": "NJ",
+      "zip": "07030"
+    },
+    "north-jersey-hp-hp0167700": {
+      "address": "1211 HAMBURG TURNPIKE, STE. 213",
+      "category": "home-care",
+      "city": "WAYNE",
+      "name": "FRIENDLY COMPANIONS, LLC DBA VISITING ANGELS",
+      "state": "NJ",
+      "zip": "07470"
+    },
+    "north-jersey-hp-hp0168700": {
+      "address": "143 LAKESIDE BOULEVARD, SUITE 8",
+      "category": "home-care",
+      "city": "LANDING",
+      "name": "AT HOME CARE DBA PREFERRED CARE AT HOME OF N W NJ",
+      "state": "NJ",
+      "zip": "07850"
+    },
+    "north-jersey-hp-hp0171100": {
+      "address": "22 MADISON AVENUE, SUITE 305",
+      "category": "home-care",
+      "city": "PARAMUS",
+      "name": "SN SENIOR CARE INC. DBA SENIOR HELPERS",
+      "state": "NJ",
+      "zip": "07652"
+    },
+    "north-jersey-hp-hp0174800": {
+      "address": "27 STEPHEN STREET",
+      "category": "home-care",
+      "city": "MONTCLAIR",
+      "name": "ALTERNATIVE CARE ESSENTIALS LLC",
+      "state": "NJ",
+      "zip": "07042"
+    },
+    "north-jersey-hp-hp0176700": {
+      "address": "2 MERCER STREET, SUITE 9",
+      "category": "home-care",
+      "city": "LODI",
+      "name": "ROYAL HEARTS HEALTHCARE, LLC",
+      "state": "NJ",
+      "zip": "07644"
+    },
+    "north-jersey-hp-hp0179100": {
+      "address": "31 PARK STREET, 2ND FLOOR",
+      "category": "home-care",
+      "city": "MONTCLAIR",
+      "name": "CAP CARE LLC DBA COMFORT KEEPERS",
+      "state": "NJ",
+      "zip": "07042"
+    },
+    "north-jersey-hp-hp0181000": {
+      "address": "271 US HIGHWAY 46, SUITE E102",
+      "category": "home-care",
+      "city": "FAIRFIELD",
+      "name": "E CARE SERVICES INC",
+      "state": "NJ",
+      "zip": "07004"
+    },
+    "north-jersey-hp-hp0181800": {
+      "address": "10 Banta Place, Suite 114",
+      "category": "home-care",
+      "city": "Hackensack",
+      "name": "CARE FINDERS TOTAL CARE LLC",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0181801": {
+      "address": "443 60TH STREET",
+      "category": "home-care",
+      "city": "WEST NEW YORK",
+      "name": "CARE FINDERS TOTAL CARE LLC",
+      "state": "NJ",
+      "zip": "07093"
+    },
+    "north-jersey-hp-hp0181804": {
+      "address": "466 Bloomfield Ave",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "CARE FINDERS TOTAL CARE LLC",
+      "state": "NJ",
+      "zip": "07107"
+    },
+    "north-jersey-hp-hp0184500": {
+      "address": "10 N. WOOD AVENUE, SUITE E",
+      "category": "home-care",
+      "city": "LINDEN",
+      "name": "BETTERCARE HOME HLTH DBA EMEREST HEALTH OF NJ",
+      "state": "NJ",
+      "zip": "07036"
+    },
+    "north-jersey-hp-hp0191600": {
+      "address": "560 SPRINGFIELD AVENUE, 2ND FL, STE G",
+      "category": "home-care",
+      "city": "WESTFIELD",
+      "name": "GARDEN STATE HEALTH SOLUTIONS DBA BRIGHTSTAR CARE",
+      "state": "NJ",
+      "zip": "07090"
+    },
+    "north-jersey-hp-hp0194700": {
+      "address": "27 CHESTNUT STREET",
+      "category": "home-care",
+      "city": "RIDGEWOOD",
+      "name": "360 Degree Care LLC",
+      "state": "NJ",
+      "zip": "07450"
+    },
+    "north-jersey-hp-hp0210300": {
+      "address": "1405 CLINTON AVENUE",
+      "category": "home-care",
+      "city": "IRVINGTON",
+      "name": "A RESCUE HEALTH STAFFING AGENCY, INC.",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0214300": {
+      "address": "151 W. PASSAIC STREET",
+      "category": "home-care",
+      "city": "ROCHELLE PARK",
+      "name": "TOTAL CARE NURSING REGISTRY, INC.",
+      "state": "NJ",
+      "zip": "07662"
+    },
+    "north-jersey-hp-hp0215100": {
+      "address": "50 UNION AVENUE #503",
+      "category": "home-care",
+      "city": "IRVINGTON",
+      "name": "HANDS OF ANGELS HEALTHCARE AGENCY LLC",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0216800": {
+      "address": "2125 CENTER AVENUE, SUITE 110",
+      "category": "home-care",
+      "city": "FORT LEE",
+      "name": "JERSEYSTAKE LLC DBA VISITING ANGELS OF FORT LEE",
+      "state": "NJ",
+      "zip": "07024"
+    },
+    "north-jersey-hp-hp0217600": {
+      "address": "14 RIDGEDALE AVENUE, SUITE 208",
+      "category": "home-care",
+      "city": "CEDAR KNOLLS",
+      "name": "SOLOFF DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+      "state": "NJ",
+      "zip": "07927"
+    },
+    "north-jersey-hp-hp0218401": {
+      "address": "180 PASSAIC AVENUE",
+      "category": "home-care",
+      "city": "FAIRFIELD",
+      "name": "CORAM CVS SPECIALTY INFUSION SERVICES",
+      "state": "NJ",
+      "zip": "07004"
+    },
+    "north-jersey-hp-hp0221500": {
+      "address": "366 BROADWAY",
+      "category": "home-care",
+      "city": "BAYONNE",
+      "name": "YOUNG ANGELS LLC DBA VISITING ANGELS",
+      "state": "NJ",
+      "zip": "07002"
+    },
+    "north-jersey-hp-hp0221800": {
+      "address": "294 CENTRAL AVENUE, 1ST FLOOR",
+      "category": "home-care",
+      "city": "ORANGE",
+      "name": "RAYMOND HOME CARE SERVICES, LLC",
+      "state": "NJ",
+      "zip": "07050"
+    },
+    "north-jersey-hp-hp0224400": {
+      "address": "2333 MORRIS AVENUE, SUITE C-214",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "CARE ASSIST LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0224600": {
+      "address": "299 BLOOMFIELD AVENUE",
+      "category": "home-care",
+      "city": "BLOOMFIELD",
+      "name": "QUALITY HEALTH CARE, INC.",
+      "state": "NJ",
+      "zip": "07003"
+    },
+    "north-jersey-hp-hp0226400": {
+      "address": "515 32ND STREET, SUITE 2-3",
+      "category": "home-care",
+      "city": "UNION CITY",
+      "name": "HOME CARE FOR YOU INC.",
+      "state": "NJ",
+      "zip": "07087"
+    },
+    "north-jersey-hp-hp0226700": {
+      "address": "591 SUMMIT AVENUE, SUITE 411",
+      "category": "home-care",
+      "city": "JERSEY CITY",
+      "name": "ST. BERNADINE HOME CARE SERVICES, LLC",
+      "state": "NJ",
+      "zip": "07306"
+    },
+    "north-jersey-hp-hp0227902": {
+      "address": "57 Union Street",
+      "category": "home-care",
+      "city": "ELIZABETH",
+      "name": "CONFIDENT CARE CORPORATION",
+      "state": "NJ",
+      "zip": "07202"
+    },
+    "north-jersey-hp-hp0231605": {
+      "address": "2400 MORRIS AVENUE, SUITE 203",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "PREMIER HOME HEALTH CARE SERVICES, INC.",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0231606": {
+      "address": "2400 Morris Avenue, Suite 203",
+      "category": "home-care",
+      "city": "Union",
+      "name": "PREMIER HOME HEALTH CARE SERVICES, INC.",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0235400": {
+      "address": "629 NEWARK POMPTON TPKE",
+      "category": "home-care",
+      "city": "POMPTON PLAINS",
+      "name": "ASSISTING SENIORS NJ001 DBA ASSISTING SENIORS AT HOME",
+      "state": "NJ",
+      "zip": "07444"
+    },
+    "north-jersey-hp-hp0241800": {
+      "address": "350 WEST PASSAIC STREET",
+      "category": "home-care",
+      "city": "ROCHELLE PARK",
+      "name": "PRESTIGE HEALTH SERVICES LLC",
+      "state": "NJ",
+      "zip": "07662"
+    },
+    "north-jersey-hp-hp0242300": {
+      "address": "547 UNION BLVD., 1ST FLOOR",
+      "category": "home-care",
+      "city": "TOTOWA",
+      "name": "JLF SENIOR CARE DBA SENIOR HELPERS NORTH JERSEY",
+      "state": "NJ",
+      "zip": "07512"
+    },
+    "north-jersey-hp-hp0246500": {
+      "address": "95 MAIN STREET",
+      "category": "home-care",
+      "city": "HACKENSACK",
+      "name": "ALPHA CARE HOME HEALTH SERVICES OF NJ, INC",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0248100": {
+      "address": "10 HERRICK DRIVE",
+      "category": "home-care",
+      "city": "OLD TAPPAN",
+      "name": "VIP HELPERS OF NJ LLC DBA VIPRIVATE CARE OF NJ",
+      "state": "NJ",
+      "zip": "07675"
+    },
+    "north-jersey-hp-hp0249500": {
+      "address": "1600 ROUTE 22 EAST, SUITE 301",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "PRUDENZA LLC DBA HOMEWELL CARE SVCS",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0250200": {
+      "address": "200 PASSAIC STREET, SUITE 5",
+      "category": "home-care",
+      "city": "HACKENSACK",
+      "name": "ELEON HEALTHCARE INC.",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0252100": {
+      "address": "655 WESTFIELD AVENUE",
+      "category": "home-care",
+      "city": "ELIZABETH",
+      "name": "JEWISH FAMILY SERVICE AGNCY OF CENTRAL N.J.",
+      "state": "NJ",
+      "zip": "07208"
+    },
+    "north-jersey-hp-hp0254700": {
+      "address": "2424 MORRIS AVENUE, SUITE 107",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "A1 PLUS HOME CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0256500": {
+      "address": "50 E PALISADE AVENUE, 2ND FL,STE 206",
+      "category": "home-care",
+      "city": "ENGLEWOOD",
+      "name": "MOM AND PAP'S HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07631"
+    },
+    "north-jersey-hp-hp0256900": {
+      "address": "1029 TEANECK ROAD, SUITE 3D",
+      "category": "home-care",
+      "city": "TEANECK",
+      "name": "NJ43 NJ45 DBA SYNERGY HOME CARE OF BERGEN COUNTY",
+      "state": "NJ",
+      "zip": "07666"
+    },
+    "north-jersey-hp-hp0257500": {
+      "address": "1169 Main Avenue",
+      "category": "home-care",
+      "city": "Clifton",
+      "name": "CARING PEOPLE NJ OPERATING LLC",
+      "state": "NJ",
+      "zip": "07011"
+    },
+    "north-jersey-hp-hp0257600": {
+      "address": "383 US Highway 46",
+      "category": "home-care",
+      "city": "FAIRFIELD",
+      "name": "FAITH HOME HEALTHCARE LLC",
+      "state": "NJ",
+      "zip": "07004"
+    },
+    "north-jersey-hp-hp0259805": {
+      "address": "288 N. Broad St, Suite 3C",
+      "category": "home-care",
+      "city": "Elizabeth",
+      "name": "CARE FINDERS TOTAL CARE LLC",
+      "state": "NJ",
+      "zip": "07208"
+    },
+    "north-jersey-hp-hp0261500": {
+      "address": "17-17 BROADWAY",
+      "category": "home-care",
+      "city": "FAIR LAWN",
+      "name": "BROADWAY RESPITE AND HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07410"
+    },
+    "north-jersey-hp-hp0262400": {
+      "address": "120 CHARLOTTE PLACE, SUITE 204",
+      "category": "home-care",
+      "city": "ENGLEWOOD CLIFFS",
+      "name": "S & S HOME CARE, INC.",
+      "state": "NJ",
+      "zip": "07632"
+    },
+    "north-jersey-hp-hp0265700": {
+      "address": "1453 SPRINGFIELD AVENUE",
+      "category": "home-care",
+      "city": "MAPLEWOOD",
+      "name": "LIBERTY MEDICAL CARE SERVICES, LLC",
+      "state": "NJ",
+      "zip": "07040"
+    },
+    "north-jersey-hp-hp0266700": {
+      "address": "764 PALISADE AVENUE, SUITE 2B",
+      "category": "home-care",
+      "city": "TEANECK",
+      "name": "PRIVATE AID CONTRACTOR, LLC",
+      "state": "NJ",
+      "zip": "07666"
+    },
+    "north-jersey-hp-hp0267700": {
+      "address": "96 MIDLAND AVENUE",
+      "category": "home-care",
+      "city": "KEARNY",
+      "name": "SACRED HOME HEALTH CARE LLC",
+      "state": "NJ",
+      "zip": "07032"
+    },
+    "north-jersey-hp-hp0273100": {
+      "address": "3807 Bergenline Ave",
+      "category": "home-care",
+      "city": "Union City",
+      "name": "NJFIRST HOME HEALTH CARE, LLC",
+      "state": "NJ",
+      "zip": "07087"
+    },
+    "north-jersey-hp-hp0275000": {
+      "address": "374 CLIFTON AVENUE, 2ND FLOOR",
+      "category": "home-care",
+      "city": "CLIFTON",
+      "name": "PROFESSIONAL CARE HOME CARE AGENCY INC.",
+      "state": "NJ",
+      "zip": "07011"
+    },
+    "north-jersey-hp-hp0277000": {
+      "address": "1787 SPRINGFIELD AVENUE, 1ST FLOOR",
+      "category": "home-care",
+      "city": "MAPLEWOOD",
+      "name": "Alayia Helping Hands LLC DBA Acti-Kare Responsive In-Home Care",
+      "state": "NJ",
+      "zip": "07040"
+    },
+    "north-jersey-hp-hp0277600": {
+      "address": "434 UNION BLVD.",
+      "category": "home-care",
+      "city": "TOTOWA",
+      "name": "THE SENIOR NJ LLC DBA THE SENIOR COMPANY",
+      "state": "NJ",
+      "zip": "07512"
+    },
+    "north-jersey-hp-hp0277700": {
+      "address": "2190 MORRIS AVENUE",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "AVILO CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0277900": {
+      "address": "117 CALIFON ROAD",
+      "category": "home-care",
+      "city": "LONG VALLEY",
+      "name": "HAPPY AT HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07853"
+    },
+    "north-jersey-hp-hp0280700": {
+      "address": "21 GRAND AVENUE, SUITE 124",
+      "category": "home-care",
+      "city": "PALISADES PARK",
+      "name": "OCEANWIDE SERVICES CORP DBA OCEANWIDE HOME CARE",
+      "state": "NJ",
+      "zip": "07650"
+    },
+    "north-jersey-hp-hp0281200": {
+      "address": "560 SYLVAN AVENUE, SUITE 3160",
+      "category": "home-care",
+      "city": "ENGLEWOOD CLIFFS",
+      "name": "WE ARE US STAFFING CORPORATION",
+      "state": "NJ",
+      "zip": "07632"
+    },
+    "north-jersey-hp-hp0283100": {
+      "address": "502 HAMBURG TPKE, SUITE 102",
+      "category": "home-care",
+      "city": "WAYNE",
+      "name": "247 HEALTHCARE SOLUTIONS DBA INTERIM HEALTHCARE",
+      "state": "NJ",
+      "zip": "07470"
+    },
+    "north-jersey-hp-hp0284400": {
+      "address": "473 BROADWAY, SUITE 402",
+      "category": "home-care",
+      "city": "BAYONNE",
+      "name": "PERFECT HOME CARE CORPORATION",
+      "state": "NJ",
+      "zip": "07002"
+    },
+    "north-jersey-hp-hp0285900": {
+      "address": "120 Eagle Rock Ave Suite 200",
+      "category": "home-care",
+      "city": "East Hanover",
+      "name": "LIFE TECH, INC. DBA LIFE HOME CARE",
+      "state": "NJ",
+      "zip": "07936"
+    },
+    "north-jersey-hp-hp0286500": {
+      "address": "123 NORTH UNION AVENUE, SUITE 305",
+      "category": "home-care",
+      "city": "CRANFORD",
+      "name": "VOLSMED DBA AMADA SENIOR CARE NORTH CENTRAL N J",
+      "state": "NJ",
+      "zip": "07016"
+    },
+    "north-jersey-hp-hp0287200": {
+      "address": "134 EVERGREEN PLACE, SUITE 805",
+      "category": "home-care",
+      "city": "EAST ORANGE",
+      "name": "EXPRESS ENTERPRISE LLC DBA EXPRESS HEALTH",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0287900": {
+      "address": "225 OCEAN AVENUE, 2ND FLOOR",
+      "category": "home-care",
+      "city": "JERSEY CITY",
+      "name": "NJ HOME HEALTH CARE LLC",
+      "state": "NJ",
+      "zip": "07305"
+    },
+    "north-jersey-hp-hp0289900": {
+      "address": "591 Summit Ave, Suite 205",
+      "category": "home-care",
+      "city": "JERSEY CITY",
+      "name": "HUDSON HOME HEALTH CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07306"
+    },
+    "north-jersey-hp-hp0290500": {
+      "address": "1605 JOHN STREET, SUITE 127",
+      "category": "home-care",
+      "city": "FORT LEE",
+      "name": "FOREVER HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07024"
+    },
+    "north-jersey-hp-hp0290800": {
+      "address": "123 N. UNION AVENUE, SUITE 305",
+      "category": "home-care",
+      "city": "CRANFORD",
+      "name": "NOAMED DBA AMADA SENIOR CARE WESTFLD SHORT HILLS",
+      "state": "NJ",
+      "zip": "07016"
+    },
+    "north-jersey-hp-hp0292700": {
+      "address": "2810 MORRIS AVENUE, SUITE 304",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "OUTFRONT HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0293200": {
+      "address": "531 SOUTH ORANGE AVENUE",
+      "category": "home-care",
+      "city": "NEWARK",
+      "name": "GQ HOME CARE & ADULT SERVICES LLC",
+      "state": "NJ",
+      "zip": "07103"
+    },
+    "north-jersey-hp-hp0297500": {
+      "address": "1086 TEANECK ROAD, #2, SUITE 3C-2",
+      "category": "home-care",
+      "city": "TEANECK",
+      "name": "DEVI CARE, INC DBA HOME INSTEAD SENIOR CARE",
+      "state": "NJ",
+      "zip": "07666"
+    },
+    "north-jersey-hp-hp0299300": {
+      "address": "375 SYLVAN AVENUE, SUITE 41",
+      "category": "home-care",
+      "city": "ENGLEWOOD CLIFFS",
+      "name": "WOORI HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07632"
+    },
+    "north-jersey-hp-hp0299800": {
+      "address": "601 HAMBURG TURNPIKE, SUITE 211",
+      "category": "home-care",
+      "city": "WAYNE",
+      "name": "MARI CARE DBA BRIGHTSTAR CARE OF WAYNE & FAIRLAWN",
+      "state": "NJ",
+      "zip": "07470"
+    },
+    "north-jersey-hp-hp0302400": {
+      "address": "714 BROADWAY, SUITE 3",
+      "category": "home-care",
+      "city": "PATERSON",
+      "name": "OUI CARE LLC",
+      "state": "NJ",
+      "zip": "07514"
+    },
+    "north-jersey-hp-hp0302600": {
+      "address": "405 PASSAIC AVENUE",
+      "category": "home-care",
+      "city": "LODI",
+      "name": "AFFILIATED HOME DBA ASSOCIATED HOME CARE OF NJ",
+      "state": "NJ",
+      "zip": "07644"
+    },
+    "north-jersey-hp-hp0306500": {
+      "address": "134 EVERGREEN PLACE, SUITE 604",
+      "category": "home-care",
+      "city": "EAST ORANGE",
+      "name": "VICTORY HEALTH SOLUTIONS INC.",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0307800": {
+      "address": "322 Old Bergen Rd Suite 1",
+      "category": "home-care",
+      "city": "Jersey City",
+      "name": "HIGH CLASS HOME HEALTH CARE LLC",
+      "state": "NJ",
+      "zip": "07305"
+    },
+    "north-jersey-hp-hp0308300": {
+      "address": "333 N BROAD STREET, SUITE 207",
+      "category": "home-care",
+      "city": "ELIZABETH",
+      "name": "CARE NEW JERSEY NURSING SERVICES INC.",
+      "state": "NJ",
+      "zip": "07208"
+    },
+    "north-jersey-hp-hp0308700": {
+      "address": "405 HAMILTON AVENUE",
+      "category": "home-care",
+      "city": "PATERSON",
+      "name": "365 HOME HEALTH SERVICES LLC",
+      "state": "NJ",
+      "zip": "07514"
+    },
+    "north-jersey-hp-hp0309300": {
+      "address": "1395-1399 CLINTON AVENUE",
+      "category": "home-care",
+      "city": "IRVINGTON",
+      "name": "LE CHOIX HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0310500": {
+      "address": "3 Bond Drive",
+      "category": "home-care",
+      "city": "Union",
+      "name": "EROS HEALTHCARE SERVICES, LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0311200": {
+      "address": "153 EAST HIGHLAND PARKWAY",
+      "category": "home-care",
+      "city": "ROSELLE",
+      "name": "INDEPENDENT HOME CARE SVCS",
+      "state": "NJ",
+      "zip": "07203"
+    },
+    "north-jersey-hp-hp0312500": {
+      "address": "175 NORTH PARK STREET",
+      "category": "home-care",
+      "city": "EAST ORANGE",
+      "name": "BELOVED CARE HOME AGENCY SERVICES LLC",
+      "state": "NJ",
+      "zip": "07017"
+    },
+    "north-jersey-hp-hp0313100": {
+      "address": "530 Chestnut Street, Ste. 201",
+      "category": "home-care",
+      "city": "Union",
+      "name": "ALPHA HEALTHCARE STAFFING FIRM LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0313600": {
+      "address": "2 Broad St, Suite 609",
+      "category": "home-care",
+      "city": "Bloomfield",
+      "name": "CURAIN DBA SYNERGY HOME CARE OF CLIFTON-SECAUCUS",
+      "state": "NJ",
+      "zip": "07003"
+    },
+    "north-jersey-hp-hp0313900": {
+      "address": "125 WASHINGTON AVENUE, SUITE 201",
+      "category": "home-care",
+      "city": "DUMONT",
+      "name": "ACHIEVE HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07628"
+    },
+    "north-jersey-hp-hp0317300": {
+      "address": "423 Central Ave",
+      "category": "home-care",
+      "city": "East Orange",
+      "name": "STATEWIDE FAMILY CARE LLC",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0319000": {
+      "address": "132 VAN BUREN STREET, 2ND FLOOR",
+      "category": "home-care",
+      "city": "NEWARK",
+      "name": "ATLAS HOMECARE LLC",
+      "state": "NJ",
+      "zip": "07105"
+    },
+    "north-jersey-hp-hp0320300": {
+      "address": "769 SANFORD AVENUE",
+      "category": "home-care",
+      "city": "NEWARK",
+      "name": "MIYOU CARING HANDS LLC",
+      "state": "NJ",
+      "zip": "07106"
+    },
+    "north-jersey-hp-hp0320800": {
+      "address": "1801 E 2ND STREET, LOWER LEVEL",
+      "category": "home-care",
+      "city": "SCOTCH PLAINS",
+      "name": "BASS SERVICES CORPORATION DBA VISITING ANGELS",
+      "state": "NJ",
+      "zip": "07076"
+    },
+    "north-jersey-hp-hp0325900": {
+      "address": "134 EVERGREEN PLACE, SUITE 303-11",
+      "category": "home-care",
+      "city": "EAST ORANGE",
+      "name": "HOLISTIC CARE SOLUTIONS LLC",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0326300": {
+      "address": "128 WAYNE AVENUE",
+      "category": "home-care",
+      "city": "PATERSON",
+      "name": "Z & I HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07502"
+    },
+    "north-jersey-hp-hp0327200": {
+      "address": "207 MCBRIDE AVENUE",
+      "category": "home-care",
+      "city": "PATERSON",
+      "name": "HEAVENS CARE LLC DBA BROTHERS HOME HEALTH CARE",
+      "state": "NJ",
+      "zip": "07501"
+    },
+    "north-jersey-hp-hp0328800": {
+      "address": "32 ELIZABETH AVENUE, SUITE 201",
+      "category": "home-care",
+      "city": "NEWARK",
+      "name": "WECARE HOME CAREGIVERS DBA WECARE HOME CARE",
+      "state": "NJ",
+      "zip": "07108"
+    },
+    "north-jersey-hp-hp0330200": {
+      "address": "98 PARK STREET",
+      "category": "home-care",
+      "city": "ORANGE",
+      "name": "LONG ISLAND SENIOR CARE LLC",
+      "state": "NJ",
+      "zip": "07050"
+    },
+    "north-jersey-hp-hp0331200": {
+      "address": "90 E Halsey Rd, Ste 352",
+      "category": "home-care",
+      "city": "Parsippany",
+      "name": "HEALTH CREST HOMECARE LLC",
+      "state": "NJ",
+      "zip": "07054"
+    },
+    "north-jersey-hp-hp0334500": {
+      "address": "160 RIVER EDGE ROAD",
+      "category": "home-care",
+      "city": "BERGENFIELD",
+      "name": "CARING HEARTS HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07621"
+    },
+    "north-jersey-hp-hp0336100": {
+      "address": "15 PARK AVENUE, SUITE 204",
+      "category": "home-care",
+      "city": "RUTHERFORD",
+      "name": "ENCLAVE HOME HEALTH SOLUTIONS LLC",
+      "state": "NJ",
+      "zip": "07070"
+    },
+    "north-jersey-hp-hp0336500": {
+      "address": "20 BANTA PLACE, SUITE 203",
+      "category": "home-care",
+      "city": "HACKENSACK",
+      "name": "AMAZING CAREGIVERS HOMECARE LLC",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0341800": {
+      "address": "4516 SMITH AVENUE",
+      "category": "home-care",
+      "city": "NORTH BERGEN",
+      "name": "CARING HANDS HOMECARE LLP",
+      "state": "NJ",
+      "zip": "07047"
+    },
+    "north-jersey-hp-hp0342400": {
+      "address": "134 EVERGREEN PLACE, SUITE 303-3",
+      "category": "home-care",
+      "city": "EAST ORANGE",
+      "name": "NURSES EXPRESS LLC",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0342800": {
+      "address": "139 HARRISTOWN ROAD, SUITE 101B",
+      "category": "home-care",
+      "city": "GLEN ROCK",
+      "name": "LIFE HOME CARE CORP DBA LIFE HOME CARE (Glen Rock)",
+      "state": "NJ",
+      "zip": "07452"
+    },
+    "north-jersey-hp-hp0343700": {
+      "address": "64 KNAPP PLACE",
+      "category": "home-care",
+      "city": "ENGLEWOOD",
+      "name": "FAVOR SENIOR HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07631"
+    },
+    "north-jersey-hp-hp0344700": {
+      "address": "540 NORTH AVENUE",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "AA QUALITY HOME CARE CORP",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0345000": {
+      "address": "61 BEECHWOOD LANE",
+      "category": "home-care",
+      "city": "BERKELEY HEIGHTS",
+      "name": "HAPPY FAMILY HOME HEALTHCARE AGENCY LLC",
+      "state": "NJ",
+      "zip": "07922"
+    },
+    "north-jersey-hp-hp0345400": {
+      "address": "2500 MORRIS AVENUE, SUITE 200",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "KIKU HOME HEALTH CARE LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0348900": {
+      "address": "78 CHELSEA AVENUE",
+      "category": "home-care",
+      "city": "NEWARK",
+      "name": "COMPASSIONATE HEALTHCARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07106"
+    },
+    "north-jersey-hp-hp0350600": {
+      "address": "30 Wilson Avenue",
+      "category": "home-care",
+      "city": "Totowa",
+      "name": "AGEWELL HOMECARE AGENCY, LLC",
+      "state": "NJ",
+      "zip": "07512"
+    },
+    "north-jersey-hp-hp0350700": {
+      "address": "181 NEW ROAD, SUITE 304",
+      "category": "home-care",
+      "city": "PARSIPPANY",
+      "name": "ALPHASOFTUSA LLC DBA 2ND FAMILY",
+      "state": "NJ",
+      "zip": "07054"
+    },
+    "north-jersey-hp-hp0351900": {
+      "address": "277 Fairfield Road, Suite 306",
+      "category": "home-care",
+      "city": "Fairfield",
+      "name": "Vanejup Quality Care LLC",
+      "state": "NJ",
+      "zip": "07004"
+    },
+    "north-jersey-hp-hp0354000": {
+      "address": "1473 CARLSEN DRIVE",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "BETTYLIN HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0354600": {
+      "address": "240 W PASSAIC STREET, SUITE 8",
+      "category": "home-care",
+      "city": "MAYWOOD",
+      "name": "BTR HOME CARE LLC DBA ASSISTING HANDS HOME CARE MAYWOOD",
+      "state": "NJ",
+      "zip": "07607"
+    },
+    "north-jersey-hp-hp0355900": {
+      "address": "1099 Wall Street W, Suite 212",
+      "category": "home-care",
+      "city": "Lyndhurst",
+      "name": "AVM Care LLC DBA Assisting Hands Home Care",
+      "state": "NJ",
+      "zip": "07071"
+    },
+    "north-jersey-hp-hp0359000": {
+      "address": "123 Highland Ave Ste G3",
+      "category": "home-care",
+      "city": "Glen Ridge",
+      "name": "ALSHAF HOME CARE AND SERVICES LLC",
+      "state": "NJ",
+      "zip": "07028"
+    },
+    "north-jersey-hp-hp0359900": {
+      "address": "561 BROAD STREET, 2ND FLOOR",
+      "category": "home-care",
+      "city": "NEWARK",
+      "name": "GLOWING HEARTS HOME CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07102"
+    },
+    "north-jersey-hp-hp0360700": {
+      "address": "154 Main Street, Unit 8",
+      "category": "home-care",
+      "city": "East Rutherford",
+      "name": "NJ Lifecare Innovation Home Care LLC",
+      "state": "NJ",
+      "zip": "07073"
+    },
+    "north-jersey-hp-hp0362700": {
+      "address": "14 Bryn Mawr Road",
+      "category": "home-care",
+      "city": "West Orange",
+      "name": "M N B COMPANION CARE LLC",
+      "state": "NJ",
+      "zip": "07052"
+    },
+    "north-jersey-hp-hp0364000": {
+      "address": "1139 E JERSEY STREET, SUITE 203",
+      "category": "home-care",
+      "city": "ELIZABETH",
+      "name": "AMERICAN HOME HEALTHCARE SOLUTIONS LLC DBA AHC HOME CARE SOLUTIONS",
+      "state": "NJ",
+      "zip": "07201"
+    },
+    "north-jersey-hp-hp0365000": {
+      "address": "1605 JOHN STREET, SUITE 108",
+      "category": "home-care",
+      "city": "FORT LEE",
+      "name": "DAHLIAS HOME CARE AGENCY LLC",
+      "state": "NJ",
+      "zip": "07024"
+    },
+    "north-jersey-hp-hp0365400": {
+      "address": "61 W Palisade Avenue, Suite 202",
+      "category": "home-care",
+      "city": "Englewood",
+      "name": "Live Easy Home Care LLC",
+      "state": "NJ",
+      "zip": "07631"
+    },
+    "north-jersey-hp-hp0366600": {
+      "address": "176 US Highway 46",
+      "category": "home-care",
+      "city": "Parsippany",
+      "name": "Revive Home Health Care LLC",
+      "state": "NJ",
+      "zip": "07054"
+    },
+    "north-jersey-hp-hp0366900": {
+      "address": "2204 Morris Avenue, Suite LL5",
+      "category": "home-care",
+      "city": "Union",
+      "name": "Keon Home Healthcare LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0367500": {
+      "address": "1 Meadowlands Plaza, Suite 200",
+      "category": "home-care",
+      "city": "East Rutherford",
+      "name": "Zoelle Partners, LLC DBA Amada Senior Care Hoboken",
+      "state": "NJ",
+      "zip": "07073"
+    },
+    "north-jersey-hp-hp0368100": {
+      "address": "420 Broadway, Suite 1",
+      "category": "home-care",
+      "city": "Bayonne",
+      "name": "Jersey Family Home Health Care LLC",
+      "state": "NJ",
+      "zip": "07002"
+    },
+    "north-jersey-hp-hp0368300": {
+      "address": "746 RIVERSIDE AVENUE",
+      "category": "home-care",
+      "city": "LYNDHURST",
+      "name": "COMFORT AND HEALING HHA CO.",
+      "state": "NJ",
+      "zip": "07071"
+    },
+    "north-jersey-hp-hp0371800": {
+      "address": "362 LUM AVENUE",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "LIGHT AND LIFE HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0374200": {
+      "address": "614 Frelinghuysen Avenue, Suite 44",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "Holistic Home Care Agency LLC",
+      "state": "NJ",
+      "zip": "07114"
+    },
+    "north-jersey-hp-hp0374500": {
+      "address": "2810 Morris Avenue, Suite 102B",
+      "category": "home-care",
+      "city": "Union",
+      "name": "Agape Berean Health Services, Inc",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0375400": {
+      "address": "535 Park Avenue",
+      "category": "home-care",
+      "city": "Orange",
+      "name": "Northeast HomeCare LLC",
+      "state": "NJ",
+      "zip": "07050"
+    },
+    "north-jersey-hp-hp0375600": {
+      "address": "720 Livingston Street",
+      "category": "home-care",
+      "city": "Elizabeth",
+      "name": "Favour Home Healthcare Services LLC",
+      "state": "NJ",
+      "zip": "07201"
+    },
+    "north-jersey-hp-hp0377000": {
+      "address": "601 Jefferson Road, Suite 207",
+      "category": "home-care",
+      "city": "Parsippany",
+      "name": "Gold Home Care LLC",
+      "state": "NJ",
+      "zip": "07054"
+    },
+    "north-jersey-hp-hp0377300": {
+      "address": "1120 S Orange Avenue",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "Sivam Hlthcare Training DBA Sivam Home Healthcare",
+      "state": "NJ",
+      "zip": "07106"
+    },
+    "north-jersey-hp-hp0377700": {
+      "address": "5-11 Saddle River Road, Suite 5",
+      "category": "home-care",
+      "city": "Fair Lawn",
+      "name": "Priority Health Home Care Agency LLC.",
+      "state": "NJ",
+      "zip": "07410"
+    },
+    "north-jersey-hp-hp0379000": {
+      "address": "1 Catan Drive",
+      "category": "home-care",
+      "city": "Flanders",
+      "name": "FELIHEAL HOME HEALTHCARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07836"
+    },
+    "north-jersey-hp-hp0379300": {
+      "address": "1 S. Corporate Drive, Suite 2C",
+      "category": "home-care",
+      "city": "Riverdale",
+      "name": "Amada Senior Care Morris LLC DBA Amada Senior Care Northwest NJ",
+      "state": "NJ",
+      "zip": "07457"
+    },
+    "north-jersey-hp-hp0379500": {
+      "address": "146 Mallory Avenue",
+      "category": "home-care",
+      "city": "Jersey City",
+      "name": "Care One Staff Inc",
+      "state": "NJ",
+      "zip": "07304"
+    },
+    "north-jersey-hp-hp0379900": {
+      "address": "20 Jackson Drive, Suite 104",
+      "category": "home-care",
+      "city": "Cranford",
+      "name": "EverVital Care LLC",
+      "state": "NJ",
+      "zip": "07016"
+    },
+    "north-jersey-hp-hp0382100": {
+      "address": "698 Chancellor Avenue, Store 2",
+      "category": "home-care",
+      "city": "Irvington",
+      "name": "AMANDACARE HOME HEALTH LLC",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0383600": {
+      "address": "1315 Sunnyfield Dr",
+      "category": "home-care",
+      "city": "Linden",
+      "name": "GRACECARE NJ HEALTH SERVICES LLC",
+      "state": "NJ",
+      "zip": "07036"
+    },
+    "north-jersey-hp-hp0384100": {
+      "address": "1156 Liberty Avenue, Suite C",
+      "category": "home-care",
+      "city": "Hillside",
+      "name": "Q AND K HOME CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07205"
+    },
+    "north-jersey-hp-hp0384200": {
+      "address": "250 Pehle Avenue, Suite 200",
+      "category": "home-care",
+      "city": "Saddle Brook",
+      "name": "Animated Home Care Agency LLC",
+      "state": "NJ",
+      "zip": "07663"
+    },
+    "north-jersey-hp-hp0384600": {
+      "address": "299 Market St Ste 360",
+      "category": "home-care",
+      "city": "Saddle Brook",
+      "name": "Elder Care Homecare NJ, LLC",
+      "state": "NJ",
+      "zip": "07663"
+    },
+    "north-jersey-hp-hp0386700": {
+      "address": "365 W Passaic Street, Suite 228",
+      "category": "home-care",
+      "city": "Rochelle Park",
+      "name": "Affirmed Home Care Pediatrics, Inc.",
+      "state": "NJ",
+      "zip": "07662"
+    },
+    "north-jersey-hp-hp0387200": {
+      "address": "591 Summit Avenue, Suite 202",
+      "category": "home-care",
+      "city": "Jersey City",
+      "name": "Top 1 Home Care LLC",
+      "state": "NJ",
+      "zip": "07306"
+    },
+    "north-jersey-hp-hp0388000": {
+      "address": "128 Engle Street, 1st Floor, Suite B",
+      "category": "home-care",
+      "city": "Englewood",
+      "name": "Kim Home Care LLC",
+      "state": "NJ",
+      "zip": "07631"
+    },
+    "north-jersey-hp-hp0388600": {
+      "address": "175 Cedar Lane, Suite 8A",
+      "category": "home-care",
+      "city": "Teaneck",
+      "name": "Royalty Home Care Services, INC",
+      "state": "NJ",
+      "zip": "07666"
+    },
+    "north-jersey-hp-hp0388800": {
+      "address": "30 UNION STREET, SUITE 37",
+      "category": "home-care",
+      "city": "ELIZABETH",
+      "name": "LOVEREIGN CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07202"
+    },
+    "north-jersey-hp-hp0389200": {
+      "address": "5 Cold Hill Road South, Suite 13",
+      "category": "home-care",
+      "city": "Mendham",
+      "name": "Visiting Health Associates LLC",
+      "state": "NJ",
+      "zip": "07945"
+    },
+    "north-jersey-hp-hp0389900": {
+      "address": "1139 East Jersey Street, Suite 617",
+      "category": "home-care",
+      "city": "Elizabeth",
+      "name": "A&J UNION HOME CARE",
+      "state": "NJ",
+      "zip": "07201"
+    },
+    "north-jersey-hp-hp0391000": {
+      "address": "333 S 7TH STREET",
+      "category": "home-care",
+      "city": "NEWARK",
+      "name": "CAREBRIDGE HEALTH SERVICES LLC",
+      "state": "NJ",
+      "zip": "07103"
+    },
+    "north-jersey-hp-hp0391400": {
+      "address": "1915 MORRIS AVENUE, SUITE 104",
+      "category": "home-care",
+      "city": "UNION",
+      "name": "LIBERTY COMPLETE CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0391600": {
+      "address": "439 Main Street, Suite 204",
+      "category": "home-care",
+      "city": "Orange",
+      "name": "Good Deeds Global Home Care Agency LLC",
+      "state": "NJ",
+      "zip": "07050"
+    },
+    "north-jersey-hp-hp0392800": {
+      "address": "67 Garfield Avenue",
+      "category": "home-care",
+      "city": "West Orange",
+      "name": "Vital Health Services LLC DBA Vital Health Associates",
+      "state": "NJ",
+      "zip": "07052"
+    },
+    "north-jersey-hp-hp0393000": {
+      "address": "105 Elm Street",
+      "category": "home-care",
+      "city": "Westfield",
+      "name": "Izabella Home Care Services LLC",
+      "state": "NJ",
+      "zip": "07090"
+    },
+    "north-jersey-hp-hp0393400": {
+      "address": "960 Pleasant Valley Way, Ste 2",
+      "category": "home-care",
+      "city": "West Orange",
+      "name": "Malachi Holdings Inc",
+      "state": "NJ",
+      "zip": "07052"
+    },
+    "north-jersey-hp-hp0393700": {
+      "address": "411 Hackensack Avenue, Suite 200",
+      "category": "home-care",
+      "city": "Hackensack",
+      "name": "Stand Out Home Care Of NJ LLC",
+      "state": "NJ",
+      "zip": "07601"
+    },
+    "north-jersey-hp-hp0394400": {
+      "address": "17-17 Broadway",
+      "category": "home-care",
+      "city": "Fairlawn",
+      "name": "Broadway Respite and Home Care LLC",
+      "state": "NJ",
+      "zip": "07410"
+    },
+    "north-jersey-hp-hp0395500": {
+      "address": "1238 Roger Ave",
+      "category": "home-care",
+      "city": "Union",
+      "name": "BERAKAH MULTI SERVICES LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0396800": {
+      "address": "360 Florence Avenue, Suite 111",
+      "category": "home-care",
+      "city": "Hillside",
+      "name": "Oak Dynamic Health Care LLC",
+      "state": "NJ",
+      "zip": "07205"
+    },
+    "north-jersey-hp-hp0397000": {
+      "address": "165 Passaic Avenue, Suite 205",
+      "category": "home-care",
+      "city": "Fairfield",
+      "name": "Fun Function Home Care LLC",
+      "state": "NJ",
+      "zip": "07004"
+    },
+    "north-jersey-hp-hp0397500": {
+      "address": "1719 State Route 10, Suite 317",
+      "category": "home-care",
+      "city": "Parsippany",
+      "name": "KS Care, LLC dba Home Instead",
+      "state": "NJ",
+      "zip": "07054"
+    },
+    "north-jersey-hp-hp0397800": {
+      "address": "316 Parsippany Rd",
+      "category": "home-care",
+      "city": "Parsippany",
+      "name": "Parekh Brothers LLC",
+      "state": "NJ",
+      "zip": "07054"
+    },
+    "north-jersey-hp-hp0398600": {
+      "address": "30 Union St Suite 37",
+      "category": "home-care",
+      "city": "Elizabeth",
+      "name": "AMAZING HOME HEALTHCARE LLC",
+      "state": "NJ",
+      "zip": "07202"
+    },
+    "north-jersey-hp-hp0398700": {
+      "address": "1308 Bright Street",
+      "category": "home-care",
+      "city": "Hillside",
+      "name": "HARMONY HOME HEALTHCARE LLC",
+      "state": "NJ",
+      "zip": "07205"
+    },
+    "north-jersey-hp-hp0399600": {
+      "address": "351 Union Avenue",
+      "category": "home-care",
+      "city": "Paterson",
+      "name": "PG HOME CARE INC",
+      "state": "NJ",
+      "zip": "07502"
+    },
+    "north-jersey-hp-hp0400800": {
+      "address": "1050 Wall St W #370",
+      "category": "home-care",
+      "city": "Lyndhurst",
+      "name": "Elderly Care Companion Services LLC",
+      "state": "NJ",
+      "zip": "07071"
+    },
+    "north-jersey-hp-hp0402000": {
+      "address": "537 Washington Avenue",
+      "category": "home-care",
+      "city": "Roselle",
+      "name": "NONIVIC LLC",
+      "state": "NJ",
+      "zip": "07203"
+    },
+    "north-jersey-hp-hp0402700": {
+      "address": "1946 Churchill Drive",
+      "category": "home-care",
+      "city": "Union",
+      "name": "C3 GOLDEN HOME HEALTHCARE LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0403100": {
+      "address": "1980 Springfield Avenue Suite 2",
+      "category": "home-care",
+      "city": "Maplewood",
+      "name": "Innovative Care Staffing Solutions LLC",
+      "state": "NJ",
+      "zip": "07040"
+    },
+    "north-jersey-hp-hp0403300": {
+      "address": "1167 Route 23 South",
+      "category": "home-care",
+      "city": "Kinnelon",
+      "name": "North Jersey Home Care LLC",
+      "state": "NJ",
+      "zip": "07405"
+    },
+    "north-jersey-hp-hp0403400": {
+      "address": "220 Voorhees Street",
+      "category": "home-care",
+      "city": "Teaneck",
+      "name": "Thrive At Home LLC",
+      "state": "NJ",
+      "zip": "07666"
+    },
+    "north-jersey-hp-hp0404400": {
+      "address": "1215 Jeanette Ave",
+      "category": "home-care",
+      "city": "Union",
+      "name": "DAY STAR HOME HEALTHCARE LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0404500": {
+      "address": "695 Dorian Road",
+      "category": "home-care",
+      "city": "Westfield",
+      "name": "Golden Years Compassionate Care, Inc.",
+      "state": "NJ",
+      "zip": "07090"
+    },
+    "north-jersey-hp-hp0405300": {
+      "address": "645 Essex Street",
+      "category": "home-care",
+      "city": "Plainfield",
+      "name": "Family Home Care Agency LLC",
+      "state": "NJ",
+      "zip": "07060"
+    },
+    "north-jersey-hp-hp0408200": {
+      "address": "123 Highland Avenue, Suite G3",
+      "category": "home-care",
+      "city": "Glen Ridge",
+      "name": "Morning Star Supportive Services Corp",
+      "state": "NJ",
+      "zip": "07028"
+    },
+    "north-jersey-hp-hp0409400": {
+      "address": "38 Main St unit A",
+      "category": "home-care",
+      "city": "Little Ferry",
+      "name": "3 sisters home care",
+      "state": "NJ",
+      "zip": "07643"
+    },
+    "north-jersey-hp-hp0409700": {
+      "address": "18 Brighton Ter",
+      "category": "home-care",
+      "city": "Irvington",
+      "name": "GRACELAND HEALTHCARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0410700": {
+      "address": "38 Yates Ave",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "LOVEMOST CARE LLC",
+      "state": "NJ",
+      "zip": "07112"
+    },
+    "north-jersey-hp-hp0413000": {
+      "address": "1064 Clinton Ave Ste 170",
+      "category": "home-care",
+      "city": "Irvington",
+      "name": "JOAN HEALTH & WELLNESS HEALTHCARE AGENCY LLC",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0413400": {
+      "address": "55 Madison Ave Ste 400",
+      "category": "home-care",
+      "city": "Morristown",
+      "name": "Live Easy Home Care Morristown LLC",
+      "state": "NJ",
+      "zip": "07960"
+    },
+    "north-jersey-hp-hp0413700": {
+      "address": "35 Journal Square Plaza, Suite 422",
+      "category": "home-care",
+      "city": "Jersey City",
+      "name": "AGASTYA CARE LLC",
+      "state": "NJ",
+      "zip": "07306"
+    },
+    "north-jersey-hp-hp0414800": {
+      "address": "576 Central Avenue, 3rd Floor",
+      "category": "home-care",
+      "city": "East Orange",
+      "name": "Madge's Reign Home Care LLC",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0415200": {
+      "address": "96 W Union Tpke",
+      "category": "home-care",
+      "city": "Wharton",
+      "name": "Family First Home Health",
+      "state": "NJ",
+      "zip": "07885"
+    },
+    "north-jersey-hp-hp0415500": {
+      "address": "1541 Stuyvesant Ave",
+      "category": "home-care",
+      "city": "Union",
+      "name": "Neddy Services LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0416100": {
+      "address": "73 Park Place Apt 3M",
+      "category": "home-care",
+      "city": "Irvington",
+      "name": "Blessed Hope Healthcare, LLC",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0416800": {
+      "address": "99 Morris Ave Ste 304",
+      "category": "home-care",
+      "city": "Springfield",
+      "name": "Caring Together Homecare LLC",
+      "state": "NJ",
+      "zip": "07081"
+    },
+    "north-jersey-hp-hp0418500": {
+      "address": "291 Windsor Road",
+      "category": "home-care",
+      "city": "Wood Ridge",
+      "name": "JenryX Quality Healthcare LLC",
+      "state": "NJ",
+      "zip": "07075"
+    },
+    "north-jersey-hp-hp0420700": {
+      "address": "1135 Clifton Avenue, Ste. 204",
+      "category": "home-care",
+      "city": "Clifton",
+      "name": "CARE WITH PASSION,LLC",
+      "state": "NJ",
+      "zip": "07013"
+    },
+    "north-jersey-hp-hp0420900": {
+      "address": "58 Harmon Cove Tower",
+      "category": "home-care",
+      "city": "Secaucus",
+      "name": "CAC Care, LLC / DBA Comfort Keepers",
+      "state": "NJ",
+      "zip": "07094"
+    },
+    "north-jersey-hp-hp0421200": {
+      "address": "35 Journal Square Plz., Ste. 418",
+      "category": "home-care",
+      "city": "Jersey City",
+      "name": "ACM HEALTH, LLC",
+      "state": "NJ",
+      "zip": "07306"
+    },
+    "north-jersey-hp-hp0422200": {
+      "address": "4 DELMAR RD APT 1",
+      "category": "home-care",
+      "city": "JERSEY CITY",
+      "name": "Angel's Care For Seniors",
+      "state": "NJ",
+      "zip": "07305"
+    },
+    "north-jersey-hp-hp0423000": {
+      "address": "70 CLINTON AVE FLOOR 2",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "GRACE FOUND HOME CARE AGENCY LLC",
+      "state": "NJ",
+      "zip": "07114"
+    },
+    "north-jersey-hp-hp0423800": {
+      "address": "642 Eagle Rock Ave Ste 3",
+      "category": "home-care",
+      "city": "West Orange",
+      "name": "ROKAH LLC",
+      "state": "NJ",
+      "zip": "07052"
+    },
+    "north-jersey-hp-hp0424100": {
+      "address": "45 E Milton Ave suite 3",
+      "category": "home-care",
+      "city": "Rahway",
+      "name": "LumencareDDD",
+      "state": "NJ",
+      "zip": "07065"
+    },
+    "north-jersey-hp-hp0424200": {
+      "address": "1000C Stuyvesant Ave",
+      "category": "home-care",
+      "city": "Union",
+      "name": "Comfort Angels Homecare",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0424700": {
+      "address": "40 Meckes Street",
+      "category": "home-care",
+      "city": "Springfield",
+      "name": "360 HealthCare Services LLC",
+      "state": "NJ",
+      "zip": "07081"
+    },
+    "north-jersey-hp-hp0424900": {
+      "address": "51 Mawhinney Ave",
+      "category": "home-care",
+      "city": "Hawthorne",
+      "name": "Training With A Purpose Home HealthCare LLC.",
+      "state": "NJ",
+      "zip": "07506"
+    },
+    "north-jersey-hp-hp0425600": {
+      "address": "118 Mallory Avenue",
+      "category": "home-care",
+      "city": "Jersey City",
+      "name": "GREEN PARK ASSISTED LIVING  LLC",
+      "state": "NJ",
+      "zip": "07304"
+    },
+    "north-jersey-hp-hp0425700": {
+      "address": "2414 Morris Ave. Ste 352",
+      "category": "home-care",
+      "city": "Union",
+      "name": "OnVerra Health LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0427400": {
+      "address": "59 Beaverbrook Road, Suite 201C",
+      "category": "home-care",
+      "city": "Lincoln Park",
+      "name": "Agape Home Care Agency LLC",
+      "state": "NJ",
+      "zip": "07035"
+    },
+    "north-jersey-hp-hp0427700": {
+      "address": "599 Stuyvesant Ave",
+      "category": "home-care",
+      "city": "Irvington",
+      "name": "Comfort Zone Healthcare Inc",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0428300": {
+      "address": "440 Market St, Ste 10B",
+      "category": "home-care",
+      "city": "Elmwood Park",
+      "name": "Rosario Care LLC",
+      "state": "NJ",
+      "zip": "07407"
+    },
+    "north-jersey-hp-hp0429600": {
+      "address": "673 Bergen Ave Unit 1A",
+      "category": "home-care",
+      "city": "Jersey City",
+      "name": "Oasis Healthcare Staffing Agency LLC",
+      "state": "NJ",
+      "zip": "07304"
+    },
+    "north-jersey-hp-hp0430200": {
+      "address": "144 Haddon Pl",
+      "category": "home-care",
+      "city": "Montclair",
+      "name": "GENTLE ROYALE HOMECARE LLC",
+      "state": "NJ",
+      "zip": "07043"
+    },
+    "north-jersey-hp-hp0430600": {
+      "address": "51 Church St Unit C",
+      "category": "home-care",
+      "city": "Paterson",
+      "name": "Proud Service Home Care LLC",
+      "state": "NJ",
+      "zip": "07505"
+    },
+    "north-jersey-hp-hp0431600": {
+      "address": "123 Highland Avenue, Suite G3",
+      "category": "home-care",
+      "city": "Glen Ridge",
+      "name": "Morning Star Supportive Services Corp",
+      "state": "NJ",
+      "zip": "07028"
+    },
+    "north-jersey-hp-hp0431800": {
+      "address": "4 Wildwood Ct",
+      "category": "home-care",
+      "city": "Montvale",
+      "name": "Atlantic in home healthcare and services corporation",
+      "state": "NJ",
+      "zip": "07645"
+    },
+    "north-jersey-hp-hp0432200": {
+      "address": "146 Highland Ave",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "COMPANIONS R US LLC",
+      "state": "NJ",
+      "zip": "07104"
+    },
+    "north-jersey-hp-hp0433300": {
+      "address": "375 Chapman St",
+      "category": "home-care",
+      "city": "Irvington",
+      "name": "Protecta Home Care Agency LLC",
+      "state": "NJ",
+      "zip": "07111"
+    },
+    "north-jersey-hp-hp0433800": {
+      "address": "674 11th Ave",
+      "category": "home-care",
+      "city": "Paterson",
+      "name": "Esperanza Home Care Service LLC",
+      "state": "NJ",
+      "zip": "07514"
+    },
+    "north-jersey-hp-hp0434000": {
+      "address": "877 Broad St Ste 304",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "A-Class Home Care LLC",
+      "state": "NJ",
+      "zip": "07102"
+    },
+    "north-jersey-hp-hp0435400": {
+      "address": "134 Evergreen Pl, Suite 303-9",
+      "category": "home-care",
+      "city": "East Orange",
+      "name": "VOMOLADITI SERVICES LLP",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0436500": {
+      "address": "625 Broad St (suite 240)",
+      "category": "home-care",
+      "city": "Newark",
+      "name": "New Jersey Home Care Society",
+      "state": "NJ",
+      "zip": "07102"
+    },
+    "north-jersey-hp-hp0436700": {
+      "address": "95 Mountainside Ter",
+      "category": "home-care",
+      "city": "Clifton",
+      "name": "Comforting Connections Health Care",
+      "state": "NJ",
+      "zip": "07013"
+    },
+    "north-jersey-hp-hp0437300": {
+      "address": "28 VALLEY ROAD",
+      "category": "home-care",
+      "city": "MONTCLAIR",
+      "name": "SPARKLING CLEAN HOME CARE LLC",
+      "state": "NJ",
+      "zip": "07042"
+    },
+    "north-jersey-hp-hp0438100": {
+      "address": "642 Florence Ter",
+      "category": "home-care",
+      "city": "Union",
+      "name": "GOODMOTHER CARE SERVICES LLC",
+      "state": "NJ",
+      "zip": "07083"
+    },
+    "north-jersey-hp-hp0438400": {
+      "address": "74 Glen Ave",
+      "category": "home-care",
+      "city": "Roseland",
+      "name": "Deheart Home Care Services LLC",
+      "state": "NJ",
+      "zip": "07068"
+    },
+    "north-jersey-hp-hp0439100": {
+      "address": "22 Wiley Ct",
+      "category": "home-care",
+      "city": "Morris Plains",
+      "name": "Emmanuel Home Care Agency LLC",
+      "state": "NJ",
+      "zip": "07950"
+    },
+    "north-jersey-hp-hp0439700": {
+      "address": "600 E Crescent Ave Suite 208-G",
+      "category": "home-care",
+      "city": "Upper Saddle River",
+      "name": "MBH Home Care LLC",
+      "state": "NJ",
+      "zip": "07458"
+    },
+    "north-jersey-hp-hp0440100": {
+      "address": "1 Meadowlands Plaza, Ste 200",
+      "category": "home-care",
+      "city": "East Rutherford",
+      "name": "FirstLight Home Care Of Passaic",
+      "state": "NJ",
+      "zip": "07073"
+    },
+    "north-jersey-hp-hp0440500": {
+      "address": "146 Union Avenue",
+      "category": "home-care",
+      "city": "Linden",
+      "name": "Julies Home Health Aid Agency LLC",
+      "state": "NJ",
+      "zip": "07036"
+    },
+    "north-jersey-hp-hp0440700": {
+      "address": "20 Commerce Dr Ste 135",
+      "category": "home-care",
+      "city": "CRANFORD",
+      "name": "GENTLE CARE SOLUTIONS",
+      "state": "NJ",
+      "zip": "07016"
+    },
+    "north-jersey-hp-hp0443600": {
+      "address": "177 Valley St",
+      "category": "home-care",
+      "city": "South Orange",
+      "name": "Golden Path Services LLC",
+      "state": "NJ",
+      "zip": "07079"
+    },
+    "north-jersey-hp-hp0444400": {
+      "address": "3 W 18th St",
+      "category": "home-care",
+      "city": "Weehawken",
+      "name": "The Garden Family Home Care",
+      "state": "NJ",
+      "zip": "07086"
+    },
+    "north-jersey-hp-hp0446700": {
+      "address": "576 Central Ave 3rd fl",
+      "category": "home-care",
+      "city": "East Orange",
+      "name": "ASN-KONE LLC DBA KOZY HOMECARE",
+      "state": "NJ",
+      "zip": "07018"
+    },
+    "north-jersey-hp-hp0449100": {
+      "address": "16-50 Chandler Dr",
+      "category": "home-care",
+      "city": "Fair Lawn",
+      "name": "CAREBERI LLC",
+      "state": "NJ",
+      "zip": "07410"
+    }
+  },
+  "inputs": {
+    "association-directory/.source.pdf": "669ce5da0c68018a23717b30aa4e94956732d2e02d059939f6e6519cd07f5e6c",
+    "association-directory/README.md": "2a6ed72d73ab256b617e090c18823cd1750d0d77fa0ea5dfd2da9cf09f16aa23",
+    "association-directory/accepted-services.json": "46e0bcf8262ec8221b5d5ceccc7f53cd4c40567600f8e543eee2bb62723782eb",
+    "association-directory/build.py": "0000d0da9afe281701115c335e5bc4a8a41a718ff432d7ca4a3f6b4dbee19441",
+    "association-directory/extract.py": "dbaf75d33514ddb8d576419a7e0ce032cf71d0cb024d9fc3655929a71e027fe9",
+    "association-directory/extracted-facts.json": "9b08b5246e6561c402fda30aec35f3b173b68a9b8c92f7db9e39236486fc9e1d",
+    "association-directory/listing-coverage.json": "0a3ce66ea71089584a37fb6c35cca9269f97cba425c2342ac43b28fb4a54f0be",
+    "association-directory/manifest.json": "687c16115bfd3e1ea6eab05ce1f0d19dd7579df03cd67b2babd6a5f2acd24b3c",
+    "association-directory/provider-coverage.json": "f15bc1395129a8b1970083a29506b5526cc1ba335dc810c5b4f8f65c5ffb08f3",
+    "association-directory/reviewed-identities.json": "0ad5220cd96e407453b6f83000c510594ee3bfba88c716495710c70dd3954a85",
+    "campus-offerings/README.md": "6eb749b1b55f723f2fe0d5ebefcc6176342312df1b0cbb9107c8f00db1bf65a6",
+    "campus-offerings/baseline-comparison.json": "8165d665173c95da15dbd0f9bd9b1b5df582548eae57707b3b4d68ae95a8f17e",
+    "campus-offerings/christian-health-2025-financials.pdf": "02144c5783881bb4c68c5e068c45bc8900b47e77795db2301cdba8fac0d3912a",
+    "campus-offerings/christian-health-2025-financials.txt": "5e06f5a7491420b1b36e9505f0bb27e4572fd895d3f7867139ed731724c041d8",
+    "campus-offerings/coverage.json": "da0d11ed14b2fa948764fb60f9826958f26c97903b33efbc10b661e1daeac01e",
+    "campus-offerings/evidence-01.json": "ca8b04d04bf9ad82cb1f178f10d7f3b0ede4549a249bde1a5fa77987c94c5b9e",
+    "campus-offerings/evidence-02.json": "bdcb51154c36e82df79d4fd72e78ea91ee9a8216685a4d72ef80e1f17bb73047",
+    "campus-offerings/evidence-03.json": "65670d2e82aae458e215d99d32976a305be1cad9e3c8ce5df26425e2d62b6326",
+    "campus-offerings/evidence-04.json": "c09cbe13329015d7eea90a60d57be3cf8884bbffa07d6060a7823461bf853ec2",
+    "campus-offerings/evidence-05.json": "f6de5a1c9a3e4b273432c022b9732739b47af8c89f0fb1e151f48380b94bca29",
+    "campus-offerings/evidence-06.json": "c07e8aa557e20726d117acd805f88b32b3525df793871ff7de0ac542cd0ff0ce",
+    "campus-offerings/fact-evidence.json": "da585f8f4d02017b2ff948d7a0a0459f24da20d20efafd2fa182b131a657092c",
+    "campus-offerings/locationResearch.patch.json": "8a2d4d4449571505a9f43b7f7b77f73e9822d7cc6b26ea29762f2193852dd629",
+    "campus-offerings/manifest.json": "b711cdb6c72d0b1b32e79ae70bbc3d495c2234686cbb270f8c0762c9b50f66aa",
+    "campus-offerings/page-checks.json": "2607570212d9ee382bdf875f11be5ad49836cdd3a3864e57908b34cfbafd29fb",
+    "campus-offerings/validate.test.mjs": "7f850d2a5e3ba96d75a29abb308d1d9b9ade100572e6a4737e9845e82b7179ef",
+    "campus-offerings/verification.txt": "3ef996706ebac9116acd7b15bb80af8ffd0fb63c602604c548672e4d1d195ee8",
+    "home-care-first-party/README.md": "db24dc93e329796cbabf2d37b450d064e0cb858109f65185fb82386efb674647",
+    "home-care-first-party/discovery.json": "376130d3f0a25d9c99975b5533bd5ba865c6ac3f861e5ae17f1563f48dcfbe06",
+    "home-care-first-party/inventory.json": "a5857ad6e7e8db077827fc7dc8ecc0e0713286f29ebd68cc3156459ba1fd63d7",
+    "home-care-first-party/receipts/bayada-bloomfield.json": "c97cfc273777be85548fb9e9c4236073abb89e97acff28099a4c5c69a1aae0c3",
+    "home-care-first-party/receipts/bayada-clifton.json": "cc1b3bdb8b43a8eeab57afd5f78c25774c49cd0353a7ab29442323da1f837e9f",
+    "home-care-first-party/receipts/bayada-dover.json": "9e897ef922ee969c8273c0b005ca666cc9a8c46c7503c023928c32a0eba13f8a",
+    "home-care-first-party/receipts/bayada-livingston.json": "900793cd914ac05d7f57d11cafc57508c28dbb60a1bf7345ebca606255ca9df3",
+    "home-care-first-party/receipts/bayada-morristown.json": "0ae776377f185badc850b82f08f6b014547819dc319b9887ab6fd64e5225b13e",
+    "home-care-first-party/receipts/bayada-union-city.json": "d94d8fdb3c01d0dbbf8edc83f2c33700fd8286ae3b62745403a02d426329cf9b",
+    "home-care-first-party/receipts/bayada-westfield.json": "eca204ee0f6343aa8d5c2b493e189b699873af0b69b07d915cfc122225c6197c",
+    "home-care-first-party/receipts/bergen-home-care.json": "ec6011b39fcc65064c296f19c1685445809e27eadda2fc1df27283ebf18670fe",
+    "home-care-first-party/receipts/brightstar-hackensack-contact.json": "13f4cbf2cbdd0e8e74aec3af31a84b8b54fdb289a29591e83006b8c06f47b5af",
+    "home-care-first-party/receipts/brightstar-hackensack.json": "4465a39bcef1090c37f258769e6040847833a8906ed0d96c9d67d3b2619525cc",
+    "home-care-first-party/receipts/brightstar-morris-contact.json": "11d95f8e196a89700d715133670e016982cec6c151cad57df5a9ee3e8c26bb3b",
+    "home-care-first-party/receipts/brightstar-morris.json": "73ba5e0912161c1ea2f2cac39bbeeda9c613d4367b041a7a9d9d0534b7404c26",
+    "home-care-first-party/receipts/brightstar-passaic-contact.json": "30c99bd2bec171867fbb9d7a3a587028867587842872289341afb0a883538f53",
+    "home-care-first-party/receipts/brightstar-passaic.json": "7ecbe4a4d4a6b94bd0205d6ce8876d12e76a807ef0753b918f57765576b95746",
+    "home-care-first-party/receipts/brightstar-westfield-contact.json": "44551a1cbba29e767d6136a1b7bcc902ef774e358ecdf74025a80e4a38826754",
+    "home-care-first-party/receipts/brightstar-westfield.json": "91e812e9573d1eead31cacb654cdf67aea92438276865f01e1628d1d51f6eebb",
+    "home-care-first-party/receipts/caring-people-nj.json": "e3403f52a9823b75c0acd94cba3812ddfb739f7dae3a7cbc3ce8e2ab3c14f0b2",
+    "home-care-first-party/receipts/caring-people.json": "351ed80caa8af0398f748ccc38430d4263e3abb12eaae4630addec0dd2141c77",
+    "home-care-first-party/receipts/comfort-keepers-closter.json": "e12aae5ba536a01d473473c7865841f065009bf81d9dc5dc11fd654684aac696",
+    "home-care-first-party/receipts/comfort-keepers-locator.json": "7a5ff4ec8e8d35f553f62fbb0c937c4c2adb3318ba98982df1985f0700fe55bb",
+    "home-care-first-party/receipts/comfort-keepers-montclair.json": "96dc1a5462c80891456c2bf6b07867499acf39fcd350d0a329a1a2954a650f18",
+    "home-care-first-party/receipts/comfort-keepers-secaucus.json": "540b5867c40cd2a6dd7ac567380ef2779db04d243e6bd98aed2c35d873ad2f64",
+    "home-care-first-party/receipts/family-first-contact.json": "2d3f3c09a840dea05bc6d1ce621a4a5e5225d7abbdd5de54f75675e4bc2a8dca",
+    "home-care-first-party/receipts/family-first-home-health.json": "bcde0d2c70883ea19324f3fb3b4f6bd2b5fab6e8cd447bcf7c932c91e44571d8",
+    "home-care-first-party/receipts/home-instead-locator.json": "e8d41318f671b4e92d4767911ef0e64a9606c8a6e9e937b4178d35e8b0418a52",
+    "home-care-first-party/receipts/home-instead-millburn.json": "9d1e9558ec8e359149dbbae3d66530f13d2194389ffc240756c698e0a41cf8fd",
+    "home-care-first-party/receipts/home-instead-parsippany.json": "1add8a8999bb07f4a4b9b14abf0e8bb55c305fab39d8178ec6981d8a27f11fbe",
+    "home-care-first-party/receipts/home-instead-teaneck.json": "1cccb571c05813a3288905eeb0006eafa4011c924eb79355f7adcab74b95fd2a",
+    "home-care-first-party/receipts/homewell-hackensack.json": "e694f4b49939db17ea0041c00ecae925e0ad37bb29c3efe6cf006da09700bbaf",
+    "home-care-first-party/receipts/homewell-union.json": "cabf9b7d7b1f2ad541997ef41db4a2f8db850bf4cfc3d5f1920a73876dd6ecaf",
+    "home-care-first-party/receipts/life-home-care-hourly.json": "409d9a5f0ea79752afda669cad9add75d127d090daa62ad996185d406ac4773c",
+    "home-care-first-party/receipts/life-home-care.json": "3ae04b89c9cc5960d3782c60e4f352453fd31f40196b04b88a51c5f9f49e406e",
+    "home-care-first-party/receipts/outfront-contact.json": "9beb1c606618196a59366ab919fee68f91d7aaf08afc585f8e3f14c38f46a429",
+    "home-care-first-party/receipts/outfront-home-care.json": "60062c22819f34de8c533ddb843d2b998587dd4bcfcf0fe1f0aab4280356a812",
+    "home-care-first-party/receipts/right-at-home-essex-area.json": "8406438b41588beafbdc4f0dfaf2fc46ffb11b31fe8cac446805afe645a0f9fb",
+    "home-care-first-party/receipts/right-at-home-essex.json": "4b225df131694176069bca696b2fc0a16b4e5d3034f512c69817df97e0e4dc2e",
+    "home-care-first-party/receipts/right-at-home-morris-area.json": "9d6aed76d92193538a920754c096edb92f07f62384ac64989f69cf8c719830ac",
+    "home-care-first-party/receipts/right-at-home-morris.json": "573d640b9d064920913f8b89a48a74586593ad08cadefcb991b60b9ca29fd017",
+    "home-care-first-party/receipts/senior-helpers-bergen.json": "68cc1ff2268fb416d7151749358a5ef8abe3b4c659a67b9575ebdbabfe279a5b",
+    "home-care-first-party/receipts/senior-helpers-fairfield.json": "f8dbf0827a690d87aa8ee2a080e8cf9f6f07b6c4d38f14a75422d085db50f0fc",
+    "home-care-first-party/receipts/senior-helpers-locator.json": "05737d4a256cf04b9f3a5d12a53093d48de5d8e8aa67dfe7002416428a1ebe0b",
+    "home-care-first-party/receipts/senior-helpers-madison.json": "3599eeaa9e1397464ec51052f2e6c8e93a74ef618a6a3af008cba8d80d2f82a1",
+    "home-care-first-party/receipts/senior-helpers-west-orange.json": "cc55848e6501908c2c016d19e3c2838c70cb4c178a7b81d978d4d9f528e86aad",
+    "home-care-first-party/receipts/synergy-bloomfield.json": "48cee9bcbeb1ba6814fe065e367c9a387ebaf68d0d37bb170597564d7895ebea",
+    "home-care-first-party/receipts/synergy-parsippany.json": "e32e9d77a0a64aae2cf4a52d71ffbeea2dbb9a1b513c3389a4cc2dc668f8816e",
+    "home-care-first-party/receipts/synergy-teaneck.json": "2a456a8fd77d89b86b95b1f6774cd54b086afad5da3281e3b9be0dac369b98bc",
+    "home-care-first-party/receipts/visiting-angels-fortlee.json": "dfb2f1697af8484fa940b8076fe29b5479e623ee6308312ffb375a1633e3da7c",
+    "home-care-first-party/receipts/visiting-angels-hoboken.json": "3d98019a90fe077d79d1353f1691f79fc4079a232d9907838c1b465342f97054",
+    "home-care-first-party/receipts/visiting-angels-jerseycity.json": "73563e55a64351b2b75db2d9438eecf3e1e896a344c1c8d64309f6bc515aee0e",
+    "home-care-first-party/receipts/visiting-angels-locator.json": "cc8d4796093e2c51ee383535dedd1a77bb0f800e6feb1a20c279fe5eb3a0cdec",
+    "home-care-first-party/receipts/visiting-angels-montclair.json": "3a6ed3fa6b786298822c4ce07de7b3b20102b048fce2c91f2da28d40dd712a28",
+    "home-care-first-party/receipts/visiting-angels-morristown.json": "1c9a02225f1f1e83b99be4cf64ce15f10bfcc3aa8b250ad79252eadb8fe86f55",
+    "home-care-first-party/receipts/visiting-angels-passaic.json": "aab0cfb43513dc812c1522f4859865b20142b79cd2e1541c908c0d2adb7933cb",
+    "home-care-first-party/receipts/visiting-angels-ramsey.json": "4cebc8daf81a13cdc3943a933472b5cc9bbbf1fbcccbd6e597083c3bf7c3d1f4",
+    "home-care-first-party/receipts/visiting-angels-scotchplains.json": "32dcd2b1b84acddd20b9cd8d5e924cfe4486da33a1c804979a349cc639d12c7a",
+    "home-care-first-party/receipts/visiting-angels-union.json": "2c0f5c8a00e3152317a2d499ececca20f5db58a51fada2ac38ea490a1ab94729",
+    "home-care-first-party/receipts/welcome-home-care.json": "68b2dfe120a36d42c3dc7bb9511a96439ab064493c14c57ffce438c853a44640",
+    "home-care-first-party/records.json": "8aa1efed37787977b5f0adc241c8d90d608f2d146391e2206dcaf0756d05dce2",
+    "home-care-first-party/unmatched.json": "8e0758c3bf552bafe85013299cabd4e529d3fe3a61b7c1f8744bfeb56d9c8c94",
+    "home-care-first-party/validate.py": "914b727d93350dbf2a34035f947574f30887db3039fed395cc0be5ca91352238",
+    "home-care-first-party/validation.json": "3e5e9948b929e4c1587642c6f3d41f2549ae344081c1e292c9597c115b90211c",
+    "nppes-organizations/README.md": "c7d30d2ba52ec7aa5888b32b079210ab31dbac78627e9f3467f208c2515cfc35",
+    "nppes-organizations/cache/00312d9a56442dd5-0000.json": "57583a5172ed723a19d21fa767e1df527c5a1f8e7617ae712afa33fb05133dc9",
+    "nppes-organizations/cache/005df2d3603c9169-0000.json": "f0277dc70d22e3af4daabdaafd4eb4583b136363270b3590b0deed620bc5395e",
+    "nppes-organizations/cache/034b2ee0090e6d7a-0000.json": "ba5611f05b322b35025792a9e02938c865b4f4ed07d443e5c4ed0d79363784e0",
+    "nppes-organizations/cache/05e0e4adb178a526-0000.json": "674f47056a6ae348f8c4118225ecf244e7e7380d77509e23f578e37670cc11a4",
+    "nppes-organizations/cache/085988abb7b193c7-0000.json": "e8be2cccd654b1f2577b7953f16862e5ceb4197e5374fa2b25e389db03196fb9",
+    "nppes-organizations/cache/08b86052df112c5c-0000.json": "91a907a88f7b6cb9f1d5167cbd774b98e80e745416d56cc5fccb983404e1044d",
+    "nppes-organizations/cache/08d39c63adb4b4b3-0000.json": "6d6d88e3bf8d95697682d83e9b9cbbb767ffc68e9ef597b419cb77f6f2072e09",
+    "nppes-organizations/cache/08dba7fe1edad803-0000.json": "47edb986854071201a5239b47ca2d7f56f85d8ca5e6adf84d2b79057e700e4e8",
+    "nppes-organizations/cache/0b5f0492b7879d42-0000.json": "404590155e5ff7bd88d772451cb5bb44aa8d4b97bb395af16ed0b86fb912d3fc",
+    "nppes-organizations/cache/0ba610cdc63d4005-0000.json": "71098f0b68097c076780f41318941a76e3e03ec7da043ed9fb150758c2809618",
+    "nppes-organizations/cache/0cbc1467994b97db-0000.json": "cee6360bf6b0a7718bf14bdd9d1102782e2896fb4b747f66f79920f8c4a933eb",
+    "nppes-organizations/cache/0d91142f802bd002-0000.json": "c8568a379197df331570c92826f027ad0e7f37daf7b350b181b1a72069c4ae17",
+    "nppes-organizations/cache/0eb26e42368eb552-0000.json": "dc0b7aa0225f44295e1b27fdb1c1224fd026184583f17914daa6d77ff3cfd154",
+    "nppes-organizations/cache/115316ed568f8b9d-0000.json": "30bd7d23e1abfe1f1cf697c8aa38c00721aa058cec299d4b54ad1ed2070cd2b3",
+    "nppes-organizations/cache/130da1b7bd28d24b-0000.json": "b5e6bbfe60c6a93acc4af65b040c55e97e5a490af9d6605fd5c6cacb32b77b10",
+    "nppes-organizations/cache/15676d65742e5b7b-0000.json": "b44050b06d2820f23767b3f9ae1e90446669ecd9c63f49eaed9c783d6fafe3ff",
+    "nppes-organizations/cache/16a8eef6e6a96257-0000.json": "53960e3a9f050211dd0832662429804161c1b50b54e902ec1f3a999385e2eee1",
+    "nppes-organizations/cache/16d4750b439bdda4-0000.json": "f7d3801a4e44e3b28225fe239cf7625504b0cc10ff9ecb62d3aa3ebbd28d0bad",
+    "nppes-organizations/cache/1944f6eab9377eb9-0000.json": "d8d6f6f8e3f58640aa1e199ec9c892cf3c02ec7792f679bbbcd734a19f0dcdd9",
+    "nppes-organizations/cache/1b4d0b91e49fe4d2-0000.json": "5d0b06a880f8d1ae69d138512658c80fbaa9708d3b679432ea39f6ba9e6b7a7d",
+    "nppes-organizations/cache/1bb1c66a927c622b-0000.json": "e39bec2bf7836a7809b291b4428942ec53bbba754a2fe380184d98981177e119",
+    "nppes-organizations/cache/1ed5f4042af6f10e-0000.json": "764e40dbd74e9f1cc36f651bcb453e16d396f58ed6494dcbc4ec13bc1c28073a",
+    "nppes-organizations/cache/1efb71ba7601bd42-0000.json": "a8fe1e6fdc171dfea90c887da38340acb81802063f74f93dbf8e1b3189d3f694",
+    "nppes-organizations/cache/2971b7c8138cd0e8-0000.json": "65ef4dba138fc4c43fea5ced19cc63af2dba976b3a887f97bda6542f6060b202",
+    "nppes-organizations/cache/2b38073f28985762-0000.json": "9bcec90fd7c75a56b310e5bb1e01f1646dc7d089ab172199d67bef385ed42546",
+    "nppes-organizations/cache/2c5b765f4dfeb460-0000.json": "fa3a199da8e6f27046d51d9d657c889841eb0c535938cc646ae57ea6e7e46106",
+    "nppes-organizations/cache/2d31224421742487-0000.json": "7513e4b6974bf1eae88caad69fd47e737e58a0b8bb5dfeca05cdea42eb3176c9",
+    "nppes-organizations/cache/2fb6849301356f76-0000.json": "1e8981cd64e0949882fb6bac4829051c53dc9d3839d1457874c90446b7c06586",
+    "nppes-organizations/cache/2fd218848ab86b91-0000.json": "99b04b3974194dda897094e80ac24077bde37a00c9ac5a233f27a601f02b7a27",
+    "nppes-organizations/cache/347ef5d8de99f191-0000.json": "e48011c3e0c129865659be8810111aa5cf55abe4301e188974e2131dca916831",
+    "nppes-organizations/cache/34ca9ab58f1a6843-0000.json": "519cce1fbbb0caa7f23a5c7bd09f75b7f1627955c6e3ecb3d6fa85e0df269ab5",
+    "nppes-organizations/cache/3503d90da45a9f09-0000.json": "207d2a2d1c8395398d12f32639e9def725af8f9bff807245ba3eba9c8780c51c",
+    "nppes-organizations/cache/37b3c2863a112838-0000.json": "0352507e6afc514165f6b00c0c72bfe3fedf0ba934548d28d61808fd477f6553",
+    "nppes-organizations/cache/38519635c442464c-0000.json": "9a3abd18c7eca07110163b3e485634fda14103a57258df041492b4face0c6e2f",
+    "nppes-organizations/cache/38833b9245dcfce2-0000.json": "e2a9da142ce169394fa2b5a88bc35d7604f3355570d7aec71be05e017110396e",
+    "nppes-organizations/cache/388b376a1cc64ba8-0000.json": "78f3df8abf2c13aa33ff8979d2f51dfa504da20bb08a440a93bc34ca5924abb9",
+    "nppes-organizations/cache/394d24c01d45daf7-0000.json": "1fc133d6abf3dbcc95d55a961e4992922abbe5d00c0ceb45176301089e1f65d4",
+    "nppes-organizations/cache/398a3aa3214ae5b6-0000.json": "b41159674b8118853278eb02b4e970cb38326381f2aca66e2ed791ad71fb158d",
+    "nppes-organizations/cache/39cd860838d45698-0000.json": "900198a5d1065bf9c006644dcd0dc2e915a60e90dc7e5e0ec6bb55c2719eec61",
+    "nppes-organizations/cache/3c7a51bf36973577-0000.json": "b99521468dfa7eff3fd228516ffce21184041412993b553c422cac7251435568",
+    "nppes-organizations/cache/3dc12fcc8740800d-0000.json": "ba494d7456570f99eee850a5bb3903cf3b1b9f1efd353de34644bb64fc67ec45",
+    "nppes-organizations/cache/3e86b45dbf00a297-0000.json": "2586207e7dde29bc3577c15cb70975fd730d873de28ce1e99f690bd092df1fe1",
+    "nppes-organizations/cache/40a40db50b22b212-0000.json": "e7b28c0982bfd5fbf7ba5e397d4a639434d08871396a33c33a7573da7ba11d28",
+    "nppes-organizations/cache/42502dc6d87c5ee1-0000.json": "1458eb4952ac72175e126e7d5910747e80649394d3bffd8d723c8b628bdbff2e",
+    "nppes-organizations/cache/43710ebc5572c550-0000.json": "754b76039f869b733db615d045c61afcd5a95736bb2446a2853764df40c8487c",
+    "nppes-organizations/cache/45f92aa7cc61f433-0000.json": "c3ef376e393703d74c4c0ccc8383229855e07d148a3fbc58e763be8acc788126",
+    "nppes-organizations/cache/4ad5fb398a1f85dd-0000.json": "9e15323e036183a7ef49968f61649ce75805623c5b3bcdcec4891f1505f4ad34",
+    "nppes-organizations/cache/4cf7b4c6a792445d-0000.json": "1c42b0998b2cc56e15ef4ad65a988b43675c310634a0acaccf6a63abd43e7939",
+    "nppes-organizations/cache/4d94e48347feafa6-0000.json": "9f4bdd1785be427700d05a4613ccff4d050632376ac8a44c7b9223b4c85a311c",
+    "nppes-organizations/cache/4f684326ceafe4f0-0000.json": "c20640b1a100bb3fcd1b15b3bb32ce70878b271025b1070f87517422cb93c35f",
+    "nppes-organizations/cache/5003a72fb2bc16bf-0000.json": "8d390fbed063883b94a37aad891f96f0610afd43b298b5e6577a970a3af3cb69",
+    "nppes-organizations/cache/516d60749a4e0891-0000.json": "6249b5a988a7141738358fff6967431b6bdd081228193d26d7e5dfb192444970",
+    "nppes-organizations/cache/538e9f36682ccd43-0000.json": "19394e2148a9aec147f4105e31e479aebf99744ce7f9417bb49c9c4761769c7b",
+    "nppes-organizations/cache/549dd42a65920bf3-0000.json": "9f34e755dd6a76c4d1ade52a6724649a0f754caed1b8e20e38216688c3ae80a8",
+    "nppes-organizations/cache/56afd29ad677ab5f-0000.json": "7cd64b3536141858cda631b520f546b520a59cbfa18e1fd2b16d2bdc16a2fc6b",
+    "nppes-organizations/cache/5a702ad98c704339-0000.json": "44498508678c6fe1a67d521fc1dce1e8ae3ee782006080e2d460688beb202dd4",
+    "nppes-organizations/cache/5e5d9d821582c5bc-0000.json": "3bd5fc68ae3bc631241edf88886034383a7bfff081984dc9e6577a72c2bcad34",
+    "nppes-organizations/cache/60ee71da36f4941d-0000.json": "3e42005392438f4e3c4f6b1e1b6150de2df6e46015aa9349ca52f0074f02ee86",
+    "nppes-organizations/cache/60f8a5b6befa52f5-0000.json": "e8a8c21ea2634cc578d8ab0b491ac59c1a5a2a664a1b140e68a6cfa415e86205",
+    "nppes-organizations/cache/6143814bf559f99e-0000.json": "a54865366401815b293c1787026dc1e6b618e05232232a2456b64eb3a75be0e9",
+    "nppes-organizations/cache/63332f9fa098d032-0000.json": "bd6cd3b72bc430dd19e0fc3e03a9b1577b916c1d0a865bd8e9a0d67090959dab",
+    "nppes-organizations/cache/655e3f76f70bbaa1-0000.json": "3e6b195aa0bd383a3dd16c9bde311336442ec3fb3a1d3ef3b0a914afdaf681ba",
+    "nppes-organizations/cache/66eb95ac9b2ab84e-0000.json": "cef01e591c8d08475e2034d2498cd616f18d32c05c04a49137a8e0a95136d1bb",
+    "nppes-organizations/cache/67d593b9a69f4b9b-0000.json": "a771a6d04b464821813aa84e5c22c5372a215afe3f635d80b9099f816953d3ce",
+    "nppes-organizations/cache/695cfda495369841-0000.json": "bdbc1eeded8f7560c893bf5ec0ddee1b82e77b48fe2c76b70a590d065491c2f6",
+    "nppes-organizations/cache/6acc88a5abcb6508-0000.json": "49554d8106ccb4ce1d58de9b021627a49589e17712d814e46eca2c9356bc8252",
+    "nppes-organizations/cache/6c02951f1c604b68-0000.json": "676045dd92ac4035ffdacea5a42c947e8f2d5dc6a8edd5870922608380b1d170",
+    "nppes-organizations/cache/6de882094529a7d4-0000.json": "ce64c4f2e3120bc422e26497de250b40f236c8436ac6bc2f7a3039d258fcd886",
+    "nppes-organizations/cache/6e0e14b0347d2bda-0000.json": "8b16aeedfa36568ca0af131e2adb548cdda1ce43bc40997d8f0db22d0a49d02e",
+    "nppes-organizations/cache/6f384ef1a146b1c2-0000.json": "1825273d79138aca948f812b7d027a748dc436cc21602ad0203757bad16d9ae3",
+    "nppes-organizations/cache/71a0f0876b0f8a5a-0000.json": "a9207c754ba4c2f6b7548ab860a817d5afe6c78c84a41ff3db03ecdb97b4b2cd",
+    "nppes-organizations/cache/744778e68e735e82-0000.json": "a6c9feead858ba103be2d070c7036dc4a252eefa0ed9c2ff5da52299a48dd97a",
+    "nppes-organizations/cache/74c947b35d59521e-0000.json": "d6aeb4e1a097d278776b54b60ed49fb1a73266e1b435fbe3177e6b63a8360452",
+    "nppes-organizations/cache/74e5207c66f43660-0000.json": "1d4d2de0c95bd004b204b03289f3ef0aad2da1e0fec6243172dd9c9c0ac53f5d",
+    "nppes-organizations/cache/75701e482a0872a7-0000.json": "59c5b2cb768f4a6d5de53c4173be73f60b6ef9ed629aa06939563beb0872e7bc",
+    "nppes-organizations/cache/75cd12d992a280f5-0000.json": "8c569b0dcb83c1e5950f13a6cb858323b7a831222c1e0faf235905c1cc6bf061",
+    "nppes-organizations/cache/764e43badcc7b88f-0000.json": "425a8e204d724459cacd231eebd8c0fbdb610c9e273d53b3dde9f28e30c482f0",
+    "nppes-organizations/cache/76dff92e10cdc4c9-0000.json": "7b8738314fbb6f41a7c708bbaabac71cc461ed29afe00bfe82b1582838f4afb8",
+    "nppes-organizations/cache/77512c1a7b7e7dc2-0000.json": "06c441cbe36e270f1a1f82fc593728d99d124636dcfcc93d18ed716de902208a",
+    "nppes-organizations/cache/77874cc4e3fbde89-0000.json": "6809f57a9c6ba5a1bab9c410d86cc63d77c9058fbf8e990875cc6ce5ca8900d1",
+    "nppes-organizations/cache/77e367f7608a4a1c-0000.json": "a2130b8f64022ca5456082760850532e6da7d7dc5118115a805655c67eec2f72",
+    "nppes-organizations/cache/7847788c04f1d17d-0000.json": "7c7520479f1ed61cde501f9182b1fa010b2dbead70a98f65893bceca1958b197",
+    "nppes-organizations/cache/799870de8690a861-0000.json": "dd679ad3b0256d882180d2a032e3bd047a5a472d0ce449cbd4dcdc410da765d3",
+    "nppes-organizations/cache/79d73f90bab5f13c-0000.json": "16f4102770f2e0524c67f22947a92ee7926817ad08f5d6c7185548925bb9a344",
+    "nppes-organizations/cache/7a75fdbaf6482586-0000.json": "a31bd1af3a822bd47994780404f1dbba0057e521ab7d01af2c3666d46fd80708",
+    "nppes-organizations/cache/7b82f2145464ce9c-0000.json": "f9a74c9292317d37088d76f7a13b44f0b8c17d44207203696aa1d96cce4ef7e4",
+    "nppes-organizations/cache/7bcf5d3f495b4529-0000.json": "8d8a6360a9e3d865e7d0f4d7725a00e7e232e39b426c01deaba71e4bc8e1a74d",
+    "nppes-organizations/cache/7dd6601156b3d1e5-0000.json": "0f459cace07e2e014aa3bc2a06659a35141905fdb54856670516f3cef5561666",
+    "nppes-organizations/cache/802937d9edd91953-0000.json": "e7a1c2891c7570cc2989d702530898b07415bee8c99424958236886b85207993",
+    "nppes-organizations/cache/80c1da3855a45eb3-0000.json": "b87f069608347d05a5d0004d18652e2b4c78417de764966aa5aa2adfae7cee1f",
+    "nppes-organizations/cache/81dc4105e2a5bb6c-0000.json": "b66ac1af8a9890d6dbcd684ed27d58767f50fbb958e173924344cac51833b4b9",
+    "nppes-organizations/cache/84035008f679acf4-0000.json": "10397495c337fd745dcf080a2f8e334df504c69d943dde26017cc7ca553c3091",
+    "nppes-organizations/cache/85e5aba685963660-0000.json": "198767b0acd995ea62bd4fb3b2843eb2e6fa832ae61d0dcbf6f06567f8fc8d3a",
+    "nppes-organizations/cache/87570ae74c491de6-0000.json": "47de001dcf20a3b23f70dd491192ebaf301033474914d3dc0e5b078b619d040f",
+    "nppes-organizations/cache/88424fbf6c163099-0000.json": "b2870406969da7e733ac9eedb77f00abe80b1262049677ddc504ace3accb8aad",
+    "nppes-organizations/cache/8c23e8caa4e43a70-0000.json": "70a190ac4e523401b84fe051f9b01903bcab40000956ecf77d5c0fb0260ace31",
+    "nppes-organizations/cache/901c1522eab79d7b-0000.json": "f0101eaaccd3ed6f3147c08b3b9864e0d11568b3ab9c495fd0b0f9e9b8be346f",
+    "nppes-organizations/cache/903f5fe4029e7696-0000.json": "091ccae48f05c29df33cc5783666b2af8a3fe07105f2b634faad907d2b9f0aed",
+    "nppes-organizations/cache/91770a7786ca574a-0000.json": "6909237af4983062cb101b62304ed23e9d3e20408219749d824e180d34b64ab2",
+    "nppes-organizations/cache/93cfd82faae185a1-0000.json": "ca14d10363e6debcb6216e486d66613bfd79d0e43633cdf19eaf302d223b3fce",
+    "nppes-organizations/cache/97ed89048f466b37-0000.json": "d7ff907b63508ba2b1ce1f3d1a7126e4c1071a0f51a6a5a7b88b493c0986dff8",
+    "nppes-organizations/cache/9a49cd6aa9f2ffa5-0000.json": "4b9bc76aed8d38c72388d3a324fab3fb803e3f6cf0f581419e90c9dc1bddcc21",
+    "nppes-organizations/cache/9a49cd6aa9f2ffa5-0200.json": "beb0b77eb12c30b044f7b1f0a70bafe9790f573d9d1b14fdad16ebd8fc9bba4b",
+    "nppes-organizations/cache/9a6ae07a37598742-0000.json": "90d088bebdd9e90f02fe3b1e9d52f953c3b412bfbe52f39b4987a651e1b56b24",
+    "nppes-organizations/cache/9aceddb175bc27e8-0000.json": "7b5febe5b5faa5672eea06c02c912572e6450264da8b15c56b4d93b2ff8210b1",
+    "nppes-organizations/cache/9ca1c665417ed7e3-0000.json": "3fd6621dc189d5e1aad3b3b3a85c7d92cac9176933ce54ae5082f733115b9c2c",
+    "nppes-organizations/cache/9ee270e8e48d6b1e-0000.json": "42fcccb1b1a80c6886aba86d0591021e40f1641db3faf167dd85807d5cf4182c",
+    "nppes-organizations/cache/a04afdae4ebfdb81-0000.json": "58dd7690d32561e4856410cfa44d246a7a30787aef535432aa3235d1f40fa335",
+    "nppes-organizations/cache/a0aa06fe95cbc981-0000.json": "88ef1dfe31f0836f07a21fe4b5a420f30148520e92598b2d52835a3247d64b9c",
+    "nppes-organizations/cache/a0c9a6a0b6763cc7-0000.json": "d1c39c3dadb534d2e033eb1495e033b5fbbf06a086e7444baec0d18cfcb62fe2",
+    "nppes-organizations/cache/a19a500424495598-0000.json": "65e9bda422ff226b63f4500bc286c773e657b1d513bb23de7623494160ba5297",
+    "nppes-organizations/cache/a37a84e3a0552c84-0000.json": "bd5b70a87edb063abfc1c72037fb9697a8f3a3f1eb0ada22b073cbf43888f367",
+    "nppes-organizations/cache/a4023ddcd5a1b6eb-0000.json": "27b92093fc0e8b17a0bc9124accdad298ffdbaeea7c30837d848052901d1ba95",
+    "nppes-organizations/cache/a6149862d1bb4c0f-0000.json": "bc4851719721e146f5e3efb6cc6975dc85b1f7b75facf30c2035ea175d9e1f49",
+    "nppes-organizations/cache/a7e067dae73d285a-0000.json": "163ea942a589bee1857d44df2b8e2aa43d9d03cc56175ae5971dae43c18c786a",
+    "nppes-organizations/cache/a89a0ae25d64abad-0000.json": "9c563c7a9094c4105e1b690dc4733164268e5ed375a0ad2fe7e38238f892b78a",
+    "nppes-organizations/cache/ac7d7797df11b4b7-0000.json": "e82722d9e761e334f9e2a0d433e2fdbc29350e539a7c2feb3427d860e3ecaaf3",
+    "nppes-organizations/cache/ad0be6206c203001-0000.json": "5bb5e121ac8bb76c0bd3386da034a06617f4e5cab463c962e47e0b1030e6c21e",
+    "nppes-organizations/cache/ad20b5703238ccc8-0000.json": "9453c4992d2063595b0809970ca2dddcfead3e7471896a099da4919e23330ee7",
+    "nppes-organizations/cache/af13b9f63812d799-0000.json": "9e21c1a9e1821658288840ddd8988fef7dfc920a54a5006c5e9835a1f97b8428",
+    "nppes-organizations/cache/b0b12c11ebd0ebdf-0000.json": "0fd5b0a7a1dd38ae017e9212d2831fa92d7ab770b8c151ff63d464c5c3f0ec93",
+    "nppes-organizations/cache/b100674fb3578c23-0000.json": "742bb53b834297c114835aaef08a1ea6a09733276328804d559a1570c733893a",
+    "nppes-organizations/cache/b2c5b577ea52498f-0000.json": "ea62432832e869e4074f300d3ea31d21223ab2f07224a259d8d9d260a8de1489",
+    "nppes-organizations/cache/b5ce60c6200e0b60-0000.json": "e419532274c413720b88e4c2ebc61a14688237d541c6bc35f256ce01388178b4",
+    "nppes-organizations/cache/b729e89537d7e5dd-0000.json": "caf6b23276347dd6900c891434722bb1cc0552f146a5d5eb85617add25c653a1",
+    "nppes-organizations/cache/b7f591fe8bc549d6-0000.json": "119f5912395f04a4f631700373ad6353f2a10584f9609ed153b5318cb3e3e7c1",
+    "nppes-organizations/cache/ba1858a7fa34b566-0000.json": "2c96ffbf6cd8000d485d608a8171bf7b3dd82c3abeb5e9ffa4b4ec03476480e4",
+    "nppes-organizations/cache/bb4f186fd6564201-0000.json": "f217e87639d5be045fa149b78421367aaa2069a9e29f4f1e9833a3de040471fe",
+    "nppes-organizations/cache/bbd5dccdbe7a2a1f-0000.json": "d67993dcc5cf8e4b280bfc5e2dd86a007c417447f58565959e14460bed7951d4",
+    "nppes-organizations/cache/bc11796571584126-0000.json": "eb611d9d3381bc090d83bf9569175424c16189f2233549be17df037e0c7bfea5",
+    "nppes-organizations/cache/bf0503d4c59f965b-0000.json": "5a5be07188109fa31c0466f0ff426853ac65eca69d46260c69a1341a7749dc77",
+    "nppes-organizations/cache/bfaf3a371ad7e63c-0000.json": "87146434d7dd82aa7697381365f4e00218cba1cbb7bfec0b6bd5ee4bada3090f",
+    "nppes-organizations/cache/c06bf936675b540c-0000.json": "609baa47bb8ccb661376c96cb0770524da9b130672d3147f9c90819bdb8ced61",
+    "nppes-organizations/cache/c19f11b60b0179a0-0000.json": "9d5b03f252db1d948b22d8ac0f191cb85cac65bfa1f055e49d77b2ee956d662c",
+    "nppes-organizations/cache/c21acf253b7317ae-0000.json": "de7dcf88feb662cb4f2d4cb454806bdee7503896fc63c99cb45d0200d0038ad1",
+    "nppes-organizations/cache/c3c48b844612ac36-0000.json": "da15d9cfc21cf9bd2a27a919b0b16a5b687334dff51f4789e910363a7fd6f4aa",
+    "nppes-organizations/cache/c3d442d286e02faf-0000.json": "9c879f05504bf15226ca14ab2c704424c3057e2acc49a7dc46b773b13fab864d",
+    "nppes-organizations/cache/c490856366cb79f4-0000.json": "38c8544235ea2c4cdbf91294891e02cb46f1f393f0502222e6015c1ccbedda84",
+    "nppes-organizations/cache/c9e815f5497bbad4-0000.json": "4ec4a90ef598f6a16c291d8e93642126226a93efa78b4c69f4c76047c3629bc2",
+    "nppes-organizations/cache/ccdd102e0c070542-0000.json": "5edec82235354930da36203c2814cb33ba1bb72ca201e6869165c57260a1e5bd",
+    "nppes-organizations/cache/ccdf5d929400ba56-0000.json": "d8bfcf348fdd0a9216457090bc10f715f5716fae968058d41bdda3555dc6b379",
+    "nppes-organizations/cache/cddf654897bbadb3-0000.json": "b48f8dcaed815783e7dd0d637b49a0ec65167d1480bd9a9b19eb812e96c6e907",
+    "nppes-organizations/cache/cdf8c19463273a7a-0000.json": "d57b946a6817339707c82e7694585e82735f786453da9e4103a093f3b7be4090",
+    "nppes-organizations/cache/d47f3da81c642395-0000.json": "d9ec06c867c934676df7d56d0cd0292eced87eeb0233a0c06b24f4f8b9294b2a",
+    "nppes-organizations/cache/d500b5e9625a7294-0000.json": "9fa71010e817b5959006025e7e6a426acf623c1d8c9a072d911681a3b99eaffc",
+    "nppes-organizations/cache/d66725eac5aca901-0000.json": "0731400a4b1d3538991cf5a36de7185e789f1576dbb76f0dd8d15622265a9641",
+    "nppes-organizations/cache/d7b91a0820effdb9-0000.json": "c98b34cf9c139492afb02b1248241c36409bafbfbc8063163d15f0f2e35935d0",
+    "nppes-organizations/cache/da61ba2ab230da3a-0000.json": "cb7651bd6c47e15fb98b4ac2a6d1a80ef222bc30fa60020a99d289c3a6b112e7",
+    "nppes-organizations/cache/dc248d946691de27-0000.json": "a1daac675c0e40e91a7282051099165e3ffbdf33c5aea8acf8e8aa48db818b6b",
+    "nppes-organizations/cache/deedd279295630e6-0000.json": "094167956d334c49f6834ea280629ce09c1d3ad936b5c6fe3040fb78b8a406eb",
+    "nppes-organizations/cache/e14fc81e6c47bfae-0000.json": "0babbeb37a514d908bb702b7fe2254cd0c008ca17213cccf2d83d611cbc081e3",
+    "nppes-organizations/cache/e279a7d9433b7b98-0000.json": "2b4ac94a623a3c143c2a94daac2dbd10f60ce9e68b62022b96b5359d90c092bd",
+    "nppes-organizations/cache/e2a580be61a0d358-0000.json": "2c817f29ed6ec68e4cf96bccc41fe8a28eded96720317f142227ef62c96ba73c",
+    "nppes-organizations/cache/e4952452dad536c0-0000.json": "5fbff5d941cad3dee1442f5de3da67db216892c5ccc8a25176c70dfa6739523a",
+    "nppes-organizations/cache/e53a7623486a20c0-0000.json": "4fa1fb6151343a14043ef1bd94e65f88ee17d6cf02fa9bbea7fb082e13e322e8",
+    "nppes-organizations/cache/e5528246a1e6cddb-0000.json": "261b849ec31488ec18e18a3b3a362d8cfd8b1b00af9282eb75be0c8ef1c63765",
+    "nppes-organizations/cache/e67a54debc6b9416-0000.json": "ebba69df61de0eac90ffc2edbbdb8330e4193d39c94c01d3fd2bfa50dab545da",
+    "nppes-organizations/cache/e814547fd2149ca4-0000.json": "391080502b74ecf69582ae55427998972df7454d77505df17fc04933ba6b0abe",
+    "nppes-organizations/cache/e89eb4e7fc331b2a-0000.json": "2cba47c93214a74902ddd9ad827dbc6e9116b70fc21b7829938a98567114b601",
+    "nppes-organizations/cache/e8e4122b71693151-0000.json": "fe861f2e0b9b75baaee2a9eb62019cdbdd4d2491aebde60200bba14a093f6e34",
+    "nppes-organizations/cache/ea0053e7c18cc94a-0000.json": "209ab4711a737a668dc21012742e32af56673924aa68edc18ff73f32fac0003e",
+    "nppes-organizations/cache/ea0732c3f424fd69-0000.json": "5b8933f237799af5586dcd1f6817a964f92233fd0c62214395993be76a0a9610",
+    "nppes-organizations/cache/ee6c57077cdad89a-0000.json": "733af97310bbc4998475ec73ea644f38f23d61048f98bcdb87c61633d857e9d6",
+    "nppes-organizations/cache/f02e0e342e58b355-0000.json": "9d4b24c01323310bb05fa9046b3d3637401f03ebbe746c1d32431736dcd339cd",
+    "nppes-organizations/cache/f4804086c8b5cc8c-0000.json": "aa9a4636e9e5c39e577af6e9576baeba3a4f932b6f6fd9fce625d036b9b67322",
+    "nppes-organizations/cache/f6b703b9800de89e-0000.json": "f409cfcde8013620b62fc18dbc8af119d14ae3fd89ca2270edd18e74de0bcc62",
+    "nppes-organizations/cache/f791f67e7d22e05a-0000.json": "5bf0c9290bf02b6ca41d7ec0c2f0bd70b248e1a4bfa49d4e5f71e7813136b4f8",
+    "nppes-organizations/cache/f7c309d3be7de0d0-0000.json": "4e1ec80a84c32a435ffc83556fe7ba9dd8cf84c5565b8a33da71f8a7f55ab0c3",
+    "nppes-organizations/cache/f92e14855ca23443-0000.json": "4f5187bc7f3a89ff54287005d898131a26a571e9c99b48e132a57b3cede722bd",
+    "nppes-organizations/cache/fa71c63c207553aa-0000.json": "07d5d271b899291f324fff5ef09d6c693b3d56bfa7359f566c9cd7ac9365adac",
+    "nppes-organizations/cache/fa9baffea4fba2b1-0000.json": "9f1442bd298a762d8342af6c902c78cbed5a7dd4ae0dfbf51e720f878f70d727",
+    "nppes-organizations/cache/fc06b9cbc2b3f1d7-0000.json": "92e8df44ee390a61f600de6e1d85d3de27f0f2f2527ab6969ae1155f7194d9fe",
+    "nppes-organizations/cache/fd7fe8b87cf1a2f9-0000.json": "fee3bd9b0461befdc8812c77f83d0601063b47562573ad3337f93b7a938ceed5",
+    "nppes-organizations/cache/ffc97b263162163d-0000.json": "dcad86644f3b8002702a43324e1833a4ee09cc7a73eb5c2b132b6353488c044e",
+    "nppes-organizations/catalog-input.json": "5cdf1d3b1c1f9081d1dd12abf4b850183265c3c00bbaec313c94a23e790cfea6",
+    "nppes-organizations/county-coverage.json": "d555e6b0997c21a6c443bb5343eca70595adbcd15dc9d4cba207146bf21985d1",
+    "nppes-organizations/evidence-manifest.json": "efb5998bef171f9dbaf9864b5fb605959652b8869a5aade1a5a3a02750f0efd0",
+    "nppes-organizations/live-verification.json": "59758c12e14ab88a2ea694ca8b57b3a2e1a3eeaaa29754e0e2ab3356206002ce",
+    "nppes-organizations/matches.json": "f2e487b2686442dc4946cac942da90cd34b1bace7a4265192623a8540991973c",
+    "nppes-organizations/query-attempts.json": "768284c563a9a11a9705b269e78f7c2e2404b7991d8d8707aa2034aaa82e4126",
+    "nppes-organizations/query-plan.json": "7940416c647a37fa980b7a4816e8524ba865b822e0c53fcd90bb58d320f15cca",
+    "nppes-organizations/replay.py": "c199dcce44fa3c4b1aa9e2cc3c41783e12579088ecabcaf471910ea57037d6d2",
+    "nppes-organizations/unmatched.json": "c337ad56dc4d5d0b47d3f0ac3ab88c328ea7120641e7c31cdd0744102fb2b71c",
+    "offerings/coverage.json": "f9ed3cc0b45dc3813048fa1b5b65fa7d25a38c3750e51b5dc3fc85c88692330a",
+    "offerings/locationResearch.json": "a779d135e33204cccca76fc0231f41c9139c35d8daa1e105dc20e41bc3c02881",
+    "offerings/manifest.json": "cbf58c312f2491b51e368178a3947f06c2ea8aec504ebbde7939ce57e84a3668",
+    "offerings/provider-page-checks.json": "a454ce8ccfe757f47690b985a56913ddc7479698b7e7495b9e1ccaa9a30474ec",
+    "state/bergen/home-care-firms.json": "9dcb4283478df396cafb9234847cfa95b20860b4bd0e688f69e64dcb8331cef0",
+    "state/essex/home-care-firms.json": "db292d469c149d0f39437e8b03a94f4c4414b7a260144fe519ea6049cc289392",
+    "state/hudson/home-care-firms.json": "535a3d9c3358621a51cbfb3d60cf4e639c30e8aee581e60a838be5a23780d60e",
+    "state/morris/home-care-firms.json": "07ffb010db01354cc9e91f7392878d04fc2c08f9ba23d7cb004e521f4d8fb4cf",
+    "state/passaic/home-care-firms.json": "63ecb860b7c590a47d2a7a83ba0d7208bad9ad880f9f2d7d683805b228bd2b3d",
+    "state/raw/firms.xlsx": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+    "state/union/home-care-firms.json": "85d1b9c3c18ca9dbb4a201c2c11a7cdbc38ac1a9b90a513f9df3e19c5fe94955"
+  },
+  "outputs": {
+    "coverage.json": "d7762049ea36861188fbfce0241a84b1ff15114592b90caffd70110620768025",
+    "first-party-upgrades.json": "dc33461cc55274c5eb43d1853814d8c2b9edc91759934f76d9cbe597b169b7b6",
+    "locationResearch.json": "cbb31c5231677df83d7f967d4d5b0bbf3a83d5bc88952b814d6ea42970165e97",
+    "source-verification.json": "1087e37ef8c61b016c3522188f2db00125aa8fcebd65a5ea8e06a71e95a55046"
+  },
+  "schemaVersion": 1,
+  "sources": {
+    "association-directory": {
+      "newProvidersWithDetailsByType": {
+        "home-care": 6,
+        "home-health": 3
+      },
+      "newResearchProviders": 6,
+      "newResearchProvidersByType": {
+        "home-care": 6
+      },
+      "providerIds": [
+        "cms-317009",
+        "cms-317058",
+        "cms-317082",
+        "north-jersey-hp-hp0035001",
+        "north-jersey-hp-hp0153400",
+        "north-jersey-hp-hp0184500",
+        "north-jersey-hp-hp0252100",
+        "north-jersey-hp-hp0257600",
+        "north-jersey-hp-hp0287900"
+      ],
+      "providersByType": {
+        "home-care": 6,
+        "home-health": 3
+      },
+      "uniqueProviders": 9
+    },
+    "campus-offerings": {
+      "newProvidersWithDetailsByType": {
+        "life-plan": 4,
+        "nursing-home": 1
+      },
+      "newResearchProviders": 4,
+      "newResearchProvidersByType": {
+        "life-plan": 4
+      },
+      "providerIds": [
+        "cms-315120",
+        "north-jersey-campus-cedar-crest-village-07444",
+        "north-jersey-campus-crane-s-mill-07006",
+        "north-jersey-campus-holland-christian-home-07508",
+        "north-jersey-campus-lantern-hill-07974",
+        "north-jersey-campus-the-oaks-at-denville-07834",
+        "north-jersey-campus-winchester-gardens-07040"
+      ],
+      "providersByType": {
+        "life-plan": 6,
+        "nursing-home": 1
+      },
+      "uniqueProviders": 7
+    },
+    "home-care-first-party": {
+      "newProvidersWithDetailsByType": {
+        "home-care": 39
+      },
+      "newResearchProviders": 39,
+      "newResearchProvidersByType": {
+        "home-care": 39
+      },
+      "providerIds": [
+        "north-jersey-hp-hp0015318",
+        "north-jersey-hp-hp0015319",
+        "north-jersey-hp-hp0015320",
+        "north-jersey-hp-hp0015321",
+        "north-jersey-hp-hp0015325",
+        "north-jersey-hp-hp0015340",
+        "north-jersey-hp-hp0015347",
+        "north-jersey-hp-hp0022500",
+        "north-jersey-hp-hp0058900",
+        "north-jersey-hp-hp0065000",
+        "north-jersey-hp-hp0077800",
+        "north-jersey-hp-hp0104400",
+        "north-jersey-hp-hp0118200",
+        "north-jersey-hp-hp0119000",
+        "north-jersey-hp-hp0124500",
+        "north-jersey-hp-hp0131500",
+        "north-jersey-hp-hp0132200",
+        "north-jersey-hp-hp0151500",
+        "north-jersey-hp-hp0154800",
+        "north-jersey-hp-hp0167700",
+        "north-jersey-hp-hp0171100",
+        "north-jersey-hp-hp0179100",
+        "north-jersey-hp-hp0191600",
+        "north-jersey-hp-hp0216800",
+        "north-jersey-hp-hp0217600",
+        "north-jersey-hp-hp0221500",
+        "north-jersey-hp-hp0242300",
+        "north-jersey-hp-hp0249500",
+        "north-jersey-hp-hp0256900",
+        "north-jersey-hp-hp0257500",
+        "north-jersey-hp-hp0285900",
+        "north-jersey-hp-hp0297500",
+        "north-jersey-hp-hp0299800",
+        "north-jersey-hp-hp0313600",
+        "north-jersey-hp-hp0320800",
+        "north-jersey-hp-hp0342800",
+        "north-jersey-hp-hp0397500",
+        "north-jersey-hp-hp0415200",
+        "north-jersey-hp-hp0420900"
+      ],
+      "providersByType": {
+        "home-care": 39
+      },
+      "uniqueProviders": 39
+    },
+    "nppes-organizations": {
+      "newProvidersWithDetailsByType": {
+        "home-care": 242
+      },
+      "newResearchProviders": 242,
+      "newResearchProvidersByType": {
+        "home-care": 242
+      },
+      "providerIds": [
+        "north-jersey-hp-hp0000216",
+        "north-jersey-hp-hp0015320",
+        "north-jersey-hp-hp0015325",
+        "north-jersey-hp-hp0015340",
+        "north-jersey-hp-hp0015343",
+        "north-jersey-hp-hp0022500",
+        "north-jersey-hp-hp0024800",
+        "north-jersey-hp-hp0038100",
+        "north-jersey-hp-hp0045700",
+        "north-jersey-hp-hp0049900",
+        "north-jersey-hp-hp0056900",
+        "north-jersey-hp-hp0057100",
+        "north-jersey-hp-hp0059400",
+        "north-jersey-hp-hp0076201",
+        "north-jersey-hp-hp0077800",
+        "north-jersey-hp-hp0081200",
+        "north-jersey-hp-hp0082500",
+        "north-jersey-hp-hp0091902",
+        "north-jersey-hp-hp0092900",
+        "north-jersey-hp-hp0097200",
+        "north-jersey-hp-hp0104800",
+        "north-jersey-hp-hp0105200",
+        "north-jersey-hp-hp0107600",
+        "north-jersey-hp-hp0115500",
+        "north-jersey-hp-hp0116100",
+        "north-jersey-hp-hp0116500",
+        "north-jersey-hp-hp0119000",
+        "north-jersey-hp-hp0120800",
+        "north-jersey-hp-hp0121600",
+        "north-jersey-hp-hp0126900",
+        "north-jersey-hp-hp0131300",
+        "north-jersey-hp-hp0131701",
+        "north-jersey-hp-hp0131702",
+        "north-jersey-hp-hp0133800",
+        "north-jersey-hp-hp0149300",
+        "north-jersey-hp-hp0153400",
+        "north-jersey-hp-hp0168700",
+        "north-jersey-hp-hp0171100",
+        "north-jersey-hp-hp0174800",
+        "north-jersey-hp-hp0176700",
+        "north-jersey-hp-hp0181000",
+        "north-jersey-hp-hp0181800",
+        "north-jersey-hp-hp0181801",
+        "north-jersey-hp-hp0181804",
+        "north-jersey-hp-hp0191600",
+        "north-jersey-hp-hp0194700",
+        "north-jersey-hp-hp0210300",
+        "north-jersey-hp-hp0214300",
+        "north-jersey-hp-hp0215100",
+        "north-jersey-hp-hp0216800",
+        "north-jersey-hp-hp0217600",
+        "north-jersey-hp-hp0218401",
+        "north-jersey-hp-hp0221500",
+        "north-jersey-hp-hp0221800",
+        "north-jersey-hp-hp0224400",
+        "north-jersey-hp-hp0224600",
+        "north-jersey-hp-hp0226400",
+        "north-jersey-hp-hp0226700",
+        "north-jersey-hp-hp0227902",
+        "north-jersey-hp-hp0231605",
+        "north-jersey-hp-hp0231606",
+        "north-jersey-hp-hp0235400",
+        "north-jersey-hp-hp0241800",
+        "north-jersey-hp-hp0246500",
+        "north-jersey-hp-hp0248100",
+        "north-jersey-hp-hp0250200",
+        "north-jersey-hp-hp0254700",
+        "north-jersey-hp-hp0256500",
+        "north-jersey-hp-hp0257500",
+        "north-jersey-hp-hp0259805",
+        "north-jersey-hp-hp0261500",
+        "north-jersey-hp-hp0262400",
+        "north-jersey-hp-hp0265700",
+        "north-jersey-hp-hp0266700",
+        "north-jersey-hp-hp0267700",
+        "north-jersey-hp-hp0273100",
+        "north-jersey-hp-hp0275000",
+        "north-jersey-hp-hp0277000",
+        "north-jersey-hp-hp0277600",
+        "north-jersey-hp-hp0277700",
+        "north-jersey-hp-hp0277900",
+        "north-jersey-hp-hp0280700",
+        "north-jersey-hp-hp0281200",
+        "north-jersey-hp-hp0283100",
+        "north-jersey-hp-hp0284400",
+        "north-jersey-hp-hp0286500",
+        "north-jersey-hp-hp0287200",
+        "north-jersey-hp-hp0287900",
+        "north-jersey-hp-hp0289900",
+        "north-jersey-hp-hp0290500",
+        "north-jersey-hp-hp0290800",
+        "north-jersey-hp-hp0292700",
+        "north-jersey-hp-hp0293200",
+        "north-jersey-hp-hp0299300",
+        "north-jersey-hp-hp0302400",
+        "north-jersey-hp-hp0302600",
+        "north-jersey-hp-hp0306500",
+        "north-jersey-hp-hp0307800",
+        "north-jersey-hp-hp0308300",
+        "north-jersey-hp-hp0308700",
+        "north-jersey-hp-hp0309300",
+        "north-jersey-hp-hp0310500",
+        "north-jersey-hp-hp0311200",
+        "north-jersey-hp-hp0312500",
+        "north-jersey-hp-hp0313100",
+        "north-jersey-hp-hp0313600",
+        "north-jersey-hp-hp0313900",
+        "north-jersey-hp-hp0317300",
+        "north-jersey-hp-hp0319000",
+        "north-jersey-hp-hp0320300",
+        "north-jersey-hp-hp0325900",
+        "north-jersey-hp-hp0326300",
+        "north-jersey-hp-hp0327200",
+        "north-jersey-hp-hp0328800",
+        "north-jersey-hp-hp0330200",
+        "north-jersey-hp-hp0331200",
+        "north-jersey-hp-hp0334500",
+        "north-jersey-hp-hp0336100",
+        "north-jersey-hp-hp0336500",
+        "north-jersey-hp-hp0341800",
+        "north-jersey-hp-hp0342400",
+        "north-jersey-hp-hp0343700",
+        "north-jersey-hp-hp0344700",
+        "north-jersey-hp-hp0345000",
+        "north-jersey-hp-hp0345400",
+        "north-jersey-hp-hp0348900",
+        "north-jersey-hp-hp0350600",
+        "north-jersey-hp-hp0350700",
+        "north-jersey-hp-hp0351900",
+        "north-jersey-hp-hp0354000",
+        "north-jersey-hp-hp0354600",
+        "north-jersey-hp-hp0355900",
+        "north-jersey-hp-hp0359000",
+        "north-jersey-hp-hp0359900",
+        "north-jersey-hp-hp0360700",
+        "north-jersey-hp-hp0362700",
+        "north-jersey-hp-hp0364000",
+        "north-jersey-hp-hp0365000",
+        "north-jersey-hp-hp0365400",
+        "north-jersey-hp-hp0366600",
+        "north-jersey-hp-hp0366900",
+        "north-jersey-hp-hp0367500",
+        "north-jersey-hp-hp0368100",
+        "north-jersey-hp-hp0368300",
+        "north-jersey-hp-hp0371800",
+        "north-jersey-hp-hp0374200",
+        "north-jersey-hp-hp0374500",
+        "north-jersey-hp-hp0375400",
+        "north-jersey-hp-hp0375600",
+        "north-jersey-hp-hp0377000",
+        "north-jersey-hp-hp0377300",
+        "north-jersey-hp-hp0377700",
+        "north-jersey-hp-hp0379000",
+        "north-jersey-hp-hp0379300",
+        "north-jersey-hp-hp0379500",
+        "north-jersey-hp-hp0379900",
+        "north-jersey-hp-hp0382100",
+        "north-jersey-hp-hp0383600",
+        "north-jersey-hp-hp0384100",
+        "north-jersey-hp-hp0384200",
+        "north-jersey-hp-hp0384600",
+        "north-jersey-hp-hp0386700",
+        "north-jersey-hp-hp0387200",
+        "north-jersey-hp-hp0388000",
+        "north-jersey-hp-hp0388600",
+        "north-jersey-hp-hp0388800",
+        "north-jersey-hp-hp0389200",
+        "north-jersey-hp-hp0389900",
+        "north-jersey-hp-hp0391000",
+        "north-jersey-hp-hp0391400",
+        "north-jersey-hp-hp0391600",
+        "north-jersey-hp-hp0392800",
+        "north-jersey-hp-hp0393000",
+        "north-jersey-hp-hp0393400",
+        "north-jersey-hp-hp0393700",
+        "north-jersey-hp-hp0394400",
+        "north-jersey-hp-hp0395500",
+        "north-jersey-hp-hp0396800",
+        "north-jersey-hp-hp0397000",
+        "north-jersey-hp-hp0397800",
+        "north-jersey-hp-hp0398600",
+        "north-jersey-hp-hp0398700",
+        "north-jersey-hp-hp0399600",
+        "north-jersey-hp-hp0400800",
+        "north-jersey-hp-hp0402000",
+        "north-jersey-hp-hp0402700",
+        "north-jersey-hp-hp0403100",
+        "north-jersey-hp-hp0403300",
+        "north-jersey-hp-hp0403400",
+        "north-jersey-hp-hp0404400",
+        "north-jersey-hp-hp0404500",
+        "north-jersey-hp-hp0405300",
+        "north-jersey-hp-hp0408200",
+        "north-jersey-hp-hp0409400",
+        "north-jersey-hp-hp0409700",
+        "north-jersey-hp-hp0410700",
+        "north-jersey-hp-hp0413000",
+        "north-jersey-hp-hp0413400",
+        "north-jersey-hp-hp0413700",
+        "north-jersey-hp-hp0414800",
+        "north-jersey-hp-hp0415200",
+        "north-jersey-hp-hp0415500",
+        "north-jersey-hp-hp0416100",
+        "north-jersey-hp-hp0416800",
+        "north-jersey-hp-hp0418500",
+        "north-jersey-hp-hp0420700",
+        "north-jersey-hp-hp0421200",
+        "north-jersey-hp-hp0422200",
+        "north-jersey-hp-hp0423000",
+        "north-jersey-hp-hp0423800",
+        "north-jersey-hp-hp0424100",
+        "north-jersey-hp-hp0424200",
+        "north-jersey-hp-hp0424700",
+        "north-jersey-hp-hp0424900",
+        "north-jersey-hp-hp0425600",
+        "north-jersey-hp-hp0425700",
+        "north-jersey-hp-hp0427400",
+        "north-jersey-hp-hp0427700",
+        "north-jersey-hp-hp0428300",
+        "north-jersey-hp-hp0429600",
+        "north-jersey-hp-hp0430200",
+        "north-jersey-hp-hp0430600",
+        "north-jersey-hp-hp0431600",
+        "north-jersey-hp-hp0431800",
+        "north-jersey-hp-hp0432200",
+        "north-jersey-hp-hp0433300",
+        "north-jersey-hp-hp0433800",
+        "north-jersey-hp-hp0434000",
+        "north-jersey-hp-hp0435400",
+        "north-jersey-hp-hp0436500",
+        "north-jersey-hp-hp0436700",
+        "north-jersey-hp-hp0437300",
+        "north-jersey-hp-hp0438100",
+        "north-jersey-hp-hp0438400",
+        "north-jersey-hp-hp0439100",
+        "north-jersey-hp-hp0439700",
+        "north-jersey-hp-hp0440100",
+        "north-jersey-hp-hp0440500",
+        "north-jersey-hp-hp0440700",
+        "north-jersey-hp-hp0443600",
+        "north-jersey-hp-hp0444400",
+        "north-jersey-hp-hp0446700",
+        "north-jersey-hp-hp0449100"
+      ],
+      "providersByType": {
+        "home-care": 243
+      },
+      "uniqueProviders": 243
+    }
+  },
+  "status": "verified"
+}

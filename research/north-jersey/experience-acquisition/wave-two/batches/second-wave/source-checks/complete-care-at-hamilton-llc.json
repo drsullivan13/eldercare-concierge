@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 202,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_3a2fcab1afb82b4e_1.log",
+    "section": "r13",
+    "sha256": "57da5138bcfe2a8617ed46a15c071d08b2a593bd9adacdbe52826733e2e4d073"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2fecd558b5859:0x17c15a935e2f185d"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "56 Hamilton Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Passaic",
+    "name": "Complete Care at Hamilton Plaza",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "13e96d0bb7bae65c502b199ebb200096458481fc9c672c02e7e3ca025dcc3424",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-08",
+        "id": "mlc-google-608777",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tRNWExOTJkMXBhVUVseE1XOHhTSEZ0V0RCWFZIYxAB!2m1!1s0x89c2fecd558b5859:0x17c15a935e2f185d",
+        "privateWindowSegmentSha256": "28d4283dc0c4e37fcddf15e249e0c546d50d12b458b72b948a2eeedafec5afb1",
+        "sentiment": "positive",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608776",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sMlgzWTNhekk0YkhaSmIweDJWbGN4V0hWT1FuYxAB!2m1!1s0x89c2fecd558b5859:0x17c15a935e2f185d",
+        "privateWindowSegmentSha256": "076827cf012fd790e28bca6fc765a01dc223089c5eb7bcaf74e25c901bd91449",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608779",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2twek5rSTFWMWxMUkhOelgzWlJUbU5JYlVOSE5YYxAB!2m1!1s0x89c2fecd558b5859:0x17c15a935e2f185d",
+        "privateWindowSegmentSha256": "4ee98733db5f49d2527b129520d24f33bda48cd708cb654f83270791f6a16888",
+        "sentiment": "negative",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-608780",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tad00xSXpSVkJVTjNVdFIyaHhaR05NVkhONlpuYxAB!2m1!1s0x89c2fecd558b5859:0x17c15a935e2f185d",
+        "privateWindowSegmentSha256": "ee92267da67ec0417249ea3f32eca6e0b5aa58780ad28f70e97553c03dab0a0a",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2025-07",
+        "id": "mlc-google-608778",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25wMWFHaFliV1l5VVRaRFdWbEJiemhSWW5wNGIwRRAB!2m1!1s0x89c2fecd558b5859:0x17c15a935e2f185d",
+        "privateWindowSegmentSha256": "546c820cd590fd3d1fbec1e2efde11aa3e86826c79b52a8ed0a6a8a5f4eb32d9",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/complete-care-at-hamilton-llc"
+}

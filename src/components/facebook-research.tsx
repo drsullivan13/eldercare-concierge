@@ -83,14 +83,18 @@ export function FacebookResearch({ research }: { research?: Research }) {
         <>
           {research.findings.length > 0 && (
             <p className="fb-research-intro">
-              Selected public posts. When experience scores tie, Harbor lists the location with more distinct resident or family discussions first.
+              Selected public posts about this location. Resident and family
+              accounts are labeled separately from recommendations and provider
+              promotion.
             </p>
           )}
           <details className="fb-research-coverage">
             <summary>What this Facebook search covered</summary>
             <p>{research.coverageExplanation}</p>
             <p className="fb-research-caution">
-              Qualitative context only. Each discussion counts once when sorting tied scores. A post adds no stars or points. Selected posts are not a representative survey. Relationships are self-described.
+              Qualitative context only. A post adds no stars or points. Selected
+              posts are not a representative survey. Relationships are
+              self-described.
             </p>
             <p className="fb-research-dates">
               Search: {date(research.searchedAt)} · Editorial review:{" "}
@@ -150,7 +154,7 @@ export function FacebookResearch({ research }: { research?: Research }) {
                     <article key={finding.id} className="fb-research-finding">
                       <div className="fb-research-finding-meta">
                         <strong>{KINDS[finding.kind]}</strong>
-                        <span>{date(finding.date)}</span>
+                        <span>Post date: {date(finding.date)}</span>
                       </div>
                       <p className="fb-research-relationship">
                         Self-described relationship:{" "}
@@ -159,12 +163,11 @@ export function FacebookResearch({ research }: { research?: Research }) {
                           ? finding.relationship.replace(/[-_]/g, " ")
                           : "not established"}
                       </p>
-                      {finding.excerpt ? (
+                      <p>
+                        <strong>Research summary</strong> · {finding.summary}
+                      </p>
+                      {finding.excerpt && (
                         <blockquote>“{finding.excerpt}”</blockquote>
-                      ) : (
-                        <p>
-                          <strong>Research summary</strong> · {finding.summary}
-                        </p>
                       )}
                       {finding.topics.length > 0 && (
                         <ul className="fb-research-topics" aria-label="Topics">
@@ -173,15 +176,9 @@ export function FacebookResearch({ research }: { research?: Research }) {
                           ))}
                         </ul>
                       )}
-                      {(finding.limitations.length > 0 || finding.excerpt) && (
+                      {finding.limitations.length > 0 && (
                         <details className="fb-research-context">
                           <summary>Context and limits</summary>
-                          {finding.excerpt && (
-                            <p>
-                              <strong>Research summary</strong> ·{" "}
-                              {finding.summary}
-                            </p>
-                          )}
                           <ul className="fb-research-limits">
                             {finding.limitations.map((limit, i) => (
                               <li key={i}>{limit}</li>
@@ -213,6 +210,25 @@ export function FacebookResearch({ research }: { research?: Research }) {
                           </a>
                         )}
                       </div>
+                      <details className="fb-research-provenance">
+                        <summary>Source provenance</summary>
+                        <p>
+                          {finding.sourceObservationIds.length} collected{" "}
+                          {finding.sourceObservationIds.length === 1
+                            ? "observation"
+                            : "observations"}
+                          . Collected rows, not independent people or
+                          households.
+                        </p>
+                        <p>Editorial review: {date(research.checkedAt)}</p>
+                        <ul aria-label="Source observation IDs">
+                          {finding.sourceObservationIds.map((observationId) => (
+                            <li key={observationId}>
+                              <code>{observationId}</code>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
                       {additionalSources.length > 0 && (
                         <details className="fb-research-additional">
                           <summary>

@@ -19,7 +19,7 @@ export function ResearchDisclosure({
           : "Sources are linked in each option. Confirm current availability, costs, and care needs directly."}
       </p>
       <details className="search-research-disclosure">
-        <summary>Research coverage & method</summary>
+        <summary>Research coverage & sources</summary>
         <div className="search-research-content">
           <div aria-label="Experience research coverage">
             <p>
@@ -31,14 +31,8 @@ export function ResearchDisclosure({
               locations with Facebook findings.
             </p>
             <p>
-              Unrated means more evidence is needed. Facebook findings add
-              context; selected posts do not change the score.
-            </p>
-            <p>
-              When you sort by experience within a care category, locations with
-              the same published score are ordered by the number of Facebook
-              threads with resident or family accounts, highest first. Locations
-              without a score are ordered by distance, then name.
+              Unrated is not a poor rating. Facebook findings add context, not a
+              representative survey of residents or families.
             </p>
           </div>
           {filtered && (

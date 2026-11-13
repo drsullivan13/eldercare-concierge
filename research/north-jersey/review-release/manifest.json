@@ -1,5 +1,5 @@
 {
-  "assessmentDate": "2026-11-12",
+  "assessmentDate": "2026-11-13",
   "collectionInventory": [
     {
       "bytes": 21531,
@@ -10,19 +10,519 @@
       "bytes": 45846,
       "path": "research/north-jersey/listing-index/release/source-observations.json",
       "sha256": "2f89a88fd7d444b228ba7f9d5c33d26c7ad860a3a929040917dad48b80615a6a"
+    },
+    {
+      "bytes": 32631,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/collector-receipts.json",
+      "sha256": "a09a3d2e363eb9a2824e0de0acb9df11e7d039459b078b59e228446c3c86edb8"
+    },
+    {
+      "bytes": 68733,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/collector-receipts.json",
+      "sha256": "60e39bb9ea43df66793b3d92996d8ab80f9f29a7b1d48aee77ec1536a412a3a9"
     }
   ],
   "counts": {
-    "approved": 70,
+    "approved": 102,
     "excerptCandidates": 204,
     "excluded": 0,
-    "included": 70,
-    "observations": 70,
+    "included": 102,
+    "observations": 102,
     "pendingOrInventory": 10,
-    "providers": 70,
+    "providers": 102,
     "publishedExcerpts": 73
   },
   "inputs": [
+    {
+      "bytes": 65489,
+      "path": "research/north-jersey/experience-acquisition/integration/approved-batches.json",
+      "sha256": "35237a76dcde3cb0f06f27e0d8df112b3293530f9cd6b1e52a44f36ca3749c3c"
+    },
+    {
+      "bytes": 1225,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "bytes": 6200,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/batch.json",
+      "sha256": "b655552f47597c57f719c2e7dd6de4b7358bbc409583448b66e60bfcf076ef73"
+    },
+    {
+      "bytes": 2018,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/brookdale-emerson.json",
+      "sha256": "2216258a465d983d18c7157fa93b88e854320ef3e3d602f4d91a19c458eb077c"
+    },
+    {
+      "bytes": 2080,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/careone-at-livingston-assisted-living.json",
+      "sha256": "693fea7dd0b08eec2bfb8c5a0f5e08e84b24dc5d38dd23fc1a67b2a049d5efb8"
+    },
+    {
+      "bytes": 2034,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/careone-at-new-milford.json",
+      "sha256": "3494ebb7ee5693db02725ae758245bc10502d0f3a84760f4a56e712bbf263870"
+    },
+    {
+      "bytes": 2050,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/complete-care-at-summit-ridge.json",
+      "sha256": "476aab52554826bf9bea61ea3a145c969086a952836e442e4bf898befa3de17f"
+    },
+    {
+      "bytes": 2055,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/complete-care-at-west-caldwell-llc.json",
+      "sha256": "945405250946b9f2a0973550f2a14e866d46965705420bd5013e31e8be72b91e"
+    },
+    {
+      "bytes": 2046,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/family-of-caring-at-teaneck-llc.json",
+      "sha256": "1bdd104269b062bff49a659768fec527deae7c2592470d4930a04dccdbcec327"
+    },
+    {
+      "bytes": 2047,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/holly-manor-center.json",
+      "sha256": "578c8f4a3be1739e2d66f7946fd98a2271bbd655ec4e0a8892983ac48b095266"
+    },
+    {
+      "bytes": 2044,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/maple-glen-center.json",
+      "sha256": "7086edf59cb04a65720c4739e703b11c4f2cf0fa7501e8b44c440c1c3fe18a7a"
+    },
+    {
+      "bytes": 2028,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/montclair-care-center.json",
+      "sha256": "31176a46f86190ac43d716c1a82379f258c82903d8af9d57430685a42aba7abc"
+    },
+    {
+      "bytes": 1446,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/promise-care-nj.json",
+      "sha256": "c1d222163edf9281d38c637f4087ec018207c77cc16857c6a8d570894e48ab2c"
+    },
+    {
+      "bytes": 2051,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-checks/sunrise-of-franklin-lakes.json",
+      "sha256": "ebccd4b3ef24fe96224ff29b61e49a6d540afa1347b6a93eb98948b74cf0001c"
+    },
+    {
+      "bytes": 21200,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-ledger.json",
+      "sha256": "4ea4e1819f737f84b2fd650aef45c3bcb44cbb3a56ba0e6da3400842a0227de5"
+    },
+    {
+      "bytes": 22676,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/released-receipts.json",
+      "sha256": "8801fadea804f8f9a4bcc4d2149ef55403ed29260045db07c539aef4f3a9d78b"
+    },
+    {
+      "bytes": 4062,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/reviewed.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    },
+    {
+      "bytes": 1225,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "bytes": 20945,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/aliases.json",
+      "sha256": "b784b5b83a8fb1fc71215beeb709b840d34330e94c2578913f69ad4197785814"
+    },
+    {
+      "bytes": 14205,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/batch.json",
+      "sha256": "c7891906341b99218cb80f85d8330a0b04b0668756e0fa1b4edf1cd05998dd44"
+    },
+    {
+      "bytes": 756,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/acclaim-rehabilitation-and-nursing-center.json",
+      "sha256": "8e1242cd5246677aae214fd57abe482c51a82152f40a9c6851343e546da59931"
+    },
+    {
+      "bytes": 800,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/amedisys-home-health-care-hackensack.json",
+      "sha256": "254627db42bff65fdaaa4fabee7ea79ea6ba3273cea1ddee6f141f61402411c9"
+    },
+    {
+      "bytes": 749,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/atlas-rehabilitation-and-healthcare-at-maywood.json",
+      "sha256": "734538892931704e502bb0595122e68acaf882cfbbee1bcbe1371696445934e0"
+    },
+    {
+      "bytes": 783,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/brookhaven-health-care-center.json",
+      "sha256": "b681c602b4ad7056980c163aeed676692266ef4c24cb725545c37725bbe91162"
+    },
+    {
+      "bytes": 774,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/careone-at-parsippany.json",
+      "sha256": "4c791b4e89f0141f8685b9c4a8209d499efb2158514111810b86002d3f23d38a"
+    },
+    {
+      "bytes": 782,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/complete-care-at-hamilton-llc.json",
+      "sha256": "7e1ad085468cab4330fca9339d5d8e8c2ecfb685dd5b84102236471bf07d6ce8"
+    },
+    {
+      "bytes": 774,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/complete-care-at-wayne-hills-rehab-resp-center.json",
+      "sha256": "08dbcf8aa27fb07b3c808395b63f3ea73dbddd485a49f37bee225ba97350a5dc"
+    },
+    {
+      "bytes": 773,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/daughters-of-israel-pleasant-valley-home.json",
+      "sha256": "752cb635c0e3b50af046747a8d3dfc32e5819ac07cfb8714224bb0b2d4a0010e"
+    },
+    {
+      "bytes": 773,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/elmora-hills-health-rehabilitation-center.json",
+      "sha256": "02807c25651e98eaffdc3ec28e34d934b1800f3e5a08b9f6d77debe031674b32"
+    },
+    {
+      "bytes": 789,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/emerson-health-care-center.json",
+      "sha256": "ae28e2e9fb70eaa78d34ad464ca48ddd9e67c03c99e34c07a2b707305b88ed1e"
+    },
+    {
+      "bytes": 768,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/family-of-caring-healthcare-at-montclair.json",
+      "sha256": "694c61451a63ca0a5edfaa9ec089b98c6b20368736282ff52da582d754c71c83"
+    },
+    {
+      "bytes": 766,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/family-of-caring-healthcare-at-ridgewood.json",
+      "sha256": "aec3705a3644382f8b0e0acfa131da7cc3240f4fe556baa178406dfc473a9408"
+    },
+    {
+      "bytes": 753,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/family-of-caring-healthcare-at-tenafly-llc.json",
+      "sha256": "d6332c8c1f4b1fd2f98760c15e389717117bc67eed7f93652d181fec317c97dd"
+    },
+    {
+      "bytes": 773,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/forest-hills-center-for-rehabilitation-and-healing.json",
+      "sha256": "eeff3884981f6a73c9b46c1395c5b40e57520152ae83b8d187ae7a4a814cc736"
+    },
+    {
+      "bytes": 783,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/hudsonview-health-care-center.json",
+      "sha256": "478836fa9e96f9b3e4584ffa90ba4fddc890266cbf9998dfc9e62909deef7e75"
+    },
+    {
+      "bytes": 810,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/llanfair-house-care-rehabilitation-center.json",
+      "sha256": "eb0b85245d7bab5c29096a690eb67c060221261320e19637ef27a274597f4111"
+    },
+    {
+      "bytes": 762,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/new-community-extended-care-facility.json",
+      "sha256": "f78005a29a9304d5ceeff74371b68aa7f2af587e134f6551afaa29eb40b9553d"
+    },
+    {
+      "bytes": 756,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/new-vista-nursing-rehabilitation-ctr.json",
+      "sha256": "77bc9b6972609ba34f2f971e771862da4f2bdc8eaf8c51bbd0617730a6b96768"
+    },
+    {
+      "bytes": 796,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/pine-acres-rehabilitation-and-healthcare.json",
+      "sha256": "ac7f8b4673048551ff0bce3c30e2d466c448bd8daad08f663ea4747ea6297a6f"
+    },
+    {
+      "bytes": 781,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/south-mountain-hc.json",
+      "sha256": "4ec2d87fff69fc71f35ce593ec38f5fd89ac0f6322c6c51d3f99255a07f6e75b"
+    },
+    {
+      "bytes": 750,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/white-house-healthcare-and-rehabilitation-center.json",
+      "sha256": "a67806fa04462327b62a871f04cdf951e1785d39f441f7c5b67423ed26c4a294"
+    },
+    {
+      "bytes": 35918,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/proposals.json",
+      "sha256": "a7a364d601c5b8f2410b72221d4ad0a8fc7e6a280d980de3fd4af43139a71c45"
+    },
+    {
+      "bytes": 8380,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/reviewed.json",
+      "sha256": "008123040452919d50be4bce0f463c1389bfe4d79bd86da95a281926e662886f"
+    },
+    {
+      "bytes": 3747,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/acclaim-rehabilitation-and-nursing-center.json",
+      "sha256": "af87dc30ece564c596de5d35f06837e067f8a488543e144b50531c36d28ba120"
+    },
+    {
+      "bytes": 1317,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/amedisys-home-health-care-hackensack.json",
+      "sha256": "598cf7e3562b4c98e22799e2109652c20c8661f07b1c1fff933c830406f27e54"
+    },
+    {
+      "bytes": 3749,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/atlas-rehabilitation-and-healthcare-at-maywood.json",
+      "sha256": "2b594a8902cb006817ab6280b8b206bd1e0b8bf06e8feaf1c80974f11a79cf38"
+    },
+    {
+      "bytes": 4026,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/brookhaven-health-care-center.json",
+      "sha256": "8eb590a3a41522101869f624524e469acd1b36aa075ee6054ac68e9fd8bc5414"
+    },
+    {
+      "bytes": 3743,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/careone-at-parsippany.json",
+      "sha256": "df80f739de6d2170e81cff7a39650c48d86d691ea53227c3835698950fc7996b"
+    },
+    {
+      "bytes": 3727,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/complete-care-at-hamilton-llc.json",
+      "sha256": "46c255638e19dcf09c03179cd19a0a7044c52fa066c44e8a61e837d6e7c8a19c"
+    },
+    {
+      "bytes": 3740,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/complete-care-at-wayne-hills-rehab-resp-center.json",
+      "sha256": "10ac2ccc26debc3b4db4e51156e86656350742cdbfe45cb83f05afe3c4de359d"
+    },
+    {
+      "bytes": 3729,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/daughters-of-israel-pleasant-valley-home.json",
+      "sha256": "e5a97a5d13c7c7c9619a48dd12118fbcc4d36689c27f3cdfcf3dc6190b438028"
+    },
+    {
+      "bytes": 3757,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/elmora-hills-health-rehabilitation-center.json",
+      "sha256": "53d0dff2c61425436ad5c06b84bdc3b719f6462bcca835f83a32543dd8def690"
+    },
+    {
+      "bytes": 3740,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/emerson-health-care-center.json",
+      "sha256": "e943d370fbc55b62d88e8b978174eaeb4945d4a8272f42eac98e4eba305d2b9a"
+    },
+    {
+      "bytes": 3744,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/family-of-caring-healthcare-at-montclair.json",
+      "sha256": "288f0e504fbc15f022bb829aef266672cdff4a713ac5f4b90f32c06d321381e1"
+    },
+    {
+      "bytes": 3729,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/family-of-caring-healthcare-at-ridgewood.json",
+      "sha256": "160a20061548e6c237f0496f5307b9ed769d434811c4e8d7ff0d091aaa7de560"
+    },
+    {
+      "bytes": 3733,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/family-of-caring-healthcare-at-tenafly-llc.json",
+      "sha256": "d6681dc34d32b43450bc3da6be4123b621eb0d1438e25c7897d6fd2f438cb47c"
+    },
+    {
+      "bytes": 3769,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/forest-hills-center-for-rehabilitation-and-healing.json",
+      "sha256": "32fe6f8d3520b14c10eb2cad42771786361850a79cbd39debd5315234267ea6f"
+    },
+    {
+      "bytes": 3750,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/hudsonview-health-care-center.json",
+      "sha256": "669040080d030d3ae35307930ee47a4280aa05e12ea8cf621ea454145f069bd0"
+    },
+    {
+      "bytes": 3655,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/llanfair-house-care-rehabilitation-center.json",
+      "sha256": "0bbc459bb8c4ace6eab83727d5c199cf4e31f4afa6b749db819148609d9f6a29"
+    },
+    {
+      "bytes": 3559,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/new-community-extended-care-facility.json",
+      "sha256": "2fd477951a479444b25f5ec696cbafa02dcefb78bd5b59fa1d6b47f125a01816"
+    },
+    {
+      "bytes": 3739,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/new-vista-nursing-rehabilitation-ctr.json",
+      "sha256": "affa115fb610d98e5e5c8470095e440768fdf9ac21e0cfc9d441b0819fd2ad4c"
+    },
+    {
+      "bytes": 3740,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/pine-acres-rehabilitation-and-healthcare.json",
+      "sha256": "99ab4d695ac26c976cec00c36282aebab80906312196d1aada87b27943dcc3ab"
+    },
+    {
+      "bytes": 3742,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/south-mountain-hc.json",
+      "sha256": "69d8753384ea67b97dea1e9e6fe34d93c5daf2a53b0d51714e03b640c0d8ff52"
+    },
+    {
+      "bytes": 3747,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/white-house-healthcare-and-rehabilitation-center.json",
+      "sha256": "cedd99be4a65dfc18fd05b932854cf3c9cbc12880a061b64426e0e4859c2b06c"
+    },
+    {
+      "bytes": 32631,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/collector-receipts.json",
+      "sha256": "a09a3d2e363eb9a2824e0de0acb9df11e7d039459b078b59e228446c3c86edb8"
+    },
+    {
+      "bytes": 2660,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/brookdale-emerson.json",
+      "sha256": "efa84899067c75d28437e4e0a0642f1f8221e006474dfe6ce96e40c08c978f02"
+    },
+    {
+      "bytes": 2722,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/careone-at-livingston-assisted-living.json",
+      "sha256": "c9fbfb3962c3e82f1da42bfefe81048912373ab9e8155d176bfef3db7149ad90"
+    },
+    {
+      "bytes": 2676,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/careone-at-new-milford.json",
+      "sha256": "c566127d6cfe04ea45cb4c48e367b048e84f7e00204db594d55fd5f1a2796908"
+    },
+    {
+      "bytes": 2692,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/complete-care-at-summit-ridge.json",
+      "sha256": "599e8c3e1c666040429f34baccd6ffed83464b414efbf9070b1425b490548efd"
+    },
+    {
+      "bytes": 2697,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/complete-care-at-west-caldwell-llc.json",
+      "sha256": "5b21dea7a9a2ff41044a83e2df89a4efc7b50068f46a097fcd73527da3d4f869"
+    },
+    {
+      "bytes": 2688,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/family-of-caring-at-teaneck-llc.json",
+      "sha256": "d6cdf42152cdf8f8b24097c1051c3cc732c75106610479ae66e8017f420c8e7d"
+    },
+    {
+      "bytes": 2689,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/holly-manor-center.json",
+      "sha256": "ef1f056a8ccb3a3b8278bd7e2059f68e3f92633dfbc95f085d1e80ea750ebc47"
+    },
+    {
+      "bytes": 2686,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/maple-glen-center.json",
+      "sha256": "08bcf727ce290622cfedea891d69a38acac26709cffe8d858bf3ef54e6f4a482"
+    },
+    {
+      "bytes": 2670,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/montclair-care-center.json",
+      "sha256": "f90e54f91f2c1fc44f3af33afa376476e7ac4f1b5a408427d88ba2e80450e541"
+    },
+    {
+      "bytes": 2088,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/promise-care-nj.json",
+      "sha256": "524e9f9d6a8cca116f0e5183839254ead59c77eab998f9a5cc4850947b0b34d0"
+    },
+    {
+      "bytes": 2693,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/sunrise-of-franklin-lakes.json",
+      "sha256": "5e4a95c937f305ffaf0ccbb025a4150d17c4b6acce19a873af016175da5ec8fe"
+    },
+    {
+      "bytes": 68733,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/collector-receipts.json",
+      "sha256": "60e39bb9ea43df66793b3d92996d8ab80f9f29a7b1d48aee77ec1536a412a3a9"
+    },
+    {
+      "bytes": 2957,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/acclaim-rehabilitation-and-nursing-center.json",
+      "sha256": "4f4f4ee8deb9f261cad2bac605e1c6ff7cc3a5139a2bcf9ba40133f625830c38"
+    },
+    {
+      "bytes": 2361,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/amedisys-home-health-care-hackensack.json",
+      "sha256": "c85a79c4d7d067cd5b2dd98f357db2f698e817c9c470491e3293cc0584eb7d0c"
+    },
+    {
+      "bytes": 2971,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/atlas-rehabilitation-and-healthcare-at-maywood.json",
+      "sha256": "01ae24de5be5373ff15b46d61b961cd6026f7d4aa2c97c983d30ba2fbe150206"
+    },
+    {
+      "bytes": 2939,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/brookhaven-health-care-center.json",
+      "sha256": "746203d39b26e88d92d0947e5159119f89becd45d1619bf09c673a56170dde33"
+    },
+    {
+      "bytes": 2915,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/careone-at-parsippany.json",
+      "sha256": "ebba77f464d6d3a3405435d5a164a93e829d7b7926bf9f6bda9425d599668dcd"
+    },
+    {
+      "bytes": 2915,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/complete-care-at-hamilton-llc.json",
+      "sha256": "844bee62543ae323effe56eb4a00f8716b157ed515289eed00cc9f916ef92952"
+    },
+    {
+      "bytes": 2962,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/complete-care-at-wayne-hills-rehab-resp-center.json",
+      "sha256": "35aef3e2520b67e21bd1d82b53a876d7b226ab815578df3767158e55b75f4429"
+    },
+    {
+      "bytes": 2961,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/daughters-of-israel-pleasant-valley-home.json",
+      "sha256": "90298ede793461eef230426d8b1e22be4d0fab6a986a28109686c09883ac1be0"
+    },
+    {
+      "bytes": 2969,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/elmora-hills-health-rehabilitation-center.json",
+      "sha256": "f16fd09dfa9a9952735d3616d0997b9ba060cec96713bff94aca796e7b1e7582"
+    },
+    {
+      "bytes": 2921,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/emerson-health-care-center.json",
+      "sha256": "cd6ec2708637d9682b866205b0128de753326a02d348fd49d130c9c4af1562e8"
+    },
+    {
+      "bytes": 2954,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/family-of-caring-healthcare-at-montclair.json",
+      "sha256": "2f190fbbab734a8827421bad164baabe906ecf894fbed841aa5d4271a135cb79"
+    },
+    {
+      "bytes": 2939,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/family-of-caring-healthcare-at-ridgewood.json",
+      "sha256": "0e604fe131841542da3eb9ccfc3b99ab43c1ba02c719c41f5a77317b94976937"
+    },
+    {
+      "bytes": 2947,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/family-of-caring-healthcare-at-tenafly-llc.json",
+      "sha256": "c1b2327622fbb631d968d97e7816f0781a100676aa351ecc5b65e1ef647bca47"
+    },
+    {
+      "bytes": 2999,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/forest-hills-center-for-rehabilitation-and-healing.json",
+      "sha256": "4534abffdf18fe4073e818e9c6da0a60d7eb0b1b20503b3b13e10fe3780126d7"
+    },
+    {
+      "bytes": 2938,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/hudsonview-health-care-center.json",
+      "sha256": "4f93e85c19986b741d3093fdab3023eff3b226e54f3fd87be8bf08d2414c3361"
+    },
+    {
+      "bytes": 2964,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/llanfair-house-care-rehabilitation-center.json",
+      "sha256": "213d4f1df90f7af055fd52c63c3b2e0711d53dbca824a56d2ebb83b6bbe52d5d"
+    },
+    {
+      "bytes": 2925,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/new-community-extended-care-facility.json",
+      "sha256": "d899255833b4de68782ad091a106f9dcdf041ac7bb86a6cf334c03fac65a39ca"
+    },
+    {
+      "bytes": 2941,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/new-vista-nursing-rehabilitation-ctr.json",
+      "sha256": "4efd05e14bafc1578eac4c249aee3704ae78760b32748c43a8e322302478046a"
+    },
+    {
+      "bytes": 2961,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/pine-acres-rehabilitation-and-healthcare.json",
+      "sha256": "d962b2e757f8b4780449d07b8876cc20b0cce8217b5ce2a80c26bf1419687feb"
+    },
+    {
+      "bytes": 2905,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/south-mountain-hc.json",
+      "sha256": "5c037a8da30342d63df38331cc632961aadd76f5939686a64185464e0647c69a"
+    },
+    {
+      "bytes": 2973,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/white-house-healthcare-and-rehabilitation-center.json",
+      "sha256": "3893787e53ace97c8a56c9934b234d8d3945404dc13fe652211a05cd498ca50c"
+    },
     {
       "bytes": 79497,
       "path": "research/north-jersey/listing-index/release/approvals.json",
@@ -494,9 +994,9 @@
       "sha256": "78563a501c95f0a65c5703881050fd1c4d66fb8f39f9ba36942da3298eb6feea"
     },
     {
-      "bytes": 1966,
+      "bytes": 20653,
       "path": "research/north-jersey/review-release/identity-corroboration.json",
-      "sha256": "d9d5f31451f52ee27db0476c2cb1557aab825b48597d154527525b3bc4a53b51"
+      "sha256": "b7c929c0ad79bca6edf13ecfc1ab317a6638c9cf020885f2e1d07c4b7b6e510c"
     },
     {
       "bytes": 1469,
@@ -630,12 +1130,12 @@
     }
   ],
   "outputs": {
-    "approvals-audit.json": "82a4e61a888bff11fa906914446d25b50b49ef6ff0847958095e54c84033b542",
+    "approvals-audit.json": "613764a046117df3e047de3953982aa08b0e54e5d9402536be23701fba05de3f",
     "excerpt-audit.json": "611b4341690e50fd0dd0b203fba66b80f082b629dbe8a7626c843b326d6a1e28",
     "exclusions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-    "experience-verification.json": "e973902f748b01dceb488c7762239c740b8f4b0c2b1f070b69808e8c594ac8f2",
-    "locationResearch.json": "67f500842cde225f1d9549b4e4c33ac8f289aff930104e7bedcd206ac19e2e0a",
-    "observation-registry.json": "fb0306a3b9a4ec9d3400b467252383df93436f5f8e79516336ecdbe45e31cb46",
+    "experience-verification.json": "2b3443c816bfb911e310d4d41c2e36e320bb1a10e490c99a1e6d983a919db31b",
+    "locationResearch.json": "aadde0d44b4eb5a671cf834a91ee724e0a99d80b8e5e02fb09688123980986f4",
+    "observation-registry.json": "6fc14b9cc0a1ee6be45d0c2921f138e984b7ccce8551c1abcc964e248631437a",
     "staging.json": "0cfbb4798aca802800de9ce15d361a7320525f87b350339dbd12a0241a84a5e1"
   },
   "rosterIdentitySha256": "b24190dbd11b8963658f41fa3b12eaed1adf9a65f4f031ee953229e1a45882c7",
@@ -646,6 +1146,6 @@
   },
   "transformer": {
     "path": "scripts/regions/release-reviews.py",
-    "sha256": "3df271b13259bdaea0049d6617fc2936093fea1e25abfcca1988c9ff32925723"
+    "sha256": "1629bc96ab0206039a2b1fdd865c8b77980160ccf95430fe32d6f950d342c743"
   }
 }

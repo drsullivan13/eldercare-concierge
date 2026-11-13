@@ -1,0 +1,41 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 92,
+    "rating": 4.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_3a2fcab1afb82b4e_1.log",
+    "section": "r10",
+    "sha256": "57da5138bcfe2a8617ed46a15c071d08b2a593bd9adacdbe52826733e2e4d073"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 0,
+  "googlePlaceIds": [],
+  "httpStatus": 200,
+  "identity": {
+    "address": "21 Main Street, Suite 252",
+    "careUnit": "Home Health",
+    "city": "Hackensack",
+    "name": "Amedisys Home Health Care",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "4eea2d778308677a36ae72364d705ef361144ea1c6d276549f42fae1c923d35e",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Home Health",
+    "reviewerIdentitiesVerified": false,
+    "rows": [],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 0
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/amedisys-home-health-care-hackensack"
+}

@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 206,
+    "rating": 4.1,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_c1c41290dddd2021_1.log",
+    "section": "r58",
+    "sha256": "dd77caef6fbadfe11988fa11c73f9c4aafe8665eba74daaccb70d32a32789a82"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2f7da9a3f5071:0xa0001810932210e2"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "9020 Wall Street",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "North Bergen",
+    "name": "Hudsonview Center for Rehabilitation and Healthcare",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "ea7b2607944c668b87696d6c06a44d3ad837052cbc874b9ebb43cf4c4a99254e",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-08",
+        "id": "mlc-google-608564",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2kwelRIQlljME5OTm5Ka1RuQkVUa2RsZGs1VVkwRRAB!2m1!1s0x89c2f7da9a3f5071:0xa0001810932210e2",
+        "privateWindowSegmentSha256": "a9a6789eac106d2dd37db3cbcc4e4d76ddd31b786fad37d9f6c02fc6f02ff476",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-08",
+        "id": "mlc-google-608565",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pWWGQwRmlNREJQTVZsQlFVcDNXR3h6VnpneVVtYxAB!2m1!1s0x89c2f7da9a3f5071:0xa0001810932210e2",
+        "privateWindowSegmentSha256": "b5ee0b92933e0abcc5dde34f2c82c55ba58c47e2073a0c5bab21839fbb68004e",
+        "sentiment": "negative",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608562",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21WclNsb3RRa1YwTW1SeU4ydDNPRVJtYUZjNWIwRRAB!2m1!1s0x89c2f7da9a3f5071:0xa0001810932210e2",
+        "privateWindowSegmentSha256": "1cda45a75c65305d3a128f02c9e26a5277084f3e2bb015fd93bd54a7714ee99e",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608563",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xRd05UbFlSVk5MVEd4aU0yRTFVRzR4UlRGVWJXYxAB!2m1!1s0x89c2f7da9a3f5071:0xa0001810932210e2",
+        "privateWindowSegmentSha256": "e499085838be5359154ae6ae153e96017d4982c401432ada2e9da1f928098355",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608561",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sT2RWSnZNakoxU2tGMVJGZEdiREZQYVdsVGJGRRAB!2m1!1s0x89c2f7da9a3f5071:0xa0001810932210e2",
+        "privateWindowSegmentSha256": "5dcf14215ffad4f811b27c31f9f2a75ebf5fb6d540bc7dba9695c6d6537b7b2a",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/hudsonview-health-care-center"
+}

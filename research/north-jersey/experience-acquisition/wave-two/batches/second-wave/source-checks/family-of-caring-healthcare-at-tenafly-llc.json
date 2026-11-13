@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 160,
+    "rating": 4.7,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_370bf0777fe7b22e_1.log",
+    "section": "r89",
+    "sha256": "28666cd3860246f258dc6b63c9e8425b89be46ca5fcff4061ee6c260ccdf9584"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c2f1addf3d66eb:0x842e073f5367c82d"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "133 County Road",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Tenafly",
+    "name": "Family of Caring at Tenafly",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "e53f920d1d266508ac92563fa3b65e6983ad8fca1cc2f623048ce83be13bc8da",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-08",
+        "id": "mlc-google-608671",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2toWWVrWlVTQzF3T0dGWlFXVlBRVXBpY1ZORVJXYxAB!2m1!1s0x89c2f1addf3d66eb:0x842e073f5367c82d",
+        "privateWindowSegmentSha256": "b5a910f8f906658485b6544f8a0edcfd68528ed987f051dd7b84755b9a076a11",
+        "sentiment": "positive",
+        "sourcePublishedText": "Aug 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608672",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pWM1JuUTNZalpQZDFReVIzbGxOVkJHYmxkaFNtYxAB!2m1!1s0x89c2f1addf3d66eb:0x842e073f5367c82d",
+        "privateWindowSegmentSha256": "89290be9f3af1dfb1805d31c5fe2ce3d1a09688953d998375ea3f81dea48bbf1",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-608675",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pnNFNpMW5RMlUwTFZFeWQzWm9PV2x5Vkc4MllXYxAB!2m1!1s0x89c2f1addf3d66eb:0x842e073f5367c82d",
+        "privateWindowSegmentSha256": "e5a93b4da6c92d30d5c9768d40edf1929cc0b4863f19271a812268f0c5f6aa5f",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-608674",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT214SFJtaG1NRWRPVGpoM2FYRlVWbEIzTFc5R1JGRRAB!2m1!1s0x89c2f1addf3d66eb:0x842e073f5367c82d",
+        "privateWindowSegmentSha256": "db334e8fbcd4c8c1776159bb2eaba158448df7ad74c423f34027a7141ccf35df",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2025-11",
+        "id": "mlc-google-608673",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2paWmIxVk9WMGhLTUVGUGEydFBNMGRTUWxGbU1IYxAB!2m1!1s0x89c2f1addf3d66eb:0x842e073f5367c82d",
+        "privateWindowSegmentSha256": "339c42e35c222bc8674e2aeede9605f832e25d76d6aa17c9f6e9fce56ff94aca",
+        "sentiment": "positive",
+        "sourcePublishedText": "Nov 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/family-of-caring-healthcare-at-tenafly-llc"
+}

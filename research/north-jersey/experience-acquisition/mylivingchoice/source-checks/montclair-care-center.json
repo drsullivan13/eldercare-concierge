@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 100,
+    "rating": 4.3,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_370bf0777fe7b22e_1.log",
+    "section": "r86",
+    "sha256": "28666cd3860246f258dc6b63c9e8425b89be46ca5fcff4061ee6c260ccdf9584"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3aaca426ee5af:0xa8b651744aca3d59"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "111-115 Gates Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Montclair",
+    "name": "Montclair Care Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "8a69f38624b29be1c114ae7dabe7ea7244eecb7e02f9de01ed649f45b05f08bd",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609187",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21SR2FVTXRaVWRqZEhObk0wbzNSVUl6VTJWTWFrRRAB!2m1!1s0x89c3aaca426ee5af:0xa8b651744aca3d59",
+        "privateWindowSegmentSha256": "f70004abc94f192d563b65db10e0976362e99fda3047911540730ea447e482b2",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609188",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2poUlpWWlphMkZJV0VaS1pWbG5SWFpzU1VOR1FsRRAB!2m1!1s0x89c3aaca426ee5af:0xa8b651744aca3d59",
+        "privateWindowSegmentSha256": "ed68d929694ec68f08b9e076b252d7d4a3ac1e0a5137e5b64315385236b6c4bb",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609186",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21sc2FXSnNjelZXZFUxME4zUndTelJ3YlRGTWIwRRAB!2m1!1s0x89c3aaca426ee5af:0xa8b651744aca3d59",
+        "privateWindowSegmentSha256": "e78796afe79a862c9b9e993ceaed5335055112694bd6d6ec357c42f65726ae9c",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-609190",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pCUExXRkZPSEZGVEVNeWVWbHhiMFJPUmxKU2JXYxAB!2m1!1s0x89c3aaca426ee5af:0xa8b651744aca3d59",
+        "privateWindowSegmentSha256": "d8c537232faab99146db0c1d1b685e3251cb40e23bc5ff24fe82737a459692ad",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-609189",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pWU1NtdzFZVkE0TW1wV2IyUjNhMVUyWW10ZlVHYxAB!2m1!1s0x89c3aaca426ee5af:0xa8b651744aca3d59",
+        "privateWindowSegmentSha256": "95660d44e0bffc35059dbb87b44c53ccf851d311364c81ffa467e2973f7fdeca",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jan 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/montclair-care-center"
+}

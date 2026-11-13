@@ -1,0 +1,89 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 244,
+    "rating": 4.1,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/forest-hills-center-for-rehabilitation-and-healing.json",
+      "sha256": "32fe6f8d3520b14c10eb2cad42771786361850a79cbd39debd5315234267ea6f"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/batch.json",
+      "sha256": "c7891906341b99218cb80f85d8330a0b04b0668756e0fa1b4edf1cd05998dd44"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/proposals.json",
+      "sha256": "a7a364d601c5b8f2410b72221d4ad0a8fc7e6a280d980de3fd4af43139a71c45"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/reviewed.json",
+      "sha256": "008123040452919d50be4bce0f463c1389bfe4d79bd86da95a281926e662886f"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/forest-hills-center-for-rehabilitation-and-healing.json",
+      "sha256": "eeff3884981f6a73c9b46c1395c5b40e57520152ae83b8d187ae7a4a814cc736"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/aliases.json",
+      "sha256": "b784b5b83a8fb1fc71215beeb709b840d34330e94c2578913f69ad4197785814"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "497 Mt Prospect Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Newark",
+    "name": "Forest Hill Center for Rehabilitation and Healing",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ62203",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315375",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609222",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609221",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609226",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609224",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-609228",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/forest-hills-center-for-rehabilitation-and-healing"
+}

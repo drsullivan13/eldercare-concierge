@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 244,
+    "rating": 4.1,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_ecccae4b5565921a_1.log",
+    "section": "r19",
+    "sha256": "9c465b86a46f2423143e99d1cecb8b412c9ac8ecde40c9c8941270fc34232361"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c25458f66ee1d9:0xf8e76aaae73255f9"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "497 Mt Prospect Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Newark",
+    "name": "Forest Hill Center for Rehabilitation and Healing",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "1583832a3ed763ef2d2ca5bd44171c683e43ec0796e83236fda6d3efab16ba87",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609222",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWSE1ubGtXRmhDUVdkZlExbFBabEpqTVVSaldtYxAB!2m1!1s0x89c25458f66ee1d9:0xf8e76aaae73255f9",
+        "privateWindowSegmentSha256": "5c5205c62b86de6ee15bc1d6c3510503589e31ee68af0f1f403c70611b068cfd",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609221",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s1VlZUSk5lWGhwTkVkdGEyMVhjbWhCVkdoZmFGRRAB!2m1!1s0x89c25458f66ee1d9:0xf8e76aaae73255f9",
+        "privateWindowSegmentSha256": "e1ddb49620116f49badedab4453ece0b0d74f8de704178b7a6fbe93d5964a78e",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609226",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xaRGREVnROMUZ0VFdSMVUxWnhiMjlwTm0xYWFYYxAB!2m1!1s0x89c25458f66ee1d9:0xf8e76aaae73255f9",
+        "privateWindowSegmentSha256": "c7b86d8a240cbc47042c2ad0ea1a2cd851ffb8d9573f4d8b918625c1371f0a60",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609224",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tOdVJTMVpVR0ptWTBWalpGQkZUbW8wVXpaQ2NIYxAB!2m1!1s0x89c25458f66ee1d9:0xf8e76aaae73255f9",
+        "privateWindowSegmentSha256": "62bd14bfae1a285322148c2366b493f7c6703e059ebaa76703b81765eb464001",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-609228",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tWbFJsUkRSVXB5TkdGT1NIUnBhazl6TjJ4ZlNWRRAB!2m1!1s0x89c25458f66ee1d9:0xf8e76aaae73255f9",
+        "privateWindowSegmentSha256": "734015d4634161e0cb1742afb1b744b16541508ba589341b3e2e667238d704df",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jan 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/forest-hills-center-for-rehabilitation-and-healing"
+}

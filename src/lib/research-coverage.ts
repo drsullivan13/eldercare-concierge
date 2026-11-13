@@ -132,16 +132,51 @@ export class ResearchCoverageInputError extends Error {
   }
 }
 
-/** CSV remains a research checklist; no observation text or personal data is exported. */
-export function researchCoverageCsv(
+export function publicResearchCoverage(
   coverage: ReturnType<typeof getResearchCoverage>,
-): string {
+) {
+  return {
+    market: coverage.market,
+    asOfDate: coverage.asOfDate,
+    total: coverage.total,
+    scored: coverage.scored,
+    unscored: coverage.unscored,
+    facebookCovered: coverage.facebookCovered,
+    facebookWithFindings: coverage.facebookWithFindings,
+    locations: coverage.locations.map((row) => ({
+      providerId: row.providerId,
+      name: row.name,
+      category: row.category,
+      address: row.address,
+      city: row.city,
+      zip: row.zip,
+      score: row.score,
+      status: row.score === null ? "unrated" : "scored",
+      ratingSourceUrls: row.ratingSourceUrls,
+      facebookStatus: row.facebookStatus,
+      facebookFindings: row.facebookFindings,
+      nextAction:
+        "Read the linked sources and confirm current care needs and availability directly.",
+    })),
+  };
+}
+
+function coverageCsv(columns: string[], rows: unknown[][]): string {
   const cell = (value: unknown) => {
     let text = value === null || value === undefined ? "" : String(value);
     // Quoting alone does not stop spreadsheet formula evaluation.
     if (/^[\s]*[=+@-]/.test(text) || /^[\t\r\n]/.test(text)) text = `'${text}`;
     return `"${text.replace(/"/g, '""')}"`;
   };
+  return (
+    [columns, ...rows].map((row) => row.map(cell).join(",")).join("\r\n") +
+    "\r\n"
+  );
+}
+
+export function publicResearchCoverageCsv(
+  coverage: ReturnType<typeof getResearchCoverage>,
+): string {
   const columns = [
     "provider_id",
     "name",
@@ -151,16 +186,13 @@ export function researchCoverageCsv(
     "zip",
     "experience_score_0_to_10",
     "score_status",
-    "eligible_reported_reviews",
-    "source_families",
     "rating_source_urls",
     "facebook_status",
     "facebook_findings",
-    "facebook_withheld_observations",
     "next_research_action",
     "assessment_date",
   ];
-  const rows = coverage.locations.map((row) => [
+  const rows = publicResearchCoverage(coverage).locations.map((row) => [
     row.providerId,
     row.name,
     row.category,
@@ -169,17 +201,54 @@ export function researchCoverageCsv(
     row.zip,
     row.score,
     row.status,
-    row.eligibleReviews,
-    row.sourceFamilies,
     row.ratingSourceUrls.join(" | "),
     row.facebookStatus,
     row.facebookFindings,
-    row.facebookWithheldObservations,
     row.nextAction,
     coverage.asOfDate,
   ]);
-  return (
-    [columns, ...rows].map((row) => row.map(cell).join(",")).join("\r\n") +
-    "\r\n"
+  return coverageCsv(columns, rows);
+}
+
+export function researchCoverageCsv(
+  coverage: ReturnType<typeof getResearchCoverage>,
+): string {
+  return coverageCsv(
+    [
+      "provider_id",
+      "name",
+      "care_category",
+      "address",
+      "city",
+      "zip",
+      "experience_score_0_to_10",
+      "score_status",
+      "eligible_reported_reviews",
+      "source_families",
+      "rating_source_urls",
+      "facebook_status",
+      "facebook_findings",
+      "facebook_withheld_observations",
+      "next_research_action",
+      "assessment_date",
+    ],
+    coverage.locations.map((row) => [
+      row.providerId,
+      row.name,
+      row.category,
+      row.address,
+      row.city,
+      row.zip,
+      row.score,
+      row.status,
+      row.eligibleReviews,
+      row.sourceFamilies,
+      row.ratingSourceUrls.join(" | "),
+      row.facebookStatus,
+      row.facebookFindings,
+      row.facebookWithheldObservations,
+      row.nextAction,
+      coverage.asOfDate,
+    ]),
   );
 }

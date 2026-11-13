@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 35,
+    "rating": 3.1,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_3a2fcab1afb82b4e_1.log",
+    "section": "r15",
+    "sha256": "57da5138bcfe2a8617ed46a15c071d08b2a593bd9adacdbe52826733e2e4d073"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3abafe8fe19a7:0x7bb1e00d987381c2"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "1155 Pleasant Valley Way",
+    "careUnit": "Memory CareSkilled Nursing / Long Term Care",
+    "city": "West Orange",
+    "name": "Daughters of Israel Home",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "51aa0bd4db6235a183ba92705f5185110306964ded12548516c42ed44837e224",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Memory CareSkilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-305624",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21sclRHMVpWbXRwWVZCSFFuVk9VekU1YWsxSlJYYxAB!2m1!1s0x89c3abafe8fe19a7:0x7bb1e00d987381c2",
+        "privateWindowSegmentSha256": "7f6d146dddcdff72f3ea2c14895bfb06088b682442dfe05859609472f68547c1",
+        "sentiment": "mixed",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-305625",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25WeU1HMDBaRUYzYzBNNVJsOWZZbHBtTXpjeGIzYxAB!2m1!1s0x89c3abafe8fe19a7:0x7bb1e00d987381c2",
+        "privateWindowSegmentSha256": "2e18bb0788a07434cb5a461f1f2463437a9cf21d7c4442a65f79a80801766441",
+        "sentiment": "negative",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-305623",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pkUFdreFdZa0Z5ZDNWdVYxQlBjM1IwZEhONFJGRRAB!2m1!1s0x89c3abafe8fe19a7:0x7bb1e00d987381c2",
+        "privateWindowSegmentSha256": "5257fff1acea6cd93bc581b955f01fc7679840353d0722a6cd6b507b39ee65ec",
+        "sentiment": "positive",
+        "sourcePublishedText": "Apr 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-305622",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21kSlJFcExSV0ZmV25OTlluVlFaRmxMWlVObWJtYxAB!2m1!1s0x89c3abafe8fe19a7:0x7bb1e00d987381c2",
+        "privateWindowSegmentSha256": "20fe824b960aed9447b78f2e2099b5bf455ed3d9fdc416581bcce1cd3dd79554",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jan 2026"
+      },
+      {
+        "date": "2025-02",
+        "id": "mlc-google-305626",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnTUNnN1BuUkt3EAE!2m1!1s0x89c3abafe8fe19a7:0x7bb1e00d987381c2",
+        "privateWindowSegmentSha256": "74a4b090c20ece7be37b026852df91891b7ea784d6354ccb71cda3c6de879e2d",
+        "sentiment": "negative",
+        "sourcePublishedText": "Feb 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/daughters-of-israel-pleasant-valley-home"
+}

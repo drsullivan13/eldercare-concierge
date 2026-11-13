@@ -1,7 +1,8 @@
 import { registeredMarket } from "@/lib/market-registration";
 import {
   getResearchCoverage,
-  researchCoverageCsv,
+  publicResearchCoverage,
+  publicResearchCoverageCsv,
   ResearchCoverageInputError,
 } from "@/lib/research-coverage";
 
@@ -31,7 +32,7 @@ export function GET(request: Request) {
     throw error;
   }
   if (params.get("format") === "csv") {
-    return new Response(researchCoverageCsv(coverage), {
+    return new Response(publicResearchCoverageCsv(coverage), {
       headers: {
         "Content-Type": "text/csv; charset=utf-8",
         "Content-Disposition": `attachment; filename="harbor-experience-research-${coverage.market.id}-${coverage.asOfDate}.csv"`,
@@ -40,7 +41,7 @@ export function GET(request: Request) {
       },
     });
   }
-  return Response.json(coverage, {
+  return Response.json(publicResearchCoverage(coverage), {
     headers: { "Cache-Control": "public, max-age=300" },
   });
 }

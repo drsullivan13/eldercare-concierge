@@ -1,0 +1,89 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 42,
+    "rating": 4.2,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/source-checks/complete-care-at-wayne-hills-rehab-resp-center.json",
+      "sha256": "10ac2ccc26debc3b4db4e51156e86656350742cdbfe45cb83f05afe3c4de359d"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/batch.json",
+      "sha256": "c7891906341b99218cb80f85d8330a0b04b0668756e0fa1b4edf1cd05998dd44"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/proposals.json",
+      "sha256": "a7a364d601c5b8f2410b72221d4ad0a8fc7e6a280d980de3fd4af43139a71c45"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/reviewed.json",
+      "sha256": "008123040452919d50be4bce0f463c1389bfe4d79bd86da95a281926e662886f"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/identity-checks/complete-care-at-wayne-hills-rehab-resp-center.json",
+      "sha256": "08dbcf8aa27fb07b3c808395b63f3ea73dbddd485a49f37bee225ba97350a5dc"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/second-wave/aliases.json",
+      "sha256": "b784b5b83a8fb1fc71215beeb709b840d34330e94c2578913f69ad4197785814"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "130 Terhune Drive",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Wayne",
+    "name": "Complete Care at Wayne Hills",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ61610",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315110",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-305682",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305685",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305683",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305684",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-305686",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/complete-care-at-wayne-hills-rehab-resp-center"
+}

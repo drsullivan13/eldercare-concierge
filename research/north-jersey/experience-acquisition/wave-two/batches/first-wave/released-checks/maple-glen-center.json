@@ -1,0 +1,73 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 173,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/source-checks/maple-glen-center.json",
+      "sha256": "69aa489d9fd340a3ff174044000f7c8e8ad840d8deec6aa46cfd585ddc756859"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/integration/reviewed-mylivingchoice.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "12-15 Saddle River Road",
+    "careUnit": "Skilled Nursing / Long Term CareRespite / Short-Term Care",
+    "city": "Fair Lawn",
+    "name": "Maple Glen Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ60224",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315328",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-04",
+        "id": "mlc-google-305869",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-305868",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305871",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-305870",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2025-11",
+        "id": "mlc-google-305872",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/maple-glen-center"
+}

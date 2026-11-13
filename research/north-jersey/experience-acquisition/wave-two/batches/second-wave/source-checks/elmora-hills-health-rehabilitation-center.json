@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 88,
+    "rating": 3.8,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_7aacc8540bc7fb41_1.log",
+    "section": "r75",
+    "sha256": "31571337d13f7b6dfb274f225a22be4ccac94f3ebc07981739364b934e4ca76e"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3b2ae85bf210f:0x35c7d534816210ac"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "225 W Jersey Street",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Elizabeth",
+    "name": "Elmora Hills Healthcare & Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "d53b6a1ce4aa2ed9f2f54fab759ce465aaa28026d02776771c5d78378ea11a94",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608428",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21oamNrcGhhVFJ4ZWpoalRTMHlNemQ0TFdkMWRHYxAB!2m1!1s0x89c3b2ae85bf210f:0x35c7d534816210ac",
+        "privateWindowSegmentSha256": "3dbe7680a0517435fc8a8fd2c2ba7d64b592ec9fbf697026b41a986934153a6d",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608427",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20xUWNubGZPSEZ3Y3poRGNqSlhURkpwUVVGM1ZuYxAB!2m1!1s0x89c3b2ae85bf210f:0x35c7d534816210ac",
+        "privateWindowSegmentSha256": "cdbb091b6321636a9ee7e6df51d5d3a3752bb165f31b9950ffc014ca81f0eb06",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608426",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21Wdk1qZFZTWEppT1hscmJIaEtNRlJLY0VKSE9IYxAB!2m1!1s0x89c3b2ae85bf210f:0x35c7d534816210ac",
+        "privateWindowSegmentSha256": "0b9a7c2ccb65d597b2faa37cf3e86440ceae29ecd6b57ebb6758ae7bc1dfc5a3",
+        "sentiment": "mixed",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-608429",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pGVWJIVkdWRFpIUkVGR1NUQnlTMUUwYWtGM1UzYxAB!2m1!1s0x89c3b2ae85bf210f:0x35c7d534816210ac",
+        "privateWindowSegmentSha256": "670a1782a33357491dc555cc8a1409f05722e03e10bb0ab3f7cdd6ea41ce221d",
+        "sentiment": "negative",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-608430",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21Ob2RIRlpkMDlNZFZWTE1EZFRVbVJJTW0xdVVWRRAB!2m1!1s0x89c3b2ae85bf210f:0x35c7d534816210ac",
+        "privateWindowSegmentSha256": "8bc3f511a575f682d32352f92d0caa52137cc7a46227dc90db99d896960c4e34",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jan 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/elmora-hills-health-rehabilitation-center"
+}

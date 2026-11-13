@@ -1,7 +1,11 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import source38 from "../../research/north-jersey/review-release/source-checks/visiting-angels-scotch-plains.json";
-import { computeExperienceScore } from "../../src/lib/experience-score";
+import {
+  computeExperienceScore,
+  type ExperienceAggregate,
+} from "../../src/lib/experience-score";
+import { publicExperience } from "../../src/lib/public-experience";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
 import type { IndividualReviewsResponse } from "../../src/lib/individual-reviews";
 
@@ -45,7 +49,7 @@ async function checkLayout(page: Page) {
   ).toEqual([]);
 }
 
-test("direct card entry separates source counts, reads actual individual records and explains exact score weights", async ({
+test("direct card entry separates source counts and reads accounts without exposing scoring internals", async ({
   page,
   request,
 }, testInfo) => {
@@ -116,17 +120,15 @@ test("direct card entry separates source counts, reads actual individual records
     .getByRole("checkbox", { name: "Family & resident accounts" })
     .uncheck();
   await dialog.locator(".experience-method summary").click();
-  await expect(dialog.locator(".score-source-weights")).toContainText(
-    "100.00%",
-  );
-  await expect(dialog.locator(".experience-method")).toContainText(
+  await expect(dialog.locator(".score-source-weights")).toHaveCount(0);
+  await expect(dialog.locator(".experience-method")).not.toContainText(
     "square root",
   );
-  await expect(dialog.locator(".experience-method")).toContainText(
-    "Shared or syndicated sources contribute once",
+  await expect(dialog.locator(".experience-method")).not.toContainText(
+    "Publication requirements",
   );
   await expect(dialog.locator(".score-purpose")).toContainText(
-    "perks do not add points",
+    "not a clinical-quality or safety score",
   );
   await checkLayout(page);
   await dialog.locator(".review-page-heading").scrollIntoViewIfNeeded();
@@ -159,7 +161,7 @@ test("real retained 38-rating source remains excluded and never implies 38 reada
       access: "full-page",
     },
   ];
-  const reviewAggregates: LocationResearchResponse["reviewAggregates"] = [
+  const reviewAggregates: ExperienceAggregate[] = [
     {
       sourceId: sources[0].id,
       platform: "MyLivingChoice",
@@ -175,13 +177,24 @@ test("real retained 38-rating source remains excluded and never implies 38 reada
   const evidence = {
     ...original,
     sources,
-    reviewAggregates,
+    reviewAggregates: reviewAggregates.map((aggregate) => ({
+      sourceId: aggregate.sourceId,
+      platform: aggregate.platform,
+      rating: aggregate.rating,
+      scale: aggregate.scale,
+      count: aggregate.count,
+      asOf: aggregate.asOf,
+      scope: aggregate.scope,
+      notes: aggregate.notes ?? [],
+    })),
     reviews: [],
-    experience: computeExperienceScore({
-      sources,
-      reviewAggregates,
-      asOfDate: "2026-11-12",
-    }),
+    experience: publicExperience(
+      computeExperienceScore({
+        sources,
+        reviewAggregates,
+        asOfDate: "2026-11-12",
+      }),
+    ),
   };
   await page.route(`**/api/research?id=${id}`, (route) =>
     route.fulfill({ json: evidence }),
@@ -210,9 +223,10 @@ test("real retained 38-rating source remains excluded and never implies 38 reada
   await expect(dialog.locator(".experience-overview")).toContainText(
     "Not rated yet",
   );
-  await expect(dialog.locator(".review-excluded")).toContainText(
-    "Not an exact-location consumer aggregate",
+  await expect(dialog.locator(".review-platforms")).toContainText(
+    "mixed employee and consumer",
   );
+  await expect(dialog.locator(".review-excluded")).toHaveCount(0);
   await expect(dialog.locator(".public-reviews article")).toHaveCount(0);
   await checkLayout(page);
   await dialog.locator(".review-count-clarity").scrollIntoViewIfNeeded();

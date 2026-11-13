@@ -52,8 +52,8 @@ export function EvidenceStandards() {
           {
             n: "04",
             title: "Experience, with context",
-            text: "Public review averages and selected accounts show different perspectives. The provisional 10-point index groups syndicated sources and leaves thin or ambiguous evidence unrated. CMS patient surveys stay separate.",
-            tag: "Sources, dates and exclusions visible",
+            text: "Public review averages and selected accounts show different perspectives. Ratings are not clinical-quality or safety measures. Missing evidence is not a poor rating. CMS patient surveys stay separate.",
+            tag: "Sources, dates and limitations visible",
           },
         ].map((item) => (
           <article key={item.n}>
@@ -72,20 +72,19 @@ export function EvidenceStandards() {
             Results start with distance. Nursing-home searches can also use the
             published CMS overall rating, with distance breaking ties and
             missing ratings last. Within a care category, you can also sort the
-            consumer experience index. It summarizes eligible public ratings,
-            not clinical quality or safety. Missing evidence is not a poor
-            rating, and no provider pays for placement.
+            consumer experience index. It summarizes consumer sentiment, not
+            clinical quality or safety. Missing evidence is not a poor rating,
+            and no provider pays for placement.
           </p>
           <p>
-            In experience sorting, if two locations have the same published
-            score, the one with more Facebook threads containing resident or
-            family accounts appears first. The accounts do not change the score.{" "}
+            Selected resident and family accounts provide context. They are not
+            a representative survey or proof of care quality.{" "}
             <a href="/methodology#family-accounts">
-              Read how Harbor counts accounts.
+              Read about the limits of selected accounts.
             </a>
           </p>
           <Link className="text-link" href="/methodology" target="_blank">
-            Read the full methodology & source library{" "}
+            Read the research standards & source library{" "}
             <ExternalLink size={15} />
           </Link>
         </div>

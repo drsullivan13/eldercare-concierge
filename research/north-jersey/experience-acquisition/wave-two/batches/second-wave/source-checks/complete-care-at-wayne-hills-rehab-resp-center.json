@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 42,
+    "rating": 4.2,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_3a2fcab1afb82b4e_1.log",
+    "section": "r14",
+    "sha256": "57da5138bcfe2a8617ed46a15c071d08b2a593bd9adacdbe52826733e2e4d073"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c31d96ea35849d:0x458fee8c23d592a2"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "130 Terhune Drive",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Wayne",
+    "name": "Complete Care at Wayne Hills",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "5c56f2ca25eadb25c34d2a30a295a6a9e577732eb1e56bc1f1d9bdb8db2b12d4",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-305682",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s5WFkwazRZVjkxUkZnd2VWTmtXR05FTUU4dGJFRRAB!2m1!1s0x89c31d96ea35849d:0x458fee8c23d592a2",
+        "privateWindowSegmentSha256": "1cf117a74d8b4b8e245ffda2a6a65110a5d8a48376937f4f53e482fc873584ce",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jul 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305685",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT210dVptUkJUbE5EYVhoM2JXdGpjM0pvY1VjMlZHYxAB!2m1!1s0x89c31d96ea35849d:0x458fee8c23d592a2",
+        "privateWindowSegmentSha256": "3dd6085ea84f8a9a2dc90e766c797f6ea24fa3d4e1f92e95ec178feed18dcc42",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305683",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2taSk4zZEpWVGRhT0VGelNGOHdSbmRDU2t0QlMwRRAB!2m1!1s0x89c31d96ea35849d:0x458fee8c23d592a2",
+        "privateWindowSegmentSha256": "aad9c25edee7ba740223c6d49a8d49a83b9e9e957fc648a7b6d258fe82913dbf",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-305684",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25jeUxURnFNRmx2YzNOQ01HMVdaVkU1WWt4RGVuYxAB!2m1!1s0x89c31d96ea35849d:0x458fee8c23d592a2",
+        "privateWindowSegmentSha256": "72a94432d614711fd3e4692ecca76d69a9a3b7ffe14fd25291a52ce271844dbb",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-305686",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tGSGREZG5iM281WDFSeloyb3RaVlE0U0ZWWU4yYxAB!2m1!1s0x89c31d96ea35849d:0x458fee8c23d592a2",
+        "privateWindowSegmentSha256": "ee29b616b1d93e5a0293c8b3fe93a719243eadcc19d8f1257ea5b4bc1a4430b6",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jan 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/complete-care-at-wayne-hills-rehab-resp-center"
+}

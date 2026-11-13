@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 197,
+    "rating": 4.4,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_c1c41290dddd2021_1.log",
+    "section": "r57",
+    "sha256": "dd77caef6fbadfe11988fa11c73f9c4aafe8665eba74daaccb70d32a32789a82"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c251aad38d3425:0xdf197b724f147bf9"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "198 Stevens Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Jersey City",
+    "name": "Acclaim Rehabilitation and Care Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "3060b8fb8c066a588dee0e9f8f3a8fcd873170c8145b9c126f0cddf0eda5916b",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-608514",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25kTVNteGhWbUZHVDBGa1prSmpZMDFXTjNwQlFVRRAB!2m1!1s0x89c251aad38d3425:0xdf197b724f147bf9",
+        "privateWindowSegmentSha256": "3693c4d72f9f4a16be0f63ab0d966853e8c149df846929053e78f1c0e3235d59",
+        "sentiment": "negative",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608512",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21wdGQwdHBYMFI0Umw5TVVtUm9VRkJWYjJaQ1RXYxAB!2m1!1s0x89c251aad38d3425:0xdf197b724f147bf9",
+        "privateWindowSegmentSha256": "15d7137045b1bafa16fcc34d02aa8a8e840c25e1f2c15dc083ce192bfbcc8b8c",
+        "sentiment": "mixed",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-608518",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2kxak1Wb3hiVFpZZGtsd1VVMDVOazFMUVdwWFMwRRAB!2m1!1s0x89c251aad38d3425:0xdf197b724f147bf9",
+        "privateWindowSegmentSha256": "11c4807ccbc1eb75d176dc876694ccc2342bc2dd3ac5188241356c6fa6ffd294",
+        "sentiment": "negative",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-02",
+        "id": "mlc-google-608516",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tKR2RUVkpRWGsxVlVWQk9EQTNNR0ZWVW1WNFRuYxAB!2m1!1s0x89c251aad38d3425:0xdf197b724f147bf9",
+        "privateWindowSegmentSha256": "c1528b094740bb1fa5e6786f6dcac5c320d151127289b402bdd42867d6ce225f",
+        "sentiment": "positive",
+        "sourcePublishedText": "Feb 2026"
+      },
+      {
+        "date": "2025-10",
+        "id": "mlc-google-608520",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tWME1tRmtVVTlEUTA5alNXeGpOMkprT1Y5elIzYxAB!2m1!1s0x89c251aad38d3425:0xdf197b724f147bf9",
+        "privateWindowSegmentSha256": "482a175ba4c71af99c4f693e2e125dadf6cd14730e0c31f6ee348365ac0666a3",
+        "sentiment": "positive",
+        "sourcePublishedText": "Oct 2025"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/acclaim-rehabilitation-and-nursing-center"
+}

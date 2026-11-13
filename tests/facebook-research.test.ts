@@ -15,7 +15,11 @@ import {
 } from "../src/lib/location-research";
 import { computeExperienceScore } from "../src/lib/experience-score";
 import { GET } from "../src/app/api/research/route";
+import { publicResearchNotes } from "../src/lib/public-location-research";
 import type { LocationResearch } from "../src/lib/location-research-types";
+import njRelease from "../research/north-jersey/facebook/reconciliation/reviewed-coverage.json";
+import njAudit from "../research/north-jersey/facebook/reconciliation/release-audit.json";
+import { markets } from "../src/lib/markets";
 
 const snapshot = data as unknown as FacebookResearchDataset;
 const locations = Object.entries(snapshot.locations);
@@ -32,6 +36,81 @@ const isFacebookUrl = (value: string) => {
       u.hostname === "fb.watch")
   );
 };
+
+test("every released North Jersey assignment preserves its reviewed findings and held or empty coverage through the real API", async () => {
+  const market = markets.find((item) => item.id === "north-jersey")!;
+  assert.deepEqual(market.facebookResearch, njRelease);
+  const auditRows = new Map(
+    njAudit.rows.map((row) => [row.observationId, row]),
+  );
+  const releasedIds = new Set<string>();
+  for (const [id, location] of Object.entries(njRelease.locations)) {
+    const response = await GET(
+      new Request(`http://localhost/api/research?id=${id}`),
+    );
+    assert.equal(response.status, 200, id);
+    const body = await response.json();
+    assert.deepEqual(
+      body.facebookResearch,
+      {
+        ...location,
+        coverageExplanation: publicResearchNotes([
+          location.coverageExplanation,
+        ]).join(" "),
+        findings: location.findings.map((finding) => ({
+          ...finding,
+          limitations: publicResearchNotes(finding.limitations),
+        })),
+        providerId: id,
+        runId: njRelease.runId,
+        checkedAt: njRelease.checkedAt,
+        reviewBasis: publicResearchNotes([njRelease.reviewBasis]).join(" "),
+      },
+      id,
+    );
+    const summary = getFacebookSummary(id)!;
+    assert.equal(summary.status, location.status, id);
+    assert.equal(summary.foundCount, location.foundCount, id);
+    assert.equal(summary.withheldCount, location.withheldCount, id);
+    const threads = new Set<string>();
+    for (const finding of location.findings) {
+      assert.equal(finding.kind, "resident-family");
+      threads.add(finding.threadUrl);
+      for (const observationId of finding.sourceObservationIds) {
+        assert.equal(releasedIds.has(observationId), false);
+        releasedIds.add(observationId);
+        const row = auditRows.get(observationId)!;
+        assert.equal(row.providerId, id);
+        assert.equal(row.disposition, "published");
+        assert.equal(row.scoreEligible, false);
+      }
+    }
+    assert.equal(body.familyExperience.distinctThreadCount, threads.size, id);
+    assert.equal(
+      location.foundCount,
+      location.publishedObservationCount + location.withheldCount,
+      id,
+    );
+  }
+  assert.deepEqual(
+    [...releasedIds].sort(),
+    njAudit.rows
+      .filter((row) => row.disposition === "published")
+      .map((row) => row.observationId)
+      .sort(),
+  );
+  for (const id of ["nj-u-08", "nj-u-09", "nj-u-10", "nj-m-10"])
+    assert.equal(getFacebookResearch(id), undefined, id);
+  const unsearched = market.providers.find(
+    (provider) => !Object.hasOwn(njRelease.locations, provider.id),
+  )!;
+  const response = await GET(
+    new Request(`http://localhost/api/research?id=${unsearched.id}`),
+  );
+  const body = await response.json();
+  assert.equal(Object.hasOwn(body, "facebookResearch"), false);
+  assert.equal(Object.hasOwn(body, "familyExperience"), false);
+});
 
 test("curated pilot retains original assignments and reviewed location supplements with reconciled provenance", () => {
   assert.equal(snapshot.schemaVersion, 1);
@@ -230,7 +309,18 @@ test("real research API attaches only the requested curated location and omits F
   );
   assert.equal(response.status, 200);
   const result = await response.json();
-  assert.deepEqual(result.facebookResearch, getFacebookResearch(id));
+  const retained = getFacebookResearch(id)!;
+  assert.deepEqual(result.facebookResearch, {
+    ...retained,
+    coverageExplanation: publicResearchNotes([
+      retained.coverageExplanation,
+    ]).join(" "),
+    reviewBasis: publicResearchNotes([retained.reviewBasis]).join(" "),
+    findings: retained.findings.map((finding) => ({
+      ...finding,
+      limitations: publicResearchNotes(finding.limitations),
+    })),
+  });
   assert.deepEqual(result.familyExperience, getFamilyExperience(id));
   assert.deepEqual(
     result.familyExperience,

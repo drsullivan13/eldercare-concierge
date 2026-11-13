@@ -208,7 +208,7 @@ test("Facebook-only detail responses display retained findings and original link
   await expect(evidence.locator(".fb-research")).toContainText(
     retained.facebookResearch!.findings[0].summary,
   );
-  await expect(evidence.locator(".fb-research")).toContainText(
+  await expect(evidence.locator(".fb-research")).not.toContainText(
     "When experience scores tie",
   );
   await expect(

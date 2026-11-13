@@ -39,6 +39,246 @@
       "singleSourceLabel": "Google",
       "value": 9.2
     },
+    "cms-315010": {
+      "aggregateRange": {
+        "maximum": 7.6,
+        "minimum": 7.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 88,
+          "normalizedRating": 7.6,
+          "platform": "MyLivingChoice",
+          "rating": 3.8,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-elmora-hills-health-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 88,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-elmora-hills-health-rehabilitation-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 7.6
+    },
+    "cms-315029": {
+      "aggregateRange": {
+        "maximum": 6.2,
+        "minimum": 6.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 6.2,
+          "platform": "MyLivingChoice",
+          "rating": 3.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-daughters-of-israel-pleasant-valley-home",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 35,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-daughters-of-israel-pleasant-valley-home",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 6.2
+    },
+    "cms-315037": {
+      "aggregateRange": {
+        "maximum": 9.4,
+        "minimum": 9.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 235,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-at-teaneck-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 235,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-at-teaneck-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.4
+    },
+    "cms-315038": {
+      "aggregateRange": {
+        "maximum": 8.6,
+        "minimum": 8.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 283,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-summit-ridge",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 283,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-summit-ridge",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.6
+    },
+    "cms-315053": {
+      "aggregateRange": {
+        "maximum": 8.6,
+        "minimum": 8.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 127,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-pine-acres-rehabilitation-and-healthcare",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 127,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-pine-acres-rehabilitation-and-healthcare",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.6
+    },
     "cms-315066": {
       "aggregateRange": {
         "maximum": 8,
@@ -77,6 +317,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8
+    },
+    "cms-315083": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 197,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-acclaim-rehabilitation-and-nursing-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 197,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-acclaim-rehabilitation-and-nursing-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.8
     },
     "cms-315085": {
       "aggregateRange": {
@@ -234,6 +522,102 @@
       "singleSourceLabel": "Google",
       "value": 8.2
     },
+    "cms-315110": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 42,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-wayne-hills-rehab-resp-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 42,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-wayne-hills-rehab-resp-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.4
+    },
+    "cms-315112": {
+      "aggregateRange": {
+        "maximum": 8.2,
+        "minimum": 8.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 206,
+          "normalizedRating": 8.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-hudsonview-health-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 206,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-hudsonview-health-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.2
+    },
     "cms-315120": {
       "aggregateRange": {
         "maximum": 8.4,
@@ -350,6 +734,102 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.6
+    },
+    "cms-315142": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 76,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-llanfair-house-care-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 2 recent eligible reviews in a visible sample of 5, 0 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 76,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 2,
+          "negative": 0,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-llanfair-house-care-rehabilitation-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.8
+    },
+    "cms-315143": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 136,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-holly-manor-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 136,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-holly-manor-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.4
     },
     "cms-315146": {
       "aggregateRange": {
@@ -506,6 +986,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.6
+    },
+    "cms-315164": {
+      "aggregateRange": {
+        "maximum": 9.4,
+        "minimum": 9.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 160,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-tenafly-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 160,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-tenafly-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.4
     },
     "cms-315171": {
       "aggregateRange": {
@@ -819,6 +1347,54 @@
       "singleSourceLabel": "Google",
       "value": 9.4
     },
+    "cms-315221": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 202,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-hamilton-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 202,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-hamilton-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
     "cms-315234": {
       "aggregateRange": {
         "maximum": 9.6,
@@ -857,6 +1433,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 9.6
+    },
+    "cms-315247": {
+      "aggregateRange": {
+        "maximum": 9,
+        "minimum": 9,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 181,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-west-caldwell-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 1 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 181,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 1,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-west-caldwell-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 9
     },
     "cms-315249": {
       "aggregateRange": {
@@ -975,6 +1599,54 @@
       "singleSourceLabel": "Google",
       "value": 7.8
     },
+    "cms-315268": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 191,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-brookhaven-health-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 191,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-brookhaven-health-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.4
+    },
     "cms-315273": {
       "aggregateRange": {
         "maximum": 9.4,
@@ -1049,6 +1721,54 @@
       "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage.",
       "reviewCount": 169,
       "sampleDiagnostics": [],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
+    "cms-315283": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 350,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-south-mountain-hc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 350,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-south-mountain-hc",
+          "visible": 5
+        }
+      ],
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 9.2
@@ -1170,6 +1890,54 @@
       "singleSourceLabel": "Google",
       "value": 8.8
     },
+    "cms-315306": {
+      "aggregateRange": {
+        "maximum": 8,
+        "minimum": 8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 86,
+          "normalizedRating": 8,
+          "platform": "MyLivingChoice",
+          "rating": 4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-careone-at-new-milford",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 86,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-careone-at-new-milford",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8
+    },
     "cms-315307": {
       "aggregateRange": {
         "maximum": 9.6,
@@ -1286,6 +2054,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.4
+    },
+    "cms-315328": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 173,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-maple-glen-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 173,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-maple-glen-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.8
     },
     "cms-315331": {
       "aggregateRange": {
@@ -1677,6 +2493,54 @@
       "singleSourceLabel": "Google",
       "value": 8.8
     },
+    "cms-315360": {
+      "aggregateRange": {
+        "maximum": 9,
+        "minimum": 9,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 197,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-emerson-health-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 197,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-emerson-health-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9
+    },
     "cms-315361": {
       "aggregateRange": {
         "maximum": 7.6,
@@ -1716,6 +2580,54 @@
       "singleSourceLabel": "Google",
       "value": 7.6
     },
+    "cms-315363": {
+      "aggregateRange": {
+        "maximum": 8.6,
+        "minimum": 8.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 100,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-montclair-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 100,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-montclair-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.6
+    },
     "cms-315366": {
       "aggregateRange": {
         "maximum": 8.2,
@@ -1751,6 +2663,102 @@
       "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage.",
       "reviewCount": 178,
       "sampleDiagnostics": [],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.2
+    },
+    "cms-315372": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 406,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-white-house-healthcare-and-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 406,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-white-house-healthcare-and-rehabilitation-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
+    "cms-315375": {
+      "aggregateRange": {
+        "maximum": 8.2,
+        "minimum": 8.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 244,
+          "normalizedRating": 8.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-forest-hills-center-for-rehabilitation-and-healing",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 244,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-forest-hills-center-for-rehabilitation-and-healing",
+          "visible": 5
+        }
+      ],
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.2
@@ -1794,6 +2802,54 @@
       "singleSourceLabel": "Google",
       "value": null
     },
+    "cms-315386": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 214,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-atlas-rehabilitation-and-healthcare-at-maywood",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 214,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-atlas-rehabilitation-and-healthcare-at-maywood",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.4
+    },
     "cms-315390": {
       "aggregateRange": {
         "maximum": 8.6,
@@ -1832,6 +2888,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.6
+    },
+    "cms-315393": {
+      "aggregateRange": {
+        "maximum": 7.199999999999999,
+        "minimum": 7.199999999999999,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 54,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-new-community-extended-care-facility",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 1 recent eligible reviews in a visible sample of 5, 0 were critical and 0 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 54,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 1,
+          "negative": 0,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-new-community-extended-care-facility",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 7.2
     },
     "cms-315413": {
       "aggregateRange": {
@@ -1911,6 +3015,102 @@
       "singleSourceLabel": "Google",
       "value": 8.8
     },
+    "cms-315434": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 275,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-ridgewood",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 275,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-ridgewood",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.8
+    },
+    "cms-315435": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 214,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-montclair",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 214,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-montclair",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
     "cms-315449": {
       "aggregateRange": {
         "maximum": 7.800000000000001,
@@ -1989,6 +3189,54 @@
       "singleSourceLabel": "Google",
       "value": 9.2
     },
+    "cms-315458": {
+      "aggregateRange": {
+        "maximum": 7.199999999999999,
+        "minimum": 7.199999999999999,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 133,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-new-vista-nursing-rehabilitation-ctr",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 133,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-new-vista-nursing-rehabilitation-ctr",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 7.2
+    },
     "cms-315460": {
       "aggregateRange": {
         "maximum": 9,
@@ -2027,6 +3275,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 9
+    },
+    "cms-315468": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 225,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-careone-at-parsippany",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 225,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-careone-at-parsippany",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.8
     },
     "cms-315488": {
       "aggregateRange": {
@@ -2184,6 +3480,102 @@
       "singleSourceLabel": "Google",
       "value": null
     },
+    "cms-317047": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 92,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-amedisys-home-health-care-hackensack",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage.",
+      "reviewCount": 92,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 0,
+          "negative": 0,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-amedisys-home-health-care-hackensack",
+          "visible": 0
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
+    "cms-317064": {
+      "aggregateRange": {
+        "maximum": 8.2,
+        "minimum": 8.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 8.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-promise-care-nj",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage.",
+      "reviewCount": 35,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 0,
+          "negative": 0,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-promise-care-nj",
+          "visible": 0
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.2
+    },
     "north-jersey-doh-nj02a00": {
       "aggregateRange": {
         "maximum": 8.6,
@@ -2301,6 +3693,54 @@
       "singleSourceLabel": "Google",
       "value": 9.4
     },
+    "north-jersey-doh-nj25284": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 51,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-sunrise-of-franklin-lakes",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 51,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-sunrise-of-franklin-lakes",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.8
+    },
     "north-jersey-doh-nj30225": {
       "aggregateRange": {
         "maximum": 10,
@@ -2339,6 +3779,102 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": null
+    },
+    "north-jersey-doh-nj30a009": {
+      "aggregateRange": {
+        "maximum": 9,
+        "minimum": 9,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 32,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-careone-at-livingston-assisted-living",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 32,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-careone-at-livingston-assisted-living",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9
+    },
+    "north-jersey-doh-nj5a004": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 47,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-brookdale-emerson",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 47,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-brookdale-emerson",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
     },
     "north-jersey-doh-nj60a001": {
       "aggregateRange": {
@@ -2731,7 +4267,7 @@
       "value": null
     }
   },
-  "assessmentDate": "2026-11-12",
+  "assessmentDate": "2026-11-13",
   "releasedOutput": {
     "cms-315005": {
       "aggregateRange": {
@@ -2771,6 +4307,246 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 9.2
+    },
+    "cms-315010": {
+      "aggregateRange": {
+        "maximum": 7.6,
+        "minimum": 7.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 88,
+          "normalizedRating": 7.6,
+          "platform": "MyLivingChoice",
+          "rating": 3.8,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-elmora-hills-health-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 88,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-elmora-hills-health-rehabilitation-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 7.6
+    },
+    "cms-315029": {
+      "aggregateRange": {
+        "maximum": 6.2,
+        "minimum": 6.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 6.2,
+          "platform": "MyLivingChoice",
+          "rating": 3.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-daughters-of-israel-pleasant-valley-home",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 35,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-daughters-of-israel-pleasant-valley-home",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 6.2
+    },
+    "cms-315037": {
+      "aggregateRange": {
+        "maximum": 9.4,
+        "minimum": 9.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 235,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-at-teaneck-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 235,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-at-teaneck-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.4
+    },
+    "cms-315038": {
+      "aggregateRange": {
+        "maximum": 8.6,
+        "minimum": 8.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 283,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-summit-ridge",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 283,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-summit-ridge",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.6
+    },
+    "cms-315053": {
+      "aggregateRange": {
+        "maximum": 8.6,
+        "minimum": 8.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 127,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-pine-acres-rehabilitation-and-healthcare",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 127,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-pine-acres-rehabilitation-and-healthcare",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.6
     },
     "cms-315066": {
       "aggregateRange": {
@@ -2828,6 +4604,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8
+    },
+    "cms-315083": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 197,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-acclaim-rehabilitation-and-nursing-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 197,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-acclaim-rehabilitation-and-nursing-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.8
     },
     "cms-315085": {
       "aggregateRange": {
@@ -3029,6 +4853,102 @@
       "singleSourceLabel": "Google",
       "value": 8.2
     },
+    "cms-315110": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 42,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-wayne-hills-rehab-resp-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 42,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-wayne-hills-rehab-resp-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.4
+    },
+    "cms-315112": {
+      "aggregateRange": {
+        "maximum": 8.2,
+        "minimum": 8.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 206,
+          "normalizedRating": 8.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-hudsonview-health-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 206,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-hudsonview-health-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.2
+    },
     "cms-315120": {
       "aggregateRange": {
         "maximum": 8.4,
@@ -3167,6 +5087,102 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.6
+    },
+    "cms-315142": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 76,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-llanfair-house-care-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 2 recent eligible reviews in a visible sample of 5, 0 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 76,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 2,
+          "negative": 0,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-llanfair-house-care-rehabilitation-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.8
+    },
+    "cms-315143": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 136,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-holly-manor-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 2 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 136,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 2,
+          "sourceId": "review-release-mlc-acquisition-holly-manor-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.4
     },
     "cms-315146": {
       "aggregateRange": {
@@ -3367,6 +5383,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.6
+    },
+    "cms-315164": {
+      "aggregateRange": {
+        "maximum": 9.4,
+        "minimum": 9.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 160,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-tenafly-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 160,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-tenafly-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.4
     },
     "cms-315171": {
       "aggregateRange": {
@@ -3786,6 +5850,54 @@
       "singleSourceLabel": "Google",
       "value": 9.4
     },
+    "cms-315221": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 202,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-hamilton-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 202,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-hamilton-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
     "cms-315234": {
       "aggregateRange": {
         "maximum": 9.6,
@@ -3842,6 +5954,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 9.6
+    },
+    "cms-315247": {
+      "aggregateRange": {
+        "maximum": 9,
+        "minimum": 9,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 181,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-west-caldwell-llc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 1 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 181,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 1,
+          "sourceId": "review-release-mlc-acquisition-complete-care-at-west-caldwell-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 9
     },
     "cms-315249": {
       "aggregateRange": {
@@ -3982,6 +6142,54 @@
       "singleSourceLabel": "Google",
       "value": 7.8
     },
+    "cms-315268": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 191,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-brookhaven-health-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 191,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-brookhaven-health-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.4
+    },
     "cms-315273": {
       "aggregateRange": {
         "maximum": 9.4,
@@ -4075,6 +6283,54 @@
           "negative": 0,
           "positive": 4,
           "sourceId": "review-release-additional-complete-care-at-milford-manor-llc",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
+    "cms-315283": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 350,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-south-mountain-hc",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 350,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-south-mountain-hc",
           "visible": 5
         }
       ],
@@ -4242,6 +6498,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.8
+    },
+    "cms-315306": {
+      "aggregateRange": {
+        "maximum": 8,
+        "minimum": 8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 86,
+          "normalizedRating": 8,
+          "platform": "MyLivingChoice",
+          "rating": 4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-careone-at-new-milford",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 86,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-careone-at-new-milford",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8
     },
     "cms-315307": {
       "aggregateRange": {
@@ -4425,6 +6729,54 @@
       "selectedConcerns": true,
       "singleSourceLabel": "Google",
       "value": 8.4
+    },
+    "cms-315328": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 173,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-maple-glen-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 173,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-maple-glen-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.8
     },
     "cms-315331": {
       "aggregateRange": {
@@ -4988,6 +7340,54 @@
       "singleSourceLabel": "Google",
       "value": 8.8
     },
+    "cms-315360": {
+      "aggregateRange": {
+        "maximum": 9,
+        "minimum": 9,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 197,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-emerson-health-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 197,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-emerson-health-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9
+    },
     "cms-315361": {
       "aggregateRange": {
         "maximum": 7.6,
@@ -5044,6 +7444,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 7.6
+    },
+    "cms-315363": {
+      "aggregateRange": {
+        "maximum": 8.6,
+        "minimum": 8.6,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 100,
+          "normalizedRating": 8.6,
+          "platform": "MyLivingChoice",
+          "rating": 4.3,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-montclair-care-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 100,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-montclair-care-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.6
     },
     "cms-315366": {
       "aggregateRange": {
@@ -5110,6 +7558,102 @@
       "singleSourceLabel": "Google",
       "value": 8.2
     },
+    "cms-315372": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 406,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-white-house-healthcare-and-rehabilitation-center",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 406,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-white-house-healthcare-and-rehabilitation-center",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
+    "cms-315375": {
+      "aggregateRange": {
+        "maximum": 8.2,
+        "minimum": 8.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 244,
+          "normalizedRating": 8.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-forest-hills-center-for-rehabilitation-and-healing",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 244,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-forest-hills-center-for-rehabilitation-and-healing",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.2
+    },
     "cms-315383": {
       "aggregateRange": {
         "maximum": 8.6,
@@ -5149,6 +7693,54 @@
       "singleSourceLabel": "Google",
       "value": null
     },
+    "cms-315386": {
+      "aggregateRange": {
+        "maximum": 8.4,
+        "minimum": 8.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 214,
+          "normalizedRating": 8.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.2,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-atlas-rehabilitation-and-healthcare-at-maywood",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 2 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 214,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 2,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-atlas-rehabilitation-and-healthcare-at-maywood",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.4
+    },
     "cms-315390": {
       "aggregateRange": {
         "maximum": 8.6,
@@ -5187,6 +7779,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.6
+    },
+    "cms-315393": {
+      "aggregateRange": {
+        "maximum": 7.199999999999999,
+        "minimum": 7.199999999999999,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 54,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-new-community-extended-care-facility",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 1 recent eligible reviews in a visible sample of 5, 0 were critical and 0 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 54,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 1,
+          "negative": 0,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-new-community-extended-care-facility",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 7.2
     },
     "cms-315413": {
       "aggregateRange": {
@@ -5305,6 +7945,102 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.8
+    },
+    "cms-315434": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 275,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-ridgewood",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 275,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-ridgewood",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.8
+    },
+    "cms-315435": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 214,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-montclair",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 214,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-family-of-caring-healthcare-at-montclair",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
     },
     "cms-315449": {
       "aggregateRange": {
@@ -5428,6 +8164,54 @@
       "singleSourceLabel": "Google",
       "value": 9.2
     },
+    "cms-315458": {
+      "aggregateRange": {
+        "maximum": 7.199999999999999,
+        "minimum": 7.199999999999999,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 133,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-new-vista-nursing-rehabilitation-ctr",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 3 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 133,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 3,
+          "sourceId": "review-release-mlc-acquisition-new-vista-nursing-rehabilitation-ctr",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 7.2
+    },
     "cms-315460": {
       "aggregateRange": {
         "maximum": 9,
@@ -5488,6 +8272,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 9
+    },
+    "cms-315468": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 225,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-careone-at-parsippany",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 225,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-careone-at-parsippany",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.8
     },
     "cms-315488": {
       "aggregateRange": {
@@ -5689,6 +8521,102 @@
       "singleSourceLabel": "Google",
       "value": null
     },
+    "cms-317047": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 92,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-amedisys-home-health-care-hackensack",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage.",
+      "reviewCount": 92,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 0,
+          "negative": 0,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-amedisys-home-health-care-hackensack",
+          "visible": 0
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
+    },
+    "cms-317064": {
+      "aggregateRange": {
+        "maximum": 8.2,
+        "minimum": 8.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 8.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.1,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-promise-care-nj",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage.",
+      "reviewCount": 35,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 0,
+          "negative": 0,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-promise-care-nj",
+          "visible": 0
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 8.2
+    },
     "north-jersey-doh-nj02a00": {
       "aggregateRange": {
         "maximum": 8.6,
@@ -5824,6 +8752,54 @@
       "singleSourceLabel": "Google",
       "value": 9.4
     },
+    "north-jersey-doh-nj25284": {
+      "aggregateRange": {
+        "maximum": 8.8,
+        "minimum": 8.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 51,
+          "normalizedRating": 8.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.4,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-sunrise-of-franklin-lakes",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 1 were critical and 4 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 51,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 1,
+          "positive": 4,
+          "sourceId": "review-release-mlc-acquisition-sunrise-of-franklin-lakes",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 8.8
+    },
     "north-jersey-doh-nj30225": {
       "aggregateRange": {
         "maximum": 10,
@@ -5880,6 +8856,102 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": null
+    },
+    "north-jersey-doh-nj30a009": {
+      "aggregateRange": {
+        "maximum": 9,
+        "minimum": 9,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 32,
+          "normalizedRating": 9,
+          "platform": "MyLivingChoice",
+          "rating": 4.5,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-careone-at-livingston-assisted-living",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 32,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-careone-at-livingston-assisted-living",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9
+    },
+    "north-jersey-doh-nj5a004": {
+      "aggregateRange": {
+        "maximum": 9.2,
+        "minimum": 9.2,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 47,
+          "normalizedRating": 9.2,
+          "platform": "MyLivingChoice",
+          "rating": 4.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-brookdale-emerson",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 47,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-brookdale-emerson",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.2
     },
     "north-jersey-doh-nj60a001": {
       "aggregateRange": {

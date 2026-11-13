@@ -460,5 +460,77 @@ console.log('Morristown and Union search and exact-CCN evidence passed');
                 adapter.Inputs(root).receipt("snapshot.xlsx")
 
 
+class AcquisitionMergeTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name)
+        self.pid = "cms-315488"
+        self.roster = {self.pid: {"county": "Morris"}}
+        self.offerings = {
+            "providerId": self.pid, "checkedAt": "2026-11-12",
+            "providerDetailsReviewed": True,
+            "sources": [{"id": "provider-official", "url": "https://example.org/unit"}],
+            "facts": [{"sourceId": "provider-official", "text": "Retained fact"}],
+            "reviewAggregates": [], "reviews": [], "notes": ["Retained offering note"],
+        }
+        self.reviews = {
+            "providerId": self.pid, "checkedAt": "2026-11-13",
+            "providerDetailsReviewed": False,
+            "sources": [{"id": "review-release-legacy"}, {"id": "review-release-new-acquisition"}],
+            "facts": [], "reviews": [], "notes": ["Retained review note"],
+            "reviewAggregates": [
+                {"sourceId": "review-release-legacy", "rating": 4.4, "scale": 5, "count": 40},
+                {"sourceId": "review-release-new-acquisition", "rating": 4.2, "scale": 5, "count": 30},
+            ],
+            "reviewSamples": [{"sourceId": "review-release-legacy", "visibleReviewCount": 2}],
+        }
+        self.write("review-excerpts/reviewed.json", {})
+        self.release("offerings", self.offerings)
+        self.release("review-release", self.reviews)
+
+    def write(self, relative, value):
+        path = self.root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(adapter.encode(value))
+
+    def release(self, origin, record):
+        data = {self.pid: record}
+        self.write(f"{origin}/locationResearch.json", data)
+        receipt = adapter.digest(adapter.encode(data))
+        self.write(f"{origin}/manifest.json", {
+            "outputs": {"locationResearch.json": {"sha256": receipt} if origin == "offerings" else receipt},
+        })
+
+    def test_acquisition_normalizer_preserves_old_and_new_sources_original_aggregates_and_samples(self):
+        result = adapter.released_research(adapter.Inputs(self.root), self.roster, ("Morris",))
+        record = result[self.pid]
+        self.assertEqual(record["sources"], self.offerings["sources"] + self.reviews["sources"])
+        self.assertEqual(record["reviewAggregates"], self.reviews["reviewAggregates"])
+        self.assertEqual(record["reviewSamples"], self.reviews["reviewSamples"])
+        self.assertEqual(record["facts"], self.offerings["facts"])
+        self.assertEqual(record["checkedAt"], "2026-11-13")
+        self.assertTrue(record["providerDetailsReviewed"])
+        self.assertEqual(record["reviews"], [])
+        self.assertEqual(result, adapter.released_research(adapter.Inputs(self.root), self.roster, ("Morris",)))
+
+    def test_acquisition_normalizer_refuses_hash_drift(self):
+        self.reviews["reviewAggregates"][1]["count"] = 99
+        self.write("review-release/locationResearch.json", {self.pid: self.reviews})
+        with self.assertRaisesRegex(ValueError, "review-release release hash mismatch"):
+            adapter.released_research(adapter.Inputs(self.root), self.roster, ("Morris",))
+
+    def test_acquisition_normalizer_keeps_duplicate_sample_producer_guard(self):
+        self.offerings["reviewSamples"] = self.reviews["reviewSamples"]
+        self.release("offerings", self.offerings)
+        with self.assertRaisesRegex(ValueError, "Duplicate review sample producer"):
+            adapter.released_research(adapter.Inputs(self.root), self.roster, ("Morris",))
+
+    def test_acquisition_normalizer_never_reads_unreleased_acquisition_files(self):
+        before = adapter.released_research(adapter.Inputs(self.root), self.roster, ("Morris",))
+        self.write("experience-acquisition/integration/approved-batches.json", {"unreviewed": True})
+        self.assertEqual(before, adapter.released_research(adapter.Inputs(self.root), self.roster, ("Morris",)))
+
+
 if __name__ == "__main__":
     unittest.main()

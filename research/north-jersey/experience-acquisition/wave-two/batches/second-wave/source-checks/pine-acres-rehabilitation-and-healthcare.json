@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 127,
+    "rating": 4.3,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "artifact": {
+    "path": "/Users/dansullivan/.factory/artifacts/scripts/65409a71-366e-48e9-91a6-3447db4c3401/call_8fe5c435e78e055a_1.log",
+    "section": "r105",
+    "sha256": "4b0fc80cb3954ed9291fc83572e5274ff4710e9a20dbe9237858595dc255aaa9"
+  },
+  "checkedAt": "2026-11-13",
+  "googlePlaceIdCount": 1,
+  "googlePlaceIds": [
+    "0x89c3a5eecaf6d30b:0x1ab91e1663be50"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "51 Madison Ave",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Madison",
+    "name": "Pine Acres Healthcare & Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "kind": "sanitized-full-page-check",
+  "pageMarkdownSha256": "20faaa519ed0bcee21bb3408a20ac8a8c0042107de59221161c30523dd508b99",
+  "population": {
+    "limitation": "Platform-selected window. It is not a resident survey or the complete aggregate population.",
+    "pageCareLabels": "Skilled Nursing / Long Term Care",
+    "reviewerIdentitiesVerified": false,
+    "rows": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-305634",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21WeFRqUnBZVmR0UkhkdVNVVXRVRXRGWkdsSmNsRRAB!2m1!1s0x89c3a5eecaf6d30b:0x1ab91e1663be50",
+        "privateWindowSegmentSha256": "660d5c71d19a5ee6844f6c907d230821ad5ab1249275aa618a63e0578442bfb6",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-305632",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT214U2EzRnZkSFZUVG1oUE5sZEVhVXMwTkd4NlFVRRAB!2m1!1s0x89c3a5eecaf6d30b:0x1ab91e1663be50",
+        "privateWindowSegmentSha256": "2f72c397b90663afb31a6f786500cd7e47995a5fe6bafc8a46d9db95585f31a7",
+        "sentiment": "positive",
+        "sourcePublishedText": "Jun 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-305633",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pSTE0zUmxUalkwY0dwcVdGVkdkSFJwVkRadGVuYxAB!2m1!1s0x89c3a5eecaf6d30b:0x1ab91e1663be50",
+        "privateWindowSegmentSha256": "ff42160a47b082793d25e481826c493783af74d4699c5661c6890ae959d0eff9",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-305635",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sWE9URkhhRGxEWHpKSExXODRTVFF3TVd4MmVVRRAB!2m1!1s0x89c3a5eecaf6d30b:0x1ab91e1663be50",
+        "privateWindowSegmentSha256": "b6fbdb10040b094b1c4e26d2b262916043df9483096bed859430b621487b70e0",
+        "sentiment": "positive",
+        "sourcePublishedText": "May 2026"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-305636",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGWmJHVjRUM2x2YmpsM1MyTklVa05TYUhsZlZtYxAB!2m1!1s0x89c3a5eecaf6d30b:0x1ab91e1663be50",
+        "privateWindowSegmentSha256": "18e5618b1113f72d907203bb63e88d4374a04de2d081e3b3f00be2bc2c9777cc",
+        "sentiment": "positive",
+        "sourcePublishedText": "Mar 2026"
+      }
+    ],
+    "scope": "all-visible-google-review-rows-before-highlighting",
+    "visibleCount": 5
+  },
+  "schemaVersion": 1,
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/pine-acres-rehabilitation-and-healthcare"
+}

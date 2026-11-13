@@ -193,7 +193,8 @@ test("cards show only positive thread counts, with the explanation in details", 
     );
     assert.doesNotMatch(card, /<details|withheld/);
     assert.match(detail, /Each thread counts once/);
-    assert.match(detail, /the same published score/);
+    assert.match(detail, /not a representative survey/);
+    assert.doesNotMatch(detail, /the same published score|sorting|tiebreak/i);
   }
   assert.equal(renderToStaticMarkup(createElement(FamilyExperienceCount)), "");
 });

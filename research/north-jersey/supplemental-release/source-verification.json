@@ -1,0 +1,158 @@
+{
+  "association-directory": {
+    "collectorReadme": "README.md",
+    "excludedScope": "Brand-only, mixed-care, conflicting or ambiguous office mappings remain unreleased.",
+    "publicationSha256": "669ce5da0c68018a23717b30aa4e94956732d2e02d059939f6e6519cd07f5e6c",
+    "releaseStatus": "reviewed_exact_office_mappings",
+    "reviewedProviders": 9,
+    "sourceCountyPaymentRows": 135,
+    "sourceListings": 62
+  },
+  "campus-offerings": {
+    "collectorReadme": "README.md",
+    "factCount": 67,
+    "heldProviderIds": [
+      "north-jersey-campus-fritz-reuter-altenheim-07047"
+    ],
+    "providersWithFacts": 7,
+    "releaseStatus": "verified_approved_patches",
+    "reviewedProviders": 8
+  },
+  "home-care-first-party": {
+    "all_inventory_providers_verified": false,
+    "artifact_set_complete": true,
+    "by_county": {
+      "Bergen": {
+        "inventory": 161,
+        "matched": 10,
+        "unique_official_hp_ids": 161,
+        "unmatched": 2
+      },
+      "Essex": {
+        "inventory": 207,
+        "matched": 7,
+        "unique_official_hp_ids": 207,
+        "unmatched": 2
+      },
+      "Hudson": {
+        "inventory": 70,
+        "matched": 4,
+        "unique_official_hp_ids": 70,
+        "unmatched": 1
+      },
+      "Morris": {
+        "inventory": 60,
+        "matched": 8,
+        "unique_official_hp_ids": 60,
+        "unmatched": 4
+      },
+      "Passaic": {
+        "inventory": 58,
+        "matched": 5,
+        "unique_official_hp_ids": 58,
+        "unmatched": 0
+      },
+      "Union": {
+        "inventory": 117,
+        "matched": 5,
+        "unique_official_hp_ids": 117,
+        "unmatched": 2
+      }
+    },
+    "collectorReadme": "README.md",
+    "discovery_status_counts": {
+      "candidate": 2,
+      "identity-discrepancy": 8,
+      "matched": 39,
+      "not-researched": 624
+    },
+    "eligible_review_aggregate_count": 0,
+    "errors": [],
+    "expected_runtime_count": 673,
+    "inventory_count": 673,
+    "known_website_count": 1,
+    "matched_count": 39,
+    "matched_unique_official_hp_ids": 39,
+    "matched_unique_provider_ids": 39,
+    "receipt_count": 57,
+    "receipt_sha256": {
+      "receipts/bayada-bloomfield.json": "c97cfc273777be85548fb9e9c4236073abb89e97acff28099a4c5c69a1aae0c3",
+      "receipts/bayada-clifton.json": "cc1b3bdb8b43a8eeab57afd5f78c25774c49cd0353a7ab29442323da1f837e9f",
+      "receipts/bayada-dover.json": "9e897ef922ee969c8273c0b005ca666cc9a8c46c7503c023928c32a0eba13f8a",
+      "receipts/bayada-livingston.json": "900793cd914ac05d7f57d11cafc57508c28dbb60a1bf7345ebca606255ca9df3",
+      "receipts/bayada-morristown.json": "0ae776377f185badc850b82f08f6b014547819dc319b9887ab6fd64e5225b13e",
+      "receipts/bayada-union-city.json": "d94d8fdb3c01d0dbbf8edc83f2c33700fd8286ae3b62745403a02d426329cf9b",
+      "receipts/bayada-westfield.json": "eca204ee0f6343aa8d5c2b493e189b699873af0b69b07d915cfc122225c6197c",
+      "receipts/bergen-home-care.json": "ec6011b39fcc65064c296f19c1685445809e27eadda2fc1df27283ebf18670fe",
+      "receipts/brightstar-hackensack-contact.json": "13f4cbf2cbdd0e8e74aec3af31a84b8b54fdb289a29591e83006b8c06f47b5af",
+      "receipts/brightstar-hackensack.json": "4465a39bcef1090c37f258769e6040847833a8906ed0d96c9d67d3b2619525cc",
+      "receipts/brightstar-morris-contact.json": "11d95f8e196a89700d715133670e016982cec6c151cad57df5a9ee3e8c26bb3b",
+      "receipts/brightstar-morris.json": "73ba5e0912161c1ea2f2cac39bbeeda9c613d4367b041a7a9d9d0534b7404c26",
+      "receipts/brightstar-passaic-contact.json": "30c99bd2bec171867fbb9d7a3a587028867587842872289341afb0a883538f53",
+      "receipts/brightstar-passaic.json": "7ecbe4a4d4a6b94bd0205d6ce8876d12e76a807ef0753b918f57765576b95746",
+      "receipts/brightstar-westfield-contact.json": "44551a1cbba29e767d6136a1b7bcc902ef774e358ecdf74025a80e4a38826754",
+      "receipts/brightstar-westfield.json": "91e812e9573d1eead31cacb654cdf67aea92438276865f01e1628d1d51f6eebb",
+      "receipts/caring-people-nj.json": "e3403f52a9823b75c0acd94cba3812ddfb739f7dae3a7cbc3ce8e2ab3c14f0b2",
+      "receipts/caring-people.json": "351ed80caa8af0398f748ccc38430d4263e3abb12eaae4630addec0dd2141c77",
+      "receipts/comfort-keepers-closter.json": "e12aae5ba536a01d473473c7865841f065009bf81d9dc5dc11fd654684aac696",
+      "receipts/comfort-keepers-locator.json": "7a5ff4ec8e8d35f553f62fbb0c937c4c2adb3318ba98982df1985f0700fe55bb",
+      "receipts/comfort-keepers-montclair.json": "96dc1a5462c80891456c2bf6b07867499acf39fcd350d0a329a1a2954a650f18",
+      "receipts/comfort-keepers-secaucus.json": "540b5867c40cd2a6dd7ac567380ef2779db04d243e6bd98aed2c35d873ad2f64",
+      "receipts/family-first-contact.json": "2d3f3c09a840dea05bc6d1ce621a4a5e5225d7abbdd5de54f75675e4bc2a8dca",
+      "receipts/family-first-home-health.json": "bcde0d2c70883ea19324f3fb3b4f6bd2b5fab6e8cd447bcf7c932c91e44571d8",
+      "receipts/home-instead-locator.json": "e8d41318f671b4e92d4767911ef0e64a9606c8a6e9e937b4178d35e8b0418a52",
+      "receipts/home-instead-millburn.json": "9d1e9558ec8e359149dbbae3d66530f13d2194389ffc240756c698e0a41cf8fd",
+      "receipts/home-instead-parsippany.json": "1add8a8999bb07f4a4b9b14abf0e8bb55c305fab39d8178ec6981d8a27f11fbe",
+      "receipts/home-instead-teaneck.json": "1cccb571c05813a3288905eeb0006eafa4011c924eb79355f7adcab74b95fd2a",
+      "receipts/homewell-hackensack.json": "e694f4b49939db17ea0041c00ecae925e0ad37bb29c3efe6cf006da09700bbaf",
+      "receipts/homewell-union.json": "cabf9b7d7b1f2ad541997ef41db4a2f8db850bf4cfc3d5f1920a73876dd6ecaf",
+      "receipts/life-home-care-hourly.json": "409d9a5f0ea79752afda669cad9add75d127d090daa62ad996185d406ac4773c",
+      "receipts/life-home-care.json": "3ae04b89c9cc5960d3782c60e4f352453fd31f40196b04b88a51c5f9f49e406e",
+      "receipts/outfront-contact.json": "9beb1c606618196a59366ab919fee68f91d7aaf08afc585f8e3f14c38f46a429",
+      "receipts/outfront-home-care.json": "60062c22819f34de8c533ddb843d2b998587dd4bcfcf0fe1f0aab4280356a812",
+      "receipts/right-at-home-essex-area.json": "8406438b41588beafbdc4f0dfaf2fc46ffb11b31fe8cac446805afe645a0f9fb",
+      "receipts/right-at-home-essex.json": "4b225df131694176069bca696b2fc0a16b4e5d3034f512c69817df97e0e4dc2e",
+      "receipts/right-at-home-morris-area.json": "9d6aed76d92193538a920754c096edb92f07f62384ac64989f69cf8c719830ac",
+      "receipts/right-at-home-morris.json": "573d640b9d064920913f8b89a48a74586593ad08cadefcb991b60b9ca29fd017",
+      "receipts/senior-helpers-bergen.json": "68cc1ff2268fb416d7151749358a5ef8abe3b4c659a67b9575ebdbabfe279a5b",
+      "receipts/senior-helpers-fairfield.json": "f8dbf0827a690d87aa8ee2a080e8cf9f6f07b6c4d38f14a75422d085db50f0fc",
+      "receipts/senior-helpers-locator.json": "05737d4a256cf04b9f3a5d12a53093d48de5d8e8aa67dfe7002416428a1ebe0b",
+      "receipts/senior-helpers-madison.json": "3599eeaa9e1397464ec51052f2e6c8e93a74ef618a6a3af008cba8d80d2f82a1",
+      "receipts/senior-helpers-west-orange.json": "cc55848e6501908c2c016d19e3c2838c70cb4c178a7b81d978d4d9f528e86aad",
+      "receipts/synergy-bloomfield.json": "48cee9bcbeb1ba6814fe065e367c9a387ebaf68d0d37bb170597564d7895ebea",
+      "receipts/synergy-parsippany.json": "e32e9d77a0a64aae2cf4a52d71ffbeea2dbb9a1b513c3389a4cc2dc668f8816e",
+      "receipts/synergy-teaneck.json": "2a456a8fd77d89b86b95b1f6774cd54b086afad5da3281e3b9be0dac369b98bc",
+      "receipts/visiting-angels-fortlee.json": "dfb2f1697af8484fa940b8076fe29b5479e623ee6308312ffb375a1633e3da7c",
+      "receipts/visiting-angels-hoboken.json": "3d98019a90fe077d79d1353f1691f79fc4079a232d9907838c1b465342f97054",
+      "receipts/visiting-angels-jerseycity.json": "73563e55a64351b2b75db2d9438eecf3e1e896a344c1c8d64309f6bc515aee0e",
+      "receipts/visiting-angels-locator.json": "cc8d4796093e2c51ee383535dedd1a77bb0f800e6feb1a20c279fe5eb3a0cdec",
+      "receipts/visiting-angels-montclair.json": "3a6ed3fa6b786298822c4ce07de7b3b20102b048fce2c91f2da28d40dd712a28",
+      "receipts/visiting-angels-morristown.json": "1c9a02225f1f1e83b99be4cf64ce15f10bfcc3aa8b250ad79252eadb8fe86f55",
+      "receipts/visiting-angels-passaic.json": "aab0cfb43513dc812c1522f4859865b20142b79cd2e1541c908c0d2adb7933cb",
+      "receipts/visiting-angels-ramsey.json": "4cebc8daf81a13cdc3943a933472b5cc9bbbf1fbcccbd6e597083c3bf7c3d1f4",
+      "receipts/visiting-angels-scotchplains.json": "32dcd2b1b84acddd20b9cd8d5e924cfe4486da33a1c804979a349cc639d12c7a",
+      "receipts/visiting-angels-union.json": "2c0f5c8a00e3152317a2d499ececca20f5db58a51fada2ac38ea490a1ab94729",
+      "receipts/welcome-home-care.json": "68b2dfe120a36d42c3dc7bb9511a96439ab064493c14c57ffce438c853a44640"
+    },
+    "releaseStatus": "verified_retained_records_only",
+    "remaining_inventory_count": 634,
+    "request_baseline_count": 673,
+    "service_area_claim_count": 53,
+    "service_claim_count": 94,
+    "unique_official_hp_ids": 673,
+    "unmatched_count": 11,
+    "unmatched_unknown_county": 0,
+    "valid": true,
+    "warnings": []
+  },
+  "nppes-organizations": {
+    "catalogRecords": 673,
+    "collectionComplete": true,
+    "collectorReadme": "README.md",
+    "matchedProviders": 243,
+    "releaseStatus": "verified_retained_exact_matches_only",
+    "retainedPages": 174,
+    "scope": "No absent-NPI claim. Only exact active NPI-2 organization and full practice-address matches.",
+    "unattemptedQueryGroups": 0
+  }
+}

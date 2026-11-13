@@ -83,7 +83,7 @@ test("research filters expose Facebook findings and score gaps, with a complete 
       /Facebook findings|Facebook threads? with resident or family accounts/,
     );
   await page.getByText("Sources & evidence", { exact: true }).click();
-  await page.getByText("Research coverage & method", { exact: true }).click();
+  await page.getByText("Research coverage & sources", { exact: true }).click();
   await expect(page.getByLabel("Experience research coverage")).toContainText(
     `${result.total} locations with Facebook findings`,
   );
@@ -101,7 +101,7 @@ test("research filters expose Facebook findings and score gaps, with a complete 
     "Not enough evidence to score",
   );
   await page.getByText("Sources & evidence", { exact: true }).click();
-  await page.getByText("Research coverage & method", { exact: true }).click();
+  await page.getByText("Research coverage & sources", { exact: true }).click();
   const download = page.waitForEvent("download");
   await page
     .getByRole("link", { name: "Download catalog research checklist" })

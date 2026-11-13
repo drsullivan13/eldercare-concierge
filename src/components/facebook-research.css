@@ -130,11 +130,13 @@
   padding: 0.5rem 0;
 }
 .fb-research .fb-research-coverage,
-.fb-research .fb-research-context {
+.fb-research .fb-research-context,
+.fb-research .fb-research-provenance {
   font-size: 0.83rem;
 }
 .fb-research .fb-research-coverage summary,
-.fb-research .fb-research-context summary {
+.fb-research .fb-research-context summary,
+.fb-research .fb-research-provenance summary {
   cursor: pointer;
   min-height: 44px;
   padding: 0.7rem 0;

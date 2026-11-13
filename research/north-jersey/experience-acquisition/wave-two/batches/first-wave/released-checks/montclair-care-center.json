@@ -1,0 +1,73 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 100,
+    "rating": 4.3,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-13",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/source-checks/montclair-care-center.json",
+      "sha256": "3c9561a807365ed251b34b180505128896c85912e5460fcd43438b6e2af63434"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/mylivingchoice/access-evidence.json",
+      "sha256": "01a45aafa4dc715617d4530b9e5ad46f6623953daa1a12174726c34d140be858"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/integration/reviewed-mylivingchoice.json",
+      "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "111-115 Gates Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Montclair",
+    "name": "Montclair Care Center",
+    "state": "New Jersey",
+    "zip": null
+  },
+  "inspection": "full-page",
+  "officialId": "NJ60702",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315363",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609187",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609188",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-609186",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-609190",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-01",
+        "id": "mlc-google-609189",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/montclair-care-center"
+}
