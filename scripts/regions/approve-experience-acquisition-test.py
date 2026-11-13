@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import copy
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
@@ -210,20 +211,24 @@ class ApprovalTests(unittest.TestCase):
             self.assertNotIn(row["providerId"], after)
 
     def test_actual_runtime_gains_21_and_preserves_all_67_existing_scores(self):
-        baseline = json.loads((APPROVE.ROOT / APPROVE.ARCHIVE / "score-baseline.json").read_bytes())
+        baseline = json.loads((APPROVE.ROOT / APPROVE.ARCHIVE / "score-fingerprints.json").read_bytes())
         result = subprocess.run([
             str(APPROVE.ROOT / "node_modules/.bin/tsx"),
             str(APPROVE.ROOT / "tests/nj-experience-acquisition.test.ts"),
             "--snapshot", baseline["assessmentDate"],
         ], cwd=APPROVE.ROOT, capture_output=True, text=True, check=True, timeout=60)
         current = {p["providerId"]: p for p in json.loads(result.stdout)["runtimeProviders"]}
-        self.assertEqual(set(current), set(baseline["activeProviderIds"]))
+        self.assertEqual(hashlib.sha256(json.dumps(
+            sorted(current), sort_keys=True, separators=(",", ":"), ensure_ascii=True,
+        ).encode("utf-8")).hexdigest(), baseline["activeProviderIdsSha256"])
         self.assertEqual(len(current), 974)
         self.assertEqual(len(baseline["scoredProviders"]), 67)
-        for provider in baseline["scoredProviders"]:
-            self.assertEqual(provider["experience"], current[provider["providerId"]]["experience"],
-                             provider["providerId"])
-        before_scored = {p["providerId"] for p in baseline["scoredProviders"]}
+        for provider_id, expected in baseline["scoredProviders"].items():
+            self.assertEqual(hashlib.sha256(json.dumps(
+                current[provider_id]["experience"], sort_keys=True,
+                separators=(",", ":"), ensure_ascii=True,
+            ).encode("utf-8")).hexdigest(), expected, provider_id)
+        before_scored = set(baseline["scoredProviders"])
         new_scored = {pid for pid, p in current.items()
                       if p["experience"]["value"] is not None and pid not in before_scored}
         decisions = self.load(self.second["reviewed"]["path"])

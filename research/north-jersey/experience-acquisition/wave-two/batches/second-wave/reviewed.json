@@ -2,33 +2,808 @@
   "assessmentDate": "2026-11-13",
   "reviewer": "second-wave-direct-witness-review",
   "method": "Read the original FetchUrl witnesses identified by the frozen source-check artifact path, section and digest. Inspect header, About, care labels and every visible Google account, not AI summaries. Read separate operator, association or government identity witnesses. Publish only privacy-safe metadata. These are the original collection dates, not fresh retrievals.",
-  "columns": ["slug", "providerId", "name", "address", "city", "careUnit", "rating", "count", "rows"],
-  "rowColumns": ["originalRowId", "publishedMonth", "sentiment"],
+  "columns": [
+    "slug",
+    "providerId",
+    "name",
+    "address",
+    "city",
+    "careUnit",
+    "rating",
+    "count",
+    "rows"
+  ],
+  "rowColumns": [
+    "originalRowId",
+    "publishedMonth",
+    "sentiment"
+  ],
   "approvals": [
-    ["acclaim-rehabilitation-and-nursing-center","cms-315083","Acclaim Rehabilitation and Care Center","198 Stevens Ave","Jersey City","Skilled Nursing / Long Term Care",4.4,197,[["608514","2026-06","negative"],["608512","2026-05","mixed"],["608518","2026-05","negative"],["608516","2026-02","positive"],["608520","2025-10","positive"]]],
-    ["amedisys-home-health-care-hackensack","cms-317047","Amedisys Home Health Care","21 Main Street, Suite 252","Hackensack","Home Health",4.6,92,[]],
-    ["atlas-rehabilitation-and-healthcare-at-maywood","cms-315386","Atlas Healthcare at Maywood","100 West Magnolia Avenue","Maywood","Skilled Nursing / Long Term Care",4.2,214,[["609256","2026-06","positive"],["609257","2026-06","positive"],["609258","2026-05","positive"],["609259","2026-04","negative"],["609260","2026-02","negative"]]],
-    ["brookhaven-health-care-center","cms-315268","Brookhaven Center for Rehabilitation and Healthcare","120 Park End Place","East Orange","Skilled Nursing / Long Term Care",4.2,191,[["678409","2026-09","positive"],["678410","2026-08","positive"],["678411","2026-08","mixed"],["678412","2026-08","positive"],["678413","2026-08","positive"]]],
-    ["careone-at-parsippany","cms-315468","CareOne at Parsippany Skilled Nursing","100 Mazdabrook Road","Parsippany Troy Hill","Skilled Nursing / Long Term Care",4.4,225,[["305991","2026-07","positive"],["305993","2026-06","positive"],["305992","2026-05","positive"],["305994","2026-03","positive"],["305990","2026-03","positive"]]],
-    ["complete-care-at-hamilton-llc","cms-315221","Complete Care at Hamilton Plaza","56 Hamilton Avenue","Passaic","Skilled Nursing / Long Term Care",4.6,202,[["608777","2026-08","positive"],["608776","2026-07","positive"],["608779","2026-05","negative"],["608780","2026-04","mixed"],["608778","2025-07","positive"]]],
-    ["complete-care-at-wayne-hills-rehab-resp-center","cms-315110","Complete Care at Wayne Hills","130 Terhune Drive","Wayne","Skilled Nursing / Long Term Care",4.2,42,[["305682","2026-07","positive"],["305685","2026-02","positive"],["305683","2026-02","positive"],["305684","2026-02","positive"],["305686","2026-01","positive"]]],
-    ["daughters-of-israel-pleasant-valley-home","cms-315029","Daughters of Israel Home","1155 Pleasant Valley Way","West Orange","Memory CareSkilled Nursing / Long Term Care",3.1,35,[["305624","2026-07","mixed"],["305625","2026-05","negative"],["305623","2026-04","positive"],["305622","2026-01","positive"],["305626","2025-02","negative"]]],
-    ["elmora-hills-health-rehabilitation-center","cms-315010","Elmora Hills Healthcare & Rehabilitation Center","225 W Jersey Street","Elizabeth","Skilled Nursing / Long Term Care",3.8,88,[["608428","2026-07","positive"],["608427","2026-07","positive"],["608426","2026-05","mixed"],["608429","2026-02","negative"],["608430","2026-01","negative"]]],
-    ["emerson-health-care-center","cms-315360","Emerson Health and Rehabilitation Center","100 Kinderkamack Road","Emerson","Skilled Nursing / Long Term Care",4.5,197,[["609173","2026-08","positive"],["609171","2026-07","positive"],["609174","2026-07","positive"],["609169","2026-03","positive"],["609175","2026-03","positive"]]],
-    ["family-of-caring-healthcare-at-montclair","cms-315435","Family of Caring at Montclair","42 North Mountain Ave","Montclair","Skilled Nursing / Long Term Care",4.6,214,[["609336","2026-07","positive"],["609344","2026-07","positive"],["609340","2026-07","positive"],["609338","2026-05","positive"],["609342","2026-02","positive"]]],
-    ["family-of-caring-healthcare-at-ridgewood","cms-315434","Family of Caring","304 S. Van Dien Ave","Ridgewood","Skilled Nursing / Long Term Care",4.4,275,[["609345","2026-07","positive"],["609339","2026-06","positive"],["609337","2026-05","positive"],["609341","2026-05","positive"],["609343","2026-04","positive"]]],
-    ["family-of-caring-healthcare-at-tenafly-llc","cms-315164","Family of Caring at Tenafly","133 County Road","Tenafly","Skilled Nursing / Long Term Care",4.7,160,[["608671","2026-08","positive"],["608672","2026-07","mixed"],["608675","2026-06","positive"],["608674","2026-03","positive"],["608673","2025-11","positive"]]],
-    ["forest-hills-center-for-rehabilitation-and-healing","cms-315375","Forest Hill Center for Rehabilitation and Healing","497 Mt Prospect Ave","Newark","Skilled Nursing / Long Term Care",4.1,244,[["609222","2026-07","positive"],["609221","2026-06","positive"],["609226","2026-05","positive"],["609224","2026-03","positive"],["609228","2026-01","positive"]]],
-    ["hudsonview-health-care-center","cms-315112","Hudsonview Center for Rehabilitation and Healthcare","9020 Wall Street","North Bergen","Skilled Nursing / Long Term Care",4.1,206,[["608564","2026-08","mixed"],["608565","2026-08","negative"],["608562","2026-07","positive"],["608563","2026-07","positive"],["608561","2026-07","positive"]]],
-    ["llanfair-house-care-rehabilitation-center","cms-315142","Llanfair Care & Rehabilitation Center","1140 Black Oak Ridge Road","Wayne","Skilled Nursing / Long Term Care",4.4,76,[["608628","2026-03","positive"],["608626","2025-07","positive"],["608632","2024-04","positive"],["608635","2024-03","positive"],["608630","2023-11","positive"]]],
-    ["new-community-extended-care-facility","cms-315393","New Community Extended Care","266 S Orange Ave","Newark","Skilled Nursing / Long Term Care",3.6,54,[["609271","2025-04","mixed"],["609272","2024-07","negative"],["609275","2019-09","negative"],["609273","2019-04","mixed"],["609274","2016-07","negative"]]],
-    ["new-vista-nursing-rehabilitation-ctr","cms-315458","New Vista Nursing and Rehabilitation Center","300 Broadway","Newark","Skilled Nursing / Long Term Care",3.6,133,[["609405","2026-07","positive"],["609402","2026-06","negative"],["609403","2026-05","mixed"],["609404","2026-03","positive"],["609400","2026-03","positive"]]],
-    ["pine-acres-rehabilitation-and-healthcare","cms-315053","Pine Acres Healthcare & Rehabilitation Center","51 Madison Ave","Madison","Skilled Nursing / Long Term Care",4.3,127,[["305634","2026-06","positive"],["305632","2026-06","positive"],["305633","2026-05","positive"],["305635","2026-05","positive"],["305636","2026-03","positive"]]],
-    ["south-mountain-hc","cms-315283","South Mountain Healthcare and Rehabilitation Center","2385 Springfield Avenue","Vauxhall","Skilled Nursing / Long Term Care",4.6,350,[["608936","2026-07","positive"],["608939","2026-07","mixed"],["608938","2026-05","positive"],["608937","2026-04","positive"],["608940","2026-04","positive"]]],
-    ["white-house-healthcare-and-rehabilitation-center","cms-315372","White House Healthcare Center","560 Berkeley Avenue","Orange","Skilled Nursing / Long Term Care",4.6,406,[["305923","2026-07","positive"],["305926","2026-06","positive"],["305922","2026-06","positive"],["305924","2026-02","positive"],["305925","2025-11","positive"]]]
+    [
+      "acclaim-rehabilitation-and-nursing-center",
+      "cms-315083",
+      "Acclaim Rehabilitation and Care Center",
+      "198 Stevens Ave",
+      "Jersey City",
+      "Skilled Nursing / Long Term Care",
+      4.4,
+      197,
+      [
+        [
+          "608514",
+          "2026-06",
+          "negative"
+        ],
+        [
+          "608512",
+          "2026-05",
+          "mixed"
+        ],
+        [
+          "608518",
+          "2026-05",
+          "negative"
+        ],
+        [
+          "608516",
+          "2026-02",
+          "positive"
+        ],
+        [
+          "608520",
+          "2025-10",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "amedisys-home-health-care-hackensack",
+      "cms-317047",
+      "Amedisys Home Health Care",
+      "21 Main Street, Suite 252",
+      "Hackensack",
+      "Home Health",
+      4.6,
+      92,
+      []
+    ],
+    [
+      "atlas-rehabilitation-and-healthcare-at-maywood",
+      "cms-315386",
+      "Atlas Healthcare at Maywood",
+      "100 West Magnolia Avenue",
+      "Maywood",
+      "Skilled Nursing / Long Term Care",
+      4.2,
+      214,
+      [
+        [
+          "609256",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "609257",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "609258",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "609259",
+          "2026-04",
+          "negative"
+        ],
+        [
+          "609260",
+          "2026-02",
+          "negative"
+        ]
+      ]
+    ],
+    [
+      "brookhaven-health-care-center",
+      "cms-315268",
+      "Brookhaven Center for Rehabilitation and Healthcare",
+      "120 Park End Place",
+      "East Orange",
+      "Skilled Nursing / Long Term Care",
+      4.2,
+      191,
+      [
+        [
+          "678409",
+          "2026-09",
+          "positive"
+        ],
+        [
+          "678410",
+          "2026-08",
+          "positive"
+        ],
+        [
+          "678411",
+          "2026-08",
+          "mixed"
+        ],
+        [
+          "678412",
+          "2026-08",
+          "positive"
+        ],
+        [
+          "678413",
+          "2026-08",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "careone-at-parsippany",
+      "cms-315468",
+      "CareOne at Parsippany Skilled Nursing",
+      "100 Mazdabrook Road",
+      "Parsippany Troy Hill",
+      "Skilled Nursing / Long Term Care",
+      4.4,
+      225,
+      [
+        [
+          "305991",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "305993",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "305992",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "305994",
+          "2026-03",
+          "positive"
+        ],
+        [
+          "305990",
+          "2026-03",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "complete-care-at-hamilton-llc",
+      "cms-315221",
+      "Complete Care at Hamilton Plaza",
+      "56 Hamilton Avenue",
+      "Passaic",
+      "Skilled Nursing / Long Term Care",
+      4.6,
+      202,
+      [
+        [
+          "608777",
+          "2026-08",
+          "positive"
+        ],
+        [
+          "608776",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "608779",
+          "2026-05",
+          "negative"
+        ],
+        [
+          "608780",
+          "2026-04",
+          "mixed"
+        ],
+        [
+          "608778",
+          "2025-07",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "complete-care-at-wayne-hills-rehab-resp-center",
+      "cms-315110",
+      "Complete Care at Wayne Hills",
+      "130 Terhune Drive",
+      "Wayne",
+      "Skilled Nursing / Long Term Care",
+      4.2,
+      42,
+      [
+        [
+          "305682",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "305685",
+          "2026-02",
+          "positive"
+        ],
+        [
+          "305683",
+          "2026-02",
+          "positive"
+        ],
+        [
+          "305684",
+          "2026-02",
+          "positive"
+        ],
+        [
+          "305686",
+          "2026-01",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "daughters-of-israel-pleasant-valley-home",
+      "cms-315029",
+      "Daughters of Israel Home",
+      "1155 Pleasant Valley Way",
+      "West Orange",
+      "Memory CareSkilled Nursing / Long Term Care",
+      3.1,
+      35,
+      [
+        [
+          "305624",
+          "2026-07",
+          "mixed"
+        ],
+        [
+          "305625",
+          "2026-05",
+          "negative"
+        ],
+        [
+          "305623",
+          "2026-04",
+          "positive"
+        ],
+        [
+          "305622",
+          "2026-01",
+          "positive"
+        ],
+        [
+          "305626",
+          "2025-02",
+          "negative"
+        ]
+      ]
+    ],
+    [
+      "elmora-hills-health-rehabilitation-center",
+      "cms-315010",
+      "Elmora Hills Healthcare & Rehabilitation Center",
+      "225 W Jersey Street",
+      "Elizabeth",
+      "Skilled Nursing / Long Term Care",
+      3.8,
+      88,
+      [
+        [
+          "608428",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "608427",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "608426",
+          "2026-05",
+          "mixed"
+        ],
+        [
+          "608429",
+          "2026-02",
+          "negative"
+        ],
+        [
+          "608430",
+          "2026-01",
+          "negative"
+        ]
+      ]
+    ],
+    [
+      "emerson-health-care-center",
+      "cms-315360",
+      "Emerson Health and Rehabilitation Center",
+      "100 Kinderkamack Road",
+      "Emerson",
+      "Skilled Nursing / Long Term Care",
+      4.5,
+      197,
+      [
+        [
+          "609173",
+          "2026-08",
+          "positive"
+        ],
+        [
+          "609171",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609174",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609169",
+          "2026-03",
+          "positive"
+        ],
+        [
+          "609175",
+          "2026-03",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "family-of-caring-healthcare-at-montclair",
+      "cms-315435",
+      "Family of Caring at Montclair",
+      "42 North Mountain Ave",
+      "Montclair",
+      "Skilled Nursing / Long Term Care",
+      4.6,
+      214,
+      [
+        [
+          "609336",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609344",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609340",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609338",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "609342",
+          "2026-02",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "family-of-caring-healthcare-at-ridgewood",
+      "cms-315434",
+      "Family of Caring",
+      "304 S. Van Dien Ave",
+      "Ridgewood",
+      "Skilled Nursing / Long Term Care",
+      4.4,
+      275,
+      [
+        [
+          "609345",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609339",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "609337",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "609341",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "609343",
+          "2026-04",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "family-of-caring-healthcare-at-tenafly-llc",
+      "cms-315164",
+      "Family of Caring at Tenafly",
+      "133 County Road",
+      "Tenafly",
+      "Skilled Nursing / Long Term Care",
+      4.7,
+      160,
+      [
+        [
+          "608671",
+          "2026-08",
+          "positive"
+        ],
+        [
+          "608672",
+          "2026-07",
+          "mixed"
+        ],
+        [
+          "608675",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "608674",
+          "2026-03",
+          "positive"
+        ],
+        [
+          "608673",
+          "2025-11",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "forest-hills-center-for-rehabilitation-and-healing",
+      "cms-315375",
+      "Forest Hill Center for Rehabilitation and Healing",
+      "497 Mt Prospect Ave",
+      "Newark",
+      "Skilled Nursing / Long Term Care",
+      4.1,
+      244,
+      [
+        [
+          "609222",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609221",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "609226",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "609224",
+          "2026-03",
+          "positive"
+        ],
+        [
+          "609228",
+          "2026-01",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "hudsonview-health-care-center",
+      "cms-315112",
+      "Hudsonview Center for Rehabilitation and Healthcare",
+      "9020 Wall Street",
+      "North Bergen",
+      "Skilled Nursing / Long Term Care",
+      4.1,
+      206,
+      [
+        [
+          "608564",
+          "2026-08",
+          "mixed"
+        ],
+        [
+          "608565",
+          "2026-08",
+          "negative"
+        ],
+        [
+          "608562",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "608563",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "608561",
+          "2026-07",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "llanfair-house-care-rehabilitation-center",
+      "cms-315142",
+      "Llanfair Care & Rehabilitation Center",
+      "1140 Black Oak Ridge Road",
+      "Wayne",
+      "Skilled Nursing / Long Term Care",
+      4.4,
+      76,
+      [
+        [
+          "608628",
+          "2026-03",
+          "positive"
+        ],
+        [
+          "608626",
+          "2025-07",
+          "positive"
+        ],
+        [
+          "608632",
+          "2024-04",
+          "positive"
+        ],
+        [
+          "608635",
+          "2024-03",
+          "positive"
+        ],
+        [
+          "608630",
+          "2023-11",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "new-community-extended-care-facility",
+      "cms-315393",
+      "New Community Extended Care",
+      "266 S Orange Ave",
+      "Newark",
+      "Skilled Nursing / Long Term Care",
+      3.6,
+      54,
+      [
+        [
+          "609271",
+          "2025-04",
+          "mixed"
+        ],
+        [
+          "609272",
+          "2024-07",
+          "negative"
+        ],
+        [
+          "609275",
+          "2019-09",
+          "negative"
+        ],
+        [
+          "609273",
+          "2019-04",
+          "mixed"
+        ],
+        [
+          "609274",
+          "2016-07",
+          "negative"
+        ]
+      ]
+    ],
+    [
+      "new-vista-nursing-rehabilitation-ctr",
+      "cms-315458",
+      "New Vista Nursing and Rehabilitation Center",
+      "300 Broadway",
+      "Newark",
+      "Skilled Nursing / Long Term Care",
+      3.6,
+      133,
+      [
+        [
+          "609405",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "609402",
+          "2026-06",
+          "negative"
+        ],
+        [
+          "609403",
+          "2026-05",
+          "mixed"
+        ],
+        [
+          "609404",
+          "2026-03",
+          "positive"
+        ],
+        [
+          "609400",
+          "2026-03",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "pine-acres-rehabilitation-and-healthcare",
+      "cms-315053",
+      "Pine Acres Healthcare & Rehabilitation Center",
+      "51 Madison Ave",
+      "Madison",
+      "Skilled Nursing / Long Term Care",
+      4.3,
+      127,
+      [
+        [
+          "305634",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "305632",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "305633",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "305635",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "305636",
+          "2026-03",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "south-mountain-hc",
+      "cms-315283",
+      "South Mountain Healthcare and Rehabilitation Center",
+      "2385 Springfield Avenue",
+      "Vauxhall",
+      "Skilled Nursing / Long Term Care",
+      4.6,
+      350,
+      [
+        [
+          "608936",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "608939",
+          "2026-07",
+          "mixed"
+        ],
+        [
+          "608938",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "608937",
+          "2026-04",
+          "positive"
+        ],
+        [
+          "608940",
+          "2026-04",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "white-house-healthcare-and-rehabilitation-center",
+      "cms-315372",
+      "White House Healthcare Center",
+      "560 Berkeley Avenue",
+      "Orange",
+      "Skilled Nursing / Long Term Care",
+      4.6,
+      406,
+      [
+        [
+          "305923",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "305926",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "305922",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "305924",
+          "2026-02",
+          "positive"
+        ],
+        [
+          "305925",
+          "2025-11",
+          "positive"
+        ]
+      ]
+    ]
   ],
   "withheld": [
-    {"slug":"brightview-tenafly-senior-assisted-living-and-memory-care","providerId":"north-jersey-doh-nj02a023","reason":"Row 625733 explicitly describes paid nature-center education programs contracted by the community. The consumer/professional population is not separated. All five visible rows were read. The operator corroborates assisted living and memory care at 55 Hudson, but does not isolate the Google aggregate."},
-    {"slug":"manhattanview-ctr-for-rehabilitation-and-healthcar","providerId":"cms-315465","reason":"Row 609437 reviews an Access Link manager and Uber ride, without a visible connection to the care unit. All five visible rows were read, including the mixed account about delayed nursing and food. Facility identity is corroborated, but the ride account leaves aggregate applicability unresolved."}
-  ]
+    {
+      "slug": "brightview-tenafly-senior-assisted-living-and-memory-care",
+      "providerId": "north-jersey-doh-nj02a023",
+      "reason": "Row 625733 explicitly describes paid nature-center education programs contracted by the community. The consumer/professional population is not separated. All five visible rows were read. The operator corroborates assisted living and memory care at 55 Hudson, but does not isolate the Google aggregate."
+    },
+    {
+      "slug": "manhattanview-ctr-for-rehabilitation-and-healthcar",
+      "providerId": "cms-315465",
+      "reason": "Row 609437 reviews an Access Link manager and Uber ride, without a visible connection to the care unit. All five visible rows were read, including the mixed account about delayed nursing and food. Facility identity is corroborated, but the ride account leaves aggregate applicability unresolved."
+    }
+  ],
+  "populationNotes": {
+    "acclaim-rehabilitation-and-nursing-center": "The window includes two strongly critical accounts and one mixed account about resident-floor conditions. Short-term rehabilitation and long-term nursing are services of the same licensed nursing facility.",
+    "amedisys-home-health-care-hackensack": "The Google panel reports 92 ratings but the page exposes no individual accounts. The complete visible window is genuinely empty, not an omitted selection. The independent office witness identifies home-health office 4201 at Suite 252, separately from nearby hospice and palliative offices.",
+    "atlas-rehabilitation-and-healthcare-at-maywood": "All five accounts include three favorable accounts and two strongly critical family accounts. Visitor access and serious care concerns remain in the complete window.",
+    "brookhaven-health-care-center": "The mixed account reports odor while praising workers. The other four visible accounts are favorable. The operator contact witness resolves the expanded facility name at the exact street.",
+    "careone-at-parsippany": "This page explicitly identifies skilled nursing at 100 Mazdabrook Road. It separately links a differently named assisted-living property. Resident rehabilitation and long-term nursing accounts support this nursing-unit scope, not a transfer of the assisted-living aggregate.",
+    "complete-care-at-hamilton-llc": "The complete window includes a strongly critical family account and a mixed account about the building. The association witness identifies Hamilton Plaza as a nursing facility at 56 Hamilton Avenue.",
+    "complete-care-at-wayne-hills-rehab-resp-center": "All five visible accounts concern residents or family care. Rehabilitation, respiratory services and long-term care belong to this nursing facility.",
+    "daughters-of-israel-pleasant-valley-home": "The 3.1 Google mean remains unchanged. The window includes mixed care and discharge feedback, two negative accounts and two favorable family accounts. Memory care is within the nursing-home service scope.",
+    "elmora-hills-health-rehabilitation-center": "The complete window includes two strongly critical family accounts and a mixed updated account. A professional title on one account does not change its explicitly stated family relationship.",
+    "emerson-health-care-center": "One account describes a free community breakfast visit rather than a care stay. It is retained as visitor context, not mislabeled as resident testimony. Other accounts explicitly concern family rehabilitation or nursing memory care.",
+    "family-of-caring-healthcare-at-montclair": "The professionally qualified reviewer explicitly reports their own mother's rehabilitation stay. This is a family account, unlike a paid provider recommendation. All five accounts remain in the window.",
+    "family-of-caring-healthcare-at-ridgewood": "The operator's location roster identifies Ridgewood at 304 S. Van Dien Avenue, rather than the other Family of Caring offices. All five visible accounts concern residents or family care.",
+    "family-of-caring-healthcare-at-tenafly-llc": "The mixed account includes an initial medication concern followed by praise. All five accounts remain attached to the Tenafly nursing facility, distinct from the brand's other locations.",
+    "forest-hills-center-for-rehabilitation-and-healing": "The operator contact page corroborates the singular Forest Hill name at 497 Mt. Prospect Avenue. The visible window includes resident, family and visitor accounts, not only rehabilitation outcomes.",
+    "hudsonview-health-care-center": "The complete window includes one mixed family account and one strongly critical account about communication and discharge arrangements. Neither is removed to match the aggregate.",
+    "llanfair-house-care-rehabilitation-center": "The government witness identifies the exact licensed nursing facility at 1140 Black Oak Ridge Road. Visible dates span November 2023 through March 2026 and retain that precision.",
+    "new-community-extended-care-facility": "All five visible dates are retained, including 2016 and 2019 accounts. Three accounts are negative and two are mixed. The reported 3.6 mean is not promoted as a favorable recent-review consensus.",
+    "new-vista-nursing-rehabilitation-ctr": "The operator describes nursing rehabilitation, long-term care and in-house dialysis. One strongly negative and one mixed family account remain alongside three favorable accounts.",
+    "pine-acres-rehabilitation-and-healthcare": "The header gives only 51 Madison Ave. The page's About and FAQ identify Madison, New Jersey, and the independent association witness corroborates that exact nursing facility. All five visible accounts are retained.",
+    "south-mountain-hc": "The mixed account includes a reported incident and subsequent resolution. Memory support and rehabilitation are services within this nursing facility, not independent living.",
+    "white-house-healthcare-and-rehabilitation-center": "The professionally experienced reviewer explicitly visits a friend. This is visitor consumer context, not an account of paid work for the provider. All five visible accounts are retained."
+  }
 }
