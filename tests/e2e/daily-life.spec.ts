@@ -381,9 +381,15 @@ for (const entry of [
             "meals & dining",
           );
         }
-        if (entry.id.startsWith("cms-"))
+        if (entry.id === "cms-315009")
           await expect(life).toContainText(
             "No source-linked everyday-life offerings",
+          );
+        if (entry.id === "cms-225281")
+          await expect(
+            life.getByRole("region", { name: "Meals & dining" }),
+          ).toContainText(
+            "The unit advertises dining choices, kitchens/fireplaces, pastoral services and recreational programming for nursing residents.",
           );
       } else {
         if (entry.id === "abc-home-healthcare")
