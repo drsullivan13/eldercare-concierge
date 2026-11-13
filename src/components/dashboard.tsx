@@ -38,6 +38,7 @@ import { ProviderCard } from "./provider-card";
 import { Modal } from "./modal";
 import type { ProfilePane } from "./profile-pane";
 import { Overview } from "./dashboard/overview";
+import { DemoComparison } from "./dashboard/demo-comparison";
 import { CareSearchView } from "./dashboard/care-search";
 import { ShortlistView } from "./dashboard/shortlist";
 import { PlanView } from "./dashboard/plan";
@@ -593,6 +594,12 @@ function WorkspaceDashboard({
               navigate={navigate}
             />
           )}
+          <Suspense fallback={null}>
+            <DemoComparison
+              showEntry={view === "overview"}
+              openProvider={openProvider}
+            />
+          </Suspense>
           {view === "search" && (
             <CareSearchView
               search={search}

@@ -374,12 +374,10 @@ test("landing to demo: search real providers, save two, compare, inspect sources
   await comparison
     .getByText("Clinical ratings, availability & records", { exact: true })
     .click();
+  expect([first.category, second.category]).not.toContain("nursing-home");
   await expect(
-    comparison.getByRole("group", {
-      name: `${first.name}, CMS overall`,
-      exact: true,
-    }),
-  ).toContainText("Not applicable");
+    comparison.getByRole("heading", { name: "CMS overall", exact: true }),
+  ).toHaveCount(0);
   await expect(
     comparison.getByRole("group", {
       name: `${first.name}, Availability`,

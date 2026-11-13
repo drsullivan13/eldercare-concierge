@@ -1,5 +1,8 @@
 "use client";
 
+import { Fragment, type ReactNode } from "react";
+import CompareCatalogAccount from "./compare-catalog-account";
+import { CompareDecisionRows } from "./compare-decision-rows";
 import { useProviderEvidence } from "@/hooks/use-provider-evidence";
 import type {
   LocationResearchResponse,
@@ -18,7 +21,17 @@ const source = {
   fallback: "Couldn't load these details.",
 };
 
-const rows = ["Published prices", "Everyday perks", "A review insight"];
+const rows: {
+  label: string;
+  render: (data: LocationResearchResponse, provider: Provider) => ReactNode;
+}[] = [
+  { label: "Published prices", render: (data) => <Prices data={data} /> },
+  { label: "Everyday perks", render: (data) => <Perks data={data} /> },
+  {
+    label: "A review insight",
+    render: (data, provider) => <Review data={data} provider={provider} />,
+  },
+];
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -56,13 +69,16 @@ function reviewInsight(data: LocationResearchResponse): Insight | undefined {
     return priority(b) - priority(a);
   });
   const account = accounts.find(
-    (review) => review.excerpt || review.aspects.length,
+    (review) =>
+      review.relationship !== "staff" &&
+      (review.excerpt || review.summary || review.aspects.length),
   );
   if (account) {
     const publisher = data.sources.find((s) => s.id === account.sourceId);
     return {
       text:
         account.excerpt ||
+        account.summary ||
         account.aspects
           .map((aspect) => `${aspect.aspect} (${aspect.sentiment})`)
           .slice(0, 2)
@@ -125,7 +141,7 @@ function Source({
   );
 }
 
-function Prices({ data }: { data: LocationResearchResponse }) {
+function publishedPrices(data: LocationResearchResponse) {
   const costs = data.facts.filter((fact) => fact.kind === "cost");
   const recurring = costs.filter(
     (fact) =>
@@ -138,9 +154,24 @@ function Prices({ data }: { data: LocationResearchResponse }) {
     recurring.find((fact) => fact.amount?.type === "base-rent") ??
     recurring[0] ??
     costs.find((fact) => fact.amount && fact.amount.min > 0);
+  const separateFees = costs.some(
+    (fact) =>
+      (fact !== lead &&
+        (fact.amount?.type === "entrance-fee" ||
+          fact.amount?.type === "care-fee")) ||
+      /separate|additional|cost extra|not included|one.time.*fee/i.test(
+        fact.text,
+      ),
+  );
+  return { costs, recurring, lead, separateFees };
+}
+
+function Prices({ data }: { data: LocationResearchResponse }) {
+  const { costs, recurring, lead, separateFees } = publishedPrices(data);
   const rate = (fact: OfferingFact) =>
     fact.amount && (
       <strong className={styles.price}>
+        {/\bfrom\b|\bstarting\b/i.test(fact.text) ? "From " : ""}
         {priceAmount(fact.amount)}
         <span>
           {fact.amount.period === "one-time"
@@ -161,33 +192,17 @@ function Prices({ data }: { data: LocationResearchResponse }) {
   );
   if (!costs.length)
     return <p className={styles.muted}>No published price found.</p>;
+  // A colon introduces the sourced rate for many room types. Preserve the
+  // full description when a provider uses another format — it can qualify fees.
   const context = lead?.text
-    .replace(/^Published /, "")
+    .split(/:\s*(?:from\s+|starting at\s+)?\$/i)[0]
+    .replace(/^Published\s+/i, "")
+    .replace(/ starting room rate before separately assessed care fees/i, "")
     .replace(
-      / starting at \$[\d,]+(?:\.\d+)?\/(month|day|hour)\.$/,
-      " · starting rate",
+      /\s*(?:starting at|starts at|is published at|are published at)\s+\$.*$/i,
+      "",
     )
-    .replace(/ starting monthly rate/, " · starting rate")
-    .replace(lead.amount ? priceAmount(lead.amount) : "", "")
-    .replace(/\b(?:are |is )?published at\s*/i, "")
-    .replace(/\bper (?:month|day|hour)\b/, "")
-    .replace(/,\s*(?:separate|effective|FUTURE).*$/i, "")
-    .replace(/:\s*(?=[.;]|$)/, "")
-    .split(/[.;](?:\s|$)/)[0];
-  const separateFees =
-    costs.some(
-      (fact) =>
-        fact !== lead &&
-        (fact.amount?.type === "entrance-fee" ||
-          fact.amount?.type === "care-fee" ||
-          /separate|additional|cost extra|not included|one.time.*fee/i.test(
-            fact.text,
-          )),
-    ) ||
-    (lead &&
-      /separate|additional|cost extra|not included|one.time.*fee/i.test(
-        lead.text,
-      ));
+    .replace(/\. Confirm the current quote\.$/, ".");
   return (
     <>
       {lead ? (
@@ -206,10 +221,16 @@ function Prices({ data }: { data: LocationResearchResponse }) {
         <p className={styles.muted}>Ask for current rates.</p>
       )}
       {!recurring.length && <small>No ongoing rate verified.</small>}
-      {separateFees && <small>Separate fees listed. See details.</small>}
-      <small className={styles.muted}>Published, not a personal quote.</small>
+      {separateFees && (
+        <small>
+          {lead && /separately assessed care fees/i.test(lead.text)
+            ? "Care fees are extra."
+            : "Additional fees listed."}
+        </small>
+      )}
       <details className={styles.more}>
         <summary>Rates & sources</summary>
+        <small className={styles.muted}>Published, not a personal quote.</small>
         {costs.map(render)}
       </details>
     </>
@@ -244,7 +265,7 @@ function Perks({ data }: { data: LocationResearchResponse }) {
   });
   if (!facts.length)
     return <p className={styles.muted}>No everyday details published.</p>;
-  return facts.slice(0, 1).map((fact) => (
+  return facts.slice(0, 2).map((fact, index) => (
     <div className={styles.fact} key={fact.id}>
       <p>
         {fact.text.length > 90
@@ -258,29 +279,40 @@ function Perks({ data }: { data: LocationResearchResponse }) {
       {/extra|additional|not included/i.test(fact.text) && (
         <small>Some services may cost extra.</small>
       )}
-      {(fact.text.length > 90 || facts.length > 1) && (
-        <details className={styles.more}>
-          <summary>Perks & details</summary>
-          {facts.map((detail) => (
-            <div className={styles.fact} key={detail.id}>
-              <p>{detail.text}</p>
-              <Source
-                source={data.sources.find(
-                  (item) => item.id === detail.sourceId,
-                )}
-              />
-            </div>
-          ))}
-        </details>
-      )}
+      {index === 0 &&
+        (facts.some((item) => item.text.length > 90) || facts.length > 2) && (
+          <details className={styles.more}>
+            <summary>Perks & details</summary>
+            {facts.map((detail) => (
+              <div className={styles.fact} key={detail.id}>
+                <p>{detail.text}</p>
+                <Source
+                  source={data.sources.find(
+                    (item) => item.id === detail.sourceId,
+                  )}
+                />
+              </div>
+            ))}
+          </details>
+        )}
     </div>
   ));
 }
 
-function Review({ data }: { data: LocationResearchResponse }) {
+function Review({
+  data,
+  provider,
+}: {
+  data: LocationResearchResponse;
+  provider: Provider;
+}) {
   const insight = reviewInsight(data);
   if (!insight)
-    return <p className={styles.muted}>No firsthand account found.</p>;
+    return provider.research?.individualReviews?.total ? (
+      <CompareCatalogAccount provider={provider} />
+    ) : (
+      <p className={styles.muted}>No individual account published here.</p>
+    );
   const excerpt =
     insight.text.length > 120
       ? `${insight.text.slice(0, 120).replace(/\s+\S*$/, "")}…`
@@ -325,88 +357,74 @@ function Review({ data }: { data: LocationResearchResponse }) {
   );
 }
 
-function ProviderFacts({
-  provider,
-  column,
-}: {
-  provider: Provider;
-  column: number;
-}) {
-  const { data, error, loading, retry } =
-    useProviderEvidence<LocationResearchResponse>(provider.id, source);
-  const values = data
-    ? [
-        <Prices key="prices" data={data} />,
-        <Perks key="perks" data={data} />,
-        <Review key="review" data={data} />,
-      ]
-    : [];
-  return rows.map((label, index) => (
-    <div
-      key={label}
-      className={styles.cell}
-      role="group"
-      style={{ gridColumn: column, gridRow: index * 2 + 2 }}
-      aria-label={`${provider.name}, ${label.toLowerCase()}`}
-      aria-busy={loading}
-    >
-      {loading ? (
-        <p className={styles.muted} role={index === 0 ? "status" : undefined}>
-          Loading…
-        </p>
-      ) : error ? (
-        index === 0 ? (
-          <div role="alert">
-            <p>{error}</p>
-            <button
-              className={styles.retry}
-              onClick={retry}
-              aria-label={`Retry details for ${provider.name}`}
-            >
-              Try again
-            </button>
-          </div>
-        ) : (
-          <p className={styles.muted}>Details unavailable.</p>
-        )
-      ) : (
-        values[index]
-      )}
-    </div>
-  ));
-}
-
 export function ComparePlaceFacts({
   providers,
 }: {
   providers: readonly Provider[];
 }) {
-  if (!providers.length) return null;
+  const left = useProviderEvidence<LocationResearchResponse>(
+    providers[0].id,
+    source,
+  );
+  const right = useProviderEvidence<LocationResearchResponse>(
+    providers[1].id,
+    source,
+  );
+  const evidence = [left, right];
   return (
-    <section
-      className={styles.grid}
-      aria-label="Prices, everyday perks and review insights"
-      style={{
-        gridTemplateColumns: `repeat(${providers.length}, minmax(0, 1fr))`,
-        minWidth: `calc(${providers.length} * var(--compare-column-width, 140px))`,
-      }}
-    >
-      {rows.map((label, index) => (
-        <h3
-          key={label}
-          className={styles.band}
-          style={{ gridRow: index * 2 + 1 }}
-        >
-          {label}
-        </h3>
-      ))}
-      {providers.map((provider, index) => (
-        <ProviderFacts
-          key={provider.id}
-          provider={provider}
-          column={index + 1}
-        />
-      ))}
-    </section>
+    <>
+      <section
+        className={styles.grid}
+        aria-label="Prices, everyday perks and review insights"
+      >
+        {rows.map((row, index) => (
+          <Fragment key={row.label}>
+            <h3 className={styles.band}>{row.label}</h3>
+            {providers.map((provider, column) => {
+              const { data, error, loading, retry } = evidence[column];
+              return (
+                <div
+                  key={provider.id}
+                  className={styles.cell}
+                  role="group"
+                  aria-label={`${provider.name}, ${row.label.toLowerCase()}`}
+                  aria-busy={loading}
+                >
+                  {loading ? (
+                    <p
+                      className={styles.muted}
+                      role={index === 0 ? "status" : undefined}
+                    >
+                      Loading…
+                    </p>
+                  ) : error && index === 0 ? (
+                    <div role="alert">
+                      <p>{error}</p>
+                      <button
+                        className={styles.retry}
+                        onClick={retry}
+                        aria-label={`Retry details for ${provider.name}`}
+                      >
+                        Try again
+                      </button>
+                    </div>
+                  ) : data ? (
+                    row.render(data, provider)
+                  ) : (
+                    <p className={styles.muted}>Details unavailable.</p>
+                  )}
+                </div>
+              );
+            })}
+            {index === 0 && (
+              <CompareDecisionRows
+                providers={providers}
+                research={evidence.map(({ data }) => data ?? null)}
+              />
+            )}
+          </Fragment>
+        ))}
+      </section>
+    </>
   );
 }

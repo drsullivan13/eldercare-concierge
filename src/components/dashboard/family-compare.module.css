@@ -98,7 +98,7 @@
 
 :global(.modal):has(.comparison) {
   width: calc(100% - 24px);
-  max-width: 900px;
+  max-width: 1100px;
   height: min(900px, 90dvh);
   max-height: 90dvh;
 }
@@ -117,7 +117,6 @@
 }
 
 .comparison {
-  --compare-column-width: 0px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -133,7 +132,14 @@
 .compareHeading h2 {
   margin: 0 0 8px;
   padding-right: 48px;
-  font-size: 28px;
+  font-size: 26px;
+}
+
+.compareHeading p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 .pairSelector {
@@ -233,7 +239,7 @@
   padding: 10px 12px;
   border-block: 1px solid #dce4dc;
   background: var(--teal-pale);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 650;
 }
 
@@ -246,8 +252,9 @@
 }
 
 .cell {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
+  font-variant-numeric: tabular-nums;
 }
 
 .cell > strong {
@@ -445,6 +452,25 @@
 }
 
 @media (max-width: 760px) {
+  :global(.modal):has(.comparison) {
+    width: calc(100% - 12px);
+    height: 94dvh;
+    max-height: 94dvh;
+  }
+
+  :global(.modal-inner):has(> .comparison) {
+    padding: 14px 6px 6px;
+  }
+
+  .identity,
+  .cell {
+    padding: 10px 8px;
+  }
+
+  .providerName {
+    font-size: 16px;
+  }
+
   .tray {
     left: 50%;
     gap: 12px;

@@ -17,8 +17,9 @@ export function CompareContent({
 }) {
   const uid = useId();
   const [omittedId, setOmittedId] = useState(providers[2]?.id);
+  const omitted = providers.find((p) => p.id === omittedId) ?? providers[2];
   const pair = providers
-    .filter((provider) => provider.id !== omittedId)
+    .filter((provider) => provider.id !== omitted?.id)
     .slice(0, 2);
   const warnings = pair.map((provider) => [
     ...new Set([
@@ -32,8 +33,9 @@ export function CompareContent({
     label: string;
     value: (provider: Provider) => ReactNode;
   }[] = [
-    ...(["overall", "inspections", "staffing", "quality"] as const).map(
-      (field) => ({
+    ...(["overall", "inspections", "staffing", "quality"] as const)
+      .filter(() => pair.some((p) => p.category === "nursing-home"))
+      .map((field) => ({
         label: `CMS ${field === "inspections" ? "health inspections" : field}`,
         value: (provider: Provider) =>
           provider.category !== "nursing-home" ? (
@@ -46,8 +48,7 @@ export function CompareContent({
               <small>As of {evidenceDate(provider.cms.dataAsOf)}</small>
             </>
           ),
-      }),
-    ),
+      })),
     {
       label: "Availability",
       value: (provider) => (
@@ -130,7 +131,7 @@ export function CompareContent({
           <label className={styles.pairSelector}>
             <span>Compare pair</span>
             <select
-              value={omittedId ?? providers[2].id}
+              value={omitted?.id}
               onChange={(event) => setOmittedId(event.target.value)}
             >
               {providers.toReversed().map((omitted) => (
@@ -143,6 +144,12 @@ export function CompareContent({
               ))}
             </select>
           </label>
+        )}
+        {new Set(pair.map((provider) => provider.category)).size > 1 && (
+          <p>
+            These places offer different types of care. Their prices and
+            clinical ratings may cover different services.
+          </p>
         )}
       </header>
       <div
@@ -281,10 +288,12 @@ export function CompareContent({
         </section>
         <details className={styles.secondaryDetails}>
           <summary>Clinical ratings, availability & records</summary>
-          <p className={styles.scope}>
-            CMS ratings apply only to the certified nursing home, not an entire
-            campus or another care setting.
-          </p>
+          {pair.some((p) => p.category === "nursing-home") && (
+            <p className={styles.scope}>
+              CMS ratings apply only to the certified nursing home, not an
+              entire campus or another care setting.
+            </p>
+          )}
           <div className={styles.aligned}>
             {rows.map((row) => (
               <Fragment key={row.label}>
