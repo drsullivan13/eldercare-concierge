@@ -129,7 +129,8 @@
 @media (max-width: 760px) {
   /* Navigation owns the screen while its panel is open. */
   body:has(.sidebar-open) .dashboard-notifications,
-  .modal:has(.dialog-form) .dashboard-notifications {
+  .modal:has(.dialog-form) .dashboard-notifications,
+  .modal[aria-label="Compare places"] .dashboard-notifications {
     visibility: hidden;
   }
 }

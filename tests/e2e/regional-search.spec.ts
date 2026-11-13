@@ -246,10 +246,8 @@ test("profile ZIP updates search and survives reopening the demo", async ({
     .getByRole("textbox", { name: "ZIP code to search near" })
     .fill("07030");
   await page.getByRole("button", { name: "Save & continue" }).click();
-  const closeMenu = page
-    .getByRole("button", { name: "Close menu", exact: true })
-    .first();
-  if (await closeMenu.isVisible()) await closeMenu.click();
+  if (await menu.isVisible())
+    await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(page.locator(".sidebar-bottom")).toContainText("North Jersey");
   await expect(
     page.getByRole("textbox", { name: "Search ZIP code" }),

@@ -21,6 +21,7 @@ export default function CareSearchDrawer({
 }) {
   return (
     <Drawer
+      driver="pointer"
       open={open}
       onOpenChange={(next) => {
         if (!next) onDismiss();
