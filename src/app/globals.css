@@ -2199,26 +2199,6 @@ em {
   padding: 11px 15px;
   min-height: 38px;
 }
-.toast {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 100;
-  background: #294d3b;
-  color: #e2edda;
-  box-shadow: 0 6px 25px #19291726;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 20px;
-  border-radius: 8px;
-  font-size: 11px;
-  max-width: calc(100vw - 40px);
-  line-height: 1.6;
-}
-.toast svg {
-  color: #b3cda2;
-}
 .loading-screen {
   min-height: 100vh;
   display: flex;
@@ -2806,12 +2786,6 @@ em {
   }
   .compare-bar > span strong {
     font-size: 12px;
-  }
-  .toast {
-    right: 20px;
-    bottom: 20px;
-    padding: 12px 16px;
-    font-size: 10px;
   }
   .care-map {
     height: 290px;

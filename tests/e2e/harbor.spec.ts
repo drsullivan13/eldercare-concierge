@@ -1243,7 +1243,7 @@ test("a browser storage failure never claims a new shortlist item or note was sa
   await expect(page.locator(".page-error")).toContainText(
     "could not save this change",
   );
-  await expect(page.locator(".toast")).toHaveCount(0);
+  await expect(page.locator(".dashboard-notification")).toHaveCount(0);
   await card(page, provider)
     .getByRole("button", { name: "View details" })
     .click();

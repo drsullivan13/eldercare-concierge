@@ -1,0 +1,131 @@
+.dashboard-notifications {
+  --comparison-clearance: 0px;
+  position: fixed;
+  inset: auto max(16px, env(safe-area-inset-right))
+    calc(
+      16px + env(safe-area-inset-bottom) + var(--keyboard-inset, 0px) +
+        var(--comparison-clearance)
+    )
+    auto;
+  width: min(400px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: max(
+    44px,
+    calc(
+      var(--visual-viewport-height, 100dvh) - 32px - env(safe-area-inset-top) -
+        env(safe-area-inset-bottom) - var(--comparison-clearance)
+    )
+  );
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 0;
+  background: transparent;
+  color: #203c36;
+}
+
+.dashboard-notifications[data-comparison-active] {
+  --comparison-clearance: 112px;
+}
+
+.dashboard-notifications [data-slot="toast-list"] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 3px;
+  list-style: none;
+}
+
+.dashboard-notification {
+  flex: none;
+  padding: 14px 16px 10px;
+  border: 1px solid #b9cbb9;
+  border-radius: 12px;
+  background: #f8faf6;
+  box-shadow: 0 3px 12px #203c3626;
+  translate: var(--toast-swipe-x, 0px) var(--toast-swipe-y, 0px);
+}
+
+.dashboard-notification[data-ending-style] {
+  display: none;
+}
+
+.dashboard-notification-copy {
+  overflow-wrap: anywhere;
+}
+
+.dashboard-notification-title {
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.dashboard-notification-description {
+  margin-top: 4px;
+  color: #425a4c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dashboard-notification-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dashboard-notification-actions button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid #9cad9a;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dashboard-notification-undo {
+  background: #203c36;
+  color: #fff;
+}
+
+.dashboard-notification-dismiss {
+  background: transparent;
+  color: #203c36;
+}
+
+.dashboard-notification:focus-visible,
+.dashboard-notification-actions button:focus-visible {
+  outline: 3px solid #537b37;
+  outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+  .dashboard-notifications[data-comparison-active] {
+    --comparison-clearance: 156px;
+  }
+}
+
+[data-native-dialog] .dashboard-notifications[data-comparison-active] {
+  --comparison-clearance: 0px;
+}
+
+@media (max-width: 760px) {
+  /* Leave the last profile controls reachable while Undo is available. */
+  .modal:has(.dashboard-notification:not([data-ending-style])) {
+    padding-bottom: min(38dvh, 180px);
+    scroll-padding-bottom: min(38dvh, 180px);
+  }
+}
+
+@media (max-width: 760px) {
+  /* Navigation owns the screen while its panel is open. */
+  body:has(.sidebar-open) .dashboard-notifications,
+  .modal:has(.dialog-form) .dashboard-notifications {
+    visibility: hidden;
+  }
+}
