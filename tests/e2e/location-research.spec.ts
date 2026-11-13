@@ -166,20 +166,22 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
     await expect(
       panel.getByRole("heading", { name: "Care, amenities & everyday life" }),
     ).toBeVisible();
+    const dailySources = panel.locator(".daily-life-sources");
+    await dailySources.locator("summary").click();
     for (const fact of data.facts.filter(
       (f) =>
         ["care", "amenity", "activity", "dining"].includes(f.kind) &&
         data.sources.find((source) => source.id === f.sourceId)?.kind !==
           "regulator",
     )) {
-      const article = panel
-        .locator(".offering-fact")
-        .filter({ has: page.locator("p", { hasText: fact.text }) });
-      await expect(article).toHaveCount(1);
-      await expect(article.locator("a.research-source")).toHaveAttribute(
-        "href",
-        data.sources.find((s) => s.id === fact.sourceId)!.url,
-      );
+      await expect(
+        dailySources.getByText(fact.text, { exact: true }),
+      ).toBeVisible();
+      await expect(
+        dailySources.locator(
+          `a[href="${data.sources.find((s) => s.id === fact.sourceId)!.url}"]`,
+        ),
+      ).toBeVisible();
     }
     for (const fact of data.facts.filter((f) =>
       ["room", "cost"].includes(f.kind),
@@ -188,10 +190,18 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
         .locator(".offering-fact")
         .filter({ has: page.locator("p", { hasText: fact.text }) });
       await expect(article).toHaveCount(1);
+      await expect(article).toHaveRole("listitem");
+      await expect(article.getByRole("heading", { level: 5 })).toHaveCount(
+        fact.amount ? 1 : 0,
+      );
+      await expect(article.getByRole("link")).toHaveAttribute(
+        "href",
+        data.sources.find((source) => source.id === fact.sourceId)!.url,
+      );
       if (fact.amount) {
         if (/\$\s*\d/.test(fact.text)) {
-          await expect(article.locator(".offering-price")).toHaveCount(0);
-          await expect(article).toContainText(fact.text);
+          await expect(article.locator("p")).toHaveText(fact.text);
+          expect(await article.locator("p strong").count()).toBeGreaterThan(0);
         } else {
           await expect(article.locator(".offering-price")).toContainText(
             fact.amount.min.toLocaleString("en-US", {
@@ -209,6 +219,16 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
         );
       }
     }
+    await expect(
+      panel.getByRole("heading", { name: "Ask for the complete bill" }),
+    ).toBeVisible();
+    await expect(
+      panel.locator(".research-question").getByRole("listitem"),
+    ).toHaveText([
+      "Room or rent, assessed care and medication support.",
+      "Second-person fees, deposits and annual increases.",
+      "Refund terms and any minimum stay.",
+    ]);
     if (id === "ma-alr-allerton-house-at-harbor-park") {
       await expect(panel).toContainText("FUTURE effective December 1, 2026");
       await expect(panel).toContainText("Source effective date: Dec 1, 2026");
@@ -251,6 +271,80 @@ test("real west, north-shore, south-shore and campus offerings retain source lin
     for (const note of data.notes)
       await expect(dialog.locator(".research-notes")).toContainText(note);
     await noOverflow(page);
+    await dialog.getByRole("button", { name: "Close dialog" }).click();
+  }
+});
+
+test("Costs & perks prioritizes real prices or amenities without repeating the intro", async ({
+  page,
+  request,
+}, testInfo) => {
+  await openSearch(page);
+  for (const id of ["lifeplan-brooksby-village", "cms-225608"]) {
+    const response = await request.get("/api/research", { params: { id } });
+    const data: LocationResearchResponse = await response.json();
+    const costs = data.facts.filter((fact) => fact.kind === "cost");
+    expect(costs.length > 0).toBe(id === "lifeplan-brooksby-village");
+    const dialog = await openLocation(page, id);
+    await showPane(dialog, "Costs & perks");
+    const panel = dialog.locator(".research-panel");
+    await expect(
+      panel.locator(":scope > section").first(),
+    ).toHaveAccessibleName(
+      costs.length
+        ? "Published costs & what they include"
+        : "Care, amenities & everyday life",
+    );
+    await expect(
+      dialog.locator(".location-research > .section-title"),
+    ).toHaveCount(0);
+    await expect(panel.locator(".research-intro")).toHaveCount(0);
+    if (costs.length) {
+      await expandFacts(dialog);
+      for (const fact of costs) {
+        const row = panel.getByRole("listitem").filter({
+          has: page.locator("p", { hasText: fact.text }),
+        });
+        await expect(row).toHaveCount(1);
+        await expect(row.locator("p")).toHaveText(fact.text);
+        await expect(row.locator("p")).toHaveCSS("font-size", "16px");
+        await expect(row.getByRole("link")).toHaveCSS("font-size", "13px");
+        const values = fact.text.match(/\$\s*\d[\d,]*(?:\.\d+)?/g) ?? [];
+        for (const value of values) {
+          expect((await row.innerText()).split(value).length - 1).toBe(
+            fact.text.split(value).length - 1,
+          );
+          expect(await row.locator("p strong").allTextContents()).toEqual(
+            expect.arrayContaining([expect.stringContaining(value)]),
+          );
+        }
+        await expect(row.getByRole("link")).toHaveCount(1);
+      }
+      await expect(
+        panel.locator("p strong").filter({
+          hasText: "$113,000–$226,000",
+        }),
+      ).toHaveText("$113,000–$226,000");
+    } else {
+      await expect(
+        panel.locator(":scope > section").nth(1),
+      ).toHaveAccessibleName("Published costs & what they include");
+      await expect(
+        panel.getByText(
+          "Pricing is not published here. Request an itemized quote.",
+          { exact: true },
+        ),
+      ).toBeVisible();
+    }
+    await dialog.evaluate((node) => {
+      node.scrollTop = 0;
+      const body = node.querySelector(".detail-body");
+      if (body) body.scrollTop = 0;
+    });
+    await noOverflow(page);
+    await page.screenshot({
+      path: testInfo.outputPath(`${id}-costs-perks.png`),
+    });
     await dialog.getByRole("button", { name: "Close dialog" }).click();
   }
 });
@@ -367,12 +461,64 @@ test("actual review sources, excluded populations and selected family accounts n
   await expect(method).toContainText(
     "Reviewers are not independently authenticated",
   );
+  await expect(
+    method.getByRole("heading", { name: "The calculation" }),
+  ).toBeVisible();
+  await expect(method.locator("ol > li")).toHaveCount(4);
+  for (const [index, aggregate] of data.reviewAggregates.entries()) {
+    const reported = panel.locator(".review-platforms article").nth(index);
+    await expect(
+      reported.getByRole("heading", { name: aggregate.platform, exact: true }),
+    ).toBeVisible();
+    await expect(reported.getByRole("term")).toHaveText([
+      "Published rating",
+      "Source population",
+      "Rating scope",
+      "Rating as of",
+    ]);
+    await expect(reported.getByRole("definition").nth(2)).toHaveText(
+      aggregate.scope,
+    );
+    if (aggregate.notes.length) {
+      const context = reported.getByText("Source context", { exact: true });
+      await expect(reported.getByRole("listitem").first()).toBeHidden();
+      await context.focus();
+      await page.keyboard.press("Enter");
+      await expect(reported.getByRole("listitem")).toHaveText(aggregate.notes);
+    }
+  }
   await expect(panel.locator(".review-excluded").first()).toBeVisible();
   const catalogResponse = await request.get("/api/reviews", {
     params: { id: data.providerId },
   });
   expect(catalogResponse.status()).toBe(200);
   const catalog: IndividualReviewsResponse = await catalogResponse.json();
+  const sampling = panel.locator(".review-sampling");
+  await expect(
+    sampling.getByRole("heading", { name: "Selection & limits" }),
+  ).toBeHidden();
+  const selectionToggle = sampling.getByText(
+    "How these accounts were selected",
+    { exact: true },
+  );
+  await selectionToggle.focus();
+  await page.keyboard.press("Enter");
+  await expect(
+    sampling.getByRole("heading", { name: "Selection & limits" }),
+  ).toBeVisible();
+  for (const source of catalog.sources) {
+    const retained = sampling.locator(".review-retained-source").filter({
+      has: page.locator(`a[href="${source.url}"]`),
+    });
+    await expect(retained.getByRole("definition").last()).toHaveText(
+      `${source.retainedCount} individual records retained.`,
+    );
+    await expect(retained).toContainText(source.stopReason);
+    if (source.scopeNote)
+      await expect(retained).toContainText(source.scopeNote);
+  }
+  for (const note of catalog.notes) await expect(sampling).toContainText(note);
+  await selectionToggle.click();
   expect((await accountLinks(dialog)).sort()).toEqual(
     catalog.accounts.map(({ url }) => url).sort(),
   );
@@ -622,14 +768,27 @@ test("profile tabs expose one named pane and support arrow, Home, End and Escape
   page,
 }) => {
   await openSearch(page);
+  let researchRequests = 0;
+  page.on("request", (request) => {
+    const url = new URL(request.url());
+    if (
+      url.pathname === "/api/research" &&
+      url.searchParams.get("id") === "lifeplan-brooksby-village"
+    )
+      researchRequests++;
+  });
   const dialog = await openLocation(page, "lifeplan-brooksby-village");
+  const requestsOnOpen = researchRequests;
   const overview = dialog.getByRole("tab", { name: "Overview", exact: true });
+  await expect(dialog.locator(".place-details-heading")).toHaveCount(0);
   await overview.focus();
   for (const [key, name] of [
     ["ArrowRight", "Costs & perks"],
+    ["ArrowRight", "Reviews"],
     ["End", "Details"],
     ["Home", "Overview"],
     ["ArrowLeft", "Details"],
+    ["ArrowRight", "Overview"],
   ]) {
     await page.keyboard.press(key);
     const tab = dialog.getByRole("tab", { name, exact: true });
@@ -637,13 +796,23 @@ test("profile tabs expose one named pane and support arrow, Home, End and Escape
     await expect(tab).toHaveAttribute("aria-selected", "true");
     await expect(tab).toHaveAttribute("tabindex", "0");
     await expect(dialog.getByRole("tab", { selected: true })).toHaveCount(1);
+    await expect(dialog.locator('[role="tabpanel"]')).toHaveCount(1);
+    await expect(dialog.locator('[role="tab"][tabindex="0"]')).toHaveCount(1);
+    await expect(dialog.locator(".place-details-heading")).toHaveCount(
+      name === "Details" ? 1 : 0,
+    );
     const panel = dialog.getByRole("tabpanel", { name, exact: true });
     await expect(panel).toBeVisible();
+    await expect(panel).toHaveAttribute(
+      "aria-labelledby",
+      (await tab.getAttribute("id"))!,
+    );
     await expect(tab).toHaveAttribute(
       "aria-controls",
       (await panel.getAttribute("id"))!,
     );
   }
+  expect(researchRequests).toBe(requestsOnOpen);
   await page.keyboard.press("Escape");
   await expect(dialog).toHaveCount(0);
 });
@@ -727,6 +896,15 @@ test("families see sourced costs and an account preview, with a direct path to c
     overview.getByRole("button", { name: "Price details & source" }),
   ).toBeVisible();
   await expect(overview.locator(".overview-rate")).toContainText("$2,523");
+  await overview
+    .getByRole("button", { name: "Price details & source" })
+    .click();
+  const monthly = dialog.locator(".fact-cost").filter({
+    hasText: "Independent-living studio Monthly Service Package",
+  });
+  await expect(monthly).toBeFocused();
+  await expect(monthly).toContainText("schedule changes January 1, 2027");
+  await showPane(dialog, "Overview");
   await expect(overview.locator("blockquote")).toBeVisible();
   const caveat = overview.locator(".overview-caveat");
   await expect(caveat.locator("p")).toBeHidden();

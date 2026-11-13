@@ -38,10 +38,21 @@
 }
 
 .property-overview p,
+.property-overview li,
 .property-overview blockquote {
   margin: 6px 0;
   font-size: 16px;
   line-height: 1.6;
+}
+
+.property-overview .overview-terms {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.property-overview .overview-terms li {
+  padding-left: 4px;
+  margin-block: 8px;
 }
 
 .provider-detail .property-overview .small {
@@ -115,7 +126,7 @@
   text-decoration-thickness: 2px;
 }
 
-.property-overview .overview-more:focus-visible {
+.property-overview :is(.overview-more, summary):focus-visible {
   outline: 2px solid #24594c;
   outline-offset: 3px;
 }

@@ -1,12 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useProviderEvidence } from "@/hooks/use-provider-evidence";
-import {
-  CalendarClock,
-  Check,
-  ExternalLink,
-  Plus,
-} from "lucide-react";
+import { CalendarClock, Check, ExternalLink, Plus } from "lucide-react";
 import { evidenceDate as date } from "./evidence-date";
 import { PropertyOverview } from "./property-overview";
 import { DailyLife } from "./daily-life";
@@ -81,46 +76,61 @@ function Facts({
   empty: string;
   uid?: string;
   targetId?: string;
-  targetRef?: React.RefObject<HTMLElement | null>;
+  targetRef?: React.RefObject<HTMLLIElement | null>;
 }) {
   if (!facts.length)
     return empty ? <p className="research-empty">{empty}</p> : null;
   const items = facts.map((fact) => (
-    <article
+    <li
       key={fact.id}
       id={uid ? `${uid}-price-${fact.id}` : undefined}
       ref={
         uid && targetId === `${uid}-price-${fact.id}` ? targetRef : undefined
       }
       tabIndex={-1}
-      className={`offering-fact fact-${fact.kind}`}
+      className={`offering-fact research-fact fact-${fact.kind}`}
     >
       {fact.amount && (
-        <span className="cost-label">
+        <h5 className="cost-label">
           {COST_LABELS[fact.amount.type]} ·{" "}
           {fact.amount.period === "one-time"
             ? "One-time"
             : `Per ${fact.amount.period}`}
-        </span>
+        </h5>
+      )}
+      {fact.kind === "capacity" && fact.unit && (
+        <h5 className="fact-heading">{fact.unit}</h5>
       )}
       {fact.amount && !/\$\s*\d/.test(fact.text) && (
         <strong className="offering-price">{price(fact)}</strong>
       )}
-      <p>{fact.text}</p>
-      {(fact.asOf || fact.amount?.asOf) && (
-        <span className="small muted">
-          Source effective date: {date(fact.asOf || fact.amount?.asOf)}
-        </span>
-      )}
-      <SourceLink
-        source={sources.find((source) => source.id === fact.sourceId)}
-      />
-    </article>
+      <p>
+        {fact.text
+          .split(
+            /(\$\s*\d[\d,]*(?:\.\d+)?(?:\s*(?:[-–—]|to)\s*\$?\s*\d[\d,]*(?:\.\d+)?)?)/g,
+          )
+          .map((part, index) =>
+            index % 2 ? <strong key={index}>{part}</strong> : part,
+          )}
+      </p>
+      <footer className="fact-provenance">
+        {(fact.asOf || fact.amount?.asOf) && (
+          <span className="small muted">
+            Source effective date: {date(fact.asOf || fact.amount?.asOf)}
+          </span>
+        )}
+        <SourceLink
+          source={sources.find((source) => source.id === fact.sourceId)}
+        />
+      </footer>
+    </li>
   ));
   const limit = facts.length > 3 ? 2 : facts.length;
   return (
     <>
-      <div className="offering-facts">{items.slice(0, limit)}</div>
+      <ul className="offering-facts" role="list">
+        {items.slice(0, limit)}
+      </ul>
       {items.length > limit && (
         <details
           className="offering-more"
@@ -135,7 +145,9 @@ function Facts({
             Show {items.length - limit} more{" "}
             {facts[0].kind === "cost" ? "price entries" : "details"}
           </summary>
-          <div className="offering-facts">{items.slice(limit)}</div>
+          <ul className="offering-facts" role="list">
+            {items.slice(limit)}
+          </ul>
         </details>
       )}
     </>
@@ -165,7 +177,7 @@ export function LocationResearch({
 }) {
   const { id: providerId, name: providerName } = provider;
   const { pane, targetId } = navigation;
-  const targetRef = useRef<HTMLElement>(null);
+  const targetRef = useRef<HTMLLIElement>(null);
   const [taskAdded, setTaskAdded] = useState(false);
   const { data, error, loading, retry } =
     useProviderEvidence<LocationResearchResponse>(providerId, source);
@@ -180,14 +192,12 @@ export function LocationResearch({
     (s) => s.id === data.availability.sourceId,
   );
   const reviews =
-    data?.reviews
-      .toSorted(
-        (a, b) =>
-          Number(b.aspects.some(({ sentiment }) => sentiment !== "positive")) -
-            Number(
-              a.aspects.some(({ sentiment }) => sentiment !== "positive"),
-            ) || (b.date ?? "").localeCompare(a.date ?? ""),
-      ) ?? [];
+    data?.reviews.toSorted(
+      (a, b) =>
+        Number(b.aspects.some(({ sentiment }) => sentiment !== "positive")) -
+          Number(a.aspects.some(({ sentiment }) => sentiment !== "positive")) ||
+        (b.date ?? "").localeCompare(a.date ?? ""),
+    ) ?? [];
   const careFacts = facts(["care", "amenity", "activity", "dining"]);
   const licensingFacts = careFacts.filter(
     (fact) =>
@@ -210,6 +220,13 @@ export function LocationResearch({
       fact.sourceId === data.availability.sourceId &&
       fact.numericValue != null,
   );
+  const costFacts = facts(["cost"]);
+  const amenities = data && (
+    <section aria-labelledby={`${uid}-life`}>
+      <h4 id={`${uid}-life`}>Care, amenities & everyday life</h4>
+      <DailyLife data={data} provider={provider} />
+    </section>
+  );
 
   return (
     <section
@@ -217,13 +234,14 @@ export function LocationResearch({
       aria-label={pane === "overview" ? "Overview" : undefined}
       aria-labelledby={pane === "overview" ? undefined : `${uid}-title`}
     >
-      {pane !== "overview" && pane !== "reviews" && (
+      {pane === "costs" && (
+        <h3 id={`${uid}-title`} className="research-title-hidden">
+          Daily life, staffing & costs
+        </h3>
+      )}
+      {pane === "details" && (
         <div className="section-title">
-          <h3 id={`${uid}-title`}>
-            {pane === "costs"
-              ? "Daily life, staffing & costs"
-              : "Availability & services"}
-          </h3>
+          <h3 id={`${uid}-title`}>Availability & services</h3>
           {data?.checkedAt && (
             <span>Research checked {date(data.checkedAt)}</span>
           )}
@@ -290,31 +308,32 @@ export function LocationResearch({
       )}
       {data && (
         <>
-          <div className={`research-panel${pane === "costs" ? " daily-life-costs" : ""}`}>
+          <div
+            className={`research-panel${pane === "costs" ? " costs-perks" : ""}`}
+          >
             {pane === "costs" && (
               <>
-                <section aria-labelledby={`${uid}-life`}>
-                  <h4 id={`${uid}-life`}>Care, amenities & everyday life</h4>
-                  <DailyLife data={data} provider={provider} />
-                </section>
+                {costFacts.length === 0 && amenities}
                 <section aria-labelledby={`${uid}-costs`}>
                   <h4 id={`${uid}-costs`}>
                     Published costs & what they include
                   </h4>
-                  <p className="research-intro">
-                    Published prices are not a personal quote. Check the dates
-                    and what is included.
-                  </p>
                   <Facts
-                    facts={facts(["cost"])}
+                    facts={costFacts}
                     sources={data.sources}
                     uid={uid}
                     targetId={targetId}
                     targetRef={targetRef}
-                    empty="Pricing has not been established for this location. Request an itemized quote for the room and care needed."
+                    empty="Pricing is not published here. Request an itemized quote."
                   />
-                  {facts(["cost"]).length > 0 &&
-                    !facts(["cost"]).some(
+                  {costFacts.length > 0 && (
+                    <p className="research-price-note">
+                      Published prices are not a personal quote. Check the dates
+                      and what is included.
+                    </p>
+                  )}
+                  {costFacts.length > 0 &&
+                    !costFacts.some(
                       (fact) =>
                         fact.amount &&
                         fact.amount.min > 0 &&
@@ -326,14 +345,26 @@ export function LocationResearch({
                       </p>
                     )}
                   <div className="research-question">
-                    <strong>Ask for the complete bill</strong>
-                    <p>
-                      {provider.locationKind === "office"
-                        ? "Hourly or visit rates, minimum shifts, overnight or live-in charges, nursing fees, cancellation terms and what insurance covers."
-                        : "Room or rent, assessed care, medication support, second-person fees, deposits, annual increases, refund terms and any minimum stay."}
-                    </p>
+                    <h5>Ask for the complete bill</h5>
+                    <ul className="research-specifics">
+                      {(provider.locationKind === "office"
+                        ? [
+                            "Hourly or visit rates and minimum shifts.",
+                            "Overnight or live-in charges and nursing fees.",
+                            "Cancellation terms and what insurance covers.",
+                          ]
+                        : [
+                            "Room or rent, assessed care and medication support.",
+                            "Second-person fees, deposits and annual increases.",
+                            "Refund terms and any minimum stay.",
+                          ]
+                      ).map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
                   </div>
                 </section>
+                {costFacts.length > 0 && amenities}
                 <section aria-labelledby={`${uid}-rooms`}>
                   <h4 id={`${uid}-rooms`}>
                     {provider.locationKind === "office"
@@ -404,12 +435,23 @@ export function LocationResearch({
                   </details>
                 )}
                 <div className="research-question">
-                  <strong>Confirm the opening that fits</strong>
-                  <p>
-                    {provider.locationKind === "office"
-                      ? "Service at your address, care needs, staff availability, start date, minimum shifts and assessment requirements."
-                      : "Care level, room type, move-in window, assessment requirements, waitlist position, refundable deposit and how long a room can be held."}
-                  </p>
+                  <h5>Confirm the opening that fits</h5>
+                  <ul className="research-specifics">
+                    {(provider.locationKind === "office"
+                      ? [
+                          "Service at your address and care needs.",
+                          "Staff availability, start date and minimum shifts.",
+                          "Assessment requirements.",
+                        ]
+                      : [
+                          "Care level, room type and move-in window.",
+                          "Assessment requirements and waitlist position.",
+                          "Refundable deposit and how long a room can be held.",
+                        ]
+                    ).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                   <button
                     className="button button-outline"
                     disabled={taskAdded}

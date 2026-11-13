@@ -28,6 +28,19 @@
   border-left: 3px solid #8c613b;
 }
 
+.provider-detail .daily-life .staffing-evidence h6 {
+  margin: 16px 0 4px;
+  font: 600 16px/1.6 var(--sans);
+}
+
+.provider-detail .daily-life .staffing-evidence details {
+  margin-top: 12px;
+}
+
+.provider-detail .daily-life .staffing-evidence .staffing-weekends {
+  margin-bottom: 16px;
+}
+
 @media (max-width: 420px) {
   .provider-detail .daily-life .staffing-evidence .staffing-roles > div {
     grid-template-columns: minmax(0, 1fr) minmax(64px, 35%);

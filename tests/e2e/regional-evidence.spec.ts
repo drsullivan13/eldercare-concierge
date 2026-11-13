@@ -90,7 +90,7 @@ test("real NJ details show unknown evidence without retrying a legitimate resear
     evidence.getByRole("button", { name: "Retry location research" }),
   ).toHaveCount(0);
   await expect(evidence).not.toContainText("Research checked");
-  await expect(evidence).toContainText("Pricing has not been established");
+  await expect(evidence).toContainText("Pricing is not published here");
   await costs.press("End");
   await expect(
     tabs.getByRole("tab", { name: "Details", exact: true }),

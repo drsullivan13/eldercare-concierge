@@ -63,24 +63,10 @@ export function PropertyOverview({
   );
   const office = provider.locationKind !== "facility";
   const costLabel = cost?.amount
-    ? cost.text
-        .split(/\$\s*\d/)[0]
-        .replace(/^(?:The |Published )/i, "")
-        .replace(
-          /\s*(?::|(?:is |are )?(?:published |advertised )?(?:starting |starts |from )?at|advertises|lists)\s*$/i,
-          "",
-        )
-        .replace(/\s+Monthly Service Package$/i, "")
-        .trim() || costLabels[cost.amount.type]
+    ? costLabels[cost.amount.type]
     : office
       ? "Service rates"
       : "Rooms & pricing";
-  const priceTiming = cost?.text.match(
-    /(?:effective|valid (?:until|through)|schedule changes)\s+[^.;]+/i,
-  )?.[0];
-  const extraFee = cost?.text.match(
-    /plus\s+(?:an?\s+)?(?:one-time\s+)?\$[\d,.]+[^.;]*/i,
-  )?.[0];
   const quotes = reviews.filter((review) => review.excerpt);
   const family = quotes.filter(
     (review) =>
@@ -91,10 +77,7 @@ export function PropertyOverview({
     family[0] ??
     quotes[0];
   const quoteSource = account && sourceFor(account.sourceId);
-  const excerpt =
-    account && account.excerpt.length > 160
-      ? account.excerpt.slice(0, 160).replace(/\s+\S*$/, "") + "…"
-      : account?.excerpt;
+  const excerpt = account?.excerpt;
   const concern = reviews.find((review) =>
     review.aspects.some(({ sentiment }) => sentiment !== "positive"),
   );
@@ -141,33 +124,18 @@ export function PropertyOverview({
                 </span>
               </p>
             )}
-            {!cost.amount && <p>{cost.text}</p>}
-            {entrance && cost !== entrance && (
-              <p className="small">
-                Separate entrance fee
-                {entrance.amount
-                  ? ` ${money(entrance.amount.min)}${entrance.amount.max !== null && entrance.amount.max !== entrance.amount.min ? "–" + money(entrance.amount.max) : ""}`
-                  : ""}
-                .
-              </p>
-            )}
-            {extraFee && (
-              <small>
-                {extraFee.charAt(0).toUpperCase() + extraFee.slice(1)}.
-              </small>
-            )}
+            <ul className="overview-terms">
+              <li>{cost.text}</li>
+              {entrance && cost !== entrance && <li>{entrance.text}</li>}
+            </ul>
             {(!cost.amount ||
               cost.amount.period === "one-time" ||
               cost.amount.min === 0) && (
               <p className="small">An ongoing rate has not been verified.</p>
             )}
-            {(priceTiming || cost.asOf || cost.amount?.asOf) && (
+            {(cost.asOf || cost.amount?.asOf) && (
               <small>
-                {priceTiming
-                  ? priceTiming.charAt(0).toUpperCase() +
-                    priceTiming.slice(1) +
-                    "."
-                  : `Effective ${evidenceDate(cost.asOf || cost.amount?.asOf)}.`}
+                Effective {evidenceDate(cost.asOf || cost.amount?.asOf)}.
               </small>
             )}
           </>
@@ -227,15 +195,17 @@ export function PropertyOverview({
         >
           {reviewLink}
         </button>
-        {catalog && catalog.withText > 0 && catalog.total > catalog.withText && (
-          <button
-            className="overview-more"
-            onClick={() => onNavigate({ pane: "reviews" })}
-          >
-            Browse {catalog.total - catalog.withText} more review link
-            {catalog.total - catalog.withText === 1 ? "" : "s"}
-          </button>
-        )}
+        {catalog &&
+          catalog.withText > 0 &&
+          catalog.total > catalog.withText && (
+            <button
+              className="overview-more"
+              onClick={() => onNavigate({ pane: "reviews" })}
+            >
+              Browse {catalog.total - catalog.withText} more review link
+              {catalog.total - catalog.withText === 1 ? "" : "s"}
+            </button>
+          )}
         {account && (
           <details className="overview-caveat">
             <summary>About this review</summary>

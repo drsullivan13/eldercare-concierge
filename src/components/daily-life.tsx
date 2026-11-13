@@ -1,6 +1,7 @@
 import type { LocationResearchResponse } from "@/lib/location-research-types";
 import type { Provider } from "@/lib/providers";
 import { dailyLife } from "@/lib/daily-life-display";
+import { amenityPoints } from "@/lib/amenity-points";
 import { evidenceDate } from "./evidence-date";
 import { Staffing } from "./staffing";
 import "./daily-life.css";
@@ -17,7 +18,30 @@ export function DailyLife({
   provider: Provider;
   compact?: boolean;
 }) {
-  const { office, groups, gaps, publishedRatio } = dailyLife(data, provider);
+  const {
+    office,
+    groups: everydayGroups,
+    gaps,
+    publishedRatio,
+  } = dailyLife(data, provider);
+  const rooms: (typeof everydayGroups)[number]["facts"] = data.facts.flatMap(
+    (fact) => {
+      const source = data.sources.find((entry) => entry.id === fact.sourceId);
+      return compact &&
+        fact.kind === "room" &&
+        source &&
+        source.kind !== "regulator"
+        ? [{ fact, source }]
+        : [];
+    },
+  );
+  const groups = [
+    ...everydayGroups.filter((group) => group.id === "dining"),
+    ...(rooms.length
+      ? [{ id: "room", title: "Accommodations", facts: rooms }]
+      : []),
+    ...everydayGroups.filter((group) => group.id !== "dining"),
+  ];
   const cms = provider.category === "nursing-home" ? provider.cms : undefined;
   const staffing =
     cms &&
@@ -31,6 +55,14 @@ export function DailyLife({
       (role) => staffing.metrics[role].status === "reported",
     ),
   );
+  const retained = groups.flatMap((group) => group.facts);
+  const sourceEntries = [
+    ...new Set(retained.map(({ source }) => source.url)),
+  ].map((url, index) => ({
+    url,
+    number: index + 1,
+    entries: retained.filter(({ source }) => source.url === url),
+  }));
   return (
     <div className={`daily-life${compact ? " daily-life-compact" : ""}`}>
       {office && (
@@ -43,50 +75,47 @@ export function DailyLife({
         </p>
       )}
       {groups.map((group) => {
-        const visible = compact ? group.facts.slice(0, 1) : group.facts;
-        const renderFacts = (entries: typeof group.facts) =>
-          entries.map(({ fact, source }) => (
-            <article
-              key={fact.id}
-              className={`offering-fact daily-life-fact fact-${fact.kind}`}
-            >
-              <p>{fact.text}</p>
-              {fact.numeric && (
-                <p className="daily-life-date">
-                  Source scope · {fact.numeric.population}
-                  {fact.numeric.period
-                    ? ` · ${fact.numeric.period}`
-                    : " · period not published"}
-                  {fact.numeric.unit === "hours-per-day" &&
-                    " · coverage hours, not a staff-to-resident ratio"}
-                </p>
-              )}
-              <a
-                className="research-source"
-                href={source.url}
-                target="_blank"
-                rel="noreferrer"
+        const points = group.facts.flatMap(({ fact, source }) =>
+          amenityPoints(fact.text).map((text, index, bullets) => ({
+            fact,
+            source,
+            text,
+            index,
+            last: index === bullets.length - 1,
+          })),
+        );
+        const preview = compact && points.length > 4 ? 3 : points.length;
+        const renderFacts = (entries: typeof points) => (
+          <ul className="daily-life-bullets">
+            {entries.map(({ fact, source, text, index, last }) => (
+              <li
+                key={`${fact.id}-${index}`}
+                className={`offering-fact daily-life-fact fact-${fact.kind}`}
               >
-                {source.kind === "provider"
-                  ? "Provider"
-                  : source.kind === "public-discussion"
-                    ? "Public discussion"
-                    : "Third-party listing"}{" "}
-                · {source.publisher} · checked {evidenceDate(source.checkedAt)}
-                {source.access === "search-result"
-                  ? " · search result only"
-                  : ""}
-              </a>
-              {fact.asOf && (
-                <p className="daily-life-date">
-                  {fact.evidence
-                    ? "Source publication date"
-                    : "Source effective date"}{" "}
-                  · {evidenceDate(fact.asOf)}
-                </p>
-              )}
-            </article>
-          ));
+                <span className="daily-life-bullet-text">{text}</span>
+                <sup className="daily-life-attribution">
+                  {" "}
+                  [
+                  {
+                    sourceEntries.find((entry) => entry.url === source.url)!
+                      .number
+                  }
+                  {source.access === "search-result" ? ", search only" : ""}]
+                </sup>
+                {fact.numeric && last && (
+                  <p className="daily-life-date">
+                    Source scope · {fact.numeric.population}
+                    {fact.numeric.period
+                      ? ` · ${fact.numeric.period}`
+                      : " · period not published"}
+                    {fact.numeric.unit === "hours-per-day" &&
+                      " · coverage hours, not a staff-to-resident ratio"}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        );
         return (
           <section
             className="daily-life-group"
@@ -94,22 +123,61 @@ export function DailyLife({
             aria-label={group.title}
           >
             <h5>{group.title}</h5>
-            {renderFacts(visible)}
-            {compact && group.facts.length > 1 && (
-              <details>
+            {renderFacts(points.slice(0, preview))}
+            {preview < points.length && (
+              <details className="daily-life-more">
                 <summary>
-                  Show {group.facts.length - 1} more{" "}
-                  {group.id === "staffing"
-                    ? "care team facts"
-                    : "published facts"}
+                  {points.length - preview} more{" "}
+                  {group.id === "staffing" ? "care team details" : "details"}
                 </summary>
-                {renderFacts(group.facts.slice(1))}
+                {renderFacts(points.slice(preview))}
               </details>
             )}
           </section>
         );
       })}
       <Staffing staffing={staffing} />
+      {sourceEntries.length > 0 && (
+        <details className="daily-life-sources">
+          <summary>Sources &amp; full wording</summary>
+          <p>
+            Reported offerings, not independently verified. Confirm current
+            availability, included services and extra charges with the location.
+            Search-only evidence has not been checked on the full page.
+          </p>
+          {sourceEntries.map(({ url, number, entries }) => (
+            <section key={url} aria-label={`Source ${number}`}>
+              <a
+                className="research-source"
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                [{number}]{" "}
+                {entries[0].source.kind === "provider"
+                  ? "Provider"
+                  : entries[0].source.kind === "public-discussion"
+                    ? "Public discussion"
+                    : "Third-party listing"}{" "}
+                · {entries[0].source.publisher} · {entries[0].source.title}
+              </a>
+              {entries.map(({ fact, source }) => (
+                <div key={fact.id} className="daily-life-source-fact">
+                  <p>{fact.text}</p>
+                  <p className="daily-life-date">
+                    Checked {evidenceDate(source.checkedAt)}
+                    {source.access === "search-result"
+                      ? " · search result only"
+                      : ""}
+                    {fact.asOf &&
+                      ` · ${fact.evidence ? "Source publication date" : "Source effective date"} · ${evidenceDate(fact.asOf)}`}
+                  </p>
+                </div>
+              ))}
+            </section>
+          ))}
+        </details>
+      )}
       <div className="daily-life-gaps">
         {!groups.length && (
           <p>

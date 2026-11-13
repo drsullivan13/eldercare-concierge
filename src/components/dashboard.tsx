@@ -1,5 +1,13 @@
 "use client";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -28,7 +36,7 @@ import { createClient } from "@/lib/supabase/client";
 import type { Provider, SearchProvider } from "@/lib/providers";
 import { Brand } from "./brand";
 import { ProviderCard } from "./provider-card";
-import { ProviderDetail } from "./provider-detail";
+import { Modal } from "./modal";
 import type { ProfilePane } from "./profile-pane";
 import { Overview } from "./dashboard/overview";
 import { CareSearchView } from "./dashboard/care-search";
@@ -41,6 +49,11 @@ import { carePlanText } from "./dashboard/export-plan";
 import "./dashboard/dashboard.css";
 
 type View = "overview" | "search" | "shortlist" | "plan" | "standards";
+const ProviderDetail = lazy(() =>
+  import("./provider-detail").then((module) => ({
+    default: module.ProviderDetail,
+  })),
+);
 const NAV = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "search", label: "Find care", icon: Search },
@@ -113,6 +126,13 @@ function WorkspaceDashboard({
     },
     [],
   );
+  const closeProvider = useCallback(() => {
+    setSelected(null);
+    const trigger = providerReturnFocus.current;
+    requestAnimationFrame(() => {
+      if (trigger?.isConnected) trigger.focus({ preventScroll: true });
+    });
+  }, []);
   const savedSet = useMemo(
     () => new Set(workspace.savedProviderIds),
     [workspace.savedProviderIds],
@@ -457,30 +477,35 @@ function WorkspaceDashboard({
         </div>
       )}
       {selectedProvider && (
-        <ProviderDetail
-          key={selectedProvider.id}
-          provider={selectedProvider}
-          initialPane={initialPane}
-          saved={savedSet.has(selectedProvider.id)}
-          note={workspace.notes[selectedProvider.id] || ""}
-          saveStatus={saveStatus}
-          saveError={error}
-          onSave={() => saveProvider(selectedProvider)}
-          onNote={(note) =>
-            update((w) => ({
-              ...w,
-              notes: { ...w.notes, [selectedProvider.id]: note },
-            }))
+        <Suspense
+          fallback={
+            <Modal title={selectedProvider.name} close={closeProvider} wide>
+              <p role="status">
+                <Loader2 className="spin" aria-hidden="true" /> Loading provider
+                details…
+              </p>
+            </Modal>
           }
-          onTask={(title) => addTask(title, selectedProvider.id)}
-          close={() => {
-            setSelected(null);
-            requestAnimationFrame(() => {
-              if (providerReturnFocus.current?.isConnected)
-                providerReturnFocus.current.focus({ preventScroll: true });
-            });
-          }}
-        />
+        >
+          <ProviderDetail
+            key={selectedProvider.id}
+            provider={selectedProvider}
+            initialPane={initialPane}
+            saved={savedSet.has(selectedProvider.id)}
+            note={workspace.notes[selectedProvider.id] || ""}
+            saveStatus={saveStatus}
+            saveError={error}
+            onSave={() => saveProvider(selectedProvider)}
+            onNote={(note) =>
+              update((w) => ({
+                ...w,
+                notes: { ...w.notes, [selectedProvider.id]: note },
+              }))
+            }
+            onTask={(title) => addTask(title, selectedProvider.id)}
+            close={closeProvider}
+          />
+        </Suspense>
       )}
       {profileOpen && (
         <ProfileDialog

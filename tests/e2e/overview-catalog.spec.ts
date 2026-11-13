@@ -1,6 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 import type { IndividualReviewsResponse } from "../../src/lib/individual-reviews";
 import type { SearchResponse } from "../../src/lib/providers";
+import type { LocationResearchResponse } from "../../src/lib/location-research-types";
 
 async function openOverview(page: Page, zip: string, name: string) {
   await page.goto("/dashboard?demo=1");
@@ -100,6 +101,12 @@ test("Brooksby keeps its attributed excerpt, concerns and direct account navigat
   );
   await expect(overview).toContainText("Self-described family · Caring.com");
   await expect(overview).toContainText("Selected reviews include concerns.");
+  await expect(overview.locator(".overview-terms li").first()).toHaveText(
+    "Independent-living studio Monthly Service Package: $2,523 per month. This is separate from the entrance fee; pricing is for reference and the schedule changes January 1, 2027.",
+  );
+  await expect(overview.locator(".overview-terms li").nth(1)).toHaveText(
+    "Independent-living studio entrance fee: $113,000–$226,000; provider describes 90% as refundable under its Residence and Care Agreement. Separate monthly fees apply.",
+  );
   await overview.locator(".overview-caveat summary").click();
   await expect(overview.locator(".overview-caveat")).toContainText(
     "Sep 29, 2025",
@@ -126,6 +133,46 @@ test("Brooksby keeps its attributed excerpt, concerns and direct account navigat
     .getByRole("button", { name: "Read concerns", exact: true })
     .click();
   await expect(account).toBeFocused();
+});
+
+test("Overview keeps a long supplied excerpt and decimal-price conditions intact", async ({
+  page,
+}) => {
+  const excerpt =
+    "This is a deliberately long review fixture, not a published review. The final sentence explains that this account concerns only a short respite stay, not a permanent residence or a different care unit.";
+  const price =
+    "Independent-living studio: $2,523.50 per month, plus a one-time $750.25 charge. This rate does not cover assisted care. The schedule changes January 1, 2027.";
+  await page.route("**/api/research?**", async (route) => {
+    const response = await route.fetch();
+    const data: LocationResearchResponse = await response.json();
+    data.reviews = [{ ...data.reviews[0], excerpt, relationship: "family" }];
+    data.facts = [
+      ...data.facts.filter((fact) => fact.kind !== "cost"),
+      {
+        id: "decimal-price-fixture",
+        kind: "cost",
+        sourceId: data.sources[0].id,
+        text: price,
+        amount: {
+          min: 2523.5,
+          max: null,
+          currency: "USD",
+          period: "month",
+          type: "base-rent",
+          asOf: null,
+        },
+      },
+    ];
+    await route.fulfill({ response, json: data });
+  });
+  const dialog = await openOverview(page, "02459", "Brooksby Village");
+  const overview = dialog.getByRole("region", { name: "Property overview" });
+  await expect(overview.locator("blockquote")).toHaveText(`“${excerpt}”`);
+  await expect(overview.locator(".overview-rate")).toHaveText(
+    "$2,523.5per month",
+  );
+  await expect(overview.locator(".overview-terms li")).toHaveText(price);
+  await expect(overview.locator(".overview-terms li")).toBeVisible();
 });
 
 for (const scenario of [

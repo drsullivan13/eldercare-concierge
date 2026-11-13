@@ -44,14 +44,28 @@ async function readableFacts(dialog: Locator) {
         ?.querySelectorAll(".section-title h3, .section-title > span") ?? [];
     return {
       sizes: [
-        ...scope.querySelectorAll("p, a, h4, h5, dt, dd, summary, small"),
+        ...scope.querySelectorAll(
+          "p, li, a, h4, h5, h6, dt, dd, summary, small",
+        ),
         ...headings,
-      ].map((node) => parseFloat(getComputedStyle(node).fontSize)),
+      ].map((node) => ({
+        text: node.textContent?.slice(0, 100),
+        size: parseFloat(getComputedStyle(node).fontSize),
+        sourceDetail: Boolean(
+          node.closest(
+            ".daily-life-sources, .daily-life-date, .daily-life-more > summary",
+          ),
+        ),
+      })),
       width: element.clientWidth,
       scroll: element.scrollWidth,
     };
   });
-  expect(result.sizes.every((size) => size >= 16)).toBe(true);
+  expect(
+    result.sizes.filter(
+      ({ size, sourceDetail }) => size < (sourceDetail ? 12 : 16),
+    ),
+  ).toEqual([]);
   expect(result.scroll).toBeLessThanOrEqual(result.width + 1);
 }
 
@@ -72,7 +86,7 @@ async function staffingDetails(
     ["Weekend total", "weekendTotal"],
     ["Weekend RNs (included in total)", "weekendRn"],
   ] as const) {
-    const row = section.locator("dl > div").filter({
+    const row = section.locator(":scope > dl > div").filter({
       has: dialog.page().getByText(label, { exact: true }),
     });
     const metric = staffing.metrics[key];
@@ -85,6 +99,12 @@ async function staffingDetails(
           : "Not published",
     );
   }
+  await expect(
+    section.getByRole("heading", { name: "Weekend care", exact: true }),
+  ).toBeVisible();
+  await expect(section).toContainText(
+    "These are daily averages, not a simultaneous staff-to-resident ratio, a headcount or a promise of coverage on any shift.",
+  );
   const details = section.locator("details");
   await expect(details).not.toHaveAttribute("open", "");
   await details.locator("summary").click();
@@ -103,6 +123,10 @@ async function staffingDetails(
   }
   await expect(details).toContainText("not a staff headcount");
   await expect(details).toContainText("not the staffing measurement period");
+  const sourceUrls = await details
+    .getByRole("link")
+    .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
+  expect(new Set(sourceUrls).size).toBe(sourceUrls.length);
   for (const metric of Object.values(staffing.metrics)) {
     if (metric.footnote) await expect(details).toContainText(metric.footnote);
   }
@@ -115,6 +139,16 @@ async function staffingDetails(
 
 for (const entry of [
   {
+    id: "north-jersey-doh-nj60a004",
+    zip: "07960",
+    expected: "Three chef-prepared meals daily",
+  },
+  {
+    id: "ma-alr-fenno-house",
+    zip: "02459",
+    expected: "Two onsite restaurant-style meals daily",
+  },
+  {
     id: "ma-alr-evans-park-at-newton-corner",
     zip: "02459",
     expected: "Chef-prepared seasonal menus",
@@ -122,7 +156,7 @@ for (const entry of [
   {
     id: "north-jersey-doh-nj13a012",
     zip: "07960",
-    expected: "Housekeeping; Laundry Service",
+    expected: "Housekeeping",
   },
   { id: "cms-315009", zip: "07960", expected: "4.24" },
   { id: "cms-225281", zip: "02459", expected: "Suppressed by CMS" },
@@ -161,6 +195,81 @@ for (const entry of [
       entry.expected,
     );
     await readableFacts(dialog);
+    if (entry.id === "north-jersey-doh-nj60a004") {
+      await page.screenshot({
+        path: test.info().outputPath("victoria-mews-overview.png"),
+      });
+      const meals = dialog.getByRole("region", { name: "Meals & dining" });
+      await expect(meals.locator(".daily-life-bullet-text")).toHaveText([
+        "Three chef-prepared meals daily",
+        "24-hour bistro with complimentary snacks and drinks",
+        "Room Service",
+      ]);
+      await expect(meals.locator("details")).toHaveCount(0);
+      await expect(meals.locator("h5 + ul")).toHaveCount(1);
+      const rooms = dialog.getByRole("region", { name: "Accommodations" });
+      await expect(rooms.locator(".daily-life-bullet-text")).toHaveText([
+        "Six private suite layouts, including studios and one- and two-bedroom suites",
+        "Typical suite features include a kitchenette, private bathroom and emergency call system",
+      ]);
+      await expect(rooms.locator("details")).toHaveCount(0);
+      const sources = dialog.locator(".daily-life-sources > summary");
+      await sources.focus();
+      await sources.press("Enter");
+      for (const fact of data.facts.filter((fact) => fact.kind === "room")) {
+        const original = dialog
+          .locator(".daily-life-source-fact")
+          .filter({ has: page.getByText(fact.text, { exact: true }) });
+        await expect(original).toHaveCount(1);
+        await expect(original.locator("..").getByRole("link")).toHaveAttribute(
+          "href",
+          data.sources.find((source) => source.id === fact.sourceId)!.url,
+        );
+      }
+      await sources.press("Enter");
+      const comforts = dialog.getByRole("region", {
+        name: "Everyday comforts & transport",
+      });
+      await expect(comforts.locator(":scope > ul > li")).toHaveCount(3);
+      const more = comforts.locator("summary");
+      await more.focus();
+      await more.press("Enter");
+      await expect(
+        comforts
+          .locator(".daily-life-bullet-text")
+          .filter({ hasText: "Pet Friendly" }),
+      ).toBeVisible();
+      await more.press("Enter");
+      expect(
+        (await dialog.locator(".daily-life-group > ul").allTextContents()).join(
+          " ",
+        ),
+      ).not.toMatch(
+        /Operator lists|MyLivingChoice lists|Confirm these details/,
+      );
+    }
+    if (entry.id === "ma-alr-fenno-house") {
+      await expect(
+        dialog.locator(".daily-life-attribution").first(),
+      ).toContainText("search only");
+      await expect(
+        dialog.locator(".daily-life-attribution").first(),
+      ).toMatchAriaSnapshot('- superscript: "[1, search only]"');
+    }
+    if (entry.id === "ma-alr-evans-park-at-newton-corner") {
+      const comforts = dialog.getByRole("region", {
+        name: "Everyday comforts & transport",
+      });
+      await expect(
+        comforts.locator(
+          ":scope > .daily-life-bullets .daily-life-bullet-text",
+        ),
+      ).toHaveText([
+        "Weekly housekeeping, laundry and linen service",
+        "Scheduled transportation",
+        "Fitness center, demonstration kitchen, theater and bistro/pub",
+      ]);
+    }
     if (data.nursingStaffing) {
       await staffingDetails(dialog, data.nursingStaffing);
       await expect(dialog.locator(".daily-life-gaps")).toContainText(
@@ -184,17 +293,21 @@ for (const entry of [
       await expect(dialog.locator(".daily-life")).toContainText(
         "Apr 1, 2026 to Jun 30, 2026",
       );
+      await dialog.locator(".staffing-evidence summary").click();
       await expect(
         dialog.locator(".daily-life").getByRole("link", { name: /CMS · CCN/ }),
       ).toHaveAttribute(
         "href",
         "https://www.medicare.gov/care-compare/details/nursing-home/315009",
       );
+      await dialog.locator(".staffing-evidence summary").click();
     }
     if (entry.id === "cms-225281") {
-      await expect(dialog.locator(".daily-life-staffing dd")).toHaveCount(6);
+      await expect(dialog.locator(".daily-life-staffing > dl dd")).toHaveCount(
+        6,
+      );
       for (const value of await dialog
-        .locator(".daily-life-staffing dd")
+        .locator(".daily-life-staffing > dl dd")
         .all()) {
         await expect(value).toHaveText("Suppressed by CMS");
       }
@@ -222,6 +335,25 @@ for (const entry of [
     await dialog.screenshot({
       path: test.info().outputPath("daily-life-costs.png"),
     });
+    const sourceDisclosure = life.locator(".daily-life-sources");
+    if (await sourceDisclosure.count()) {
+      await expect(sourceDisclosure).not.toHaveAttribute("open", "");
+      await sourceDisclosure.locator("summary").click();
+      const sourceSizes = await sourceDisclosure
+        .locator("p, a, summary")
+        .evaluateAll((nodes) =>
+          nodes.map((node) => parseFloat(getComputedStyle(node).fontSize)),
+        );
+      expect(sourceSizes.every((size) => size >= 12 && size <= 13)).toBe(true);
+      if (entry.id === "ma-alr-fenno-house") {
+        await expect(sourceDisclosure).toContainText("search result only");
+        await expect(sourceDisclosure).toContainText("Provider · Fenno House");
+      }
+      const links = await sourceDisclosure
+        .getByRole("link")
+        .evaluateAll((nodes) => nodes.map((node) => node.getAttribute("href")));
+      expect(new Set(links).size).toBe(links.length);
+    }
     for (const fact of data.facts.filter(
       (fact) =>
         ["care", "amenity", "activity", "dining"].includes(fact.kind) &&
@@ -229,20 +361,20 @@ for (const entry of [
           "regulator",
     )) {
       const article = life
-        .locator(".offering-fact")
+        .locator(".daily-life-source-fact")
         .filter({ has: page.locator("p", { hasText: fact.text }) });
       await expect(article).toHaveCount(1);
-      await expect(article.getByRole("link")).toHaveAttribute(
+      await expect(article.locator("..").getByRole("link")).toHaveAttribute(
         "href",
         data.sources.find((source) => source.id === fact.sourceId)!.url,
       );
     }
     for (const fact of data.dailyLife?.facts ?? []) {
-      const article = life.locator(".offering-fact").filter({
+      const article = life.locator(".daily-life-source-fact").filter({
         has: page.getByText(fact.text, { exact: true }),
       });
       await expect(article).toHaveCount(1);
-      await expect(article.getByRole("link")).toHaveAttribute(
+      await expect(article.locator("..").getByRole("link")).toHaveAttribute(
         "href",
         data.dailyLife!.sources.find((source) => source.id === fact.sourceId)!
           .url,
@@ -368,7 +500,9 @@ test("explicit provider ratio retains its scope without inventing shift coverage
   for (const tab of ["Overview", "Costs & perks"]) {
     await dialog.getByRole("tab", { name: tab, exact: true }).click();
     const life = dialog.locator(".daily-life");
-    await expect(life.getByText(text, { exact: true })).toBeVisible();
+    await expect(
+      life.locator(".daily-life-bullet-text").filter({ hasText: text }),
+    ).toBeVisible();
     await expect(life).toContainText(
       "Source scope · Day-shift aides in the nursing unit · October 2026",
     );

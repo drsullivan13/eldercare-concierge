@@ -64,13 +64,19 @@ export function ExperienceExplanation({
       <p className="score-publication-reason">{score.reason}</p>
       <details className="evidence-disclosure experience-method">
         <summary>How to read this score</summary>
-        <p>
-          Convert each eligible source average to ten points by dividing its
-          rating by its scale and multiplying by 10. Give each source a raw
-          weight equal to the square root of its review count, capped at 100
-          reviews. Divide each raw weight by the total raw weight. Add the
-          weighted ten-point averages and round to one decimal.
-        </p>
+        <h5>The calculation</h5>
+        <ol className="research-specifics">
+          <li>
+            Convert each eligible source average to ten points by dividing its
+            rating by its scale and multiplying by 10.
+          </li>
+          <li>
+            Give each source a raw weight equal to the square root of its review
+            count, capped at 100 reviews.
+          </li>
+          <li>Divide each raw weight by the total raw weight.</li>
+          <li>Add the weighted ten-point averages and round to one decimal.</li>
+        </ol>
         {score.includedSources.length > 0 && (
           <>
             <ul className="score-source-weights">
@@ -102,26 +108,31 @@ export function ExperienceExplanation({
             </p>
           </>
         )}
-        <p>
-          Publish only with 30 reported ratings from one source family, or at
-          least 10 across two families with five each. Shared or syndicated
-          sources contribute once. Checks must be within 180 days and aggregate
-          snapshots within 365 days.
-        </p>
-        <p>
-          Withhold when two source families with at least ten ratings each
-          differ by two or more points out of ten, or when eligible recent
-          accounts trigger the disagreement rules. Two independent families with
-          opposing accounts can withhold a score. So can at least three contrary
-          accounts that form a majority of the recent eligible accounts in a
-          reviewed visible sample. A recent account must be within 730 days.
-        </p>
-        <p>
-          Moderate coverage requires at least 30 ratings and two source families
-          with ten each, without substantial disagreement. Otherwise a published
-          score has limited coverage. Missing or excluded evidence is not a
-          negative rating.
-        </p>
+        <h5>Publication requirements</h5>
+        <ul className="research-specifics">
+          <li>
+            Publish only with 30 reported ratings from one source family, or at
+            least 10 across two families with five each. Shared or syndicated
+            sources contribute once. Checks must be within 180 days and
+            aggregate snapshots within 365 days.
+          </li>
+          <li>
+            Withhold when two source families with at least ten ratings each
+            differ by two or more points out of ten, or when eligible recent
+            accounts trigger the disagreement rules. Two independent families
+            with opposing accounts can withhold a score. So can at least three
+            contrary accounts that form a majority of the recent eligible
+            accounts in a reviewed visible sample. A recent account must be
+            within 730 days.
+          </li>
+          <li>
+            Moderate coverage requires at least 30 ratings and two source
+            families with ten each, without substantial disagreement. Otherwise
+            a published score has limited coverage. Missing or excluded evidence
+            is not a negative rating.
+          </li>
+        </ul>
+        <h5>What the score cannot establish</h5>
         <p>
           Reviewers are not independently authenticated. Tour reviews may be
           included, and counts can overlap across sites. Selected accounts and
@@ -168,19 +179,33 @@ export function ExperienceExplanation({
           );
           return (
             <article key={`${aggregate.sourceId}-${index}`}>
-              <strong>{aggregate.platform}</strong>
-              <span>
-                {aggregate.rating === null
-                  ? "Rating not established"
-                  : `${aggregate.rating} / ${aggregate.scale}`}
-                {" · "}
-                {aggregate.count === null
-                  ? "Count unknown"
-                  : `${aggregate.count} ratings reported by this source`}
-              </span>
-              <p>
-                {aggregate.scope} · Rating as of {evidenceDate(aggregate.asOf)}
-              </p>
+              <h5>{aggregate.platform}</h5>
+              <dl className="research-values">
+                <div>
+                  <dt>Published rating</dt>
+                  <dd>
+                    {aggregate.rating === null
+                      ? "Rating not established"
+                      : `${aggregate.rating} / ${aggregate.scale}`}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Source population</dt>
+                  <dd>
+                    {aggregate.count === null
+                      ? "Count unknown"
+                      : `${aggregate.count} ratings reported by this source`}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Rating scope</dt>
+                  <dd>{aggregate.scope}</dd>
+                </div>
+                <div>
+                  <dt>Rating as of</dt>
+                  <dd>{evidenceDate(aggregate.asOf)}</dd>
+                </div>
+              </dl>
               {included && (
                 <p className="review-included">
                   Eligible source · {(included.weight * 100).toFixed(2)}% of the
@@ -188,6 +213,23 @@ export function ExperienceExplanation({
                   {score.value === null ? ", not a published score" : ""}.
                 </p>
               )}
+              {aggregate.notes.length > 0 && (
+                <details className="evidence-disclosure">
+                  <summary>Source context</summary>
+                  <ul className="research-specifics">
+                    {aggregate.notes.map((note, noteIndex) => (
+                      <li key={noteIndex}>{note}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+              {score.excludedSources
+                .filter((item) => item.sourceId === aggregate.sourceId)
+                .map((item, excludedIndex) => (
+                  <p className="review-excluded" key={excludedIndex}>
+                    Excluded from index: {item.reason}
+                  </p>
+                ))}
               {source && (
                 <a
                   className="research-source"
@@ -203,21 +245,6 @@ export function ExperienceExplanation({
                   <ExternalLink size={14} />
                 </a>
               )}
-              {aggregate.notes.length > 0 && (
-                <details className="evidence-disclosure">
-                  <summary>Source context</summary>
-                  {aggregate.notes.map((note, noteIndex) => (
-                    <p key={noteIndex}>{note}</p>
-                  ))}
-                </details>
-              )}
-              {score.excludedSources
-                .filter((item) => item.sourceId === aggregate.sourceId)
-                .map((item, excludedIndex) => (
-                  <p className="review-excluded" key={excludedIndex}>
-                    Excluded from index: {item.reason}
-                  </p>
-                ))}
             </article>
           );
         })}

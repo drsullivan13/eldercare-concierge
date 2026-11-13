@@ -7,20 +7,31 @@
 
 .provider-detail .location-research > .section-title h3 {
   font-family: inherit;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 500;
   color: var(--ink);
 }
 
 .provider-detail .location-research > .section-title > span {
   max-width: none;
   text-align: left;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .provider-detail .offering-facts {
   display: block;
   margin-block: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.provider-detail .research-title-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .provider-detail .offering-fact {
@@ -42,15 +53,165 @@
   color: #24594c;
 }
 
+.provider-detail .catalog-services ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+  padding-left: 22px;
+  list-style: disc;
+}
+
 .provider-detail .catalog-services li {
   padding: 0;
   border-radius: 0;
   background: transparent;
   color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-.provider-detail .catalog-services li:not(:last-child)::after {
-  content: " ·";
+.provider-detail .location-research .fact-heading,
+.provider-detail .location-research h5.cost-label,
+.provider-detail .location-research .research-question h5,
+.provider-detail .review-score-explanation h5,
+.provider-detail .review-sampling h5 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.provider-detail .location-research .research-fact > p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.provider-detail .location-research .fact-provenance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.provider-detail .location-research .fact-provenance .small {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.provider-detail .location-research .fact-provenance .research-source,
+.provider-detail .location-research .catalog-services .research-source,
+.provider-detail .location-research .availability-observation .research-source,
+.provider-detail .location-research > .research-caution .research-source,
+.provider-detail .review-score-explanation .research-source,
+.provider-detail .review-sampling .research-source {
+  min-height: 44px;
+  margin-top: 0;
+  color: #4d645a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.provider-detail .location-research .research-price-note {
+  color: #4d645a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.provider-detail .costs-perks h4 {
+  font-size: 20px;
+}
+
+.provider-detail .costs-perks .research-empty {
+  font-size: 16px;
+}
+
+.provider-detail .location-research .research-source:hover {
+  color: #24594c;
+  text-decoration-thickness: 2px;
+}
+
+.provider-detail .location-research .research-specifics {
+  margin: 8px 0 16px;
+  padding-left: 22px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.provider-detail .location-research .research-specifics li + li {
+  margin-top: 8px;
+}
+
+.provider-detail .location-research .research-question,
+.provider-detail .location-research .availability-observation {
+  padding: 16px 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.provider-detail .location-research .availability-observation p,
+.provider-detail .location-research .research-intro,
+.provider-detail .location-research .research-notes,
+.provider-detail .location-research .research-caution,
+.provider-detail .research-panel > section > .evidence-disclosure,
+.provider-detail .review-score-explanation .evidence-disclosure,
+.provider-detail .public-reviews .evidence-disclosure,
+.provider-detail .review-sampling > p,
+.provider-detail .experience-method > p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.provider-detail .location-research .research-notes > summary,
+.provider-detail .research-panel > section > .evidence-disclosure > summary,
+.provider-detail .review-score-explanation .evidence-disclosure > summary,
+.provider-detail .public-reviews .evidence-disclosure > summary {
+  min-height: 44px;
+  padding-block: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.provider-detail .location-research .research-notes li + li {
+  margin-top: 10px;
+}
+
+.provider-detail .review-score-explanation .review-platforms {
+  display: block;
+}
+
+.provider-detail .review-score-explanation .review-platforms article,
+.provider-detail .review-sampling .review-retained-source {
+  padding: 20px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.provider-detail .location-research .research-values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.provider-detail .research-values dt {
+  color: #526153;
+  font-size: 14px;
+}
+
+.provider-detail .research-values dd {
+  margin: 2px 0 0;
+}
+
+.provider-detail .experience-method h5,
+.provider-detail .review-sampling h5 {
+  margin-top: 20px;
 }
 
 .provider-detail .research-panel > section + section {
@@ -249,6 +410,10 @@
 }
 
 @media (max-width: 600px) {
+  .provider-detail .location-research .research-values,
+  .provider-detail .catalog-services ul {
+    grid-template-columns: 1fr;
+  }
   .provider-detail .review-meta {
     flex-direction: column;
     align-items: flex-start;

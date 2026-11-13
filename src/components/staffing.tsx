@@ -62,6 +62,9 @@ export function Staffing({
             <dd>{value(metrics[key])}</dd>
           </div>
         ))}
+      </dl>
+      <h6>Weekend care</h6>
+      <dl className="staffing-roles staffing-weekends">
         {weekends.map(([key, label]) => (
           <div key={key}>
             <dt>{label}</dt>
@@ -77,25 +80,31 @@ export function Staffing({
       {staffing.staffingRatingNote && (
         <p role="note">{staffing.staffingRatingNote}</p>
       )}
-      <a
-        className="research-source"
-        href={staffing.careCompareUrl}
-        target="_blank"
-        rel="noreferrer"
-      >
-        CMS · CCN {staffing.ccn} · checked{" "}
-        {evidenceDate(staffing.retrievedAt.slice(0, 10))}
-      </a>
       <details>
         <summary>Turnover, census &amp; source notes</summary>
-        <p>
-          Turnover · {evidenceDate(turnoverPeriod.startDate)} to{" "}
-          {evidenceDate(turnoverPeriod.endDate)} · {turnoverPeriod.label}. Total
-          nursing staff · {value(metrics.totalTurnover)}
-          {metrics.totalTurnover.status === "reported" ? "%" : ""}. RNs ·{" "}
-          {value(metrics.rnTurnover)}
-          {metrics.rnTurnover.status === "reported" ? "%" : ""}.
+        <h6>Staff turnover</h6>
+        <p className="daily-life-date">
+          {evidenceDate(turnoverPeriod.startDate)} to{" "}
+          {evidenceDate(turnoverPeriod.endDate)} · {turnoverPeriod.label}. Total{" "}
+          nursing staff and RNs are reported separately.
         </p>
+        <dl className="staffing-roles">
+          <div>
+            <dt>Total nursing staff</dt>
+            <dd>
+              {value(metrics.totalTurnover)}
+              {metrics.totalTurnover.status === "reported" ? "%" : ""}
+            </dd>
+          </div>
+          <div>
+            <dt>Registered nurses (RNs)</dt>
+            <dd>
+              {value(metrics.rnTurnover)}
+              {metrics.rnTurnover.status === "reported" ? "%" : ""}
+            </dd>
+          </div>
+        </dl>
+        <h6>Resident census</h6>
         <p>
           Average residents per day · {value(metrics.census)}. CMS reports this
           census from MDS daily counts. It is not a staff headcount.
@@ -107,38 +116,34 @@ export function Staffing({
           CMS processing date · {evidenceDate(staffing.processingDate)}. This is
           not the staffing measurement period.
         </p>
+        <h6>CMS sources</h6>
         <a
           className="research-source"
-          href={turnoverPeriod.sourceUrl}
+          href={staffing.careCompareUrl}
           target="_blank"
           rel="noreferrer"
         >
-          CMS turnover measurement period
+          CMS · CCN {staffing.ccn} · checked{" "}
+          {evidenceDate(staffing.retrievedAt.slice(0, 10))}
         </a>
-        <a
-          className="research-source"
-          href={staffingPeriod.sourceUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          CMS measurement periods
-        </a>
-        <a
-          className="research-source"
-          href={staffing.dictionaryUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          CMS definitions &amp; footnotes
-        </a>
-        <a
-          className="research-source"
-          href={staffing.sourceUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          CMS Provider Information dataset
-        </a>
+        {[
+          ...new Map([
+            [staffingPeriod.sourceUrl, "CMS measurement periods"],
+            [turnoverPeriod.sourceUrl, "CMS turnover measurement period"],
+            [staffing.dictionaryUrl, "CMS definitions & footnotes"],
+            [staffing.sourceUrl, "CMS Provider Information dataset"],
+          ]).entries(),
+        ].map(([url, label]) => (
+          <a
+            key={url}
+            className="research-source"
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {label}
+          </a>
+        ))}
       </details>
     </section>
   );

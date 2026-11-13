@@ -258,9 +258,13 @@ export function IndividualReviewList({
                       <strong>Research summary</strong> · {review.summary}
                     </p>
                   )}
-                  {review.notes.map((note, index) => (
-                    <p key={index}>{note}</p>
-                  ))}
+                  {review.notes.length > 0 && (
+                    <ul className="research-specifics">
+                      {review.notes.map((note, index) => (
+                        <li key={index}>{note}</li>
+                      ))}
+                    </ul>
+                  )}
                   {review.searchResultOnly && (
                     <p>Search result only. The full page was not reviewed.</p>
                   )}
@@ -305,30 +309,59 @@ export function IndividualReviewList({
         {research.checkedAt && (
           <p>Research checked {evidenceDate(research.checkedAt)}.</p>
         )}
-        <p>
-          These are the individual records Harbor has retained or linked, not
-          every rating included in a platform average. An unknown relationship
-          does not establish firsthand experience. No author identity is
-          inferred.
-        </p>
-        <p>
-          {counts.total} individual accounts available, {counts.withText} with
-          retained text or a research summary. Source counts are platform
-          totals, not reviews reproduced here. They may overlap and some sources
-          are excluded from the score.
-        </p>
-        <p>
-          Selected accounts, not a representative survey. Relationships are
-          self-described, not independently verified. Concerns appear first,
-          then the most recent dates. Unknown dates stay unknown.
-        </p>
-        {sourceReports.map((item) => (
-          <p key={`${item.publisher}-${item.count}`}>
-            {item.publisher} reports {item.count} ratings.
-          </p>
-        ))}
+        <h5>Selection & limits</h5>
+        <ul className="research-specifics">
+          <li>
+            These are the individual records Harbor has retained or linked, not
+            every rating included in a platform average. An unknown relationship
+            does not establish firsthand experience. No author identity is
+            inferred.
+          </li>
+          <li>
+            {counts.total} individual accounts available, {counts.withText} with
+            retained text or a research summary. Source counts are platform
+            totals, not reviews reproduced here. They may overlap and some
+            sources are excluded from the score.
+          </li>
+          <li>
+            Selected accounts, not a representative survey. Relationships are
+            self-described, not independently verified. Concerns appear first,
+            then the most recent dates. Unknown dates stay unknown.
+          </li>
+        </ul>
+        {sourceReports.length > 0 && (
+          <>
+            <h5>Platform rating totals</h5>
+            <ul className="research-specifics">
+              {sourceReports.map((item) => (
+                <li key={`${item.publisher}-${item.count}`}>
+                  {item.publisher} reports {item.count} ratings.
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
         {data?.sources.map((item) => (
-          <div key={item.id}>
+          <section className="review-retained-source" key={item.id}>
+            <h5>{item.publisher}</h5>
+            <dl className="research-values">
+              <div>
+                <dt>Source population</dt>
+                <dd>
+                  {item.reportedCount === null
+                    ? "Rating count not established"
+                    : `${item.reportedCount} ratings reported`}
+                </dd>
+              </div>
+              <div>
+                <dt>Retained accounts</dt>
+                <dd>{item.retainedCount} individual records retained.</dd>
+              </div>
+            </dl>
+            <ul className="research-specifics">
+              <li>{item.stopReason}</li>
+              {item.scopeNote && <li>{item.scopeNote}</li>}
+            </ul>
             <a
               className="research-source"
               href={item.url}
@@ -338,19 +371,18 @@ export function IndividualReviewList({
               Individual account source on {item.publisher}{" "}
               <ExternalLink size={14} />
             </a>
-            <p>
-              {item.reportedCount === null
-                ? "Rating count not established"
-                : `${item.reportedCount} ratings reported`}
-              . {item.retainedCount} individual records retained.{" "}
-              {item.stopReason}
-            </p>
-            {item.scopeNote && <p>{item.scopeNote}</p>}
-          </div>
+          </section>
         ))}
-        {data?.notes.map((note, index) => (
-          <p key={index}>{note}</p>
-        ))}
+        {Boolean(data?.notes.length) && (
+          <>
+            <h5>Research notes</h5>
+            <ul className="research-specifics">
+              {data!.notes.map((note, index) => (
+                <li key={index}>{note}</li>
+              ))}
+            </ul>
+          </>
+        )}
         <FamilyExperienceEvidence evidence={research.familyExperience} />
       </details>
       <FacebookResearch
