@@ -178,13 +178,13 @@ export function PropertyOverview({ provider }: { provider: Provider }) {
           </p>
         )}
         {provider.serviceArea && (
-          <>
-            <p>Provider-reported service area. {provider.serviceArea}</p>
-            <p>
-              Office proximity does not confirm service at your address or staff
-              availability.
-            </p>
-          </>
+          <p>Provider-reported service area. {provider.serviceArea}</p>
+        )}
+        {(office || provider.serviceArea) && (
+          <p>
+            Office proximity does not confirm service at your address or staff
+            availability.
+          </p>
         )}
         {provider.sources.slice(0, 1).map((source) => (
           <a

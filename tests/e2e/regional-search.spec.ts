@@ -155,9 +155,25 @@ test("restored NJ ZIP drives the first search without seeding MA records", async
     /Boston|Massachusetts/,
   );
   await card.getByRole("button", { name: "View details" }).click();
+  const dialog = page.getByRole("dialog", { name: njOffice.name, exact: true });
+  const overview = dialog
+    .getByRole("tabpanel", { name: "Overview", exact: true })
+    .getByRole("region", { name: "Property overview", exact: true });
   await expect(
-    page.getByRole("dialog").locator(".inline-notice").first(),
-  ).toContainText("Confirm service coverage at your address");
+    overview.getByText("Test address, Hoboken, NJ 07030", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    overview.getByText(
+      "An office that arranges care, not a residential community.",
+      { exact: true },
+    ),
+  ).toBeVisible();
+  await expect(
+    overview.getByText(
+      "Office proximity does not confirm service at your address or staff availability.",
+      { exact: true },
+    ),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Close dialog" }).click();
   await page.getByRole("radio", { name: "Map view", exact: true }).click();
   const markers = page.locator(".leaflet-overlay-pane path");
