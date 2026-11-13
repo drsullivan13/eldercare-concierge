@@ -140,6 +140,52 @@ test("home care keeps published staff roles, meal help and service schedules in 
   assert.ok(!result.gaps.includes("meal preparation"));
 });
 
+test("published agency social-worker services do not fill the companionship gap", () => {
+  const id = "cms-317058";
+  const { provider } = retainedProfile(id);
+  const data = getLocationResearch(id);
+  const result = dailyLife(data, provider);
+  const socialWorker = result.groups
+    .flatMap((group) => group.facts)
+    .find(({ fact }) => fact.text.includes("Medical Social Worker"));
+  assert.ok(socialWorker);
+  assert.equal(
+    socialWorker.source.publisher,
+    "Home Care & Hospice Association of NJ",
+  );
+  assert.deepEqual(result.gaps, [
+    "meal preparation",
+    "companionship & outings",
+    "transport arrangements",
+  ]);
+});
+
+test("social-work and staff evidence stay distinct from explicit activities and companionship", () => {
+  const { data, provider } = retainedProfile("cms-317058");
+  const source = data.sources.find((entry) => entry.kind === "provider")!;
+  for (const [kind, text, hasGap] of [
+    ["care", "Medical Social Worker services are available.", true],
+    ["care", "Medical social services are available.", true],
+    ["care", "Social work staff support care planning.", true],
+    ["care", "Social staff help coordinate visits.", true],
+    ["care", "Social activities are offered.", false],
+    ["care", "Companionship is offered.", false],
+    ["care", "Social work staff also offer companionship.", false],
+    ["activity", "Weekly social gathering.", false],
+  ] satisfies [OfferingFact["kind"], string, boolean][]) {
+    const result = dailyLife(
+      {
+        facts: [{ id: "social-evidence", kind, text, sourceId: source.id }],
+        sources: data.sources,
+      },
+      provider,
+    );
+    assert.equal(result.gaps.includes("companionship & outings"), hasGap, text);
+    assert.equal(result.groups[0].facts[0].fact.text, text);
+    assert.equal(result.groups[0].facts[0].source, source);
+  }
+});
+
 test("licensing-only nursing records produce one evidence gap, not invented amenities or ratios", () => {
   for (const id of ["cms-315009", "cms-225002"]) {
     const { data, provider } = retainedProfile(id);

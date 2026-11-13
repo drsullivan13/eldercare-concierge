@@ -145,7 +145,7 @@ export function dailyLife(
       !/\b(meal|meals|dining|diet|diets|menu|menus|chef|food)\b/i.test(text) &&
       (office ? "meal preparation" : "meals & dining"),
     !groups.has("activity") &&
-      !/\b(activit(?:y|ies)|outings|social|companionship|classes|exercise)\b/i.test(
+      !/\b(activit(?:y|ies)|outings|companionship|classes|exercise)\b/i.test(
         text,
       ) &&
       (office ? "companionship & outings" : "activities & outings"),
