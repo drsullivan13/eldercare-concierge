@@ -66,7 +66,7 @@ const completed: OutreachResultResponse = {
 async function openWorkspace(
   page: Page,
   outreach: OutreachRecord[] = [],
-  path = "/dashboard",
+  path = "/dashboard?demo=1",
 ) {
   await page.clock.setFixedTime(new Date("2026-11-13T13:00:00.000Z"));
   const workspace: Workspace = {

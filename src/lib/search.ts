@@ -1,6 +1,7 @@
 import { distanceMiles } from "./distance";
 import {
   getMarket,
+  getProviderEntry,
   getProviderMarket,
   marketIdentity,
   markets,
@@ -193,14 +194,9 @@ export function getProvidersByIds(
   registry: MarketRegistry = markets,
 ): Provider[] {
   return [...new Set(ids)].flatMap((id) => {
-    const market = getProviderMarket(id, registry);
-    if (!market || (marketId !== undefined && market.id !== marketId))
+    const entry = getProviderEntry(id, registry);
+    if (!entry || (marketId !== undefined && entry.market.id !== marketId))
       return [];
-    const provider = market.providers.find(
-      (record) => record.id === id && record.state === market.state,
-    );
-    return provider
-      ? [{ ...provider, research: getResearchSummary(provider.id, registry) }]
-      : [];
+    return [{ ...entry.provider, research: getResearchSummary(id, registry) }];
   });
 }

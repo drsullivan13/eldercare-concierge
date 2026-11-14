@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useProviderEvidence } from "@/hooks/use-provider-evidence";
 import {
   isLocationDescriptionResponse,
   type LocationDescriptionResponse,
@@ -18,61 +18,37 @@ const descriptionScopes: Record<LocationDescriptionResponse["scope"], string> =
       "Service-area description, not a verified visitable location.",
   };
 
-type DescriptionState =
-  | { status: "loading" }
-  | { status: "missing" }
-  | { status: "failed" }
-  | { status: "loaded"; description: LocationDescriptionResponse };
+const descriptionSource = {
+  path: "/api/location-description",
+  idParameter: "id",
+  unavailable: "Description request failed.",
+  notFound: null,
+  mismatched: "Invalid description response.",
+  fallback: "The location description could not be loaded.",
+  validate: isLocationDescriptionResponse,
+};
 
 function LocationDescriptionSummary({ providerId }: { providerId: string }) {
-  const [state, setState] = useState<DescriptionState>({ status: "loading" });
-  const [attempt, setAttempt] = useState(0);
+  const {
+    data: description,
+    error,
+    retry,
+  } = useProviderEvidence<LocationDescriptionResponse>(
+    providerId,
+    descriptionSource,
+  );
 
-  useEffect(() => {
-    const controller = new AbortController();
-    async function load() {
-      try {
-        const response = await fetch(
-          `/api/location-description?${new URLSearchParams({ id: providerId })}`,
-          { signal: controller.signal },
-        );
-        if (response.status === 404) {
-          if (!controller.signal.aborted) setState({ status: "missing" });
-          return;
-        }
-        if (!response.ok) throw new Error("Description request failed.");
-        const description: unknown = await response.json();
-        if (!isLocationDescriptionResponse(description, providerId))
-          throw new Error("Invalid description response.");
-        if (!controller.signal.aborted)
-          setState({ status: "loaded", description });
-      } catch {
-        if (!controller.signal.aborted) setState({ status: "failed" });
-      }
-    }
-    void load();
-    return () => controller.abort();
-  }, [providerId, attempt]);
-
-  if (state.status === "loading" || state.status === "missing") return null;
-  if (state.status === "failed")
+  if (error)
     return (
       <section aria-label="Location description">
         <p>The location description could not be loaded.</p>
-        <button
-          type="button"
-          className="overview-more"
-          onClick={() => {
-            setState({ status: "loading" });
-            setAttempt((value) => value + 1);
-          }}
-        >
+        <button type="button" className="overview-more" onClick={retry}>
           Retry location description
         </button>
       </section>
     );
 
-  const { description } = state;
+  if (!description) return null;
   const official = description.basis === "official-listing";
   return (
     <section className="overview-description" aria-label="Location description">

@@ -337,18 +337,40 @@ test("missing descriptions stay hidden while unknown providers return a real 404
   ).toHaveCount(0);
 });
 
-for (const failure of ["network", "wrong-ID"] as const) {
+for (const failure of [
+  "network",
+  "wrong-ID",
+  "HTTP",
+  "invalid-JSON",
+  "unsafe-source",
+] as const) {
   test(`${failure} failure never displays a description and recovers with retry`, async ({
     page,
   }) => {
     let requests = 0;
+    let recover = false;
+    let release!: () => void;
+    const held = new Promise<void>((resolve) => {
+      release = resolve;
+    });
     const data = description(campus, "campus");
-    await page.route("**/api/location-description?**", (route) => {
+    await page.route("**/api/location-description?**", async (route) => {
       requests += 1;
-      if (requests === 1)
-        return failure === "network"
-          ? route.abort("failed")
-          : route.fulfill({ json: { ...data, providerId: unitId } });
+      if (!recover) {
+        if (failure === "network") return route.abort("failed");
+        if (failure === "wrong-ID")
+          return route.fulfill({ json: { ...data, providerId: unitId } });
+        if (failure === "HTTP") return route.fulfill({ status: 503 });
+        if (failure === "invalid-JSON")
+          return route.fulfill({ contentType: "application/json", body: "{" });
+        return route.fulfill({
+          json: {
+            ...data,
+            sources: [{ ...data.sources[0], url: "javascript:alert(1)" }],
+          },
+        });
+      }
+      await held;
       return route.fulfill({ json: data });
     });
     await search(page);
@@ -357,16 +379,26 @@ for (const failure of ["network", "wrong-ID"] as const) {
       name: "Retry location description",
     });
     await expect(retry).toBeVisible();
+    await expect(dialog).toContainText(
+      "The location description could not be loaded.",
+    );
     await expect(dialog.getByText(data.summary, { exact: true })).toHaveCount(
       0,
     );
     await expect(
       dialog.getByRole("heading", { name: "Location & access", exact: true }),
     ).toBeVisible();
+    const failedRequests = requests;
+    recover = true;
     await retry.click();
+    await expect(retry).toHaveCount(0);
+    await expect(
+      dialog.getByRole("region", { name: "Location description" }),
+    ).toHaveCount(0);
+    release();
     await expect(dialog.getByText(data.summary, { exact: true })).toBeVisible();
     await expect(retry).toHaveCount(0);
-    expect(requests).toBe(2);
+    expect(requests).toBe(failedRequests + 1);
   });
 }
 

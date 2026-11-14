@@ -342,6 +342,115 @@ test("failed rehearsals recover only from strictly newer server snapshots", () =
   );
 });
 
+test("eligible merges keep the saved brief and apply a changed server snapshot", () => {
+  const base = createOutreachRecord(provider, ["Costs"], "Ask about visits");
+  const saved = {
+    ...base,
+    state: "opened" as const,
+    updatedAt: "2026-11-13T10:00:00.000Z",
+    findings: ["Opened detail"],
+    nextSteps: ["Connect"],
+  };
+  const sameState = mergeOutreach(
+    [saved],
+    [
+      {
+        ...saved,
+        updatedAt: "2026-11-13T10:00:01.000Z",
+        findings: ["Newer detail"],
+        nextSteps: ["Call back"],
+      },
+    ],
+  )[0];
+  assert.equal(sameState.state, "opened");
+  assert.equal(sameState.updatedAt, "2026-11-13T10:00:01.000Z");
+  assert.deepEqual(sameState.findings, ["Newer detail"]);
+  assert.deepEqual(sameState.nextSteps, ["Call back"]);
+  assert.equal(sameState.brief, saved.brief);
+  assert.equal(sameState.createdAt, saved.createdAt);
+
+  const advanced = mergeOutreach(
+    [saved],
+    [
+      {
+        ...saved,
+        state: "connected",
+        updatedAt: "2026-11-13T09:00:00.000Z",
+        findings: ["Connected detail"],
+        nextSteps: ["Confirm"],
+      },
+    ],
+  )[0];
+  assert.equal(advanced.state, "connected");
+  assert.equal(advanced.updatedAt, "2026-11-13T09:00:00.000Z");
+  assert.deepEqual(advanced.findings, ["Connected detail"]);
+  assert.equal(advanced.brief, saved.brief);
+
+  const failed = {
+    ...saved,
+    state: "failed" as const,
+    findings: ["Interrupted"],
+    nextSteps: ["Try again"],
+  };
+  const recovered = mergeOutreach(
+    [failed],
+    [
+      {
+        ...failed,
+        state: "completed" as const,
+        updatedAt: "2026-11-13T10:00:00.001Z",
+        findings: ["Recovered"],
+        nextSteps: ["Verify"],
+      },
+    ],
+  )[0];
+  assert.equal(recovered.state, "completed");
+  assert.equal(recovered.updatedAt, "2026-11-13T10:00:00.001Z");
+  assert.deepEqual(recovered.findings, ["Recovered"]);
+  assert.equal(recovered.brief, failed.brief);
+
+  const changedBrief = {
+    ...saved,
+    updatedAt: "2026-11-13T10:00:02.000Z",
+    brief: { ...saved.brief, question: "Changed question" },
+    findings: ["Must not apply"],
+  };
+  assert.deepEqual(mergeOutreach([saved], [changedBrief]), [saved]);
+  assert.equal(mergeOutreach([saved], [changedBrief])[0].brief, saved.brief);
+});
+
+test("unchanged polled results skip brief serialization and return the saved record", () => {
+  const saved = {
+    ...createOutreachRecord(provider, ["Costs"], "Ask about visits"),
+    state: "opened" as const,
+    updatedAt: "2026-11-13T10:00:00.000Z",
+    findings: ["Opened detail"],
+    nextSteps: ["Connect"],
+  };
+  const duplicate = {
+    ...saved,
+    brief: { ...saved.brief },
+    findings: [...saved.findings],
+    nextSteps: [...saved.nextSteps],
+  };
+  const original = JSON.stringify;
+  let calls = 0;
+  JSON.stringify = ((value: unknown, replacer?: unknown, space?: unknown) => {
+    calls += 1;
+    return original(
+      value,
+      replacer as Parameters<typeof original>[1],
+      space as Parameters<typeof original>[2],
+    );
+  }) as typeof JSON.stringify;
+  try {
+    assert.equal(mergeOutreach([saved], [duplicate])[0], saved);
+    assert.equal(calls, 0);
+  } finally {
+    JSON.stringify = original;
+  }
+});
+
 test("completed records never change state, timestamps, brief or payload", () => {
   const base = createOutreachRecord(provider, [], "Original question");
   const completed = {

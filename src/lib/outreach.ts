@@ -178,12 +178,7 @@ export function mergeOutreach(
       records.set(record.brief.requestId, record);
       continue;
     }
-    // A request's credentials and brief are immutable after the click that saved it.
-    if (
-      previous.state === "completed" ||
-      JSON.stringify(previous.brief) !== JSON.stringify(record.brief)
-    )
-      continue;
+    if (previous.state === "completed") continue;
     const newer = Date.parse(record.updatedAt) > Date.parse(previous.updatedAt);
     // Only requested uses the browser's clock. Advanced server states can be earlier.
     const advance =
@@ -192,7 +187,11 @@ export function mergeOutreach(
       previous.state === "failed" &&
       newer &&
       ["opened", "connected", "completed"].includes(record.state);
-    if (advance || recover || (record.state === previous.state && newer))
+    // A request's credentials and brief are immutable after the click that saved it.
+    if (
+      (advance || recover || (record.state === previous.state && newer)) &&
+      JSON.stringify(previous.brief) === JSON.stringify(record.brief)
+    )
       records.set(record.brief.requestId, {
         ...previous,
         state: record.state,

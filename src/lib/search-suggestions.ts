@@ -1,10 +1,29 @@
 import { distanceMiles } from "./distance";
-import { markets, type MarketRegistry } from "./markets";
+import { markets, type MarketRegistry, type MarketSnapshot } from "./markets";
 import { resolveSearchScope, SearchInputError } from "./search-scope";
 import type {
   SearchSuggestion,
   SearchSuggestionsResponse,
 } from "./search-suggestion-types";
+
+function indexMarket(market: MarketSnapshot) {
+  return {
+    towns: Object.values(market.zips).map((location) => ({
+      location,
+      key: location.city.toLocaleLowerCase("en-US"),
+    })),
+    providers: market.providers.map((provider) => ({
+      provider,
+      name: provider.name.toLocaleLowerCase("en-US"),
+      matchText: `${provider.name} ${provider.city}`.toLocaleLowerCase("en-US"),
+    })),
+  };
+}
+
+const publishedIndexes = new Map<
+  MarketSnapshot,
+  ReturnType<typeof indexMarket>
+>();
 
 export function searchSuggestions(
   input: URLSearchParams,
@@ -27,10 +46,17 @@ export function searchSuggestions(
     registry,
   );
   if (query.length < 2) return { suggestions: [] };
-  type Match = SearchSuggestion & { distance: number };
+  let index = registry === markets ? publishedIndexes.get(market) : undefined;
+  if (!index) {
+    index = indexMarket(market);
+    if (registry === markets) publishedIndexes.set(market, index);
+  }
+  type Match = SearchSuggestion & {
+    distance: number;
+    normalizedValue: string;
+  };
   const towns = new Map<string, Match>();
-  for (const location of Object.values(market.zips)) {
-    const key = location.city.toLocaleLowerCase("en-US");
+  for (const { location, key } of index.towns) {
     if (!key.includes(query)) continue;
     const distance = distanceMiles(point, location);
     if (distance > radius || (towns.get(key)?.distance ?? Infinity) <= distance)
@@ -41,15 +67,14 @@ export function searchSuggestions(
       value: location.city,
       detail: `Town · ${market.state}`,
       distance,
+      normalizedValue: key,
     });
   }
   const providers: Match[] = [];
-  for (const provider of market.providers) {
+  for (const { provider, name, matchText } of index.providers) {
     if (
       provider.state !== market.state ||
-      !`${provider.name} ${provider.city}`
-        .toLocaleLowerCase("en-US")
-        .includes(query) ||
+      !matchText.includes(query) ||
       (category !== "all" &&
         provider.category !== category &&
         !provider.searchCategories?.includes(category)) ||
@@ -70,11 +95,12 @@ export function searchSuggestions(
       value: provider.name,
       detail: `${provider.city}, ${provider.state} · Provider`,
       distance,
+      normalizedValue: name,
     });
   }
   const compare = (a: Match, b: Match) =>
-    Number(!a.value.toLocaleLowerCase("en-US").startsWith(query)) -
-      Number(!b.value.toLocaleLowerCase("en-US").startsWith(query)) ||
+    Number(!a.normalizedValue.startsWith(query)) -
+      Number(!b.normalizedValue.startsWith(query)) ||
     a.distance - b.distance ||
     a.value.localeCompare(b.value, "en", { sensitivity: "base" }) ||
     a.id.localeCompare(b.id, "en");

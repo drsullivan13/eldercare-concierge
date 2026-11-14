@@ -232,6 +232,37 @@ test("global saved-ID lookup preserves caller order, deduplicates and optionally
   assert.equal(getProviderMarket(njProvider.id, registry)?.id, "north-jersey");
 });
 
+test("custom saved-ID lookup follows live records and first valid ownership without retaining stale entries", () => {
+  const id = "custom-lookup";
+  const first = { ...nursing, id, name: "First valid MA record" };
+  const duplicate = { ...first, name: "Later MA duplicate" };
+  const other = { ...njProvider, id, name: "NJ duplicate" };
+  const customMA = { ...ma, providers: [{ ...other }, first, duplicate] };
+  const customNJ = { ...nj, providers: [other] };
+  const custom = [customMA, customNJ];
+  const ids = Object.freeze([id, "missing", id]);
+  const names = (marketId?: string) =>
+    getProvidersByIds(ids, marketId, custom).map((provider) => provider.name);
+  assert.deepEqual(names(), [first.name]);
+  assert.deepEqual(names("north-jersey"), []);
+  assert.equal(getProviderMarket(id, custom), customMA);
+  custom.reverse();
+  assert.deepEqual(names(), [other.name]);
+  assert.deepEqual(names("massachusetts"), []);
+  other.state = "MA";
+  assert.deepEqual(names(), [first.name]);
+  first.id = "renamed";
+  assert.deepEqual(names(), [duplicate.name]);
+  customMA.providers = [];
+  assert.deepEqual(names(), []);
+  other.state = "NJ";
+  assert.deepEqual(names(), [other.name]);
+  const result = getProvidersByIds(ids, undefined, custom);
+  result[0].name = "Caller edit";
+  assert.deepEqual(names(), [other.name]);
+  assert.deepEqual(ids, [id, "missing", id]);
+});
+
 test("absent NJ evidence stays absent even when the Massachusetts snapshot contains the same lookup key", () => {
   const contaminatedMA: MarketSnapshot = {
     ...ma,

@@ -56,7 +56,7 @@ async function openPlan(page: Page, initial = workspace) {
     },
     { key: KEY, initial },
   );
-  await page.goto("/dashboard");
+  await page.goto("/dashboard?demo=1");
   await expect(page.locator(".app-shell")).toBeVisible();
   await navigate(page, "Your plan");
 }

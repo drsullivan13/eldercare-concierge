@@ -1,7 +1,7 @@
 "use client";
 
 import { DEFAULT_DASHBOARD_SEARCH_ZIP } from "@/lib/dashboard-defaults";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { SearchResponse } from "@/lib/providers";
 import type { Workspace } from "@/lib/workspace";
 
@@ -17,7 +17,7 @@ type SearchFields = {
 /** Keeps edits separate from the last submitted search and cancels stale requests. */
 export function useCareSearch(profile: Workspace["profile"]) {
   const [draft, setDraft] = useState<SearchFields>(() => ({
-    zip: profile.zip || DEFAULT_DASHBOARD_SEARCH_ZIP,
+    zip: profile.zip.trim() || DEFAULT_DASHBOARD_SEARCH_ZIP,
     radius: "25",
     category: profile.careTypes.length === 1 ? profile.careTypes[0] : "all",
     sort: "distance",
@@ -25,6 +25,10 @@ export function useCareSearch(profile: Workspace["profile"]) {
     evidence: "all",
   }));
   const [request, setRequest] = useState(draft);
+  const submitted = useRef<{
+    fields: SearchFields;
+    status: "pending" | "succeeded" | "failed";
+  }>({ fields: request, status: "pending" });
   const [data, setData] = useState<SearchResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -32,6 +36,8 @@ export function useCareSearch(profile: Workspace["profile"]) {
 
   useEffect(() => {
     const controller = new AbortController();
+    const current = () =>
+      !controller.signal.aborted && submitted.current.fields === request;
     async function load() {
       try {
         const response = await fetch(
@@ -43,9 +49,13 @@ export function useCareSearch(profile: Workspace["profile"]) {
         const result = await response.json();
         if (!response.ok)
           throw new Error(result.error || "Search is unavailable right now.");
-        if (!controller.signal.aborted) setData(result);
+        if (current()) {
+          submitted.current.status = "succeeded";
+          setData(result);
+        }
       } catch (cause) {
-        if (controller.signal.aborted) return;
+        if (!current()) return;
+        submitted.current.status = "failed";
         setError(
           cause instanceof Error
             ? cause.message
@@ -53,7 +63,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
         );
         setData(null);
       } finally {
-        if (!controller.signal.aborted) setLoading(false);
+        if (current()) setLoading(false);
       }
     }
     void load();
@@ -71,16 +81,25 @@ export function useCareSearch(profile: Workspace["profile"]) {
   }
 
   function run(next = draft) {
+    const fields = { ...next, zip: next.zip.trim(), q: next.q.trim() };
+    setDisplayCount(18);
+    if (
+      submitted.current.status !== "failed" &&
+      (Object.keys(fields) as (keyof SearchFields)[]).every(
+        (field) => fields[field] === submitted.current.fields[field],
+      )
+    )
+      return;
+    submitted.current = { fields, status: "pending" };
     setLoading(true);
     setData(null);
     setError("");
-    setDisplayCount(18);
-    setRequest({ ...next, zip: next.zip.trim(), q: next.q.trim() });
+    setRequest(fields);
   }
 
   function filter(patch: Partial<SearchFields>) {
     setDraft((current) => ({ ...current, ...patch }));
-    run({ ...request, ...patch });
+    run({ ...submitted.current.fields, ...patch });
   }
 
   return {

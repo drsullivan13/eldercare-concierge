@@ -3,10 +3,18 @@ import assert from "node:assert/strict";
 import { GET } from "../src/app/api/search-suggestions/route";
 import { searchSuggestions } from "../src/lib/search-suggestions";
 import { searchProviders } from "../src/lib/search";
-import { markets } from "../src/lib/markets";
+import {
+  markets,
+  type MarketRegistry,
+  type MarketSnapshot,
+} from "../src/lib/markets";
 import type { SearchSuggestionsResponse } from "../src/lib/search-suggestion-types";
 
-function suggest(q: string, overrides: Record<string, string> = {}) {
+function suggest(
+  q: string,
+  overrides: Record<string, string> = {},
+  registry: MarketRegistry = markets,
+) {
   return searchSuggestions(
     new URLSearchParams({
       zip: "07928",
@@ -15,8 +23,109 @@ function suggest(q: string, overrides: Record<string, string> = {}) {
       q,
       ...overrides,
     }),
+    registry,
   ).suggestions;
 }
+
+function customMarket(): MarketSnapshot {
+  const published = markets.find((market) => market.state === "NJ")!;
+  return {
+    ...published,
+    zips: { "07928": { city: "Origin", lat: 40, lng: -74 } },
+    providers: [
+      {
+        ...published.providers[0],
+        id: "custom-provider",
+        name: "Harbor Lodge",
+        city: "Cedar",
+        category: "assisted-living",
+        searchCategories: [],
+        lat: 40,
+        lng: -74,
+      },
+    ],
+  };
+}
+
+test("custom registries reflect changed town and provider text and replaced records", () => {
+  const market = customMarket();
+  const registry = [market];
+  assert.deepEqual(
+    suggest("harbor", {}, registry).map((item) => item.id),
+    ["custom-provider"],
+  );
+  assert.deepEqual(
+    suggest("origin", {}, registry).map((item) => item.value),
+    ["Origin"],
+  );
+
+  market.providers[0].name = "Willow House";
+  market.providers[0].city = "Maple";
+  market.zips["07928"].city = "Willow";
+  assert.deepEqual(suggest("harbor", {}, registry), []);
+  assert.deepEqual(suggest("cedar", {}, registry), []);
+  assert.deepEqual(suggest("origin", {}, registry), []);
+  assert.deepEqual(
+    suggest("willow", {}, registry).map((item) => item.value),
+    ["Willow", "Willow House"],
+  );
+  assert.deepEqual(
+    suggest("maple", {}, registry).map((item) => item.id),
+    ["custom-provider"],
+  );
+
+  market.providers = [{ ...market.providers[0], name: "Birch House" }];
+  market.zips = { "07928": { city: "Birch", lat: 40, lng: -74 } };
+  assert.deepEqual(suggest("willow", {}, registry), []);
+  assert.deepEqual(
+    suggest("birch", {}, registry).map((item) => item.value),
+    ["Birch", "Birch House"],
+  );
+});
+
+test("duplicate normalized towns use the nearest matching ZIP before ranking and radius filtering", () => {
+  const market = customMarket();
+  market.providers = [];
+  market.zips["07929"] = { city: "mApLe", lat: 40.2, lng: -74 };
+  market.zips["07930"] = { city: "MAPLE", lat: 40.02, lng: -74 };
+  market.zips["07931"] = { city: "Mapleton", lat: 40.04, lng: -74 };
+  const expected = [
+    {
+      id: `town:${market.id}:maple`,
+      kind: "town",
+      value: "MAPLE",
+      detail: "Town · NJ",
+    },
+    {
+      id: `town:${market.id}:mapleton`,
+      kind: "town",
+      value: "Mapleton",
+      detail: "Town · NJ",
+    },
+  ];
+  for (const radius of ["5", "25"])
+    assert.deepEqual(suggest("  MaPlE  ", { radius }, [market]), expected);
+});
+
+test("provider ranking uses case-insensitive name prefixes before distance, name and ID", () => {
+  const market = customMarket();
+  const provider = market.providers[0];
+  market.providers = [
+    { ...provider, id: "substring", name: "The Maple", lat: 40 },
+    { ...provider, id: "far-prefix", name: "mApLe A", lat: 40.1 },
+    { ...provider, id: "name-z", name: "Maple Z", lat: 40.01 },
+    { ...provider, id: "tie-b", name: "MAPLE B", lat: 40.01 },
+    { ...provider, id: "tie-a", name: "MAPLE B", lat: 40.01 },
+  ];
+  assert.deepEqual(
+    suggest("  MaPlE  ", {}, [market]).map((item) => item.id),
+    ["tie-a", "tie-b", "name-z", "far-prefix", "substring"],
+  );
+  assert.deepEqual(
+    suggest("cEdAr", {}, [market]).map((item) => item.id),
+    ["substring", "tie-a", "tie-b", "name-z", "far-prefix"],
+  );
+});
 
 test("towns come from reviewed nearby ZIPs and provider suggestions use the full scoped catalog", () => {
   assert.ok(

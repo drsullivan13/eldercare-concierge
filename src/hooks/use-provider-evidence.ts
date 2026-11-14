@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 
-interface ProviderEvidenceSource {
+interface ProviderEvidenceSource<T> {
   path: string;
   idParameter: string;
   unavailable: string;
-  notFound?: string;
+  notFound?: string | null;
   mismatched: string;
   fallback: string;
+  validate?: (data: unknown, providerId: string) => data is T;
 }
 
 export function useProviderEvidence<T extends { providerId: string }>(
   providerId: string,
-  source: ProviderEvidenceSource,
+  source: ProviderEvidenceSource<T>,
 ) {
   const [attempt, setAttempt] = useState(0);
   const [result, setResult] = useState<{
@@ -31,6 +32,10 @@ export function useProviderEvidence<T extends { providerId: string }>(
         const response = await fetch(`${source.path}?${params}`, {
           signal: controller.signal,
         });
+        if (response.status === 404 && source.notFound === null) {
+          if (!controller.signal.aborted) setResult({ key });
+          return;
+        }
         if (!response.ok) {
           throw new Error(
             response.status === 404 && source.notFound
@@ -39,6 +44,8 @@ export function useProviderEvidence<T extends { providerId: string }>(
           );
         }
         const data = (await response.json()) as T;
+        if (source.validate && !source.validate(data, providerId))
+          throw new Error(source.mismatched);
         if (data.providerId !== providerId) throw new Error(source.mismatched);
         if (!controller.signal.aborted) setResult({ key, data });
       } catch (reason) {

@@ -12,6 +12,8 @@ import {
 import { GET as searchGET } from "../src/app/api/search/route";
 import { GET as providersGET } from "../src/app/api/providers/route";
 import type { Provider } from "../src/lib/providers";
+import { markets } from "../src/lib/markets";
+import { getResearchSummary } from "../src/lib/location-research";
 
 const raw = JSON.parse(
   readFileSync(
@@ -193,6 +195,100 @@ test("same-distance/name ties resolve by ID using real catalog coordinates", () 
       (provider) => provider.id,
     ),
     ["first", "second"],
+  );
+});
+
+test("equal-distance sorting preserves English name collation and the case-sensitive ID tie-breaker", () => {
+  const record = catalog.find((provider) => provider.id === "cms-225506")!;
+  const fixtures = Object.freeze(
+    [
+      "École",
+      "ecole",
+      "E\u0301cole",
+      "Alpha-2",
+      "Alpha 10",
+      "alpha",
+      "Ångström",
+      "Zulu",
+    ]
+      .flatMap((name, i) =>
+        ["a", "A", "10", "2"].map((suffix) =>
+          Object.freeze({ ...record, id: `tie-${i}-${suffix}`, name }),
+        ),
+      )
+      .reverse(),
+  );
+  const before = JSON.stringify(fixtures);
+  const expected = [...fixtures]
+    .sort(
+      (a, b) =>
+        a.name.localeCompare(b.name, "en", { sensitivity: "base" }) ||
+        a.id.localeCompare(b.id, "en"),
+    )
+    .map((provider) => provider.id);
+  for (const sort of ["distance", "cms-rating", "experience"]) {
+    const result = searchProviders(
+      { zip: "02116", radius: 25, category: "nursing-home", sort },
+      fixtures,
+    );
+    assert.deepEqual(
+      result.providers.map((provider) => provider.id),
+      expected,
+    );
+  }
+  assert.equal(JSON.stringify(fixtures), before);
+});
+
+test("maximum saved-ID batches return byte-identical scan results without modifying callers or snapshots", async () => {
+  const ids = Object.freeze(
+    Array.from({ length: 100 }, (_, i) => {
+      const market = markets[i % markets.length];
+      return market.providers[
+        Math.floor(((i + 1) * (market.providers.length - 1)) / 100)
+      ].id;
+    }),
+  );
+  const snapshotsBefore = JSON.stringify(
+    markets.map((market) => market.providers),
+  );
+  for (const marketId of [undefined, ...markets.map((market) => market.id)]) {
+    const expected = [...new Set(ids)].flatMap((id) => {
+      const market = markets.find((market) =>
+        market.providers.some(
+          (provider) => provider.id === id && provider.state === market.state,
+        ),
+      );
+      if (!market || (marketId !== undefined && market.id !== marketId))
+        return [];
+      const provider = market.providers.find(
+        (provider) => provider.id === id && provider.state === market.state,
+      )!;
+      return [{ ...provider, research: getResearchSummary(id) }];
+    });
+    const params = new URLSearchParams({ ids: ids.join(",") });
+    if (marketId) params.set("market", marketId);
+    const response = providersGET(
+      new Request(`http://localhost/api/providers?${params}`),
+    );
+    assert.equal(response.status, 200);
+    assert.equal(
+      await response.text(),
+      JSON.stringify({ providers: expected }),
+    );
+    const actual = getProvidersByIds(ids, marketId);
+    assert.equal(JSON.stringify(actual), JSON.stringify(expected));
+    if (actual.length) {
+      actual[0].name = "Caller edit";
+      if (actual[0].research) actual[0].research.experience.value = -100;
+      assert.equal(
+        JSON.stringify(getProvidersByIds(ids, marketId)),
+        JSON.stringify(expected),
+      );
+    }
+  }
+  assert.equal(
+    JSON.stringify(markets.map((market) => market.providers)),
+    snapshotsBefore,
   );
 });
 

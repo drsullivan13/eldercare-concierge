@@ -41,7 +41,6 @@ import { Modal } from "./modal";
 import type { ProfilePane } from "./profile-pane";
 import { Overview } from "./dashboard/overview";
 import { DemoComparison } from "./dashboard/demo-comparison";
-import { CareSearchView } from "./dashboard/care-search";
 import { ShortlistView } from "./dashboard/shortlist";
 import { PlanView } from "./dashboard/plan";
 import { OutreachEditor, OutreachHistory } from "./dashboard/outreach";
@@ -54,6 +53,11 @@ import type { DashboardNotification } from "./dashboard/dashboard-notifications"
 import "./dashboard/dashboard.css";
 
 type View = "overview" | "search" | "shortlist" | "plan" | "standards";
+const CareSearchView = lazy(() =>
+  import("./dashboard/care-search").then((module) => ({
+    default: module.CareSearchView,
+  })),
+);
 const DashboardNotifications = lazy(
   () => import("./dashboard/dashboard-notifications"),
 );
@@ -133,6 +137,14 @@ function WorkspaceDashboard({
   const sidebar = useRef<HTMLElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
   const main = useRef<HTMLElement>(null);
+  const focusLoadedSearch = useCallback((node: HTMLDivElement | null) => {
+    if (!node || document.activeElement !== main.current) return;
+    const heading = node.querySelector("h1");
+    if (heading) {
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    }
+  }, []);
   const outreachHistory = useRef<HTMLDivElement>(null);
   const profileReturnFocus = useRef<HTMLElement | null>(null);
   useEffect(() => {
@@ -713,12 +725,23 @@ function WorkspaceDashboard({
             />
           </Suspense>
           {view === "search" && (
-            <CareSearchView
-              search={search}
-              submit={submitSearch}
-              cards={cards}
-              openProvider={openProvider}
-            />
+            <Suspense
+              fallback={
+                <p role="status">
+                  <Loader2 className="spin" aria-hidden="true" /> Loading care
+                  search…
+                </p>
+              }
+            >
+              <div ref={focusLoadedSearch}>
+                <CareSearchView
+                  search={search}
+                  submit={submitSearch}
+                  cards={cards}
+                  openProvider={openProvider}
+                />
+              </div>
+            </Suspense>
           )}
           {view === "shortlist" && (
             <>

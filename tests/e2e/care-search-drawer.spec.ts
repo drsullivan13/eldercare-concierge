@@ -11,6 +11,93 @@ async function findCare(page: Page) {
     })
     .click();
   await expect(page.locator(".search-summary")).toContainText("Chatham, 07928");
+  await expect(
+    page.getByRole("heading", { name: "Find care nearby." }),
+  ).toBeFocused();
+}
+
+test("matching pending and completed submissions reuse results and one request", async ({
+  page,
+}) => {
+  let searches = 0;
+  let release!: () => void;
+  const pending = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/api/search?*", async (route) => {
+    searches++;
+    const response = await route.fetch();
+    await pending;
+    await route.fulfill({ response });
+  });
+  try {
+    await page.goto("/dashboard?demo=1");
+    await expect.poll(() => searches).toBe(1);
+    await page
+      .locator("form.quick-search")
+      .getByRole("button", { name: "Find care", exact: true })
+      .click();
+    await expect(
+      page.getByRole("heading", { name: "Find care nearby." }),
+    ).toBeFocused();
+    expect(searches).toBe(1);
+    release();
+    const cards = page.locator(".care-search-view .provider-card");
+    await expect(cards.first()).toBeVisible();
+    const results = await cards.allTextContents();
+    await page.getByRole("button", { name: "Filters", exact: true }).click();
+    await page
+      .getByRole("button", { name: "Apply filters", exact: true })
+      .click();
+    await expect(
+      page.getByRole("form", { name: "Care search filters" }),
+    ).toBeHidden();
+    await expect(cards).toHaveText(results);
+    expect(searches).toBe(1);
+  } finally {
+    release();
+  }
+});
+
+for (const failure of ["http", "network"] as const) {
+  test(`same search retries after ${failure} failure`, async ({ page }) => {
+    const requests: string[] = [];
+    await page.route("**/api/search?*", async (route) => {
+      requests.push(route.request().url());
+      if (requests.length > 1) return route.continue();
+      if (failure === "network") return route.abort("failed");
+      return route.fulfill({
+        status: 503,
+        json: { error: "Search unavailable" },
+      });
+    });
+    await page.goto("/dashboard?demo=1");
+    const menu = page.getByRole("button", { name: "Open navigation" });
+    if (await menu.isVisible()) await menu.click();
+    await page
+      .locator(".side-nav")
+      .getByRole("button", { name: "Find care", exact: true })
+      .click();
+    await expect(
+      page.locator(".care-search-view").getByRole("alert"),
+    ).toBeVisible();
+    await page.getByRole("button", { name: "Filters", exact: true }).click();
+    const retried = page.waitForResponse(
+      (response) => new URL(response.url()).pathname === "/api/search",
+    );
+    await page
+      .getByRole("button", { name: "Apply filters", exact: true })
+      .click();
+    expect((await retried).status()).toBe(200);
+    await expect(
+      page.locator(".care-search-view .provider-card").first(),
+    ).toBeVisible();
+    await expect(
+      page.locator(".care-search-view").getByRole("alert"),
+    ).toHaveCount(0);
+    expect(requests).toHaveLength(2);
+    expect(requests[1]).toBe(requests[0]);
+  });
 }
 
 test("filters apply only on submit and every dismissal discards mobile edits", async ({
