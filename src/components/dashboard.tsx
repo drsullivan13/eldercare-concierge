@@ -31,6 +31,8 @@ import { ACCOUNTS_ENABLED } from "@/lib/features";
 import { useWorkspace } from "@/hooks/use-workspace";
 import { useCareSearch } from "@/hooks/use-care-search";
 import { useSavedProviders } from "@/hooks/use-saved-providers";
+import { useOutreach } from "@/hooks/use-outreach";
+import type { OutreachProvider, OutreachRecord } from "@/lib/outreach";
 import { createClient } from "@/lib/supabase/client";
 import type { Provider, SearchProvider } from "@/lib/providers";
 import { Brand } from "./brand";
@@ -42,6 +44,7 @@ import { DemoComparison } from "./dashboard/demo-comparison";
 import { CareSearchView } from "./dashboard/care-search";
 import { ShortlistView } from "./dashboard/shortlist";
 import { PlanView } from "./dashboard/plan";
+import { OutreachEditor, OutreachHistory } from "./dashboard/outreach";
 import { ComparisonTray, useComparison } from "./dashboard/compare-dialog";
 import { ProfileDialog } from "./dashboard/profile-dialog";
 import { EvidenceStandards } from "./dashboard/research-standards";
@@ -100,7 +103,26 @@ function WorkspaceDashboard({
   const sidebar = useRef<HTMLElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
   const main = useRef<HTMLElement>(null);
+  const outreachHistory = useRef<HTMLDivElement>(null);
   const profileReturnFocus = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    const openHistory = () => {
+      if (window.location.hash !== "#outreach-history") return;
+      setView("plan");
+      setMobileMenu(false);
+    };
+    openHistory();
+    window.addEventListener("hashchange", openHistory);
+    return () => window.removeEventListener("hashchange", openHistory);
+  }, []);
+  useEffect(() => {
+    if (view !== "plan" || window.location.hash !== "#outreach-history") return;
+    const frame = requestAnimationFrame(() => {
+      outreachHistory.current?.scrollIntoView({ block: "start" });
+      outreachHistory.current?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [view]);
   useEffect(() => {
     const media = window.matchMedia("(max-width: 760px)");
     function change() {
@@ -144,6 +166,32 @@ function WorkspaceDashboard({
   const { data } = search;
   const saved = useSavedProviders(workspace.savedProviderIds);
   const savedProviders = saved.providers;
+  const outreach = useOutreach(workspace, update, state.ready, demo);
+  const [outreachDraft, setOutreachDraft] = useState<{
+    provider: OutreachProvider;
+    parent?: OutreachRecord;
+  } | null>(null);
+  const outreachReturnFocus = useRef<HTMLElement | null>(null);
+  function prepareOutreach(
+    provider: OutreachProvider,
+    parent?: OutreachRecord,
+  ) {
+    outreachReturnFocus.current =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+    setOutreachDraft({ provider, parent });
+  }
+  function closeOutreach() {
+    setOutreachDraft(null);
+    requestAnimationFrame(() => {
+      const target = outreachReturnFocus.current;
+      if (target?.isConnected && !target.closest("[inert], [hidden]"))
+        target.focus({ preventScroll: true });
+    });
+  }
+  const followUp = (record: OutreachRecord) =>
+    prepareOutreach(record.brief, record);
   const [selected, setSelected] = useState<Provider | null>(null);
   const [initialPane, setInitialPane] = useState<ProfilePane>("overview");
   const providerReturnFocus = useRef<HTMLElement | null>(null);
@@ -621,13 +669,25 @@ function WorkspaceDashboard({
             </>
           )}
           {view === "plan" && (
-            <PlanView
-              workspace={workspace}
-              update={update}
-              addTask={addTask}
-              exportPlan={exportPlan}
-              notify={notify}
-            />
+            <>
+              <PlanView
+                workspace={workspace}
+                update={update}
+                addTask={addTask}
+                exportPlan={exportPlan}
+                notify={notify}
+              />
+              <div id="outreach-history" ref={outreachHistory} tabIndex={-1}>
+                <OutreachHistory
+                  {...outreach}
+                  followUp={followUp}
+                  addTask={(title, providerId) =>
+                    addTask(title, providerId, "Outreach")
+                  }
+                  findCare={() => navigate("search")}
+                />
+              </div>
+            </>
           )}
           {view === "standards" && <EvidenceStandards />}
         </main>
@@ -713,9 +773,41 @@ function WorkspaceDashboard({
               }))
             }
             onTask={(title) => addTask(title, selectedProvider.id)}
+            onOutreach={() =>
+              prepareOutreach({
+                providerId: selectedProvider.id,
+                providerName: selectedProvider.name,
+                phone: selectedProvider.phone || "",
+              })
+            }
+            outreachHistory={
+              <OutreachHistory
+                {...outreach}
+                records={outreach.records.filter(
+                  (record) => record.brief.providerId === selectedProvider.id,
+                )}
+                followUp={followUp}
+                viewPlan={() => {
+                  closeProvider();
+                  navigate("plan");
+                }}
+                addTask={(title, providerId) =>
+                  addTask(title, providerId, "Outreach")
+                }
+              />
+            }
             close={closeProvider}
           />
         </Suspense>
+      )}
+      {outreachDraft && (
+        <OutreachEditor
+          provider={outreachDraft.provider}
+          parent={outreachDraft.parent}
+          launch={outreach.launch}
+          error={outreach.error}
+          close={closeOutreach}
+        />
       )}
       {profileOpen && (
         <ProfileDialog

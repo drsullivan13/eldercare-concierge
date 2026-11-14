@@ -1,3 +1,5 @@
+import { parseOutreachRecord, type OutreachRecord } from "./outreach";
+
 type WorkspaceTask = {
   id: string;
   title: string;
@@ -17,6 +19,7 @@ export type Workspace = {
   savedProviderIds: string[];
   notes: Record<string, string>;
   tasks: WorkspaceTask[];
+  outreach?: OutreachRecord[];
   updatedAt: string;
 };
 
@@ -81,10 +84,17 @@ export function validateWorkspace(value: unknown): WorkspaceValidation {
   });
   if (
     !object(value) ||
-    !keys(value, ["profile", "savedProviderIds", "notes", "tasks", "updatedAt"])
+    !keys(value, [
+      "profile",
+      "savedProviderIds",
+      "notes",
+      "tasks",
+      "outreach",
+      "updatedAt",
+    ])
   ) {
     return invalid(
-      "Workspace must contain only profile, savedProviderIds, notes, tasks and updatedAt.",
+      "Workspace must contain only profile, savedProviderIds, notes, tasks, outreach and updatedAt.",
     );
   }
   const p = value.profile;
@@ -150,6 +160,20 @@ export function validateWorkspace(value: unknown): WorkspaceValidation {
     }
     taskIds.add(task.id);
   }
+  let outreach: OutreachRecord[] | undefined;
+  if (value.outreach !== undefined) {
+    if (!Array.isArray(value.outreach) || value.outreach.length > 100)
+      return invalid("Use at most 100 outreach records.");
+    outreach = [];
+    const requests = new Set<string>();
+    for (const valueRecord of value.outreach) {
+      const record = parseOutreachRecord(valueRecord);
+      if (!record || requests.has(record.brief.requestId))
+        return invalid("Outreach records need valid, distinct requests.");
+      requests.add(record.brief.requestId);
+      outreach.push(record);
+    }
+  }
   if (
     typeof value.updatedAt !== "string" ||
     value.updatedAt.length > 40 ||
@@ -190,6 +214,7 @@ export function validateWorkspace(value: unknown): WorkspaceValidation {
           : { providerId: task.providerId }),
       })) as WorkspaceTask[],
       updatedAt: value.updatedAt,
+      ...(outreach === undefined ? {} : { outreach }),
     },
   };
 }

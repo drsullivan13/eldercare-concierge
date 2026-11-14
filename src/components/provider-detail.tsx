@@ -1,5 +1,12 @@
 "use client";
-import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import {
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@ui-sdk/react/tabs";
 import {
   Bookmark,
@@ -41,6 +48,8 @@ export function ProviderDetail({
   onSave,
   onNote,
   onTask,
+  onOutreach,
+  outreachHistory,
   close,
   saveStatus,
   saveError,
@@ -52,6 +61,8 @@ export function ProviderDetail({
   onSave: () => void;
   onNote: (note: string) => boolean;
   onTask: (title: string) => boolean;
+  onOutreach?: () => void;
+  outreachHistory?: ReactNode;
   close: () => void;
   saveStatus: string;
   saveError: string;
@@ -145,6 +156,11 @@ export function ProviderDetail({
                   <Phone size={15} />
                   Call
                 </a>
+              )}
+              {onOutreach && (
+                <button className="button button-primary" onClick={onOutreach}>
+                  Prepare outreach
+                </button>
               )}
             </div>
           </div>
@@ -336,6 +352,7 @@ export function ProviderDetail({
               </div>
             )}
           </TabsPanel>
+          {outreachHistory}
           <details className="detail-notes">
             <summary>Your questions & notes</summary>
             <p className="small muted">

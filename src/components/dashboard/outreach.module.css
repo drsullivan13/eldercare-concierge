@@ -1,0 +1,226 @@
+.editor {
+  display: grid;
+  gap: 10px;
+}
+
+.editor h2,
+.editor p,
+.history h2,
+.entry h3,
+.entry h4,
+.entry p {
+  margin: 0;
+}
+
+.editor h2 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.provider {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.notice {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.goals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.goals legend,
+.question {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.suggestions,
+.taskEditor {
+  display: grid;
+  gap: 12px;
+  overflow-wrap: anywhere;
+}
+
+.suggestions h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.suggestions button {
+  min-height: 44px;
+}
+
+.taskEditor {
+  margin-top: 10px;
+}
+
+.taskEditor input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid var(--border, #d8ddd8);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 16px;
+}
+
+.goals label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border, #d8ddd8);
+  border-radius: 6px;
+  padding: 10px 12px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.goals label:has(input:checked) {
+  background: #edf5f1;
+  border-color: #25665b;
+}
+
+.goals input {
+  accent-color: #25665b;
+  flex-shrink: 0;
+}
+
+.editor textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 72px;
+  max-height: 160px;
+  border: 1px solid var(--border, #d8ddd8);
+  border-radius: 6px;
+  padding: 12px;
+  font: inherit;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.actions,
+.heading,
+.entry header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.actions {
+  margin-top: 6px;
+}
+
+.history {
+  margin-top: 28px;
+  scroll-margin-top: 24px;
+}
+
+.heading {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.heading > div {
+  flex: 1 1 240px;
+}
+
+.heading h2 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.entry,
+.empty {
+  padding: 20px;
+  margin-top: 14px;
+  border: 1px solid var(--border, #d8ddd8);
+  background: var(--white, #fff);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.entry {
+  display: grid;
+  gap: 12px;
+}
+
+.entry header {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.entry h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.entry h4 {
+  font-size: 14px;
+}
+
+.entry ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.stage {
+  padding: 5px 9px;
+  border-radius: 4px;
+  background: #edf5f1;
+  color: #245d52;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.topics {
+  font-size: 13px;
+  color: var(--muted, #596861);
+}
+
+.nextSteps li + li {
+  margin-top: 10px;
+}
+
+.nextSteps button {
+  margin-left: 12px;
+  min-height: 44px;
+}
+
+.empty p + p,
+.empty button {
+  margin-top: 10px;
+}
+
+@media (max-width: 560px) {
+  .entry,
+  .empty {
+    padding: 14px;
+  }
+
+  .actions > button,
+  .heading > button {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .nextSteps button {
+    display: flex;
+    margin-left: 0;
+  }
+}
