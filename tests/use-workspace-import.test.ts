@@ -1,12 +1,14 @@
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
-import { createRequire } from "node:module";
 import { resolve } from "node:path";
 import test from "node:test";
-import { chromium, type Page } from "@playwright/test";
+import type { Page } from "@playwright/test";
 import type { useWorkspace } from "../src/hooks/use-workspace";
 import { createEmptyWorkspace, type Workspace } from "../src/lib/workspace";
-import { chromiumLaunchOptions } from "../scripts/lib/chromium.mjs";
+import {
+  bundleWorkspaceBrowser,
+  launchWorkspaceBrowser,
+  openWorkspacePage,
+} from "./helpers/workspace-browser";
 
 const OWNER = "11111111-1111-4111-8111-111111111111";
 const OTHER = "22222222-2222-4222-8222-222222222222";
@@ -47,8 +49,6 @@ declare global {
   }
 }
 
-const require = createRequire(resolve("package.json"));
-const { build } = createRequire(require.resolve("tsx/package.json"))("esbuild");
 let bundle: string;
 
 function demoPlan(name = "Local family"): Workspace {
@@ -92,11 +92,8 @@ async function mount(
   demo = false,
 ) {
   if (!bundle) {
-    const result = await build({
-      stdin: {
-        resolveDir: process.cwd(),
-        loader: "tsx",
-        contents: `
+    bundle = await bundleWorkspaceBrowser(
+      `
           import { createRoot } from "react-dom/client";
           import { useState } from "react";
           import { useWorkspace } from "./src/hooks/use-workspace";
@@ -136,53 +133,14 @@ async function mount(
           }
           root.render(<App/>);
         `,
+      {
+        router: "window.__workspaceImport.router",
+        client: "window.__workspaceImport.client",
+        tsconfig: resolve("tsconfig.json"),
       },
-      bundle: true,
-      write: false,
-      platform: "browser",
-      tsconfig: resolve("tsconfig.json"),
-      define: { "process.env.NODE_ENV": '"production"' },
-      plugins: [
-        {
-          name: "workspace-import-browser-boundaries",
-          setup(builder: {
-            onResolve: (
-              options: object,
-              callback: (args: { path: string }) => object,
-            ) => void;
-            onLoad: (
-              options: object,
-              callback: (args: { path: string }) => object,
-            ) => void;
-          }) {
-            builder.onResolve(
-              { filter: /^(next\/navigation|@\/lib\/supabase\/client)$/ },
-              (args) => ({ path: args.path, namespace: "test" }),
-            );
-            builder.onLoad({ filter: /.*/, namespace: "test" }, (args) => ({
-              contents:
-                args.path === "next/navigation"
-                  ? "export const useRouter=()=>window.__workspaceImport.router;"
-                  : "export const isSupabaseConfigured=()=>true; export const createClient=()=>window.__workspaceImport.client;",
-            }));
-          },
-        },
-      ],
-    });
-    bundle = result.outputFiles[0].text;
+    );
   }
-  await page.route("https://harbor.test/", (route) =>
-    route.fulfill({
-      contentType: "text/html",
-      body: '<div id="root"></div>',
-    }),
-  );
-  await page.goto("https://harbor.test/");
-  await page.evaluate(
-    ({ stored, demo }) =>
-      Object.assign(window, { __stored: stored, __demo: demo }),
-    { stored, demo },
-  );
+  await openWorkspacePage(page, { __stored: stored, __demo: demo });
   await page.addScriptTag({ content: bundle });
   await page.waitForFunction(() => Boolean(window.__workspaceImport?.api));
 }
@@ -231,14 +189,7 @@ test(
   "opt-in import and reload through the actual workspace hook",
   { timeout: 90_000 },
   async (t) => {
-    const chrome =
-      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-    const browser = await chromium.launch({
-      ...(existsSync(chrome)
-        ? { executablePath: chrome }
-        : chromiumLaunchOptions),
-      headless: true,
-    });
+    const browser = await launchWorkspaceBrowser();
     async function scenario(run: (page: Page) => Promise<void>) {
       const page = await browser.newPage();
       page.setDefaultTimeout(5_000);
