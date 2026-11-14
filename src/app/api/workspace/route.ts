@@ -1,5 +1,11 @@
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 import { MAX_WORKSPACE_BYTES, validateWorkspace } from "@/lib/workspace";
+import {
+  isWorkspaceOwner,
+  isWorkspaceRevision,
+  nextWorkspaceRevision,
+  parseAccountSnapshot,
+} from "@/lib/account-workspace";
 
 import { isSameOriginRequest } from "@/lib/request-origin";
 
@@ -60,7 +66,12 @@ export async function GET() {
         503,
         headers,
       );
-    if (!data) return response({ workspace: null }, 200, headers);
+    if (!data)
+      return response(
+        { owner: auth.user.id, revision: null, workspace: null },
+        200,
+        headers,
+      );
     const parsed = validateWorkspace({
       ...data.data,
       updatedAt: data.updated_at,
@@ -74,7 +85,15 @@ export async function GET() {
         500,
         headers,
       );
-    return response({ workspace: parsed.workspace }, 200, headers);
+    return response(
+      parseAccountSnapshot({
+        owner: auth.user.id,
+        revision: data.updated_at,
+        workspace: parsed.workspace,
+      }),
+      200,
+      headers,
+    );
   } catch {
     return response(
       { error: "Your workspace could not be loaded. Please retry." },
@@ -146,29 +165,62 @@ export async function PUT(request: Request) {
       typeof body !== "object" ||
       body === null ||
       Array.isArray(body) ||
-      Object.keys(body).length !== 1 ||
-      !("workspace" in body)
+      Object.keys(body).length !== 3 ||
+      !("workspace" in body) ||
+      !("expectedOwner" in body) ||
+      !isWorkspaceOwner(body.expectedOwner) ||
+      !("expectedRevision" in body) ||
+      !(
+        body.expectedRevision === null ||
+        isWorkspaceRevision(body.expectedRevision)
+      )
     ) {
-      return response({ error: "Expected { workspace }." }, 400, headers);
+      return response(
+        { error: "Expected { workspace, expectedOwner, expectedRevision }." },
+        400,
+        headers,
+      );
     }
+    if (body.expectedOwner !== auth.user.id)
+      return response(
+        {
+          code: "OWNER_MISMATCH",
+          error: "Your account changed. Reload this page before continuing.",
+        },
+        409,
+        headers,
+      );
     const parsed = validateWorkspace(body.workspace);
     if (!parsed.ok) return response({ error: parsed.error }, 400, headers);
     const workspace = {
       ...parsed.workspace,
-      updatedAt: new Date().toISOString(),
+      updatedAt: nextWorkspaceRevision(body.expectedRevision),
     };
-    const { data, error } = await auth.client
-      .from("user_workspaces")
-      .upsert(
-        {
-          user_id: auth.user.id,
-          data: workspace,
-          updated_at: workspace.updatedAt,
-        },
-        { onConflict: "user_id" },
-      )
+    const table = auth.client.from("user_workspaces");
+    const write =
+      body.expectedRevision === null
+        ? table.insert({
+            user_id: auth.user.id,
+            data: workspace,
+            updated_at: workspace.updatedAt,
+          })
+        : table
+            .update({ data: workspace, updated_at: workspace.updatedAt })
+            .eq("user_id", auth.user.id)
+            .eq("updated_at", body.expectedRevision);
+    const { data, error } = await write
       .select("data, updated_at")
-      .single();
+      .maybeSingle();
+    if (error?.code === "23505" || (!error && !data))
+      return response(
+        {
+          code: "CONFLICT",
+          error:
+            "Your workspace changed elsewhere. Load the latest version before saving again.",
+        },
+        409,
+        headers,
+      );
     if (error || !data)
       return response(
         { error: "Your changes were not saved. Please retry." },
@@ -176,7 +228,11 @@ export async function PUT(request: Request) {
         headers,
       );
     return response(
-      { workspace: { ...data.data, updatedAt: data.updated_at } },
+      parseAccountSnapshot({
+        owner: auth.user.id,
+        revision: data.updated_at,
+        workspace: { ...data.data, updatedAt: data.updated_at },
+      }),
       200,
       headers,
     );

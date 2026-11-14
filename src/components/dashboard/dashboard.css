@@ -1,3 +1,20 @@
+.workspace-import-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.workspace-import-notice p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .sidebar-research-link {
   display: flex;
   align-items: center;
@@ -350,7 +367,6 @@
   padding-bottom: 140px;
 }
 
-
 .care-search-view .results-toolbar {
   flex-wrap: nowrap;
   margin: 16px 0 8px;
@@ -606,7 +622,6 @@
   .has-comparison .dashboard-content {
     padding-bottom: 180px;
   }
-
 
   .care-search-view .research-search .name-search,
   .care-search-view .research-search .button {

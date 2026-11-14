@@ -257,7 +257,10 @@ export function createOutreachRecord(
   return candidate;
 }
 
-export function outreachUrl(brief: OutreachBrief): string {
+export function outreachUrl(
+  brief: OutreachBrief,
+  workspace: "account" | "demo" = "demo",
+): string {
   const bytes = new TextEncoder().encode(JSON.stringify(brief));
   const encoded = btoa(
     Array.from(bytes, (byte) => String.fromCharCode(byte)).join(""),
@@ -265,5 +268,5 @@ export function outreachUrl(brief: OutreachBrief): string {
     .replace(/\+/g, "-")
     .replace(/\//g, "_")
     .replace(/=+$/, "");
-  return `https://harbor-voice-lab.vercel.app/#outreach=${encoded}`;
+  return `https://harbor-voice-lab.vercel.app/#outreach=${encoded}${workspace === "account" ? "&workspace=account" : ""}`;
 }

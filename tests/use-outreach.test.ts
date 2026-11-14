@@ -18,6 +18,8 @@ type Harness = {
   workspace: Workspace;
   reject: boolean;
   blockedStorage: boolean;
+  demo: boolean;
+  updates: number;
   openings: {
     url: string;
     target: string;
@@ -26,7 +28,18 @@ type Harness = {
   }[];
   edit(note: string): void;
   setReady(ready: boolean): void;
+  setDemo(demo: boolean): void;
+  replaceUpdate(): void;
+  replaceWorkspace(): void;
+  holdResponses(): void;
   unmount(): void;
+  pendingRefresh?: Promise<void>;
+  responses: {
+    signal: AbortSignal;
+    bodyStarted: boolean;
+    releaseFetch(): void;
+    releaseBody(): void;
+  }[];
 };
 
 declare global {
@@ -42,7 +55,11 @@ const provider = {
 };
 const chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
-async function mount(page: Page, editorProvider?: OutreachProvider) {
+async function mount(
+  page: Page,
+  editorProvider?: OutreachProvider,
+  demo = true,
+) {
   // Use the bundler already shipped with the declared tsx test runner.
   const require = createRequire(resolve("package.json"));
   const { build } = createRequire(require.resolve("tsx/package.json"))(
@@ -61,35 +78,73 @@ async function mount(page: Page, editorProvider?: OutreachProvider) {
         import "./src/app/globals.css";
         const provider = ${JSON.stringify(editorProvider ?? null)};
         const key = "harbor.demo.workspace.v1";
-        const h = window.__outreach = { reject: false, blockedStorage: false, openings: [] };
+        const h = window.__outreach = { reject: false, blockedStorage: false, openings: [], updates: 0, responses: [] };
+        h.holdResponses = () => {
+          window.fetch = (_input, init) => new Promise(resolve => {
+            const response = {
+              signal: init.signal,
+              bodyStarted: false,
+              releaseBody() {},
+              releaseFetch() {
+                resolve({
+                  status: 200,
+                  ok: true,
+                  json: () => new Promise(resolveBody => {
+                    response.bodyStarted = true;
+                    response.releaseBody = () => resolveBody({
+                      state: "completed",
+                      updatedAt: "2026-11-13T12:00:00.000Z",
+                      findings: ["Account rehearsal result"],
+                      nextSteps: [],
+                    });
+                  }),
+                });
+              },
+            };
+            h.responses.push(response);
+          });
+        };
         const originalSetItem = Storage.prototype.setItem;
         Storage.prototype.setItem = function (...args) {
           if (h.blockedStorage) throw new Error("Blocked storage");
           return originalSetItem.apply(this, args);
         };
         window.open = (url, target, features) => {
-          h.openings.push({ url, target, features, saved: JSON.parse(localStorage.getItem(key)) });
+          h.openings.push({ url, target, features, saved: h.demo ? JSON.parse(localStorage.getItem(key)) : structuredClone(h.readWorkspace()) });
           return null;
         };
         const root = createRoot(document.getElementById("root"));
         h.unmount = () => root.unmount();
         function App() {
-          const [workspace, setWorkspace] = useState(() => JSON.parse(localStorage.getItem(key)) || createEmptyWorkspace());
+          const [workspace, setWorkspace] = useState(() => ${demo} && JSON.parse(localStorage.getItem(key)) || createEmptyWorkspace());
           const current = useRef(workspace);
+          h.readWorkspace = () => current.current;
           const [ready, setReady] = useState(true);
+          const [demo, setDemo] = useState(${demo});
+          const [revision, setRevision] = useState(0);
           const [editing, setEditing] = useState(Boolean(provider));
           const update = useCallback(updater => {
+            h.updates++;
             if (h.reject) return false;
             const checked = validateWorkspace({ ...updater(current.current), updatedAt: new Date().toISOString() });
             if (!checked.ok) return false;
-            localStorage.setItem(key, JSON.stringify(checked.workspace));
+            if (demo) localStorage.setItem(key, JSON.stringify(checked.workspace));
             current.current = checked.workspace;
             setWorkspace(checked.workspace);
             return true;
-          }, []);
-          h.api = useOutreach(workspace, update, ready, true);
+          }, [demo, revision]);
+          h.api = useOutreach(workspace, update, ready, demo);
+          h.demo = demo;
           h.workspace = workspace;
           h.setReady = setReady;
+          h.setDemo = setDemo;
+          h.replaceUpdate = () => setRevision(value => value + 1);
+          h.replaceWorkspace = () => {
+            const empty = createEmptyWorkspace();
+            current.current = empty;
+            setWorkspace(empty);
+            setRevision(value => value + 1);
+          };
           h.edit = note => update(w => ({ ...w, notes: { ...w.notes, "care-1": note } }));
           return editing ? <OutreachEditor provider={provider} launch={h.api.launch} error={h.api.error} close={() => setEditing(false)} /> : null;
         }
@@ -122,6 +177,461 @@ async function mount(page: Page, editorProvider?: OutreachProvider) {
   );
 }
 
+test("demo and account launches, duplicate reopening, explicit reopening and follow-ups use the current mode", async () => {
+  const browser = await chromium.launch({
+    ...(existsSync(chrome)
+      ? { executablePath: chrome }
+      : chromiumLaunchOptions),
+    headless: true,
+  });
+  try {
+    for (const demo of [true, false]) {
+      const page = await browser.newPage();
+      await page.route("**/api/outreach-result", (route) =>
+        route.fulfill({ status: 404 }),
+      );
+      await mount(page, undefined, demo);
+      assert.equal(
+        await page.evaluate(
+          (p) => window.__outreach.api.launch(p, ["Pricing"], "Visit 海?"),
+          provider,
+        ),
+        true,
+      );
+      await page.waitForFunction(
+        () => window.__outreach.api.records.length === 1,
+      );
+      const original = await page.evaluate(
+        () => window.__outreach.api.records[0],
+      );
+      assert.equal(
+        await page.evaluate(
+          (p) => window.__outreach.api.launch(p, ["Pricing"], "Visit 海?"),
+          provider,
+        ),
+        true,
+      );
+      await page.evaluate(() =>
+        window.__outreach.api.reopen(window.__outreach.api.records[0]),
+      );
+      assert.equal(
+        await page.evaluate(
+          (p) =>
+            window.__outreach.api.launch(
+              p,
+              ["Availability"],
+              "Follow up 海",
+              window.__outreach.api.records[0],
+            ),
+          provider,
+        ),
+        true,
+      );
+      await page.waitForFunction(
+        () => window.__outreach.api.records.length === 2,
+      );
+      const openings = await page.evaluate(() => window.__outreach.openings);
+      assert.equal(openings.length, 4);
+      const briefs = openings.map((opening) => {
+        const url = new URL(opening.url);
+        const fragment = new URLSearchParams(url.hash.slice(1));
+        assert.equal(fragment.get("workspace"), demo ? null : "account");
+        assert.equal(url.search, "");
+        assert.equal(
+          url.href.split("#")[0],
+          "https://harbor-voice-lab.vercel.app/",
+        );
+        assert.equal(opening.target, "_blank");
+        assert.equal(opening.features, "noopener,noreferrer");
+        const brief = JSON.parse(
+          Buffer.from(fragment.get("outreach")!, "base64url").toString("utf8"),
+        );
+        assert.equal(Object.hasOwn(brief, "workspace"), false);
+        assert.deepEqual(
+          opening.saved.outreach?.find(
+            (record) => record.brief.requestId === brief.requestId,
+          )?.brief,
+          brief,
+        );
+        return brief;
+      });
+      assert.deepEqual(briefs.slice(0, 3), [
+        original.brief,
+        original.brief,
+        original.brief,
+      ]);
+      assert.notEqual(briefs[3].requestId, original.brief.requestId);
+      assert.notEqual(briefs[3].readKey, original.brief.readKey);
+      assert.match(briefs[3].previous, /Prior user request: Visit 海\?/);
+      assert.equal(
+        await page.evaluate(() => window.__outreach.api.records[1].parentId),
+        original.brief.requestId,
+      );
+      if (!demo)
+        assert.equal(await page.evaluate(() => localStorage.length), 0);
+
+      await page.evaluate((value) => window.__outreach.setDemo(value), !demo);
+      await page.waitForFunction(
+        (value) => window.__outreach.demo === value,
+        !demo,
+      );
+      await page.evaluate(() =>
+        window.__outreach.api.reopen(window.__outreach.api.records[0]),
+      );
+      const reopened = new URL(
+        await page.evaluate(() => window.__outreach.openings.at(-1)!.url),
+      );
+      const fragment = new URLSearchParams(reopened.hash.slice(1));
+      assert.equal(fragment.get("workspace"), demo ? "account" : null);
+      assert.deepEqual(
+        JSON.parse(
+          Buffer.from(fragment.get("outreach")!, "base64url").toString("utf8"),
+        ),
+        original.brief,
+      );
+      await page.close();
+    }
+  } finally {
+    await browser.close();
+  }
+});
+
+test("late account fetch and body results cannot mutate state after lifecycle changes", async (t) => {
+  const browser = await chromium.launch({
+    ...(existsSync(chrome)
+      ? { executablePath: chrome }
+      : chromiumLaunchOptions),
+    headless: true,
+  });
+  try {
+    for (const stage of ["fetch", "body"] as const) {
+      for (const change of [
+        "unready",
+        "update replacement",
+        "mode",
+        "unmount",
+      ] as const) {
+        await t.test(`${stage} resolution after ${change}`, async () => {
+          const page = await browser.newPage();
+          try {
+            await mount(page, undefined, false);
+            await page.evaluate(() => {
+              Object.defineProperty(document, "visibilityState", {
+                configurable: true,
+                value: "hidden",
+              });
+              window.__outreach.holdResponses();
+            });
+            assert.equal(
+              await page.evaluate(
+                (p) => window.__outreach.api.launch(p, [], "Account question"),
+                provider,
+              ),
+              true,
+            );
+            await page.waitForFunction(
+              () => window.__outreach.api.records.length === 1,
+            );
+            await page.evaluate(() => {
+              window.__outreach.pendingRefresh =
+                window.__outreach.api.refresh();
+            });
+            await page.waitForFunction(
+              () =>
+                window.__outreach.responses.length === 1 &&
+                window.__outreach.api.refreshing,
+            );
+            if (stage === "body") {
+              await page.evaluate(() =>
+                window.__outreach.responses[0].releaseFetch(),
+              );
+              await page.waitForFunction(
+                () => window.__outreach.responses[0].bodyStarted,
+              );
+            }
+            await page.evaluate((change) => {
+              const h = window.__outreach;
+              if (change === "unready") h.setReady(false);
+              else if (change === "update replacement") h.replaceUpdate();
+              else if (change === "mode") h.setDemo(true);
+              else h.unmount();
+            }, change);
+            await page.waitForFunction(
+              () => window.__outreach.responses[0].signal.aborted,
+            );
+            const before = await page.evaluate(() => ({
+              workspace: window.__outreach.workspace,
+              updates: window.__outreach.updates,
+              error: window.__outreach.api.error,
+              refreshing: window.__outreach.api.refreshing,
+            }));
+            if (change !== "unmount") assert.equal(before.refreshing, false);
+            await page.evaluate(async (stage) => {
+              const h = window.__outreach;
+              if (stage === "fetch") h.responses[0].releaseFetch();
+              else h.responses[0].releaseBody();
+              await h.pendingRefresh;
+            }, stage);
+            assert.deepEqual(
+              await page.evaluate(() => ({
+                workspace: window.__outreach.workspace,
+                updates: window.__outreach.updates,
+                error: window.__outreach.api.error,
+                refreshing: window.__outreach.api.refreshing,
+              })),
+              before,
+            );
+            if (stage === "fetch")
+              assert.equal(
+                await page.evaluate(
+                  () => window.__outreach.responses[0].bodyStarted,
+                ),
+                false,
+              );
+            if (change === "unmount") return;
+            if (change === "unready") {
+              await page.evaluate(() => window.__outreach.setReady(true));
+              await page.evaluate(
+                () =>
+                  new Promise<void>((resolve) =>
+                    requestAnimationFrame(() => resolve()),
+                  ),
+              );
+            }
+            await page.evaluate(() => {
+              window.__outreach.pendingRefresh =
+                window.__outreach.api.refresh();
+            });
+            await page.waitForFunction(
+              () => window.__outreach.responses.length === 2,
+            );
+            assert.equal(
+              await page.evaluate(() => window.__outreach.api.refreshing),
+              true,
+            );
+            await page.evaluate(() =>
+              window.__outreach.responses[1].releaseFetch(),
+            );
+            await page.waitForFunction(
+              () => window.__outreach.responses[1].bodyStarted,
+            );
+            await page.evaluate(async () => {
+              window.__outreach.responses[1].releaseBody();
+              await window.__outreach.pendingRefresh;
+            });
+            await page.waitForFunction(() => !window.__outreach.api.refreshing);
+            assert.equal(
+              await page.evaluate(() => window.__outreach.updates),
+              before.updates + 1,
+            );
+            assert.equal(
+              await page.evaluate(() => window.__outreach.api.records[0].state),
+              "completed",
+            );
+          } finally {
+            await page.close();
+          }
+        });
+      }
+    }
+  } finally {
+    await browser.close();
+  }
+});
+
+test("account lifecycle reset clears abandoned refreshes and permits new work", async (t) => {
+  const browser = await chromium.launch({
+    ...(existsSync(chrome)
+      ? { executablePath: chrome }
+      : chromiumLaunchOptions),
+    headless: true,
+  });
+  try {
+    for (const change of ["empty workspace", "ready cycle"] as const) {
+      await t.test(change, async () => {
+        const page = await browser.newPage();
+        try {
+          await mount(page, undefined, false);
+          await page.evaluate((p) => {
+            Object.defineProperty(document, "visibilityState", {
+              configurable: true,
+              value: "hidden",
+            });
+            const h = window.__outreach;
+            h.holdResponses();
+            h.api.launch(p, [], "Old question");
+            h.pendingRefresh = h.api.refresh();
+          }, provider);
+          await page.waitForFunction(
+            () =>
+              window.__outreach.api.refreshing &&
+              window.__outreach.responses.length === 1,
+          );
+          if (change === "ready cycle") {
+            await page.evaluate(() => window.__outreach.setReady(false));
+            await page.waitForFunction(
+              () => window.__outreach.responses[0].signal.aborted,
+            );
+            await page.evaluate(() => {
+              const h = window.__outreach;
+              h.replaceWorkspace();
+              h.setReady(true);
+            });
+          } else {
+            await page.evaluate(() => window.__outreach.replaceWorkspace());
+          }
+          await page.waitForFunction(
+            () =>
+              window.__outreach.responses[0].signal.aborted &&
+              window.__outreach.api.records.length === 0,
+          );
+          const before = await page.evaluate(() => ({
+            workspace: window.__outreach.workspace,
+            updates: window.__outreach.updates,
+            error: window.__outreach.api.error,
+            refreshing: window.__outreach.api.refreshing,
+          }));
+          await page.evaluate(async () => {
+            const h = window.__outreach;
+            h.responses[0].releaseFetch();
+            await h.pendingRefresh;
+          });
+          assert.deepEqual(
+            await page.evaluate(() => ({
+              workspace: window.__outreach.workspace,
+              updates: window.__outreach.updates,
+              error: window.__outreach.api.error,
+              refreshing: window.__outreach.api.refreshing,
+            })),
+            before,
+          );
+          assert.equal(
+            await page.evaluate(() => window.__outreach.api.refreshing),
+            false,
+          );
+          await page.evaluate(() => window.__outreach.api.refresh());
+          assert.equal(
+            await page.evaluate(() => window.__outreach.api.refreshing),
+            false,
+          );
+          assert.equal(
+            await page.evaluate((p) => {
+              const h = window.__outreach;
+              const launched = h.api.launch(p, [], "New question");
+              h.pendingRefresh = h.api.refresh();
+              return launched;
+            }, provider),
+            true,
+          );
+          await page.waitForFunction(
+            () =>
+              window.__outreach.responses.length === 2 &&
+              window.__outreach.api.refreshing,
+          );
+          await page.evaluate(() =>
+            window.__outreach.responses[1].releaseFetch(),
+          );
+          await page.waitForFunction(
+            () => window.__outreach.responses[1].bodyStarted,
+          );
+          await page.evaluate(async () => {
+            const h = window.__outreach;
+            h.responses[1].releaseBody();
+            await h.pendingRefresh;
+          });
+          await page.waitForFunction(
+            () =>
+              !window.__outreach.api.refreshing &&
+              window.__outreach.api.records[0].state === "completed",
+          );
+          assert.equal(
+            await page.evaluate(
+              () => window.__outreach.api.records[0].brief.question,
+            ),
+            "New question",
+          );
+        } finally {
+          await page.close();
+        }
+      });
+    }
+  } finally {
+    await browser.close();
+  }
+});
+
+test("settling an abandoned account refresh cannot clear a newer in-flight refresh", async () => {
+  const browser = await chromium.launch({
+    ...(existsSync(chrome)
+      ? { executablePath: chrome }
+      : chromiumLaunchOptions),
+    headless: true,
+  });
+  try {
+    const page = await browser.newPage();
+    await mount(page, undefined, false);
+    await page.evaluate((p) => {
+      Object.defineProperty(document, "visibilityState", {
+        configurable: true,
+        value: "hidden",
+      });
+      const h = window.__outreach;
+      h.holdResponses();
+      h.api.launch(p, [], "Account question");
+      h.pendingRefresh = h.api.refresh();
+    }, provider);
+    await page.waitForFunction(
+      () =>
+        window.__outreach.api.refreshing &&
+        window.__outreach.responses.length === 1,
+    );
+    await page.evaluate(() => window.__outreach.replaceUpdate());
+    await page.waitForFunction(
+      () => window.__outreach.responses[0].signal.aborted,
+    );
+    await page.evaluate(() => {
+      void window.__outreach.api.refresh();
+    });
+    await page.waitForFunction(
+      () =>
+        window.__outreach.responses.length === 2 &&
+        window.__outreach.api.refreshing,
+    );
+    const before = await page.evaluate(() => ({
+      workspace: window.__outreach.workspace,
+      updates: window.__outreach.updates,
+      error: window.__outreach.api.error,
+      refreshing: window.__outreach.api.refreshing,
+    }));
+    await page.evaluate(async () => {
+      const h = window.__outreach;
+      h.responses[0].releaseFetch();
+      await h.pendingRefresh;
+    });
+    assert.deepEqual(
+      await page.evaluate(() => ({
+        workspace: window.__outreach.workspace,
+        updates: window.__outreach.updates,
+        error: window.__outreach.api.error,
+        refreshing: window.__outreach.api.refreshing,
+      })),
+      before,
+    );
+    await page.evaluate(() => window.__outreach.responses[1].releaseFetch());
+    await page.waitForFunction(
+      () => window.__outreach.responses[1].bodyStarted,
+    );
+    await page.evaluate(() => window.__outreach.responses[1].releaseBody());
+    await page.waitForFunction(
+      () =>
+        !window.__outreach.api.refreshing &&
+        window.__outreach.api.records[0].state === "completed",
+    );
+  } finally {
+    await browser.close();
+  }
+});
+
 test("outreach hook persists before opening, deduplicates clicks and recovers across reload and tabs", async () => {
   const browser = await chromium.launch({
     ...(existsSync(chrome)
@@ -152,9 +662,12 @@ test("outreach hook persists before opening, deduplicates clicks and recovers ac
     assert.equal(opening.features, "noopener,noreferrer");
     assert.equal(opening.saved.outreach?.length, 1);
     const brief = JSON.parse(
-      Buffer.from(new URL(opening.url).hash.slice(10), "base64url").toString(
-        "utf8",
-      ),
+      Buffer.from(
+        new URLSearchParams(new URL(opening.url).hash.slice(1)).get(
+          "outreach",
+        )!,
+        "base64url",
+      ).toString("utf8"),
     );
     assert.deepEqual(brief, opening.saved.outreach![0].brief);
     assert.equal(
@@ -760,9 +1273,12 @@ test("compact composer validates after submit and launches without a listed phon
       await page.waitForFunction(() => window.__outreach.openings.length === 1);
       const opening = await page.evaluate(() => window.__outreach.openings[0]);
       const brief = JSON.parse(
-        Buffer.from(new URL(opening.url).hash.slice(10), "base64url").toString(
-          "utf8",
-        ),
+        Buffer.from(
+          new URLSearchParams(new URL(opening.url).hash.slice(1)).get(
+            "outreach",
+          )!,
+          "base64url",
+        ).toString("utf8"),
       );
       assert.equal(brief.phone, "");
       assert.deepEqual(brief.topics, ["Pricing"]);

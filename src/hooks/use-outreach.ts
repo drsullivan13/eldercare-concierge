@@ -22,6 +22,7 @@ export function useOutreach(
   ready: boolean,
   demo = false,
 ) {
+  const mode = demo ? "demo" : "account";
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState("");
   const current = useRef(workspace);
@@ -44,6 +45,7 @@ export function useOutreach(
     return () => {
       active.current = false;
       generation.current = epoch + 1;
+      setRefreshing(false);
       backoff.clear();
       for (const controller of requests) controller.abort();
     };
@@ -162,7 +164,7 @@ export function useOutreach(
         .finally(() => {
           if (running.current?.task === task) {
             running.current = null;
-            if (active.current) setRefreshing(false);
+            if (valid()) setRefreshing(false);
           }
         });
       running.current = { generation: epoch, task };
@@ -216,7 +218,7 @@ export function useOutreach(
         );
         if (!trusted) return;
         window.open(
-          outreachUrl(trusted.brief),
+          outreachUrl(trusted.brief, mode),
           "_blank",
           "noopener,noreferrer",
         );
@@ -227,7 +229,7 @@ export function useOutreach(
         );
       }
     },
-    [ready, snapshot],
+    [ready, snapshot, mode],
   );
 
   const launch = useCallback(
@@ -267,7 +269,11 @@ export function useOutreach(
         );
         const target = existing ?? record;
         save([target]);
-        window.open(outreachUrl(target.brief), "_blank", "noopener,noreferrer");
+        window.open(
+          outreachUrl(target.brief, mode),
+          "_blank",
+          "noopener,noreferrer",
+        );
         setError("");
         return true;
       } catch {
@@ -277,7 +283,7 @@ export function useOutreach(
         return false;
       }
     },
-    [ready, snapshot, save],
+    [ready, snapshot, save, mode],
   );
 
   return {

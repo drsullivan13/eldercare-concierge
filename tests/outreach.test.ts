@@ -66,12 +66,50 @@ test("the production fragment transports UTF-8 JSON without query-string credent
   assert.match(url.hash, /^#outreach=[A-Za-z0-9_-]+$/);
   assert.deepEqual(
     JSON.parse(
-      Buffer.from(url.hash.slice("#outreach=".length), "base64url").toString(
-        "utf8",
-      ),
+      Buffer.from(
+        new URLSearchParams(url.hash.slice(1)).get("outreach")!,
+        "base64url",
+      ).toString("utf8"),
     ),
     record.brief,
   );
+});
+
+test("account launches append only a fragment workspace hint and demo URLs stay byte-compatible", () => {
+  const record = createOutreachRecord(
+    provider,
+    ["介護"],
+    "Private question 海",
+  );
+  const legacy = `https://harbor-voice-lab.vercel.app/#outreach=${Buffer.from(JSON.stringify(record.brief), "utf8").toString("base64url")}`;
+  assert.equal(outreachUrl(record.brief), legacy);
+  assert.equal(outreachUrl(record.brief, "demo"), legacy);
+  assert.equal(
+    outreachUrl(record.brief, "account"),
+    `${legacy}&workspace=account`,
+  );
+  for (const mode of ["demo", "account"] as const) {
+    const url = new URL(outreachUrl(record.brief, mode));
+    const fragment = new URLSearchParams(url.hash.slice(1));
+    assert.equal(url.search, "");
+    assert.equal(url.username, "");
+    assert.equal(url.password, "");
+    assert.ok(!url.href.split("#")[0].includes(record.brief.readKey));
+    assert.ok(!url.href.split("#")[0].includes(record.brief.requestId));
+    assert.ok(!url.href.includes(record.brief.question));
+    assert.equal(
+      fragment.get("workspace"),
+      mode === "account" ? "account" : null,
+    );
+    assert.deepEqual(
+      JSON.parse(
+        Buffer.from(fragment.get("outreach")!, "base64url").toString("utf8"),
+      ),
+      record.brief,
+    );
+    assert.ok(parseOutreachRecord(record));
+    assert.ok(!Object.hasOwn(record.brief, "workspace"));
+  }
 });
 
 test("brief limits accept their exact maximum and reject excess or unknown fields", () => {
@@ -359,7 +397,9 @@ test("blank-phone briefs launch, round-trip through the fragment and reload", ()
   );
   const brief = JSON.parse(
     Buffer.from(
-      new URL(outreachUrl(record.brief)).hash.slice(10),
+      new URLSearchParams(new URL(outreachUrl(record.brief)).hash.slice(1)).get(
+        "outreach",
+      )!,
       "base64url",
     ).toString("utf8"),
   );

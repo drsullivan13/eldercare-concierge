@@ -8,10 +8,14 @@ export function ProfileDialog({
   profile,
   save,
   close,
+  error = "",
+  blocked = false,
 }: {
   profile: Workspace["profile"];
   save: (profile: Workspace["profile"]) => void;
   close: () => void;
+  error?: string;
+  blocked?: boolean;
 }) {
   const [value, setValue] = useState(profile);
   return (
@@ -25,7 +29,7 @@ export function ProfileDialog({
         className="dialog-form"
         onSubmit={(e) => {
           e.preventDefault();
-          save(value);
+          if (!blocked) save(value);
         }}
       >
         <label>
@@ -93,7 +97,12 @@ export function ProfileDialog({
           Just research preferences here. Please leave out medical, financial
           and other sensitive information.
         </p>
-        <button className="button button-primary full-width">
+        {error && (
+          <p className="form-error" role="alert">
+            {error}
+          </p>
+        )}
+        <button className="button button-primary full-width" disabled={blocked}>
           Save & continue <ArrowRight size={16} />
         </button>
       </form>

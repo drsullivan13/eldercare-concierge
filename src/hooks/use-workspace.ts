@@ -4,6 +4,12 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
 import { validateWorkspace, type Workspace } from "@/lib/workspace";
+import {
+  AccountWorkspaceSession,
+  type WorkspaceView,
+} from "@/lib/account-workspace-session";
+import { parseDemoImport } from "@/lib/demo-workspace-import";
+
 const DEMO_KEY = "harbor.demo.workspace.v1";
 function makeWorkspace(name = "", demo = false): Workspace {
   return {
@@ -41,180 +47,250 @@ function makeWorkspace(name = "", demo = false): Workspace {
     updatedAt: new Date().toISOString(),
   };
 }
+
+type Lifecycle =
+  | { demo: true; active: boolean; workspace: Workspace }
+  | {
+      demo: false;
+      session: AccountWorkspaceSession;
+      demoImportChecked: boolean;
+    };
+
+function readDemoImport(): Workspace | null {
+  try {
+    return parseDemoImport(
+      localStorage.getItem(DEMO_KEY),
+      makeWorkspace("", true),
+    );
+  } catch {
+    return null;
+  }
+}
+
+function initialView(demo: boolean): WorkspaceView {
+  return {
+    workspace: makeWorkspace("", demo),
+    ready: false,
+    error: "",
+    saveStatus: "",
+    email: "",
+    owner: null,
+    conflict: false,
+    dirty: false,
+  };
+}
+
 export function useWorkspace(demo: boolean) {
   const router = useRouter();
-  const [workspace, setWorkspace] = useState<Workspace>(() =>
-    makeWorkspace("", demo),
-  );
-  const [ready, setReady] = useState(false);
-  const [error, setError] = useState("");
-  const [saveStatus, setSaveStatus] = useState("");
-  const [email, setEmail] = useState("");
-  const current = useRef(workspace);
-  const queue = useRef(Promise.resolve());
-  const revision = useRef(0);
+  const [state, setState] = useState<{
+    demo: boolean;
+    view: WorkspaceView;
+    lifecycle: Lifecycle | null;
+  }>(() => ({
+    demo,
+    view: initialView(demo),
+    lifecycle: null,
+  }));
+  const [checkedDemoSession, setCheckedDemoSession] =
+    useState<AccountWorkspaceSession | null>(null);
+  const lifecycle = useRef<Lifecycle | null>(null);
+  const view = state.demo === demo ? state.view : initialView(demo);
+  const bound = state.demo === demo ? state.lifecycle : null;
+
   useEffect(() => {
-    let active = true;
-    async function init() {
+    if (demo) {
+      const local: Extract<Lifecycle, { demo: true }> = {
+        demo: true,
+        active: true,
+        workspace: makeWorkspace("", true),
+      };
+      lifecycle.current = local;
+      let error = "";
+      let storedLocally = false;
       try {
-        if (demo) {
-          let value = makeWorkspace("", true);
-          let storedLocally = false;
-          try {
-            const stored = localStorage.getItem(DEMO_KEY);
-            if (stored) {
-              const candidate = validateWorkspace(JSON.parse(stored));
-              if (candidate.ok) value = candidate.workspace;
-              else
-                setError(
-                  "The previous demo plan could not be restored. A fresh workspace is ready.",
-                );
-            }
-            localStorage.setItem(DEMO_KEY, JSON.stringify(value));
-            storedLocally = true;
-          } catch {
-            setError(
-              "This browser could not store your plan. Enable site storage to save changes; you can still search for care.",
-            );
-          }
-          if (active) {
-            current.current = value;
-            setWorkspace(value);
-            setReady(true);
-            setSaveStatus(
-              storedLocally ? "Saved in this browser" : "Demo not saved",
-            );
-          }
-          return;
+        const stored = localStorage.getItem(DEMO_KEY);
+        if (stored) {
+          const candidate = validateWorkspace(JSON.parse(stored));
+          if (candidate.ok) local.workspace = candidate.workspace;
+          else
+            error =
+              "The previous demo plan could not be restored. A fresh workspace is ready.";
         }
+        localStorage.setItem(DEMO_KEY, JSON.stringify(local.workspace));
+        storedLocally = true;
+      } catch {
+        error =
+          "This browser could not store your plan. Enable site storage to save changes; you can still search for care.";
+      }
+      setState({
+        demo,
+        lifecycle: local,
+        view: {
+          ...initialView(true),
+          workspace: local.workspace,
+          ready: true,
+          error,
+          saveStatus: storedLocally
+            ? "Saved in this browser"
+            : "Demo not saved",
+        },
+      });
+      return () => {
+        local.active = false;
+        if (lifecycle.current === local) lifecycle.current = null;
+      };
+    }
+    const session = new AccountWorkspaceSession({
+      createClient: async () => {
         if (!isSupabaseConfigured()) {
           router.replace("/signup");
-          return;
+          throw new Error("Cloud workspace is not configured.");
         }
-        const supabase = await createClient();
-        const {
-          data: { user },
-          error: authError,
-        } = await supabase.auth.getUser();
-        if (authError || !user) {
-          router.replace("/login");
-          return;
-        }
-        const res = await fetch("/api/workspace", { cache: "no-store" });
-        const body = await res.json();
-        if (!res.ok)
-          throw new Error(body.error || "Your workspace could not be loaded.");
-        const value =
-          body.workspace ||
-          makeWorkspace(
-            typeof user.user_metadata?.display_name === "string"
-              ? user.user_metadata.display_name.slice(0, 80)
-              : "",
-          );
-        const checked = validateWorkspace(value);
-        if (!checked.ok)
-          throw new Error(
-            "Your stored workspace needs attention. Please try again later.",
-          );
-        if (active) {
-          current.current = checked.workspace;
-          setWorkspace(checked.workspace);
-          setEmail(user.email || "");
-          setReady(true);
-          setSaveStatus(
-            body.workspace ? "Saved to your account" : "Ready to start",
-          );
-        }
-      } catch (e) {
-        if (active)
-          setError(
-            e instanceof Error
-              ? e.message
-              : "Your workspace could not be loaded.",
-          );
-      }
-    }
-    void init();
+        return createClient();
+      },
+      fetch: (...args) => fetch(...args),
+      fresh: makeWorkspace,
+      publish: (next) => {
+        if (lifecycle.current === cloud)
+          setState({ demo: false, view: next, lifecycle: cloud });
+      },
+      signedOut: () => router.replace("/login"),
+    });
+    const cloud: Extract<Lifecycle, { demo: false }> = {
+      demo: false,
+      session,
+      demoImportChecked: false,
+    };
+    lifecycle.current = cloud;
+    setState({ demo: false, view: initialView(false), lifecycle: cloud });
+    void session.start();
     return () => {
-      active = false;
+      session.dispose();
+      if (lifecycle.current === cloud) lifecycle.current = null;
     };
   }, [demo, router]);
-  const persist = useCallback((value: Workspace) => {
-    const version = ++revision.current;
-    setSaveStatus("Saving…");
-    queue.current = queue.current.then(async () => {
-      try {
-        const response = await fetch("/api/workspace", {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ workspace: value }),
-        });
-        if (!response.ok) {
-          const result = await response.json();
-          throw new Error(result.error || "Could not save your changes.");
-        }
-        if (version === revision.current) {
-          setSaveStatus("Saved to your account");
-          setError("");
-        }
-      } catch (e) {
-        if (version === revision.current) {
-          setSaveStatus("Changes not saved");
-          setError(
-            e instanceof Error ? e.message : "Could not save your changes.",
-          );
-        }
-      }
-    });
-  }, []);
+
   const update = useCallback(
-    (updater: (value: Workspace) => Workspace): boolean => {
-      const checked = validateWorkspace({
-        ...updater(current.current),
-        updatedAt: new Date().toISOString(),
-      });
-      if (!checked.ok) {
-        setError(checked.error);
-        return false;
-      }
-      if (demo) {
+    (updater: (workspace: Workspace) => Workspace): boolean => {
+      const current = lifecycle.current;
+      if (!current || current !== bound || current.demo !== demo) return false;
+      if (!current.demo) return current.session.update(updater);
+      if (!current.active) return false;
+      try {
+        const checked = validateWorkspace({
+          ...updater(structuredClone(current.workspace)),
+          updatedAt: new Date().toISOString(),
+        });
+        if (!checked.ok) throw new Error(checked.error);
         try {
           localStorage.setItem(DEMO_KEY, JSON.stringify(checked.workspace));
-          setSaveStatus("Saved in this browser");
-          setError("");
         } catch {
-          setError(
+          throw new Error(
             "Your browser could not save this change. Export your current plan before leaving.",
           );
-          return false;
         }
-      } else persist(checked.workspace);
-      current.current = checked.workspace;
-      setWorkspace(checked.workspace);
-      return true;
+        current.workspace = checked.workspace;
+        setState((previous) => ({
+          demo: true,
+          lifecycle: current,
+          view: {
+            ...previous.view,
+            workspace: checked.workspace,
+            error: "",
+            saveStatus: "Saved in this browser",
+          },
+        }));
+        return true;
+      } catch (error) {
+        setState((previous) => ({
+          ...previous,
+          view: {
+            ...previous.view,
+            error:
+              error instanceof Error
+                ? error.message
+                : "Your change could not be applied.",
+          },
+        }));
+        return false;
+      }
     },
-    [demo, persist],
+    [bound, demo],
   );
-  useEffect(() => {
+
+  const retrySave = useCallback(() => {
+    const current = lifecycle.current;
+    if (!demo && current && current === bound && !current.demo)
+      current.session.retrySave();
+  }, [bound, demo]);
+  const loadLatest = useCallback(async (): Promise<boolean> => {
+    const current = lifecycle.current;
+    if (!demo && current && current === bound && !current.demo)
+      return current.session.loadLatest();
+    return false;
+  }, [bound, demo]);
+  const checkDemoImport = useCallback((): boolean => {
+    const current = lifecycle.current;
+    if (demo || !current || current !== bound || current.demo) return false;
+    const eligible =
+      current.session.canImportDemo() && readDemoImport() !== null;
+    current.demoImportChecked = eligible;
+    setCheckedDemoSession(eligible ? current.session : null);
+    return eligible;
+  }, [bound, demo]);
+  const importDemo = useCallback(async (): Promise<boolean> => {
+    const current = lifecycle.current;
     if (
       demo ||
-      (saveStatus !== "Saving…" && saveStatus !== "Changes not saved")
+      !current ||
+      current !== bound ||
+      current.demo ||
+      !current.demoImportChecked
     )
-      return;
-    const warn = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-    };
+      return false;
+    current.demoImportChecked = false;
+    setCheckedDemoSession(null);
+    return current.session.importDemo(readDemoImport);
+  }, [bound, demo]);
+  const setError = useCallback(
+    (error: string) => {
+      const current = lifecycle.current;
+      if (!current || current !== bound || current.demo !== demo) return;
+      if (!current.demo) current.session.setError(error);
+      else if (current.active)
+        setState((previous) => ({
+          ...previous,
+          view: { ...previous.view, error },
+        }));
+    },
+    [bound, demo],
+  );
+
+  useEffect(() => {
+    if (demo || !view.dirty) return;
+    const warn = (event: BeforeUnloadEvent) => event.preventDefault();
     window.addEventListener("beforeunload", warn);
     return () => window.removeEventListener("beforeunload", warn);
-  }, [demo, saveStatus]);
+  }, [demo, view.dirty]);
+
+  const current = lifecycle.current;
+  const canImportDemo =
+    !demo &&
+    current !== null &&
+    current === bound &&
+    !current.demo &&
+    checkedDemoSession === current.session &&
+    current.demoImportChecked &&
+    current.session.canImportDemo();
+
   return {
-    workspace,
+    ...view,
     update,
-    ready,
-    error,
     setError,
-    saveStatus,
-    email,
-    retrySave: () => persist(current.current),
+    retrySave,
+    loadLatest,
+    checkDemoImport,
+    canImportDemo,
+    importDemo,
   };
 }

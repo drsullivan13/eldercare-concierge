@@ -47,6 +47,7 @@ import { PlanView } from "./dashboard/plan";
 import { OutreachEditor, OutreachHistory } from "./dashboard/outreach";
 import { ComparisonTray, useComparison } from "./dashboard/compare-dialog";
 import { ProfileDialog } from "./dashboard/profile-dialog";
+import { DemoImportDialog } from "./dashboard/demo-import-dialog";
 import { EvidenceStandards } from "./dashboard/research-standards";
 import { carePlanText } from "./dashboard/export-plan";
 import type { DashboardNotification } from "./dashboard/dashboard-notifications";
@@ -69,6 +70,7 @@ const NAV = [
 ] as const;
 export function Dashboard({ demo }: { demo: boolean }) {
   const state = useWorkspace(demo);
+  const [workspaceVersion, setWorkspaceVersion] = useState(0);
   if (!state.ready)
     return (
       <div className="loading-screen">
@@ -85,18 +87,46 @@ export function Dashboard({ demo }: { demo: boolean }) {
         )}
       </div>
     );
-  return <WorkspaceDashboard demo={demo} state={state} />;
+  return (
+    <WorkspaceDashboard
+      key={`${demo ? "demo" : state.owner}:${workspaceVersion}`}
+      demo={demo}
+      state={state}
+      resetViews={() => setWorkspaceVersion((version) => version + 1)}
+    />
+  );
 }
 function WorkspaceDashboard({
   demo,
   state,
+  resetViews,
 }: {
   demo: boolean;
   state: ReturnType<typeof useWorkspace>;
+  resetViews: () => void;
 }) {
   const { workspace, update, error, setError, saveStatus, email, retrySave } =
     state;
   const router = useRouter();
+  const [importOpen, setImportOpen] = useState(false);
+  const [demoChecked, setDemoChecked] = useState(false);
+  const [reloading, setReloading] = useState(false);
+  const conflict = !demo && state.conflict;
+  async function reloadLatest() {
+    if (reloading) return;
+    if (
+      !window.confirm(
+        "Reload the latest account workspace? This discards unsaved changes on this device. Export your plan first if you want to keep a copy.",
+      )
+    )
+      return;
+    setReloading(true);
+    try {
+      if (await state.loadLatest()) resetViews();
+    } finally {
+      setReloading(false);
+    }
+  }
   const [view, setView] = useState<View>("overview");
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -196,9 +226,7 @@ function WorkspaceDashboard({
   const [initialPane, setInitialPane] = useState<ProfilePane>("overview");
   const providerReturnFocus = useRef<HTMLElement | null>(null);
   const comparison = useComparison();
-  const [profileOpen, setProfileOpen] = useState(
-    !demo && !workspace.profile.zip,
-  );
+  const [profileOpen, setProfileOpen] = useState(false);
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
   const [pendingNotifications, setPendingNotifications] = useState<
     DashboardNotification[]
@@ -398,7 +426,7 @@ function WorkspaceDashboard({
   async function signOut() {
     if (
       !demo &&
-      saveStatus === "Changes not saved" &&
+      state.dirty &&
       !window.confirm(
         "Your latest changes have not been saved. Sign out and discard those changes? You can cancel and export your plan or retry saving.",
       )
@@ -600,6 +628,11 @@ function WorkspaceDashboard({
               ? "Research standards"
               : NAV.find((n) => n.id === view)?.label}
           </span>
+          {!demo && (
+            <span className="save-status" role="status">
+              {saveStatus}
+            </span>
+          )}
           <button
             ref={menuButton}
             className="mobile-menu"
@@ -618,20 +651,51 @@ function WorkspaceDashboard({
           className="dashboard-content"
           tabIndex={-1}
         >
-          {(error || saveStatus === "Changes not saved") && (
+          {(conflict || error || saveStatus === "Changes not saved") && (
             <div role="alert" className="form-error page-error">
-              {error ||
-                "Your latest changes have not been saved. Retry saving or export your plan before leaving."}
-              {saveStatus === "Changes not saved" && (
+              {conflict
+                ? "Your account workspace changed elsewhere. Export your plan if needed, then reload the latest workspace before making more edits."
+                : error ||
+                  "Your latest changes have not been saved. Retry saving or export your plan before leaving."}
+              {conflict && (
+                <>
+                  <button
+                    className="text-link"
+                    onClick={reloadLatest}
+                    disabled={reloading}
+                  >
+                    {reloading ? "Reloading…" : "Reload latest"}
+                  </button>
+                  <button className="text-link" onClick={exportPlan}>
+                    Export your plan
+                  </button>
+                </>
+              )}
+              {!conflict && saveStatus === "Changes not saved" && (
                 <button className="text-link" onClick={retrySave}>
                   Retry saving
                 </button>
               )}
-              {saveStatus !== "Changes not saved" && (
+              {!conflict && saveStatus !== "Changes not saved" && (
                 <button onClick={() => setError("")} aria-label="Dismiss error">
                   <X size={16} />
                 </button>
               )}
+            </div>
+          )}
+          {!demo && state.canImportDemo && !conflict && (
+            <div className="workspace-import-notice">
+              <p>
+                Your demo plan is still on this device. Import it only if you
+                want it in this account.
+              </p>
+              <button
+                className="text-link"
+                disabled={saveStatus === "Saving…"}
+                onClick={() => setImportOpen(true)}
+              >
+                Import demo plan
+              </button>
             </div>
           )}
           {view === "overview" && (
@@ -706,10 +770,34 @@ function WorkspaceDashboard({
               {saveStatus}
             </p>
             <div className="workspace-details-actions">
+              {!demo && (
+                <a href="/account" className="text-link">
+                  Account settings <ArrowUpRight size={16} />
+                </a>
+              )}
               {demo && ACCOUNTS_ENABLED && (
                 <Link href="/signup" className="text-link">
                   Create an account <ArrowUpRight size={16} />
                 </Link>
+              )}
+              {!demo && (
+                <>
+                  <a href="/dashboard?demo=1" className="text-link">
+                    Open demo <ArrowUpRight size={16} />
+                  </a>
+                  {!state.canImportDemo && (
+                    <button
+                      className="text-link"
+                      disabled={conflict || saveStatus === "Saving…"}
+                      onClick={() => {
+                        state.checkDemoImport();
+                        setDemoChecked(true);
+                      }}
+                    >
+                      Check this device for a demo plan
+                    </button>
+                  )}
+                </>
               )}
               <button
                 className="text-link"
@@ -720,6 +808,12 @@ function WorkspaceDashboard({
                 {demo ? "Leave demo" : "Sign out"}
               </button>
             </div>
+            {!demo && demoChecked && !state.canImportDemo && (
+              <p className="muted" role="status">
+                No demo plan is available to import. Import needs a usable local
+                plan and an empty account workspace.
+              </p>
+            )}
           </div>
         </details>
         <footer className="app-footer">
@@ -813,6 +907,8 @@ function WorkspaceDashboard({
         <ProfileDialog
           profile={workspace.profile}
           close={closeProfile}
+          error={error}
+          blocked={conflict}
           save={(profile) => {
             if (update((w) => ({ ...w, profile }))) {
               if (profile.zip.trim() !== search.request.zip) comparison.clear();
@@ -820,6 +916,19 @@ function WorkspaceDashboard({
               closeProfile();
               notify("Your workspace has been updated.");
             }
+          }}
+        />
+      )}
+      {importOpen && (
+        <DemoImportDialog
+          error={error}
+          blocked={conflict}
+          close={() => setImportOpen(false)}
+          importDemo={async () => {
+            const imported = await state.importDemo();
+            if (imported) resetViews();
+            else setImportOpen(false);
+            return imported;
           }}
         />
       )}

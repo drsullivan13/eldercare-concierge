@@ -165,11 +165,14 @@ async function launchRehearsal(
     /^https:\/\/harbor-voice-lab\.vercel\.app\/#outreach=/,
   );
   const url = new URL(popup.url());
-  const encoded = new URLSearchParams(url.hash.slice(1)).get("outreach")!;
+  const fragment = new URLSearchParams(url.hash.slice(1));
+  const encoded = fragment.get("outreach")!;
   const brief: OutreachBrief = JSON.parse(
     Buffer.from(encoded, "base64url").toString("utf8"),
   );
   expect(url.search).toBe("");
+  expect(fragment.has("workspace")).toBe(false);
+  expect(url.href.split("#")[0]).toBe("https://harbor-voice-lab.vercel.app/");
   expect(brief).toMatchObject(identity);
   expect(brief.requestId).toMatch(/^[0-9a-f-]{36}$/i);
   expect(brief.readKey).toMatch(/^[0-9a-f]{64}$/i);
