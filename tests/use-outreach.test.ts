@@ -7,11 +7,13 @@ import { chromium, type Page } from "@playwright/test";
 import type { useOutreach } from "../src/hooks/use-outreach";
 import type { Workspace } from "../src/lib/workspace";
 import {
+  createOutreachRecord,
   parseOutreachRecord,
   type OutreachProvider,
   type OutreachRecord,
 } from "../src/lib/outreach";
 import { chromiumLaunchOptions } from "../scripts/lib/chromium.mjs";
+import { createEmptyWorkspace } from "../src/lib/workspace";
 
 type Harness = {
   api: ReturnType<typeof useOutreach>;
@@ -176,6 +178,302 @@ async function mount(
     () => Boolean(window.__outreach?.api) && !window.__outreach.api.refreshing,
   );
 }
+
+test("saved legacy completed reports backfill only manually with two workers, survive reload and reject unrelated results", async () => {
+  const browser = await chromium.launch({
+    ...(existsSync(chrome)
+      ? { executablePath: chrome }
+      : chromiumLaunchOptions),
+    headless: true,
+  });
+  try {
+    const page = await browser.newPage();
+    const records = Array.from({ length: 5 }, (_, i) => ({
+      ...createOutreachRecord(provider, ["Pricing"], `Question ${i}`),
+      state: "completed" as const,
+      createdAt: new Date(Date.UTC(2026, 10, 13, 9, 0, i)).toISOString(),
+      updatedAt: "2026-11-13T10:00:00.000Z",
+      findings: [`Final report ${i}`],
+      nextSteps: ["Confirm with provider"],
+    }));
+    await page.addInitScript(
+      (workspace) => {
+        if (!localStorage.getItem("harbor.demo.workspace.v1"))
+          localStorage.setItem(
+            "harbor.demo.workspace.v1",
+            JSON.stringify(workspace),
+          );
+      },
+      { ...createEmptyWorkspace(), outreach: records },
+    );
+    let calls = 0;
+    let live = 0;
+    let maximum = 0;
+    let unrelated = true;
+    await page.route("**/api/outreach-result", async (route) => {
+      calls++;
+      live++;
+      maximum = Math.max(maximum, live);
+      const { requestId } = route.request().postDataJSON();
+      const saved = records.find(
+        (record) => record.brief.requestId === requestId,
+      )!;
+      await new Promise((resolve) => setTimeout(resolve, 20));
+      live--;
+      await route.fulfill({
+        json: {
+          state: unrelated ? "connected" : "completed",
+          updatedAt: saved.updatedAt,
+          findings: unrelated ? ["Unrelated partial report"] : saved.findings,
+          nextSteps: saved.nextSteps,
+          activity: [{ state: "completed", at: saved.updatedAt }],
+          commitments: [{ kind: "scheduled", text: "Verify Friday visit" }],
+        },
+      });
+    });
+    await mount(page);
+    await page.clock.install();
+    await page.clock.fastForward(121_000);
+    await page.evaluate(() => {
+      window.dispatchEvent(new Event("focus"));
+      document.dispatchEvent(new Event("visibilitychange"));
+      return window.__outreach.api.refresh(false);
+    });
+    assert.equal(calls, 0);
+    await page.evaluate(() => window.__outreach.api.refresh());
+    assert.equal(calls, 5);
+    assert.equal(maximum, 2);
+    assert.deepEqual(
+      await page.evaluate(() => window.__outreach.api.records),
+      records,
+    );
+    unrelated = false;
+    await page.evaluate(() =>
+      Promise.all([
+        window.__outreach.api.refresh(),
+        window.__outreach.api.refresh(),
+      ]),
+    );
+    assert.equal(calls, 10);
+    const enriched = await page.evaluate(() => window.__outreach.api.records);
+    for (let i = 0; i < records.length; i++) {
+      assert.deepEqual(enriched[i], {
+        ...records[i],
+        activity: [{ state: "completed", at: records[i].updatedAt }],
+        commitments: [{ kind: "scheduled", text: "Verify Friday visit" }],
+      });
+    }
+    await page.evaluate(() => window.__outreach.unmount());
+    await mount(page);
+    assert.deepEqual(
+      await page.evaluate(() => window.__outreach.api.records),
+      enriched,
+    );
+    await page.evaluate(() => window.__outreach.api.refresh());
+    assert.equal(calls, 10);
+    await page.evaluate((legacy) => {
+      const key = "harbor.demo.workspace.v1";
+      const workspace = { ...window.__outreach.workspace, outreach: legacy };
+      localStorage.setItem(key, JSON.stringify(workspace));
+      window.dispatchEvent(new StorageEvent("storage", { key }));
+    }, records);
+    await page.waitForFunction(() => !window.__outreach.api.refreshing);
+    assert.deepEqual(
+      await page.evaluate(() => window.__outreach.api.records),
+      enriched,
+    );
+  } finally {
+    await browser.close();
+  }
+});
+
+test("completed legacy backfill times out after ten seconds per request and never enters background polling", async () => {
+  const browser = await chromium.launch({
+    ...(existsSync(chrome)
+      ? { executablePath: chrome }
+      : chromiumLaunchOptions),
+    headless: true,
+  });
+  try {
+    const page = await browser.newPage();
+    const records = Array.from({ length: 5 }, (_, i) => ({
+      ...createOutreachRecord(provider, [], `Question ${i}`),
+      state: "completed" as const,
+      createdAt: new Date(Date.UTC(2026, 10, 13, 9, 0, i)).toISOString(),
+      updatedAt: "2026-11-13T10:00:00.000Z",
+    }));
+    await page.addInitScript(
+      (workspace) =>
+        localStorage.setItem(
+          "harbor.demo.workspace.v1",
+          JSON.stringify(workspace),
+        ),
+      { ...createEmptyWorkspace(), outreach: records },
+    );
+    await page.route("**/api/outreach-result", () => {});
+    await mount(page);
+    await page.clock.install({ time: new Date("2026-11-14T12:00:00Z") });
+    await page.clock.pauseAt(new Date("2026-11-14T12:00:01Z"));
+    await page.evaluate(() => {
+      const realFetch = window.fetch;
+      window.fetch = (input, init) => {
+        window.__outreach.responses.push({
+          signal: init!.signal!,
+          bodyStarted: false,
+          releaseFetch() {},
+          releaseBody() {},
+        });
+        return realFetch(input, init);
+      };
+      window.__outreach.pendingRefresh = window.__outreach.api.refresh();
+    });
+    await page.waitForFunction(() => window.__outreach.responses.length === 2);
+    await page.clock.fastForward(9999);
+    assert.equal(
+      await page.evaluate(() =>
+        window.__outreach.responses.some((response) => response.signal.aborted),
+      ),
+      false,
+    );
+    await page.clock.fastForward(1);
+    await page.waitForFunction(() => window.__outreach.responses.length === 4);
+    await page.clock.fastForward(10_000);
+    await page.waitForFunction(() => window.__outreach.responses.length === 5);
+    await page.clock.fastForward(10_000);
+    await page.evaluate(() => window.__outreach.pendingRefresh);
+    assert.equal(
+      await page.evaluate(() =>
+        window.__outreach.responses.every(
+          (response) => response.signal.aborted,
+        ),
+      ),
+      true,
+    );
+    assert.deepEqual(
+      await page.evaluate(() => window.__outreach.api.records),
+      records,
+    );
+    assert.ok(await page.evaluate(() => window.__outreach.api.error));
+    await page.clock.fastForward(121_000);
+    await page.evaluate(() => {
+      window.dispatchEvent(new Event("focus"));
+      return window.__outreach.api.refresh(false);
+    });
+    assert.equal(
+      await page.evaluate(() => window.__outreach.responses.length),
+      5,
+    );
+  } finally {
+    await browser.close();
+  }
+});
+
+test("a delayed legacy response cannot replay captured commitments over a newer cancellation", async () => {
+  const browser = await chromium.launch({
+    ...(existsSync(chrome)
+      ? { executablePath: chrome }
+      : chromiumLaunchOptions),
+    headless: true,
+  });
+  let release = () => {};
+  try {
+    const page = await browser.newPage();
+    let payload: unknown = {
+      state: "opened",
+      updatedAt: "2026-11-13T10:00:01.000Z",
+      findings: [],
+      nextSteps: [],
+      activity: [{ state: "opened", at: "2026-11-13T10:00:01.000Z" }],
+      commitments: [{ kind: "proposed", text: "Visit Friday" }],
+    };
+    let held = Promise.resolve();
+    let started = () => {};
+    await page.route("**/api/outreach-result", async (route) => {
+      const captured = payload;
+      started();
+      await held;
+      await route.fulfill({ json: captured });
+    });
+    await mount(page);
+    await page.evaluate(
+      (p) => window.__outreach.api.launch(p, ["Pricing"], "Visit?"),
+      provider,
+    );
+    await page.evaluate(() => window.__outreach.api.refresh());
+    held = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    const requested = new Promise<void>((resolve) => {
+      started = resolve;
+    });
+    payload = {
+      state: "connected",
+      updatedAt: "2026-11-13T10:00:04.000Z",
+      findings: ["Newer legacy result"],
+      nextSteps: ["Confirm"],
+    };
+    await page.evaluate(() => {
+      window.__outreach.pendingRefresh = window.__outreach.api.refresh();
+    });
+    await requested;
+    await page.evaluate(() => {
+      const key = "harbor.demo.workspace.v1";
+      const current = window.__outreach.api.records[0];
+      const workspace = {
+        ...window.__outreach.workspace,
+        outreach: [
+          {
+            ...current,
+            state: "connected",
+            updatedAt: "2026-11-13T10:00:03.000Z",
+            activity: [
+              ...current.activity!,
+              { state: "connected", at: "2026-11-13T10:00:03.000Z" },
+            ],
+            commitments: [{ kind: "cancelled", text: "Visit Friday" }],
+          },
+        ],
+      };
+      localStorage.setItem(key, JSON.stringify(workspace));
+      window.dispatchEvent(new StorageEvent("storage", { key }));
+    });
+    await page.waitForFunction(
+      () =>
+        window.__outreach.api.records[0].commitments?.[0].kind === "cancelled",
+    );
+    release();
+    await page.evaluate(() => window.__outreach.pendingRefresh);
+    const merged = await page.evaluate(() => window.__outreach.api.records[0]);
+    assert.equal(merged.updatedAt, "2026-11-13T10:00:04.000Z");
+    assert.deepEqual(merged.findings, ["Newer legacy result"]);
+    assert.deepEqual(merged.commitments, [
+      { kind: "cancelled", text: "Visit Friday" },
+    ]);
+    assert.equal(merged.activity?.length, 2);
+    payload = {
+      state: "completed",
+      updatedAt: "2026-11-13T10:00:05.000Z",
+      findings: ["Final report"],
+      nextSteps: ["Confirm"],
+    };
+    await page.evaluate(() => window.__outreach.api.refresh());
+    const completed = await page.evaluate(
+      () => window.__outreach.api.records[0],
+    );
+    assert.equal(completed.state, "completed");
+    assert.deepEqual(completed.commitments, merged.commitments);
+    assert.deepEqual(completed.activity, merged.activity);
+    await page.evaluate(() => window.__outreach.unmount());
+    await mount(page);
+    assert.deepEqual(
+      await page.evaluate(() => window.__outreach.api.records[0]),
+      completed,
+    );
+  } finally {
+    release();
+    await browser.close();
+  }
+});
 
 test("demo and account launches, duplicate reopening, explicit reopening and follow-ups use the current mode", async () => {
   const browser = await chromium.launch({
@@ -860,6 +1158,8 @@ test("refresh validates results, limits concurrency, backs off and never regress
           updatedAt: new Date(Date.now() + 1000).toISOString(),
           findings: valid ? ["Rehearsal only"] : [42],
           nextSteps: ["Confirm with provider"],
+          activity: [],
+          commitments: [],
         },
       });
     });
@@ -1184,6 +1484,7 @@ test("failed records refresh manually and on focus, obey automatic backoff and s
       ...result,
       state: "completed",
       updatedAt: "2026-11-13T10:00:04.000Z",
+      ...{ activity: [], commitments: [] },
     };
     await page.clock.fastForward(15_000);
     await page.waitForFunction(

@@ -138,6 +138,12 @@ export async function POST(request: Request) {
       updatedAt,
       findings,
       nextSteps,
+      ...(Object.hasOwn(payload, "activity")
+        ? { activity: payload.activity }
+        : {}),
+      ...(Object.hasOwn(payload, "commitments")
+        ? { commitments: payload.commitments }
+        : {}),
     });
     if (!result) throw new Error("Invalid result");
     return response(result);

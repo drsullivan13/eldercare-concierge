@@ -7,7 +7,7 @@ create table if not exists public.user_workspaces (
   data jsonb not null,
   updated_at timestamptz not null default now(),
   constraint workspace_object check (jsonb_typeof(data) = 'object'),
-  constraint workspace_size check (octet_length(data::text) <= 131072),
+  constraint workspace_size check (octet_length(data::text) <= 3145728),
   constraint workspace_profile check (coalesce(jsonb_typeof(data->'profile') = 'object', false)),
   constraint workspace_saved check (coalesce(jsonb_typeof(data->'savedProviderIds') = 'array', false)),
   constraint workspace_notes check (coalesce(jsonb_typeof(data->'notes') = 'object', false)),

@@ -87,7 +87,7 @@ export function useOutreach(
   );
 
   const refresh = useCallback(
-    (force = true): Promise<void> => {
+    (force = true, backfill = force): Promise<void> => {
       if (!ready || !active.current) return Promise.resolve();
       const epoch = generation.current;
       if (running.current?.generation === epoch) return running.current.task;
@@ -95,7 +95,10 @@ export function useOutreach(
       const run = async () => {
         const pending = (snapshot().outreach ?? []).filter(
           (record) =>
-            record.state !== "completed" &&
+            (record.state !== "completed" ||
+              (backfill &&
+                (record.activity === undefined ||
+                  record.commitments === undefined))) &&
             (force ||
               (retry.current.get(record.brief.requestId)?.after ?? 0) <=
                 Date.now()),
@@ -129,12 +132,21 @@ export function useOutreach(
                 const result = parseOutreachResult(await response.json());
                 if (!result) throw new Error("Invalid outreach result.");
                 if (!valid() || controller.signal.aborted) return;
-                const trusted = current.current.outreach?.find(
-                  (item) =>
-                    item.brief.requestId === requestId &&
-                    item.brief.readKey === readKey,
-                );
-                if (trusted) save([{ ...trusted, ...result }]);
+                if (
+                  current.current.outreach?.some(
+                    (item) => item.brief.requestId === requestId,
+                  )
+                )
+                  save([
+                    {
+                      brief: record.brief,
+                      createdAt: record.createdAt,
+                      ...(record.parentId === undefined
+                        ? {}
+                        : { parentId: record.parentId }),
+                      ...result,
+                    },
+                  ]);
                 failures = 0;
               }
             } catch {
@@ -179,7 +191,7 @@ export function useOutreach(
       if (document.visibilityState === "visible") void refresh(false);
     };
     const focus = () => {
-      if (document.visibilityState === "visible") void refresh();
+      if (document.visibilityState === "visible") void refresh(true, false);
     };
     const storage = (event: StorageEvent) => {
       if (

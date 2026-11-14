@@ -33,6 +33,210 @@ declare global {
   }
 }
 
+test("audit boundaries copy exact maxima and keep absent fields absent", () => {
+  const legacy = {
+    state: "completed",
+    updatedAt: "2026-11-13T10:00:00Z",
+    findings: ["Final report"],
+    nextSteps: ["Confirm"],
+  };
+  const full = {
+    ...legacy,
+    activity: Array.from({ length: 128 }, (_, i) => ({
+      state: (["opened", "connected", "failed", "completed"] as const)[i % 4],
+      at: new Date(Date.parse(legacy.updatedAt) + i).toISOString(),
+    })),
+    commitments: Array.from({ length: 8 }, (_, i) => ({
+      kind: (["scheduled", "agreed", "proposed", "cancelled"] as const)[i % 4],
+      text: `${i}`.padEnd(320, "界"),
+    })),
+  };
+  const parsed = parseOutreachResult(full)!;
+  assert.deepEqual(parsed, full);
+  assert.notEqual(parsed.activity, full.activity);
+  assert.notEqual(parsed.activity![0], full.activity[0]);
+  assert.notEqual(parsed.commitments![0], full.commitments[0]);
+  const record = createOutreachRecord(provider, [], "");
+  const workspace = {
+    ...createEmptyWorkspace(),
+    outreach: [{ ...record, ...full }],
+  };
+  assert.deepEqual(validateWorkspace(JSON.parse(JSON.stringify(workspace))), {
+    ok: true,
+    workspace,
+  });
+  for (const parse of [
+    (value: unknown) => parseOutreachResult(value),
+    (value: unknown) =>
+      parseOutreachRecord({ ...record, ...(value as object) }),
+  ]) {
+    assert.ok(!Object.hasOwn(parse(legacy)!, "activity"));
+    assert.ok(!Object.hasOwn(parse(legacy)!, "commitments"));
+    assert.deepEqual(parse({ ...legacy, activity: [], commitments: [] }), {
+      ...parse(legacy),
+      activity: [],
+      commitments: [],
+    });
+    for (const change of [
+      { activity: Array(129).fill(full.activity[0]) },
+      { commitments: Array(9).fill(full.commitments[0]) },
+      ...[null, {}, "opened", [null], [[]], [1], new Array(1), undefined].map(
+        (activity) => ({ activity }),
+      ),
+      ...[null, {}, "agreed", [null], [[]], [1], new Array(1), undefined].map(
+        (commitments) => ({ commitments }),
+      ),
+      ...[
+        {},
+        { state: "opened" },
+        { at: legacy.updatedAt },
+        { state: "requested", at: legacy.updatedAt },
+        { state: [], at: legacy.updatedAt },
+        { state: "opened", at: "2026-02-30T10:00:00Z" },
+        { state: "opened", at: "2026-11-13T25:00:00Z" },
+        { state: "opened", at: "2026-11-13" },
+        { state: "opened", at: legacy.updatedAt, transcript: "private" },
+      ].map((entry) => ({ activity: [entry] })),
+      ...[
+        {},
+        { kind: "scheduled" },
+        { text: "Visit" },
+        { kind: "unknown", text: "Visit" },
+        { kind: [], text: "Visit" },
+        { kind: "agreed", text: null },
+        { kind: "agreed", text: "" },
+        { kind: "agreed", text: " \n " },
+        { kind: "agreed", text: "NUL\0text" },
+        { kind: "agreed", text: "x".repeat(321) },
+        { kind: "agreed", text: "Visit", transcript: "private" },
+      ].map((entry) => ({ commitments: [entry] })),
+    ])
+      assert.equal(
+        parse({ ...legacy, ...change }),
+        null,
+        JSON.stringify(change),
+      );
+  }
+});
+
+test("audit survives interleaved legacy snapshots, retries and bounded repeated merges", () => {
+  const base = createOutreachRecord(provider, ["Pricing"], "Visit?");
+  const at = (n: number) =>
+    new Date(Date.UTC(2026, 10, 13, 10, 0, n)).toISOString();
+  const rich = {
+    ...base,
+    state: "opened" as const,
+    updatedAt: at(1),
+    activity: [{ state: "opened" as const, at: at(1) }],
+    commitments: [{ kind: "proposed" as const, text: "Visit on Friday" }],
+  };
+  const legacy = { ...base, state: "connected" as const, updatedAt: at(3) };
+  for (const records of [
+    mergeOutreach([rich], [legacy]),
+    mergeOutreach([legacy], [rich]),
+  ]) {
+    assert.equal(records[0].state, "connected");
+    assert.equal(records[0].updatedAt, at(3));
+    assert.deepEqual(records[0].activity, rich.activity);
+    assert.deepEqual(records[0].commitments, rich.commitments);
+  }
+  const cancelled = {
+    ...legacy,
+    updatedAt: at(4),
+    commitments: [{ kind: "cancelled" as const, text: "Visit on Friday" }],
+  };
+  const earlierAdvance = mergeOutreach(
+    [cancelled],
+    [{ ...rich, state: "completed" }],
+  )[0];
+  assert.equal(earlierAdvance.state, "completed");
+  assert.deepEqual(earlierAdvance.commitments, cancelled.commitments);
+  const duplicates = {
+    ...rich,
+    activity: [rich.activity[0], rich.activity[0]],
+  };
+  const inserted = mergeOutreach([], [duplicates]);
+  assert.equal(inserted[0].activity?.length, 1);
+  assert.deepEqual(mergeOutreach(inserted, [duplicates]), inserted);
+  let saved = mergeOutreach(
+    [rich],
+    [legacy, cancelled, { ...legacy, updatedAt: at(6) }, rich],
+  );
+  assert.deepEqual(saved[0].commitments, cancelled.commitments);
+  saved = mergeOutreach(saved, [
+    { ...legacy, updatedAt: at(7), commitments: [] },
+  ]);
+  assert.deepEqual(mergeOutreach(saved, [rich])[0].commitments, []);
+  for (let i = 0; i < 3; i++)
+    saved = mergeOutreach(saved, [
+      {
+        ...legacy,
+        activity: Array.from({ length: 128 }, (_, j) => ({
+          state: "connected" as const,
+          at: new Date(Date.parse(at(1)) + j + i * 128).toISOString(),
+        })),
+      },
+    ]);
+  assert.equal(saved[0].activity!.length, 128);
+  const repeated = mergeOutreach(saved, saved);
+  assert.deepEqual(repeated, saved);
+  assert.ok(parseOutreachRecord(repeated[0]));
+  const failed = { ...saved[0], state: "failed" as const, updatedAt: at(8) };
+  const recovered = mergeOutreach(
+    [failed],
+    [{ ...legacy, updatedAt: at(9) }],
+  )[0];
+  assert.deepEqual(recovered.activity, failed.activity);
+  assert.deepEqual(recovered.commitments, []);
+  assert.equal(recovered.state, "connected");
+});
+
+test("only the immutable full brief and matching completed report can enrich a final audit", () => {
+  const completed = {
+    ...createOutreachRecord(provider, ["Costs"], "Original"),
+    state: "completed" as const,
+    updatedAt: "2026-11-13T10:00:00.000Z",
+    findings: ["Final findings"],
+    nextSteps: ["Final next step"],
+  };
+  const rich = {
+    ...completed,
+    activity: [{ state: "completed" as const, at: completed.updatedAt }],
+    commitments: [{ kind: "agreed" as const, text: "Confirm costs" }],
+  };
+  const enriched = mergeOutreach([completed], [rich]);
+  assert.deepEqual(enriched, [rich]);
+  assert.deepEqual(
+    mergeOutreach(enriched, [completed, rich, completed]),
+    enriched,
+  );
+  for (const change of [
+    { state: "connected" as const },
+    { state: "failed" as const },
+    { updatedAt: "2026-11-13T09:59:59.000Z" },
+    { updatedAt: "2026-11-13T10:00:01.000Z" },
+    { findings: ["Different report"] },
+    { nextSteps: [] },
+  ])
+    assert.deepEqual(mergeOutreach([completed], [{ ...rich, ...change }]), [
+      completed,
+    ]);
+  for (const change of [
+    { readKey: "0".repeat(64) },
+    { providerId: "other" },
+    { providerName: "Other" },
+    { phone: "" },
+    { topics: ["Other"] },
+    { question: "Other" },
+    { previous: "Other" },
+  ]) {
+    const tampered = { ...rich, brief: { ...rich.brief, ...change } };
+    assert.deepEqual(mergeOutreach([completed], [tampered]), [completed]);
+    const pending = { ...completed, state: "opened" as const };
+    assert.deepEqual(mergeOutreach([pending], [tampered]), [pending]);
+  }
+});
+
 test("old workspaces remain valid and outreach survives validation and reload", () => {
   const workspace = createEmptyWorkspace();
   assert.deepEqual(validateWorkspace(workspace), { ok: true, workspace });
@@ -718,6 +922,8 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
       updatedAt: "2026-11-13T00:00:01.000Z",
       findings: ["Rehearsal finished"],
       nextSteps: ["Verify with the real provider"],
+      activity: [],
+      commitments: [],
     };
     await first.evaluate(() => window.__integration.api.refresh());
     assert.equal(calls, polled + 9);

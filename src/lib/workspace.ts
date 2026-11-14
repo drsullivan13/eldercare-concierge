@@ -23,7 +23,7 @@ export type Workspace = {
   updatedAt: string;
 };
 
-export const MAX_WORKSPACE_BYTES = 128 * 1024;
+export const MAX_WORKSPACE_BYTES = 2 * 1024 * 1024;
 const ID = /^[A-Za-z0-9][A-Za-z0-9._:-]{0,99}$/;
 const RESERVED_KEYS = new Set(["__proto__", "constructor", "prototype"]);
 
@@ -186,7 +186,7 @@ export function validateWorkspace(value: unknown): WorkspaceValidation {
     new TextEncoder().encode(JSON.stringify(value)).byteLength >
     MAX_WORKSPACE_BYTES
   ) {
-    return invalid("Workspace exceeds the 128 KiB limit.");
+    return invalid("Workspace exceeds the 2 MiB limit.");
   }
   // Copy the accepted shape; never retain attacker-controlled object prototypes or extra fields.
   return {

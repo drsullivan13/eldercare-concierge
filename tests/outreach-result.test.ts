@@ -90,6 +90,61 @@ test("roundtrip uses the fixed lab and projects only safe result fields", async 
     );
 });
 
+test("audit projection retains exact maxima, strips top-level private fields and rejects nested extras", async (t) => {
+  const full = {
+    ...result,
+    findings: Array.from({ length: 16 }, (_, i) =>
+      `${i}`.padEnd(1200, "\u0001"),
+    ),
+    nextSteps: Array.from({ length: 12 }, (_, i) =>
+      `${i}`.padEnd(1200, "\u0001"),
+    ),
+    activity: Array.from({ length: 128 }, (_, i) => ({
+      state: ["opened", "connected", "failed", "completed"][i % 4],
+      at: result.updatedAt,
+    })),
+    commitments: Array.from({ length: 8 }, (_, i) => ({
+      kind: ["scheduled", "agreed", "proposed", "cancelled"][i % 4],
+      text: `${i}`.padEnd(320, "\u0001"),
+    })),
+  };
+  let payload: unknown = {
+    ...full,
+    ...capability,
+    transcript: secret,
+    source: secret,
+  };
+  t.mock.method(globalThis, "fetch", async () => Response.json(payload));
+  assert.deepEqual(await invoke(), full);
+  for (const change of [
+    { activity: Array(129).fill(full.activity[0]) },
+    { commitments: Array(9).fill(full.commitments[0]) },
+    { activity: [{ ...full.activity[0], transcript: secret }] },
+    { commitments: [{ ...full.commitments[0], source: secret }] },
+    { activity: [{ state: "opened" }] },
+    { activity: [{ state: "requested", at: result.updatedAt }] },
+    { activity: [{ state: "opened", at: "2026-02-30T10:00:00Z" }] },
+    { commitments: [{ kind: "unknown", text: "Visit" }] },
+    { commitments: [{ kind: "agreed", text: "x".repeat(321) }] },
+    { commitments: [{ kind: "agreed", text: "" }] },
+    { commitments: [{ kind: "agreed", text: " \n " }] },
+    { commitments: [{ kind: "agreed", text: "NUL\0text" }] },
+    ...[null, {}, 0, [null], [[]]].flatMap((value) => [
+      { activity: value },
+      { commitments: value },
+    ]),
+  ]) {
+    payload = { ...result, ...change };
+    assert.deepEqual(await invoke(request(), 503), retry);
+  }
+  for (payload of [
+    result,
+    { ...result, activity: [] },
+    { ...result, commitments: [] },
+  ])
+    assert.deepEqual(await invoke(), payload);
+});
+
 test("same-origin, JSON and capability validation reject before contacting the lab", async (t) => {
   const fetch = t.mock.method(globalThis, "fetch", async () =>
     Response.json(result),

@@ -20,11 +20,19 @@ export type OutreachRecord = {
   parentId?: string;
   findings: string[];
   nextSteps: string[];
+  activity?: {
+    state: "opened" | "connected" | "failed" | "completed";
+    at: string;
+  }[];
+  commitments?: {
+    kind: "scheduled" | "agreed" | "proposed" | "cancelled";
+    text: string;
+  }[];
 };
 
 type OutreachResult = Pick<
   OutreachRecord,
-  "updatedAt" | "findings" | "nextSteps"
+  "updatedAt" | "findings" | "nextSteps" | "activity" | "commitments"
 > & { state: Exclude<OutreachRecord["state"], "requested"> };
 
 const UUID =
@@ -67,10 +75,63 @@ function details(value: unknown, max: number): value is string[] {
   );
 }
 
+type Audit = Pick<OutreachRecord, "activity" | "commitments">;
+
+function audit(value: Record<string, unknown>): Audit | null {
+  const result: Audit = {};
+  if (Object.hasOwn(value, "activity")) {
+    if (
+      !Array.isArray(value.activity) ||
+      value.activity.length > 128 ||
+      !Array.from(value.activity).every(
+        (item) =>
+          object(item) &&
+          Object.keys(item).length === 2 &&
+          keys(item, ["state", "at"]) &&
+          typeof item.state === "string" &&
+          ["opened", "connected", "failed", "completed"].includes(item.state) &&
+          timestamp(item.at),
+      )
+    )
+      return null;
+    result.activity = value.activity.map(({ state, at }) => ({ state, at }));
+  }
+  if (Object.hasOwn(value, "commitments")) {
+    if (
+      !Array.isArray(value.commitments) ||
+      value.commitments.length > 8 ||
+      !Array.from(value.commitments).every(
+        (item) =>
+          object(item) &&
+          Object.keys(item).length === 2 &&
+          keys(item, ["kind", "text"]) &&
+          typeof item.kind === "string" &&
+          ["scheduled", "agreed", "proposed", "cancelled"].includes(
+            item.kind,
+          ) &&
+          text(item.text, 320, 1),
+      )
+    )
+      return null;
+    result.commitments = value.commitments.map(({ kind, text }) => ({
+      kind,
+      text,
+    }));
+  }
+  return result;
+}
+
 export function parseOutreachResult(value: unknown): OutreachResult | null {
   if (
     !object(value) ||
-    !keys(value, ["state", "updatedAt", "findings", "nextSteps"]) ||
+    !keys(value, [
+      "state",
+      "updatedAt",
+      "findings",
+      "nextSteps",
+      "activity",
+      "commitments",
+    ]) ||
     typeof value.state !== "string" ||
     !["opened", "connected", "completed", "failed"].includes(value.state) ||
     !timestamp(value.updatedAt) ||
@@ -78,11 +139,14 @@ export function parseOutreachResult(value: unknown): OutreachResult | null {
     !details(value.nextSteps, 12)
   )
     return null;
+  const checkedAudit = audit(value);
+  if (!checkedAudit) return null;
   return {
     state: value.state as OutreachResult["state"],
     updatedAt: value.updatedAt,
     findings: [...new Set(value.findings)],
     nextSteps: [...new Set(value.nextSteps)],
+    ...checkedAudit,
   };
 }
 
@@ -97,6 +161,8 @@ export function parseOutreachRecord(value: unknown): OutreachRecord | null {
       "parentId",
       "findings",
       "nextSteps",
+      "activity",
+      "commitments",
     ])
   )
     return null;
@@ -141,6 +207,8 @@ export function parseOutreachRecord(value: unknown): OutreachRecord | null {
     !details(value.nextSteps, 12)
   )
     return null;
+  const checkedAudit = audit(value);
+  if (!checkedAudit) return null;
   return {
     brief: {
       providerId: brief.providerId,
@@ -158,11 +226,60 @@ export function parseOutreachRecord(value: unknown): OutreachRecord | null {
     ...(value.parentId === undefined ? {} : { parentId: value.parentId }),
     findings: [...new Set(value.findings)],
     nextSteps: [...new Set(value.nextSteps)],
+    ...checkedAudit,
   };
 }
 
 export function outreachPending(record: OutreachRecord) {
   return RANK[record.state] < 3;
+}
+
+function sameStrings(a: string[], b: string[]) {
+  return a.length === b.length && a.every((item, index) => item === b[index]);
+}
+
+function sameBrief(a: OutreachBrief, b: OutreachBrief) {
+  return (
+    a.requestId === b.requestId &&
+    a.readKey === b.readKey &&
+    a.providerId === b.providerId &&
+    a.providerName === b.providerName &&
+    a.phone === b.phone &&
+    a.question === b.question &&
+    a.previous === b.previous &&
+    sameStrings(a.topics, b.topics)
+  );
+}
+
+function mergeAudit(
+  previous: OutreachRecord,
+  record: OutreachRecord,
+  replace: boolean,
+): Audit {
+  const result: Audit = {};
+  if (previous.activity !== undefined || record.activity !== undefined) {
+    const events = new Map<string, NonNullable<Audit["activity"]>[number]>();
+    for (const item of [
+      ...(previous.activity ?? []),
+      ...(record.activity ?? []),
+    ]) {
+      const at = new Date(item.at).toISOString();
+      events.set(`${at}:${item.state}`, { state: item.state, at });
+    }
+    result.activity = [...events.values()]
+      .sort(
+        (a, b) => a.at.localeCompare(b.at) || a.state.localeCompare(b.state),
+      )
+      .slice(-128);
+  }
+  const commitments =
+    record.commitments !== undefined &&
+    (replace || previous.commitments === undefined)
+      ? record.commitments
+      : previous.commitments;
+  if (commitments !== undefined)
+    result.commitments = commitments.map((item) => ({ ...item }));
+  return result;
 }
 
 export function mergeOutreach(
@@ -175,10 +292,12 @@ export function mergeOutreach(
   for (const record of incoming) {
     const previous = records.get(record.brief.requestId);
     if (!previous) {
-      records.set(record.brief.requestId, record);
+      records.set(record.brief.requestId, {
+        ...record,
+        ...mergeAudit(record, record, true),
+      });
       continue;
     }
-    if (previous.state === "completed") continue;
     const newer = Date.parse(record.updatedAt) > Date.parse(previous.updatedAt);
     // Only requested uses the browser's clock. Advanced server states can be earlier.
     const advance =
@@ -187,18 +306,43 @@ export function mergeOutreach(
       previous.state === "failed" &&
       newer &&
       ["opened", "connected", "completed"].includes(record.state);
-    // A request's credentials and brief are immutable after the click that saved it.
+    const replace =
+      previous.state !== "completed" &&
+      (advance || recover || (record.state === previous.state && newer));
+    const hasAudit =
+      record.activity !== undefined || record.commitments !== undefined;
+    if (!replace && !hasAudit) continue;
+    // A completed audit must describe the exact report, not a delayed partial result.
     if (
-      (advance || recover || (record.state === previous.state && newer)) &&
-      JSON.stringify(previous.brief) === JSON.stringify(record.brief)
+      previous.state === "completed" &&
+      !(
+        record.state === "completed" &&
+        Date.parse(record.updatedAt) === Date.parse(previous.updatedAt) &&
+        sameStrings(record.findings, previous.findings) &&
+        sameStrings(record.nextSteps, previous.nextSteps)
+      )
     )
-      records.set(record.brief.requestId, {
-        ...previous,
-        state: record.state,
-        updatedAt: record.updatedAt,
-        findings: record.findings,
-        nextSteps: record.nextSteps,
-      });
+      continue;
+    if (!sameBrief(previous.brief, record.brief)) continue;
+    const combined = {
+      ...previous,
+      ...(replace
+        ? {
+            state: record.state,
+            updatedAt: record.updatedAt,
+            findings: record.findings,
+            nextSteps: record.nextSteps,
+          }
+        : {}),
+      ...mergeAudit(
+        previous,
+        record,
+        replace &&
+          (previous.state === "requested" ||
+            Date.parse(record.updatedAt) >= Date.parse(previous.updatedAt)),
+      ),
+    };
+    records.set(record.brief.requestId, combined);
   }
   return [...records.values()].sort(
     (a, b) =>

@@ -331,7 +331,7 @@ describe(
         { ...workspace("A"), savedProviderIds: {} },
         { ...workspace("A"), notes: [] },
         { ...workspace("A"), tasks: {} },
-        { ...workspace("A"), notes: { oversized: "x".repeat(131072) } },
+        { ...workspace("A"), notes: { oversized: "x".repeat(3145728) } },
       ]) {
         await assert.rejects(
           db.query(

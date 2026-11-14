@@ -4,7 +4,6 @@ import {
   isWorkspaceOwner,
   isWorkspaceRevision,
   nextWorkspaceRevision,
-  parseAccountSnapshot,
 } from "@/lib/account-workspace";
 
 import { isSameOriginRequest } from "@/lib/request-origin";
@@ -72,11 +71,18 @@ export async function GET() {
         200,
         headers,
       );
-    const parsed = validateWorkspace({
+    const workspace = {
       ...data.data,
       updatedAt: data.updated_at,
-    });
-    if (!parsed.ok)
+    };
+    // Older rows may fit only with their original timestamp spelling.
+    if (
+      new TextEncoder().encode(JSON.stringify(workspace)).byteLength >
+      MAX_WORKSPACE_BYTES
+    )
+      workspace.updatedAt = data.data?.updatedAt;
+    const parsed = validateWorkspace(workspace);
+    if (!parsed.ok || !isWorkspaceRevision(data.updated_at))
       return response(
         {
           error:
@@ -86,11 +92,11 @@ export async function GET() {
         headers,
       );
     return response(
-      parseAccountSnapshot({
+      {
         owner: auth.user.id,
         revision: data.updated_at,
         workspace: parsed.workspace,
-      }),
+      },
       200,
       headers,
     );
@@ -196,6 +202,23 @@ export async function PUT(request: Request) {
       ...parsed.workspace,
       updatedAt: nextWorkspaceRevision(body.expectedRevision),
     };
+    // PostgreSQL can spell this same revision with a six-digit fraction and offset.
+    if (
+      new TextEncoder().encode(
+        JSON.stringify({
+          ...workspace,
+          updatedAt: workspace.updatedAt.replace(/Z$/, "+00:00"),
+        }),
+      ).byteLength > MAX_WORKSPACE_BYTES
+    )
+      return response(
+        {
+          error:
+            "Workspace payload is too large after timestamp normalization.",
+        },
+        400,
+        headers,
+      );
     const table = auth.client.from("user_workspaces");
     const write =
       body.expectedRevision === null
@@ -221,18 +244,18 @@ export async function PUT(request: Request) {
         409,
         headers,
       );
-    if (error || !data)
+    if (error || !data || !isWorkspaceRevision(data.updated_at))
       return response(
         { error: "Your changes were not saved. Please retry." },
         503,
         headers,
       );
     return response(
-      parseAccountSnapshot({
+      {
         owner: auth.user.id,
         revision: data.updated_at,
-        workspace: { ...data.data, updatedAt: data.updated_at },
-      }),
+        workspace: { ...workspace, updatedAt: data.updated_at },
+      },
       200,
       headers,
     );
