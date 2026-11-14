@@ -160,8 +160,9 @@ class Archive:
                 retained_count = 0
                 for receipt in pages:
                     path = root / receipt["file"]
+                    relative = self.relative(path)
                     payload = self.read(path)
-                    require(self.consumed[self.relative(path)]["sha256"] == receipt["sha256"],
+                    require(self.consumed[relative]["sha256"] == receipt["sha256"],
                             f"Receipt mismatch {path}")
                     require(payload["count"] == partition["expected_count"], f"Count drift {dataset_id}")
                     require(payload["query"].get("conditions", []) == partition["conditions"],
@@ -172,7 +173,7 @@ class Archive:
                         labels.update({k: v["description"] for k, v in schema["fields"].items()})
                     for index, row in enumerate(payload["results"]):
                         original[row_key(row)].append({
-                            "file": self.relative(path), "rowIndex": index,
+                            "file": relative, "rowIndex": index,
                             "sha256": receipt["sha256"], "datasetId": dataset_id,
                             "partition": partition["name"],
                         })

@@ -10,7 +10,9 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+import tempfile
 import unittest
+from unittest.mock import patch
 
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
@@ -379,6 +381,21 @@ class OriginalSourceTests(unittest.TestCase):
             cwd=OUT, capture_output=True, text=True, timeout=120)
         self.assertEqual(0, result.returncode, result.stdout + result.stderr)
         self.assertEqual("check", json.loads(result.stdout)["mode"])
+
+    def test_generation_preserves_every_released_byte_including_manifest(self):
+        spec = importlib.util.spec_from_file_location("clinical_generation_test", ROOT / "scripts/regions/clinical-nj.py")
+        transform = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(transform)
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory)
+            with patch.object(transform, "OUTPUT", destination), patch.object(
+                    sys, "argv", ["clinical-nj.py"]):
+                transform.main()
+            expected = set(self.emitted["outputs"]) | {"manifest.json"}
+            self.assertEqual(expected, {path.name for path in destination.iterdir()})
+            for name in sorted(expected):
+                with self.subTest(artifact=name):
+                    self.assertEqual((OUT / name).read_bytes(), (destination / name).read_bytes())
 
     def test_numeric_and_text_footnotes_and_missing_boundary(self):
         spec = importlib.util.spec_from_file_location("clinical_transform_test", ROOT / "scripts/regions/clinical-nj.py")
