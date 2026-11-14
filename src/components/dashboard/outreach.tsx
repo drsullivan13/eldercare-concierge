@@ -21,6 +21,16 @@ const stages: Record<OutreachRecord["state"], string> = {
   completed: "Rehearsal completed",
   failed: "Rehearsal interrupted",
 };
+const commitmentLabels = {
+  scheduled: "Scheduled",
+  agreed: "Agreed",
+  proposed: "Proposed",
+  cancelled: "Cancelled",
+};
+
+function textKey(value: string) {
+  return value.trim().replace(/\s+/g, " ").toLowerCase();
+}
 
 function subscribeOnline(change: () => void) {
   window.addEventListener("online", change);
@@ -182,17 +192,19 @@ export function OutreachEditor({
   );
 }
 
+const activityFormatter = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+});
+
 function activityDate(value: string) {
-  return new Date(value).toLocaleString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-  });
+  return activityFormatter.format(new Date(value));
 }
 
-function OutreachNextStep({
+function OutreachPlanAction({
   step,
   providerId,
   addTask,
@@ -218,8 +230,7 @@ function OutreachNextStep({
     setError("");
   }
   return (
-    <li>
-      <span>{step}</span>
+    <>
       {editing ? (
         <div className={styles.taskEditor}>
           <label htmlFor={uid}>Summarize this next step for your plan</label>
@@ -273,7 +284,7 @@ function OutreachNextStep({
           {error}
         </p>
       )}
-    </li>
+    </>
   );
 }
 
@@ -283,18 +294,70 @@ function OutreachEntry({
   followUp,
   addTask,
   online,
+  entryId,
+  previousEntryId,
 }: {
   record: OutreachRecord;
   reopen: Outreach["reopen"];
   followUp: (record: OutreachRecord) => void;
   addTask: (title: string, providerId: string) => boolean;
   online: boolean;
+  entryId: string;
+  previousEntryId?: string;
 }) {
   const canReopen = record.state !== "completed";
+  const commitments = new Map<
+    string,
+    { text: string; kinds: (keyof typeof commitmentLabels)[] }
+  >();
+  for (const commitment of record.commitments ?? []) {
+    const key = textKey(commitment.text);
+    const existing = commitments.get(key);
+    if (existing) {
+      if (!existing.kinds.includes(commitment.kind))
+        existing.kinds.push(commitment.kind);
+    } else {
+      commitments.set(key, { text: commitment.text, kinds: [commitment.kind] });
+    }
+  }
+  const nextSteps = [
+    ...new Map(record.nextSteps.map((step) => [textKey(step), step])).values(),
+  ];
+  const supportingText = new Set([
+    ...commitments.keys(),
+    ...nextSteps.map(textKey),
+    textKey(record.brief.question),
+  ]);
+  const disclaimer = `Rehearsal only. These are the practice receptionist's own words, not verified facts about ${record.brief.providerName}. No real placement, tour or booking was made.`;
+  const notes = record.findings
+    .filter((finding) => finding !== disclaimer)
+    .map((finding) =>
+      finding.replace(/^Receptionist said: "([\s\S]*)"$/, "$1"),
+    );
+  const findings = [
+    ...new Map(notes.map((finding) => [textKey(finding), finding])).values(),
+  ].filter((finding) => !supportingText.has(textKey(finding)));
+  const activity = [
+    ...new Map(
+      [
+        { state: "requested" as const, at: record.createdAt },
+        ...(record.activity?.length
+          ? record.activity
+          : record.state !== "requested"
+            ? [{ state: record.state, at: record.updatedAt }]
+            : []),
+      ].map((event) => [`${event.state}:${event.at}`, event]),
+    ).values(),
+  ].sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
   return (
-    <article className={styles.entry}>
+    <article
+      className={styles.entry}
+      id={entryId}
+      tabIndex={-1}
+      aria-label={`${record.brief.providerName}, ${activityDate(record.createdAt)}`}
+    >
       <header>
-        <div>
+        <div className={styles.identity}>
           <h3>{record.brief.providerName}</h3>
           <p className="small muted">
             Last activity{" "}
@@ -303,44 +366,130 @@ function OutreachEntry({
             </time>
           </p>
         </div>
-        <span className={styles.stage}>{stages[record.state]}</span>
+        <span className={styles.stage} data-state={record.state}>
+          {stages[record.state]}
+        </span>
       </header>
-      {record.parentId && <p className="small muted">Follow-up rehearsal</p>}
-      {record.brief.topics.length > 0 && (
-        <p className={styles.topics}>{record.brief.topics.join(" · ")}</p>
+      {record.parentId &&
+        (previousEntryId ? (
+          <a
+            className={styles.previous}
+            href={`#${previousEntryId}`}
+            onClick={(event) => {
+              event.preventDefault();
+              document.getElementById(previousEntryId)?.focus();
+            }}
+          >
+            Follow-up rehearsal · View previous rehearsal
+          </a>
+        ) : (
+          <p className="small muted">
+            Follow-up rehearsal · Previous rehearsal is not in this view.
+          </p>
+        ))}
+      {commitments.size > 0 && (
+        <div className={styles.commitments}>
+          <h4>Appointments & agreements</h4>
+          <p className="small muted">
+            Practice outcomes. Confirm any appointment with the provider.
+          </p>
+          <ul className={styles.commitmentList}>
+            {[...commitments].map(([key, commitment]) => {
+              const step = nextSteps.find((item) => textKey(item) === key);
+              return (
+                <li key={key}>
+                  <div className={styles.commitmentKinds}>
+                    {commitment.kinds.map((kind) => (
+                      <span
+                        key={kind}
+                        className={styles.commitmentKind}
+                        data-kind={kind}
+                      >
+                        {commitmentLabels[kind]}
+                      </span>
+                    ))}
+                  </div>
+                  <p>{commitment.text}</p>
+                  {step && (
+                    <OutreachPlanAction
+                      step={step}
+                      providerId={record.brief.providerId}
+                      addTask={addTask}
+                    />
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       )}
-      {record.brief.question && <p>{record.brief.question}</p>}
-      <h4>Rehearsal results</h4>
-      {record.findings.length ? (
-        <ul>
-          {record.findings.map((finding, i) => (
-            <li key={i}>{finding}</li>
-          ))}
-        </ul>
-      ) : (
-        <p className="small muted">
-          {record.state === "failed"
-            ? "The browser rehearsal did not finish. No provider was dialed."
-            : record.state === "completed"
-              ? "No findings were returned. Provider answers still need confirmation."
-              : "No findings yet. Open the rehearsal, then refresh after the browser session."}
-        </p>
-      )}
-      {record.nextSteps.length > 0 && (
-        <>
+      {nextSteps.some((step) => !commitments.has(textKey(step))) && (
+        <div className={styles.detail}>
           <h4>Next steps to confirm</h4>
           <ul className={styles.nextSteps}>
-            {record.nextSteps.map((step, i) => (
-              <OutreachNextStep
-                key={i}
-                step={step}
-                providerId={record.brief.providerId}
-                addTask={addTask}
-              />
+            {nextSteps
+              .filter((step) => !commitments.has(textKey(step)))
+              .map((step) => (
+                <li key={textKey(step)}>
+                  <span>{step}</span>
+                  <OutreachPlanAction
+                    step={step}
+                    providerId={record.brief.providerId}
+                    addTask={addTask}
+                  />
+                </li>
+              ))}
+          </ul>
+        </div>
+      )}
+      {(record.brief.topics.length > 0 || record.brief.question) && (
+        <div className={styles.detail}>
+          <h4>Questions & goals</h4>
+          {record.brief.topics.length > 0 && (
+            <p className={styles.topics}>{record.brief.topics.join(" · ")}</p>
+          )}
+          {record.brief.question &&
+            !commitments.has(textKey(record.brief.question)) &&
+            !nextSteps.some(
+              (step) => textKey(step) === textKey(record.brief.question),
+            ) && <p className={styles.questionText}>{record.brief.question}</p>}
+        </div>
+      )}
+      <div className={styles.detail}>
+        <h4>Rehearsal notes</h4>
+        {findings.length ? (
+          <ul>
+            {findings.map((finding) => (
+              <li key={textKey(finding)}>{finding}</li>
             ))}
           </ul>
-        </>
-      )}
+        ) : (
+          <p className="small muted">
+            {record.findings.length || commitments.size
+              ? "No additional notes."
+              : record.state === "failed"
+                ? "The browser rehearsal did not finish. No provider was dialed."
+                : record.state === "completed"
+                  ? "No findings were returned. Provider answers still need confirmation."
+                  : "No findings yet. Open the rehearsal, then refresh after the browser session."}
+          </p>
+        )}
+      </div>
+      <details className={styles.activity}>
+        <summary>Rehearsal activity</summary>
+        <ol aria-label="Rehearsal activity, oldest first">
+          {activity.map((event) => (
+            <li key={`${event.state}:${event.at}`}>
+              <span>
+                {event.state === "requested"
+                  ? "Outreach prepared"
+                  : stages[event.state]}
+              </span>
+              <time dateTime={event.at}>{activityDate(event.at)}</time>
+            </li>
+          ))}
+        </ol>
+      </details>
       <div className={styles.actions}>
         {canReopen && (
           <button
@@ -381,15 +530,27 @@ export function OutreachHistory({
   const online = useOnline();
   const uid = useId();
   const [refreshed, setRefreshed] = useState(false);
+  const ordered = [...records].sort(
+    (a, b) =>
+      Date.parse(b.updatedAt) - Date.parse(a.updatedAt) ||
+      Date.parse(b.createdAt) - Date.parse(a.createdAt) ||
+      a.brief.requestId.localeCompare(b.brief.requestId),
+  );
+  const entryIds = new Map(
+    ordered.map((record, index) => [
+      record.brief.requestId,
+      `${uid}-entry-${index}`,
+    ]),
+  );
   return (
     <section className={styles.history} aria-labelledby={`${uid}-heading`}>
       <div className={styles.heading}>
         <div>
           <h2 id={`${uid}-heading`}>Outreach history</h2>
           <p className="small muted">
-            Browser rehearsals only. No provider is dialed and answers need
-            confirmation. Available in Your plan, even for providers not on your
-            shortlist.
+            {viewPlan
+              ? "This provider's rehearsals."
+              : "All providers, including those not on your shortlist."}
           </p>
         </div>
         <button
@@ -409,6 +570,9 @@ export function OutreachHistory({
           {refreshing ? "Refreshing…" : "Refresh outreach"}
         </button>
       </div>
+      <p className={styles.disclaimer}>
+        Browser rehearsals only. No provider is dialed.
+      </p>
       {viewPlan && (
         <button className="text-link" onClick={viewPlan}>
           View all outreach in Your plan
@@ -425,7 +589,7 @@ export function OutreachHistory({
           {error}
         </p>
       )}
-      <p role="status" className="small muted">
+      <p role="status" className={`${styles.refreshStatus} small muted`}>
         {refreshing
           ? "Checking for rehearsal results…"
           : refreshed && !error
@@ -433,9 +597,14 @@ export function OutreachHistory({
             : ""}
       </p>
       {records.length ? (
-        [...records]
-          .sort((a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt))
-          .map((record) => (
+        <>
+          <p className={styles.order}>
+            {records.length}{" "}
+            {records.length === 1
+              ? "rehearsal"
+              : "rehearsals · Newest activity first"}
+          </p>
+          {ordered.map((record) => (
             <OutreachEntry
               key={record.brief.requestId}
               record={record}
@@ -443,8 +612,13 @@ export function OutreachHistory({
               followUp={followUp}
               addTask={addTask}
               online={online}
+              entryId={entryIds.get(record.brief.requestId)!}
+              previousEntryId={
+                record.parentId ? entryIds.get(record.parentId) : undefined
+              }
             />
-          ))
+          ))}
+        </>
       ) : (
         <div className={styles.empty}>
           <p>No outreach rehearsals yet.</p>

@@ -1,4 +1,10 @@
-import { ArrowRight, Bookmark, ClipboardList, MapPin } from "lucide-react";
+import {
+  ArrowRight,
+  Bookmark,
+  ClipboardList,
+  MapPin,
+  PhoneOutgoing,
+} from "lucide-react";
 import Image from "next/image";
 import { CATEGORY_LABELS } from "@/lib/providers";
 import type { Workspace } from "@/lib/workspace";
@@ -9,11 +15,13 @@ export function Overview({
   search,
   findCare,
   navigate,
+  openOutreachHistory,
 }: {
   workspace: Workspace;
   search: CareSearch;
   findCare: () => void;
   navigate: (view: "shortlist" | "plan") => void;
+  openOutreachHistory: () => void;
 }) {
   const pending = workspace.tasks.filter(
     (task) => task.status === "todo",
@@ -116,6 +124,14 @@ export function Overview({
             {pending > 0 && <span>{pending} steps in your care plan</span>}
           </span>
           <ArrowRight size={18} />
+        </button>
+        <button onClick={openOutreachHistory}>
+          <PhoneOutgoing size={22} aria-hidden="true" />
+          <span>
+            <strong>Outreach history</strong>
+            <span>Review conversations and follow-ups</span>
+          </span>
+          <ArrowRight size={18} aria-hidden="true" />
         </button>
       </div>
     </div>

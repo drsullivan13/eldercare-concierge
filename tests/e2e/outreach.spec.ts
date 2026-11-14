@@ -3,12 +3,10 @@ import type { OutreachBrief, OutreachRecord } from "../../src/lib/outreach";
 import type { SearchProvider, SearchResponse } from "../../src/lib/providers";
 import type { Workspace } from "../../src/lib/workspace";
 
-type OutreachResultResponse = {
-  state: "opened" | "connected" | "completed" | "failed";
-  updatedAt: string;
-  findings: string[];
-  nextSteps: string[];
-};
+type OutreachResultResponse = Pick<
+  OutreachRecord,
+  "updatedAt" | "findings" | "nextSteps" | "commitments" | "activity"
+> & { state: Exclude<OutreachRecord["state"], "requested"> };
 
 const KEY = "harbor.demo.workspace.v1";
 const provider: SearchProvider = {
@@ -404,4 +402,388 @@ test("return from the voice lab opens plan history and focuses the results", asy
   await expect(history).toBeFocused();
   await expect(history).toContainText(provider.name);
   await expect(history).toContainText(completed.findings[0]);
+});
+
+const appointment = "Tour on November 18 at 10 am, confirm with admissions.";
+const agreement =
+  "Admissions agreed to send the fee schedule in the rehearsal.";
+const proposal = "A Saturday visit was proposed, with no time confirmed.";
+const cancellation = "The earlier Friday visit was cancelled in the rehearsal.";
+const rehearsalNote =
+  "Ask admissions whether a family member may join remotely.";
+const richResult: OutreachResultResponse = {
+  ...completed,
+  commitments: [
+    { kind: "scheduled", text: appointment },
+    { kind: "agreed", text: agreement },
+    { kind: "proposed", text: proposal },
+    { kind: "cancelled", text: cancellation },
+  ],
+  findings: [appointment, agreement, proposal, cancellation, rehearsalNote].map(
+    (quote) => `Receptionist said: "${quote}"`,
+  ),
+  nextSteps: [appointment],
+  activity: [
+    { state: "completed", at: completed.updatedAt },
+    { state: "connected", at: "2026-11-13T12:32:00.000Z" },
+    { state: "opened", at: "2026-11-13T12:30:00.000Z" },
+  ],
+};
+
+test("refreshed commitments lead the history without repeating notes or losing plan actions", async ({
+  page,
+}, testInfo) => {
+  let resultAvailable = false;
+  await page.route("**/api/outreach-result", (route) =>
+    route.fulfill(
+      resultAvailable
+        ? { json: richResult }
+        : { status: 404, json: { error: "Not available yet." } },
+    ),
+  );
+  await openWorkspace(page, [pending]);
+  await page.getByRole("button", { name: /^Outreach history/ }).click();
+  const history = page.getByRole("region", { name: "Outreach history" });
+  const entry = history.getByRole("article");
+  await expect(entry).toContainText("Ready to open");
+  resultAvailable = true;
+  await history
+    .getByRole("button", { name: "Refresh outreach", exact: true })
+    .click();
+  await expect(entry).toContainText("Rehearsal completed");
+  await expect(history).toContainText("No provider is dialed.");
+  await expect(entry).toContainText(
+    "Confirm any appointment with the provider.",
+  );
+  await expect(entry.getByRole("heading", { level: 4 })).toHaveText([
+    "Appointments & agreements",
+    "Questions & goals",
+    "Rehearsal notes",
+  ]);
+  for (const text of [
+    appointment,
+    agreement,
+    proposal,
+    cancellation,
+    rehearsalNote,
+  ]) {
+    await expect(entry.getByText(text, { exact: true })).toHaveCount(1);
+    await expect(entry.getByText(text, { exact: true })).toBeVisible();
+  }
+  for (const kind of ["Scheduled", "Agreed", "Proposed", "Cancelled"])
+    await expect(entry.getByText(kind, { exact: true })).toBeVisible();
+  await expect(entry).toContainText(pending.brief.question);
+  await expect(entry).toContainText("Pricing");
+  await expect(
+    entry.getByRole("button", { name: "Reopen rehearsal" }),
+  ).toHaveCount(0);
+  const add = entry.getByRole("button", {
+    name: `Add to plan: ${appointment}`,
+    exact: true,
+  });
+  await add.focus();
+  await page.keyboard.press("Enter");
+  await expect(
+    entry.getByRole("button", {
+      name: `Added to plan: ${appointment}`,
+      exact: true,
+    }),
+  ).toBeDisabled();
+  expect((await persisted(page)).tasks).toEqual([
+    expect.objectContaining({
+      title: appointment,
+      providerId: provider.id,
+      category: "Outreach",
+    }),
+  ]);
+  const activity = entry.getByText("Rehearsal activity", { exact: true });
+  await activity.focus();
+  await page.keyboard.press("Enter");
+  const timeline = entry.getByRole("list", {
+    name: "Rehearsal activity, oldest first",
+  });
+  await expect(timeline.getByRole("listitem")).toHaveText([
+    /Outreach prepared/,
+    /Rehearsal opened/,
+    /Browser agent connected/,
+    /Rehearsal completed/,
+  ]);
+  expect(
+    await timeline
+      .locator("time")
+      .evaluateAll((times) =>
+        times.map((time) => time.getAttribute("datetime")),
+      ),
+  ).toEqual([
+    pending.createdAt,
+    "2026-11-13T12:30:00.000Z",
+    "2026-11-13T12:32:00.000Z",
+    completed.updatedAt,
+  ]);
+  await expectPrivateCredentials(page, [pending.brief]);
+  await testInfo.attach("outreach history", {
+    body: await entry.screenshot(),
+    contentType: "image/png",
+  });
+  await page.reload();
+  await navigate(page, "Your plan");
+  await expect(
+    page.getByRole("region", { name: "Outreach history" }),
+  ).toContainText(cancellation);
+  expect((await persisted(page)).outreach?.[0]).toMatchObject({
+    ...richResult,
+    activity: [...richResult.activity!].sort((left, right) =>
+      left.at.localeCompare(right.at),
+    ),
+  });
+});
+
+test("provider history stays scoped and linked follow-ups are keyboard navigable in all-provider history", async ({
+  page,
+}) => {
+  const original: OutreachRecord = { ...pending, ...richResult };
+  const followUp: OutreachRecord = {
+    ...pending,
+    brief: {
+      ...pending.brief,
+      requestId: "bbccdd22-2233-4455-8899-aabbccddeeff",
+      question: "Confirm the proposed tour.",
+    },
+    parentId: pending.brief.requestId,
+    createdAt: "2026-11-13T12:40:00.000Z",
+    updatedAt: "2026-11-13T12:40:00.000Z",
+  };
+  const unrelated: OutreachRecord = {
+    ...original,
+    brief: {
+      ...original.brief,
+      providerId: decoy.id,
+      providerName: decoy.name,
+      phone: decoy.phone!,
+      requestId: "ccddee33-2233-4455-8899-aabbccddeeff",
+    },
+    updatedAt: "2026-11-13T12:45:00.000Z",
+  };
+  await page.route("**/api/outreach-result", (route) =>
+    route.fulfill({ status: 404, json: { error: "Not available yet." } }),
+  );
+  await openWorkspace(page, [followUp, unrelated, original]);
+  const profile = await openProfile(page);
+  const scoped = profile.getByRole("region", { name: "Outreach history" });
+  await expect(scoped.getByRole("article")).toHaveCount(2);
+  await expect(scoped).not.toContainText(decoy.name);
+  await scoped
+    .getByRole("button", { name: "View all outreach in Your plan" })
+    .click();
+  await expect(profile).toHaveCount(0);
+  const history = page.getByRole("region", { name: "Outreach history" });
+  await expect(
+    history.getByRole("article").getByRole("heading", { level: 3 }),
+  ).toHaveText([decoy.name, provider.name, provider.name]);
+  const previous = history.getByRole("link", {
+    name: "Follow-up rehearsal · View previous rehearsal",
+  });
+  await previous.focus();
+  await page.keyboard.press("Enter");
+  await expect(
+    history
+      .getByRole("article")
+      .filter({ has: page.getByText(pending.brief.question, { exact: true }) })
+      .filter({
+        has: page.getByRole("heading", { name: "Appointments & agreements" }),
+      })
+      .last(),
+  ).toBeFocused();
+  const pendingEntry = history
+    .getByRole("article")
+    .filter({ hasText: followUp.brief.question });
+  const reopen = pendingEntry.getByRole("button", { name: "Reopen rehearsal" });
+  const opened = page.context().waitForEvent("page");
+  await reopen.focus();
+  await page.keyboard.press("Enter");
+  const popup = await opened;
+  await expect(popup).toHaveURL(
+    /^https:\/\/harbor-voice-lab\.vercel\.app\/#outreach=/,
+  );
+  await popup.close();
+  await expectPrivateCredentials(page, [
+    original.brief,
+    followUp.brief,
+    unrelated.brief,
+  ]);
+});
+
+test("legacy failed and orphaned follow-ups remain readable while offline", async ({
+  page,
+}) => {
+  const failed: OutreachRecord = {
+    ...pending,
+    state: "failed",
+    parentId: "ddeeff44-2233-4455-8899-aabbccddeeff",
+    updatedAt: completed.updatedAt,
+  };
+  await page.route("**/api/outreach-result", (route) =>
+    route.fulfill({ status: 404, json: { error: "Not available yet." } }),
+  );
+  await openWorkspace(page, [failed]);
+  await navigate(page, "Your plan");
+  const history = page.getByRole("region", { name: "Outreach history" });
+  await expect(history).toContainText(
+    "Previous rehearsal is not in this view.",
+  );
+  await expect(history).toContainText(
+    "The browser rehearsal did not finish. No provider was dialed.",
+  );
+  await expect(
+    history.getByRole("heading", { name: "Appointments & agreements" }),
+  ).toHaveCount(0);
+  await history.getByText("Rehearsal activity", { exact: true }).click();
+  await expect(
+    history
+      .getByRole("list", { name: "Rehearsal activity, oldest first" })
+      .getByRole("listitem"),
+  ).toHaveText([/Outreach prepared/, /Rehearsal interrupted/]);
+  await page.context().setOffline(true);
+  await expect(history).toContainText("Saved history is still available.");
+  await expect(
+    history.getByRole("button", { name: "Refresh outreach" }),
+  ).toBeDisabled();
+  await expect(
+    history.getByRole("button", { name: "Reopen rehearsal" }),
+  ).toBeDisabled();
+  await history.getByRole("button", { name: "Prepare follow-up" }).click();
+  const editor = page.getByRole("dialog", { name: "Follow-up rehearsal" });
+  const question = editor.getByRole("textbox", {
+    name: "Your question or another goal",
+  });
+  await question.fill("Keep this draft while offline.");
+  await expect(
+    editor.getByRole("button", { name: "Open rehearsal" }),
+  ).toBeDisabled();
+  await page.context().setOffline(false);
+  await expect(
+    editor.getByRole("button", { name: "Open rehearsal" }),
+  ).toBeEnabled();
+  await expect(question).toHaveValue("Keep this draft while offline.");
+  await page.keyboard.press("Escape");
+  await expect(editor).toHaveCount(0);
+  await expect(
+    history.getByRole("button", { name: "Prepare follow-up" }),
+  ).toBeFocused();
+});
+
+test("narrow history wraps long notes and keeps next-step editing and controls usable", async ({
+  page,
+}, testInfo) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  const longStep =
+    "Confirm these accessibility arrangements with admissions before the proposed visit. ".repeat(
+      4,
+    );
+  const record: OutreachRecord = {
+    ...pending,
+    ...richResult,
+    findings: [rehearsalNote, "Unbroken-reference-".repeat(50)],
+    nextSteps: [longStep],
+  };
+  await openWorkspace(page, [record]);
+  await navigate(page, "Your plan");
+  const history = page.getByRole("region", { name: "Outreach history" });
+  await expect(history.getByText(longStep, { exact: true })).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  const summarize = history.getByRole("button", {
+    name: `Summarize for plan: ${longStep}`,
+    exact: true,
+  });
+  await summarize.focus();
+  await page.keyboard.press("Enter");
+  const title = history.getByRole("textbox", {
+    name: "Summarize this next step for your plan",
+  });
+  await title.fill("Confirm accessibility arrangements");
+  await title.press("Tab");
+  await expect(
+    history.getByRole("button", { name: "Cancel", exact: true }),
+  ).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(
+    history.getByRole("button", { name: "Add to plan", exact: true }),
+  ).toBeFocused();
+  await page.keyboard.press("Enter");
+  await expect(
+    history.getByRole("button", {
+      name: `Added to plan: ${longStep}`,
+      exact: true,
+    }),
+  ).toBeDisabled();
+  expect((await persisted(page)).tasks[0].title).toBe(
+    "Confirm accessibility arrangements",
+  );
+  for (const control of await history.locator("button, summary, a").all()) {
+    if (await control.isVisible()) {
+      const box = await control.boundingBox();
+      expect(box?.height).toBeGreaterThanOrEqual(44);
+      expect(box!.x).toBeGreaterThanOrEqual(0);
+      expect(box!.x + box!.width).toBeLessThanOrEqual(320);
+    }
+  }
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await testInfo.attach("320px outreach history", {
+    body: await history.screenshot(),
+    contentType: "image/png",
+  });
+});
+
+test("empty history points to provider outreach and keyboard validation keeps the editor usable", async ({
+  page,
+}) => {
+  await openWorkspace(page);
+  await navigate(page, "Your plan");
+  const history = page.getByRole("region", { name: "Outreach history" });
+  await expect(history).toContainText("No outreach rehearsals yet.");
+  await expect(
+    history.getByRole("button", { name: "Refresh outreach" }),
+  ).toBeDisabled();
+  await history.getByRole("button", { name: "Find a provider" }).click();
+  await page
+    .locator(".provider-card")
+    .getByRole("button", { name: provider.name, exact: true })
+    .click();
+  const profile = page.getByRole("dialog", {
+    name: provider.name,
+    exact: true,
+  });
+  await profile
+    .getByRole("button", { name: "Prepare outreach", exact: true })
+    .focus();
+  await page.keyboard.press("Enter");
+  const editor = page.getByRole("dialog", {
+    name: "Prepare outreach",
+    exact: true,
+  });
+  const open = editor.getByRole("button", { name: "Open rehearsal" });
+  await open.focus();
+  await page.keyboard.press("Enter");
+  await expect(editor.getByRole("alert")).toHaveText(
+    "Choose at least one goal or write a question.",
+  );
+  const question = editor.getByRole("textbox", {
+    name: "Your question or another goal",
+  });
+  await expect(question).toHaveAttribute("aria-invalid", "true");
+  await question.fill("Can we arrange a tour?");
+  await expect(question).toHaveAttribute("aria-invalid", "false");
+  await page.keyboard.press("Escape");
+  await expect(editor).toHaveCount(0);
+  await expect(
+    profile.getByRole("button", { name: "Prepare outreach", exact: true }),
+  ).toBeFocused();
 });

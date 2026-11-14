@@ -331,6 +331,12 @@ function WorkspaceDashboard({
     });
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+  function openOutreachHistory() {
+    setMobileMenu(false);
+    setView("plan");
+    if (location.hash !== "#outreach-history") location.hash = "outreach-history";
+    else requestAnimationFrame(() => outreachHistory.current?.focus());
+  }
   function closeMenu() {
     setMobileMenu(false);
     requestAnimationFrame(() => menuButton.current?.focus());
@@ -716,6 +722,7 @@ function WorkspaceDashboard({
               search={search}
               findCare={submitSearch}
               navigate={navigate}
+              openOutreachHistory={openOutreachHistory}
             />
           )}
           <Suspense fallback={null}>
@@ -906,7 +913,7 @@ function WorkspaceDashboard({
                 followUp={followUp}
                 viewPlan={() => {
                   closeProvider();
-                  navigate("plan");
+                  openOutreachHistory();
                 }}
                 addTask={(title, providerId) =>
                   addTask(title, providerId, "Outreach")

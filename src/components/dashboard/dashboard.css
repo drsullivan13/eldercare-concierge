@@ -155,8 +155,8 @@
 
 .care-workspace-links {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 48px);
   margin: 40px 0 32px;
 }
 
