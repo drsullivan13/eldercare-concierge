@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Provider research works without secrets. The default workspace stores the plan in the browser; accounts remain disabled. Do not turn on accounts just to test care search.
+Provider research works without secrets. Accounts are off by default, so the dashboard opens the browser-local demo at `/dashboard?demo=1`. Do not turn on accounts just to test care search. To work on the account flow, follow "Enable accounts" in the README; account workspaces are stored per user in Supabase, separate from demo storage.
 
 Before publishing a code change:
 

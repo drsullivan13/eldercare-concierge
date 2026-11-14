@@ -2,7 +2,7 @@
 
 An elder-care research and coordination proof of concept for North Jersey and Greater Boston. Families can search by ZIP and radius, inspect public evidence, compare resources, save a shortlist, and build a transition plan.
 
-**Status:** the POC opens directly into a browser-local workspace, with no app sign-in required. Source is published to GitHub and a protected Vercel preview is available. Shortlists, notes and tasks stay in the current browser; export is available. Accounts are deliberately disabled for this phase. See [the verification record](docs/verification.md) for the latest hosted checks.
+**Status:** Harbor has two workspace modes. A build with accounts enabled requires sign-in and saves each family's shortlist, notes and tasks to their own Supabase workspace. The explicitly labeled local demo at `/dashboard?demo=1` needs no sign-in and keeps its plan in the current browser. Accounts are off by default, so local runs open the demo. Export is available in both modes. Source is published to GitHub and a protected Vercel preview is available. No hosted result for email delivery, the confirmation callback, session refresh or two-user isolation has been recorded yet. The dated hosted checks in [the verification record](docs/verification.md) predate the account flow.
 
 ![Harbor care workspace](docs/screenshots/dashboard.png)
 
@@ -20,7 +20,7 @@ The [regional workflow](docs/region-workflow.md) covers refreshing source data, 
 
 ## What is built
 
-- Public landing page and immediate dashboard access. Account screens and care-preferences setup are retained for a later activation.
+- Public landing page. With accounts enabled, it leads to signup and sign-in, with the local demo one link away. With accounts off, it opens the local demo directly.
 - A family dashboard with a 90-day planning outline, saved options and next steps.
 - The Massachusetts baseline includes ZIP/radius search across 521 resource records: 280 nursing homes, 224 assisted-living residences, 10 home-service organizations and 7 continuing-care campuses.
 - List and map views, care-category filters, name/town search and nursing-home-only CMS rating order.
@@ -30,7 +30,7 @@ The [regional workflow](docs/region-workflow.md) covers refreshing source data, 
 - As of November 12, 2026, 21 of 521 Massachusetts locations and 56 of 974 North Jersey locations qualify for a numeric experience score under version 2. Provider details show source ratings and review counts even when Harbor withholds its own score.
 - Research filters, category-specific score sorting, and a property overview with rooms, pricing, amenities and attributed resident or family accounts. Facebook and unrated filters plus a downloadable 521-location checklist make research gaps visible.
 - Three-option comparison, research notes, task creation/completion/deletion and Markdown plan export.
-- A configured Supabase database with owner-only access. Account UI is off by default; no service-role key is used by the app.
+- A configured Supabase database where each signed-in user can access only their own `user_workspaces` row. Account UI is off unless the build enables it; no service-role key is used by the app.
 - A private research collection service with a 521-record registry, source coverage, daily CMS checks, retries, request budgets and a review queue. A completed Yelp evaluation checked listing identity and API access without retaining review content; Yelp collection is now paused under the free-sources-only plan.
 - A strict CSV importer for Facebook research batches, plus 31 curated findings across 10 locations in the Reviews tab. Promotion, recommendations, tours and resident/family accounts are labeled separately; 32 unresolved or unsuitable observations remain withheld. Facebook findings never change scores.
 
@@ -49,7 +49,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`, then choose **Open your care workspace**. Or open `http://localhost:3000/dashboard` directly. No secrets are needed for provider research and the demo plan. Demo storage uses `harbor.demo.workspace.v1`; clearing browser storage removes it. Real-account state is never written to that storage key.
+Open `http://localhost:3000`, then choose **Open your care workspace**. Or open `http://localhost:3000/dashboard?demo=1` directly. No secrets are needed for provider research and the demo plan. Demo storage uses `harbor.demo.workspace.v1`; clearing browser storage removes it. Real-account state is never written to that storage key, and a demo plan is never imported into an account silently.
 
 For a production-mode local check:
 
@@ -60,18 +60,18 @@ npm run start
 
 Do not run a fresh build while serving the previous `.next` build from the same directory. Stop the server, build, then start it again.
 
-## Activate accounts later
+## Enable accounts
 
-`NEXT_PUBLIC_ENABLE_ACCOUNTS` defaults to false. In this mode, signup/login links are hidden and their URLs redirect into the local demo. Keep it off while testing the current POC. A dedicated Supabase project is already provisioned for this repository; the steps below also describe setup for a fresh copy.
+`NEXT_PUBLIC_ENABLE_ACCOUNTS` defaults to false. In this mode, signup/login links are hidden and account URLs, including `/dashboard`, redirect into the local demo. Accounts turn on only in a build that sets the flag to `true` and also has `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. That build sends `/dashboard` visitors to sign in and keeps the demo at `/dashboard?demo=1`. Keep the flag off while testing care search locally. A dedicated Supabase project is already provisioned for this repository; the steps below also describe setup for a fresh copy.
 
 1. Select a **new, dedicated Supabase project**. Inspect its schema before applying SQL. Do not apply this app's schema to an unrelated project.
 2. Review and run `supabase/schema.sql` once. It creates `user_workspaces`, enables RLS, and grants authenticated users access only to their own row. Policies are deliberately not blindly reapplied.
 3. Copy `.env.example` to `.env.local` and set the project's URL and publishable key. The publishable key is designed for client use. Never substitute a secret/service-role key.
 4. Configure the Supabase Site URL and allowed callback URL for the exact app origin, including `http://localhost:3000/auth/callback` for development and the deployed HTTPS callback for production.
-5. Keep email confirmation enabled. Configure a production email sender before opening signup beyond Supabase's default email restrictions. Confirm that delivery, callback, session refresh and sign-out actually work.
-6. Add the same two environment variables to the intended Vercel environment, then rebuild. `NEXT_PUBLIC_` values are compiled into client bundles.
-7. Run the live-account verification checklist in `docs/verification.md`. Static code review and a local demo do not prove a hosted auth setup works.
-8. Only after those checks, set `NEXT_PUBLIC_ENABLE_ACCOUNTS=true` in the intended environment and rebuild to expose the account flow.
+5. Keep email confirmation enabled. Configure a production email sender before opening signup beyond Supabase's default email restrictions.
+6. Add the same two public values and `NEXT_PUBLIC_ENABLE_ACCOUNTS=true` to the intended Vercel environment, then rebuild. `NEXT_PUBLIC_` values are compiled into client bundles, so a change takes effect only after a rebuild.
+7. Run the live-account checklist in `docs/verification.md` against that build with controlled test accounts. Enabling the build does not show that email delivery, the confirmation callback, session refresh, sign-out or two-user isolation work. Record each result only after observing it. Static code review and a local demo do not prove a hosted auth setup works.
+8. If a check fails, set `NEXT_PUBLIC_ENABLE_ACCOUNTS=false` and rebuild. Account URLs then return to the local demo.
 
 The app fails closed when account infrastructure is unavailable. Signup is disabled with a clear explanation; `/api/workspace` returns 503. Anonymous calls return 401 once configured. Personal responses are `private, no-store`; writes validate browser origin, payload size and every accepted field. Owner identity comes from `auth.getUser()`, not a submitted user ID or editable metadata.
 

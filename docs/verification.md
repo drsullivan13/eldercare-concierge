@@ -1,6 +1,6 @@
 # Verification record
 
-The current user flow is landing → browser-local workspace without sign-in → ZIP/radius search → actual provider evidence → shortlist/comparison/notes → coordination tasks → persisted reload. Accounts are deferred and hidden behind `NEXT_PUBLIC_ENABLE_ACCOUNTS=false`.
+The dated sections below preserve historical demo and research-service results. Their descriptions of deferred accounts are not current setup instructions. Hosted builds with `NEXT_PUBLIC_ENABLE_ACCOUNTS=true` and the public Supabase values use sign-in and save each plan to the user's own Supabase row. The explicit local demo at `/dashboard?demo=1` needs no sign-in and stores its plan in the browser. This record has no hosted result yet for email delivery, the confirmation callback, session refresh or two-user isolation.
 
 ## Code and interface cleanup · November 12, 2026
 

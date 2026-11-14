@@ -1,6 +1,6 @@
 # Architecture
 
-Harbor is a Next.js application with a browser-local family workspace, server-side search over reviewed snapshots, and a separate private research collector. The public app does not read unreviewed collection results.
+Harbor is a Next.js application with a family workspace, server-side search over reviewed snapshots, and a separate private research collector. The workspace is saved per user in Supabase, or in the browser for the explicit local demo. The public app does not read unreviewed collection results.
 
 ```mermaid
 flowchart LR
@@ -9,7 +9,7 @@ flowchart LR
   Snapshots --> Search[Search and evidence modules]
   Search --> Routes[Read-only Next routes]
   Routes --> Dashboard[Care search and provider details]
-  Dashboard <--> Workspace[Browser-local plan]
+  Dashboard <--> Workspace[Account or browser-demo plan]
   CMS[Official CMS sources] --> Worker[Private scheduled collector]
   Worker --> Queue[Snapshots and review candidates]
   Queue -. editorial review .-> Inputs
@@ -17,11 +17,11 @@ flowchart LR
 
 ## Family workflow
 
-`src/app/dashboard/page.tsx` selects the browser-local flow while accounts are disabled. `Dashboard` waits for the workspace to initialize, then coordinates navigation and actions shared by the views.
+`src/app/dashboard/page.tsx` renders the browser-local demo for `/dashboard?demo=1` and redirects other visits there while accounts are disabled. With accounts enabled, it requires a signed-in user before rendering the account workspace. `Dashboard` waits for the workspace to initialize, then coordinates navigation and actions shared by the views.
 
 The modules under `src/components/dashboard/` own search, overview, shortlist, plan and dialogs. Search request state lives in `use-care-search`; it separates form edits from submitted filters and cancels superseded requests. `use-saved-providers` resolves the shortlist's IDs to current catalog records. The workspace remains the source of truth for saved IDs and notes when that lookup is loading or fails.
 
-`use-workspace` validates every change before storing it. A failed browser write does not claim a save succeeded. The browser loads the Supabase SDK when a cloud account action requests a client. Account-backed persistence has separate server-side identity checks and row-level access controls.
+`use-workspace` validates every change before storing it. The demo path writes to browser storage. The account path loads and saves through the authenticated `/api/workspace` route, which reads and writes only the signed-in user's `user_workspaces` row under owner-only row-level security. Demo data is never imported into an account silently. A failed write in either path does not claim a save succeeded. The browser loads the Supabase SDK when a cloud account action requests a client.
 
 Provider cards show the information needed to choose which options to investigate. Details expose source-linked offerings, costs, availability, consumer reviews, Facebook findings and applicable CMS evidence. Location research and home-health panels share a request hook that checks the returned provider ID, cancels superseded requests and supports retry. The provider detail disclosure preserves the complete list of source-reported services. Material care warnings remain visible on cards.
 
