@@ -723,7 +723,164 @@ test("blank-phone briefs launch, round-trip through the fragment and reload", ()
   );
 });
 
-test("previous context uses only bounded rehearsal findings and unresolved requests", () => {
+test("follow-up carries the production commitment-only floor plan agreement through the handoff", () => {
+  const parent = {
+    ...createOutreachRecord(
+      { ...provider, providerName: "Fictional Harbor House", phone: "" },
+      ["Costs"],
+      "Private original request",
+    ),
+    ...parseOutreachResult({
+      state: "completed",
+      updatedAt: "2026-11-13T10:00:00.000Z",
+      findings: [
+        "Rehearsal only. These are the practice receptionist's own words, not verified facts about Fictional Harbor House. No real placement, tour or booking was made.",
+        "The receptionist gave no substantive answers in this rehearsal.",
+      ],
+      nextSteps: ["Call Fictional Harbor House to verify Costs."],
+      commitments: [
+        {
+          kind: "agreed",
+          text: "I agree to send the floor plan tomorrow.",
+        },
+      ],
+    })!,
+  };
+  parent.brief.previous = "Private earlier context";
+  const saved = structuredClone(parent);
+  const child = createOutreachRecord(
+    parent.brief,
+    ["Costs"],
+    "Follow up on the floor plan",
+    parent,
+  );
+  assert.equal(child.state, "requested");
+  assert.equal(child.parentId, parent.brief.requestId);
+  assert.notEqual(child.brief.requestId, parent.brief.requestId);
+  assert.notEqual(child.brief.readKey, parent.brief.readKey);
+  assert.deepEqual(child.findings, []);
+  assert.deepEqual(child.nextSteps, []);
+  assert.ok(!Object.hasOwn(child, "commitments"));
+  assert.ok(parseOutreachRecord(child));
+  for (const mode of ["demo", "account"] as const) {
+    const url = new URL(outreachUrl(child.brief, mode));
+    const brief = JSON.parse(
+      Buffer.from(
+        new URLSearchParams(url.hash.slice(1)).get("outreach")!,
+        "base64url",
+      ).toString("utf8"),
+    );
+    assert.deepEqual(brief, child.brief);
+    assert.ok(brief.previous);
+    assert.match(
+      brief.previous,
+      /^Prior rehearsal commitment \(agreed\): I agree to send the floor plan tomorrow\.\n/,
+    );
+    assert.ok(brief.previous.length <= 1200);
+    for (const privateText of [
+      parent.brief.readKey,
+      parent.brief.requestId,
+      parent.brief.question,
+      parent.brief.previous,
+    ])
+      assert.ok(!brief.previous.includes(privateText));
+    assert.equal(url.search, "");
+    assert.deepEqual(parseOutreachRecord({ ...child, brief }), child);
+  }
+  assert.deepEqual(parent, saved);
+});
+
+test("distinct practice commitments lead long findings without exact duplicate notes", () => {
+  const commitments = [
+    { kind: "scheduled", text: "Your tour is booked for Thursday at ten." },
+    { kind: "agreed", text: "I agree to send the floor plan tomorrow." },
+    { kind: "proposed", text: "We could arrange a Saturday visit." },
+    { kind: "cancelled", text: "Your earlier Friday tour is cancelled." },
+  ] as const;
+  const parent = {
+    ...createOutreachRecord(provider, [], ""),
+    state: "completed" as const,
+    commitments: [...commitments, commitments[1]],
+    findings: [
+      commitments[0].text,
+      `Receptionist said: "${commitments[1].text}"`,
+      `${commitments[1].text} Please call first.`,
+      "界😀".repeat(400),
+    ],
+    nextSteps: [commitments[2].text, "Confirm with staff"],
+  };
+  const saved = structuredClone(parent);
+  const previous = createOutreachRecord(provider, [], "", parent).brief
+    .previous!;
+  const labels = commitments.map(
+    ({ kind, text }) => `Prior rehearsal commitment (${kind}): ${text}`,
+  );
+  assert.ok(previous.startsWith(labels.join("\n") + "\n"));
+  assert.equal(previous.length, 1200);
+  for (const { text } of commitments) {
+    assert.ok(!previous.includes(`Prior rehearsal finding: ${text}\n`));
+    assert.ok(
+      !previous.includes(
+        `Prior rehearsal finding: Receptionist said: "${text}"`,
+      ),
+    );
+    assert.ok(!previous.includes(`Unanswered request: ${text}`));
+  }
+  assert.equal(
+    previous.split(`Prior rehearsal commitment (agreed):`).length - 1,
+    1,
+  );
+  assert.ok(
+    previous.includes(
+      `Prior rehearsal finding: ${commitments[1].text} Please call first.`,
+    ),
+  );
+  assert.deepEqual(parent, saved);
+
+  assert.ok(
+    createOutreachRecord(provider, [], "", {
+      ...parent,
+      commitments: [
+        { kind: "proposed", text: "Visit on Friday" },
+        { kind: "cancelled", text: "Visit on Friday" },
+      ],
+    }).brief.previous!.startsWith(
+      "Prior rehearsal commitment (proposed): Visit on Friday\nPrior rehearsal commitment (cancelled): Visit on Friday\n",
+    ),
+  );
+});
+
+test("follow-up context stays within its UTF-16 limit at maximum commitment volume", () => {
+  const parent = {
+    ...createOutreachRecord(provider, [], ""),
+    state: "completed" as const,
+    commitments: Array.from({ length: 8 }, (_, i) => ({
+      kind: (["scheduled", "agreed", "proposed", "cancelled"] as const)[i % 4],
+      text: `${i}${"😀".repeat(159)}界`,
+    })),
+    findings: Array.from({ length: 16 }, () => "界".repeat(1200)),
+    nextSteps: Array.from({ length: 12 }, () => "n".repeat(1200)),
+  };
+  assert.ok(parseOutreachRecord(parent));
+  const child = createOutreachRecord(provider, [], "", parent);
+  assert.equal(child.brief.previous!.length, 1200);
+  assert.ok(child.brief.previous!.startsWith("Prior rehearsal commitment"));
+  assert.ok(!child.brief.previous!.includes("Prior rehearsal finding"));
+  assert.equal(child.parentId, parent.brief.requestId);
+  assert.ok(parseOutreachRecord(child));
+  const brief = JSON.parse(
+    Buffer.from(
+      new URLSearchParams(new URL(outreachUrl(child.brief)).hash.slice(1)).get(
+        "outreach",
+      )!,
+      "base64url",
+    ).toString("utf8"),
+  );
+  assert.equal(brief.previous.length, 1200);
+  assert.ok(parseOutreachRecord({ ...child, brief }));
+});
+
+test("previous context keeps legacy formatting byte-for-byte without commitments", () => {
   const parent = createOutreachRecord(
     provider,
     [],
@@ -733,6 +890,28 @@ test("previous context uses only bounded rehearsal findings and unresolved reque
   parent.findings = ["A rehearsal observation"];
   parent.nextSteps = ["Confirm with staff"];
   parent.brief.previous = "Do not recursively forward this context";
+  for (const state of [
+    "requested",
+    "opened",
+    "connected",
+    "completed",
+    "failed",
+  ] as const) {
+    for (const audit of [{}, { commitments: [] }]) {
+      const previous = createOutreachRecord(provider, [], "", {
+        ...parent,
+        state,
+        ...audit,
+      }).brief.previous;
+      assert.equal(
+        previous,
+        "Prior rehearsal finding: A rehearsal observation\nUnanswered request: Confirm with staff" +
+          (state === "completed"
+            ? ""
+            : "\nPrior user request: Original private question"),
+      );
+    }
+  }
   const child = createOutreachRecord(provider, [], "Follow up", parent);
   assert.equal(child.parentId, parent.brief.requestId);
   assert.match(

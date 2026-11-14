@@ -358,12 +358,25 @@ export function createOutreachRecord(
   parent?: OutreachRecord,
 ): OutreachRecord {
   const now = new Date().toISOString();
+  const commitmentTexts = new Set(parent?.commitments?.map(({ text }) => text));
   const previous = parent
     ? [
-        ...parent.findings.map(
-          (finding) => `Prior rehearsal finding: ${finding}`,
+        ...new Set(
+          parent.commitments?.map(
+            ({ kind, text }) => `Prior rehearsal commitment (${kind}): ${text}`,
+          ),
         ),
-        ...parent.nextSteps.map((step) => `Unanswered request: ${step}`),
+        ...parent.findings
+          .filter(
+            (finding) =>
+              !commitmentTexts.has(
+                finding.replace(/^Receptionist said: "([\s\S]*)"$/, "$1"),
+              ),
+          )
+          .map((finding) => `Prior rehearsal finding: ${finding}`),
+        ...parent.nextSteps
+          .filter((step) => !commitmentTexts.has(step))
+          .map((step) => `Unanswered request: ${step}`),
         ...(parent.state === "failed" || outreachPending(parent)
           ? [
               parent.brief.question &&
