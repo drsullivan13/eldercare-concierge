@@ -1,0 +1,20 @@
+.settings {
+  padding-block: 32px;
+}
+
+.settings h1 {
+  font-size: 32px;
+  margin: 14px 0 16px;
+}
+
+.settings h2 {
+  font-size: 24px;
+}
+
+.settings form + form {
+  margin-top: 32px;
+}
+
+.settings p {
+  overflow-wrap: anywhere;
+}

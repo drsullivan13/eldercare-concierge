@@ -1,4 +1,7 @@
-// Public build-time switch. Account activation also requires the hosted checks
-// documented in docs/verification.md; the current POC uses local demo storage.
+// Only advertise accounts when this build can reach its Supabase project.
 export const ACCOUNTS_ENABLED =
-  process.env.NEXT_PUBLIC_ENABLE_ACCOUNTS === "true";
+  process.env.NEXT_PUBLIC_ENABLE_ACCOUNTS === "true" &&
+  Boolean(
+    process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+  );
