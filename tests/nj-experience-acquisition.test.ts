@@ -208,9 +208,24 @@ if (snapshotIndex !== -1) {
   test("acquisition preserves every baseline aggregate, source and existing score", () => {
     const baseline = readBaselineFingerprint(baselinePath, baselineSha256);
     const current = runtimeSnapshot(baseline.asOfDate);
+    // Every historical provider must survive the later home-care expansion.
+    const historicIds = new Set(Object.keys(baseline.providers));
+    const original = current.runtimeProviders.filter((row) =>
+      historicIds.has(row.providerId),
+    );
     assert.deepEqual(
-      current.runtimeProviders.map((provider) => provider.providerId).sort(),
-      Object.keys(baseline.providers).sort(),
+      original.map((row) => row.providerId).sort(),
+      [...historicIds].sort(),
+    );
+    const added = current.runtimeProviders.filter(
+      (row) => !historicIds.has(row.providerId),
+    );
+    assert.ok(
+      added.every(
+        (row) =>
+          row.category === "home-care" &&
+          /^north-jersey-hp-hp\d+$/.test(row.providerId),
+      ),
     );
     assert.equal(
       Object.values(baseline.providers).filter(

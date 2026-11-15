@@ -39,6 +39,17 @@ const forbiddenKeys = new Set([
 ]);
 const forbiddenText =
   /square root|weighted (?:average|calculation|result)|eligibility threshold|10-review threshold|30 reported reviews from one family|180 days|365 days|730 days|source-family .*deduplicate|numeric (?:experience )?scor(?:e|ing)/i;
+// An official business name may contain a duration (e.g. "365 Days of Care Healthcare Agency LLC").
+// Remove only those exact names; every surrounding sentence and every score field is still checked.
+const literalBusinessNames = [
+  ...new Set(
+    markets.flatMap((market) =>
+      market.providers
+        .map((provider) => provider.name)
+        .filter((name) => forbiddenText.test(name)),
+    ),
+  ),
+];
 const scoreKeys = [
   "label",
   "value",
@@ -52,7 +63,11 @@ const scoreKeys = [
 
 function assertPublic(value: unknown, path = "payload"): void {
   if (typeof value === "string") {
-    assert.doesNotMatch(value, forbiddenText, path);
+    const text = literalBusinessNames.reduce(
+      (rest, name) => rest.replaceAll(name, ""),
+      value,
+    );
+    assert.doesNotMatch(text, forbiddenText, path);
   } else if (Array.isArray(value)) {
     value.forEach((item, i) => assertPublic(item, `${path}[${i}]`));
   } else if (value && typeof value === "object") {
