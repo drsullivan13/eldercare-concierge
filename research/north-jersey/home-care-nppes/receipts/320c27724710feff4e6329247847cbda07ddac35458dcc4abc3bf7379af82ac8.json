@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 8418,
+      "http_status": 200,
+      "raw": "raw/e719d3bdeebcf3afd22f2737c73c408518a6df3d1449d6fbe3310348923140b3.json",
+      "retrieved_at": "2026-11-15T03:22:38.741432+00:00",
+      "sha256": "e719d3bdeebcf3afd22f2737c73c408518a6df3d1449d6fbe3310348923140b3"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ATLANTIC IN*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "e5a74ebfb4379115e5d794ea",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ATLANTIC+IN%2A&skip=0&state=NJ&version=2.1"
+}

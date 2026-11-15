@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1181,
+      "http_status": 200,
+      "raw": "raw/c5d198e03bf5b8b68ef2e5249520dd658085779fcbef83c862f01f783a18478c.json",
+      "retrieved_at": "2026-11-15T03:20:49.202666+00:00",
+      "sha256": "c5d198e03bf5b8b68ef2e5249520dd658085779fcbef83c862f01f783a18478c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NURSE CONCIERGE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "5d41694d5594f6513f08ce59",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NURSE+CONCIERGE%2A&skip=0&state=NJ&version=2.1"
+}

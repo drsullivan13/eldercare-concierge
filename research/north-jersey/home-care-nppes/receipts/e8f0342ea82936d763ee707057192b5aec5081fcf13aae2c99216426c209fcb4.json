@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 23605,
+      "http_status": 200,
+      "raw": "raw/e02d36845bfe91e77fa9fdccdaf854da363d033a92debd075a1601590761bb28.json",
+      "retrieved_at": "2026-11-15T03:21:19.787082+00:00",
+      "sha256": "e02d36845bfe91e77fa9fdccdaf854da363d033a92debd075a1601590761bb28"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SYNERGY HOMECARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "8e53536ccfbc90d0a8104adc",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SYNERGY+HOMECARE%2A&skip=0&state=NJ&version=2.1"
+}

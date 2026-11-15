@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1401,
+      "http_status": 200,
+      "raw": "raw/c25d73d4b6d3464c93b32e5f4eca9e9214d9eb638901eaaacc4af3f181d3abc2.json",
+      "retrieved_at": "2026-11-15T03:21:47.400401+00:00",
+      "sha256": "c25d73d4b6d3464c93b32e5f4eca9e9214d9eb638901eaaacc4af3f181d3abc2"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "VC SERVICES*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "a96e5b8dfcbbbd0356af4975",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=VC+SERVICES%2A&skip=0&state=NJ&version=2.1"
+}

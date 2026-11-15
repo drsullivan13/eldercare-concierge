@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 14242,
+      "http_status": 200,
+      "raw": "raw/89647238ee59a9c47009e4592f78ae8579992ebd5c80b1ddd0a9775ca48d497c.json",
+      "retrieved_at": "2026-11-15T03:22:50.772375+00:00",
+      "sha256": "89647238ee59a9c47009e4592f78ae8579992ebd5c80b1ddd0a9775ca48d497c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CARING HANDS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "f7de96768477f800e9b1108c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CARING+HANDS%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2658,
+      "http_status": 200,
+      "raw": "raw/f22d8be16b72127c9830cb2801fece74c94b5828281c29f948ea12645f2216ef.json",
+      "retrieved_at": "2026-11-15T03:21:49.290467+00:00",
+      "sha256": "f22d8be16b72127c9830cb2801fece74c94b5828281c29f948ea12645f2216ef"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CARE AT*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "ac1c71bd28f2f7de5686ba2c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CARE+AT%2A&skip=0&state=NJ&version=2.1"
+}

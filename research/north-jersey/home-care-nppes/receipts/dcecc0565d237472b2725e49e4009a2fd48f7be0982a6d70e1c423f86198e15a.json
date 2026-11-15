@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4228,
+      "http_status": 200,
+      "raw": "raw/c34946a282b07461d29cf6956e181a1618bd1317136b9559e1d6068b9c21db2b.json",
+      "retrieved_at": "2026-11-15T03:22:21.101766+00:00",
+      "sha256": "c34946a282b07461d29cf6956e181a1618bd1317136b9559e1d6068b9c21db2b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "postal_code": "07927",
+    "skip": "0",
+    "taxonomy_description": "Home Health",
+    "version": "2.1"
+  },
+  "query_id": "d07e99fd1c77b676f6fefaed",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&postal_code=07927&skip=0&taxonomy_description=Home+Health&version=2.1"
+}

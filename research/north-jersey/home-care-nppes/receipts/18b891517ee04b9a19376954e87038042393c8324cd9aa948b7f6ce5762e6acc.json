@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1284,
+      "http_status": 200,
+      "raw": "raw/606bc47c04bd4c9b1935e0f2b1d7128dd08fd6b4657dda9b4b0baf97c153f7e6.json",
+      "retrieved_at": "2026-11-15T03:21:08.588500+00:00",
+      "sha256": "606bc47c04bd4c9b1935e0f2b1d7128dd08fd6b4657dda9b4b0baf97c153f7e6"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SPECIAL PRIVATE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "78b1befe787a446e277ee568",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SPECIAL+PRIVATE%2A&skip=0&state=NJ&version=2.1"
+}

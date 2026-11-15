@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1250,
+      "http_status": 200,
+      "raw": "raw/0612a61f4c24a982b42d4c9a6cc17e7f7e809fe1f0c6c6acb7a6e8944c73ef47.json",
+      "retrieved_at": "2026-11-15T03:20:13.395288+00:00",
+      "sha256": "0612a61f4c24a982b42d4c9a6cc17e7f7e809fe1f0c6c6acb7a6e8944c73ef47"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "LOVEREIGN CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "029f15e9b07c030d78d05329",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=LOVEREIGN+CARE%2A&skip=0&state=NJ&version=2.1"
+}

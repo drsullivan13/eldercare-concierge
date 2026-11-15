@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 29351,
+      "http_status": 200,
+      "raw": "raw/2c0975bb5dde6667a692d39f0a5005489c2c504da750f51bfbce4b95465c3a8c.json",
+      "retrieved_at": "2026-11-15T03:21:39.025228+00:00",
+      "sha256": "2c0975bb5dde6667a692d39f0a5005489c2c504da750f51bfbce4b95465c3a8c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SYNERGY HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "a4c359b83a6faccc281e72d2",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SYNERGY+HOME%2A&skip=0&state=NJ&version=2.1"
+}

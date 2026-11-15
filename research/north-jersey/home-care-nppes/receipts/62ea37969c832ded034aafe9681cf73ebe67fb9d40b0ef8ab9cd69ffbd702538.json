@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1211,
+      "http_status": 200,
+      "raw": "raw/25d2960bd63dc577349d705f0fae15f84434e31080bc54a780afbd6ffc49c35e.json",
+      "retrieved_at": "2026-11-15T03:21:18.853654+00:00",
+      "sha256": "25d2960bd63dc577349d705f0fae15f84434e31080bc54a780afbd6ffc49c35e"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "MBH HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "8c8822e2c36d319afc73fa77",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=MBH+HOME%2A&skip=0&state=NJ&version=2.1"
+}

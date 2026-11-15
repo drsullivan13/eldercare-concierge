@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1241,
+      "http_status": 200,
+      "raw": "raw/c50282ea6cc824d60d3a4e2b5d115e65dab5cf47a71f5eb9f96c77ac5ebdeea1.json",
+      "retrieved_at": "2026-11-15T03:22:31.090367+00:00",
+      "sha256": "c50282ea6cc824d60d3a4e2b5d115e65dab5cf47a71f5eb9f96c77ac5ebdeea1"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "KD HOMECARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "dc0cc9016fa534a8d292b861",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=KD+HOMECARE%2A&skip=0&state=NJ&version=2.1"
+}

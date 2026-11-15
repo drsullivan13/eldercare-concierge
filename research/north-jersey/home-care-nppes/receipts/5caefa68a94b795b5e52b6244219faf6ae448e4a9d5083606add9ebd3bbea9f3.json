@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 22264,
+      "http_status": 200,
+      "raw": "raw/5904a75ce8b1fada15d3f87577a3795839861c1ef1c1ad751cc35e197aef7c6e.json",
+      "retrieved_at": "2026-11-15T03:21:28.014516+00:00",
+      "sha256": "5904a75ce8b1fada15d3f87577a3795839861c1ef1c1ad751cc35e197aef7c6e"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "FAMILY FIRST*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "9b15456b9d8fd46ca5a72ef1",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=FAMILY+FIRST%2A&skip=0&state=NJ&version=2.1"
+}

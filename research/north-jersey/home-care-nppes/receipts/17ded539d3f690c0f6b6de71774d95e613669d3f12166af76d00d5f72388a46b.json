@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1264,
+      "http_status": 200,
+      "raw": "raw/171fcf4e1d617ecbb1d31148ee5032242395e74e7ce29cbb907fa8ffe7eb77f2.json",
+      "retrieved_at": "2026-11-15T03:20:28.526800+00:00",
+      "sha256": "171fcf4e1d617ecbb1d31148ee5032242395e74e7ce29cbb907fa8ffe7eb77f2"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ADURA HOMECARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2b5d27a87f8ea539c9562e08",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ADURA+HOMECARE%2A&skip=0&state=NJ&version=2.1"
+}

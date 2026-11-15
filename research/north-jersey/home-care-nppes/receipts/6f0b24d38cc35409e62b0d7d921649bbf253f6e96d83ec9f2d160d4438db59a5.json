@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5751,
+      "http_status": 200,
+      "raw": "raw/674c47d98ab279891c6e4db6803f15149ab15c0829af00d8b0b749ad29832eaa.json",
+      "retrieved_at": "2026-11-15T03:20:26.411323+00:00",
+      "sha256": "674c47d98ab279891c6e4db6803f15149ab15c0829af00d8b0b749ad29832eaa"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ZOE HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "25b38e6372402d46e1b37600",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ZOE+HOME%2A&skip=0&state=NJ&version=2.1"
+}

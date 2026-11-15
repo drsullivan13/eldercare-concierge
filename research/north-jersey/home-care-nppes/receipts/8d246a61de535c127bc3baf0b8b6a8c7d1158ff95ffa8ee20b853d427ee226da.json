@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 7844,
+      "http_status": 200,
+      "raw": "raw/697e3c370d69d3b851e3d384dd3e5fc19f80e38f3db330434bd9c7853367c24e.json",
+      "retrieved_at": "2026-11-15T03:22:32.436930+00:00",
+      "sha256": "697e3c370d69d3b851e3d384dd3e5fc19f80e38f3db330434bd9c7853367c24e"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "VICTORY HEALTH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "dd25e28029f4b84d4cb1ae5d",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=VICTORY+HEALTH%2A&skip=0&state=NJ&version=2.1"
+}

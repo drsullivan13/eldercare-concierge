@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 6381,
+      "http_status": 200,
+      "raw": "raw/c3e461590df57ddc514453490293321c2d511d6c42b30e638eb34f2fc6fea761.json",
+      "retrieved_at": "2026-11-15T03:20:52.057757+00:00",
+      "sha256": "c3e461590df57ddc514453490293321c2d511d6c42b30e638eb34f2fc6fea761"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "WECARE HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "628835bc9f23eb0b41ea3ae3",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=WECARE+HOME%2A&skip=0&state=NJ&version=2.1"
+}

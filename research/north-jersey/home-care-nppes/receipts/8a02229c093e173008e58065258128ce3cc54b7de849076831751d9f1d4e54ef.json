@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 316373,
+      "http_status": 200,
+      "raw": "raw/42ff59f0b83a0b42ec2df28d1fa30c23a0fd3c016edd3aba65d5d64d5bd370e5.json",
+      "retrieved_at": "2026-11-15T03:22:04.263849+00:00",
+      "sha256": "42ff59f0b83a0b42ec2df28d1fa30c23a0fd3c016edd3aba65d5d64d5bd370e5"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NEW JERSEY*",
+    "skip": "400",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "be7518fdd30aa896147d4895",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NEW+JERSEY%2A&skip=400&state=NJ&version=2.1"
+}

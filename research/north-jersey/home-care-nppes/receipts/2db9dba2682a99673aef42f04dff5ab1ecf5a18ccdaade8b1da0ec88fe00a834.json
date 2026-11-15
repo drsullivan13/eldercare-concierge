@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 30137,
+      "http_status": 200,
+      "raw": "raw/a6ec1bfbbc2d6af35138275eeb37aba37e2a2e0a12a3ff9edab03d3664891aa6.json",
+      "retrieved_at": "2026-11-15T03:22:29.538140+00:00",
+      "sha256": "a6ec1bfbbc2d6af35138275eeb37aba37e2a2e0a12a3ff9edab03d3664891aa6"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "INTERIM HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d8a3101b1f17ec5da5bf9a34",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=INTERIM+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 7432,
+      "http_status": 200,
+      "raw": "raw/ff8604f4995795d3750a86e4a9c0392e3c9de3113ce602659f6361782981106a.json",
+      "retrieved_at": "2026-11-15T03:20:54.096050+00:00",
+      "sha256": "ff8604f4995795d3750a86e4a9c0392e3c9de3113ce602659f6361782981106a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "PRIORITY HEALTH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "6558704d6f1fcf845e779d5d",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=PRIORITY+HEALTH%2A&skip=0&state=NJ&version=2.1"
+}

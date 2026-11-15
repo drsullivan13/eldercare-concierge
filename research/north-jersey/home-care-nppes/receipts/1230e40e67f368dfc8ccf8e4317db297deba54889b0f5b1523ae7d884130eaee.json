@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 19797,
+      "http_status": 200,
+      "raw": "raw/c74c0938b5d410ace0093953365934beeb5943a203598d682b8d2c95f058015a.json",
+      "retrieved_at": "2026-11-15T03:20:37.788315+00:00",
+      "sha256": "c74c0938b5d410ace0093953365934beeb5943a203598d682b8d2c95f058015a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BRIGHTSTAR CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3a32c6f8fe369116db5d9e21",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BRIGHTSTAR+CARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,68 @@
+{
+  "asOf": "2026-11-14",
+  "family": "Listen360 independent customer survey",
+  "rawSurveyScoreIsNps": false,
+  "publisherMethod": "Each survey response is converted by the publisher to its star equivalent and averaged across responses. This differs from their NPS metric. Public count is described as reviews; do not infer distinct clients or total invitations.",
+  "sources": {
+    "method": "https://support.listen360.com/hc/en-us/articles/207612843-How-Does-NPS-Translate-to-a-Star-Rating",
+    "disclosureChoice": "https://support.listen360.com/hc/en-us/articles/204460089-How-to-Add-a-Reviews-Button-to-Your-Website",
+    "disclosureScreenshot": "https://support.listen360.com/hc/article_attachments/4409592815515/Screen_Shot_2021-11-04_at_12.15.51_PM.png",
+    "disclosureScreenshotSha256": "f796e4b11accee283ed67a3c222546cf6aaefe135d77d709ecbe7258856d779c",
+    "individualRemoval": "https://support.listen360.com/hc/en-us/articles/204459869-How-to-Remove-a-Review-from-the-Listen360-Public-Reviews-Page-and-Website-Widget-Reviews-Feeds",
+    "feedbackTriggerSettings": "https://support.listen360.com/hc/en-us/articles/204459849-How-often-are-my-customers-asked-for-feedback",
+    "sharing": "https://support.listen360.com/hc/en-us/articles/204460039-Sharing-Your-Customer-Feedback-Publicly",
+    "access": "https://reviews.listen360.com/robots.txt",
+    "terms": "https://www.listen360.com/terms-of-service/"
+  },
+  "disclosureFinding": "The official configuration screenshot offers promoter testimonials only, two all-feedback variants, or no public feedback. Businesses may report comments for removal from public view. Public branch pages queried do not identify the underlying disclosure option or prove the count includes all solicited responses.",
+  "liveStatus": "Individual Paramus HTML read directly via ordinary public GET. Paced Python retrieval of the remaining URLs returned HTTP 403 with Cloudflare code 1010; collection stopped. No form submits or access-control workarounds.",
+  "inspected": [
+    {
+      "providerId": "north-jersey-hp-hp0171100",
+      "publisher": "Listen360",
+      "url": "https://reviews.listen360.com/senior-helpers-of-paramus",
+      "officialAddress": "22 MADISON AVENUE, SUITE 305",
+      "checkedAt": "2026-11-14",
+      "sourceAddress": "22 Madison Ave  Suite 305, Paramus, NJ, 07652",
+      "phone": "201-968-5777",
+      "sourceRating": 4.8,
+      "sourceReviewCount": 78,
+      "visibleWindowCount": 20,
+      "visibleMinimumStarRating": 4.6,
+      "htmlSha256": "58f5f47c4e656a21ee799181348a3ee29d65acd19166f857bea7dc84076d3208",
+      "decision": "link-only; promoter-only publication could not be ruled out"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0382700",
+      "publisher": "Listen360",
+      "url": "https://reviews.listen360.com/comforcare-home-care-somerville",
+      "officialAddress": "92 E Main Street, Suite 305",
+      "checkedAt": "2026-11-14",
+      "sourceAddress": "92 E. Main St. Suite 305, Somerville, NJ 08876",
+      "phone": "908-927-0500",
+      "decision": "link-only; public listing seen through original indexed page and office address and phone agree, but disclosure mode and current live score unverified."
+    }
+  ],
+  "otherSources": [
+    {
+      "publisher": "Birdeye",
+      "decision": "Automated extraction restricted. Public summaries can combine external sources (such as Google) and are not an independent rating by default.",
+      "url": "https://birdeye.com/acceptable-use-policy/"
+    },
+    {
+      "publisher": "Trustindex",
+      "decision": "Automated collection restricted; widgets may be filtered by rating or hand-selected by subscribers.",
+      "url": "https://www.trustindex.io/terms-of-use"
+    },
+    {
+      "publisher": "Better Business Bureau",
+      "decision": "Personal noncommercial access, unless specifically allowed or written consent available.",
+      "url": "https://www.bbb.org/terms-of-use"
+    },
+    {
+      "publisher": "CareScout",
+      "decision": "Network membership does not carry a branch-specific customer-rating denominator. Terms restrict automated collection.",
+      "url": "https://www.carescout.com/terms-of-use"
+    }
+  ]
+}

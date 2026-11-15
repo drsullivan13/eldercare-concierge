@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2508,
+      "http_status": 200,
+      "raw": "raw/33d16e130a7c2961b904cd3654dad00fa8f4f4302b3766d0012baf66334b982d.json",
+      "retrieved_at": "2026-11-15T03:21:30.691904+00:00",
+      "sha256": "33d16e130a7c2961b904cd3654dad00fa8f4f4302b3766d0012baf66334b982d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ANGEL HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "9e2359a3b8cbc09310ad5194",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ANGEL+HOME%2A&skip=0&state=NJ&version=2.1"
+}

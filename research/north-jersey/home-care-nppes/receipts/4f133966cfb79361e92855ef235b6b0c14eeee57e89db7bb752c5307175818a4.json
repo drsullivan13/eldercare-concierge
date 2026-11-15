@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4111,
+      "http_status": 200,
+      "raw": "raw/f6d7812a902581686c7cc41bea3ea0d7f9b7255af49aa4ca29ed81db8990189c.json",
+      "retrieved_at": "2026-11-15T03:21:48.365589+00:00",
+      "sha256": "f6d7812a902581686c7cc41bea3ea0d7f9b7255af49aa4ca29ed81db8990189c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "STAR PEDIATRIC*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "ab3fb1296ba3a769c1e3c6d1",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=STAR+PEDIATRIC%2A&skip=0&state=NJ&version=2.1"
+}

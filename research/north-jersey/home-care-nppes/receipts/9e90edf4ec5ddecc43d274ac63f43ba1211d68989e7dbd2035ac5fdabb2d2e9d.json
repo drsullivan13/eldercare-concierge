@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1251,
+      "http_status": 200,
+      "raw": "raw/135733d64ce0c4a8c4d15d9c8d7ee4094a0610da76401cc2ab180bb8e4597703.json",
+      "retrieved_at": "2026-11-15T03:21:25.782000+00:00",
+      "sha256": "135733d64ce0c4a8c4d15d9c8d7ee4094a0610da76401cc2ab180bb8e4597703"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "PROTECTA HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "983c6517fceb14802d701e37",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=PROTECTA+HOME%2A&skip=0&state=NJ&version=2.1"
+}

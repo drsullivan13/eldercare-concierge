@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5145,
+      "http_status": 200,
+      "raw": "raw/a3d4a4d7a705d287739be1b8d41088c9f70dfde1b04c422313c336acf9dcea91.json",
+      "retrieved_at": "2026-11-15T03:21:23.532953+00:00",
+      "sha256": "a3d4a4d7a705d287739be1b8d41088c9f70dfde1b04c422313c336acf9dcea91"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ALPHA CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "946125ee23077087ffa1adb1",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ALPHA+CARE%2A&skip=0&state=NJ&version=2.1"
+}

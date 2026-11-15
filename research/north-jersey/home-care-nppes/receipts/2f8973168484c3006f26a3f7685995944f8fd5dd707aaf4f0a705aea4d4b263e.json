@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4305,
+      "http_status": 200,
+      "raw": "raw/0443e37889b98c323b30c9e20fcf0c54b32d8142e55f25b7e1fe83439137bdf8.json",
+      "retrieved_at": "2026-11-15T03:22:28.466583+00:00",
+      "sha256": "0443e37889b98c323b30c9e20fcf0c54b32d8142e55f25b7e1fe83439137bdf8"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CROSSLINKS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d7c3ecf815ac0e214b39c585",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CROSSLINKS%2A&skip=0&state=NJ&version=2.1"
+}

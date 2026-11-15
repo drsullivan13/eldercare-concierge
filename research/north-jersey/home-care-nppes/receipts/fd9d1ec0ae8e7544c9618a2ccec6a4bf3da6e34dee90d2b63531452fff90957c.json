@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3916,
+      "http_status": 200,
+      "raw": "raw/9d7a4ceff5d9696d98e37c1efc5eb0bd26bb3889cdc3cc5f04d642267d005e19.json",
+      "retrieved_at": "2026-11-15T03:22:15.054452+00:00",
+      "sha256": "9d7a4ceff5d9696d98e37c1efc5eb0bd26bb3889cdc3cc5f04d642267d005e19"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "EXCEL HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "c79dbfc00d601b178d93d1d7",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=EXCEL+HOME%2A&skip=0&state=NJ&version=2.1"
+}

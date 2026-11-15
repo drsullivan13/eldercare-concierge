@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2892,
+      "http_status": 200,
+      "raw": "raw/fa08fe69421f7a8a6d8c027443b7ac4571931ae58b2962e608257860f6ed73cd.json",
+      "retrieved_at": "2026-11-15T03:20:18.135972+00:00",
+      "sha256": "fa08fe69421f7a8a6d8c027443b7ac4571931ae58b2962e608257860f6ed73cd"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NUSOURCE TECH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "11573cae9cf44252c2efdf78",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NUSOURCE+TECH%2A&skip=0&state=NJ&version=2.1"
+}

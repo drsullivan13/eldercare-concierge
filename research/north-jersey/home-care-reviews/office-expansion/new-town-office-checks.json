@@ -1,0 +1,3788 @@
+{
+  "checkedAt": "2026-11-15",
+  "discovery": {
+    "completed": true,
+    "towns": 146,
+    "profiles": 40,
+    "http": {
+      "308": 125,
+      "200": 21
+    },
+    "receiptSha256": "1b9b12f2707425600fe3d55b8e5c6e86b2e4b175a7bcefa3cde75ed6a2db58dd"
+  },
+  "baselineSha256": "dfe5ec927b0f374f23e0a11162a7a35b79497a981f387205408bbb6f569dda1a",
+  "visibleRows": 156,
+  "publishedProfiles": 21,
+  "publishedAccounts": 82,
+  "publishedAggregates": 11,
+  "eligibleAggregates": [
+    [
+      "griswold-home-care-for-monmouth-county",
+      11
+    ],
+    [
+      "home-instead-home-care-services-of-monmouth-county-nj",
+      29
+    ],
+    [
+      "homewatch-caregivers-of-monmouth-county",
+      3
+    ],
+    [
+      "maya-homecare",
+      6
+    ],
+    [
+      "personal-home-care-of-new-jersey",
+      12
+    ],
+    [
+      "preferred-care-at-home-of-bergen-county-west",
+      13
+    ],
+    [
+      "the-senior-company",
+      108
+    ],
+    [
+      "visiting-angels-matawan",
+      35
+    ],
+    [
+      "visiting-angels-red-bank",
+      11
+    ],
+    [
+      "visiting-angels-wall",
+      51
+    ],
+    [
+      "zenith-home-care-agency",
+      46
+    ]
+  ],
+  "pages": [
+    {
+      "slug": "always-best-care-senior-services-tinton-falls",
+      "sourceUrl": "https://www.mylivingchoice.com/property/always-best-care-senior-services-tinton-falls",
+      "pageEvidenceSha256": "23ad577bce81dba5c5b91011acd98901d9f11c92bd3b39ceeb4cf00d6ae68469",
+      "redactedFetchSha256": "d5f545894562ea7b201899b7df17b0a39f095a78bf4f7aed0d04dc15ff803d6f",
+      "editorialReceiptSha256": "cbf3c9104d9042b18352968d7ed5a88c1b082ff0cc8a3072dad41d0c35cb36d7",
+      "pageIdentity": {
+        "name": "Always Best Care Senior Services",
+        "street": "788 Shrewsbury Ave #2204",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "No roster office of this brand or legal name in Tinton Falls; the only same-building row is a different business in another suite.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 1,
+      "sourceCount": 1,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "The only visible row is a direct family account of this office; the source reports one Google rating."
+        ]
+      },
+      "visibleCount": 1,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "441222",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "negative",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer arranged care for a dying relative and describes the sales process and billing directly.",
+          "bodySha256": "823dde9b98463fd825b27be589b981c55f6d1c81be243215285d280b2ad6b34a",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "always-home-care",
+      "sourceUrl": "https://www.mylivingchoice.com/property/always-home-care",
+      "pageEvidenceSha256": "903f369b8053792f5a5c578c6a2f605f715f17c0ad098b4f7bba81697241f678",
+      "redactedFetchSha256": "b50a1ab193c010c640fb10fda3cad1ed3fe1e88fe202c89e5bd295bd7fe97a78",
+      "editorialReceiptSha256": "da0e40f3638deb828676e7cc77e84607691f01dabd701c240d3d801f9403d81c",
+      "pageIdentity": {
+        "name": "Always Home Care",
+        "street": "167C New Brunswick Ave",
+        "city": "Perth Amboy",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "Roster Always Home Care offices are in West New York, Paterson, Jersey City and Hackensack; none in Perth Amboy. Brand-only transfer is not allowed.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 4.9,
+      "sourceCount": 558,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "Four of five visible rows review the agency training school, so the 558-rating Google population mixes students with clients."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440443",
+          "population": "trainee",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer is a student praising an aide-certification course and its teacher, not a care client.",
+          "bodySha256": "0fc3fe2d162687847e6a5732c188d60f8b6c693f7334a0d6ed4515bd10259211",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440446",
+          "population": "consumer-recipient",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer says the agency has served them for several years and names their own aide.",
+          "bodySha256": "f79aaf4bdf9013dc012e56e0bdc9be8f21cb0463cff479486d094e79e31cec90",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440444",
+          "population": "trainee",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer reviews the aide-certification and CPR courses and reception staff, not home care received.",
+          "bodySha256": "9e2823847c035de2557a0a443fee5c46af19bfbc211191ced4e901353876be7b",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440442",
+          "population": "trainee",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer reviews a CPR course and the academy setting.",
+          "bodySha256": "70e7823b7134543909ef429ae4bf7443c139843026dcd5e8ddd5021774ab217c",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440445",
+          "population": "trainee",
+          "relationship": "unknown",
+          "sentiment": "mixed",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer praises a teacher and comments on classroom space; a training account, not care received.",
+          "bodySha256": "4eebe4b3af232b3e38254dba8c82f7fdf1416c45adc6a51871a191d0035f3885",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "always-responsive-home-care-monmouth-county-nj",
+      "sourceUrl": "https://www.mylivingchoice.com/property/always-responsive-home-care-monmouth-county-nj",
+      "pageEvidenceSha256": "2ed961bf8b307f54fcd7f024e97878a4c0926ca9e2a194e0f77593c20ebb7ef9",
+      "redactedFetchSha256": "a7dfa4fb367404634a867e50347a785986f5f4418e3d1065e37444543191c8e9",
+      "editorialReceiptSha256": "21ca92eb70c54bb07b3fdb33e08033c150c852c6dd5a903ab7958d34c1d33844",
+      "pageIdentity": {
+        "name": "Always Responsive Home Care, Monmouth County NJ",
+        "street": "479 CR-520 Ste B201",
+        "city": "Marlboro Township",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "Roster Always Responsive offices are in Monroe, Cranford and Paramus; none at this Marlboro street.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 26,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family accounts of service from this office.",
+          "Caution: three visible rows were posted in the same month with a similar structure; authenticity is not verified, and no population cue excludes them."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440659",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse describes the caregiver supporting the household through a progressing illness.",
+          "bodySha256": "e72b2ac73ddf094e4b5e2ea57caa5be239e9399fb8192b4fb9274b5c7e30d9c0",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440657",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Grandchild describes the agency sending round-the-clock help the next day.",
+          "bodySha256": "914c9c8744592852c78178743b3d3411c511918d3690d4fb6fa29dc9a66874d3",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440660",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a caregiver helping with cooking and medication.",
+          "bodySha256": "6da0dd6314e1790506b2444dd1a6525dc3f736aa111b23f3af87723e6bbfdd0a",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440658",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer arranged a personal-care aide for a loved one and describes intake and a nurse orientation at home.",
+          "bodySha256": "5263077bfe2fc414643fa48bb97ce841041a08ee0a9c69e171d4e3e3e95dadf7",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440661",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer arranged care for a chronically ill loved one after trying other agencies.",
+          "bodySha256": "f3ae7e16d8f8b173c803fb3344d7a17cb5bd50d6569fa3f5a117a29d0647a9db",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "bayada-assistive-care-tinton-falls",
+      "sourceUrl": "https://www.mylivingchoice.com/property/bayada-assistive-care-tinton-falls",
+      "pageEvidenceSha256": "7d81ec1bddc9b7ca10f54af5ba9a678ab5c5fabe4d53d21586a95467e1bd281f",
+      "redactedFetchSha256": "6706d1fd7ba207267891b63649205e73f6f9aa4714d63b96bd29437cfe339a40",
+      "editorialReceiptSha256": "3b13ad5c1f9b99d4fff2d783fb0ac437a747ae9eb08f659b10a44332852b02fb",
+      "pageIdentity": {
+        "name": "BAYADA Assistive Care",
+        "street": "30 Park Rd Suite 1A",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0015308",
+        "basis": "Legal name BAYADA Home Health Care; page Suite 1A is one of the suites listed on this registry row (1A, 1B and 4B). The other BAYADA row in the building is Suite 4.",
+        "normalizations": [
+          "Road equals Rd."
+        ],
+        "cautions": [
+          "BAYADA runs several care units; one visible account is about pediatric nursing and is excluded."
+        ]
+      },
+      "sourceAverage": 4.9,
+      "sourceCount": 13,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row concerns private-duty nursing for a child, a different care unit.",
+          "One visible row is generic praise without a service relationship."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "559725",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": "pediatric private-duty nursing rather than the nonmedical home-care office",
+          "rationale": "Parent thanks private-duty nurses for a child’s case; this is nursing care, not the nonmedical assistive-care unit.",
+          "bodySha256": "d602750aaad5ce12b8cc6280a1e3f63941710f8bce144199cd9afd5afbc38eee",
+          "disposition": [
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "559726",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "General praise for office staff and nurses with no stated service relationship.",
+          "bodySha256": "7eb9528afdc7bb0d130519074177cb60c406af99a24cbb8b8674b32215ecd1b6",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "559727",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes aides sent for their father the next day and an RN visit.",
+          "bodySha256": "4f2794af60db4c963b7a2b214168d6f7d8bdac44c6c8bd320290f591a64a34cd",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "559728",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer received caregiver service and describes office communication.",
+          "bodySha256": "b4b274dd8f6b0837eb9ac763f5cabe87201f395c1b7a8c939a83f95613d570cd",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "559729",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes the assessment, a client service manager and an aide caring for their mother.",
+          "bodySha256": "8a8bfc9897588ec28cca3f856623f78248c38323bebbc6b4d7705b2d0cadc688",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 3,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "boardwalk-homecare",
+      "sourceUrl": "https://www.mylivingchoice.com/property/boardwalk-homecare",
+      "pageEvidenceSha256": "77e74c0ed4b0b9ac483151b1999a3d3b592f90a2c82ff74948ff72f58c9fe8a5",
+      "redactedFetchSha256": "4e24f8a03fffd4531ccf4c5c0d9bea5231a05efd4449b0aa52a6d4a2f19e3284",
+      "editorialReceiptSha256": "ef11ed2e1abbe1016a0a2cc89341bba09b3061839d8c54821b361c6b56896843",
+      "pageIdentity": {
+        "name": "Boardwalk Homecare",
+        "street": "404 NJ-35",
+        "city": "Neptune City",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "held-identity",
+        "providerId": null,
+        "basis": "Legal name matches HP0089600 and the number and route agree, but the page city is Neptune City while the registry city is Neptune, a different municipality, and the registry street adds South.",
+        "normalizations": [],
+        "cautions": [
+          "Candidate north-jersey-hp-hp0089600 retained as a lead only."
+        ]
+      },
+      "sourceAverage": 4.2,
+      "sourceCount": 29,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "Two visible rows are employee posts and one is generic praise.",
+          "The page lists assisted living, independent living and skilled nursing alongside at-home care."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "441218",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Generic praise of staff and skilled nursing with no stated relationship.",
+          "bodySha256": "e16d07d7ca8c3b2d0862b949745bf4c92eb26ec6f1f3d26f4bd5660467a30152",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "441221",
+          "population": "employee",
+          "relationship": "staff",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer calls it the best place to work.",
+          "bodySha256": "feb633e86bfd56d4a739f9f2eae6b3bfa96999d93b37e0c7e9e42c9b19b0f09d",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "441217",
+          "population": "employee",
+          "relationship": "staff",
+          "sentiment": "negative",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer argues about pay and their employment.",
+          "bodySha256": "44a496a5afe8482265b63da2ecc42532989f76a2a61501f6682802a40df25781",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "441219",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes the care their mother received.",
+          "bodySha256": "575a759b4522093b1d0fc9c2fbe6be23d8bb29f1ef60f34ec1e617a61f5e4619",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "441220",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer describes service from consultation through the last day of care.",
+          "bodySha256": "12f59d9bf1c444405ae35a0f265250f58964501d9119b631d46c2bcfbf73820a",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "brightstar-care-raritan",
+      "sourceUrl": "https://www.mylivingchoice.com/property/brightstar-care-raritan",
+      "pageEvidenceSha256": "e63e039eb1d216a785dd07e9066df96c3dd08ac79d864ebc866ff72d8ac77fd6",
+      "redactedFetchSha256": "c2a0e2bd5f6c742f800a5a69375d0353b97e7458bb60438dc532454eb3dfada8",
+      "editorialReceiptSha256": "acfbe5fe2df2dd2f03b5e0dccc488b7f15a246136496f8e567ae1296ef71a0a9",
+      "pageIdentity": {
+        "name": "BrightStar Care",
+        "street": "44 E Somerset St",
+        "city": "Raritan",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0286400",
+        "basis": "Registered DBA BrightStar Care of Somerset at 44 East Somerset Street, Raritan; page omits the floor.",
+        "normalizations": [
+          "Page street omits a registry suite or floor; same building number and street, and no other roster office with this name shares the building (released precedent: SYNERGY Teaneck, Home Helpers Somerset)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 4.2,
+      "sourceCount": 5,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "Visible rows name other branch towns, so the Google population is not established as this office alone."
+        ]
+      },
+      "visibleCount": 4,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "439796",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer says the agency provided the help they needed through the aide process.",
+          "bodySha256": "9f7ee6ac9882d0bc9db7f2df9ff0a47c20007fcc93cd50be214cff77b41e8dd2",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "439795",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "negative",
+          "identityConcern": "account names a different BrightStar branch town",
+          "careScopeConcern": null,
+          "rationale": "Adult child describes failed callbacks and high rates, but names a different BrightStar branch.",
+          "bodySha256": "e8e2eaa1bc9e5bcab9b5261b3095a61491e2f43f79c13933667853b618e25869",
+          "disposition": [
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "439793",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative describes the team helping with an aunt; the team name matches this office's registered DBA, BrightStar Care of Somerset.",
+          "bodySha256": "0b4d9aa6b203a04be806640a07c1632dad130f8224bbc0a0cbebb83aa5506c78",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "439794",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a caregiver accompanying their mother to family events.",
+          "bodySha256": "629319af0ffdd0a8d1202d2ecd9c305eebad4a0efe003dc6a614fcb204cc9195",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 3,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "brightstar-care-tinton-falls",
+      "sourceUrl": "https://www.mylivingchoice.com/property/brightstar-care-tinton-falls",
+      "pageEvidenceSha256": "ea4c5597348a33c7dc21a7d3054c73471a615d7cffe8601f9fd469bb5944e8c6",
+      "redactedFetchSha256": "a7c7effa5eaa2b52120ba994bc6b654be989ad386f964e2b7c7883e746c167ce",
+      "editorialReceiptSha256": "0d7d5bccfe5bbf9008f3e4ee36965ae4094593b730dff8b348c5ff944c1046f5",
+      "pageIdentity": {
+        "name": "BrightStar Care",
+        "street": "55 Gilbert St N Ste 201",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "No roster BrightStar office in Tinton Falls or at this street.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 4.8,
+      "sourceCount": 8,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row names an out-of-state branch, so the Google population is not established as this office alone.",
+          "One visible row includes skilled nursing visits."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "441256",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Household has had an aide for about a year.",
+          "bodySha256": "d16ab1dc9f006061643b2b7786c7a5b3d5e9bc02b3f9481befa266dac97fa879",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "441255",
+          "population": "consumer-recipient",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer describes intake and the caregiver sent to them personally.",
+          "bodySha256": "f98f6c71e512d43c4fef6fea43b08b36555d1ca01ccb7db443bca4609d122fdd",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "441257",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer describes intake, paperwork and an aide arranged the same week.",
+          "bodySha256": "7005d0acfce108544e10338efa7239aafeffb1ebeaad96d2461f8955c0cd739b",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "441258",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": "account includes skilled wound-care visits as well as aide service",
+          "rationale": "Adult child describes years of live-in aides and also skilled wound-care visits.",
+          "bodySha256": "6dfc5663dcdebdc54f29e652a444bbd4bc4f4ed5f31441e1f75cd122696020ab",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "441259",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": "account names an out-of-state BrightStar branch",
+          "careScopeConcern": null,
+          "rationale": "Sibling describes choosing a BrightStar branch in another state.",
+          "bodySha256": "2cc55b64cbd8be350cd02a855e69b9c9c45e0233294b827276de2f8f2a229cae",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "care-at-home-agency-llc",
+      "sourceUrl": "https://www.mylivingchoice.com/property/care-at-home-agency-llc",
+      "pageEvidenceSha256": "65112856c2d19818584c5d3a60cd7e83948de08f0f01c743f9436c804e46baf6",
+      "redactedFetchSha256": "9a9996727d007a0685d887d965ee45c701d131a2cd60913661d4f08c6eadbc9e",
+      "editorialReceiptSha256": "048e038ca752dcbbd3de5f7430a6c730a4017d09b1f0c2a3d86bf7a3120919e7",
+      "pageIdentity": {
+        "name": "Care At Home Agency LLC",
+        "street": "213 Main St Ste 102A",
+        "city": "Matawan",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0386900",
+        "basis": "Legal and registered name, street, suite and city are equal.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 5,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One of two visible rows is generic praise without a service relationship.",
+          "The other visible row concerns nursing work, so care scope is unclear."
+        ]
+      },
+      "visibleCount": 2,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440408",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": "account describes an assigned nurse rather than nonmedical aide service",
+          "rationale": "Adult child praises the nurse assigned to their mother; the account is about nursing work.",
+          "bodySha256": "81653caa092e34e19946114b5cb241b56db4357dabd55bdb4c5ec86e9721e20e",
+          "disposition": [
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440409",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Generic recommendation with no stated service relationship.",
+          "bodySha256": "c065e05f74f6dfd4d77ebf299f7dd7de7bf131fba5dea039a2703e57c5a31c47",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "care-options-for-kids-shrewsbury",
+      "sourceUrl": "https://www.mylivingchoice.com/property/care-options-for-kids-shrewsbury",
+      "pageEvidenceSha256": "cb4e8d0c6500c711c112cfd3cef8a12fccd1ba831d0673367fe8fd8d13842c3f",
+      "redactedFetchSha256": "e84175e3cfc7df35ed39030dbdc9f230955e8b2fc618f652c880c26ce65a62af",
+      "editorialReceiptSha256": "9c0fdcfd77a5ed0bf831e52774ad248aca21052acaba3e344a3669f1e84cbfb6",
+      "pageIdentity": {
+        "name": "Care Options for Kids",
+        "street": "1030 Broad St Ste 100",
+        "city": "Shrewsbury",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "Roster Care Options for Kids offices are in North Brunswick, Neptune and Elmwood Park; none in Shrewsbury.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 4.6,
+      "sourceCount": 16,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "unresolved",
+        "reasons": [
+          "Visible rows name a different home health and nursing business, so the Google place identity does not match the page brand.",
+          "Several rows are generic praise without a service relationship."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "441265",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": "Google place appears to belong to a differently named home health and nursing business",
+          "careScopeConcern": null,
+          "rationale": "Short praise of aides and nurses with no stated relationship; the page brand differs from the business named in sibling rows.",
+          "bodySha256": "438c5d914050d1053e4b60e8010790b781f5a461fab4779a7c6743686bf9a326",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "441263",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": "review names a different business than the page",
+          "careScopeConcern": null,
+          "rationale": "Generic recommendation that names a different home health and nursing business.",
+          "bodySha256": "636b466b7b1875e1d3c4a284d9284b5f51cfbd7118b57652835220af61e32b47",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "441262",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": "Google place appears to belong to a differently named home health and nursing business",
+          "careScopeConcern": null,
+          "rationale": "Family member describes caregivers helping a relative.",
+          "bodySha256": "89f24c26dc3a28e4cf42efb603a691b4389e09b81a17c3dd9a4bd1eb48cdce42",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "441261",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": "review names a different business than the page",
+          "careScopeConcern": null,
+          "rationale": "Promotional praise of home health care with an unspecified personal experience; names a different business abbreviation.",
+          "bodySha256": "85b853a927a1ac1f3b31cdf4e0995d15bd7a60a9af6fe75e54955bc0dbf82cf0",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "441260",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": "review names a different business than the page",
+          "careScopeConcern": "nurses and aides of a home health and nursing business",
+          "rationale": "Adult child praises nurses and aides at a differently named business.",
+          "bodySha256": "ef742141339b36da85beb04168ba455098fa86f638c8b89727e85830946de7cf",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "caring-people",
+      "sourceUrl": "https://www.mylivingchoice.com/property/caring-people",
+      "pageEvidenceSha256": "77e0a6d33339b8685e6b308c1d308af57058575c51fb9912a8a311eb4aab954f",
+      "redactedFetchSha256": "628ed188c532a1f86592b63fa6e4f5be864ab706216694b8f8883fffcd255b7c",
+      "editorialReceiptSha256": "26ce40e9e356614ebe0bd26056cffe12cc2784123829027b0543043acc0e0c50",
+      "pageIdentity": {
+        "name": "Caring People",
+        "street": "2137 NJ-35 Ste 370",
+        "city": "Holmdel",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "The only roster Caring People office is in Clifton; none in Holmdel.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": null,
+      "sourceCount": null,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "no-visible-reviews",
+        "reasons": [
+          "The review panel says there are no reviews yet; no Google aggregate is displayed."
+        ]
+      },
+      "visibleCount": 0,
+      "rows": [],
+      "released": false
+    },
+    {
+      "slug": "carousel-of-home-care-inc",
+      "sourceUrl": "https://www.mylivingchoice.com/property/carousel-of-home-care-inc",
+      "pageEvidenceSha256": "7e566edf356d20702cd67749a4aa50ed3a73a2552733957852e37fe709c3f731",
+      "redactedFetchSha256": "5915bb48a405729f1ef5a9dc10940f9f64dd037ac562356f130e0d319e7cca8a",
+      "editorialReceiptSha256": "505f462765e5ff57c5dbf22b0408841cf5b2ff5b8afbdab9130f7d340c829ddf",
+      "pageIdentity": {
+        "name": "Carousel of Home Care Inc",
+        "street": "1340 NJ-36",
+        "city": "Hazlet",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0204601",
+        "basis": "Legal name Carousel of Home Care at 1340 Highway 36, Hazlet; page omits the plaza name and suite.",
+        "normalizations": [
+          "State route forms NJ-n, Route n, Highway n and State Route n are the same road (released precedent: NJ-27 and Highway 27).",
+          "Page street omits a registry suite or floor; same building number and street, and no other roster office with this name shares the building (released precedent: SYNERGY Teaneck, Home Helpers Somerset)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 4.4,
+      "sourceCount": 5,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row is one-line praise without a service relationship, so the five-rating population is not established as consumer."
+        ]
+      },
+      "visibleCount": 4,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440682",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "One-line promotional praise with no stated service relationship.",
+          "bodySha256": "20cb04d6421e7bfb074bd0b623f662e0cbae007a95d43704734f3c4f65b1461c",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440681",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family describes the aide and staff keeping their family safe.",
+          "bodySha256": "30dfb7985fa1a794135648566dd18e6136229bd1680d78e450ae30855e48eb40",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440679",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult children describe two years of aides for their father and replacement coverage.",
+          "bodySha256": "932aa0372f67dac183c9911aa844a76e4ef50463afaa8660ea3711228d8358c4",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440680",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child says this agency kept coverage after other agencies failed.",
+          "bodySha256": "56ced126830325896e164b9da7ea2b9172daf543ba1cb91d43dc20a05625141c",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 3,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "comforcare-home-care-north-monmouth-nj",
+      "sourceUrl": "https://www.mylivingchoice.com/property/comforcare-home-care-north-monmouth-nj",
+      "pageEvidenceSha256": "f011e5d3c50b73eb0a98d72e36440eb95a335cfa005054d4124bc64c22b410d6",
+      "redactedFetchSha256": "73815b4d8c5e0984ce400982443c8eff777d06c9f1eeb256a9525406528e97d0",
+      "editorialReceiptSha256": "d27d13c093af9d949a404fffa6ae0f0403f41fca280b7bff1f856e54a2711a35",
+      "pageIdentity": {
+        "name": "ComForCare Home Care (North Monmouth, NJ)",
+        "street": "Ave at the Cmns Suite 2",
+        "city": "Shrewsbury",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "Page street has no building number and no roster ComForCare office is in Shrewsbury.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 3,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All three visible rows describe caregiver service received from this office; the source reports three Google ratings.",
+          "Caution: two rows share very similar wording; authenticity is not verified."
+        ]
+      },
+      "visibleCount": 3,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "664672",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer had a caregiver and describes reaching the office at any hour.",
+          "bodySha256": "3d14ea98383c8206fe9c637aa33ad802666038806dbee2fdbe1b8059ad99cd99",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "565196",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer worked with intake and the owner and had a caregiver.",
+          "bodySha256": "0aad37a90f77b07b0eeca40cc837c3272b16e39f28b6130a009d243663619170",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "565197",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer describes their caregiver and helpful staff.",
+          "bodySha256": "abea0e74f563a638b2e1730577e92520e3bb678f6d2e94fe2ee079af2cff95ac",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "comfort-keepers-shrewsbury",
+      "sourceUrl": "https://www.mylivingchoice.com/property/comfort-keepers-shrewsbury",
+      "pageEvidenceSha256": "b9b9d34aeba381463bee3d8e05884b3b5d4fa5c12e4c1b2d60069725abd459e3",
+      "redactedFetchSha256": "fda84231ed8c4b6a7ffbaecb946f16baf28cfaff764a93c166f83aa4f55a1f0c",
+      "editorialReceiptSha256": "f45bb364c4a7253b394f531bfd630c3b093fba5033da7aecc0f85084b90eb47f",
+      "pageIdentity": {
+        "name": "Comfort Keepers",
+        "street": "697 Broad St",
+        "city": "Shrewsbury",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0178100",
+        "basis": "Registered DBA Comfort Keepers of Central Jersey; street and city equal.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 4.4,
+      "sourceCount": 58,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row is from someone who did not use the service, so the 58-rating population is not established as clients."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "665062",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "mixed",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Household praises administrative staff but says aides were inconsistent and some lacked professionalism.",
+          "bodySha256": "eee36da475a1944d86cfc9769afa259ea26807efb07863ce2dd885fb8bd39cff",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "665063",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse describes caregivers for his wife and flexible scheduling before a move to memory care.",
+          "bodySha256": "aa193dc351622a8b34a887e6994009cf982a264b4b7c61c954eba922f914d09f",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "665064",
+          "population": "consumer-recipient",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer received help from an aide while recovering and praises office responsiveness.",
+          "bodySha256": "dc01bb511c89c59a408c8ef47ae4da9e005347044164863c9dad40921e380c15",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "521935",
+          "population": "consumer-recipient",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer has had the same aide for several months.",
+          "bodySha256": "e00a8b751e746e3969137abab0fcbf77ce14f7c4a2ebff6acfc3e2181b22b410",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "521936",
+          "population": "ambiguous",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer says they could not use the service; praises an owner call only.",
+          "bodySha256": "3234236455336699696c7a0150bf44d4537e9fb96a2c5d65d059baed0d3090f9",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 4,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "elder-life-management",
+      "sourceUrl": "https://www.mylivingchoice.com/property/elder-life-management",
+      "pageEvidenceSha256": "6f50ac15e9fca64f2eede688bc0ef33a486e26ad738a26f39c60dfcd81b61484",
+      "redactedFetchSha256": "fc2e05e4f1c966de6e922c04707467dd527cc1c6ebe913d920667e80cecba600",
+      "editorialReceiptSha256": "06740843db74fbe35b8ce04286c64b15a391c26cd0a9658bc7ee88ca24daee29",
+      "pageIdentity": {
+        "name": "Elder Life Management",
+        "street": "One Hovchild Blvd, 4000 NJ-66 Ste 225",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 4
+      },
+      "registryDecision": {
+        "decision": "held-identity",
+        "providerId": null,
+        "basis": "Street, suite and city equal HP0246700, but its registered DBA is Elder Life Home Care, not Elder Life Management. The visible reviews describe care management and Medicaid services.",
+        "normalizations": [],
+        "cautions": [
+          "Candidate north-jersey-hp-hp0246700 retained as a lead only; registry expiry was already past at capture."
+        ]
+      },
+      "sourceAverage": 3.9,
+      "sourceCount": 12,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "unresolved",
+        "reasons": [
+          "Visible rows describe care management, placement and Medicaid applications, not in-home care, so the aggregate is not home-care office evidence."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "441238",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "mixed",
+          "identityConcern": null,
+          "careScopeConcern": "care-management or financial-planning service, not in-home aide care",
+          "rationale": "Client praises customer service but criticizes the financial office; service type is not described as in-home care.",
+          "bodySha256": "fdf155f4b1774b5c14944df11418e5c882e268ea11cfb76d9bd573e49f85e78c",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "441237",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": "geriatric care management, not in-home aide care",
+          "rationale": "Family describes a nurse care manager advocating for a parent and end-of-life planning.",
+          "bodySha256": "a393a5b85e240a646a7ea74cb565e5e91ab7a2c2debefead7fcb5900cd9d2c66",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "441236",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": "Medicaid application service, not in-home care",
+          "rationale": "Adult child describes Medicaid application help for a parent in a facility.",
+          "bodySha256": "704c12bd4a99948c6d80604217fcdb973f1eabb077f601e22586976523fdf2af",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "441239",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": "placement and paperwork service, not in-home care",
+          "rationale": "Relative describes help choosing assisted living and paperwork.",
+          "bodySha256": "e3c8256aa8edba834f4bf02d6012f8cb9373be4ba42b6c7327c96c376ce3126b",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "441235",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": "Medicaid application service, not in-home care",
+          "rationale": "Relative describes Medicaid application help for nursing-home care.",
+          "bodySha256": "4c839abba2293f5da8e3b92fbe7260d949d06421c7d60d0470434906144e8cbf",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "griswold-home-care-for-monmouth-county",
+      "sourceUrl": "https://www.mylivingchoice.com/property/griswold-home-care-for-monmouth-county",
+      "pageEvidenceSha256": "2f72c39d164ccd6de9bb4add956ae8319223717d145c1c1d2d94f6c6ed767f0d",
+      "redactedFetchSha256": "79fe767e71012554b95f1977f9575ccc47df4644889d49d0dde67490c36c5ca1",
+      "editorialReceiptSha256": "25f47945534291cd904bcbf8c433b32ac141e5eae011bb61a1fedfd491fc32a8",
+      "pageIdentity": {
+        "name": "Griswold Home Care for Monmouth County",
+        "street": "75 West Front Street",
+        "city": "Red Bank",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0048701",
+        "basis": "Registered DBA Griswold Home Care; street and city equal.",
+        "normalizations": [],
+        "cautions": [
+          "The bridge flags this row’s listed expiry as already past at capture, while the runtime roster lists it as Active. The parent should confirm current registration before publication."
+        ]
+      },
+      "sourceAverage": 4.5,
+      "sourceCount": 11,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family or client accounts of aide service from this office; no row names another branch."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "441230",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child used part-time and later live-in aides for their mother and compares rates.",
+          "bodySha256": "86d68b133d840d1efc0dc52a9dc4298a36e0e261c3bd22048df89b96fbf00c1c",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "441234",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Household says it was satisfied with the aides it used.",
+          "bodySha256": "d1afd335c1277d36cfa29ad95c915c5d8d656d5bad9817971407a6cf810de014",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "441231",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes part-time and live-in staff caring for their mother over several years.",
+          "bodySha256": "4690d8a7bf24744208e6f8fdcea32459823a6cac39eae95c99886d5ebfabb5e8",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "441233",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes years of working with the office to staff aides for their mother.",
+          "bodySha256": "aa6c06e110cc3b0f659378d9c3a1639cf6ff79d23911ca1ac60fb66771ed8875",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "441232",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes caregivers for their father at short notice.",
+          "bodySha256": "8e85de3cb12ac2ddb6c82c194c0a28dcfb85bc0b354151f935d224e0fba6a5ca",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "griswold-home-care-for-passaic-sussex-and-morris-counties",
+      "sourceUrl": "https://www.mylivingchoice.com/property/griswold-home-care-for-passaic-sussex-and-morris-counties",
+      "pageEvidenceSha256": "8f0b7e9a9f0e5ff67948a5744672150044887541a41b04280b84da7b46cbd8d9",
+      "redactedFetchSha256": "94fe46e90573450b5bdc038584cb9eec5a5717569442a058f618f24423198083",
+      "editorialReceiptSha256": "7c13f60e088d4cc1866360f15cd8b95aa4e3219fae208b73b5221e00baa55d23",
+      "pageIdentity": {
+        "name": "Griswold Home Care for Passaic, Sussex & Morris Counties",
+        "street": "9 Carey Ave #100",
+        "city": "Butler",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "No roster Griswold office in Butler.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": null,
+      "sourceCount": null,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "no-visible-reviews",
+        "reasons": [
+          "The review panel says there are no reviews yet; no Google aggregate is displayed."
+        ]
+      },
+      "visibleCount": 0,
+      "rows": [],
+      "released": false
+    },
+    {
+      "slug": "helpers-at-home-care",
+      "sourceUrl": "https://www.mylivingchoice.com/property/helpers-at-home-care",
+      "pageEvidenceSha256": "f84c2d514331d8ec3cadc5f878f38252645d964a1247b3b5cf4efc9b9976e792",
+      "redactedFetchSha256": "d8a90394b357897f55ceecf2ab47fae566410769084ae9bc6d2c8feed17a93bc",
+      "editorialReceiptSha256": "486fb6b224af408af7df558df50eb92f5fdb3f00ffbb3840e58807e8c80fdca4",
+      "pageIdentity": {
+        "name": "Helpers At Home Care",
+        "street": "15 N Main St",
+        "city": "Marlboro Township",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0173800",
+        "basis": "Legal name Helpers At Home Care at 15 North Main Street; page omits the floor. Page city Marlboro Township is the same municipality as registry Marlboro.",
+        "normalizations": [
+          "Page street omits a registry suite or floor; same building number and street, and no other roster office with this name shares the building (released precedent: SYNERGY Teaneck, Home Helpers Somerset).",
+          "A trailing Township designator is dropped for the same municipality."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 4.9,
+      "sourceCount": 83,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "Visible rows include an employee post, a professional referrer and two posts without a service relationship."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440323",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Praise of the owner and team without describing care the writer received or arranged.",
+          "bodySha256": "117026842106f309a234c4cc021bf868689c63f9a6b5a491f3a0a5957b23a1fd",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440326",
+          "population": "professional",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer refers others to the agency in a professional capacity.",
+          "bodySha256": "27f3e2508e3de5b52bc7fdde6067d913ec94a56aed3f5dfe9916284b363d24cd",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440327",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Household describes housekeeping, meals and medication help after an assessment.",
+          "bodySha256": "68e350de7ab1ed2aef1c658f73409d5204a59813f612ca7fecb5b034c89ccb0e",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440324",
+          "population": "employee",
+          "relationship": "staff",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer calls it the best agency to work for.",
+          "bodySha256": "b4053f62c09a101b26e5905b6331170fc01dcd67a452b854cd0f298b3297bf59",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440325",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Praise of the owner without a stated service relationship.",
+          "bodySha256": "6667eced97532eb65ac9c3be9062f6eb0b6dca194bb62d79339824aabdd08355",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 1,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "home-care-bears",
+      "sourceUrl": "https://www.mylivingchoice.com/property/home-care-bears",
+      "pageEvidenceSha256": "25f4beb6b8ee3ba0d24773dc4565e9153002d3aec142cf0bfe1fbe6443b492ed",
+      "redactedFetchSha256": "901e7fb6db730f72e699b00060842c49c07d4a6e087cfb2082cce6b8df994fb7",
+      "editorialReceiptSha256": "c7656677d8154fae54c19da66c126a978b6b5338ae571ecf495a06be41553aac",
+      "pageIdentity": {
+        "name": "Home Care Bears",
+        "street": "228 New Jersey 34 Old Bridge",
+        "city": "Matawan",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "held-identity",
+        "providerId": null,
+        "basis": "Legal name matches HP0300000 and the number and route agree, but the page street adds an Old Bridge locality token and omits the registry suite.",
+        "normalizations": [],
+        "cautions": [
+          "Candidate north-jersey-hp-hp0300000 retained as a lead only; phone is not visible to corroborate."
+        ]
+      },
+      "sourceAverage": 5,
+      "sourceCount": 2,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One of two visible rows has no service relationship and may be from staff."
+        ]
+      },
+      "visibleCount": 2,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440419",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "One-line praise that may refer to working there; no service relationship.",
+          "bodySha256": "efb225958d3a4da73923ee2d2ec5eeda8ab96fc392c2c5de3ca4fa3de94c4632",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440418",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse describes several caregivers for her husband and weekly check-in calls.",
+          "bodySha256": "0c3b00d30541fd889259e427f67daf13a74ea30fda5eda1db883cc0c2e10e876",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "home-helpers-home-care-of-summit-nj",
+      "sourceUrl": "https://www.mylivingchoice.com/property/home-helpers-home-care-of-summit-nj",
+      "pageEvidenceSha256": "096e10ccd5bd747a4866f88ec459b00ca5dbe1a593d28c21c0b696df7a3a314f",
+      "redactedFetchSha256": "f11e0cd65af83f1e38ec100ad3cf702e59a7a06bec27cd14da8b8bf51c123590",
+      "editorialReceiptSha256": "d63738036e0e6b0d1bcdfe68ca608be8dc2459d66e75a663759a894367f67ac9",
+      "pageIdentity": {
+        "name": "Home Helpers Home Care of Summit, NJ",
+        "street": "830 Morris Tpke 4th Floor Suite 408",
+        "city": "Short Hills",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0367900",
+        "basis": "Registered DBA Home Helpers Home Care of Summit, NJ at 830 Morris Turnpike, 4th Floor, Short Hills. The other office on that floor is a different business in Suite 401.",
+        "normalizations": [
+          "Registry row omits a suite the page shows; the page suite conflicts with no roster office of this name."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 29,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row is from a nurse who works with the office, a professional population."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440026",
+          "population": "professional",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer is a nurse describing working with the care manager.",
+          "bodySha256": "6aea44b3af2e6b801c5f1793accf5122d5ed51d5100cc7ada09bc8cb68c4af62",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440022",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Sibling describes urgent setup of care for a brother.",
+          "bodySha256": "787b7ceb350fbc02edc5532159a40f85c2e0768b24b9bdfac2d7c2cab00293d9",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440023",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes the care manager matching a caregiver to their parents.",
+          "bodySha256": "41a0f969ced61b8b0d396d6f2b7cf731cc8524a220458517c178feef4c88ff2d",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440024",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes arranging live-in help for parents within a week.",
+          "bodySha256": "4e75f8c09f288425f17336f8519d54658c5caff9634021dd9abc45d290130fbc",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440025",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a replacement aide for their father and daily check-ins.",
+          "bodySha256": "8355dca54dbfb2494589eb985b93bb458b5ce3b3658281011ffe2fa239307263",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 4,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "home-instead-home-care-services-of-monmouth-county-nj",
+      "sourceUrl": "https://www.mylivingchoice.com/property/home-instead-home-care-services-of-monmouth-county-nj",
+      "pageEvidenceSha256": "5d6331ca641af770337913818653dc8cbc4bcd05ce1d10fc32c32191967048a2",
+      "redactedFetchSha256": "eb94dde5df5bab3a7d7fb87ccb62d1a3e761bc9b610806774afd4e1b9882bfbc",
+      "editorialReceiptSha256": "201dfea8a7404c2263fd213724784dac718c68c83bf011fc13857a949d822235",
+      "pageIdentity": {
+        "name": "Home Instead Home Care Services of Monmouth County, NJ",
+        "street": "800 Broad St",
+        "city": "Shrewsbury",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0172800",
+        "basis": "Registered DBA Home Instead Senior Care; street and city equal.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 4.7,
+      "sourceCount": 29,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family or client accounts of caregivers from this office; no row names another branch."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440654",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult children describe a caregiver for their mother for over a year.",
+          "bodySha256": "b0a2199a156c64186ec565f6ca64ffd13e5491cb6acf6b3760446b008b0cb912",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440655",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes the office manager finding a good match for an elderly mother.",
+          "bodySha256": "0e797379f699e917814a32d408d42887a8083fb766ac5da643b5462193a8145e",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440652",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family member relays a parent’s account of a caregiver for the other parent.",
+          "bodySha256": "62368487a793b95b4e8f779431a4b1b36b3ad2c5dee58aefd23faedd71d484ce",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440653",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer uses the service and praises their caregiver.",
+          "bodySha256": "551e00c4a309a76782b181efe563c2f0d48324c4c34d230067faf3607a55deb9",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440656",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes the home health aide for their mother.",
+          "bodySha256": "4d72c858ed4011b13cfff53ee3d7a479c4d0e6966965a1cfbc119d24911ee2e3",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "homewatch-caregivers-of-monmouth-county",
+      "sourceUrl": "https://www.mylivingchoice.com/property/homewatch-caregivers-of-monmouth-county",
+      "pageEvidenceSha256": "9969229c0fdfdffda34badc61a91075946b61c938049501f0656af1551c4339c",
+      "redactedFetchSha256": "302cca46356ce6b099e397a595fcd4575f804e16dea7c9b6197b263e4431c187",
+      "editorialReceiptSha256": "f27be920a3077491b71ba172878319c94a09f9c9a96bf8046413fbf3bf0c0114",
+      "pageIdentity": {
+        "name": "Homewatch CareGivers of Monmouth County",
+        "street": "59 Ave at the Cmns Ste 103",
+        "city": "Shrewsbury",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0384500",
+        "basis": "Registered DBA Homewatch Caregivers of Eatontown at 59 Avenue at the Commons, Suite 103, Shrewsbury; page street and suite equal.",
+        "normalizations": [
+          "Cmns equals Commons."
+        ],
+        "cautions": [
+          "The page title says Monmouth County while the registered DBA says Eatontown; the exact suite match ties both to this office."
+        ]
+      },
+      "sourceAverage": 5,
+      "sourceCount": 3,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All three visible rows are direct family accounts of caregiver service.",
+          "Two rows name an Eatontown branch; the registry DBA for this exact Shrewsbury suite is Homewatch Caregivers of Eatontown, so they refer to this office."
+        ]
+      },
+      "visibleCount": 3,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "565142",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse describes a companion caregiver for her husband.",
+          "bodySha256": "d499993c1b6130c5b0e26d2b6553e5698e30bf392e4274cf249e518b0349bdf8",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "565143",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family praises care planning and names the Eatontown DBA. The registry lists Homewatch Caregivers of Eatontown as the DBA of this exact Shrewsbury suite, so the name points to this office.",
+          "bodySha256": "f1f3f9397cdb9b07d6b584c625d84c2223efb9b5ef9bb9198f65068ea830b49b",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "565144",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family praises care for a relative and names the Eatontown DBA. The registry lists Homewatch Caregivers of Eatontown as the DBA of this exact Shrewsbury suite, so the name points to this office.",
+          "bodySha256": "1e487cedacb33ea3f6554e511e4ff50076927532f1b56161f2b805725824a11c",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 3,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "key-family-care-llc",
+      "sourceUrl": "https://www.mylivingchoice.com/property/key-family-care-llc",
+      "pageEvidenceSha256": "27a184492ab5b6859ae3cd21ab006936ebe16ba03b53c856306ac7bb0293a910",
+      "redactedFetchSha256": "40633ed0142c9073a0bc146d7fd20b57ec07fef3312ca2a46d11579b2e3c2679",
+      "editorialReceiptSha256": "0d0697d7604bc3bf4ffaae9148fe04712a8d6527d8e60e90267b03385786751c",
+      "pageIdentity": {
+        "name": "Key Family Care LLC",
+        "street": "788 Shrewsbury Ave #2221",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0381100",
+        "basis": "Legal name, street, suite and city equal.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 1,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "unresolved",
+        "reasons": [
+          "The panel reports one Google rating but serves no visible review, so its population cannot be assessed."
+        ]
+      },
+      "visibleCount": 0,
+      "rows": [],
+      "released": false
+    },
+    {
+      "slug": "kp-home-care-services",
+      "sourceUrl": "https://www.mylivingchoice.com/property/kp-home-care-services",
+      "pageEvidenceSha256": "db64dcf2a044d750c2fbd5355bc72d0cd66745fd6125c6c515148919146d9d4c",
+      "redactedFetchSha256": "f2cb05809160619988554513001664997c5203e7a32b423056c14c34398a7c09",
+      "editorialReceiptSha256": "b6010ead618c91b3733086b1a9a20e9d4ddabd91a5bb1d0324a3bab12b42d03b",
+      "pageIdentity": {
+        "name": "Kp Home Care Services",
+        "street": "46 Sager Pl",
+        "city": "Hillside",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0418700",
+        "basis": "Legal name KP Homecare Services; street and city equal.",
+        "normalizations": [
+          "Home Care equals Homecare."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 4.9,
+      "sourceCount": 10,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "Three of five visible rows are generic or promotional praise without a service relationship.",
+          "All five visible rows were posted within two months."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440597",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Promotional one-liner with no service relationship.",
+          "bodySha256": "3e3a431e26b52673a1473aa84a7ba018fb5c43cbe098e986e674080acfcb8132",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440598",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Generic praise with no service relationship.",
+          "bodySha256": "3d419260dd64deb6407e4dbe917dfb97dca8dc4213d7bb0f663be3865afc0f8a",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440595",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Third-person description of the agency that reads as promotional; no stated relationship.",
+          "bodySha256": "e2f0522f32a2bbe3969cad0c1a1ac2b03ac0fa76d75e23fc478ce062b39a66eb",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440596",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative says the agency provided home care for their uncle.",
+          "bodySha256": "335fcb8e18b89051f39c55627436840458f76a4bf5d1b43f16c20a06c7704f98",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440599",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family says the agency left them feeling supported.",
+          "bodySha256": "48d20079d8f864a34e46ac3a91701e2dae5552831156c8675b91c42271bc9462",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 2,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "lares-home-care",
+      "sourceUrl": "https://www.mylivingchoice.com/property/lares-home-care",
+      "pageEvidenceSha256": "c7f13f4325560e5ffe54386051e2b3233e90f50aaf8172ab0da93ce5c7b3a6f7",
+      "redactedFetchSha256": "14df512b7d0cad1b7a451302309443ec5f7997a312dd3378dc0b3baeae477141",
+      "editorialReceiptSha256": "c2a53387f83759fc5d717923a773e57b2a08a504b8ca3529290000e6021de5f2",
+      "pageIdentity": {
+        "name": "Lares Home Care",
+        "street": "1000 NJ-34 #101",
+        "city": "Matawan",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0204800",
+        "basis": "Legal name Lares Home Care at 1000 Route 34, Suite 101, Matawan.",
+        "normalizations": [
+          "State route forms NJ-n, Route n, Highway n and State Route n are the same road (released precedent: NJ-27 and Highway 27)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 5,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "Visible rows include a partner-style post and generic praise without a service relationship."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440421",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relatives describe the team caring for an aunt living alone.",
+          "bodySha256": "c2c8b3133fafba3c77961b6cad1efb77e3b97c04b751a9fc7d0ed8e230a2bef9",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440422",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes fast setup and an in-home aide for their mother.",
+          "bodySha256": "a0238e8e4d2c5c8cccf3caf643590ec9625dded01e9b9ec84ce9778dd1e96e9b",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440423",
+          "population": "professional",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer says it is always a pleasure to work with the agency and praises how patients are looked after; reads as a partner or staff post.",
+          "bodySha256": "c6c5513b0013eecedd55c1591fe6d8f921decdc883537a7e9e8dbd9ca668353e",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440420",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse describes caregivers calming her husband and helpful office staff.",
+          "bodySha256": "c4cf5a2f75dad45a1ae4f7a45d3de9cfb998596e3e0d8a7c376d19b5f598fa04",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440424",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Generic praise of the team without a stated service relationship.",
+          "bodySha256": "8b4628ab6251a4c53a662aac7aaac58281df97c0987a732673d161de9b7af1eb",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 3,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "lynn-care-senior-services-llc",
+      "sourceUrl": "https://www.mylivingchoice.com/property/lynn-care-senior-services-llc",
+      "pageEvidenceSha256": "4ad7f2a82616f13ab3d614f512f793ff4381e2de8544d7e006264f78187603d7",
+      "redactedFetchSha256": "0f44db87385430e6af4f8c58a106f33fee3b711e3e3d841918abeb23b06f9f8b",
+      "editorialReceiptSha256": "d21bb1ed318e8d23d3678411895a52d21c7943958dd263d204e69f3d54d6bc74",
+      "pageIdentity": {
+        "name": "Lynn Care Senior Services",
+        "street": "44 Apple St",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "No roster office of this name in Tinton Falls.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": null,
+      "sourceCount": null,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "no-visible-reviews",
+        "reasons": [
+          "The review panel says there are no reviews yet; no Google aggregate is displayed."
+        ]
+      },
+      "visibleCount": 0,
+      "rows": [],
+      "released": false
+    },
+    {
+      "slug": "maya-homecare",
+      "sourceUrl": "https://www.mylivingchoice.com/property/maya-homecare",
+      "pageEvidenceSha256": "212e04233b309d37a21ec716ef2daf667ae8bdbd0026429f40f0412f47688293",
+      "redactedFetchSha256": "8a39ce3d1009b7b4a4af933698c629edc5048b85376295fdaeaa67027d09681c",
+      "editorialReceiptSha256": "b9903bec300a65a2f87835c71ee2a234cd54b43158f0ff3bd8bf187203b7d374",
+      "pageIdentity": {
+        "name": "Maya Homecare",
+        "street": "3322 US-22 Ste 420",
+        "city": "Branchburg",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0342600",
+        "basis": "Legal name Maya Homecare at 3322 Route 22 W, Suite 420, Branchburg. The other office in the building is a different business in Suite 409.",
+        "normalizations": [
+          "State route forms NJ-n, Route n, Highway n and State Route n are the same road (released precedent: NJ-27 and Highway 27).",
+          "Direction W omitted on the page."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 6,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family accounts of care from this agency; no row names another branch."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "439805",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes the team caring for their mother.",
+          "bodySha256": "b6f43521da476f022e323f88c92cebe44d1936e196f42264667a80c78cded356",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "439803",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family interviewed caregivers through the owner and hired an aide for a sibling.",
+          "bodySha256": "b1f5871528a1db42937a14f7c190da933222f504f2f06c408b8a5698f60c0cf0",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "439806",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative says the agency helped a mother-in-law for a couple of months near the end of life.",
+          "bodySha256": "ce8b897951a5a9b3fd28aba15731b844d541ae13090798baa873ee10afbd998a",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "439804",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative engaged the owner to help a mother-in-law recover at home.",
+          "bodySha256": "ea48a851f2770ef499faecbead7067e8b04e1f129a84e507c7716260675301cf",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "439802",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes an assessment and caregivers for a father living alone.",
+          "bodySha256": "9db0f97b60e7162e9b7f6483dfc43218abe5470ae02ef9c590f0e0fc56118d26",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "new-era-home-care",
+      "sourceUrl": "https://www.mylivingchoice.com/property/new-era-home-care",
+      "pageEvidenceSha256": "99633b46fe5382663178b761c8ed578b1b78e010ec1b1086e14948cf68aea694",
+      "redactedFetchSha256": "6b5753a65a917d585f67dea66765e15d96c48e708071d3524ec9b348742d2524",
+      "editorialReceiptSha256": "1ae438ae93d657c1baef85c71018739be0c7332f7442b179b4dc74d366816aff",
+      "pageIdentity": {
+        "name": "New Era Home Care",
+        "street": "92 Main St",
+        "city": "Matawan",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0270800",
+        "basis": "Legal name New Era Home Care at 92 Main Street, Matawan; page omits the floor.",
+        "normalizations": [
+          "Page street omits a registry suite or floor; same building number and street, and no other roster office with this name shares the building (released precedent: SYNERGY Teaneck, Home Helpers Somerset)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 4.3,
+      "sourceCount": 11,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row reviews the agency training school, and one names a different business."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440425",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "mixed",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child praises aides but criticizes communication when aides cannot come.",
+          "bodySha256": "15d721e67d910a00ca03a22a32bacde01b5cfc1850dc60a14af3524e01a84a91",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440427",
+          "population": "trainee",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer was a student at the agency training school.",
+          "bodySha256": "2c8f0b313af1a8d09d683aa1acb3b9e0a0fd5a69cf60f0165960616b81b7ddd5",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440426",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Household praises office staff and its caregiver.",
+          "bodySha256": "cf551015b402de164ea56aa7771877f69b04c06de40c82ca542f60c439a276c6",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440429",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": "account recommends a differently named business",
+          "careScopeConcern": null,
+          "rationale": "Adult child praises the aide and office but recommends a differently named business.",
+          "bodySha256": "fd4c68a390e5813d2dbf69551179b1a9fcfd914efed273d7d5a80e4816cf7dc2",
+          "disposition": [
+            "no-publishable-summary",
+            "wrong-or-uncertain-office-or-care"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440428",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative has used the agency for about three years for an elderly father-in-law.",
+          "bodySha256": "40763a3d83c466daa2bf9ce78df3f6b994c07753751ce4d06f417b5c6c553931",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 3,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "nova-home-care-and-staffing",
+      "sourceUrl": "https://www.mylivingchoice.com/property/nova-home-care-and-staffing",
+      "pageEvidenceSha256": "41fb2a3a8e60e72a0235dc7ce4ae5a2034cf0dd3be907b5b292b6b2617b86a60",
+      "redactedFetchSha256": "08dcb25da1fa94b2b1d14d558bffd9e951506f69654ea18e068338ca8cb9e534",
+      "editorialReceiptSha256": "0884478e426bac12319d2d8acaf6c71737aebe48e1805c2817cb4c7e3f08294b",
+      "pageIdentity": {
+        "name": "Nova Home Care & Staffing",
+        "street": "821 Broad St",
+        "city": "Shrewsbury",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0053401",
+        "basis": "Registered DBA Nova Home Care and Staffing; street and city equal.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 2,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "unresolved",
+        "reasons": [
+          "The only visible row of two reported ratings has no stated service relationship."
+        ]
+      },
+      "visibleCount": 1,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "565296",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Short praise of office staff and home health care with no stated service relationship.",
+          "bodySha256": "cefdfe4b4e09c5dcf355d0dcaab9d4dde960a18b9044c6905659eb84b0d5b6cc",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "personal-home-care-of-new-jersey",
+      "sourceUrl": "https://www.mylivingchoice.com/property/personal-home-care-of-new-jersey",
+      "pageEvidenceSha256": "1c1cbc6431bcd13ba3d94780639d0dbecbc333e265bedfc6efdfe2d0ea72217a",
+      "redactedFetchSha256": "4aea1d471dbb574d62e4c5b428fdc00f398a5e374257f4308bf55b15178d8ba9",
+      "editorialReceiptSha256": "4c1380333dab284c1ab30be784397f1297f20424502eec8eaf50cf4e28fdfd7f",
+      "pageIdentity": {
+        "name": "Personal Home Care of New Jersey",
+        "street": "11 Deerpark Dr Ste 102-H",
+        "city": "Monmouth Junction",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0196500",
+        "basis": "Legal name Personal Home Care of New Jersey at 11 Deer Park Drive, Suite 102-H, Monmouth Junction.",
+        "normalizations": [
+          "Deerpark equals Deer Park (space only)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 12,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family accounts of aide service from this agency.",
+          "Caution: all five visible rows were posted within about a month; authenticity is not verified."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440329",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family describes the owner finding aides for their mother at short notice and odd hours.",
+          "bodySha256": "e0b51f7ee8685426804b4ea00e09047c2901bb90c0e04fb2ec6a1fa60b466246",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440328",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative describes quickly finding a qualified caregiver for a father-in-law.",
+          "bodySha256": "4d2d427dd915bcbb8cb0c97db8db074cb4ea93cb07397ac546f4edda021a4b0a",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440331",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes aides helping their parents with daily routines and activities.",
+          "bodySha256": "d50d5369d4cb8d7e8f48726cfda692980aeef327dedc7015c09d88e2013ef3a9",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440330",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes aides for their parents and responsive placement.",
+          "bodySha256": "8230a46dbb8d701e3aec2508e2104ea7a1c878189765270ce0b6dc12c08f7cf0",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440332",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family describes scheduling, payment and screening handled for an aging parent.",
+          "bodySha256": "5d177588a887b780231f3b1082670e47b65f00c5b37e0ca546966700bd77b636",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "preferred-care-at-home-of-bergen-county-west",
+      "sourceUrl": "https://www.mylivingchoice.com/property/preferred-care-at-home-of-bergen-county-west",
+      "pageEvidenceSha256": "5e30a8be440bb10d67e7b5891314d262bb1fa764127ef4a1de4cd29893e4da6f",
+      "redactedFetchSha256": "53615eefa6f3f80c577fbf241ccae26457bee238b4f2232b087e698bd7daed9f",
+      "editorialReceiptSha256": "e4c998be5c82c8f3ca8f54d7aae82bf5096279e4bfa0ce52d9f9d3a6429beccd",
+      "pageIdentity": {
+        "name": "Preferred Care at Home of Bergen County West",
+        "street": "301 NJ-17",
+        "city": "Rutherford",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0394000",
+        "basis": "Registered trade name Preferred Care at Home of Bergen County West at 301 Route 17 N, Rutherford.",
+        "normalizations": [
+          "State route forms NJ-n, Route n, Highway n and State Route n are the same road (released precedent: NJ-27 and Highway 27).",
+          "Direction N omitted on the page."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 13,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family or client accounts of service from this office; no row names another branch."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "602447",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative describes the owner building a care plan for an elderly aunt.",
+          "bodySha256": "d4cd361c8a6f4c2d5e97378b81758906bec58f503004c05738ab138ec3b65e53",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "602444",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family used the agency for about nine months for a relative.",
+          "bodySha256": "ece64f62f87dafe3dfa20bf10cb9e66fbace1bc0b76e8a72146e4d5d4af3604e",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "602446",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes day and night care for their mother for about eleven months.",
+          "bodySha256": "72cf4f5a3a19cb2e6ae546bb7e7a3826dadce50d716e71aafb17d524659cd481",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "602445",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer describes the agency’s caregivers arriving on time and their dealings with the owner.",
+          "bodySha256": "00c53809272e9c261909601ed73833457774a775f7508bedb90fc176609248a1",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "602443",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a caregiver supporting their father in an assisted living residence.",
+          "bodySha256": "1e298282f8130a81674ab4e8c7330e2af0d6af7bb68716d3d5295c0fab598a2d",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "preferred-care-at-home-of-monmouth-and-ocean-county",
+      "sourceUrl": "https://www.mylivingchoice.com/property/preferred-care-at-home-of-monmouth-and-ocean-county",
+      "pageEvidenceSha256": "bdb302c014ad90724c043752fc37499bbe534cfaae0f60115d8a764364eda9c1",
+      "redactedFetchSha256": "ee0c973515bcbc80e8ccc6c95d427df3210d404ae998cdb4b560e1e4f052a560",
+      "editorialReceiptSha256": "364848a28c7bd930be360d882052a13296ad4f91052e0cc02d23b582c5ecaeeb",
+      "pageIdentity": {
+        "name": "Preferred Care at Home of Monmouth and Ocean County",
+        "street": "3600 NJ-66 #150",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "held-identity",
+        "providerId": null,
+        "basis": "Registered trade name, number, route and suite match HP0402600, but the page city is Tinton Falls while the registry city is Neptune.",
+        "normalizations": [],
+        "cautions": [
+          "Candidate north-jersey-hp-hp0402600 retained as a lead only; phone is not visible to corroborate."
+        ]
+      },
+      "sourceAverage": 5,
+      "sourceCount": 9,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row is from an employee."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "441186",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Grandchild describes aides for a grandmother over two years.",
+          "bodySha256": "fb39af7057a361e901f6ad81d8d796b7c284df716a8e583c90820f255b4d7662",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "599709",
+          "population": "employee",
+          "relationship": "staff",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer says they work for the company.",
+          "bodySha256": "e33ec09e2ea7b81e6a34fc0e69b77c20db92cbcec93bcaf9955a8e1c03e18dfc",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "441187",
+          "population": "consumer-recipient",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Former client thanks the office for their caregiver.",
+          "bodySha256": "69d77fceae7181dea18858f418afdfeb1dc3030a3ed16c0f153676e543d7ab83",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "441185",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family describes immediate response and regular check-ins.",
+          "bodySha256": "60f68d67691b9cf4ab169821df2b2507ef5afdc53db194c97f885af7d6884c76",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "441188",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child hired the agency for their father.",
+          "bodySha256": "2df2b8d986efa0398764229218157b89054d0bfc0c8584075c923d552c7a8344",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "preferred-care-at-home-of-northwest-new-jersey",
+      "sourceUrl": "https://www.mylivingchoice.com/property/preferred-care-at-home-of-northwest-new-jersey",
+      "pageEvidenceSha256": "306d7286553090f2fb2cb8007105c3a4b83c078a3278e45245b64dd0cb5c9647",
+      "redactedFetchSha256": "1360398313bf09bdbf61206781ffc3dbd898d0fe91905aeae60831531aa3101a",
+      "editorialReceiptSha256": "cbeba06a79a74dd51880ede084a7dced528035b61745c0797794e77d6a6c2264",
+      "pageIdentity": {
+        "name": "Preferred Care at Home of Northwest New Jersey",
+        "street": "143 Lakeside Blvd",
+        "city": "Landing",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0168700",
+        "basis": "Registered DBA Preferred Care at Home of North West New Jersey at 143 Lakeside Boulevard, Landing; page omits the suite.",
+        "normalizations": [
+          "Page street omits a registry suite or floor; same building number and street, and no other roster office with this name shares the building (released precedent: SYNERGY Teaneck, Home Helpers Somerset).",
+          "Northwest equals North West (space only)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 4.7,
+      "sourceCount": 18,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row is from an employee and one has no stated service relationship."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "602635",
+          "population": "employee",
+          "relationship": "staff",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer describes the agency as a place to work and caregiver incentives.",
+          "bodySha256": "e0c6522644c5f4ca4713921b748132ebbac571e3e21c41d1416e0194a2a9f93e",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "602634",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Praise for how clients and caregivers are treated with no stated service relationship.",
+          "bodySha256": "94c7ddb09abb8d2745c1c966abbf1fea9fb8227e8bb0a91b923f41fd1634fcfb",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "602636",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes years of live-in and overnight aides for their mother.",
+          "bodySha256": "40b38fdb0e94c23687f6e143e510aeefebb83f7d7cbf7692596d1b48e2fa1383",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "602637",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes live-in and then daytime caregivers for their father and a quick replacement.",
+          "bodySha256": "7a6c8962e315b9953424090375aa48d4d6c880b720de43e7e4b00a8f49fc84be",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "602638",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "mixed",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse praises the core caregivers but describes untrained substitutes and pressure to reassign the team.",
+          "bodySha256": "46e2cf9c73d2414ecf58a8799fa81908bd8397e1e44e6338f21d63cb6140af24",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 3,
+      "aggregateRetained": false
+    },
+    {
+      "slug": "spark-home-care",
+      "sourceUrl": "https://www.mylivingchoice.com/property/spark-home-care",
+      "pageEvidenceSha256": "8eadc03df9f16e3fcc6c59bfc71b16feab778a0d590f2dac36f5af7d981d8b10",
+      "redactedFetchSha256": "ddde34414158ad702ff3d150f349b100f5923a068c49f4bb0473365b2e2c5ec1",
+      "editorialReceiptSha256": "ab744f3a9c589f09cd3914dfc3247677199ac8f097f634943b9b02c122eee47a",
+      "pageIdentity": {
+        "name": "Spark Home Care",
+        "street": "3455 NJ-66 Suite 6",
+        "city": "Tinton Falls",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "held-identity",
+        "providerId": null,
+        "basis": "Legal name, number, route and suite match HP0349400, but the page city is Tinton Falls while the registry city is Neptune.",
+        "normalizations": [],
+        "cautions": [
+          "Candidate north-jersey-hp-hp0349400 retained as a lead only."
+        ]
+      },
+      "sourceAverage": 5,
+      "sourceCount": 15,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row praises matching without a stated service relationship."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "558559",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child says the agency cared for their mother.",
+          "bodySha256": "bb04b1b7c2a2bbeadd2245b0de769127e1b3abe9d3a559d4bd8828a2c44608ad",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "558560",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Parent describes the home health aide working with their son.",
+          "bodySha256": "bf73af7e53407365771529e6840eb989ec532ba0820c1e542eba1ccf9fe2f6ad",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "558561",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Praise for caregiver matching without saying the writer received or arranged care.",
+          "bodySha256": "6538847e0e6541a22831c4babb11fa8cf5aeadbb51486886b348409ec2701fba",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "558562",
+          "population": "consumer-unknown",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Friend of a client describes the aide and extended hours arranged for him.",
+          "bodySha256": "2b58ee554644cf0a5f0be74f83c4366c6e434b653616e5fec0b06da4a5fde8b1",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "558563",
+          "population": "consumer-recipient",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer describes their own aides and schedule communication after rehab.",
+          "bodySha256": "1050327b19539c55ba42c18101417b1ddbe497253e4471a1513097cbd8779871",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "synergy-homecare-matawan",
+      "sourceUrl": "https://www.mylivingchoice.com/property/synergy-homecare-matawan",
+      "pageEvidenceSha256": "78bcae0beb885e7f944a2fa2b1f7ce487d15fe491c9fc5489414417e23d36a06",
+      "redactedFetchSha256": "8385a81aa3d7fd09358a248e86a1787aadab9bcd1731e700d4cc24b3dd7b3083",
+      "editorialReceiptSha256": "05e193f2f526b55043dbc7a221896c06f8a98e4dd272b3c91119e878f263aaa8",
+      "pageIdentity": {
+        "name": "SYNERGY HomeCare",
+        "street": "1 Ravine Dr",
+        "city": "Matawan",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "held-identity",
+        "providerId": null,
+        "basis": "Street and city equal HP0309400, but its legal name is BECE Home Care Services with no registered SYNERGY DBA. A brand at a shared address is not a name match.",
+        "normalizations": [],
+        "cautions": [
+          "Candidate north-jersey-hp-hp0309400 retained as a lead only; phone is not visible."
+        ]
+      },
+      "sourceAverage": 4.8,
+      "sourceCount": 32,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "mixed-population",
+        "reasons": [
+          "One visible row is a one-line post whose relationship and care setting are unclear."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "664541",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family describes adding hours because of the service for a loved one.",
+          "bodySha256": "d0b46a1aeb3f4c752e3c61fe02cfccef86fbf98a8f904938259c6ec48fa8a835",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "664542",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child praises the aide helping with their father.",
+          "bodySha256": "46beb2f8cbdc99bed6cbfc3a8f714cba44f3cc4e5da1a4af8e66dbaa16c392cb",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "545688",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "negative",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family used the agency several times; serious concerns about a replacement caregiver and how a complaint was handled.",
+          "bodySha256": "46fb5b2252c7fede55e1d2cf9317ba79138e55c7ad827781ab93254d4ac760d1",
+          "disposition": [
+            "office-unresolved"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "545689",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "One line about children’s safety; neither the service relationship nor the care setting is clear.",
+          "bodySha256": "e6537f736f83427819b14a8fdc5f51d3546e811fd44ae9be26b9e7b3d62871b9",
+          "disposition": [
+            "office-unresolved",
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "545690",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child has used backup care for parents for two years.",
+          "bodySha256": "bd905bba26b4df9a5dd1663128e837188afae0a9749f214c3852e9c2791fb480",
+          "disposition": [
+            "office-unresolved"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "the-senior-company",
+      "sourceUrl": "https://www.mylivingchoice.com/property/the-senior-company",
+      "pageEvidenceSha256": "896dac4a69d1593a11792fa1b4c96c479d1e83ff71d800b0a6db6f9bd5ca15c1",
+      "redactedFetchSha256": "75b180cb63faea4febeb0e40bfcac2be61ebdb5c2eea69ef4886444beba6b963",
+      "editorialReceiptSha256": "15c75925ed6a30f69c4fd5505b11ae87851b9b1845a39764856dd1d094b5e73e",
+      "pageIdentity": {
+        "name": "The Senior Company",
+        "street": "434 Union Blvd",
+        "city": "Totowa",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0277600",
+        "basis": "Registered DBA The Senior Company; street and city equal.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 4.9,
+      "sourceCount": 108,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family accounts of aide service from this agency; no row names another branch."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440485",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Sibling describes a live-in aide supporting their sister’s recovery.",
+          "bodySha256": "40a90bb8e9e19ad66c0c18ec0c398cd8f3715e632f0fcfd4394c00ac8f1767c1",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440489",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes aides for their father after a hospital stay and simple billing.",
+          "bodySha256": "620f711897f42e33cd773990d271b980d4a2c7284ad7ce26d2cf36f300c80886",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440487",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family member praises two aides caring for a loved one and the office contact.",
+          "bodySha256": "cae555a4e27091a2767e71f36f4d20248a88a1b09a695c95a5d273eb2de771a3",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440488",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Out-of-state cousin describes months of coordinated care.",
+          "bodySha256": "6ffc5038591f2123a7c8c77721da826628cbf8014aea61981e6207682d46886b",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440486",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a daytime caregiver for their father for nine months.",
+          "bodySha256": "6dd94ee6d9405e88a924f809e5381e3eaf31ed4f35bf4ffb4b630fe5489cba28",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "visiting-angels-hoboken",
+      "sourceUrl": "https://www.mylivingchoice.com/property/visiting-angels-hoboken",
+      "pageEvidenceSha256": "d62d083a3fdef365b0accb33646f6943d31d466f16c6116d18ad9d492be1d9fe",
+      "redactedFetchSha256": "c499e09395ed34e63f550653574569ef319ffdad35075f2315656ac40457eb61",
+      "editorialReceiptSha256": "72e0dffd62570c1053c027bbf3072e43fe106f5112d6b5f95079e585765e6165",
+      "pageIdentity": {
+        "name": "Visiting Angels Hoboken",
+        "street": "50 Harrison St #211A",
+        "city": "Hoboken",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0154800",
+        "basis": "Registered DBA Visiting Angels at 50 Harrison Street, Suite 211A, Hoboken. A different business occupies Suite 209B.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 4,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "unresolved",
+        "reasons": [
+          "The only visible row of four reported ratings has no stated service relationship."
+        ]
+      },
+      "visibleCount": 1,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "602453",
+          "population": "ambiguous",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Two-word praise with no service relationship.",
+          "bodySha256": "9d8baf4d84dc9b74c78044af8478dd8ff75c53651651c1de9a25176c89d908f4",
+          "disposition": [
+            "no-publishable-summary",
+            "not-established-consumer"
+          ]
+        }
+      ],
+      "released": false
+    },
+    {
+      "slug": "visiting-angels-matawan",
+      "sourceUrl": "https://www.mylivingchoice.com/property/visiting-angels-matawan",
+      "pageEvidenceSha256": "b0e3842768b76fbfdb8ae1b692e22374dc48838d594ffb599cff48503e369f9b",
+      "redactedFetchSha256": "3f41f8642f5509b20cb126ba5059178de8fbfe9e0f9b9770b7617996f24b27b1",
+      "editorialReceiptSha256": "a0b3c491d44c26d535b6356ef588c2c35812274184da67d22adad85499995e1b",
+      "pageIdentity": {
+        "name": "Visiting Angels Matawan",
+        "street": "5 Ravine Dr",
+        "city": "Matawan",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0283000",
+        "basis": "Registered DBA Visiting Angels of Matawan at 5 Ravine Drive; page omits the floor.",
+        "normalizations": [
+          "Page street omits a registry suite or floor; same building number and street, and no other roster office with this name shares the building (released precedent: SYNERGY Teaneck, Home Helpers Somerset)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 35,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family accounts of service from this office; one names Matawan, consistent with the page."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440413",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse describes two years of caregivers and schedule flexibility.",
+          "bodySha256": "de39cbc57c9040a3aaf5c575dc4ad97f83025682c85b57e499fab4856fb3f3d4",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440414",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Spouse describes a well-matched caregiver for her husband.",
+          "bodySha256": "e64c0ac1a0ded76e3fbe290f09f96d8f7857de6f4d2edf83174c3c9420f406f7",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440415",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes an aide arranged after their mother came home from hospital.",
+          "bodySha256": "65d40c13fb0608c7ee3c0dca3adf9c4dfea20c1eb1edc6892815b975c5ae764e",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440417",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family thanks the agency for the caregiver it sent.",
+          "bodySha256": "1beeb04a439432ae0d40b62c14cbf18428faccdb26286d348eefb5d9a89fa832",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440416",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes care coordination and aides for their father.",
+          "bodySha256": "019b6ad24d904d267429281fa66b09d092e5d5dac1aaaa13f9f08d50bacfc0da",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "visiting-angels-red-bank",
+      "sourceUrl": "https://www.mylivingchoice.com/property/visiting-angels-red-bank",
+      "pageEvidenceSha256": "85189dd07583a34056684c380fcdfd2a603f3c5a74ac953709d5edf4aa5f90d6",
+      "redactedFetchSha256": "fa94b862b4f375a256e6fd4dd709be822976c2241cdcdb747ee21cb2e4489c23",
+      "editorialReceiptSha256": "1c3a18e42aadc8e03d073e82e9dfd731712908c6d71f5b56b923f171e8f92328",
+      "pageIdentity": {
+        "name": "Visiting Angels Red Bank",
+        "street": "62 Maple Ave #1",
+        "city": "Red Bank",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0055200",
+        "basis": "Registered DBA Visiting Angels at 62 Maple Avenue, Red Bank.",
+        "normalizations": [
+          "Registry row omits a suite the page shows; the page suite conflicts with no roster office of this name."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 11,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family accounts of service from this office; one names Red Bank, consistent with the page.",
+          "Caution: all five visible rows were posted within two months; authenticity is not verified."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "603682",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes fast intake and a care plan for their father.",
+          "bodySha256": "4e8ecfe7c9861b512f982fbddf4eb1a7905defcaaeba97371dd315b9d224a5ef",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "603683",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes being guided through arranging care for their mother.",
+          "bodySha256": "5d9fb8d42f05d3d0275279747451d5c02f38d9673b73e02c688ee492594c65be",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "603684",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative praises the care given to their aunt.",
+          "bodySha256": "b839a9bdfe226f8d20a691866dc331fb3472122ae35f0993212ae1c81fa0837e",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "603685",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative praises the care given to their aunt and names Red Bank.",
+          "bodySha256": "381102797122574925158eaaaf738d8006c5ad499aeb6790fe3e40ec3e066487",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "603681",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes immediate care and a dependable aide for their mother.",
+          "bodySha256": "749f982064ac3f3db8b881b9a0e54c3090eb2626b4e5ca01de7a50bf7a81a228",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "visiting-angels-wall",
+      "sourceUrl": "https://www.mylivingchoice.com/property/visiting-angels-wall",
+      "pageEvidenceSha256": "2b5595b7d3db90fd0759c826a87e77536e0ee7db3fc27decee8cb1bb8dafea45",
+      "redactedFetchSha256": "e5b8281268460ecd88779566fdb940338bdd8f0b7d5de14e4688b5757a8d3141",
+      "editorialReceiptSha256": "39d98d83b990225ba84e4373a99ce7b6c3d8ec96b6f4d648bc8dd0e8a1565337",
+      "pageIdentity": {
+        "name": "Visiting Angels Wall",
+        "street": "2510 Belmar Blvd K8",
+        "city": "Wall",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0199100",
+        "basis": "Registered DBA Visiting Angels at 2510 Belmar Blvd, Unit K-8, Wall.",
+        "normalizations": [
+          "K8 equals Unit K-8."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 5,
+      "sourceCount": 51,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family accounts of service from this office; no row names another branch."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "604460",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Relative describes same-day 24-hour coverage for an aunt.",
+          "bodySha256": "c2d8b0c74df9c114d90f930c1d2fabc83d8bd442a5cd0fff5deabf109fc2cc37",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "604459",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family member thanks office managers and caregivers.",
+          "bodySha256": "f0d657afcfebcd4bf1da8a4d13ac87324b0b2f6abb02c5128adb8254f3ab9317",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "604461",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child living away describes responsive coverage for their mother.",
+          "bodySha256": "6f944e1eb0c561525e9394a6ed317d2d0dbfb471b66423659761753873ae2539",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "604458",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a dependable daily caregiver for their mother.",
+          "bodySha256": "0d7c77040f08682c942331b63935cb6e520a29838b1148cbd77c85fb48a72a50",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "604462",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes aides caring for their mother and accompanying her to appointments.",
+          "bodySha256": "53511ca5518ad3d26a7a644e1027623c6de0052d2841928dd1eb08c4dc7b744b",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    },
+    {
+      "slug": "zenith-home-care-agency",
+      "sourceUrl": "https://www.mylivingchoice.com/property/zenith-home-care-agency",
+      "pageEvidenceSha256": "86fffe41eadcf97287bb3b915831d815e2323a1e4331aa97742169308c2bad95",
+      "redactedFetchSha256": "1ee6b8bc47ac50a80c46f18ee0e6d68d64ecc5525fa4cb52225a7d73327ed693",
+      "editorialReceiptSha256": "82bfdd5cbc71524d6e046b2fc54a1ddf8e0dcacc034297519ad2a0cdd46c06d7",
+      "pageIdentity": {
+        "name": "Zenith Home Care Agency",
+        "street": "1 Liberty Way Suite #03",
+        "city": "Cranbury",
+        "stateOrZip": "New Jersey",
+        "partCount": 3
+      },
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0327600",
+        "basis": "Legal name Zenith Home Care Agency at 1 Liberty Way, Suite 03, Cranbury; page omits the floor.",
+        "normalizations": [
+          "Page street omits a registry suite or floor; same building number and street, and no other roster office with this name shares the building (released precedent: SYNERGY Teaneck, Home Helpers Somerset)."
+        ],
+        "cautions": []
+      },
+      "sourceAverage": 4.9,
+      "sourceCount": 46,
+      "sourceClass": "google",
+      "aggregateDecision": {
+        "populationDecision": "consumer",
+        "reasons": [
+          "All five visible rows are direct family or client accounts of aide service from this agency; no row names another branch."
+        ]
+      },
+      "visibleCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "reportId": "440296",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a live-in caregiver placed within two days after a hospital discharge.",
+          "bodySha256": "a106a430ede4fdef65c14296829a502b8949670b16e022a5135b1c2305461fe9",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 2,
+          "reportId": "440297",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes live-in aides, replacements and nurse check-ins for their mother.",
+          "bodySha256": "f0222aae5074f0fa31f8e360c9bea0793f545009626439efa2699be47188da0c",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 3,
+          "reportId": "440298",
+          "population": "consumer-recipient",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Writer received part-time aides at home after a hospital stay.",
+          "bodySha256": "3d3ffcfd394b07509ded7be54ba4984d95bbf199c3e1fe45e1244233a1d05af7",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 4,
+          "reportId": "440300",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Family describes overnight companionship for their mother after a move to a nursing facility.",
+          "bodySha256": "200a70f859e885f3e7dcc509e04a38f993509b68d637f5ad43eb6e5b48b5735a",
+          "disposition": [
+            "retained"
+          ]
+        },
+        {
+          "ordinal": 5,
+          "reportId": "440299",
+          "population": "consumer-family",
+          "relationship": "family",
+          "sentiment": "positive",
+          "identityConcern": null,
+          "careScopeConcern": null,
+          "rationale": "Adult child describes a year of care coordination and vacation coverage for their mother.",
+          "bodySha256": "aedc3dcffe98a859cc2f406a9d0954ad13065bdd133340c8c43c5bb29ec83485",
+          "disposition": [
+            "retained"
+          ]
+        }
+      ],
+      "released": true,
+      "accountsRetained": 5,
+      "aggregateRetained": true
+    }
+  ]
+}

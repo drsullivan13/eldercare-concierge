@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 15338,
+      "http_status": 200,
+      "raw": "raw/0cc6f02f0f4992cc8dc83f48babcd23abe4fec9463f211df5c43e8bdcf2e722d.json",
+      "retrieved_at": "2026-11-15T03:20:16.884771+00:00",
+      "sha256": "0cc6f02f0f4992cc8dc83f48babcd23abe4fec9463f211df5c43e8bdcf2e722d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CONFIDENT CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "0db6b5013e51c7efb8cb93e1",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CONFIDENT+CARE%2A&skip=0&state=NJ&version=2.1"
+}

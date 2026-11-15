@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1346,
+      "http_status": 200,
+      "raw": "raw/ced0801fefd3d1ddd6b3a9f060fb5f1365291d6b1d08b8aa72a708c6032fdea5.json",
+      "retrieved_at": "2026-11-15T03:22:05.217680+00:00",
+      "sha256": "ced0801fefd3d1ddd6b3a9f060fb5f1365291d6b1d08b8aa72a708c6032fdea5"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "INSTACARE HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "bf9f32918ca95f29e9e89e83",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=INSTACARE+HOME%2A&skip=0&state=NJ&version=2.1"
+}

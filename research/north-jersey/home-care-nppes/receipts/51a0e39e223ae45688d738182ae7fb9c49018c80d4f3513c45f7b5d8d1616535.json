@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1585,
+      "http_status": 200,
+      "raw": "raw/86493b54ea31ea988b95f480e9fe634025a072fb8348560adbaa7cf9ffb84ff2.json",
+      "retrieved_at": "2026-11-15T03:22:51.444813+00:00",
+      "sha256": "86493b54ea31ea988b95f480e9fe634025a072fb8348560adbaa7cf9ffb84ff2"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AGASTYA CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "f9b2cc532201bd882b38bc23",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AGASTYA+CARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1324,
+      "http_status": 200,
+      "raw": "raw/48123698b4534338a72cae7a9916315282e88aef782617d90956bf85131d1a5a.json",
+      "retrieved_at": "2026-11-15T03:21:17.679426+00:00",
+      "sha256": "48123698b4534338a72cae7a9916315282e88aef782617d90956bf85131d1a5a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NONIVIC LLC*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "885cb29e90f98f9f07c7716e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NONIVIC+LLC%2A&skip=0&state=NJ&version=2.1"
+}

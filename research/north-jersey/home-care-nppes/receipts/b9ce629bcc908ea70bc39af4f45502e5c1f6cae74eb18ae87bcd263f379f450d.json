@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 9988,
+      "http_status": 200,
+      "raw": "raw/2249875d6be629115f0e8bc8c2b01a1c8981ce4c37793d898e78ff3645384a74.json",
+      "retrieved_at": "2026-11-15T03:20:46.434433+00:00",
+      "sha256": "2249875d6be629115f0e8bc8c2b01a1c8981ce4c37793d898e78ff3645384a74"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BRIGHT HORIZON*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "55c20e10680b0597b7e7cf81",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BRIGHT+HORIZON%2A&skip=0&state=NJ&version=2.1"
+}

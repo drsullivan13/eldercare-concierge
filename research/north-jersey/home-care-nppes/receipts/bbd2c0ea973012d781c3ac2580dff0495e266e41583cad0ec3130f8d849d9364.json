@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3188,
+      "http_status": 200,
+      "raw": "raw/abe7ff4fdc8469ad4e8d426f86c01b8eee50f74b300a2ca75739122798c24a92.json",
+      "retrieved_at": "2026-11-15T03:22:40.490527+00:00",
+      "sha256": "abe7ff4fdc8469ad4e8d426f86c01b8eee50f74b300a2ca75739122798c24a92"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CENTURION ENTERPRISES*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "e6abb8ffebcdb06e9f0f1d06",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CENTURION+ENTERPRISES%2A&skip=0&state=NJ&version=2.1"
+}

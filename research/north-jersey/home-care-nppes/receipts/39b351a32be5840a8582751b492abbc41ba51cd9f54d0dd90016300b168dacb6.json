@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1617,
+      "http_status": 200,
+      "raw": "raw/bacbe19c80197a3ab7a709407c4498f6bf48980b9a61100221e66596affacc7d.json",
+      "retrieved_at": "2026-11-15T03:20:46.583147+00:00",
+      "sha256": "bacbe19c80197a3ab7a709407c4498f6bf48980b9a61100221e66596affacc7d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ALSHAF HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "55f5cd2a7052c7c8cf8b5e77",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ALSHAF+HOME%2A&skip=0&state=NJ&version=2.1"
+}

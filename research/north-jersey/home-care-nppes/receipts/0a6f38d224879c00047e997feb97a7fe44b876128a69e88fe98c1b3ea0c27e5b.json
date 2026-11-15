@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2415,
+      "http_status": 200,
+      "raw": "raw/045a9375680a984977137eb5f26551de27118e202ad9b17b2ea7261650d3ce0f.json",
+      "retrieved_at": "2026-11-15T03:22:50.585530+00:00",
+      "sha256": "045a9375680a984977137eb5f26551de27118e202ad9b17b2ea7261650d3ce0f"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AGAPE HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "f767bd12cdb6afbff7065617",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AGAPE+HOME%2A&skip=0&state=NJ&version=2.1"
+}

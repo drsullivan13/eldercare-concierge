@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1345,
+      "http_status": 200,
+      "raw": "raw/e54a44ed6689c66d41e4a65a123c371f8385d9ada1e3fc0e3960281dea665940.json",
+      "retrieved_at": "2026-11-15T03:20:28.146473+00:00",
+      "sha256": "e54a44ed6689c66d41e4a65a123c371f8385d9ada1e3fc0e3960281dea665940"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HOLISTIC HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2a6237c8b2f5597d989d2753",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HOLISTIC+HOME%2A&skip=0&state=NJ&version=2.1"
+}

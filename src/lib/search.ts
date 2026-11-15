@@ -8,6 +8,7 @@ import {
   type MarketRegistry,
 } from "./markets";
 import { getResearchSummary } from "./location-research";
+import { providerSearchText } from "./provider-search-text";
 import {
   CATEGORY_LABELS,
   matchesHomeCareServiceArea,
@@ -106,13 +107,7 @@ export function searchProviders(
   for (const provider of records ?? market.providers) {
     if (provider.state !== market.state) continue;
     catalogTotal++;
-    if (
-      query &&
-      !`${provider.name} ${provider.city}`
-        .toLocaleLowerCase("en-US")
-        .includes(query)
-    )
-      continue;
+    if (query && !providerSearchText(provider).includes(query)) continue;
     const searchableCategories = [
       ...new Set([provider.category, ...(provider.searchCategories ?? [])]),
     ];

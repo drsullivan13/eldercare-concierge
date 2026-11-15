@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1283,
+      "http_status": 200,
+      "raw": "raw/3338e4f7b9b03fa43045ff23c367a0ae5216af957e54a2728889e0b668a5f52e.json",
+      "retrieved_at": "2026-11-15T03:20:43.189103+00:00",
+      "sha256": "3338e4f7b9b03fa43045ff23c367a0ae5216af957e54a2728889e0b668a5f52e"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HARMONY SUPPORT*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "472d0712aac5fa251f6eaf30",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HARMONY+SUPPORT%2A&skip=0&state=NJ&version=2.1"
+}

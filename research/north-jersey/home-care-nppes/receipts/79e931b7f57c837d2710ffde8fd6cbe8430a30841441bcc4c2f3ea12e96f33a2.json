@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1235,
+      "http_status": 200,
+      "raw": "raw/5c3c335bc3c421ea75ea2ff0ca8c250dd86b0c0b2651001e287dc1e78f881024.json",
+      "retrieved_at": "2026-11-15T03:20:23.591981+00:00",
+      "sha256": "5c3c335bc3c421ea75ea2ff0ca8c250dd86b0c0b2651001e287dc1e78f881024"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GRACECARE NJ*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "21eee8bc4e3f484d70eb6e1c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GRACECARE+NJ%2A&skip=0&state=NJ&version=2.1"
+}

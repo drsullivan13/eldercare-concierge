@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1201,
+      "http_status": 200,
+      "raw": "raw/8b467634fabca3aed693f9c559260db170ec718074afc395c8d0609d2200b7ff.json",
+      "retrieved_at": "2026-11-15T03:22:15.862347+00:00",
+      "sha256": "8b467634fabca3aed693f9c559260db170ec718074afc395c8d0609d2200b7ff"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "M N*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "c8f63e3476e1a59273bcbe11",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=M+N%2A&skip=0&state=NJ&version=2.1"
+}

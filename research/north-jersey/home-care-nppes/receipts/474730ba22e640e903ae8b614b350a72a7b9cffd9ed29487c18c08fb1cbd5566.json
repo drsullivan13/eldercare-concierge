@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 32722,
+      "http_status": 200,
+      "raw": "raw/3ed2cfc46f3e9186731e0e7fdbe939121a2458457d1d578e3a59fd4e2d0c7bf2.json",
+      "retrieved_at": "2026-11-15T03:20:35.978509+00:00",
+      "sha256": "3ed2cfc46f3e9186731e0e7fdbe939121a2458457d1d578e3a59fd4e2d0c7bf2"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "VISITING ANGELS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "37d7c9b9882c8fb3cdcde2e0",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=VISITING+ANGELS%2A&skip=0&state=NJ&version=2.1"
+}

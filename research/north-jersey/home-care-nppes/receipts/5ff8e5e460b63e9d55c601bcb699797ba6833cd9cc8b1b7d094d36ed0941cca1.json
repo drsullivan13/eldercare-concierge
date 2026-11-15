@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2580,
+      "http_status": 200,
+      "raw": "raw/f55880bc6a34ec26a9b201925f39cdc01b677b20e4a22e39b2bba1d8b0a8edbf.json",
+      "retrieved_at": "2026-11-15T03:22:28.165646+00:00",
+      "sha256": "f55880bc6a34ec26a9b201925f39cdc01b677b20e4a22e39b2bba1d8b0a8edbf"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CLAREMONT MEDICAL*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d6b9b1ade671ad1ef5fd9e11",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CLAREMONT+MEDICAL%2A&skip=0&state=NJ&version=2.1"
+}

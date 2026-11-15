@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1532,
+      "http_status": 200,
+      "raw": "raw/f88aa4a68b2658fd63c5963b382a31e1a6cab6bb710702ef05623151900dbe44.json",
+      "retrieved_at": "2026-11-15T03:22:40.551660+00:00",
+      "sha256": "f88aa4a68b2658fd63c5963b382a31e1a6cab6bb710702ef05623151900dbe44"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "KJ SHUTE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "e76ea81bff13a4610a58e5df",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=KJ+SHUTE%2A&skip=0&state=NJ&version=2.1"
+}

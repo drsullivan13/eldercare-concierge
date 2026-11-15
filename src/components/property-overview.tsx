@@ -5,8 +5,13 @@ import {
   isLocationDescriptionResponse,
   type LocationDescriptionResponse,
 } from "@/lib/location-description-types";
-import { isServiceProvider, type Provider } from "@/lib/providers";
+import {
+  isServiceProvider,
+  type Provider,
+  type RegistrationFacts,
+} from "@/lib/providers";
 import { evidenceDate } from "./evidence-date";
+import { RegistrationProfile } from "./registration-profile";
 import "./property-overview.css";
 
 const descriptionScopes: Record<LocationDescriptionResponse["scope"], string> =
@@ -89,7 +94,13 @@ function LocationDescriptionSummary({ providerId }: { providerId: string }) {
   );
 }
 
-export function PropertyOverview({ provider }: { provider: Provider }) {
+export function PropertyOverview({
+  provider,
+  registrationFacts,
+}: {
+  provider: Provider;
+  registrationFacts?: RegistrationFacts;
+}) {
   const office = isServiceProvider(provider);
   const street = provider.address.trim().replace(/,+$/, "");
   const locality = `${provider.city}, ${provider.state} ${provider.zip}`;
@@ -99,8 +110,10 @@ export function PropertyOverview({ provider }: { provider: Provider }) {
       : `${street}, ${locality}`
     : "";
   const mailing = /\bP\.?\s*O\.?\s*BOX\b|\bPOST OFFICE BOX\b/i.test(street);
+  const unlocatedOffice =
+    office && (provider.lat === null || provider.lng === null);
   const directions =
-    street && address && !mailing
+    street && address && !mailing && !unlocatedOffice
       ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`
       : undefined;
 
@@ -139,6 +152,9 @@ export function PropertyOverview({ provider }: { provider: Provider }) {
             established. Confirm the office address before visiting.
           </p>
         )}
+        {unlocatedOffice && !mailing && (
+          <p>Confirm the street address with the agency before visiting.</p>
+        )}
         {office && (
           <p>
             {mailing
@@ -146,7 +162,7 @@ export function PropertyOverview({ provider }: { provider: Provider }) {
               : "An office that arranges care, not a residential community."}
           </p>
         )}
-        {provider.locationKind === "zip" && (
+        {provider.locationKind === "zip" && !unlocatedOffice && (
           <p>
             Exact location point not confirmed; distance and map use ZIP area
             estimate.
@@ -175,6 +191,7 @@ export function PropertyOverview({ provider }: { provider: Provider }) {
           </a>
         ))}
       </div>
+      {registrationFacts && <RegistrationProfile facts={registrationFacts} />}
     </div>
   );
 }

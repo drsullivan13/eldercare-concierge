@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2813,
+      "http_status": 200,
+      "raw": "raw/a3129663df6cfab7361374306fd950ef08da9f9b4bd7dc08d3bfd47f401144f1.json",
+      "retrieved_at": "2026-11-15T03:21:03.593686+00:00",
+      "sha256": "a3129663df6cfab7361374306fd950ef08da9f9b4bd7dc08d3bfd47f401144f1"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "COMGRACE LLC*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "7105793bffd2b7ad601fbfec",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=COMGRACE+LLC%2A&skip=0&state=NJ&version=2.1"
+}

@@ -30,6 +30,21 @@ type Source = {
   dataAsOf?: string;
   supports: string;
 };
+/** Source-listed business facts as captured on the check date, not a current verification. */
+export type RegistrationFacts = {
+  registration: string;
+  businessName: string;
+  dbas?: string;
+  licenseType: string;
+  status: string;
+  expiresOn: string | null;
+  source: {
+    title: string;
+    publisher: string;
+    url: string;
+    checkedAt: string;
+  };
+};
 export type Provider = {
   id: string;
   name: string;

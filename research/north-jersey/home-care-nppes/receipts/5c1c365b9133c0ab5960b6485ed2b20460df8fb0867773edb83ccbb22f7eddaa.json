@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3908,
+      "http_status": 200,
+      "raw": "raw/f9744206570a2941d13a9969183041e3a67d47646ce9a0be5f1021ea396fcf2b.json",
+      "retrieved_at": "2026-11-15T03:20:14.168227+00:00",
+      "sha256": "f9744206570a2941d13a9969183041e3a67d47646ce9a0be5f1021ea396fcf2b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "TRAINING WITH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "057aa9c81407a0a41581789c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=TRAINING+WITH%2A&skip=0&state=NJ&version=2.1"
+}

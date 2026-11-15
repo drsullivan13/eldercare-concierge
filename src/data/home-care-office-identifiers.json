@@ -1,0 +1,4627 @@
+{
+  "schemaVersion": 1,
+  "inputs": [
+    {
+      "file": "research/north-jersey/home-care-network/verified.json",
+      "sha256": "94dac8d23af96e1ba39e2d6c09c85ad1343c1128b62bbe837389160f172bf00b"
+    },
+    {
+      "file": "research/north-jersey/home-care-nppes/verified-branch-facts.json",
+      "sha256": "b4176df950750faede8fcacab20babafbacd9f5614bf4eea35b0b1ce253f8f14"
+    },
+    {
+      "file": "research/north-jersey/home-care-network/uhc-verified.json",
+      "sha256": "cb6572785c626274ef35a16fd5c37bb8adabb8ffbd8ea186da73155b63073ab7"
+    }
+  ],
+  "offices": [
+    {
+      "providerId": "north-jersey-hp-hp0015320",
+      "federalOrganization": {
+        "npi": "1659689206",
+        "legalName": "BAYADA HOME HEALTH CARE, INC.",
+        "lastUpdated": "2026-03-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1659689206"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0015322",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 103,
+              "printedPage": "88"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 129,
+              "printedPage": "113"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 130,
+              "printedPage": "114"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0015325",
+      "federalOrganization": {
+        "npi": "1366473068",
+        "legalName": "BAYADA HOME HEALTH CARE, INC.",
+        "lastUpdated": "2026-03-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1366473068"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0015339",
+      "federalOrganization": {
+        "npi": "1669719316",
+        "legalName": "BAYADA HOME HEALTH CARE, INC.",
+        "lastUpdated": "2026-03-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1669719316"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0015342",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 185,
+              "printedPage": "170"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 248,
+              "printedPage": "232"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0015343",
+      "federalOrganization": {
+        "npi": "1043625130",
+        "legalName": "BAYADA HOME HEALTH CARE, INC.",
+        "lastUpdated": "2026-03-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1043625130"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0015352",
+      "federalOrganization": {
+        "npi": "1083323398",
+        "legalName": "BAYADA HOME HEALTH CARE, INC.",
+        "lastUpdated": "2026-03-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1083323398"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0020400",
+      "federalOrganization": {
+        "npi": "1598889198",
+        "legalName": "CLAREMONT MEDICAL AND REHABILITATION INC.",
+        "lastUpdated": "2016-12-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1598889198"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0022500",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 268
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1902094220",
+        "legalName": "BERGEN HOME CARE AND NURSING INC",
+        "lastUpdated": "2019-11-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1902094220"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0022801",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0023300",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 244,
+              "printedPage": "228"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0024800",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 185,
+              "printedPage": "170"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1558488908",
+        "legalName": "AMAZING GRACE NURSING CARE SERVICE",
+        "lastUpdated": "2021-04-27",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1558488908"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0035003",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 103
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0035004",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0038100",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 282,
+              "printedPage": "266"
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1639329527",
+        "legalName": "AWCA HOME CARE AGENCY, INC.",
+        "lastUpdated": "2014-05-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1639329527"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0045700",
+      "federalOrganization": {
+        "npi": "1265852537",
+        "legalName": "NUSOURCE TECHNOLOGY, INC.",
+        "lastUpdated": "2014-04-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1265852537"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0047200",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 130,
+              "printedPage": "115"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0049900",
+      "federalOrganization": {
+        "npi": "1942571351",
+        "legalName": "ACE HOME HEALTHCARE, INC.",
+        "lastUpdated": "2017-04-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1942571351"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0051801",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 268
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0054400",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 107
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 271
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 345
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0056900",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0057100",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 103
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 210
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 229
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 268
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0061600",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0067900",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 307
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0069600",
+      "federalOrganization": {
+        "npi": "1871651455",
+        "legalName": "C.A.S. HEALTH CARE, INC.",
+        "lastUpdated": "2020-08-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1871651455"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0074502",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 229
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 269
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 305
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0077800",
+      "federalOrganization": {
+        "npi": "1851843577",
+        "legalName": "CENTURION ENTERPRISES",
+        "lastUpdated": "2016-10-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1851843577"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0080600",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 107
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 271
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 345
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0081200",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1265560247",
+        "legalName": "GENTLE HEART CARE, LLC",
+        "lastUpdated": "2015-10-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1265560247"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0082500",
+      "federalOrganization": {
+        "npi": "1811106925",
+        "legalName": "SERENITY SENIOR CARE",
+        "lastUpdated": "2024-09-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1811106925"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0083500",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 305
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0091902",
+      "federalOrganization": {
+        "npi": "1730366592",
+        "legalName": "BERGEN CARE PERSONAL TOUCH, LLC",
+        "lastUpdated": "2023-06-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1730366592"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0092800",
+      "federalOrganization": {
+        "npi": "1740474493",
+        "legalName": "EXCEL HOME CARE SERVICES, INC.",
+        "lastUpdated": "2024-06-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1740474493"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0092900",
+      "federalOrganization": {
+        "npi": "1023289063",
+        "legalName": "AMEFIL HEALTHCARE SERVICES",
+        "lastUpdated": "2025-12-01",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1023289063"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0097200",
+      "federalOrganization": {
+        "npi": "1356547996",
+        "legalName": "CARING SOLUTIONS HOME CARE, LLC",
+        "lastUpdated": "2020-08-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1356547996"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0105200",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 102,
+              "printedPage": "87"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 129,
+              "printedPage": "113"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1346411857",
+        "legalName": "ALWAYS CARING HEALTH CARE SERVICES, LLC",
+        "lastUpdated": "2011-07-14",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1346411857"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0106600",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 168,
+              "printedPage": "153"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0107600",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 248,
+              "printedPage": "232"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0108700",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 269
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0115500",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1639208119",
+        "legalName": "CHRILL CARE, INC",
+        "lastUpdated": "2024-05-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1639208119"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0116100",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 269
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0116500",
+      "federalOrganization": {
+        "npi": "1760728810",
+        "legalName": "AT EASE HOME CARE LLC",
+        "lastUpdated": "2012-12-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1760728810"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0116700",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0119000",
+      "federalOrganization": {
+        "npi": "1295466019",
+        "legalName": "MARIAN CARE LLC",
+        "lastUpdated": "2022-06-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1295466019"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0120800",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 185,
+              "printedPage": "170"
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1841690070",
+        "legalName": "EPIC HEALTH SERVICES, INC.",
+        "lastUpdated": "2025-01-27",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1841690070"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0121600",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 107
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 345
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0122400",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 185,
+              "printedPage": "170"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0126900",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 225,
+              "printedPage": "209"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 226,
+              "printedPage": "210"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 269
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1447939962",
+        "legalName": "CROSSLINKS CARE LLC",
+        "lastUpdated": "2023-07-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1447939962"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0130200",
+      "federalOrganization": {
+        "npi": "1669759643",
+        "legalName": "MINTEX N TECH",
+        "lastUpdated": "2011-11-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1669759643"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0131300",
+      "federalOrganization": {
+        "npi": "1699172916",
+        "legalName": "KJ SHUTE HOME CARE, INC",
+        "lastUpdated": "2023-10-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1699172916"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0131700",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 129,
+              "printedPage": "113"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 130,
+              "printedPage": "114"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 268
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0131701",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 103,
+              "printedPage": "88"
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1902220577",
+        "legalName": "BEST HOME CARE, INC",
+        "lastUpdated": "2020-07-14",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1902220577"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0131702",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 268
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1558774786",
+        "legalName": "BEST HOME CARE INC",
+        "lastUpdated": "2020-06-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1558774786"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0131703",
+      "federalOrganization": {
+        "npi": "1134610652",
+        "legalName": "BEST HOME CARE, INC",
+        "lastUpdated": "2024-08-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1134610652"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0133800",
+      "federalOrganization": {
+        "npi": "1083227136",
+        "legalName": "CEDAS HOME CARE SERVICES, LLC",
+        "lastUpdated": "2020-08-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1083227136"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0138300",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 212
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 307
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1871884346",
+        "legalName": "INSTACARE HOME HEALTH SOLUTIONS LLC.",
+        "lastUpdated": "2011-05-02",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1871884346"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0143900",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 187,
+              "printedPage": "172"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 244,
+              "printedPage": "228"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 269
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1578842860",
+        "legalName": "E&S HOME CARE SOLUTIONS LLC",
+        "lastUpdated": "2022-07-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1578842860"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0147200",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 107
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 194
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 212
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 271
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 307
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 345
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1205910940",
+        "legalName": "VC SERVICES LLC",
+        "lastUpdated": "2016-04-14",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1205910940"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0148000",
+      "federalOrganization": {
+        "npi": "1700389103",
+        "legalName": "CAREBRIDGE HOME CARE, LLC",
+        "lastUpdated": "2018-03-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1700389103"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0149300",
+      "federalOrganization": {
+        "npi": "1134867799",
+        "legalName": "TENDER HANDS HOME CARE LLC DBA GRISWOLD HOME CARE",
+        "lastUpdated": "2022-05-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1134867799"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0150300",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0153402",
+      "federalOrganization": {
+        "npi": "1386356780",
+        "legalName": "STARLIGHT HOME CARE AGENCY",
+        "lastUpdated": "2022-12-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1386356780"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0158800",
+      "federalOrganization": {
+        "npi": "1962774422",
+        "legalName": "TRUE VINE HEALTH CARE SOLUTIONS LLP",
+        "lastUpdated": "2012-01-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1962774422"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0168700",
+      "federalOrganization": {
+        "npi": "1598117715",
+        "legalName": "AT HOME CARE, INC.",
+        "lastUpdated": "2025-02-27",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1598117715"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0171100",
+      "federalOrganization": {
+        "npi": "1932792280",
+        "legalName": "SN SENIOR CARE, INC",
+        "lastUpdated": "2021-02-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1932792280"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0171300",
+      "federalOrganization": {
+        "npi": "1144668120",
+        "legalName": "ALERT HOME SERVICES CORPORATION",
+        "lastUpdated": "2025-02-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1144668120"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0174000",
+      "federalOrganization": {
+        "npi": "1376902197",
+        "legalName": "PRIDECARE, INC.",
+        "lastUpdated": "2020-01-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1376902197"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0174100",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 212,
+              "printedPage": "197"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0174800",
+      "federalOrganization": {
+        "npi": "1225467772",
+        "legalName": "ALTERNATIVE CARE ESSENTIALS, LLC",
+        "lastUpdated": "2013-11-05",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1225467772"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0176400",
+      "federalOrganization": {
+        "npi": "1851770234",
+        "legalName": "MOBILITY SPECIAL HOME CARE SERVICES LLC",
+        "lastUpdated": "2015-05-19",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1851770234"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0176700",
+      "federalOrganization": {
+        "npi": "1235741554",
+        "legalName": "ROYAL HEARTS HEALTHCARE",
+        "lastUpdated": "2020-08-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1235741554"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0178100",
+      "federalOrganization": {
+        "npi": "1811345168",
+        "legalName": "WINN JAM INC",
+        "lastUpdated": "2016-05-27",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1811345168"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0181000",
+      "federalOrganization": {
+        "npi": "1053561340",
+        "legalName": "E CARE SERVICES INC",
+        "lastUpdated": "2026-04-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1053561340"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0181100",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 243,
+              "printedPage": "227"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 244,
+              "printedPage": "228"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0191600",
+      "federalOrganization": {
+        "npi": "1790197713",
+        "legalName": "GARDEN STATE HEALTH SOLUTIONS LLC",
+        "lastUpdated": "2016-03-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1790197713"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0191900",
+      "federalOrganization": {
+        "npi": "1104424654",
+        "legalName": "TNT VENTURES, LLC",
+        "lastUpdated": "2020-10-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1104424654"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0194700",
+      "federalOrganization": {
+        "npi": "1225418098",
+        "legalName": "360 DEGREE CARE, LLC",
+        "lastUpdated": "2015-06-05",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1225418098"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0197100",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 244,
+              "printedPage": "228"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 107
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 194
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 212
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 271
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 308
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 345
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1912380841",
+        "legalName": "VISITING AIDE OF NEW JERSEY LLC",
+        "lastUpdated": "2015-07-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1912380841"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0198500",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0200100",
+      "federalOrganization": {
+        "npi": "1104327626",
+        "legalName": "GRACE EXCELLENCY CARE, LLC",
+        "lastUpdated": "2018-02-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1104327626"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0204600",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_4_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 164,
+              "printedPage": "149"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1720201874",
+        "legalName": "CAROUSEL OF HOME CARE",
+        "lastUpdated": "2016-04-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1720201874"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0208800",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 187,
+              "printedPage": "172"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0210300",
+      "federalOrganization": {
+        "npi": "1538511522",
+        "legalName": "A RESCUE HEALTH STAFFING AGENCY, INC.",
+        "lastUpdated": "2016-07-01",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1538511522"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0214300",
+      "federalOrganization": {
+        "npi": "1306064878",
+        "legalName": "TOTAL CARE NURSING REGISTRY, INC.",
+        "lastUpdated": "2022-07-13",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1306064878"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0215100",
+      "federalOrganization": {
+        "npi": "1407214372",
+        "legalName": "HANDS OF ANGELS HEALTHCARE AGENCY LLC",
+        "lastUpdated": "2023-04-20",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1407214372"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0216800",
+      "federalOrganization": {
+        "npi": "1093444721",
+        "legalName": "JERSEY STAKE LLC",
+        "lastUpdated": "2023-01-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1093444721"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0217600",
+      "federalOrganization": {
+        "npi": "1225402126",
+        "legalName": "SOLOFF LLC",
+        "lastUpdated": "2020-08-13",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1225402126"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0221500",
+      "federalOrganization": {
+        "npi": "1891475299",
+        "legalName": "YOUNG ANGELS",
+        "lastUpdated": "2023-07-20",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1891475299"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0221800",
+      "federalOrganization": {
+        "npi": "1467104356",
+        "legalName": "RAYMOND HOME CARE SERVICES LLC",
+        "lastUpdated": "2022-01-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1467104356"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0224600",
+      "federalOrganization": {
+        "npi": "1063663110",
+        "legalName": "QUALITY HEALTH CARE, INC.",
+        "lastUpdated": "2021-04-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1063663110"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0227900",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0227902",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 211
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1033188495",
+        "legalName": "CONFIDENT CARE CORP",
+        "lastUpdated": "2026-01-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1033188495"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0231605",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 248,
+              "printedPage": "232"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1053525352",
+        "legalName": "PREMIER HOME HEALTH CARE SERVICES, INC",
+        "lastUpdated": "2019-01-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1053525352"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0235400",
+      "federalOrganization": {
+        "npi": "1871034108",
+        "legalName": "ASSISTINGSENIORS NJ001",
+        "lastUpdated": "2017-03-20",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1871034108"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0241200",
+      "federalOrganization": {
+        "npi": "1538147202",
+        "legalName": "LIVINGSTON INFUSION CARE",
+        "lastUpdated": "2024-06-20",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1538147202"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0246500",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 210
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 268
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 305
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1366912685",
+        "legalName": "ALPHA CARE HOME HEALTH SERVICES OF NJ, INC.",
+        "lastUpdated": "2021-06-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1366912685"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0249201",
+      "federalOrganization": {
+        "npi": "1720538044",
+        "legalName": "CALIBERHEALTH PLUS",
+        "lastUpdated": "2025-02-19",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1720538044"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0254700",
+      "federalOrganization": {
+        "npi": "1023521101",
+        "legalName": "A1 PLUS HOME CARE SERVICES LLC",
+        "lastUpdated": "2021-05-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1023521101"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0255500",
+      "federalOrganization": {
+        "npi": "1992230460",
+        "legalName": "GOODWILL CARING HEALTHCARE SERVICES",
+        "lastUpdated": "2026-06-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1992230460"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0256900",
+      "federalOrganization": {
+        "npi": "1619494150",
+        "legalName": "SYNERGY HOMECARE OF BERGEN COUNTY",
+        "lastUpdated": "2022-07-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1619494150"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0257500",
+      "federalOrganization": {
+        "npi": "1720514201",
+        "legalName": "CARING PEOPLE NJ OPERATING, LLC",
+        "lastUpdated": "2022-04-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1720514201"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0259811",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 269
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0261400",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 25
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 104
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 144
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 210
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 229
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 268
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 305
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 342
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1689063299",
+        "legalName": "ASTERA HOUSING INC",
+        "lastUpdated": "2023-07-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1689063299"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0261500",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 211,
+              "printedPage": "196"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0265700",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1558578369",
+        "legalName": "LIBERTY MEDICAL CARE SERVICES LLC",
+        "lastUpdated": "2024-12-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1558578369"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0266700",
+      "federalOrganization": {
+        "npi": "1538754403",
+        "legalName": "PRIVATE AID CONTRACTOR, LLC",
+        "lastUpdated": "2022-11-14",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1538754403"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0267700",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 107
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 194
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 271
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 307
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 345
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1497245591",
+        "legalName": "SACRED HOME HEALTH CARE",
+        "lastUpdated": "2022-09-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1497245591"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0273100",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 212
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 307
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1679080204",
+        "legalName": "NJFIRST HOME HEALTH CARE LLC",
+        "lastUpdated": "2024-11-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1679080204"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0273600",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_4_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 164,
+              "printedPage": "149"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 194
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 212
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0276400",
+      "federalOrganization": {
+        "npi": "1164911558",
+        "legalName": "MAGER ENTERPRISES INC.",
+        "lastUpdated": "2022-01-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1164911558"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0277000",
+      "federalOrganization": {
+        "npi": "1962980565",
+        "legalName": "ALAYIA HELPING HANDS",
+        "lastUpdated": "2024-06-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1962980565"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0277600",
+      "federalOrganization": {
+        "npi": "1629635628",
+        "legalName": "THE SENIOR NJ, LLC",
+        "lastUpdated": "2019-05-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1629635628"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0277700",
+      "federalOrganization": {
+        "npi": "1023522604",
+        "legalName": "AVILO CARE SERVICES LLC",
+        "lastUpdated": "2023-11-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1023522604"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0277900",
+      "federalOrganization": {
+        "npi": "1275154460",
+        "legalName": "HAPPY AT HOME CARE LLC",
+        "lastUpdated": "2020-04-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1275154460"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0278600",
+      "federalOrganization": {
+        "npi": "1215437553",
+        "legalName": "HACKENSACK MERIDIAN AMBULATORY CARE, INC.",
+        "lastUpdated": "2026-06-23",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1215437553"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0282300",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0283000",
+      "federalOrganization": {
+        "npi": "1114401593",
+        "legalName": "COLLEGE AVENUE PARTNERS LLC",
+        "lastUpdated": "2020-09-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1114401593"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0283100",
+      "federalOrganization": {
+        "npi": "1801351580",
+        "legalName": "247 HEALTHCARE SOLUTIONS LLC",
+        "lastUpdated": "2024-02-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1801351580"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0284100",
+      "federalOrganization": {
+        "npi": "1104383421",
+        "legalName": "BRIDGEWAY CARE AT HOME, LLC",
+        "lastUpdated": "2022-09-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1104383421"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0284400",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 194
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 307
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1144799701",
+        "legalName": "PERFECT HOME CARE",
+        "lastUpdated": "2020-01-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1144799701"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0286400",
+      "federalOrganization": {
+        "npi": "1598239840",
+        "legalName": "SOMERSET HOME CARE AND MEDICAL STAFFING LLC",
+        "lastUpdated": "2019-01-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1598239840"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0287200",
+      "federalOrganization": {
+        "npi": "1114493277",
+        "legalName": "EXPRESS ENTERPRISE",
+        "lastUpdated": "2023-09-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1114493277"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0287900",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 130,
+              "printedPage": "114"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1922563345",
+        "legalName": "NJ HOME HEALTH CARE LLC",
+        "lastUpdated": "2020-05-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1922563345"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0290400",
+      "federalOrganization": {
+        "npi": "1538919436",
+        "legalName": "SINAMCARE",
+        "lastUpdated": "2024-03-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1538919436"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0292700",
+      "federalOrganization": {
+        "npi": "1356033492",
+        "legalName": "OUTFRONT HOME CARE LLC",
+        "lastUpdated": "2023-05-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1356033492"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0293100",
+      "federalOrganization": {
+        "npi": "1447824644",
+        "legalName": "EXPO SIGNATURE HOME CARE LLC",
+        "lastUpdated": "2025-10-10",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1447824644"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0293200",
+      "federalOrganization": {
+        "npi": "1033753199",
+        "legalName": "GQ HOME CARE & ADULT SERVICES LLC",
+        "lastUpdated": "2026-01-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1033753199"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0293800",
+      "federalOrganization": {
+        "npi": "1619573730",
+        "legalName": "BEST GIFT HOME HEALTH CARE LLC",
+        "lastUpdated": "2026-02-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1619573730"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0299300",
+      "federalOrganization": {
+        "npi": "1073148664",
+        "legalName": "WOORI HOME CARE LLC",
+        "lastUpdated": "2024-01-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1073148664"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0299800",
+      "federalOrganization": {
+        "npi": "1386284917",
+        "legalName": "MARI CARE LLC",
+        "lastUpdated": "2022-06-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1386284917"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0301200",
+      "federalOrganization": {
+        "npi": "1891320537",
+        "legalName": "FAMILEE, INC.",
+        "lastUpdated": "2023-04-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1891320537"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0302700",
+      "federalOrganization": {
+        "npi": "1528686300",
+        "legalName": "A KINDER TOUCH",
+        "lastUpdated": "2020-07-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1528686300"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0303100",
+      "federalOrganization": {
+        "npi": "1437506854",
+        "legalName": "B&G HOMECARE INC.",
+        "lastUpdated": "2016-05-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1437506854"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0306500",
+      "federalOrganization": {
+        "npi": "1548051170",
+        "legalName": "VICTORY HEALTH SOLUTIONS INC.",
+        "lastUpdated": "2025-05-14",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1548051170"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0308300",
+      "federalOrganization": {
+        "npi": "1033706080",
+        "legalName": "CARE NEW JERSEY NURSING SERVICES INC",
+        "lastUpdated": "2023-02-14",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1033706080"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0308700",
+      "federalOrganization": {
+        "npi": "1689292336",
+        "legalName": "365 HOME HEALTH SERVICES LLC",
+        "lastUpdated": "2020-07-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1689292336"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0309300",
+      "federalOrganization": {
+        "npi": "1548871163",
+        "legalName": "LE CHOIX HOME CARE LLC",
+        "lastUpdated": "2020-08-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1548871163"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0309400",
+      "federalOrganization": {
+        "npi": "1699371336",
+        "legalName": "BECE HOMECARE SERVICES, LLC",
+        "lastUpdated": "2025-03-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1699371336"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0309500",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_4_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 173,
+              "printedPage": "158"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_4_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 233,
+              "printedPage": "217"
+            }
+          ]
+        },
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 27
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 106
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 146
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 193
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 212
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 231
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 270
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 307
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0310500",
+      "federalOrganization": {
+        "npi": "1417538612",
+        "legalName": "EROS HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2026-03-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1417538612"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0312500",
+      "federalOrganization": {
+        "npi": "1922688829",
+        "legalName": "BELOVED CARE HOME AGENCY SERVICES LLC",
+        "lastUpdated": "2021-04-13",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1922688829"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0313600",
+      "federalOrganization": {
+        "npi": "1972277507",
+        "legalName": "CURAIN HEALTHCARE SERVICES",
+        "lastUpdated": "2026-02-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1972277507"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0313900",
+      "federalOrganization": {
+        "npi": "1780584854",
+        "legalName": "ACHIEVE HOME CARE LLC",
+        "lastUpdated": "2026-11-10",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1780584854"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0315700",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 169,
+              "printedPage": "154"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0317300",
+      "federalOrganization": {
+        "npi": "1336890508",
+        "legalName": "STATEWIDE FAMILY CARE",
+        "lastUpdated": "2026-05-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1336890508"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0317700",
+      "federalOrganization": {
+        "npi": "1801566500",
+        "legalName": "ZION GRACE HOME HEALTH CARE & COMMUNITY SERVICES",
+        "lastUpdated": "2025-05-23",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1801566500"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0320300",
+      "federalOrganization": {
+        "npi": "1962147033",
+        "legalName": "MIYOU CARING HANDS LLC.",
+        "lastUpdated": "2022-05-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1962147033"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0321400",
+      "federalOrganization": {
+        "npi": "1174205892",
+        "legalName": "AGAPE TOUCH LLC DBA PREFERRED CARE AT HOME OF NORTHEAST NEW JERSEY",
+        "lastUpdated": "2023-08-02",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1174205892"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0322400",
+      "federalOrganization": {
+        "npi": "1841966991",
+        "legalName": "ALLCARE-GIVING",
+        "lastUpdated": "2023-12-20",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1841966991"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0325900",
+      "federalOrganization": {
+        "npi": "1083287403",
+        "legalName": "HOLISTIC CARE SOLUTIONS",
+        "lastUpdated": "2022-12-13",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1083287403"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0326600",
+      "federalOrganization": {
+        "npi": "1932812070",
+        "legalName": "COMGRACE LLC",
+        "lastUpdated": "2023-01-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1932812070"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0327100",
+      "federalOrganization": {
+        "npi": "1235785122",
+        "legalName": "SPECIAL PRIVATE HOME CARE",
+        "lastUpdated": "2019-08-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1235785122"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0327200",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 179,
+              "printedPage": "163"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0328800",
+      "federalOrganization": {
+        "npi": "1851044416",
+        "legalName": "WECARE HOME CAREGIVERS CORPORATION",
+        "lastUpdated": "2025-10-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1851044416"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0330200",
+      "federalOrganization": {
+        "npi": "1629679188",
+        "legalName": "LONG ISLAND SENIOR CARE LLC",
+        "lastUpdated": "2024-04-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1629679188"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0331200",
+      "federalOrganization": {
+        "npi": "1225794738",
+        "legalName": "HEALTH CREST HOMECARE LLC",
+        "lastUpdated": "2025-08-11",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1225794738"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0334500",
+      "federalOrganization": {
+        "npi": "1831845791",
+        "legalName": "CARING HEARTS HOME CARE",
+        "lastUpdated": "2025-07-01",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1831845791"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0336100",
+      "federalOrganization": {
+        "npi": "1144948019",
+        "legalName": "ENCLAVE HOME HEALTH SOLUTIONS",
+        "lastUpdated": "2022-08-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1144948019"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0336500",
+      "federalOrganization": {
+        "npi": "1023725389",
+        "legalName": "AMAZING CAREGIVERS HOMECARE LLC",
+        "lastUpdated": "2025-08-27",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1023725389"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0339700",
+      "federalOrganization": {
+        "npi": "1235857061",
+        "legalName": "SAINT GABRIEL HOME HEALTHCARE LLC",
+        "lastUpdated": "2026-02-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1235857061"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0340400",
+      "federalOrganization": {
+        "npi": "1073229209",
+        "legalName": "GLAD HOME HEALTH CARE SERVICES, LLC",
+        "lastUpdated": "2023-01-31",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1073229209"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0341800",
+      "federalOrganization": {
+        "npi": "1902613847",
+        "legalName": "CARING HANDS HOMECARE LLP",
+        "lastUpdated": "2024-12-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1902613847"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0344100",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 186,
+              "printedPage": "171"
+            },
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 243,
+              "printedPage": "227"
+            }
+          ]
+        }
+      ],
+      "federalOrganization": {
+        "npi": "1528777000",
+        "legalName": "1ST AMERICARE INC",
+        "lastUpdated": "2025-01-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1528777000"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0344700",
+      "federalOrganization": {
+        "npi": "1710757232",
+        "legalName": "AA QUALITY HOME CARE",
+        "lastUpdated": "2024-01-05",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1710757232"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0345000",
+      "federalOrganization": {
+        "npi": "1679106181",
+        "legalName": "HAPPY FAMILY HOME HEALTHCARE AGENCY LLC",
+        "lastUpdated": "2023-08-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1679106181"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0347100",
+      "federalOrganization": {
+        "npi": "1306524079",
+        "legalName": "NJKH SENIOR CARE LLC",
+        "lastUpdated": "2023-07-11",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1306524079"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0348900",
+      "federalOrganization": {
+        "npi": "1972201846",
+        "legalName": "COMPASSIONATE HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2024-01-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1972201846"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0349400",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_4_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 164,
+              "printedPage": "149"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0350600",
+      "federalOrganization": {
+        "npi": "1831923747",
+        "legalName": "AGEWELL HOMECARE AGENCY LLC",
+        "lastUpdated": "2024-09-02",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1831923747"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0351900",
+      "federalOrganization": {
+        "npi": "1396450136",
+        "legalName": "VANEJUP QUALITY CARE LLC",
+        "lastUpdated": "2023-12-19",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1396450136"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0353000",
+      "federalOrganization": {
+        "npi": "1598459695",
+        "legalName": "ONPOINT HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2023-06-05",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1598459695"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0353200",
+      "federalOrganization": {
+        "npi": "1063129161",
+        "legalName": "AXZONS HOMECARE CORPORATION",
+        "lastUpdated": "2024-06-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1063129161"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0354600",
+      "federalOrganization": {
+        "npi": "1255011615",
+        "legalName": "BTR HOME CARE LLC",
+        "lastUpdated": "2023-07-20",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1255011615"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0355900",
+      "federalOrganization": {
+        "npi": "1194509117",
+        "legalName": "AVM CARE LLC",
+        "lastUpdated": "2025-04-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1194509117"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0359000",
+      "federalOrganization": {
+        "npi": "1003688516",
+        "legalName": "ALSHAF HOME CARE AND SERVICES LLC",
+        "lastUpdated": "2026-09-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1003688516"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0359900",
+      "federalOrganization": {
+        "npi": "1861168205",
+        "legalName": "GLOWING HEARTS HOME CARE SERVICES",
+        "lastUpdated": "2021-08-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1861168205"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0360700",
+      "federalOrganization": {
+        "npi": "1558040360",
+        "legalName": "NJ LIFECARE INNOVATION HOME CARE LLC",
+        "lastUpdated": "2023-07-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1558040360"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0362100",
+      "federalOrganization": {
+        "npi": "1376221564",
+        "legalName": "ANGEL HOME CARE LLC",
+        "lastUpdated": "2023-07-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1376221564"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0362700",
+      "federalOrganization": {
+        "npi": "1740028224",
+        "legalName": "M N B COMPANION CARE LLC",
+        "lastUpdated": "2024-07-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1740028224"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0365000",
+      "federalOrganization": {
+        "npi": "1548032915",
+        "legalName": "DAHLIAS HOME CARE AGENCY, LLC",
+        "lastUpdated": "2026-09-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1548032915"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0365400",
+      "federalOrganization": {
+        "npi": "1295415776",
+        "legalName": "LIVE EASY HOME CARE LLC",
+        "lastUpdated": "2023-08-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1295415776"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0366600",
+      "federalOrganization": {
+        "npi": "1306625256",
+        "legalName": "REVIVE HOME HEALTH CARE LLC",
+        "lastUpdated": "2023-09-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1306625256"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0366900",
+      "federalOrganization": {
+        "npi": "1508324062",
+        "legalName": "KEON HOME HEALTHCARE LLC",
+        "lastUpdated": "2024-07-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1508324062"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0367100",
+      "federalOrganization": {
+        "npi": "1487534467",
+        "legalName": "STONEBRIAR HEALTH SERVICES LLC",
+        "lastUpdated": "2025-09-02",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1487534467"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0368400",
+      "federalOrganization": {
+        "npi": "1114899606",
+        "legalName": "CGL LEARNING INSTITUTE LLC",
+        "lastUpdated": "2025-09-23",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1114899606"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0371700",
+      "federalOrganization": {
+        "npi": "1114789732",
+        "legalName": "LIFE & HEALTH HOME CARE AGENCY LLC",
+        "lastUpdated": "2024-07-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1114789732"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0371800",
+      "federalOrganization": {
+        "npi": "1720832843",
+        "legalName": "LIGHT AND LIFE HOME CARE LLC",
+        "lastUpdated": "2024-04-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1720832843"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0372100",
+      "federalOrganization": {
+        "npi": "1326908773",
+        "legalName": "FAVORS TOUCH LLC",
+        "lastUpdated": "2025-11-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1326908773"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0374100",
+      "federalOrganization": {
+        "npi": "1740986892",
+        "legalName": "KD HOMECARE",
+        "lastUpdated": "2024-11-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1740986892"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0374200",
+      "federalOrganization": {
+        "npi": "1285593251",
+        "legalName": "HOLISTIC HOME CARE AGENCY LLC",
+        "lastUpdated": "2026-10-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1285593251"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0374900",
+      "federalOrganization": {
+        "npi": "1861242885",
+        "legalName": "COMFORTCARE HOME CARE LLC",
+        "lastUpdated": "2024-03-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1861242885"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0375400",
+      "federalOrganization": {
+        "npi": "1568296564",
+        "legalName": "NORTHEAST HOMECARE LLC",
+        "lastUpdated": "2024-08-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1568296564"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0376400",
+      "federalOrganization": {
+        "npi": "1518718238",
+        "legalName": "MERAKI PARTNERS, LLC",
+        "lastUpdated": "2025-08-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1518718238"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0377000",
+      "federalOrganization": {
+        "npi": "1982440772",
+        "legalName": "GOLD HOME CARE LLC",
+        "lastUpdated": "2024-07-02",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1982440772"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0377300",
+      "federalOrganization": {
+        "npi": "1679303069",
+        "legalName": "SIVAM HEALTHCARE TRAINING INCORPORATED",
+        "lastUpdated": "2024-08-01",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1679303069"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0377700",
+      "federalOrganization": {
+        "npi": "1972317584",
+        "legalName": "PRIORITY HEALTH HOME CARE AGENCY, LLC",
+        "lastUpdated": "2025-02-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1972317584"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0378000",
+      "federalOrganization": {
+        "npi": "1578014858",
+        "legalName": "ZOE HOME HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2026-06-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1578014858"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0379000",
+      "federalOrganization": {
+        "npi": "1194565127",
+        "legalName": "FELIHEAL HOME HEALTHCARE SERVICES",
+        "lastUpdated": "2025-05-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1194565127"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0379100",
+      "federalOrganization": {
+        "npi": "1154198315",
+        "legalName": "CELEBRATION HOME HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2023-12-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1154198315"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0379600",
+      "federalOrganization": {
+        "npi": "1447006358",
+        "legalName": "BEST HOME CARE INC",
+        "lastUpdated": "2024-04-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1447006358"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0380700",
+      "federalOrganization": {
+        "npi": "1053140665",
+        "legalName": "BOIKIN HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2024-07-31",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1053140665"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0381100",
+      "federalOrganization": {
+        "npi": "1336957786",
+        "legalName": "KEY FAMILY CARE LLC",
+        "lastUpdated": "2024-12-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1336957786"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0382700",
+      "federalOrganization": {
+        "npi": "1154160463",
+        "legalName": "MCN CARE SERVICES LLC",
+        "lastUpdated": "2024-05-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1154160463"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0383400",
+      "federalOrganization": {
+        "npi": "1003705351",
+        "legalName": "NUSA CARE LLC",
+        "lastUpdated": "2025-07-01",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1003705351"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0383600",
+      "federalOrganization": {
+        "npi": "1063260479",
+        "legalName": "GRACECARE NJ HEALTH SERVICES LLC",
+        "lastUpdated": "2024-05-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1063260479"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0385200",
+      "federalOrganization": {
+        "npi": "1669205597",
+        "legalName": "LIKE FAMILY HOME CARE",
+        "lastUpdated": "2025-03-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1669205597"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0386100",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 103,
+              "printedPage": "88"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0386700",
+      "federalOrganization": {
+        "npi": "1487401493",
+        "legalName": "AFFIRMED HOME CARE PEDIATRICS INC",
+        "lastUpdated": "2024-05-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1487401493"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0386900",
+      "federalOrganization": {
+        "npi": "1407674526",
+        "legalName": "CARE AT HOME AGENCY",
+        "lastUpdated": "2024-11-27",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1407674526"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0387900",
+      "federalOrganization": {
+        "npi": "1669309084",
+        "legalName": "BEAUVAIS HEALTH HOMECARE 3 BEAUVAIS NURSING SCHOOL CORPORATION",
+        "lastUpdated": "2026-09-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1669309084"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0388000",
+      "federalOrganization": {
+        "npi": "1750133450",
+        "legalName": "KIM HOME CARE LLC",
+        "lastUpdated": "2024-08-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1750133450"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0388800",
+      "federalOrganization": {
+        "npi": "1194514836",
+        "legalName": "LOVEREIGN CARE SERVICES LLC",
+        "lastUpdated": "2025-04-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1194514836"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0391000",
+      "federalOrganization": {
+        "npi": "1073322897",
+        "legalName": "CAREBRIDGE HEALTH SERVICES LLC",
+        "lastUpdated": "2025-01-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1073322897"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0391400",
+      "federalOrganization": {
+        "npi": "1922805530",
+        "legalName": "LIBERTY COMPLETE CARE SERVICES",
+        "lastUpdated": "2026-01-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1922805530"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0392800",
+      "federalOrganization": {
+        "npi": "1154193910",
+        "legalName": "VITAL HEALTH SERVICES",
+        "lastUpdated": "2026-11-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1154193910"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0393000",
+      "federalOrganization": {
+        "npi": "1003771015",
+        "legalName": "IZABELLA HOME CARE SERVICES LLC",
+        "lastUpdated": "2025-12-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1003771015"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0393400",
+      "federalOrganization": {
+        "npi": "1467261727",
+        "legalName": "MALACHI HOLDINGS, INC.",
+        "lastUpdated": "2025-01-13",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1467261727"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0393500",
+      "federalOrganization": {
+        "npi": "1326857392",
+        "legalName": "HARMONY & GRACE CARE SERVICE",
+        "lastUpdated": "2025-01-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1326857392"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0393700",
+      "federalOrganization": {
+        "npi": "1578360269",
+        "legalName": "STAND OUT HOME CARE OF NJ",
+        "lastUpdated": "2025-02-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1578360269"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0394400",
+      "historicalDirectories": [
+        {
+          "payer": "Fidelis Care New Jersey",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_1_Eng_Spa_R.PDF",
+              "asOf": "2026-10-06",
+              "physicalPage": 211,
+              "printedPage": "196"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0395100",
+      "federalOrganization": {
+        "npi": "1467328443",
+        "legalName": "EDEN TOUCH HOME CARE LLC",
+        "lastUpdated": "2025-10-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1467328443"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0395300",
+      "federalOrganization": {
+        "npi": "1205624046",
+        "legalName": "HOLY TRINITY HOME CARE AGENCY",
+        "lastUpdated": "2025-04-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1205624046"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0396800",
+      "federalOrganization": {
+        "npi": "1578367033",
+        "legalName": "OAK DYNAMIC HEALTHCARE",
+        "lastUpdated": "2025-04-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1578367033"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0397000",
+      "federalOrganization": {
+        "npi": "1104633205",
+        "legalName": "FUN FUNCTION HOME CARE LLC",
+        "lastUpdated": "2024-12-12",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1104633205"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0397900",
+      "federalOrganization": {
+        "npi": "1720991508",
+        "legalName": "CARING FOR ANGELS HOME CARE",
+        "lastUpdated": "2026-09-23",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1720991508"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0398600",
+      "federalOrganization": {
+        "npi": "1346050671",
+        "legalName": "AMAZING HOME HEALTHCARE LLC",
+        "lastUpdated": "2025-01-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1346050671"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0398700",
+      "federalOrganization": {
+        "npi": "1639051147",
+        "legalName": "HARMONY HOME HEALTHCARE LLC",
+        "lastUpdated": "2025-07-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1639051147"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0401800",
+      "federalOrganization": {
+        "npi": "1518752732",
+        "legalName": "A HELPING HAND SENIOR SERVICES",
+        "lastUpdated": "2025-04-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1518752732"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0401900",
+      "federalOrganization": {
+        "npi": "1609758234",
+        "legalName": "TENDER HANDS HOMECARE SERVICES LLC",
+        "lastUpdated": "2026-01-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1609758234"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0402000",
+      "federalOrganization": {
+        "npi": "1578432779",
+        "legalName": "NONIVIC LLC",
+        "lastUpdated": "2025-11-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1578432779"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0402700",
+      "federalOrganization": {
+        "npi": "1386592996",
+        "legalName": "C3 GOLDEN HOME HEALTHCARE LLC",
+        "lastUpdated": "2026-03-19",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1386592996"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0403300",
+      "federalOrganization": {
+        "npi": "1558162511",
+        "legalName": "NORTH JERSEY HOME CARE LLC",
+        "lastUpdated": "2026-08-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1558162511"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0403400",
+      "federalOrganization": {
+        "npi": "1811882681",
+        "legalName": "THRIVE AT HOME LLC",
+        "lastUpdated": "2025-06-11",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1811882681"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0404300",
+      "federalOrganization": {
+        "npi": "1598610321",
+        "legalName": "ALWAYS RESPONSIVE HOME CARE N. BERGEN",
+        "lastUpdated": "2026-02-26",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1598610321"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0404400",
+      "federalOrganization": {
+        "npi": "1265316194",
+        "legalName": "DAY STAR HOME HEALTHCARE",
+        "lastUpdated": "2025-08-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1265316194"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0404700",
+      "federalOrganization": {
+        "npi": "1700670353",
+        "legalName": "DAYSPRING HEALTH CARE LLC.",
+        "lastUpdated": "2025-04-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1700670353"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0405700",
+      "federalOrganization": {
+        "npi": "1982323937",
+        "legalName": "EXCEL HEALTHCARE EXPERTS LLC",
+        "lastUpdated": "2022-08-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1982323937"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0406100",
+      "federalOrganization": {
+        "npi": "1235990631",
+        "legalName": "AN ANGEL FOR EVERYONE LLC",
+        "lastUpdated": "2024-01-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1235990631"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0406200",
+      "federalOrganization": {
+        "npi": "1700670429",
+        "legalName": "GIFTED HANDS HOME CARE LLC",
+        "lastUpdated": "2025-04-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1700670429"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0408700",
+      "federalOrganization": {
+        "npi": "1649144213",
+        "legalName": "HEARTFELT HEALTH CARE AGENCY LLC",
+        "lastUpdated": "2025-10-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1649144213"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0409400",
+      "federalOrganization": {
+        "npi": "1912864547",
+        "legalName": "3 SISTERS HOME CARE LLC",
+        "lastUpdated": "2026-01-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1912864547"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0409600",
+      "federalOrganization": {
+        "npi": "1649061888",
+        "legalName": "BARAN HOME CARE LLC",
+        "lastUpdated": "2025-05-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1649061888"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0409700",
+      "federalOrganization": {
+        "npi": "1912853029",
+        "legalName": "GRACELAND HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2026-03-10",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1912853029"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0409800",
+      "federalOrganization": {
+        "npi": "1598619892",
+        "legalName": "NOVACURRA HEALTH SOLUTIONS LLC",
+        "lastUpdated": "2026-02-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1598619892"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0412500",
+      "federalOrganization": {
+        "npi": "1144155706",
+        "legalName": "TENDER HANDS CONSULTING INC",
+        "lastUpdated": "2026-06-16",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1144155706"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0412700",
+      "federalOrganization": {
+        "npi": "1275351181",
+        "legalName": "HARMONY SUPPORT LLC",
+        "lastUpdated": "2024-09-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1275351181"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0413400",
+      "federalOrganization": {
+        "npi": "1972492775",
+        "legalName": "LIVE EASY HOME CARE MORRISTOWN",
+        "lastUpdated": "2025-06-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1972492775"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0413700",
+      "federalOrganization": {
+        "npi": "1255220604",
+        "legalName": "AGASTYA CARE, LLC",
+        "lastUpdated": "2025-07-01",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1255220604"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0414000",
+      "federalOrganization": {
+        "npi": "1114688496",
+        "legalName": "JOYFUL HOME CARE SERVICES, INC",
+        "lastUpdated": "2022-01-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1114688496"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0415200",
+      "federalOrganization": {
+        "npi": "1821974783",
+        "legalName": "FAMILY FIRST HOME HEALTH LLC",
+        "lastUpdated": "2025-08-14",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1821974783"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0416100",
+      "federalOrganization": {
+        "npi": "1952275505",
+        "legalName": "BLESSED HOPE HEALTHCARE LLC",
+        "lastUpdated": "2025-10-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1952275505"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0416800",
+      "federalOrganization": {
+        "npi": "1831984020",
+        "legalName": "CARING TOGETHER HOMECARE LLC",
+        "lastUpdated": "2026-04-10",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1831984020"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0418600",
+      "federalOrganization": {
+        "npi": "1912857368",
+        "legalName": "ADURA HOMECARE SERVICES LLC",
+        "lastUpdated": "2026-02-03",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1912857368"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0420600",
+      "federalOrganization": {
+        "npi": "1497623573",
+        "legalName": "NEST ELITE HOME HEALTHCARE LLC",
+        "lastUpdated": "2025-10-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1497623573"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0420700",
+      "federalOrganization": {
+        "npi": "1902786403",
+        "legalName": "CARE WITH PASSION, LLC.",
+        "lastUpdated": "2025-09-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1902786403"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0421900",
+      "federalOrganization": {
+        "npi": "1235076019",
+        "legalName": "SUNNY CARE HEALTH SERVICES LLC",
+        "lastUpdated": "2026-04-30",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1235076019"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0422200",
+      "federalOrganization": {
+        "npi": "1235097270",
+        "legalName": "ANGEL'S CARE FOR SENIORS",
+        "lastUpdated": "2026-01-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1235097270"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0422400",
+      "federalOrganization": {
+        "npi": "1558210690",
+        "legalName": "SHILOH GLOBAL",
+        "lastUpdated": "2026-01-22",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1558210690"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0423000",
+      "federalOrganization": {
+        "npi": "1093672560",
+        "legalName": "GRACE FOUND HOME CARE AGENCY LLC",
+        "lastUpdated": "2026-01-07",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1093672560"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0423700",
+      "historicalDirectories": [
+        {
+          "payer": "UnitedHealthcare Community Plan",
+          "program": "NJ FamilyCare Medicaid MLTSS",
+          "checkedAt": "2026-11-14",
+          "sources": [
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 26
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 105
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 145
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 192
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 230
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 269
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 306
+            },
+            {
+              "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+              "asOf": "2026-06",
+              "physicalPage": 343
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0423800",
+      "federalOrganization": {
+        "npi": "1114511615",
+        "legalName": "ROKAH LLC",
+        "lastUpdated": "2025-11-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1114511615"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0423900",
+      "federalOrganization": {
+        "npi": "1639978117",
+        "legalName": "HEALTH AND WOUND CARE SOLUTIONS",
+        "lastUpdated": "2026-06-24",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1639978117"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0424100",
+      "federalOrganization": {
+        "npi": "1245120237",
+        "legalName": "LUMENCAREDDD",
+        "lastUpdated": "2025-10-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1245120237"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0424200",
+      "federalOrganization": {
+        "npi": "1922951029",
+        "legalName": "COMFORT ANGELS HOMECARE LLC",
+        "lastUpdated": "2026-04-20",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1922951029"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0424700",
+      "federalOrganization": {
+        "npi": "1194542571",
+        "legalName": "360 HEALTHCARE SERVICES LLC",
+        "lastUpdated": "2026-02-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1194542571"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0424900",
+      "federalOrganization": {
+        "npi": "1033574447",
+        "legalName": "TRAINING WITH A PURPOSE HOME HEALTHCARE LLC",
+        "lastUpdated": "2026-02-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1033574447"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0425100",
+      "federalOrganization": {
+        "npi": "1215887450",
+        "legalName": "BRIGHT HORIZON HOME HEALTH CARE",
+        "lastUpdated": "2026-01-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1215887450"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0425600",
+      "federalOrganization": {
+        "npi": "1457207508",
+        "legalName": "GREEN PARK ASSISTED LIVING",
+        "lastUpdated": "2026-03-09",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1457207508"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0427000",
+      "federalOrganization": {
+        "npi": "1225984172",
+        "legalName": "BLUE AID HOME CARE LLC",
+        "lastUpdated": "2026-03-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1225984172"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0427400",
+      "federalOrganization": {
+        "npi": "1134091606",
+        "legalName": "AGAPE HOME CARE AGENCY LLC",
+        "lastUpdated": "2025-09-23",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1134091606"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0428300",
+      "federalOrganization": {
+        "npi": "1477375681",
+        "legalName": "ROSARIO CARE LLC",
+        "lastUpdated": "2026-04-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1477375681"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0429600",
+      "federalOrganization": {
+        "npi": "1326984618",
+        "legalName": "OASIS HEALTHCARE STAFFING AGENCY LLC",
+        "lastUpdated": "2026-04-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1326984618"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0430200",
+      "federalOrganization": {
+        "npi": "1477350114",
+        "legalName": "GENTLE ROYALE HOMECARE LLC",
+        "lastUpdated": "2025-02-28",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1477350114"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0430500",
+      "federalOrganization": {
+        "npi": "1992531578",
+        "legalName": "AMAZING U COMMUNITY SERVICES LLC",
+        "lastUpdated": "2024-09-11",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1992531578"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0430900",
+      "federalOrganization": {
+        "npi": "1447122361",
+        "legalName": "LIQUID LUXE INFUSIONS",
+        "lastUpdated": "2025-09-19",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1447122361"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0431800",
+      "federalOrganization": {
+        "npi": "1639031230",
+        "legalName": "ATLANTIC IN HOME HEALTHCARE AND SERVICES",
+        "lastUpdated": "2025-12-02",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1639031230"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0432200",
+      "federalOrganization": {
+        "npi": "1972434587",
+        "legalName": "COMPANIONS R US",
+        "lastUpdated": "2026-05-25",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1972434587"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0433300",
+      "federalOrganization": {
+        "npi": "1588593958",
+        "legalName": "PROTECTA HOME CARE AGENCY LLC",
+        "lastUpdated": "2026-05-13",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1588593958"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0434000",
+      "federalOrganization": {
+        "npi": "1508714999",
+        "legalName": "A-CLASS HOME CARE LLC",
+        "lastUpdated": "2026-10-01",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1508714999"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0436500",
+      "federalOrganization": {
+        "npi": "1376453803",
+        "legalName": "NEW JERSEY HOME CARE SOCIETY LLC",
+        "lastUpdated": "2026-09-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1376453803"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0436700",
+      "federalOrganization": {
+        "npi": "1295633147",
+        "legalName": "COMFORTING CONNECTIONS HEALTHCARE",
+        "lastUpdated": "2026-10-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1295633147"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0438100",
+      "federalOrganization": {
+        "npi": "1528915493",
+        "legalName": "GOODMOTHER CARE SERVICES LLC",
+        "lastUpdated": "2026-03-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1528915493"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0439700",
+      "federalOrganization": {
+        "npi": "1073446779",
+        "legalName": "MBH HOME CARE, LLC",
+        "lastUpdated": "2026-06-04",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1073446779"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0440700",
+      "federalOrganization": {
+        "npi": "1366379638",
+        "legalName": "GENTLE CARE SOLUTIONS LLC",
+        "lastUpdated": "2026-05-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1366379638"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0440900",
+      "federalOrganization": {
+        "npi": "1588496012",
+        "legalName": "ANGELIC HEALTHCARE NEW JERSEY INC.",
+        "lastUpdated": "2024-08-15",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1588496012"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0442800",
+      "federalOrganization": {
+        "npi": "1962326967",
+        "legalName": "GOLDMINERZ HOME CARE LLC",
+        "lastUpdated": "2026-08-05",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1962326967"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0443500",
+      "federalOrganization": {
+        "npi": "1962382168",
+        "legalName": "SAFE EN CASA HOME HEALTH AGENCY",
+        "lastUpdated": "2025-09-08",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1962382168"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0443600",
+      "federalOrganization": {
+        "npi": "1881527414",
+        "legalName": "GOLDEN PATH SERVICES",
+        "lastUpdated": "2026-06-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1881527414"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0443900",
+      "federalOrganization": {
+        "npi": "1689522542",
+        "legalName": "NURSE CONCIERGE LLC",
+        "lastUpdated": "2026-03-17",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1689522542"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0444400",
+      "federalOrganization": {
+        "npi": "1295643450",
+        "legalName": "THE GARDEN FAMILY HOME CARE",
+        "lastUpdated": "2026-08-31",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1295643450"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0444600",
+      "federalOrganization": {
+        "npi": "1033024633",
+        "legalName": "JC HEALTHCARE LLC",
+        "lastUpdated": "2026-08-18",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1033024633"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0446700",
+      "federalOrganization": {
+        "npi": "1255254843",
+        "legalName": "ASN-KONE",
+        "lastUpdated": "2026-07-31",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1255254843"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0448700",
+      "federalOrganization": {
+        "npi": "1134026354",
+        "legalName": "APEX HOME HEALTH LLC",
+        "lastUpdated": "2026-10-21",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1134026354"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0451200",
+      "federalOrganization": {
+        "npi": "1548168305",
+        "legalName": "METROMED HOME CARE SERVICES LLC",
+        "lastUpdated": "2026-10-29",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1548168305"
+      }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0452000",
+      "federalOrganization": {
+        "npi": "1063312767",
+        "legalName": "CARESFULLY SUPPORT SERVICES",
+        "lastUpdated": "2026-11-06",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1063312767"
+      }
+    }
+  ]
+}

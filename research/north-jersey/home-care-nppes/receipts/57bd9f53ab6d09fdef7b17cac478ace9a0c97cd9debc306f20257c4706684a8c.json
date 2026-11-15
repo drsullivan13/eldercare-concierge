@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1467,
+      "http_status": 200,
+      "raw": "raw/fb9e1c7b62be5db677457edfb0786f85c492d3a156882c9305daf903f27c40ef.json",
+      "retrieved_at": "2026-11-15T03:22:46.259249+00:00",
+      "sha256": "fb9e1c7b62be5db677457edfb0786f85c492d3a156882c9305daf903f27c40ef"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CHOICE ONE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "ee2c7c1f7e555651e08ff648",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CHOICE+ONE%2A&skip=0&state=NJ&version=2.1"
+}

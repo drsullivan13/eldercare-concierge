@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1685,
+      "http_status": 200,
+      "raw": "raw/7799f1cd7cabeb8e9e755fcf25556007a9ebf9f3327e4b44778f490e6dce9241.json",
+      "retrieved_at": "2026-11-15T03:21:46.527223+00:00",
+      "sha256": "7799f1cd7cabeb8e9e755fcf25556007a9ebf9f3327e4b44778f490e6dce9241"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AXZONS HOMECARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "a90cc4c04fbf0af097eae2f6",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AXZONS+HOMECARE%2A&skip=0&state=NJ&version=2.1"
+}

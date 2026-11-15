@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1887,
+      "http_status": 200,
+      "raw": "raw/566d693de0558e1a3e0b971f4f5aa0f7c1da1f07d2e4eade3a230e1f8b8536e0.json",
+      "retrieved_at": "2026-11-15T03:20:43.103033+00:00",
+      "sha256": "566d693de0558e1a3e0b971f4f5aa0f7c1da1f07d2e4eade3a230e1f8b8536e0"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "PRIVATE AID*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "46e7069aec7624ccc83513b5",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=PRIVATE+AID%2A&skip=0&state=NJ&version=2.1"
+}

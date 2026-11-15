@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1601,
+      "http_status": 200,
+      "raw": "raw/ad1c3f06d4605f745bb7e7976413f85fc2cadcd5569662c9948d956eacdd7e5a.json",
+      "retrieved_at": "2026-11-15T03:20:53.202794+00:00",
+      "sha256": "ad1c3f06d4605f745bb7e7976413f85fc2cadcd5569662c9948d956eacdd7e5a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CAREPOINT HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "64099b7c6d065a7d4d2b34e3",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CAREPOINT+HOME%2A&skip=0&state=NJ&version=2.1"
+}

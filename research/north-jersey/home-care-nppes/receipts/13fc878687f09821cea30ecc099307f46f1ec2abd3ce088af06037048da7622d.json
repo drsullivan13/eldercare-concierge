@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2559,
+      "http_status": 200,
+      "raw": "raw/0e62270bd0477e3d392a105fc9351ebc5ab3aa87ec8627fba8fc38a93cc1d247.json",
+      "retrieved_at": "2026-11-15T03:21:36.621150+00:00",
+      "sha256": "0e62270bd0477e3d392a105fc9351ebc5ab3aa87ec8627fba8fc38a93cc1d247"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SACRED HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "a2470190cba64fe1f4146ef6",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SACRED+HOME%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1245,
+      "http_status": 200,
+      "raw": "raw/39f79a732eef4cb5a5dd6f56468f538c9eb23aa847e961d68c676c028de86eaa.json",
+      "retrieved_at": "2026-11-15T03:22:39.890746+00:00",
+      "sha256": "39f79a732eef4cb5a5dd6f56468f538c9eb23aa847e961d68c676c028de86eaa"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NORTHEAST HOMECARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "e663832dc311f75a143f8e41",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NORTHEAST+HOMECARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1230,
+      "http_status": 200,
+      "raw": "raw/19dc41bf476c0f640ee121fdf7db99f4323444c17d4030df8e708733a37f03f4.json",
+      "retrieved_at": "2026-11-15T03:22:26.980399+00:00",
+      "sha256": "19dc41bf476c0f640ee121fdf7db99f4323444c17d4030df8e708733a37f03f4"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GRACELAND HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d5f83adcf880e175c2a768ad",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GRACELAND+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

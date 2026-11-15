@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1288,
+      "http_status": 200,
+      "raw": "raw/fb846bdd06cfbb0ee8ea0596845cca916761191b0f4686bd53321c0ecc0a9b95.json",
+      "retrieved_at": "2026-11-15T03:20:39.114140+00:00",
+      "sha256": "fb846bdd06cfbb0ee8ea0596845cca916761191b0f4686bd53321c0ecc0a9b95"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SAFE EN*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3cb9ec46fa7683652d13b69e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SAFE+EN%2A&skip=0&state=NJ&version=2.1"
+}

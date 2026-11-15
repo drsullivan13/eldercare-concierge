@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1191,
+      "http_status": 200,
+      "raw": "raw/a16ef6f5c54caaef41541f44efd4f2525036d24fb0e43eb402d524882efd780d.json",
+      "retrieved_at": "2026-11-15T03:20:13.857208+00:00",
+      "sha256": "a16ef6f5c54caaef41541f44efd4f2525036d24fb0e43eb402d524882efd780d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "DAY STAR*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "044106799c7217857bcfbe60",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=DAY+STAR%2A&skip=0&state=NJ&version=2.1"
+}

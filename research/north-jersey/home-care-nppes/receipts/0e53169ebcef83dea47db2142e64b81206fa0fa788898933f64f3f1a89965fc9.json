@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 8342,
+      "http_status": 200,
+      "raw": "raw/af7dccca13294cf32a8747a9b07648795af7da24a5b05d8b1ae5bfc7b55f44ff.json",
+      "retrieved_at": "2026-11-15T03:20:48.842706+00:00",
+      "sha256": "af7dccca13294cf32a8747a9b07648795af7da24a5b05d8b1ae5bfc7b55f44ff"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HANDS OF*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "5c81de2ea2fbe5b252b28c2e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HANDS+OF%2A&skip=0&state=NJ&version=2.1"
+}

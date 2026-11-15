@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 7955,
+      "http_status": 200,
+      "raw": "raw/564c40961242522ae451e19a7c63c507efd1c25043d5873523220a87136c7d3f.json",
+      "retrieved_at": "2026-11-15T03:20:13.562371+00:00",
+      "sha256": "564c40961242522ae451e19a7c63c507efd1c25043d5873523220a87136c7d3f"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AMAZING GRACE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "034a9739289160bfc8953643",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AMAZING+GRACE%2A&skip=0&state=NJ&version=2.1"
+}

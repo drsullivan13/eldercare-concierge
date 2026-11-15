@@ -1,0 +1,136 @@
+{
+  "checkedDate": "2026-11-14",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+    "-B",
+    "research/north-jersey/home-care-network/uhc-replay.py"
+  ],
+  "measurement": "Single fresh-process complete default replay, including process startup, imports, all retained input reads, hashes, parsing, full-roster indexed matching, quality checks, JSON serialization, six output writes, and stdout capture.",
+  "runCount": 1,
+  "elapsedSeconds": 0.243259,
+  "childUserSeconds": 0.17234,
+  "childSystemSeconds": 0.021317,
+  "python": "3.11.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "cpuCount": 8,
+  "hostLoadAverageBeforeRun": [
+    8.3876953125,
+    15.1806640625,
+    20.3974609375
+  ],
+  "timingCaveat": "Filesystem caches were not flushed. Host had concurrent Python/framework, browser, system and Droid activity. This is one observed elapsed time, not a speedup, median, cold-disk measurement, or hard performance guarantee.",
+  "exitCode": 0,
+  "stderr": "",
+  "workCounts": {
+    "sourceRows": 886,
+    "rosterProviders": 1074,
+    "verifiedProviders": 47,
+    "distinctAcceptedOfficeIdentities": 47,
+    "acceptedSourceRows": 255,
+    "providerKeyedListings": 255
+  },
+  "deterministicRegeneration": true,
+  "checkModeExitCode": 0,
+  "inputHashes": {
+    "uhc-source-rows.json": {
+      "sha256": "869ce5d25d50dad27db395d83699e7f692b7b63f3421d8532f322d9420d7f49e",
+      "bytes": 147067
+    },
+    "uhc-bridge.csv": {
+      "sha256": "1124133bd57f992b28b292ac8050362bd33d3b25debf5ca2282632b1d62b5f7d",
+      "bytes": 168906
+    },
+    "uhc-roster.json": {
+      "sha256": "95f80fa8d4d4807b42d489d7fff4efb4feda5c3771d83d157da63c2f77f603e5",
+      "bytes": 462297
+    },
+    "uhc-registration-identities.json": {
+      "sha256": "6f7b3123c67b91dcc69531a8cae02824d50d468ab840f1665ca37c957fd6b3d9",
+      "bytes": 234402
+    }
+  },
+  "outputSha256": {
+    "uhc-directory-listings.json": "fdee150b392cb6172e1091c94253f6d36131c803221faa5f8907e44356af7ac1",
+    "uhc-verified.json": "cb6572785c626274ef35a16fd5c37bb8adabb8ffbd8ea186da73155b63073ab7",
+    "uhc-row-dispositions.json": "8ecbf6047222c515fa4a1a5f385322c42d0be177a6049ca3da2dd9f4d77cdced",
+    "uhc-roster-dispositions.json": "20bd4a7eab376c1c7aa015b05adee399025a6d3d00388a41885795fad3f9e52a",
+    "uhc-quality-checks.json": "526a4c4505ca1ff92b86716e32169e6177d62b0c5b0a541384d5e6cee72d6745",
+    "uhc-counts.json": "129ef29bb81d3b3ee2438b1aa150adac67bb600c5844dff27670f4b4c7b85c30"
+  },
+  "scriptSha256": "8ed1b1a566d06056162fbd52ed6c2da4579cbfc967906b3c2502031a4c4f21bb",
+  "testSha256": "dc659278ca576135847d2931957408e08d9e44978b09d273484c2883656d65fb",
+  "testCommand": "python3 -B -W error research/north-jersey/home-care-network/uhc-test.py",
+  "newTestsPassed": 24,
+  "existingTestsRun": false,
+  "separateUntimedProfile": {
+    "mode": "Fresh runpy execution of --check, with cProfile. Profile timing is not the reported elapsed time.",
+    "hotFunctionsBySelfTime": [
+      {
+        "file": "encoder.py",
+        "line": 334,
+        "function": "_iterencode_dict",
+        "calls": 1300250,
+        "selfSeconds": 0.314866,
+        "cumulativeSeconds": 0.442758
+      },
+      {
+        "file": "encoder.py",
+        "line": 278,
+        "function": "_iterencode_list",
+        "calls": 413770,
+        "selfSeconds": 0.085417,
+        "cumulativeSeconds": 0.293121
+      },
+      {
+        "file": "encoder.py",
+        "line": 414,
+        "function": "_iterencode",
+        "calls": 475429,
+        "selfSeconds": 0.08357,
+        "cumulativeSeconds": 0.545686
+      },
+      {
+        "file": "encoder.py",
+        "line": 183,
+        "function": "encode",
+        "calls": 42,
+        "selfSeconds": 0.045728,
+        "cumulativeSeconds": 0.598387
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<built-in method builtins.isinstance>",
+        "calls": 343459,
+        "selfSeconds": 0.032099,
+        "cumulativeSeconds": 0.032147
+      },
+      {
+        "file": "uhc-replay.py",
+        "line": 252,
+        "function": "build",
+        "calls": 1,
+        "selfSeconds": 0.031742,
+        "cumulativeSeconds": 0.189132
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<built-in method _json.encode_basestring>",
+        "calls": 161350,
+        "selfSeconds": 0.029529,
+        "cumulativeSeconds": 0.029529
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<method 'sub' of 're.Pattern' objects>",
+        "calls": 10174,
+        "selfSeconds": 0.017347,
+        "cumulativeSeconds": 0.021364
+      }
+    ]
+  },
+  "limiterEvidence": "The separate profile identifies JSON encoding and recursive indentation as the largest self-time work. Full default replay serializes all six reviewed outputs; it does not time only matches or a cached result.",
+  "sourceVerificationLimitation": "Official PDF retrieval returned HTTP 403. Evidence checks are against the supplied immutable extract, not independent original PDF pages."
+}

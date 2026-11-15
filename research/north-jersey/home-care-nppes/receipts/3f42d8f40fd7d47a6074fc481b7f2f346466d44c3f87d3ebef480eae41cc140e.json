@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 289266,
+      "http_status": 200,
+      "raw": "raw/a227785bbf5509894b947b0277618a6a1d8b57e1ef78f38c2b71883b0fde6a37.json",
+      "retrieved_at": "2026-11-15T03:22:21.830132+00:00",
+      "sha256": "a227785bbf5509894b947b0277618a6a1d8b57e1ef78f38c2b71883b0fde6a37"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GARDEN STATE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d08393a906c2ec8ab58e1f9a",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GARDEN+STATE%2A&skip=0&state=NJ&version=2.1"
+}

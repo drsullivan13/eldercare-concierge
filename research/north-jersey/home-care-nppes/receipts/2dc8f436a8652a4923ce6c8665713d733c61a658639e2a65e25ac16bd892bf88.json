@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1354,
+      "http_status": 200,
+      "raw": "raw/d211fac027fa6baa47f82a8536f1bd3e2e1353233ba0afe5f8666b6a857f9e76.json",
+      "retrieved_at": "2026-11-15T03:22:01.571691+00:00",
+      "sha256": "d211fac027fa6baa47f82a8536f1bd3e2e1353233ba0afe5f8666b6a857f9e76"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "FAVORS TOUCH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "bae57fb6fc0ce3631b41ee38",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=FAVORS+TOUCH%2A&skip=0&state=NJ&version=2.1"
+}

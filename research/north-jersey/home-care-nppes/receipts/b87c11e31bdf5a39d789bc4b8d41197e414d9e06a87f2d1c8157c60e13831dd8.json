@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1441,
+      "http_status": 200,
+      "raw": "raw/a494c93ecebb3d81c7fe4880fe2df411c506d514a02d92b69c9537f29d9b4e66.json",
+      "retrieved_at": "2026-11-15T03:20:28.226946+00:00",
+      "sha256": "a494c93ecebb3d81c7fe4880fe2df411c506d514a02d92b69c9537f29d9b4e66"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ASSISTING SENIORS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2a738f9184155514e7443705",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ASSISTING+SENIORS%2A&skip=0&state=NJ&version=2.1"
+}

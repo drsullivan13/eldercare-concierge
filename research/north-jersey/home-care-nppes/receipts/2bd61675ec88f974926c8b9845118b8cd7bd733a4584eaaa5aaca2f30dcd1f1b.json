@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1179,
+      "http_status": 200,
+      "raw": "raw/e362bfdc2b6fe13d52745d33be704b390572564e1a0a1c37b8906cecb60c97bd.json",
+      "retrieved_at": "2026-11-15T03:22:04.834148+00:00",
+      "sha256": "e362bfdc2b6fe13d52745d33be704b390572564e1a0a1c37b8906cecb60c97bd"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SHILOH GLOBAL*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "bf3f8f22013262483353695f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SHILOH+GLOBAL%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2488,
+      "http_status": 200,
+      "raw": "raw/28b7d95dae942e8fde87d4255dea6cf1490870ce62381d6e55fa75d45f96195b.json",
+      "retrieved_at": "2026-11-15T03:21:39.558703+00:00",
+      "sha256": "28b7d95dae942e8fde87d4255dea6cf1490870ce62381d6e55fa75d45f96195b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "OASIS HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "a4e101b61032fcbc4606ebde",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=OASIS+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1215,
+      "http_status": 200,
+      "raw": "raw/66900910445cfb485986f4d5ed7982ef96c1b50ea5c775d982f218d64b3e7f9e.json",
+      "retrieved_at": "2026-11-15T03:20:40.423603+00:00",
+      "sha256": "66900910445cfb485986f4d5ed7982ef96c1b50ea5c775d982f218d64b3e7f9e"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NOVACURRA HEALTH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3f72b66ceb61b9a9c5e7cc6f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NOVACURRA+HEALTH%2A&skip=0&state=NJ&version=2.1"
+}

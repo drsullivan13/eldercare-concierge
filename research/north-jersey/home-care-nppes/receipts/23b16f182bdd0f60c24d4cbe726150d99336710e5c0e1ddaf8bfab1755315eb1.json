@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1311,
+      "http_status": 200,
+      "raw": "raw/fe48e49b8ba08b38cc7a56cda9513ae381f4cf5978789261c4eb27bc8b0deca0.json",
+      "retrieved_at": "2026-11-15T03:21:11.939513+00:00",
+      "sha256": "fe48e49b8ba08b38cc7a56cda9513ae381f4cf5978789261c4eb27bc8b0deca0"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "REVIVE HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "7cc38d1838151fb4de5eff47",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=REVIVE+HOME%2A&skip=0&state=NJ&version=2.1"
+}

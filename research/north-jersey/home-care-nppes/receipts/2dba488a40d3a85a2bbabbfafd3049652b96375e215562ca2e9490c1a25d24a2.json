@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3425,
+      "http_status": 200,
+      "raw": "raw/c7df240043adb19a0b56472982d6d53f2848877e64c11a4a637f5ad957e4a124.json",
+      "retrieved_at": "2026-11-15T03:20:51.102709+00:00",
+      "sha256": "c7df240043adb19a0b56472982d6d53f2848877e64c11a4a637f5ad957e4a124"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "DAYSPRING HEALTH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "617b6c7b372dcb3529d345f5",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=DAYSPRING+HEALTH%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2637,
+      "http_status": 200,
+      "raw": "raw/96ef839106983e7ebae3fb224d285a19c0ac8c13b8f5e3e859e58712fd959ffb.json",
+      "retrieved_at": "2026-11-15T03:20:44.013191+00:00",
+      "sha256": "96ef839106983e7ebae3fb224d285a19c0ac8c13b8f5e3e859e58712fd959ffb"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CGL LEARNING*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "4b039742f0c4bb0d672e8c28",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CGL+LEARNING%2A&skip=0&state=NJ&version=2.1"
+}

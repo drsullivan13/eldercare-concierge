@@ -1,7 +1,15 @@
-import { getProviderMarket, markets, type MarketRegistry } from "./markets";
+import {
+  getProviderEntry,
+  getProviderMarket,
+  markets,
+  type MarketRegistry,
+} from "./markets";
 import { getReviewCatalog } from "./review-catalog";
 import { getDailyLifeResearch } from "./daily-life";
 import { getNursingStaffingResearch } from "./nursing-staffing";
+import { getHomeCareOfficeIdentifiers } from "./home-care-office-identifiers";
+import { getRegistrationFacts } from "./registration-facts";
+import { getOfficeDirectoryResearch } from "./office-directory-research";
 import { individualReviews, reviewAccountCounts } from "./individual-reviews";
 import {
   computeExperienceScore,
@@ -85,10 +93,15 @@ export function getLocationResearch(
   registry: MarketRegistry = markets,
 ): InternalLocationResearchResponse {
   validateProviderId(providerId);
-  const market = getProviderMarket(providerId, registry);
-  if (!market)
+  const entry = getProviderEntry(providerId, registry);
+  if (!entry)
     throw new ResearchInputError("No catalog provider matches this ID.", 404);
+  const { market, provider } = entry;
   const records = market.locationResearch;
+  const publishedOffice =
+    registry === markets &&
+    market.id === "north-jersey" &&
+    provider.category === "home-care";
   const record: LocationResearch =
     records && Object.hasOwn(records, providerId)
       ? records[providerId]
@@ -112,6 +125,11 @@ export function getLocationResearch(
         };
   return {
     ...record,
+    ...(publishedOffice && {
+      registrationFacts: getRegistrationFacts(provider),
+      officeDirectories: getOfficeDirectoryResearch(providerId),
+      officeIdentifiers: getHomeCareOfficeIdentifiers(providerId),
+    }),
     ...(registry === markets && {
       dailyLife: getDailyLifeResearch(providerId) ?? undefined,
       nursingStaffing: getNursingStaffingResearch(providerId) ?? undefined,

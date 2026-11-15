@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1339,
+      "http_status": 200,
+      "raw": "raw/65c580d510935f5a4a9edba0ed6b16f24f19c24a674508050fa73576f5135ab9.json",
+      "retrieved_at": "2026-11-15T03:20:15.740424+00:00",
+      "sha256": "65c580d510935f5a4a9edba0ed6b16f24f19c24a674508050fa73576f5135ab9"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SN SENIOR*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "0a35fb9a8819a268a75439ea",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SN+SENIOR%2A&skip=0&state=NJ&version=2.1"
+}

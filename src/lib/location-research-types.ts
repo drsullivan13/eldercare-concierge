@@ -2,6 +2,8 @@ import type {
   ExperienceReviewSample,
   ExperienceSummary,
 } from "./experience-score";
+import type { HomeCareOfficeIdentifiers } from "./home-care-office-identifiers";
+import type { RegistrationFacts } from "./providers";
 import type { PublicExperience } from "./public-experience";
 import type {
   FacebookResearch,
@@ -16,7 +18,12 @@ export type ResearchSource = {
   url: string;
   title: string;
   publisher: string;
-  kind: "provider" | "regulator" | "public-directory" | "review-platform" | "public-discussion";
+  kind:
+    | "provider"
+    | "regulator"
+    | "public-directory"
+    | "review-platform"
+    | "public-discussion";
   checkedAt: string;
   publishedAt: string | null;
   access: "full-page" | "search-result" | "pdf";
@@ -46,6 +53,15 @@ export type OfferingFact = {
     type: "base-rent" | "care-fee" | "entrance-fee" | "other";
     asOf: string | null;
   } | null;
+};
+export type OfficeDirectoryResearch = {
+  providerId: string;
+  office: { name: string; address: string };
+  source: ResearchSource;
+  services: string[];
+  paymentOptions: string[];
+  accreditations?: string[];
+  awards: { name: "Provider of Choice"; years: number[] }[];
 };
 type AvailabilityObservation = {
   status:
@@ -107,6 +123,9 @@ export type ResearchSummary = {
   experience: PublicExperience;
 };
 export type InternalLocationResearchResponse = LocationResearch & {
+  registrationFacts?: RegistrationFacts;
+  officeDirectories?: OfficeDirectoryResearch[];
+  officeIdentifiers?: HomeCareOfficeIdentifiers;
   dailyLife?: DailyLifeResearch;
   nursingStaffing?: NursingStaffingResearch;
   familyExperience?: FamilyExperience;

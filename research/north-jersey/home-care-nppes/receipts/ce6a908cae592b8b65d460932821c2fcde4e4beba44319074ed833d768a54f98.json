@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4307,
+      "http_status": 200,
+      "raw": "raw/450d23f9714bca7e1d0a7075f95c6506ecf1c1b12d56148aa005d25ae5ad762a.json",
+      "retrieved_at": "2026-11-15T03:21:33.246157+00:00",
+      "sha256": "450d23f9714bca7e1d0a7075f95c6506ecf1c1b12d56148aa005d25ae5ad762a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "FIRSTLIGHT HOMECARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "9fa99c6f6f4f690a4775493c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=FIRSTLIGHT+HOMECARE%2A&skip=0&state=NJ&version=2.1"
+}

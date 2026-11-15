@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1329,
+      "http_status": 200,
+      "raw": "raw/280f1469f888350b2320ce2b78911705058126103504e28279872c732aa896e6.json",
+      "retrieved_at": "2026-11-15T03:21:07.849520+00:00",
+      "sha256": "280f1469f888350b2320ce2b78911705058126103504e28279872c732aa896e6"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "THE SENIOR*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "773f520e8f0c6fbf57b5ad5c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=THE+SENIOR%2A&skip=0&state=NJ&version=2.1"
+}

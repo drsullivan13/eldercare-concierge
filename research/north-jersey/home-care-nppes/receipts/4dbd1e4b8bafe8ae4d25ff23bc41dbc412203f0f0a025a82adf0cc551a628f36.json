@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1354,
+      "http_status": 200,
+      "raw": "raw/ef85ff9ef10439c0a9b44b115558c3f2cbd991d6812b61c4fae14c5cb0a97809.json",
+      "retrieved_at": "2026-11-15T03:21:25.808684+00:00",
+      "sha256": "ef85ff9ef10439c0a9b44b115558c3f2cbd991d6812b61c4fae14c5cb0a97809"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "PERFECT HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "98551efd89797727f048a25b",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=PERFECT+HOME%2A&skip=0&state=NJ&version=2.1"
+}

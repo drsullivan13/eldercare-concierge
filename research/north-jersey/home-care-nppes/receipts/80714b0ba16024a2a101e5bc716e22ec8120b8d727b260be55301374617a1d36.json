@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 294298,
+      "http_status": 200,
+      "raw": "raw/e394dda5f61738168046ef4311740fa7d7f74fea75ac821c2b1290ff09dc66e7.json",
+      "retrieved_at": "2026-11-15T03:21:15.767702+00:00",
+      "sha256": "e394dda5f61738168046ef4311740fa7d7f74fea75ac821c2b1290ff09dc66e7"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NORTH JERSEY*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "83c0e00dc0cbf032c1ecc096",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NORTH+JERSEY%2A&skip=0&state=NJ&version=2.1"
+}

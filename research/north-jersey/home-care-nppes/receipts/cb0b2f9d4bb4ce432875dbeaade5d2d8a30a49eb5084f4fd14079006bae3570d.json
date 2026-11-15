@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2888,
+      "http_status": 200,
+      "raw": "raw/33c7427f76808644900d17fa024da948a0a5c243f9a5141394f03032d5baeb3b.json",
+      "retrieved_at": "2026-11-15T03:22:47.075843+00:00",
+      "sha256": "33c7427f76808644900d17fa024da948a0a5c243f9a5141394f03032d5baeb3b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HOLY TRINITY*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "ef98d7b21858991bfe060d9a",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HOLY+TRINITY%2A&skip=0&state=NJ&version=2.1"
+}

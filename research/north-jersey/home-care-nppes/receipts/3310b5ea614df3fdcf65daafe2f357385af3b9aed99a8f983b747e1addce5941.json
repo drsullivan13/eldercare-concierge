@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5367,
+      "http_status": 200,
+      "raw": "raw/68b0682860b009ae3210795833379ec23481abe539fb6a8ab57e5667941b4e79.json",
+      "retrieved_at": "2026-11-15T03:21:11.646457+00:00",
+      "sha256": "68b0682860b009ae3210795833379ec23481abe539fb6a8ab57e5667941b4e79"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "COMPASSIONATE HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "7cb96b578080e14f45d642aa",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=COMPASSIONATE+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

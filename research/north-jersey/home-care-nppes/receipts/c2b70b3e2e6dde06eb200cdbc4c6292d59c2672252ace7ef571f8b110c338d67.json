@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1522,
+      "http_status": 200,
+      "raw": "raw/0fc3039b5a6346f414a0d8f487d8cc631ad8d689a533c2dea17d71993daaceef.json",
+      "retrieved_at": "2026-11-15T03:20:49.263601+00:00",
+      "sha256": "0fc3039b5a6346f414a0d8f487d8cc631ad8d689a533c2dea17d71993daaceef"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AGAPE TOUCH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "5d70c4c5d877d1a9d5fe3959",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AGAPE+TOUCH%2A&skip=0&state=NJ&version=2.1"
+}

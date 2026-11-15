@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 319514,
+      "http_status": 200,
+      "raw": "raw/2379b3efd92c27c2cf2ce70239af4402fde768e7afe4a7b07f5453c884b819e3.json",
+      "retrieved_at": "2026-11-15T03:28:18.366935+00:00",
+      "sha256": "2379b3efd92c27c2cf2ce70239af4402fde768e7afe4a7b07f5453c884b819e3"
+    }
+  ],
+  "query": {
+    "address_purpose": "LOCATION",
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "postal_code": "07052",
+    "skip": "400",
+    "version": "2.1"
+  },
+  "query_id": "5bcc4c122f55f1b405a70b96",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?address_purpose=LOCATION&enumeration_type=NPI-2&limit=200&postal_code=07052&skip=400&version=2.1"
+}

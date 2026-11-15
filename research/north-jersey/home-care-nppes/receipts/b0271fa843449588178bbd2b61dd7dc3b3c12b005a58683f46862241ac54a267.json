@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1192,
+      "http_status": 200,
+      "raw": "raw/dc806a8e40e155729f8e1d3b29d073a80b086c8811d79ec2e2c29eb807e0ebf3.json",
+      "retrieved_at": "2026-11-15T03:21:15.026309+00:00",
+      "sha256": "dc806a8e40e155729f8e1d3b29d073a80b086c8811d79ec2e2c29eb807e0ebf3"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "3 SISTERS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "82728e6e1e3ef6479886576b",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=3+SISTERS%2A&skip=0&state=NJ&version=2.1"
+}

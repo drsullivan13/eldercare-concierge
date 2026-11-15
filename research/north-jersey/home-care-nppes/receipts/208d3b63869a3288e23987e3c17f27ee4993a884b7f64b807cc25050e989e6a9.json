@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5936,
+      "http_status": 200,
+      "raw": "raw/99d50816cfa6d0a7c2423ab598fed1747c2958ac0b35e85564ed336f22beb9e9.json",
+      "retrieved_at": "2026-11-15T03:21:34.560186+00:00",
+      "sha256": "99d50816cfa6d0a7c2423ab598fed1747c2958ac0b35e85564ed336f22beb9e9"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AFFINITY CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "a12d2207532baf9619241cde",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AFFINITY+CARE%2A&skip=0&state=NJ&version=2.1"
+}

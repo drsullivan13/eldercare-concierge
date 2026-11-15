@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 272037,
+      "http_status": 200,
+      "raw": "raw/c833cb6b1361085188deea24ca8b00346245008b2846ed70d6e3d3c3c766454e.json",
+      "retrieved_at": "2026-11-15T03:22:27.738575+00:00",
+      "sha256": "c833cb6b1361085188deea24ca8b00346245008b2846ed70d6e3d3c3c766454e"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BAYADA HOME*",
+    "skip": "200",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d61dfcaf1c933a93a00125de",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BAYADA+HOME%2A&skip=200&state=NJ&version=2.1"
+}

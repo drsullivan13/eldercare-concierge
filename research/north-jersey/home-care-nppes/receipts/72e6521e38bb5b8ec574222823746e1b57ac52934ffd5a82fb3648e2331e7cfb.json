@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1256,
+      "http_status": 200,
+      "raw": "raw/1bb4acb7f7e2dcda5422eb0f65a6115fa120bb831d1461b99577657e5a1a940c.json",
+      "retrieved_at": "2026-11-15T03:20:20.666607+00:00",
+      "sha256": "1bb4acb7f7e2dcda5422eb0f65a6115fa120bb831d1461b99577657e5a1a940c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AMAZING CAREGIVERS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "17c03f09195485be48031f52",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AMAZING+CAREGIVERS%2A&skip=0&state=NJ&version=2.1"
+}

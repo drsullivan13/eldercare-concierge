@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2566,
+      "http_status": 200,
+      "raw": "raw/ce101caf8f02b419995f2c8638a9818f58eec86b818eb30b58be88a058a0f706.json",
+      "retrieved_at": "2026-11-15T03:21:50.571788+00:00",
+      "sha256": "ce101caf8f02b419995f2c8638a9818f58eec86b818eb30b58be88a058a0f706"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "THRIVE AT*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "ad79038edc22d1963022c457",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=THRIVE+AT%2A&skip=0&state=NJ&version=2.1"
+}

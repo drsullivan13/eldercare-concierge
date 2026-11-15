@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1728,
+      "http_status": 200,
+      "raw": "raw/e37544ffd54600081379279e601339198ecc52ad260fe03398654ecd498fbea2.json",
+      "retrieved_at": "2026-11-15T03:20:30.789948+00:00",
+      "sha256": "e37544ffd54600081379279e601339198ecc52ad260fe03398654ecd498fbea2"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HEALTH CREST*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "30a8057627a5b16198ab9155",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HEALTH+CREST%2A&skip=0&state=NJ&version=2.1"
+}

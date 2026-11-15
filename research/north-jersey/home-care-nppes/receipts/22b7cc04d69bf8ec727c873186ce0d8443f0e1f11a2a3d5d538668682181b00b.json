@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5355,
+      "http_status": 200,
+      "raw": "raw/f90864a2e8624d49e1131bbf09984a303d276d95573a66d4b7fd261df1b2d1db.json",
+      "retrieved_at": "2026-11-15T03:20:38.439359+00:00",
+      "sha256": "f90864a2e8624d49e1131bbf09984a303d276d95573a66d4b7fd261df1b2d1db"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BEAUVAIS HEALTH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3bde2536bbe80e5a496885d4",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BEAUVAIS+HEALTH%2A&skip=0&state=NJ&version=2.1"
+}

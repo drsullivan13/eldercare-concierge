@@ -1,0 +1,209 @@
+{
+  "checkedDate": "2026-11-14",
+  "rosterProviders": 1074,
+  "verifiedProviders": 31,
+  "heldProviders": 1043,
+  "verifiedDistinctOfficeIdentities": 30,
+  "dispositionReasons": {
+    "exact_office_identity": 31,
+    "identity_discrepancy": 182,
+    "not_found_in_full_directory_phone_audit": 857,
+    "roster_location_hold": 4
+  },
+  "homeCareListingOccurrences": 298,
+  "broaderDirectoryListingOccurrences": 24,
+  "totalAuditedDirectoryListingOccurrences": 322,
+  "verifiedListingOccurrences": 42,
+  "comparisonCount": 345828,
+  "homeCareComparisonCount": 320052,
+  "phoneAudit": {
+    "scope": "All original raw pages, every section, all seven PDFs.",
+    "pagesScanned": 2012,
+    "rosterRowsScanned": 1074,
+    "distinctBasePhonesScanned": 1047,
+    "rosterRowsWithExtensions": 4,
+    "phoneHits": 184,
+    "homeCarePhoneHits": 160,
+    "broaderDirectoryPhoneHits": 24,
+    "unexaminedPhoneHits": 0,
+    "unexaminedSourcePages": 0,
+    "coverageByRegion": {
+      "1_1": {
+        "pagesScanned": 360,
+        "phoneHits": 32,
+        "broaderDirectoryOccurrences": 2
+      },
+      "1_2": {
+        "pagesScanned": 240,
+        "phoneHits": 12,
+        "broaderDirectoryOccurrences": 0
+      },
+      "2_1": {
+        "pagesScanned": 292,
+        "phoneHits": 26,
+        "broaderDirectoryOccurrences": 1
+      },
+      "2_2": {
+        "pagesScanned": 188,
+        "phoneHits": 21,
+        "broaderDirectoryOccurrences": 0
+      },
+      "3_1": {
+        "pagesScanned": 312,
+        "phoneHits": 47,
+        "broaderDirectoryOccurrences": 4
+      },
+      "3_2": {
+        "pagesScanned": 320,
+        "phoneHits": 32,
+        "broaderDirectoryOccurrences": 14
+      },
+      "4_2": {
+        "pagesScanned": 300,
+        "phoneHits": 14,
+        "broaderDirectoryOccurrences": 3
+      }
+    }
+  },
+  "holdReasonDefinitions": {
+    "roster_location_hold": "The input roster flags an unresolved location. This blocks verification even if all identity fields match.",
+    "identity_discrepancy": "At least one exact organization, base phone, or street-and-city anchor exists, but no organization listing passes every identity field. Base-phone discovery does not drop extensions for verification.",
+    "not_found_in_full_directory_phone_audit": "No anchor exists in home-care listings and no roster base phone occurs anywhere in all seven PDFs. Every strict match must share a phone. This is not a nonparticipation finding."
+  },
+  "coverage": {
+    "1_1": {
+      "countiesAsPublished": [
+        "Bergen",
+        "Warren"
+      ],
+      "sourceUrl": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_1_Eng_Spa_R.PDF",
+      "sourceDate": "2026-10-06",
+      "pdfPageCount": 360,
+      "retainedListingPages": 22,
+      "homeCareListings": 49,
+      "homeCarePhysicalPages": [
+        211,
+        212,
+        220,
+        282,
+        283,
+        284,
+        285
+      ]
+    },
+    "1_2": {
+      "countiesAsPublished": [
+        "Passaic",
+        "Sussex"
+      ],
+      "sourceUrl": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_1_2_Eng_Spa_R.PDF",
+      "sourceDate": "2026-10-06",
+      "pdfPageCount": 240,
+      "retainedListingPages": 16,
+      "homeCareListings": 29,
+      "homeCarePhysicalPages": [
+        129,
+        130,
+        179,
+        180,
+        181
+      ]
+    },
+    "2_1": {
+      "countiesAsPublished": [
+        "Essex"
+      ],
+      "sourceUrl": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_1_Eng_Spa_R.PDF",
+      "sourceDate": "2026-10-06",
+      "pdfPageCount": 292,
+      "retainedListingPages": 22,
+      "homeCareListings": 49,
+      "homeCarePhysicalPages": [
+        167,
+        168,
+        169,
+        222,
+        224,
+        225,
+        226
+      ]
+    },
+    "2_2": {
+      "countiesAsPublished": [
+        "Hudson"
+      ],
+      "sourceUrl": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_2_2_Eng_Spa_R.PDF",
+      "sourceDate": "2026-10-06",
+      "pdfPageCount": 188,
+      "retainedListingPages": 13,
+      "homeCareListings": 29,
+      "homeCarePhysicalPages": [
+        102,
+        103,
+        129,
+        130
+      ]
+    },
+    "3_1": {
+      "countiesAsPublished": [
+        "Middlesex"
+      ],
+      "sourceUrl": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_1_Eng_Spa_R.PDF",
+      "sourceDate": "2026-10-06",
+      "pdfPageCount": 312,
+      "retainedListingPages": 21,
+      "homeCareListings": 68,
+      "homeCarePhysicalPages": [
+        186,
+        187,
+        188,
+        242,
+        243,
+        244,
+        245
+      ]
+    },
+    "3_2": {
+      "countiesAsPublished": [
+        "Morris",
+        "Union"
+      ],
+      "sourceUrl": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_3_2_Eng_Spa_R.PDF",
+      "sourceDate": "2026-10-06",
+      "pdfPageCount": 320,
+      "retainedListingPages": 26,
+      "homeCareListings": 52,
+      "homeCarePhysicalPages": [
+        175,
+        176,
+        185,
+        186,
+        245,
+        246,
+        248,
+        249
+      ]
+    },
+    "4_2": {
+      "countiesAsPublished": [
+        "Monmouth",
+        "Somerset"
+      ],
+      "sourceUrl": "https://www.fideliscarenj.com/content/dam/centene/wellcare/nj/pdfs/directories/NJ_Caid_Provider_Directory_Region_4_2_Eng_Spa_R.PDF",
+      "sourceDate": "2026-10-06",
+      "pdfPageCount": 300,
+      "retainedListingPages": 23,
+      "homeCareListings": 22,
+      "homeCarePhysicalPages": [
+        163,
+        164,
+        173,
+        230,
+        231,
+        232,
+        233
+      ]
+    }
+  },
+  "caveat": "Historical Fidelis Care NJ FamilyCare directory listing evidence only. Not evidence of current eligibility, an active contract, authorization, availability, unlisted services, or guaranteed insurance coverage. Not found is not nonparticipation. Other NJ FamilyCare plans were not searched."
+}

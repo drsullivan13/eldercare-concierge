@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1204,
+      "http_status": 200,
+      "raw": "raw/f2d42f133ebe8642c125e52271649fe407e6dda01ba24d9a3b5434b2b7a937d3.json",
+      "retrieved_at": "2026-11-15T03:21:54.578672+00:00",
+      "sha256": "f2d42f133ebe8642c125e52271649fe407e6dda01ba24d9a3b5434b2b7a937d3"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "EDEN TOUCH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "b2f79a435476227c88fc245a",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=EDEN+TOUCH%2A&skip=0&state=NJ&version=2.1"
+}

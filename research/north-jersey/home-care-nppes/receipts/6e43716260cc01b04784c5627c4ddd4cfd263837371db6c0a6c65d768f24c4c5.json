@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3973,
+      "http_status": 200,
+      "raw": "raw/e5dcaf0f50d8c7a318af2fc1cab6d3d7f6051c672317610e33f73a1cbb08893c.json",
+      "retrieved_at": "2026-11-15T03:20:46.049990+00:00",
+      "sha256": "e5dcaf0f50d8c7a318af2fc1cab6d3d7f6051c672317610e33f73a1cbb08893c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AN ANGEL*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "52e6d3678eb5d18d4680ce31",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AN+ANGEL%2A&skip=0&state=NJ&version=2.1"
+}

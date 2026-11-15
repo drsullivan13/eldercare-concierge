@@ -276,6 +276,33 @@ class PublicationTests(unittest.TestCase):
         dump(self.root, str(path.relative_to(self.root)), policy)
         self.rejected(lambda _: None)
 
+    def test_denied_caring_aggregate_cannot_replace_any_released_evidence(self):
+        self.assertEqual(self.run_cli(self.batch).returncode, 0)
+        before = {p: p.read_bytes() for p in (self.root / release.AREA).rglob("*") if p.is_file()}
+        before[self.root / release.OUTPUT] = (self.root / release.OUTPUT).read_bytes()
+        policy_path = "research/north-jersey/reviews/source-access.json"
+        policy = json.loads((self.root / policy_path).read_bytes())
+        policy["sources"].append({
+            "host": "caring.com", "access_decision": "restricted_no_automation",
+            "basis": "Synthetic denial, matching the production source gate",
+        })
+        dump(self.root, policy_path, policy)
+        batch = deepcopy(self.batch)
+        obs = batch["observations"][0]
+        caring = "https://www.caring.com/senior-care/new-jersey/morristown/synthetic-office"
+        obs.update(checkedUrl=caring, canonicalUrl=caring, effectiveUrl=caring,
+                   originalUrl=None, publisher="Caring.com", sourceFamily="caring",
+                   syndication={"status": "original", "family": None}, accounts=[])
+        obs["identity"]["url"] = caring
+        obs["window"].update(visibleCount=0, observations=[], coverage="partial",
+                             stopReason="Synthetic aggregate-only observation")
+        result = self.run_cli(batch)
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("excluded by source-access policy", result.stderr)
+        after = {p: p.read_bytes() for p in (self.root / release.AREA).rglob("*") if p.is_file()}
+        after[self.root / release.OUTPUT] = (self.root / release.OUTPUT).read_bytes()
+        self.assertEqual(before, after)
+
     def test_missing_and_malformed_access_registry(self):
         path = self.root / "research/north-jersey/reviews/source-access.json"
         path.unlink()
@@ -358,6 +385,37 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         account = self.published()["providers"][PID]["catalog"]["accounts"][0]
         self.assertEqual((account["date"], account["datePrecision"]), ("2025", "year"))
+
+
+class ReleasedEvidenceTests(unittest.TestCase):
+    def test_initial_immutable_batch_and_every_released_item_are_preserved(self):
+        root = SCRIPT.resolve().parents[2]
+        digest = "9ee38a254d29849c1397f4095d39cb48964de8923c972c7aee0f33f6f94627ff"
+        raw = (root / release.AREA / "batches" / (digest + ".json")).read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), digest)
+        initial = release.parse(raw)
+        inputs = release.Inputs(root)
+        offices = release.office_roster(inputs)
+        errors = []
+        old = release.historical()
+        _, policy = old.source_access(root, errors)
+        self.assertEqual(errors, [])
+        _, expected, _ = release.validate_batch(initial, offices, policy, old)
+        manifest = inputs.read(release.AREA / "manifest.json")
+        current = inputs.read(manifest["inputs"]["reviewedInput"]["path"])
+        self.assertEqual(hashlib.sha256(inputs.data(manifest["inputs"]["reviewedInput"]["path"])).hexdigest(),
+                         manifest["inputs"]["reviewedInput"]["sha256"])
+        for observation in initial["observations"]:
+            self.assertIn(observation, current["observations"])
+        published = inputs.read(release.OUTPUT)["providers"]
+        for pid, patch in expected.items():
+            self.assertEqual(published[pid]["identity"], patch["identity"])
+            for key in ("sources", "reviewAggregates", "reviews", "reviewSamples", "notes"):
+                for item in patch[key]:
+                    self.assertIn(item, published[pid][key], (pid, key))
+            for key in ("accounts", "sources", "notes"):
+                for item in patch["catalog"][key]:
+                    self.assertIn(item, published[pid]["catalog"][key], (pid, "catalog", key))
 
 
 if __name__ == "__main__":

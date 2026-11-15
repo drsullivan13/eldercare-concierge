@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2520,
+      "http_status": 200,
+      "raw": "raw/9ba4aec8ccad315bd82e98094fe5bf71fc0efbe216980f956073906fe2e83a36.json",
+      "retrieved_at": "2026-11-15T03:20:30.006926+00:00",
+      "sha256": "9ba4aec8ccad315bd82e98094fe5bf71fc0efbe216980f956073906fe2e83a36"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "OAK DYNAMIC*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2ecb88ce444e48730a8ca1c1",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=OAK+DYNAMIC%2A&skip=0&state=NJ&version=2.1"
+}

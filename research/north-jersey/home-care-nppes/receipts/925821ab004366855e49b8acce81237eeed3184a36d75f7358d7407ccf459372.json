@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1421,
+      "http_status": 200,
+      "raw": "raw/eeac5980745cb9f96c83c572f57fee97c0087569a8b972b79cb0075d00ecc54d.json",
+      "retrieved_at": "2026-11-15T03:22:54.062839+00:00",
+      "sha256": "eeac5980745cb9f96c83c572f57fee97c0087569a8b972b79cb0075d00ecc54d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SOLOFF*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "ffa8e3ee87040718252053ae",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SOLOFF%2A&skip=0&state=NJ&version=2.1"
+}

@@ -118,6 +118,37 @@ export function publicLocationResearch(
     dailyLife: data.dailyLife,
     nursingStaffing: data.nursingStaffing,
     familyExperience: data.familyExperience,
+    ...(data.registrationFacts && {
+      registrationFacts: data.registrationFacts,
+    }),
+    ...(data.officeIdentifiers && {
+      officeIdentifiers: data.officeIdentifiers,
+    }),
+    ...(data.officeDirectories?.length && {
+      officeDirectories: data.officeDirectories.map((directory) => ({
+        providerId: directory.providerId,
+        office: {
+          name: directory.office.name,
+          address: directory.office.address,
+        },
+        source: {
+          id: directory.source.id,
+          title: directory.source.title,
+          url: directory.source.url,
+          publisher: directory.source.publisher,
+          checkedAt: directory.source.checkedAt,
+          publishedAt: directory.source.publishedAt,
+          kind: directory.source.kind,
+          access: directory.source.access,
+        },
+        services: directory.services,
+        paymentOptions: directory.paymentOptions,
+        awards: directory.awards.map(({ name, years }) => ({ name, years })),
+        ...(directory.accreditations?.length && {
+          accreditations: directory.accreditations,
+        }),
+      })),
+    }),
     facebookResearch: facebook && {
       providerId: facebook.providerId,
       status: facebook.status,

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4002,
+      "http_status": 200,
+      "raw": "raw/6a24bcbeff59e9336608e1ff45404e5767e069d3305ecf7017732416e2d96dcc.json",
+      "retrieved_at": "2026-11-15T03:21:13.531105+00:00",
+      "sha256": "6a24bcbeff59e9336608e1ff45404e5767e069d3305ecf7017732416e2d96dcc"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CARING PEOPLE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "80804f007641a7156b418031",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CARING+PEOPLE%2A&skip=0&state=NJ&version=2.1"
+}

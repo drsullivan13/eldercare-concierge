@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1274,
+      "http_status": 200,
+      "raw": "raw/383b3530af2e567accc508aa7a1eac3a80c360f9175950716ae6c1559e8ae5fd.json",
+      "retrieved_at": "2026-11-15T03:20:53.035300+00:00",
+      "sha256": "383b3530af2e567accc508aa7a1eac3a80c360f9175950716ae6c1559e8ae5fd"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AA QUALITY*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "63c1230cfd2f6214c311be20",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AA+QUALITY%2A&skip=0&state=NJ&version=2.1"
+}

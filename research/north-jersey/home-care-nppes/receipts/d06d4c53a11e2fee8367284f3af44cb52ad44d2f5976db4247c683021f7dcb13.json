@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1212,
+      "http_status": 200,
+      "raw": "raw/d8e46987970898e9cd68d43ccff29123c7975b0a963ff0c5053cdffd9a2f6b31.json",
+      "retrieved_at": "2026-11-15T03:22:02.118856+00:00",
+      "sha256": "d8e46987970898e9cd68d43ccff29123c7975b0a963ff0c5053cdffd9a2f6b31"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NJ LIFECARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "bbc6c4558591f98e9f5e70b8",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NJ+LIFECARE%2A&skip=0&state=NJ&version=2.1"
+}

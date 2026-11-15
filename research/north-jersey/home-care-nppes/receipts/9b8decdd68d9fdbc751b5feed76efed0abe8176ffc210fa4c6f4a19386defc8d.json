@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1403,
+      "http_status": 200,
+      "raw": "raw/f6e329a8f33bb8f3f9f6125bc815ea9363383631345df44b0fb75efbd5c46751.json",
+      "retrieved_at": "2026-11-15T03:20:52.734843+00:00",
+      "sha256": "f6e329a8f33bb8f3f9f6125bc815ea9363383631345df44b0fb75efbd5c46751"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "STATEWIDE FAMILY*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "63746a7cb165ffcb3e9f5c38",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=STATEWIDE+FAMILY%2A&skip=0&state=NJ&version=2.1"
+}

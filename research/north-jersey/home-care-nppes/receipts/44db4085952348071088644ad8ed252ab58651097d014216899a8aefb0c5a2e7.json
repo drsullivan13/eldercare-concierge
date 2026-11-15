@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1351,
+      "http_status": 200,
+      "raw": "raw/1112c4b7428491985ba12de3b6d8ba33dd57f5c8499c695e263768bb68b9c127.json",
+      "retrieved_at": "2026-11-15T03:22:00.485530+00:00",
+      "sha256": "1112c4b7428491985ba12de3b6d8ba33dd57f5c8499c695e263768bb68b9c127"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AVILO CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "b932fd46b140117ecd50bf5e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AVILO+CARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 38859,
+      "http_status": 200,
+      "raw": "raw/712131398df80ee6c2feaa5ae64305d430779d7fb220fd6533b8d839594add97.json",
+      "retrieved_at": "2026-11-15T03:20:28.912786+00:00",
+      "sha256": "712131398df80ee6c2feaa5ae64305d430779d7fb220fd6533b8d839594add97"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HOME HELPERS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2bcef513d430484daedf6d3f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HOME+HELPERS%2A&skip=0&state=NJ&version=2.1"
+}

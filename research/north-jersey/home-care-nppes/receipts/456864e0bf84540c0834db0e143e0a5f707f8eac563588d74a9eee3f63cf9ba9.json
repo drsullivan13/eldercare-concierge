@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 15380,
+      "http_status": 200,
+      "raw": "raw/ff43da5094b23e4869fccb8015106e0956440d14a3b3cd4384b9870c32807208.json",
+      "retrieved_at": "2026-11-15T03:20:53.958248+00:00",
+      "sha256": "ff43da5094b23e4869fccb8015106e0956440d14a3b3cd4384b9870c32807208"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "FIRSTLIGHT HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "64faebb14caccd1b7e47583c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=FIRSTLIGHT+HOME%2A&skip=0&state=NJ&version=2.1"
+}

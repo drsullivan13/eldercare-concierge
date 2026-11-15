@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2773,
+      "http_status": 200,
+      "raw": "raw/f544854d750c107773abd10d97e49249d9494c0ba1de4bfbeb59fabbeb2eb9de.json",
+      "retrieved_at": "2026-11-15T03:20:23.250704+00:00",
+      "sha256": "f544854d750c107773abd10d97e49249d9494c0ba1de4bfbeb59fabbeb2eb9de"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CALIBERHEALTH PLUS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2067d851e2af640bf25dc0f6",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CALIBERHEALTH+PLUS%2A&skip=0&state=NJ&version=2.1"
+}

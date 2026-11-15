@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2321,
+      "http_status": 200,
+      "raw": "raw/4be080d7b729b8c787baa7bf30c1b33e41e3f51d0ac6c14237f8a24167492ebf.json",
+      "retrieved_at": "2026-11-15T03:20:43.703489+00:00",
+      "sha256": "4be080d7b729b8c787baa7bf30c1b33e41e3f51d0ac6c14237f8a24167492ebf"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ROKAH LLC*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "4989dec04239a0cdb1d4e1f3",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ROKAH+LLC%2A&skip=0&state=NJ&version=2.1"
+}

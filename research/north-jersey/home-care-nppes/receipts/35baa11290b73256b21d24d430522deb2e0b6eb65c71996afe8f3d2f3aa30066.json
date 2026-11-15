@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4055,
+      "http_status": 200,
+      "raw": "raw/80f465c0b422d1b7813174b913c0cb6fd57e377254d05f51f322941c6ea7b7c2.json",
+      "retrieved_at": "2026-11-15T03:20:29.689855+00:00",
+      "sha256": "80f465c0b422d1b7813174b913c0cb6fd57e377254d05f51f322941c6ea7b7c2"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "TENDER HANDS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2d8365a1f1bc6e73f8c901a3",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=TENDER+HANDS%2A&skip=0&state=NJ&version=2.1"
+}

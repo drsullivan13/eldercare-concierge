@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1206,
+      "http_status": 200,
+      "raw": "raw/0ac6ef527c05929a805464861205140437df3ab5bfad1fd6dd47d5fe30d189ac.json",
+      "retrieved_at": "2026-11-15T03:21:06.360959+00:00",
+      "sha256": "0ac6ef527c05929a805464861205140437df3ab5bfad1fd6dd47d5fe30d189ac"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SUNNY CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "74b1e404adab4efda200b38f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SUNNY+CARE%2A&skip=0&state=NJ&version=2.1"
+}

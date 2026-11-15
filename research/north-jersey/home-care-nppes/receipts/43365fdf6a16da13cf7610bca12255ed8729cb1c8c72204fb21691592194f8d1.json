@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1457,
+      "http_status": 200,
+      "raw": "raw/ba09684664ec5fd5298e6a1addfeb6d341021a272c7b1cca0d1b652d302dbcbb.json",
+      "retrieved_at": "2026-11-15T03:21:53.830083+00:00",
+      "sha256": "ba09684664ec5fd5298e6a1addfeb6d341021a272c7b1cca0d1b652d302dbcbb"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ALAYIA HELPING*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "b220e0a8323febabb352349b",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ALAYIA+HELPING%2A&skip=0&state=NJ&version=2.1"
+}

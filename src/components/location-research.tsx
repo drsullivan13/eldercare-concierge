@@ -5,6 +5,8 @@ import { CalendarClock, Check, ExternalLink, Plus } from "lucide-react";
 import { evidenceDate as date } from "./evidence-date";
 import { PropertyOverview } from "./property-overview";
 import { DailyLife } from "./daily-life";
+import { HomeCareOfficeIdentifiers } from "./home-care-office-identifiers";
+import { OfficeDirectory } from "./office-directory";
 import { IndividualReviewList } from "./individual-review-list";
 import { ExperienceExplanation } from "./experience-explanation";
 import type {
@@ -272,7 +274,12 @@ export function LocationResearch({
           />
         </div>
       )}
-      {pane === "overview" && <PropertyOverview provider={provider} />}
+      {pane === "overview" && (
+        <PropertyOverview
+          provider={provider}
+          registrationFacts={data?.registrationFacts}
+        />
+      )}
       {pane === "details" && catalogServices.length > 0 && (
         <div className="catalog-services">
           <h4>Listed services and care settings</h4>
@@ -375,6 +382,20 @@ export function LocationResearch({
                   />
                 </section>
               </>
+            )}
+            {pane === "details" &&
+              data.officeDirectories?.map((directory) => (
+                <OfficeDirectory
+                  key={directory.source.id}
+                  data={directory}
+                  uid={uid + "-" + directory.source.id}
+                />
+              ))}
+            {pane === "details" && data.officeIdentifiers && (
+              <HomeCareOfficeIdentifiers
+                data={data.officeIdentifiers}
+                uid={uid}
+              />
             )}
             {pane === "details" && (
               <section aria-label="Availability">

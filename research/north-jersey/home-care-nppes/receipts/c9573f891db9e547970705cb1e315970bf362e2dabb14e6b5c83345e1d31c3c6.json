@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 17540,
+      "http_status": 200,
+      "raw": "raw/174471681e42e4cd32ed4d5ec6a8f247caea81f414b0f9c1ffba56ad46e6ec4d.json",
+      "retrieved_at": "2026-11-15T03:20:24.260317+00:00",
+      "sha256": "174471681e42e4cd32ed4d5ec6a8f247caea81f414b0f9c1ffba56ad46e6ec4d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "PREFERRED CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "22d783827bd2e3a9ffe0439e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=PREFERRED+CARE%2A&skip=0&state=NJ&version=2.1"
+}

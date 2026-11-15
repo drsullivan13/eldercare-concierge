@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1346,
+      "http_status": 200,
+      "raw": "raw/9f739da15911ab6ec99c2b6fa1b2786e5ef05cb4f170b98f341e066a22eb1228.json",
+      "retrieved_at": "2026-11-15T03:20:58.338554+00:00",
+      "sha256": "9f739da15911ab6ec99c2b6fa1b2786e5ef05cb4f170b98f341e066a22eb1228"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "247 HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "6b52e133f5add44a97dc3099",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=247+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

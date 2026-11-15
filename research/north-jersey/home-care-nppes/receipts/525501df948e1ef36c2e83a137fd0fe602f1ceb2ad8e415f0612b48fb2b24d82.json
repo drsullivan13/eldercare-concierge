@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1650,
+      "http_status": 200,
+      "raw": "raw/d20a6450390e4812799955e96714052d9e42bb7ee5f76ad8efad35596b57ef46.json",
+      "retrieved_at": "2026-11-15T03:20:52.306205+00:00",
+      "sha256": "d20a6450390e4812799955e96714052d9e42bb7ee5f76ad8efad35596b57ef46"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "STONEBRIAR HEALTH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "62feb413c5b2b73a1feeb97e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=STONEBRIAR+HEALTH%2A&skip=0&state=NJ&version=2.1"
+}

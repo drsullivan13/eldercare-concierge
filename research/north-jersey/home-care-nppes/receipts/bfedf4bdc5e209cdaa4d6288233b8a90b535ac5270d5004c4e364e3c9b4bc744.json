@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2487,
+      "http_status": 200,
+      "raw": "raw/a1d09229c3b6c16fde84ca16731e24ed0180755e7b8d338762765ecb27846d3e.json",
+      "retrieved_at": "2026-11-15T03:22:09.542013+00:00",
+      "sha256": "a1d09229c3b6c16fde84ca16731e24ed0180755e7b8d338762765ecb27846d3e"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "365 HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "c3242f37185ba2a42a5a8a40",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=365+HOME%2A&skip=0&state=NJ&version=2.1"
+}

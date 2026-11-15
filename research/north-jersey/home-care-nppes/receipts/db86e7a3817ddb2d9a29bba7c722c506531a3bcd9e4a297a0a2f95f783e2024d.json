@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5289,
+      "http_status": 200,
+      "raw": "raw/92d58336dd48be1560cf486db3efa22c73a6b1a0b651771e742040c515054e84.json",
+      "retrieved_at": "2026-11-15T03:21:56.241110+00:00",
+      "sha256": "92d58336dd48be1560cf486db3efa22c73a6b1a0b651771e742040c515054e84"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "LIBERTY MEDICAL*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "b616a0d297d27ba2ae4b0e76",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=LIBERTY+MEDICAL%2A&skip=0&state=NJ&version=2.1"
+}

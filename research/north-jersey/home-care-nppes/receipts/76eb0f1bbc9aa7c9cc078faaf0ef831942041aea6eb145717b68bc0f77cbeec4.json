@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1693,
+      "http_status": 200,
+      "raw": "raw/f0780f14f7b50620b01006c2fb0a07f4de08a0de6e16319e3f2e82b5241f5dda.json",
+      "retrieved_at": "2026-11-15T03:22:29.579462+00:00",
+      "sha256": "f0780f14f7b50620b01006c2fb0a07f4de08a0de6e16319e3f2e82b5241f5dda"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ZION GRACE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d96b84858e819f83232211ab",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ZION+GRACE%2A&skip=0&state=NJ&version=2.1"
+}

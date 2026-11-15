@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1406,
+      "http_status": 200,
+      "raw": "raw/b1f25276c7dff0d54e4d5d0c6861c4d37f7ba67652fe47fe9f9cc292af1ccdac.json",
+      "retrieved_at": "2026-11-15T03:21:49.644809+00:00",
+      "sha256": "b1f25276c7dff0d54e4d5d0c6861c4d37f7ba67652fe47fe9f9cc292af1ccdac"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CEDAS HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "acca839e58f8965bc2f5c061",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CEDAS+HOME%2A&skip=0&state=NJ&version=2.1"
+}

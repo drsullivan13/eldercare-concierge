@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5299,
+      "http_status": 200,
+      "raw": "raw/3358ee81de243b015156242ed1cd36f1395579e06f12bcef7cdd1756749239f3.json",
+      "retrieved_at": "2026-11-15T03:21:22.745780+00:00",
+      "sha256": "3358ee81de243b015156242ed1cd36f1395579e06f12bcef7cdd1756749239f3"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HOLISTIC CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "929ac11e1a5909feec770bbb",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HOLISTIC+CARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4005,
+      "http_status": 200,
+      "raw": "raw/f2017116237a372122a4134a7688e9415e4e2495be64d3886c7b18ceb988af09.json",
+      "retrieved_at": "2026-11-15T03:21:15.640029+00:00",
+      "sha256": "f2017116237a372122a4134a7688e9415e4e2495be64d3886c7b18ceb988af09"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HARMONY HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "839c2af6f1393b5ea2e23817",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HARMONY+HOME%2A&skip=0&state=NJ&version=2.1"
+}

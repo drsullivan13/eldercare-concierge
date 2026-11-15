@@ -42,6 +42,7 @@ const forbiddenText =
 // An official business name may contain a duration (e.g. "365 Days of Care Healthcare Agency LLC").
 // Remove only those exact names; every surrounding sentence and every score field is still checked.
 const literalBusinessNames = [
+  "365 Days of Care Healthcare Agency",
   ...new Set(
     markets.flatMap((market) =>
       market.providers

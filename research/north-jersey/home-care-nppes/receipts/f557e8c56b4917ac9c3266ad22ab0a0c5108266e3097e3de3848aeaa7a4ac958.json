@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1327,
+      "http_status": 200,
+      "raw": "raw/8e57d6bb46dd6e6c98ed87e8842f0b8ee64d7818879286be526cfb63e2044167.json",
+      "retrieved_at": "2026-11-15T03:20:25.720405+00:00",
+      "sha256": "8e57d6bb46dd6e6c98ed87e8842f0b8ee64d7818879286be526cfb63e2044167"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NEST ELITE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "24c428cd663e2095c8cbd347",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NEST+ELITE%2A&skip=0&state=NJ&version=2.1"
+}

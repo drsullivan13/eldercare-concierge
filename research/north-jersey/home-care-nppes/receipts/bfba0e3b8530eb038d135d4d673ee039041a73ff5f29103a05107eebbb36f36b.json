@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2772,
+      "http_status": 200,
+      "raw": "raw/096309e777762193bcd02ea1017c7b576981664103a09588357643cf1a2ce150.json",
+      "retrieved_at": "2026-11-15T03:22:43.149763+00:00",
+      "sha256": "096309e777762193bcd02ea1017c7b576981664103a09588357643cf1a2ce150"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "MOBILITY SPECIAL*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "e932999bdf4013e84c286ada",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=MOBILITY+SPECIAL%2A&skip=0&state=NJ&version=2.1"
+}

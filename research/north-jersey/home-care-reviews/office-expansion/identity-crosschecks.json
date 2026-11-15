@@ -1,0 +1,237 @@
+{
+  "family": "google",
+  "held": {
+    "bayada-assistive-care-state-programs-elizabeth": [
+      {
+        "contentSha256": "bfcec94bfe620c8f722901f5b67877a89d8e1fc3df2550e45d232ffebc809545",
+        "findings": "Official site matches 100 Jefferson Avenue Suite 302 and personal/companion care.",
+        "sourceUrl": "https://www.bayada.com/office/nj/elizabeth/personal-and-companion-care/union-county-10061"
+      },
+      {
+        "contentSha256": "cedc1f0b8a5e76b4c1cdb67cb5b3b7081f1b094b0ec31a8cd16c8fdc74208375",
+        "findings": "Exact suite connected to HP0015336 but the active state registration is located in Pennsauken outside the pilot. No interchangeable active Elizabeth office.",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1992737738"
+      },
+      {
+        "contentSha256": "84d6c07d2dcf002720b3f47d081fb2a7784b82277c37ff49abe112507283f2ef",
+        "findings": "Additional distinct NPI shares same suite and phone with no NJ license in taxonomy.",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1770343147"
+      }
+    ],
+    "joy-bringers-home-care": [
+      {
+        "contentSha256": "e558ac929555ee90b173f2d2f14d72ebc52ca162a6db485d77f32eac20222619",
+        "findings": "Separate East Brunswick practice 6 Auer Court Suite G; NPPES does not assign a state license ID.",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1295649341"
+      },
+      {
+        "contentSha256": "5dff3581a5664706cb3f43e5c38bad0c3bcaaede4bcc25fa45aee18abae842a6",
+        "findings": "Separate Edison practice record at NJ-27 suite 117 also lacks license ID, uses same shared phone as East Brunswick. NJ legal name at Edison and Oakhurst cannot identify which active unit received East Brunswick reviews.",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1023768165"
+      }
+    ],
+    "promise-care-of-essex-county-new-jersey": "Clinical home health listing; matching corporate name does not establish a nonmedical HCSF branch."
+  },
+  "observations": [
+    {
+      "checkedDate": "2026-11-14",
+      "eligible": true,
+      "hold": null,
+      "populationReview": [
+        {
+          "date": "2026-03",
+          "id": "439998",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-01",
+          "id": "439997",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2025-07",
+          "id": "439999",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2021-10",
+          "id": "440001",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2021-08",
+          "id": "440000",
+          "relationship": "family",
+          "sentiment": "positive"
+        }
+      ],
+      "providerId": "north-jersey-hp-hp0015340",
+      "reportedCount": 44,
+      "reportedRating": 4.9,
+      "sourceBodySha256": "f1bb3f8a336b8b8f424f4592812cfddde32dba58ebc18ee81fabfa785c5f8fcc",
+      "sourceStreet": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Livingston",
+        "addressRegion": "New Jersey",
+        "postalCode": "07039",
+        "streetAddress": "651 Old W Mt Pleasant Ave Ste 175"
+      },
+      "sourceUrl": "https://www.mylivingchoice.com/property/bayada-assistive-care-livingston",
+      "stateDBA": "",
+      "stateRow": 583
+    },
+    {
+      "checkedDate": "2026-11-14",
+      "eligible": true,
+      "hold": null,
+      "populationReview": [
+        {
+          "date": "2026-05",
+          "id": "440214",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-05",
+          "id": "440211",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-04",
+          "id": "440212",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2025-12",
+          "id": "440213",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2025-10",
+          "id": "440215",
+          "relationship": "family",
+          "sentiment": "positive"
+        }
+      ],
+      "providerId": "north-jersey-hp-hp0367200",
+      "reportedCount": 44,
+      "reportedRating": 5,
+      "sourceBodySha256": "2bc60bfd22911bb10f1c11b1225dfd19e7c709f2fff3efc70ecc0c931cd12d64",
+      "sourceStreet": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "New Brunswick",
+        "addressRegion": "New Jersey",
+        "postalCode": "08901",
+        "streetAddress": "37 Easton Ave Ste 200"
+      },
+      "sourceUrl": "https://www.mylivingchoice.com/property/home-sure-home-care",
+      "stateDBA": "",
+      "stateRow": 1848
+    },
+    {
+      "checkedDate": "2026-11-14",
+      "eligible": false,
+      "hold": "The branch changed ownership in 2023 and some reviews explicitly describe care spanning two operators; no operator-specific aggregate denominator is public. Only records referencing current or repeat service in 2026 are published.",
+      "populationReview": [
+        {
+          "date": "2026-04",
+          "id": "439654",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-04",
+          "id": "439652",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-03",
+          "id": "439651",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-03",
+          "id": "439653",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-03",
+          "id": "439655",
+          "relationship": "family",
+          "sentiment": "positive"
+        }
+      ],
+      "providerId": "north-jersey-hp-hp0358100",
+      "reportedCount": 52,
+      "reportedRating": 4.6,
+      "sourceBodySha256": "6c5ad01e11effb0b83b7857061cff1abad35eb06a22cc1120153f31036f08f81",
+      "sourceStreet": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "South Orange Village",
+        "addressRegion": "New Jersey",
+        "postalCode": "07079",
+        "streetAddress": "76 S Orange Ave #305"
+      },
+      "sourceUrl": "https://www.mylivingchoice.com/property/homewatch-caregivers-of-south-orange",
+      "stateDBA": "",
+      "stateRow": 2128
+    }
+  ],
+  "reviewedOn": "2026-11-14",
+  "sourceContexts": {
+    "north-jersey-hp-hp0015340": [
+      {
+        "contentSha256": "993dfef677f8152f81a704bf1cd8e32bbb7a620d8e81a40b4ce4042fab300be7",
+        "findings": "Personal and Companion Care office 10395 at 651 Old Mount Pleasant Avenue Suite 175. Official service name is Assistive Care in the published page metadata. Daily living assistance and nurse coordination are stated by this office.",
+        "sourceUrl": "https://www.bayada.com/office/nj/livingston/personal-and-companion-care/essex-county-10395"
+      },
+      {
+        "contentSha256": "73872a210ef21967cd671abc9501f830b748cdc833e11c1eeb09ff48937ce529",
+        "findings": "NPPES identifies BAYADA HOME HEALTH CARE INC at identical Livingston address and suite, explicitly listing NJ HP0015340. Two reviews mention hospice; both describe aides/private caregivers in concert with it. No hospice-specific score transferred.",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1952672727"
+      }
+    ],
+    "north-jersey-hp-hp0358100": [
+      {
+        "contentSha256": "286231dde48fc6a3a83c9f7ac2ed7278a2f854c815dbb77dd18a8f0efcdb96c1",
+        "findings": "NPPES registered in November 2023 gives current legal KKA VENTURES LLC DBA HOMEWATCH CAREGIVERS OF SOUTH ORANGE and registered-office phone 973-810-0110 at the reviewed 76 S Orange Ave Ste 305. NJ register lists 75 W South Orange Ave Suite 203 under the same exact legal name and phone.",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1558135442"
+      },
+      {
+        "findings": "Official contact page lists the exact reviewed 76 South Orange Avenue Suite 305.",
+        "sourceUrl": "https://www.homewatchcaregivers.com/south-orange/contact-us/"
+      },
+      {
+        "contentSha256": "5c5db1419ab07cbc24234c782376a993dbd899b3f4efeed62e5fa93d10d2d0c4",
+        "findings": "Transaction broker identifies acquisition of the South Orange franchise from its prior owner under the 2023 heading. Unknown part of all-time 52-rating population predates transfer. Keep score withheld; dated post-sale customer accounts only.",
+        "sourceUrl": "https://www.osbornehomecare.com/completed-transactions/franchises/"
+      }
+    ],
+    "north-jersey-hp-hp0367200": [
+      {
+        "contentSha256": "f83eb3cf234256a240d209443ace87b8b15e02584633f8e1458e2ecac78f3f6b",
+        "findings": "Office itself explicitly gives reviewed 37 Easton Avenue 200 AND its unique agency license HP0367200. The same legal name, street and town are present in the NJ register and NPPES. Suite discrepancy retained; no inferred move date and no affiliation with the other license at suite 200.",
+        "sourceUrl": "https://www.homesurehomecare.com/home-health-aide"
+      },
+      {
+        "contentSha256": "c44fef43777fc77922aed557311fb94d4bfada2ce0f8653ffa9caf131b0462aa",
+        "findings": "Federal legal name HOME SURE HOME CARE LLC and location 37 EASTON AVE #225 corroborate the current NJ registry version. The provider uses this single license for its own published suite 200 page.",
+        "sourceUrl": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1871312769"
+      }
+    ]
+  },
+  "stateRegistryWorkbookSha256": "0bea21d668c3fd62e97b0ba36eede5785fcc69be146a5d8302bd9e05609fd489"
+}

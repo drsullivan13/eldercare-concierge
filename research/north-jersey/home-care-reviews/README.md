@@ -1,8 +1,10 @@
 # North Jersey home-care reviews
 
-The initial office release contains 57 original summaries across 15 registered home-care offices. Four source-reported Google averages qualify as consumer aggregates. Two meet Harbor’s existing sample requirement for a public index: FirstLight Home Care of Piscataway at its Somerset office (39 ratings), and SYNERGY HomeCare in Teaneck (58). Smaller samples remain available on their office pages. Mixed professional or employee populations, unsupported branches and unrelated clinical reviews are withheld. Families can still read an individually attributable account when the overall rating population is unclear.
+The expanded release contains 330 readable, source-linked accounts across 96 registered offices. Across the full 1,074-office dashboard, 37 offices have an eligible published review average and 11 meet Harbor’s sample and population requirements for a numeric experience score. These 11 source averages report 615 ratings in total. The score formula is unchanged.
 
-The November 14, 2026 acquisition audit covers 72 distinct city directory pages and 122 public office profiles, with 470 displayed review rows before editorial selection. A city redirect or an unsuccessful match is a coverage gap. A Google aggregate shown by MyLivingChoice is one Google source family. The displayed review window is often much smaller than the published rating count. The wider catalog includes offices for which no family account has been released.
+The original release had 57 summaries across 15 offices and two scores. A second inspection of every visible row on the original 122 pages, 146 additional town checks, a statewide publisher-sitemap match against the registered names and DBAs, and targeted operator and federal identity checks expanded coverage. The Teaneck SYNERGY office still has readable family accounts. Its average is now held because one visible account does not establish the writer’s relationship to the agency. The Livingston BAYADA office was matched using the operator’s office-specific personal-care page, exact suite and the state license number recorded by NPPES.
+
+The current evidence dispositions are in [office-expansion](office-expansion/). The [whole-roster coverage audit](../home-care-coverage/README.md) measures the entries returned through the application. Multiple websites displaying the same Google ratings count as one source family.
 
 ## Source trail
 

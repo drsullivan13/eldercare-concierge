@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 8538,
+      "http_status": 200,
+      "raw": "raw/04d1d487972a52eeb51814dcde992c3fc370cbc35b871127f2e92393ce7c39f6.json",
+      "retrieved_at": "2026-11-15T03:20:43.601363+00:00",
+      "sha256": "04d1d487972a52eeb51814dcde992c3fc370cbc35b871127f2e92393ce7c39f6"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "PREMIER HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "48d790c68e74fa3759c5eac4",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=PREMIER+HOME%2A&skip=0&state=NJ&version=2.1"
+}

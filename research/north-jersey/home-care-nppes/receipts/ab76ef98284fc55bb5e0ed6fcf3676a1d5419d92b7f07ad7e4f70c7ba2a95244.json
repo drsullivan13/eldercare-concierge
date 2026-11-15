@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2450,
+      "http_status": 200,
+      "raw": "raw/f24894a20b29e2565fa872e03c7c623a868c9ab9b00dea61c7cd3135de1783ea.json",
+      "retrieved_at": "2026-11-15T03:20:55.696318+00:00",
+      "sha256": "f24894a20b29e2565fa872e03c7c623a868c9ab9b00dea61c7cd3135de1783ea"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "A HELPING*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "68e63776ac9b252a2a6d1d0b",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=A+HELPING%2A&skip=0&state=NJ&version=2.1"
+}

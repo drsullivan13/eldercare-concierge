@@ -1,0 +1,21 @@
+{
+  "attempts": [
+    {
+      "bytes": 1545,
+      "http_status": 200,
+      "raw": "raw/658c7c00ff8c5b144bbd3162f2c25b5a7e0715d29450f85ff7d4e1779d782337.json",
+      "retrieved_at": "2026-11-15T03:23:24.336028+00:00",
+      "sha256": "658c7c00ff8c5b144bbd3162f2c25b5a7e0715d29450f85ff7d4e1779d782337"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "number": "1558578369",
+    "skip": "0",
+    "version": "2.1"
+  },
+  "query_id": "fcc4d11b88fb23dd154a1a6d",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&number=1558578369&skip=0&version=2.1"
+}

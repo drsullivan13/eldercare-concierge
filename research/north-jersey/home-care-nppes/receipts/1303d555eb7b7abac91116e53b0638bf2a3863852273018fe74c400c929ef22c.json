@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1467,
+      "http_status": 200,
+      "raw": "raw/fb9e1c7b62be5db677457edfb0786f85c492d3a156882c9305daf903f27c40ef.json",
+      "retrieved_at": "2026-11-15T03:20:40.930514+00:00",
+      "sha256": "fb9e1c7b62be5db677457edfb0786f85c492d3a156882c9305daf903f27c40ef"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "MINTEX N*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "4156a9d51f45ab9f1d40b640",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=MINTEX+N%2A&skip=0&state=NJ&version=2.1"
+}

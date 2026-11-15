@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4347,
+      "http_status": 200,
+      "raw": "raw/0298caaaa1b5fabfdb4c482241b6c513c7c405d694477f4d664af3c108b828c5.json",
+      "retrieved_at": "2026-11-15T03:21:30.162232+00:00",
+      "sha256": "0298caaaa1b5fabfdb4c482241b6c513c7c405d694477f4d664af3c108b828c5"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "EPIC HEALTH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "9d14e62979648ca8bcb5004e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=EPIC+HEALTH%2A&skip=0&state=NJ&version=2.1"
+}

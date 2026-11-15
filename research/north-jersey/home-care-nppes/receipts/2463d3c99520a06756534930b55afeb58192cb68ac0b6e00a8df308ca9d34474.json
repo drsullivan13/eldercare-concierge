@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2060,
+      "http_status": 200,
+      "raw": "raw/19de516281e435087f8ca84df6c6a7f4bbf94aa109719c13e6edd5a3b6fefd63.json",
+      "retrieved_at": "2026-11-15T03:21:23.908785+00:00",
+      "sha256": "19de516281e435087f8ca84df6c6a7f4bbf94aa109719c13e6edd5a3b6fefd63"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BRIDGEWAY CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "958bcd392f32907c0aaf2203",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BRIDGEWAY+CARE%2A&skip=0&state=NJ&version=2.1"
+}

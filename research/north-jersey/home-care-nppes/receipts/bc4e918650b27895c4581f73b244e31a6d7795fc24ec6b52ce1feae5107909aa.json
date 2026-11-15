@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3900,
+      "http_status": 200,
+      "raw": "raw/10d97384600c41fa67723a080411ece1862461f0152959118e0e0f0b46035692.json",
+      "retrieved_at": "2026-11-15T03:22:43.482551+00:00",
+      "sha256": "10d97384600c41fa67723a080411ece1862461f0152959118e0e0f0b46035692"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AMAZING U*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "e983c9cf5febd991a569bd30",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AMAZING+U%2A&skip=0&state=NJ&version=2.1"
+}

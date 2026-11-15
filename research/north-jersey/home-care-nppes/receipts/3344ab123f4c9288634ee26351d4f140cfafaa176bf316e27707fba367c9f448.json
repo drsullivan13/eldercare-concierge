@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1211,
+      "http_status": 200,
+      "raw": "raw/ee95a300407b411fc59b753c21892ac50ad7433ddea63c8b4b8f3339841ac4ea.json",
+      "retrieved_at": "2026-11-15T03:21:14.148608+00:00",
+      "sha256": "ee95a300407b411fc59b753c21892ac50ad7433ddea63c8b4b8f3339841ac4ea"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "JC HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "8143be8789db4e3a9b405e16",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=JC+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

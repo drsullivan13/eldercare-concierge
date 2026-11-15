@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2767,
+      "http_status": 200,
+      "raw": "raw/2da003516e99349c953dcba26abadd8ea980a42c6d76b43f15dc06dc5aad5648.json",
+      "retrieved_at": "2026-11-15T03:20:46.163529+00:00",
+      "sha256": "2da003516e99349c953dcba26abadd8ea980a42c6d76b43f15dc06dc5aad5648"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ANGELIC HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "53fac11adb0211bdc64baf54",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ANGELIC+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

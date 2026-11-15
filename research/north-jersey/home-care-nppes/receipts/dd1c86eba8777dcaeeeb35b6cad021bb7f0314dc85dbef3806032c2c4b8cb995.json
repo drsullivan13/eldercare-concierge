@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 291058,
+      "http_status": 200,
+      "raw": "raw/9b00c61ce9741b7161bf3f839b600e388debff907ad6df32cb39eb1a25c7f751.json",
+      "retrieved_at": "2026-11-15T03:28:38.422071+00:00",
+      "sha256": "9b00c61ce9741b7161bf3f839b600e388debff907ad6df32cb39eb1a25c7f751"
+    }
+  ],
+  "query": {
+    "address_purpose": "LOCATION",
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "postal_code": "08873",
+    "skip": "0",
+    "version": "2.1"
+  },
+  "query_id": "df17e1565fdec00271e18ef3",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?address_purpose=LOCATION&enumeration_type=NPI-2&limit=200&postal_code=08873&skip=0&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1165,
+      "http_status": 200,
+      "raw": "raw/53267aba5bed6b9d821c4aae9280e857f1784fd267cf69f3a56ae493b2033879.json",
+      "retrieved_at": "2026-11-15T03:20:45.422836+00:00",
+      "sha256": "53267aba5bed6b9d821c4aae9280e857f1784fd267cf69f3a56ae493b2033879"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "NUSA CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "51d9298ea30d90d464d76361",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=NUSA+CARE%2A&skip=0&state=NJ&version=2.1"
+}

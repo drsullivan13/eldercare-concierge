@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3295,
+      "http_status": 200,
+      "raw": "raw/af83977afb2678a0ed7a88d4707fcb5effe20ef83de163afc056e55673fd470f.json",
+      "retrieved_at": "2026-11-15T03:22:48.559036+00:00",
+      "sha256": "af83977afb2678a0ed7a88d4707fcb5effe20ef83de163afc056e55673fd470f"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GIFTED HANDS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "f281ed720d7d2cf121a45d95",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GIFTED+HANDS%2A&skip=0&state=NJ&version=2.1"
+}

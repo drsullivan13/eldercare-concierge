@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 18243,
+      "http_status": 200,
+      "raw": "raw/53a18f46a7810c258c99f3eb130762d2409cbdc6e0597d70cb6276df9cd34481.json",
+      "retrieved_at": "2026-11-15T03:22:33.031151+00:00",
+      "sha256": "53a18f46a7810c258c99f3eb130762d2409cbdc6e0597d70cb6276df9cd34481"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "COMFORT KEEPERS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "de12a1a735625fa89b787622",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=COMFORT+KEEPERS%2A&skip=0&state=NJ&version=2.1"
+}

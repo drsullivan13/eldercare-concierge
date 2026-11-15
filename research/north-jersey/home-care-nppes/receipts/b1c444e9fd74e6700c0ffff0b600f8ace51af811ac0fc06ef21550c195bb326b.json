@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1572,
+      "http_status": 200,
+      "raw": "raw/91255aa4712aa4eec28db2e18afd1ebfcd67acd32405d990362f4731b567e098.json",
+      "retrieved_at": "2026-11-15T03:22:48.903548+00:00",
+      "sha256": "91255aa4712aa4eec28db2e18afd1ebfcd67acd32405d990362f4731b567e098"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CHRILL CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "f38cb8cafa2469700c83619c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CHRILL+CARE%2A&skip=0&state=NJ&version=2.1"
+}

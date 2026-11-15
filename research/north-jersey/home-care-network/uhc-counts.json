@@ -1,0 +1,179 @@
+{
+  "checkedDate": "2026-11-14",
+  "sourceDate": "2026-06",
+  "sourceRows": 886,
+  "retainedPhysicalPages": 35,
+  "rosterProviders": 1074,
+  "verifiedProviders": 47,
+  "distinctAcceptedOfficeIdentities": 47,
+  "acceptedSourceRows": 255,
+  "providerKeyedListings": 255,
+  "rowDispositionReasons": {
+    "accepted_exact_branch": 255,
+    "not_in_published_roster": 114,
+    "office_discrepancy": 359,
+    "organization_discrepancy": 132,
+    "uncertain_source_text": 5,
+    "unresolved_source_wrap": 12,
+    "wrong_population": 9
+  },
+  "rosterDispositionReasons": {
+    "accepted_exact_branch": 47,
+    "bridge_identity_conflict": 5,
+    "not_found_in_supplied_counties": 912,
+    "office_discrepancy": 67,
+    "organization_discrepancy": 29,
+    "roster_location_hold": 4,
+    "wrong_population": 10
+  },
+  "byServicingCounty": {
+    "Bergen": {
+      "sourceRows": 95,
+      "acceptedBranches": 32,
+      "acceptedListingOccurrences": 32,
+      "providerKeyedListings": 32,
+      "excludedRows": 63,
+      "exclusionReasons": {
+        "not_in_published_roster": 11,
+        "office_discrepancy": 37,
+        "organization_discrepancy": 13,
+        "unresolved_source_wrap": 1,
+        "wrong_population": 1
+      }
+    },
+    "Essex": {
+      "sourceRows": 127,
+      "acceptedBranches": 40,
+      "acceptedListingOccurrences": 40,
+      "providerKeyedListings": 40,
+      "excludedRows": 87,
+      "exclusionReasons": {
+        "not_in_published_roster": 12,
+        "office_discrepancy": 52,
+        "organization_discrepancy": 20,
+        "uncertain_source_text": 1,
+        "unresolved_source_wrap": 1,
+        "wrong_population": 1
+      }
+    },
+    "Hudson": {
+      "sourceRows": 92,
+      "acceptedBranches": 30,
+      "acceptedListingOccurrences": 30,
+      "providerKeyedListings": 30,
+      "excludedRows": 62,
+      "exclusionReasons": {
+        "not_in_published_roster": 11,
+        "office_discrepancy": 33,
+        "organization_discrepancy": 16,
+        "unresolved_source_wrap": 1,
+        "wrong_population": 1
+      }
+    },
+    "Middlesex": {
+      "sourceRows": 83,
+      "acceptedBranches": 24,
+      "acceptedListingOccurrences": 24,
+      "providerKeyedListings": 24,
+      "excludedRows": 59,
+      "exclusionReasons": {
+        "not_in_published_roster": 14,
+        "office_discrepancy": 30,
+        "organization_discrepancy": 12,
+        "uncertain_source_text": 1,
+        "unresolved_source_wrap": 1,
+        "wrong_population": 1
+      }
+    },
+    "Monmouth": {
+      "sourceRows": 80,
+      "acceptedBranches": 18,
+      "acceptedListingOccurrences": 18,
+      "providerKeyedListings": 18,
+      "excludedRows": 62,
+      "exclusionReasons": {
+        "not_in_published_roster": 15,
+        "office_discrepancy": 34,
+        "organization_discrepancy": 11,
+        "unresolved_source_wrap": 1,
+        "wrong_population": 1
+      }
+    },
+    "Morris": {
+      "sourceRows": 89,
+      "acceptedBranches": 22,
+      "acceptedListingOccurrences": 22,
+      "providerKeyedListings": 22,
+      "excludedRows": 67,
+      "exclusionReasons": {
+        "not_in_published_roster": 13,
+        "office_discrepancy": 36,
+        "organization_discrepancy": 14,
+        "uncertain_source_text": 1,
+        "unresolved_source_wrap": 2,
+        "wrong_population": 1
+      }
+    },
+    "Passaic": {
+      "sourceRows": 103,
+      "acceptedBranches": 31,
+      "acceptedListingOccurrences": 31,
+      "providerKeyedListings": 31,
+      "excludedRows": 72,
+      "exclusionReasons": {
+        "not_in_published_roster": 11,
+        "office_discrepancy": 45,
+        "organization_discrepancy": 13,
+        "unresolved_source_wrap": 2,
+        "wrong_population": 1
+      }
+    },
+    "Somerset": {
+      "sourceRows": 98,
+      "acceptedBranches": 21,
+      "acceptedListingOccurrences": 21,
+      "providerKeyedListings": 21,
+      "excludedRows": 77,
+      "exclusionReasons": {
+        "not_in_published_roster": 17,
+        "office_discrepancy": 43,
+        "organization_discrepancy": 13,
+        "uncertain_source_text": 1,
+        "unresolved_source_wrap": 2,
+        "wrong_population": 1
+      }
+    },
+    "Union": {
+      "sourceRows": 119,
+      "acceptedBranches": 37,
+      "acceptedListingOccurrences": 37,
+      "providerKeyedListings": 37,
+      "excludedRows": 82,
+      "exclusionReasons": {
+        "not_in_published_roster": 10,
+        "office_discrepancy": 49,
+        "organization_discrepancy": 20,
+        "uncertain_source_text": 1,
+        "unresolved_source_wrap": 1,
+        "wrong_population": 1
+      }
+    }
+  },
+  "reasonDefinitions": {
+    "accepted_exact_branch": "One exact office identity passes all release checks.",
+    "unresolved_source_wrap": "The supplied body or city continuation is incomplete or wrapped. No boundary is guessed.",
+    "uncertain_source_text": "The source name contains an unresolved question mark.",
+    "wrong_population": "An explicit pediatric, children, or kids identity is outside this adult eldercare release.",
+    "ambiguous_colocation": "Distinct organization identities share this complete office address. No branch is released from that address.",
+    "ambiguous_roster_identity": "More than one distinct registered organization passes the identity checks.",
+    "office_discrepancy": "An exact legal or registered DBA name exists, but full street including unit, city, ZIP, or phone differs. This includes possible old or moved offices, not a confirmed move.",
+    "organization_discrepancy": "A location or phone anchor exists, but no specific legal or registered DBA name matches.",
+    "not_in_published_roster": "No exact organization, full office address, or phone anchor exists in the full published roster.",
+    "roster_location_hold": "The supplied bridge has an unresolved location hold.",
+    "bridge_identity_conflict": "The bridge does not agree with the published full office identity and independently retained registration identity.",
+    "not_branch_office": "Explicit headquarters-only, service-area-only, or non-office identity cannot support a branch release.",
+    "not_found_in_supplied_counties": "No exact identity anchor was found in the supplied nine-county PCA extract. This is not a nonparticipation finding.",
+    "source_or_quality_exclusion": "Anchored source rows exist but are excluded by source parsing, population, location, or ambiguity checks."
+  },
+  "caveat": "Historical June 2026 UnitedHealthcare Community Plan NJ MLTSS directory listing evidence from the supplied page-and-line extraction only. The official PDF could not be independently retrieved during this review. Not evidence of current participation, eligibility, an active contract, authorization, availability, or guaranteed insurance coverage. Named servicing county is not the office county or a coverage promise. Not found is not nonparticipation."
+}

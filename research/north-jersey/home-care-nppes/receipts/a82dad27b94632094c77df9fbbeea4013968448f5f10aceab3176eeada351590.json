@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3667,
+      "http_status": 200,
+      "raw": "raw/a66b15513b049eecdf4ccffdc5891b3bdffad7523386753beff55b9152a8e076.json",
+      "retrieved_at": "2026-11-15T03:21:45.262734+00:00",
+      "sha256": "a66b15513b049eecdf4ccffdc5891b3bdffad7523386753beff55b9152a8e076"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CARE WITH*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "a722a02928e157a01ef9243e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CARE+WITH%2A&skip=0&state=NJ&version=2.1"
+}

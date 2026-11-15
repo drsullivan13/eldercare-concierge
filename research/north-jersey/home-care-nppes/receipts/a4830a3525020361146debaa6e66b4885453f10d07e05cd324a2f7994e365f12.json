@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3642,
+      "http_status": 200,
+      "raw": "raw/0f3be9fc2675f55b21dce1b26b23d9327c40192bea2089568a4ff5cf1eba0c10.json",
+      "retrieved_at": "2026-11-15T03:21:22.566414+00:00",
+      "sha256": "0f3be9fc2675f55b21dce1b26b23d9327c40192bea2089568a4ff5cf1eba0c10"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "EXPO SIGNATURE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "925684dbb5caaf12ca2e062c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=EXPO+SIGNATURE%2A&skip=0&state=NJ&version=2.1"
+}

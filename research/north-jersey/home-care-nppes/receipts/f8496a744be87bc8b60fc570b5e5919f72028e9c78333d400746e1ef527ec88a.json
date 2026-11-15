@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1348,
+      "http_status": 200,
+      "raw": "raw/233a69ec0ca8c1eacd0579dc94ec14cb8f250f491be0582f179b717ed0ceb93b.json",
+      "retrieved_at": "2026-11-15T03:21:21.627208+00:00",
+      "sha256": "233a69ec0ca8c1eacd0579dc94ec14cb8f250f491be0582f179b717ed0ceb93b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "VISITING AIDE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "915119038bc51362bb2fa019",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=VISITING+AIDE%2A&skip=0&state=NJ&version=2.1"
+}

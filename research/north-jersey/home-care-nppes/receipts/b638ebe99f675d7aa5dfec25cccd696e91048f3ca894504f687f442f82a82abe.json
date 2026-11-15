@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1158,
+      "http_status": 200,
+      "raw": "raw/882da6fd62ee965f79e631efb4601a5e4b84b829d26c8e911e876de05f954b86.json",
+      "retrieved_at": "2026-11-15T03:21:15.497559+00:00",
+      "sha256": "882da6fd62ee965f79e631efb4601a5e4b84b829d26c8e911e876de05f954b86"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GOLDMINERZ HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "83322556cef94dbc9733bb3f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GOLDMINERZ+HOME%2A&skip=0&state=NJ&version=2.1"
+}

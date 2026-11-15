@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1473,
+      "http_status": 200,
+      "raw": "raw/07daabca74a82a94de610f897dcd15e97516427d365b6797060526039442422b.json",
+      "retrieved_at": "2026-11-15T03:20:18.576491+00:00",
+      "sha256": "07daabca74a82a94de610f897dcd15e97516427d365b6797060526039442422b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GLAD HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "11f30d47cbe34e58b640156d",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GLAD+HOME%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2544,
+      "http_status": 200,
+      "raw": "raw/3a7158cfcd1f025311e9dd3db75ce41b800e1a898e636956069ebf588d324450.json",
+      "retrieved_at": "2026-11-15T03:20:40.551885+00:00",
+      "sha256": "3a7158cfcd1f025311e9dd3db75ce41b800e1a898e636956069ebf588d324450"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BLESSED HOPE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3fc7dd1cfe01f6314232379f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BLESSED+HOPE%2A&skip=0&state=NJ&version=2.1"
+}

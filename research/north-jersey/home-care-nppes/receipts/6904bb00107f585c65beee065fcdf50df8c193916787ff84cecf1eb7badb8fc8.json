@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 6349,
+      "http_status": 200,
+      "raw": "raw/65cf026dc3d643bd477173fbb810883a8fc9b18de39c288ba48db4d125219f79.json",
+      "retrieved_at": "2026-11-15T03:21:16.856693+00:00",
+      "sha256": "65cf026dc3d643bd477173fbb810883a8fc9b18de39c288ba48db4d125219f79"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ALWAYS RESPONSIVE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "86d56c053c0c03e22c42ef7f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ALWAYS+RESPONSIVE%2A&skip=0&state=NJ&version=2.1"
+}

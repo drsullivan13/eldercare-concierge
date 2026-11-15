@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1297,
+      "http_status": 200,
+      "raw": "raw/127125ff90ede2a34f36ec8a5a039c85682b940d36a9ebd0c190c3f8bd0e8fca.json",
+      "retrieved_at": "2026-11-15T03:20:47.895803+00:00",
+      "sha256": "127125ff90ede2a34f36ec8a5a039c85682b940d36a9ebd0c190c3f8bd0e8fca"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "KEY FAMILY*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "5ae0e72206524cf022cb5a31",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=KEY+FAMILY%2A&skip=0&state=NJ&version=2.1"
+}

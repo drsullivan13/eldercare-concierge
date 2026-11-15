@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1522,
+      "http_status": 200,
+      "raw": "raw/0a85cb3b4f9c5564a8d384a39f0934993d63609ddb65f2e5a0bc8769b1dbb324.json",
+      "retrieved_at": "2026-11-15T03:20:14.993266+00:00",
+      "sha256": "0a85cb3b4f9c5564a8d384a39f0934993d63609ddb65f2e5a0bc8769b1dbb324"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "OUTFRONT HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "08ed1a44c9d96d9a7c098d65",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=OUTFRONT+HOME%2A&skip=0&state=NJ&version=2.1"
+}

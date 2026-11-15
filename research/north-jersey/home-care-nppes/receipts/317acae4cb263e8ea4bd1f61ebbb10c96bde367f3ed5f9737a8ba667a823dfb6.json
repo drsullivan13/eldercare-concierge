@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 12801,
+      "http_status": 200,
+      "raw": "raw/c96a3a75710426b8f61e7fd0d3ab28fe7953a0eab6875ef1584b91f9d82dd872.json",
+      "retrieved_at": "2026-11-15T03:21:28.615236+00:00",
+      "sha256": "c96a3a75710426b8f61e7fd0d3ab28fe7953a0eab6875ef1584b91f9d82dd872"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GRISWOLD HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "9bf5af8c0cbe71b61a356c09",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GRISWOLD+HOME%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1353,
+      "http_status": 200,
+      "raw": "raw/44c1eafd9103cb9ea088a87c33b8c23cf2fce230aa8bb17a4a8c5f03890fd20d.json",
+      "retrieved_at": "2026-11-15T03:20:19.476235+00:00",
+      "sha256": "44c1eafd9103cb9ea088a87c33b8c23cf2fce230aa8bb17a4a8c5f03890fd20d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BECE HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "14611a803b6cb6f198f79117",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BECE+HOME%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1287,
+      "http_status": 200,
+      "raw": "raw/9c5980020b0b4b5f27d04adb44896e9ae8505485142d1c40787944db318eb1f3.json",
+      "retrieved_at": "2026-11-15T03:21:05.486814+00:00",
+      "sha256": "9c5980020b0b4b5f27d04adb44896e9ae8505485142d1c40787944db318eb1f3"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "FELIHEAL HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "73aa655bd88f434853a99f94",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=FELIHEAL+HOME%2A&skip=0&state=NJ&version=2.1"
+}

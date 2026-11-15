@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2550,
+      "http_status": 200,
+      "raw": "raw/f92fa548635df40775f69c41ac2a162b94b3220b7e03aea810a2fb6701ba02d0.json",
+      "retrieved_at": "2026-11-15T03:20:55.399430+00:00",
+      "sha256": "f92fa548635df40775f69c41ac2a162b94b3220b7e03aea810a2fb6701ba02d0"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SAINT GABRIEL*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "6857a4d1a3f9b92323bb0325",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SAINT+GABRIEL%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1331,
+      "http_status": 200,
+      "raw": "raw/b3bb253c8b692f6a4ee7fddd1a80f96cc1641e2f3f45f8103a9d2fe6d9798b83.json",
+      "retrieved_at": "2026-11-15T03:20:37.983018+00:00",
+      "sha256": "b3bb253c8b692f6a4ee7fddd1a80f96cc1641e2f3f45f8103a9d2fe6d9798b83"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "MIYOU CARING*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3a935bc5be087e1f0bdd8ea6",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=MIYOU+CARING%2A&skip=0&state=NJ&version=2.1"
+}

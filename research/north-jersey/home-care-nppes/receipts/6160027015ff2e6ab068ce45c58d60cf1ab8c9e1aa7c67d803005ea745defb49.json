@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1650,
+      "http_status": 200,
+      "raw": "raw/fe60f7fdebbd3dc135a4a7cfc3cd7878380fde77f051fd1ba711616d6db1d281.json",
+      "retrieved_at": "2026-11-15T03:21:17.622347+00:00",
+      "sha256": "fe60f7fdebbd3dc135a4a7cfc3cd7878380fde77f051fd1ba711616d6db1d281"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ROYAL HEARTS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "87e6ac89d0cc72703f72db86",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ROYAL+HEARTS%2A&skip=0&state=NJ&version=2.1"
+}

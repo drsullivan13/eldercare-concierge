@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2601,
+      "http_status": 200,
+      "raw": "raw/b39ac353520a03e2c18a6edaeb04e22f8be654420e55a6e8aa0efa143b9a3c1c.json",
+      "retrieved_at": "2026-11-15T03:20:44.853269+00:00",
+      "sha256": "b39ac353520a03e2c18a6edaeb04e22f8be654420e55a6e8aa0efa143b9a3c1c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HAPPY FAMILY*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "4f058b1087fbf9791b571b11",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HAPPY+FAMILY%2A&skip=0&state=NJ&version=2.1"
+}

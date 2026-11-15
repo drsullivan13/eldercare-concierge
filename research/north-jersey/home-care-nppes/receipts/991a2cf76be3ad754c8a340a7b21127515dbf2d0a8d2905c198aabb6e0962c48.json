@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1399,
+      "http_status": 200,
+      "raw": "raw/3c1281985f19cc55732d09ad4b983aa156e1465b0ac4e31f40d6e590e2417eab.json",
+      "retrieved_at": "2026-11-15T03:20:40.733521+00:00",
+      "sha256": "3c1281985f19cc55732d09ad4b983aa156e1465b0ac4e31f40d6e590e2417eab"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AVM CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "4048e380cbf6d462e143aaeb",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AVM+CARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 25052,
+      "http_status": 200,
+      "raw": "raw/24ab0b67c9a2e4d956d5fe053ef58a9ebfc5f9ad0be085b1ff257ce62fe43cdd.json",
+      "retrieved_at": "2026-11-15T03:20:19.687700+00:00",
+      "sha256": "24ab0b67c9a2e4d956d5fe053ef58a9ebfc5f9ad0be085b1ff257ce62fe43cdd"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BEST HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "14e4e95efffc848da87281fb",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BEST+HOME%2A&skip=0&state=NJ&version=2.1"
+}

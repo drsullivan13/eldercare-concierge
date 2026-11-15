@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1196,
+      "http_status": 200,
+      "raw": "raw/a92f184e4daf89b91e6594854a16fb6c32f0de83a247ba726198af7d98b2b97c.json",
+      "retrieved_at": "2026-11-15T03:20:12.605830+00:00",
+      "sha256": "a92f184e4daf89b91e6594854a16fb6c32f0de83a247ba726198af7d98b2b97c"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "LE CHOIX*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "00654a9e826c51ead8e2d85d",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=LE+CHOIX%2A&skip=0&state=NJ&version=2.1"
+}

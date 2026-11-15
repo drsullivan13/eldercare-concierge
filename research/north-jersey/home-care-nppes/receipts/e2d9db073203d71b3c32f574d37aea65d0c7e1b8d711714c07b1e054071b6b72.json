@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2742,
+      "http_status": 200,
+      "raw": "raw/219060936b8c0aa4f4d6062d1e90c533503da1f0c7632bcbcceff48133958a24.json",
+      "retrieved_at": "2026-11-15T03:20:16.488569+00:00",
+      "sha256": "219060936b8c0aa4f4d6062d1e90c533503da1f0c7632bcbcceff48133958a24"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BERGEN HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "0cb6b7ecf276e018f62c04ee",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BERGEN+HOME%2A&skip=0&state=NJ&version=2.1"
+}

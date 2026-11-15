@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1433,
+      "http_status": 200,
+      "raw": "raw/fc3644d23ad469415bb36a1f2a745e9800a8937d3f24e1a1b4b11f9ecdcda751.json",
+      "retrieved_at": "2026-11-15T03:20:39.467785+00:00",
+      "sha256": "fc3644d23ad469415bb36a1f2a745e9800a8937d3f24e1a1b4b11f9ecdcda751"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AT EASE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3d87bd2ccb6dcbed68f01f10",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AT+EASE%2A&skip=0&state=NJ&version=2.1"
+}

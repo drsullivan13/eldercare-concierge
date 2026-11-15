@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 5443,
+      "http_status": 200,
+      "raw": "raw/70d71bcbdebfc8fd1bcba9b012ef20035d0da96b90c664a82675acd399c8c1b4.json",
+      "retrieved_at": "2026-11-15T03:20:48.807132+00:00",
+      "sha256": "70d71bcbdebfc8fd1bcba9b012ef20035d0da96b90c664a82675acd399c8c1b4"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "EXCEL HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "5c2802a7f05d051c51a5f79b",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=EXCEL+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

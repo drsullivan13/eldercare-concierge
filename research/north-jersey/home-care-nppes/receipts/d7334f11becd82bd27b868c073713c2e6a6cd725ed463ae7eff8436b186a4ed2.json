@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1304,
+      "http_status": 200,
+      "raw": "raw/e35349034bf13beeb412cd6d71f66ffd248e61cc1c23acdad81dd9815a6547be.json",
+      "retrieved_at": "2026-11-15T03:20:29.770722+00:00",
+      "sha256": "e35349034bf13beeb412cd6d71f66ffd248e61cc1c23acdad81dd9815a6547be"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "BLUE AID*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "2de561cecb46a3097e34257d",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=BLUE+AID%2A&skip=0&state=NJ&version=2.1"
+}

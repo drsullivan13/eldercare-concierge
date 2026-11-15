@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1275,
+      "http_status": 200,
+      "raw": "raw/07ea43a2005d2e765797804c3d732f84d49bec75b2eb235548466bfc63e33c7d.json",
+      "retrieved_at": "2026-11-15T03:20:20.747726+00:00",
+      "sha256": "07ea43a2005d2e765797804c3d732f84d49bec75b2eb235548466bfc63e33c7d"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "LIGHT AND*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "183e28d11d81aadafc2bc7a7",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=LIGHT+AND%2A&skip=0&state=NJ&version=2.1"
+}

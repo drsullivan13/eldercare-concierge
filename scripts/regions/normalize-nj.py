@@ -346,10 +346,29 @@ def home_care_supply(inputs, counties, baseline_ids):
     require(len(rows) == receipt["exported_rows"] == receipt["displayed_rows"],
             "Live registration export and displayed portal count differ")
     records = {p["id"]: p for p in inputs.json(SUPPLY + "providers.json")}
-    providers, refreshed, crosswalk, ledger, county_by_id = [], {}, [], [], {}
+    providers, refreshed, registry_only, crosswalk, ledger, county_by_id = [], {}, {}, [], [], {}
     for reg in inputs.json(SUPPLY + "registrations.json"):
         county = reg.get("county")
         if reg["outcome"] != "published" or county not in counties:
+            pid = f"{MARKET}-hp-{slug(reg['registrationId'])}"
+            if (pid in baseline_ids and reg["outcome"] == "held"
+                    and reg.get("reason") in {"po_box_address", "city_zip_county_conflict"}):
+                row = rows[reg["primaryRow"]]
+                active = [r for r in rows.values() if r["License/Registration"].upper() == reg["registrationId"]
+                          and r["License Status"] == "Active"]
+                require(row["License/Registration"].upper() == reg["registrationId"]
+                        and row["License Status"] == reg["status"] == "Active"
+                        and row["License Type"] == "Health Care Services" and active == [row],
+                        f"Held registration identity disagrees with current registry: {reg['registrationId']}")
+                registry_only[pid] = {
+                    "row": row,
+                    "source": source(
+                        receipt, "NJ health care service firm registration",
+                        "New Jersey Division of Consumer Affairs",
+                        f"Registration {reg['registrationId']}, source row {row['source_row']}. "
+                        "Registered business name, Active status, expiration and registry phone only. "
+                        "Physical office location remains unverified."),
+                }
             if reg.get("runtime") == "omitted" or (reg["outcome"] == "published" and not county):
                 ledger.append({"source": "NJ HCSF supply release", "sourceFile": registry,
                                "providerId": reg.get("providerId", f"{MARKET}-hp-{slug(reg['registrationId'])}"),
@@ -375,7 +394,8 @@ def home_care_supply(inputs, counties, baseline_ids):
         else:
             providers.append(provider)
         crosswalk.append({**current, "status": "included"})
-    return {"providers": providers, "refreshed": refreshed, "zips": inputs.json(SUPPLY + "market-zips.json"),
+    return {"providers": providers, "refreshed": refreshed, "registryOnly": registry_only,
+            "zips": inputs.json(SUPPLY + "market-zips.json"),
             "crosswalk": crosswalk, "ledger": ledger, "countyById": county_by_id,
             "outputs": {k: v["sha256"] for k, v in manifest["outputs"].items()}}
 
@@ -972,6 +992,20 @@ def normalize(root, counties, *, source_only=False):
         held = {r["providerId"]: r for r in supply["ledger"] if r.get("change") in {"po_box_address", "city_zip_county_conflict"}}
         for provider in providers:
             if provider["id"] in held:
+                current = supply["registryOnly"][provider["id"]]
+                require(provider["category"] == "home-care", f"Held registration category changed: {provider['id']}")
+                row = current["row"]
+                provider["name"] = row["Business Name"]
+                provider.pop("phone", None)
+                if clean(row["Business Phone"]) not in ("", "0"):
+                    provider["phone"] = clean(row["Business Phone"])
+                provider["limitations"] = [note for note in provider["limitations"]
+                                           if not note.startswith("Portal lists expiration ")]
+                expires = excel_date(row["Expiration Date"]) if clean(row["Expiration Date"]) else None
+                provider["limitations"].append(
+                    f"Portal lists expiration {expires}. Active status is retained as published; neither field overrides the other."
+                    if expires else "Portal lists no expiration date. Active status is retained as published.")
+                provider["sources"].append(current["source"])
                 issue = held[provider["id"]]["change"]
                 reason = "The registry gives a PO box." if issue == "po_box_address" else "The registry city and ZIP give conflicting counties."
                 provider.update(lat=None, lng=None)

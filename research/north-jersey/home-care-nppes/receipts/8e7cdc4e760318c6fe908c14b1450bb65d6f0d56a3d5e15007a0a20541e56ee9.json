@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 6031,
+      "http_status": 200,
+      "raw": "raw/c3e7a69bf3826d97eea7ffe9c34c748b434e24ca0c480de117da00af5e24702b.json",
+      "retrieved_at": "2026-11-15T03:22:30.128472+00:00",
+      "sha256": "c3e7a69bf3826d97eea7ffe9c34c748b434e24ca0c480de117da00af5e24702b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CAREONE AT*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "d9fa8400a6631cb670fcffbb",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CAREONE+AT%2A&skip=0&state=NJ&version=2.1"
+}

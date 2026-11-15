@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-11-14",
+  "sourceUrl": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
+  "discoveryUrl": "https://www.uhc.com/communityplan/new-jersey/plans/medicaid/familycare/mltss",
+  "discoveryEvidence": {
+    "heading": "Find a provider",
+    "linkText": "Download the directory of MLTSS providers and facilities",
+    "readWith": "FetchUrl",
+    "checkedDate": "2026-11-14"
+  },
+  "sourceDate": "2026-06",
+  "sourceDatePrecision": "month",
+  "sourceDateAuthority": "User-supplied June 2026 edition identification. No day inferred.",
+  "pdfPageCount": 373,
+  "pdfPageCountAuthority": "User-supplied source description",
+  "printedPage": null,
+  "physicalPageSemantics": "One-based physical PDF page, exactly the supplied page field.",
+  "pdfSha256": null,
+  "pdfRetrieval": {
+    "status": "blocked",
+    "httpStatus": 403,
+    "reason": "FetchUrl cannot process binary files. Certificate-validating curl requests to the official PDF returned HTTP 403. No PDF bytes or independent PDF page text were obtained."
+  },
+  "sourceRowCount": 886,
+  "rosterCount": 1074,
+  "origins": {
+    "rows": {
+      "path": "/tmp/harbor-pulse/uhc-pca.json",
+      "sha256": "869ce5d25d50dad27db395d83699e7f692b7b63f3421d8532f322d9420d7f49e",
+      "bytes": 147067
+    },
+    "bridge": {
+      "path": "/tmp/harbor-agency-exact-office-dba-bridge.csv",
+      "sha256": "1124133bd57f992b28b292ac8050362bd33d3b25debf5ca2282632b1d62b5f7d",
+      "bytes": 168906
+    },
+    "roster": {
+      "path": "/Users/dansullivan/workspace/eldercare-concierge-poc/src/data/regional-markets.json",
+      "sha256": "955f22e4d87b4c2ce9e8d444adda5d8ff5174151a1aa3eb89cc5803cce93bb9f",
+      "bytes": 8098127
+    },
+    "registration": {
+      "path": "/Users/dansullivan/workspace/eldercare-concierge-poc/src/data/nj-registration-facts.json",
+      "sha256": "83bfb13b6e036dc04b7b2b331f8036a315be2fb5b386c47dd14e71bc6071a6d8",
+      "bytes": 318251
+    }
+  },
+  "files": {
+    "uhc-source-rows.json": {
+      "sha256": "869ce5d25d50dad27db395d83699e7f692b7b63f3421d8532f322d9420d7f49e",
+      "bytes": 147067
+    },
+    "uhc-bridge.csv": {
+      "sha256": "1124133bd57f992b28b292ac8050362bd33d3b25debf5ca2282632b1d62b5f7d",
+      "bytes": 168906
+    },
+    "uhc-roster.json": {
+      "sha256": "95f80fa8d4d4807b42d489d7fff4efb4feda5c3771d83d157da63c2f77f603e5",
+      "bytes": 462297
+    },
+    "uhc-registration-identities.json": {
+      "sha256": "6f7b3123c67b91dcc69531a8cae02824d50d468ab840f1665ca37c957fd6b3d9",
+      "bytes": 234402
+    }
+  },
+  "pages": {
+    "25": {
+      "rows": 26,
+      "firstLine": 1806,
+      "lastLine": 1856,
+      "sha256": "2acededc6cfa2f0c82eef1e5d93896ba0a627714a918aca815ad0f2a64f89ab3"
+    },
+    "26": {
+      "rows": 34,
+      "firstLine": 1863,
+      "lastLine": 1929,
+      "sha256": "21f502144bf0b2242f655e30700292bae2032ad1e8e6c2b3cf70031fe6449418"
+    },
+    "27": {
+      "rows": 34,
+      "firstLine": 1936,
+      "lastLine": 2002,
+      "sha256": "67a9c5b667e193bcff9ffe5fe6677debc735dc6cef7d99733e7bf32b46365e8d"
+    },
+    "28": {
+      "rows": 1,
+      "firstLine": 2009,
+      "lastLine": 2009,
+      "sha256": "9081a7070bdcb10da945ed1001379f147b89dad40c162f4b7e602714d1888ea8"
+    },
+    "103": {
+      "rows": 6,
+      "firstLine": 7612,
+      "lastLine": 7622,
+      "sha256": "6d891bcddd0504069c0dff0683d01a067d0885828b7c8fcf0aee63250542ee39"
+    },
+    "104": {
+      "rows": 34,
+      "firstLine": 7629,
+      "lastLine": 7695,
+      "sha256": "69cec4f422608fb5656f22c7383d49fa04129ffb3a2f7fb3d16c5a57f75e0a47"
+    },
+    "105": {
+      "rows": 34,
+      "firstLine": 7702,
+      "lastLine": 7768,
+      "sha256": "a3e532028570c57dd160e43246404222ccd8fd2a2556ce3a96161797f381bfe0"
+    },
+    "106": {
+      "rows": 34,
+      "firstLine": 7775,
+      "lastLine": 7841,
+      "sha256": "c5f9054a9a0dcb3e43b310dbbcc671119bd690c5b49e982d5e99df1ec7bd24de"
+    },
+    "107": {
+      "rows": 19,
+      "firstLine": 7848,
+      "lastLine": 7884,
+      "sha256": "6a9f7cfe7ed5f0a67a04696d4ef105a76069f28b6ef635ca48fec6c9cabdcae4"
+    },
+    "144": {
+      "rows": 22,
+      "firstLine": 10604,
+      "lastLine": 10646,
+      "sha256": "b2e3b85036d935ee52c15b4b9f2f79b3c883faafc4c799c779ade468dc04f5e9"
+    },
+    "145": {
+      "rows": 34,
+      "firstLine": 10653,
+      "lastLine": 10719,
+      "sha256": "b3f6550a8fdb039303c3a97619f7052e33ad12913c120bf34f245334a93e1008"
+    },
+    "146": {
+      "rows": 34,
+      "firstLine": 10726,
+      "lastLine": 10793,
+      "sha256": "be4e3f06c989d7693869b6ce520c0210b04ac2514f41b30a9931caf600ca83fe"
+    },
+    "147": {
+      "rows": 2,
+      "firstLine": 10800,
+      "lastLine": 10802,
+      "sha256": "2b6b85a13bae9912435c377a3d64d8b70c5a3f74efc39d471eedf4e8fad6bf7e"
+    },
+    "192": {
+      "rows": 32,
+      "firstLine": 14137,
+      "lastLine": 14199,
+      "sha256": "fb1764f2f77c112a6587438b5d95f855302043d92a0e2dc36dbed6c5e4a505e0"
+    },
+    "193": {
+      "rows": 34,
+      "firstLine": 14206,
+      "lastLine": 14272,
+      "sha256": "fc7069454e6ba23d06866024c4a2d44500ec5ff602549472eb6385df381ce60b"
+    },
+    "194": {
+      "rows": 17,
+      "firstLine": 14279,
+      "lastLine": 14311,
+      "sha256": "60af1f04df764b37bd50a5134ec46f4ce41ca4e3aa634fcd9315cf7fed69b193"
+    },
+    "210": {
+      "rows": 11,
+      "firstLine": 15512,
+      "lastLine": 15532,
+      "sha256": "393f2ac4916a51be6e100aee880b4afa2e6190b5ef3fd1c0b4316397a88c021b"
+    },
+    "211": {
+      "rows": 34,
+      "firstLine": 15539,
+      "lastLine": 15605,
+      "sha256": "45e397d520388d049e4a744fc77341a28848b5d1fe3930e4ffe5df0355cfd140"
+    },
+    "212": {
+      "rows": 34,
+      "firstLine": 15612,
+      "lastLine": 15679,
+      "sha256": "5de0c126c24a06c9c188dcd4b2b66851ae5815398596ff65b900911a63b8078d"
+    },
+    "213": {
+      "rows": 1,
+      "firstLine": 15686,
+      "lastLine": 15686,
+      "sha256": "f7cf4b163440ec4e5d7bfc3d4365c37cad3ffa3ffc668d86ecd2c12e83343820"
+    },
+    "229": {
+      "rows": 21,
+      "firstLine": 16888,
+      "lastLine": 16928,
+      "sha256": "646f1bb8940ec18793bec438a9fcc643cab9d0c5a28f75df93dc2237435bb134"
+    },
+    "230": {
+      "rows": 34,
+      "firstLine": 16935,
+      "lastLine": 17001,
+      "sha256": "44e5364f5c26d1c160156d61f5422d5e1d8696ca998a112e06a008f587392030"
+    },
+    "231": {
+      "rows": 34,
+      "firstLine": 17008,
+      "lastLine": 17075,
+      "sha256": "900c21c83a558e70881d3171091d4c0be57100286ee82a49ff6a3774059ebdae"
+    },
+    "268": {
+      "rows": 19,
+      "firstLine": 19779,
+      "lastLine": 19815,
+      "sha256": "3caf162ba21bdf4146987f7a63e044310e5271c5356f5d5ed4cada9432890aea"
+    },
+    "269": {
+      "rows": 34,
+      "firstLine": 19822,
+      "lastLine": 19888,
+      "sha256": "ad36269953b1b776d72fee5f042660529b2364bf2c0ff6ef75a5f65ab9e190a8"
+    },
+    "270": {
+      "rows": 34,
+      "firstLine": 19895,
+      "lastLine": 19961,
+      "sha256": "39006f62b6a7a248894136e2fa335115de87e3e41281386154339c86dab9be98"
+    },
+    "271": {
+      "rows": 16,
+      "firstLine": 19968,
+      "lastLine": 19998,
+      "sha256": "ab6dd5fb1ee189d937c27bc5ba17c7c6d8e3ba2e1ed167b25c0eb8588f849cc1"
+    },
+    "305": {
+      "rows": 24,
+      "firstLine": 22505,
+      "lastLine": 22551,
+      "sha256": "636c3c435c14f614f33f24572d1c1281f1dbe8f9f7badb7f6a389cc1625a28cd"
+    },
+    "306": {
+      "rows": 34,
+      "firstLine": 22558,
+      "lastLine": 22624,
+      "sha256": "f30cf3d8d3c3fb57e6d1ade55d231e6a8e94b10b6d88571ba2c0a7beba0ea1b7"
+    },
+    "307": {
+      "rows": 34,
+      "firstLine": 22631,
+      "lastLine": 22698,
+      "sha256": "c6d095b58839761c96c125e8e525acd5bc7e37498dd34632dc6e6783dd84c9a0"
+    },
+    "308": {
+      "rows": 6,
+      "firstLine": 22705,
+      "lastLine": 22715,
+      "sha256": "5f6298092dbbdb5b41627c7111297d76be709a03dfe5372427e26f5acfc0c176"
+    },
+    "342": {
+      "rows": 34,
+      "firstLine": 25214,
+      "lastLine": 25280,
+      "sha256": "9f8f6b4cc5bf0ba9d795c7eee248228c2d0ceb0f2c4e1926e935b9b36032e342"
+    },
+    "343": {
+      "rows": 34,
+      "firstLine": 25287,
+      "lastLine": 25353,
+      "sha256": "9118ac5e7ad36f655c616b37333c5019063dc09bee303a1da91e0b3d71eed720"
+    },
+    "344": {
+      "rows": 34,
+      "firstLine": 25360,
+      "lastLine": 25426,
+      "sha256": "356f5bf0e037b4abdb1ab84494888b1d2837ce1663deb0d8315a027c179773c0"
+    },
+    "345": {
+      "rows": 17,
+      "firstLine": 25433,
+      "lastLine": 25465,
+      "sha256": "48e0cd1c68876ffaac9054debb9265ab048a3c624518ef3231dc4b56ae2ba215"
+    }
+  },
+  "limitations": [
+    "Retained source evidence is the supplied immutable extraction, not an independent re-extraction of the official PDF.",
+    "Line is the supplied extraction line index. Its base was not specified and is not relabeled.",
+    "Source rows cover only Personal Care Assistant in the nine supplied servicing counties, not all NJ counties or all PDF specialties.",
+    "Registration identity evidence is a later local snapshot, not proof of registration or DBA effective dates in June 2026."
+  ],
+  "rosterProjection": "All 1,074 published NJ home-care IDs keyed to name, complete address, city, state, ZIP, primary phone, category, locationKind, description and warnings. Omitted coordinates and repeated source/limitation arrays are not identity anchors."
+}

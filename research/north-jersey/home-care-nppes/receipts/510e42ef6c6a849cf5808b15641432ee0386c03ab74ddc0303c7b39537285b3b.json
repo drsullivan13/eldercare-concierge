@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1316,
+      "http_status": 200,
+      "raw": "raw/af4779cdce618ad786f3711c6eaeeb52b900d4f81ce80397857640db6354d5fa.json",
+      "retrieved_at": "2026-11-15T03:22:12.612854+00:00",
+      "sha256": "af4779cdce618ad786f3711c6eaeeb52b900d4f81ce80397857640db6354d5fa"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "GQ HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "c5069f5e4b4fb6efcef93a3c",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=GQ+HOME%2A&skip=0&state=NJ&version=2.1"
+}

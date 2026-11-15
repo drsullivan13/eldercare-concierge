@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1365,
+      "http_status": 200,
+      "raw": "raw/9779c7a1a599532c0fee6f88d322b74e031e503baf4c5c8d5a2017a51693009b.json",
+      "retrieved_at": "2026-11-15T03:20:56.653301+00:00",
+      "sha256": "9779c7a1a599532c0fee6f88d322b74e031e503baf4c5c8d5a2017a51693009b"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "RAYMOND HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "6967c8e0260b87272e993f78",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=RAYMOND+HOME%2A&skip=0&state=NJ&version=2.1"
+}

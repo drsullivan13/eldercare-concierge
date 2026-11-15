@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1376,
+      "http_status": 200,
+      "raw": "raw/13282af2e95a22735675d55e5590fb94629d0304f002ccd9b872291e5975a87a.json",
+      "retrieved_at": "2026-11-15T03:20:50.390645+00:00",
+      "sha256": "13282af2e95a22735675d55e5590fb94629d0304f002ccd9b872291e5975a87a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "MALACHI HOLDINGS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "5f0b57cc9328399ab733de35",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=MALACHI+HOLDINGS%2A&skip=0&state=NJ&version=2.1"
+}

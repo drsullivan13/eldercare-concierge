@@ -226,7 +226,7 @@ test("published review evidence is present in the office catalog and leaves othe
 
 test("sparse and withheld panels can have readable family accounts", async () => {
   const sparse = "north-jersey-hp-hp0413400";
-  const detail = getLocationResearch(sparse, asOf);
+  const detail = getLocationResearch(sparse, release.asOf);
   assert.equal(detail.experience.value, null);
   assert.equal(detail.experience.reviewCount, 13);
   const result = await reviewGET(
@@ -239,21 +239,21 @@ test("sparse and withheld panels can have readable family accounts", async () =>
     ),
   );
   const rated = searchProviders({
-    zip: "07666",
+    zip: "07083",
     radius: 5,
     category: "home-care",
     sort: "experience",
   });
   assert.equal(
     rated.providers.find(
-      (provider) => provider.id === "north-jersey-hp-hp0256900",
+      (provider) => provider.id === "north-jersey-hp-hp0249500",
     )?.research?.experience.value,
-    9.6,
+    9.8,
   );
 });
 
 test("external office profiles can accompany an unrated listing without creating accounts or a score", async () => {
-  const id = "north-jersey-hp-hp0119000";
+  const id = "north-jersey-hp-hp0131500";
   const result = await reviewGET(
     new Request(`https://harbor.example/api/reviews?id=${id}`),
   ).json();
@@ -459,6 +459,75 @@ test("accounts alone never create an average or a score", (t) => {
   assert.equal(result.research.experience.reviewCount, 0);
   assert.equal(result.catalog.sources[0].reportedCount, null);
   assert.deepEqual(result.counts, { total: 1, withText: 0 });
+});
+
+test("a synthetic Caring-family aggregate reaches the office APIs without inventing accounts", (t) => {
+  const path = temporaryApp(t);
+  const batch = json(join(path, "synthetic-input.json"));
+  const obs = batch.observations[0];
+  const url = syntheticUrl;
+  Object.assign(obs, {
+    checkedUrl: url,
+    canonicalUrl: url,
+    effectiveUrl: url,
+    originalUrl: null,
+    publisher: "Synthetic MyLivingChoice",
+    sourceFamily: "caring",
+    syndication: { status: "syndicated", family: "caring" },
+    accounts: [],
+  });
+  obs.identity.url = url;
+  obs.aggregate = {
+    kind: "consumer-average",
+    rating: 4.5,
+    scale: 5,
+    count: 30,
+    asOf: null,
+  };
+  Object.assign(obs.window, {
+    visibleCount: 0,
+    observations: [],
+    coverage: "partial",
+    stopReason:
+      "Synthetic aggregate-only check; individual review pages not inspected",
+  });
+  publish(path, batch);
+  const result = probe(path);
+  assert.deepEqual(result.counts, { total: 0, withText: 0 });
+  assert.equal(result.research.reviewAggregates.length, 1);
+  assert.equal(result.research.reviewAggregates[0].rating, 4.5);
+  assert.equal(result.research.experience.reviewCount, 30);
+  assert.equal(result.research.experience.independentSourceCount, 1);
+  assert.equal(result.reviewsApi.accounts.length, 0);
+  assert.equal(result.researchApi.experience.reviewCount, 30);
+  assert.equal(result.catalog.sources[0].reportedCount, 30);
+  assert.equal(result.catalog.sources[0].retainedCount, 0);
+  assert.equal(result.catalog.sources[0].coverage, "partial");
+  assert.equal(result.catalog.sources[0].url, url);
+  obs.identity.address = "2 WRONG BRANCH STREET";
+  writeJson(join(path, "synthetic-input.json"), batch);
+  const before = readFileSync(join(path, "src/data/home-care-reviews.json"));
+  const rejected = spawnSync(
+    "python3",
+    [
+      "-B",
+      join(root, "scripts/regions/home-care-reviews.py"),
+      "--root",
+      path,
+      "--input",
+      join(path, "synthetic-input.json"),
+    ],
+    { encoding: "utf8", timeout: 30_000 },
+  );
+  assert.equal(rejected.status, 2);
+  assert.match(
+    rejected.stderr,
+    /Identity witness disagrees with official address/,
+  );
+  assert.deepEqual(
+    readFileSync(join(path, "src/data/home-care-reviews.json")),
+    before,
+  );
 });
 
 test("a previously unresearched office receives reviews without changing its missing facts or availability", (t) => {

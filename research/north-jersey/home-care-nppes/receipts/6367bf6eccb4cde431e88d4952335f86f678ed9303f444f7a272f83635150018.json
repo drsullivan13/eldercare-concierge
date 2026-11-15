@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3047,
+      "http_status": 200,
+      "raw": "raw/26ddacc2ad8b1f142827ed031e4cbbf51c40423ad9d3cc5a97cc97aa0c7058da.json",
+      "retrieved_at": "2026-11-15T03:21:17.894156+00:00",
+      "sha256": "26ddacc2ad8b1f142827ed031e4cbbf51c40423ad9d3cc5a97cc97aa0c7058da"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "TRUE VINE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "897f0e407c08e5bcc773133e",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=TRUE+VINE%2A&skip=0&state=NJ&version=2.1"
+}

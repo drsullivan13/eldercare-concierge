@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-14",
+  "discoveryRows": 405,
+  "publisher": "Commission on Accreditation for Home Care",
+  "publisherEvidence": {
+    "sourceUrl": "https://www.cahcusa.org/",
+    "checkedAt": "2026-11-14",
+    "quotation": "Commission on Accreditation for Home Care"
+  },
+  "originalInputs": [
+    {
+      "name": "cahc-full-listings.json",
+      "sha256": "76174ad4dacbffd81b003ff75a5d59f30a23d98eae87946e9604386b51ce3286",
+      "rows": 405
+    },
+    {
+      "name": "harbor-agency-exact-office-dba-bridge.csv",
+      "sha256": "1124133bd57f992b28b292ac8050362bd33d3b25debf5ca2282632b1d62b5f7d",
+      "rows": 1074
+    }
+  ],
+  "replayInputSha256": {
+    "cahc-replay.json": "c2d97d9788f0790588fd17a72b615e7be5262527bfdda7a913829d321ec67b87",
+    "cahc-dba-bridge.json": "d48ad26147aed738ffa90715b392801fe07a39cea91324b9afbcbb1289b2cb8c",
+    "cahc-extraction-audit.json": "774cd48ef40e6aef56622f35327975f5c1e6d0b9e504faa5ed6cce7d99eea698"
+  },
+  "registryInput": {
+    "path": "../home-care-supply/providers.json",
+    "sha256": "3622ea8d3c089c77de4ab3abf8b4408d0b0fa349b1b9731106d09a2a0fde2b4f",
+    "rows": 1071
+  },
+  "registrySource": {
+    "publisher": "New Jersey Division of Consumer Affairs",
+    "sourceUrl": "https://rgbportal.dca.njoag.gov/public-view/",
+    "bridgeEvidence": "sourceRow and registered DBA from the supplied CSV"
+  },
+  "contactPolicy": "Identity-only phones. No directory email or agency website retained.",
+  "streetPolicy": "No verified directory street in these inputs. Primary-phone path only.",
+  "zipPolicy": "Published ZIP strings are unchanged. Missing or malformed ZIP is audit data.",
+  "publicAddressPolicy": "Only the directory city and NJ are public. No ZIP correction or postal verification."
+}

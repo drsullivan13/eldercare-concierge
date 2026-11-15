@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2496,
+      "http_status": 200,
+      "raw": "raw/81b0d1244c2dea455b2029f6c330a03add490ae42160e81b4fcc6df0fa7a6def.json",
+      "retrieved_at": "2026-11-15T03:20:33.693766+00:00",
+      "sha256": "81b0d1244c2dea455b2029f6c330a03add490ae42160e81b4fcc6df0fa7a6def"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "COLLEGE AVE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "3588014ba0af5493c41f289a",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=COLLEGE+AVE%2A&skip=0&state=NJ&version=2.1"
+}

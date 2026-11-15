@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1397,
+      "http_status": 200,
+      "raw": "raw/0291a877adcd2c82423d68d1bd1b2ae511e17dbfc384506d0e53db5ab81c07d0.json",
+      "retrieved_at": "2026-11-15T03:21:53.075069+00:00",
+      "sha256": "0291a877adcd2c82423d68d1bd1b2ae511e17dbfc384506d0e53db5ab81c07d0"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CARING SOLUTIONS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "b0ed2fe69895bf3ac3331c26",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CARING+SOLUTIONS%2A&skip=0&state=NJ&version=2.1"
+}

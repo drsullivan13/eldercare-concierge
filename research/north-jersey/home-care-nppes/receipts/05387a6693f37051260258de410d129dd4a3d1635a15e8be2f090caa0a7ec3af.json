@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 19355,
+      "http_status": 200,
+      "raw": "raw/abb2829bdac0281a47b1fd5bdad151e8823d73eec3ecc7ad7357628e4f11385a.json",
+      "retrieved_at": "2026-11-15T03:22:09.022822+00:00",
+      "sha256": "abb2829bdac0281a47b1fd5bdad151e8823d73eec3ecc7ad7357628e4f11385a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "SENIOR HELPERS*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "c2d76b07ac7ddfec5e630e38",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=SENIOR+HELPERS%2A&skip=0&state=NJ&version=2.1"
+}

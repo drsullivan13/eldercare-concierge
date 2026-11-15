@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1500,
+      "http_status": 200,
+      "raw": "raw/50dcbb4bb4db59ea6e533a70442cb2a1018d0f5a6ebc2d9ca9f14443c597546f.json",
+      "retrieved_at": "2026-11-15T03:22:38.738845+00:00",
+      "sha256": "50dcbb4bb4db59ea6e533a70442cb2a1018d0f5a6ebc2d9ca9f14443c597546f"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CURAIN*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "e552b4a2c24769892858e21a",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CURAIN%2A&skip=0&state=NJ&version=2.1"
+}

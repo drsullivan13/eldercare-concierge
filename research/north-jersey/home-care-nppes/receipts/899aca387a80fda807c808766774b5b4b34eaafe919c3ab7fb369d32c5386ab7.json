@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1407,
+      "http_status": 200,
+      "raw": "raw/a293274d6269e90b21e1e8683a9787eeb6f8f41f43611c098c0c2164729b717a.json",
+      "retrieved_at": "2026-11-15T03:22:51.582321+00:00",
+      "sha256": "a293274d6269e90b21e1e8683a9787eeb6f8f41f43611c098c0c2164729b717a"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "AMEFIL HEALTHCARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "fa56e395c7229341421afec6",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=AMEFIL+HEALTHCARE%2A&skip=0&state=NJ&version=2.1"
+}

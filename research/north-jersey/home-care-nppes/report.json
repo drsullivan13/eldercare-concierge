@@ -1,0 +1,96 @@
+{
+  "acquisition_last_attempt_at": "2026-11-15T03:55:36.209253+00:00",
+  "acquisition_started_at": "2026-11-15T03:20:12.605830+00:00",
+  "app_coverage_states": {
+    "ambiguous": 30,
+    "attempted_zero": 103,
+    "unresolved": 687,
+    "verified": 254
+  },
+  "attempted_discovery_queries": 1462,
+  "candidate_reasons": {
+    "exact_organization_practice_address_unit_and_phone": 326,
+    "explicit_suite_or_floor_conflict": 54,
+    "former_name_only_identity": 2,
+    "mailing_only_address_match": 94,
+    "organization_identity_not_exact": 4787,
+    "practice_city_conflict_or_missing": 14,
+    "practice_phone_conflict": 155,
+    "roster_location_warning": 2,
+    "roster_source_identity_conflict": 44,
+    "suite_or_floor_evidence_missing": 81,
+    "wrong_branch_or_older_address": 6952
+  },
+  "coverage_states": {
+    "ambiguous": 30,
+    "attempted_zero": 103,
+    "unresolved": 688,
+    "verified": 254
+  },
+  "exact_lookup_queries": 337,
+  "incomplete_queries": {},
+  "limitations": "NPPES organization identity and source-reported practice contact/taxonomy only. An NPI does not establish licensing, certification, service territories, payor acceptance, availability, clinical quality, or review scores. Missing evidence is unknown.",
+  "locally_relevant_npis": 4125,
+  "planned_discovery_queries": 1462,
+  "query_states": {
+    "complete": 1799
+  },
+  "reconciliation": {
+    "app_count": 1074,
+    "app_only": [
+      "north-jersey-hp-hp0144800",
+      "north-jersey-hp-hp0286200",
+      "north-jersey-hp-hp0373200",
+      "north-jersey-hp-hp0404800"
+    ],
+    "different_identity_fields": [
+      "north-jersey-hp-hp0052100",
+      "north-jersey-hp-hp0058900",
+      "north-jersey-hp-hp0065000",
+      "north-jersey-hp-hp0104400",
+      "north-jersey-hp-hp0124500",
+      "north-jersey-hp-hp0171100",
+      "north-jersey-hp-hp0172800",
+      "north-jersey-hp-hp0179100",
+      "north-jersey-hp-hp0191600",
+      "north-jersey-hp-hp0217600",
+      "north-jersey-hp-hp0223700",
+      "north-jersey-hp-hp0242300",
+      "north-jersey-hp-hp0256900",
+      "north-jersey-hp-hp0286400",
+      "north-jersey-hp-hp0289000",
+      "north-jersey-hp-hp0299800",
+      "north-jersey-hp-hp0374000",
+      "north-jersey-hp-hp0420900",
+      "north-jersey-hp-hp0443400"
+    ],
+    "intersection_count": 1070,
+    "precedence": "Current app identity wins for shared IDs. Substantive conflicts are withheld.",
+    "substantive_identity_conflicts": [
+      "north-jersey-hp-hp0289000",
+      "north-jersey-hp-hp0374000",
+      "north-jersey-hp-hp0420900",
+      "north-jersey-hp-hp0443400"
+    ],
+    "supply_count": 1071,
+    "supply_only": [
+      "north-jersey-hp-hp0414700"
+    ],
+    "union_count": 1075
+  },
+  "retained_failed_attempts": 0,
+  "retained_request_attempts": 1912,
+  "roster_sources": {
+    "research/north-jersey/home-care-supply/providers.json": {
+      "sha256": "3622ea8d3c089c77de4ab3abf8b4408d0b0fa349b1b9731106d09a2a0fde2b4f"
+    },
+    "src/data/regional-markets.json": {
+      "sha256": "9e558acccf5e8abdd8cc1046ccd6cac2f73c97d8ede31cbb13aae8b30a613eb8"
+    }
+  },
+  "schema": 1,
+  "search_scope": "Completed queries are scoped searches, not proof that an unmatched office lacks an NPI. Every roster ZIP has an unfiltered NPI-2 practice-location query and a retained Home Health query. Name prefixes search legal, DBA, former and other names. Former-name-only matches are withheld. City aliases are not assumed. Default address filters can match mailing or practice. Only practice is matched locally.",
+  "unique_candidate_npis": 42079,
+  "verified_offices": 254,
+  "verified_unique_npis": 254
+}

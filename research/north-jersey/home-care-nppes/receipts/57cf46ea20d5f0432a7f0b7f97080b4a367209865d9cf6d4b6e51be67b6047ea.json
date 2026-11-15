@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1365,
+      "http_status": 200,
+      "raw": "raw/c39efc2c04ae8096c23d32ab4447028973994ae8028feedaa2781274bb3ca894.json",
+      "retrieved_at": "2026-11-15T03:22:12.211700+00:00",
+      "sha256": "c39efc2c04ae8096c23d32ab4447028973994ae8028feedaa2781274bb3ca894"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "HAPPY AT*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "c44e402b43dda8b0a2522b4b",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=HAPPY+AT%2A&skip=0&state=NJ&version=2.1"
+}

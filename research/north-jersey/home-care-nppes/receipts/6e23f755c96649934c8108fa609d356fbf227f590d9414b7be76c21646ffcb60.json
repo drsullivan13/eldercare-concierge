@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1370,
+      "http_status": 200,
+      "raw": "raw/fcb062fbb88600f23386f062c7c56c2f8a5a5aa83b0ed655c40a283f7843d235.json",
+      "retrieved_at": "2026-11-15T03:22:17.551389+00:00",
+      "sha256": "fcb062fbb88600f23386f062c7c56c2f8a5a5aa83b0ed655c40a283f7843d235"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ACHIEVE HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "cc0fa01ab2e73bf573ba0899",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ACHIEVE+HOME%2A&skip=0&state=NJ&version=2.1"
+}

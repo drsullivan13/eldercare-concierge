@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1240,
+      "http_status": 200,
+      "raw": "raw/80e83b6f078f16258b85df209a2c78a75f51f9cc6a89fb64a0dd547601b6c3da.json",
+      "retrieved_at": "2026-11-15T03:20:17.819212+00:00",
+      "sha256": "80e83b6f078f16258b85df209a2c78a75f51f9cc6a89fb64a0dd547601b6c3da"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "C3 GOLDEN*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "107d1dcaefcf28606c7e6adc",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=C3+GOLDEN%2A&skip=0&state=NJ&version=2.1"
+}

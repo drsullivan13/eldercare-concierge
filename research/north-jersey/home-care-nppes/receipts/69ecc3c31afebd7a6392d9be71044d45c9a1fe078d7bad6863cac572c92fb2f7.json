@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 3931,
+      "http_status": 200,
+      "raw": "raw/ba5ac63a0871290085fc8028866d044d3cdf14ad456728540776c6b17d9daffa.json",
+      "retrieved_at": "2026-11-15T03:21:18.811951+00:00",
+      "sha256": "ba5ac63a0871290085fc8028866d044d3cdf14ad456728540776c6b17d9daffa"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ALTERNATIVE CARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "8c6e364606ea095fc09e4e32",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ALTERNATIVE+CARE%2A&skip=0&state=NJ&version=2.1"
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 1316,
+      "http_status": 200,
+      "raw": "raw/fb93a29f730e3ee852b03cc6b18a93cce4d4f035f1a2fb21a19cc1fbc050adf3.json",
+      "retrieved_at": "2026-11-15T03:21:12.448531+00:00",
+      "sha256": "fb93a29f730e3ee852b03cc6b18a93cce4d4f035f1a2fb21a19cc1fbc050adf3"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "CELEBRATION HOME*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "7dd9067c5580c20cdbc58f4f",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=CELEBRATION+HOME%2A&skip=0&state=NJ&version=2.1"
+}

@@ -2,6 +2,7 @@ import { distanceMiles } from "./distance";
 import { markets, type MarketRegistry, type MarketSnapshot } from "./markets";
 import { resolveSearchScope, SearchInputError } from "./search-scope";
 import { matchesHomeCareServiceArea } from "./providers";
+import { providerSearchText } from "./provider-search-text";
 import type {
   SearchSuggestion,
   SearchSuggestionsResponse,
@@ -16,7 +17,7 @@ function indexMarket(market: MarketSnapshot) {
     providers: market.providers.map((provider) => ({
       provider,
       name: provider.name.toLocaleLowerCase("en-US"),
-      matchText: `${provider.name} ${provider.city}`.toLocaleLowerCase("en-US"),
+      matchText: providerSearchText(provider),
     })),
   };
 }

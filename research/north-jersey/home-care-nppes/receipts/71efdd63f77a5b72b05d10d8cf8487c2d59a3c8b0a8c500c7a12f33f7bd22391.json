@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 2549,
+      "http_status": 200,
+      "raw": "raw/ac05c07aba62aabc94fbdf9ec6bfc34add5868671479df4dea39ad336f8f1b19.json",
+      "retrieved_at": "2026-11-15T03:21:19.686574+00:00",
+      "sha256": "ac05c07aba62aabc94fbdf9ec6bfc34add5868671479df4dea39ad336f8f1b19"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "1ST AMERICARE*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "8e079de5d48001c675a9d863",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=1ST+AMERICARE%2A&skip=0&state=NJ&version=2.1"
+}

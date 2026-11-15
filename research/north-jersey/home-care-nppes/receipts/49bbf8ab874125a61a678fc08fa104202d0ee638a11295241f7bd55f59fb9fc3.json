@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "bytes": 4019,
+      "http_status": 200,
+      "raw": "raw/6e0828178bf8d35b1056daa87a72b815e63ee4137411422751f32fdf3af04372.json",
+      "retrieved_at": "2026-11-15T03:22:14.586894+00:00",
+      "sha256": "6e0828178bf8d35b1056daa87a72b815e63ee4137411422751f32fdf3af04372"
+    }
+  ],
+  "query": {
+    "enumeration_type": "NPI-2",
+    "limit": "200",
+    "organization_name": "ALWAYS CARING*",
+    "skip": "0",
+    "state": "NJ",
+    "version": "2.1"
+  },
+  "query_id": "c744c15af43cb93235303b67",
+  "status": "ok",
+  "url": "https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-2&limit=200&organization_name=ALWAYS+CARING%2A&skip=0&state=NJ&version=2.1"
+}
