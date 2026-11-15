@@ -97483,6 +97483,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0078702": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0078702-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0078702-office-services-source",
+            "text": "The Warren office lists help with meal preparation, housekeeping, shopping and personal care."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0078702",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0078702-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Comfort Keepers of Warren",
+            "title": "Comfort Keepers of Warren · Home care services",
+            "url": "https://www.comfortkeepers.com/offices/new-jersey/warren/care-services/our-caregivers/"
+          }
+        ]
+      },
       "north-jersey-hp-hp0081200": {
         "availability": {
           "asOf": null,
@@ -108514,6 +108548,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0352600": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0352600-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0352600-office-services-source",
+            "text": "The Edison office lists help with bathing, dressing, meals and shopping, plus around-the-clock companionship and support returning home after a hospital stay."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0352600",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0352600-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Assisting Hands of Central New Jersey",
+            "title": "Assisting Hands of Central New Jersey · Home care services",
+            "url": "https://assistinghands.com/6/wp-content/uploads/sites/29/2025/05/Brochure_Care-Services_Central-NJ.pdf"
+          }
+        ]
+      },
       "north-jersey-hp-hp0353200": {
         "availability": {
           "asOf": null,
@@ -114802,13 +114870,19 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1629988985-registry-classification",
             "kind": "care",
             "sourceId": "supp-nppes-1629988985",
             "text": "NPPES lists FIRSTLIGHT HOME CARE OF PASSAIC at the matching East Rutherford practice address with the published taxonomy labels Home Health. NPI 1629988985. NPPES last updated 2026-09-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0440100-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0440100-office-services-source",
+            "text": "The East Rutherford office lists personal care, companionship, dementia care and respite for family caregivers."
           }
         ],
         "notes": [
@@ -114832,6 +114906,16 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1629988985"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0440100-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "FirstLight Home Care of Passaic",
+            "title": "FirstLight Home Care of Passaic · Home care services",
+            "url": "https://www.firstlighthomecare.com/home-healthcare-passaic/"
           }
         ]
       },
@@ -114913,6 +114997,40 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1366379638"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0440900": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0440900-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0440900-office-services-source",
+            "text": "South Plainfield is one of the agency’s three listed offices. The agency offers companion care and support for people with disabilities or chronic conditions. Call to confirm which services are available locally."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0440900",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0440900-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Angelic Care New Jersey",
+            "title": "Angelic Care New Jersey · Home care services",
+            "url": "https://angeliccaregivers.com/"
           }
         ]
       },
