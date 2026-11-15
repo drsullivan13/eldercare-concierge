@@ -5,7 +5,7 @@ import type { publicResearchCoverage } from "../../src/lib/research-coverage";
 import regionalMarkets from "../../src/data/regional-markets.json";
 import acquisition from "../../research/north-jersey/experience-acquisition/integration/approved-batches.json";
 
-const approvals = acquisition.batches.flatMap((batch) => batch.approvals);
+const approvals = acquisition.batches.map((batch) => batch.approvals).flat();
 const approvedIds = new Set(approvals.map((approval) => approval.providerId));
 const market = regionalMarkets.find((market) => market.id === "north-jersey")!;
 const providers = market.providers.filter(
@@ -15,8 +15,8 @@ const providers = market.providers.filter(
 test("new exact-unit aggregates reach public research and full-region coverage", async ({
   request,
 }) => {
-  expect(approvals).toHaveLength(32);
-  expect(approvedIds.size).toBe(32);
+  expect(approvals).toHaveLength(33);
+  expect(approvedIds.size).toBe(approvals.length);
   for (const approval of approvals) {
     const { providerId, aggregate: published } = approval;
     const response = await request.get(`/api/research?id=${providerId}`);
