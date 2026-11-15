@@ -1,0 +1,90 @@
+{
+  "assessmentDate": "2026-11-15",
+  "columns": [
+    "slug",
+    "providerId",
+    "name",
+    "address",
+    "city",
+    "careUnit",
+    "zip",
+    "rating",
+    "count",
+    "rows"
+  ],
+  "approvals": [
+    [
+      "sinai-post-acute-nursing-rehab-center",
+      "north-jersey-doh-nj60713",
+      "Sinai Post-Acute Nursing & Rehab Center",
+      "65 Jay Street",
+      "Newark",
+      "Skilled Nursing / Long Term Care",
+      "07103",
+      3.1,
+      131,
+      [
+        [
+          "305802",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "305803",
+          "2026-05",
+          "mixed"
+        ],
+        [
+          "305806",
+          "2026-04",
+          "negative"
+        ],
+        [
+          "305804",
+          "2026-03",
+          "positive"
+        ],
+        [
+          "305805",
+          "2026-03",
+          "positive"
+        ]
+      ]
+    ]
+  ],
+  "populationNotes": {
+    "sinai-post-acute-nursing-rehab-center": "The 3.1/5 Google average covers 131 ratings at this facility. Five visible accounts include favorable, critical and mixed experiences. Two writers have unknown relationships. A single platform does not represent every resident or measure clinical quality."
+  },
+  "method": "Independent reading of every visible account; current direct HTML verified each ID/month. Dates in the sample are the calendar-month labels in the public server HTML (UTC). For row 305803 the published timestamp is May 1 UTC and April 30 in Newark. This changes neither recency nor the score. The original Google posting date is unknown.",
+  "dateVerification": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/date-verification.json",
+    "sha256": "f375c489e277e2210e508572c3122577ac15d04b2d7aeedd5e4c6e66b02b0561"
+  },
+  "reviewedPopulation": [
+    {
+      "originalRowId": "305802",
+      "relationship": "family",
+      "sentiment": "positive"
+    },
+    {
+      "originalRowId": "305803",
+      "relationship": "resident",
+      "sentiment": "mixed"
+    },
+    {
+      "originalRowId": "305806",
+      "relationship": "resident",
+      "sentiment": "negative"
+    },
+    {
+      "originalRowId": "305804",
+      "relationship": "unknown",
+      "sentiment": "positive"
+    },
+    {
+      "originalRowId": "305805",
+      "relationship": "unknown",
+      "sentiment": "positive"
+    }
+  ]
+}

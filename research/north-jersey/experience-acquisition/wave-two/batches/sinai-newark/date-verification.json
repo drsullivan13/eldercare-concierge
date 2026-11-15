@@ -1,0 +1,142 @@
+{
+  "kind": "source-date-recheck",
+  "checkedAt": "2026-11-15",
+  "url": "https://www.mylivingchoice.com/property/sinai-post-acute-nursing-rehab-center",
+  "privacy": "Review prose, author names, author photos and review permalinks were held in process memory only and are not retained.",
+  "access": {
+    "robots": {
+      "url": "https://www.mylivingchoice.com/robots.txt",
+      "observedAt": "2026-11-15T13:05:09.078212+00:00",
+      "httpStatus": 200,
+      "bodySha256": "e772f4d519f6baba090de6d2f97b7b54895b6014daca3fb7ab40bb166438b2c9",
+      "propertyPathAllowed": {
+        "*": true,
+        "GPTBot": true
+      }
+    },
+    "terms": {
+      "url": "https://www.mylivingchoice.com/terms-of-service",
+      "observedAt": "2026-11-15T13:05:11.268558+00:00",
+      "httpStatus": 200,
+      "bodySha256": "82d30f92bd1364b9b419f894f7991533fd8a58398575b94468025e9dc7cdd01c",
+      "minimalAccessText": "no scraping at disruptive volume",
+      "decision": "permitted_low_volume"
+    }
+  },
+  "retrievals": [
+    {
+      "tool": "serial public curl GET, no cookies or credentials",
+      "observedAt": "2026-11-15T13:05:13.522577+00:00",
+      "httpStatus": 200,
+      "bodyBytes": 401811,
+      "bodySha256": "c5b9a66895cd1211b50b6b417febb75a37793d12837f6ba1185528fe824da459",
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "date": "Sun, 15 Nov 2026 13:05:13 GMT"
+      }
+    },
+    {
+      "tool": "serial public curl GET, no cookies or credentials (repeat for machine-field extraction)",
+      "observedAt": "2026-11-15T13:05:31.921613+00:00",
+      "httpStatus": 200,
+      "bodyBytes": 401811,
+      "bodySha256": "c5b9a66895cd1211b50b6b417febb75a37793d12837f6ba1185528fe824da459"
+    },
+    {
+      "tool": "FetchUrl (rendered Markdown)",
+      "observedAt": "2026-11-15",
+      "httpStatus": 200,
+      "markdownChars": 41214,
+      "markdownSha256": null,
+      "markdownShaNote": "Not hashed: the sandbox has no digest primitive and writing the Markdown to disk would retain review prose."
+    }
+  ],
+  "matchesRetainedCollector": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/residential-recheck/collection-receipts.json",
+    "observedAt": "2026-11-15T12:37:35.404034+00:00",
+    "bodySha256": "c5b9a66895cd1211b50b6b417febb75a37793d12837f6ba1185528fe824da459",
+    "identicalBody": true
+  },
+  "findings": {
+    "renderedDateForm": "calendar month label ('Mon YYYY') in a span inside each article; no relative date ('ago') anywhere in the HTML or the FetchUrl Markdown; no <time> tag, datetime attribute or JSON-LD Review date",
+    "machineDate": "Each review object in the inline Next.js flight payload carries publishedAt as a UTC Postgres timestamp with microseconds.",
+    "collectorDateSource": "collect.py reads the server-rendered 'May 2026' span (formatted from publishedAt in UTC) and stores 2026-05.",
+    "fetchUrlDateSource": "FetchUrl renders the page in a client time zone behind UTC; hydration reformats publishedAt 2026-05-01T00:11:10Z as 2026-04-30 local, so the label becomes 'Apr 2026'. Only row 305803 lies on a month boundary.",
+    "discrepancyCause": "time-zone-dependent month formatting of one machine timestamp, not a source change",
+    "publishedAtSemantics": "Field name only; the page does not state whether it is the Google post time or the MyLivingChoice ingestion time.",
+    "schema": "scripts/regions/review-catalog.py precision(): YYYY-MM-DD=day, YYYY-MM=month, YYYY=year, null=unknown"
+  },
+  "rows": [
+    {
+      "ordinal": 1,
+      "id": "mlc-google-305802",
+      "sourceReviewId": "305802",
+      "machinePublishedAt": "2026-07-14 21:49:07.615675+00",
+      "machinePublishedAtUtc": "2026-07-14T21:49:07.615675+00:00",
+      "machinePublishedAtAmericaNewYork": "2026-07-14T17:49:07.615675-04:00",
+      "serverHtmlMonthLabel": "Jul 2026",
+      "fetchUrlMarkdownMonthLabel": "Jul 2026",
+      "collectorDate": "2026-07",
+      "monthStableAcrossUtcAndFacilityZone": true,
+      "conservativeDate": "2026-07",
+      "conservativeDatePrecision": "month"
+    },
+    {
+      "ordinal": 2,
+      "id": "mlc-google-305803",
+      "sourceReviewId": "305803",
+      "machinePublishedAt": "2026-05-01 00:11:10.583576+00",
+      "machinePublishedAtUtc": "2026-05-01T00:11:10.583576+00:00",
+      "machinePublishedAtAmericaNewYork": "2026-04-30T20:11:10.583576-04:00",
+      "serverHtmlMonthLabel": "May 2026",
+      "fetchUrlMarkdownMonthLabel": "Apr 2026",
+      "collectorDate": "2026-05",
+      "monthStableAcrossUtcAndFacilityZone": false,
+      "conservativeDate": "2026",
+      "conservativeDatePrecision": "year"
+    },
+    {
+      "ordinal": 3,
+      "id": "mlc-google-305806",
+      "sourceReviewId": "305806",
+      "machinePublishedAt": "2026-04-12 21:20:09.296493+00",
+      "machinePublishedAtUtc": "2026-04-12T21:20:09.296493+00:00",
+      "machinePublishedAtAmericaNewYork": "2026-04-12T17:20:09.296493-04:00",
+      "serverHtmlMonthLabel": "Apr 2026",
+      "fetchUrlMarkdownMonthLabel": "Apr 2026",
+      "collectorDate": "2026-04",
+      "monthStableAcrossUtcAndFacilityZone": true,
+      "conservativeDate": "2026-04",
+      "conservativeDatePrecision": "month"
+    },
+    {
+      "ordinal": 4,
+      "id": "mlc-google-305804",
+      "sourceReviewId": "305804",
+      "machinePublishedAt": "2026-03-19 15:01:08.767522+00",
+      "machinePublishedAtUtc": "2026-03-19T15:01:08.767522+00:00",
+      "machinePublishedAtAmericaNewYork": "2026-03-19T11:01:08.767522-04:00",
+      "serverHtmlMonthLabel": "Mar 2026",
+      "fetchUrlMarkdownMonthLabel": "Mar 2026",
+      "collectorDate": "2026-03",
+      "monthStableAcrossUtcAndFacilityZone": true,
+      "conservativeDate": "2026-03",
+      "conservativeDatePrecision": "month"
+    },
+    {
+      "ordinal": 5,
+      "id": "mlc-google-305805",
+      "sourceReviewId": "305805",
+      "machinePublishedAt": "2026-03-08 04:39:12.118814+00",
+      "machinePublishedAtUtc": "2026-03-08T04:39:12.118814+00:00",
+      "machinePublishedAtAmericaNewYork": "2026-03-07T23:39:12.118814-05:00",
+      "serverHtmlMonthLabel": "Mar 2026",
+      "fetchUrlMarkdownMonthLabel": "Mar 2026",
+      "collectorDate": "2026-03",
+      "monthStableAcrossUtcAndFacilityZone": true,
+      "conservativeDate": "2026-03",
+      "conservativeDatePrecision": "month"
+    }
+  ]
+}

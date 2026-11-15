@@ -8706,6 +8706,87 @@
       }
     ]
   },
+  "north-jersey-doh-nj60713": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Current availability has not been independently researched. Contact the provider."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [],
+    "notes": [
+      "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+      "Reported counts are not unique people. Unknown cross-posting may remain.",
+      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+    ],
+    "providerDetailsReviewed": false,
+    "providerId": "north-jersey-doh-nj60713",
+    "reviewAggregates": [
+      {
+        "asOf": null,
+        "count": 131,
+        "notes": [
+          "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. The 3.1/5 Google average covers 131 ratings at this facility. Five visible accounts include favorable, critical and mixed experiences. Two writers have unknown relationships. A single platform does not represent every resident or measure clinical quality.",
+          "Observed ZIP matches the exact official care unit."
+        ],
+        "platform": "MyLivingChoice",
+        "rating": 3.1,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-sinai-post-acute-nursing-rehab-center"
+      }
+    ],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-google-305802",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-305803",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-google-305806",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-google-305804",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-google-305805",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-sinai-post-acute-nursing-rehab-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "review-release-mlc-acquisition-sinai-post-acute-nursing-rehab-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "MyLivingChoice",
+        "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/sinai-post-acute-nursing-rehab-center"
+      }
+    ]
+  },
   "north-jersey-doh-nj60a001": {
     "availability": {
       "asOf": null,

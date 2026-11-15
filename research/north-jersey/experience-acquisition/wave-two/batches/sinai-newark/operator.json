@@ -1,0 +1,50 @@
+{
+  "source": "Operator contact and services pages",
+  "sourceUrl": "https://sinaipostacutecare.com/contact-us/",
+  "httpStatus": 200,
+  "checkedAt": "2026-11-15",
+  "inspection": "full-page",
+  "matchedPublishedFacts": [
+    "65 Jay Street, Newark, NJ 07103",
+    "973-483-6800",
+    "services page: sub-acute rehabilitation with a 49-bed therapy unit, short-term and long-term rehabilitation, dialysis coordination, palliative and hospice"
+  ],
+  "sameFacility": [
+    {
+      "source": "CMS Provider Information dataset 4pq5-n9py (live API)",
+      "sourceUrl": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Bvalue%5D=315236&conditions%5B0%5D%5Boperator%5D=%3D&limit=1",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-15",
+      "inspection": "full-record",
+      "matchedPublishedFacts": [
+        "CCN 315236",
+        "SINAI POST-ACUTE NURSING & REHAB CENTER",
+        "65 JAY STREET",
+        "NEWARK",
+        "07103",
+        "telephone 9734836800",
+        "430 certified beds",
+        "legal business name SINAI CENTER FOR REHABILITATION AND HEALTHCARE LLC",
+        "provider type Medicare and Medicaid",
+        "processing date 2026-10-01"
+      ]
+    },
+    {
+      "source": "NJ DOH Health Facilities detail",
+      "sourceUrl": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ60713",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-15",
+      "inspection": "full-page",
+      "matchedPublishedFacts": [
+        "Licensed name Sinai Post Acute Nursing And Rehab Center",
+        "65 Jay Street, Newark, NJ 07103",
+        "(973) 483-6800",
+        "Long Term Care Facility",
+        "License 060713",
+        "Licensed owner SINAI CENTER FOR REHABILITATION AND HEALTHCARE LLC",
+        "430 long term care beds"
+      ]
+    }
+  ],
+  "officialReviewRecipient": "NJ60713"
+}

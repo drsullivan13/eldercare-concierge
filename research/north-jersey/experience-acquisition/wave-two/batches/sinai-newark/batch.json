@@ -1,0 +1,32 @@
+{
+  "id": "mylivingchoice-sinai-newark",
+  "mode": "reviewed",
+  "proposals": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/proposals.json",
+    "sha256": "93ab26be05d37f741b0447d465db47f551bc87b7387218889ad7b408fa0b94f1"
+  },
+  "reviewed": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/reviewed.json",
+    "sha256": "8cfc3855c8cc7c61866364539da1b0d87c3cbbcfea4ad4c59af390147c52bd97"
+  },
+  "access": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/access.json",
+    "sha256": "472892e53f98baa6409733e419090c4cb39224e117ffbd35a4bff300f1ff1c73"
+  },
+  "sources": {
+    "sinai-post-acute-nursing-rehab-center": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/source.json",
+      "sha256": "b3b72945df5cf20911ff7af98c2fc829e0d4f1373813601b66d9a52d6450ee49"
+    }
+  },
+  "identities": {
+    "sinai-post-acute-nursing-rehab-center": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/operator.json",
+      "sha256": "d6b1d3065638a168e8bf638c2fcadb040b580f96d9d2905727e4c57a514e8eae"
+    }
+  },
+  "aliases": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/aliases.json",
+    "sha256": "04b9729e9d64246ce3c7511036379f4abd4436b8e42bd149797a80a360870b9f"
+  }
+}

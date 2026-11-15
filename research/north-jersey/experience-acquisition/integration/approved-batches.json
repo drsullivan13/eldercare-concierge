@@ -1138,6 +1138,47 @@
           "access": "full-page",
           "aggregate": {
             "asOf": null,
+            "count": 131,
+            "rating": 3.1,
+            "scale": 5,
+            "scope": "consumer",
+            "sourceFamily": "google"
+          },
+          "checkedAt": "2026-11-15",
+          "id": "mlc-acquisition-sinai-post-acute-nursing-rehab-center",
+          "identity": {
+            "address": "65 Jay Street",
+            "careUnit": "Skilled Nursing / Long Term Care",
+            "city": "Newark",
+            "name": "Sinai Post-Acute Nursing & Rehab Center",
+            "state": "New Jersey",
+            "zip": "07103"
+          },
+          "material": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-sinai-newark/independent-checks/sinai-post-acute-nursing-rehab-center.json",
+            "sha256": "93f487b9208f59979d8b78f55555cc42990ba4be20fedc984e5897f0645b4809"
+          },
+          "observation": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-sinai-newark/collector-receipts.json",
+            "pointer": "/receipts/0",
+            "sha256": "4341e5fdcf950b4d569630250ac270d08b252339d6cf7391c4aec0cf0d2dff0f"
+          },
+          "officialId": "NJ60713",
+          "platform": "MyLivingChoice",
+          "providerId": "north-jersey-doh-nj60713",
+          "reason": "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. The 3.1/5 Google average covers 131 ratings at this facility. Five visible accounts include favorable, critical and mixed experiences. Two writers have unknown relationships. A single platform does not represent every resident or measure clinical quality.",
+          "url": "https://www.mylivingchoice.com/property/sinai-post-acute-nursing-rehab-center"
+        }
+      ],
+      "assessmentDate": "2026-11-15",
+      "id": "mylivingchoice-sinai-newark"
+    },
+    {
+      "approvals": [
+        {
+          "access": "full-page",
+          "aggregate": {
+            "asOf": null,
             "count": 35,
             "rating": 4.9,
             "scale": 5,

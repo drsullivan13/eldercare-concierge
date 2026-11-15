@@ -22,26 +22,31 @@
       "sha256": "7a49f91945c4e3b3ced01c2427fc4b2c8ee6dc90a8944b8415855e22182c510a"
     },
     {
+      "bytes": 3246,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-sinai-newark/collector-receipts.json",
+      "sha256": "4341e5fdcf950b4d569630250ac270d08b252339d6cf7391c4aec0cf0d2dff0f"
+    },
+    {
       "bytes": 3284,
       "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/collector-receipts.json",
       "sha256": "7a782ce634fa9e80be9adaa2e07d0ee97092c4881ba318bf33754e391e53e13c"
     }
   ],
   "counts": {
-    "approved": 103,
+    "approved": 104,
     "excerptCandidates": 204,
     "excluded": 0,
-    "included": 103,
-    "observations": 103,
+    "included": 104,
+    "observations": 104,
     "pendingOrInventory": 10,
-    "providers": 103,
+    "providers": 104,
     "publishedExcerpts": 73
   },
   "inputs": [
     {
-      "bytes": 71785,
+      "bytes": 74257,
       "path": "research/north-jersey/experience-acquisition/integration/approved-batches.json",
-      "sha256": "377cd5222d57c2f68736aeaa39fcecf58d06b3e005f2413b3eb46c1b1750cce6"
+      "sha256": "08a01fff4658cc7607526ca6b50f28f63918db6eccc81bd1b4baa6765b5081f4"
     },
     {
       "bytes": 659,
@@ -394,6 +399,41 @@
       "sha256": "cedd99be4a65dfc18fd05b932854cf3c9cbc12880a061b64426e0e4859c2b06c"
     },
     {
+      "bytes": 659,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/access.json",
+      "sha256": "472892e53f98baa6409733e419090c4cb39224e117ffbd35a4bff300f1ff1c73"
+    },
+    {
+      "bytes": 694,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/aliases.json",
+      "sha256": "04b9729e9d64246ce3c7511036379f4abd4436b8e42bd149797a80a360870b9f"
+    },
+    {
+      "bytes": 1409,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/batch.json",
+      "sha256": "097dec94a194d5282d9f8c7c8f1deabc4f11b789a5cb353355b5db008800e077"
+    },
+    {
+      "bytes": 1924,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/operator.json",
+      "sha256": "d6b1d3065638a168e8bf638c2fcadb040b580f96d9d2905727e4c57a514e8eae"
+    },
+    {
+      "bytes": 1558,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/proposals.json",
+      "sha256": "93ab26be05d37f741b0447d465db47f551bc87b7387218889ad7b408fa0b94f1"
+    },
+    {
+      "bytes": 2380,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/reviewed.json",
+      "sha256": "8cfc3855c8cc7c61866364539da1b0d87c3cbbcfea4ad4c59af390147c52bd97"
+    },
+    {
+      "bytes": 1669,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/source.json",
+      "sha256": "b3b72945df5cf20911ff7af98c2fc829e0d4f1373813601b66d9a52d6450ee49"
+    },
+    {
       "bytes": 32631,
       "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/collector-receipts.json",
       "sha256": "a09a3d2e363eb9a2824e0de0acb9df11e7d039459b078b59e228446c3c86edb8"
@@ -562,6 +602,16 @@
       "bytes": 2973,
       "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/independent-checks/white-house-healthcare-and-rehabilitation-center.json",
       "sha256": "5e9fd7f220404537e24024eeb70f55af1f155b858b7f7f4a5c5ec0b42eef7723"
+    },
+    {
+      "bytes": 3246,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-sinai-newark/collector-receipts.json",
+      "sha256": "4341e5fdcf950b4d569630250ac270d08b252339d6cf7391c4aec0cf0d2dff0f"
+    },
+    {
+      "bytes": 2866,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-sinai-newark/independent-checks/sinai-post-acute-nursing-rehab-center.json",
+      "sha256": "93f487b9208f59979d8b78f55555cc42990ba4be20fedc984e5897f0645b4809"
     },
     {
       "bytes": 3284,
@@ -1044,9 +1094,9 @@
       "sha256": "78563a501c95f0a65c5703881050fd1c4d66fb8f39f9ba36942da3298eb6feea"
     },
     {
-      "bytes": 21434,
+      "bytes": 22289,
       "path": "research/north-jersey/review-release/identity-corroboration.json",
-      "sha256": "290dff5bb57cf5778a0916e3176b5a6e9cdbb6c6a18efd633ae1812f1eb305d2"
+      "sha256": "44e0c2bb6b6cdde7292800496fca5852af73855a2e45ec75f5c62c1f7643c4e8"
     },
     {
       "bytes": 1469,
@@ -1180,12 +1230,12 @@
     }
   ],
   "outputs": {
-    "approvals-audit.json": "00be7300af29a075837c76188bc4a66a9e67b6f11dec51e046ea22441e6eac21",
+    "approvals-audit.json": "9c7783b26c2f7a835a21e0ddd92e575a79eb622f97665ed3c03ba3c1d49c6e60",
     "excerpt-audit.json": "611b4341690e50fd0dd0b203fba66b80f082b629dbe8a7626c843b326d6a1e28",
     "exclusions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-    "experience-verification.json": "4c341a1f482370ba59e7d63d034fb9068a65f99b467cef39c4f3479cdf378ca0",
-    "locationResearch.json": "ca81b26d64e0bc2f7701414bb11319b886d8b360eaef826eb6f329ece23f9417",
-    "observation-registry.json": "ea51dee632ded8a5a951c51bc895118022068163835e706a5390b6d060da1f87",
+    "experience-verification.json": "a1252f16cae9b2154a4e87d57aad2f841f56f690dd2b127ff6639b1d2f4a7a22",
+    "locationResearch.json": "6d776d86e9a30af385d6bbd6d13b3a4a56e6f5134f6f0a0c91cdf3ae2e3b8b48",
+    "observation-registry.json": "8701a3e856db09121f0c12991addbcacb38e226b90dcf0162e0a35d7a8c79aa7",
     "staging.json": "0cfbb4798aca802800de9ce15d361a7320525f87b350339dbd12a0241a84a5e1"
   },
   "rosterIdentitySha256": "71a3ab4a7f48704a2d7b9490f3a53f6590b7cf26b2bbceec394cfcc4ad1f5da5",

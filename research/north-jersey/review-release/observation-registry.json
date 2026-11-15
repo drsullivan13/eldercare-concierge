@@ -1027,6 +1027,38 @@
     {
       "aggregate": {
         "asOf": null,
+        "count": 131,
+        "rating": 3.1,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "identity": {
+        "address": "65 Jay Street",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Newark",
+        "name": "Sinai Post-Acute Nursing & Rehab Center",
+        "state": "New Jersey",
+        "zip": "07103"
+      },
+      "inspection": "full-page",
+      "key": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-sinai-newark/collector-receipts.json#/receipts/0",
+      "kind": "review-platform",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-sinai-newark/collector-receipts.json",
+        "pointer": "/receipts/0",
+        "sha256": "4341e5fdcf950b4d569630250ac270d08b252339d6cf7391c4aec0cf0d2dff0f"
+      },
+      "officialId": "NJ60713",
+      "platform": "MyLivingChoice",
+      "providerId": "north-jersey-doh-nj60713",
+      "status": null,
+      "url": "https://www.mylivingchoice.com/property/sinai-post-acute-nursing-rehab-center"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
         "count": 35,
         "rating": 4.9,
         "scale": 5,
