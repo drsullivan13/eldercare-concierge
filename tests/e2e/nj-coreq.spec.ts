@@ -181,3 +181,80 @@ test("the certified nursing profile keeps the source-linked CoreQ composite in R
   await expect(survey.locator("strong")).toHaveText("96%");
   await expect(consumer).toHaveText(experience!);
 });
+
+test("a nursing card without consumer experience shows its FY2027 CoreQ composite and opens the same survey", async ({
+  page,
+}) => {
+  await page.goto("/dashboard?demo=1");
+  const search = page.getByRole("region", { name: "Search nearby care" });
+  await search
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("nursing-home");
+  await search.getByLabel("Search ZIP code").fill("07922");
+  await search.getByLabel("Search radius").selectOption("5");
+  await search.locator('button[type="submit"]').click();
+  const cardFor = (name: string) =>
+    page.locator("article.provider-card").filter({
+      has: page.getByRole("button", { name, exact: true }),
+    });
+  const card = cardFor("RUNNELLS CENTER FOR REHABILITATION & HEALTHCARE");
+  const score = card.locator(".experience-card-score");
+  await expect(score.locator("strong")).toHaveText("89%");
+  await expect(score).toContainText("NJ resident & family survey");
+  await expect(score).toContainText(
+    "Long-stay satisfaction composite · FY2027 reporting year",
+  );
+  await expect(card).not.toContainText("Not enough evidence to score");
+  await expect(card.locator(".provider-review-entry")).toHaveCount(1);
+  const action = card.getByRole("button", {
+    name: "View survey & review sources",
+    exact: true,
+  });
+  await expect(action).toBeVisible();
+  for (const element of [card, score]) {
+    expect(
+      await element.evaluate((node) => node.scrollWidth - node.clientWidth),
+    ).toBeLessThanOrEqual(1);
+  }
+  const bounds = await score.boundingBox();
+  const cardBounds = await card.boundingBox();
+  expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(
+    cardBounds!.x + cardBounds!.width,
+  );
+
+  const ordinary = cardFor("AUTUMN LAKE HEALTHCARE AT BERKELEY HEIGHTS");
+  await expect(ordinary.locator(".experience-card-score strong")).toHaveText(
+    "9.0/10",
+  );
+  await expect(ordinary).toContainText("Consumer experience");
+  await expect(ordinary).not.toContainText("CoreQ");
+  await expect(ordinary).not.toContainText("100%");
+  await expect(
+    ordinary.getByRole("button", {
+      name: "Browse 5 review links",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(page.getByText("View survey & review sources")).toHaveCount(1);
+
+  await action.click();
+  const dialog = page.getByRole("dialog");
+  await expect(
+    dialog.getByRole("tab", { name: "Reviews", exact: true }),
+  ).toHaveAttribute("aria-selected", "true");
+  const survey = dialog.getByRole("region", {
+    name: "NJ resident & family survey",
+  });
+  await expect(survey.locator("strong")).toHaveText("89%");
+  await expect(survey).toContainText(
+    "FY2027 reporting/payment year, not the survey year",
+  );
+  await survey.getByText("Source, scope & definition", { exact: true }).click();
+  await expect(survey).toContainText("CMS CCN 315009");
+  await expect(survey).toContainText("cell AZ271");
+  expect(
+    await survey.evaluate(
+      (element) => element.scrollWidth - element.clientWidth,
+    ),
+  ).toBeLessThanOrEqual(1);
+});

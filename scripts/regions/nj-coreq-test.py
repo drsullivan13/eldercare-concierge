@@ -64,6 +64,8 @@ class CoreqCliTests(unittest.TestCase):
 
     def test_current_only_check_leaves_identical_current_and_existing_history_untouched(self):
         body = self.write(self.combined)
+        cards_path = self.output.with_name("nj-coreq-cards.json")
+        cards_path.write_text(json.dumps({"reportingYear": "FY2027", "values": {"315083": 96}}, indent=2) + "\n")
         self.run_cli("--check", default_output=True)
         self.assertEqual(self.output.read_text(), body)
         changed = copy.deepcopy(self.combined)

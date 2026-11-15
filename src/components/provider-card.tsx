@@ -1,6 +1,11 @@
 "use client";
 import "./provider-card.css";
 import { FamilyExperienceCount } from "./family-experience";
+import {
+  currentNjCoreqValue,
+  coreqReportingYear,
+  formatCoreqPercent,
+} from "./nj-coreq";
 import { providerDisplayName } from "./provider-display-name";
 import {
   ArrowUpRight,
@@ -82,6 +87,11 @@ export function ProviderCard({
   onCompare?: () => void;
 }) {
   const research = provider.research;
+  const coreq =
+    research?.experience.value == null &&
+    research?.experience.publicationStatus !== "sources-disagree"
+      ? currentNjCoreqValue(provider)
+      : null;
   const alerts = new Set<string>();
   if (research?.admissionRestriction) alerts.add(research.admissionRestriction);
   for (const alert of providerCareAlerts(provider)) alerts.add(alert);
@@ -180,6 +190,17 @@ export function ProviderCard({
               </small>
             </span>
           </span>
+        ) : coreq !== null ? (
+          <span className="experience-card-score">
+            <strong>{formatCoreqPercent(coreq)}</strong>
+            <span>
+              NJ resident &amp; family survey
+              <small>
+                Long-stay satisfaction composite · {coreqReportingYear}{" "}
+                reporting year
+              </small>
+            </span>
+          </span>
         ) : (
           <span className="experience-card-unrated">
             <span>
@@ -202,14 +223,16 @@ export function ProviderCard({
           className="provider-review-entry"
           onClick={(event) => onReviews(event.currentTarget)}
         >
-          {research?.individualReviews?.total
-            ? research.individualReviews.withText === 0
-              ? `Browse ${research.individualReviews.total} review links`
-              : research.individualReviews.withText ===
-                  research.individualReviews.total
-                ? `Read ${research.individualReviews.withText} reviews`
-                : `Read ${research.individualReviews.withText} reviews, browse ${research.individualReviews.total - research.individualReviews.withText} links`
-            : "Explore review sources"}
+          {coreq !== null
+            ? "View survey & review sources"
+            : research?.individualReviews?.total
+              ? research.individualReviews.withText === 0
+                ? `Browse ${research.individualReviews.total} review links`
+                : research.individualReviews.withText ===
+                    research.individualReviews.total
+                  ? `Read ${research.individualReviews.withText} reviews`
+                  : `Read ${research.individualReviews.withText} reviews, browse ${research.individualReviews.total - research.individualReviews.withText} links`
+              : "Explore review sources"}
           <ArrowUpRight size={15} />
         </button>
         {research?.experience.selectedConcerns && (

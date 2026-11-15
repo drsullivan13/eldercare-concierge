@@ -14,11 +14,13 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import cards from "../src/data/nj-coreq-cards.json";
 import snapshot from "../src/data/nj-coreq.json";
 import { NjCoreqSurvey } from "../src/components/nj-coreq-survey";
 import { getMarket } from "../src/lib/markets";
-import type { Provider } from "../src/lib/providers";
+import type { Provider, SearchProvider } from "../src/lib/providers";
 import { getLocationResearch } from "../src/lib/location-research";
+import { searchProviders } from "../src/lib/search";
 
 const root = new URL("../", import.meta.url);
 const workbook =
@@ -447,4 +449,198 @@ test("the survey belongs only to Reviews and never changes Harbor experience or 
   }
   assert.equal(JSON.stringify(before).includes("CoreQ"), false);
   assert.equal(JSON.stringify(before).includes("917532"), false);
+});
+
+const {
+  ProviderCard,
+}: typeof import("../src/components/provider-card") = require("../src/components/provider-card");
+const card = (value: SearchProvider) =>
+  renderToStaticMarkup(
+    createElement(ProviderCard, {
+      provider: value,
+      saved: false,
+      onSave() {},
+      onOpen() {},
+      onReviews() {},
+    }),
+  );
+const liveCard = (candidate: Provider) =>
+  searchProviders(
+    { zip: candidate.zip, category: candidate.category, radius: 25 },
+    [candidate],
+  ).providers[0]!;
+const runnells = liveCard(providers.find((row) => row.id === "cms-315009")!);
+test("lean survey values match every current exact catalog facility", () => {
+  const ids = new Set(
+    providers
+      .filter(
+        (p) =>
+          p.state === "NJ" &&
+          p.category === "nursing-home" &&
+          p.officialRecord &&
+          p.locationKind === "facility" &&
+          p.cms &&
+          p.id === `cms-${p.cms.ccn}`,
+      )
+      .map((p) => p.cms!.ccn),
+  );
+  const expected = Object.fromEntries(
+    Object.entries(snapshot.results)
+      .filter(([ccn]) => ids.has(ccn))
+      .map(([ccn, row]) => [ccn, row.value]),
+  );
+  assert.deepEqual(cards, {
+    reportingYear: snapshot.source.reportingYear,
+    values: expected,
+  });
+  assert.equal(Object.keys(expected).length, 91);
+});
+
+const coreqLabel = "NJ resident &amp; family survey";
+const fallbackAction = "View survey &amp; review sources";
+const publishedResults: Record<string, { raw: string }> = snapshot.results;
+const publishedPercent = (raw: string) =>
+  `${Number((Number(raw) * 100).toFixed(2))}%`;
+const reviewActions = (html: string) =>
+  html.match(/class="provider-review-entry"/g)?.length ?? 0;
+
+test("cards without consumer experience show the published FY2027 composite that Reviews shows", () => {
+  const eligible = providers.filter(
+    (row) =>
+      row.category === "nursing-home" &&
+      row.officialRecord &&
+      row.locationKind === "facility" &&
+      row.cms &&
+      row.id === `cms-${row.cms.ccn}` &&
+      Object.hasOwn(snapshot.results, row.cms.ccn),
+  );
+  assert.equal(eligible.length, 91);
+  const fallback: string[] = [];
+  const disagree: string[] = [];
+  for (const candidate of eligible) {
+    const live = liveCard(candidate);
+    const ccn = candidate.cms!.ccn;
+    const experience = live.research!.experience;
+    const html = card(live);
+    assert.equal(reviewActions(html), 1, ccn);
+    if (experience.value !== null) {
+      assert.ok(html.includes("Consumer experience"), ccn);
+      assert.ok(!html.includes(coreqLabel), ccn);
+      assert.ok(!html.includes(fallbackAction), ccn);
+      continue;
+    }
+    if (experience.publicationStatus === "sources-disagree") {
+      disagree.push(ccn);
+      assert.ok(html.includes("Harbor score withheld · Sources disagree"), ccn);
+      assert.ok(!html.includes(coreqLabel), ccn);
+      assert.ok(!html.includes(fallbackAction), ccn);
+      continue;
+    }
+    fallback.push(ccn);
+    const percent = publishedPercent(publishedResults[ccn].raw);
+    assert.ok(html.includes(`<strong>${percent}</strong>`), ccn);
+    assert.ok(html.includes(coreqLabel), ccn);
+    assert.ok(
+      html.includes("Long-stay satisfaction composite · FY2027 reporting year"),
+      ccn,
+    );
+    assert.ok(html.includes(`>${fallbackAction}<`), ccn);
+    assert.ok(!html.includes("Not enough evidence to score"), ccn);
+    assert.doesNotMatch(html, /satisfied|\/10</, ccn);
+    assert.ok(render(candidate).includes(`<strong>${percent}</strong>`), ccn);
+  }
+  assert.equal(fallback.length, 27);
+  assert.deepEqual(disagree.sort(), ["315103", "315178"]);
+  assert.ok(card(runnells).includes("<strong>89%</strong>"));
+});
+
+test("card values keep zero and published decimals and trim floating-point noise", () => {
+  const result = snapshot.results["315009"];
+  const original = result.value;
+  const originalCardValue = cards.values["315009"];
+  try {
+    for (const [value, shown] of [
+      [0, "0%"],
+      [90.5, "90.5%"],
+      [88.999, "89%"],
+      [67.125, "67.13%"],
+    ] as const) {
+      result.value = value;
+      cards.values["315009"] = value;
+      const html = card(runnells);
+      assert.ok(html.includes(`<strong>${shown}</strong>`), shown);
+      assert.ok(html.includes(`>${fallbackAction}<`), shown);
+      assert.ok(render(runnells).includes(`<strong>${shown}</strong>`), shown);
+    }
+  } finally {
+    result.value = original;
+    cards.values["315009"] = originalCardValue;
+  }
+});
+
+test("a consumer score or explicit source disagreement keeps the card's existing state", () => {
+  const research = runnells.research!;
+  const scored = card({
+    ...runnells,
+    research: {
+      ...research,
+      experience: { ...research.experience, value: 7.5, reviewCount: 12 },
+    },
+  });
+  assert.ok(scored.includes("7.5<small>/10</small>"));
+  assert.ok(!scored.includes(coreqLabel));
+  assert.ok(!scored.includes("89%"));
+  assert.ok(scored.includes(">Explore review sources<"));
+  const disagreeing = card({
+    ...runnells,
+    research: {
+      ...research,
+      experience: {
+        ...research.experience,
+        publicationStatus: "sources-disagree",
+      },
+    },
+  });
+  assert.ok(disagreeing.includes("Harbor score withheld · Sources disagree"));
+  assert.ok(!disagreeing.includes(coreqLabel));
+  assert.ok(disagreeing.includes(">Explore review sources<"));
+  assert.equal(reviewActions(disagreeing), 1);
+});
+
+test("cards for other settings, states, CCNs, campuses or FY2026-only history show no CoreQ composite", () => {
+  for (const changes of [
+    { category: "assisted-living" },
+    { category: "life-plan" },
+    { category: "home-care" },
+    { category: "home-health" },
+    { state: "NY" },
+    { officialRecord: false },
+    { locationKind: "office" },
+    { locationKind: "zip" },
+    { cms: undefined },
+    { cms: { ...runnells.cms!, ccn: "315029" } },
+    { cms: { ...runnells.cms!, ccn: "317001" } },
+    { id: "campus-sister-facility" },
+    { id: "cms-__proto__", cms: { ...runnells.cms!, ccn: "__proto__" } },
+  ] satisfies Partial<SearchProvider>[]) {
+    const html = card({ ...runnells, ...changes });
+    assert.ok(!html.includes(coreqLabel), JSON.stringify(changes));
+    assert.ok(!html.includes("89%"), JSON.stringify(changes));
+    assert.ok(html.includes(">Explore review sources<"));
+    assert.equal(reviewActions(html), 1);
+  }
+  for (const ccn of ["315138", "315376", "315393"]) {
+    const candidate = providers.find((row) => row.id === `cms-${ccn}`)!;
+    const html = card(liveCard(candidate));
+    assert.ok(!html.includes(coreqLabel), ccn);
+    assert.ok(!html.includes("CoreQ"), ccn);
+    assert.ok(!html.includes(fallbackAction), ccn);
+    assert.match(render(candidate), /Historical result\. FY2026/);
+  }
+  const unscoredWithoutCoreq = liveCard(
+    providers.find((row) => row.id === "cms-315523")!,
+  );
+  const html = card(unscoredWithoutCoreq);
+  assert.ok(html.includes("Not enough evidence to score"));
+  assert.ok(!html.includes(coreqLabel));
 });

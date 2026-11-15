@@ -373,6 +373,21 @@ def main():
                 require(isinstance(existing, dict) and "historical" not in existing,
                         "Rebuilding an existing combined projection requires --historical-workbook")
         args.output.write_text(body)
+    if args.output.resolve() == OUTPUT.resolve():
+        cards_path = OUTPUT.with_name("nj-coreq-cards.json")
+        providers = json.loads((ROOT / "research/north-jersey/runtime/providers.json").read_text())
+        catalog_ccns = {p["cms"]["ccn"] for p in providers
+                        if p["state"] == "NJ" and p["category"] == "nursing-home"
+                        and p.get("officialRecord") and p.get("locationKind") == "facility"
+                        and p.get("cms") and p["id"] == "cms-" + p["cms"]["ccn"]}
+        cards = {"reportingYear": projection["source"]["reportingYear"],
+                 "values": {ccn: row["value"] for ccn, row in projection["results"].items()
+                            if ccn in catalog_ccns}}
+        cards_body = json.dumps(cards, ensure_ascii=False, indent=2) + "\n"
+        if args.check:
+            require(cards_path.read_text() == cards_body, f"Card survey values differ: {cards_path}")
+        else:
+            cards_path.write_text(cards_body)
     print(json.dumps({
         "emitted": len(projection["results"]),
         **({"historicalEmitted": len(projection["historical"]["results"])}

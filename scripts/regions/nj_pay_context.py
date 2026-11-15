@@ -2,6 +2,63 @@
 import re
 
 
+NJMMIS_SPECIALTIES = {
+    "Personal Care Assistance - Aged & Disabled": "personal care assistance",
+    "Private Duty Nursing": "private duty nursing",
+    "Respite": "respite care",
+    "Homemaker - CCPED": "homemaker services",
+}
+
+
+def njmmis_services(specialties):
+    return sorted({NJMMIS_SPECIALTIES[label] for label in specialties
+                   if label in NJMMIS_SPECIALTIES})
+
+
+def add_njmmis_context(inputs, offices, research):
+    try:
+        rows = inputs.json("home-care-network/njmmis-exports/verified.json")
+    except FileNotFoundError:
+        return  # Older research fixtures do not contain this optional source.
+    for row in rows:
+        pid = row["providerId"]
+        if pid not in offices:
+            continue
+        office = offices[pid]
+        registry = row["registryOffice"]
+        if (row["decision"] != "accepted_exact_office"
+                or not re.fullmatch(r"north-jersey-hp-hp\d{7}", pid)
+                or any(office.get(key) != registry[key]
+                       for key in ("name", "address", "city", "state", "zip", "phone"))
+                or row["careServices"] != njmmis_services(row["sourceSpecialties"])
+                or not row["careServices"]):
+            raise ValueError(f"Changed NJMMIS office identity or specialties: {pid}")
+        record = office_record(research, pid, row["checkedAt"])
+        key = f"{pid}-njmmis-{row['evidenceId']}"
+        source_id = key + "-source"
+        source_office = row["sourceOffice"]
+        source = {
+            "id": source_id, "kind": "public-directory", "access": "pdf",
+            "publisher": "New Jersey Medicaid (NJMMIS)",
+            "title": "NJMMIS Home Care Provider directory",
+            "url": row["sourceUrl"], "checkedAt": row["checkedAt"], "publishedAt": None,
+            "excerpt": (f"{source_office['name']}; {source_office['address']}; "
+                        f"{source_office['city']}, {source_office['state']} {source_office['zip']}; "
+                        f"Phone: {source_office['phone']}."),
+        }
+        text = ("New Jersey Medicaid lists this office for "
+                + ", ".join(row["careServices"]) + ". "
+                "Confirm coverage for this office and service with your health plan.")
+        fact = {"id": key + "-services", "kind": "care", "sourceId": source_id,
+                "text": text, "asOf": row["checkedAt"]}
+        for collection, value in (("sources", source), ("facts", fact)):
+            previous = next((item for item in record[collection] if item["id"] == value["id"]), None)
+            if previous is not None and previous != value:
+                raise ValueError(f"Conflicting NJMMIS {collection}: {pid}")
+            if previous is None:
+                record[collection].append(value)
+
+
 def add_county_home_care_context(inputs, providers, research):
     offices = {p["id"]: p for p in providers if p["category"] == "home-care"}
     for row in inputs.json("home-care-pay-services/observations.json"):
@@ -78,6 +135,8 @@ def add_county_home_care_context(inputs, providers, research):
             research[pid]["facts"].append({"id": f"{pid}-{rate['key']}", "kind": "cost",
                                           "sourceId": f"{pid}-{key}-source",
                                           "text": rate["text"], "amount": rate["amount"]})
+
+    add_njmmis_context(inputs, offices, research)
 
 
 

@@ -31281,7 +31281,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-home-bayada-bloomfield-hp0015319-services-0",
@@ -31306,6 +31306,13 @@
         "kind": "care",
         "sourceId": "supp-home-96be2b346ffea925",
         "text": "The official local office page lists 650 Bloomfield Avenue, Suite 200, Bloomfield NJ 07003."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0015319-njmmis-da9172e51eaf60b9-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015319-njmmis-da9172e51eaf60b9-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -31331,6 +31338,17 @@
         "publisher": "BAYADA Essex County, Bloomfield",
         "title": "BAYADA Essex County, Bloomfield official office information",
         "url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "BAYADA HOME HEALTH CARE INC; 650 BLOOMFIELD AVE SUITE 200; BLOOMFIELD, NJ 07003-2512; Phone: 9737436075.",
+        "id": "north-jersey-hp-hp0015319-njmmis-da9172e51eaf60b9-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -31438,7 +31456,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-home-bayada-clifton-hp0015321-services-0",
@@ -31463,6 +31481,13 @@
         "kind": "care",
         "sourceId": "supp-home-d4447d6399a756e2",
         "text": "The official local office page lists 1117 Main Avenue, Suite 101, Clifton NJ 07011."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0015321-njmmis-b92121e878f6ef75-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015321-njmmis-b92121e878f6ef75-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -31488,6 +31513,53 @@
         "publisher": "BAYADA Passaic County, Clifton",
         "title": "BAYADA Passaic County, Clifton official office information",
         "url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "BAYADA HOME HEALTHCARE INC; 1117 MAIN AVE SUITE 101; CLIFTON, NJ 07011-2379; Phone: 9735741120.",
+        "id": "north-jersey-hp-hp0015321-njmmis-b92121e878f6ef75-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0015322": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0015322-njmmis-a61c45cc6819236f-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015322-njmmis-a61c45cc6819236f-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0015322",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "BAYADA HOME HEALTH CARE INC; 123 LIBERTY VIEW DRIVE; JERSEY CITY, NJ 07302-4378; Phone: 2013391330.",
+        "id": "north-jersey-hp-hp0015322-njmmis-a61c45cc6819236f-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -31617,6 +31689,42 @@
         "publisher": "U.S. Department of Health and Human Services",
         "title": "Medicaid personal care claims history",
         "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0015328": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0015328-njmmis-c2e44441513acbce-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015328-njmmis-c2e44441513acbce-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0015328",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "BAYADA HOME HEALTH CARE INC; 201 SMITH STREET; PERTH AMBOY, NJ 08861-4323; Phone: 7324423370.",
+        "id": "north-jersey-hp-hp0015328-njmmis-c2e44441513acbce-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -32122,13 +32230,20 @@
       "status": "not-published",
       "text": "Contact the agency for current availability."
     },
-    "checkedAt": "2026-11-14",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "morris-2025-025-payment",
         "kind": "cost",
         "sourceId": "morris-2025-025-directory",
         "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0023300-njmmis-e2f676e716e2be2f-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0023300-njmmis-e2f676e716e2be2f-source",
+        "text": "New Jersey Medicaid lists this office for homemaker services, personal care assistance, private duty nursing, respite care. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [],
@@ -32146,6 +32261,17 @@
         "publisher": "Morris County",
         "title": "2025 Home Care Agencies, page 6",
         "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=6"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "GENTLE CARE HOME SERVICES INC; 1180 STELTON ROAD; PISCATAWAY, NJ 08854-0000; Phone: 7327770021.",
+        "id": "north-jersey-hp-hp0023300-njmmis-e2f676e716e2be2f-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -32256,6 +32382,42 @@
         "publisher": "U.S. Department of Health and Human Services",
         "title": "Medicaid personal care claims history",
         "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0033800": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0033800-njmmis-5c41fc48243df10f-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0033800-njmmis-5c41fc48243df10f-source",
+        "text": "New Jersey Medicaid lists this office for homemaker services, personal care assistance, respite care. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0033800",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "HOME CARE WITH LOVE INC; 320 RARITAN AVE 2ND FLOOR STE 210; HIGHLAND PARK, NJ 08904-0000; Phone: 7323391933.",
+        "id": "north-jersey-hp-hp0033800-njmmis-5c41fc48243df10f-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -32390,6 +32552,13 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0035003-essex-respite-2025-source",
         "text": "Named in Essex County’s 2025 respite program schedule. Contact the county for the current provider list."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0035003-njmmis-4ed9edfbf7909ba4-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0035003-njmmis-4ed9edfbf7909ba4-source",
+        "text": "New Jersey Medicaid lists this office for homemaker services, personal care assistance, private duty nursing, respite care. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [],
@@ -32407,6 +32576,17 @@
         "publisher": "Essex County Board of County Commissioners, Department of Citizen Services / Division of Senior Services",
         "title": "Essex County 2025 respite program schedule, page 8",
         "url": "https://ecode360.com/ES1525/document/753118519.pdf#page=8"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "ELARA CARING; 76 SOUTH ORANGE AVE. SUITE 309; SOUTH ORANGE, NJ 07079-1923; Phone: 9736747700.",
+        "id": "north-jersey-hp-hp0035003-njmmis-4ed9edfbf7909ba4-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -32710,13 +32890,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1275783383-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1275783383",
         "text": "NPPES lists PRIME HEALTH CARE LLC. at the matching JERSEY CITY practice address with the published taxonomy labels Home Health. NPI 1275783383. NPPES last updated 2008-09-25. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0056900-njmmis-b2b872a108e3e520-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0056900-njmmis-b2b872a108e3e520-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -32740,6 +32927,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1275783383"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "PRIME HEALTHCARE LLC; 39 TERHUNE AVENUE; JERSEY CITY, NJ 07305-0000; Phone: 2014334741.",
+        "id": "north-jersey-hp-hp0056900-njmmis-b2b872a108e3e520-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -33061,6 +33259,13 @@
     "checkedAt": "2026-11-15",
     "facts": [
       {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0069600-njmmis-7696f896d1d3ea2e-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0069600-njmmis-7696f896d1d3ea2e-source",
+        "text": "New Jersey Medicaid lists this office for private duty nursing. Confirm coverage for this office and service with your health plan."
+      },
+      {
         "id": "north-jersey-hp-hp0069600-hhs-nj-enrollment",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0069600-hhs-nj-enrollment-source",
@@ -33073,6 +33278,17 @@
     "reviewAggregates": [],
     "reviews": [],
     "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "C.A.S. HEALTH CARE, INC.; 224 HIGHWAY 35; RED BANK, NJ 07701-0000; Phone: 7327589020.",
+        "id": "north-jersey-hp-hp0069600-njmmis-7696f896d1d3ea2e-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      },
       {
         "access": "full-page",
         "checkedAt": "2026-11-15",
@@ -33092,13 +33308,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1225394588-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1225394588",
         "text": "NPPES lists LOVING CARE AGENCY, INC at the matching HACKENSACK practice address with the published taxonomy labels Home Health. NPI 1225394588. NPPES last updated 2025-01-27. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0076201-njmmis-27a1cf52309ac143-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0076201-njmmis-27a1cf52309ac143-source",
+        "text": "New Jersey Medicaid lists this office for private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -33122,6 +33345,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1225394588"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "AVEANNA HEALTHCARE; 3 UNIVERSITY PLAZA STE 124; HACKENSACK, NJ 07601-6208; Phone: 2019394300.",
+        "id": "north-jersey-hp-hp0076201-njmmis-27a1cf52309ac143-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -33678,6 +33912,42 @@
       }
     ]
   },
+  "north-jersey-hp-hp0100200": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0100200-njmmis-395bc48db6401d9e-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0100200-njmmis-395bc48db6401d9e-source",
+        "text": "New Jersey Medicaid lists this office for private duty nursing. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0100200",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "BRENTWOOD HEALTH CARE INC; 565 ROUTE 35 STE 3B; RED BANK, NJ 07701-0000; Phone: 7322197080.",
+        "id": "north-jersey-hp-hp0100200-njmmis-395bc48db6401d9e-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
   "north-jersey-hp-hp0103300": {
     "availability": {
       "asOf": null,
@@ -34021,6 +34291,42 @@
       }
     ]
   },
+  "north-jersey-hp-hp0108700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0108700-njmmis-405e128968191293-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0108700-njmmis-405e128968191293-source",
+        "text": "New Jersey Medicaid lists this office for homemaker services, personal care assistance, private duty nursing, respite care. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0108700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "CARE 4 ME LLC; 765 TEANECK ROAD SUITE 2R; TEANECK, NJ 07666-0000; Phone: 2018377779.",
+        "id": "north-jersey-hp-hp0108700-njmmis-405e128968191293-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
   "north-jersey-hp-hp0115500": {
     "availability": {
       "asOf": null,
@@ -34132,13 +34438,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1528489705-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1528489705",
         "text": "NPPES lists CASA HOME CARE, INC at the matching CLIFTON practice address with the published taxonomy labels Home Health. NPI 1528489705. NPPES last updated 2016-04-18. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0116100-njmmis-a5f19ac7528c003a-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0116100-njmmis-a5f19ac7528c003a-source",
+        "text": "New Jersey Medicaid lists this office for homemaker services, personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -34162,6 +34475,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1528489705"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "CASA HOME CARE, INC; 100 SCALES PLAZA, STE. 100; CLIFTON, NJ 07013-0000; Phone: 2014748063.",
+        "id": "north-jersey-hp-hp0116100-njmmis-a5f19ac7528c003a-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -34429,6 +34753,13 @@
         "text": "NPPES lists EPIC HEALTH SERVICES, INC. at the matching CLARK practice address with the published taxonomy labels Behavior Analyst, Home Health, Nursing Care. NPI 1841690070. NPPES last updated 2025-01-27. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
       },
       {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0120800-njmmis-64ef904dcf234227-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0120800-njmmis-64ef904dcf234227-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing, respite care. Confirm coverage for this office and service with your health plan."
+      },
+      {
         "id": "north-jersey-hp-hp0120800-hhs-nj-enrollment",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0120800-hhs-nj-enrollment-source",
@@ -34456,6 +34787,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1841690070"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "EPIC HEALTH SERVICES, INC; 77 BRANT AVENUE SUITE 320; CLARK, NJ 07066-0000; Phone: 9735100120.",
+        "id": "north-jersey-hp-hp0120800-njmmis-64ef904dcf234227-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       },
       {
         "access": "full-page",
@@ -34868,6 +35210,42 @@
         "publisher": "BrightStar Care Greater Hackensack",
         "title": "BrightStar Care Greater Hackensack official office information",
         "url": "https://www.brightstarcare.com/locations/greater-hackensack/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0131700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0131700-njmmis-238b761b4f5b1efb-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0131700-njmmis-238b761b4f5b1efb-source",
+        "text": "New Jersey Medicaid lists this office for homemaker services, personal care assistance, respite care. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0131700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "BEST HOME CARE INC; 879 BERGEN AVENUE SUITE 200; JERSEY CITY, NJ 07306-0000; Phone: 2017987600.",
+        "id": "north-jersey-hp-hp0131700-njmmis-238b761b4f5b1efb-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -36691,13 +37069,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1053561340-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1053561340",
         "text": "NPPES lists E CARE SERVICES INC at the matching FAIRFIELD practice address with the published taxonomy labels Home Health, Home Infusion, In Home Supportive Care, Point of Service. NPI 1053561340. NPPES last updated 2026-04-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0181000-njmmis-427fb1dc3cd1219f-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0181000-njmmis-427fb1dc3cd1219f-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -36721,6 +37106,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1053561340"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "E CARE SERVICES INC; 271 US HIGHWAY 46 STE E102; FAIRFIELD, NJ 07004-0000; Phone: 9737276806.",
+        "id": "north-jersey-hp-hp0181000-njmmis-427fb1dc3cd1219f-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -38194,6 +38590,42 @@
       }
     ]
   },
+  "north-jersey-hp-hp0227900": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0227900-njmmis-4bc75ec5d613c9a5-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0227900-njmmis-4bc75ec5d613c9a5-source",
+        "text": "New Jersey Medicaid lists this office for homemaker services, personal care assistance, private duty nursing, respite care. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0227900",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "CONFIDENT CARE CORP; 3 UNIVERSITY PLAZA DRIVE STE 340; HACKENSACK, NJ 07601-0000; Phone: 2014989400.",
+        "id": "north-jersey-hp-hp0227900-njmmis-4bc75ec5d613c9a5-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
   "north-jersey-hp-hp0227901": {
     "availability": {
       "asOf": null,
@@ -39040,13 +39472,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1114376118-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1114376118",
         "text": "NPPES lists ELEON HEALTHCARE INC. at the matching HACKENSACK practice address with the published taxonomy labels Home Health. NPI 1114376118. NPPES last updated 2016-06-10. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0250200-njmmis-8d21537b2cc6b030-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0250200-njmmis-8d21537b2cc6b030-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -39071,6 +39510,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1114376118"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "ELEON HEALTHCARE INC; 200 PASSAIC ST SUITE 5; HACKENSACK, NJ 07601-0000; Phone: 2014675999.",
+        "id": "north-jersey-hp-hp0250200-njmmis-8d21537b2cc6b030-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -39946,6 +40396,42 @@
         "publisher": "Broadway Respite & Home Care",
         "title": "Broadway Respite & Home Care · Home care services",
         "url": "https://newjerseyseniorservices.com/broadway/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0261600": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0261600-njmmis-21b2b3f127dddad0-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0261600-njmmis-21b2b3f127dddad0-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0261600",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "COMFORCARE HOME CARE-MORRIS; 45 BROADWAY 2ND FLOOR; DENVILLE, NJ 07834-0000; Phone: 9733161400.",
+        "id": "north-jersey-hp-hp0261600-njmmis-21b2b3f127dddad0-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -41726,6 +42212,13 @@
     "checkedAt": "2026-11-15",
     "facts": [
       {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0293100-njmmis-09a5dadff552d551-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0293100-njmmis-09a5dadff552d551-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
+      },
+      {
         "id": "north-jersey-hp-hp0293100-hhs-nj-enrollment",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0293100-hhs-nj-enrollment-source",
@@ -41744,6 +42237,17 @@
     "reviewAggregates": [],
     "reviews": [],
     "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "EXPO SIGNATURE HOME CARE LLC; 1727 US-130 UNIT #6; NORTH BRUNSWICK, NJ 08902-0000; Phone: 7329559575.",
+        "id": "north-jersey-hp-hp0293100-njmmis-09a5dadff552d551-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      },
       {
         "access": "full-page",
         "checkedAt": "2026-11-15",
@@ -42340,6 +42844,13 @@
         "text": "NPPES lists 365 HOME HEALTH SERVICES LLC at the matching PATERSON practice address with the published taxonomy labels Home Health. NPI 1689292336. NPPES last updated 2020-07-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
       },
       {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0308700-njmmis-6b6d24cf2f2d57b6-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0308700-njmmis-6b6d24cf2f2d57b6-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
+      },
+      {
         "id": "north-jersey-hp-hp0308700-hhs-nj-enrollment",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0308700-hhs-nj-enrollment-source",
@@ -42373,6 +42884,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1689292336"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "365 HOME HEALTH SERVICES LLC; 405 HAMILTON AVENUE; PATERSON, NJ 07514-0000; Phone: 9172002719.",
+        "id": "north-jersey-hp-hp0308700-njmmis-6b6d24cf2f2d57b6-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       },
       {
         "access": "full-page",
@@ -43003,13 +43525,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1376247718-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1376247718",
         "text": "NPPES lists ATLAS HOMECARE LLC at the matching NEWARK practice address with the published taxonomy labels Chore Provider, Home Health. NPI 1376247718. NPPES last updated 2026-11-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0319000-njmmis-5e5a8cdf482caa49-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0319000-njmmis-5e5a8cdf482caa49-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -43034,6 +43563,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1376247718"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "ATLAS HOMECARE LLC; 132 VAN BUREN STREET 2ND FLOOR; NEWARK, NJ 07105-0000; Phone: 9733548100.",
+        "id": "north-jersey-hp-hp0319000-njmmis-5e5a8cdf482caa49-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -43051,6 +43591,13 @@
         "kind": "care",
         "sourceId": "supp-nppes-1962147033",
         "text": "NPPES lists MIYOU CARING HANDS LLC. at the matching NEWARK practice address with the published taxonomy labels Home Health Aide. NPI 1962147033. NPPES last updated 2022-05-03. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0320300-njmmis-c5a5333299541276-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0320300-njmmis-c5a5333299541276-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       },
       {
         "id": "north-jersey-hp-hp0320300-hhs-nj-enrollment",
@@ -43080,6 +43627,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1962147033"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "MIYOU CARING HANDS LLC; 769 SANFORD AVENUE; NEWARK, NJ 07106-0000; Phone: 2019696485.",
+        "id": "north-jersey-hp-hp0320300-njmmis-c5a5333299541276-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       },
       {
         "access": "full-page",
@@ -43219,6 +43777,42 @@
       }
     ]
   },
+  "north-jersey-hp-hp0322800": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0322800-njmmis-cbe7a2cbf36dc67f-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0322800-njmmis-cbe7a2cbf36dc67f-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0322800",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "DAZZLE HEALTHCARE LLC; 51 JFK PARKWAY 1ST FLOOR WEST; SHORT HILLS, NJ 07078-0000; Phone: 9084474996.",
+        "id": "north-jersey-hp-hp0322800-njmmis-cbe7a2cbf36dc67f-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
   "north-jersey-hp-hp0323200": {
     "availability": {
       "asOf": null,
@@ -43233,6 +43827,13 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0323200-office-services-source",
         "text": "The Somerset agency offers companionship, meal preparation and respite care."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0323200-njmmis-77c14b1100ffd40a-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0323200-njmmis-77c14b1100ffd40a-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [],
@@ -43250,6 +43851,17 @@
         "publisher": "NBC Home Care Agency",
         "title": "NBC Home Care Agency · In-home care services",
         "url": "https://www.nbchomecare.com/services"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "NBC HOME CARE AGENCY LLC; 225 DEMOTT LN SUITE 206; SOMERSET, NJ 08873-0000; Phone: 7324084369.",
+        "id": "north-jersey-hp-hp0323200-njmmis-77c14b1100ffd40a-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -43373,13 +43985,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1346811106-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1346811106",
         "text": "NPPES lists HEAVENS CARE LLC at the matching PATERSON practice address with the published taxonomy labels Home Health. NPI 1346811106. NPPES last updated 2024-08-14. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0327200-njmmis-7ad5e86aefd97b46-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0327200-njmmis-7ad5e86aefd97b46-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -43404,6 +44023,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1346811106"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "BROTHERS HOME HEALTH CARE; 207 MCBRIDE AVE; PATERSON, NJ 07501-0000; Phone: 8629301043.",
+        "id": "north-jersey-hp-hp0327200-njmmis-7ad5e86aefd97b46-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -43513,6 +44143,13 @@
         "text": "NPPES lists LONG ISLAND SENIOR CARE LLC at the matching ORANGE practice address with the published taxonomy labels Adult Companion, Home Health. NPI 1629679188. NPPES last updated 2024-04-29. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
       },
       {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0330200-njmmis-cb46244dafa85e02-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0330200-njmmis-cb46244dafa85e02-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
+      },
+      {
         "id": "north-jersey-hp-hp0330200-hhs-nj-enrollment",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0330200-hhs-nj-enrollment-source",
@@ -43540,6 +44177,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1629679188"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "LONG ISLAND SENIOR CARE LLC; 98 PARK STREET; ORANGE, NJ 07050-0000; Phone: 9732335903.",
+        "id": "north-jersey-hp-hp0330200-njmmis-cb46244dafa85e02-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       },
       {
         "access": "full-page",
@@ -43826,6 +44474,42 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1023725389"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0337100": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0337100-njmmis-c736154bfe519fff-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0337100-njmmis-c736154bfe519fff-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0337100",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "FRIENDLY HOME CARE LLC; 863 HAMILTON STREET; SOMERSET, NJ 08873-3106; Phone: 7328898444.",
+        "id": "north-jersey-hp-hp0337100-njmmis-c736154bfe519fff-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -44390,6 +45074,42 @@
       }
     ]
   },
+  "north-jersey-hp-hp0347500": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0347500-njmmis-0f0da70648885066-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0347500-njmmis-0f0da70648885066-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0347500",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "AMOR HOMECARE OF NJ INC; 433 MOUNTAIN VIEW ROAD; ENGLEWOOD, NJ 07631-0000; Phone: 9172260509.",
+        "id": "north-jersey-hp-hp0347500-njmmis-0f0da70648885066-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
   "north-jersey-hp-hp0347600": {
     "availability": {
       "asOf": null,
@@ -44714,6 +45434,42 @@
         "publisher": "Assisting Hands of Central New Jersey",
         "title": "Assisting Hands of Central New Jersey · Home care services",
         "url": "https://assistinghands.com/6/wp-content/uploads/sites/29/2025/05/Brochure_Care-Services_Central-NJ.pdf"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0352700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0352700-njmmis-d488127acad919dd-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0352700-njmmis-d488127acad919dd-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0352700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "SVITANOK LLC; 12-17 RIVER RD 2ND FLOOR; FAIR LAWN, NJ 07410-0000; Phone: 2018772461.",
+        "id": "north-jersey-hp-hp0352700-njmmis-d488127acad919dd-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -45239,13 +45995,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1740028224-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1740028224",
         "text": "NPPES lists M N B COMPANION CARE LLC at the matching West Orange practice address with the published taxonomy labels Home Health. NPI 1740028224. NPPES last updated 2024-07-18. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0362700-njmmis-591fab99e9265027-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0362700-njmmis-591fab99e9265027-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -45269,6 +46032,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1740028224"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "MNB COMPANION CARE LLC; 14 BRYN MAWR ROAD; WEST ORANGE, NJ 07052-0000; Phone: 2012076679.",
+        "id": "north-jersey-hp-hp0362700-njmmis-591fab99e9265027-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -45388,13 +46162,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1548032915-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1548032915",
         "text": "NPPES lists DAHLIAS HOME CARE AGENCY, LLC at the matching FORT LEE practice address with the published taxonomy labels In Home Supportive Care. NPI 1548032915. NPPES last updated 2026-09-07. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0365000-njmmis-666eb3bbe788910c-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0365000-njmmis-666eb3bbe788910c-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -45418,6 +46199,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1548032915"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "DAHLIAS HOME CARE AGENCYLLC; 1605 JOHN STREET SUITE 108; FORT LEE, NJ 07024-0000; Phone: 8446346500.",
+        "id": "north-jersey-hp-hp0365000-njmmis-666eb3bbe788910c-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -45659,6 +46451,42 @@
       }
     ]
   },
+  "north-jersey-hp-hp0367200": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0367200-njmmis-b993876c3009361a-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0367200-njmmis-b993876c3009361a-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0367200",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "HOME SURE HOME CARE LLC; 37 EASTON AVE #225; NEW BRUNSWICK, NJ 08901-0000; Phone: 8483190900.",
+        "id": "north-jersey-hp-hp0367200-njmmis-b993876c3009361a-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
   "north-jersey-hp-hp0367500": {
     "availability": {
       "asOf": null,
@@ -45780,13 +46608,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1699481655-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1699481655",
         "text": "NPPES lists COMFORT AND HEALING HHA at the matching LYNDHURST practice address with the published taxonomy labels Home Health. NPI 1699481655. NPPES last updated 2025-01-12. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0368300-njmmis-1620a6b8d12bb4dd-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0368300-njmmis-1620a6b8d12bb4dd-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -45811,6 +46646,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1699481655"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "COMFORT AND HEALING HHA; 746 RIVERSIDE AVE; LYNDHURST, NJ 07071-0000; Phone: 9086919221.",
+        "id": "north-jersey-hp-hp0368300-njmmis-1620a6b8d12bb4dd-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -46471,6 +47317,13 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0378600-office-services-source",
         "text": "M&S offers around-the-clock assistance, including meal preparation, light housekeeping and help with personal routines."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0378600-njmmis-5550b55834f13b66-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0378600-njmmis-5550b55834f13b66-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [],
@@ -46488,6 +47341,17 @@
         "publisher": "M&S Home Healthcare",
         "title": "M&S Home Healthcare · Home care",
         "url": "https://www.mshomehealthcarenj.com/daily-home-care/"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "M & S HOME HEALTHCARE; 240 SOUTH MAIN STREET; MANVILLE, NJ 08835-0000; Phone: 9088958009.",
+        "id": "north-jersey-hp-hp0378600-njmmis-5550b55834f13b66-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -47019,6 +47883,13 @@
     "checkedAt": "2026-11-15",
     "facts": [
       {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0383400-njmmis-32f6b01740904bb7-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0383400-njmmis-32f6b01740904bb7-source",
+        "text": "New Jersey Medicaid lists this office for private duty nursing. Confirm coverage for this office and service with your health plan."
+      },
+      {
         "id": "north-jersey-hp-hp0383400-hhs-nj-enrollment",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0383400-hhs-nj-enrollment-source",
@@ -47031,6 +47902,17 @@
     "reviewAggregates": [],
     "reviews": [],
     "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "NUSA CARE LLC; 51 GIRARD AVE; SOMERSET, NJ 08873-1828; Phone: 8482281406.",
+        "id": "north-jersey-hp-hp0383400-njmmis-32f6b01740904bb7-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      },
       {
         "access": "full-page",
         "checkedAt": "2026-11-15",
@@ -47344,13 +48226,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1750133450-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1750133450",
         "text": "NPPES lists KIM HOME CARE LLC at the matching Englewood practice address with the published taxonomy labels Home Health, In Home Supportive Care. NPI 1750133450. NPPES last updated 2024-08-06. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0388000-njmmis-ee0099ea490ab971-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0388000-njmmis-ee0099ea490ab971-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -47374,6 +48263,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1750133450"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "KIM HOME CARE LLC; 128 ENGLE STREET 1ST FLOOR, SUITE B; ENGLEWOOD, NJ 07631-0000; Phone: 2018355122.",
+        "id": "north-jersey-hp-hp0388000-njmmis-ee0099ea490ab971-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -48342,13 +49242,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1639051147-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1639051147",
         "text": "NPPES lists HARMONY HOME HEALTHCARE LLC at the matching Hillside practice address with the published taxonomy labels Nursing Care, Registered Nurse, Home Health. NPI 1639051147. NPPES last updated 2025-07-24. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0398700-njmmis-d2142bf49eb10b5e-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0398700-njmmis-d2142bf49eb10b5e-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -48372,6 +49279,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1639051147"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "HARMONY HOME HEALTHCARE LLC; 1308 BRIGHT STREET; HILLSIDE, NJ 07205-0000; Phone: 9739782319.",
+        "id": "north-jersey-hp-hp0398700-njmmis-d2142bf49eb10b5e-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -48817,13 +49735,20 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1265316194-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1265316194",
         "text": "NPPES lists DAY STAR HOME HEALTHCARE at the matching Union practice address with the published taxonomy labels Home Health. NPI 1265316194. NPPES last updated 2025-08-04. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0404400-njmmis-b9b61c18b4567198-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0404400-njmmis-b9b61c18b4567198-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
       }
     ],
     "notes": [
@@ -48847,6 +49772,17 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1265316194"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "DAY STAR HOME HEALTHCARELLC; 1215 JEANETTE AVENUE; UNION, NJ 07083-0000; Phone: 9177751973.",
+        "id": "north-jersey-hp-hp0404400-njmmis-b9b61c18b4567198-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -48963,6 +49899,42 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1942096599"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0407100": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0407100-njmmis-f4128105658ac5d8-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0407100-njmmis-f4128105658ac5d8-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0407100",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "NOUVELLE HEALTH LLC; 25 POMPTON AVENUE SUITE 304 L; VERONA, NJ 07044-0000; Phone: 9734942818.",
+        "id": "north-jersey-hp-hp0407100-njmmis-f4128105658ac5d8-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },
@@ -49827,6 +50799,78 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1225652126"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0418600": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0418600-njmmis-2e68006ba8b181a5-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0418600-njmmis-2e68006ba8b181a5-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance, private duty nursing. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0418600",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "ADURA HOMECARE SERVICES LLC; 137 S BROADWAY STE A1; SOUTH AMBOY, NJ 08879-0000; Phone: 7325263003.",
+        "id": "north-jersey-hp-hp0418600-njmmis-2e68006ba8b181a5-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0418700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "asOf": "2026-11-15",
+        "id": "north-jersey-hp-hp0418700-njmmis-c1d7203c994274e0-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0418700-njmmis-c1d7203c994274e0-source",
+        "text": "New Jersey Medicaid lists this office for personal care assistance. Confirm coverage for this office and service with your health plan."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0418700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "excerpt": "KP HOMECARE SERVICES LLC; 46 SAGER PLACE; HILLSIDE, NJ 07205-0000; Phone: 9083586250.",
+        "id": "north-jersey-hp-hp0418700-njmmis-c1d7203c994274e0-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "New Jersey Medicaid (NJMMIS)",
+        "title": "NJMMIS Home Care Provider directory",
+        "url": "https://www.njmmis.com/providerDirectory.aspx?nonBilling=False"
       }
     ]
   },

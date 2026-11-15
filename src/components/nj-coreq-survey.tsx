@@ -1,7 +1,10 @@
 import snapshot from "@/data/nj-coreq.json";
 import type { Provider } from "@/lib/providers";
+import { exactNjNursingFacilityCcn, formatCoreqPercent } from "./nj-coreq";
 
-const results: Record<
+const currentSource = snapshot.source;
+const historicalSource = snapshot.historical.source;
+const currentResults: Record<
   string,
   (typeof snapshot.results)[keyof typeof snapshot.results]
 > = snapshot.results;
@@ -11,21 +14,17 @@ const historicalResults: Record<
 > = snapshot.historical.results;
 
 export function NjCoreqSurvey({ provider }: { provider: Provider }) {
-  const ccn = provider.cms?.ccn;
+  const ccn = exactNjNursingFacilityCcn(provider);
   if (
-    provider.category !== "nursing-home" ||
-    provider.state !== "NJ" ||
-    !provider.officialRecord ||
-    provider.locationKind !== "facility" ||
     !ccn ||
-    provider.id !== `cms-${ccn}` ||
-    (!Object.hasOwn(results, ccn) && !Object.hasOwn(historicalResults, ccn))
+    (!Object.hasOwn(currentResults, ccn) &&
+      !Object.hasOwn(historicalResults, ccn))
   ) {
     return null;
   }
-  const historical = !Object.hasOwn(results, ccn);
-  const result = historical ? historicalResults[ccn] : results[ccn];
-  const source = historical ? snapshot.historical.source : snapshot.source;
+  const historical = !Object.hasOwn(currentResults, ccn);
+  const result = historical ? historicalResults[ccn] : currentResults[ccn];
+  const source = historical ? historicalSource : currentSource;
   return (
     <section
       className="home-health-evidence"
@@ -37,12 +36,7 @@ export function NjCoreqSurvey({ provider }: { provider: Provider }) {
       <p className="small muted">{source.population}.</p>
       <div className="hh-survey-context">
         <div>
-          <strong>
-            {result.value.toLocaleString("en-US", {
-              maximumFractionDigits: 2,
-            })}
-            %
-          </strong>
+          <strong>{formatCoreqPercent(result.value)}</strong>
           <span>CoreQ satisfaction composite</span>
         </div>
       </div>
@@ -78,7 +72,7 @@ export function NjCoreqSurvey({ provider }: { provider: Provider }) {
         </p>
         {historical && (
           <p>
-            FY2027 suppression in sheet “{snapshot.source.workbook.sheet}”, cell{" "}
+            FY2027 suppression in sheet “{currentSource.workbook.sheet}”, cell{" "}
             {historicalResults[ccn].currentSuppression.cell}. The fiscal years
             do not establish survey dates or a trend.
           </p>
@@ -89,11 +83,7 @@ export function NjCoreqSurvey({ provider }: { provider: Provider }) {
           NJ DHS {source.reportingYear} workbook
         </a>
         {historical && (
-          <a
-            href={snapshot.source.workbook.url}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={currentSource.workbook.url} target="_blank" rel="noreferrer">
             NJ DHS FY2027 workbook
           </a>
         )}

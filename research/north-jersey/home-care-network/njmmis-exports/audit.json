@@ -1,0 +1,5176 @@
+{
+  "counts": {
+    "decisions": {
+      "accepted_exact_office": 77,
+      "ambiguous_office": 4,
+      "ineligible_office": 9,
+      "no_exact_registered_organization": 581,
+      "no_explicit_supported_specialty": 1,
+      "not_explicitly_active": 8,
+      "office_identity_mismatch": 220
+    },
+    "officeSpecialties": 75,
+    "officesBySpecialty": {
+      "Homemaker - CCPED": 7,
+      "Personal Care Assistance - Aged & Disabled": 38,
+      "Private Duty Nursing": 23,
+      "Respite": 7
+    },
+    "pages": 240,
+    "pdfRecords": 900,
+    "retainedOrganizationRecords": 150,
+    "sourceFiles": 36,
+    "statusHolds": {
+      "not_explicitly_active": 21
+    },
+    "uniqueOffices": 42,
+    "verifiedRows": 42
+  },
+  "decisions": [
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0108700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptId": "harbor-njmmis-homemaker-Bergen.pdf:p3:r11"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0227900"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227901"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227902"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptId": "harbor-njmmis-homemaker-Bergen.pdf:p4:r13"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptId": "harbor-njmmis-homemaker-Essex.pdf:p4:r13"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0093300"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0152400"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0157000"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0161800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0175000"
+        }
+      ],
+      "decision": "ambiguous_office",
+      "receiptId": "harbor-njmmis-homemaker-Hudson.pdf:p1:r2"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0131700"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131701"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131702"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131703"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131705"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0357200"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379600"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0392900"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0131700",
+      "receiptId": "harbor-njmmis-homemaker-Hudson.pdf:p1:r3"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-homemaker-Middlesex.pdf:p3:r12"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0023300"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptId": "harbor-njmmis-homemaker-Middlesex.pdf:p4:r14"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0033800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0033800",
+      "receiptId": "harbor-njmmis-homemaker-Middlesex.pdf:p4:r16"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0116100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0116100",
+      "receiptId": "harbor-njmmis-homemaker-Passaic.pdf:p1:r3"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227900"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227901"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227902"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-homemaker-Union.pdf:p1:r4"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0388000"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0388000",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p10:r40"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0280700"
+        },
+        {
+          "fullAddress": false,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0280701"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p12:r46"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0311200"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p12:r47"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0262400"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p14:r55"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0352700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0352700",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p15:r58"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0319100"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p1:r2"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0298000"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p1:r4"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0347500"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0347500",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p3:r10"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0276400"
+        },
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0355900"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p4:r13"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0302600"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p4:r14"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0108700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p6:r23"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0243102"
+        },
+        {
+          "fullAddress": false,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0243103"
+        },
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0243107"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p7:r25"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0279400"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p7:r26"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0117000"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p7:r27"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0368300"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0368300",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p7:r28"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0227900"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227901"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227902"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p8:r29"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0365000"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0365000",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p8:r30"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0250200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0250200",
+      "receiptId": "harbor-njmmis-pca-Bergen.pdf:p8:r31"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p10:r38"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0406400"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p10:r40"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379400"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0383800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0412800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p11:r44"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0309300"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p16:r63"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0330200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0330200",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p17:r65"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0320300"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0320300",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p17:r67"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0362700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0362700",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p17:r68"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0407100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0407100",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p18:r72"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0342400"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p19:r73"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0351900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p25:r98"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0328800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p26:r102"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0141700"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p2:r7"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0319000"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0319000",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p3:r10"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015308"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015318"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0015319"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015320"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015321"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015322"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015325"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015328"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015339"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015340"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015342"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015343"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015347"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015352"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0015319",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p4:r14"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181801"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181802"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0181804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259803"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259805"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259811"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259812"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p5:r18"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0322800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0322800",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p8:r31"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0311900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p8:r32"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0181000"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0181000",
+      "receiptId": "harbor-njmmis-pca-Essex.pdf:p9:r36"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0093300"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0152400"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0157000"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0161800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0175000"
+        }
+      ],
+      "decision": "ambiguous_office",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p1:r3"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015308"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015318"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015319"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015320"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015321"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0015322"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015325"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015328"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015339"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015340"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015342"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015343"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015347"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015352"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0015322",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p2:r5"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0131700"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131701"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131702"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131703"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131705"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0357200"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379600"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0392900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p2:r8"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181800"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181801"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181802"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259803"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259805"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259811"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259812"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p3:r11"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0341800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p3:r12"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0131700"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131701"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131702"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131703"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131705"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0357200"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379600"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0392900"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0131700",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p3:r9"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0374900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p4:r14"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0056900"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0056900",
+      "receiptId": "harbor-njmmis-pca-Hudson.pdf:p8:r29"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0396400"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p10:r37"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0023300"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p11:r42"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0033800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0033800",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p12:r47"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0367200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0367200",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p12:r48"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0364400"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p14:r53"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0348800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p14:r55"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0341500"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p18:r72"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0418600"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0418600",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p1:r1"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0353200"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p3:r10"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015308"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015318"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015319"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015320"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015321"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015322"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015325"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0015328"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015339"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015340"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015342"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015343"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015347"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015352"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0015328",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p4:r13"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181801"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181802"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259803"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259805"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0259811"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259812"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p5:r19"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0326600"
+        }
+      ],
+      "decision": "no_explicit_supported_specialty",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p7:r26"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0282800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p7:r27"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p9:r33"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0293100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0293100",
+      "receiptId": "harbor-njmmis-pca-Middlesex.pdf:p9:r36"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0276400"
+        },
+        {
+          "fullAddress": false,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0355900"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pca-Monmouth.pdf:p1:r2"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0246700"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pca-Monmouth.pdf:p3:r12"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0394500"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Monmouth.pdf:p7:r25"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0350700"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Morris.pdf:p1:r1"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0261600"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0261600",
+      "receiptId": "harbor-njmmis-pca-Morris.pdf:p2:r7"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0377000"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Morris.pdf:p3:r10"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0308700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0308700",
+      "receiptId": "harbor-njmmis-pca-Passaic.pdf:p1:r2"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015308"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015318"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015319"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015320"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0015321"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015322"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015325"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015328"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015339"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015340"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015342"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015343"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015347"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0015352"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0015321",
+      "receiptId": "harbor-njmmis-pca-Passaic.pdf:p2:r8"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0327200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0327200",
+      "receiptId": "harbor-njmmis-pca-Passaic.pdf:p3:r11"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131700"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131701"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131702"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131703"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131705"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0357200"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379600"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0392900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Passaic.pdf:p3:r9"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181801"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0181802"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0181804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259803"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259804"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259805"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259811"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0259812"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pca-Passaic.pdf:p4:r13"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0116100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0116100",
+      "receiptId": "harbor-njmmis-pca-Passaic.pdf:p4:r14"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0324500"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Somerset.pdf:p1:r1"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0337100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0337100",
+      "receiptId": "harbor-njmmis-pca-Somerset.pdf:p2:r7"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0378600"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0378600",
+      "receiptId": "harbor-njmmis-pca-Somerset.pdf:p4:r13"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0323200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0323200",
+      "receiptId": "harbor-njmmis-pca-Somerset.pdf:p4:r14"
+    },
+    {
+      "acceptedSpecialties": [
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0383400"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0383400",
+      "receiptId": "harbor-njmmis-pca-Somerset.pdf:p4:r15"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0299500"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p12:r47"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0364000"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p1:r4"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0131700"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131701"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131702"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131703"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131705"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0357200"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379600"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0392900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p3:r11"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0354000"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p3:r12"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227900"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227901"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227902"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p5:r17"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0404400"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0404400",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p5:r19"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0120800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0120800",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p6:r21"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p6:r22"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0398700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0398700",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p8:r29"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0418700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0418700",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p9:r33"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0402800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pca-Union.pdf:p9:r34"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0319100"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p1:r1"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0298000"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p1:r2"
+    },
+    {
+      "acceptedSpecialties": [
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0076201"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0120800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0076201",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p2:r5"
+    },
+    {
+      "acceptedSpecialties": [
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0076201"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0120800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0076201",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p2:r6"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0108700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p3:r11"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0243102"
+        },
+        {
+          "fullAddress": false,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0243103"
+        },
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0243107"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p3:r12"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0368300"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0368300",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p4:r13"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0227900"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227901"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227902"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p4:r14"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0311200"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Bergen.pdf:p6:r22"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0309300"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p10:r39"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0362700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0362700",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p11:r41"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0342400"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p12:r45"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0351900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p15:r60"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0328800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p16:r63"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0141700"
+        }
+      ],
+      "decision": "not_explicitly_active",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p1:r4"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0319000"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0319000",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p2:r5"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0322800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0322800",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p4:r16"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0311900"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p5:r17"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p6:r21"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379400"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0383800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0412800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Essex.pdf:p7:r25"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0093300"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0152400"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0157000"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0161800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0175000"
+        }
+      ],
+      "decision": "ambiguous_office",
+      "receiptId": "harbor-njmmis-pdn-Hudson.pdf:p1:r2"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0418600"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0418600",
+      "receiptId": "harbor-njmmis-pdn-Middlesex.pdf:p1:r1"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Middlesex.pdf:p4:r14"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0293100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0293100",
+      "receiptId": "harbor-njmmis-pdn-Middlesex.pdf:p5:r17"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0023300"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptId": "harbor-njmmis-pdn-Middlesex.pdf:p5:r20"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0367200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0367200",
+      "receiptId": "harbor-njmmis-pdn-Middlesex.pdf:p7:r25"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0348800"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Middlesex.pdf:p8:r29"
+    },
+    {
+      "acceptedSpecialties": [
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0100200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0100200",
+      "receiptId": "harbor-njmmis-pdn-Monmouth.pdf:p1:r3"
+    },
+    {
+      "acceptedSpecialties": [
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0069600"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0069600",
+      "receiptId": "harbor-njmmis-pdn-Monmouth.pdf:p1:r4"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0246700"
+        }
+      ],
+      "decision": "ineligible_office",
+      "receiptId": "harbor-njmmis-pdn-Monmouth.pdf:p3:r10"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0300000"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Monmouth.pdf:p3:r11"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0319300"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Monmouth.pdf:p6:r21"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0235400"
+        },
+        {
+          "fullAddress": false,
+          "office": false,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0292100"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Morris.pdf:p1:r1"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0261600"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0261600",
+      "receiptId": "harbor-njmmis-pdn-Morris.pdf:p2:r7"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0308700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0308700",
+      "receiptId": "harbor-njmmis-pdn-Passaic.pdf:p1:r1"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0327200"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0327200",
+      "receiptId": "harbor-njmmis-pdn-Passaic.pdf:p2:r5"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0116100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0116100",
+      "receiptId": "harbor-njmmis-pdn-Passaic.pdf:p2:r6"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0337100"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0337100",
+      "receiptId": "harbor-njmmis-pdn-Somerset.pdf:p1:r3"
+    },
+    {
+      "acceptedSpecialties": [
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0383400"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0383400",
+      "receiptId": "harbor-njmmis-pdn-Somerset.pdf:p2:r7"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0364000"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-pdn-Union.pdf:p1:r3"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0404400"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0404400",
+      "receiptId": "harbor-njmmis-pdn-Union.pdf:p2:r5"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0120800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0120800",
+      "receiptId": "harbor-njmmis-pdn-Union.pdf:p2:r6"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0398700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0398700",
+      "receiptId": "harbor-njmmis-pdn-Union.pdf:p3:r11"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0108700"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptId": "harbor-njmmis-respite-Bergen.pdf:p3:r10"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0227900"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227901"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227902"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptId": "harbor-njmmis-respite-Bergen.pdf:p3:r12"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptId": "harbor-njmmis-respite-Essex.pdf:p3:r12"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0093300"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0152400"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0157000"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0161800"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0175000"
+        }
+      ],
+      "decision": "ambiguous_office",
+      "receiptId": "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0131700"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131701"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131702"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131703"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0131705"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0357200"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0379600"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0392900"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0131700",
+      "receiptId": "harbor-njmmis-respite-Hudson.pdf:p1:r3"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035001"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0035003"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035004"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0035011"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-respite-Middlesex.pdf:p3:r10"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0023300"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptId": "harbor-njmmis-respite-Middlesex.pdf:p3:r12"
+    },
+    {
+      "acceptedSpecialties": [
+        "Homemaker - CCPED",
+        "Personal Care Assistance - Aged & Disabled",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0033800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0033800",
+      "receiptId": "harbor-njmmis-respite-Middlesex.pdf:p4:r14"
+    },
+    {
+      "checks": [
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227900"
+        },
+        {
+          "fullAddress": false,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227901"
+        },
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": false,
+          "providerId": "north-jersey-hp-hp0227902"
+        }
+      ],
+      "decision": "office_identity_mismatch",
+      "receiptId": "harbor-njmmis-respite-Union.pdf:p1:r4"
+    },
+    {
+      "acceptedSpecialties": [
+        "Personal Care Assistance - Aged & Disabled",
+        "Private Duty Nursing",
+        "Respite"
+      ],
+      "checks": [
+        {
+          "fullAddress": true,
+          "office": true,
+          "phone": true,
+          "providerId": "north-jersey-hp-hp0120800"
+        }
+      ],
+      "decision": "accepted_exact_office",
+      "providerId": "north-jersey-hp-hp0120800",
+      "receiptId": "harbor-njmmis-respite-Union.pdf:p2:r5"
+    }
+  ],
+  "officeSpecialtyDecisions": [
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0015319",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p4:r14"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0015321",
+      "receiptIds": [
+        "harbor-njmmis-pca-Passaic.pdf:p2:r8"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0015322",
+      "receiptIds": [
+        "harbor-njmmis-pca-Hudson.pdf:p2:r5"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0015328",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p4:r13"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-pca-Middlesex.pdf:p11:r42",
+        "harbor-njmmis-pdn-Middlesex.pdf:p5:r20",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r12"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-pca-Middlesex.pdf:p11:r42",
+        "harbor-njmmis-pdn-Middlesex.pdf:p5:r20",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r12"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-pca-Middlesex.pdf:p11:r42",
+        "harbor-njmmis-pdn-Middlesex.pdf:p5:r20",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r12"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0023300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-pca-Middlesex.pdf:p11:r42",
+        "harbor-njmmis-pdn-Middlesex.pdf:p5:r20",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r12"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0033800",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p4:r16",
+        "harbor-njmmis-pca-Middlesex.pdf:p12:r47",
+        "harbor-njmmis-respite-Middlesex.pdf:p4:r14"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0033800",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p4:r16",
+        "harbor-njmmis-pca-Middlesex.pdf:p12:r47",
+        "harbor-njmmis-respite-Middlesex.pdf:p4:r14"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0033800",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p4:r16",
+        "harbor-njmmis-pca-Middlesex.pdf:p12:r47",
+        "harbor-njmmis-respite-Middlesex.pdf:p4:r14"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Essex.pdf:p4:r13",
+        "harbor-njmmis-pca-Essex.pdf:p10:r38",
+        "harbor-njmmis-pdn-Essex.pdf:p6:r21",
+        "harbor-njmmis-respite-Essex.pdf:p3:r12"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Essex.pdf:p4:r13",
+        "harbor-njmmis-pca-Essex.pdf:p10:r38",
+        "harbor-njmmis-pdn-Essex.pdf:p6:r21",
+        "harbor-njmmis-respite-Essex.pdf:p3:r12"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Essex.pdf:p4:r13",
+        "harbor-njmmis-pca-Essex.pdf:p10:r38",
+        "harbor-njmmis-pdn-Essex.pdf:p6:r21",
+        "harbor-njmmis-respite-Essex.pdf:p3:r12"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035003",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Essex.pdf:p4:r13",
+        "harbor-njmmis-pca-Essex.pdf:p10:r38",
+        "harbor-njmmis-pdn-Essex.pdf:p6:r21",
+        "harbor-njmmis-respite-Essex.pdf:p3:r12"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035011",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p3:r12",
+        "harbor-njmmis-pca-Middlesex.pdf:p9:r33",
+        "harbor-njmmis-pdn-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r10"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035011",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p3:r12",
+        "harbor-njmmis-pca-Middlesex.pdf:p9:r33",
+        "harbor-njmmis-pdn-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r10"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035011",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p3:r12",
+        "harbor-njmmis-pca-Middlesex.pdf:p9:r33",
+        "harbor-njmmis-pdn-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r10"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0035011",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Middlesex.pdf:p3:r12",
+        "harbor-njmmis-pca-Middlesex.pdf:p9:r33",
+        "harbor-njmmis-pdn-Middlesex.pdf:p4:r14",
+        "harbor-njmmis-respite-Middlesex.pdf:p3:r10"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0056900",
+      "receiptIds": [
+        "harbor-njmmis-pca-Hudson.pdf:p8:r29"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0069600",
+      "receiptIds": [
+        "harbor-njmmis-pdn-Monmouth.pdf:p1:r4"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0076201",
+      "receiptIds": [
+        "harbor-njmmis-pdn-Bergen.pdf:p2:r5",
+        "harbor-njmmis-pdn-Bergen.pdf:p2:r6"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0093300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0093300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0093300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0093300",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0100200",
+      "receiptIds": [
+        "harbor-njmmis-pdn-Monmouth.pdf:p1:r3"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p3:r11",
+        "harbor-njmmis-pca-Bergen.pdf:p6:r23",
+        "harbor-njmmis-pdn-Bergen.pdf:p3:r11",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r10"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p3:r11",
+        "harbor-njmmis-pca-Bergen.pdf:p6:r23",
+        "harbor-njmmis-pdn-Bergen.pdf:p3:r11",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r10"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p3:r11",
+        "harbor-njmmis-pca-Bergen.pdf:p6:r23",
+        "harbor-njmmis-pdn-Bergen.pdf:p3:r11",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r10"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0108700",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p3:r11",
+        "harbor-njmmis-pca-Bergen.pdf:p6:r23",
+        "harbor-njmmis-pdn-Bergen.pdf:p3:r11",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r10"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0116100",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Passaic.pdf:p1:r3",
+        "harbor-njmmis-pca-Passaic.pdf:p4:r14",
+        "harbor-njmmis-pdn-Passaic.pdf:p2:r6"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0116100",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Passaic.pdf:p1:r3",
+        "harbor-njmmis-pca-Passaic.pdf:p4:r14",
+        "harbor-njmmis-pdn-Passaic.pdf:p2:r6"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0116100",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Passaic.pdf:p1:r3",
+        "harbor-njmmis-pca-Passaic.pdf:p4:r14",
+        "harbor-njmmis-pdn-Passaic.pdf:p2:r6"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0117000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p7:r27"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0120800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p6:r21",
+        "harbor-njmmis-pdn-Union.pdf:p2:r6",
+        "harbor-njmmis-respite-Union.pdf:p2:r5"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0120800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p6:r21",
+        "harbor-njmmis-pdn-Union.pdf:p2:r6",
+        "harbor-njmmis-respite-Union.pdf:p2:r5"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0120800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p6:r21",
+        "harbor-njmmis-pdn-Union.pdf:p2:r6",
+        "harbor-njmmis-respite-Union.pdf:p2:r5"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0131700",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pca-Hudson.pdf:p3:r9",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r3"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0131700",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pca-Hudson.pdf:p3:r9",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r3"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0131700",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pca-Hudson.pdf:p3:r9",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r3"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0131701",
+      "receiptIds": [
+        "harbor-njmmis-pca-Hudson.pdf:p2:r8"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0131702",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p3:r11"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0141700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p2:r7",
+        "harbor-njmmis-pdn-Essex.pdf:p1:r4"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0141700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p2:r7",
+        "harbor-njmmis-pdn-Essex.pdf:p1:r4"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0152400",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0152400",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0152400",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0152400",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Hudson.pdf:p1:r2",
+        "harbor-njmmis-pca-Hudson.pdf:p1:r3",
+        "harbor-njmmis-pdn-Hudson.pdf:p1:r2",
+        "harbor-njmmis-respite-Hudson.pdf:p1:r2"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0181000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p9:r36"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0181801",
+      "receiptIds": [
+        "harbor-njmmis-pca-Hudson.pdf:p3:r11"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0181802",
+      "receiptIds": [
+        "harbor-njmmis-pca-Passaic.pdf:p4:r13"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0181804",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p5:r18"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p4:r13",
+        "harbor-njmmis-pca-Bergen.pdf:p8:r29",
+        "harbor-njmmis-pdn-Bergen.pdf:p4:r14",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r12"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p4:r13",
+        "harbor-njmmis-pca-Bergen.pdf:p8:r29",
+        "harbor-njmmis-pdn-Bergen.pdf:p4:r14",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r12"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p4:r13",
+        "harbor-njmmis-pca-Bergen.pdf:p8:r29",
+        "harbor-njmmis-pdn-Bergen.pdf:p4:r14",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r12"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0227900",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Bergen.pdf:p4:r13",
+        "harbor-njmmis-pca-Bergen.pdf:p8:r29",
+        "harbor-njmmis-pdn-Bergen.pdf:p4:r14",
+        "harbor-njmmis-respite-Bergen.pdf:p3:r12"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0227902",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Union.pdf:p1:r4",
+        "harbor-njmmis-pca-Union.pdf:p5:r17",
+        "harbor-njmmis-respite-Union.pdf:p1:r4"
+      ],
+      "specialty": "Homemaker - CCPED",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0227902",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Union.pdf:p1:r4",
+        "harbor-njmmis-pca-Union.pdf:p5:r17",
+        "harbor-njmmis-respite-Union.pdf:p1:r4"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0227902",
+      "receiptIds": [
+        "harbor-njmmis-homemaker-Union.pdf:p1:r4",
+        "harbor-njmmis-pca-Union.pdf:p5:r17",
+        "harbor-njmmis-respite-Union.pdf:p1:r4"
+      ],
+      "specialty": "Respite",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0235400",
+      "receiptIds": [
+        "harbor-njmmis-pdn-Morris.pdf:p1:r1"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0243107",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p7:r25",
+        "harbor-njmmis-pdn-Bergen.pdf:p3:r12"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0243107",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p7:r25",
+        "harbor-njmmis-pdn-Bergen.pdf:p3:r12"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0246700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Monmouth.pdf:p3:r12",
+        "harbor-njmmis-pdn-Monmouth.pdf:p3:r10"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0246700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Monmouth.pdf:p3:r12",
+        "harbor-njmmis-pdn-Monmouth.pdf:p3:r10"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0250200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p8:r31"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0259811",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p5:r19"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0261600",
+      "receiptIds": [
+        "harbor-njmmis-pca-Morris.pdf:p2:r7",
+        "harbor-njmmis-pdn-Morris.pdf:p2:r7"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0261600",
+      "receiptIds": [
+        "harbor-njmmis-pca-Morris.pdf:p2:r7",
+        "harbor-njmmis-pdn-Morris.pdf:p2:r7"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0262400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p14:r55"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0279400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p7:r26"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0280700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p12:r46"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0282800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p7:r27"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0293100",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p9:r36",
+        "harbor-njmmis-pdn-Middlesex.pdf:p5:r17"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0293100",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p9:r36",
+        "harbor-njmmis-pdn-Middlesex.pdf:p5:r17"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0298000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p1:r4",
+        "harbor-njmmis-pdn-Bergen.pdf:p1:r2"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0298000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p1:r4",
+        "harbor-njmmis-pdn-Bergen.pdf:p1:r2"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0299500",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p12:r47"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0300000",
+      "receiptIds": [
+        "harbor-njmmis-pdn-Monmouth.pdf:p3:r11"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0302600",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p4:r14"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0308700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Passaic.pdf:p1:r2",
+        "harbor-njmmis-pdn-Passaic.pdf:p1:r1"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0308700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Passaic.pdf:p1:r2",
+        "harbor-njmmis-pdn-Passaic.pdf:p1:r1"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0309300",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p16:r63",
+        "harbor-njmmis-pdn-Essex.pdf:p10:r39"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0309300",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p16:r63",
+        "harbor-njmmis-pdn-Essex.pdf:p10:r39"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0311200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p12:r47",
+        "harbor-njmmis-pdn-Bergen.pdf:p6:r22"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0311200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p12:r47",
+        "harbor-njmmis-pdn-Bergen.pdf:p6:r22"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0311900",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p8:r32",
+        "harbor-njmmis-pdn-Essex.pdf:p5:r17"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0319000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p3:r10",
+        "harbor-njmmis-pdn-Essex.pdf:p2:r5"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0319000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p3:r10",
+        "harbor-njmmis-pdn-Essex.pdf:p2:r5"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0319100",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p1:r2",
+        "harbor-njmmis-pdn-Bergen.pdf:p1:r1"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0319100",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p1:r2",
+        "harbor-njmmis-pdn-Bergen.pdf:p1:r1"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0319300",
+      "receiptIds": [
+        "harbor-njmmis-pdn-Monmouth.pdf:p6:r21"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0320300",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p17:r67"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0322800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p8:r31",
+        "harbor-njmmis-pdn-Essex.pdf:p4:r16"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0322800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p8:r31",
+        "harbor-njmmis-pdn-Essex.pdf:p4:r16"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0323200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Somerset.pdf:p4:r14"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0324500",
+      "receiptIds": [
+        "harbor-njmmis-pca-Somerset.pdf:p1:r1"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0327200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Passaic.pdf:p3:r11",
+        "harbor-njmmis-pdn-Passaic.pdf:p2:r5"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0327200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Passaic.pdf:p3:r11",
+        "harbor-njmmis-pdn-Passaic.pdf:p2:r5"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0328800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p26:r102",
+        "harbor-njmmis-pdn-Essex.pdf:p16:r63"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0330200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p17:r65"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0337100",
+      "receiptIds": [
+        "harbor-njmmis-pca-Somerset.pdf:p2:r7",
+        "harbor-njmmis-pdn-Somerset.pdf:p1:r3"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0337100",
+      "receiptIds": [
+        "harbor-njmmis-pca-Somerset.pdf:p2:r7",
+        "harbor-njmmis-pdn-Somerset.pdf:p1:r3"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0341800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Hudson.pdf:p3:r12"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0342400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p19:r73",
+        "harbor-njmmis-pdn-Essex.pdf:p12:r45"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0342400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p19:r73",
+        "harbor-njmmis-pdn-Essex.pdf:p12:r45"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0347500",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p3:r10"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0348800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p14:r55",
+        "harbor-njmmis-pdn-Middlesex.pdf:p8:r29"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0348800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p14:r55",
+        "harbor-njmmis-pdn-Middlesex.pdf:p8:r29"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0350700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Morris.pdf:p1:r1"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0351900",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p25:r98",
+        "harbor-njmmis-pdn-Essex.pdf:p15:r60"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0352700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p15:r58"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0353200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p3:r10"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0354000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p3:r12"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "not_explicitly_active",
+      "providerId": "north-jersey-hp-hp0355900",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p4:r13"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Canceled - No Activity"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0357200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Passaic.pdf:p3:r9"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0362700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p17:r68",
+        "harbor-njmmis-pdn-Essex.pdf:p11:r41"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0362700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p17:r68",
+        "harbor-njmmis-pdn-Essex.pdf:p11:r41"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0364000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p1:r4",
+        "harbor-njmmis-pdn-Union.pdf:p1:r3"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0364000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p1:r4",
+        "harbor-njmmis-pdn-Union.pdf:p1:r3"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0364400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p14:r53"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0365000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p8:r30"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0367200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p12:r48",
+        "harbor-njmmis-pdn-Middlesex.pdf:p7:r25"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0367200",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p12:r48",
+        "harbor-njmmis-pdn-Middlesex.pdf:p7:r25"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0368300",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p7:r28",
+        "harbor-njmmis-pdn-Bergen.pdf:p4:r13"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0368300",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p7:r28",
+        "harbor-njmmis-pdn-Bergen.pdf:p4:r13"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0374900",
+      "receiptIds": [
+        "harbor-njmmis-pca-Hudson.pdf:p4:r14"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0377000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Morris.pdf:p3:r10"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0378600",
+      "receiptIds": [
+        "harbor-njmmis-pca-Somerset.pdf:p4:r13"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0379900",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p6:r22"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0383400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Somerset.pdf:p4:r15",
+        "harbor-njmmis-pdn-Somerset.pdf:p2:r7"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0383800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p11:r44",
+        "harbor-njmmis-pdn-Essex.pdf:p7:r25"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0383800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p11:r44",
+        "harbor-njmmis-pdn-Essex.pdf:p7:r25"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0388000",
+      "receiptIds": [
+        "harbor-njmmis-pca-Bergen.pdf:p10:r40"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0394500",
+      "receiptIds": [
+        "harbor-njmmis-pca-Monmouth.pdf:p7:r25"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0396400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p10:r37"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0398700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p8:r29",
+        "harbor-njmmis-pdn-Union.pdf:p3:r11"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0398700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p8:r29",
+        "harbor-njmmis-pdn-Union.pdf:p3:r11"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0402800",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p9:r34"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0404400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p5:r19",
+        "harbor-njmmis-pdn-Union.pdf:p2:r5"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0404400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p5:r19",
+        "harbor-njmmis-pdn-Union.pdf:p2:r5"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0406400",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p10:r40"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0407100",
+      "receiptIds": [
+        "harbor-njmmis-pca-Essex.pdf:p18:r72"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0418600",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p1:r1",
+        "harbor-njmmis-pdn-Middlesex.pdf:p1:r1"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0418600",
+      "receiptIds": [
+        "harbor-njmmis-pca-Middlesex.pdf:p1:r1",
+        "harbor-njmmis-pdn-Middlesex.pdf:p1:r1"
+      ],
+      "specialty": "Private Duty Nursing",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    },
+    {
+      "decision": "eligible_status",
+      "providerId": "north-jersey-hp-hp0418700",
+      "receiptIds": [
+        "harbor-njmmis-pca-Union.pdf:p9:r33"
+      ],
+      "specialty": "Personal Care Assistance - Aged & Disabled",
+      "statuses": [
+        "Open To New Patients"
+      ]
+    }
+  ]
+}
