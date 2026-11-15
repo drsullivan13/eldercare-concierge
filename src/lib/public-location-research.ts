@@ -143,7 +143,16 @@ export function publicLocationResearch(
         },
         services: directory.services,
         paymentOptions: directory.paymentOptions,
-        awards: directory.awards.map(({ name, years }) => ({ name, years })),
+        awards: directory.awards.map(({ name, years, annualSources }) => ({
+          name,
+          years,
+          ...(annualSources && {
+            annualSources: annualSources.map(({ year, url }) => ({
+              year,
+              url,
+            })),
+          }),
+        })),
         ...(directory.accreditations?.length && {
           accreditations: directory.accreditations,
         }),

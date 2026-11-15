@@ -6,7 +6,7 @@ import { evidenceDate as date } from "./evidence-date";
 import { PropertyOverview } from "./property-overview";
 import { DailyLife } from "./daily-life";
 import { HomeCareOfficeIdentifiers } from "./home-care-office-identifiers";
-import { OfficeDirectory } from "./office-directory";
+import { ClientSurveyRecognition, OfficeDirectory } from "./office-directory";
 import { IndividualReviewList } from "./individual-review-list";
 import { ExperienceExplanation } from "./experience-explanation";
 import type {
@@ -490,6 +490,10 @@ export function LocationResearch({
             )}
             {pane === "reviews" && (
               <>
+                <ClientSurveyRecognition
+                  directories={data.officeDirectories ?? []}
+                  uid={uid + "-survey-awards"}
+                />
                 <IndividualReviewList
                   research={data}
                   uid={uid}

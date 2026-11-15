@@ -61,7 +61,11 @@ export type OfficeDirectoryResearch = {
   services: string[];
   paymentOptions: string[];
   accreditations?: string[];
-  awards: { name: "Provider of Choice"; years: number[] }[];
+  awards: {
+    name: "Provider of Choice";
+    years: number[];
+    annualSources?: { year: number; url: string }[];
+  }[];
 };
 type AvailabilityObservation = {
   status:

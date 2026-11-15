@@ -43,6 +43,7 @@ async function audit() {
   const dimensions = [
     "services",
     "accreditations",
+    "clientSurveyAwardYears",
     "payments",
     "insurance",
     "historicalInsuranceDirectories",
@@ -245,9 +246,21 @@ async function audit() {
           (historicalInsuranceDirectoryPageReferences[id] ?? 0) + 1;
       }
     }
+    const recognizedYears = new Set();
     for (const directory of data.officeDirectories ?? []) {
       assert.equal(directory.providerId, provider.id);
       source(directory.source);
+      for (const award of directory.awards ?? []) {
+        if (award.name !== "Provider of Choice") continue;
+        for (const year of award.years) {
+          assert.ok(!recognizedYears.has(year), `Duplicate client recognition for ${provider.id} in ${year}`);
+          recognizedYears.add(year);
+          const url = award.annualSources?.find((item) => item.year === year)?.url ?? directory.source.url;
+          const id = syntheticId("client-survey-recognition", url);
+          source({ id, publisher: directory.source.publisher, kind: directory.source.kind });
+          add("clientSurveyAwardYears", id, 1);
+        }
+      }
       add("services", directory.source.id, directory.services.length);
       add(
         "accreditations",

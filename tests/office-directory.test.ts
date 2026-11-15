@@ -1,10 +1,14 @@
+import { mergeAnnualClientAwards } from "../scripts/release-activated-insights-office-directory";
 import accreditation from "../src/data/home-care-accreditation-extension.json";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { GET } from "../src/app/api/research/route";
-import { OfficeDirectory } from "../src/components/office-directory";
+import {
+  ClientSurveyRecognition,
+  OfficeDirectory,
+} from "../src/components/office-directory";
 import { RegistrationProfile } from "../src/components/registration-profile";
 import { getMarket } from "../src/lib/markets";
 import { getLocationResearch } from "../src/lib/location-research";
@@ -91,7 +95,15 @@ test("every directory office has source-specific evidence and the provider resea
       uid: "test-office",
     }),
   );
-  assert.ok(html.includes("Client-satisfaction awards"));
+  assert.ok(!html.includes("Provider of Choice"));
+  const awards = renderToStaticMarkup(
+    createElement(ClientSurveyRecognition, {
+      directories: [activatedOffice],
+      uid: "awards",
+    }),
+  );
+  assert.ok(awards.includes("Client survey recognition"));
+  assert.ok(awards.includes("Provider of Choice"));
   assert.ok(html.includes("Listed services"));
   assert.ok(html.includes(activatedOffice.source.url));
   const accredited = associations.offices.find(
@@ -133,4 +145,115 @@ test("identity, historical payer, directory evidence and survey awards do not ch
     new Request("https://harbor.example/api/research?id=" + sample.providerId),
   ).json();
   assert.deepEqual(json.officeIdentifiers, sample);
+});
+
+test("annual lists merge one recognition per year and reject wrong office, edition or recipient", () => {
+  const provider = offices.find((p) => p.id === "north-jersey-hp-hp0191900")!;
+  const facts = getRegistrationFacts(provider)!;
+  const award = {
+    year: 2022,
+    namedRecipient: "SYNERGY HomeCare of N. Central NJ",
+    sourceUrl:
+      "https://activatedinsights.com/latest-news/2022-provider-of-choice/",
+  };
+  const row = {
+    providerId: provider.id,
+    registration: facts.registration,
+    businessName: provider.name,
+    registeredTradeName: facts.dbas,
+    registryAddress: provider.address,
+    registryCity: provider.city,
+    registryZip: provider.zip,
+    phone: provider.phone!,
+    checkedAt: "2026-11-15",
+    awards: [award],
+  };
+  const [office] = mergeAnnualClientAwards([], [row]);
+  const [merged] = mergeAnnualClientAwards([office], [row]);
+  assert.deepEqual(merged, office);
+  assert.deepEqual(office.services, []);
+  assert.deepEqual(office.awards, [
+    {
+      name: "Provider of Choice",
+      years: [2022],
+      annualSources: [{ year: 2022, url: award.sourceUrl }],
+    },
+  ]);
+  assert.equal(
+    renderToStaticMarkup(
+      createElement(OfficeDirectory, { data: office, uid: "details" }),
+    ),
+    "",
+  );
+  assert.match(
+    renderToStaticMarkup(
+      createElement(ClientSurveyRecognition, {
+        directories: [office],
+        uid: "reviews",
+      }),
+    ),
+    /href="https:\/\/activatedinsights.com\/latest-news\/2022-provider-of-choice\/"/,
+  );
+  for (const change of [
+    { registryAddress: "Different unit" },
+    { registeredTradeName: "SYNERGY HomeCare" },
+    { awards: [{ ...award, year: 2024 }] },
+    { awards: [{ ...award, namedRecipient: "Another office" }] },
+  ])
+    assert.throws(() => mergeAnnualClientAwards([], [{ ...row, ...change }]));
+});
+
+test("BAYADA award recipients require both operator team codes and the exact personal-care office", () => {
+  const p = offices.find((p) => p.id === "north-jersey-hp-hp0015347")!;
+  const f = getRegistrationFacts(p)!;
+  const url =
+    "https://www.bayada.com/office/nj/morristown/personal-and-companion-care/morris-county-10005";
+  const award = {
+    year: 2024,
+    namedRecipient: "BAYADA Home Health Care, Morristown, NJ (MOR – 6)",
+    sourceUrl:
+      "https://activatedinsights.com/articles/2024-best-of-home-care-provider-of-choice-award-winners/",
+  };
+  const row = {
+    providerId: p.id,
+    registration: f.registration,
+    businessName: f.businessName,
+    registryAddress: p.address,
+    registryCity: p.city,
+    registryZip: p.zip,
+    phone: p.phone!,
+    checkedAt: "2026-11-15",
+    operatorReceipt: {
+      url,
+      teamCode: "MOR",
+      teamNumber: "6",
+      address: "32 Maple Avenue, 1st Floor",
+      city: "Morristown",
+      zip: "07960",
+      phone: p.phone!,
+    },
+    awards: [award],
+  };
+  assert.equal(mergeAnnualClientAwards([], [row])[0].awards[0].years[0], 2024);
+  for (const change of [
+    { operatorReceipt: { ...row.operatorReceipt, teamNumber: "60" } },
+    {
+      operatorReceipt: {
+        ...row.operatorReceipt,
+        url: url.replace("personal-and-companion-care", "pediatrics"),
+      },
+    },
+    {
+      operatorReceipt: {
+        ...row.operatorReceipt,
+        address: "32 Maple Avenue, 2nd Floor",
+      },
+    },
+    {
+      awards: [
+        { ...award, namedRecipient: "BAYADA Home Health Care (MOR – 60)" },
+      ],
+    },
+  ])
+    assert.throws(() => mergeAnnualClientAwards([], [{ ...row, ...change }]));
 });
