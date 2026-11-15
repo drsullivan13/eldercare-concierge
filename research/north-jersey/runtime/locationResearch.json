@@ -33332,13 +33332,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1053525352-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1053525352",
         "text": "NPPES lists PREMIER HOME HEALTH CARE SERVICES, INC at the matching Union practice address with the published taxonomy labels Home Health, Nursing Care. NPI 1053525352. NPPES last updated 2019-01-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0231606-office-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0231606-office-services-source",
+        "text": "The Union office lists respite and dementia care, appointment escorts, and 24-hour live-in support. Its published intake number is 908-322-8883."
       }
     ],
     "notes": [
@@ -33363,6 +33369,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1053525352"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0231606-office-services-source",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Premier Home Health Care Services",
+        "title": "Premier Home Health Care Services · Home care services",
+        "url": "https://www.premierhomehealthcare.com/new-jersey-home-health-locations/"
       }
     ]
   },
@@ -40470,13 +40486,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1720832843-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1720832843",
         "text": "NPPES lists LIGHT AND LIFE HOME CARE LLC at the matching UNION practice address with the published taxonomy labels Home Health. NPI 1720832843. NPPES last updated 2024-04-15. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0371800-office-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0371800-office-services-source",
+        "text": "The Union agency offers help with bathing, dressing and getting around, as well as meal preparation, appointment accompaniment and dementia support. Families can request weekend visits."
       }
     ],
     "notes": [
@@ -40500,6 +40522,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1720832843"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0371800-office-services-source",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Light and Life Home Care",
+        "title": "Light and Life Home Care · Home care services",
+        "url": "https://www.lightandlifehomecare.com/home-care-services"
       }
     ]
   },
@@ -41207,6 +41239,40 @@
         "publisher": "Care One Staff",
         "title": "Care One Staff · Home care services",
         "url": "https://careonestaff.com/homecare/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0379700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0379700-office-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0379700-office-services-source",
+        "text": "Everjoy describes nurse-supervised nonmedical care at home. Its Edison team offers personal care and helps families plan and manage that support."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0379700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0379700-office-services-source",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Everjoy Home Care Services",
+        "title": "Everjoy Home Care Services · Home care services",
+        "url": "https://everjoyhomecare.com/"
       }
     ]
   },
@@ -43861,6 +43927,40 @@
         "publisher": "Life Care Assistance",
         "title": "Life Care Assistance · Home care services",
         "url": "https://lifecareassistance.net/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0414200": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0414200-office-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0414200-office-services-source",
+        "text": "After a hospital or rehabilitation stay, Apex offers help at home with meals, daily routines, mobility and personal care."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0414200",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0414200-office-services-source",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Apex Home Care Services",
+        "title": "Apex Home Care Services · Home care services",
+        "url": "https://apexhomecarenj.com/"
       }
     ]
   },
