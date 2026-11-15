@@ -1,0 +1,633 @@
+{
+  "release": "2026-10-21.0",
+  "bounds": [
+    -75.0,
+    40.02,
+    -73.86,
+    41.29
+  ],
+  "plannedGroups": 83,
+  "completedGroups": 83,
+  "networkBytesForRegionalRead": 71163399,
+  "networkBytesForPilot": 4871526,
+  "officeDenominator": 1074,
+  "candidateOfficeCount": 412,
+  "operatorLikeHostOfficeCandidates": 236,
+  "registryOnlyOperatorLikeHostOfficeCandidates": 89,
+  "registryOnlyByPriority": {
+    "verify-phone-street-name": 29,
+    "exact-name-street-phone": 28,
+    "verify-alias-street-phone": 27,
+    "verify-suite-street-phone": 5
+  },
+  "registryOnlyByCounty": {
+    "Union": 10,
+    "Essex": 22,
+    "Hudson": 5,
+    "Passaic": 6,
+    "Bergen": 14,
+    "Monmouth": 14,
+    "Middlesex": 8,
+    "Morris": 4,
+    "Somerset": 6
+  },
+  "candidateRowCount": 521,
+  "rowDispositions": {
+    "verify-suite-street-phone": 19,
+    "hold-phone-only": 97,
+    "hold-address-difference": 95,
+    "hold-conflicting-suite": 74,
+    "verify-alias-street-phone": 80,
+    "exact-name-street-phone": 99,
+    "verify-phone-street-name": 57
+  },
+  "notes": "Host filter removes common directories and social networks but does not prove office identity, current status, services, authority, or accuracy. Some registry rows share physical locations. Validate operator pages separately. No POI content constitutes published care or review evidence.",
+  "source": "https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json",
+  "attribution": "https://docs.overturemaps.org/attribution/",
+  "captureDate": "2026-11-15",
+  "candidates": [
+    {
+      "providerId": "north-jersey-hp-hp0131703",
+      "poiId": "ac9ea840-e906-4621-b49e-b9c107bb6dba",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://besthomecarenj.com/personal-care-services/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0241800",
+      "poiId": "449b2086-2ae7-4288-9402-1da7d8569594",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.comfortkeepers.com/offices/new-jersey/rochelle-park/care-services/in-home-care/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0248100",
+      "poiId": "bdd5a650-c455-4bc9-bf2e-64890eb116f4",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://viprivatecare.com/services/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0268900",
+      "poiId": "cd30aaea-e7a9-4c99-aea2-2f392a1a866f",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.daughterforaday.com/services"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0328900",
+      "poiId": "a33ddcf7-230e-4131-a9ec-a78704d28a35",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://betterathomeca.com/In-home-care-services"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0332000",
+      "poiId": "9f05a0cf-6637-4848-95ab-f711b5ba7fb7",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "already-enriched"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0428500",
+      "poiId": "3161f313-363e-4e72-8dda-6c1b5079a965",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://carehomecompassion.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0092900",
+      "poiId": "f904a327-bdd5-4d5a-b964-31390278bff6",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "Operator domain did not resolve; no current exact-office service page established.",
+      "officeReviewSource": "https://www.amefilhealthcare.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0221800",
+      "poiId": "733f526d-2b9e-4d60-868f-b2bfe4d6da63",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.raymondhomecareservicesllc.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0312500",
+      "poiId": "d19a069d-4c8e-42d9-83c3-7a019df5ba6a",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://belovedcareagency.com/home-care-services"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0359900",
+      "poiId": "740813d5-cab6-4c85-b749-818f691affd5",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.glowingheartshomecare.com/services"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0360200",
+      "poiId": "3a582a05-b790-4294-b449-895ed53614ba",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.jobhainesathome.com/care/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0385900",
+      "poiId": "c8a5277c-0e70-40a3-886c-b0da6f0ea240",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "Rendered operator site offers nonmedical services, but its phone differs from the registry and no Montclair street address is shown. Another home-care operator shares the registered building.",
+      "officeReviewSource": "https://legacylifehomecareservices.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0412700",
+      "poiId": "ed287a92-3370-40c8-8d55-9342dc263f28",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.harmonysupport.care/home-care.html"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0425200",
+      "poiId": "af9af4ea-13fe-4ecb-a906-bf0451b3a610",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://1heartcares.com/montclair/home-care-services/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0241200",
+      "poiId": "f2af862d-c6f9-491b-a426-f3f07e9ece74",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0249201",
+      "poiId": "0d6e8b1c-e6bf-4e37-b0a4-99b6ef5aaa18",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0380700",
+      "poiId": "66cee6cd-46a4-44a1-8033-19e24c0d90aa",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0174300",
+      "poiId": "1c2f7f19-d3fd-4165-abf6-225294150aca",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0386900",
+      "poiId": "a12f7be7-916b-4586-b5c2-b4d11a1bf932",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0251300",
+      "poiId": "e9ad0705-f736-4bfb-8efa-b54a09ec47a6",
+      "disposition": "exact-name-street-phone",
+      "officeReview": "Operator lists 23 Diamond Spring Rd Suite 2, Denville. Registry lists 1033 Tabor Road, floor 2; phone matches, no verified same-office address transition.",
+      "officeReviewSource": "https://www.expresshomecarenj.com/contact-us"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0373300",
+      "poiId": "87342f2a-4a24-4a68-b3ea-02c3cef8f1b8",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0411300",
+      "poiId": "a33303a3-f810-4a39-96bd-27e6fb706deb",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0411800",
+      "poiId": "3aaa4dff-173e-4ac4-bf79-f9b1d9d2f6da",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0378600",
+      "poiId": "c0aa5b89-410c-4578-b2ca-fdd4e399a635",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0130700",
+      "poiId": "6dea4b88-0fa3-46d2-bf3d-7b0fd9a3a0fa",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0155900",
+      "poiId": "89de5bf2-99ec-4e29-b4ff-0d56244c7d24",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0345400",
+      "poiId": "8a3c5cc1-69b6-4cda-b6e1-83b7ac10f619",
+      "disposition": "exact-name-street-phone"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0280700",
+      "poiId": "6a5116fb-b809-46bb-b89d-b6e4d755a397",
+      "disposition": "verify-suite-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.oceanwidenj.com/services"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0365000",
+      "poiId": "a4748cc7-b6b9-4adc-a876-67641648255c",
+      "disposition": "verify-suite-street-phone",
+      "officeReview": "Agency contact currently names Suite 212; state registry and Fort Lee chamber name Suite 108.",
+      "officeReviewSource": "https://dahliashomecare.com/contact-us/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0138400",
+      "poiId": "db4afa4c-3b79-4bf3-b06e-60a1b11979d2",
+      "disposition": "verify-suite-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.reliablehealthcareagency.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0323200",
+      "poiId": "51d4e668-4702-475a-94a0-67d2a3c96ee4",
+      "disposition": "verify-suite-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.nbchomecare.com/services"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0380800",
+      "poiId": "a2114fcd-ec6d-4f46-b199-cd4b2d7dfbf0",
+      "disposition": "verify-suite-street-phone",
+      "officeReview": "Operator agrees on street, name and phone, but omits Suite 101. Chamber lists Suite 101 at 100, not 110, Hillside Avenue.",
+      "officeReviewSource": "https://www.guidingheartsllc.com/contact"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0311000",
+      "poiId": "74881562-fa2d-4a85-8ae0-2f565f04389a",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.gratitudehomecarenj.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0352400",
+      "poiId": "f8c411db-9543-492e-8994-3af0ba4b346d",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.thecaringconnections.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0368300",
+      "poiId": "f60756d9-4a80-4463-b08b-81aaea1e5ece",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "The POI describes an individual clinician, not the HHA office. CMS registration cannot establish a branch service.",
+      "officeReviewSource": "https://npiregistry.cms.hhs.gov/provider-view/1699481655"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0408400",
+      "poiId": "b96ac1a0-ab12-4c79-be3c-526de21547d6",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Candidate domain returned a generic error; franchise and secondary directory results did not verify branch services.",
+      "officeReviewSource": "https://homeshealthangel.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0215100",
+      "poiId": "be03a5ef-33a7-4823-9494-abdc8fabeede",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "The correct source describes clinical care and home health aide career training. No attributable nonclinical task or family service established.",
+      "officeReviewSource": "https://handsofangelshealthcare.org/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0277000",
+      "poiId": "72ee340e-280f-42e9-8901-9deb819a19f9",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.alayiahelpinghands.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0287000",
+      "poiId": "16e5d406-fe25-4617-84a1-138ff6c563b1",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://caringseniorservice.com/essex-county/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0342900",
+      "poiId": "4fc1ec62-65fe-4f74-96d1-371ce1d1c601",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "In Time Care Service lists the same street/suite and phone but does not establish a connection to Millies Home Care LLC; focus is emotional/health education.",
+      "officeReviewSource": "https://www.intimecareservice.org/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0377300",
+      "poiId": "8ef9ddf7-944f-473d-8dac-911438b7e279",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "The POI points to a church. CMS confirms the Sivam organization but does not establish a family-facing service.",
+      "officeReviewSource": "https://npiregistry.cms.hhs.gov/provider-view/1679303069"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0393400",
+      "poiId": "77af0367-5683-471b-aed6-8de681e59990",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.seniorhelpers.com/nj/west-orange/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0427700",
+      "poiId": "1676cd4c-fcca-4f4a-a2be-37c11a3b118e",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://comfortzonehealth.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0444400",
+      "poiId": "6c14c0d5-a672-4e19-8d70-4d1034110394",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Candidate operator domain timed out. No accessible alternative first-party service evidence established; CMS corroborates office identity only.",
+      "officeReviewSource": "https://npiregistry.cms.hhs.gov/provider-view/1295643450"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0153402",
+      "poiId": "ecbd97f1-ae6c-4f3f-90ed-54185c2fe24b",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "The operator serves pediatric clients; no evidence this office offers nonclinical adult home care.",
+      "officeReviewSource": "https://www.starpediatrics.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0176400",
+      "poiId": "230a3959-1baa-4a03-96f0-e94cee6c49c3",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Mobility & Motion is not the NJ registered Executive Care trade name; no first-party service evidence tied to this registration.",
+      "officeReviewSource": "https://npiregistry.cms.hhs.gov/provider-view/1851770234"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0189900",
+      "poiId": "6b9ce7ee-1293-4978-a05f-584faaf6229f",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Provider URL returns the default hosting setup page with no office or services.",
+      "officeReviewSource": "https://www.alwaystheretocare.net/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0278800",
+      "poiId": "9fac59d4-62ca-4eae-b496-9aad17bcdff4",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.aclahealthcare.com/live-in-care"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0305900",
+      "poiId": "2df24731-ce9a-4ae5-9e0b-4a2f51abdf8a",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "The candidate represents a senior cottage/setting, not verified home care for this registered office.",
+      "officeReviewSource": "https://www.lw-cottages.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0309400",
+      "poiId": "1d6dd9a3-7cbe-4d47-b05f-3e22f5f84e0d",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://synergyhomecare.com/nj-matawan-07747/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0374800",
+      "poiId": "fd4cdee4-481f-45bc-9f3d-2096d8976e59",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Centstone advertises employer staffing and recruiting at the matching address, without an agency offer to families for nonclinical home support.",
+      "officeReviewSource": "https://centstone.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0405400",
+      "poiId": "6384062f-3c6a-437d-ae14-4865b99a86b3",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Capstone Wealth Management is not the NJ registered Devoted Caregivers business or service line.",
+      "officeReviewSource": "https://capstoneprivateclient.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0309800",
+      "poiId": "028901c9-5987-42d8-a143-db78af5f35fd",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Previously verified in the franchise release; a second listing would duplicate evidence.",
+      "officeReviewSource": "https://locations.seniorshelpingseniors.com/nj/easthanover/87.html"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0350700",
+      "poiId": "4b54d7f7-9d1b-424f-b852-563a866cb23b",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://2ndfamily.com/location/nj/north-jersey/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0103300",
+      "poiId": "f181d744-dd3d-45ca-a3b9-f86b77437e50",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://aboveandbeyondhc.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0326300",
+      "poiId": "8a617b33-b092-4e42-8dae-f26502b6b980",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "POI is a tax/multiservice business. No first-party service record links it to the home-care office.",
+      "officeReviewSource": "https://kobirtax.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0444000",
+      "poiId": "e119e7b4-4ae7-4989-bde7-d20f31adeb08",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Maximum Community Support Services Inc. shows the NJ phone and street, but no direct legal/DBA link to Maximum Homecare Services LLC, or NJ-specific older-adult service scope.",
+      "officeReviewSource": "https://www.maximumcommunity.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0283800",
+      "poiId": "1b6f8027-30bc-4f4e-840f-609d1c97f98e",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "The named business provides home infusion. No verified nonclinical senior care for this office.",
+      "officeReviewSource": "https://www.promptcare.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0368400",
+      "poiId": "f7bca28b-499e-4038-abc0-94fd11123602",
+      "disposition": "verify-alias-street-phone",
+      "officeReview": "Ideal Services R Us currently advertises tax preparation at the candidate address and phone; it does not verify a care service.",
+      "officeReviewSource": "https://www.idealservicesrus.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0360000",
+      "poiId": "5b3db8eb-f383-42f2-81d1-7631b4990a87",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0351900",
+      "poiId": "c7c047bf-11d4-4749-afe1-af5b0f03a011",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://vanejupqualitycare.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0359800",
+      "poiId": "a543b8b6-2bf6-4e35-81d7-7e9b42b61bdb",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0370500",
+      "poiId": "1c3ecbae-3778-41fd-86c3-e979aecf835f",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://aplaceathome.com/montclair/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0414800",
+      "poiId": "eba26e6d-db1f-423f-91d8-66618f41f464",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://madgesreignhc.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0431100",
+      "poiId": "66ea99cf-eaf5-43e9-a67a-a45f29a9f1f6",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0439000",
+      "poiId": "7b60a329-15e4-4e0a-93af-fea82eda8401",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0093300",
+      "poiId": "e655026e-602c-45f1-be42-11102bc7306c",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://alwayshomecare.org/our-location/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0152400",
+      "poiId": "e655026e-602c-45f1-be42-11102bc7306c",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0181801",
+      "poiId": "4a984bf0-47d7-4067-9671-fbdf2fc773e4",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://carefinders.org/new-jersey/west-new-york/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0431500",
+      "poiId": "f413fd31-6c8d-4b40-8a29-ae4a1e860894",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0272500",
+      "poiId": "df3ad351-4a93-44c3-94f7-15f3761d4f35",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0280000",
+      "poiId": "714ed141-f33e-4166-bf13-bc3e6f688e8a",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.ospreyhomehealth.com/home-health-care-services"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0333100",
+      "poiId": "76ee28c9-600f-4a19-80d5-2615065a9be7",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.healthsurenj.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0363700",
+      "poiId": "154460bd-957a-472a-a738-9d27bc01fb0b",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://icahelps.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0380100",
+      "poiId": "776834f5-b740-475b-81a1-b5c020762f44",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0355800",
+      "poiId": "4db06d0c-20a4-4606-84fc-d30289616848",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://www.almahomecare.org/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0381100",
+      "poiId": "db0e5636-cb0a-43e2-95c6-31a03682faa6",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0382300",
+      "poiId": "cb9dbbc4-b00b-45d2-98cf-5c63401f9358",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://primehomecare247.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0383500",
+      "poiId": "22276689-5ef5-4f0f-bd21-3c72821eb013",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0353800",
+      "poiId": "3def0548-8367-4b0a-be2c-0a05699b6125",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0157000",
+      "poiId": "12bf59f0-341a-4d09-a684-1e6a6ffa9fae",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://alwayshomecare.org/our-location/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0373100",
+      "poiId": "c45185d6-a0b8-4033-924c-04ea83352fc0",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://jaamahomehealthcare.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0406900",
+      "poiId": "efa3a418-1c23-46a5-87c6-9144ac227491",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0423200",
+      "poiId": "521c4e68-2949-44ad-a369-c20e10b89e5c",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0044700",
+      "poiId": "436f7ec1-9786-4acb-883a-6152ccfabde4",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0231606",
+      "poiId": "1d88d07e-21f7-4508-9b49-f2158c02d4e4",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "held"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0413800",
+      "poiId": "41297f1f-4e7c-4eaf-a8cb-86fe18aa7d48",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://lifecareassistance.net/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0425700",
+      "poiId": "9075cc30-52a6-40f3-93a1-54afee21aa14",
+      "disposition": "verify-phone-street-name",
+      "officeReview": "verified-office-services",
+      "officeReviewSource": "https://onverrahealth.com/consumer-guide"
+    }
+  ]
+}

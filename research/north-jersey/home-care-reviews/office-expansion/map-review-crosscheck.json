@@ -1,0 +1,540 @@
+{
+  "asOf": "2026-11-15",
+  "uniqueReviewListingsCompared": 523,
+  "inputCollections": {
+    "editorial": 122,
+    "newTowns": 40,
+    "sitemapReviews": 153,
+    "clusterInventory": 211
+  },
+  "separateUniquePOIRosterPairs": 521,
+  "allDistinctHighCountPages": 93,
+  "highCountPagesWithRosterRelatedPOIAtSameNormalizedStreetAndCity": 21,
+  "currentlyRetainedAggregateFamilies": {
+    "google": 36
+  },
+  "unknownFamilyMainPagesWithAtLeast5": 0,
+  "newQualifyingScores": 0,
+  "findings": [
+    "Overture office alias/zip/phone validates discovery, never the reviewer population. The remaining large medically mixed, clinical/employee, closed-office and off-roster listings retain their existing holds.",
+    "The examined Overture POI links supply no independent family ratings. All presently retained published aggregates derive from Google; secondary syndicated Google records cannot add an independent family.",
+    "Prior releases already recovered BAYADA Livingston and Home Sure; they are counted in the current report. State Programs Elizabeth, South Orange, and Joy Bringers remain distinct care units, inactive locations or separate offices."
+  ],
+  "highCountOfficeMatches": [
+    {
+      "slug": "always-responsive-home-care-middlesex-county-nj",
+      "sourceObservations": [
+        {
+          "count": 57,
+          "reason": [
+            "retained"
+          ],
+          "family": "google",
+          "receipt": "b07447f6493338b0f9eefee2b84d00a7091629676cb2b7c5849e2f6821b7e483"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "62841dd3-df68-4cf7-b33f-b149291d6e71",
+          "providerId": "north-jersey-hp-hp0148500",
+          "poiName": "Independence Home Care",
+          "disposition": "verify-alias-street-phone"
+        }
+      ]
+    },
+    {
+      "slug": "brightstar-care-cedar-knolls",
+      "sourceObservations": [
+        {
+          "count": 164,
+          "reason": [
+            "visible-care-unit-or-branch-unresolved",
+            "visible-window-mixes-school-nursing-and-home-care-services"
+          ],
+          "family": "google",
+          "receipt": "1d63b70073e97a7f300e6f995234faf9a03d08c766ccbc187d1d8c77313905ff"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "24388502-c2f0-43cb-a90e-8bb3c41065de",
+          "providerId": "north-jersey-hp-hp0259803",
+          "poiName": "O'mullan & Brady, P.a.",
+          "disposition": "hold-conflicting-suite"
+        },
+        {
+          "poiId": "160974d4-105a-4bba-a168-1c8c5583c870",
+          "providerId": "north-jersey-hp-hp0217600",
+          "poiName": "BrightStar Care Morris County",
+          "disposition": "verify-alias-street-phone"
+        }
+      ]
+    },
+    {
+      "slug": "eminence-home-care",
+      "sourceObservations": [
+        {
+          "count": 67,
+          "reason": [
+            "exact-runtime-office-not-corroborated",
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "61c0ed31e355983c963e4e18c989d363a5aee1b58a1ae23bdbf0d2afab983919"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "d2c99fa9-218f-4f9b-b956-43800f153070",
+          "providerId": "north-jersey-hp-hp0282000",
+          "poiName": "Citadel Home Care",
+          "disposition": "hold-phone-only"
+        }
+      ]
+    },
+    {
+      "slug": "firstlight-home-care-of-piscataway",
+      "sourceObservations": [
+        {
+          "count": 39,
+          "reason": [
+            "retained"
+          ],
+          "family": "google",
+          "receipt": "da1f127c0a22edc4a9c341252c14f07d2f3dabf1379e80535c2f0ca72983bbd8"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "c2e2202e-c809-4f18-986e-324106915491",
+          "providerId": "north-jersey-hp-hp0361900",
+          "poiName": "FirstLight Home Care of Piscataway",
+          "disposition": "hold-conflicting-suite"
+        }
+      ]
+    },
+    {
+      "slug": "heart-to-heart-corporate-office-east-orange",
+      "sourceObservations": [
+        {
+          "count": 45,
+          "reason": [
+            "exact-runtime-office-not-corroborated",
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "d4491412bae8073ae0633afdd98823e896e36fb58754e365fd2642b60d81ced1"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "eba26e6d-db1f-423f-91d8-66618f41f464",
+          "providerId": "north-jersey-hp-hp0414800",
+          "poiName": "Madge\u2019s Reign Home Care, LLC",
+          "disposition": "verify-phone-street-name"
+        },
+        {
+          "poiId": "66ea99cf-eaf5-43e9-a67a-a45f29a9f1f6",
+          "providerId": "north-jersey-hp-hp0431100",
+          "poiName": "Continuity Home Health Solutions ",
+          "disposition": "verify-phone-street-name"
+        }
+      ]
+    },
+    {
+      "slug": "home-sure-home-care",
+      "sourceObservations": [
+        {
+          "count": 44,
+          "reason": [
+            "exact-runtime-office-not-corroborated"
+          ],
+          "family": "google",
+          "receipt": "6cfac9a69a96775904f8b35c6144afde8a0f461e669526c0d0831ae1df775be2"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "776834f5-b740-475b-81a1-b5c020762f44",
+          "providerId": "north-jersey-hp-hp0380100",
+          "poiName": "Cecilia Home Care ",
+          "disposition": "verify-phone-street-name"
+        },
+        {
+          "poiId": "726c61f7-c84e-4694-8ea4-0370e9141bb3",
+          "providerId": "north-jersey-hp-hp0367200",
+          "poiName": "Home Sure Home Care",
+          "disposition": "hold-conflicting-suite"
+        }
+      ]
+    },
+    {
+      "slug": "joy-bringers-home-care",
+      "sourceObservations": [
+        {
+          "count": 65,
+          "reason": [
+            "exact-runtime-office-not-corroborated"
+          ],
+          "family": "google",
+          "receipt": "3a66deca0ea0f3ca100ff732dc4da4bb6dc1f1237c24037fc43d22c03ebdef6e"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "09a7c5a2-a1b5-4feb-9a2b-27a0f53a4f2e",
+          "providerId": "north-jersey-hp-hp0397400",
+          "poiName": "Joy Bringers Home Care",
+          "disposition": "hold-conflicting-suite"
+        }
+      ],
+      "previousEditorialDisposition": [
+        "Separate East Brunswick practice 6 Auer Court Suite G; NPPES does not assign a state license ID.",
+        "Separate Edison practice record at NJ-27 suite 117 also lacks license ID, uses same shared phone as East Brunswick. NJ legal name at Edison and Oakhurst cannot identify which active unit received East Brunswick reviews."
+      ]
+    },
+    {
+      "slug": "life-home-care-senior-home-care-agency",
+      "sourceObservations": [
+        {
+          "count": 105,
+          "reason": [
+            "exact-runtime-office-not-corroborated",
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "c21c58cc491b39903be0328f1181382dc48d475fc10b85bb6872917a92480187"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "c08a576b-793f-424d-9877-029240bfe15b",
+          "providerId": "north-jersey-hp-hp0285900",
+          "poiName": "Life Home Care | Senior Home Care Agency",
+          "disposition": "hold-conflicting-suite"
+        },
+        {
+          "poiId": "c08a576b-793f-424d-9877-029240bfe15b",
+          "providerId": "north-jersey-hp-hp0365500",
+          "poiName": "Life Home Care | Senior Home Care Agency",
+          "disposition": "hold-conflicting-suite"
+        },
+        {
+          "poiId": "c08a576b-793f-424d-9877-029240bfe15b",
+          "providerId": "north-jersey-hp-hp0342800",
+          "poiName": "Life Home Care | Senior Home Care Agency",
+          "disposition": "hold-conflicting-suite"
+        }
+      ]
+    },
+    {
+      "slug": "promise-care-of-essex-county-new-jersey",
+      "sourceObservations": [
+        {
+          "count": 35,
+          "reason": [
+            "exact-runtime-office-not-corroborated"
+          ],
+          "family": "google",
+          "receipt": "0edb4eda5758041c6ed7d0a2429c0ce47c68c58c5c8300fca5c13dcf7d57694b"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "eba26e6d-db1f-423f-91d8-66618f41f464",
+          "providerId": "north-jersey-hp-hp0414800",
+          "poiName": "Madge\u2019s Reign Home Care, LLC",
+          "disposition": "verify-phone-street-name"
+        },
+        {
+          "poiId": "66ea99cf-eaf5-43e9-a67a-a45f29a9f1f6",
+          "providerId": "north-jersey-hp-hp0431100",
+          "poiName": "Continuity Home Health Solutions ",
+          "disposition": "verify-phone-street-name"
+        }
+      ],
+      "previousEditorialDisposition": "Clinical home health listing; matching corporate name does not establish a nonmedical HCSF branch."
+    },
+    {
+      "slug": "right-at-home-old-bridge",
+      "sourceObservations": [
+        {
+          "count": 343,
+          "reason": [
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "396c9d50aa2e91163db46cc2039be486d750942ec6a41d9454d29518976a3798"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "8b846c3e-212d-4ef4-a30f-bca2751785bf",
+          "providerId": "north-jersey-hp-hp0052100",
+          "poiName": "Right at Home Middlesex and Northern Monmouth Counties",
+          "disposition": "hold-phone-only"
+        },
+        {
+          "poiId": "c67ed380-52bd-486f-9a79-110ea94dd713",
+          "providerId": "north-jersey-hp-hp0052100",
+          "poiName": "Right at Home",
+          "disposition": "hold-phone-only"
+        }
+      ]
+    },
+    {
+      "slug": "right-at-home-west-orange",
+      "sourceObservations": [
+        {
+          "count": 76,
+          "reason": [
+            "prior-independent-population-or-care-scope-hold",
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "1758b1b879cf95b9fe349afc3f370083fdb1c0159479d5de7284e06bccfece99"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "94ee9c1f-9de1-41d7-b9e3-78a4d1bc543b",
+          "providerId": "north-jersey-hp-hp0058900",
+          "poiName": "Right at Home Essex County",
+          "disposition": "verify-alias-street-phone"
+        }
+      ]
+    },
+    {
+      "slug": "synergy-homecare-teaneck",
+      "sourceObservations": [
+        {
+          "count": 58,
+          "reason": [
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "74940f9881ecb8e0e698fdf6d4f008f73558b1d10a9a7ec4720821dbe84bce34"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "c1fbafd4-4da6-4a15-b606-edc5c360f999",
+          "providerId": "north-jersey-hp-hp0256900",
+          "poiName": "SYNERGY HomeCare",
+          "disposition": "verify-alias-street-phone"
+        }
+      ]
+    },
+    {
+      "slug": "visiting-angels-fort-lee",
+      "sourceObservations": [
+        {
+          "count": 93,
+          "reason": [
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "a53a02ccf007ae40e66b89bf775f15a9acd8e45d9a8c9a7f0ec9acc16078bdb6"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "e1f9f419-7b18-4828-b203-dbf03670ab44",
+          "providerId": "north-jersey-hp-hp0231601",
+          "poiName": "Premier Home Health Care Services, Inc",
+          "disposition": "hold-address-difference"
+        }
+      ]
+    },
+    {
+      "slug": "visiting-angels-scotch-plains",
+      "sourceObservations": [
+        {
+          "count": 38,
+          "reason": [
+            "visible-window-not-pure-consumer-population"
+          ],
+          "family": "google",
+          "receipt": "925aa559fa7e4adbedeca74bac40aa8f1826d068a2551157e50f85d94f64c689"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "f25ae322-0d00-49dd-9d2a-2ce30aff7411",
+          "providerId": "north-jersey-hp-hp0320800",
+          "poiName": "Visiting Angels Senior Home Care Scotch Plains",
+          "disposition": "hold-phone-only"
+        }
+      ]
+    },
+    {
+      "slug": "synergy-homecare-matawan",
+      "sourceObservations": [
+        {
+          "count": 32,
+          "reason": [
+            "held-identity",
+            "mixed-population",
+            "Street and city equal HP0309400, but its legal name is BECE Home Care Services with no registered SYNERGY DBA. A brand at a shared address is not a name match."
+          ],
+          "family": "google",
+          "receipt": "78bcae0beb885e7f944a2fa2b1f7ce487d15fe491c9fc5489414417e23d36a06"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "1d6dd9a3-7cbe-4d47-b05f-3e22f5f84e0d",
+          "providerId": "north-jersey-hp-hp0309400",
+          "poiName": "SYNERGY HomeCare",
+          "disposition": "verify-alias-street-phone"
+        }
+      ]
+    },
+    {
+      "slug": "the-senior-company",
+      "sourceObservations": [
+        {
+          "count": 108,
+          "reason": [
+            "exact-office-match",
+            "consumer",
+            "Registered DBA The Senior Company; street and city equal."
+          ],
+          "family": "google",
+          "receipt": "896dac4a69d1593a11792fa1b4c96c479d1e83ff71d800b0a6db6f9bd5ca15c1"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "413d464c-4cc4-4948-a7ea-253ed7fe934b",
+          "providerId": "north-jersey-hp-hp0277600",
+          "poiName": "The Senior Company",
+          "disposition": "verify-phone-street-name"
+        }
+      ]
+    },
+    {
+      "slug": "visiting-angels-matawan",
+      "sourceObservations": [
+        {
+          "count": 35,
+          "reason": [
+            "exact-office-match",
+            "consumer",
+            "Registered DBA Visiting Angels of Matawan at 5 Ravine Drive; page omits the floor."
+          ],
+          "family": "google",
+          "receipt": "b0e3842768b76fbfdb8ae1b692e22374dc48838d594ffb599cff48503e369f9b"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "c7bca796-ad52-42cc-94b5-27cbb4cf2a00",
+          "providerId": "north-jersey-hp-hp0283000",
+          "poiName": "Visiting Angels Home Care",
+          "disposition": "verify-alias-street-phone"
+        },
+        {
+          "poiId": "2317c99f-63c2-4903-8659-2d2ff0319a49",
+          "providerId": "north-jersey-hp-hp0283000",
+          "poiName": "Angel Caregiver Academy",
+          "disposition": "verify-alias-street-phone"
+        }
+      ]
+    },
+    {
+      "slug": "zenith-home-care-agency",
+      "sourceObservations": [
+        {
+          "count": 46,
+          "reason": [
+            "exact-office-match",
+            "consumer",
+            "Legal name Zenith Home Care Agency at 1 Liberty Way, Suite 03, Cranbury; page omits the floor."
+          ],
+          "family": "google",
+          "receipt": "86fffe41eadcf97287bb3b915831d815e2323a1e4331aa97742169308c2bad95"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "7276f0a6-7844-4a7f-9827-2d7017b7ecdb",
+          "providerId": "north-jersey-hp-hp0327600",
+          "poiName": "Zenith Home Care Agency",
+          "disposition": "exact-name-street-phone"
+        }
+      ]
+    },
+    {
+      "slug": "emerest-health-of-new-jersey-home-health-agency",
+      "sourceObservations": [
+        {
+          "count": 142,
+          "reason": "inventory-screen",
+          "family": null,
+          "receipt": "f764d5ac47346c39175ba15888296b39a1b072c593cb080c57ebb9739719a351"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "52f0c4d6-3c82-4839-86f1-d5b078381a7a",
+          "providerId": "north-jersey-hp-hp0184500",
+          "poiName": "Emerest Health of New Jersey Home Health Agency",
+          "disposition": "verify-alias-street-phone"
+        }
+      ],
+      "previousEditorialDisposition": "Reviews of working at this office and its hiring process appear together with home-care customer feedback."
+    },
+    {
+      "slug": "life-medical-care-that-comes-to-you",
+      "sourceObservations": [
+        {
+          "count": 94,
+          "reason": "practice-providing-clinical-house-calls",
+          "family": null,
+          "receipt": "1e59cbf1b2d0a2320e8fe18c8d955e1b1f1270cb764ba54b760908d1361fdf7c"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "c08a576b-793f-424d-9877-029240bfe15b",
+          "providerId": "north-jersey-hp-hp0285900",
+          "poiName": "Life Home Care | Senior Home Care Agency",
+          "disposition": "hold-conflicting-suite"
+        },
+        {
+          "poiId": "c08a576b-793f-424d-9877-029240bfe15b",
+          "providerId": "north-jersey-hp-hp0365500",
+          "poiName": "Life Home Care | Senior Home Care Agency",
+          "disposition": "hold-conflicting-suite"
+        },
+        {
+          "poiId": "c08a576b-793f-424d-9877-029240bfe15b",
+          "providerId": "north-jersey-hp-hp0342800",
+          "poiName": "Life Home Care | Senior Home Care Agency",
+          "disposition": "hold-conflicting-suite"
+        }
+      ]
+    },
+    {
+      "slug": "sands-home-health-care-agency",
+      "sourceObservations": [
+        {
+          "count": 52,
+          "reason": "inventory-screen",
+          "family": null,
+          "receipt": "857c82815e711cb1b1732f2e0799ee26eaeb3e55ab8d1d4ed1b5212e910bb8e0"
+        }
+      ],
+      "officeCandidates": [
+        {
+          "poiId": "53468789-c14e-4cd8-b046-523ef05752e5",
+          "providerId": "north-jersey-hp-hp0122400",
+          "poiName": "Full Circle Health Services",
+          "disposition": "verify-phone-street-name"
+        }
+      ],
+      "previousEditorialDisposition": "A visible row opens with a revised-review drafting prompt and two other general endorsements do not establish a customer relationship."
+    }
+  ]
+}

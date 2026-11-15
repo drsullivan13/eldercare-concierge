@@ -1,6 +1,6 @@
 # North Jersey home-care reviews
 
-The expanded release contains 330 readable, source-linked accounts across 96 registered offices. Across the full 1,074-office dashboard, 37 offices have an eligible published review average and 11 meet Harbor’s sample and population requirements for a numeric experience score. These 11 source averages report 615 ratings in total. The score formula is unchanged.
+The expanded release contains 330 readable, source-linked accounts across 96 registered offices. Across the full 1,074-office dashboard, 36 offices have an eligible published review average and 11 meet Harbor’s sample and population requirements for a numeric experience score. These 11 source averages report 615 ratings in total. The score formula is unchanged.
 
 The original release had 57 summaries across 15 offices and two scores. A second inspection of every visible row on the original 122 pages, 146 additional town checks, a statewide publisher-sitemap match against the registered names and DBAs, and targeted operator and federal identity checks expanded coverage. The Teaneck SYNERGY office still has readable family accounts. Its average is now held because one visible account does not establish the writer’s relationship to the agency. The Livingston BAYADA office was matched using the operator’s office-specific personal-care page, exact suite and the state license number recorded by NPPES.
 

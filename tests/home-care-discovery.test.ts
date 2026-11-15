@@ -86,3 +86,20 @@ test("home-care matching retains secondary categories and ZIP estimates without 
   assert.notEqual(secondary.category, "home-care");
   assert.ok(secondary.searchCategories?.includes("home-care"));
 });
+
+test("Key Family Care publishes distinct weekday and weekend prices through the research API", async () => {
+  const { GET } = await import("../src/app/api/research/route");
+  const id = "north-jersey-hp-hp0381100";
+  const response = await GET(new Request(`http://localhost/api/research?id=${id}`));
+  assert.equal(response.status, 200);
+  const { facts } = await response.json();
+  for (const [key, min, max] of [
+    ["weekday-rate", 35, 38],
+    ["weekend-holiday-rate", 36, 40],
+  ] as const) {
+    const rate = facts.find((fact: { id: string }) => fact.id === `${id}-${key}`);
+    assert.equal(rate.kind, "cost");
+    assert.equal(rate.sourceId, `${id}-office-services-source`);
+    assert.deepEqual(rate.amount, { min, max, period: "hour", type: "care-fee", currency: "USD", asOf: null });
+  }
+});
