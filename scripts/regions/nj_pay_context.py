@@ -53,6 +53,10 @@ def add_county_home_care_context(inputs, providers, research):
             raise ValueError(f"Changed office service identity: {pid}")
         add_fact(research, pid, "office-services", row["title"], row["text"], row,
                  "full-page", row["checkedAt"], kind=row["category"])
+        if "publishedRate" in row:
+            research[pid]["facts"].append({"id": f"{pid}-office-rate", "kind": "cost",
+                                          "sourceId": f"{pid}-office-services-source",
+                                          "text": row["rateText"], "amount": row["publishedRate"]})
 
 
 
