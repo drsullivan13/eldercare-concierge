@@ -1,0 +1,4347 @@
+{
+  "source": {
+    "publisher": "New Jersey Department of Human Services",
+    "title": "FY2027 NF QIPP CoreQ long-stay resident/family satisfaction composite",
+    "reportingYear": "FY2027",
+    "yearMeaning": "reporting/payment year, not survey year",
+    "unit": "percent",
+    "measure": "CoreQ Composite Score",
+    "population": "Long-stay nursing-home residents and their families",
+    "definitionUrl": "https://www.nj.gov/humanservices/doas/resources/nursing/",
+    "definition": "Three questions rate the facility overall, staff and care received. Responses range from 1 (poor) to 5 (excellent). The QIPP composite benchmark is 85%.",
+    "surveyPeriod": null,
+    "sampleSize": null,
+    "workbook": {
+      "url": "https://www.nj.gov/humanservices/doas/documents/FY27%20NH%20Rates%20FFS%20Residents%20%20NF%20QIPP%20UPTD%20073026%20R2.4.2.2%20Final.xlsx",
+      "sha256": "95482f38a3f9707cda3d0507049d180fa362fc4c643cdf639034ef957a1ae8db",
+      "sheet": "SFY27FFS Rate-NFQIPP70726 R2.4",
+      "headerCell": "AZ5",
+      "numberFormat": "0%",
+      "numberFormatId": 9,
+      "definitionCells": "'SFY27 Cover sheet'!A32:A37"
+    },
+    "cms": {
+      "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+      "sha256": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c",
+      "file": "research/north-jersey/cms/raw/4pq5-n9py/primary/page-0000000.json",
+      "statewideRows": 348
+    },
+    "state": {
+      "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+      "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716",
+      "file": "research/north-jersey/state/raw/ltc.xlsx"
+    },
+    "costReport": {
+      "url": "https://www.nj.gov/humanservices/doas/documents/CY-2024-Nursing-Facility-Medicaid-Cost-Report-Data-FINAL-20260929.xlsx",
+      "sha256": "20574bc6f03edf7d1aad60c768cc7a638e43ee325b14cff95199510dbcc14f04",
+      "sheets": [
+        "Data Summary",
+        "Schedule A-8"
+      ]
+    },
+    "identityPolicy": "Unique Medicaid ID to NPI to CCN through the CY2024 NJ Medicaid cost report, or unique normalized exact names across all workbook, CMS NJ and DOH statewide records, plus exact DOH/CMS street, city and ZIP. No fuzzy names or campus inheritance. Gainwell IDs are retained, not treated as CCNs.",
+    "workbookRows": 370
+  },
+  "results": {
+    "315001": {
+      "value": 86.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "MERWICK CARE & REHABILITATION CENTER",
+        "medicaidId": "4482808",
+        "nameCell": "A223",
+        "medicaidIdCell": "B223",
+        "cmsName": "MERWICK POST ACUTE",
+        "npi": "1417260910",
+        "address": "100 PLAINSBORO ROAD",
+        "city": "PLAINSBORO",
+        "state": "NJ",
+        "zip": "08536"
+      },
+      "cell": "AZ223",
+      "raw": "0.86499999999999999"
+    },
+    "315005": {
+      "value": 87.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SPRING GROVE REHAB AND HEALTH CARE CENTER",
+        "medicaidId": "673889",
+        "nameCell": "A287",
+        "medicaidIdCell": "B287",
+        "cmsName": "SPRING GROVE REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1487151940",
+        "address": "144 GALES DRIVE",
+        "city": "NEW PROVIDENCE",
+        "state": "NJ",
+        "zip": "07974"
+      },
+      "cell": "AZ287",
+      "raw": "0.875"
+    },
+    "315008": {
+      "value": 93.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LAUREL MANOR HEALTHCARE & REHAB CENTER",
+        "medicaidId": "280917",
+        "nameCell": "A205",
+        "medicaidIdCell": "B205",
+        "cmsName": "LAUREL MANOR HEALTHCARE AND REHABILITATION CENTER",
+        "npi": "1730466392",
+        "address": "18 W LAUREL ROAD",
+        "city": "STRATFORD",
+        "state": "NJ",
+        "zip": "08084"
+      },
+      "cell": "AZ205",
+      "raw": "0.93500000000000005"
+    },
+    "315009": {
+      "value": 88.99999999999999,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "RUNNELLS SPECIALIZED HOSPITAL",
+        "medicaidId": "482331",
+        "nameCell": "A271",
+        "medicaidIdCell": "B271",
+        "cmsName": "RUNNELLS CENTER FOR REHABILITATION & HEALTHCARE",
+        "npi": "1144622374",
+        "address": "40 WATCHUNG WAY",
+        "city": "BERKELEY HEIGHTS",
+        "state": "NJ",
+        "zip": "07922"
+      },
+      "cell": "AZ271",
+      "raw": "0.8899999999999999"
+    },
+    "315010": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ELMORA HILLS HEALTH & REHAB. CENTER",
+        "medicaidId": "4505808",
+        "nameCell": "A155",
+        "medicaidIdCell": "B155",
+        "cmsName": "ELMORA HILLS HEALTH & REHABILITATION CENTER",
+        "npi": "1801997853",
+        "address": "225 W JERSEY STREET",
+        "city": "ELIZABETH",
+        "state": "NJ",
+        "zip": "07202"
+      },
+      "cell": "AZ155",
+      "raw": "0.92999999999999994"
+    },
+    "315013": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "BARCLAYS REHAB",
+        "medicaidId": "488143",
+        "nameCell": "A53",
+        "medicaidIdCell": "B53",
+        "cmsName": "BARCLAYS REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1184095697",
+        "address": "1412 MARLTON PIKE EAST",
+        "city": "CHERRY HILL",
+        "state": "NJ",
+        "zip": "08034"
+      },
+      "cell": "AZ53",
+      "raw": "0.95"
+    },
+    "315015": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT MADISON LLC",
+        "medicaidId": "807320",
+        "nameCell": "A113",
+        "medicaidIdCell": "B113",
+        "cmsName": "COMPLETE CARE AT MADISON, LLC",
+        "stateFacilityId": "NJ61217",
+        "stateRow": 705,
+        "address": "625 STATE HIGHWAY 34",
+        "city": "MATAWAN",
+        "state": "NJ",
+        "zip": "07747"
+      },
+      "cell": "AZ113",
+      "raw": "0.875"
+    },
+    "315021": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ATLAS HEALTHCARE AT DAUGHTERS OF MIRIAM",
+        "medicaidId": "890278",
+        "nameCell": "A43",
+        "medicaidIdCell": "B43",
+        "cmsName": "ATLAS REHABILITATION AND HEALTHCARE AT DAUGHTERS O",
+        "npi": "1851037121",
+        "address": "155 HAZEL STREET",
+        "city": "CLIFTON",
+        "state": "NJ",
+        "zip": "07011"
+      },
+      "cell": "AZ43",
+      "raw": "0.95"
+    },
+    "315029": {
+      "value": 85.00000000000001,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "DAUGHTERS OF ISRAEL PLEASANT VALLEY HOME",
+        "medicaidId": "4477103",
+        "nameCell": "A147",
+        "medicaidIdCell": "B147",
+        "cmsName": "DAUGHTERS OF ISRAEL PLEASANT VALLEY HOME",
+        "stateFacilityId": "NJ70770",
+        "stateRow": 525,
+        "address": "1155 PLEASANT VALLEY WAY",
+        "city": "WEST ORANGE",
+        "state": "NJ",
+        "zip": "07052"
+      },
+      "cell": "AZ147",
+      "raw": "0.85000000000000009"
+    },
+    "315036": {
+      "value": 94.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ARBOR GLEN CENTER",
+        "medicaidId": "4476603",
+        "nameCell": "A28",
+        "medicaidIdCell": "B28",
+        "cmsName": "Arbor Glen Center",
+        "stateFacilityId": "NJ60706",
+        "stateRow": 656,
+        "address": "25 E LINDSLEY ROAD",
+        "city": "CEDAR GROVE",
+        "state": "NJ",
+        "zip": "07009"
+      },
+      "cell": "AZ28",
+      "raw": "0.94"
+    },
+    "315037": {
+      "value": 91.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "FAMILY OF CARING AT TEANECK,LLC",
+        "medicaidId": "907561",
+        "nameCell": "A168",
+        "medicaidIdCell": "B168",
+        "cmsName": "FAMILY OF CARING AT TEANECK LLC",
+        "stateFacilityId": "NJ60217",
+        "stateRow": 615,
+        "address": "1104 TEANECK ROAD",
+        "city": "TEANECK",
+        "state": "NJ",
+        "zip": "07666"
+      },
+      "cell": "AZ168",
+      "raw": "0.91500000000000004"
+    },
+    "315038": {
+      "value": 86.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT SUMMIT RIDGE",
+        "medicaidId": "676489",
+        "nameCell": "A128",
+        "medicaidIdCell": "B128",
+        "cmsName": "COMPLETE CARE AT SUMMIT RIDGE",
+        "stateFacilityId": "NJ60739",
+        "stateRow": 673,
+        "address": "20 SUMMIT STREET",
+        "city": "WEST ORANGE",
+        "state": "NJ",
+        "zip": "07052"
+      },
+      "cell": "AZ128",
+      "raw": "0.86"
+    },
+    "315042": {
+      "value": 94.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LINCOLN PARK RENAISSANCE REHAB AND NURSING",
+        "medicaidId": "347779",
+        "nameCell": "A209",
+        "medicaidIdCell": "B209",
+        "cmsName": "LINCOLN PARK RENAISSANCE",
+        "npi": "1306182159",
+        "address": "521 PINE BROOK ROAD",
+        "city": "LINCOLN PARK",
+        "state": "NJ",
+        "zip": "07035"
+      },
+      "cell": "AZ209",
+      "raw": "0.94"
+    },
+    "315044": {
+      "value": 68.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "MOHAWK MEADOWS",
+        "medicaidId": "1008315",
+        "nameCell": "A226",
+        "medicaidIdCell": "B226",
+        "cmsName": "MOHAWK MEADOWS",
+        "stateFacilityId": "NJ61902",
+        "stateRow": 790,
+        "address": "1 O'BRIEN LANE",
+        "city": "LAFAYETTE",
+        "state": "NJ",
+        "zip": "07848"
+      },
+      "cell": "AZ226",
+      "raw": "0.68500000000000005"
+    },
+    "315047": {
+      "value": 93.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "WYNWOOD REHABILITATION AND HEALTHCARE CENTER",
+        "medicaidId": "875872",
+        "nameCell": "A325",
+        "medicaidIdCell": "B325",
+        "cmsName": "WYNWOOD REHABILITATION AND HEALTHCARE CENTER",
+        "stateFacilityId": "NJ60314",
+        "stateRow": 630,
+        "address": "1700 WYNWOOD DRIVE",
+        "city": "CINNAMINSON",
+        "state": "NJ",
+        "zip": "08077"
+      },
+      "cell": "AZ325",
+      "raw": "0.93500000000000005"
+    },
+    "315050": {
+      "value": 100.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT BURLINGTON WOODS,LLC",
+        "medicaidId": "806846",
+        "nameCell": "A98",
+        "medicaidIdCell": "B98",
+        "cmsName": "COMPLETE CARE AT BURLINGTON WOODS, LLC",
+        "stateFacilityId": "NJ60301",
+        "stateRow": 625,
+        "address": "115 SUNSET ROAD",
+        "city": "BURLINGTON",
+        "state": "NJ",
+        "zip": "08016"
+      },
+      "cell": "AZ98",
+      "raw": "1"
+    },
+    "315053": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "PINE ACRES CONVALESCENT CENTER",
+        "medicaidId": "4491602",
+        "nameCell": "A247",
+        "medicaidIdCell": "B247",
+        "cmsName": "PINE ACRES REHABILITATION AND HEALTHCARE",
+        "npi": "1326367228",
+        "address": "51 MADISON AVE",
+        "city": "MADISON",
+        "state": "NJ",
+        "zip": "07940"
+      },
+      "cell": "AZ247",
+      "raw": "0.95"
+    },
+    "315054": {
+      "value": 88.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "OUR LADY'S CENTER FOR REHAB & HEALTHCARE",
+        "medicaidId": "537136",
+        "nameCell": "A239",
+        "medicaidIdCell": "B239",
+        "cmsName": "OUR LADYS CENTER FOR REHABILITATION & HEALTHCARE",
+        "npi": "1336518539",
+        "address": "1100 CLEMATIS AVE",
+        "city": "PLEASANTVILLE",
+        "state": "NJ",
+        "zip": "08232"
+      },
+      "cell": "AZ239",
+      "raw": "0.88"
+    },
+    "315056": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "JERSEY SHORE POST ACUTE REHAB & NURSING LLC",
+        "medicaidId": "786713",
+        "nameCell": "A198",
+        "medicaidIdCell": "B198",
+        "cmsName": "JERSEY SHORE POST ACUTE REHABILITATION AND NURSING",
+        "npi": "1902499379",
+        "address": "101 WALNUT STREET",
+        "city": "NEPTUNE",
+        "state": "NJ",
+        "zip": "07753"
+      },
+      "cell": "AZ198",
+      "raw": "0.97499999999999998"
+    },
+    "315058": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "GOLDEN REHAB & NURSING CENTER",
+        "medicaidId": "4498500",
+        "nameCell": "A179",
+        "medicaidIdCell": "B179",
+        "cmsName": "AUTUMN LAKE HEALTHCARE AT SALEM COUNTY",
+        "npi": "1316232812",
+        "address": "438 SALEM-WOODSTOWN ROAD",
+        "city": "SALEM",
+        "state": "NJ",
+        "zip": "08079"
+      },
+      "cell": "AZ179",
+      "raw": "1"
+    },
+    "315061": {
+      "value": 100.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "SOUTH JERSEY EXTENDED CARE",
+        "medicaidId": "4473701",
+        "nameCell": "A281",
+        "medicaidIdCell": "B281",
+        "cmsName": "South Jersey Extended Care",
+        "stateFacilityId": "NJ60602",
+        "stateRow": 649,
+        "address": "99 MANHEIM AVENUE",
+        "city": "BRIDGETON",
+        "state": "NJ",
+        "zip": "08302"
+      },
+      "cell": "AZ281",
+      "raw": "1"
+    },
+    "315064": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ASHBROOK CARE & REHAB. CENTER",
+        "medicaidId": "4505701",
+        "nameCell": "A37",
+        "medicaidIdCell": "B37",
+        "cmsName": "ASHBROOK CARE & REHABILITATION CENTER",
+        "npi": "1073742300",
+        "address": "1610 RARITAN ROAD",
+        "city": "SCOTCH PLAINS",
+        "state": "NJ",
+        "zip": "07076"
+      },
+      "cell": "AZ37",
+      "raw": "1"
+    },
+    "315066": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "STRATFORD MANOR REHAB & CARE CENTER",
+        "medicaidId": "464031",
+        "nameCell": "A292",
+        "medicaidIdCell": "B292",
+        "cmsName": "Stratford Manor Rehabilitation and Care Center",
+        "npi": "1184089427",
+        "address": "787 NORTHFIELD AVE",
+        "city": "WEST ORANGE",
+        "state": "NJ",
+        "zip": "07052"
+      },
+      "cell": "AZ292",
+      "raw": "0.95"
+    },
+    "315068": {
+      "value": 97.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "DWELLSIDE CARE AND REHAB",
+        "medicaidId": "891975",
+        "nameCell": "A152",
+        "medicaidIdCell": "B152",
+        "cmsName": "DWELLSIDE CARE AND REHAB",
+        "stateFacilityId": "NJ60402",
+        "stateRow": 632,
+        "address": "3025 CHAPEL AVENUE WEST",
+        "city": "CHERRY HILL",
+        "state": "NJ",
+        "zip": "08002"
+      },
+      "cell": "AZ152",
+      "raw": "0.97499999999999998"
+    },
+    "315069": {
+      "value": 85.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "TOWER LODGE CARE CENTER",
+        "medicaidId": "4488806",
+        "nameCell": "A305",
+        "medicaidIdCell": "B305",
+        "cmsName": "TOWER LODGE CARE CENTER",
+        "stateFacilityId": "NJ61331",
+        "stateRow": 728,
+        "address": "1506 GULLY ROAD",
+        "city": "WALL",
+        "state": "NJ",
+        "zip": "07719"
+      },
+      "cell": "AZ305",
+      "raw": "0.85"
+    },
+    "315072": {
+      "value": 90.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "HEATH VILLAGE",
+        "medicaidId": "4492609",
+        "nameCell": "A189",
+        "medicaidIdCell": "B189",
+        "cmsName": "Heath Village",
+        "npi": "1912041526",
+        "address": "451 SCHOOLEY'S MOUNTAIN RD",
+        "city": "HACKETTSTOWN",
+        "state": "NJ",
+        "zip": "07840"
+      },
+      "cell": "AZ189",
+      "raw": "0.90500000000000003"
+    },
+    "315083": {
+      "value": 96.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ACCLAIM REHABILITATION AND NURSING CENTER",
+        "medicaidId": "917532",
+        "nameCell": "A8",
+        "medicaidIdCell": "B8",
+        "cmsName": "ACCLAIM REHABILITATION AND NURSING CENTER",
+        "stateFacilityId": "60909",
+        "stateRow": 543,
+        "address": "198 STEVENS AVE",
+        "city": "JERSEY CITY",
+        "state": "NJ",
+        "zip": "07305"
+      },
+      "cell": "AZ8",
+      "raw": "0.96"
+    },
+    "315085": {
+      "value": 87.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT CHESTNUT HILL. LLC",
+        "medicaidId": "784982",
+        "nameCell": "A101",
+        "medicaidIdCell": "B101",
+        "cmsName": "COMPLETE CARE AT CHESTNUT HILL LLC",
+        "stateFacilityId": "NJ61605",
+        "stateRow": 769,
+        "address": "360 CHESTNUT STREET",
+        "city": "PASSAIC",
+        "state": "NJ",
+        "zip": "07055"
+      },
+      "cell": "AZ101",
+      "raw": "0.87"
+    },
+    "315087": {
+      "value": 74.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CARE ONE AT KING JAMES",
+        "medicaidId": "4490304",
+        "nameCell": "A74",
+        "medicaidIdCell": "B74",
+        "cmsName": "CAREONE AT MIDDLETOWN",
+        "npi": "1598764060",
+        "address": "1040 STATE ROUTE 36",
+        "city": "ATLANTIC HIGHLANDS",
+        "state": "NJ",
+        "zip": "07716"
+      },
+      "cell": "AZ74",
+      "raw": "0.74"
+    },
+    "315091": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "BIRCHWOOD REHABILITATION AND HEALTHCARE CENTER",
+        "medicaidId": "899038",
+        "nameCell": "A61",
+        "medicaidIdCell": "B61",
+        "cmsName": "BIRCHWOOD REHABILITATION AND HEALTHCARE CENTER",
+        "stateFacilityId": "NJ62006",
+        "stateRow": 797,
+        "address": "205 BIRCHWOOD AVE",
+        "city": "CRANFORD",
+        "state": "NJ",
+        "zip": "07016"
+      },
+      "cell": "AZ61",
+      "raw": "0.95"
+    },
+    "315094": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT MERCERVILLE,LLC",
+        "medicaidId": "798894",
+        "nameCell": "A115",
+        "medicaidIdCell": "B115",
+        "cmsName": "COMPLETE CARE AT MERCERVILLE LLC",
+        "stateFacilityId": "NJ61106",
+        "stateRow": 694,
+        "address": "2240 WHITEHORSE-MERCERVILLE ROAD",
+        "city": "HAMILTON TOWNSHIP",
+        "state": "NJ",
+        "zip": "08619"
+      },
+      "cell": "AZ115",
+      "raw": "0.95"
+    },
+    "315101": {
+      "value": 85.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT PLAINFIELD LLC",
+        "medicaidId": "934780",
+        "nameCell": "A123",
+        "medicaidIdCell": "B123",
+        "cmsName": "COMPLETE CARE AT PLAINFIELD LLC",
+        "stateFacilityId": "NJ62009",
+        "stateRow": 800,
+        "address": "1340 PARK AVE",
+        "city": "PLAINFIELD",
+        "state": "NJ",
+        "zip": "07060"
+      },
+      "cell": "AZ123",
+      "raw": "0.85"
+    },
+    "315103": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "EXCEL CARE AT WAYNE",
+        "medicaidId": "928216",
+        "nameCell": "A163",
+        "medicaidIdCell": "B163",
+        "cmsName": "EXCEL CARE AT WAYNE",
+        "stateFacilityId": "NJ61614",
+        "stateRow": 772,
+        "address": "296 HAMBURG TURNPIKE",
+        "city": "WAYNE",
+        "state": "NJ",
+        "zip": "07470"
+      },
+      "cell": "AZ163",
+      "raw": "0.95"
+    },
+    "315104": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CORNELL HALL CARE & REHAB. CENTER",
+        "medicaidId": "4505905",
+        "nameCell": "A140",
+        "medicaidIdCell": "B140",
+        "cmsName": "CORNELL HALL CARE & REHABILITATION CENTER",
+        "npi": "1528297868",
+        "address": "234 CHESTNUT STREET",
+        "city": "UNION",
+        "state": "NJ",
+        "zip": "07083"
+      },
+      "cell": "AZ140",
+      "raw": "1"
+    },
+    "315105": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CORAL HARBOR REHAB & HEALTHCARE CENTER",
+        "medicaidId": "521817",
+        "nameCell": "A139",
+        "medicaidIdCell": "B139",
+        "cmsName": "CORAL HARBOR REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1093180572",
+        "address": "2050 SIXTH AVE",
+        "city": "NEPTUNE CITY",
+        "state": "NJ",
+        "zip": "07753"
+      },
+      "cell": "AZ139",
+      "raw": "0.92999999999999994"
+    },
+    "315106": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ELIZABETH NURSING & REHAB. CENTER",
+        "medicaidId": "4504607",
+        "nameCell": "A154",
+        "medicaidIdCell": "B154",
+        "cmsName": "ELIZABETH NURSING AND REHAB CENTER",
+        "npi": "1942210026",
+        "address": "1048 GROVE STREET",
+        "city": "ELIZABETH",
+        "state": "NJ",
+        "zip": "07202"
+      },
+      "cell": "AZ154",
+      "raw": "0.95"
+    },
+    "315110": {
+      "value": 62.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT LAKEVIEW,LLC",
+        "medicaidId": "967564",
+        "nameCell": "A110",
+        "medicaidIdCell": "B110",
+        "cmsName": "COMPLETE CARE AT WAYNE HILLS REHAB & RESP CENTER",
+        "npi": "1972988103",
+        "address": "130 TERHUNE DRIVE",
+        "city": "WAYNE",
+        "state": "NJ",
+        "zip": "07470"
+      },
+      "cell": "AZ110",
+      "raw": "0.625"
+    },
+    "315111": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "PREFERRED CARE AT HAMILTON",
+        "medicaidId": "715255",
+        "nameCell": "A252",
+        "medicaidIdCell": "B252",
+        "cmsName": "PREFERRED CARE AT HAMILTON",
+        "stateFacilityId": "NJ61105",
+        "stateRow": 693,
+        "address": "1501 STATE HWY 33",
+        "city": "HAMILTON SQUARE",
+        "state": "NJ",
+        "zip": "08690"
+      },
+      "cell": "AZ252",
+      "raw": "0.95"
+    },
+    "315112": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "HUDSON VIEW CARE  REHAB. CENTER",
+        "medicaidId": "945811",
+        "nameCell": "A193",
+        "medicaidIdCell": "B193",
+        "cmsName": "HUDSONVIEW HEALTH CARE CENTER",
+        "npi": "1518693613",
+        "address": "9020 WALL STREET",
+        "city": "NORTH BERGEN",
+        "state": "NJ",
+        "zip": "07047"
+      },
+      "cell": "AZ193",
+      "raw": "0.95"
+    },
+    "315113": {
+      "value": 90.99999999999999,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CLOVER MEADOWS HEALTHCARE AND REHAB",
+        "medicaidId": "690970",
+        "nameCell": "A90",
+        "medicaidIdCell": "B90",
+        "cmsName": "CLOVER MEADOWS HEALTHCARE AND REHABILITATION CENTE",
+        "npi": "1326506684",
+        "address": "112 FRANKLIN CORNER ROAD",
+        "city": "LAWRENCEVILLE",
+        "state": "NJ",
+        "zip": "08648"
+      },
+      "cell": "AZ90",
+      "raw": "0.90999999999999992"
+    },
+    "315115": {
+      "value": 90.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ATLANTIC COAST REHAB & HEALTH CARE CENTER",
+        "medicaidId": "4495306",
+        "nameCell": "A40",
+        "medicaidIdCell": "B40",
+        "cmsName": "ATLANTIC COAST REHAB & HEALTH",
+        "npi": "1811994890",
+        "address": "485 RIVER AVE",
+        "city": "LAKEWOOD",
+        "state": "NJ",
+        "zip": "08701"
+      },
+      "cell": "AZ40",
+      "raw": "0.9"
+    },
+    "315119": {
+      "value": 90.99999999999999,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ARNOLD WALTER NURSING AND REHAB CENTER",
+        "medicaidId": "884642",
+        "nameCell": "A36",
+        "medicaidIdCell": "B36",
+        "cmsName": "Arnold Walter Nursing & Rehabilitation Center",
+        "npi": "1972194702",
+        "address": "622 S LAUREL AVENUE",
+        "city": "HAZLET",
+        "state": "NJ",
+        "zip": "07730"
+      },
+      "cell": "AZ36",
+      "raw": "0.90999999999999992"
+    },
+    "315122": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT WESTFIELD LLC",
+        "medicaidId": "808652",
+        "nameCell": "A132",
+        "medicaidIdCell": "B132",
+        "cmsName": "COMPLETE CARE AT WESTFIELD, LLC",
+        "stateFacilityId": "NJ62013",
+        "stateRow": 801,
+        "address": "1515 LAMBERTS MILL ROAD",
+        "city": "WESTFIELD",
+        "state": "NJ",
+        "zip": "07090"
+      },
+      "cell": "AZ132",
+      "raw": "0.875"
+    },
+    "315125": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CRYSTAL SPRING CENTER",
+        "medicaidId": "851965",
+        "nameCell": "A146",
+        "medicaidIdCell": "B146",
+        "cmsName": "CRYSTAL LAKE HEALTHCARE AND REHABILITATION",
+        "npi": "1831852946",
+        "address": "395 LAKESIDE BLVD",
+        "city": "BAYVILLE",
+        "state": "NJ",
+        "zip": "08721"
+      },
+      "cell": "AZ146",
+      "raw": "0.92999999999999994"
+    },
+    "315126": {
+      "value": 90.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "BISHOP McCARTHY CENTER FOR REHAB & HEALTHCARE",
+        "medicaidId": "537489",
+        "nameCell": "A62",
+        "medicaidIdCell": "B62",
+        "cmsName": "BISHOP MCCARTHY CENTER FOR REHAB & HEALTHCARE",
+        "stateFacilityId": "NJ60601",
+        "stateRow": 648,
+        "address": "1045 E CHESTNUT AVE",
+        "city": "VINELAND",
+        "state": "NJ",
+        "zip": "08360"
+      },
+      "cell": "AZ62",
+      "raw": "0.90500000000000003"
+    },
+    "315128": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "MOUNT HOLLY REHABILITATION & HEALTHCARE CENTER",
+        "medicaidId": "863963",
+        "nameCell": "A230",
+        "medicaidIdCell": "B230",
+        "cmsName": "MOUNT HOLLY REHABILITATION & HEALTHCARE CENTER",
+        "stateFacilityId": "NJ60310",
+        "stateRow": 628,
+        "address": "62 RICHMOND AVENUE",
+        "city": "LUMBERTON",
+        "state": "NJ",
+        "zip": "08048"
+      },
+      "cell": "AZ230",
+      "raw": "0.875"
+    },
+    "315129": {
+      "value": 90.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "DELLRIDGE HEALTH & REHAB. CENTER",
+        "medicaidId": "4464109",
+        "nameCell": "A149",
+        "medicaidIdCell": "B149",
+        "cmsName": "DELLRIDGE HEALTH & REHABILITATION CENTER",
+        "npi": "1013003854",
+        "address": "532 FARVIEW AVE",
+        "city": "PARAMUS",
+        "state": "NJ",
+        "zip": "07652"
+      },
+      "cell": "AZ149",
+      "raw": "0.9"
+    },
+    "315134": {
+      "value": 88.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT GREEN KNOLL",
+        "medicaidId": "685119",
+        "nameCell": "A104",
+        "medicaidIdCell": "B104",
+        "cmsName": "COMPLETE CARE AT GREEN KNOLL",
+        "stateFacilityId": "NJ61806",
+        "stateRow": 785,
+        "address": "875 ROUTE 202-206 NORTH",
+        "city": "BRIDGEWATER",
+        "state": "NJ",
+        "zip": "08807"
+      },
+      "cell": "AZ104",
+      "raw": "0.88"
+    },
+    "315135": {
+      "value": 88.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CREST POINTE REHAB AND HEALTHCARE CTR",
+        "medicaidId": "699641",
+        "nameCell": "A144",
+        "medicaidIdCell": "B144",
+        "cmsName": "CREST POINTE REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1891274197",
+        "address": "1515 HULSE ROAD",
+        "city": "PT PLEASANT",
+        "state": "NJ",
+        "zip": "08742"
+      },
+      "cell": "AZ144",
+      "raw": "0.88"
+    },
+    "315136": {
+      "value": 89.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT SHREWSBURY LLC",
+        "medicaidId": "930636",
+        "nameCell": "A127",
+        "medicaidIdCell": "B127",
+        "cmsName": "COMPLETE CARE AT SHREWSBURY LLC",
+        "stateFacilityId": "NJ61326",
+        "stateRow": 725,
+        "address": "89 AVENUE AT THE COMMON",
+        "city": "SHREWSBURY",
+        "state": "NJ",
+        "zip": "07702"
+      },
+      "cell": "AZ127",
+      "raw": "0.89"
+    },
+    "315137": {
+      "value": 86.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT BARN HILL, LLC",
+        "medicaidId": "874159",
+        "nameCell": "A93",
+        "medicaidIdCell": "B93",
+        "cmsName": "COMPLETE CARE AT BARN HILL",
+        "npi": "1568056018",
+        "address": "249 HIGH STREET",
+        "city": "NEWTON",
+        "state": "NJ",
+        "zip": "07860"
+      },
+      "cell": "AZ93",
+      "raw": "0.86499999999999999"
+    },
+    "315140": {
+      "value": 96.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "WATERFRONT REHABILITATION AND HEALTHCARE CENTER",
+        "medicaidId": "971367",
+        "nameCell": "A316",
+        "medicaidIdCell": "B316",
+        "cmsName": "WATERFRONT REHABILITATION AND HEALTHCARE CENTER",
+        "stateFacilityId": "NJ61809",
+        "stateRow": 786,
+        "address": "633 STATE ROUTE 28",
+        "city": "RARITAN",
+        "state": "NJ",
+        "zip": "08869"
+      },
+      "cell": "AZ316",
+      "raw": "0.96"
+    },
+    "315141": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ABINGDON CARE & REHAB CENTER",
+        "medicaidId": "4499603",
+        "nameCell": "A7",
+        "medicaidIdCell": "B7",
+        "cmsName": "ABINGDON CARE & REHABILITATION CENTER",
+        "npi": "1073742318",
+        "address": "303 ROCK AVE",
+        "city": "GREEN BROOK",
+        "state": "NJ",
+        "zip": "08812"
+      },
+      "cell": "AZ7",
+      "raw": "0.95"
+    },
+    "315142": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LLANFAIR HOUSE CARE & REHAB. CENTER",
+        "medicaidId": "4497406",
+        "nameCell": "A214",
+        "medicaidIdCell": "B214",
+        "cmsName": "LLANFAIR HOUSE CARE & REHABILITATION CENTER",
+        "npi": "1982833224",
+        "address": "1140 BLACK OAK RIDGE ROAD",
+        "city": "WAYNE",
+        "state": "NJ",
+        "zip": "07470"
+      },
+      "cell": "AZ214",
+      "raw": "0.97499999999999998"
+    },
+    "315143": {
+      "value": 92.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "HOLLY MANOR CENTER",
+        "medicaidId": "4492200",
+        "nameCell": "A190",
+        "medicaidIdCell": "B190",
+        "cmsName": "HOLLY MANOR CENTER",
+        "stateFacilityId": "NJ61406",
+        "stateRow": 735,
+        "address": "84 COLD HILL ROAD",
+        "city": "MENDHAM",
+        "state": "NJ",
+        "zip": "07945"
+      },
+      "cell": "AZ190",
+      "raw": "0.92500000000000004"
+    },
+    "315147": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "GROVE PARK HEALTHCARE AND REHABILITATION",
+        "medicaidId": "852490",
+        "nameCell": "A182",
+        "medicaidIdCell": "B182",
+        "cmsName": "GROVE PARK HEALTHCARE AND REHABILITATION CENTER",
+        "npi": "1982263000",
+        "address": "101 NORTH GROVE STREET",
+        "city": "EAST ORANGE",
+        "state": "NJ",
+        "zip": "07017"
+      },
+      "cell": "AZ182",
+      "raw": "0.95"
+    },
+    "315152": {
+      "value": 82.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "CARE ONE AT WELLINGTON",
+        "medicaidId": "4464508",
+        "nameCell": "A83",
+        "medicaidIdCell": "B83",
+        "cmsName": "CAREONE AT WELLINGTON",
+        "stateFacilityId": "NJ60205",
+        "stateRow": 610,
+        "address": "301 UNION STREET",
+        "city": "HACKENSACK",
+        "state": "NJ",
+        "zip": "07601"
+      },
+      "cell": "AZ83",
+      "raw": "0.82499999999999996"
+    },
+    "315157": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "MORRISTOWN POST ACUTE REHAB AND NURSING CENTER",
+        "medicaidId": "747386",
+        "nameCell": "A228",
+        "medicaidIdCell": "B228",
+        "cmsName": "MORRISTOWN POST ACUTE REHAB AND NURSING CENTER",
+        "stateFacilityId": "NJ61417",
+        "stateRow": 743,
+        "address": "77 MADISON AVENUE",
+        "city": "MORRISTOWN",
+        "state": "NJ",
+        "zip": "07960"
+      },
+      "cell": "AZ228",
+      "raw": "0.95"
+    },
+    "315158": {
+      "value": 88.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "RIDGEWOOD CENTER",
+        "medicaidId": "4464303",
+        "nameCell": "A263",
+        "medicaidIdCell": "B263",
+        "cmsName": "RIDGEWOOD CENTER",
+        "stateFacilityId": "NJ60215",
+        "stateRow": 614,
+        "address": "330 FRANKLIN TPK",
+        "city": "RIDGEWOOD",
+        "state": "NJ",
+        "zip": "07450"
+      },
+      "cell": "AZ263",
+      "raw": "0.88"
+    },
+    "315159": {
+      "value": 96.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ELMWOOD HILLS HEALTHCARE CENTER",
+        "medicaidId": "420832",
+        "nameCell": "A156",
+        "medicaidIdCell": "B156",
+        "cmsName": "ELMWOOD HILLS HEALTHCARE CENTER LLC",
+        "npi": "1033547161",
+        "address": "425 WOODBURY-TURNERSVILLE ROAD",
+        "city": "BLACKWOOD",
+        "state": "NJ",
+        "zip": "08012"
+      },
+      "cell": "AZ156",
+      "raw": "0.96"
+    },
+    "315166": {
+      "value": 86.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "MASONIC HOME OF NEW JERSEY",
+        "medicaidId": "4466101",
+        "nameCell": "A218",
+        "medicaidIdCell": "B218",
+        "cmsName": "MASONIC VILLAGE AT BURLINGTON",
+        "npi": "1043205859",
+        "address": "902 JACKSONVILLE ROAD",
+        "city": "BURLINGTON",
+        "state": "NJ",
+        "zip": "08016"
+      },
+      "cell": "AZ218",
+      "raw": "0.86499999999999999"
+    },
+    "315171": {
+      "value": 86.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "OAKLAND REHAB AND HEALTHCARE CENTER",
+        "medicaidId": "889849",
+        "nameCell": "A236",
+        "medicaidIdCell": "B236",
+        "cmsName": "OAKLAND REHABILITATION AND HEALTHCARE  CENTER",
+        "npi": "1033500251",
+        "address": "20 BREAKNECK ROAD",
+        "city": "OAKLAND",
+        "state": "NJ",
+        "zip": "07436"
+      },
+      "cell": "AZ236",
+      "raw": "0.86499999999999999"
+    },
+    "315174": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "DEPTFORD CENTER FOR REHABILITATION AND HEALTHCARE",
+        "medicaidId": "383872",
+        "nameCell": "A150",
+        "medicaidIdCell": "B150",
+        "cmsName": "Deptford Center for Rehabilitation and Healthcare",
+        "stateFacilityId": "NJ60804",
+        "stateRow": 674,
+        "address": "1511 CLEMENTS BRIDGE RD",
+        "city": "DEPTFORD",
+        "state": "NJ",
+        "zip": "08096"
+      },
+      "cell": "AZ150",
+      "raw": "0.95"
+    },
+    "315176": {
+      "value": 83.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "MEDFORD CARE CENTER",
+        "medicaidId": "4466209",
+        "nameCell": "A221",
+        "medicaidIdCell": "B221",
+        "cmsName": "THE PINES AT MEDFORD",
+        "npi": "1467459008",
+        "address": "185 TUCKERTON ROAD",
+        "city": "MEDFORD",
+        "state": "NJ",
+        "zip": "08055"
+      },
+      "cell": "AZ221",
+      "raw": "0.83499999999999996"
+    },
+    "315177": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "GATEWAY CARE CENTER",
+        "medicaidId": "4489900",
+        "nameCell": "A178",
+        "medicaidIdCell": "B178",
+        "cmsName": "SHORE POINTE CARE CENTER",
+        "npi": "1699769323",
+        "address": "139 GRANT AVE",
+        "city": "EATONTOWN",
+        "state": "NJ",
+        "zip": "07724"
+      },
+      "cell": "AZ178",
+      "raw": "0.95"
+    },
+    "315178": {
+      "value": 86.00000000000001,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT ORANGE PARK, LLC",
+        "medicaidId": "858781",
+        "nameCell": "A119",
+        "medicaidIdCell": "B119",
+        "cmsName": "COMPLETE CARE AT ORANGE PARK",
+        "npi": "1023602570",
+        "address": "140 PARK AVE",
+        "city": "EAST ORANGE",
+        "state": "NJ",
+        "zip": "07017"
+      },
+      "cell": "AZ119",
+      "raw": "0.8600000000000001"
+    },
+    "315179": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "AUTUMN LAKE AT OCEANVIEW",
+        "medicaidId": "458643",
+        "nameCell": "A49",
+        "medicaidIdCell": "B49",
+        "cmsName": "Autumn Lake Healthcare at Oceanview",
+        "npi": "1528054962",
+        "address": "2721 ROUTE 9",
+        "city": "OCEAN VIEW",
+        "state": "NJ",
+        "zip": "08230"
+      },
+      "cell": "AZ49",
+      "raw": "1"
+    },
+    "315180": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ALAMEDA CENTER FOR REHAB & HC",
+        "medicaidId": "539139",
+        "nameCell": "A12",
+        "medicaidIdCell": "B12",
+        "cmsName": "Alameda Center for Rehabilitation and Healthcare",
+        "npi": "1144685181",
+        "address": "303 ELM STREET",
+        "city": "PERTH AMBOY",
+        "state": "NJ",
+        "zip": "08861"
+      },
+      "cell": "AZ12",
+      "raw": "0.93"
+    },
+    "315182": {
+      "value": 86.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "BRIDGEWAY CARE AND REHAB CENTER AT BRIDGEWATER",
+        "medicaidId": "4499204",
+        "nameCell": "A63",
+        "medicaidIdCell": "B63",
+        "cmsName": "BRIDGEWAY CARE AND REHAB CENTER AT BRIDGEWATER",
+        "stateFacilityId": "NJ61811",
+        "stateRow": 787,
+        "address": "270 ROUTE 28",
+        "city": "BRIDGEWATER",
+        "state": "NJ",
+        "zip": "08807"
+      },
+      "cell": "AZ63",
+      "raw": "0.86499999999999999"
+    },
+    "315185": {
+      "value": 100.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT LINWOOD LLC",
+        "medicaidId": "649422",
+        "nameCell": "A112",
+        "medicaidIdCell": "B112",
+        "cmsName": "COMPLETE CARE AT LINWOOD, LLC",
+        "stateFacilityId": "NJ60104",
+        "stateRow": 602,
+        "address": "201 NEW ROAD AND CENTRAL AVE",
+        "city": "LINWOOD",
+        "state": "NJ",
+        "zip": "08221"
+      },
+      "cell": "AZ112",
+      "raw": "1"
+    },
+    "315187": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ECHELON CARE & REHAB",
+        "medicaidId": "956899",
+        "nameCell": "A153",
+        "medicaidIdCell": "B153",
+        "cmsName": "ECHELON CARE & REHAB",
+        "stateFacilityId": "60408",
+        "stateRow": 540,
+        "address": "1302 LAUREL OAK ROAD",
+        "city": "VOORHEES",
+        "state": "NJ",
+        "zip": "08043"
+      },
+      "cell": "AZ153",
+      "raw": "0.95"
+    },
+    "315190": {
+      "value": 89.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LEISURE CHATEAU REHAB.",
+        "medicaidId": "4493605",
+        "nameCell": "A207",
+        "medicaidIdCell": "B207",
+        "cmsName": "LEISURE CHATEAU REHABILITATION",
+        "npi": "1790772267",
+        "address": "962 RIVER AVE",
+        "city": "LAKEWOOD",
+        "state": "NJ",
+        "zip": "08701"
+      },
+      "cell": "AZ207",
+      "raw": "0.89"
+    },
+    "315192": {
+      "value": 89.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ALARIS HEALTH AT KEARNY",
+        "medicaidId": "4480007",
+        "nameCell": "A18",
+        "medicaidIdCell": "B18",
+        "cmsName": "ALARIS HEALTH AT KEARNY",
+        "stateFacilityId": "NJ10909L",
+        "stateRow": 568,
+        "address": "206 BERGEN AVE",
+        "city": "KEARNY",
+        "state": "NJ",
+        "zip": "07032"
+      },
+      "cell": "AZ18",
+      "raw": "0.89"
+    },
+    "315194": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT ST. VINCENT'S LLC",
+        "medicaidId": "977764",
+        "nameCell": "A129",
+        "medicaidIdCell": "B129",
+        "cmsName": "COMPLETE CARE AT ST VINCENTS LLC",
+        "stateFacilityId": "NJ60737",
+        "stateRow": 671,
+        "address": "315 EAST LINDSLEY ROAD",
+        "city": "CEDAR GROVE",
+        "state": "NJ",
+        "zip": "07009"
+      },
+      "cell": "AZ129",
+      "raw": "0.9"
+    },
+    "315195": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "AUTUMN LAKES HEALTHCARE AT BERKELEY HEIGHTS",
+        "medicaidId": "628921",
+        "nameCell": "A50",
+        "medicaidIdCell": "B50",
+        "cmsName": "AUTUMN LAKE HEALTHCARE AT BERKELEY HEIGHTS",
+        "npi": "1982690335",
+        "address": "35 COTTAGE STREET",
+        "city": "BERKELEY HEIGHTS",
+        "state": "NJ",
+        "zip": "07922"
+      },
+      "cell": "AZ50",
+      "raw": "1"
+    },
+    "315196": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ARISTACARE AT MANCHESTER",
+        "medicaidId": "409910",
+        "nameCell": "A35",
+        "medicaidIdCell": "B35",
+        "cmsName": "AristaCare at Manchester LLC",
+        "npi": "1083036586",
+        "address": "1770 TOBIAS AVENUE",
+        "city": "MANCHESTER",
+        "state": "NJ",
+        "zip": "08759"
+      },
+      "cell": "AZ35",
+      "raw": "0.95"
+    },
+    "315198": {
+      "value": 91.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ADROIT CARE REHAB AND NURSING CENTER",
+        "medicaidId": "888222",
+        "nameCell": "A10",
+        "medicaidIdCell": "B10",
+        "cmsName": "ADROIT CARE REHABILITATION AND NURSING CENTER",
+        "npi": "1346900180",
+        "address": "1777 LAWRENCE STREET",
+        "city": "RAHWAY",
+        "state": "NJ",
+        "zip": "07065"
+      },
+      "cell": "AZ10",
+      "raw": "0.91"
+    },
+    "315199": {
+      "value": 95.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "IMPERIAL CARE CENTER",
+        "medicaidId": "4491009",
+        "nameCell": "A195",
+        "medicaidIdCell": "B195",
+        "cmsName": "IMPERIAL CARE CENTER",
+        "stateFacilityId": "NJ61335",
+        "stateRow": 730,
+        "address": "919 GREEN GROVE ROAD",
+        "city": "NEPTUNE",
+        "state": "NJ",
+        "zip": "07753"
+      },
+      "cell": "AZ195",
+      "raw": "0.95500000000000007"
+    },
+    "315200": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ARISTACARE AT DELAIRE",
+        "medicaidId": "585467",
+        "nameCell": "A34",
+        "medicaidIdCell": "B34",
+        "cmsName": "ARISTACARE AT PARKSIDE",
+        "npi": "1932644176",
+        "address": "400 W STIMPSON AVE",
+        "city": "LINDEN",
+        "state": "NJ",
+        "zip": "07036"
+      },
+      "cell": "AZ34",
+      "raw": "0.95"
+    },
+    "315202": {
+      "value": 88.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "LOPATCONG CENTER",
+        "medicaidId": "4506502",
+        "nameCell": "A215",
+        "medicaidIdCell": "B215",
+        "cmsName": "LOPATCONG CENTER",
+        "stateFacilityId": "NJ62105",
+        "stateRow": 813,
+        "address": "390 RED SCHOOL LANE",
+        "city": "PHILLIPSBURG",
+        "state": "NJ",
+        "zip": "08865"
+      },
+      "cell": "AZ215",
+      "raw": "0.88500000000000001"
+    },
+    "315204": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CANTERBURY AT CEDAR GROVE",
+        "medicaidId": "8864501",
+        "nameCell": "A69",
+        "medicaidIdCell": "B69",
+        "cmsName": "CANTERBURY AT CEDAR GROVE",
+        "npi": "1407852833",
+        "address": "398 POMPTON AVENUE",
+        "city": "CEDAR GROVE",
+        "state": "NJ",
+        "zip": "07009"
+      },
+      "cell": "AZ69",
+      "raw": "0.97499999999999998"
+    },
+    "315205": {
+      "value": 96.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COOPER CENTER FOR REHABILITATION & HEALTHCARE",
+        "medicaidId": "413399",
+        "nameCell": "A138",
+        "medicaidIdCell": "B138",
+        "cmsName": "MAJESTIC CENTER FOR REHAB & SUB-ACUTE CARE",
+        "npi": "1720419666",
+        "address": "TWO COOPER PLAZA",
+        "city": "CAMDEN",
+        "state": "NJ",
+        "zip": "08103"
+      },
+      "cell": "AZ138",
+      "raw": "0.96499999999999997"
+    },
+    "315207": {
+      "value": 87.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT KRESSON VIEW, LLC",
+        "medicaidId": "847755",
+        "nameCell": "A109",
+        "medicaidIdCell": "B109",
+        "cmsName": "COMPLETE CARE AT KRESSON VIEW",
+        "npi": "1104407030",
+        "address": "2601 EAST EVESHAM ROAD",
+        "city": "VOORHEES",
+        "state": "NJ",
+        "zip": "08043"
+      },
+      "cell": "AZ109",
+      "raw": "0.875"
+    },
+    "315209": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "HAMMONTON CENTER FOR REHABILITATION AND HEALTHCARE",
+        "medicaidId": "372846",
+        "nameCell": "A185",
+        "medicaidIdCell": "B185",
+        "cmsName": "Hammonton Center for Rehabilitation and Healthcare",
+        "stateFacilityId": "NJ60113",
+        "stateRow": 604,
+        "address": "43 N WHITE HORSE PIKE",
+        "city": "HAMMONTON",
+        "state": "NJ",
+        "zip": "08037"
+      },
+      "cell": "AZ185",
+      "raw": "0.95"
+    },
+    "315210": {
+      "value": 86.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "THE HEALTH CENTER AT GALLOWAY",
+        "medicaidId": "363529",
+        "nameCell": "A301",
+        "medicaidIdCell": "B301",
+        "cmsName": "HEALTH CENTER AT GALLOWAY, THE",
+        "npi": "1144666579",
+        "address": "66 WEST JIMMIE LEEDS ROAD",
+        "city": "GALLOWAY TOWNSHIP",
+        "state": "NJ",
+        "zip": "08205"
+      },
+      "cell": "AZ301",
+      "raw": "0.86499999999999999"
+    },
+    "315213": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "WILLOW SPRINGS REHABILITATION AND HEALTHCARE",
+        "medicaidId": "450570",
+        "nameCell": "A321",
+        "medicaidIdCell": "B321",
+        "cmsName": "Willow Springs Rehabilitation and Healthcare Cente",
+        "npi": "1710389739",
+        "address": "1049 BURNT TAVERN ROAD",
+        "city": "BRICK",
+        "state": "NJ",
+        "zip": "08724"
+      },
+      "cell": "AZ321",
+      "raw": "0.92999999999999994"
+    },
+    "315214": {
+      "value": 92.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ARISTACARE AT CEDAR OAKS",
+        "medicaidId": "4485106",
+        "nameCell": "A32",
+        "medicaidIdCell": "B32",
+        "cmsName": "ARISTACARE AT CEDAR OAKS",
+        "stateFacilityId": "NJ61216",
+        "stateRow": 704,
+        "address": "1311 DURHAM AVENUE",
+        "city": "SOUTH PLAINFIELD",
+        "state": "NJ",
+        "zip": "07080"
+      },
+      "cell": "AZ32",
+      "raw": "0.92500000000000004"
+    },
+    "315215": {
+      "value": 90.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "GREENWOOD HOUSE - HOME FOR THE JEWISH AGED",
+        "medicaidId": "4483600",
+        "nameCell": "A181",
+        "medicaidIdCell": "B181",
+        "cmsName": "GREENWOOD HOUSE HOME FOR THE JEWISH AGED",
+        "stateFacilityId": "NJ31101",
+        "stateRow": 518,
+        "address": "53 WALTER STREET",
+        "city": "TRENTON",
+        "state": "NJ",
+        "zip": "08628"
+      },
+      "cell": "AZ181",
+      "raw": "0.90500000000000003"
+    },
+    "315216": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT CEDAR GROVE",
+        "medicaidId": "845159",
+        "nameCell": "A100",
+        "medicaidIdCell": "B100",
+        "cmsName": "COMPLETE CARE AT CEDAR GROVE",
+        "stateFacilityId": "NJ60720",
+        "stateRow": 661,
+        "address": "536 RIDGE ROAD",
+        "city": "CEDAR GROVE",
+        "state": "NJ",
+        "zip": "07009"
+      },
+      "cell": "AZ100",
+      "raw": "0.875"
+    },
+    "315217": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ARISTA CARE AT NORWOOD TERRACE",
+        "medicaidId": "4506006",
+        "nameCell": "A31",
+        "medicaidIdCell": "B31",
+        "cmsName": "ARISTACARE AT NORWOOD TERRACE",
+        "npi": "1154319648",
+        "address": "40 NORWOOD AVENUE",
+        "city": "PLAINFIELD",
+        "state": "NJ",
+        "zip": "07060"
+      },
+      "cell": "AZ31",
+      "raw": "0.95"
+    },
+    "315218": {
+      "value": 86.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SEACREST REHAB AND HEALTHCARE",
+        "medicaidId": "873713",
+        "nameCell": "A275",
+        "medicaidIdCell": "B275",
+        "cmsName": "SEACREST REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1366111742",
+        "address": "1001 CENTER ST",
+        "city": "LITTLE EGG HARBOR TW",
+        "state": "NJ",
+        "zip": "08087"
+      },
+      "cell": "AZ275",
+      "raw": "0.86499999999999999"
+    },
+    "315219": {
+      "value": 85.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT VOORHEES,LLC",
+        "medicaidId": "848581",
+        "nameCell": "A130",
+        "medicaidIdCell": "B130",
+        "cmsName": "Complete Care at Voorhees, LLC",
+        "stateFacilityId": "NJ60414",
+        "stateRow": 640,
+        "address": "3001 EVESHAM ROAD",
+        "city": "VOORHEES",
+        "state": "NJ",
+        "zip": "08043"
+      },
+      "cell": "AZ130",
+      "raw": "0.85499999999999998"
+    },
+    "315221": {
+      "value": 94.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT HAMILTON, LLC",
+        "medicaidId": "628930",
+        "nameCell": "A105",
+        "medicaidIdCell": "B105",
+        "cmsName": "COMPLETE CARE AT HAMILTON, LLC",
+        "stateFacilityId": "NJ61627",
+        "stateRow": 776,
+        "address": "56 HAMILTON AVENUE",
+        "city": "PASSAIC",
+        "state": "NJ",
+        "zip": "07055"
+      },
+      "cell": "AZ105",
+      "raw": "0.94"
+    },
+    "315222": {
+      "value": 85.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "BARNEGAT NURSING CENTER",
+        "medicaidId": "392847",
+        "nameCell": "A54",
+        "medicaidIdCell": "B54",
+        "cmsName": "BARNEGAT REHABILITATION AND NURSING CENTER",
+        "npi": "1629403324",
+        "address": "859 WEST BAY AVE",
+        "city": "BARNEGAT",
+        "state": "NJ",
+        "zip": "08005"
+      },
+      "cell": "AZ54",
+      "raw": "0.85499999999999998"
+    },
+    "315223": {
+      "value": 86.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "AVALON REHAB AND HEALTHCARE CENTER",
+        "medicaidId": "952010",
+        "nameCell": "A51",
+        "medicaidIdCell": "B51",
+        "cmsName": "AVALON REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1487376752",
+        "address": "1059 EDINBURG ROAD",
+        "city": "HAMILTON",
+        "state": "NJ",
+        "zip": "08690"
+      },
+      "cell": "AZ51",
+      "raw": "0.86"
+    },
+    "315225": {
+      "value": 89.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "RIVERFRONT REHABILITATION AND HEALTHCARE CENTER",
+        "medicaidId": "1013335",
+        "nameCell": "A264",
+        "medicaidIdCell": "B264",
+        "cmsName": "RIVER FRONT REHABILITATION AND HEALTHCARE CENTER",
+        "stateFacilityId": "NJ60415",
+        "stateRow": 641,
+        "address": "5101 NORTH PARK DRIVE",
+        "city": "PENNSAUKEN",
+        "state": "NJ",
+        "zip": "08109"
+      },
+      "cell": "AZ264",
+      "raw": "0.89"
+    },
+    "315226": {
+      "value": 92.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "HUNTERDON CARE CENTER",
+        "medicaidId": "273031",
+        "nameCell": "A194",
+        "medicaidIdCell": "B194",
+        "cmsName": "HUNTERDON CARE CENTER LLC",
+        "npi": "1538303391",
+        "address": "1 LEISURE COURT",
+        "city": "FLEMINGTON",
+        "state": "NJ",
+        "zip": "08822"
+      },
+      "cell": "AZ194",
+      "raw": "0.92500000000000004"
+    },
+    "315228": {
+      "value": 92.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT COURT HOUSE, LLC",
+        "medicaidId": "806731",
+        "nameCell": "A102",
+        "medicaidIdCell": "B102",
+        "cmsName": "COMPLETE CARE AT COURT HOUSE, LLC",
+        "stateFacilityId": "NJ60507",
+        "stateRow": 647,
+        "address": "144 MAGNOLIA DRIVE",
+        "city": "CAPE MAY COURT HOUSE",
+        "state": "NJ",
+        "zip": "08210"
+      },
+      "cell": "AZ102",
+      "raw": "0.91999999999999993"
+    },
+    "315229": {
+      "value": 93.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "PHOENIX CENTER FOR REHAB AND PEDS.",
+        "medicaidId": "732575",
+        "nameCell": "A246",
+        "medicaidIdCell": "B246",
+        "cmsName": "PHOENIX CENTER FOR REHABILITATION AND PEDIATRICS",
+        "npi": "1023657475",
+        "address": "1433 RINGWOOD AVE",
+        "city": "HASKELL",
+        "state": "NJ",
+        "zip": "07420"
+      },
+      "cell": "AZ246",
+      "raw": "0.93500000000000005"
+    },
+    "315233": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LINCOLN SPECIALTY CARE CENTER",
+        "medicaidId": "4473809",
+        "nameCell": "A210",
+        "medicaidIdCell": "B210",
+        "cmsName": "AUTUMN LAKE HEALTHCARE AT VINELAND",
+        "npi": "1679727598",
+        "address": "1640 SOUTH LINCOLN AVENUE",
+        "city": "VINELAND",
+        "state": "NJ",
+        "zip": "08360"
+      },
+      "cell": "AZ210",
+      "raw": "1"
+    },
+    "315234": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ARBOR RIDGE REHAB HEALTHCARE",
+        "medicaidId": "737828",
+        "nameCell": "A29",
+        "medicaidIdCell": "B29",
+        "cmsName": "ARBOR RIDGE REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1407400674",
+        "address": "261 TERHUNE DRIVE",
+        "city": "WAYNE",
+        "state": "NJ",
+        "zip": "07470"
+      },
+      "cell": "AZ29",
+      "raw": "0.92999999999999994"
+    },
+    "315236": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SINAI POST ACUTE NURSING & REHAB",
+        "medicaidId": "464589",
+        "nameCell": "A279",
+        "medicaidIdCell": "B279",
+        "cmsName": "SINAI POST-ACUTE NURSING & REHAB CENTER",
+        "npi": "1336546639",
+        "address": "65 JAY STREET",
+        "city": "NEWARK",
+        "state": "NJ",
+        "zip": "07103"
+      },
+      "cell": "AZ279",
+      "raw": "0.95"
+    },
+    "315237": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SOUTHGATE HEALTH CARE CENTER",
+        "medicaidId": "387754",
+        "nameCell": "A284",
+        "medicaidIdCell": "B284",
+        "cmsName": "AUTUMN LAKE HEALTHCARE AT SOUTHGATE",
+        "npi": "1548500598",
+        "address": "449 S PENNSVILLE-AUBURN ROAD",
+        "city": "CARNEYS POINT",
+        "state": "NJ",
+        "zip": "08069"
+      },
+      "cell": "AZ284",
+      "raw": "1"
+    },
+    "315243": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "MILLVILLE CENTER",
+        "medicaidId": "4474007",
+        "nameCell": "A224",
+        "medicaidIdCell": "B224",
+        "cmsName": "MILLVILLE CENTER",
+        "stateFacilityId": "NJ60608",
+        "stateRow": 652,
+        "address": "54 SHARP STREET",
+        "city": "MILLVILLE",
+        "state": "NJ",
+        "zip": "08332"
+      },
+      "cell": "AZ224",
+      "raw": "0.95"
+    },
+    "315244": {
+      "value": 97.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "PREFERRED CARE AT ABSECON",
+        "medicaidId": "687677",
+        "nameCell": "A250",
+        "medicaidIdCell": "B250",
+        "cmsName": "PREFERRED CARE AT ABSECON",
+        "stateFacilityId": "NJ60115",
+        "stateRow": 605,
+        "address": "1020 PITNEY ROAD",
+        "city": "ABSECON",
+        "state": "NJ",
+        "zip": "08201"
+      },
+      "cell": "AZ250",
+      "raw": "0.97499999999999998"
+    },
+    "315245": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ARISTACARE AT CHERRY HILL",
+        "medicaidId": "251836",
+        "nameCell": "A33",
+        "medicaidIdCell": "B33",
+        "cmsName": "ARISTACARE AT CHERRY HILL",
+        "stateFacilityId": "60417",
+        "stateRow": 541,
+        "address": "1399 CHAPEL AVE WEST",
+        "city": "CHERRY HILL",
+        "state": "NJ",
+        "zip": "08002"
+      },
+      "cell": "AZ33",
+      "raw": "0.9"
+    },
+    "315247": {
+      "value": 100.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT WEST CALDWELL,LLC",
+        "medicaidId": "977926",
+        "nameCell": "A133",
+        "medicaidIdCell": "B133",
+        "cmsName": "COMPLETE CARE AT WEST CALDWELL LLC",
+        "stateFacilityId": "NJ60734",
+        "stateRow": 669,
+        "address": "165 FAIRFIELD AVE",
+        "city": "WEST CALDWELL",
+        "state": "NJ",
+        "zip": "07006"
+      },
+      "cell": "AZ133",
+      "raw": "1"
+    },
+    "315249": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "LINCOLN PARK CARE CENTER",
+        "medicaidId": "352756",
+        "nameCell": "A208",
+        "medicaidIdCell": "B208",
+        "cmsName": "LINCOLN PARK CARE CENTER",
+        "stateFacilityId": "NJ61409",
+        "stateRow": 738,
+        "address": "499 PINE BROOK ROAD",
+        "city": "LINCOLN PARK",
+        "state": "NJ",
+        "zip": "07035"
+      },
+      "cell": "AZ208",
+      "raw": "0.875"
+    },
+    "315252": {
+      "value": 86.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT BAYSHORE,LLC",
+        "medicaidId": "943517",
+        "nameCell": "A94",
+        "medicaidIdCell": "B94",
+        "cmsName": "COMPLETE CARE AT BAYSHORE LLC",
+        "stateFacilityId": "61342",
+        "stateRow": 547,
+        "address": "715 NORTH BEERS STREET",
+        "city": "HOLMDEL",
+        "state": "NJ",
+        "zip": "07733"
+      },
+      "cell": "AZ94",
+      "raw": "0.86499999999999999"
+    },
+    "315257": {
+      "value": 89.99999999999999,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CEDAR GROVE RESPITORY AND NURSING",
+        "medicaidId": "727474",
+        "nameCell": "A87",
+        "medicaidIdCell": "B87",
+        "cmsName": "CEDAR GROVE RESPIRATORY AND NURSING CENTER",
+        "npi": "1184274375",
+        "address": "1420 SOUTH BLACK HORSE PIKE",
+        "city": "WILLIAMSTOWN",
+        "state": "NJ",
+        "zip": "08094"
+      },
+      "cell": "AZ87",
+      "raw": "0.89999999999999991"
+    },
+    "315260": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ASPEN HILLS HEALTHCARE CENTER",
+        "medicaidId": "313190",
+        "nameCell": "A38",
+        "medicaidIdCell": "B38",
+        "cmsName": "Aspen Hills Healthcare Center",
+        "stateFacilityId": "NJ60302",
+        "stateRow": 626,
+        "address": "600 PEMBERTON BROWN MILLS RD",
+        "city": "PEMBERTON",
+        "state": "NJ",
+        "zip": "08068"
+      },
+      "cell": "AZ38",
+      "raw": "0.9"
+    },
+    "315261": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LAKELAND NURSING AND REHAB",
+        "medicaidId": "906867",
+        "nameCell": "A202",
+        "medicaidIdCell": "B202",
+        "cmsName": "LAKELAND NURSING & REHAB",
+        "npi": "1093430928",
+        "address": "25 FIFTH AVENUE",
+        "city": "HASKELL",
+        "state": "NJ",
+        "zip": "07420"
+      },
+      "cell": "AZ202",
+      "raw": "0.92999999999999994"
+    },
+    "315263": {
+      "value": 91.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "PALACE NURSING & REHAB.",
+        "medicaidId": "141283",
+        "nameCell": "A240",
+        "medicaidIdCell": "B240",
+        "cmsName": "PALACE REHABILITATION AND CARE CENTER, THE",
+        "npi": "1366698920",
+        "address": "315 WEST MILL ROAD",
+        "city": "MAPLE SHADE",
+        "state": "NJ",
+        "zip": "08052"
+      },
+      "cell": "AZ240",
+      "raw": "0.91500000000000004"
+    },
+    "315264": {
+      "value": 90.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT BEY LEA LLC",
+        "medicaidId": "642754",
+        "nameCell": "A95",
+        "medicaidIdCell": "B95",
+        "cmsName": "COMPLETE CARE AT BEY LEA, LLC",
+        "npi": "1871081224",
+        "address": "1351 OLD FREEHOLD ROAD",
+        "city": "TOMS RIVER",
+        "state": "NJ",
+        "zip": "08753"
+      },
+      "cell": "AZ95",
+      "raw": "0.9"
+    },
+    "315265": {
+      "value": 92.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT GREEN ACRES MANOR",
+        "medicaidId": "597597",
+        "nameCell": "A103",
+        "medicaidIdCell": "B103",
+        "cmsName": "COMPLETE CARE AT GREEN ACRES",
+        "npi": "1689192205",
+        "address": "1931 LAKEWOOD ROAD",
+        "city": "TOMS RIVER",
+        "state": "NJ",
+        "zip": "08755"
+      },
+      "cell": "AZ103",
+      "raw": "0.92500000000000004"
+    },
+    "315266": {
+      "value": 90.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "PARK CRESCENT HEALTHCARE & REHAB",
+        "medicaidId": "4475704",
+        "nameCell": "A241",
+        "medicaidIdCell": "B241",
+        "cmsName": "Park Crescent Healthcare & Rehabilitation Center",
+        "npi": "1104061472",
+        "address": "480 PARKWAY DRIVE",
+        "city": "EAST ORANGE",
+        "state": "NJ",
+        "zip": "07017"
+      },
+      "cell": "AZ241",
+      "raw": "0.9"
+    },
+    "315267": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ABIGAIL HOUSE FOR N&R",
+        "medicaidId": "6874",
+        "nameCell": "A6",
+        "medicaidIdCell": "B6",
+        "cmsName": "ABIGAIL HOUSE FOR NURSING & REHABILITATION",
+        "npi": "1952321754",
+        "address": "1105 -1115 LINDEN STREET",
+        "city": "CAMDEN",
+        "state": "NJ",
+        "zip": "08102"
+      },
+      "cell": "AZ6",
+      "raw": "0.97499999999999998"
+    },
+    "315268": {
+      "value": 93.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "BROOKHAVEN HEALTH CARE CENTER",
+        "medicaidId": "944581",
+        "nameCell": "A66",
+        "medicaidIdCell": "B66",
+        "cmsName": "BROOKHAVEN HEALTH CARE CENTER",
+        "stateFacilityId": "NJ60732",
+        "stateRow": 667,
+        "address": "120 PARK END PLACE",
+        "city": "EAST ORANGE",
+        "state": "NJ",
+        "zip": "07018"
+      },
+      "cell": "AZ66",
+      "raw": "0.92999999999999994"
+    },
+    "315271": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CARNEYS POINT CARE CENTER",
+        "medicaidId": "141461",
+        "nameCell": "A85",
+        "medicaidIdCell": "B85",
+        "cmsName": "AUTUMN LAKE HEALTHCARE AT MEMORIAL BRIDGE",
+        "npi": "1801042460",
+        "address": "201 FIFTH AVENUE",
+        "city": "PENNS GROVE",
+        "state": "NJ",
+        "zip": "08069"
+      },
+      "cell": "AZ85",
+      "raw": "1"
+    },
+    "315273": {
+      "value": 92.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT WOODLANDS LLC",
+        "medicaidId": "734616",
+        "nameCell": "A135",
+        "medicaidIdCell": "B135",
+        "cmsName": "COMPLETE CARE AT WOODLANDS",
+        "npi": "1033739891",
+        "address": "1400 WOODLAND AVE",
+        "city": "PLAINFIELD",
+        "state": "NJ",
+        "zip": "07060"
+      },
+      "cell": "AZ135",
+      "raw": "0.92500000000000004"
+    },
+    "315274": {
+      "value": 92.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT LAURELTON LLC",
+        "medicaidId": "642991",
+        "nameCell": "A111",
+        "medicaidIdCell": "B111",
+        "cmsName": "COMPLETE CARE AT LAURELTON, LLC",
+        "stateFacilityId": "NJ61532",
+        "stateRow": 762,
+        "address": "475 JACK MARTIN BLVD",
+        "city": "BRICK",
+        "state": "NJ",
+        "zip": "08724"
+      },
+      "cell": "AZ111",
+      "raw": "0.91999999999999993"
+    },
+    "315275": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CONCORD HALTHCARE REHAB CENTER",
+        "medicaidId": "14613",
+        "nameCell": "A136",
+        "medicaidIdCell": "B136",
+        "cmsName": "CONCORD HEALTHCARE & REHABILITATION CENTER",
+        "npi": "1699740894",
+        "address": "963 OCEAN AVE",
+        "city": "LAKEWOOD",
+        "state": "NJ",
+        "zip": "08701"
+      },
+      "cell": "AZ136",
+      "raw": "1"
+    },
+    "315276": {
+      "value": 86.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT MILFORD MANOR,LLC",
+        "medicaidId": "857858",
+        "nameCell": "A116",
+        "medicaidIdCell": "B116",
+        "cmsName": "COMPLETE CARE AT MILFORD MANOR LLC",
+        "stateFacilityId": "NJ61612",
+        "stateRow": 771,
+        "address": "69 MAPLE ROAD",
+        "city": "WEST MILFORD",
+        "state": "NJ",
+        "zip": "07480"
+      },
+      "cell": "AZ116",
+      "raw": "0.86"
+    },
+    "315279": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "EMBASSY MANOR AT EDISON NURSE",
+        "medicaidId": "784532",
+        "nameCell": "A157",
+        "medicaidIdCell": "B157",
+        "cmsName": "EMBASSY MANOR AT EDISON NURSING AND REHABILITATION",
+        "npi": "1518556752",
+        "address": "10 BRUNSWICK AVENUE",
+        "city": "EDISON",
+        "state": "NJ",
+        "zip": "08817"
+      },
+      "cell": "AZ157",
+      "raw": "0.95"
+    },
+    "315280": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "SILVER HEALTHCARE CENTER",
+        "medicaidId": "600598",
+        "nameCell": "A278",
+        "medicaidIdCell": "B278",
+        "cmsName": "SILVER HEALTHCARE CENTER",
+        "stateFacilityId": "NJ60407",
+        "stateRow": 635,
+        "address": "1417 BRACE ROAD",
+        "city": "CHERRY HILL",
+        "state": "NJ",
+        "zip": "08034"
+      },
+      "cell": "AZ278",
+      "raw": "0.9"
+    },
+    "315284": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT MONMOUTH,LLC",
+        "medicaidId": "856959",
+        "nameCell": "A117",
+        "medicaidIdCell": "B117",
+        "cmsName": "COMPLETE CARE AT MONMOUTH, LLC",
+        "stateFacilityId": "NJ61318",
+        "stateRow": 722,
+        "address": "229 BATH AVENUE",
+        "city": "LONG BRANCH",
+        "state": "NJ",
+        "zip": "07740"
+      },
+      "cell": "AZ117",
+      "raw": "0.95"
+    },
+    "315286": {
+      "value": 91.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "REDBANK CENTER FOR REHABILITATION AND HEALING",
+        "medicaidId": "955272",
+        "nameCell": "A260",
+        "medicaidIdCell": "B260",
+        "cmsName": "REDBANK CENTER FOR REHABILITATION AND HEALING",
+        "stateFacilityId": "NJ61325",
+        "stateRow": 724,
+        "address": "100 CHAPIN AVENUE",
+        "city": "RED BANK",
+        "state": "NJ",
+        "zip": "07701"
+      },
+      "cell": "AZ260",
+      "raw": "0.91500000000000004"
+    },
+    "315288": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "BARTLEY HEALTHCARE NURSING & REHAB.",
+        "medicaidId": "906492",
+        "nameCell": "A56",
+        "medicaidIdCell": "B56",
+        "cmsName": "BARTLEY NURSING & REHAB",
+        "npi": "1851306443",
+        "address": "175 BARTLEY RD",
+        "city": "JACKSON",
+        "state": "NJ",
+        "zip": "08527"
+      },
+      "cell": "AZ56",
+      "raw": "1"
+    },
+    "315290": {
+      "value": 92.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "BUCKINGHAM AT NORWOOD",
+        "medicaidId": "8878005",
+        "nameCell": "A67",
+        "medicaidIdCell": "B67",
+        "cmsName": "Excelcare at Norwood",
+        "npi": "1629074059",
+        "address": "100 MCCLELLAN STREET",
+        "city": "NORWOOD",
+        "state": "NJ",
+        "zip": "07648"
+      },
+      "cell": "AZ67",
+      "raw": "0.91999999999999993"
+    },
+    "315291": {
+      "value": 90.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ATRIUM POST ACUTE CARE OF WAYNE VIEW",
+        "medicaidId": "512346",
+        "nameCell": "A48",
+        "medicaidIdCell": "B48",
+        "cmsName": "Avalon Rehab and Care Center",
+        "npi": "1912015223",
+        "address": "2020 ROUTE 23 NORTH",
+        "city": "WAYNE",
+        "state": "NJ",
+        "zip": "07470"
+      },
+      "cell": "AZ48",
+      "raw": "0.9"
+    },
+    "315293": {
+      "value": 89.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "WHITING GARDENS REHABILITATION AND NURSING",
+        "medicaidId": "964255",
+        "nameCell": "A319",
+        "medicaidIdCell": "B319",
+        "cmsName": "WHITING GARDENS REHABILITATION AND NURSING CENTER",
+        "npi": "1265081053",
+        "address": "3000 HILLTOP ROAD",
+        "city": "WHITING",
+        "state": "NJ",
+        "zip": "08759"
+      },
+      "cell": "AZ319",
+      "raw": "0.89"
+    },
+    "315295": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT REGENT, LLC",
+        "medicaidId": "936677",
+        "nameCell": "A125",
+        "medicaidIdCell": "B125",
+        "cmsName": "COMPLETE CARE AT REGENT LLC",
+        "stateFacilityId": "NJ60231",
+        "stateRow": 622,
+        "address": "50 POLIFLY ROAD",
+        "city": "HACKENSACK",
+        "state": "NJ",
+        "zip": "07601"
+      },
+      "cell": "AZ125",
+      "raw": "0.9"
+    },
+    "315299": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "KING MANOR CARE",
+        "medicaidId": "4490509",
+        "nameCell": "A201",
+        "medicaidIdCell": "B201",
+        "cmsName": "KING MANOR CARE AND REHABILITATION CENTER",
+        "npi": "1134245988",
+        "address": "2303 WEST BANGS AVE",
+        "city": "NEPTUNE",
+        "state": "NJ",
+        "zip": "07753"
+      },
+      "cell": "AZ201",
+      "raw": "0.92999999999999994"
+    },
+    "315300": {
+      "value": 92.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ALARIS HEALTH AT HAMILTON PARK",
+        "medicaidId": "4479009",
+        "nameCell": "A17",
+        "medicaidIdCell": "B17",
+        "cmsName": "ALARIS HEALTH AT HAMILTON PARK",
+        "stateFacilityId": "NJ60906",
+        "stateRow": 680,
+        "address": "525 MONMOUTH STREET",
+        "city": "JERSEY CITY",
+        "state": "NJ",
+        "zip": "07302"
+      },
+      "cell": "AZ17",
+      "raw": "0.92500000000000004"
+    },
+    "315302": {
+      "value": 88.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ROLLING HILLS CARE CENTER",
+        "medicaidId": "4480104",
+        "nameCell": "A267",
+        "medicaidIdCell": "B267",
+        "cmsName": "ROLLING HILLS CARE CENTER",
+        "stateFacilityId": "NJ61004",
+        "stateRow": 688,
+        "address": "16 CRATETOWN ROAD",
+        "city": "LEBANON",
+        "state": "NJ",
+        "zip": "08833"
+      },
+      "cell": "AZ267",
+      "raw": "0.88"
+    },
+    "315303": {
+      "value": 93.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "MORRISVIEW HEALTHCARE",
+        "medicaidId": "605174",
+        "nameCell": "A229",
+        "medicaidIdCell": "B229",
+        "cmsName": "Morris View Healthcare Center",
+        "npi": "1588181606",
+        "address": "540 WEST HANOVER AVENUE",
+        "city": "MORRISTOWN",
+        "state": "NJ",
+        "zip": "07960"
+      },
+      "cell": "AZ229",
+      "raw": "0.93500000000000005"
+    },
+    "315304": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "WARREN HAVEN",
+        "medicaidId": "503037",
+        "nameCell": "A314",
+        "medicaidIdCell": "B314",
+        "cmsName": "Warren Haven Rehab and Nursing Center",
+        "npi": "1144604836",
+        "address": "350 OXFORD ROAD",
+        "city": "OXFORD",
+        "state": "NJ",
+        "zip": "07863"
+      },
+      "cell": "AZ314",
+      "raw": "0.97499999999999998"
+    },
+    "315305": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "SPRING CREEK HEALTHCARE CENTER",
+        "medicaidId": "849529",
+        "nameCell": "A285",
+        "medicaidIdCell": "B285",
+        "cmsName": "SPRING CREEK HEALTHCARE CENTER",
+        "stateFacilityId": "NJ61201",
+        "stateRow": 698,
+        "address": "1 LINDBERGH AVENUE",
+        "city": "PERTH AMBOY",
+        "state": "NJ",
+        "zip": "08861"
+      },
+      "cell": "AZ285",
+      "raw": "0.95"
+    },
+    "315306": {
+      "value": 70.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "WOODCREST HEALTH CARE CENTER",
+        "medicaidId": "4464605",
+        "nameCell": "A324",
+        "medicaidIdCell": "B324",
+        "cmsName": "CAREONE AT NEW MILFORD",
+        "npi": "1386643062",
+        "address": "800 RIVER ROAD",
+        "city": "NEW MILFORD",
+        "state": "NJ",
+        "zip": "07646"
+      },
+      "cell": "AZ324",
+      "raw": "0.70499999999999996"
+    },
+    "315307": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT HARBORAGE LLC",
+        "medicaidId": "935093",
+        "nameCell": "A106",
+        "medicaidIdCell": "B106",
+        "cmsName": "COMPLETE CARE AT HARBORAGE LLC",
+        "stateFacilityId": "NJ60907",
+        "stateRow": 681,
+        "address": "7600 RIVER RD",
+        "city": "NORTH BERGEN",
+        "state": "NJ",
+        "zip": "07047"
+      },
+      "cell": "AZ106",
+      "raw": "0.875"
+    },
+    "315309": {
+      "value": 92.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ARISTA CARE AT WHITING",
+        "medicaidId": "164160",
+        "nameCell": "A30",
+        "medicaidIdCell": "B30",
+        "cmsName": "ARISTACARE AT WHITING",
+        "stateFacilityId": "NJ61523",
+        "stateRow": 756,
+        "address": "23 SCHOOLHOUSE ROAD",
+        "city": "WHITING",
+        "state": "NJ",
+        "zip": "08759"
+      },
+      "cell": "AZ30",
+      "raw": "0.92500000000000004"
+    },
+    "315310": {
+      "value": 97.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "OPTIMA CARE HARBORVIEW",
+        "medicaidId": "890341",
+        "nameCell": "A238",
+        "medicaidIdCell": "B238",
+        "cmsName": "OPTIMA CARE HARBORVIEW",
+        "stateFacilityId": "NJ60905",
+        "stateRow": 679,
+        "address": "178-198 OGDEN AVE",
+        "city": "JERSEY CITY",
+        "state": "NJ",
+        "zip": "07307"
+      },
+      "cell": "AZ238",
+      "raw": "0.97499999999999998"
+    },
+    "315311": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT PHILLIPSBURG, LLC",
+        "medicaidId": "849553",
+        "nameCell": "A122",
+        "medicaidIdCell": "B122",
+        "cmsName": "COMPLETE CARE AT PHILLIPSBURG, LLC",
+        "stateFacilityId": "NJ62101",
+        "stateRow": 810,
+        "address": "843 WILBUR AVENUE",
+        "city": "PHILLIPSBURG",
+        "state": "NJ",
+        "zip": "08865"
+      },
+      "cell": "AZ122",
+      "raw": "0.875"
+    },
+    "315312": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "HAMPTON RIDGE HEALTHCARE AND REHAB",
+        "medicaidId": "5076102",
+        "nameCell": "A186",
+        "medicaidIdCell": "B186",
+        "cmsName": "Hampton Ridge Healthcare and Rehabilitation",
+        "npi": "1396046975",
+        "address": "94 STEVENS ROAD",
+        "city": "TOMS RIVER",
+        "state": "NJ",
+        "zip": "08755"
+      },
+      "cell": "AZ186",
+      "raw": "0.92999999999999994"
+    },
+    "315314": {
+      "value": 89.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ANCHOR CARE AND REHAB CENTER",
+        "medicaidId": "643882",
+        "nameCell": "A25",
+        "medicaidIdCell": "B25",
+        "cmsName": "Anchor Care and Rehabilitation Center",
+        "npi": "1962996132",
+        "address": "3325 HIGHWAY 35",
+        "city": "HAZLET",
+        "state": "NJ",
+        "zip": "07730"
+      },
+      "cell": "AZ25",
+      "raw": "0.89500000000000002"
+    },
+    "315316": {
+      "value": 88.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT BRAKELEY, LLC",
+        "medicaidId": "808644",
+        "nameCell": "A96",
+        "medicaidIdCell": "B96",
+        "cmsName": "COMPLETE CARE AT BRAKELEY PARK",
+        "npi": "1902487820",
+        "address": "290 RED SCHOOL LANE",
+        "city": "PHILLIPSBURG",
+        "state": "NJ",
+        "zip": "08865"
+      },
+      "cell": "AZ96",
+      "raw": "0.88500000000000001"
+    },
+    "315317": {
+      "value": 88.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "EXCEL CARE AT THE PINES",
+        "medicaidId": "898040",
+        "nameCell": "A162",
+        "medicaidIdCell": "B162",
+        "cmsName": "EXCEL CARE AT THE PINES",
+        "stateFacilityId": "NJ60103",
+        "stateRow": 601,
+        "address": "29 NORTH VERMONT AVE",
+        "city": "ATLANTIC CITY",
+        "state": "NJ",
+        "zip": "08401"
+      },
+      "cell": "AZ162",
+      "raw": "0.88"
+    },
+    "315320": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT HOLIDAY,LLC",
+        "medicaidId": "706779",
+        "nameCell": "A107",
+        "medicaidIdCell": "B107",
+        "cmsName": "COMPLETE CARE AT HOLIDAY CITY",
+        "npi": "1649827718",
+        "address": "4 PLAZA DRIVE",
+        "city": "TOMS RIVER",
+        "state": "NJ",
+        "zip": "08757"
+      },
+      "cell": "AZ107",
+      "raw": "1"
+    },
+    "315321": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "PREFERRED CARE AT OLD BRIDGE",
+        "medicaidId": "594555",
+        "nameCell": "A254",
+        "medicaidIdCell": "B254",
+        "cmsName": "PREFERRED CARE AT OLD BRIDGE, LLC",
+        "npi": "1407391477",
+        "address": "6989 RT18",
+        "city": "OLD BRIDGE",
+        "state": "NJ",
+        "zip": "08857"
+      },
+      "cell": "AZ254",
+      "raw": "1"
+    },
+    "315322": {
+      "value": 93.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "INGLEMOOR REHAB.CENTER-LIVINGSTON",
+        "medicaidId": "9057706",
+        "nameCell": "A196",
+        "medicaidIdCell": "B196",
+        "cmsName": "INGLEMOOR REHABILITATION AND CARE CENTER",
+        "npi": "1316920572",
+        "address": "311 S LIVINGSTON AVE",
+        "city": "LIVINGSTON",
+        "state": "NJ",
+        "zip": "07039"
+      },
+      "cell": "AZ196",
+      "raw": "0.93500000000000005"
+    },
+    "315324": {
+      "value": 90.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "WATERS EDGE HEALTHCARE & REHAB.",
+        "medicaidId": "5561400",
+        "nameCell": "A315",
+        "medicaidIdCell": "B315",
+        "cmsName": "TRENTON GARDENS REHABILITATION AND NURSING CENTER",
+        "npi": "1487641767",
+        "address": "512 UNION STREET",
+        "city": "TRENTON",
+        "state": "NJ",
+        "zip": "08611"
+      },
+      "cell": "AZ315",
+      "raw": "0.9"
+    },
+    "315327": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "FOUNTAINVIEW CARE CENTER",
+        "medicaidId": "5608104",
+        "nameCell": "A174",
+        "medicaidIdCell": "B174",
+        "cmsName": "FOUNTAINVIEW CARE CENTER",
+        "stateFacilityId": "NJ61536",
+        "stateRow": 766,
+        "address": "527 RIVER AVENUE",
+        "city": "LAKEWOOD",
+        "state": "NJ",
+        "zip": "08701"
+      },
+      "cell": "AZ174",
+      "raw": "0.95"
+    },
+    "315328": {
+      "value": 91.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "MAPLE GLEN CENTER",
+        "medicaidId": "4464401",
+        "nameCell": "A217",
+        "medicaidIdCell": "B217",
+        "cmsName": "MAPLE GLEN CENTER",
+        "stateFacilityId": "NJ60224",
+        "stateRow": 620,
+        "address": "12-15 SADDLE RIVER ROAD",
+        "city": "FAIRLAWN",
+        "state": "NJ",
+        "zip": "07410"
+      },
+      "cell": "AZ217",
+      "raw": "0.91"
+    },
+    "315330": {
+      "value": 90.99999999999999,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT MARCELLA LLC",
+        "medicaidId": "807087",
+        "nameCell": "A114",
+        "medicaidIdCell": "B114",
+        "cmsName": "COMPLETE CARE AT MARCELLA",
+        "npi": "1245811173",
+        "address": "2305 RANCOCAS ROAD",
+        "city": "BURLINGTON",
+        "state": "NJ",
+        "zip": "08016"
+      },
+      "cell": "AZ114",
+      "raw": "0.90999999999999992"
+    },
+    "315331": {
+      "value": 78.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE AT PASSAIC COUNTY",
+        "medicaidId": "586714",
+        "nameCell": "A121",
+        "medicaidIdCell": "B121",
+        "cmsName": "COMPLETE CARE AT FAIR LAWN EDGE",
+        "npi": "1851826291",
+        "address": "77 EAST 43RD STREET",
+        "city": "PATERSON",
+        "state": "NJ",
+        "zip": "07514"
+      },
+      "cell": "AZ121",
+      "raw": "0.78"
+    },
+    "315332": {
+      "value": 96.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "SOUTHERN OCEAN CENTER",
+        "medicaidId": "6231802",
+        "nameCell": "A283",
+        "medicaidIdCell": "B283",
+        "cmsName": "SOUTHERN OCEAN CENTER",
+        "stateFacilityId": "NJ80413",
+        "stateRow": 827,
+        "address": "1361 ROUTE 72 WEST",
+        "city": "MANAHAWKIN",
+        "state": "NJ",
+        "zip": "08050"
+      },
+      "cell": "AZ283",
+      "raw": "0.96"
+    },
+    "315333": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT ARBORS",
+        "medicaidId": "709018",
+        "nameCell": "A92",
+        "medicaidIdCell": "B92",
+        "cmsName": "COMPLETE CARE AT ARBORS",
+        "stateFacilityId": "NJ61537",
+        "stateRow": 767,
+        "address": "1750 ROUTE 37 WEST",
+        "city": "TOMS RIVER",
+        "state": "NJ",
+        "zip": "08757"
+      },
+      "cell": "AZ92",
+      "raw": "0.875"
+    },
+    "315335": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ATRIUM POST ACUTE CARE OF WAYNE",
+        "medicaidId": "521744",
+        "nameCell": "A47",
+        "medicaidIdCell": "B47",
+        "cmsName": "ATRIUM POST ACUTE CARE OF WAYNE",
+        "npi": "1043674526",
+        "address": "1120 ALPS ROAD",
+        "city": "WAYNE",
+        "state": "NJ",
+        "zip": "07470"
+      },
+      "cell": "AZ47",
+      "raw": "0.92999999999999994"
+    },
+    "315336": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "GARDENS AT MONROE HEALTHCARE & REHAB CENTER",
+        "medicaidId": "4485203",
+        "nameCell": "A177",
+        "medicaidIdCell": "B177",
+        "cmsName": "GARDENS AT MONROE HEALTHCARE AND REHABILITATION, T",
+        "npi": "1457453946",
+        "address": "189 APPLEGARTH ROAD",
+        "city": "MONROE TOWNSHIP",
+        "state": "NJ",
+        "zip": "08831"
+      },
+      "cell": "AZ177",
+      "raw": "1"
+    },
+    "315337": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "MCAULEY HALL HEALTH CARE CENTER",
+        "medicaidId": "6329209",
+        "nameCell": "A219",
+        "medicaidIdCell": "B219",
+        "cmsName": "MCAULEY HALL HEALTH CARE CENTE",
+        "npi": "1316089360",
+        "address": "1633 HIGHWAY 22",
+        "city": "WATCHUNG",
+        "state": "NJ",
+        "zip": "07069"
+      },
+      "cell": "AZ219",
+      "raw": "0.92999999999999994"
+    },
+    "315338": {
+      "value": 87.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LAWRENCE REHABILITATION AND HEALTHCARE CENTER/THE MEADOWS AT LAWRENCE",
+        "medicaidId": "916960",
+        "nameCell": "A206",
+        "medicaidIdCell": "B206",
+        "cmsName": "LAWRENCE REHAB & HCC/THE MEADOWS AT LAWRENCE",
+        "npi": "1740902816",
+        "address": "1 BISHOPS DRIVE",
+        "city": "LAWRENCEVILLE",
+        "state": "NJ",
+        "zip": "08648"
+      },
+      "cell": "AZ206",
+      "raw": "0.87"
+    },
+    "315339": {
+      "value": 83.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "CARE ONE AT ORADELL",
+        "medicaidId": "6419704",
+        "nameCell": "A78",
+        "medicaidIdCell": "B78",
+        "cmsName": "CAREONE AT ORADELL",
+        "stateFacilityId": "NJ60234",
+        "stateRow": 624,
+        "address": "600 KINDERKAMACK ROAD",
+        "city": "ORADELL",
+        "state": "NJ",
+        "zip": "07649"
+      },
+      "cell": "AZ78",
+      "raw": "0.83000000000000007"
+    },
+    "315340": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SEASHORE GARDENS",
+        "medicaidId": "4463102",
+        "nameCell": "A276",
+        "medicaidIdCell": "B276",
+        "cmsName": "ATLAS HEALTHCARE AT SEASHORE GARDENS",
+        "npi": "1528052412",
+        "address": "22 WEST JIMMIE LEEDS ROAD",
+        "city": "GALLOWAY TOWNSHIP",
+        "state": "NJ",
+        "zip": "08205"
+      },
+      "cell": "AZ276",
+      "raw": "0.95"
+    },
+    "315341": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT CLARK, LLC",
+        "medicaidId": "945668",
+        "nameCell": "A99",
+        "medicaidIdCell": "B99",
+        "cmsName": "COMPLETE CARE AT CLARK LLC",
+        "stateFacilityId": "NJ62026",
+        "stateRow": 809,
+        "address": "1213 WESTFIELD AVENUE",
+        "city": "CLARK",
+        "state": "NJ",
+        "zip": "07066"
+      },
+      "cell": "AZ99",
+      "raw": "0.9"
+    },
+    "315342": {
+      "value": 92.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT BRICK LLC",
+        "medicaidId": "944785",
+        "nameCell": "A97",
+        "medicaidIdCell": "B97",
+        "cmsName": "Complete Care at Brick LLC",
+        "stateFacilityId": "NJ62217",
+        "stateRow": 821,
+        "address": "415 JACK MARTIN BLVD",
+        "city": "BRICK",
+        "state": "NJ",
+        "zip": "08724"
+      },
+      "cell": "AZ97",
+      "raw": "0.92500000000000004"
+    },
+    "315343": {
+      "value": 92.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "BROADWAY HOUSE FOR CONTINUING CARE",
+        "medicaidId": "564745",
+        "nameCell": "A65",
+        "medicaidIdCell": "B65",
+        "cmsName": "BROADWAY HOUSE FOR CONTINUING CARE",
+        "npi": "1538168885",
+        "address": "298 BROADWAY",
+        "city": "NEWARK",
+        "state": "NJ",
+        "zip": "07104"
+      },
+      "cell": "AZ65",
+      "raw": "0.91999999999999993"
+    },
+    "315344": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "OPTIMA CARE CASTLE HILL",
+        "medicaidId": "969834",
+        "nameCell": "A237",
+        "medicaidIdCell": "B237",
+        "cmsName": "OPTIMA CARE CASTLE HILL",
+        "stateFacilityId": "NJ60910",
+        "stateRow": 682,
+        "address": "615 23RD ST",
+        "city": "UNION CITY",
+        "state": "NJ",
+        "zip": "07087"
+      },
+      "cell": "AZ237",
+      "raw": "0.95"
+    },
+    "315348": {
+      "value": 100.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "HEALTH CENTER AT BLOOMINGDALE",
+        "medicaidId": "426148",
+        "nameCell": "A188",
+        "medicaidIdCell": "B188",
+        "cmsName": "HEALTH CENTER AT BLOOMINGDALE",
+        "stateFacilityId": "NJ61631",
+        "stateRow": 779,
+        "address": "255 UNION AVE",
+        "city": "BLOOMINGDALE",
+        "state": "NJ",
+        "zip": "07403"
+      },
+      "cell": "AZ188",
+      "raw": "1"
+    },
+    "315349": {
+      "value": 86.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT INGLEMOOR,LLC",
+        "medicaidId": "807753",
+        "nameCell": "A108",
+        "medicaidIdCell": "B108",
+        "cmsName": "COMPLETE CARE AT INGLEMOOR, LLC",
+        "stateFacilityId": "NJ60210",
+        "stateRow": 613,
+        "address": "333 GRAND AVE",
+        "city": "ENGLEWOOD",
+        "state": "NJ",
+        "zip": "07631"
+      },
+      "cell": "AZ108",
+      "raw": "0.86499999999999999"
+    },
+    "315350": {
+      "value": 88.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "NORTH CAPE CENTER",
+        "medicaidId": "6799604",
+        "nameCell": "A235",
+        "medicaidIdCell": "B235",
+        "cmsName": "NORTH CAPE CENTER",
+        "stateFacilityId": "NJ62200",
+        "stateRow": 815,
+        "address": "700 TOWN BANK ROAD",
+        "city": "NORTH CAPE MAY",
+        "state": "NJ",
+        "zip": "08204"
+      },
+      "cell": "AZ235",
+      "raw": "0.88"
+    },
+    "315352": {
+      "value": 67.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ALARIS HEALTH AT ST MARY'S",
+        "medicaidId": "6799302",
+        "nameCell": "A19",
+        "medicaidIdCell": "B19",
+        "cmsName": "AXIA CARE CENTER OF ORANGE",
+        "npi": "1245272723",
+        "address": "135 SOUTH CENTER STREET",
+        "city": "ORANGE",
+        "state": "NJ",
+        "zip": "07050"
+      },
+      "cell": "AZ19",
+      "raw": "0.67500000000000004"
+    },
+    "315353": {
+      "value": 88.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "CRANBURY CENTER",
+        "medicaidId": "6911706",
+        "nameCell": "A142",
+        "medicaidIdCell": "B142",
+        "cmsName": "CRANBURY CENTER",
+        "stateFacilityId": "NJ61224",
+        "stateRow": 711,
+        "address": "292 APPLEGARTH ROAD",
+        "city": "MONROE TOWNSHIP",
+        "state": "NJ",
+        "zip": "08831"
+      },
+      "cell": "AZ142",
+      "raw": "0.88500000000000001"
+    },
+    "315355": {
+      "value": 93.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "EXCEL CARE AT DOVER",
+        "medicaidId": "947041",
+        "nameCell": "A159",
+        "medicaidIdCell": "B159",
+        "cmsName": "EXCEL CARE AT DOVER",
+        "stateFacilityId": "61423",
+        "stateRow": 548,
+        "address": "65 NORTH SUSSEX STREET",
+        "city": "DOVER",
+        "state": "NJ",
+        "zip": "07801"
+      },
+      "cell": "AZ159",
+      "raw": "0.92999999999999994"
+    },
+    "315359": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ALLAINCE CARE REHAB AND NURSING CENTER",
+        "medicaidId": "890430",
+        "nameCell": "A16",
+        "medicaidIdCell": "B16",
+        "cmsName": "ALLIANCE CARE REHABILITATION AND NURSING CENTER",
+        "npi": "1861152613",
+        "address": "155 40TH STREET",
+        "city": "IRVINGTON",
+        "state": "NJ",
+        "zip": "07111"
+      },
+      "cell": "AZ16",
+      "raw": "0.95"
+    },
+    "315360": {
+      "value": 95.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "EMERSON HEALTH CARE CENTER",
+        "medicaidId": "4464206",
+        "nameCell": "A158",
+        "medicaidIdCell": "B158",
+        "cmsName": "Emerson Health Care Center",
+        "stateFacilityId": "NJ60202",
+        "stateRow": 607,
+        "address": "100 KINDERKAMACK ROAD",
+        "city": "EMERSON",
+        "state": "NJ",
+        "zip": "07630"
+      },
+      "cell": "AZ158",
+      "raw": "0.95499999999999996"
+    },
+    "315362": {
+      "value": 93.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT PARK PLACE LLC",
+        "medicaidId": "801356",
+        "nameCell": "A120",
+        "medicaidIdCell": "B120",
+        "cmsName": "COMPLETE CARE AT PARK PLACE LLC",
+        "stateFacilityId": "NJ61345",
+        "stateRow": 734,
+        "address": "2 DEER PARK DRIVE",
+        "city": "MONMOUTH JUNCTION",
+        "state": "NJ",
+        "zip": "08852"
+      },
+      "cell": "AZ120",
+      "raw": "0.92999999999999994"
+    },
+    "315364": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "JERSEY SHORE CENTER",
+        "medicaidId": "7319100",
+        "nameCell": "A197",
+        "medicaidIdCell": "B197",
+        "cmsName": "JERSEY SHORE CENTER",
+        "stateFacilityId": "NJ62214",
+        "stateRow": 820,
+        "address": "3 INDUSTRIAL WAY EAST",
+        "city": "EATONTOWN",
+        "state": "NJ",
+        "zip": "07724"
+      },
+      "cell": "AZ197",
+      "raw": "0.9"
+    },
+    "315365": {
+      "value": 87.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT OCEAN GROVE LLC",
+        "medicaidId": "931055",
+        "nameCell": "A118",
+        "medicaidIdCell": "B118",
+        "cmsName": "COMPLETE CARE AT OCEAN GROVE LLC",
+        "stateFacilityId": "NJ61344",
+        "stateRow": 733,
+        "address": "160 S MAIN ST",
+        "city": "OCEAN GROVE",
+        "state": "NJ",
+        "zip": "07756"
+      },
+      "cell": "AZ118",
+      "raw": "0.87"
+    },
+    "315367": {
+      "value": 90.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "REGENCY HERITAGE NURSING & REHAB. CENTER",
+        "medicaidId": "4499107",
+        "nameCell": "A262",
+        "medicaidIdCell": "B262",
+        "cmsName": "REGENCY HERITAGE NURSING AND REHABILITATION CENTER",
+        "npi": "1427057918",
+        "address": "380 DEMOTT LANE",
+        "city": "SOMERSET",
+        "state": "NJ",
+        "zip": "08873"
+      },
+      "cell": "AZ262",
+      "raw": "0.90500000000000003"
+    },
+    "315370": {
+      "value": 90.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "CARNEGIE POST ACUTE CARE AT PRINCETON",
+        "medicaidId": "937789",
+        "nameCell": "A84",
+        "medicaidIdCell": "B84",
+        "cmsName": "CARNEGIE POST ACUTE CARE AT PRINCETON LLC",
+        "npi": "1679288526",
+        "address": "5000 WINDROW DRIVE",
+        "city": "PRINCETON",
+        "state": "NJ",
+        "zip": "08540"
+      },
+      "cell": "AZ84",
+      "raw": "0.90500000000000003"
+    },
+    "315372": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "WHITE HOUSE HEALTHCARE",
+        "medicaidId": "1004212",
+        "nameCell": "A318",
+        "medicaidIdCell": "B318",
+        "cmsName": "WHITE HOUSE HEALTHCARE AND REHABILITATION CENTER",
+        "npi": "1679286249",
+        "address": "560 BERKELEY AVENUE",
+        "city": "ORANGE",
+        "state": "NJ",
+        "zip": "07050"
+      },
+      "cell": "AZ318",
+      "raw": "0.97499999999999998"
+    },
+    "315375": {
+      "value": 93.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "FOREST HILL CENTER REHAB & HEALING",
+        "medicaidId": "887242",
+        "nameCell": "A172",
+        "medicaidIdCell": "B172",
+        "cmsName": "FOREST HILLS CENTER FOR REHABILITATION AND HEALING",
+        "npi": "1649315565",
+        "address": "497 MT PROSPECT AVE",
+        "city": "NEWARK",
+        "state": "NJ",
+        "zip": "07104"
+      },
+      "cell": "AZ172",
+      "raw": "0.93500000000000005"
+    },
+    "315378": {
+      "value": 91.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "HOMESTEAD REHABILITATION & HEALTH CARE CENTER",
+        "medicaidId": "348252",
+        "nameCell": "A191",
+        "medicaidIdCell": "B191",
+        "cmsName": "Homestead Rehabilitation & Health Care Center",
+        "stateFacilityId": "NJ61905",
+        "stateRow": 793,
+        "address": "129 MORRIS TURNPIKE",
+        "city": "NEWTON",
+        "state": "NJ",
+        "zip": "07860"
+      },
+      "cell": "AZ191",
+      "raw": "0.91"
+    },
+    "315381": {
+      "value": 100.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SUMMER HILL NURSING HOME",
+        "medicaidId": "382493",
+        "nameCell": "A293",
+        "medicaidIdCell": "B293",
+        "cmsName": "AUTUMN LAKE HEALTHCARE AT OLD BRIDGE",
+        "npi": "1235470022",
+        "address": "111 ROUTE 516",
+        "city": "OLD BRIDGE",
+        "state": "NJ",
+        "zip": "08857"
+      },
+      "cell": "AZ293",
+      "raw": "1"
+    },
+    "315384": {
+      "value": 87.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ROSE MOUNTAIN CARE CENTER",
+        "medicaidId": "4485301",
+        "nameCell": "A269",
+        "medicaidIdCell": "B269",
+        "cmsName": "ROSE MOUNTAIN CARE CENTER",
+        "stateFacilityId": "NJ61204",
+        "stateRow": 700,
+        "address": "ROUTE 1 & 18",
+        "city": "NEW BRUNSWICK",
+        "state": "NJ",
+        "zip": "08901"
+      },
+      "cell": "AZ269",
+      "raw": "0.875"
+    },
+    "315386": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ATLAS REHAB AND HEALTHCARE AT MAYWOOD",
+        "medicaidId": "778711",
+        "nameCell": "A44",
+        "medicaidIdCell": "B44",
+        "cmsName": "ATLAS REHABILITATION AND HEALTHCARE AT MAYWOOD",
+        "npi": "1972139178",
+        "address": "100 WEST MAGNOLIA AVENUE",
+        "city": "MAYWOOD",
+        "state": "NJ",
+        "zip": "07607"
+      },
+      "cell": "AZ44",
+      "raw": "0.97499999999999998"
+    },
+    "315387": {
+      "value": 97.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ALLAIRE REHAB AND NURSING CENTER",
+        "medicaidId": "501425",
+        "nameCell": "A22",
+        "medicaidIdCell": "B22",
+        "cmsName": "ALLAIRE REHAB & NURSING",
+        "npi": "1972963486",
+        "address": "115 DUTCH LANE ROAD",
+        "city": "FREEHOLD",
+        "state": "NJ",
+        "zip": "07728"
+      },
+      "cell": "AZ22",
+      "raw": "0.97499999999999998"
+    },
+    "315396": {
+      "value": 100.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "PREFERRED CARE AT CUMBERLAND",
+        "medicaidId": "908517",
+        "nameCell": "A251",
+        "medicaidIdCell": "B251",
+        "cmsName": "PREFERRED CARE AT CUMBERLAND",
+        "stateFacilityId": "NJ60603",
+        "stateRow": 650,
+        "address": "154 SUNNY SLOPE DRIVE",
+        "city": "BRIDGETON",
+        "state": "NJ",
+        "zip": "08302"
+      },
+      "cell": "AZ251",
+      "raw": "1"
+    },
+    "315397": {
+      "value": 97.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "PREFERRED CARE AT WALL",
+        "medicaidId": "518620",
+        "nameCell": "A255",
+        "medicaidIdCell": "B255",
+        "cmsName": "PREFERRED CARE AT WALL",
+        "stateFacilityId": "NJ61330",
+        "stateRow": 727,
+        "address": "2350 HOSPITAL ROAD",
+        "city": "ALLENWOOD",
+        "state": "NJ",
+        "zip": "08720"
+      },
+      "cell": "AZ255",
+      "raw": "0.97499999999999998"
+    },
+    "315413": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "PEACE CARE ST. ANN'S",
+        "medicaidId": "4479807",
+        "nameCell": "A243",
+        "medicaidIdCell": "B243",
+        "cmsName": "PEACE CARE ST ANN'S",
+        "stateFacilityId": "NJ30904",
+        "stateRow": 516,
+        "address": "198 OLD BERGEN ROAD",
+        "city": "JERSEY CITY",
+        "state": "NJ",
+        "zip": "07305"
+      },
+      "cell": "AZ243",
+      "raw": "0.9"
+    },
+    "315414": {
+      "value": 88.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ASTER CREEK NURSING AND REHABILITATION CENTER",
+        "medicaidId": "928364",
+        "nameCell": "A39",
+        "medicaidIdCell": "B39",
+        "cmsName": "ASTER CREEK NURSING AND REHABILITATION CENTER",
+        "stateFacilityId": "NJ61310",
+        "stateRow": 717,
+        "address": "524 WARDELL ROAD",
+        "city": "TINTON FALLS",
+        "state": "NJ",
+        "zip": "07753"
+      },
+      "cell": "AZ39",
+      "raw": "0.88"
+    },
+    "315416": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "GREEN HILL, INC.",
+        "medicaidId": "4476905",
+        "nameCell": "A180",
+        "medicaidIdCell": "B180",
+        "cmsName": "GREEN HILL",
+        "npi": "1528061868",
+        "address": "103 PLEASANT VALLEY WAY",
+        "city": "WEST ORANGE",
+        "state": "NJ",
+        "zip": "07052"
+      },
+      "cell": "AZ180",
+      "raw": "0.95"
+    },
+    "315417": {
+      "value": 85.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "REFORMED CHURCH HOME",
+        "medicaidId": "4477502",
+        "nameCell": "A261",
+        "medicaidIdCell": "B261",
+        "cmsName": "REFORMED CHURCH HOME",
+        "npi": "1780688226",
+        "address": "1990 ROUTE 18 NORTH",
+        "city": "OLD BRIDGE",
+        "state": "NJ",
+        "zip": "08857"
+      },
+      "cell": "AZ261",
+      "raw": "0.85499999999999998"
+    },
+    "315419": {
+      "value": 96.50000000000001,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "NEW JERSEY EASTERN STAR HOME",
+        "medicaidId": "4499506",
+        "nameCell": "A233",
+        "medicaidIdCell": "B233",
+        "cmsName": "N J EASTERN STAR HOME",
+        "npi": "1255321220",
+        "address": "111 FINDERNE AVENUE",
+        "city": "BRIDGEWATER",
+        "state": "NJ",
+        "zip": "08807"
+      },
+      "cell": "AZ233",
+      "raw": "0.96500000000000008"
+    },
+    "315421": {
+      "value": 93.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ROSE GARDEN NURSING & REHAB. CENTER",
+        "medicaidId": "4494202",
+        "nameCell": "A268",
+        "medicaidIdCell": "B268",
+        "cmsName": "ROSE GARDEN NURSING AND REHABILITATION CENTER",
+        "npi": "1710974050",
+        "address": "1579 OLD FREEHOLD ROAD",
+        "city": "TOMS RIVER",
+        "state": "NJ",
+        "zip": "08753"
+      },
+      "cell": "AZ268",
+      "raw": "0.92999999999999994"
+    },
+    "315423": {
+      "value": 88.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "HAMILTON GROVE HEALTHCARE AND REHABILITATION, LLC",
+        "medicaidId": "263222",
+        "nameCell": "A183",
+        "medicaidIdCell": "B183",
+        "cmsName": "HAMILTON GROVE HEALTHCARE AND REHABILITATION, LLC",
+        "stateFacilityId": "61103",
+        "stateRow": 544,
+        "address": "2300 HAMILTON AVE",
+        "city": "HAMILTON",
+        "state": "NJ",
+        "zip": "08619"
+      },
+      "cell": "AZ183",
+      "raw": "0.88"
+    },
+    "315425": {
+      "value": 91.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "FOOTHILL ACRES REHAB & NURSING",
+        "medicaidId": "4499000",
+        "nameCell": "A171",
+        "medicaidIdCell": "B171",
+        "cmsName": "FOOTHILL ACRES REHABILITATION & NURSING CENTER",
+        "npi": "1932203304",
+        "address": "39 EAST MOUNTAIN ROAD",
+        "city": "HILLSBOROUGH",
+        "state": "NJ",
+        "zip": "08844"
+      },
+      "cell": "AZ171",
+      "raw": "0.91500000000000004"
+    },
+    "315433": {
+      "value": 89.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COUNTRY ARCH CARE CENTER",
+        "medicaidId": "8531803",
+        "nameCell": "A141",
+        "medicaidIdCell": "B141",
+        "cmsName": "COUNTRY ARCH CARE CENTER",
+        "stateFacilityId": "NJ61006",
+        "stateRow": 689,
+        "address": "114 PITTSTOWN ROAD",
+        "city": "PITTSTOWN",
+        "state": "NJ",
+        "zip": "08867"
+      },
+      "cell": "AZ141",
+      "raw": "0.89"
+    },
+    "315437": {
+      "value": 89.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LAUREL BAY HEALTH & REHAB. CENTER",
+        "medicaidId": "4489306",
+        "nameCell": "A203",
+        "medicaidIdCell": "B203",
+        "cmsName": "LAUREL BAY HEALTH & REHABILITATION CENTER",
+        "npi": "1043370596",
+        "address": "32 LAUREL AVENUE",
+        "city": "KEANSBURG",
+        "state": "NJ",
+        "zip": "07734"
+      },
+      "cell": "AZ203",
+      "raw": "0.89"
+    },
+    "315442": {
+      "value": 90.99999999999999,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "TRINITAS HOSPITAL",
+        "medicaidId": "4505301",
+        "nameCell": "A306",
+        "medicaidIdCell": "B306",
+        "cmsName": "Trinitas Hospital",
+        "stateFacilityId": "NJ12001L",
+        "stateRow": 478,
+        "address": "655 EAST JERSEY STREET",
+        "city": "ELIZABETH",
+        "state": "NJ",
+        "zip": "07206"
+      },
+      "cell": "AZ306",
+      "raw": "0.90999999999999992"
+    },
+    "315449": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ALARIS AT WEST ORANGE",
+        "medicaidId": "7702001",
+        "nameCell": "A13",
+        "medicaidIdCell": "B13",
+        "cmsName": "Alaris Health at West Orange",
+        "npi": "1386688141",
+        "address": "5 BROOK END DRIVE",
+        "city": "WEST ORANGE",
+        "state": "NJ",
+        "zip": "07052"
+      },
+      "cell": "AZ13",
+      "raw": "0.95"
+    },
+    "315451": {
+      "value": 91.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "THE ELMS REHABILITATION AND HEALTHCARE CENTER OF CRANBURY",
+        "medicaidId": "936715",
+        "nameCell": "A300",
+        "medicaidIdCell": "B300",
+        "cmsName": "THE ELMS REHAB AND HEALTHCARE CENTER OF CRANBURY",
+        "npi": "1023013786",
+        "address": "61 MAPLEWOOD AVENUE",
+        "city": "CRANBURY",
+        "state": "NJ",
+        "zip": "08512"
+      },
+      "cell": "AZ300",
+      "raw": "0.91500000000000004"
+    },
+    "315452": {
+      "value": 86.00000000000001,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "PEACE CARE ST. JOSEPH'S",
+        "medicaidId": "4479904",
+        "nameCell": "A244",
+        "medicaidIdCell": "B244",
+        "cmsName": "PEACE CARE ST JOSEPH'S",
+        "stateFacilityId": "NJ30905",
+        "stateRow": 517,
+        "address": "537 PAVONIA AVENUE",
+        "city": "JERSEY CITY",
+        "state": "NJ",
+        "zip": "07306"
+      },
+      "cell": "AZ244",
+      "raw": "0.8600000000000001"
+    },
+    "315453": {
+      "value": 93.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT SHORROCK",
+        "medicaidId": "706957",
+        "nameCell": "A126",
+        "medicaidIdCell": "B126",
+        "cmsName": "COMPLETE CARE AT SHORROCK",
+        "stateFacilityId": "NJ656003",
+        "stateRow": 824,
+        "address": "75 OLD TOMS RIVER ROAD",
+        "city": "BRICK",
+        "state": "NJ",
+        "zip": "08723"
+      },
+      "cell": "AZ126",
+      "raw": "0.92999999999999994"
+    },
+    "315454": {
+      "value": 90.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SHORE GARDENS REHAB. & NURSING CENTER",
+        "medicaidId": "845582",
+        "nameCell": "A277",
+        "medicaidIdCell": "B277",
+        "cmsName": "SHORE GARDENS REHABILITATION AND NURSING CENTER",
+        "npi": "1255007639",
+        "address": "231 WARNER STREET",
+        "city": "TOMS RIVER",
+        "state": "NJ",
+        "zip": "08755"
+      },
+      "cell": "AZ277",
+      "raw": "0.90500000000000003"
+    },
+    "315455": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "AVANT REHABILITATION AND CARE CENTER .",
+        "medicaidId": "909629",
+        "nameCell": "A52",
+        "medicaidIdCell": "B52",
+        "cmsName": "AVANT REHABILITATION AND CARE CENTER",
+        "stateFacilityId": "NJ476002",
+        "stateRow": 595,
+        "address": "1314 BRUNSWICK AVENUE",
+        "city": "TRENTON",
+        "state": "NJ",
+        "zip": "08638"
+      },
+      "cell": "AZ52",
+      "raw": "0.95"
+    },
+    "315456": {
+      "value": 91.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "MYSTIC MEADOWS REHAB AND NURSING CENTER",
+        "medicaidId": "980056",
+        "nameCell": "A231",
+        "medicaidIdCell": "B231",
+        "cmsName": "MYSTIC MEADOWS REHABILITATION AND NURSING CENTER",
+        "npi": "1659082873",
+        "address": "151 NINTH AVENUE",
+        "city": "LITTLE EGG HARBOR TW",
+        "state": "NJ",
+        "zip": "08087"
+      },
+      "cell": "AZ231",
+      "raw": "0.91500000000000004"
+    },
+    "315458": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "NEW VISTA NURSING & REHAB. CENTER",
+        "medicaidId": "758361",
+        "nameCell": "A234",
+        "medicaidIdCell": "B234",
+        "cmsName": "NEW VISTA NURSING & REHABILITATION CTR",
+        "npi": "1467057026",
+        "address": "300 BROADWAY",
+        "city": "NEWARK",
+        "state": "NJ",
+        "zip": "07104"
+      },
+      "cell": "AZ234",
+      "raw": "0.95"
+    },
+    "315460": {
+      "value": 85.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "COMPLETE CARE@ PROSPECT HEIGHT",
+        "medicaidId": "952460",
+        "nameCell": "A124",
+        "medicaidIdCell": "B124",
+        "cmsName": "COMPLETE CARE AT PROSPECT HEIGHTS LLC",
+        "npi": "1750062535",
+        "address": "336 PROSPECT AVE",
+        "city": "HACKENSACK",
+        "state": "NJ",
+        "zip": "07601"
+      },
+      "cell": "AZ124",
+      "raw": "0.85499999999999998"
+    },
+    "315461": {
+      "value": 85.00000000000001,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "BERLIN REHAB AND HEALTHCARE CENTER",
+        "medicaidId": "860191",
+        "nameCell": "A59",
+        "medicaidIdCell": "B59",
+        "cmsName": "BERLIN REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1245981372",
+        "address": "100 LONG-A-COMING LANE",
+        "city": "BERLIN",
+        "state": "NJ",
+        "zip": "08009"
+      },
+      "cell": "AZ59",
+      "raw": "0.85000000000000009"
+    },
+    "315462": {
+      "value": 94.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "TALLWOODS CARE CENTER",
+        "medicaidId": "8161801",
+        "nameCell": "A296",
+        "medicaidIdCell": "B296",
+        "cmsName": "TALLWOODS CARE CENTER",
+        "stateFacilityId": "NJ656005",
+        "stateRow": 826,
+        "address": "18 BUTLER BOULEVARD",
+        "city": "BAYVILLE",
+        "state": "NJ",
+        "zip": "08721"
+      },
+      "cell": "AZ296",
+      "raw": "0.94499999999999995"
+    },
+    "315463": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "MEADOWBROOK RESPIRATORY AND NURSING CENTER",
+        "medicaidId": "1036408",
+        "nameCell": "A220",
+        "medicaidIdCell": "B220",
+        "cmsName": "MEADOWBROOK RESPIRATORY AND NURSING CENTER",
+        "stateFacilityId": "NJ556200",
+        "stateRow": 598,
+        "address": "38 FRENEAU AVENUE",
+        "city": "MATAWAN",
+        "state": "NJ",
+        "zip": "07747"
+      },
+      "cell": "AZ220",
+      "raw": "0.95"
+    },
+    "315473": {
+      "value": 98.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "JEWISH HOME AT ROCKLEIGH",
+        "medicaidId": "8749001",
+        "nameCell": "A199",
+        "medicaidIdCell": "B199",
+        "cmsName": "JEWISH HOME AT ROCKLEIGH",
+        "stateFacilityId": "NJJZ24OP",
+        "stateRow": 829,
+        "address": "10 LINK DRIVE",
+        "city": "ROCKLEIGH",
+        "state": "NJ",
+        "zip": "07647"
+      },
+      "cell": "AZ199",
+      "raw": "0.98"
+    },
+    "315476": {
+      "value": 95.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ALARIS HEALTH AT THE FOUNTAINS - NORTH",
+        "medicaidId": "8974306",
+        "nameCell": "A21",
+        "medicaidIdCell": "B21",
+        "cmsName": "OPTIMA CARE FOUNTAINS",
+        "npi": "1023054228",
+        "address": "595 COUNTY AVENUE",
+        "city": "SECAUCUS",
+        "state": "NJ",
+        "zip": "07094"
+      },
+      "cell": "AZ21",
+      "raw": "0.95"
+    },
+    "315483": {
+      "value": 92.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "PLAZA HEALTH CARE CENTER",
+        "medicaidId": "36498",
+        "nameCell": "A249",
+        "medicaidIdCell": "B249",
+        "cmsName": "Plaza Healthcare & Rehabilitation Center",
+        "npi": "1790815447",
+        "address": "456 RAHWAY AVENUE",
+        "city": "ELIZABETH",
+        "state": "NJ",
+        "zip": "07202"
+      },
+      "cell": "AZ249",
+      "raw": "0.92500000000000004"
+    },
+    "315487": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "PREFERRED CARE AT MERCER",
+        "medicaidId": "567299",
+        "nameCell": "A253",
+        "medicaidIdCell": "B253",
+        "cmsName": "PREFERRED CARE AT MERCER",
+        "stateFacilityId": "NJ476003",
+        "stateRow": 596,
+        "address": "1201 PARKWAY AVENUE",
+        "city": "EWING",
+        "state": "NJ",
+        "zip": "08628"
+      },
+      "cell": "AZ253",
+      "raw": "0.95"
+    },
+    "315488": {
+      "value": 93.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "CARE ONE AT MADISON AVENUE",
+        "medicaidId": "58319",
+        "nameCell": "A76",
+        "medicaidIdCell": "B76",
+        "cmsName": "CAREONE AT MADISON AVENUE",
+        "stateFacilityId": "NJ60921",
+        "stateRow": 685,
+        "address": "151 MADISON AVENUE",
+        "city": "MORRISTOWN",
+        "state": "NJ",
+        "zip": "07960"
+      },
+      "cell": "AZ76",
+      "raw": "0.92999999999999994"
+    },
+    "315494": {
+      "value": 93.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ALARIS HEALTH AT THE CHATEAU",
+        "medicaidId": "110710",
+        "nameCell": "A20",
+        "medicaidIdCell": "B20",
+        "cmsName": "Alaris Health at The Chateau",
+        "stateFacilityId": "NJ056301",
+        "stateRow": 562,
+        "address": "96 PARKWAY",
+        "city": "ROCHELLE PARK",
+        "state": "NJ",
+        "zip": "07662"
+      },
+      "cell": "AZ20",
+      "raw": "0.93500000000000005"
+    },
+    "315497": {
+      "value": 92.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ALLENDALE NURSING HOME",
+        "medicaidId": "794597",
+        "nameCell": "A24",
+        "medicaidIdCell": "B24",
+        "cmsName": "ALLENDALE REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1154902252",
+        "address": "85 HARRETON ROAD",
+        "city": "ALLENDALE",
+        "state": "NJ",
+        "zip": "07401"
+      },
+      "cell": "AZ24",
+      "raw": "0.92500000000000004"
+    },
+    "315499": {
+      "value": 95.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LIONS GATE NURSING HOME",
+        "medicaidId": "124737",
+        "nameCell": "A211",
+        "medicaidIdCell": "B211",
+        "cmsName": "LIONS GATE",
+        "npi": "1922015122",
+        "address": "1100 LAUREL OAK ROAD",
+        "city": "VOORHEES",
+        "state": "NJ",
+        "zip": "08043"
+      },
+      "cell": "AZ211",
+      "raw": "0.95500000000000007"
+    },
+    "315500": {
+      "value": 92.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "PROMEDICA SKILLED NURSING AND REHAB (VOORHEES WEST)",
+        "medicaidId": "125598",
+        "nameCell": "A259",
+        "medicaidIdCell": "B259",
+        "cmsName": "AUTUMN LAKE HEALTHCARE AT VOORHEES",
+        "npi": "1205887635",
+        "address": "1086 DUMONT CIRCLE",
+        "city": "VOORHEES",
+        "state": "NJ",
+        "zip": "08043"
+      },
+      "cell": "AZ259",
+      "raw": "0.92500000000000004"
+    },
+    "315501": {
+      "value": 90.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "COMPLETE CARE AT WALL LLC    *",
+        "medicaidId": "937592",
+        "nameCell": "A131",
+        "medicaidIdCell": "B131",
+        "cmsName": "Complete Care at Wall LLC",
+        "stateFacilityId": "NJ13301",
+        "stateRow": 578,
+        "address": "1725 MERIDIAN TRAIL",
+        "city": "WALL",
+        "state": "NJ",
+        "zip": "07719"
+      },
+      "cell": "AZ131",
+      "raw": "0.9"
+    },
+    "315503": {
+      "value": 90.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "ROYAL SUITES HEALTH CARE",
+        "medicaidId": "118770",
+        "nameCell": "A270",
+        "medicaidIdCell": "B270",
+        "cmsName": "ROYAL SUITES HEALTH CARE & REHABILITATION",
+        "npi": "1144321886",
+        "address": "214 WEST JIMMIE LEEDS ROAD",
+        "city": "GALLOWAY TOWNSHIP",
+        "state": "NJ",
+        "zip": "08205"
+      },
+      "cell": "AZ270",
+      "raw": "0.9"
+    },
+    "315504": {
+      "value": 77.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "WEDGEWOOD GARDENS CARE CENTER",
+        "medicaidId": "186571",
+        "nameCell": "A317",
+        "medicaidIdCell": "B317",
+        "cmsName": "WEDGWOOD GARDENS CARE CENTER",
+        "npi": "1952566028",
+        "address": "3419 HIGHWAY 9",
+        "city": "FREEHOLD",
+        "state": "NJ",
+        "zip": "07728"
+      },
+      "cell": "AZ317",
+      "raw": "0.77500000000000002"
+    },
+    "315510": {
+      "value": 91.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "BRIDGEWAY CARE AND REHAB CENTER AT HILLSBOROUGH",
+        "medicaidId": "292087",
+        "nameCell": "A64",
+        "medicaidIdCell": "B64",
+        "cmsName": "BRIDGEWAY CARE AND REHAB CENTER AT HILLSBOROUGH",
+        "stateFacilityId": "NJ18104",
+        "stateRow": 584,
+        "address": "395 AMWELL ROAD",
+        "city": "HILLSBOROUGH",
+        "state": "NJ",
+        "zip": "08844"
+      },
+      "cell": "AZ64",
+      "raw": "0.91"
+    },
+    "315514": {
+      "value": 95.0,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "EXCEL CARE AT EGG HARBOR",
+        "medicaidId": "890812",
+        "nameCell": "A160",
+        "medicaidIdCell": "B160",
+        "cmsName": "EXCEL CARE AT EGG HARBOR",
+        "stateFacilityId": "NJ01001",
+        "stateRow": 553,
+        "address": "6818 DELILAH ROAD",
+        "city": "EGG HARBOR TOWNSHIP",
+        "state": "NJ",
+        "zip": "08234"
+      },
+      "cell": "AZ160",
+      "raw": "0.95"
+    },
+    "315516": {
+      "value": 95.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "ADVANCED SUBACUTE REHABILITATION CENTER AT SEWELL",
+        "medicaidId": "429899",
+        "nameCell": "A11",
+        "medicaidIdCell": "B11",
+        "cmsName": "ADVANCED SUBACUTE REHABILITATION CENTER AT SEWELL",
+        "stateFacilityId": "NJ08007",
+        "stateRow": 565,
+        "address": "685 SALINA ROAD",
+        "city": "SEWELL",
+        "state": "NJ",
+        "zip": "08080"
+      },
+      "cell": "AZ11",
+      "raw": "0.95500000000000007"
+    },
+    "315518": {
+      "value": 85.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "VENETIAN CARE & REHAB CENTER",
+        "medicaidId": "452122",
+        "nameCell": "A312",
+        "medicaidIdCell": "B312",
+        "cmsName": "RARITAN POST ACUTE AND HEALTHCARE CENTER",
+        "npi": "1952736985",
+        "address": "275 JOHN T O'LEARY BOULEVARD",
+        "city": "SOUTH AMBOY",
+        "state": "NJ",
+        "zip": "08879"
+      },
+      "cell": "AZ312",
+      "raw": "0.85499999999999998"
+    },
+    "315520": {
+      "value": 94.0,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "SOMERSET WOODS REHAB AND NURSING",
+        "medicaidId": "521396",
+        "nameCell": "A280",
+        "medicaidIdCell": "B280",
+        "cmsName": "SOMERSET WOODS REHABILITATION & NURSING CENTER",
+        "npi": "1114309119",
+        "address": "780 OLD NEW BRUNSWICK ROAD",
+        "city": "SOMERSET",
+        "state": "NJ",
+        "zip": "08873"
+      },
+      "cell": "AZ280",
+      "raw": "0.94"
+    },
+    "315524": {
+      "value": 86.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "LAUREL BROOK REHAB AND HEALTHCARE CENTER",
+        "medicaidId": "896977",
+        "nameCell": "A204",
+        "medicaidIdCell": "B204",
+        "cmsName": "LAUREL BROOK REHABILITATION AND HEALTHCARE CENTER",
+        "npi": "1376063651",
+        "address": "3718 CHURCH ROAD",
+        "city": "MOUNT LAUREL",
+        "state": "NJ",
+        "zip": "08054"
+      },
+      "cell": "AZ204",
+      "raw": "0.86499999999999999"
+    },
+    "315525": {
+      "value": 91.5,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "HUDSON HILLS SENIOR LIVING",
+        "medicaidId": "609382",
+        "nameCell": "A192",
+        "medicaidIdCell": "B192",
+        "cmsName": "HARBOUR VIEW SENIOR LIVING CORP",
+        "npi": "1326578105",
+        "address": "3161 KENNEDY BLVD",
+        "city": "NORTH BERGEN",
+        "state": "NJ",
+        "zip": "07047"
+      },
+      "cell": "AZ192",
+      "raw": "0.91500000000000004"
+    },
+    "315526": {
+      "value": 88.5,
+      "identity": {
+        "method": "statewide-unique-exact-name-and-DOH-address",
+        "workbookName": "LIVINGSTON POST ACUTE CARE",
+        "medicaidId": "1137832",
+        "nameCell": "A213",
+        "medicaidIdCell": "B213",
+        "cmsName": "LIVINGSTON POST ACUTE CARE",
+        "stateFacilityId": "NJNH07001",
+        "stateRow": 831,
+        "address": "348 E CEDAR STREET",
+        "city": "LIVINGSTON",
+        "state": "NJ",
+        "zip": "07039"
+      },
+      "cell": "AZ213",
+      "raw": "0.88500000000000001"
+    },
+    "315528": {
+      "value": 86.00000000000001,
+      "identity": {
+        "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+        "workbookName": "THE JEWISH HOME FOR REHABILITATION AND NURSING",
+        "medicaidId": "748773",
+        "nameCell": "A302",
+        "medicaidIdCell": "B302",
+        "cmsName": "JEWISH HOME FOR REHABILITATION AND NURSING, THE",
+        "npi": "1477174118",
+        "address": "1151 WEST MAIN STREET",
+        "city": "FREEHOLD",
+        "state": "NJ",
+        "zip": "07728"
+      },
+      "cell": "AZ302",
+      "raw": "0.8600000000000001"
+    }
+  }
+}

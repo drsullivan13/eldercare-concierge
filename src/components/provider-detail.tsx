@@ -25,6 +25,7 @@ import { providerCareAlerts } from "./provider-card";
 import { providerDisplayName } from "./provider-display-name";
 import { InspectionHistory } from "./inspection-history";
 import { HomeHealthEvidence } from "./home-health-evidence";
+import { NjCoreqSurvey } from "./nj-coreq-survey";
 import { LocationResearch } from "./location-research";
 import type { ProfileNavigation, ProfilePane } from "./profile-pane";
 import "./provider-detail.css";
@@ -228,6 +229,10 @@ export function ProviderDetail({
               navigation={navigation}
               uid={uid}
             />
+            {navigation.pane === "reviews" &&
+              provider.category === "nursing-home" && (
+                <NjCoreqSurvey provider={provider} />
+              )}
             {navigation.pane === "reviews" &&
               provider.category === "home-health" && (
                 <HomeHealthEvidence
