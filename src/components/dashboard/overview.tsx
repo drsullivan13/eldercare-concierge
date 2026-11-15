@@ -26,13 +26,19 @@ export function Overview({
   const pending = workspace.tasks.filter(
     (task) => task.status === "todo",
   ).length;
+  const homeCare = search.draft.category === "home-care";
   return (
     <div className="care-overview">
       <section className="care-search-home" aria-label="Search nearby care">
         <div className="page-heading compact">
           <h1>
-            Find care for <em>your family.</em>
+            {homeCare ? "Find in-home care for" : "Find care for"}{" "}
+            <em>your family.</em>
           </h1>
+          <p className="care-search-guidance" id="overview-care-types">
+            Looking for a facility? Choose nursing, assisted living or another
+            care type below.
+          </p>
         </div>
         <div className="care-welcome-photo">
           <Image
@@ -55,6 +61,7 @@ export function Overview({
             <span>Care type</span>
             <select
               aria-label="Care type"
+              aria-describedby="overview-care-types"
               value={search.draft.category}
               onChange={(event) => search.edit("category", event.target.value)}
             >
@@ -97,7 +104,8 @@ export function Overview({
             </select>
           </label>
           <button className="button button-primary" type="submit">
-            Find care <ArrowRight size={18} />
+            {homeCare ? "Find in-home care" : "Find care"}
+            <ArrowRight size={18} />
           </button>
         </form>
       </section>

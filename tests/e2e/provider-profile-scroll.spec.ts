@@ -2,6 +2,10 @@ import { test, expect, type Locator, type Page } from "@playwright/test";
 
 async function openProfile(page: Page, zip: string, name: string) {
   await page.goto("/dashboard?demo=1");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
   await page.getByLabel("Search ZIP code").fill(zip);
   await page
     .getByRole("combobox", { name: "Search radius" })

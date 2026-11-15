@@ -10,6 +10,7 @@ import {
 import { getResearchSummary } from "./location-research";
 import {
   CATEGORY_LABELS,
+  matchesHomeCareServiceArea,
   type CareCategory,
   type Provider,
   type SearchProvider,
@@ -75,6 +76,7 @@ export function searchProviders(
     ![
       "all",
       "details",
+      "service-area",
       "pricing",
       "openings",
       "reviews",
@@ -83,6 +85,10 @@ export function searchProviders(
     ].includes(evidence)
   )
     throw new SearchInputError("Choose a supported research filter.");
+  if (evidence === "service-area" && category !== "home-care")
+    throw new SearchInputError(
+      "Service-area filtering is available for in-home care.",
+    );
   if (query.length > 200)
     throw new SearchInputError("Search text must be 200 characters or fewer.");
   const categories: Record<string, number> = Object.fromEntries(
@@ -113,6 +119,12 @@ export function searchProviders(
     const matchesCategory =
       category === "all" ||
       searchableCategories.includes(category as CareCategory);
+    const serviceAreaMatch = matchesHomeCareServiceArea(
+      provider,
+      zip,
+      category,
+    );
+    if (evidence === "service-area" && !serviceAreaMatch) continue;
     const distance =
       provider.lat === null ||
       provider.lng === null ||
@@ -121,9 +133,10 @@ export function searchProviders(
         ? null
         : distanceMiles(point, { lat: provider.lat, lng: provider.lng });
     if (distance === null && !matchesCategory) continue;
-    if (distance !== null && distance > radius) continue;
+    if (distance !== null && distance > radius && !serviceAreaMatch) continue;
     const research =
-      (evidence !== "all" || (matchesCategory && distance !== null)) &&
+      (evidence !== "all" ||
+        (matchesCategory && (distance !== null || serviceAreaMatch))) &&
       getProviderMarket(provider.id, registry)?.id === market.id
         ? getResearchSummary(provider.id, registry)
         : undefined;
@@ -138,13 +151,18 @@ export function searchProviders(
     if (evidence === "unrated" && research?.experience.value != null) continue;
     if (evidence === "facebook" && !research?.facebookResearch?.findingCount)
       continue;
-    if (distance === null) {
+    if (distance === null && !serviceAreaMatch) {
       excludedWithoutCoordinates++;
       continue;
     }
     for (const key of searchableCategories) categories[key]++;
     if (matchesCategory) {
-      providers.push({ ...provider, research, distanceMiles: distance });
+      providers.push({
+        ...provider,
+        research,
+        distanceMiles: distance,
+        ...(serviceAreaMatch && { serviceAreaMatch: true }),
+      });
       if (research?.experience.value != null) experienceCoverage.scored++;
       else experienceCoverage.unscored++;
       if ((research?.facebookResearch?.findingCount ?? 0) > 0)
@@ -153,7 +171,7 @@ export function searchProviders(
     }
   }
   const byDistanceName = (a: SearchProvider, b: SearchProvider) =>
-    a.distanceMiles! - b.distanceMiles! ||
+    (a.distanceMiles ?? Infinity) - (b.distanceMiles ?? Infinity) ||
     a.name.localeCompare(b.name, "en", { sensitivity: "base" }) ||
     a.id.localeCompare(b.id, "en");
   providers.sort((a, b) => {

@@ -82,7 +82,7 @@ async function openDemo(page: Page, fromLanding = false) {
   ).toBeVisible();
   await page.getByText("About your workspace", { exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Find care for",
+    "Find in-home care for",
   );
 }
 
@@ -100,8 +100,11 @@ async function searchTenMiles(page: Page) {
     );
   });
   await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+  await page
     .locator("form.quick-search")
-    .getByRole("button", { name: "Find care" })
+    .getByRole("button", { name: "Find care", exact: true })
     .click();
   const response = await result;
   expect(response.status()).toBe(200);
@@ -153,8 +156,11 @@ test("care alerts remain visible while source detail is disclosed on demand", as
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
   await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+  await page
     .locator("form.quick-search")
-    .getByRole("button", { name: "Find care" })
+    .getByRole("button", { name: "Find care", exact: true })
     .click();
   await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page.getByPlaceholder("Search by name or town").fill(provider.name);
@@ -221,7 +227,7 @@ test("a failed shortlist lookup preserves saved IDs and notes in the downloaded 
   );
   await page.goto("/dashboard?demo=1");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Find care for",
+    "Find in-home care for",
   );
   await navigate(page, "Your shortlist");
   await expect(page.getByRole("main").getByRole("alert")).toContainText(
@@ -431,7 +437,7 @@ test("landing to demo: search real providers, save two, compare, inspect sources
     .toEqual([first.id, second.id]);
   await page.reload();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Find care for",
+    "Find in-home care for",
   );
   await navigate(page, "Your shortlist");
   await expect(page.locator(".provider-card")).toHaveCount(2);
@@ -750,7 +756,7 @@ test("personal planning tasks add, toggle, persist and delete in the local demo"
     .toBe("done");
   await page.reload();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Find care for",
+    "Find in-home care for",
   );
   await navigate(page, "Your plan");
   await expect(
@@ -932,7 +938,7 @@ test("protected API never returns a workspace to an anonymous browser or silentl
         ),
       ).toBeVisible();
       await expect(page.getByRole("heading", { level: 1 })).toContainText(
-        "Find care for",
+        "Find in-home care for",
       );
       await expect(
         page.locator('a[href="/signup"], a[href="/login"]'),
@@ -1176,8 +1182,11 @@ test("continuing-care campuses retain separate identities and label ZIP estimate
     .getByRole("combobox", { name: "Search radius" })
     .selectOption("50");
   await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+  await page
     .locator("form.quick-search")
-    .getByRole("button", { name: "Find care" })
+    .getByRole("button", { name: "Find care", exact: true })
     .click();
   await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page

@@ -34,7 +34,7 @@ import { useSavedProviders } from "@/hooks/use-saved-providers";
 import { useOutreach } from "@/hooks/use-outreach";
 import type { OutreachProvider, OutreachRecord } from "@/lib/outreach";
 import { createClient } from "@/lib/supabase/client";
-import type { Provider, SearchProvider } from "@/lib/providers";
+import { type Provider, type SearchProvider } from "@/lib/providers";
 import { Brand } from "./brand";
 import { ProviderCard } from "./provider-card";
 import { Modal } from "./modal";
@@ -43,6 +43,10 @@ import { Overview } from "./dashboard/overview";
 import { DemoComparison } from "./dashboard/demo-comparison";
 import { ShortlistView } from "./dashboard/shortlist";
 import { PlanView } from "./dashboard/plan";
+import {
+  HomeCareOutreach,
+  HomeCareOutreachPlan,
+} from "./dashboard/home-care-outreach";
 import { OutreachEditor, OutreachHistory } from "./dashboard/outreach";
 import { ComparisonTray, useComparison } from "./dashboard/compare-dialog";
 import { ProfileDialog } from "./dashboard/profile-dialog";
@@ -208,6 +212,9 @@ function WorkspaceDashboard({
   const { data } = search;
   const saved = useSavedProviders(workspace.savedProviderIds);
   const savedProviders = saved.providers;
+  const homeCareProviders = useSavedProviders(
+    Object.keys(workspace.homeCareOutreach ?? {}),
+  );
   const outreach = useOutreach(workspace, update, state.ready, demo);
   const [outreachDraft, setOutreachDraft] = useState<{
     provider: OutreachProvider;
@@ -235,6 +242,7 @@ function WorkspaceDashboard({
   const followUp = (record: OutreachRecord) =>
     prepareOutreach(record.brief, record);
   const [selected, setSelected] = useState<Provider | null>(null);
+  const [initialHomeCareOpen, setInitialHomeCareOpen] = useState(false);
   const [initialPane, setInitialPane] = useState<ProfilePane>("overview");
   const providerReturnFocus = useRef<HTMLElement | null>(null);
   const comparison = useComparison();
@@ -285,6 +293,7 @@ function WorkspaceDashboard({
           ? document.activeElement
           : null);
       setInitialPane(pane);
+      setInitialHomeCareOpen(false);
       setSelected(provider);
     },
     [],
@@ -334,7 +343,8 @@ function WorkspaceDashboard({
   function openOutreachHistory() {
     setMobileMenu(false);
     setView("plan");
-    if (location.hash !== "#outreach-history") location.hash = "outreach-history";
+    if (location.hash !== "#outreach-history")
+      location.hash = "outreach-history";
     else requestAnimationFrame(() => outreachHistory.current?.focus());
   }
   function closeMenu() {
@@ -771,6 +781,31 @@ function WorkspaceDashboard({
                 exportPlan={exportPlan}
                 notify={notify}
               />
+              <HomeCareOutreachPlan
+                records={workspace.homeCareOutreach ?? {}}
+                open={(id) => {
+                  const provider = [
+                    ...homeCareProviders.providers,
+                    ...savedProviders,
+                    ...(data?.providers ?? []),
+                  ].find((provider) => provider.id === id);
+                  if (!provider) {
+                    setError(
+                      homeCareProviders.loading
+                        ? "Agency details are still loading. Try opening the workflow again."
+                        : "Agency details could not be loaded. Your interview record is retained. Retry loading agency details below.",
+                    );
+                    return;
+                  }
+                  openProvider(provider);
+                  setInitialHomeCareOpen(true);
+                }}
+              />
+              {homeCareProviders.error && (
+                <button className="text-link" onClick={homeCareProviders.retry}>
+                  Retry loading agency details
+                </button>
+              )}
               <div id="outreach-history" ref={outreachHistory} tabIndex={-1}>
                 <OutreachHistory
                   {...outreach}
@@ -889,6 +924,27 @@ function WorkspaceDashboard({
             note={workspace.notes[selectedProvider.id] || ""}
             saveStatus={saveStatus}
             saveError={error}
+            initialHomeCareOpen={initialHomeCareOpen}
+            homeCareOutreach={
+              selectedProvider.category === "home-care" ? (
+                <HomeCareOutreach
+                  provider={selectedProvider}
+                  record={workspace.homeCareOutreach?.[selectedProvider.id]}
+                  saveStatus={saveStatus}
+                  saveError={error}
+                  blocked={conflict}
+                  onRecord={(record) =>
+                    update((w) => ({
+                      ...w,
+                      homeCareOutreach: {
+                        ...w.homeCareOutreach,
+                        [selectedProvider.id]: record,
+                      },
+                    }))
+                  }
+                />
+              ) : undefined
+            }
             onSave={() => saveProvider(selectedProvider)}
             onNote={(note) =>
               update((w) => ({

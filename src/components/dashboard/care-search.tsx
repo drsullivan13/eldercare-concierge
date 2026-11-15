@@ -114,7 +114,15 @@ export function CareSearchView({
       <div className="page-heading compact">
         <div>
           <h1>
-            Find care <em>nearby.</em>
+            {request.category === "home-care" ? (
+              <>
+                Home-care <em>options.</em>
+              </>
+            ) : (
+              <>
+                Find care <em>nearby.</em>
+              </>
+            )}
           </h1>
         </div>
       </div>
@@ -149,6 +157,12 @@ export function CareSearchView({
           <SlidersHorizontal size={16} /> Filters
         </button>
       </div>
+      {request.category === "home-care" && (
+        <p className="care-search-guidance">
+          See nearby offices and agencies that report serving your ZIP. Confirm
+          your address and staffing with the agency.
+        </p>
+      )}
       {panel === "experience" && (
         <section
           className="experience-category-prompt"

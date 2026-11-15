@@ -7,9 +7,17 @@ test.describe.configure({ timeout: 180_000 });
 
 async function openProfile(page: Page, provider: SearchProvider, zip: string) {
   await page.goto("/dashboard?demo=1");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Find care for your family.",
+    "Find in-home care for your family.",
   );
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill(zip);
   await page
     .getByRole("combobox", { name: "Search radius" })

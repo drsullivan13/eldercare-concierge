@@ -1,5 +1,9 @@
 import { CATEGORY_LABELS, type Provider } from "@/lib/providers";
 import type { Workspace } from "@/lib/workspace";
+import {
+  HOME_CARE_INTERVIEW_LABELS,
+  homeCareNextAction,
+} from "@/lib/home-care-outreach";
 
 /** The saved workspace is authoritative even when provider hydration is incomplete. */
 export function carePlanText(
@@ -49,6 +53,36 @@ export function carePlanText(
     ...workspace.tasks.map(
       (task) =>
         `- [${task.status === "done" ? "x" : " "}] ${task.title}${task.dueDate ? ` · Due ${task.dueDate}` : ""} · ${task.category}${task.providerId ? ` · Provider: ${task.providerId}` : ""}`,
+    ),
+    "",
+    "## Agency interviews and in-home introductions",
+    "Actual family-recorded activity, separate from voice rehearsal. Harbor has not contacted or booked an agency.",
+    ...Object.entries(workspace.homeCareOutreach ?? {}).flatMap(
+      ([id, record]) => {
+        const interview = record.interview;
+        const action = homeCareNextAction(record);
+        return [
+          `### ${record.providerName}`,
+          `Provider ID: ${id}`,
+          `Interview: ${HOME_CARE_INTERVIEW_LABELS[interview.status === "completed" ? interview.outcome : interview.status]}`,
+          ...(interview.status === "scheduled"
+            ? [`Scheduled interview: ${interview.scheduledAt}`]
+            : []),
+          ...(interview.status === "completed"
+            ? [`Actual interview: ${interview.occurredAt}`]
+            : []),
+          ...(record.stage === "introduction"
+            ? [
+                `In-home introduction: ${record.introduction.startsAt}`,
+                `Family-recorded confirmation: ${record.introduction.status}. Not independently verified by Harbor.`,
+              ]
+            : []),
+          `Next action: ${action.label}`,
+          `Family notes: ${record.notes}`,
+          `Record updated: ${record.updatedAt}`,
+          "",
+        ];
+      },
     ),
     "",
     "Provider availability, costs and personal fit require confirmation.",

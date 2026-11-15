@@ -1,4 +1,8 @@
 import { parseOutreachRecord, type OutreachRecord } from "./outreach";
+import {
+  parseHomeCareOutreach,
+  type HomeCareOutreachRecord,
+} from "./home-care-outreach";
 
 type WorkspaceTask = {
   id: string;
@@ -20,6 +24,7 @@ export type Workspace = {
   notes: Record<string, string>;
   tasks: WorkspaceTask[];
   outreach?: OutreachRecord[];
+  homeCareOutreach?: Record<string, HomeCareOutreachRecord>;
   updatedAt: string;
 };
 
@@ -90,11 +95,12 @@ export function validateWorkspace(value: unknown): WorkspaceValidation {
       "notes",
       "tasks",
       "outreach",
+      "homeCareOutreach",
       "updatedAt",
     ])
   ) {
     return invalid(
-      "Workspace must contain only profile, savedProviderIds, notes, tasks, outreach and updatedAt.",
+      "Workspace must contain only profile, savedProviderIds, notes, tasks, outreach, homeCareOutreach and updatedAt.",
     );
   }
   const p = value.profile;
@@ -174,6 +180,14 @@ export function validateWorkspace(value: unknown): WorkspaceValidation {
       outreach.push(record);
     }
   }
+  const homeCareOutreach =
+    value.homeCareOutreach === undefined
+      ? undefined
+      : parseHomeCareOutreach(value.homeCareOutreach);
+  if (homeCareOutreach === null)
+    return invalid(
+      "Home-care outreach needs valid interview stages, dates and family-recorded introductions (100 agencies maximum).",
+    );
   if (
     typeof value.updatedAt !== "string" ||
     value.updatedAt.length > 40 ||
@@ -215,6 +229,7 @@ export function validateWorkspace(value: unknown): WorkspaceValidation {
       })) as WorkspaceTask[],
       updatedAt: value.updatedAt,
       ...(outreach === undefined ? {} : { outreach }),
+      ...(homeCareOutreach === undefined ? {} : { homeCareOutreach }),
     },
   };
 }

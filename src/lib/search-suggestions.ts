@@ -1,6 +1,7 @@
 import { distanceMiles } from "./distance";
 import { markets, type MarketRegistry, type MarketSnapshot } from "./markets";
 import { resolveSearchScope, SearchInputError } from "./search-scope";
+import { matchesHomeCareServiceArea } from "./providers";
 import type {
   SearchSuggestion,
   SearchSuggestionsResponse,
@@ -41,7 +42,7 @@ export function searchSuggestions(
   const query = (input.get("q") ?? "").trim().toLocaleLowerCase("en-US");
   if (query.length > 200)
     throw new SearchInputError("Search text must be 200 characters or fewer.");
-  const { market, point, radius, category } = resolveSearchScope(
+  const { zip, market, point, radius, category } = resolveSearchScope(
     Object.fromEntries(input),
     registry,
   );
@@ -77,18 +78,22 @@ export function searchSuggestions(
       !matchText.includes(query) ||
       (category !== "all" &&
         provider.category !== category &&
-        !provider.searchCategories?.includes(category)) ||
+        !provider.searchCategories?.includes(category))
+    )
+      continue;
+    const serviceAreaMatch = matchesHomeCareServiceArea(
+      provider,
+      zip,
+      category,
+    );
+    const distance =
       provider.lat === null ||
       provider.lng === null ||
       !Number.isFinite(provider.lat) ||
       !Number.isFinite(provider.lng)
-    )
-      continue;
-    const distance = distanceMiles(point, {
-      lat: provider.lat,
-      lng: provider.lng,
-    });
-    if (distance > radius) continue;
+        ? Infinity
+        : distanceMiles(point, { lat: provider.lat, lng: provider.lng });
+    if (distance > radius && !serviceAreaMatch) continue;
     providers.push({
       id: provider.id,
       kind: "provider",

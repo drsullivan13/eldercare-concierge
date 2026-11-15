@@ -10,7 +10,7 @@ const EXPORTED = "Your care plan has been exported.";
 
 async function openWorkspace(page: Page, savedCount = 1) {
   const response = await page.request.get(
-    "/api/search?zip=07928&radius=25&category=all&sort=distance",
+    "/api/search?zip=07928&radius=25&category=home-care&sort=distance",
   );
   expect(response.ok()).toBe(true);
   const { providers } = (await response.json()) as SearchResponse;

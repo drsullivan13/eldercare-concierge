@@ -9,6 +9,10 @@ const name = "COMPLETE CARE AT PLAINFIELD LLC";
 
 async function openReviews(page: Page) {
   await page.goto("/dashboard?demo=1");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("07960");
   await page

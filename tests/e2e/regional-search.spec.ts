@@ -312,7 +312,7 @@ test("live NJ search shows published market results and catalog provenance", asy
   page,
   request,
 }) => {
-  const response = await request.get("/api/search?zip=07030&radius=25");
+  const response = await request.get("/api/search?zip=07030&radius=25&category=home-care");
   expect(response.status()).toBe(200);
   const result = await response.json();
   await restoreWorkspace(page, "07030");

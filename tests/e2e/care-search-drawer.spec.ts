@@ -6,13 +6,13 @@ async function findCare(page: Page) {
   await page
     .locator("form.quick-search")
     .getByRole("button", {
-      name: "Find care",
+      name: "Find in-home care",
       exact: true,
     })
     .click();
   await expect(page.locator(".search-summary")).toContainText("Chatham, 07928");
   await expect(
-    page.getByRole("heading", { name: "Find care nearby." }),
+    page.getByRole("heading", { name: "Nearby agency offices." }),
   ).toBeFocused();
 }
 
@@ -35,10 +35,10 @@ test("matching pending and completed submissions reuse results and one request",
     await expect.poll(() => searches).toBe(1);
     await page
       .locator("form.quick-search")
-      .getByRole("button", { name: "Find care", exact: true })
+      .getByRole("button", { name: "Find in-home care", exact: true })
       .click();
     await expect(
-      page.getByRole("heading", { name: "Find care nearby." }),
+      page.getByRole("heading", { name: "Nearby agency offices." }),
     ).toBeFocused();
     expect(searches).toBe(1);
     release();
@@ -160,7 +160,7 @@ test("filters apply only on submit and every dismissal discards mobile edits", a
     ).toHaveValue("25");
     await expect(
       drawer.getByRole("combobox", { name: "Care category" }),
-    ).toHaveValue("all");
+    ).toHaveValue("home-care");
     await expect(
       drawer.getByRole("combobox", { name: "Research filter" }),
     ).toHaveValue("all");

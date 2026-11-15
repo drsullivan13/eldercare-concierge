@@ -5,6 +5,10 @@ import type { LocationResearchResponse } from "../../src/lib/location-research-t
 
 async function openOverview(page: Page, zip: string, name: string) {
   await page.goto("/dashboard?demo=1");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
   await expect(
     page.getByRole("textbox", { name: "Search ZIP code" }),
   ).toBeVisible();

@@ -1,0 +1,144 @@
+{
+  "checkedAt": "2026-11-13",
+  "scope": "Ten reviewed North Jersey home-care offices that have an email or form row. Phone-only offices, CMS home health, facilities, campuses, inferred mailboxes, and licensing contacts are omitted.",
+  "offices": {
+    "north-jersey-hp-hp0015347": {
+      "name": "BAYADA Home Health Care, Morristown",
+      "routes": [
+        {
+          "kind": "form",
+          "href": "https://www.bayada.com/office/nj/morristown/personal-and-companion-care/morris-county-10005",
+          "sourceUrl": "https://www.bayada.com/office/nj/morristown/personal-and-companion-care/morris-county-10005",
+          "checkedAt": "2026-11-13",
+          "note": "Office page callback form includes this office number, service type, and reason for call."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0022500": {
+      "name": "Bergen Home Care and Nursing, Hackensack",
+      "routes": [
+        {
+          "kind": "email",
+          "address": "bergenhomecare@gmail.com",
+          "sourceUrl": "https://www.bergenhomecare.net/contact-us",
+          "checkedAt": "2026-11-13",
+          "note": "Published office email for general inquiries at 136 Essex Street, Hackensack. The office also handles classes."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0033500": {
+      "name": "A Caring Connection, Scotch Plains",
+      "routes": [
+        {
+          "kind": "email",
+          "address": "accoffice@acccares.net",
+          "sourceUrl": "https://www.acccares.com/",
+          "checkedAt": "2026-11-13",
+          "note": "The operator accepts family referrals and publishes this office email for inquiries at 460 Park Avenue, Scotch Plains."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0082500": {
+      "name": "Serenity Senior Care, Bloomfield",
+      "routes": [
+        {
+          "kind": "email",
+          "address": "info@serenity-senior-care.com",
+          "sourceUrl": "https://www.serenity-senior-care.com/health-care-contact-us",
+          "checkedAt": "2026-11-13",
+          "note": "General inquiry email on the Bloomfield home-care contact page. The site lists suite 202 and the registration lists suite 208 at 2 Broad Street."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0099100": {
+      "name": "Garden State ElderCare, South Orange",
+      "routes": [
+        {
+          "kind": "email",
+          "address": "info@gsecare.com",
+          "sourceUrl": "https://www.gsecare.com/contact/",
+          "checkedAt": "2026-11-13",
+          "note": "General service inquiry email. The name and telephone match the South Orange registration. The contact page lists service areas that include South Orange."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0115500": {
+      "name": "Chrill Care, Verona",
+      "routes": [
+        {
+          "kind": "email",
+          "address": "services@ccihomecare.com",
+          "sourceUrl": "https://ccihomecare.com/contact-us/",
+          "checkedAt": "2026-11-13",
+          "note": "Services email for inquiries at 201 Bloomfield Avenue, Verona."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0118200": {
+      "name": "Home Instead Senior Care, Millburn",
+      "routes": [
+        {
+          "kind": "form",
+          "href": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+          "sourceUrl": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+          "checkedAt": "2026-11-13",
+          "note": "Multistep consultation request on the Millburn office page."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0119000": {
+      "name": "Visiting Angels of Suburban Essex, Caldwell",
+      "routes": [
+        {
+          "kind": "form",
+          "href": "https://www.visitingangels.com/montclair/contact-us",
+          "sourceUrl": "https://www.visitingangels.com/montclair/contact-us",
+          "checkedAt": "2026-11-13",
+          "note": "Local service form for the matching office. Choose Home Care Services. The family may select email as the preferred reply channel. That preference is not a published mailbox."
+        }
+      ],
+      "excluded": []
+    },
+    "north-jersey-hp-hp0427400": {
+      "name": "Agape Home Care Agency, Lincoln Park",
+      "routes": [
+        {
+          "kind": "form",
+          "href": "https://agapehomecareagency.org/contact-us/",
+          "sourceUrl": "https://agapehomecareagency.org/contact-us/",
+          "checkedAt": "2026-11-13",
+          "note": "Care coordinator form on the exact suite page. The operator offers it for pricing and availability questions."
+        }
+      ],
+      "excluded": [
+        {
+          "kind": "email",
+          "value": "info@agapehomecare.com",
+          "sourceUrl": "https://agapehomecareagency.org/contact-us/",
+          "checkedAt": "2026-11-13",
+          "reason": "The page body lists info@agapehomecare.com and the footer mailto target differs. Neither address is a usable route."
+        }
+      ]
+    },
+    "north-jersey-hp-hp0440600": {
+      "name": "L & L Staffing and Home Care Services, Union",
+      "routes": [],
+      "excluded": [
+        {
+          "kind": "form",
+          "value": "https://www.landlhomecare.com/contact-us/",
+          "sourceUrl": "https://www.landlhomecare.com/contact-us/",
+          "checkedAt": "2026-11-13",
+          "reason": "The company-wide form features Englewood in the text above it. The site labels the Union office separately, so this form is not a usable route for Union."
+        }
+      ]
+    }
+  }
+}

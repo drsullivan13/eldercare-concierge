@@ -26,7 +26,7 @@ test("fresh demo starts in Chatham and an explicitly chosen ZIP stays selected",
   await zip.fill("02459");
   await page
     .locator("form.quick-search")
-    .getByRole("button", { name: "Find care", exact: true })
+    .getByRole("button", { name: "Find in-home care", exact: true })
     .click();
   await expect(page.locator(".search-summary")).toContainText(
     "Newton Center, 02459",

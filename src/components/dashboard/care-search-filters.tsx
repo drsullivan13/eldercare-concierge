@@ -92,6 +92,11 @@ export function CareSearchFilters({
             onChange={(event) => search.edit("evidence", event.target.value)}
           >
             <option value="all">All options</option>
+            {draft.category === "home-care" && (
+              <option value="service-area">
+                Agency reports serving this ZIP
+              </option>
+            )}
             <option value="details">Offerings researched</option>
             <option value="pricing">Published costs</option>
             <option value="openings">Published opening claims</option>

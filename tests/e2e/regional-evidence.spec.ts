@@ -21,10 +21,11 @@ async function openSearch(page: Page, zip: string) {
   await expect(
     page.getByRole("textbox", { name: "Search ZIP code" }),
   ).toHaveValue(zip);
-  const menu = page.getByRole("button", { name: "Open navigation" });
-  if (await menu.isVisible()) await menu.click();
   await page
-    .locator(".side-nav")
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+  await page
+    .locator("form.quick-search")
     .getByRole("button", { name: "Find care", exact: true })
     .click();
 }

@@ -9,7 +9,7 @@ test.describe.configure({ timeout: 180_000 });
 async function openSearch(page: Page, category = "all") {
   await page.goto("/dashboard?demo=1");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Find care for your family.",
+    "Find in-home care for your family.",
   );
   await page
     .getByRole("combobox", { name: "Care type", exact: true })
@@ -20,7 +20,7 @@ async function openSearch(page: Page, category = "all") {
     .selectOption("50");
   await page
     .locator("form.quick-search")
-    .getByRole("button", { name: "Find care" })
+    .getByRole("button", { name: category === "home-care" ? "Find in-home care" : "Find care", exact: true })
     .click();
   await expect(
     page.getByRole("button", { name: "Filters", exact: true }),

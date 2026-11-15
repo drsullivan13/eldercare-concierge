@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import {
   CATEGORY_LABELS,
+  isServiceProvider,
   type CareCategory,
   type Provider,
   type SearchProvider,
@@ -140,9 +141,25 @@ export function ProviderCard({
       <p className="provider-address">
         {providerDisplayName(provider.city)}, {provider.state} {provider.zip}
       </p>
-      {provider.locationKind === "office" && (
+      {(provider.locationKind === "office" || isServiceProvider(provider)) && (
         <p className="provider-location-note">
-          Office location. Service at your address is not confirmed.
+          {provider.category === "home-care" &&
+          provider.serviceAreaMatch === true ? (
+            <>
+              Provider-reported service area includes your searched ZIP. Office
+              distance does not limit this match. Confirm service at your
+              address and staffing.
+            </>
+          ) : (
+            <>
+              {provider.locationKind === "zip"
+                ? "ZIP-estimated office location."
+                : "Office location."}{" "}
+              {provider.category === "home-care" &&
+                "Service area unknown for your searched ZIP. "}
+              Service at your address is not confirmed.
+            </>
+          )}
         </p>
       )}
       <div className="provider-research-summary">

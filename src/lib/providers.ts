@@ -47,6 +47,8 @@ export type Provider = {
   description: string;
   services: string[];
   serviceArea?: string;
+  /** Published provider-reported coverage, not confirmation of an individual address or vacancy. */
+  serviceAreaZips?: string[];
   capacity?: number;
   ownership?: string;
   officialRecord: boolean;
@@ -73,7 +75,22 @@ export type Provider = {
   limitations: string[];
   research?: ResearchSummary;
 };
-export type SearchProvider = Provider & { distanceMiles: number | null };
+export type SearchProvider = Provider & {
+  distanceMiles: number | null;
+  /** The searched ZIP is in the published provider-reported area, not verified address coverage or vacancy. */
+  serviceAreaMatch?: boolean;
+};
+export function matchesHomeCareServiceArea(
+  provider: Pick<Provider, "category" | "serviceAreaZips">,
+  zip: string,
+  category: CareCategory | "all",
+): boolean {
+  return (
+    category === "home-care" &&
+    provider.category === "home-care" &&
+    provider.serviceAreaZips?.includes(zip) === true
+  );
+}
 export function isServiceProvider(provider: Pick<Provider, "category">) {
   return (
     provider.category === "home-care" ||

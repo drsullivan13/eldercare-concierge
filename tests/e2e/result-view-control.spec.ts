@@ -5,7 +5,7 @@ async function findCare(page: Page) {
   await page.goto("/dashboard?demo=1");
   await page
     .locator("form.quick-search")
-    .getByRole("button", { name: "Find care", exact: true })
+    .getByRole("button", { name: "Find in-home care", exact: true })
     .click();
   await expect(page.locator(".provider-card").first()).toBeVisible();
 }

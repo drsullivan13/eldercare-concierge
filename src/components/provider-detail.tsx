@@ -50,6 +50,8 @@ export function ProviderDetail({
   onTask,
   onOutreach,
   outreachHistory,
+  homeCareOutreach,
+  initialHomeCareOpen = false,
   close,
   saveStatus,
   saveError,
@@ -63,6 +65,8 @@ export function ProviderDetail({
   onTask: (title: string) => boolean;
   onOutreach?: () => void;
   outreachHistory?: ReactNode;
+  homeCareOutreach?: ReactNode;
+  initialHomeCareOpen?: boolean;
   close: () => void;
   saveStatus: string;
   saveError: string;
@@ -71,6 +75,8 @@ export function ProviderDetail({
   const [draft, setDraft] = useState(note);
   const [noteSaved, setNoteSaved] = useState(false);
   const [taskAdded, setTaskAdded] = useState(false);
+  const [homeCareOpen, setHomeCareOpen] = useState(initialHomeCareOpen);
+  const homeCareSection = useRef<HTMLElement>(null);
   const uid = useId();
   const [navigation, setNavigation] = useState<ProfileNavigation>({
     pane: initialPane,
@@ -103,6 +109,7 @@ export function ProviderDetail({
   };
   const displayLocality = `${providerDisplayName(provider.city)}, ${provider.state} ${provider.zip}`;
   const alerts = providerCareAlerts(provider);
+  const agencyWorkflow = provider.category === "home-care" && homeCareOutreach;
   const researchNotes = provider.warnings.filter(
     (warning) => !alerts.includes(warning),
   );
@@ -157,9 +164,30 @@ export function ProviderDetail({
                   Call
                 </a>
               )}
+              {agencyWorkflow && (
+                <button
+                  className="button button-primary"
+                  aria-expanded={homeCareOpen}
+                  aria-controls={`${uid}-home-care`}
+                  onClick={() => {
+                    setHomeCareOpen(true);
+                    requestAnimationFrame(() => {
+                      homeCareSection.current?.scrollIntoView({
+                        block: "start",
+                      });
+                      homeCareSection.current?.focus({ preventScroll: true });
+                    });
+                  }}
+                >
+                  Agency interview & introduction
+                </button>
+              )}
               {onOutreach && (
-                <button className="button button-primary" onClick={onOutreach}>
-                  Prepare outreach
+                <button
+                  className={`button ${agencyWorkflow ? "button-outline" : "button-primary"}`}
+                  onClick={onOutreach}
+                >
+                  {agencyWorkflow ? "Voice rehearsal" : "Prepare outreach"}
                 </button>
               )}
             </div>
@@ -173,6 +201,15 @@ export function ProviderDetail({
           </TabsList>
         </div>
         <div className="detail-body">
+          {agencyWorkflow && homeCareOpen && (
+            <section
+              id={`${uid}-home-care`}
+              ref={homeCareSection}
+              tabIndex={-1}
+            >
+              {homeCareOutreach}
+            </section>
+          )}
           {alerts.length > 0 && (
             <div className="detail-warnings">
               <ShieldAlert size={20} />

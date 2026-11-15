@@ -6,6 +6,10 @@ test("experience ranking requires a care type and keeps clinical quality separat
 }) => {
   await page.goto("/dashboard?demo=1");
   await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
+  await page
     .getByRole("region", { name: "Search nearby care" })
     .getByRole("button", { name: "Find care", exact: true })
     .click();
@@ -56,6 +60,10 @@ test("research filters expose Facebook findings and score gaps, with a complete 
   request,
 }) => {
   await page.goto("/dashboard?demo=1");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .getByRole("combobox", { name: "Search radius" })

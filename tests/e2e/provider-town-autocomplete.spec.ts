@@ -4,6 +4,10 @@ import AxeBuilder from "@axe-core/playwright";
 async function openFilters(page: Page) {
   await page.goto("/dashboard?demo=1");
   await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
+  await page
     .locator("form.quick-search")
     .getByRole("button", { name: "Find care", exact: true })
     .click();

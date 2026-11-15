@@ -20,6 +20,7 @@ export function parseDemoImport(
       workspace.savedProviderIds.length > 0 ||
       Object.values(workspace.notes).some((note) => note.trim() !== "") ||
       (workspace.outreach?.length ?? 0) > 0 ||
+      Object.keys(workspace.homeCareOutreach ?? {}).length > 0 ||
       workspace.tasks.some((task) => {
         const starter = starterTasks.get(task.id);
         return (

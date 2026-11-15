@@ -57,7 +57,7 @@ function rawFor(rows: RawRow[], ccn: string) {
 async function openHomeHealth(page: Page) {
   await page.goto("/dashboard?demo=1");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Find care for",
+    "Find in-home care for",
   );
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page

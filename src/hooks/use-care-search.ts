@@ -14,12 +14,23 @@ type SearchFields = {
   evidence: string;
 };
 
+function compatibleEvidence(fields: SearchFields): SearchFields {
+  return fields.category !== "home-care" && fields.evidence === "service-area"
+    ? { ...fields, evidence: "all" }
+    : fields;
+}
+
 /** Keeps edits separate from the last submitted search and cancels stale requests. */
 export function useCareSearch(profile: Workspace["profile"]) {
   const [draft, setDraft] = useState<SearchFields>(() => ({
     zip: profile.zip.trim() || DEFAULT_DASHBOARD_SEARCH_ZIP,
     radius: "25",
-    category: profile.careTypes.length === 1 ? profile.careTypes[0] : "all",
+    category:
+      profile.careTypes.length === 0
+        ? "home-care"
+        : profile.careTypes.length === 1
+          ? profile.careTypes[0]
+          : "all",
     sort: "distance",
     q: "",
     evidence: "all",
@@ -71,17 +82,23 @@ export function useCareSearch(profile: Workspace["profile"]) {
   }, [request]);
 
   function edit(field: keyof SearchFields, value: string) {
-    setDraft((current) => ({
-      ...current,
-      [field]: value,
-      ...(field === "category" && value !== "nursing-home"
-        ? { sort: "distance" }
-        : {}),
-    }));
+    setDraft((current) =>
+      compatibleEvidence({
+        ...current,
+        [field]: value,
+        ...(field === "category" && value !== "nursing-home"
+          ? { sort: "distance" }
+          : {}),
+      }),
+    );
   }
 
   function run(next = draft) {
-    const fields = { ...next, zip: next.zip.trim(), q: next.q.trim() };
+    const fields = compatibleEvidence({
+      ...next,
+      zip: next.zip.trim(),
+      q: next.q.trim(),
+    });
     setDisplayCount(18);
     if (
       submitted.current.status !== "failed" &&
@@ -98,7 +115,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
   }
 
   function filter(patch: Partial<SearchFields>) {
-    setDraft((current) => ({ ...current, ...patch }));
+    setDraft((current) => compatibleEvidence({ ...current, ...patch }));
     run({ ...submitted.current.fields, ...patch });
   }
 

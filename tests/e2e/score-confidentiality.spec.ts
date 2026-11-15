@@ -33,6 +33,10 @@ test("public pages, research downloads and loaded client scripts keep scoring de
     /square root|weighted|threshold|EXPERIENCE V2|scores tie|five each/i,
   );
   await page.goto("/dashboard?demo=1");
+  await page
+    .getByRole("combobox", { name: "Care type", exact: true })
+    .selectOption("all");
+
   await page.getByRole("textbox", { name: "Search ZIP code" }).fill("02459");
   await page
     .locator("form.quick-search")

@@ -19,7 +19,7 @@ async function prepareComparison(page: Page) {
   });
   await page
     .locator("form.quick-search")
-    .getByRole("button", { name: "Find care", exact: true })
+    .getByRole("button", { name: "Find in-home care", exact: true })
     .click();
   const result = await response;
   expect(result.ok()).toBe(true);
