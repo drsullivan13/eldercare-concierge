@@ -228,6 +228,13 @@ export function ProviderDetail({
               navigation={navigation}
               uid={uid}
             />
+            {navigation.pane === "reviews" &&
+              provider.category === "home-health" && (
+                <HomeHealthEvidence
+                  providerId={provider.id}
+                  display="patient-survey"
+                />
+              )}
             {navigation.pane === "details" && (
               <div>
                 <h3 className="place-details-heading">About this provider</h3>

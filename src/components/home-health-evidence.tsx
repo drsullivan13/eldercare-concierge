@@ -58,7 +58,13 @@ const source = {
   fallback: "The home-health snapshot could not be loaded.",
 };
 
-export function HomeHealthEvidence({ providerId }: { providerId: string }) {
+export function HomeHealthEvidence({
+  providerId,
+  display = "details",
+}: {
+  providerId: string;
+  display?: "details" | "patient-survey";
+}) {
   const headingId = useId();
   const { data, error, loading, retry } =
     useProviderEvidence<HomeHealthEvidenceResponse>(providerId, source);
@@ -66,7 +72,11 @@ export function HomeHealthEvidence({ providerId }: { providerId: string }) {
   return (
     <section className="home-health-evidence" aria-labelledby={headingId}>
       <div className="section-title">
-        <h3 id={headingId}>Home-health quality & patient experience</h3>
+        <h3 id={headingId}>
+          {display === "patient-survey"
+            ? "Medicare patient survey"
+            : "Home-health quality & patient experience"}
+        </h3>
       </div>
       {loading && (
         <p className="small muted" role="status">
@@ -85,7 +95,69 @@ export function HomeHealthEvidence({ providerId }: { providerId: string }) {
           </button>
         </div>
       )}
-      {data && (
+      {data && display === "patient-survey" && (
+        <>
+          <p className="small muted">
+            Patients rated their Medicare-certified home-health agency. One
+            agency can serve several offices.
+          </p>
+          {data.agencies.map((agency) => (
+            <article
+              className="hh-agency"
+              key={agency.ccn}
+              data-ccn={agency.ccn}
+            >
+              {data.agencies.length > 1 && (
+                <h4>
+                  {agency.cmsProviderName} · {agency.cmsAddress.city} (
+                  {agency.ccn})
+                </h4>
+              )}
+              <div className="hh-survey-context">
+                <div>
+                  <strong>
+                    <PublishedValue
+                      metric={agency.patientExperience.summaryStarRating}
+                      suffix=" / 5"
+                      definitions={data.footnoteDefinitions}
+                    />
+                  </strong>
+                  <span>CMS patient survey stars</span>
+                </div>
+                <div>
+                  <strong>
+                    <PublishedValue
+                      metric={agency.patientExperience.completedSurveys}
+                      definitions={data.footnoteDefinitions}
+                    />
+                  </strong>
+                  <span>completed surveys</span>
+                </div>
+              </div>
+              <p className="small muted">
+                Survey period: {agency.patientExperience.period.label}
+              </p>
+              {agency.patientExperience.generalFootnoteCodes.map((code) => (
+                <p className="small hh-footnote" key={code}>
+                  CMS survey note {code}:{" "}
+                  {data.footnoteDefinitions[code] ??
+                    "See the CMS data dictionary."}
+                </p>
+              ))}
+            </article>
+          ))}
+          <div className="hh-source-links">
+            <a
+              href="https://data.cms.gov/provider-data/dataset/ccn4-8vby"
+              target="_blank"
+              rel="noreferrer"
+            >
+              CMS patient survey data <ExternalLink size={14} />
+            </a>
+          </div>
+        </>
+      )}
+      {data && display === "details" && (
         <>
           <p className="small muted">
             CMS release: {dateLabel(data.releasedAt)} · Retrieved{" "}
