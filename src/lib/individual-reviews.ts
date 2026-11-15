@@ -12,6 +12,7 @@ export type IndividualReview = RetainedReview & {
 export type IndividualReviewsResponse = {
   providerId: string;
   accounts: IndividualReview[];
+  externalProfiles?: { publisher: string; url: string }[];
   sources: Omit<ReviewCatalog["sources"][number], "sourceFamily">[];
   notes: string[];
 };

@@ -2,7 +2,10 @@ import {
   getLocationResearch,
   ResearchInputError,
 } from "@/lib/location-research";
-import { getReviewCatalog } from "@/lib/review-catalog";
+import {
+  getExternalReviewProfiles,
+  getReviewCatalog,
+} from "@/lib/review-catalog";
 import { individualReviews } from "@/lib/individual-reviews";
 import { publicResearchNotes } from "@/lib/public-location-research";
 
@@ -14,9 +17,11 @@ export function GET(request: Request) {
     const id = params.get("id")!;
     const research = getLocationResearch(id);
     const reviews = individualReviews(research, getReviewCatalog(id));
+    const externalProfiles = getExternalReviewProfiles(id);
     return Response.json(
       {
         providerId: reviews.providerId,
+        ...(externalProfiles.length ? { externalProfiles } : {}),
         accounts: reviews.accounts.map((account) => ({
           ...account,
           notes: publicResearchNotes(account.notes),

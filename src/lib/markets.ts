@@ -6,6 +6,10 @@ import facebookResearch from "@/data/facebook-research.json";
 import inspectionHistory from "@/data/inspection-history.json";
 import homeHealthEvidence from "@/data/home-health-evidence.json";
 import regionalMarkets from "@/data/regional-markets.json";
+import homeCareReviews from "@/data/home-care-reviews.json";
+import reviewCatalog from "@/data/review-catalog.json";
+import { mergeHomeCareReviews } from "./home-care-reviews";
+import type { ReviewCatalog } from "./review-catalog-types";
 import type { Provider } from "./providers";
 import type { LocationResearch } from "./location-research-types";
 import type { FacebookResearchDataset } from "./facebook-research";
@@ -102,7 +106,7 @@ if (!Array.isArray(regionalMarkets))
     "regional-markets.json must contain an array of reviewed snapshots.",
   );
 
-export const markets = createMarketRegistry([
+const reviewedMarkets = createMarketRegistry([
   {
     ...marketIdentity(legacyMarket),
     defaultZip: legacyMarket.defaultZip,
@@ -117,6 +121,13 @@ export const markets = createMarketRegistry([
   },
   ...(regionalMarkets as unknown as MarketSnapshot[]),
 ]);
+
+export const { snapshots: markets, catalogs: publishedReviewCatalogs } =
+  mergeHomeCareReviews(
+    reviewedMarkets,
+    reviewCatalog as Record<string, ReviewCatalog>,
+    homeCareReviews as Parameters<typeof mergeHomeCareReviews>[2],
+  );
 
 // Bundled snapshots are fixed for the lifetime of this module. Callers that
 // supply their own registry still resolve against its current contents.

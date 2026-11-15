@@ -40,6 +40,7 @@ export function IndividualReviewList({
   const accountRefs = useRef(new Map<string, HTMLElement>());
   const accounts = data?.accounts ?? individualReviews(research, null).accounts;
   const counts = reviewAccountCounts(accounts);
+  const externalProfiles = data?.externalProfiles ?? [];
   const sourceReports = [
     ...(data?.sources ?? []).map((item) => ({
       publisher: item.publisher,
@@ -112,6 +113,25 @@ export function IndividualReviewList({
       <div className="review-section-title">
         <h3 id={`${uid}-title`}>What people say</h3>
       </div>
+      {externalProfiles.length > 0 && (
+        <nav aria-label="External office review profiles">
+          <ul className="research-specifics">
+            {externalProfiles.map(({ publisher, url }) => (
+              <li key={url}>
+                <a
+                  className="research-source"
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Read reviews on {publisher}{" "}
+                  <ExternalLink aria-hidden size={13} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
       <div className="review-count-clarity">
         <p>
           <strong>

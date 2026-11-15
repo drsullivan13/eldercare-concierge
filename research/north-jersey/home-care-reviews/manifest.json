@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "dependencies": {
+      "research/north-jersey/home-care-supply/source/firms.xlsx": "0bea21d668c3fd62e97b0ba36eede5785fcc69be146a5d8302bd9e05609fd489",
+      "research/north-jersey/reviews/source-access.json": "43961fc2f75274e7b3c2e672a61e1e54425acb946c0d709e4c5393aabc91ed7f",
+      "research/north-jersey/runtime/crosswalk.json": "fc2fec4a60b728a0a7e2c612e7d0af2f2e071686c31c03e7e8ab0f48adde3a36",
+      "research/north-jersey/state/bergen/home-care-firms.json": "9dcb4283478df396cafb9234847cfa95b20860b4bd0e688f69e64dcb8331cef0",
+      "research/north-jersey/state/passaic/home-care-firms.json": "63ecb860b7c590a47d2a7a83ba0d7208bad9ad880f9f2d7d683805b228bd2b3d",
+      "research/north-jersey/state/raw/firms.xlsx": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "research/north-jersey/state/union/home-care-firms.json": "85d1b9c3c18ca9dbb4a201c2c11a7cdbc38ac1a9b90a513f9df3e19c5fe94955",
+      "scripts/regions/home-care-reviews.py": "0a7b05b5b75e65f61547983424dfb062ae538b9b4e468b5da79ac3b3114b8bef",
+      "scripts/regions/nj_collect.py": "0542e1248ba3a2d553421251f6d70da8b31e4b3a0d23e1a5f2af59169ac6f8f1",
+      "scripts/regions/reviews.py": "e451ee7b135eca2ee157f9beac7506a578e91b254ee94a82ba0f404d7da55853",
+      "src/data/regional-markets.json": "923672da3904684e6a3a5016dcf8bb3215507e9af69abdf445ae1b18949bb0d8"
+    },
+    "originalInputSha256": "d51b44c369eda1d13c228c985d6e924d686a51ce4658eeac53b3148d622006be",
+    "reviewedInput": {
+      "path": "research/north-jersey/home-care-reviews/batches/9ee38a254d29849c1397f4095d39cb48964de8923c972c7aee0f33f6f94627ff.json",
+      "sha256": "9ee38a254d29849c1397f4095d39cb48964de8923c972c7aee0f33f6f94627ff"
+    }
+  },
+  "outputs": {
+    "research/north-jersey/home-care-reviews/batches/9ee38a254d29849c1397f4095d39cb48964de8923c972c7aee0f33f6f94627ff.json": "9ee38a254d29849c1397f4095d39cb48964de8923c972c7aee0f33f6f94627ff",
+    "research/north-jersey/home-care-reviews/decisions.json": "4bcf7e57d9dbb8726f1fa41aa9dce72cfb90ce712206df06180e1acdf4fc22f2",
+    "src/data/home-care-reviews.json": "5fb16a02d17107fdeecdf7b59c5733796af8cc53efa98b2942bdb8dd2f92b053"
+  },
+  "schemaVersion": 1
+}
