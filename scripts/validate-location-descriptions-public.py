@@ -57,8 +57,9 @@ def check(root, baseline_output=None):
     coverage = inputs["official/coverage.json"]
     rows = coverage["locations"]
     ids = [row["providerId"] for row in rows]
-    require(len(ids) == len(set(ids)) and set(ids) == set(providers),
-            "Official coverage must contain every active ID exactly once")
+    require(len(ids) == len(set(ids)) and set(ids) <= set(providers)
+            and digest({pid: identities[pid] for pid in ids}) == manifest["originalInventoryIdentitySha256"],
+            "Official coverage must contain every originally audited identity exactly once")
     require(all(row["status"] in {"described", "fetch-failed", "identity-conflict"} for row in rows),
             "Unknown official collection disposition")
     require({row["providerId"] for row in rows if row["status"] == "described"} == set(baseline)

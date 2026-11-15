@@ -10,7 +10,7 @@ import re
 import sys
 import tempfile
 from collections import Counter
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -55,7 +55,7 @@ def iso_date(value, path):
         calendar_date = date.fromisoformat(value)
     except ValueError as exc:
         raise ValueError(f"{path}: invalid calendar date {value}") from exc
-    require(calendar_date <= date.today(), f"{path}: future source date")
+    require(calendar_date <= datetime.now(timezone.utc).date(), f"{path}: future source date")
 
 
 def publication_date(value, path):
@@ -142,13 +142,14 @@ PROVIDER = shape({
     "address": text, "city": text, "state": pattern(r"[A-Z]{2}"), "zip": ZIP,
     "lat": N, "lng": N, "locationKind": choice("facility", "office", "zip"),
     "phone?": string, "website?": url, "description": string, "services": STRINGS,
-    "serviceArea?": string, "capacity?": count, "ownership?": string,
+    "serviceArea?": string, "serviceAreaZips?": array(ZIP),
+    "capacity?": count, "ownership?": string,
     "officialRecord": boolean, "cms?": CMS, "sources": array(PROVIDER_SOURCE),
     "warnings": STRINGS, "limitations": STRINGS,
 })
 RESEARCH_SOURCE = shape({
     "id": text, "url": url, "title": text, "publisher": text,
-    "kind": choice("provider", "regulator", "review-platform", "public-discussion"),
+    "kind": choice("provider", "regulator", "public-directory", "review-platform", "public-discussion"),
     "checkedAt": iso_date, "publishedAt": D,
     "access": choice("full-page", "search-result", "pdf"), "excerpt?": string,
 })
@@ -372,6 +373,12 @@ def validate_market(market, review, prefixes):
         pid = provider["id"]
         require(provider["state"] == market["state"], f"{pid}: provider state differs from market")
         require(provider["zip"] in zips, f"{pid}: provider ZIP is outside market ZIPs")
+        service_zips = provider.get("serviceAreaZips", [])
+        unique(service_zips, f"{pid}.serviceAreaZips")
+        for code in service_zips:
+            require(code in zips, f"{pid}: serviceAreaZips contains ZIP outside market")
+            require(market["state"] in prefixes.get(code[:3], []),
+                    f"{pid}: serviceAreaZips contains ZIP outside state")
         point(provider["lat"], provider["lng"], pid)
         require(provider["sources"], f"{pid}: provider requires source provenance")
         if "cms" in provider:

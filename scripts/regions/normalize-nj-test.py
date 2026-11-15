@@ -77,25 +77,26 @@ class ActualSourceTests(unittest.TestCase):
         self.assertEqual(doh["NJ61424"]["category"], "nursing-home")
 
     def test_active_firms_are_source_registrations_not_certified_brands(self):
-        raw = {row["source_row"]: row for row in collector.workbook_rows(
-            adapter.RESEARCH / "state/raw/firms.xlsx")}
-        firms = [row for row in self.crosswalk if row["source"] == "NJ HP registry"]
-        self.assertEqual(len({row["providerId"] for row in firms}), 673)
-        for row in firms:
-            original = raw[row["sourceRow"]]
+        old = {r["source_row"]: r for r in collector.workbook_rows(adapter.RESEARCH / "state/raw/firms.xlsx")}
+        live_file = "home-care-supply/source/firms.xlsx"
+        live = {r["source_row"]: r for r in collector.workbook_rows(adapter.RESEARCH / live_file)}
+        firms = [r for r in self.crosswalk if r["source"] == "NJ HP registry"]
+        self.assertEqual(len({r["providerId"] for r in firms}), 1074)
+        for r in firms:
+            raw = live if r.get("sourceFile") == live_file else old
+            original = raw[r["sourceRow"]]
             self.assertEqual(original["License Status"], "Active")
-            self.assertEqual(row["officialId"], original["License/Registration"])
-            provider = self.by_id[row["providerId"]]
+            self.assertEqual(r["officialId"].upper(), original["License/Registration"].upper())
+            provider = self.by_id[r["providerId"]]
             self.assertEqual(provider["name"], original["Business Name"])
             self.assertEqual(provider["address"], " ".join(original["Business Address"].split()))
-            self.assertIn(provider["locationKind"], ("office", "zip"))
-            self.assertNotIn("serviceArea", provider)
             self.assertNotIn("cms", provider)
             self.assertNotIn("dataAsOf", provider["sources"][0])
-            self.assertEqual(provider["services"], [])
-        dispositions = [row for row in self.crosswalk + self.ledger if row["source"] == "NJ HP registry"]
-        self.assertEqual(Counter(row["sourceRow"] for row in dispositions), Counter(raw.keys()))
-        self.assertEqual(len(dispositions), 3623)
+            if provider.get("services") or provider.get("serviceArea"):
+                self.assertTrue(any(s["kind"] == "provider" for s in provider["sources"]))
+        original_dispositions = [r for r in self.crosswalk + self.ledger if r["source"] == "NJ HP registry" and r.get("sourceFile") != live_file]
+        self.assertEqual(Counter(r["sourceRow"] for r in original_dispositions), Counter(old.keys()))
+        self.assertEqual(len(live), 3628)
 
     def test_historical_campuses_have_no_invented_certification_or_date(self):
         campuses = [p for p in self.providers if p["category"] == "life-plan"]
@@ -151,8 +152,12 @@ class ActualSourceTests(unittest.TestCase):
 
     def test_address_accuracy_and_fallbacks_match_the_verified_release(self):
         points = json.loads((adapter.RESEARCH / "address-points/providers-by-id.json").read_bytes())
-        for pid, provider in self.by_id.items():
-            row = points[pid]
+        for pid, row in points.items():
+            provider = self.by_id[pid]
+            if provider["lat"] is None:
+                self.assertIsNone(provider["lng"])
+                self.assertTrue(any("physical office location is unverified" in w for w in provider["warnings"]))
+                continue
             self.assertEqual((provider["lat"], provider["lng"]), (row["lat"], row["lng"]))
             if row["status"] == "matched":
                 self.assertIn(provider["locationKind"], ("facility", "office"))
@@ -166,21 +171,38 @@ class ActualSourceTests(unittest.TestCase):
         stats = json.loads(self.files["validation.json"])["evidenceByCountyAndSetting"]
         actual = Counter()
         for county, settings in stats.items():
-            self.assertIn(county, adapter.COUNTIES)
+            self.assertIn(county, (*adapter.COUNTIES, *adapter.SUPPLY_COUNTIES))
             for count in settings.values():
                 actual.update(count)
         self.assertEqual(actual["locations"], len(self.providers))
-        self.assertEqual(actual["streetMatched"], 853)
+        self.assertEqual(actual["streetMatched"], 853 + 236)
         details = json.loads(self.files["locationResearch.json"])
         self.assertEqual(actual["locationsWithPublishedRate"],
                          sum(any(f.get("amount") for f in r["facts"]) for r in details.values()))
         self.assertEqual(actual["publishedWaitlists"],
                          sum(r["availability"]["status"] == "waitlist-published" for r in details.values()))
 
+    def test_source_only_baseline_replays_retained_address_capture_inputs(self):
+        files, _ = adapter.normalize(adapter.RESEARCH, adapter.COUNTIES, source_only=True)
+        retained = adapter.RESEARCH / "address-points/inputs"
+        for name in ("providers.json", "crosswalk.json", "zips.json", "meta.json"):
+            self.assertEqual(files[name], (retained / name).read_bytes(), name)
+        baseline = json.loads(files["meta.json"])
+        published = json.loads(self.files["meta.json"])
+        for county, totals in baseline["countyCounts"].items():
+            current = published["countyCounts"][county]
+            self.assertEqual({k:v for k,v in totals.items() if k != "home-care"}, {k:v for k,v in current.items() if k != "home-care"})
+            self.assertGreaterEqual(current.get("home-care",0), totals.get("home-care",0))
+        baseline_zips = json.loads(files["zips.json"])
+        published_zips = json.loads(self.files["zips.json"])
+        self.assertEqual({code: published_zips[code] for code in baseline_zips}, baseline_zips)
+        baseline_ids = {p["id"] for p in json.loads(files["providers.json"])}
+        self.assertLessEqual(baseline_ids, set(self.by_id))
+
     def test_real_runtime_validator_accepts_manifest(self):
         markets = adapter.validate_release(self.files, self.manifest)
         self.assertEqual(len(markets[0]["providers"]), len(self.providers))
-        self.assertEqual(len(markets[0]["zips"]), 270)
+        self.assertEqual(len(markets[0]["zips"]), 404)
         for provider in self.providers:
             if "cms" in provider:
                 self.assertEqual(provider["id"], "cms-" + provider["cms"]["ccn"])

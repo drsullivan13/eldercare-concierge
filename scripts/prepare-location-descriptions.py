@@ -213,9 +213,9 @@ def main():
             "meaning": "Every active ID has a disposition. Described is source-backed, not a claim of availability. Original collection failures remain in official/coverage.json.",
             "locations": [{
                 "providerId": pid,
-                "status": "described" if pid in result["locations"] else official_coverage[pid]["status"],
+                "status": "described" if pid in result["locations"] else official_coverage.get(pid, {}).get("status", "not-collected"),
                 "basis": result["locations"][pid]["basis"] if pid in result["locations"] else None,
-                "originalOfficialStatus": official_coverage[pid]["status"],
+                "originalOfficialStatus": official_coverage.get(pid, {}).get("status", "not-collected"),
             } for pid in sorted(providers)],
             "cmsMatches": matches,
         }

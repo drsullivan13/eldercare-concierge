@@ -1,0 +1,4520 @@
+[
+  {
+    "record_id": "visiting-angels-union-hp0065000",
+    "provider_id": "north-jersey-hp-hp0065000",
+    "official_registration_id": "HP0065000",
+    "county": "Union",
+    "registered_name": "ALANGAD & ASSOCIATES INC. DBA VISITING ANGELS",
+    "registered_address": "485 MORRIS AVENUE, SUITE 201 ",
+    "registered_city": "SPRINGFIELD",
+    "registered_state": "NJ",
+    "registered_zip": "07081",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 208
+    },
+    "office_name": "Visiting Angels Union",
+    "observed_address": "485 Morris Ave #201, Springfield NJ 07081",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Local page explicitly names both counties. Union is the brand office name; the listed office is in Springfield.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/union/home",
+        "effective_url": "https://www.visitingangels.com/union/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-union.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.visitingangels.com/union/home",
+        "evidence_lines": [
+          72
+        ]
+      },
+      {
+        "text": "Meal preparation",
+        "source_url": "https://www.visitingangels.com/union/home",
+        "evidence_lines": [
+          72
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Union County",
+        "source_url": "https://www.visitingangels.com/union/home",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          64
+        ]
+      },
+      {
+        "text": "Essex County",
+        "source_url": "https://www.visitingangels.com/union/home",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          64
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 485 Morris Ave #201, Springfield NJ 07081.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          385,
+          387
+        ]
+      },
+      {
+        "text": "Local page explicitly names both counties. Union is the brand office name; the listed office is in Springfield.",
+        "source_urls": [
+          "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+          "https://www.visitingangels.com/union/home"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Union lists bathing and dressing assistance and meal preparation.",
+      "source_urls": [
+        "https://www.visitingangels.com/union/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/union/home",
+          "evidence_lines": [
+            72
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/union/home",
+          "evidence_lines": [
+            72
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "485 Morris Ave #201, Springfield NJ 07081",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        385,
+        387
+      ]
+    }
+  },
+  {
+    "record_id": "visiting-angels-montclair-hp0119000",
+    "provider_id": "north-jersey-hp-hp0119000",
+    "official_registration_id": "HP0119000",
+    "county": "Essex",
+    "registered_name": "MARIAN CARE DBA VISITING ANGELS OF SUBURBAN ESSEX",
+    "registered_address": "7 CLEVELAND STREET ",
+    "registered_city": "CALDWELL",
+    "registered_state": "NJ",
+    "registered_zip": "07006",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2309
+    },
+    "office_name": "Visiting Angels Montclair",
+    "observed_address": "7 Cleveland St, Caldwell NJ 07006",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Montclair is the brand office name; the locator lists Caldwell.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/montclair/home",
+        "effective_url": "https://www.visitingangels.com/montclair/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-montclair.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.visitingangels.com/montclair/home",
+        "evidence_lines": [
+          76
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.visitingangels.com/montclair/home",
+        "evidence_lines": [
+          81
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Suburban Essex",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          207
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 7 Cleveland St, Caldwell NJ 07006.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          203,
+          205
+        ]
+      },
+      {
+        "text": "Montclair is the brand office name; the locator lists Caldwell.",
+        "source_urls": [
+          "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+          "https://www.visitingangels.com/montclair/home"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Montclair lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://www.visitingangels.com/montclair/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/montclair/home",
+          "evidence_lines": [
+            76
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/montclair/home",
+          "evidence_lines": [
+            81
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "7 Cleveland St, Caldwell NJ 07006",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        203,
+        205
+      ]
+    }
+  },
+  {
+    "record_id": "visiting-angels-ramsey-hp0151500",
+    "provider_id": "north-jersey-hp-hp0151500",
+    "official_registration_id": "HP0151500",
+    "county": "Bergen",
+    "registered_name": "KTF ENTERPRISES, LLC DBA VISITING ANGELS",
+    "registered_address": "17 S. FRANKLIN TURNPIKE, 1ST FL #3",
+    "registered_city": "RAMSEY",
+    "registered_state": "NJ",
+    "registered_zip": "07446",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2130
+    },
+    "office_name": "Visiting Angels Ramsey",
+    "observed_address": "17 S. Franklin Tpk 1st Floor #3, Ramsey NJ 07446",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/ramsey/home",
+        "effective_url": "https://www.visitingangels.com/ramsey/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-ramsey.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.visitingangels.com/ramsey/home",
+        "evidence_lines": [
+          78
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.visitingangels.com/ramsey/home",
+        "evidence_lines": [
+          82
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Northwestern Bergen County",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          341
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 17 S. Franklin Tpk 1st Floor #3, Ramsey NJ 07446.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          337,
+          339
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Ramsey lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://www.visitingangels.com/ramsey/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/ramsey/home",
+          "evidence_lines": [
+            78
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/ramsey/home",
+          "evidence_lines": [
+            82
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "17 S. Franklin Tpk 1st Floor #3, Ramsey NJ 07446",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        337,
+        339
+      ]
+    }
+  },
+  {
+    "record_id": "visiting-angels-hoboken-hp0154800",
+    "provider_id": "north-jersey-hp-hp0154800",
+    "official_registration_id": "HP0154800",
+    "county": "Hudson",
+    "registered_name": "ANGEL ON THE HUDSON INC DBA VISITING ANGELS",
+    "registered_address": "50 HARRISON STREET, SUITE 211A",
+    "registered_city": "HOBOKEN",
+    "registered_state": "NJ",
+    "registered_zip": "07030",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 360
+    },
+    "office_name": "Visiting Angels Hoboken",
+    "observed_address": "50 Harrison St #211A, Hoboken NJ 07030",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. North Arlington remains a named town, not a county inference.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/hoboken/home",
+        "effective_url": "https://www.visitingangels.com/hoboken/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-hoboken.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.visitingangels.com/hoboken/home",
+        "evidence_lines": [
+          79
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.visitingangels.com/hoboken/home",
+        "evidence_lines": [
+          83
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Hoboken",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          257
+        ]
+      },
+      {
+        "text": "Secaucus",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          257
+        ]
+      },
+      {
+        "text": "Kearny",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          257
+        ]
+      },
+      {
+        "text": "North Arlington",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          257
+        ]
+      },
+      {
+        "text": "Other Hudson County communities",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          257
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 50 Harrison St #211A, Hoboken NJ 07030.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          253,
+          255
+        ]
+      },
+      {
+        "text": "North Arlington remains a named town, not a county inference.",
+        "source_urls": [
+          "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+          "https://www.visitingangels.com/hoboken/home"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Hoboken lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://www.visitingangels.com/hoboken/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/hoboken/home",
+          "evidence_lines": [
+            79
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/hoboken/home",
+          "evidence_lines": [
+            83
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "50 Harrison St #211A, Hoboken NJ 07030",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        253,
+        255
+      ]
+    }
+  },
+  {
+    "record_id": "visiting-angels-passaic-hp0167700",
+    "provider_id": "north-jersey-hp-hp0167700",
+    "official_registration_id": "HP0167700",
+    "county": "Passaic",
+    "registered_name": "FRIENDLY COMPANIONS, LLC DBA VISITING ANGELS",
+    "registered_address": "1211 HAMBURG TURNPIKE, STE. 213",
+    "registered_city": "WAYNE",
+    "registered_state": "NJ",
+    "registered_zip": "07470",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1482
+    },
+    "office_name": "Visiting Angels Wayne",
+    "observed_address": "1211 Hamburg Turnpike #213, Wayne NJ 07470",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/passaic/home",
+        "effective_url": "https://www.visitingangels.com/passaic/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-passaic.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.visitingangels.com/passaic/home",
+        "evidence_lines": [
+          86
+        ]
+      },
+      {
+        "text": "Meal preparation",
+        "source_url": "https://www.visitingangels.com/passaic/home",
+        "evidence_lines": [
+          85
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Passaic County",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          425
+        ]
+      },
+      {
+        "text": "Bergen County",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          425
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 1211 Hamburg Turnpike #213, Wayne NJ 07470.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          421,
+          423
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Wayne lists bathing and dressing assistance and meal preparation.",
+      "source_urls": [
+        "https://www.visitingangels.com/passaic/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/passaic/home",
+          "evidence_lines": [
+            86
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/passaic/home",
+          "evidence_lines": [
+            85
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "1211 Hamburg Turnpike #213, Wayne NJ 07470",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        421,
+        423
+      ]
+    }
+  },
+  {
+    "record_id": "visiting-angels-fortlee-hp0216800",
+    "provider_id": "north-jersey-hp-hp0216800",
+    "official_registration_id": "HP0216800",
+    "county": "Bergen",
+    "registered_name": "JERSEYSTAKE LLC DBA VISITING ANGELS OF FORT LEE",
+    "registered_address": "2125 CENTER AVENUE, SUITE 110",
+    "registered_city": "FORT LEE",
+    "registered_state": "NJ",
+    "registered_zip": "07024",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2026
+    },
+    "office_name": "Visiting Angels Fort Lee",
+    "observed_address": "2125 Center Ave #110, Fort Lee NJ 07024",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/fortlee/home",
+        "effective_url": "https://www.visitingangels.com/fortlee/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-fortlee.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Personal care",
+        "source_url": "https://www.visitingangels.com/fortlee/home",
+        "evidence_lines": [
+          101
+        ]
+      },
+      {
+        "text": "Light housekeeping",
+        "source_url": "https://www.visitingangels.com/fortlee/home",
+        "evidence_lines": [
+          125
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Fort Lee",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          233
+        ]
+      },
+      {
+        "text": "Cliffside Park",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          233
+        ]
+      },
+      {
+        "text": "Leonia",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          233
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 2125 Center Ave #110, Fort Lee NJ 07024.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          229,
+          231
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Fort Lee lists personal care and light housekeeping.",
+      "source_urls": [
+        "https://www.visitingangels.com/fortlee/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/fortlee/home",
+          "evidence_lines": [
+            101
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/fortlee/home",
+          "evidence_lines": [
+            125
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check.",
+      "The local page also contains an unrelated Snoqualmie Valley service-area paragraph. That conflicting geography is excluded. Retained Fort Lee coverage comes from the official New Jersey locator."
+    ],
+    "office_address_evidence": {
+      "text": "2125 Center Ave #110, Fort Lee NJ 07024",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        229,
+        231
+      ]
+    }
+  },
+  {
+    "record_id": "visiting-angels-jerseycity-hp0221500",
+    "provider_id": "north-jersey-hp-hp0221500",
+    "official_registration_id": "HP0221500",
+    "county": "Hudson",
+    "registered_name": "YOUNG ANGELS LLC DBA VISITING ANGELS",
+    "registered_address": "366 BROADWAY ",
+    "registered_city": "BAYONNE",
+    "registered_state": "NJ",
+    "registered_zip": "07002",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 3605
+    },
+    "office_name": "Visiting Angels Jersey City",
+    "observed_address": "366 Broadway, Bayonne NJ 07002",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Jersey City is the brand office name; the locator lists Bayonne.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/jerseycity/home",
+        "effective_url": "https://www.visitingangels.com/jerseycity/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-jerseycity.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.visitingangels.com/jerseycity/home",
+        "evidence_lines": [
+          77,
+          78
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.visitingangels.com/jerseycity/home",
+        "evidence_lines": [
+          84
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Jersey City",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          183
+        ]
+      },
+      {
+        "text": "Bayonne",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          183
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 366 Broadway, Bayonne NJ 07002.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          179,
+          181
+        ]
+      },
+      {
+        "text": "Jersey City is the brand office name; the locator lists Bayonne.",
+        "source_urls": [
+          "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+          "https://www.visitingangels.com/jerseycity/home"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Jersey City lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://www.visitingangels.com/jerseycity/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/jerseycity/home",
+          "evidence_lines": [
+            77,
+            78
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/jerseycity/home",
+          "evidence_lines": [
+            84
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "366 Broadway, Bayonne NJ 07002",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        179,
+        181
+      ]
+    }
+  },
+  {
+    "record_id": "visiting-angels-scotchplains-hp0320800",
+    "provider_id": "north-jersey-hp-hp0320800",
+    "official_registration_id": "HP0320800",
+    "county": "Union",
+    "registered_name": "BASS SERVICES CORPORATION DBA VISITING ANGELS",
+    "registered_address": "1801 E 2ND STREET, LOWER LEVEL ",
+    "registered_city": "SCOTCH PLAINS",
+    "registered_state": "NJ",
+    "registered_zip": "07076",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 546
+    },
+    "office_name": "Visiting Angels Scotch Plains",
+    "observed_address": "1801 E 2nd St, Scotch Plains NJ 07076",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The locator omits the registry's lower-level designation. The suite or floor is not independently confirmed.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "effective_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.visitingangels.com/scotchplains/home",
+        "effective_url": "https://www.visitingangels.com/scotchplains/home",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/visiting-angels-scotchplains.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.visitingangels.com/scotchplains/home",
+        "evidence_lines": [
+          78
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.visitingangels.com/scotchplains/home",
+        "evidence_lines": [
+          86
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Scotch Plains and surrounding communities",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          365
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 1801 E 2nd St, Scotch Plains NJ 07076.",
+        "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+        "evidence_lines": [
+          361,
+          363
+        ]
+      },
+      {
+        "text": "The locator omits the registry's lower-level designation. The suite or floor is not independently confirmed.",
+        "source_urls": [
+          "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+          "https://www.visitingangels.com/scotchplains/home"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Visiting Angels Scotch Plains lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://www.visitingangels.com/scotchplains/home"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.visitingangels.com/scotchplains/home",
+          "evidence_lines": [
+            78
+          ]
+        },
+        {
+          "source_url": "https://www.visitingangels.com/scotchplains/home",
+          "evidence_lines": [
+            86
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "1801 E 2nd St, Scotch Plains NJ 07076",
+      "source_url": "https://www.visitingangels.com/senior-home-care-new-jersey-nj",
+      "evidence_lines": [
+        361,
+        363
+      ]
+    }
+  },
+  {
+    "record_id": "home-instead-millburn-hp0118200",
+    "provider_id": "north-jersey-hp-hp0118200",
+    "official_registration_id": "HP0118200",
+    "county": "Essex",
+    "registered_name": "BARON-QUEEN, INC. DBA HOME INSTEAD SENIOR CARE",
+    "registered_address": "215 MILLBURN AVENUE, SUITE 2B ",
+    "registered_city": "MILLBURN",
+    "registered_state": "NJ",
+    "registered_zip": "07041",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 545
+    },
+    "office_name": "Home Instead Millburn",
+    "observed_address": "215 Millburn Ave, Suite 2B, Millburn NJ 07041",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Millburn is identified by the local office page. No countywide service inference.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "effective_url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/home-instead-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+        "effective_url": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/home-instead-millburn.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companionship",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+        "evidence_lines": [
+          176
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+        "evidence_lines": [
+          150
+        ]
+      },
+      {
+        "text": "Meal preparation",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+        "evidence_lines": [
+          203
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 215 Millburn Ave, Suite 2B, Millburn NJ 07041.",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "evidence_lines": [
+          21
+        ]
+      },
+      {
+        "text": "Millburn is identified by the local office page. No countywide service inference.",
+        "source_urls": [
+          "https://www.homeinstead.com/home-care/usa/nj/",
+          "https://www.homeinstead.com/home-care/usa/nj/millburn/288/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Home Instead Millburn lists companionship and respite care.",
+      "source_urls": [
+        "https://www.homeinstead.com/home-care/usa/nj/millburn/288/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+          "evidence_lines": [
+            176
+          ]
+        },
+        {
+          "source_url": "https://www.homeinstead.com/home-care/usa/nj/millburn/288/",
+          "evidence_lines": [
+            150
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check.",
+      "No explicit community service-area list is retained for this office. Its office location or local marketing name is not used as coverage proof."
+    ],
+    "office_address_evidence": {
+      "text": "215 Millburn Ave, Suite 2B, Millburn NJ 07041",
+      "source_url": "https://www.homeinstead.com/home-care/usa/nj/",
+      "evidence_lines": [
+        21
+      ]
+    }
+  },
+  {
+    "record_id": "home-instead-parsippany-hp0397500",
+    "provider_id": "north-jersey-hp-hp0397500",
+    "official_registration_id": "HP0397500",
+    "county": "Morris",
+    "registered_name": "KS Care, LLC dba Home Instead",
+    "registered_address": "1719 State Route 10, Suite 317 ",
+    "registered_city": "Parsippany",
+    "registered_state": "NJ",
+    "registered_zip": "07054",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2129
+    },
+    "office_name": "Home Instead Morris County",
+    "observed_address": "1719 New Jersey 10, 317, Parsippany-Troy Hills NJ 07054",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "effective_url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/home-instead-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/",
+        "effective_url": "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/home-instead-parsippany.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companionship",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/",
+        "evidence_lines": [
+          230
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/",
+        "evidence_lines": [
+          204
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Morris County",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          272
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 1719 New Jersey 10, 317, Parsippany-Troy Hills NJ 07054.",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "evidence_lines": [
+          34
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Home Instead Morris County lists companionship and respite care.",
+      "source_urls": [
+        "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/",
+          "evidence_lines": [
+            230
+          ]
+        },
+        {
+          "source_url": "https://www.homeinstead.com/home-care/usa/nj/morris-county/322/",
+          "evidence_lines": [
+            204
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "1719 New Jersey 10, 317, Parsippany-Troy Hills NJ 07054",
+      "source_url": "https://www.homeinstead.com/home-care/usa/nj/",
+      "evidence_lines": [
+        34
+      ]
+    }
+  },
+  {
+    "record_id": "home-instead-teaneck-hp0297500",
+    "provider_id": "north-jersey-hp-hp0297500",
+    "official_registration_id": "HP0297500",
+    "county": "Bergen",
+    "registered_name": "DEVI CARE, INC DBA HOME INSTEAD SENIOR CARE",
+    "registered_address": "1086 TEANECK ROAD, #2, SUITE 3C-2",
+    "registered_city": "TEANECK",
+    "registered_state": "NJ",
+    "registered_zip": "07666",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1198
+    },
+    "office_name": "Home Instead Teaneck",
+    "observed_address": "1086 Teaneck Rd, Suite 3C-2, Teaneck NJ 07666",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Teaneck is named on the local office page. No countywide service inference.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "effective_url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/home-instead-locator.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/",
+        "effective_url": "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/home-instead-teaneck.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companionship",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/",
+        "evidence_lines": [
+          231
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/",
+        "evidence_lines": [
+          205
+        ]
+      },
+      {
+        "text": "Meal preparation",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/",
+        "evidence_lines": [
+          263
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 1086 Teaneck Rd, Suite 3C-2, Teaneck NJ 07666.",
+        "source_url": "https://www.homeinstead.com/home-care/usa/nj/",
+        "evidence_lines": [
+          67
+        ]
+      },
+      {
+        "text": "Teaneck is named on the local office page. No countywide service inference.",
+        "source_urls": [
+          "https://www.homeinstead.com/home-care/usa/nj/",
+          "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Home Instead Teaneck lists companionship and respite care.",
+      "source_urls": [
+        "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/",
+          "evidence_lines": [
+            231
+          ]
+        },
+        {
+          "source_url": "https://www.homeinstead.com/home-care/usa/nj/teaneck/735/",
+          "evidence_lines": [
+            205
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check.",
+      "No explicit community service-area list is retained for this office. Its office location or local marketing name is not used as coverage proof."
+    ],
+    "office_address_evidence": {
+      "text": "1086 Teaneck Rd, Suite 3C-2, Teaneck NJ 07666",
+      "source_url": "https://www.homeinstead.com/home-care/usa/nj/",
+      "evidence_lines": [
+        67
+      ]
+    }
+  },
+  {
+    "record_id": "senior-helpers-bergen-hp0171100",
+    "provider_id": "north-jersey-hp-hp0171100",
+    "official_registration_id": "HP0171100",
+    "county": "Bergen",
+    "registered_name": "SN SENIOR CARE INC. DBA SENIOR HELPERS",
+    "registered_address": "22 MADISON AVENUE, SUITE 305 ",
+    "registered_city": "PARAMUS",
+    "registered_state": "NJ",
+    "registered_zip": "07652",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 3132
+    },
+    "office_name": "Senior Helpers Bergen County",
+    "observed_address": "22 Madison Avenue, Suite 305, Paramus NJ 07652",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The provider page also supplies the exact HP ID. The local page publishes the exact HP0171100 registration ID.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "effective_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/senior-helpers-bergen.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "evidence_lines": [
+          91
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "evidence_lines": [
+          97
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "evidence_lines": [
+          121
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Bergen County",
+        "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          55
+        ]
+      },
+      {
+        "text": "Paramus",
+        "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          55
+        ]
+      },
+      {
+        "text": "Teaneck",
+        "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          55
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 22 Madison Avenue, Suite 305, Paramus NJ 07652.",
+        "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+        "evidence_lines": [
+          47,
+          49,
+          51
+        ]
+      },
+      {
+        "text": "The local page publishes the exact HP0171100 registration ID.",
+        "source_urls": [
+          "https://www.seniorhelpers.com/nj/bergen-county/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Senior Helpers Bergen County lists companion care and personal care.",
+      "source_urls": [
+        "https://www.seniorhelpers.com/nj/bergen-county/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+          "evidence_lines": [
+            91
+          ]
+        },
+        {
+          "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+          "evidence_lines": [
+            97
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "22 Madison Avenue, Suite 305, Paramus NJ 07652",
+      "source_url": "https://www.seniorhelpers.com/nj/bergen-county/",
+      "evidence_lines": [
+        47,
+        49,
+        51
+      ]
+    }
+  },
+  {
+    "record_id": "senior-helpers-fairfield-hp0242300",
+    "provider_id": "north-jersey-hp-hp0242300",
+    "official_registration_id": "HP0242300",
+    "county": "Passaic",
+    "registered_name": "JLF SENIOR CARE DBA SENIOR HELPERS NORTH JERSEY",
+    "registered_address": "547 UNION BLVD., 1ST FLOOR ",
+    "registered_city": "TOTOWA",
+    "registered_state": "NJ",
+    "registered_zip": "07512",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2041
+    },
+    "office_name": "Senior Helpers Fairfield",
+    "observed_address": "547 Union Blvd, Totowa NJ 07512",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The provider page also supplies the exact HP ID. The local page publishes HP0242300. Fairfield is the brand territory name; the office address is Totowa. First-floor designation is not confirmed by the page.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+        "effective_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/senior-helpers-fairfield.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+        "evidence_lines": [
+          97
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+        "evidence_lines": [
+          103
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+        "evidence_lines": [
+          127
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 547 Union Blvd, Totowa NJ 07512.",
+        "source_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      },
+      {
+        "text": "The local page publishes HP0242300. Fairfield is the brand territory name; the office address is Totowa. First-floor designation is not confirmed by the page.",
+        "source_urls": [
+          "https://www.seniorhelpers.com/nj/fairfield-montville/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Senior Helpers Fairfield lists companion care and personal care.",
+      "source_urls": [
+        "https://www.seniorhelpers.com/nj/fairfield-montville/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+          "evidence_lines": [
+            97
+          ]
+        },
+        {
+          "source_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+          "evidence_lines": [
+            103
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check.",
+      "No explicit community service-area list is retained for this office. Its office location or local marketing name is not used as coverage proof."
+    ],
+    "office_address_evidence": {
+      "text": "547 Union Blvd, Totowa NJ 07512",
+      "source_url": "https://www.seniorhelpers.com/nj/fairfield-montville/",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  },
+  {
+    "record_id": "senior-helpers-madison-hp0104400",
+    "provider_id": "north-jersey-hp-hp0104400",
+    "official_registration_id": "HP0104400",
+    "county": "Morris",
+    "registered_name": "HM SARROW, INC. D/B/A SENIOR HELPERS",
+    "registered_address": "214 MAIN STREET, 2ND FLOOR",
+    "registered_city": "MADISON",
+    "registered_state": "NJ",
+    "registered_zip": "07940",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1782
+    },
+    "office_name": "Senior Helpers Madison",
+    "observed_address": "214 Main Street 2nd Floor, Madison NJ 07940",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The provider page also supplies the exact HP ID. The local page publishes HP0104400. A recruitment statement mentions three counties but is not used as service-area proof.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.seniorhelpers.com/nj/madison/",
+        "effective_url": "https://www.seniorhelpers.com/nj/madison/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/senior-helpers-madison.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.seniorhelpers.com/nj/madison/",
+        "evidence_lines": [
+          89
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.seniorhelpers.com/nj/madison/",
+        "evidence_lines": [
+          95
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://www.seniorhelpers.com/nj/madison/",
+        "evidence_lines": [
+          119
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 214 Main Street 2nd Floor, Madison NJ 07940.",
+        "source_url": "https://www.seniorhelpers.com/nj/madison/",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      },
+      {
+        "text": "The local page publishes HP0104400. A recruitment statement mentions three counties but is not used as service-area proof.",
+        "source_urls": [
+          "https://www.seniorhelpers.com/nj/madison/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Senior Helpers Madison lists companion care and personal care.",
+      "source_urls": [
+        "https://www.seniorhelpers.com/nj/madison/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.seniorhelpers.com/nj/madison/",
+          "evidence_lines": [
+            89
+          ]
+        },
+        {
+          "source_url": "https://www.seniorhelpers.com/nj/madison/",
+          "evidence_lines": [
+            95
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check.",
+      "No explicit community service-area list is retained for this office. Its office location or local marketing name is not used as coverage proof."
+    ],
+    "office_address_evidence": {
+      "text": "214 Main Street 2nd Floor, Madison NJ 07940",
+      "source_url": "https://www.seniorhelpers.com/nj/madison/",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  },
+  {
+    "record_id": "brightstar-hackensack-hp0131500",
+    "provider_id": "north-jersey-hp-hp0131500",
+    "official_registration_id": "HP0131500",
+    "county": "Bergen",
+    "registered_name": "IKHAYA WORLD, INC. DBA BRIGHTSTAR HEALTHCARE",
+    "registered_address": "70 KINDERKAMACK ROAD ",
+    "registered_city": "EMERSON",
+    "registered_state": "NJ",
+    "registered_zip": "07630",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1928
+    },
+    "office_name": "BrightStar Care Greater Hackensack",
+    "observed_address": "70 Kinderkamack Road, Suite 101, Emerson NJ 07630",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Local FAQ explicitly says the agency is private pay and is not Medicare certified. Skilled nursing advertising is not CMS certification.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.brightstarcare.com/locations/greater-hackensack/contact-us/",
+        "effective_url": "https://www.brightstarcare.com/locations/greater-hackensack/contact-us/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-hackensack-contact.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+        "effective_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-hackensack.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+        "evidence_lines": [
+          182
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+        "evidence_lines": [
+          183
+        ]
+      },
+      {
+        "text": "Skilled nursing",
+        "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+        "evidence_lines": [
+          184
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Hackensack",
+        "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          180
+        ]
+      },
+      {
+        "text": "Bergen County",
+        "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          180
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 70 Kinderkamack Road, Suite 101, Emerson NJ 07630.",
+        "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/contact-us/",
+        "evidence_lines": [
+          37,
+          39,
+          41
+        ]
+      },
+      {
+        "text": "Local FAQ explicitly says the agency is private pay and is not Medicare certified. Skilled nursing advertising is not CMS certification.",
+        "source_urls": [
+          "https://www.brightstarcare.com/locations/greater-hackensack/contact-us/",
+          "https://www.brightstarcare.com/locations/greater-hackensack/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BrightStar Care Greater Hackensack lists companion care and personal care.",
+      "source_urls": [
+        "https://www.brightstarcare.com/locations/greater-hackensack/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+          "evidence_lines": [
+            182
+          ]
+        },
+        {
+          "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/",
+          "evidence_lines": [
+            183
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "70 Kinderkamack Road, Suite 101, Emerson NJ 07630",
+      "source_url": "https://www.brightstarcare.com/locations/greater-hackensack/contact-us/",
+      "evidence_lines": [
+        37,
+        39,
+        41
+      ]
+    }
+  },
+  {
+    "record_id": "brightstar-morris-hp0217600",
+    "provider_id": "north-jersey-hp-hp0217600",
+    "official_registration_id": "HP0217600",
+    "county": "Morris",
+    "registered_name": "SOLOFF DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+    "registered_address": "14 RIDGEDALE AVENUE, SUITE 208 ",
+    "registered_city": "CEDAR KNOLLS",
+    "registered_state": "NJ",
+    "registered_zip": "07927",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 3142
+    },
+    "office_name": "BrightStar Care Morris & Essex County",
+    "observed_address": "14 Ridgedale Avenue, Suite 208, Cedar Knolls NJ 07927",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.brightstarcare.com/locations/morris-county/contact-us/",
+        "effective_url": "https://www.brightstarcare.com/locations/morris-county/contact-us/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-morris-contact.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.brightstarcare.com/locations/morris-county/",
+        "effective_url": "https://www.brightstarcare.com/locations/morris-county/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-morris.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.brightstarcare.com/locations/morris-county/",
+        "evidence_lines": [
+          216
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.brightstarcare.com/locations/morris-county/",
+        "evidence_lines": [
+          217
+        ]
+      },
+      {
+        "text": "Skilled nursing",
+        "source_url": "https://www.brightstarcare.com/locations/morris-county/",
+        "evidence_lines": [
+          226
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Morris County",
+        "source_url": "https://www.brightstarcare.com/locations/morris-county/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          27
+        ]
+      },
+      {
+        "text": "Essex County",
+        "source_url": "https://www.brightstarcare.com/locations/morris-county/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          27
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 14 Ridgedale Avenue, Suite 208, Cedar Knolls NJ 07927.",
+        "source_url": "https://www.brightstarcare.com/locations/morris-county/contact-us/",
+        "evidence_lines": [
+          37,
+          39,
+          41
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BrightStar Care Morris & Essex County lists companion care and personal care.",
+      "source_urls": [
+        "https://www.brightstarcare.com/locations/morris-county/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.brightstarcare.com/locations/morris-county/",
+          "evidence_lines": [
+            216
+          ]
+        },
+        {
+          "source_url": "https://www.brightstarcare.com/locations/morris-county/",
+          "evidence_lines": [
+            217
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "14 Ridgedale Avenue, Suite 208, Cedar Knolls NJ 07927",
+      "source_url": "https://www.brightstarcare.com/locations/morris-county/contact-us/",
+      "evidence_lines": [
+        37,
+        39,
+        41
+      ]
+    }
+  },
+  {
+    "record_id": "brightstar-westfield-hp0191600",
+    "provider_id": "north-jersey-hp-hp0191600",
+    "official_registration_id": "HP0191600",
+    "county": "Union",
+    "registered_name": "GARDEN STATE HEALTH SOLUTIONS DBA BRIGHTSTAR CARE",
+    "registered_address": "560 SPRINGFIELD AVENUE, 2ND FL, STE G ",
+    "registered_city": "WESTFIELD",
+    "registered_state": "NJ",
+    "registered_zip": "07090",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1506
+    },
+    "office_name": "BrightStar Care Westfield & Summit",
+    "observed_address": "560 Springfield Ave, Second Floor, Ste G, Westfield NJ 07090",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.brightstarcare.com/locations/westfield-summit/contact-us/",
+        "effective_url": "https://www.brightstarcare.com/locations/westfield-summit/contact-us/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-westfield-contact.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.brightstarcare.com/locations/westfield-summit/",
+        "effective_url": "https://www.brightstarcare.com/locations/westfield-summit/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-westfield.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.brightstarcare.com/locations/westfield-summit/",
+        "evidence_lines": [
+          216
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.brightstarcare.com/locations/westfield-summit/",
+        "evidence_lines": [
+          217
+        ]
+      },
+      {
+        "text": "Skilled nursing",
+        "source_url": "https://www.brightstarcare.com/locations/westfield-summit/",
+        "evidence_lines": [
+          221
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Union County",
+        "source_url": "https://www.brightstarcare.com/locations/westfield-summit/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          214
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 560 Springfield Ave, Second Floor, Ste G, Westfield NJ 07090.",
+        "source_url": "https://www.brightstarcare.com/locations/westfield-summit/contact-us/",
+        "evidence_lines": [
+          37,
+          39,
+          41
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BrightStar Care Westfield & Summit lists companion care and personal care.",
+      "source_urls": [
+        "https://www.brightstarcare.com/locations/westfield-summit/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.brightstarcare.com/locations/westfield-summit/",
+          "evidence_lines": [
+            216
+          ]
+        },
+        {
+          "source_url": "https://www.brightstarcare.com/locations/westfield-summit/",
+          "evidence_lines": [
+            217
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "560 Springfield Ave, Second Floor, Ste G, Westfield NJ 07090",
+      "source_url": "https://www.brightstarcare.com/locations/westfield-summit/contact-us/",
+      "evidence_lines": [
+        37,
+        39,
+        41
+      ]
+    }
+  },
+  {
+    "record_id": "brightstar-passaic-hp0299800",
+    "provider_id": "north-jersey-hp-hp0299800",
+    "official_registration_id": "HP0299800",
+    "county": "Passaic",
+    "registered_name": "MARI CARE DBA BRIGHTSTAR CARE OF WAYNE & FAIRLAWN",
+    "registered_address": "601 HAMBURG TURNPIKE, SUITE 211 ",
+    "registered_city": "WAYNE",
+    "registered_state": "NJ",
+    "registered_zip": "07470",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2308
+    },
+    "office_name": "BrightStar Care Passaic and Bergen County",
+    "observed_address": "601 Hamburg Turnpike, Suite 211, Wayne NJ 07470",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Only the locally confirmed broad service categories are retained. The brandwide nursing menu is not assigned to this office.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/contact-us/",
+        "effective_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/contact-us/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-passaic-contact.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+        "effective_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/brightstar-passaic.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "In-home care",
+        "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+        "evidence_lines": [
+          27
+        ]
+      },
+      {
+        "text": "Medical staffing",
+        "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+        "evidence_lines": [
+          27
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Passaic County",
+        "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          27
+        ]
+      },
+      {
+        "text": "Bergen County",
+        "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          27
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 601 Hamburg Turnpike, Suite 211, Wayne NJ 07470.",
+        "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/contact-us/",
+        "evidence_lines": [
+          37,
+          39,
+          41
+        ]
+      },
+      {
+        "text": "Only the locally confirmed broad service categories are retained. The brandwide nursing menu is not assigned to this office.",
+        "source_urls": [
+          "https://www.brightstarcare.com/locations/passaic-western-bergen-county/contact-us/",
+          "https://www.brightstarcare.com/locations/passaic-western-bergen-county/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BrightStar Care Passaic and Bergen County lists in-home care and medical staffing.",
+      "source_urls": [
+        "https://www.brightstarcare.com/locations/passaic-western-bergen-county/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+          "evidence_lines": [
+            27
+          ]
+        },
+        {
+          "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/",
+          "evidence_lines": [
+            27
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "601 Hamburg Turnpike, Suite 211, Wayne NJ 07470",
+      "source_url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/contact-us/",
+      "evidence_lines": [
+        37,
+        39,
+        41
+      ]
+    }
+  },
+  {
+    "record_id": "homewell-hackensack-hp0077800",
+    "provider_id": "north-jersey-hp-hp0077800",
+    "official_registration_id": "HP0077800",
+    "county": "Bergen",
+    "registered_name": "CENTURION ENTERPRISES, LLC DBA HOMEWELL CARE SERVICES",
+    "registered_address": "15 DYATT PLACE ",
+    "registered_city": "HACKENSACK",
+    "registered_state": "NJ",
+    "registered_zip": "07601",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 944
+    },
+    "office_name": "HomeWell Care Services Hackensack",
+    "observed_address": "15 Dyatt Place, Hackensack NJ 07601",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The page has a service-area section but the retained text does not expose its community list. No countywide service inference.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+        "effective_url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/homewell-hackensack.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+        "evidence_lines": [
+          301
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+        "evidence_lines": [
+          311
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 15 Dyatt Place, Hackensack NJ 07601.",
+        "source_url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+        "evidence_lines": [
+          785,
+          787
+        ]
+      },
+      {
+        "text": "The page has a service-area section but the retained text does not expose its community list. No countywide service inference.",
+        "source_urls": [
+          "https://homewellcares.com/in-home-care-nj-hackensack-nj111/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "HomeWell Care Services Hackensack lists companion care and personal care.",
+      "source_urls": [
+        "https://homewellcares.com/in-home-care-nj-hackensack-nj111/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+          "evidence_lines": [
+            301
+          ]
+        },
+        {
+          "source_url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+          "evidence_lines": [
+            311
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "15 Dyatt Place, Hackensack NJ 07601",
+      "source_url": "https://homewellcares.com/in-home-care-nj-hackensack-nj111/",
+      "evidence_lines": [
+        785,
+        787
+      ]
+    }
+  },
+  {
+    "record_id": "homewell-union-hp0249500",
+    "provider_id": "north-jersey-hp-hp0249500",
+    "official_registration_id": "HP0249500",
+    "county": "Union",
+    "registered_name": "PRUDENZA LLC DBA HOMEWELL CARE SVCS",
+    "registered_address": "1600 ROUTE 22 EAST, SUITE 301 ",
+    "registered_city": "UNION",
+    "registered_state": "NJ",
+    "registered_zip": "07083",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2862
+    },
+    "office_name": "HomeWell Care Services Union",
+    "observed_address": "1600 U.S. 22 Suite 301, Union NJ 07083",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The page has a service-area section but the retained text does not expose its community list. No countywide service inference.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+        "effective_url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/homewell-union.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+        "evidence_lines": [
+          290
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+        "evidence_lines": [
+          300
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 1600 U.S. 22 Suite 301, Union NJ 07083.",
+        "source_url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+        "evidence_lines": [
+          789,
+          791,
+          793
+        ]
+      },
+      {
+        "text": "The page has a service-area section but the retained text does not expose its community list. No countywide service inference.",
+        "source_urls": [
+          "https://homewellcares.com/in-home-care-nj-union-nj1112/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "HomeWell Care Services Union lists companion care and personal care.",
+      "source_urls": [
+        "https://homewellcares.com/in-home-care-nj-union-nj1112/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+          "evidence_lines": [
+            290
+          ]
+        },
+        {
+          "source_url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+          "evidence_lines": [
+            300
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "1600 U.S. 22 Suite 301, Union NJ 07083",
+      "source_url": "https://homewellcares.com/in-home-care-nj-union-nj1112/",
+      "evidence_lines": [
+        789,
+        791,
+        793
+      ]
+    }
+  },
+  {
+    "record_id": "synergy-parsippany-hp0132200",
+    "provider_id": "north-jersey-hp-hp0132200",
+    "official_registration_id": "HP0132200",
+    "county": "Morris",
+    "registered_name": "Home Care of NJ DBA Synergy HomeCare Metro NJ",
+    "registered_address": "181 NEW ROAD, SUITE 313 ",
+    "registered_city": "PARSIPPANY",
+    "registered_state": "NJ",
+    "registered_zip": "07054",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1817
+    },
+    "office_name": "SYNERGY HomeCare Metro NJ",
+    "observed_address": "181 New Road, Suite 313, Parsippany NJ 07054",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. These are confirmed examples in the local service-area list, not a complete list.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://synergyhomecare.com/nj-parsippany-07054/",
+        "effective_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/synergy-parsippany.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+        "evidence_lines": [
+          249
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+        "evidence_lines": [
+          249
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Passaic County",
+        "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          37,
+          55
+        ]
+      },
+      {
+        "text": "Hudson County",
+        "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          37,
+          55
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 181 New Road, Suite 313, Parsippany NJ 07054.",
+        "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+        "evidence_lines": [
+          29
+        ]
+      },
+      {
+        "text": "These are confirmed examples in the local service-area list, not a complete list.",
+        "source_urls": [
+          "https://synergyhomecare.com/nj-parsippany-07054/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "SYNERGY HomeCare Metro NJ lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://synergyhomecare.com/nj-parsippany-07054/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+          "evidence_lines": [
+            249
+          ]
+        },
+        {
+          "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+          "evidence_lines": [
+            249
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "181 New Road, Suite 313, Parsippany NJ 07054",
+      "source_url": "https://synergyhomecare.com/nj-parsippany-07054/",
+      "evidence_lines": [
+        29
+      ]
+    }
+  },
+  {
+    "record_id": "synergy-teaneck-hp0256900",
+    "provider_id": "north-jersey-hp-hp0256900",
+    "official_registration_id": "HP0256900",
+    "county": "Bergen",
+    "registered_name": "NJ43 NJ45 DBA SYNERGY HOME CARE OF BERGEN COUNTY",
+    "registered_address": "1029 TEANECK ROAD, SUITE 3D ",
+    "registered_city": "TEANECK",
+    "registered_state": "NJ",
+    "registered_zip": "07666",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2525
+    },
+    "office_name": "SYNERGY HomeCare Bergen County",
+    "observed_address": "1029 Teaneck Road, Suite 3D, Teaneck NJ 07666",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "effective_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/synergy-teaneck.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "evidence_lines": [
+          261
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "evidence_lines": [
+          261
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Bergen County",
+        "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          33,
+          34,
+          37,
+          38
+        ]
+      },
+      {
+        "text": "Passaic County",
+        "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          33,
+          34,
+          37,
+          38
+        ]
+      },
+      {
+        "text": "Fort Lee",
+        "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          33,
+          34,
+          37,
+          38
+        ]
+      },
+      {
+        "text": "Englewood",
+        "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          33,
+          34,
+          37,
+          38
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 1029 Teaneck Road, Suite 3D, Teaneck NJ 07666.",
+        "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+        "evidence_lines": [
+          29
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "SYNERGY HomeCare Bergen County lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://synergyhomecare.com/nj-bergen-county-07666/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+          "evidence_lines": [
+            261
+          ]
+        },
+        {
+          "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+          "evidence_lines": [
+            261
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "1029 Teaneck Road, Suite 3D, Teaneck NJ 07666",
+      "source_url": "https://synergyhomecare.com/nj-bergen-county-07666/",
+      "evidence_lines": [
+        29
+      ]
+    }
+  },
+  {
+    "record_id": "synergy-bloomfield-hp0313600",
+    "provider_id": "north-jersey-hp-hp0313600",
+    "official_registration_id": "HP0313600",
+    "county": "Essex",
+    "registered_name": "CURAIN DBA SYNERGY HOME CARE OF CLIFTON-SECAUCUS",
+    "registered_address": "2 Broad St, Suite 609",
+    "registered_city": "Bloomfield",
+    "registered_state": "NJ",
+    "registered_zip": "07003",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1148
+    },
+    "office_name": "SYNERGY HomeCare Clifton-Secaucus",
+    "observed_address": "2 Broad Street, Unit 609, Bloomfield NJ 07003",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Clifton-Secaucus is the brand territory name. The page explicitly lists an office in Bloomfield. Some service links use a Clifton URL; those links are not separate office proof.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+        "effective_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/synergy-bloomfield.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+        "evidence_lines": [
+          196
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+        "evidence_lines": [
+          196
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Hudson County",
+        "source_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          51
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 2 Broad Street, Unit 609, Bloomfield NJ 07003.",
+        "source_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+        "evidence_lines": [
+          29
+        ]
+      },
+      {
+        "text": "Clifton-Secaucus is the brand territory name. The page explicitly lists an office in Bloomfield. Some service links use a Clifton URL; those links are not separate office proof.",
+        "source_urls": [
+          "https://synergyhomecare.com/nj-bloomfield-07003/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "SYNERGY HomeCare Clifton-Secaucus lists bathing and dressing assistance and companionship.",
+      "source_urls": [
+        "https://synergyhomecare.com/nj-bloomfield-07003/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+          "evidence_lines": [
+            196
+          ]
+        },
+        {
+          "source_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+          "evidence_lines": [
+            196
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "2 Broad Street, Unit 609, Bloomfield NJ 07003",
+      "source_url": "https://synergyhomecare.com/nj-bloomfield-07003/",
+      "evidence_lines": [
+        29
+      ]
+    }
+  },
+  {
+    "record_id": "comfort-keepers-closter-hp0124500",
+    "provider_id": "north-jersey-hp-hp0124500",
+    "official_registration_id": "HP0124500",
+    "county": "Bergen",
+    "registered_name": "BERGEN HOME CARE LLC DBA COMFORT KEEPERS",
+    "registered_address": "491 CLOSTER DOCK ROAD, SUITE #4",
+    "registered_city": "CLOSTER",
+    "registered_state": "NJ",
+    "registered_zip": "07624",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 609
+    },
+    "office_name": "Comfort Keepers Closter",
+    "observed_address": "491 Closter Dock Rd, Closter NJ 07624",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The site omits registry Suite 4. Street address, brand, city and ZIP agree; the suite remains unverified.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+        "effective_url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/comfort-keepers-closter.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companionship",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+        "evidence_lines": [
+          59
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+        "evidence_lines": [
+          59
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 491 Closter Dock Rd, Closter NJ 07624.",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+        "evidence_lines": [
+          5
+        ]
+      },
+      {
+        "text": "The site omits registry Suite 4. Street address, brand, city and ZIP agree; the suite remains unverified.",
+        "source_urls": [
+          "https://www.comfortkeepers.com/offices/new-jersey/closter/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Comfort Keepers Closter lists companionship and personal care.",
+      "source_urls": [
+        "https://www.comfortkeepers.com/offices/new-jersey/closter/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+          "evidence_lines": [
+            59
+          ]
+        },
+        {
+          "source_url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+          "evidence_lines": [
+            59
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "491 Closter Dock Rd, Closter NJ 07624",
+      "source_url": "https://www.comfortkeepers.com/offices/new-jersey/closter/",
+      "evidence_lines": [
+        5
+      ]
+    }
+  },
+  {
+    "record_id": "comfort-keepers-montclair-hp0179100",
+    "provider_id": "north-jersey-hp-hp0179100",
+    "official_registration_id": "HP0179100",
+    "county": "Essex",
+    "registered_name": "CAP CARE LLC DBA COMFORT KEEPERS",
+    "registered_address": "31 PARK STREET, 2ND FLOOR",
+    "registered_city": "MONTCLAIR",
+    "registered_state": "NJ",
+    "registered_zip": "07042",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 762
+    },
+    "office_name": "Comfort Keepers Montclair",
+    "observed_address": "31 Park St, 2nd Floor, Montclair NJ 07042",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "effective_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/comfort-keepers-montclair.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "evidence_lines": [
+          128
+        ]
+      },
+      {
+        "text": "Meal preparation",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "evidence_lines": [
+          128
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Essex County",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          128
+        ]
+      },
+      {
+        "text": "Bergen County",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          128
+        ]
+      },
+      {
+        "text": "Morris County",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          128
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 31 Park St, 2nd Floor, Montclair NJ 07042.",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+        "evidence_lines": [
+          5
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Comfort Keepers Montclair lists companion care and meal preparation.",
+      "source_urls": [
+        "https://www.comfortkeepers.com/offices/new-jersey/montclair/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+          "evidence_lines": [
+            128
+          ]
+        },
+        {
+          "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+          "evidence_lines": [
+            128
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "31 Park St, 2nd Floor, Montclair NJ 07042",
+      "source_url": "https://www.comfortkeepers.com/offices/new-jersey/montclair/",
+      "evidence_lines": [
+        5
+      ]
+    }
+  },
+  {
+    "record_id": "comfort-keepers-secaucus-hp0420900",
+    "provider_id": "north-jersey-hp-hp0420900",
+    "official_registration_id": "HP0420900",
+    "county": "Hudson",
+    "registered_name": "CAC Care, LLC / DBA Comfort Keepers",
+    "registered_address": "58 Harmon Cove Tower ",
+    "registered_city": "Secaucus",
+    "registered_state": "NJ",
+    "registered_zip": "07094",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 751
+    },
+    "office_name": "Comfort Keepers Secaucus",
+    "observed_address": "58 Harmon Cove Tower Suite 58, Secaucus NJ 07094",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The site adds Suite 58 to the registry's 58 Harmon Cove Tower address. The suite is not independently established by the register.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "effective_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/comfort-keepers-secaucus.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "evidence_lines": [
+          61
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "evidence_lines": [
+          61
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "evidence_lines": [
+          93
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Jersey City",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          410
+        ]
+      },
+      {
+        "text": "Secaucus",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          410
+        ]
+      },
+      {
+        "text": "Hudson County",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          410
+        ]
+      },
+      {
+        "text": "Fairview",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          410
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 58 Harmon Cove Tower Suite 58, Secaucus NJ 07094.",
+        "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+        "evidence_lines": [
+          5
+        ]
+      },
+      {
+        "text": "The site adds Suite 58 to the registry's 58 Harmon Cove Tower address. The suite is not independently established by the register.",
+        "source_urls": [
+          "https://www.comfortkeepers.com/offices/new-jersey/secaucus/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Comfort Keepers Secaucus lists companion care and personal care.",
+      "source_urls": [
+        "https://www.comfortkeepers.com/offices/new-jersey/secaucus/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+          "evidence_lines": [
+            61
+          ]
+        },
+        {
+          "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+          "evidence_lines": [
+            61
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "58 Harmon Cove Tower Suite 58, Secaucus NJ 07094",
+      "source_url": "https://www.comfortkeepers.com/offices/new-jersey/secaucus/",
+      "evidence_lines": [
+        5
+      ]
+    }
+  },
+  {
+    "record_id": "bergen-home-care-hp0022500",
+    "provider_id": "north-jersey-hp-hp0022500",
+    "official_registration_id": "HP0022500",
+    "county": "Bergen",
+    "registered_name": "BERGEN HOME CARE AND NURSING INC.",
+    "registered_address": "136 ESSEX STREET ",
+    "registered_city": "HACKENSACK",
+    "registered_state": "NJ",
+    "registered_zip": "07601",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 608
+    },
+    "office_name": "Bergen Home Care & Nursing",
+    "observed_address": "136 Essex Street, Hackensack NJ 07601",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Training-program counties on the homepage are not used as home-care service coverage. Source is the agency's service page, not proof of Medicare certification.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.bergenhomecare.net/home-health-agency",
+        "effective_url": "https://www.bergenhomecare.net/home-health-agency",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bergen-home-care.json",
+        "supports": "Exact local office identity and published address, and local service observations"
+      }
+    ],
+    "services": [
+      {
+        "text": "Skilled nursing",
+        "source_url": "https://www.bergenhomecare.net/home-health-agency",
+        "evidence_lines": [
+          559
+        ]
+      },
+      {
+        "text": "Homemaker and home health aide services",
+        "source_url": "https://www.bergenhomecare.net/home-health-agency",
+        "evidence_lines": [
+          559
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 136 Essex Street, Hackensack NJ 07601.",
+        "source_url": "https://www.bergenhomecare.net/home-health-agency",
+        "evidence_lines": [
+          1356
+        ]
+      },
+      {
+        "text": "Training-program counties on the homepage are not used as home-care service coverage. Source is the agency's service page, not proof of Medicare certification.",
+        "source_urls": [
+          "https://www.bergenhomecare.net/home-health-agency"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Bergen Home Care & Nursing lists skilled nursing and homemaker and home health aide services.",
+      "source_urls": [
+        "https://www.bergenhomecare.net/home-health-agency"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.bergenhomecare.net/home-health-agency",
+          "evidence_lines": [
+            559
+          ]
+        },
+        {
+          "source_url": "https://www.bergenhomecare.net/home-health-agency",
+          "evidence_lines": [
+            559
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "136 Essex Street, Hackensack NJ 07601",
+      "source_url": "https://www.bergenhomecare.net/home-health-agency",
+      "evidence_lines": [
+        1356
+      ]
+    }
+  },
+  {
+    "record_id": "life-home-care-hourly-hp0285900",
+    "provider_id": "north-jersey-hp-hp0285900",
+    "official_registration_id": "HP0285900",
+    "county": "Morris",
+    "registered_name": "LIFE TECH, INC. DBA LIFE HOME CARE",
+    "registered_address": "120 Eagle Rock Ave Suite 200",
+    "registered_city": "East Hanover",
+    "registered_state": "NJ",
+    "registered_zip": "07936",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2194
+    },
+    "office_name": "Life Home Care East Hanover",
+    "observed_address": "120 Eagle Rock Ave, Suite 200, East Hanover NJ 07936",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The operator's locations page applies its service menu to its named offices. This record is the East Hanover registration, not the whole brand.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://homecare.life/locations/",
+        "effective_url": "https://homecare.life/locations/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/life-home-care.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://homecare.life/hourly-care/",
+        "effective_url": "https://homecare.life/hourly-care/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/life-home-care-hourly.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Hourly personal care and companionship",
+        "source_url": "https://homecare.life/hourly-care/",
+        "evidence_lines": [
+          19
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://homecare.life/hourly-care/",
+        "evidence_lines": [
+          20
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Essex County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Morris County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Union County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Passaic County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Bergen County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 120 Eagle Rock Ave, Suite 200, East Hanover NJ 07936.",
+        "source_url": "https://homecare.life/locations/",
+        "evidence_lines": [
+          31,
+          33
+        ]
+      },
+      {
+        "text": "The operator's locations page applies its service menu to its named offices. This record is the East Hanover registration, not the whole brand.",
+        "source_urls": [
+          "https://homecare.life/locations/",
+          "https://homecare.life/hourly-care/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Life Home Care East Hanover lists hourly personal care and companionship and respite care.",
+      "source_urls": [
+        "https://homecare.life/hourly-care/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://homecare.life/hourly-care/",
+          "evidence_lines": [
+            19
+          ]
+        },
+        {
+          "source_url": "https://homecare.life/hourly-care/",
+          "evidence_lines": [
+            20
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "120 Eagle Rock Ave, Suite 200, East Hanover NJ 07936",
+      "source_url": "https://homecare.life/locations/",
+      "evidence_lines": [
+        31,
+        33
+      ]
+    }
+  },
+  {
+    "record_id": "life-home-care-hourly-hp0342800",
+    "provider_id": "north-jersey-hp-hp0342800",
+    "official_registration_id": "HP0342800",
+    "county": "Bergen",
+    "registered_name": "LIFE HOME CARE CORP DBA LIFE HOME CARE (Glen Rock)",
+    "registered_address": "139 HARRISTOWN ROAD, SUITE 101B ",
+    "registered_city": "GLEN ROCK",
+    "registered_state": "NJ",
+    "registered_zip": "07452",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2190
+    },
+    "office_name": "Life Home Care Glen Rock",
+    "observed_address": "139 Harristown Rd, Suite 101B, Glen Rock NJ 07452",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The operator's locations page applies its service menu to its named offices. This record is the separate Glen Rock registration.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://homecare.life/locations/",
+        "effective_url": "https://homecare.life/locations/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/life-home-care.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://homecare.life/hourly-care/",
+        "effective_url": "https://homecare.life/hourly-care/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/life-home-care-hourly.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Hourly personal care and companionship",
+        "source_url": "https://homecare.life/hourly-care/",
+        "evidence_lines": [
+          19
+        ]
+      },
+      {
+        "text": "Respite care",
+        "source_url": "https://homecare.life/hourly-care/",
+        "evidence_lines": [
+          20
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Essex County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Morris County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Union County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Passaic County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      },
+      {
+        "text": "Bergen County",
+        "source_url": "https://homecare.life/locations/",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          17
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 139 Harristown Rd, Suite 101B, Glen Rock NJ 07452.",
+        "source_url": "https://homecare.life/locations/",
+        "evidence_lines": [
+          37,
+          39
+        ]
+      },
+      {
+        "text": "The operator's locations page applies its service menu to its named offices. This record is the separate Glen Rock registration.",
+        "source_urls": [
+          "https://homecare.life/locations/",
+          "https://homecare.life/hourly-care/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Life Home Care Glen Rock lists hourly personal care and companionship and respite care.",
+      "source_urls": [
+        "https://homecare.life/hourly-care/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://homecare.life/hourly-care/",
+          "evidence_lines": [
+            19
+          ]
+        },
+        {
+          "source_url": "https://homecare.life/hourly-care/",
+          "evidence_lines": [
+            20
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "139 Harristown Rd, Suite 101B, Glen Rock NJ 07452",
+      "source_url": "https://homecare.life/locations/",
+      "evidence_lines": [
+        37,
+        39
+      ]
+    }
+  },
+  {
+    "record_id": "caring-people-nj-hp0257500",
+    "provider_id": "north-jersey-hp-hp0257500",
+    "official_registration_id": "HP0257500",
+    "county": "Passaic",
+    "registered_name": "CARING PEOPLE NJ OPERATING LLC",
+    "registered_address": "1169 Main Avenue",
+    "registered_city": "Clifton",
+    "registered_state": "NJ",
+    "registered_zip": "07011",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 901
+    },
+    "office_name": "Caring People Clifton",
+    "observed_address": "1169 Main Avenue, Clifton NJ 07011",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. The operator explicitly applies this service menu to its New Jersey locations. It is not evidence of a particular countywide service area.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.caringpeople.com/locations",
+        "effective_url": "https://www.caringpeople.com/locations",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/caring-people.json",
+        "supports": "Exact Clifton office address and explicitly advertised New Jersey service menu."
+      }
+    ],
+    "services": [
+      {
+        "text": "Live-in and 24-hour care",
+        "source_url": "https://www.caringpeople.com/locations",
+        "evidence_lines": [
+          235
+        ]
+      },
+      {
+        "text": "Skilled and private duty nursing",
+        "source_url": "https://www.caringpeople.com/locations",
+        "evidence_lines": [
+          235
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 1169 Main Avenue, Clifton NJ 07011.",
+        "source_url": "https://www.caringpeople.com/locations",
+        "evidence_lines": [
+          265,
+          267
+        ]
+      },
+      {
+        "text": "The operator explicitly applies this service menu to its New Jersey locations. It is not evidence of a particular countywide service area.",
+        "source_urls": [
+          "https://www.caringpeople.com/locations",
+          "https://www.caringpeople.com/locations"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Caring People Clifton lists live-in and 24-hour care and skilled and private duty nursing.",
+      "source_urls": [
+        "https://www.caringpeople.com/locations"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.caringpeople.com/locations",
+          "evidence_lines": [
+            235
+          ]
+        },
+        {
+          "source_url": "https://www.caringpeople.com/locations",
+          "evidence_lines": [
+            235
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "1169 Main Avenue, Clifton NJ 07011",
+      "source_url": "https://www.caringpeople.com/locations",
+      "evidence_lines": [
+        265,
+        267
+      ]
+    }
+  },
+  {
+    "record_id": "right-at-home-essex-hp0058900",
+    "provider_id": "north-jersey-hp-hp0058900",
+    "official_registration_id": "HP0058900",
+    "county": "Essex",
+    "registered_name": "MOSES SCOTT ASSOC DBA RIGHT AT HOME OF ESSEX CTY",
+    "registered_address": "735 NORTHFIELD AVENUE ",
+    "registered_city": "WEST ORANGE",
+    "registered_state": "NJ",
+    "registered_zip": "07052",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 2443
+    },
+    "office_name": "Right at Home Essex County",
+    "observed_address": "735 Northfield Ave, West Orange NJ 07052",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. ",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+        "effective_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/right-at-home-essex-area.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://www.rightathome.net/essex-county",
+        "effective_url": "https://www.rightathome.net/essex-county",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/right-at-home-essex.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Companion care",
+        "source_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+        "evidence_lines": [
+          47
+        ]
+      },
+      {
+        "text": "Personal care",
+        "source_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+        "evidence_lines": [
+          48
+        ]
+      }
+    ],
+    "service_areas": [
+      {
+        "text": "Essex County",
+        "source_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+        "scope": "Provider-reported coverage example; confirm the individual address.",
+        "evidence_lines": [
+          61
+        ]
+      }
+    ],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 735 Northfield Ave, West Orange NJ 07052.",
+        "source_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+        "evidence_lines": [
+          93
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Right at Home Essex County lists companion care and personal care.",
+      "source_urls": [
+        "https://www.rightathome.net/essex-county/about-us/areas-served"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+          "evidence_lines": [
+            47
+          ]
+        },
+        {
+          "source_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+          "evidence_lines": [
+            48
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check."
+    ],
+    "office_address_evidence": {
+      "text": "735 Northfield Ave, West Orange NJ 07052",
+      "source_url": "https://www.rightathome.net/essex-county/about-us/areas-served",
+      "evidence_lines": [
+        93
+      ]
+    }
+  },
+  {
+    "record_id": "family-first-home-health-hp0415200",
+    "provider_id": "north-jersey-hp-hp0415200",
+    "official_registration_id": "HP0415200",
+    "county": "Morris",
+    "registered_name": "Family First Home Health",
+    "registered_address": "96 W Union Tpke",
+    "registered_city": "Wharton",
+    "registered_state": "NJ",
+    "registered_zip": "07885",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 1401
+    },
+    "office_name": "Family First Home Health",
+    "observed_address": "96 W Union Turnpike, Wharton NJ 07885",
+    "match_basis": "Published local brand or agency identity plus matching street, city and ZIP against the exact active registry row. Suite or floor differences and omissions are disclosed separately. Office address is exposed by the provider contact page's embedded map target. A general reference to Morris and Essex families is not used as countywide coverage.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://famfirsthomehealth.com/contact-us/",
+        "effective_url": "https://famfirsthomehealth.com/contact-us/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/family-first-contact.json",
+        "supports": "Exact local office identity and published address"
+      },
+      {
+        "url": "https://famfirsthomehealth.com/",
+        "effective_url": "https://famfirsthomehealth.com/",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/family-first-home-health.json",
+        "supports": "Locally advertised services and service areas"
+      }
+    ],
+    "services": [
+      {
+        "text": "Personal care",
+        "source_url": "https://famfirsthomehealth.com/",
+        "evidence_lines": [
+          59
+        ]
+      },
+      {
+        "text": "Companion care",
+        "source_url": "https://famfirsthomehealth.com/",
+        "evidence_lines": [
+          65
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official provider page or brand locator lists 96 W Union Turnpike, Wharton NJ 07885.",
+        "source_url": "https://famfirsthomehealth.com/contact-us/",
+        "evidence_lines": [
+          37
+        ]
+      },
+      {
+        "text": "Office address is exposed by the provider contact page's embedded map target. A general reference to Morris and Essex families is not used as countywide coverage.",
+        "source_urls": [
+          "https://famfirsthomehealth.com/contact-us/",
+          "https://famfirsthomehealth.com/"
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "Family First Home Health lists personal care and companion care.",
+      "source_urls": [
+        "https://famfirsthomehealth.com/"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://famfirsthomehealth.com/",
+          "evidence_lines": [
+            59
+          ]
+        },
+        {
+          "source_url": "https://famfirsthomehealth.com/",
+          "evidence_lines": [
+            65
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "Office location is not itself a service area. Confirm individual address, care needs, rates and scheduling.",
+      "Registration status and expiration come from the retained state snapshot, not a new live licensing check.",
+      "No eligible original review aggregate independently verified in this first-party check.",
+      "No explicit community service-area list is retained for this office. Its office location or local marketing name is not used as coverage proof."
+    ],
+    "office_address_evidence": {
+      "text": "96 W Union Turnpike, Wharton NJ 07885",
+      "source_url": "https://famfirsthomehealth.com/contact-us/",
+      "evidence_lines": [
+        37
+      ]
+    }
+  },
+  {
+    "record_id": "bayada-bloomfield-hp0015319",
+    "provider_id": "north-jersey-hp-hp0015319",
+    "official_registration_id": "HP0015319",
+    "county": "Essex",
+    "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+    "registered_address": "650 BLOOMFIELD AVENUE, SUITE 200",
+    "registered_city": "BLOOMFIELD",
+    "registered_state": "NJ",
+    "registered_zip": "07003",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 594
+    },
+    "office_name": "BAYADA Essex County, Bloomfield",
+    "observed_address": "650 Bloomfield Avenue, Suite 200, Bloomfield NJ 07003",
+    "match_basis": "Exact BAYADA name, street, unit or floor, city and ZIP agree with the retained active registry row. Redirected official office URL retained separately.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+        "effective_url": "https://www.bayada.com/office/nj/bloomfield/personal-and-companion-care/essex-county-10059",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bayada-bloomfield.json",
+        "supports": "Exact local office address and personal and companion care service description."
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Meal preparation and light housekeeping",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+        "evidence_lines": [
+          35
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official local office page lists 650 Bloomfield Avenue, Suite 200, Bloomfield NJ 07003.",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BAYADA Essex County, Bloomfield lists help with bathing, dressing, meals, housekeeping, and companionship.",
+      "source_urls": [
+        "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+          "evidence_lines": [
+            35
+          ]
+        },
+        {
+          "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+          "evidence_lines": [
+            35
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "The county team name is not treated as blanket countywide coverage.",
+      "Registration is from the retained state snapshot, not a new licensing check.",
+      "No eligible original review aggregate independently verified."
+    ],
+    "office_address_evidence": {
+      "text": "650 Bloomfield Avenue, Suite 200, Bloomfield NJ 07003",
+      "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/bloomfield/650-bloomfield-avenue-suite-200/10059",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  },
+  {
+    "record_id": "bayada-westfield-hp0015320",
+    "provider_id": "north-jersey-hp-hp0015320",
+    "official_registration_id": "HP0015320",
+    "county": "Union",
+    "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+    "registered_address": "251 NORTH AVENUE WEST, SUITE 201",
+    "registered_city": "WESTFIELD",
+    "registered_state": "NJ",
+    "registered_zip": "07090",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 581
+    },
+    "office_name": "BAYADA Union County, Westfield",
+    "observed_address": "251 North Avenue West, Suite 201, Westfield NJ 07090",
+    "match_basis": "Exact BAYADA name, street, unit or floor, city and ZIP agree with the retained active registry row. Redirected official office URL retained separately.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+        "effective_url": "https://www.bayada.com/office/nj/westfield/personal-and-companion-care/union-county-10209",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bayada-westfield.json",
+        "supports": "Exact local office address and personal and companion care service description."
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+        "evidence_lines": [
+          15
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+        "evidence_lines": [
+          15
+        ]
+      },
+      {
+        "text": "Meal preparation and light housekeeping",
+        "source_url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+        "evidence_lines": [
+          15
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official local office page lists 251 North Avenue West, Suite 201, Westfield NJ 07090.",
+        "source_url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+        "evidence_lines": [
+          27,
+          29
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BAYADA Union County, Westfield lists help with bathing, dressing, meals, housekeeping, and companionship.",
+      "source_urls": [
+        "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+          "evidence_lines": [
+            15
+          ]
+        },
+        {
+          "source_url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+          "evidence_lines": [
+            15
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "The county team name is not treated as blanket countywide coverage.",
+      "Registration is from the retained state snapshot, not a new licensing check.",
+      "No eligible original review aggregate independently verified."
+    ],
+    "office_address_evidence": {
+      "text": "251 North Avenue West, Suite 201, Westfield NJ 07090",
+      "source_url": "https://www.bayada.com/offices/nj/westfield/251-north-avenue-west/assistive-care",
+      "evidence_lines": [
+        27,
+        29
+      ]
+    }
+  },
+  {
+    "record_id": "bayada-clifton-hp0015321",
+    "provider_id": "north-jersey-hp-hp0015321",
+    "official_registration_id": "HP0015321",
+    "county": "Passaic",
+    "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+    "registered_address": "1117 MAIN AVENUE, SUITE 101",
+    "registered_city": "CLIFTON",
+    "registered_state": "NJ",
+    "registered_zip": "07011",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 584
+    },
+    "office_name": "BAYADA Passaic County, Clifton",
+    "observed_address": "1117 Main Avenue, Suite 101, Clifton NJ 07011",
+    "match_basis": "Exact BAYADA name, street, unit or floor, city and ZIP agree with the retained active registry row. Redirected official office URL retained separately.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+        "effective_url": "https://www.bayada.com/office/nj/clifton/personal-and-companion-care/passaic-county-10066",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bayada-clifton.json",
+        "supports": "Exact local office address and personal and companion care service description."
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Meal preparation and light housekeeping",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+        "evidence_lines": [
+          35
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official local office page lists 1117 Main Avenue, Suite 101, Clifton NJ 07011.",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BAYADA Passaic County, Clifton lists help with bathing, dressing, meals, housekeeping, and companionship.",
+      "source_urls": [
+        "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+          "evidence_lines": [
+            35
+          ]
+        },
+        {
+          "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+          "evidence_lines": [
+            35
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "The county team name is not treated as blanket countywide coverage.",
+      "Registration is from the retained state snapshot, not a new licensing check.",
+      "No eligible original review aggregate independently verified."
+    ],
+    "office_address_evidence": {
+      "text": "1117 Main Avenue, Suite 101, Clifton NJ 07011",
+      "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/clifton/1117-main-avenue-suite-101/10066",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  },
+  {
+    "record_id": "bayada-dover-hp0015325",
+    "provider_id": "north-jersey-hp-hp0015325",
+    "official_registration_id": "HP0015325",
+    "county": "Morris",
+    "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+    "registered_address": "383 WEST BLACKWELL ST, 1ST FL, STE 1A",
+    "registered_city": "DOVER",
+    "registered_state": "NJ",
+    "registered_zip": "07801",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 557
+    },
+    "office_name": "BAYADA Morris County, Dover",
+    "observed_address": "383 West Blackwell Street, 1st Floor Suite 1A, Dover NJ 07801",
+    "match_basis": "Exact BAYADA name, street, unit or floor, city and ZIP agree with the retained active registry row. Redirected official office URL retained separately.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+        "effective_url": "https://www.bayada.com/office/nj/dover/personal-and-companion-care/morris-county-10103",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bayada-dover.json",
+        "supports": "Exact local office address and personal and companion care service description."
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Meal preparation and light housekeeping",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+        "evidence_lines": [
+          35
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official local office page lists 383 West Blackwell Street, 1st Floor Suite 1A, Dover NJ 07801.",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BAYADA Morris County, Dover lists help with bathing, dressing, meals, housekeeping, and companionship.",
+      "source_urls": [
+        "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+          "evidence_lines": [
+            35
+          ]
+        },
+        {
+          "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+          "evidence_lines": [
+            35
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "The county team name is not treated as blanket countywide coverage.",
+      "Registration is from the retained state snapshot, not a new licensing check.",
+      "No eligible original review aggregate independently verified."
+    ],
+    "office_address_evidence": {
+      "text": "383 West Blackwell Street, 1st Floor Suite 1A, Dover NJ 07801",
+      "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/dover/383-west-blackwell-street-1st-floor-suite-1a/10103",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  },
+  {
+    "record_id": "bayada-livingston-hp0015340",
+    "provider_id": "north-jersey-hp-hp0015340",
+    "official_registration_id": "HP0015340",
+    "county": "Essex",
+    "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+    "registered_address": "651 OLD MOUNT PLEASANT AVENUE, SUITE 175",
+    "registered_city": "LIVINGSTON",
+    "registered_state": "NJ",
+    "registered_zip": "07039",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 582
+    },
+    "office_name": "BAYADA Essex County, Livingston",
+    "observed_address": "651 Old Mount Pleasant Avenue, Suite 175, Livingston NJ 07039",
+    "match_basis": "Exact BAYADA name, street, unit or floor, city and ZIP agree with the retained active registry row. Redirected official office URL retained separately.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+        "effective_url": "https://www.bayada.com/office/nj/livingston/personal-and-companion-care/essex-county-10395",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bayada-livingston.json",
+        "supports": "Exact local office address and personal and companion care service description."
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Meal preparation and light housekeeping",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+        "evidence_lines": [
+          35
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official local office page lists 651 Old Mount Pleasant Avenue, Suite 175, Livingston NJ 07039.",
+        "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BAYADA Essex County, Livingston lists help with bathing, dressing, meals, housekeeping, and companionship.",
+      "source_urls": [
+        "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+          "evidence_lines": [
+            35
+          ]
+        },
+        {
+          "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+          "evidence_lines": [
+            35
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "The county team name is not treated as blanket countywide coverage.",
+      "Registration is from the retained state snapshot, not a new licensing check.",
+      "No eligible original review aggregate independently verified."
+    ],
+    "office_address_evidence": {
+      "text": "651 Old Mount Pleasant Avenue, Suite 175, Livingston NJ 07039",
+      "source_url": "https://bayada.com/personal-care-and-companionship/locations/nj/livingston/651-old-mount-pleasant-avenue-suite-175/10395",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  },
+  {
+    "record_id": "bayada-morristown-hp0015347",
+    "provider_id": "north-jersey-hp-hp0015347",
+    "official_registration_id": "HP0015347",
+    "county": "Morris",
+    "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+    "registered_address": "32 MAPLE AVENUE,1ST FL",
+    "registered_city": "MORRISTOWN",
+    "registered_state": "NJ",
+    "registered_zip": "07960",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 555
+    },
+    "office_name": "BAYADA Morris County, Morristown",
+    "observed_address": "32 Maple Avenue, 1st Floor, Morristown NJ 07960",
+    "match_basis": "Exact BAYADA name, street, unit or floor, city and ZIP agree with the retained active registry row. Redirected official office URL retained separately.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+        "effective_url": "https://www.bayada.com/office/nj/morristown/personal-and-companion-care/morris-county-10005",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bayada-morristown.json",
+        "supports": "Exact local office address and personal and companion care service description."
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Meal preparation and light housekeeping",
+        "source_url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+        "evidence_lines": [
+          35
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official local office page lists 32 Maple Avenue, 1st Floor, Morristown NJ 07960.",
+        "source_url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BAYADA Morris County, Morristown lists help with bathing, dressing, meals, housekeeping, and companionship.",
+      "source_urls": [
+        "https://www.bayada.com/personal-and-companion-care/morris-county-10005"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+          "evidence_lines": [
+            35
+          ]
+        },
+        {
+          "source_url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+          "evidence_lines": [
+            35
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "The county team name is not treated as blanket countywide coverage.",
+      "Registration is from the retained state snapshot, not a new licensing check.",
+      "No eligible original review aggregate independently verified."
+    ],
+    "office_address_evidence": {
+      "text": "32 Maple Avenue, 1st Floor, Morristown NJ 07960",
+      "source_url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  },
+  {
+    "record_id": "bayada-union-city-hp0015318",
+    "provider_id": "north-jersey-hp-hp0015318",
+    "official_registration_id": "HP0015318",
+    "county": "Hudson",
+    "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+    "registered_address": "3196 KENNEDY BLVD., KENNEDY MEDICAL CTR",
+    "registered_city": "UNION CITY",
+    "registered_state": "NJ",
+    "registered_zip": "07087",
+    "registry_source": {
+      "url": "https://rgbportal.dca.njoag.gov/public-view/",
+      "file": "raw/firms.xlsx",
+      "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+      "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+      "http_last_modified": null,
+      "row": 553
+    },
+    "office_name": "BAYADA Hudson County, Union City",
+    "observed_address": "3196 Kennedy Boulevard, Kennedy Medical Center, Union City NJ 07087",
+    "match_basis": "Exact BAYADA name, street, unit or floor, city and ZIP agree with the retained active registry row. Redirected official office URL retained separately.",
+    "checked_at": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+        "effective_url": "https://www.bayada.com/office/nj/union-city/personal-and-companion-care/hudson-county-10054",
+        "checked_at": "2026-11-13",
+        "receipt": "receipts/bayada-union-city.json",
+        "supports": "Exact local office address and personal and companion care service description."
+      }
+    ],
+    "services": [
+      {
+        "text": "Bathing and dressing assistance",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Companionship",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+        "evidence_lines": [
+          35
+        ]
+      },
+      {
+        "text": "Meal preparation and light housekeeping",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+        "evidence_lines": [
+          35
+        ]
+      }
+    ],
+    "service_areas": [],
+    "primary_observations": [
+      {
+        "text": "The official local office page lists 3196 Kennedy Boulevard, Kennedy Medical Center, Union City NJ 07087.",
+        "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+        "evidence_lines": [
+          47,
+          49
+        ]
+      }
+    ],
+    "publishable_statement": {
+      "text": "BAYADA Hudson County, Union City lists help with bathing, dressing, meals, housekeeping, and companionship.",
+      "source_urls": [
+        "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054"
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+          "evidence_lines": [
+            35
+          ]
+        },
+        {
+          "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+          "evidence_lines": [
+            35
+          ]
+        }
+      ]
+    },
+    "review_aggregates": [],
+    "limitations": [
+      "Provider-reported services, not independent quality, safety, staffing or availability verification.",
+      "The county team name is not treated as blanket countywide coverage.",
+      "Registration is from the retained state snapshot, not a new licensing check.",
+      "No eligible original review aggregate independently verified."
+    ],
+    "office_address_evidence": {
+      "text": "3196 Kennedy Boulevard, Kennedy Medical Center, Union City NJ 07087",
+      "source_url": "https://www.bayada.com/personal-care-and-companionship/locations/nj/union-city/3196-kennedy-boulevard-kennedy-medical-center/10054",
+      "evidence_lines": [
+        47,
+        49
+      ]
+    }
+  }
+]

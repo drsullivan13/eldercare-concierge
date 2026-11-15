@@ -175,7 +175,7 @@ test("the Boston origin boundary still applies at its nearest real ZIPs on both 
 test("published NJ ZIP coverage accepts reviewed localities and rejects excluded or unrecognized ZIPs without claiming pending", async () => {
   const market = getMarket("north-jersey")!;
   assert.ok(market, "The NJ snapshot is published");
-  for (const zip of ["07083", "07960", "08812"]) {
+  for (const zip of ["07083", "07960", "08812", "08901", "08817", "08807"]) {
     assert.ok(Object.hasOwn(market.zips, zip), zip);
     const response = searchGET(request(`search?zip=${zip}&radius=10`));
     assert.equal(response.status, 200, zip);
@@ -187,7 +187,7 @@ test("published NJ ZIP coverage accepts reviewed localities and rejects excluded
       result.providers.every((provider: Provider) => provider.state === "NJ"),
     );
   }
-  for (const zip of ["08002", "08901", "07000"]) {
+  for (const zip of ["08002", "07000"]) {
     const response = searchGET(request(`search?zip=${zip}`));
     assert.equal(response.status, 400, zip);
     const { error } = await response.json();

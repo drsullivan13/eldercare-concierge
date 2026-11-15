@@ -18,31 +18,31 @@
           "sha256": "d28297aef2b562b46669acb5f845e1437239f4bbc516ed039e0d9306dc973838"
         },
         "locationResearch": {
-          "count": 558,
+          "count": 567,
           "path": "runtime/locationResearch.json",
-          "sha256": "a342b89f3da624067f95eda855730e6b51c05f7f071e15c4c0be0c51ca0a4c9f"
+          "sha256": "edeaa2feb238c39a37d2aff0a56ee4eb3bce5c4fb958589a57c24f3a87ab18db"
         },
         "meta": {
-          "count": 974,
+          "count": 1375,
           "path": "runtime/meta.json",
-          "sha256": "8687ff4526d1b0f015f38b4baf631a4ac96fdc6ba47e599ad9eb0aabf42a0973"
+          "sha256": "e5a7124cd412d3ef73056ec6e19d467d99c6a4de902f705e46b23d55b4176d7a"
         },
         "providers": {
-          "count": 974,
+          "count": 1375,
           "path": "runtime/providers.json",
-          "sha256": "27603e930d0c56d42edee3177d3a8a93bbf94725e12e134e5e5b17255e0d1855"
+          "sha256": "50020219b4d03c7daac7504c20ccd35bf8df379ed9b88f077132b29341653c29"
         },
         "zips": {
-          "count": 270,
+          "count": 404,
           "path": "runtime/zips.json",
-          "sha256": "d3e20077d709b26d164442ca3ae12e9db07e4a144b2193ff7ae515da9576ebfe"
+          "sha256": "dc9582dea73e529e53265735483fd208c7d2842e148f3627e6c1f0712cca2df8"
         }
       },
       "defaultZip": "07960",
       "id": "north-jersey",
       "label": "North Jersey",
       "review": {
-        "reviewedAt": "2026-11-13",
+        "reviewedAt": "2026-11-15",
         "reviewer": "NJ source and location identity verification; release-manifest checks",
         "status": "reviewed"
       },

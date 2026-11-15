@@ -26474,7 +26474,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-home-bayada-dover-hp0015325-services-0",
@@ -26505,6 +26505,12 @@
         "kind": "care",
         "sourceId": "supp-nppes-1366473068",
         "text": "NPPES lists BAYADA HOME HEALTH CARE, INC. at the matching DOVER practice address with the published taxonomy labels Home Health. NPI 1366473068. NPPES last updated 2026-03-25. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "morris-2025-007-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-007-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
       }
     ],
     "notes": [
@@ -26545,6 +26551,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1366473068"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-007-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 3",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3"
       }
     ]
   },
@@ -26677,7 +26693,7 @@
       "status": "not-published",
       "text": "Current availability has not been independently researched. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-home-bayada-morristown-hp0015347-services-0",
@@ -26702,6 +26718,18 @@
         "kind": "care",
         "sourceId": "supp-home-d0b777705b41c3ea",
         "text": "The official local office page lists 32 Maple Avenue, 1st Floor, Morristown NJ 07960."
+      },
+      {
+        "id": "morris-2025-008-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-008-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-008-services",
+        "kind": "care",
+        "sourceId": "morris-2025-008-directory",
+        "text": "Services listed in the 2025 county directory: Homemaker, Companion."
       }
     ],
     "notes": [
@@ -26755,6 +26783,50 @@
         "publisher": "BAYADA Morris County, Morristown",
         "title": "BAYADA Morris County, Morristown official office information",
         "url": "https://www.bayada.com/personal-and-companion-care/morris-county-10005"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-008-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 3",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0022400": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-006-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-006-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0022400",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-006-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 3",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3"
       }
     ]
   },
@@ -26839,6 +26911,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0023300": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-025-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-025-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0023300",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-025-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 6",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=6"
+      }
+    ]
+  },
   "north-jersey-hp-hp0024800": {
     "availability": {
       "asOf": null,
@@ -26846,13 +26952,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-nppes-1558488908-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1558488908",
         "text": "NPPES lists AMAZING GRACE NURSING CARE SERVICE at the matching UNION practice address with the published taxonomy labels Home Health, Respite Care. NPI 1558488908. NPPES last updated 2021-04-27. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "morris-2025-002-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-002-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-002-services",
+        "kind": "care",
+        "sourceId": "morris-2025-002-directory",
+        "text": "Services listed in the 2025 county directory: Homemaker, Companion."
       }
     ],
     "notes": [
@@ -26876,6 +26994,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1558488908"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-002-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 2",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=2"
       }
     ]
   },
@@ -27044,13 +27172,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-nppes-1265852537-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1265852537",
         "text": "NPPES lists NUSOURCE TECHNOLOGY, INC. at the matching CHATHAM practice address with the published taxonomy labels Home Health. NPI 1265852537. NPPES last updated 2014-04-24. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "morris-2025-056-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-056-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-056-services",
+        "kind": "care",
+        "sourceId": "morris-2025-056-directory",
+        "text": "Services listed in the 2025 county directory: Companion."
       }
     ],
     "notes": [
@@ -27074,6 +27214,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1265852537"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-056-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 12",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12"
       }
     ]
   },
@@ -27309,6 +27459,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0061600": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-015-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-015-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0061600",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-015-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 4",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=4"
+      }
+    ]
+  },
   "north-jersey-hp-hp0065000": {
     "availability": {
       "asOf": null,
@@ -27391,6 +27575,46 @@
       }
     ]
   },
+  "north-jersey-hp-hp0068300": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-060-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-060-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-060-services",
+        "kind": "care",
+        "sourceId": "morris-2025-060-directory",
+        "text": "Services listed in the 2025 county directory: Homemaker, Companion."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0068300",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-060-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 12",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12"
+      }
+    ]
+  },
   "north-jersey-hp-hp0076201": {
     "availability": {
       "asOf": null,
@@ -27438,7 +27662,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-home-homewell-hackensack-hp0077800-services-0",
@@ -27469,6 +27693,18 @@
         "kind": "care",
         "sourceId": "supp-nppes-1851843577",
         "text": "NPPES lists CENTURION ENTERPRISES at the matching HACKENSACK practice address with the published taxonomy labels Home Health. NPI 1851843577. NPPES last updated 2016-10-28. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "morris-2025-037-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-037-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-037-services",
+        "kind": "care",
+        "sourceId": "morris-2025-037-directory",
+        "text": "Services listed in the 2025 county directory: Companions."
       }
     ],
     "notes": [
@@ -27509,6 +27745,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1851843577"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-037-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 8",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=8"
       }
     ]
   },
@@ -27719,7 +27965,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-home-senior-helpers-madison-hp0104400-services-0",
@@ -27750,6 +27996,18 @@
         "kind": "care",
         "sourceId": "supp-home-9cd3ec54d8df058a",
         "text": "The local page publishes HP0104400. A recruitment statement mentions three counties but is not used as service-area proof."
+      },
+      {
+        "id": "morris-2025-062-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-062-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-062-services",
+        "kind": "care",
+        "sourceId": "morris-2025-062-directory",
+        "text": "Services listed in the 2025 county directory: Homemaker, Companions."
       }
     ],
     "notes": [
@@ -27776,6 +28034,16 @@
         "publisher": "Senior Helpers Madison",
         "title": "Senior Helpers Madison official office information",
         "url": "https://www.seniorhelpers.com/nj/madison/"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-062-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 13",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=13"
       }
     ]
   },
@@ -28018,6 +28286,40 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1760728810"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0116700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-054-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-054-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0116700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-054-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 11",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=11"
       }
     ]
   },
@@ -28695,6 +28997,46 @@
       }
     ]
   },
+  "north-jersey-hp-hp0136300": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-066-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-066-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-066-services",
+        "kind": "care",
+        "sourceId": "morris-2025-066-directory",
+        "text": "Services listed in the 2025 county directory: Companionship and light\n  housekeeping also available."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0136300",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-066-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 14",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=14"
+      }
+    ]
+  },
   "north-jersey-hp-hp0149300": {
     "availability": {
       "asOf": null,
@@ -29132,13 +29474,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-nppes-1598117715-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1598117715",
         "text": "NPPES lists AT HOME CARE, INC. at the matching LANDING practice address with the published taxonomy labels Home Health, In Home Supportive Care. NPI 1598117715. NPPES last updated 2025-02-27. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "morris-2025-052-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-052-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
       }
     ],
     "notes": [
@@ -29162,6 +29510,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1598117715"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-052-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 11",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=11"
       }
     ]
   },
@@ -30038,7 +30396,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-home-brightstar-morris-hp0217600-services-0",
@@ -30081,6 +30439,18 @@
         "kind": "care",
         "sourceId": "supp-nppes-1225402126",
         "text": "NPPES lists SOLOFF LLC at the matching CEDAR KNOLLS practice address with the published taxonomy labels Home Health. NPI 1225402126. NPPES last updated 2020-08-13. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "morris-2025-010-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-010-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-010-services",
+        "kind": "care",
+        "sourceId": "morris-2025-010-directory",
+        "text": "Services listed in the 2025 county directory: Companion."
       }
     ],
     "notes": [
@@ -30131,6 +30501,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1225402126"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-010-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 3",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3"
       }
     ]
   },
@@ -30172,6 +30552,40 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1063432672"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0219400": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-022-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-022-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0219400",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-022-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 6",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=6"
       }
     ]
   },
@@ -30748,6 +31162,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0245900": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-043-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-043-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0245900",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-043-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 9",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=9"
+      }
+    ]
+  },
   "north-jersey-hp-hp0246500": {
     "availability": {
       "asOf": null,
@@ -31159,7 +31607,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-14",
     "facts": [
       {
         "id": "supp-home-caring-people-nj-hp0257500-services-0",
@@ -31190,6 +31638,12 @@
         "kind": "care",
         "sourceId": "supp-nppes-1720514201",
         "text": "NPPES lists CARING PEOPLE NJ OPERATING, LLC at the matching Clifton practice address with the published taxonomy labels Clinic/Center, Multi-Specialty, Home Health. NPI 1720514201. NPPES last updated 2022-04-06. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "morris-2025-014-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-014-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
       }
     ],
     "notes": [
@@ -31230,6 +31684,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1720514201"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-014-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 4",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=4"
       }
     ]
   },
@@ -34330,6 +34794,46 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1396450136"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0353500": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-14",
+    "facts": [
+      {
+        "id": "morris-2025-057-payment",
+        "kind": "cost",
+        "sourceId": "morris-2025-057-directory",
+        "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "morris-2025-057-services",
+        "kind": "care",
+        "sourceId": "morris-2025-057-directory",
+        "text": "Services listed in the 2025 county directory: Companion."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0353500",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-14",
+        "id": "morris-2025-057-directory",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Morris County",
+        "title": "2025 Home Care Agencies, page 12",
+        "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12"
       }
     ]
   },

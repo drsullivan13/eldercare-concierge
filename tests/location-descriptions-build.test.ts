@@ -1,4 +1,5 @@
 import test from "node:test";
+import type { Provider as CatalogProvider } from "../src/lib/providers";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import {
@@ -413,7 +414,7 @@ test("public validation rejects duplicate JSON keys and missing normalized input
   });
 });
 
-test("every active North Jersey ID has an honest official collection disposition", () => {
+test("every active North Jersey ID has a dated collection disposition or is outside the original collection", () => {
   const markets = JSON.parse(
     readFileSync(join(root, "src/data/regional-markets.json"), "utf8"),
   );
@@ -426,11 +427,16 @@ test("every active North Jersey ID has an honest official collection disposition
   const coverage = JSON.parse(
     readFileSync(join(official, "coverage.json"), "utf8"),
   );
-  assert.equal(providers.length, 974);
-  assert.deepEqual(
-    coverage.locations.map((p: { providerId: string }) => p.providerId).sort(),
-    providers.map((p: Provider) => p.id).sort(),
-  );
+  const currentIds = new Set(providers.map((p: Provider) => p.id));
+  const originalIds = new Set(coverage.locations.map((p: { providerId: string }) => p.providerId));
+  assert.equal(originalIds.size, 974);
+  for (const pid of originalIds) assert.ok(currentIds.has(pid));
+  for (const provider of providers as CatalogProvider[]) {
+    if (!originalIds.has(provider.id)) {
+      assert.equal(provider.category, "home-care");
+      assert.ok(provider.sources.some((s) => s.kind === "regulatory"));
+    }
+  }
   assert.deepEqual(
     coverage.locations
       .filter((p: { status: string }) => p.status === "described")

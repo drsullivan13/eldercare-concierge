@@ -1,0 +1,662 @@
+{
+  "counties": {
+    "Atlantic": {
+      "activeIdsLocated": 34,
+      "excludedOutsideTarget": 34,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 45,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Bergen": {
+      "activeIdsLocated": 163,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 3,
+      "inactiveIdsLocated": 186,
+      "published": 162,
+      "publishedNew": 3,
+      "publishedRuntimeReused": 159,
+      "tier": "ring"
+    },
+    "Burlington": {
+      "activeIdsLocated": 88,
+      "excludedOutsideTarget": 88,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 102,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Camden": {
+      "activeIdsLocated": 110,
+      "excludedOutsideTarget": 108,
+      "heldCandidate": 3,
+      "inactiveIdsLocated": 122,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Cape May": {
+      "activeIdsLocated": 5,
+      "excludedOutsideTarget": 5,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 8,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Cumberland": {
+      "activeIdsLocated": 14,
+      "excludedOutsideTarget": 14,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 21,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Essex": {
+      "activeIdsLocated": 216,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 2,
+      "inactiveIdsLocated": 262,
+      "published": 216,
+      "publishedNew": 9,
+      "publishedRuntimeReused": 207,
+      "tier": "core"
+    },
+    "Gloucester": {
+      "activeIdsLocated": 29,
+      "excludedOutsideTarget": 29,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 53,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Hudson": {
+      "activeIdsLocated": 72,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 91,
+      "published": 72,
+      "publishedNew": 2,
+      "publishedRuntimeReused": 70,
+      "tier": "preserved"
+    },
+    "Hunterdon": {
+      "activeIdsLocated": 16,
+      "excludedOutsideTarget": 16,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 11,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Mercer": {
+      "activeIdsLocated": 68,
+      "excludedOutsideTarget": 68,
+      "heldCandidate": 6,
+      "inactiveIdsLocated": 75,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Middlesex": {
+      "activeIdsLocated": 195,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 4,
+      "inactiveIdsLocated": 170,
+      "published": 194,
+      "publishedNew": 194,
+      "publishedRuntimeReused": 0,
+      "tier": "core"
+    },
+    "Monmouth": {
+      "activeIdsLocated": 109,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 9,
+      "inactiveIdsLocated": 130,
+      "published": 107,
+      "publishedNew": 107,
+      "publishedRuntimeReused": 0,
+      "tier": "ring"
+    },
+    "Morris": {
+      "activeIdsLocated": 65,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 78,
+      "published": 65,
+      "publishedNew": 5,
+      "publishedRuntimeReused": 60,
+      "tier": "core"
+    },
+    "Ocean": {
+      "activeIdsLocated": 80,
+      "excludedOutsideTarget": 80,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 105,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Passaic": {
+      "activeIdsLocated": 59,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 2,
+      "inactiveIdsLocated": 71,
+      "published": 58,
+      "publishedNew": 1,
+      "publishedRuntimeReused": 57,
+      "tier": "ring"
+    },
+    "Salem": {
+      "activeIdsLocated": 2,
+      "excludedOutsideTarget": 2,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 6,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Somerset": {
+      "activeIdsLocated": 78,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 3,
+      "inactiveIdsLocated": 52,
+      "published": 77,
+      "publishedNew": 77,
+      "publishedRuntimeReused": 0,
+      "tier": "core"
+    },
+    "Sussex": {
+      "activeIdsLocated": 14,
+      "excludedOutsideTarget": 14,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 14,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    },
+    "Union": {
+      "activeIdsLocated": 122,
+      "excludedOutsideTarget": 0,
+      "heldCandidate": 2,
+      "inactiveIdsLocated": 144,
+      "published": 119,
+      "publishedNew": 3,
+      "publishedRuntimeReused": 116,
+      "tier": "core"
+    },
+    "Warren": {
+      "activeIdsLocated": 15,
+      "excludedOutsideTarget": 15,
+      "heldCandidate": 0,
+      "inactiveIdsLocated": 18,
+      "published": 0,
+      "publishedNew": 0,
+      "publishedRuntimeReused": 0,
+      "tier": null
+    }
+  },
+  "heldOutsideTarget": {
+    "place_name_unmatched": 1,
+    "po_box_address": 3
+  },
+  "heldTargetRelevant": [
+    {
+      "candidateCounties": [
+        "Somerset"
+      ],
+      "city": "SKILLMAN",
+      "reason": "zip_not_in_nj_postal_reference",
+      "registrationId": "HP0021203",
+      "zip": "08552"
+    },
+    {
+      "candidateCounties": [
+        "Mercer",
+        "Monmouth"
+      ],
+      "city": "HAMILTON",
+      "reason": "county_ambiguous",
+      "registrationId": "HP0076200",
+      "zip": "08691"
+    },
+    {
+      "candidateCounties": [
+        "Monmouth"
+      ],
+      "city": "KEYPORT",
+      "reason": "po_box_address",
+      "registrationId": "HP0099400",
+      "zip": "07735"
+    },
+    {
+      "candidateCounties": [
+        "Bergen"
+      ],
+      "city": "ENGLEWOOD CLIFFS",
+      "reason": "po_box_address",
+      "registrationId": "HP0144800",
+      "runtime": "omitted",
+      "zip": "07632"
+    },
+    {
+      "candidateCounties": [
+        "Middlesex"
+      ],
+      "city": "HIGHLAND PARK",
+      "reason": "po_box_address",
+      "registrationId": "HP0145300",
+      "zip": "08904"
+    },
+    {
+      "candidateCounties": [
+        "Middlesex"
+      ],
+      "city": "MONROE TWSP",
+      "reason": "place_name_unmatched",
+      "registrationId": "HP0185000",
+      "zip": "08831"
+    },
+    {
+      "candidateCounties": [
+        "Somerset"
+      ],
+      "city": "GLADSTONE",
+      "reason": "po_box_address",
+      "registrationId": "HP0199800",
+      "zip": "07934"
+    },
+    {
+      "candidateCounties": [
+        "Bergen",
+        "Passaic"
+      ],
+      "city": "HACKENSACK",
+      "reason": "city_zip_county_conflict",
+      "registrationId": "HP0286200",
+      "runtime": "omitted",
+      "zip": "07524"
+    },
+    {
+      "candidateCounties": [
+        "Middlesex",
+        "Monmouth"
+      ],
+      "city": "Manalpan",
+      "reason": "place_name_unmatched",
+      "registrationId": "HP0319500",
+      "zip": "07726"
+    },
+    {
+      "candidateCounties": [
+        "Somerset"
+      ],
+      "city": "HILLSBOROUGH TWNSP",
+      "reason": "place_name_unmatched",
+      "registrationId": "HP0334100",
+      "zip": "08844"
+    },
+    {
+      "candidateCounties": [
+        "Mercer",
+        "Monmouth"
+      ],
+      "city": "Hamilton",
+      "reason": "county_ambiguous",
+      "registrationId": "HP0365700",
+      "zip": "08691"
+    },
+    {
+      "candidateCounties": [
+        "Mercer",
+        "Monmouth"
+      ],
+      "city": "Hamilton",
+      "reason": "county_ambiguous",
+      "registrationId": "HP0367800",
+      "zip": "08691"
+    },
+    {
+      "candidateCounties": [
+        "Essex",
+        "Union"
+      ],
+      "city": "Plainfield",
+      "reason": "city_zip_county_conflict",
+      "registrationId": "HP0373200",
+      "runtime": "omitted",
+      "zip": "07040"
+    },
+    {
+      "candidateCounties": [
+        "Bergen"
+      ],
+      "city": "Palisade Park",
+      "reason": "place_name_unmatched",
+      "registrationId": "HP0386500",
+      "zip": "07650"
+    },
+    {
+      "candidateCounties": [
+        "Essex"
+      ],
+      "city": "Livingston",
+      "reason": "zip_not_in_nj_postal_reference",
+      "registrationId": "HP0389400",
+      "zip": "07089"
+    },
+    {
+      "candidateCounties": [
+        "Mercer",
+        "Monmouth"
+      ],
+      "city": "Hamilton Township",
+      "reason": "county_ambiguous",
+      "registrationId": "HP0392000",
+      "zip": "08691"
+    },
+    {
+      "candidateCounties": [
+        "Passaic"
+      ],
+      "city": "totowa",
+      "reason": "po_box_address",
+      "registrationId": "HP0404800",
+      "runtime": "omitted",
+      "zip": "07511"
+    },
+    {
+      "candidateCounties": [
+        "Middlesex"
+      ],
+      "city": "NO BRUNSWICK",
+      "reason": "place_name_unmatched",
+      "registrationId": "HP0409000",
+      "zip": "08902"
+    },
+    {
+      "candidateCounties": [
+        "Mercer",
+        "Monmouth"
+      ],
+      "city": "Hamilton",
+      "reason": "county_ambiguous",
+      "registrationId": "HP0422800",
+      "zip": "08691"
+    },
+    {
+      "candidateCounties": [
+        "Union"
+      ],
+      "city": "Elizabeith",
+      "reason": "place_name_unmatched",
+      "registrationId": "HP0427800",
+      "zip": "07202"
+    },
+    {
+      "candidateCounties": [
+        "Monmouth"
+      ],
+      "city": "Freehold Boro",
+      "reason": "zip_not_in_nj_postal_reference",
+      "registrationId": "HP0441800",
+      "zip": "07228"
+    },
+    {
+      "candidateCounties": [
+        "Monmouth"
+      ],
+      "city": "freehold",
+      "reason": "missing_address",
+      "registrationId": "HP0446000",
+      "zip": "07728"
+    }
+  ],
+  "published": {
+    "byLocationKind": {
+      "office": 824,
+      "zip": 247
+    },
+    "byRuntime": {
+      "new": 402,
+      "reused": 669
+    },
+    "byTier": {
+      "core": 671,
+      "core+ring": 1,
+      "preserved": 72,
+      "ring": 327
+    },
+    "newOfficeGeocode": {
+      "accepted": 236,
+      "input_differs_from_registry_row": 1,
+      "matched_street_differs": 51,
+      "not_exact_match": 76,
+      "not_in_capture": 38
+    },
+    "runtimeLookupPointMismatches": [],
+    "total": 1071,
+    "withBlankBusinessState": 30,
+    "withPastExpirationWarning": 208,
+    "withSupersededAddressWarning": 1,
+    "zipsOutsideRuntimeLookup": [
+      "07001",
+      "07008",
+      "07059",
+      "07064",
+      "07067",
+      "07069",
+      "07077",
+      "07080",
+      "07095",
+      "07701",
+      "07702",
+      "07712",
+      "07717",
+      "07718",
+      "07719",
+      "07724",
+      "07726",
+      "07727",
+      "07728",
+      "07730",
+      "07731",
+      "07733",
+      "07735",
+      "07740",
+      "07746",
+      "07747",
+      "07748",
+      "07750",
+      "07753",
+      "07755",
+      "07764",
+      "07921",
+      "08501",
+      "08512",
+      "08536",
+      "08558",
+      "08736",
+      "08750",
+      "08807",
+      "08810",
+      "08816",
+      "08817",
+      "08820",
+      "08823",
+      "08830",
+      "08831",
+      "08835",
+      "08837",
+      "08840",
+      "08844",
+      "08846",
+      "08852",
+      "08854",
+      "08857",
+      "08859",
+      "08861",
+      "08863",
+      "08869",
+      "08872",
+      "08873",
+      "08876",
+      "08879",
+      "08882",
+      "08884",
+      "08901",
+      "08902",
+      "08903",
+      "08904"
+    ],
+    "zipsUsed": 213
+  },
+  "publishedMultipleTargetCounties": [
+    {
+      "counties": [
+        "Morris",
+        "Passaic"
+      ],
+      "providerId": "north-jersey-hp-hp0414700"
+    }
+  ],
+  "registrationOutcomes": {
+    "excluded": {
+      "no_active_row": 1938,
+      "outside_nj": 74,
+      "outside_target_counties": 473
+    },
+    "held": {
+      "city_zip_county_conflict": 2,
+      "county_ambiguous": 5,
+      "missing_address": 1,
+      "place_name_unmatched": 7,
+      "po_box_address": 8,
+      "zip_not_in_nj_postal_reference": 3
+    },
+    "published": 1071
+  },
+  "registry": {
+    "activeRows": 1678,
+    "activeRowsPastExpirationAtCapture": 331,
+    "activeRowsWithBlankState": 49,
+    "activeRowsWithoutExpiration": 0,
+    "caseNormalizedIds": [
+      {
+        "registrationId": "HP999999999",
+        "sourceIds": [
+          "hp999999999"
+        ]
+      }
+    ],
+    "checkedAt": "2026-11-15",
+    "dataAsOf": null,
+    "distinctIds": 3582,
+    "exactDuplicateRows": 45,
+    "idsWithActiveRow": 1644,
+    "idsWithConflictingVariants": [
+      {
+        "fields": [
+          "Business Address",
+          "Business City",
+          "Business Name",
+          "Business Phone",
+          "Business Zipcode",
+          "Expiration Date",
+          "License Status"
+        ],
+        "outcome": "published",
+        "registrationId": "HP0365500",
+        "rows": [
+          2193,
+          2195
+        ]
+      }
+    ],
+    "idsWithDuplicateRows": 45,
+    "rows": 3628,
+    "statusCounts": {
+      "Active": 1678,
+      "Closed": 60,
+      "Expired": 1884,
+      "Expired.": 2,
+      "Inactive": 2,
+      "Revoked": 2
+    },
+    "url": "https://rgbportal.dca.njoag.gov/public-view/"
+  },
+  "rowDispositions": {
+    "exact_duplicate": 45,
+    "excluded": 2485,
+    "held": 26,
+    "published": 1071,
+    "superseded_non_active": 1
+  },
+  "runtime": {
+    "byLocationKind": {
+      "office": 588,
+      "zip": 85
+    },
+    "homeCareRecords": 673,
+    "notInRegistry": [],
+    "omitted": [
+      {
+        "providerId": "north-jersey-hp-hp0144800",
+        "reason": "po_box_address"
+      },
+      {
+        "providerId": "north-jersey-hp-hp0286200",
+        "reason": "city_zip_county_conflict"
+      },
+      {
+        "providerId": "north-jersey-hp-hp0373200",
+        "reason": "city_zip_county_conflict"
+      },
+      {
+        "providerId": "north-jersey-hp-hp0404800",
+        "reason": "po_box_address"
+      }
+    ],
+    "recordsWithWarningsAdded": 143,
+    "regenerated": [],
+    "reused": 669,
+    "reusedByLocationKind": {
+      "office": 588,
+      "zip": 81
+    },
+    "zipPointMismatches": []
+  },
+  "schemaVersion": 1,
+  "targetCounties": {
+    "core": [
+      "Essex",
+      "Middlesex",
+      "Morris",
+      "Somerset",
+      "Union"
+    ],
+    "preserved": [
+      "Hudson"
+    ],
+    "ring": [
+      "Bergen",
+      "Monmouth",
+      "Passaic"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "categories": {
     "assisted-living": 116,
-    "home-care": 673,
+    "home-care": 1074,
     "home-health": 18,
     "life-plan": 7,
     "nursing-home": 160
@@ -11,47 +11,56 @@
   "countyCounts": {
     "Bergen": {
       "assisted-living": 43,
-      "home-care": 161,
+      "home-care": 164,
       "home-health": 5,
       "nursing-home": 30
     },
     "Essex": {
       "assisted-living": 20,
-      "home-care": 207,
+      "home-care": 216,
       "home-health": 4,
       "life-plan": 2,
       "nursing-home": 39
     },
     "Hudson": {
       "assisted-living": 2,
-      "home-care": 70,
+      "home-care": 72,
       "home-health": 3,
       "life-plan": 1,
       "nursing-home": 18
     },
+    "Middlesex": {
+      "home-care": 194
+    },
+    "Monmouth": {
+      "home-care": 107
+    },
     "Morris": {
       "assisted-living": 30,
-      "home-care": 60,
+      "home-care": 65,
       "home-health": 3,
       "life-plan": 2,
       "nursing-home": 26
     },
     "Passaic": {
       "assisted-living": 10,
-      "home-care": 58,
+      "home-care": 59,
       "home-health": 2,
       "life-plan": 1,
       "nursing-home": 23
     },
+    "Somerset": {
+      "home-care": 77
+    },
     "Union": {
       "assisted-living": 11,
-      "home-care": 117,
+      "home-care": 120,
       "home-health": 1,
       "life-plan": 1,
       "nursing-home": 24
     }
   },
-  "crosswalkRows": 986,
+  "crosswalkRows": 1375,
   "dohSourceRows": 894,
   "evidenceByCountyAndSetting": {
     "Bergen": {
@@ -66,8 +75,8 @@
         "streetMatched": 38
       },
       "home-care": {
-        "locations": 161,
-        "locationsWithFacts": 65,
+        "locations": 164,
+        "locationsWithFacts": 66,
         "locationsWithPublishedRate": 0,
         "locationsWithReviewAggregate": 0,
         "publishedOpenings": 0,
@@ -108,8 +117,8 @@
         "streetMatched": 19
       },
       "home-care": {
-        "locations": 207,
-        "locationsWithFacts": 72,
+        "locations": 216,
+        "locationsWithFacts": 73,
         "locationsWithPublishedRate": 0,
         "locationsWithReviewAggregate": 0,
         "publishedOpenings": 0,
@@ -160,7 +169,7 @@
         "streetMatched": 0
       },
       "home-care": {
-        "locations": 70,
+        "locations": 72,
         "locationsWithFacts": 27,
         "locationsWithPublishedRate": 0,
         "locationsWithReviewAggregate": 0,
@@ -200,6 +209,30 @@
         "streetMatched": 16
       }
     },
+    "Middlesex": {
+      "home-care": {
+        "locations": 194,
+        "locationsWithFacts": 3,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 129
+      }
+    },
+    "Monmouth": {
+      "home-care": {
+        "locations": 107,
+        "locationsWithFacts": 0,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 58
+      }
+    },
     "Morris": {
       "assisted-living": {
         "locations": 30,
@@ -212,8 +245,8 @@
         "streetMatched": 23
       },
       "home-care": {
-        "locations": 60,
-        "locationsWithFacts": 24,
+        "locations": 65,
+        "locationsWithFacts": 27,
         "locationsWithPublishedRate": 0,
         "locationsWithReviewAggregate": 1,
         "publishedOpenings": 0,
@@ -264,7 +297,7 @@
         "streetMatched": 10
       },
       "home-care": {
-        "locations": 58,
+        "locations": 59,
         "locationsWithFacts": 23,
         "locationsWithPublishedRate": 0,
         "locationsWithReviewAggregate": 0,
@@ -304,6 +337,18 @@
         "streetMatched": 19
       }
     },
+    "Somerset": {
+      "home-care": {
+        "locations": 77,
+        "locationsWithFacts": 1,
+        "locationsWithPublishedRate": 0,
+        "locationsWithReviewAggregate": 0,
+        "publishedOpenings": 0,
+        "publishedWaitlists": 0,
+        "scoredLocations": 0,
+        "streetMatched": 49
+      }
+    },
     "Union": {
       "assisted-living": {
         "locations": 11,
@@ -316,7 +361,7 @@
         "streetMatched": 10
       },
       "home-care": {
-        "locations": 117,
+        "locations": 120,
         "locationsWithFacts": 61,
         "locationsWithPublishedRate": 0,
         "locationsWithReviewAggregate": 0,
@@ -577,6 +622,13 @@
         "name": "DAY STAR HOME HEALTHCARE LLC"
       },
       {
+        "address": "1000 Stone Street",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0413800",
+        "name": "Life Care Assistance, LLC"
+      },
+      {
         "address": "1541 Stuyvesant Ave",
         "category": "home-care",
         "cmsCcn": null,
@@ -652,6 +704,13 @@
         "cmsCcn": null,
         "id": "north-jersey-hp-hp0440600",
         "name": "L & L STAFFING AND HOME CARE SERVICES, INC."
+      },
+      {
+        "address": "1460 Morris Avenue",
+        "category": "home-care",
+        "cmsCcn": null,
+        "id": "north-jersey-hp-hp0450300",
+        "name": "Royals Senior Home Care"
       }
     ],
     "07960": [
@@ -762,6 +821,42 @@
       }
     ]
   },
+  "homeCareSupply": {
+    "addedOffices": 401,
+    "counties": [
+      "Somerset",
+      "Middlesex",
+      "Monmouth"
+    ],
+    "officesByCounty": {
+      "Bergen": 162,
+      "Essex": 216,
+      "Hudson": 72,
+      "Middlesex": 194,
+      "Monmouth": 107,
+      "Morris": 65,
+      "Passaic": 58,
+      "Somerset": 77,
+      "Union": 119
+    },
+    "publishedOffices": 1070,
+    "refreshedOffices": 669,
+    "releaseOutputs": {
+      "market-zips.json": "dc9582dea73e529e53265735483fd208c7d2842e148f3627e6c1f0712cca2df8",
+      "providers.json": "3622ea8d3c089c77de4ab3abf8b4408d0b0fa349b1b9731106d09a2a0fde2b4f",
+      "reconciliation.json": "5b7cbea05d40b0e773c3f295510245cf26f29c2a0897cc123b89ba36a9ccc0ba",
+      "registrations.json": "7dc68d49f69b57d6bffc38667da2095962b0b044482f5f66f2429104a9fd9715",
+      "rows.json": "d10ec3dd605ded0eafd6b9de5cdd0f266a24f220eeee08220e1204ed4a576391",
+      "zip-references.json": "8608d193f870cad7dc840d925614c593ca722a3e56e211cada89db9cc0b1121d"
+    },
+    "retainedSeparately": {
+      "ambiguous_office_county": 1,
+      "city_zip_county_conflict": 2,
+      "po_box_address": 2
+    },
+    "zipsAdded": 134,
+    "zipsSharedWithBaseline": 270
+  },
   "inspectionFacilities": 139,
   "inspectionTotals": {
     "healthCitations": 3256,
@@ -769,18 +864,20 @@
   },
   "ledgerReasons": {
     "clinical_detail_outside_runtime_contract": 6,
+    "newer_state_registry_capture": 681,
     "no_exact_runtime_care_category": 92,
     "no_unique_exact_nursing_unit_address_match": 14,
     "not_certified": 37,
     "office_address_or_zip_missing": 1,
     "office_county_not_verified": 59,
+    "office_geography_held": 5,
     "office_outside_selected_counties": 20,
     "outside_selected_counties": 540,
     "registration_not_active": 832,
     "registration_outside_retained_county_scope": 2046,
     "service_coverage_is_not_an_office_location": 1246
   },
-  "providerCount": 974,
+  "providerCount": 1375,
   "publishedHomeHealthOffices": 18,
   "verifiedHomeHealthOfficeInputs": 18
 }

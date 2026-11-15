@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "blankZctaRows": 24,
+    "nationalRows": 112565,
+    "njRows": 1340,
+    "outOfStateRows": 0,
+    "retainedRows": 1340,
+    "zctas": 598
+  },
+  "filter": "Original pipe-delimited header and rows in original order. Retain every nationwide row for every nonblank ZCTA intersecting an NJ county subdivision, plus blank-ZCTA rows for NJ subdivisions. No water, unassigned, offshore, or out-of-state parts of retained ZCTAs removed.",
+  "retained": {
+    "bytes": 195517,
+    "path": "nj-cousub-2020.psv",
+    "sha256": "480dc0e8593aa2847ab0ef02ef165e8add43a370134387a85384a8e32a7b77ab"
+  },
+  "schemaVersion": 1,
+  "source": {
+    "bytes": 16262349,
+    "effectiveUrl": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_cousub20_natl.txt",
+    "retrievedAt": "2026-11-15T00:35:45+00:00",
+    "sha256": "406d2f1b11692a185e930e53f63a68951e5b64dbb7b0cf201a934a8e54aee27b",
+    "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_cousub20_natl.txt"
+  }
+}

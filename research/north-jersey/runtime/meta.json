@@ -1,9 +1,9 @@
 {
-  "asOf": "2026-11-13",
-  "catalogTotal": 974,
+  "asOf": "2026-11-15",
+  "catalogTotal": 1375,
   "categories": {
     "assisted-living": 116,
-    "home-care": 673,
+    "home-care": 1074,
     "home-health": 18,
     "life-plan": 7,
     "nursing-home": 160
@@ -11,41 +11,50 @@
   "countyCounts": {
     "Bergen": {
       "assisted-living": 43,
-      "home-care": 161,
+      "home-care": 164,
       "home-health": 5,
       "nursing-home": 30
     },
     "Essex": {
       "assisted-living": 20,
-      "home-care": 207,
+      "home-care": 216,
       "home-health": 4,
       "life-plan": 2,
       "nursing-home": 39
     },
     "Hudson": {
       "assisted-living": 2,
-      "home-care": 70,
+      "home-care": 72,
       "home-health": 3,
       "life-plan": 1,
       "nursing-home": 18
     },
+    "Middlesex": {
+      "home-care": 194
+    },
+    "Monmouth": {
+      "home-care": 107
+    },
     "Morris": {
       "assisted-living": 30,
-      "home-care": 60,
+      "home-care": 65,
       "home-health": 3,
       "life-plan": 2,
       "nursing-home": 26
     },
     "Passaic": {
       "assisted-living": 10,
-      "home-care": 58,
+      "home-care": 59,
       "home-health": 2,
       "life-plan": 1,
       "nursing-home": 23
     },
+    "Somerset": {
+      "home-care": 77
+    },
     "Union": {
       "assisted-living": 11,
-      "home-care": 117,
+      "home-care": 120,
       "home-health": 1,
       "life-plan": 1,
       "nursing-home": 24
@@ -56,7 +65,8 @@
     "CMS citation and penalty totals describe the retained reporting window, not lifetime safety histories.",
     "Record totals are source identities, not unique physical facilities or brands. Unresolved CMS/state pairs and separate active firm registrations can share premises.",
     "CMS home-health service coverage is not used to place an office in a county.",
-    "ZIP locations from Census 2026 Gazetteer and GeoNames CC BY 4.0. County overlaps from Census 2020. ZIP fallback points are approximate."
+    "ZIP locations from Census 2026 Gazetteer and GeoNames CC BY 4.0. County overlaps from Census 2020. ZIP fallback points are approximate.",
+    "Somerset, Middlesex and Monmouth have no licensed facility, campus or certified home-health collection. ZIP search origins cover the nine counties. Office geography alone does not establish home service coverage."
   ],
-  "scope": "Licensed care units, certified home-health offices, active registered business offices and explicitly historical named campuses."
+  "scope": "Licensed care units, certified home-health offices, active registered business offices and explicitly historical named campuses. Somerset, Middlesex and Monmouth add only active registered home-care business offices from the reviewed supply release."
 }

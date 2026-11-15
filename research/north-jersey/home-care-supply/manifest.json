@@ -1,0 +1,141 @@
+{
+  "builder": "scripts/regions/nj_homecare_supply.py",
+  "consumer": "providers.json",
+  "inputs": {
+    "geography/nj-zips.json": {
+      "bytes": 23295,
+      "retrievedAt": "2026-11-13",
+      "sha256": "d3e20077d709b26d164442ca3ae12e9db07e4a144b2193ff7ae515da9576ebfe",
+      "url": null
+    },
+    "geography/raw/census-2020-zcta-county.txt": {
+      "bytes": 6821287,
+      "retrievedAt": "2026-11-12T14:50:45+00:00",
+      "sha256": "3ed41278d637dc249e0323306f68be8a6c234e3090f4de88ef328dee71aeaaaf",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+    },
+    "geography/raw/census-2026-zcta.zip": {
+      "bytes": 952131,
+      "retrievedAt": "2026-11-12T14:50:44+00:00",
+      "sha256": "f1e9046b91f6e60686a99343cb2752834c02b0764939403b331c78c017e2c54c",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_zcta_national.zip"
+    },
+    "geography/raw/geonames-US.zip": {
+      "bytes": 634328,
+      "retrievedAt": "2026-11-12T14:50:44+00:00",
+      "sha256": "8143066cdca36f13bf956692750e8d14797a3968c0c87d026e95fa7b0e080c26",
+      "url": "https://download.geonames.org/export/zip/US.zip"
+    },
+    "geography/raw/geonames-readme.txt": {
+      "bytes": 2893,
+      "retrievedAt": "2026-11-12T14:50:44+00:00",
+      "sha256": "fff60148da20f4d182859d926518efa5b0f3949f3c3273a284901325f1f8f008",
+      "url": "https://download.geonames.org/export/zip/readme.txt"
+    },
+    "home-care-supply/source/baseline-offices.json.gz": {
+      "basis": "673 home-care records selected from the reviewed six-county runtime/providers.json; original artifact SHA-256 27603e930d0c56d42edee3177d3a8a93bbf94725e12e134e5e5b17255e0d1855. Frozen so current releases never depend on their own output.",
+      "bytes": 71110,
+      "retrievedAt": "2026-11-13",
+      "sha256": "5540242907772deb59005479754a7564ad4ef6feb508bc802b754cc1e934bd33",
+      "url": null
+    },
+    "home-care-supply/source/census-office-geocode/census-input.csv": {
+      "bytes": 17851,
+      "retrievedAt": "2026-11-15T00:32:12.898507+00:00",
+      "sha256": "cbefd0a0f874713414b68703a9a9d0d587adaef45f12df4ad9a2e5c6bd75135e",
+      "url": "https://geocoding.geo.census.gov/geocoder/geographies/addressbatch"
+    },
+    "home-care-supply/source/census-office-geocode/census-output.csv": {
+      "bytes": 65147,
+      "retrievedAt": "2026-11-15T00:32:12.898507+00:00",
+      "sha256": "e5227ee008526b5d3e685c1656d2e66d5c2a07fcef68e8729cd0d80647973d60",
+      "url": "https://geocoding.geo.census.gov/geocoder/geographies/addressbatch"
+    },
+    "home-care-supply/source/firms.xlsx": {
+      "bytes": 335081,
+      "retrievedAt": "2026-11-15T00:18:23.160Z",
+      "sha256": "0bea21d668c3fd62e97b0ba36eede5785fcc69be146a5d8302bd9e05609fd489",
+      "url": "https://rgbportal.dca.njoag.gov/public-view/"
+    },
+    "state/raw/localities.html": {
+      "bytes": 458053,
+      "retrievedAt": "2026-11-12T15:01:19.849674+00:00",
+      "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+      "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl"
+    },
+    "state/raw/municipalities.json": {
+      "bytes": 207315,
+      "retrievedAt": "2026-11-12T15:01:19.579670+00:00",
+      "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+      "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000"
+    }
+  },
+  "outputs": {
+    "market-zips.json": {
+      "bytes": 34931,
+      "sha256": "dc9582dea73e529e53265735483fd208c7d2842e148f3627e6c1f0712cca2df8"
+    },
+    "providers.json": {
+      "bytes": 1781900,
+      "records": 1071,
+      "sha256": "3622ea8d3c089c77de4ab3abf8b4408d0b0fa349b1b9731106d09a2a0fde2b4f"
+    },
+    "reconciliation.json": {
+      "bytes": 14529,
+      "sha256": "5b7cbea05d40b0e773c3f295510245cf26f29c2a0897cc123b89ba36a9ccc0ba"
+    },
+    "registrations.json": {
+      "bytes": 1316545,
+      "records": 3582,
+      "sha256": "7dc68d49f69b57d6bffc38667da2095962b0b044482f5f66f2429104a9fd9715"
+    },
+    "rows.json": {
+      "bytes": 382341,
+      "records": 3628,
+      "sha256": "d10ec3dd605ded0eafd6b9de5cdd0f266a24f220eeee08220e1204ed4a576391"
+    },
+    "zip-references.json": {
+      "bytes": 67336,
+      "records": 213,
+      "sha256": "8608d193f870cad7dc840d925614c593ca722a3e56e211cada89db9cc0b1121d"
+    }
+  },
+  "schemaVersion": 1,
+  "sourceReachability": {
+    "meaning": "The complete HP* capture contains 3,628 rows, matching the portal total. The source has no effective date.",
+    "observedAt": "2026-11-14",
+    "observer": "coordinating agent, HTTP fetch",
+    "urls": [
+      {
+        "note": "HP* search and export matched counts; no renewal or availability is inferred.",
+        "status": 200,
+        "url": "https://rgbportal.dca.njoag.gov/public-view/"
+      },
+      {
+        "note": "Page last modified 8/19/2026. Alert says HCSF registrations now expire September 30 instead of June 30. Current registrations expire September 30, 2026, and registrations already renewed for 2026-27 extend to September 30, 2027. Workbook expiration dates are kept literally. The firm definition includes health care, companion or personal care placement, so registration is not proof of nonmedical-only service.",
+        "status": 200,
+        "url": "https://www.njconsumeraffairs.gov/hcservice"
+      },
+      {
+        "note": "JSON matches the retained municipality dataset shape.",
+        "status": 200,
+        "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000"
+      },
+      {
+        "note": "Reports 3301 matches, equal to the retained locality capture.",
+        "status": 200,
+        "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl"
+      },
+      {
+        "note": "CC BY 4.0 attribution required. Postal points are approximate, algorithmic estimates.",
+        "status": 200,
+        "url": "https://download.geonames.org/export/zip/readme.txt"
+      },
+      {
+        "note": "Census states that ZIP codes are not ZCTAs.",
+        "status": 200,
+        "url": "https://www.census.gov/programs-surveys/geography/guidance/geo-areas/zctas.html"
+      }
+    ]
+  }
+}

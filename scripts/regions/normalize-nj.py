@@ -21,6 +21,8 @@ ROOT = Path(__file__).resolve().parents[2]
 RESEARCH = ROOT / "research/north-jersey"
 OUTPUT = RESEARCH / "runtime"
 COUNTIES = ("Union", "Morris", "Essex", "Bergen", "Hudson", "Passaic")
+SUPPLY = "home-care-supply/"
+SUPPLY_COUNTIES = ("Somerset", "Middlesex", "Monmouth")
 MARKET = "north-jersey"
 NS = {"s": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 TYPES = {
@@ -328,6 +330,56 @@ def home_health_inputs(inputs, zips, counties, ledger):
     }
 
 
+def home_care_supply(inputs, counties, baseline_ids):
+    """Match the current HCSF export to independently assigned counties and existing Harbor IDs."""
+    manifest = inputs.json(SUPPLY + "manifest.json")
+    require(manifest["schemaVersion"] == 1 and manifest["consumer"] == "providers.json",
+            "Unsupported home-care supply manifest")
+    for group, prefix in (("inputs", ""), ("outputs", SUPPLY)):
+        for name, receipt in manifest[group].items():
+            body = inputs.read(prefix + name)
+            require(len(body) == receipt["bytes"] and digest(body) == receipt["sha256"],
+                    f"Home-care supply evidence changed: {name}")
+    registry = SUPPLY + "source/firms.xlsx"
+    receipt = inputs.receipt(registry)
+    rows = {r["source_row"]: r for r in workbook_rows(inputs.read(registry))}
+    require(len(rows) == receipt["exported_rows"] == receipt["displayed_rows"],
+            "Live registration export and displayed portal count differ")
+    records = {p["id"]: p for p in inputs.json(SUPPLY + "providers.json")}
+    providers, refreshed, crosswalk, ledger, county_by_id = [], {}, [], [], {}
+    for reg in inputs.json(SUPPLY + "registrations.json"):
+        county = reg.get("county")
+        if reg["outcome"] != "published" or county not in counties:
+            if reg.get("runtime") == "omitted" or (reg["outcome"] == "published" and not county):
+                ledger.append({"source": "NJ HCSF supply release", "sourceFile": registry,
+                               "providerId": reg.get("providerId", f"{MARKET}-hp-{slug(reg['registrationId'])}"),
+                               "officialId": reg["registrationId"], "sourceRow": reg["primaryRow"],
+                               "status": "retained_separately", "reason": "office_geography_held", "change": reg.get("reason", "ambiguous_office_county")})
+            continue
+        pid = reg["providerId"]
+        row = rows[reg["primaryRow"]]
+        provider = records[pid]
+        require(pid == f"{MARKET}-hp-{slug(reg['registrationId'])}" and row["License Status"] == "Active"
+                and row["License/Registration"].upper() == reg["registrationId"] and provider["category"] == "home-care"
+                and provider["address"] == clean(row["Business Address"]) and provider["zip"] == clean(row["Business Zipcode"])[:5]
+                and provider["name"] == row["Business Name"] and provider["city"] == row["Business City"]
+                and "serviceArea" not in provider and provider["services"] == [],
+                f"Office disagrees with registration {reg['registrationId']}")
+        county_by_id[pid] = county
+        current = {"source": "NJ HP registry", "sourceFile": registry, "sourceRow": reg["primaryRow"],
+                   "officialId": reg["registrationId"], "county": county, "providerId": pid,
+                   "sourceSha256": receipt["sha256"], "sourceAsOf": None, "cmsCcn": None,
+                   "countyBasis": reg["countyAssignment"], "zipCountyBasis": reg["zipCountyBasis"]}
+        if pid in baseline_ids:
+            refreshed[pid] = provider
+        else:
+            providers.append(provider)
+        crosswalk.append({**current, "status": "included"})
+    return {"providers": providers, "refreshed": refreshed, "zips": inputs.json(SUPPLY + "market-zips.json"),
+            "crosswalk": crosswalk, "ledger": ledger, "countyById": county_by_id,
+            "outputs": {k: v["sha256"] for k, v in manifest["outputs"].items()}}
+
+
 def clinical_inputs(inputs, providers, ledger):
     manifest = inputs.json("clinical/manifest.json")
     require(manifest["schemaVersion"] == 1, "Unsupported clinical manifest schema")
@@ -565,7 +617,7 @@ def reviewed_facebook(inputs, providers):
     return dataset
 
 
-def evidence_coverage(inputs, providers, addresses, research):
+def evidence_coverage(inputs, providers, county_by_id, addresses, research):
     scores = {}
     if "review-release/manifest.json" in inputs.hashes:
         path = "review-release/experience-verification.json"
@@ -575,13 +627,12 @@ def evidence_coverage(inputs, providers, addresses, research):
     groups = {}
     for provider in providers:
         pid = provider["id"]
-        address = addresses[pid]
         category = provider["category"]
-        bucket = groups.setdefault(address["county"], {}).setdefault(category, Counter())
+        bucket = groups.setdefault(county_by_id[pid], {}).setdefault(category, Counter())
         detail = research.get(pid, {})
         facts = detail.get("facts", [])
         bucket.update({
-            "locations": 1, "streetMatched": address["status"] == "matched",
+            "locations": 1, "streetMatched": addresses.get(pid, {}).get("status") == "matched" or (pid not in addresses and provider["locationKind"] == "office"),
             "locationsWithFacts": bool(facts), "locationsWithPublishedRate": any(f.get("amount") for f in facts),
             "locationsWithReviewAggregate": bool(detail.get("reviewAggregates")),
             "scoredLocations": scores.get(pid, {}).get("value") is not None,
@@ -594,7 +645,7 @@ def evidence_coverage(inputs, providers, addresses, research):
 def normalize(root, counties, *, source_only=False):
     inputs = Inputs(root)
     geography_manifest = inputs.json("geography/manifest.json")
-    zips = inputs.json("geography/nj-zips.json")
+    zips = geography_zips = inputs.json("geography/nj-zips.json")
     for name in ("nj-zips.json", "nj-county-zips.json", "nj-zips-provenance.json"):
         require(digest(inputs.read("geography/" + name)) ==
                 geography_manifest["outputs"][name]["sha256"], f"Geography hash mismatch: {name}")
@@ -887,6 +938,19 @@ def normalize(root, counties, *, source_only=False):
                            "sourceRow": record["source"]["row"], "status": "unresolved",
                            "reason": "office_county_not_verified", "countyCandidates": record["county_candidates"]})
     disposed_firm_rows = {row["sourceRow"] for row in crosswalk + ledger if row["source"] == "NJ HP registry"}
+    supply = None
+    if not source_only:
+        scope = set(counties)
+        if scope == set(COUNTIES):
+            scope.update(SUPPLY_COUNTIES)
+        supply = home_care_supply(inputs, scope, {p["id"] for p in providers})
+        # Each included current office has exactly one public crosswalk identity. Preserve
+        # the original workbook row as a separate dated audit disposition.
+        prior = [r for r in crosswalk if r.get("providerId") in supply["refreshed"] and r["source"] == "NJ HP registry"]
+        ledger.extend({**r, "status": "superseded", "reason": "newer_state_registry_capture"} for r in prior)
+        crosswalk = [r for r in crosswalk if not (r.get("providerId") in supply["refreshed"] and r["source"] == "NJ HP registry")]
+        crosswalk.extend(supply["crosswalk"])
+        ledger.extend(supply["ledger"])
     for row in firm_rows:
         if row["source_row"] not in disposed_firm_rows:
             ledger.append({"source": "NJ HP registry", "sourceFile": "state/raw/firms.xlsx",
@@ -899,18 +963,36 @@ def normalize(root, counties, *, source_only=False):
     crosswalk.extend(home_health["crosswalk"])
     county_by_id.update({row["providerId"]: row["county"] for row in home_health["crosswalk"]})
     inspections, home_health_evidence = clinical_inputs(inputs, providers, ledger)
-    providers.sort(key=lambda p: p["id"])
-    require(len({p["id"] for p in providers}) == len(providers), "Duplicate provider ID")
     research = {}
+    scope_counties = tuple(counties)
     if not source_only:
         address_roster = publish_address_points(inputs, providers, county_by_id, counties)
         research = released_research(inputs, address_roster, counties)
+        providers = [supply["refreshed"].get(p["id"], p) for p in providers]
+        held = {r["providerId"]: r for r in supply["ledger"] if r.get("change") in {"po_box_address", "city_zip_county_conflict"}}
+        for provider in providers:
+            if provider["id"] in held:
+                issue = held[provider["id"]]["change"]
+                reason = "The registry gives a PO box." if issue == "po_box_address" else "The registry city and ZIP give conflicting counties."
+                provider.update(lat=None, lng=None)
+                provider["warnings"].append(f"{reason} The physical office location is unverified.")
+        providers.extend(supply["providers"])
+        county_by_id.update(supply["countyById"])
+        zips = {**zips, **supply["zips"]}
+        from homecare_enrichment import enrich
+        enrich(inputs, providers, zips, county_by_id)
+        from nj_pay_context import add_county_home_care_context
+        add_county_home_care_context(inputs, providers, research)
+        if set(counties) == set(COUNTIES):
+            scope_counties += SUPPLY_COUNTIES
+    providers.sort(key=lambda p: p["id"])
+    require(len({p["id"] for p in providers}) == len(providers), "Duplicate provider ID")
     as_of = max(s["checkedAt"] for p in providers for s in p["sources"])
     meta = {
         "asOf": as_of, "catalogTotal": len(providers),
         "categories": dict(sorted(Counter(p["category"] for p in providers).items())),
         "countyCounts": {county: dict(Counter(p["category"] for p in providers
-                                             if county_by_id[p["id"]] == county)) for county in counties},
+                                             if county_by_id[p["id"]] == county)) for county in scope_counties},
         "scope": "Licensed care units, certified home-health offices, active registered business offices "
                  "and explicitly historical named campuses.",
         "limitations": [
@@ -923,6 +1005,13 @@ def normalize(root, counties, *, source_only=False):
             "County overlaps from Census 2020. ZIP fallback points are approximate.",
         ],
     }
+    if supply is not None:
+        meta["scope"] += (" Somerset, Middlesex and Monmouth add only active registered home-care business offices "
+                          "from the reviewed supply release.")
+        meta["limitations"].append(
+            "Somerset, Middlesex and Monmouth have no licensed facility, campus or certified home-health collection. "
+            "ZIP search origins cover the nine counties. Office geography alone does not establish home service coverage."
+        )
     artifacts = {"providers": providers, "zips": zips, "meta": meta,
                  "inspectionHistory": inspections, "homeHealthEvidence": home_health_evidence}
     if research:
@@ -949,9 +1038,20 @@ def normalize(root, counties, *, source_only=False):
     files["crosswalk.json"] = encode(crosswalk)
     files["home-health-release-inputs.json"] = encode(home_health)
     files["unresolved-exclusions.json"] = encode(ledger)
-    coverage = evidence_coverage(inputs, providers, address_roster, research) if not source_only else {}
+    coverage = evidence_coverage(inputs, providers, county_by_id, address_roster, research) if not source_only else {}
+    supply_summary = None if supply is None else {
+        "counties": list(SUPPLY_COUNTIES), "releaseOutputs": supply["outputs"],
+        "addedOffices": len(supply["providers"]), "refreshedOffices": len(supply["refreshed"]),
+        "publishedOffices": len(supply["countyById"]),
+        "officesByCounty": dict(sorted(Counter(supply["countyById"].values()).items())),
+        "zipsAdded": len(set(supply["zips"]) - set(geography_zips)),
+        "zipsSharedWithBaseline": len(set(supply["zips"]) & set(geography_zips)),
+        "retainedSeparately": dict(sorted(Counter(row["change"] for row in supply["ledger"]
+                                                  if row["status"] == "retained_separately").items())),
+    }
     files["source-inputs.json"] = encode({
         "schemaVersion": 1, "counties": list(counties),
+        **({"homeCareSupplyCounties": list(SUPPLY_COUNTIES)} if supply is not None else {}),
         "files": inputs.hashes, "cmsStatus": cms_status, "stateStatus": state_status,
     })
     files["validation.json"] = encode({
@@ -966,6 +1066,7 @@ def normalize(root, counties, *, source_only=False):
                             if facility[collection] is not None)
             for collection in ("healthCitations", "penalties")
         } if inspections is not None else None,
+        "homeCareSupply": supply_summary,
         "dohSourceRows": len(rows), "crosswalkRows": len(crosswalk),
         "ledgerReasons": dict(sorted(Counter(item["reason"] for item in ledger).items())),
         "examples": {zip_code: [{"id": p["id"], "name": p["name"], "address": p["address"],

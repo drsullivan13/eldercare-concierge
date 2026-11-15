@@ -1,0 +1,16 @@
+{
+  "url": "https://geocoding.geo.census.gov/geocoder/geographies/addressbatch",
+  "documentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+  "benchmark": "4",
+  "vintage": "4",
+  "retrievedAt": "2026-11-15T00:32:12.898507+00:00",
+  "countyFips": {
+    "023": "Middlesex",
+    "025": "Monmouth",
+    "035": "Somerset"
+  },
+  "fields": "Input is public HP registration ID, parsed office street (unit omitted), city, state, ZIP. Batch results are Census address-range interpolation, not rooftop points.",
+  "rows": 367,
+  "census-input.csv": "cbefd0a0f874713414b68703a9a9d0d587adaef45f12df4ad9a2e5c6bd75135e",
+  "census-output.csv": "e5227ee008526b5d3e685c1656d2e66d5c2a07fcef68e8729cd0d80647973d60"
+}
