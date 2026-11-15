@@ -1,0 +1,35 @@
+{
+  "verifiedDate": "2026-11-14",
+  "outreach": false,
+  "productionEndpointsCalled": false,
+  "usableScoresAdded": 0,
+  "publishers": [
+    {
+      "publisher": "SeniorAdvisor / A Place for Mom",
+      "officialPartnerPage": "https://www.senioradvisor.com/partner-with-us",
+      "developerPortal": "https://senioradvisor.3scale.net/",
+      "terms": "https://www.senioradvisor.com/about/terms-of-use",
+      "contact": "info@senioradvisor.com (content sharing partnerships)",
+      "evidence": "Partner page specifically advertises home-care providers and reviews in the US and Canada; the portal distinguishes Basic limited reviews from higher-entitlement full review access. The separate reviews widget displays only four- and five-star records and is ineligible for scoring.",
+      "unknowns": "Current onboarding and price, full history/limits, nine-county coverage, count/mean field definitions, permission to store, publish independently derived scores, summarize and show original records; no public guarantee. Check whether rights depend on lead generation, which the Harbor no-commission model does not require.",
+      "deduplicateWith": [
+        "A Place for Mom",
+        "AgingCare",
+        "SeniorAdvisor-syndicated listings"
+      ]
+    },
+    {
+      "publisher": "Caring",
+      "officialPartnerPage": "https://docs.caring.com/",
+      "contact": "engineering@caring.com (publisher's contact for developer keys)",
+      "evidence": "API supports location/resource IDs, review ID, original source URL, 1\u20135 overall rating, moderation status, and timestamps. Approved review results can be paginated and updated by last_modified. Filter resource_id for care service, not the multi-service property_id. No published full aggregate count/average was established by the technical reference. The authorized full window should be reconciled against a publisher count; a derived mean should not substitute for a published aggregate.",
+      "unknowns": "NJ entitlements, licensing and business terms, home-care catalog access, aggregate rights, and upstream survey provenance are not verified.",
+      "deduplicateWith": [
+        "SeniorHomes",
+        "Activated Insights syndicated survey participants"
+      ],
+      "syndicationSource": "https://partners.caring.com/home-care-pulse-caring-com-partnership-expands-availability-agency-reviews/"
+    }
+  ],
+  "recommendedTest": "Send only public branch names, physical address+suite and HP IDs in a coverage request. Ask for a no-lead-sharing, read-only sample for the 21 near-threshold offices before purchase. Require total approved client/family count and average, source-native IDs and upstream families, freshness/withdrawals and explicit caching/display/derived-score rights; require no PII and drop response author email. Report returned branch matches, distinct eligible new families, and incremental scores versus today's corpus before budgeting."
+}

@@ -1,3 +1,4 @@
+import accreditation from "../src/data/home-care-accreditation-extension.json";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { createElement } from "react";
@@ -49,7 +50,11 @@ test("each live office has its exact state facts while catalog records remain sm
 });
 
 test("every directory office has source-specific evidence and the provider research route publishes only the requested office", async () => {
-  const combined = [...activated.offices, ...associations.offices];
+  const combined = [
+    ...activated.offices,
+    ...associations.offices,
+    ...accreditation.offices,
+  ];
   for (const entry of combined) {
     const published = getOfficeDirectoryResearch(entry.providerId)!;
     assert.ok(
@@ -104,9 +109,12 @@ test("every directory office has source-specific evidence and the provider resea
 
 test("identity, historical payer, directory evidence and survey awards do not change experience scores", async () => {
   const ids = new Set(
-    [...activated.offices, ...associations.offices, ...identifiers.offices].map(
-      (p) => p.providerId,
-    ),
+    [
+      ...activated.offices,
+      ...associations.offices,
+      ...accreditation.offices,
+      ...identifiers.offices,
+    ].map((p) => p.providerId),
   );
   for (const providerId of ids) {
     const custom = getLocationResearch(providerId, "2026-11-15", [nj]);
