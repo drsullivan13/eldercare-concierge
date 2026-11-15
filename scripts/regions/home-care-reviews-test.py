@@ -388,7 +388,7 @@ class PublicationTests(unittest.TestCase):
 
 
 class ReleasedEvidenceTests(unittest.TestCase):
-    def test_initial_immutable_batch_and_every_released_item_are_preserved(self):
+    def test_immutable_baseline_and_reviewed_release_are_preserved(self):
         root = SCRIPT.resolve().parents[2]
         digest = "9ee38a254d29849c1397f4095d39cb48964de8923c972c7aee0f33f6f94627ff"
         raw = (root / release.AREA / "batches" / (digest + ".json")).read_bytes()
@@ -400,22 +400,23 @@ class ReleasedEvidenceTests(unittest.TestCase):
         old = release.historical()
         _, policy = old.source_access(root, errors)
         self.assertEqual(errors, [])
-        _, expected, _ = release.validate_batch(initial, offices, policy, old)
         manifest = inputs.read(release.AREA / "manifest.json")
         current = inputs.read(manifest["inputs"]["reviewedInput"]["path"])
         self.assertEqual(hashlib.sha256(inputs.data(manifest["inputs"]["reviewedInput"]["path"])).hexdigest(),
                          manifest["inputs"]["reviewedInput"]["sha256"])
-        for observation in initial["observations"]:
-            self.assertIn(observation, current["observations"])
-        published = inputs.read(release.OUTPUT)["providers"]
-        for pid, patch in expected.items():
-            self.assertEqual(published[pid]["identity"], patch["identity"])
-            for key in ("sources", "reviewAggregates", "reviews", "reviewSamples", "notes"):
-                for item in patch[key]:
-                    self.assertIn(item, published[pid][key], (pid, key))
-            for key in ("accounts", "sources", "notes"):
-                for item in patch["catalog"][key]:
-                    self.assertIn(item, published[pid]["catalog"][key], (pid, "catalog", key))
+        by_office = {row["providerId"]: row for row in current["observations"]}
+        for original in initial["observations"]:
+            reviewed = by_office[original["providerId"]]
+            self.assertEqual(reviewed["canonicalUrl"], original["canonicalUrl"])
+            previous_ids = {row["id"] for row in original["accounts"]}
+            current_ids = {row["id"] for row in reviewed["accounts"]}
+            # The Teaneck follow-up excluded one account with an unverified relationship.
+            withdrawn = {"mlc-519431"} if original["officialId"] == "HP0256900" else set()
+            self.assertEqual(previous_ids - current_ids, withdrawn)
+        for official_id in ("HP0256900", "HP0073500"):
+            self.assertIsNone(by_office["north-jersey-hp-" + official_id.lower()]["aggregate"])
+        _, expected, _ = release.validate_batch(current, offices, policy, old)
+        self.assertEqual(inputs.read(release.OUTPUT)["providers"], expected)
 
 
 if __name__ == "__main__":
