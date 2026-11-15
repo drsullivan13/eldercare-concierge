@@ -1,0 +1,363 @@
+{
+  "approvals": [
+    [
+      "arden-courts-wayne",
+      "north-jersey-doh-nj70a002",
+      "Arden Courts (Wayne)",
+      "800 Hamburg Turnpike",
+      "Wayne",
+      "Memory Care / Respite / Short-Term Care",
+      "07470",
+      4.7,
+      53,
+      [
+        [
+          "629065",
+          "2026-08",
+          "positive"
+        ],
+        [
+          "629066",
+          "2026-07",
+          "positive"
+        ],
+        [
+          "629067",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "629068",
+          "2026-06",
+          "positive"
+        ],
+        [
+          "629069",
+          "2026-06",
+          "positive"
+        ]
+      ]
+    ],
+    [
+      "canterbury-at-cedar-grove",
+      "north-jersey-doh-nj60729",
+      "Canterbury Care & Rehabilitation Center",
+      "398 Pompton Avenue",
+      "Cedar Grove",
+      "Skilled Nursing / Long Term Care",
+      "07009",
+      3.6,
+      83,
+      [
+        [
+          "608751",
+          "2026-07",
+          "negative"
+        ],
+        [
+          "608752",
+          "2026-06",
+          "negative"
+        ],
+        [
+          "608754",
+          "2025-10",
+          "negative"
+        ],
+        [
+          "608755",
+          "2025-05",
+          "negative"
+        ],
+        [
+          "608753",
+          "2024-10",
+          "negative"
+        ]
+      ]
+    ]
+  ],
+  "assessmentDate": "2026-11-15",
+  "columns": [
+    "slug",
+    "providerId",
+    "name",
+    "address",
+    "city",
+    "careUnit",
+    "zip",
+    "rating",
+    "count",
+    "rows"
+  ],
+  "coordinatorOverride": {
+    "decision": "hold-unresolved-potential-workforce",
+    "proof": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/whippany-administrator-check.json",
+      "sha256": "75952dc5ce7fc0fff6881e2e73482645992703a766c609554fccca6c6b1d1ea1"
+    },
+    "rowId": "629196",
+    "slug": "arden-courts-whippany"
+  },
+  "independentReviews": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/arden-editorial.json",
+      "sha256": "e58752f3fc4516272b918813581f43f9d572c30d40de8b3f7dc1239e8459fcd0"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/nursing-editorial.json",
+      "sha256": "cb7e0bb3bc67501463358129dd32169f5035bffe20d1304efcde6f905e2a72b6"
+    }
+  ],
+  "method": "Independent full-page editorial readings reconciled against every direct collection row ID/month and original Google family. Coordinator re-read the six property windows and relevant primary evidence. No names or full narratives are added. Collection heuristic roles and sentiments remain intact in original collection files; source checks use editorial classifications. JSON-LD ZIPs from direct collection are preserved rather than substituted with the editorial Markdown reader’s null ZIP. Unknown aggregate dates remain null.",
+  "populationNotes": {
+    "arden-courts-wayne": "Google's 4.7 out of 5 from 53 ratings appears on MyLivingChoice. These are the same Google ratings, not a separate set of reviews. The five displayed accounts are positive overall. Three describe care for a parent, one describes a family's inquiry, and one describes visits without stating a family relationship or work connection. They are not all accounts from residents or their families, and the writers' identities have not been verified. The displayed accounts are only part of the reviews behind the rating and do not show how common these experiences are. The operator and New Jersey's facility information identify one memory-care residence at 800 Hamburg Turnpike, including short stays in that residence. The directory's general description of independent and assisted living conflicts with the operator's description of this memory-care community. A yoga instructor's Facebook account on the operator's website is separate from these Google reviews. The rating's publication date is unknown. The displayed review dates give a month, not an exact day. This consumer rating does not establish clinical quality or safety.",
+    "canterbury-at-cedar-grove": "Google's 3.6 out of 5 from 83 ratings appears on MyLivingChoice under Canterbury Care & Rehabilitation Center. These are the same Google ratings, not a separate set of reviews. The nursing home at 398 Pompton Avenue is now named Eagle Rock Post Acute Care at Cedar Grove. The rating may include experiences under earlier names and prior or current operators. A state name-change application does not confirm that every proposed ownership change took place. All five displayed accounts are negative overall. One is from a resident, two are from family members, one describes a tour for a family member, and one does not state a relationship. The tour account does not establish an employment relationship. Brief praise for therapy or the lobby does not change the overall criticism. The displayed accounts include one from October 2024, which may not describe current care. These five accounts are only part of the reviews behind the rating and do not show how common these experiences are. The writers' identities have not been verified, and the care allegations remain unverified. The rating's publication date is unknown. The displayed review dates give a month, not an exact day. This consumer rating does not establish clinical quality or safety."
+  },
+  "withheld": [
+    {
+      "aggregate": {
+        "asOf": null,
+        "count": 68,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "blockers": [
+        {
+          "gate": "population",
+          "reason": "Hold exact-location/population attestation. Row 628395 uses conflicting county/place wording despite the matching Google feature ID. Its location remains unresolved. Row 628394 assists another family and a same-place operator Google widget includes a visiting speaker, but paid/professional status is unknown, not proven employment. No family-only aggregate requirement is imposed. Preserve all five positive rows, unknown roles and the original 4.9/5 across 68 ratings. Do not substitute generated-summary count 66.",
+          "status": "unresolved"
+        }
+      ],
+      "identity": {
+        "address": "510 Prospect Avenue",
+        "careUnit": "Memory Care / Respite / Short-Term Care",
+        "city": "West Orange",
+        "name": "Arden Courts (West Orange)",
+        "state": "New Jersey",
+        "zip": "07052"
+      },
+      "officialId": "NJ30A002",
+      "providerId": "north-jersey-doh-nj30a002",
+      "reason": "Hold exact-location/population attestation. Row 628395 uses conflicting county/place wording despite the matching Google feature ID. Its location remains unresolved. Row 628394 assists another family and a same-place operator Google widget includes a visiting speaker, but paid/professional status is unknown, not proven employment. No family-only aggregate requirement is imposed. Preserve all five positive rows, unknown roles and the original 4.9/5 across 68 ratings. Do not substitute generated-summary count 66.",
+      "rows": [
+        {
+          "date": "2026-09",
+          "id": "mlc-google-628394",
+          "relationship": "third-party-helper-unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-06",
+          "id": "mlc-google-628395",
+          "relationship": "family-location-conflict",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-06",
+          "id": "mlc-google-628396",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-06",
+          "id": "mlc-google-628397",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-06",
+          "id": "mlc-google-628398",
+          "relationship": "family",
+          "sentiment": "positive"
+        }
+      ],
+      "slug": "arden-courts-west-orange"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
+        "count": 41,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "blockers": [
+        {
+          "gate": "population",
+          "reason": "Hold unresolved potential workforce contribution. The visible reviewer name on row 629196 exactly matches the administrator named by NJ DOH for NJ60A003. A name match does not prove personal identity, but requires resolution before attesting a clean broad consumer aggregate. Independent editorial retained this role as unknown and recommended broad-consumer eligibility; this coordinator hold adds the separately inspected primary administrator match. Other unknown relationships are not relabeled employees. All five visible sentiments are positive. Keep 4.9/5 across 41 ratings and month-only dates. A newer negative family Google account visible in the operator widget is overlapping, not a separate family; do not claim an all-positive overall feed.",
+          "status": "unresolved"
+        }
+      ],
+      "identity": {
+        "address": "18 Eden Lane",
+        "careUnit": "Memory Care / Respite / Short-Term Care",
+        "city": "Whippany",
+        "name": "Arden Courts (Whippany)",
+        "state": "New Jersey",
+        "zip": "07981"
+      },
+      "officialId": "NJ60A003",
+      "providerId": "north-jersey-doh-nj60a003",
+      "reason": "Hold unresolved potential workforce contribution. The visible reviewer name on row 629196 exactly matches the administrator named by NJ DOH for NJ60A003. A name match does not prove personal identity, but requires resolution before attesting a clean broad consumer aggregate. Independent editorial retained this role as unknown and recommended broad-consumer eligibility; this coordinator hold adds the separately inspected primary administrator match. Other unknown relationships are not relabeled employees. All five visible sentiments are positive. Keep 4.9/5 across 41 ratings and month-only dates. A newer negative family Google account visible in the operator widget is overlapping, not a separate family; do not claim an all-positive overall feed.",
+      "rows": [
+        {
+          "date": "2026-06",
+          "id": "mlc-google-629196",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2024-11",
+          "id": "mlc-google-629197",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2024-10",
+          "id": "mlc-google-629198",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2024-10",
+          "id": "mlc-google-629199",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2024-10",
+          "id": "mlc-google-629200",
+          "relationship": "family-context",
+          "sentiment": "positive"
+        }
+      ],
+      "slug": "arden-courts-whippany"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
+        "count": 375,
+        "rating": 4.1,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "blockers": [
+        {
+          "gate": "population",
+          "reason": "Honor substantive co-located care-unit hold. NJ62006 is the 200-bed nursing unit; NJ20C003 is a distinct 30-place personal-care home at the same address and phone. Nursing-themed selected accounts and nursing-only directory labels do not establish the scope of all 375 Google ratings. No usable operator-published place-ID bridge was established. Do not score either unit or infer closure from an old license-expiry field. Operator automated access is restricted by terms; the earlier operator contact read is excluded from eligibility and no further operator reads are authorized.",
+          "status": "unresolved"
+        }
+      ],
+      "identity": {
+        "address": "205 Birchwood Ave",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Cranford",
+        "name": "Birchwood Rehabilitation & Healthcare Center",
+        "state": "New Jersey",
+        "zip": "07016"
+      },
+      "officialId": "NJ62006",
+      "providerId": "cms-315091",
+      "reason": "Honor substantive co-located care-unit hold. NJ62006 is the 200-bed nursing unit; NJ20C003 is a distinct 30-place personal-care home at the same address and phone. Nursing-themed selected accounts and nursing-only directory labels do not establish the scope of all 375 Google ratings. No usable operator-published place-ID bridge was established. Do not score either unit or infer closure from an old license-expiry field. Operator automated access is restricted by terms; the earlier operator contact read is excluded from eligibility and no further operator reads are authorized.",
+      "rows": [
+        {
+          "date": "2026-08",
+          "id": "mlc-google-608533",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-07",
+          "id": "mlc-google-608540",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-07",
+          "id": "mlc-google-608535",
+          "relationship": "family",
+          "sentiment": "negative"
+        },
+        {
+          "date": "2026-05",
+          "id": "mlc-google-608537",
+          "relationship": "family",
+          "sentiment": "mixed"
+        },
+        {
+          "date": "2026-04",
+          "id": "mlc-google-608539",
+          "relationship": "family",
+          "sentiment": "positive"
+        }
+      ],
+      "slug": "birchwood-rehabilitation-and-healthcare-center"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
+        "count": 219,
+        "rating": 4.8,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "blockers": [
+        {
+          "gate": "population",
+          "reason": "Honor substantive shared-care-unit hold. NJ609201 is the 53-bed nursing unit; NJ14C014 (27 personal-care places) and NJ60A010 (21 assisted-living beds) are separate licensed units at 190 Park Avenue under the same operator. The operator’s selected Google place exactly matches all five review links, but a shared operator/place link does not demonstrate that all 219 ratings exclude the other care settings. Nursing-themed visible accounts cannot establish the full aggregate population.",
+          "status": "unresolved"
+        }
+      ],
+      "identity": {
+        "address": "190  Park Avenue",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Florham Park",
+        "name": "Florham Park Rehabilitation And Healthcare Center",
+        "state": "New Jersey",
+        "zip": "07932"
+      },
+      "officialId": "NJ609201",
+      "providerId": "cms-315530",
+      "reason": "Honor substantive shared-care-unit hold. NJ609201 is the 53-bed nursing unit; NJ14C014 (27 personal-care places) and NJ60A010 (21 assisted-living beds) are separate licensed units at 190 Park Avenue under the same operator. The operator’s selected Google place exactly matches all five review links, but a shared operator/place link does not demonstrate that all 219 ratings exclude the other care settings. Nursing-themed visible accounts cannot establish the full aggregate population.",
+      "rows": [
+        {
+          "date": "2026-07",
+          "id": "mlc-google-609595",
+          "relationship": "family",
+          "sentiment": "negative"
+        },
+        {
+          "date": "2026-05",
+          "id": "mlc-google-609597",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-04",
+          "id": "mlc-google-609600",
+          "relationship": "family",
+          "sentiment": "negative"
+        },
+        {
+          "date": "2026-04",
+          "id": "mlc-google-609599",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "date": "2026-03",
+          "id": "mlc-google-609601",
+          "relationship": "family",
+          "sentiment": "positive"
+        }
+      ],
+      "slug": "florham-park-rehabilitation-and-healthcare-center"
+    }
+  ]
+}

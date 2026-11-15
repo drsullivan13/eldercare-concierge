@@ -1,0 +1,26 @@
+{
+  "basis": "Exact facility street, city and ZIP, not a brand or mailing-address search. Only one state care-unit record at this location; nearby 820 Hamburg Turnpike is a different street number. State source does not itself establish memory-care specialization.",
+  "checkedAt": "2026-11-15",
+  "kind": "regulatory",
+  "matchedRows": [
+    {
+      "address": "800 HAMBURG TURNPIKE",
+      "beds": 56,
+      "city": "WAYNE",
+      "license": "70a002",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "name": "ARDEN COURTS AT WAYNE",
+      "officialId": "NJ70A002",
+      "sourceRow": 364,
+      "zip": "07470"
+    }
+  ],
+  "rawSourceSha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716",
+  "retainedSource": {
+    "path": "research/north-jersey/state/passaic/care-units.json",
+    "sha256": "957b5e5bcd5d4c8360b7e08105e3bf3746f56c3045acee60e9e2669551a4916f"
+  },
+  "sourceDate": "2026-11-06",
+  "sourceType": "PRIMARY",
+  "sourceUrl": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+}

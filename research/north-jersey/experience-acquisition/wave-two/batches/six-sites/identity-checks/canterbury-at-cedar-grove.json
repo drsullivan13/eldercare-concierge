@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-15",
+  "httpStatus": 200,
+  "inspection": "full-page",
+  "matchedPublishedFacts": [
+    "Eagle Rock Post Acute, 398 Pompton Avenue, Cedar Grove NJ 07009, 9732397600.",
+    "NJ60729 / license 060729 identifies Canterbury at the same street, phone and 180 beds.",
+    "State rename application names Canterbury and Eagle Rock for license 60729 and 180 LTC beds."
+  ],
+  "primarySources": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/canterbury-operator.json",
+      "sha256": "1eafb22b4925a9249e9c943d8911ea83f1d13f688ff254873b62605674af7a18"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/canterbury-regulatory.json",
+      "sha256": "bf7821e18cc870045d2ef926662bd184718cc3667fbe9c308ba0417423693d29"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/canterbury-rename.json",
+      "sha256": "b92d1b9858068d9d8ea95f05fabbaeb4219fbb59a063f60585e022ff986e1055"
+    }
+  ],
+  "source": "Operator and NJ license/rename application",
+  "sourceUrl": "https://eaglerockpostacute.com/"
+}

@@ -1,0 +1,86 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 68,
+    "rating": 4.9,
+    "scale": 5,
+    "scope": "ambiguous",
+    "sourceFamily": "google"
+  },
+  "bodySha256": "254ce1fa164aae9e225248cc7e3e4418a85cc5895673090f9084035eda947c88",
+  "checkedAt": "2026-11-15",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/collection/arden-courts-west-orange.json",
+    "sha256": "8e45b4c4c2d76dd5503d5aa372c59ca88ef5af45de19b91d3b71bc390c53a45b"
+  },
+  "googlePlaceIds": [
+    "0x0:0x56c7403156c11b8b"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "510 Prospect Avenue",
+    "careUnit": "Memory Care / Respite / Short-Term Care",
+    "city": "West Orange",
+    "name": "Arden Courts (West Orange)",
+    "state": "New Jersey",
+    "zip": "07052"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/arden-editorial.json",
+    "sha256": "e58752f3fc4516272b918813581f43f9d572c30d40de8b3f7dc1239e8459fcd0"
+  },
+  "inspection": "full-page",
+  "listingAnnotations": {
+    "aggregateScopeBeforeEditorial": "unverified-platform-population",
+    "careTypes": [
+      "Memory Care",
+      "Respite / Short-Term Care"
+    ],
+    "observedIdentity": {
+      "address": "510 Prospect Avenue",
+      "city": "West Orange",
+      "name": "Arden Courts (West Orange)",
+      "state": "New Jersey",
+      "zip": "07052"
+    }
+  },
+  "observedAt": "2026-11-15T13:46:20.333340+00:00",
+  "population": {
+    "rows": [
+      {
+        "date": "2026-09",
+        "id": "mlc-google-628394",
+        "relationship": "third-party-helper-unknown",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-628395",
+        "relationship": "family-location-conflict",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-628396",
+        "relationship": "family",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-628397",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-628398",
+        "relationship": "family",
+        "sentiment": "positive"
+      }
+    ],
+    "visibleCount": 5
+  },
+  "populationReview": "Hold exact-location/population attestation. Row 628395 uses conflicting county/place wording despite the matching Google feature ID. Its location remains unresolved. Row 628394 assists another family and a same-place operator Google widget includes a visiting speaker, but paid/professional status is unknown, not proven employment. No family-only aggregate requirement is imposed. Preserve all five positive rows, unknown roles and the original 4.9/5 across 68 ratings. Do not substitute generated-summary count 66.",
+  "scopeHold": "Hold exact-location/population attestation. Row 628395 uses conflicting county/place wording despite the matching Google feature ID. Its location remains unresolved. Row 628394 assists another family and a same-place operator Google widget includes a visiting speaker, but paid/professional status is unknown, not proven employment. No family-only aggregate requirement is imposed. Preserve all five positive rows, unknown roles and the original 4.9/5 across 68 ratings. Do not substitute generated-summary count 66.",
+  "url": "https://www.mylivingchoice.com/property/arden-courts-west-orange"
+}

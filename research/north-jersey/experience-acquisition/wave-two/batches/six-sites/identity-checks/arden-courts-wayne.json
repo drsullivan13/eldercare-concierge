@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-15",
+  "httpStatus": 200,
+  "inspection": "full-page",
+  "matchedPublishedFacts": [
+    "Arden Courts at Wayne, 800 Hamburg Turnpike, Wayne NJ 07470.",
+    "Exclusive memory care with respite and trial stays in the same residence.",
+    "NJ70A002 / license 70a002, 56 assisted-living beds; no separate independent-living or nursing unit identified.",
+    "Operator Google CID 3435395557008841935 equals the suffix of every displayed review feature ID."
+  ],
+  "primarySources": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/wayne-operator.json",
+      "sha256": "2c177421bd7acc9f0afb355836154f71d35988dd066002b81ee4b002c5baa8f5"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/wayne-regulatory.json",
+      "sha256": "dd5f361cfc78b29a1cf6568224fd3e07bda910e5e78d6b08237bded055a6edca"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/wayne-state-roster.json",
+      "sha256": "76270b7baafc15fa5e10c9c76d90e129b0aeff297ca84edaa1fa697e02bc440f"
+    }
+  ],
+  "source": "Operator exact dedicated residence and NJ DOH",
+  "sourceUrl": "https://www.arden-courts.com/communities/wayne/"
+}

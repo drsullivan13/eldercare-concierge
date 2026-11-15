@@ -1,0 +1,86 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 53,
+    "rating": 4.7,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "bodySha256": "7c588b9b7e261d0b01b58e7f5ec857c4a5b16fc77e367a737dc5463527371757",
+  "checkedAt": "2026-11-15",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/collection/arden-courts-wayne.json",
+    "sha256": "3653d4a09139f3b25a3999531a48ac9e3310b991874ca5c0c01e4b9cb8418032"
+  },
+  "googlePlaceIds": [
+    "0x0:0x2facfa0ebe779ccf"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "800 Hamburg Turnpike",
+    "careUnit": "Memory Care / Respite / Short-Term Care",
+    "city": "Wayne",
+    "name": "Arden Courts (Wayne)",
+    "state": "New Jersey",
+    "zip": "07470"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/arden-editorial.json",
+    "sha256": "e58752f3fc4516272b918813581f43f9d572c30d40de8b3f7dc1239e8459fcd0"
+  },
+  "inspection": "full-page",
+  "listingAnnotations": {
+    "aggregateScopeBeforeEditorial": "unverified-platform-population",
+    "careTypes": [
+      "Memory Care",
+      "Respite / Short-Term Care"
+    ],
+    "observedIdentity": {
+      "address": "800 Hamburg Turnpike",
+      "city": "Wayne",
+      "name": "Arden Courts (Wayne)",
+      "state": "New Jersey",
+      "zip": "07470"
+    }
+  },
+  "observedAt": "2026-11-15T13:46:17.773400+00:00",
+  "population": {
+    "rows": [
+      {
+        "date": "2026-08",
+        "id": "mlc-google-629065",
+        "relationship": "family",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-07",
+        "id": "mlc-google-629066",
+        "relationship": "family",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-629067",
+        "relationship": "family",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-629068",
+        "relationship": "family-inquiry",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-629069",
+        "relationship": "visitor-otherwise-unknown",
+        "sentiment": "positive"
+      }
+    ],
+    "visibleCount": 5
+  },
+  "populationReview": "Google's original 4.7/5 across 53 ratings is republished by MyLivingChoice, not a second family. Three visible writers describe resident parents, one describes a family inquiry and one visits without stating kinship or occupational affiliation. All five accounts are positive overall. Ordinary inquiries and visitors are permitted broad consumer feedback, not verified resident-family accounts. Structured Memory Care and Respite / Short-Term Care labels are preserved. Generated independent/assisted-living prose conflicts with operator-exclusive memory care. Hash-bound state/operator proof ties the same sole licensed residence to NJ70A002 and excludes a separate independent-living or nursing unit. Short stays occur in that residence. No global memory-care/respite equivalence is asserted. The operator's yoga-instructor Facebook row is not Google denominator evidence. Aggregate date is unknown; displayed months are retained.",
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/arden-courts-wayne"
+}

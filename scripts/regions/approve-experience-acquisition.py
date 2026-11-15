@@ -86,9 +86,11 @@ def build(root=ROOT):
             source_document = bound(source_reference)
             evidence = [source_reference, batch["access"], batch_reference,
                         batch["proposals"], batch["reviewed"], *batch_evidence]
-            if "streetCorroboration" in proposal:
-                proof = bound(proposal["streetCorroboration"])
-                evidence.append(proposal["streetCorroboration"])
+            for key in ("streetCorroboration", "careUnitCorroboration"):
+                if key not in proposal:
+                    continue
+                proof = bound(proposal[key])
+                evidence.append(proposal[key])
                 for primary in proof["primarySources"]:
                     bound(primary)
                     evidence.append(primary)

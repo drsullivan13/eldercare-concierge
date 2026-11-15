@@ -90797,7 +90797,7 @@
           "status": "not-published",
           "text": "Availability has not been independently checked."
         },
-        "checkedAt": "2026-11-12",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "asOf": "2026-11-06",
@@ -90815,10 +90815,64 @@
             "text": "State-reported unit capacity: 180. Current vacancies are unknown."
           }
         ],
-        "notes": [],
+        "notes": [
+          "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+          "Reported counts are not unique people. Unknown cross-posting may remain.",
+          "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+        ],
         "providerDetailsReviewed": false,
         "providerId": "north-jersey-doh-nj60729",
-        "reviewAggregates": [],
+        "reviewAggregates": [
+          {
+            "asOf": null,
+            "count": 83,
+            "notes": [
+              "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. Google's 3.6 out of 5 from 83 ratings appears on MyLivingChoice under Canterbury Care & Rehabilitation Center. These are the same Google ratings, not a separate set of reviews. The nursing home at 398 Pompton Avenue is now named Eagle Rock Post Acute Care at Cedar Grove. The rating may include experiences under earlier names and prior or current operators. A state name-change application does not confirm that every proposed ownership change took place. All five displayed accounts are negative overall. One is from a resident, two are from family members, one describes a tour for a family member, and one does not state a relationship. The tour account does not establish an employment relationship. Brief praise for therapy or the lobby does not change the overall criticism. The displayed accounts include one from October 2024, which may not describe current care. These five accounts are only part of the reviews behind the rating and do not show how common these experiences are. The writers' identities have not been verified, and the care allegations remain unverified. The rating's publication date is unknown. The displayed review dates give a month, not an exact day. This consumer rating does not establish clinical quality or safety.",
+              "Observed ZIP matches the exact official care unit."
+            ],
+            "platform": "MyLivingChoice",
+            "rating": 3.6,
+            "scale": 5,
+            "scope": "consumer",
+            "sourceFamily": "google",
+            "sourceId": "review-release-mlc-acquisition-canterbury-at-cedar-grove"
+          }
+        ],
+        "reviewSamples": [
+          {
+            "observations": [
+              {
+                "date": "2026-07",
+                "id": "mlc-google-608751",
+                "sentiment": "negative"
+              },
+              {
+                "date": "2026-06",
+                "id": "mlc-google-608752",
+                "sentiment": "negative"
+              },
+              {
+                "date": "2025-10",
+                "id": "mlc-google-608754",
+                "sentiment": "negative"
+              },
+              {
+                "date": "2025-05",
+                "id": "mlc-google-608755",
+                "sentiment": "negative"
+              },
+              {
+                "date": "2024-10",
+                "id": "mlc-google-608753",
+                "sentiment": "negative"
+              }
+            ],
+            "selection": "all-visible-before-highlighting",
+            "sourceFamily": "google",
+            "sourceId": "review-release-mlc-acquisition-canterbury-at-cedar-grove",
+            "visibleCount": 5
+          }
+        ],
         "reviews": [],
         "sources": [
           {
@@ -90830,6 +90884,16 @@
             "publisher": "New Jersey Department of Health",
             "title": "NJ DOH licensed long-term care facilities",
             "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "review-release-mlc-acquisition-canterbury-at-cedar-grove",
+            "kind": "review-platform",
+            "publishedAt": null,
+            "publisher": "MyLivingChoice",
+            "title": "MyLivingChoice consumer aggregate",
+            "url": "https://www.mylivingchoice.com/property/canterbury-at-cedar-grove"
           }
         ]
       },
@@ -92694,7 +92758,7 @@
           "status": "not-published",
           "text": "Availability has not been independently checked."
         },
-        "checkedAt": "2026-11-12",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "asOf": "2026-11-06",
@@ -92712,10 +92776,64 @@
             "text": "State-reported unit capacity: 56. Current vacancies are unknown."
           }
         ],
-        "notes": [],
+        "notes": [
+          "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+          "Reported counts are not unique people. Unknown cross-posting may remain.",
+          "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+        ],
         "providerDetailsReviewed": false,
         "providerId": "north-jersey-doh-nj70a002",
-        "reviewAggregates": [],
+        "reviewAggregates": [
+          {
+            "asOf": null,
+            "count": 53,
+            "notes": [
+              "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. Google's 4.7 out of 5 from 53 ratings appears on MyLivingChoice. These are the same Google ratings, not a separate set of reviews. The five displayed accounts are positive overall. Three describe care for a parent, one describes a family's inquiry, and one describes visits without stating a family relationship or work connection. They are not all accounts from residents or their families, and the writers' identities have not been verified. The displayed accounts are only part of the reviews behind the rating and do not show how common these experiences are. The operator and New Jersey's facility information identify one memory-care residence at 800 Hamburg Turnpike, including short stays in that residence. The directory's general description of independent and assisted living conflicts with the operator's description of this memory-care community. A yoga instructor's Facebook account on the operator's website is separate from these Google reviews. The rating's publication date is unknown. The displayed review dates give a month, not an exact day. This consumer rating does not establish clinical quality or safety.",
+              "Observed ZIP matches the exact official care unit."
+            ],
+            "platform": "MyLivingChoice",
+            "rating": 4.7,
+            "scale": 5,
+            "scope": "consumer",
+            "sourceFamily": "google",
+            "sourceId": "review-release-mlc-acquisition-arden-courts-wayne"
+          }
+        ],
+        "reviewSamples": [
+          {
+            "observations": [
+              {
+                "date": "2026-08",
+                "id": "mlc-google-629065",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-07",
+                "id": "mlc-google-629066",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-06",
+                "id": "mlc-google-629067",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-06",
+                "id": "mlc-google-629068",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-06",
+                "id": "mlc-google-629069",
+                "sentiment": "positive"
+              }
+            ],
+            "selection": "all-visible-before-highlighting",
+            "sourceFamily": "google",
+            "sourceId": "review-release-mlc-acquisition-arden-courts-wayne",
+            "visibleCount": 5
+          }
+        ],
         "reviews": [],
         "sources": [
           {
@@ -92727,6 +92845,16 @@
             "publisher": "New Jersey Department of Health",
             "title": "NJ DOH licensed long-term care facilities",
             "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "review-release-mlc-acquisition-arden-courts-wayne",
+            "kind": "review-platform",
+            "publishedAt": null,
+            "publisher": "MyLivingChoice",
+            "title": "MyLivingChoice consumer aggregate",
+            "url": "https://www.mylivingchoice.com/property/arden-courts-wayne"
           }
         ]
       },

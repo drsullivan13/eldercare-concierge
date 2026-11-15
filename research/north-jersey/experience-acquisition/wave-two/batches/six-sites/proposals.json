@@ -1,0 +1,218 @@
+{
+  "approvals": [
+    {
+      "access": "full-page",
+      "aggregate": {
+        "asOf": null,
+        "count": 53,
+        "rating": 4.7,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "careUnitCorroboration": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/wayne-care-unit-corroboration.json",
+        "sha256": "44c67473c9b0b414b955f5be670b8675830693849a9a5c8a35cf47a48eae8f55"
+      },
+      "checkedAt": "2026-11-15",
+      "id": "mlc-acquisition-arden-courts-wayne",
+      "identity": {
+        "address": "800 Hamburg Turnpike",
+        "careUnit": "Memory Care / Respite / Short-Term Care",
+        "city": "Wayne",
+        "name": "Arden Courts (Wayne)",
+        "state": "New Jersey",
+        "zip": "07470"
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/arden-editorial.json",
+        "sha256": "e58752f3fc4516272b918813581f43f9d572c30d40de8b3f7dc1239e8459fcd0"
+      },
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/source-checks/arden-courts-wayne.json",
+        "pointer": "",
+        "sha256": "4acca28b8f97476ed0dba5168edab078de80e7cc440a591acf80f92cabd2f29a"
+      },
+      "officialId": "NJ70A002",
+      "platform": "MyLivingChoice",
+      "providerId": "north-jersey-doh-nj70a002",
+      "reason": "Google's original 4.7/5 across 53 ratings is republished by MyLivingChoice, not a second family. Three visible writers describe resident parents, one describes a family inquiry and one visits without stating kinship or occupational affiliation. All five accounts are positive overall. Ordinary inquiries and visitors are permitted broad consumer feedback, not verified resident-family accounts. Structured Memory Care and Respite / Short-Term Care labels are preserved. Generated independent/assisted-living prose conflicts with operator-exclusive memory care. Hash-bound state/operator proof ties the same sole licensed residence to NJ70A002 and excludes a separate independent-living or nursing unit. Short stays occur in that residence. No global memory-care/respite equivalence is asserted. The operator's yoga-instructor Facebook row is not Google denominator evidence. Aggregate date is unknown; displayed months are retained.",
+      "url": "https://www.mylivingchoice.com/property/arden-courts-wayne"
+    },
+    {
+      "access": "full-page",
+      "aggregate": {
+        "asOf": null,
+        "count": 68,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "id": "mlc-acquisition-arden-courts-west-orange",
+      "identity": {
+        "address": "510 Prospect Avenue",
+        "careUnit": "Memory Care / Respite / Short-Term Care",
+        "city": "West Orange",
+        "name": "Arden Courts (West Orange)",
+        "state": "New Jersey",
+        "zip": "07052"
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/arden-editorial.json",
+        "sha256": "e58752f3fc4516272b918813581f43f9d572c30d40de8b3f7dc1239e8459fcd0"
+      },
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/source-checks/arden-courts-west-orange.json",
+        "pointer": "",
+        "sha256": "3e00615c319c4a3b402d8dd7fbd81ea47e79187b1e73683ae185507e41d7c888"
+      },
+      "officialId": "NJ30A002",
+      "platform": "MyLivingChoice",
+      "providerId": "north-jersey-doh-nj30a002",
+      "reason": "Hold exact-location/population attestation. Row 628395 uses conflicting county/place wording despite the matching Google feature ID. Its location remains unresolved. Row 628394 assists another family and a same-place operator Google widget includes a visiting speaker, but paid/professional status is unknown, not proven employment. No family-only aggregate requirement is imposed. Preserve all five positive rows, unknown roles and the original 4.9/5 across 68 ratings. Do not substitute generated-summary count 66.",
+      "url": "https://www.mylivingchoice.com/property/arden-courts-west-orange"
+    },
+    {
+      "access": "full-page",
+      "aggregate": {
+        "asOf": null,
+        "count": 41,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "id": "mlc-acquisition-arden-courts-whippany",
+      "identity": {
+        "address": "18 Eden Lane",
+        "careUnit": "Memory Care / Respite / Short-Term Care",
+        "city": "Whippany",
+        "name": "Arden Courts (Whippany)",
+        "state": "New Jersey",
+        "zip": "07981"
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/arden-editorial.json",
+        "sha256": "e58752f3fc4516272b918813581f43f9d572c30d40de8b3f7dc1239e8459fcd0"
+      },
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/source-checks/arden-courts-whippany.json",
+        "pointer": "",
+        "sha256": "650279636196bc4123a23c2de0d780de7222f02d6e483534bccfe23c1ee3e295"
+      },
+      "officialId": "NJ60A003",
+      "platform": "MyLivingChoice",
+      "providerId": "north-jersey-doh-nj60a003",
+      "reason": "Hold unresolved potential workforce contribution. The visible reviewer name on row 629196 exactly matches the administrator named by NJ DOH for NJ60A003. A name match does not prove personal identity, but requires resolution before attesting a clean broad consumer aggregate. Independent editorial retained this role as unknown and recommended broad-consumer eligibility; this coordinator hold adds the separately inspected primary administrator match. Other unknown relationships are not relabeled employees. All five visible sentiments are positive. Keep 4.9/5 across 41 ratings and month-only dates. A newer negative family Google account visible in the operator widget is overlapping, not a separate family; do not claim an all-positive overall feed.",
+      "url": "https://www.mylivingchoice.com/property/arden-courts-whippany"
+    },
+    {
+      "access": "full-page",
+      "aggregate": {
+        "asOf": null,
+        "count": 375,
+        "rating": 4.1,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "id": "mlc-acquisition-birchwood-rehabilitation-and-healthcare-center",
+      "identity": {
+        "address": "205 Birchwood Ave",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Cranford",
+        "name": "Birchwood Rehabilitation & Healthcare Center",
+        "state": "New Jersey",
+        "zip": "07016"
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/nursing-editorial.json",
+        "sha256": "cb7e0bb3bc67501463358129dd32169f5035bffe20d1304efcde6f905e2a72b6"
+      },
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/source-checks/birchwood-rehabilitation-and-healthcare-center.json",
+        "pointer": "",
+        "sha256": "0759bd45933c815dbd7cdff650e9851ae87d3d997ab2934edf2e9e258d4046cc"
+      },
+      "officialId": "NJ62006",
+      "platform": "MyLivingChoice",
+      "providerId": "cms-315091",
+      "reason": "Honor substantive co-located care-unit hold. NJ62006 is the 200-bed nursing unit; NJ20C003 is a distinct 30-place personal-care home at the same address and phone. Nursing-themed selected accounts and nursing-only directory labels do not establish the scope of all 375 Google ratings. No usable operator-published place-ID bridge was established. Do not score either unit or infer closure from an old license-expiry field. Operator automated access is restricted by terms; the earlier operator contact read is excluded from eligibility and no further operator reads are authorized.",
+      "url": "https://www.mylivingchoice.com/property/birchwood-rehabilitation-and-healthcare-center"
+    },
+    {
+      "access": "full-page",
+      "aggregate": {
+        "asOf": null,
+        "count": 83,
+        "rating": 3.6,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "id": "mlc-acquisition-canterbury-at-cedar-grove",
+      "identity": {
+        "address": "398 Pompton Avenue",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Cedar Grove",
+        "name": "Canterbury Care & Rehabilitation Center",
+        "state": "New Jersey",
+        "zip": "07009"
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/nursing-editorial.json",
+        "sha256": "cb7e0bb3bc67501463358129dd32169f5035bffe20d1304efcde6f905e2a72b6"
+      },
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/source-checks/canterbury-at-cedar-grove.json",
+        "pointer": "",
+        "sha256": "cac6e7192c005100bcdfb96321e054967f148465202708509c71f691b1242675"
+      },
+      "officialId": "NJ60729",
+      "platform": "MyLivingChoice",
+      "providerId": "north-jersey-doh-nj60729",
+      "reason": "Google's original 3.6/5 across 83 ratings is republished by MyLivingChoice and belongs once to the included state nursing listing NJ60729, now named Eagle Rock Post Acute Care at Cedar Grove. CMS 315204 remains a separate unresolved registry record and receives no inherited aggregate or score. NJ license 060729, the exact street, phone, 180 nursing beds, operator and state rename application corroborate the old/new names. The application is not proof every proposed ownership transfer completed. Ratings may span prior and current operators. All five displayed accounts are negative overall, comprising one resident, two family members, one prospective-family tour and one unknown relationship. Praise for therapy or the lobby is incidental, not a balanced appraisal. Row 608755 describes a prospective-family visit, not employment. Keep the October 2024 row even though it is outside 730 days. The 7.2/10 consumer estimate is not clinical quality or safety; critical care allegations remain unverified. Aggregate date is unknown; displayed months are retained.",
+      "url": "https://www.mylivingchoice.com/property/canterbury-at-cedar-grove"
+    },
+    {
+      "access": "full-page",
+      "aggregate": {
+        "asOf": null,
+        "count": 219,
+        "rating": 4.8,
+        "scale": 5,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "id": "mlc-acquisition-florham-park-rehabilitation-and-healthcare-center",
+      "identity": {
+        "address": "190  Park Avenue",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Florham Park",
+        "name": "Florham Park Rehabilitation And Healthcare Center",
+        "state": "New Jersey",
+        "zip": "07932"
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/nursing-editorial.json",
+        "sha256": "cb7e0bb3bc67501463358129dd32169f5035bffe20d1304efcde6f905e2a72b6"
+      },
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/source-checks/florham-park-rehabilitation-and-healthcare-center.json",
+        "pointer": "",
+        "sha256": "5546211809821febd7713aff8050cdae7848ddff8962570c9e343bd770f10b8d"
+      },
+      "officialId": "NJ609201",
+      "platform": "MyLivingChoice",
+      "providerId": "cms-315530",
+      "reason": "Honor substantive shared-care-unit hold. NJ609201 is the 53-bed nursing unit; NJ14C014 (27 personal-care places) and NJ60A010 (21 assisted-living beds) are separate licensed units at 190 Park Avenue under the same operator. The operator’s selected Google place exactly matches all five review links, but a shared operator/place link does not demonstrate that all 219 ratings exclude the other care settings. Nursing-themed visible accounts cannot establish the full aggregate population.",
+      "url": "https://www.mylivingchoice.com/property/florham-park-rehabilitation-and-healthcare-center"
+    }
+  ]
+}

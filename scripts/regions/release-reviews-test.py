@@ -139,6 +139,112 @@ class ReleaseTests(unittest.TestCase):
             self.write(str(release.ACQUISITION_LEDGER), {"schemaVersion": 1, "batches": batches})
             self.assertEqual(release.encoded(before), release.encoded(self.build()))
 
+    def residence_proof(self):
+        self.providers[0]["category"] = "assisted-living"
+        self.write("research/north-jersey/runtime/providers.json", self.providers)
+        self.crosswalk[0]["licensedSetting"] = "ASSISTED LIVING RESIDENCE"
+        self.write("research/north-jersey/runtime/crosswalk.json", self.crosswalk)
+        self.approval["identity"].update(zip="07960", careUnit="Memory Care / Respite / Short-Term Care")
+        self.observation["identity"].update(observed_zip="07960",
+                                           observed_care_unit=self.approval["identity"]["careUnit"])
+        self.update_observation()
+        base = str(release.ACQUISITION / "wave-two/batches/example")
+        self.residence_primary_paths = [base + "/operator.json", base + "/regulatory.json"]
+        for kind, path in zip(("operator", "regulatory"), self.residence_primary_paths, strict=True):
+            witness = {
+                "sourceType": "PRIMARY", "kind": kind,
+                "sourceUrl": ("https://operator.example.org/location" if kind == "operator"
+                              else "https://healthapps.nj.gov/facilities/example"),
+                "checkedAt": "2026-11-12", "inspection": "full-page", "httpStatus": 200,
+                "name": "Example Home", "address": "151 Madison Avenue", "city": "Morristown",
+                "state": "NJ", "zip": "07960",
+            }
+            witness.update(
+                {"dedicatedMemoryCare": True, "shortStaysSameResidence": True} if kind == "operator"
+                else {"officialId": "NJ60921", "licensedSetting": "ASSISTED LIVING RESIDENCE",
+                      "soleLicensedResidence": True})
+            self.write(path, witness)
+        self.residence_path = base + "/care-unit.json"
+        self.residence = {
+            "providerId": self.approval["providerId"], "officialId": self.approval["officialId"],
+            "observedIdentity": copy.deepcopy(self.approval["identity"]),
+            "officialAddress": self.providers[0]["address"],
+            "licensedSetting": "ASSISTED LIVING RESIDENCE", "soleLicensedResidence": True,
+            "separateIndependentLivingUnit": False, "separateNursingUnit": False,
+            "primarySources": [self.reference(path) for path in self.residence_primary_paths],
+        }
+        self.bind_residence_proof()
+
+    def bind_residence_proof(self):
+        self.write(self.residence_path, self.residence)
+        self.approval["careUnitCorroboration"] = self.reference(self.residence_path)
+
+    def test_dedicated_memory_residence_requires_explicit_proof_without_global_equivalence(self):
+        self.residence_proof()
+        proof = self.approval.pop("careUnitCorroboration")
+        self.assert_fails("care unit mismatch")
+        self.approval["careUnitCorroboration"] = proof
+        actual = self.build()
+        self.assertEqual(actual["approvals-audit.json"]["approvals"][0]["approval"]["identity"]["careUnit"],
+                         "Memory Care / Respite / Short-Term Care")
+        self.assertFalse(release.compatible_unit("Memory Care", "assisted-living"))
+        self.assertFalse(release.compatible_unit("Respite / Short-Term Care", "assisted-living"))
+        paths = {r["path"] for r in actual["manifest.json"]["inputs"]}
+        self.assertTrue({self.residence_path, *self.residence_primary_paths} <= paths)
+
+    def test_dedicated_residence_rejects_missing_or_changed_primary_evidence(self):
+        for target in ("proof", "operator", "regulatory"):
+            with self.subTest(target=target):
+                self.residence_proof()
+                path = self.residence_path if target == "proof" else self.residence_primary_paths[
+                    0 if target == "operator" else 1]
+                self.write(path, {})
+                self.assert_fails("Source hash drift")
+
+    def test_dedicated_residence_rejects_other_units_even_with_rebound_proof(self):
+        for key, value in (("soleLicensedResidence", False), ("separateIndependentLivingUnit", True),
+                           ("separateNursingUnit", True), ("officialId", "NJ99999")):
+            with self.subTest(key=key):
+                self.residence_proof()
+                self.residence[key] = value
+                self.bind_residence_proof()
+                self.assert_fails("exact residence mismatch")
+
+    def test_dedicated_residence_rejects_campus_or_unresolved_nursing_sibling(self):
+        for category, status in (("nursing-home", "included_cms_only"),
+                                 ("assisted-living", "included"), ("life-plan", "included")):
+            with self.subTest(category=category):
+                self.residence_proof()
+                sibling = {**self.providers[0], "id": "other-unit", "category": category}
+                self.write("research/north-jersey/runtime/providers.json", [*self.providers, sibling])
+                self.write("research/north-jersey/runtime/crosswalk.json", [
+                    *self.crosswalk, {"providerId": "other-unit", "officialId": "other", "status": status},
+                ])
+                self.assert_fails("separate or unresolved")
+
+    def test_dedicated_residence_rejects_nonprimary_stale_or_wrong_witness(self):
+        cases = [
+            (0, "dedicatedMemoryCare", False), (0, "shortStaysSameResidence", False),
+            (1, "soleLicensedResidence", False), (1, "officialId", "NJ99999"),
+            (1, "licensedSetting", "LONG TERM CARE FACILITY"),
+            (0, "inspection", "snippet"), (0, "httpStatus", 403),
+            (1, "checkedAt", "2026-11-11"), (0, "address", "152 Madison Avenue"),
+            (0, "name", "Other Community"),
+            (1, "zip", "07470"), (0, "sourceType", "directory"),
+            (0, "sourceUrl", "https://www.mylivingchoice.com/property/example"),
+            (1, "sourceUrl", "https://regulatory.example.org/location"),
+        ]
+        for index, field, value in cases:
+            with self.subTest(field=field, value=value):
+                self.residence_proof()
+                path = self.residence_primary_paths[index]
+                witness = json.loads((self.root / path).read_bytes())
+                witness[field] = value
+                self.write(path, witness)
+                self.residence["primarySources"][index] = self.reference(path)
+                self.bind_residence_proof()
+                self.assert_fails("primary care-unit witness|identical sole|witness host")
+
     def street_proof(self):
         self.providers[0]["phone"] = "(973) 555-0100"
         self.write("research/north-jersey/runtime/providers.json", self.providers)

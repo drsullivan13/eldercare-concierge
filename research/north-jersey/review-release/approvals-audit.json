@@ -2260,6 +2260,59 @@
     },
     {
       "acquisitionBatch": {
+        "assessmentDate": "2026-11-15",
+        "id": "mylivingchoice-six-sites"
+      },
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 53,
+          "rating": 4.7,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "careUnitCorroboration": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/wayne-care-unit-corroboration.json",
+          "sha256": "44c67473c9b0b414b955f5be670b8675830693849a9a5c8a35cf47a48eae8f55"
+        },
+        "checkedAt": "2026-11-15",
+        "id": "mlc-acquisition-arden-courts-wayne",
+        "identity": {
+          "address": "800 Hamburg Turnpike",
+          "careUnit": "Memory Care / Respite / Short-Term Care",
+          "city": "Wayne",
+          "name": "Arden Courts (Wayne)",
+          "state": "New Jersey",
+          "zip": "07470"
+        },
+        "material": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-six-sites/independent-checks/arden-courts-wayne.json",
+          "sha256": "d8877aa9d4d57a257049bc2e08a371793214e2f2a4aaab2b17374df5a16d6e9d"
+        },
+        "observation": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-six-sites/collector-receipts.json",
+          "pointer": "/receipts/0",
+          "sha256": "e68d5543cfd61c7664e542f571bf7eba2108900c205d52b9ebfa5d034b896d39"
+        },
+        "officialId": "NJ70A002",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj70a002",
+        "reason": "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. Google's 4.7 out of 5 from 53 ratings appears on MyLivingChoice. These are the same Google ratings, not a separate set of reviews. The five displayed accounts are positive overall. Three describe care for a parent, one describes a family's inquiry, and one describes visits without stating a family relationship or work connection. They are not all accounts from residents or their families, and the writers' identities have not been verified. The displayed accounts are only part of the reviews behind the rating and do not show how common these experiences are. The operator and New Jersey's facility information identify one memory-care residence at 800 Hamburg Turnpike, including short stays in that residence. The directory's general description of independent and assisted living conflicts with the operator's description of this memory-care community. A yoga instructor's Facebook account on the operator's website is separate from these Google reviews. The rating's publication date is unknown. The displayed review dates give a month, not an exact day. This consumer rating does not establish clinical quality or safety.",
+        "url": "https://www.mylivingchoice.com/property/arden-courts-wayne"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": "07470",
+        "officialZip": "07470",
+        "zipResolution": "observed"
+      },
+      "observationKey": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-six-sites/collector-receipts.json#/receipts/0",
+      "sourceId": "review-release-mlc-acquisition-arden-courts-wayne"
+    },
+    {
+      "acquisitionBatch": {
         "assessmentDate": "2026-11-13",
         "id": "mylivingchoice-second-wave"
       },
@@ -2457,6 +2510,55 @@
       },
       "observationKey": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/collector-receipts.json#/receipts/3",
       "sourceId": "review-release-mlc-acquisition-brookhaven-health-care-center"
+    },
+    {
+      "acquisitionBatch": {
+        "assessmentDate": "2026-11-15",
+        "id": "mylivingchoice-six-sites"
+      },
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 83,
+          "rating": 3.6,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-15",
+        "id": "mlc-acquisition-canterbury-at-cedar-grove",
+        "identity": {
+          "address": "398 Pompton Avenue",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Cedar Grove",
+          "name": "Canterbury Care & Rehabilitation Center",
+          "state": "New Jersey",
+          "zip": "07009"
+        },
+        "material": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-six-sites/independent-checks/canterbury-at-cedar-grove.json",
+          "sha256": "b7697ea79e27de9e776b030772940676151a83a04c7b82b26477956bb838377f"
+        },
+        "observation": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-six-sites/collector-receipts.json",
+          "pointer": "/receipts/1",
+          "sha256": "e68d5543cfd61c7664e542f571bf7eba2108900c205d52b9ebfa5d034b896d39"
+        },
+        "officialId": "NJ60729",
+        "platform": "MyLivingChoice",
+        "providerId": "north-jersey-doh-nj60729",
+        "reason": "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. Google's 3.6 out of 5 from 83 ratings appears on MyLivingChoice under Canterbury Care & Rehabilitation Center. These are the same Google ratings, not a separate set of reviews. The nursing home at 398 Pompton Avenue is now named Eagle Rock Post Acute Care at Cedar Grove. The rating may include experiences under earlier names and prior or current operators. A state name-change application does not confirm that every proposed ownership change took place. All five displayed accounts are negative overall. One is from a resident, two are from family members, one describes a tour for a family member, and one does not state a relationship. The tour account does not establish an employment relationship. Brief praise for therapy or the lobby does not change the overall criticism. The displayed accounts include one from October 2024, which may not describe current care. These five accounts are only part of the reviews behind the rating and do not show how common these experiences are. The writers' identities have not been verified, and the care allegations remain unverified. The rating's publication date is unknown. The displayed review dates give a month, not an exact day. This consumer rating does not establish clinical quality or safety.",
+        "url": "https://www.mylivingchoice.com/property/canterbury-at-cedar-grove"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": "07009",
+        "officialZip": "07009",
+        "zipResolution": "observed"
+      },
+      "observationKey": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-six-sites/collector-receipts.json#/receipts/1",
+      "sourceId": "review-release-mlc-acquisition-canterbury-at-cedar-grove"
     },
     {
       "acquisitionBatch": {

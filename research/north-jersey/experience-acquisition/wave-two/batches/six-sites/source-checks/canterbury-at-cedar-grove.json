@@ -1,0 +1,85 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 83,
+    "rating": 3.6,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "bodySha256": "94285ca7b275ef1a601271963a5d3ad73a477e10bb387c3f839ef12e678a49db",
+  "checkedAt": "2026-11-15",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/collection/canterbury-at-cedar-grove.json",
+    "sha256": "8762654c6d21b6bc24d97566cd2b70b5b6676b738f984f1ff5bf44802d35d290"
+  },
+  "googlePlaceIds": [
+    "0x89c3001788cd38c7:0xada17127fee346e9"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "398 Pompton Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Cedar Grove",
+    "name": "Canterbury Care & Rehabilitation Center",
+    "state": "New Jersey",
+    "zip": "07009"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/nursing-editorial.json",
+    "sha256": "cb7e0bb3bc67501463358129dd32169f5035bffe20d1304efcde6f905e2a72b6"
+  },
+  "inspection": "full-page",
+  "listingAnnotations": {
+    "aggregateScopeBeforeEditorial": "unverified-platform-population",
+    "careTypes": [
+      "Skilled Nursing / Long Term Care"
+    ],
+    "observedIdentity": {
+      "address": "398 Pompton Avenue",
+      "city": "Cedar Grove",
+      "name": "Canterbury Care & Rehabilitation Center",
+      "state": "New Jersey",
+      "zip": "07009"
+    }
+  },
+  "observedAt": "2026-11-15T13:46:27.454046+00:00",
+  "population": {
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-608751",
+        "relationship": "resident",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2026-06",
+        "id": "mlc-google-608752",
+        "relationship": "family",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2025-10",
+        "id": "mlc-google-608754",
+        "relationship": "unknown",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2025-05",
+        "id": "mlc-google-608755",
+        "relationship": "prospective-family-tour",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2024-10",
+        "id": "mlc-google-608753",
+        "relationship": "family",
+        "sentiment": "negative"
+      }
+    ],
+    "visibleCount": 5
+  },
+  "populationReview": "Google's original 3.6/5 across 83 ratings is republished by MyLivingChoice and belongs once to the included state nursing listing NJ60729, now named Eagle Rock Post Acute Care at Cedar Grove. CMS 315204 remains a separate unresolved registry record and receives no inherited aggregate or score. NJ license 060729, the exact street, phone, 180 nursing beds, operator and state rename application corroborate the old/new names. The application is not proof every proposed ownership transfer completed. Ratings may span prior and current operators. All five displayed accounts are negative overall, comprising one resident, two family members, one prospective-family tour and one unknown relationship. Praise for therapy or the lobby is incidental, not a balanced appraisal. Row 608755 describes a prospective-family visit, not employment. Keep the October 2024 row even though it is outside 730 days. The 7.2/10 consumer estimate is not clinical quality or safety; critical care allegations remain unverified. Aggregate date is unknown; displayed months are retained.",
+  "scopeHold": null,
+  "url": "https://www.mylivingchoice.com/property/canterbury-at-cedar-grove"
+}

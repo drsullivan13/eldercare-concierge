@@ -1,0 +1,234 @@
+{
+  "url": "https://www.mylivingchoice.com/property/arden-courts-west-orange",
+  "observedAt": "2026-11-15T13:46:20.333340+00:00",
+  "httpStatus": 200,
+  "responseHeaders": {
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 15 Nov 2026 13:46:20 GMT"
+  },
+  "bodySha256": "254ce1fa164aae9e225248cc7e3e4418a85cc5895673090f9084035eda947c88",
+  "bodyBytes": 297913,
+  "transport": "serial public curl GET; raw body held in process memory only",
+  "collectorVersion": "sanitized-html-v1",
+  "page": {
+    "sourceIdentity": {
+      "name": "Arden Courts (West Orange)",
+      "address": "510 Prospect Avenue",
+      "city": "West Orange",
+      "state": "New Jersey",
+      "zip": "07052"
+    },
+    "aggregate": {
+      "rating": 4.9,
+      "scale": 5,
+      "count": 68,
+      "aggregateType": "Google platform aggregate republished in public Google panel",
+      "reviewScope": "unverified-platform-population",
+      "sourceDate": null,
+      "sourceDateBasis": "No aggregate as-of date is displayed in the Google panel."
+    },
+    "googlePanelUrl": null,
+    "visibleReviewWindow": {
+      "complete": true,
+      "rowCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "rating": 5.0,
+          "datePublished": "2026-09",
+          "dateLabel": "Sep 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xKQlVXOTZWbnB6YW1wQ1EwcEpVMnMzYzI1RWMwRRAB!2m1!1s0x0:0x56c7403156c11b8b!3m1!1s2@1:CAIQACodChtycF9oOlJBUW96VnpzampCQ0pJU2s3c25Ec0E%7C%7C?hl=en-US",
+          "sourceReviewId": "628394",
+          "population": "ambiguous",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/628394",
+            "googlePlaceIds": [
+              "0x0:0x56c7403156c11b8b"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": false
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 2,
+          "rating": 5.0,
+          "datePublished": "2026-06",
+          "dateLabel": "Jun 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tadU9UTlNPVXhmZVc5elp6ZDVTM1J2ZHpCb2FtYxAB!2m1!1s0x0:0x56c7403156c11b8b!3m1!1s2@1:CAIQACodChtycF9oOkZuOTNSOUxfeW9zZzd5S3RvdzBoamc%7C%7C?hl=en-US",
+          "sourceReviewId": "628395",
+          "population": "consumer-family",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/628395",
+            "googlePlaceIds": [
+              "0x0:0x56c7403156c11b8b"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": true,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 3,
+          "rating": 5.0,
+          "datePublished": "2026-06",
+          "dateLabel": "Jun 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kVFJ6ZE1WakZETjAwNVNVbG1UR0kyU1VWUldrRRAB!2m1!1s0x0:0x56c7403156c11b8b!3m1!1s2@1:CAIQACodChtycF9oOndTRzdMVjFDN005SUlmTGI2SUVRWkE%7C%7C?hl=en-US",
+          "sourceReviewId": "628396",
+          "population": "consumer-family",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/628396",
+            "googlePlaceIds": [
+              "0x0:0x56c7403156c11b8b"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": true,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 4,
+          "rating": 5.0,
+          "datePublished": "2026-06",
+          "dateLabel": "Jun 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2kwMFVuWXlURUZsVDJVMmNsSTRjMkl6Y21kaVVuYxAB!2m1!1s0x0:0x56c7403156c11b8b!3m1!1s2@1:CAIQACodChtycF9oOi00UnYyTEFlT2U2clI4c2IzcmdiUnc%7C%7C?hl=en-US",
+          "sourceReviewId": "628397",
+          "population": "ambiguous",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/628397",
+            "googlePlaceIds": [
+              "0x0:0x56c7403156c11b8b"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 5,
+          "rating": 5.0,
+          "datePublished": "2026-06",
+          "dateLabel": "Jun 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xveE0xVllORFU0VEZsRFlrbHFiMUJXVjNSVmNXYxAB!2m1!1s0x0:0x56c7403156c11b8b!3m1!1s2@1:CAIQACodChtycF9oOloxM1VYNDU4TFlDYklqb1BWV3RVcWc%7C%7C?hl=en-US",
+          "sourceReviewId": "628398",
+          "population": "consumer-family",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/628398",
+            "googlePlaceIds": [
+              "0x0:0x56c7403156c11b8b"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": true,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": false
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        }
+      ],
+      "scope": "all review articles served in the public property HTML, not all Google reviews",
+      "htmlArticleCount": 5,
+      "htmlReportLinkCount": 5,
+      "unparsedArticleCount": 0
+    },
+    "structural": {
+      "reviewHeadingPresent": true,
+      "googlePlaceIds": [
+        "0x0:0x56c7403156c11b8b"
+      ],
+      "careTypes": [
+        "Memory Care",
+        "Respite / Short-Term Care"
+      ],
+      "jsonLdIdentityPresent": true,
+      "googlePanelAggregatePresent": true
+    }
+  }
+}

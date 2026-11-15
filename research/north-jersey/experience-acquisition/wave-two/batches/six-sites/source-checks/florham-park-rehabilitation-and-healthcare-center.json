@@ -1,0 +1,85 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 219,
+    "rating": 4.8,
+    "scale": 5,
+    "scope": "ambiguous",
+    "sourceFamily": "google"
+  },
+  "bodySha256": "bc5b10e2ad503f7eb869b33515f9186402c96171653ae55082a66ea7eba94cf5",
+  "checkedAt": "2026-11-15",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/collection/florham-park-rehabilitation-and-healthcare-center.json",
+    "sha256": "c12d75eb97b3c03be859231a4d1ab29e7a78e5c08e79cbb5b47d0e0c17c79ad5"
+  },
+  "googlePlaceIds": [
+    "0x89c3a66c310e6107:0xe3b3bc66227ee6d6"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "190  Park Avenue",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Florham Park",
+    "name": "Florham Park Rehabilitation And Healthcare Center",
+    "state": "New Jersey",
+    "zip": "07932"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/nursing-editorial.json",
+    "sha256": "cb7e0bb3bc67501463358129dd32169f5035bffe20d1304efcde6f905e2a72b6"
+  },
+  "inspection": "full-page",
+  "listingAnnotations": {
+    "aggregateScopeBeforeEditorial": "unverified-platform-population",
+    "careTypes": [
+      "Skilled Nursing / Long Term Care"
+    ],
+    "observedIdentity": {
+      "address": "190  Park Avenue",
+      "city": "Florham Park",
+      "name": "Florham Park Rehabilitation And Healthcare Center",
+      "state": "New Jersey",
+      "zip": "07932"
+    }
+  },
+  "observedAt": "2026-11-15T13:46:29.948221+00:00",
+  "population": {
+    "rows": [
+      {
+        "date": "2026-07",
+        "id": "mlc-google-609595",
+        "relationship": "family",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-609597",
+        "relationship": "family",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-609600",
+        "relationship": "family",
+        "sentiment": "negative"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-609599",
+        "relationship": "family",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-609601",
+        "relationship": "family",
+        "sentiment": "positive"
+      }
+    ],
+    "visibleCount": 5
+  },
+  "populationReview": "Honor substantive shared-care-unit hold. NJ609201 is the 53-bed nursing unit; NJ14C014 (27 personal-care places) and NJ60A010 (21 assisted-living beds) are separate licensed units at 190 Park Avenue under the same operator. The operator’s selected Google place exactly matches all five review links, but a shared operator/place link does not demonstrate that all 219 ratings exclude the other care settings. Nursing-themed visible accounts cannot establish the full aggregate population.",
+  "scopeHold": "Honor substantive shared-care-unit hold. NJ609201 is the 53-bed nursing unit; NJ14C014 (27 personal-care places) and NJ60A010 (21 assisted-living beds) are separate licensed units at 190 Park Avenue under the same operator. The operator’s selected Google place exactly matches all five review links, but a shared operator/place link does not demonstrate that all 219 ratings exclude the other care settings. Nursing-themed visible accounts cannot establish the full aggregate population.",
+  "url": "https://www.mylivingchoice.com/property/florham-park-rehabilitation-and-healthcare-center"
+}

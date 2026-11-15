@@ -1,0 +1,27 @@
+{
+  "licensedSetting": "ASSISTED LIVING RESIDENCE",
+  "observedIdentity": {
+    "address": "800 Hamburg Turnpike",
+    "careUnit": "Memory Care / Respite / Short-Term Care",
+    "city": "Wayne",
+    "name": "Arden Courts (Wayne)",
+    "state": "New Jersey",
+    "zip": "07470"
+  },
+  "officialAddress": "800 HAMBURG TURNPIKE WAYNE, NJ 07470",
+  "officialId": "NJ70A002",
+  "primarySources": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/wayne-operator.json",
+      "sha256": "2c177421bd7acc9f0afb355836154f71d35988dd066002b81ee4b002c5baa8f5"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/primary/wayne-regulatory.json",
+      "sha256": "dd5f361cfc78b29a1cf6568224fd3e07bda910e5e78d6b08237bded055a6edca"
+    }
+  ],
+  "providerId": "north-jersey-doh-nj70a002",
+  "separateIndependentLivingUnit": false,
+  "separateNursingUnit": false,
+  "soleLicensedResidence": true
+}

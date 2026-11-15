@@ -1,0 +1,86 @@
+{
+  "aggregate": {
+    "asOf": null,
+    "count": 41,
+    "rating": 4.9,
+    "scale": 5,
+    "scope": "ambiguous",
+    "sourceFamily": "google"
+  },
+  "bodySha256": "3ba711e3ab47e3551e2d3cd295e4341759e7a9e624b3e2a08d630ae9af37e8f0",
+  "checkedAt": "2026-11-15",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/collection/arden-courts-whippany.json",
+    "sha256": "47b16361f43a2c2617c1d006fd93123ff0af62d275647ffbfb352721435dad9f"
+  },
+  "googlePlaceIds": [
+    "0x0:0x5dc35d96b4440fab"
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "18 Eden Lane",
+    "careUnit": "Memory Care / Respite / Short-Term Care",
+    "city": "Whippany",
+    "name": "Arden Courts (Whippany)",
+    "state": "New Jersey",
+    "zip": "07981"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/arden-editorial.json",
+    "sha256": "e58752f3fc4516272b918813581f43f9d572c30d40de8b3f7dc1239e8459fcd0"
+  },
+  "inspection": "full-page",
+  "listingAnnotations": {
+    "aggregateScopeBeforeEditorial": "unverified-platform-population",
+    "careTypes": [
+      "Memory Care",
+      "Respite / Short-Term Care"
+    ],
+    "observedIdentity": {
+      "address": "18 Eden Lane",
+      "city": "Whippany",
+      "name": "Arden Courts (Whippany)",
+      "state": "New Jersey",
+      "zip": "07981"
+    }
+  },
+  "observedAt": "2026-11-15T13:46:22.682265+00:00",
+  "population": {
+    "rows": [
+      {
+        "date": "2026-06",
+        "id": "mlc-google-629196",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2024-11",
+        "id": "mlc-google-629197",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2024-10",
+        "id": "mlc-google-629198",
+        "relationship": "family",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2024-10",
+        "id": "mlc-google-629199",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2024-10",
+        "id": "mlc-google-629200",
+        "relationship": "family-context",
+        "sentiment": "positive"
+      }
+    ],
+    "visibleCount": 5
+  },
+  "populationReview": "Hold unresolved potential workforce contribution. The visible reviewer name on row 629196 exactly matches the administrator named by NJ DOH for NJ60A003. A name match does not prove personal identity, but requires resolution before attesting a clean broad consumer aggregate. Independent editorial retained this role as unknown and recommended broad-consumer eligibility; this coordinator hold adds the separately inspected primary administrator match. Other unknown relationships are not relabeled employees. All five visible sentiments are positive. Keep 4.9/5 across 41 ratings and month-only dates. A newer negative family Google account visible in the operator widget is overlapping, not a separate family; do not claim an all-positive overall feed.",
+  "scopeHold": "Hold unresolved potential workforce contribution. The visible reviewer name on row 629196 exactly matches the administrator named by NJ DOH for NJ60A003. A name match does not prove personal identity, but requires resolution before attesting a clean broad consumer aggregate. Independent editorial retained this role as unknown and recommended broad-consumer eligibility; this coordinator hold adds the separately inspected primary administrator match. Other unknown relationships are not relabeled employees. All five visible sentiments are positive. Keep 4.9/5 across 41 ratings and month-only dates. A newer negative family Google account visible in the operator widget is overlapping, not a separate family; do not claim an all-positive overall feed.",
+  "url": "https://www.mylivingchoice.com/property/arden-courts-whippany"
+}

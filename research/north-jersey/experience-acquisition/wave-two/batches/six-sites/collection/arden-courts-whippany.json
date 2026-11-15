@@ -1,0 +1,234 @@
+{
+  "url": "https://www.mylivingchoice.com/property/arden-courts-whippany",
+  "observedAt": "2026-11-15T13:46:22.682265+00:00",
+  "httpStatus": 200,
+  "responseHeaders": {
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 15 Nov 2026 13:46:22 GMT"
+  },
+  "bodySha256": "3ba711e3ab47e3551e2d3cd295e4341759e7a9e624b3e2a08d630ae9af37e8f0",
+  "bodyBytes": 296509,
+  "transport": "serial public curl GET; raw body held in process memory only",
+  "collectorVersion": "sanitized-html-v1",
+  "page": {
+    "sourceIdentity": {
+      "name": "Arden Courts (Whippany)",
+      "address": "18 Eden Lane",
+      "city": "Whippany",
+      "state": "New Jersey",
+      "zip": "07981"
+    },
+    "aggregate": {
+      "rating": 4.9,
+      "scale": 5,
+      "count": 41,
+      "aggregateType": "Google platform aggregate republished in public Google panel",
+      "reviewScope": "unverified-platform-population",
+      "sourceDate": null,
+      "sourceDateBasis": "No aggregate as-of date is displayed in the Google panel."
+    },
+    "googlePanelUrl": null,
+    "visibleReviewWindow": {
+      "complete": true,
+      "rowCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "rating": 5.0,
+          "datePublished": "2026-06",
+          "dateLabel": "Jun 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xnM1lWOVJWRzVtYVRSNlpXMUZUa3A0VFVwNkxXYxAB!2m1!1s0x0:0x5dc35d96b4440fab!3m1!1s2@1:CAIQACodChtycF9oOlg3YV9RVG5maTR6ZW1FTkp4TUp6LWc%7C%7C?hl=en-US",
+          "sourceReviewId": "629196",
+          "population": "ambiguous",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/629196",
+            "googlePlaceIds": [
+              "0x0:0x5dc35d96b4440fab"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": false
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 2,
+          "rating": 5.0,
+          "datePublished": "2024-11",
+          "dateLabel": "Nov 2024",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUQzek9iZEFREAE!2m1!1s0x0:0x5dc35d96b4440fab!3m1!1s2@1:CIHM0ogKEICAgID3zObdAQ%7C%7C?hl=en-US",
+          "sourceReviewId": "629197",
+          "population": "ambiguous",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/629197",
+            "googlePlaceIds": [
+              "0x0:0x5dc35d96b4440fab"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": false
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 3,
+          "rating": 5.0,
+          "datePublished": "2024-10",
+          "dateLabel": "Oct 2024",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURYNU5mYzRnRRAB!2m1!1s0x0:0x5dc35d96b4440fab!3m1!1s2@1:CIHM0ogKEICAgIDX5Nfc4gE%7C%7C?hl=en-US",
+          "sourceReviewId": "629198",
+          "population": "consumer-family",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/629198",
+            "googlePlaceIds": [
+              "0x0:0x5dc35d96b4440fab"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": true,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 4,
+          "rating": 5.0,
+          "datePublished": "2024-10",
+          "dateLabel": "Oct 2024",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSURuXzhMaUhBEAE!2m1!1s0x0:0x5dc35d96b4440fab!3m1!1s2@1:CIHM0ogKEICAgIDn_8LiHA%7C%7C?hl=en-US",
+          "sourceReviewId": "629199",
+          "population": "ambiguous",
+          "sentiment": "positive",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/629199",
+            "googlePlaceIds": [
+              "0x0:0x5dc35d96b4440fab"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 5,
+          "rating": 5.0,
+          "datePublished": "2024-10",
+          "dateLabel": "Oct 2024",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURucDdlN3hRRRAB!2m1!1s0x0:0x5dc35d96b4440fab!3m1!1s2@1:CIHM0ogKEICAgIDnp7e7xQE%7C%7C?hl=en-US",
+          "sourceReviewId": "629200",
+          "population": "ambiguous",
+          "sentiment": "mixed",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "5 out of 5 stars",
+            "reportPath": "/reviews/report/external/629200",
+            "googlePlaceIds": [
+              "0x0:0x5dc35d96b4440fab"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": true
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        }
+      ],
+      "scope": "all review articles served in the public property HTML, not all Google reviews",
+      "htmlArticleCount": 5,
+      "htmlReportLinkCount": 5,
+      "unparsedArticleCount": 0
+    },
+    "structural": {
+      "reviewHeadingPresent": true,
+      "googlePlaceIds": [
+        "0x0:0x5dc35d96b4440fab"
+      ],
+      "careTypes": [
+        "Memory Care",
+        "Respite / Short-Term Care"
+      ],
+      "jsonLdIdentityPresent": true,
+      "googlePanelAggregatePresent": true
+    }
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "url": "https://www.mylivingchoice.com/property/canterbury-at-cedar-grove",
+  "observedAt": "2026-11-15T13:46:27.454046+00:00",
+  "httpStatus": 200,
+  "responseHeaders": {
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 15 Nov 2026 13:46:27 GMT"
+  },
+  "bodySha256": "94285ca7b275ef1a601271963a5d3ad73a477e10bb387c3f839ef12e678a49db",
+  "bodyBytes": 370411,
+  "transport": "serial public curl GET; raw body held in process memory only",
+  "collectorVersion": "sanitized-html-v1",
+  "page": {
+    "sourceIdentity": {
+      "name": "Canterbury Care & Rehabilitation Center",
+      "address": "398 Pompton Avenue",
+      "city": "Cedar Grove",
+      "state": "New Jersey",
+      "zip": "07009"
+    },
+    "aggregate": {
+      "rating": 3.6,
+      "scale": 5,
+      "count": 83,
+      "aggregateType": "Google platform aggregate republished in public Google panel",
+      "reviewScope": "unverified-platform-population",
+      "sourceDate": null,
+      "sourceDateBasis": "No aggregate as-of date is displayed in the Google panel."
+    },
+    "googlePanelUrl": null,
+    "visibleReviewWindow": {
+      "complete": true,
+      "rowCount": 5,
+      "rows": [
+        {
+          "ordinal": 1,
+          "rating": 1.0,
+          "datePublished": "2026-07",
+          "dateLabel": "Jul 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pSTVpYTmlRbG8wVkdGclFXRlpiMGt0TTNoUWRHYxAB!2m1!1s0x89c3001788cd38c7:0xada17127fee346e9",
+          "sourceReviewId": "608751",
+          "population": "ambiguous",
+          "sentiment": "negative",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "1 out of 5 stars",
+            "reportPath": "/reviews/report/external/608751",
+            "googlePlaceIds": [
+              "0x89c3001788cd38c7:0xada17127fee346e9"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": false,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 2,
+          "rating": 1.0,
+          "datePublished": "2026-06",
+          "dateLabel": "Jun 2026",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21SclYwTkhNRzFNWjJ4emFtRk5ZMnBhU3pOeVQxRRAB!2m1!1s0x89c3001788cd38c7:0xada17127fee346e9",
+          "sourceReviewId": "608752",
+          "population": "consumer-family",
+          "sentiment": "mixed",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "1 out of 5 stars",
+            "reportPath": "/reviews/report/external/608752",
+            "googlePlaceIds": [
+              "0x89c3001788cd38c7:0xada17127fee346e9"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": true,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": true
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 3,
+          "rating": 1.0,
+          "datePublished": "2025-10",
+          "dateLabel": "Oct 2025",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21NMVdHOW5YMFpoV1d0M1pVMXVUbXhQV0VWS1pYYxAB!2m1!1s0x89c3001788cd38c7:0xada17127fee346e9",
+          "sourceReviewId": "608754",
+          "population": "ambiguous",
+          "sentiment": "negative",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "1 out of 5 stars",
+            "reportPath": "/reviews/report/external/608754",
+            "googlePlaceIds": [
+              "0x89c3001788cd38c7:0xada17127fee346e9"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": false,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": true
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": false
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 4,
+          "rating": 1.0,
+          "datePublished": "2025-05",
+          "dateLabel": "May 2025",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VPT2pzS0R2Z3JmeTNBRRAB!2m1!1s0x89c3001788cd38c7:0xada17127fee346e9",
+          "sourceReviewId": "608755",
+          "population": "employee",
+          "sentiment": "mixed",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "1 out of 5 stars",
+            "reportPath": "/reviews/report/external/608755",
+            "googlePlaceIds": [
+              "0x89c3001788cd38c7:0xada17127fee346e9"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": true,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": true,
+              "employment-experience": false,
+              "professional-first-person": true,
+              "employment-third-person": false
+            },
+            "sentimentCues": {
+              "positiveCue": true,
+              "criticalOrContrastCue": true
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        },
+        {
+          "ordinal": 5,
+          "rating": 1.0,
+          "datePublished": "2024-10",
+          "dateLabel": "Oct 2024",
+          "sourceReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUNYOTdqMzdRRRAB!2m1!1s0x89c3001788cd38c7:0xada17127fee346e9",
+          "sourceReviewId": "608753",
+          "population": "consumer-family",
+          "sentiment": "negative",
+          "metadata": {
+            "articleTag": "article",
+            "articleClass": "rounded-2xl bg-white p-5 ring-1 ring-stone-200",
+            "ratingAriaLabel": "1 out of 5 stars",
+            "reportPath": "/reviews/report/external/608753",
+            "googlePlaceIds": [
+              "0x89c3001788cd38c7:0xada17127fee346e9"
+            ],
+            "bodyPresent": true,
+            "bodyNodeCount": 1,
+            "roleCues": {
+              "family-first-person": true,
+              "family-explicit": false,
+              "self-recipient": false,
+              "employee-first-person": false,
+              "employment-experience": false,
+              "professional-first-person": false,
+              "employment-third-person": false
+            },
+            "sentimentCues": {
+              "positiveCue": false,
+              "criticalOrContrastCue": true
+            },
+            "classificationMethod": "conservative-role-and-sentiment-cues-v1",
+            "classificationRequiresIndependentReview": true
+          }
+        }
+      ],
+      "scope": "all review articles served in the public property HTML, not all Google reviews",
+      "htmlArticleCount": 5,
+      "htmlReportLinkCount": 5,
+      "unparsedArticleCount": 0
+    },
+    "structural": {
+      "reviewHeadingPresent": true,
+      "googlePlaceIds": [
+        "0x89c3001788cd38c7:0xada17127fee346e9"
+      ],
+      "careTypes": [
+        "Skilled Nursing / Long Term Care"
+      ],
+      "jsonLdIdentityPresent": true,
+      "googlePanelAggregatePresent": true
+    }
+  }
+}

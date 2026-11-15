@@ -1,0 +1,124 @@
+{
+  "locations": [
+    {
+      "newAssessmentSeparate": true,
+      "originalDisposition": "care-unit-not-compatible",
+      "originalRetainedReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/arden-courts-wayne.json",
+        "sha256": "7953492783b176744006cbac2497d9b8ab20959c2774e438c18505c34b56ce34"
+      },
+      "slug": "arden-courts-wayne",
+      "sourceAccess": {
+        "decision": "permitted_low_volume",
+        "method": "Current robots and terms checked. One serial public fetch per property. No internal API, login, form submission, report activation, original Google review fetching or bypass.",
+        "robotsUrl": "https://www.mylivingchoice.com/robots.txt",
+        "termsEffectiveDate": "2026-10-30",
+        "termsUrl": "https://www.mylivingchoice.com/terms-of-service"
+      }
+    },
+    {
+      "newAssessmentSeparate": true,
+      "originalDisposition": "care-unit-not-compatible",
+      "originalRetainedReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/arden-courts-west-orange.json",
+        "sha256": "16380e82b328a2bb5d76e32164309f68afcab1f9791770792480bf2fcf7d73fa"
+      },
+      "slug": "arden-courts-west-orange",
+      "sourceAccess": {
+        "decision": "permitted_low_volume",
+        "method": "Current robots and terms checked. One serial public fetch per property. No internal API, login, form submission, report activation, original Google review fetching or bypass.",
+        "robotsUrl": "https://www.mylivingchoice.com/robots.txt",
+        "termsEffectiveDate": "2026-10-30",
+        "termsUrl": "https://www.mylivingchoice.com/terms-of-service"
+      }
+    },
+    {
+      "newAssessmentSeparate": true,
+      "originalDisposition": "care-unit-not-compatible",
+      "originalRetainedReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/arden-courts-whippany.json",
+        "sha256": "e8d62f6becef8c88595110faf32a1160f51bb498a9180997c733f02caf2a5642"
+      },
+      "slug": "arden-courts-whippany",
+      "sourceAccess": {
+        "decision": "permitted_low_volume",
+        "method": "Current robots and terms checked. One serial public fetch per property. No internal API, login, form submission, report activation, original Google review fetching or bypass.",
+        "robotsUrl": "https://www.mylivingchoice.com/robots.txt",
+        "termsEffectiveDate": "2026-10-30",
+        "termsUrl": "https://www.mylivingchoice.com/terms-of-service"
+      }
+    },
+    {
+      "newAssessmentSeparate": true,
+      "originalDisposition": {
+        "inventory": "overlapping-runtime-identities",
+        "observationIndex": 45,
+        "pageInventory": "overlapping_official_units",
+        "scopeConfirmed": false
+      },
+      "originalRetainedReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/birchwood-rehabilitation-and-healthcare-center.json",
+        "sha256": "4cb6992ca821944bf87b16c320941fda57a1ddb16ddd901e70c246c2b4c743cd"
+      },
+      "slug": "birchwood-rehabilitation-and-healthcare-center",
+      "sourceAccess": {
+        "operatorAccess": {
+          "decision": "restricted; exclude operator reads from eligible corroboration",
+          "reason": "Section 8 prohibits automated access without express written permission. Discovered after initial page reads; stopped this host. Permissive robots does not override terms. No permission assumed.",
+          "source": {
+            "checkedAt": "2026-11-15",
+            "httpStatus": 200,
+            "log": "call_f66d49db0c097835_1.log",
+            "markdownSha256": "68ec6903a39ade24ce52510170f88214db022135b794102845d3edb320e8a449",
+            "section": "r98",
+            "url": "https://birchwoodrhc.com/terms-of-use/"
+          },
+          "url": "https://birchwoodrhc.com/terms-of-use/"
+        },
+        "reviewSource": "permitted_low_volume"
+      }
+    },
+    {
+      "newAssessmentSeparate": true,
+      "originalDisposition": {
+        "inventory": "overlapping-runtime-identities",
+        "observationIndex": 410,
+        "pageInventory": "overlapping_official_units",
+        "resolution": "Name/duplicate-identity hold addressed editorially by license/phone/beds and direct NJ rename application, not by relaxing the crosswalk. CMS 315204 stays included_cms_only and receives no score. No registry merge performed.",
+        "scopeConfirmed": true
+      },
+      "originalRetainedReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/canterbury-at-cedar-grove.json",
+        "sha256": "68cb30a1719306f6cd23d0fc2da6f8525ed1f09b6e7f057db02db64d90ebc8f9"
+      },
+      "slug": "canterbury-at-cedar-grove",
+      "sourceAccess": {
+        "operatorAccess": {
+          "decision": "not used for approval"
+        },
+        "reviewSource": "permitted_low_volume"
+      }
+    },
+    {
+      "newAssessmentSeparate": true,
+      "originalDisposition": {
+        "inventory": "overlapping-runtime-identities",
+        "observationIndex": 256,
+        "pageInventory": "overlapping_official_units",
+        "scopeConfirmed": false
+      },
+      "originalRetainedReceipt": {
+        "path": "research/north-jersey/listing-index/discovery/pages/florham-park-rehabilitation-and-healthcare-center.json",
+        "sha256": "1c5bb4179802acc54b4a42115cc3c793708e66e53c5068b6f8aa7adf27043ce9"
+      },
+      "slug": "florham-park-rehabilitation-and-healthcare-center",
+      "sourceAccess": {
+        "operatorAccess": {
+          "decision": "not used for approval"
+        },
+        "reviewSource": "permitted_low_volume"
+      }
+    }
+  ],
+  "method": "Historical listing decisions, receipts and source-access files remain unchanged. New decisions refer to the separately dated immutable batch."
+}

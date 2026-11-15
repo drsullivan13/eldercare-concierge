@@ -4020,6 +4020,54 @@
       "singleSourceLabel": "Google",
       "value": 6.2
     },
+    "north-jersey-doh-nj60729": {
+      "aggregateRange": {
+        "maximum": 7.199999999999999,
+        "minimum": 7.199999999999999,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 83,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-canterbury-at-cedar-grove",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 4 recent eligible reviews in a visible sample of 5, 4 were critical and 0 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 83,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 4,
+          "negative": 4,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-canterbury-at-cedar-grove",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 7.2
+    },
     "north-jersey-doh-nj60a001": {
       "aggregateRange": {
         "maximum": 9.2,
@@ -4136,6 +4184,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": null
+    },
+    "north-jersey-doh-nj70a002": {
+      "aggregateRange": {
+        "maximum": 9.4,
+        "minimum": 9.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 53,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-arden-courts-wayne",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 53,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-arden-courts-wayne",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.4
     },
     "north-jersey-doh-nj82472": {
       "aggregateRange": {
@@ -9241,6 +9337,54 @@
       "singleSourceLabel": "Google",
       "value": 6.2
     },
+    "north-jersey-doh-nj60729": {
+      "aggregateRange": {
+        "maximum": 7.199999999999999,
+        "minimum": 7.199999999999999,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 83,
+          "normalizedRating": 7.199999999999999,
+          "platform": "MyLivingChoice",
+          "rating": 3.6,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-canterbury-at-cedar-grove",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 4 recent eligible reviews in a visible sample of 5, 4 were critical and 0 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 83,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 4,
+          "negative": 4,
+          "positive": 0,
+          "sourceId": "review-release-mlc-acquisition-canterbury-at-cedar-grove",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": true,
+      "singleSourceLabel": "Google",
+      "value": 7.2
+    },
     "north-jersey-doh-nj60a001": {
       "aggregateRange": {
         "maximum": 9.2,
@@ -9393,6 +9537,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": null
+    },
+    "north-jersey-doh-nj70a002": {
+      "aggregateRange": {
+        "maximum": 9.4,
+        "minimum": 9.4,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 53,
+          "normalizedRating": 9.4,
+          "platform": "MyLivingChoice",
+          "rating": 4.7,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-arden-courts-wayne",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 53,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-arden-courts-wayne",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.4
     },
     "north-jersey-doh-nj82472": {
       "aggregateRange": {

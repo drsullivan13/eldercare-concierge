@@ -296,6 +296,94 @@ def comparable_name(value, category):
     return token(name)
 
 
+def validate_primary_hosts(review_url, operator_url, regulatory_url):
+    review_host, operator_host, regulatory_host = (
+        canonical_url(url).split("/")[0].rstrip(".")
+        for url in (review_url, operator_url, regulatory_url)
+    )
+    regulatory_hosts = {"nj.gov", "cms.gov", "medicare.gov"}
+    nonoperator_hosts = regulatory_hosts | {
+        review_host, regulatory_host, "mylivingchoice.com", "caring.com",
+        "aplaceformom.com", "senioradvisor.com", "seniorly.com", "senioradvice.com",
+        "seniorcare.com", "nursinghomes.com", "assistedlivingcenter.com", "seniorsite.org",
+        "google.com", "yelp.com", "facebook.com", "birdeye.com",
+    }
+    require((regulatory_host in {"healthapps.nj.gov", "nj.gov"}
+             or any(regulatory_host == host or regulatory_host.endswith("." + host)
+                    for host in ("cms.gov", "medicare.gov")))
+            and not any(operator_host == host or operator_host.endswith("." + host)
+                        for host in nonoperator_hosts),
+            "Invalid primary street witness host")
+
+
+def validate_care_unit_corroboration(approval, provider, providers, crosswalk, inputs):
+    require(inputs is not None, "Care-unit corroboration requires hash-bound primary evidence")
+    reference = approval["careUnitCorroboration"]
+    proof = parse_json(inputs.bound(reference))
+    require(Path(reference["path"]).is_relative_to(ACQUISITION),
+            "Care-unit corroboration must stay inside experience-acquisition")
+    fields(proof, "providerId officialId observedIdentity officialAddress licensedSetting "
+           "soleLicensedResidence separateIndependentLivingUnit separateNursingUnit primarySources",
+           "care-unit corroboration")
+    identity = approval["identity"]
+    require(proof["providerId"] == approval["providerId"]
+            and proof["officialId"] == approval["officialId"]
+            and proof["observedIdentity"] == identity
+            and proof["officialAddress"] == provider["address"]
+            and provider["category"] == "assisted-living"
+            and proof["licensedSetting"] == "ASSISTED LIVING RESIDENCE"
+            and proof["soleLicensedResidence"] is True
+            and proof["separateIndependentLivingUnit"] is False
+            and proof["separateNursingUnit"] is False
+            and words(identity["careUnit"]) in {
+                "memory care", "memory care respite short term care",
+            }, "Care-unit corroboration exact residence mismatch")
+    siblings = {
+        row["providerId"] for row in crosswalk
+        if row.get("status") in {"included", "included_cms_only"}
+        and row.get("providerId") in providers
+        and provider_street(providers[row["providerId"]]) == provider_street(provider)
+        and token(providers[row["providerId"]]["city"]) == token(provider["city"])
+        and providers[row["providerId"]]["zip"][:5] == provider["zip"][:5]
+    }
+    require(siblings == {approval["providerId"]},
+            "Dedicated residence has a separate or unresolved runtime care unit")
+    require(isinstance(proof["primarySources"], list) and len(proof["primarySources"]) == 2,
+            "Care-unit corroboration requires operator and state witnesses")
+    witnesses = {}
+    for source in proof["primarySources"]:
+        require(Path(source["path"]).is_relative_to(ACQUISITION)
+                and source["path"] not in {reference["path"], approval["observation"]["path"],
+                                           approval["material"]["path"]},
+                "Care-unit corroboration requires separate primary witnesses")
+        witness = parse_json(inputs.bound(source))
+        require(witness.get("sourceType") == "PRIMARY"
+                and witness.get("kind") in {"operator", "regulatory"}
+                and witness["kind"] not in witnesses
+                and witness.get("httpStatus") == 200
+                and witness.get("inspection") == "full-page"
+                and witness.get("checkedAt") == approval["checkedAt"]
+                and text_value(witness.get("name"))
+                and words(witness.get("address", "")) == provider_street(provider)
+                and token(witness.get("city")) == token(provider["city"])
+                and token(witness.get("state")) in {"nj", "newjersey"}
+                and witness.get("zip") == identity["zip"] == provider["zip"][:5],
+                "Invalid primary care-unit witness")
+        witnesses[witness["kind"]] = witness
+    operator, regulatory = witnesses["operator"], witnesses["regulatory"]
+    validate_primary_hosts(approval["url"], operator["sourceUrl"], regulatory["sourceUrl"])
+    require(operator.get("dedicatedMemoryCare") is True
+            and operator.get("shortStaysSameResidence") is True
+            and comparable_name(operator["name"], provider["category"])
+            == comparable_name(provider["name"], provider["category"])
+            and regulatory.get("officialId") == approval["officialId"]
+            and regulatory.get("licensedSetting") == proof["licensedSetting"]
+            and regulatory.get("soleLicensedResidence") is True
+            and comparable_name(regulatory["name"], provider["category"])
+            == comparable_name(provider["name"], provider["category"]),
+            "Primary witnesses do not establish the identical sole licensed residence")
+
+
 def validate_street_corroboration(approval, provider, providers, crosswalk, inputs):
     require(inputs is not None, "Street corroboration requires hash-bound primary evidence")
     reference = approval["streetCorroboration"]
@@ -351,23 +439,7 @@ def validate_street_corroboration(approval, provider, providers, crosswalk, inpu
                 "Invalid primary street witness")
         witnesses[witness["kind"]] = witness
     operator, regulatory = witnesses["operator"], witnesses["regulatory"]
-    review_host, operator_host, regulatory_host = (
-        canonical_url(url).split("/")[0].rstrip(".")
-        for url in (approval["url"], operator["sourceUrl"], regulatory["sourceUrl"])
-    )
-    regulatory_hosts = {"nj.gov", "cms.gov", "medicare.gov"}
-    nonoperator_hosts = regulatory_hosts | {
-        review_host, regulatory_host, "mylivingchoice.com", "caring.com",
-        "aplaceformom.com", "senioradvisor.com", "seniorly.com", "senioradvice.com",
-        "seniorcare.com", "nursinghomes.com", "assistedlivingcenter.com", "seniorsite.org",
-        "google.com", "yelp.com", "facebook.com", "birdeye.com",
-    }
-    require((regulatory_host in {"healthapps.nj.gov", "nj.gov"}
-             or any(regulatory_host == host or regulatory_host.endswith("." + host)
-                    for host in ("cms.gov", "medicare.gov")))
-            and not any(operator_host == host or operator_host.endswith("." + host)
-                        for host in nonoperator_hosts),
-            "Invalid primary street witness host")
+    validate_primary_hosts(approval["url"], operator["sourceUrl"], regulatory["sourceUrl"])
     require(canonical_url(operator["sourceUrl"]) != canonical_url(regulatory["sourceUrl"])
             and comparable_name(operator["name"], provider["category"])
             == comparable_name(identity["name"], provider["category"])
@@ -427,7 +499,11 @@ def validate_identity(approval, observed, providers, crosswalk, aliases=(), inpu
             and token(provider["state"]) == "nj"
             and token(identity["state"]) in {"nj", "newjersey"},
             "Observed street/city/state identity mismatch")
-    require(compatible_unit(identity["careUnit"], provider["category"]),
+    care_matches = compatible_unit(identity["careUnit"], provider["category"])
+    if "careUnitCorroboration" in approval:
+        validate_care_unit_corroboration(approval, provider, providers, crosswalk, inputs)
+        care_matches = True
+    require(care_matches,
             "Observed care unit mismatch")
     require(identity["zip"] is None or identity["zip"][:5] == provider["zip"][:5],
             "Observed ZIP identity mismatch")
@@ -481,7 +557,8 @@ def raw_listing_observation(approval, original, inputs):
 def validate_approval(approval, inputs, observations, providers, crosswalk, aliases, assessment_date):
     fields(approval, "id providerId officialId observation material url checkedAt access "
            "platform identity aggregate reason" + (" reconciliation" if "reconciliation" in approval else "")
-           + (" streetCorroboration" if "streetCorroboration" in approval else ""), "approval")
+           + (" streetCorroboration" if "streetCorroboration" in approval else "")
+           + (" careUnitCorroboration" if "careUnitCorroboration" in approval else ""), "approval")
     if "reconciliation" in approval:
         fields(approval["reconciliation"], "name address", "editorial reconciliation note")
     require(all(text_value(approval[key]) for key in
