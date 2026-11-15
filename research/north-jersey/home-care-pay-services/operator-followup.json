@@ -1,0 +1,315 @@
+[
+  {
+    "observation_id": "amazing-grace-companionship",
+    "provider_id": "north-jersey-hp-hp0024800",
+    "official_registration_id": "HP0024800",
+    "category": "nonmedical_service",
+    "scope": "Union office",
+    "value": "Companionship",
+    "limitations": [
+      "Agency-reported offering, not care availability."
+    ],
+    "sources": [
+      {
+        "url": "https://amazinggracencs.com/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "amazing-grace-billing-terms",
+    "provider_id": "north-jersey-hp-hp0024800",
+    "official_registration_id": "HP0024800",
+    "category": "published_billing_terms",
+    "scope": "Union office",
+    "value": {
+      "no_setup_charge": true,
+      "no_daily_case_monitoring_charge": true,
+      "deposit": "2-week refundable advance payment deposit",
+      "shift_differentials": "night shift, weekend, holidays and urgent request"
+    },
+    "limitations": [
+      "No numeric hourly or daily price published in this inspected page.",
+      "Do not convert a deposit or fee waiver into a care rate."
+    ],
+    "sources": [
+      {
+        "url": "https://amazinggracencs.com/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://amazinggracencs.com/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "samaritan-nj-territory",
+    "provider_id": "north-jersey-hp-hp0068300",
+    "official_registration_id": "HP0068300",
+    "category": "served_territory",
+    "scope": "Englewood HQ, NJ requests",
+    "value": {
+      "kind": "county_request_area",
+      "counties": [
+        "Atlantic",
+        "Bergen",
+        "Burlington",
+        "Camden",
+        "Cape May",
+        "Cumberland",
+        "Essex",
+        "Gloucester",
+        "Hudson",
+        "Hunterdon",
+        "Mercer",
+        "Middlesex",
+        "Monmouth",
+        "Morris",
+        "Ocean",
+        "Passaic",
+        "Salem",
+        "Somerset",
+        "Sussex",
+        "Union",
+        "Warren"
+      ]
+    },
+    "limitations": [
+      "Provider accepts requests and says it will confirm coverage. Not a guarantee of staff availability.",
+      "NY coverage belongs to Brooklyn office and is excluded."
+    ],
+    "sources": [
+      {
+        "url": "https://samaritanservices.com/service-area/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://samaritanservices.com/service-area/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "gentle-care-regional-territory",
+    "provider_id": "north-jersey-hp-hp0023300",
+    "official_registration_id": "HP0023300",
+    "category": "served_territory",
+    "scope": "Piscataway office",
+    "value": {
+      "kind": "verbatim_region",
+      "text": "most of northern and central New Jersey"
+    },
+    "limitations": [
+      "No county, town or ZIP coverage expanded from this regional wording.",
+      "Office street/phone and private pay come from county 2025 plus registration, not this regional statement."
+    ],
+    "sources": [
+      {
+        "url": "https://gchshome.com/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "caring-world-regional-territory",
+    "provider_id": "north-jersey-hp-hp0061600",
+    "official_registration_id": "HP0061600",
+    "category": "served_territory",
+    "scope": "North Brunswick office",
+    "value": {
+      "kind": "verbatim_region",
+      "text": "Northern and Central New Jersey"
+    },
+    "limitations": [
+      "No exact county or ZIP coverage inferred.",
+      "County Route 130 office matching uses name, route, city and exact phone."
+    ],
+    "sources": [
+      {
+        "url": "https://www.supercaring.com/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "expert-private-pay",
+    "provider_id": "north-jersey-hp-hp0219400",
+    "official_registration_id": "HP0219400",
+    "category": "private_pay",
+    "scope": "New Brunswick office",
+    "value": true,
+    "limitations": [
+      "Retained registry says Active but expiration date 2026-09-30 is before check date. Current registration eligibility unresolved."
+    ],
+    "sources": [
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "expert-live-in-territory",
+    "provider_id": "north-jersey-hp-hp0219400",
+    "official_registration_id": "HP0219400",
+    "category": "served_territory",
+    "scope": "New Brunswick live-in service only",
+    "value": {
+      "kind": "county_service_area",
+      "service": "Live-In Home Care",
+      "counties": [
+        "Middlesex",
+        "Monmouth",
+        "Ocean",
+        "Mercer",
+        "Morris",
+        "Hunterdon",
+        "Somerset",
+        "Essex",
+        "Passaic",
+        "Sussex",
+        "Union",
+        "Warren",
+        "Bergen"
+      ]
+    },
+    "limitations": [
+      "Do not apply live-in county coverage to hourly care.",
+      "Status Active conflicts with past expiration date. Not current eligibility or availability.",
+      "Page contains inconsistent Suite 515 directions. Contact page explicitly says Suite 320."
+    ],
+    "sources": [
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.experthomecare.com/home-care-near-me-in-new-jersey/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "katrix-office-conflict",
+    "provider_id": "north-jersey-hp-hp0245900",
+    "official_registration_id": "HP0245900",
+    "category": "office_conflict",
+    "scope": "East Hanover office identity",
+    "value": {
+      "registered_and_contact_body": "434 Ridgedale Avenue, Suite 11",
+      "website_header": "47 Peach Tree Avenue"
+    },
+    "limitations": [
+      "County facts retained as historical. Do not assert current Ridgedale office location."
+    ],
+    "sources": [
+      {
+        "url": "https://www.katrixhomecare.com/home-care-and-concierge-services-contact-us",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.katrixhomecare.com/home-care-and-concierge-services-contact-us",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.katrixhomecare.com/home-care-and-concierge-services-contact-us",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  },
+  {
+    "observation_id": "bonjour-scotch-plains-published-2025-fees",
+    "provider_id": null,
+    "official_registration_id": null,
+    "category": "published_fee_schedule",
+    "limitations": [
+      "Attributable first-party published fees, not a median, estimate or obtained quote.",
+      "Fee schedule says effective 2025-01-01. Current applicability is unresolved because current page says rates are not published.",
+      "No Active Bonjour firm found in retained statewide HP export. Candidate names/statuses are not live-license verification.",
+      "Website omits Suite 2B and uses different telephone. Group Inc registry ZIP differs from website.",
+      "Live-in daily amount is not interchangeable with awake 24-hour rotating care. Do not multiply into a promised all-in monthly cost."
+    ],
+    "matched_active_registration": false,
+    "eligible_for_active_supply_integration": false,
+    "published_effective_date": "2025-01-01",
+    "sources": [
+      {
+        "url": "https://bonjourhomecare.com/fees/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://bonjourhomecare.com/fees/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://bonjourhomecare.com/fees/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://bonjourhomecare.com/fees/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://bonjourhomecare.com/fees/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://bonjourhomecare.com/fees/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://bonjourhomecare.com/fees/",
+        "checkedAt": "2026-11-14"
+      }
+    ]
+  }
+]
