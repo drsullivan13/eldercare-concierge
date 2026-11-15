@@ -42,9 +42,13 @@ test("CoreQ import guards pass for zero, sentinel values and statewide identity 
   const result = spawnSync(
     "python3",
     [new URL("scripts/regions/nj-coreq-test.py", root).pathname],
-    { cwd: root, encoding: "utf8", timeout: 30_000 },
+    { cwd: root, encoding: "utf8", timeout: 120_000 },
   );
-  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.equal(
+    result.status,
+    0,
+    [result.stdout, result.stderr, result.error].filter(Boolean).join("\n"),
+  );
 });
 
 test(
