@@ -154,7 +154,8 @@ class ReleaseTests(unittest.TestCase):
                 ("151 County Route 10", "151 Madison Avenue"), strict=True):
             self.write(path, {
                 "sourceType": "PRIMARY", "kind": kind,
-                "sourceUrl": f"https://{kind}.example.org/location",
+                "sourceUrl": ("https://operator.example.org/location" if kind == "operator"
+                              else "https://healthapps.nj.gov/facilities/example"),
                 "checkedAt": "2026-11-12", "inspection": "full-page", "httpStatus": 200,
                 "name": "Example Home", "addresses": [address], "city": "Morristown",
                 "state": "New Jersey", "zip": "07960", "phone": "(973) 555-0100",
@@ -192,6 +193,88 @@ class ReleaseTests(unittest.TestCase):
                 self.street_proof()
                 self.write(self.proof_path if target == "proof" else self.primary_paths[0], {})
                 self.assert_fails("Source hash drift")
+
+    def test_street_corroboration_rejects_rebound_nonprimary_hosts(self):
+        self.street_proof()
+        for index, url in enumerate((
+                "https://www.mylivingchoice.com/property/other-property",
+                "https://www.third-party-directory.example/facility")):
+            path = self.primary_paths[index]
+            witness = json.loads((self.root / path).read_bytes())
+            witness["sourceUrl"] = url
+            self.write(path, witness)
+            self.proof["primarySources"][index] = self.reference(path)
+        self.bind_street_proof()
+        self.assert_fails("primary street witness host")
+
+    def test_street_corroboration_rejects_untrusted_or_nonindependent_hosts(self):
+        substitutions = [
+            (0, "https://mylivingchoice.com/property/other-property"),
+            (0, "https://www.mylivingchoice.com/property/other-property"),
+            (0, "https://locations.mylivingchoice.com/facility"),
+            (0, "https://healthapps.nj.gov/another-facility"),
+            (0, "https://www.healthapps.nj.gov/another-facility"),
+            (0, "https://HEALTHAPPS.NJ.GOV./another-facility"),
+            (0, "https://www.cms.gov/facility"),
+            (0, "https://data.cms.gov/facility"),
+            (0, "https://www.medicare.gov/facility"),
+            (1, "https://operator.example.org/another-facility"),
+            (1, "https://www.operator.example.org/another-facility"),
+            (1, "https://www.third-party-directory.example/facility"),
+            (1, "https://healthapps.nj.gov.attacker.example/facility"),
+            (1, "https://www.cms.gov.attacker.example/facility"),
+            (1, "https://medicare.gov.attacker.example/facility"),
+            (1, "https://notcms.gov/facility"),
+            (1, "https://unrelated.nj.gov/facility"),
+        ]
+        substitutions.extend(
+            (0, f"https://{prefix}{host}/facility")
+            for host in ("caring.com", "aplaceformom.com", "senioradvisor.com",
+                         "seniorly.com", "senioradvice.com", "seniorcare.com",
+                         "nursinghomes.com", "assistedlivingcenter.com", "seniorsite.org",
+                         "google.com", "yelp.com", "facebook.com", "birdeye.com")
+            for prefix in ("", "www.", "reviews."))
+        for index, url in substitutions:
+            with self.subTest(index=index, url=url):
+                self.street_proof()
+                path = self.primary_paths[index]
+                witness = json.loads((self.root / path).read_bytes())
+                witness["sourceUrl"] = url
+                self.write(path, witness)
+                self.proof["primarySources"][index] = self.reference(path)
+                self.bind_street_proof()
+                self.assert_fails("primary street witness host")
+
+    def test_street_corroboration_rejects_other_review_platform_host_aliases(self):
+        self.approval["url"] = "https://reviews.example.net/property/example-home"
+        self.observation["source_url"] = self.approval["url"]
+        material = (self.root / self.material_path).read_text().replace(
+            self.url, self.approval["url"])
+        self.write(self.material_path, material)
+        self.approval["material"] = self.reference(self.material_path)
+        for host in ("reviews.example.net", "www.reviews.example.net"):
+            with self.subTest(host=host):
+                self.street_proof()
+                path = self.primary_paths[0]
+                witness = json.loads((self.root / path).read_bytes())
+                witness["sourceUrl"] = f"https://{host}/property/other-home"
+                self.write(path, witness)
+                self.proof["primarySources"][0] = self.reference(path)
+                self.bind_street_proof()
+                self.assert_fails("primary street witness host")
+
+    def test_street_corroboration_accepts_authoritative_regulatory_hosts(self):
+        for host in ("healthapps.nj.gov", "www.nj.gov", "www.cms.gov",
+                     "data.cms.gov", "www.medicare.gov"):
+            with self.subTest(host=host):
+                self.street_proof()
+                path = self.primary_paths[1]
+                witness = json.loads((self.root / path).read_bytes())
+                witness["sourceUrl"] = f"https://{host}/facility"
+                self.write(path, witness)
+                self.proof["primarySources"][1] = self.reference(path)
+                self.bind_street_proof()
+                self.assertIn("cms-315488", self.build()["locationResearch.json"])
 
     def test_street_corroboration_rejects_unrelated_identity_fields(self):
         for field, value in (

@@ -351,6 +351,23 @@ def validate_street_corroboration(approval, provider, providers, crosswalk, inpu
                 "Invalid primary street witness")
         witnesses[witness["kind"]] = witness
     operator, regulatory = witnesses["operator"], witnesses["regulatory"]
+    review_host, operator_host, regulatory_host = (
+        canonical_url(url).split("/")[0].rstrip(".")
+        for url in (approval["url"], operator["sourceUrl"], regulatory["sourceUrl"])
+    )
+    regulatory_hosts = {"nj.gov", "cms.gov", "medicare.gov"}
+    nonoperator_hosts = regulatory_hosts | {
+        review_host, regulatory_host, "mylivingchoice.com", "caring.com",
+        "aplaceformom.com", "senioradvisor.com", "seniorly.com", "senioradvice.com",
+        "seniorcare.com", "nursinghomes.com", "assistedlivingcenter.com", "seniorsite.org",
+        "google.com", "yelp.com", "facebook.com", "birdeye.com",
+    }
+    require((regulatory_host in {"healthapps.nj.gov", "nj.gov"}
+             or any(regulatory_host == host or regulatory_host.endswith("." + host)
+                    for host in ("cms.gov", "medicare.gov")))
+            and not any(operator_host == host or operator_host.endswith("." + host)
+                        for host in nonoperator_hosts),
+            "Invalid primary street witness host")
     require(canonical_url(operator["sourceUrl"]) != canonical_url(regulatory["sourceUrl"])
             and comparable_name(operator["name"], provider["category"])
             == comparable_name(identity["name"], provider["category"])
