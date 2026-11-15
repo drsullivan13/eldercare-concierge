@@ -1,5 +1,16 @@
 [
   {
+    "providerId": "north-jersey-hp-hp0048701",
+    "county": "Monmouth",
+    "status": "accepted",
+    "queries": [],
+    "acceptedUrls": [
+      "https://birdeye.com/griswold-home-care-for-monmouth-county-175561710791779"
+    ],
+    "withheldCandidates": [],
+    "reason": "Directly checked the supplied Birdeye profile and official Monmouth County branch. Both identify the same Red Bank street address and Google business CID. Retained link-only metadata and a non-scoring office fact; no review bodies, averages or counts were imported."
+  },
+  {
     "providerId": "north-jersey-hp-hp0000216",
     "county": "Bergen",
     "status": "not_attempted",

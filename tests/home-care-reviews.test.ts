@@ -284,6 +284,36 @@ test("external office profiles can accompany an unrated listing without creating
   assert.equal(getLocationResearch(overlap, asOf).experience.value, null);
 });
 
+test("Red Bank Griswold links to Birdeye without importing review content or changing experience", async () => {
+  const id = "north-jersey-hp-hp0048701";
+  const url =
+    "https://birdeye.com/griswold-home-care-for-monmouth-county-175561710791779";
+  const result = await reviewGET(
+    new Request(`https://harbor.example/api/reviews?id=${id}`),
+  ).json();
+  assert.deepEqual(result.externalProfiles, [{ publisher: "Birdeye", url }]);
+  const research = getLocationResearch(id, "2026-11-15");
+  assert.equal(research.experience.value, null);
+  assert.equal(research.experience.reviewCount, 11);
+  assert.equal(research.experience.independentSourceCount, 1);
+  assert.deepEqual(
+    research.reviewAggregates,
+    release.providers[id].reviewAggregates,
+  );
+  assert.deepEqual(research.reviews, release.providers[id].reviews);
+  assert.equal(result.accounts.length, getReviewCatalog(id)!.accounts.length);
+  assert.ok(
+    result.accounts.every((account: { url: string }) => account.url !== url),
+  );
+  assert.ok(
+    research.sources.some(
+      (source) =>
+        source.publisher === "Griswold Home Care" &&
+        source.url === "https://www.griswoldcare.com/monmouth-county/",
+    ),
+  );
+});
+
 test("accepted synthetic CLI evidence reaches default search, research, catalog and both APIs", (t) => {
   const path = temporaryApp(t);
   const output = publish(path);

@@ -1,0 +1,177 @@
+{
+  "assessment_date": "2026-11-15",
+  "offices": [
+    {
+      "provider_id": "north-jersey-hp-hp0364000",
+      "registration_id": "HP0364000",
+      "registered_branch": "1139 E Jersey Street, Suite 203, Elizabeth, NJ 07201",
+      "retained_aggregate": {
+        "family": "google",
+        "publisher": "MyLivingChoice",
+        "mean": 5,
+        "count": 4
+      },
+      "google_family_refresh": {
+        "url": "https://www.mylivingchoice.com/property/american-home-healthcare-solutions",
+        "access": "full public page",
+        "observed_address": "1139 E Jersey St Ste 203, Elizabeth, New Jersey",
+        "observed_aggregate": "5 / 4 ratings, labeled Google (4)",
+        "change": "none"
+      },
+      "second_source_candidates": [
+        {
+          "url": "https://bettercallahc.com/contact-us/",
+          "type": "operator site",
+          "address_match": "exact street and suite",
+          "aggregate": "none shown",
+          "note": "Operator phone differs from registry phone."
+        },
+        {
+          "url": "https://www.agingcare.com/local/american-home-healthcare-solutions-llc-elizabeth-in-home-care-nj",
+          "type": "independent directory",
+          "address_match": "exact street and suite",
+          "aggregate": "none shown; write-a-review link only"
+        },
+        {
+          "url": "https://www.agingchoices.com/provider/american-home-healthcare-solutions-llc-elizabeth-nj/0fef0e44-4f39-4e26-acdb-f2976febaba7",
+          "type": "independent directory",
+          "address_match": "exact street and suite",
+          "aggregate": "none shown; rate-this-provider link only"
+        },
+        {
+          "url": "https://www.aplaceformom.com/community/american-home-healthcare-solutions-llc-1487796",
+          "type": "independent directory",
+          "address_match": "not verifiable",
+          "aggregate": "none",
+          "note": "Listing redirects to a generic assisted-living page; search preview only."
+        }
+      ],
+      "conflicts_or_mismatches": [
+        "A Facebook result for the brand lists Jersey City; a MapQuest result lists unit #501. Neither carries an aggregate; neither used."
+      ],
+      "disposition": "no-eligible-evidence",
+      "reason": "Google count unchanged at 4. No independent exact-office aggregate with a published mean and count found."
+    },
+    {
+      "provider_id": "north-jersey-hp-hp0390600",
+      "registration_id": "HP0390600",
+      "registered_branch": "991 US Highway 22, Suite 200, Bridgewater, NJ 08807",
+      "retained_aggregate": {
+        "family": "google",
+        "publisher": "MyLivingChoice",
+        "mean": 5,
+        "count": 2
+      },
+      "google_family_refresh": {
+        "url": "https://www.mylivingchoice.com/property/loving-life-caregivers",
+        "access": "full public page",
+        "observed_address": "991 US-22 Suite 200, Bridgewater, New Jersey",
+        "observed_aggregate": "5 / 2 ratings, labeled Google (2)",
+        "change": "none",
+        "scope_note": "Page summary describes the visible reviews as relating to young-adult one-on-one support clients; operator site describes a DDD support population. Consumer population, but not senior home care."
+      },
+      "second_source_candidates": [
+        {
+          "url": "https://lovinglifenj.com/contact-us/",
+          "type": "operator site",
+          "address_match": "exact street and suite (map embed)",
+          "aggregate": "none shown"
+        }
+      ],
+      "conflicts_or_mismatches": [
+        "Address is shared with One You Love Homecare (Passion To Action, HP0408800) and a Comfort Keepers office. Their Caring.com and A Place for Mom reviews belong to other operators and were not transferred."
+      ],
+      "disposition": "no-eligible-evidence",
+      "reason": "Google count unchanged at 2. No independent named-operator aggregate found."
+    },
+    {
+      "provider_id": "north-jersey-hp-hp0330000",
+      "registration_id": "HP0330000",
+      "registered_branch": "44 Glenwood Avenue, East Orange, NJ 07017",
+      "retained_aggregate": {
+        "family": "google",
+        "publisher": "MyLivingChoice",
+        "mean": 5,
+        "count": 1
+      },
+      "google_family_refresh": {
+        "url": "https://www.mylivingchoice.com/property/flourish-home-care",
+        "access": "full public page",
+        "observed_address": "44 Glenwood Ave Rm 206A, East Orange, New Jersey",
+        "observed_aggregate": "5 / 1 rating, labeled Google (1)",
+        "change": "none"
+      },
+      "second_source_candidates": [
+        {
+          "url": "https://www.flourishhc.org/",
+          "type": "operator site",
+          "address_match": "street; Fl 2 Rm 206A (registry omits unit)",
+          "aggregate": "none shown"
+        },
+        {
+          "url": "https://www.agingcare.com/local/flourish-home-care-llc-east-orange-in-home-care-nj",
+          "type": "independent directory",
+          "address_match": "street and room 206A",
+          "aggregate": "none shown; write-a-review link only"
+        },
+        {
+          "url": "https://local.yahoo.com/info-231119628-flourish-home-care-llc-east-orange/",
+          "type": "independent directory",
+          "address_match": "street and #206A",
+          "aggregate": "none shown"
+        }
+      ],
+      "conflicts_or_mismatches": [
+        "CAHC accreditation and NPI listings are identity sources only; they carry no consumer rating and were not used. Same-name Flourish operators in other states were excluded."
+      ],
+      "disposition": "no-eligible-evidence",
+      "reason": "Google count unchanged at 1. No independent exact-office aggregate found."
+    }
+  ],
+  "url_status": {
+    "https://www.mylivingchoice.com/property/american-home-healthcare-solutions": {
+      "status": 200,
+      "final_url": "https://www.mylivingchoice.com/property/american-home-healthcare-solutions"
+    },
+    "https://bettercallahc.com/contact-us/": {
+      "status": 200,
+      "final_url": "https://bettercallahc.com/contact-us/"
+    },
+    "https://www.agingcare.com/local/american-home-healthcare-solutions-llc-elizabeth-in-home-care-nj": {
+      "status": 200,
+      "final_url": "https://www.agingcare.com/local/american-home-healthcare-solutions-llc-elizabeth-in-home-care-nj"
+    },
+    "https://www.agingchoices.com/provider/american-home-healthcare-solutions-llc-elizabeth-nj/0fef0e44-4f39-4e26-acdb-f2976febaba7": {
+      "status": 200,
+      "final_url": "https://www.agingchoices.com/provider/american-home-healthcare-solutions-llc-elizabeth-nj/0fef0e44-4f39-4e26-acdb-f2976febaba7"
+    },
+    "https://www.aplaceformom.com/community/american-home-healthcare-solutions-llc-1487796": {
+      "status": 200,
+      "final_url": "https://www.aplaceformom.com/assisted-living"
+    },
+    "https://www.mylivingchoice.com/property/loving-life-caregivers": {
+      "status": 200,
+      "final_url": "https://www.mylivingchoice.com/property/loving-life-caregivers"
+    },
+    "https://lovinglifenj.com/contact-us/": {
+      "status": 200,
+      "final_url": "https://lovinglifenj.com/contact-us/"
+    },
+    "https://www.mylivingchoice.com/property/flourish-home-care": {
+      "status": 200,
+      "final_url": "https://www.mylivingchoice.com/property/flourish-home-care"
+    },
+    "https://www.flourishhc.org/": {
+      "status": 200,
+      "final_url": "https://www.flourishhc.org/"
+    },
+    "https://www.agingcare.com/local/flourish-home-care-llc-east-orange-in-home-care-nj": {
+      "status": 200,
+      "final_url": "https://www.agingcare.com/local/flourish-home-care-llc-east-orange-in-home-care-nj"
+    },
+    "https://local.yahoo.com/info-231119628-flourish-home-care-llc-east-orange/": {
+      "status": 200,
+      "final_url": "https://local.yahoo.com/info-231119628-flourish-home-care-llc-east-orange/"
+    }
+  }
+}
