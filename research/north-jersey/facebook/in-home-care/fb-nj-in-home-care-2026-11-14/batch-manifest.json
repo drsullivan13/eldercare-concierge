@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-14",
+  "identity_holds": [
+    "Somerset identity hold (repo assignment): two active HP registrations share the Senior Helpers address at 764 Easton Ave Suite 8 (HP0423200 and HP0175500). Leave that office unassigned until the current operator can be corroborated. It is separate from the Plainsboro assignment (HP0347100)."
+  ],
+  "markets": [
+    "union",
+    "morris",
+    "essex",
+    "somerset",
+    "middlesex",
+    "comparison",
+    "discovery"
+  ],
+  "observation_prefixes": {
+    "comparison": "fb-njc-",
+    "discovery": "fb-njd-",
+    "essex": "fb-nje-",
+    "middlesex": "fb-njx-",
+    "morris": "fb-njm-",
+    "somerset": "fb-njs-",
+    "union": "fb-nju-"
+  },
+  "protocol_version": "0.1",
+  "providers": [
+    {
+      "county": "Union",
+      "harbor_id": "north-jersey-hp-hp0065000",
+      "name": "Visiting Angels Union",
+      "provider_id": "north-jersey-hp-hp0065000",
+      "registration_hp": "HP0065000",
+      "street_address": "485 Morris Ave #201, Springfield, NJ 07081",
+      "town": "Springfield"
+    },
+    {
+      "county": "Union",
+      "harbor_id": "north-jersey-hp-hp0249500",
+      "name": "HomeWell Care Services",
+      "provider_id": "north-jersey-hp-hp0249500",
+      "registration_hp": "HP0249500",
+      "street_address": "1600 US Highway 22 E, Suite 301, Union, NJ 07083",
+      "town": "Union"
+    },
+    {
+      "county": "Union",
+      "harbor_id": "north-jersey-hp-hp0191600",
+      "name": "BrightStar Care Westfield & Summit",
+      "provider_id": "north-jersey-hp-hp0191600",
+      "registration_hp": "HP0191600",
+      "street_address": "560 Springfield Ave, Second Floor, Ste G, Westfield, NJ 07090",
+      "town": "Westfield"
+    },
+    {
+      "county": "Union",
+      "harbor_id": "north-jersey-hp-hp0015320",
+      "name": "BAYADA Union County",
+      "provider_id": "north-jersey-hp-hp0015320",
+      "registration_hp": "HP0015320",
+      "street_address": "251 North Ave W, Suite 201, Westfield, NJ 07090",
+      "town": "Westfield"
+    },
+    {
+      "county": "Morris",
+      "harbor_id": "north-jersey-hp-hp0104400",
+      "name": "Senior Helpers Madison",
+      "provider_id": "north-jersey-hp-hp0104400",
+      "registration_hp": "HP0104400",
+      "street_address": "214 Main Street, 2nd Floor, Madison, NJ 07940",
+      "town": "Madison"
+    },
+    {
+      "county": "Morris",
+      "harbor_id": "north-jersey-hp-hp0397500",
+      "name": "Home Instead Morris County",
+      "provider_id": "north-jersey-hp-hp0397500",
+      "registration_hp": "HP0397500",
+      "street_address": "1719 NJ-10, Suite 317, Parsippany, NJ 07054",
+      "town": "Parsippany"
+    },
+    {
+      "county": "Morris",
+      "harbor_id": "north-jersey-hp-hp0285900",
+      "name": "Life Home Care",
+      "provider_id": "north-jersey-hp-hp0285900",
+      "registration_hp": "HP0285900",
+      "street_address": "120 Eagle Rock Ave, Suite 200, East Hanover, NJ 07936",
+      "town": "East Hanover"
+    },
+    {
+      "county": "Morris",
+      "harbor_id": "north-jersey-hp-hp0015347",
+      "name": "BAYADA Morris County",
+      "provider_id": "north-jersey-hp-hp0015347",
+      "registration_hp": "HP0015347",
+      "street_address": "32 Maple Avenue, 1st Floor, Morristown, NJ 07960",
+      "town": "Morristown"
+    },
+    {
+      "county": "Essex",
+      "harbor_id": "north-jersey-hp-hp0119000",
+      "name": "Visiting Angels Montclair",
+      "provider_id": "north-jersey-hp-hp0119000",
+      "registration_hp": "HP0119000",
+      "street_address": "7 Cleveland St, Caldwell, NJ 07006",
+      "town": "Caldwell"
+    },
+    {
+      "county": "Essex",
+      "harbor_id": "north-jersey-hp-hp0058900",
+      "name": "Right at Home Essex County",
+      "provider_id": "north-jersey-hp-hp0058900",
+      "registration_hp": "HP0058900",
+      "street_address": "735 Northfield Ave, West Orange, NJ 07052",
+      "town": "West Orange"
+    },
+    {
+      "county": "Essex",
+      "harbor_id": "north-jersey-hp-hp0118200",
+      "name": "Home Instead Millburn",
+      "provider_id": "north-jersey-hp-hp0118200",
+      "registration_hp": "HP0118200",
+      "street_address": "215 Millburn Ave, Suite 2B, Millburn, NJ 07041",
+      "town": "Millburn"
+    },
+    {
+      "county": "Essex",
+      "harbor_id": "north-jersey-hp-hp0179100",
+      "name": "Comfort Keepers Montclair",
+      "provider_id": "north-jersey-hp-hp0179100",
+      "registration_hp": "HP0179100",
+      "street_address": "31 Park St, 2nd Floor, Montclair, NJ 07042",
+      "town": "Montclair"
+    },
+    {
+      "county": "Bergen",
+      "harbor_id": "north-jersey-hp-hp0171100",
+      "name": "Senior Helpers Bergen County",
+      "provider_id": "north-jersey-hp-hp0171100",
+      "registration_hp": "HP0171100",
+      "street_address": "22 Madison Avenue, Suite 305, Paramus, NJ 07652",
+      "town": "Paramus"
+    },
+    {
+      "county": "Bergen",
+      "harbor_id": "north-jersey-hp-hp0151500",
+      "name": "Visiting Angels Ramsey",
+      "provider_id": "north-jersey-hp-hp0151500",
+      "registration_hp": "HP0151500",
+      "street_address": "17 S. Franklin Tpk, 1st Floor #3, Ramsey, NJ 07446",
+      "town": "Ramsey"
+    },
+    {
+      "county": "Passaic",
+      "harbor_id": "north-jersey-hp-hp0015321",
+      "name": "BAYADA Passaic County",
+      "provider_id": "north-jersey-hp-hp0015321",
+      "registration_hp": "HP0015321",
+      "street_address": "1117 Main Avenue, Suite 101, Clifton, NJ 07011",
+      "town": "Clifton"
+    },
+    {
+      "county": "Passaic",
+      "harbor_id": "north-jersey-hp-hp0242300",
+      "name": "Senior Helpers Fairfield",
+      "provider_id": "north-jersey-hp-hp0242300",
+      "registration_hp": "HP0242300",
+      "street_address": "547 Union Blvd, Totowa, NJ 07512",
+      "town": "Totowa"
+    },
+    {
+      "county": "multi",
+      "name": "Discovery lane (town searches, Union/Morris/Essex/Somerset/Middlesex)",
+      "provider_id": "lane-discovery",
+      "type": "discovery_lane"
+    },
+    {
+      "county": "Somerset",
+      "harbor_id": "north-jersey-hp-hp0101000",
+      "name": "Right at Home Somerset & Hunterdon",
+      "provider_id": "north-jersey-hp-hp0101000",
+      "registration_hp": "HP0101000",
+      "street_address": "105 Omni Dr, Hillsborough, NJ 08844",
+      "town": "Hillsborough"
+    },
+    {
+      "county": "Somerset",
+      "harbor_id": "north-jersey-hp-hp0289000",
+      "name": "Home Instead Somerset",
+      "provider_id": "north-jersey-hp-hp0289000",
+      "registration_hp": "HP0289000",
+      "street_address": "220 Davidson Ave, Suite 98, Somerset, NJ 08873",
+      "town": "Somerset"
+    },
+    {
+      "county": "Middlesex",
+      "harbor_id": "north-jersey-hp-hp0436900",
+      "name": "Visiting Angels East Brunswick",
+      "provider_id": "north-jersey-hp-hp0436900",
+      "registration_hp": "HP0436900",
+      "street_address": "A2 Brier Hill Ct, Suite 3, East Brunswick, NJ",
+      "town": "East Brunswick"
+    },
+    {
+      "county": "Middlesex",
+      "harbor_id": "north-jersey-hp-hp0347100",
+      "name": "Senior Helpers Plainsboro",
+      "provider_id": "north-jersey-hp-hp0347100",
+      "registration_hp": "HP0347100",
+      "street_address": "2 Hospital Dr, Building B, Plainsboro, NJ 08536",
+      "town": "Plainsboro"
+    }
+  ],
+  "run_id": "fb-nj-in-home-care-2026-11-14",
+  "selection_method": "explicit assignment from Dan Sullivan 2026-11-14 (16 HCSF-registered offices) + updated repo assignment home-care-assignment.md main 7ba7adc (4 more seeds: Somerset x2, Middlesex x2) + discovery lane across Union/Morris/Essex/Somerset/Middlesex",
+  "supplied_assignment": "supplied-home-care-assignment.md (main 7ba7adc, 2026-11-14)"
+}
