@@ -1,0 +1,29 @@
+{
+  "source": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf",
+  "outsideRelease": [
+    {
+      "id": "HP0049900",
+      "reason": "ACE: current PDF omits suite. County HTML has suite 12; registry says 10."
+    },
+    {
+      "id": "HP0440600",
+      "reason": "L&L: county HTML and roster agree but newer PDF prints 1460 Vauxhall suite 24 instead of 1640 suite 2D."
+    },
+    {
+      "id": "HP0277700",
+      "reason": "Avilo street/name agree, phones differ, and listed registration expiry predates date checked."
+    },
+    {
+      "id": "HP0077800",
+      "reason": "HomeWell street/name agree but phone differs; no independent program number confirmation."
+    },
+    {
+      "id": "HP0371800",
+      "reason": "Light and Life street/name agree but phone differs; no independent program number confirmation."
+    },
+    {
+      "reason": "Artisan, Griswold, Home Instead, Premier, Care Finders and EROS registered phone matches but source address differs. No branch reassignment."
+    }
+  ],
+  "sourceAccess": "County\u2019s Division on Aging links to the May PDF, which was readable from the public web tool. Direct curl to both March and May PDF URLs returned 404 from this environment; use current county landing page or HTML companion for verification. No byte hash of original PDF claimed."
+}

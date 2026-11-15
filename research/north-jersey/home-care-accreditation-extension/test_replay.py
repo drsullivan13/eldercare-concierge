@@ -54,12 +54,22 @@ class MatchTest(unittest.TestCase):
         self.assertIn("Check the scope", a["accreditations"][0])
         self.assertNotEqual(a["source"]["id"], b["source"]["id"])
 
+    def test_nihca_links_are_office_specific_and_undated(self):
+        row = self.row | {"id":"138", "url":"https://members.nihcaccreditation.com/af_directory.asp?memberid=138", "category":"NIHCA Accredited"}
+        record, level = replay.render("nihca", row, self.office, "2026-11-15", [], None)
+        self.assertEqual(level, "directory_only")
+        self.assertEqual(record["source"]["url"], row["url"])
+        self.assertIn("does not give a service scope or expiration date", record["accreditations"][0])
+        for change in ({"category":"NIHCA Accredited PDN"}, {"url":"https://example.org/memberid=138"}):
+            with self.assertRaises(ValueError):
+                replay.render("nihca", row | change, self.office, "2026-11-15", [], None)
+
     def test_captured_dataset(self):
         release = replay.replay()
         summary = release["summary.json"]
-        self.assertEqual(len(release["decisions.json"]), 304)
-        self.assertEqual(summary["distinctOffices"], 73)
-        self.assertEqual(summary["additionalToCahc"], 73)
+        self.assertEqual(len(release["decisions.json"]), 390)
+        self.assertEqual(summary["distinctOffices"], 88)
+        self.assertEqual(summary["additionalToCahc"], 88)
         self.assertEqual(summary["sources"]["chap"]["dispositions"]["directory_only"], 2)
         self.assertEqual(summary["sources"]["chap"]["dispositions"]["no_dated_home_care_scope_current_at_check"], 4)
         for record in release["offices.json"]["offices"]:

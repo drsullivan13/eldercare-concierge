@@ -16,6 +16,7 @@ from nj_collect import workbook_rows
 
 SOURCES = {
     "achc": ("Accreditation Commission for Health Care", "https://ams.achc.org/accredited_organizations.aspx"),
+    "nihca": ("National Institute for Home Care Accreditation", "https://members.nihcaccreditation.com/af_memberdirectory.asp"),
     "chap": ("Community Health Accreditation Partner", "https://locator.chaplinq.org/"),
 }
 CATALOG = ROOT / "src/data/regional-markets.json"
@@ -91,7 +92,7 @@ def match(source, row, index):
     candidates = index.get(fulladdress, [])
     matched = []
     for office in candidates:
-        if office["hold"] or (source=="chap" and number(row["phone"]) and number(row["phone"])!=number(office["phone"])):
+        if office["hold"] or (source!="achc" and number(row["phone"]) and number(row["phone"])!=number(office["phone"])):
             continue
         shared = aliases(row["name"],row.get("dba","")) & aliases(office["registeredName"],office["dbas"])
         if shared:
@@ -105,6 +106,12 @@ def render(source, row, office, checked, date_rows, detail_issue):
     if detail_issue and date_rows:
         raise ValueError("Dated claims cannot coexist with a source lookup hold")
     publisher, url = SOURCES[source]
+    if source == "nihca":
+        if (date_rows or detail_issue or row.get("category") != "NIHCA Accredited"
+                or not re.fullmatch(r"[1-9][0-9]*", row["id"])
+                or row["url"] != f"https://members.nihcaccreditation.com/af_directory.asp?memberid={row['id']}"):
+            raise ValueError("Invalid NIHCA office listing")
+        url = row["url"]
     programs = set()
     for fact in date_rows:
         if fact["program"] != "Home Care" or not fact["services"]:
@@ -122,10 +129,12 @@ def render(source, row, office, checked, date_rows, detail_issue):
         state, listing = "current_location_scope", sorted(programs)
     else:
         state, listing = "directory_only", ["Listed in the Home Care directory. Check the scope with the accreditor."]
+    if source == "nihca":
+        listing = ["NIHCA lists this office as accredited. The directory does not give a service scope or expiration date."]
     key = row["id"]
     return {
         "providerId":office["providerId"],
-        "office":{"name":row["name"],"address": row["displayAddress"] if source=="chap" else f'{row["street"]}, {row["city"]}, NJ {row["zip"]}'},
+        "office":{"name":row["name"],"address": row["displayAddress"] if source!="achc" else f'{row["street"]}, {row["city"]}, NJ {row["zip"]}'},
         "source":{"id":f"{source}-{office['providerId']}-{key}","url":url,"title":f"{publisher} · Home Care directory · {row['name']}",
                   "publisher":publisher,"kind":"public-directory","access":"full-page","checkedAt":checked,"publishedAt":None},
         "accreditations":listing,"services":[],"awards":[],"paymentOptions":[]
@@ -147,7 +156,12 @@ def replay():
         if snapshot["sourceUrl"] != url or details["sourceUrl"] != url or snapshot["checkedAt"] != details["checkedAt"]:
             raise ValueError(f"Source receipt mismatch: {source}")
         qry=snapshot["query"]
-        if not (qry == {"serviceLine":"HomeCare","state":"NJ"} if source=="chap" else qry["program"]=="Home Care" and qry["state"]=="New Jersey" and qry["programControlValue"]=="29" and qry["stateControlValue"]=="35"):
+        expected_queries = {
+            "nihca":{"version":1,"state":"NJ","country":"USA","category":"NIHCA Accredited","categoryValue":"4"},
+            "chap":{"serviceLine":"HomeCare","state":"NJ"},
+            "achc":{"program":"Home Care","state":"New Jersey","programControlValue":"29","stateControlValue":"35"},
+        }
+        if not expected_queries[source].items() <= qry.items():
             raise ValueError(f"Missing NJ Home Care query: {source}")
         checked=snapshot["checkedAt"]; byid={r["id"]:r for r in snapshot["records"]}
         if len(byid)!=len(snapshot["records"]): raise ValueError(f"Duplicate source office in {source}")
@@ -159,15 +173,29 @@ def replay():
                 digest = hashlib.sha256(json.dumps(rows, ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
                 if digest != page["sha256"] or len(rows) != page["count"]:
                     raise ValueError("CHAP page receipt differs from the captured directory")
-        direct={r["id"]:r["details"] for r in details["records"]};issues={r["id"]:r["issue"] for r in details["issues"]}
-        if len(direct)!=len(details["records"]) or len(issues)!=len(details["issues"]) or (set(direct)|set(issues))-set(byid) or set(direct)&set(issues): raise ValueError("Conflicting or orphan detailed source row")
+        if source == "nihca":
+            if len(byid) != snapshot["displayedCount"] or any(
+                row["category"] != "NIHCA Accredited" or row["displayAddress"] and not re.search(r"\bNJ \d{5}(?:-\d{4})?$",row["displayAddress"])
+                for row in byid.values()
+            ):
+                raise ValueError("Invalid NIHCA statewide source rows")
+            for detail in details["records"]:
+                row = byid[detail["id"]]
+                if any(row[field] != detail[field] for field in ("name", "displayAddress", "phone", "url", "category")) or not re.fullmatch(r"[a-f0-9]{64}",detail["pageSha256"]):
+                    raise ValueError("NIHCA direct office evidence disagrees with search")
+        direct={r["id"]:r.get("details",[]) for r in details["records"]};issues={r["id"]:r["issue"] for r in details.get("issues",[])}
+        if len(direct)!=len(details["records"]) or len(issues)!=len(details.get("issues",[])) or (set(direct)|set(issues))-set(byid) or set(direct)&set(issues): raise ValueError("Conflicting or orphan detailed source row")
         source_offices=[]
         for key,row in byid.items():
             trace={"publisher":source,"sourceRowId":key};hit, reason=match(source,row,index)
             if hit:
                 office,names=hit
                 trace.update({"providerId":office["providerId"],"registryRow":office["row"],"matchedNames":names,
-                              "phoneCorroborated":source == "chap" and bool(number(row.get("phone")))})
+                              "phoneCorroborated":source != "achc" and bool(number(row.get("phone")))})
+                if source == "nihca" and (key not in direct or not number(row["phone"])):
+                    trace["disposition"] = "direct_office_category_or_phone_unconfirmed"
+                    decisions.append(trace)
+                    continue
                 published,state=render(source,row,office,checked,direct.get(key,[]),issues.get(key))
                 if published:
                     source_offices.append(published)

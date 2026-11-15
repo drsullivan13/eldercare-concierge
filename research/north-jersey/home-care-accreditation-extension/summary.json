@@ -1,13 +1,15 @@
 {
-  "additionalToCahc": 73,
+  "additionalToCahc": 88,
   "currentRosterSize": 1074,
-  "distinctOffices": 73,
+  "distinctOffices": 88,
   "previouslyPresentInCahc": 0,
   "sourceSha256": {
     "sources/achc-details.json": "45681d15889b6735e665a2bda9689e7b38d48176ad90bae49f3a0c321e393648",
     "sources/achc-search.json": "3e4574a0f76a4abf9105ae48498c3b97c46014a3d173eb5c651b9b8b46b30d1f",
     "sources/chap-details.json": "84ae2e208fe67ce6d2b7f5b9b6c5052eeb2a8c6ba613e344c0d16bde1363b212",
-    "sources/chap-search.json": "9b4dd7037e2a8ef032cc650468a2c0dc52522090938e2055d017546e6c8f9878"
+    "sources/chap-search.json": "9b4dd7037e2a8ef032cc650468a2c0dc52522090938e2055d017546e6c8f9878",
+    "sources/nihca-details.json": "4d5a6eea717444e677b361f26e1fd8677508fc28df9ca809cf4ccbd32efe3fc8",
+    "sources/nihca-search.json": "6377976c3114528973759329b1c2e165d79a4922ed0c56522d55f44a090d3fd0"
   },
   "sources": {
     "achc": {
@@ -27,6 +29,14 @@
       },
       "publishedOfficeRecords": 26,
       "statewideOfficeRecords": 167
+    },
+    "nihca": {
+      "dispositions": {
+        "directory_only": 15,
+        "exact_name_full_address_or_phone_unconfirmed": 71
+      },
+      "publishedOfficeRecords": 15,
+      "statewideOfficeRecords": 86
     }
   }
 }

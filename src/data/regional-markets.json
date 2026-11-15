@@ -96134,13 +96134,19 @@
           "status": "not-published",
           "text": "Contact the agency for current availability."
         },
-        "checkedAt": "2026-11-14",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "morris-2025-006-payment",
             "kind": "cost",
             "sourceId": "morris-2025-006-directory",
             "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+          },
+          {
+            "id": "north-jersey-hp-hp0022400-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0022400-office-services-source",
+            "text": "The office lists live-in care, private-duty nursing, certified home health aides, 24-hour home care."
           }
         ],
         "notes": [],
@@ -96158,6 +96164,16 @@
             "publisher": "Morris County",
             "title": "2025 Home Care Agencies, page 3",
             "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0022400-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Atlantic Private Care Services",
+            "title": "Atlantic Private Care Services · Services",
+            "url": "https://atlanticprivatecare.com/"
           }
         ]
       },
@@ -96283,7 +96299,7 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-14",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1558488908-registry-classification",
@@ -96302,6 +96318,12 @@
             "kind": "care",
             "sourceId": "morris-2025-002-directory",
             "text": "Services listed in the 2025 county directory: Homemaker, Companion."
+          },
+          {
+            "id": "north-jersey-hp-hp0024800-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0024800-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-206-9988."
           }
         ],
         "notes": [
@@ -96335,6 +96357,16 @@
             "publisher": "Morris County",
             "title": "2025 Home Care Agencies, page 2",
             "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=2"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0024800-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 13",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=13"
           }
         ]
       },
@@ -96455,6 +96487,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0035003": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0035003-essex-respite-2025",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0035003-essex-respite-2025-source",
+            "text": "Named in Essex County’s 2025 respite program schedule. Contact the county for the current provider list."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0035003",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0035003-essex-respite-2025-source",
+            "kind": "public-directory",
+            "publishedAt": null,
+            "publisher": "Essex County Board of County Commissioners, Department of Citizen Services / Division of Senior Services",
+            "title": "Essex County 2025 respite program schedule, page 8",
+            "url": "https://ecode360.com/ES1525/document/753118519.pdf#page=8"
+          }
+        ]
+      },
       "north-jersey-hp-hp0038100": {
         "availability": {
           "asOf": null,
@@ -96503,7 +96569,7 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-14",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1265852537-registry-classification",
@@ -96522,6 +96588,12 @@
             "kind": "care",
             "sourceId": "morris-2025-056-directory",
             "text": "Services listed in the 2025 county directory: Companion."
+          },
+          {
+            "id": "north-jersey-hp-hp0045700-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0045700-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 973-701-9832."
           }
         ],
         "notes": [
@@ -96555,6 +96627,16 @@
             "publisher": "Morris County",
             "title": "2025 Home Care Agencies, page 12",
             "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0045700-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 14",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=14"
           }
         ]
       },
@@ -97385,13 +97467,19 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1689707002-registry-classification",
             "kind": "care",
             "sourceId": "supp-nppes-1689707002",
             "text": "NPPES lists SAGE ELDERCARE, INC. at the matching SUMMIT practice address with the published taxonomy labels Home Health. NPI 1689707002. NPPES last updated 2020-08-22. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0104800-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0104800-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-273-8400."
           }
         ],
         "notes": [
@@ -97416,6 +97504,16 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1689707002"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0104800-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 14",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=14"
           }
         ]
       },
@@ -97466,13 +97564,19 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1497900617-registry-classification",
             "kind": "care",
             "sourceId": "supp-nppes-1497900617",
             "text": "NPPES lists GRACIOUS HOME CARE LLC. at the matching UNION practice address with the published taxonomy labels Home Health. NPI 1497900617. NPPES last updated 2023-05-01. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0107600-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0107600-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-206-1100."
           }
         ],
         "notes": [
@@ -97497,6 +97601,50 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1497900617"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0107600-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 14",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=14"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0108000": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0108000-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0108000-office-services-source",
+            "text": "Monmouth County renewed this agency’s housekeeping and certified home health aide contract for 2026. Call 732-222-9111 to ask about the program."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0108000",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0108000-office-services-source",
+            "kind": "public-directory",
+            "publishedAt": null,
+            "publisher": "Monmouth County Purchasing, Office on Aging",
+            "title": "Monmouth County home-care services contract, 2026 renewal",
+            "url": "https://pol.co.monmouth.nj.us/BidDetails?BidType=6&ID=CC-1-2025"
           }
         ]
       },
@@ -97507,13 +97655,25 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1639208119-registry-classification",
             "kind": "care",
             "sourceId": "supp-nppes-1639208119",
             "text": "NPPES lists CHRILL CARE, INC at the matching VERONA practice address with the published taxonomy labels Chore Provider, Home Health, In Home Supportive Care. NPI 1639208119. NPPES last updated 2024-05-15. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0115500-essex-respite-2025",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0115500-essex-respite-2025-source",
+            "text": "Named in Essex County’s 2025 respite program schedule. Contact the county for the current provider list."
+          },
+          {
+            "id": "north-jersey-hp-hp0115500-nj211-respite-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0115500-nj211-respite-services-source",
+            "text": "NJ 211 lists in-home respite care for Essex County residents. Call 973-744-8103 for intake."
           }
         ],
         "notes": [
@@ -97537,6 +97697,26 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1639208119"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0115500-essex-respite-2025-source",
+            "kind": "public-directory",
+            "publishedAt": null,
+            "publisher": "Essex County Board of County Commissioners, Department of Citizen Services / Division of Senior Services",
+            "title": "Essex County 2025 respite program schedule, page 8",
+            "url": "https://ecode360.com/ES1525/document/753118519.pdf#page=8"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0115500-nj211-respite-services-source",
+            "kind": "public-directory",
+            "publishedAt": null,
+            "publisher": "NJ 211 statewide information and referral directory",
+            "title": "NJ 211 · In-home respite care",
+            "url": "https://search.nj211.org/search/41e2dc2e-0c1c-559d-b0b0-1c2917afbf89"
           }
         ]
       },
@@ -97905,6 +98085,40 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1225277007"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0122400": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0122400-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0122400-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-624-1005."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0122400",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0122400-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 14",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=14"
           }
         ]
       },
@@ -98966,13 +99180,19 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1225467772-registry-classification",
             "kind": "care",
             "sourceId": "supp-nppes-1225467772",
             "text": "NPPES lists ALTERNATIVE CARE ESSENTIALS, LLC at the matching MONTCLAIR practice address with the published taxonomy labels Home Health. NPI 1225467772. NPPES last updated 2013-11-05. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0174800-essex-respite-2025",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0174800-essex-respite-2025-source",
+            "text": "Named in Essex County’s 2025 respite program schedule. Contact the county for the current provider list."
           }
         ],
         "notes": [
@@ -98996,6 +99216,16 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1225467772"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0174800-essex-respite-2025-source",
+            "kind": "public-directory",
+            "publishedAt": null,
+            "publisher": "Essex County Board of County Commissioners, Department of Citizen Services / Division of Senior Services",
+            "title": "Essex County 2025 respite program schedule, page 8",
+            "url": "https://ecode360.com/ES1525/document/753118519.pdf#page=8"
           }
         ]
       },
@@ -99274,6 +99504,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0184400": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0184400-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0184400-office-services-source",
+            "text": "The office lists companionship, personal care with bathing and dressing, light housekeeping and cooking, medication reminders, mobility and transfer assistance."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0184400",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0184400-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Allied Care",
+            "title": "Allied Care · Services",
+            "url": "https://familychoicehealthcare.com/alliedcare"
+          }
+        ]
+      },
       "north-jersey-hp-hp0184500": {
         "availability": {
           "asOf": null,
@@ -99281,7 +99545,7 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-association-p41-4-services-0",
@@ -99312,6 +99576,12 @@
             "kind": "cost",
             "sourceId": "supp-association-p41-4-index-page-28",
             "text": "2026-2027 association directory lists Medicaid PCA, Private PCA for Union County. PCA means personal care assistance; PDN means private duty nursing. These are service-specific directory payment categories, not a quoted price, insurance enrollment check, eligibility decision or guarantee of acceptance. Confirm payer authorization, the individual service and current acceptance."
+          },
+          {
+            "id": "north-jersey-hp-hp0184500-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0184500-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-345-2444."
           }
         ],
         "notes": [
@@ -99356,6 +99626,16 @@
             "publisher": "Home Care & Hospice Association of NJ",
             "title": "Association directory county payment legend and listing",
             "url": "https://higherlogicdownload.s3.amazonaws.com/HOMECARENJ/c98377c8-a111-4b58-bbb5-0128aed8a16f/UploadedImages/HCHANJ_26_Edition_FINAL_LR.pdf#page=28"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0184500-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 14",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=14"
           }
         ]
       },
@@ -99366,7 +99646,7 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-home-brightstar-westfield-hp0191600-services-0",
@@ -99403,6 +99683,12 @@
             "kind": "care",
             "sourceId": "supp-nppes-1790197713",
             "text": "NPPES lists GARDEN STATE HEALTH SOLUTIONS LLC at the matching WESTFIELD practice address with the published taxonomy labels Home Health. NPI 1790197713. NPPES last updated 2016-03-03. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0191600-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0191600-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-322-8200."
           }
         ],
         "notes": [
@@ -99453,6 +99739,16 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1790197713"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0191600-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 13",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=13"
           }
         ]
       },
@@ -100716,7 +101012,7 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-association-p45-3-services-0",
@@ -100735,6 +101031,12 @@
             "kind": "cost",
             "sourceId": "supp-association-p45-3-index-page-28",
             "text": "2026-2027 association directory lists Private PCA, Private PDN for Union County. PCA means personal care assistance; PDN means private duty nursing. These are service-specific directory payment categories, not a quoted price, insurance enrollment check, eligibility decision or guarantee of acceptance. Confirm payer authorization, the individual service and current acceptance."
+          },
+          {
+            "id": "north-jersey-hp-hp0252100-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0252100-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-352-8375."
           }
         ],
         "notes": [
@@ -100769,6 +101071,16 @@
             "publisher": "Home Care & Hospice Association of NJ",
             "title": "Association directory county payment legend and listing",
             "url": "https://higherlogicdownload.s3.amazonaws.com/HOMECARENJ/c98377c8-a111-4b58-bbb5-0128aed8a16f/UploadedImages/HCHANJ_26_Edition_FINAL_LR.pdf#page=28"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0252100-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 14",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=14"
           }
         ]
       },
@@ -101713,6 +102025,40 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1548898968"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0282000": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0282000-essex-respite-2025",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0282000-essex-respite-2025-source",
+            "text": "Named in Essex County’s 2025 respite program schedule. Contact the county for the current provider list."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0282000",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0282000-essex-respite-2025-source",
+            "kind": "public-directory",
+            "publishedAt": null,
+            "publisher": "Essex County Board of County Commissioners, Department of Citizen Services / Division of Senior Services",
+            "title": "Essex County 2025 respite program schedule, page 9",
+            "url": "https://ecode360.com/ES1525/document/753118519.pdf#page=9"
           }
         ]
       },
@@ -103193,7 +103539,7 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-home-visiting-angels-scotchplains-hp0320800-services-0",
@@ -103224,6 +103570,12 @@
             "kind": "care",
             "sourceId": "supp-home-72580bf99037e440",
             "text": "The locator omits the registry's lower-level designation. The suite or floor is not independently confirmed."
+          },
+          {
+            "id": "north-jersey-hp-hp0320800-union-caregiver-directory",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0320800-union-caregiver-directory-source",
+            "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-322-0056."
           }
         ],
         "notes": [
@@ -103259,6 +103611,16 @@
             "publisher": "Visiting Angels Scotch Plains",
             "title": "Visiting Angels Scotch Plains official office information",
             "url": "https://www.visitingangels.com/scotchplains/home"
+          },
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0320800-union-caregiver-directory-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-05-05",
+            "publisher": "Union County Division on Aging",
+            "title": "Union County resource directory for older adults, page 14",
+            "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=14"
           }
         ]
       },
@@ -104406,6 +104768,40 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1558040360"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0361600": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0361600-essex-respite-2025",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0361600-essex-respite-2025-source",
+            "text": "Named in Essex County’s 2025 respite program schedule. Contact the county for the current provider list."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0361600",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "pdf",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0361600-essex-respite-2025-source",
+            "kind": "public-directory",
+            "publishedAt": null,
+            "publisher": "Essex County Board of County Commissioners, Department of Citizen Services / Division of Senior Services",
+            "title": "Essex County 2025 respite program schedule, page 9",
+            "url": "https://ecode360.com/ES1525/document/753118519.pdf#page=9"
           }
         ]
       },
