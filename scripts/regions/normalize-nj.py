@@ -936,6 +936,10 @@ def normalize(root, counties, *, source_only=False):
             if "cms" not in provider:
                 continue
             row = next(row for row in nursing if row[CCN] == provider["cms"]["ccn"])
+            if not source_only and not provider.get("phone"):
+                phone = clean(row.get("telephone_number"))
+                if re.fullmatch(r"[2-9][0-9]{2}[2-9][0-9]{6}", phone):
+                    provider["phone"] = f"({phone[:3]}) {phone[3:6]}-{phone[6:]}"
             footnotes = {key: value for key, value in row.items()
                          if key.endswith("_footnote") and clean(value)}
             if footnotes:
@@ -1107,6 +1111,18 @@ def normalize(root, counties, *, source_only=False):
         address_roster = publish_address_points(inputs, providers, county_by_id, counties)
         research = released_research(inputs, address_roster, counties)
         providers = [supply["refreshed"].get(p["id"], p) for p in providers]
+        campus_contacts = inputs.json("state/campus-contacts.json")
+        for provider in providers:
+            contact = campus_contacts["contacts"].get(provider["id"])
+            if contact:
+                require(provider["category"] == "life-plan" and provider["address"] == contact["address"],
+                        f"Campus contact identity changed: {provider['id']}")
+                provider["phone"] = contact["phone"]
+                provider["sources"].append({
+                    "title": contact["role"], "publisher": contact["publisher"], "url": contact["url"],
+                    "kind": "provider", "checkedAt": campus_contacts["checkedAt"],
+                    "supports": f"{contact['role']}: {contact['phone']}.",
+                })
         held = {r["providerId"]: r for r in supply["ledger"] if r.get("change") in {"po_box_address", "city_zip_county_conflict"}}
         for provider in providers:
             if provider["id"] in held:

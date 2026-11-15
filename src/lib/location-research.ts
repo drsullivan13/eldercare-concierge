@@ -1,9 +1,5 @@
-import {
-  getProviderEntry,
-  getProviderMarket,
-  markets,
-  type MarketRegistry,
-} from "./markets";
+import { getProviderEntry, markets, type MarketRegistry } from "./markets";
+import { njHomeHealthSurvey } from "./home-health";
 import { getReviewCatalog } from "./review-catalog";
 import { getDailyLifeResearch } from "./daily-life";
 import { getNursingStaffingResearch } from "./nursing-staffing";
@@ -143,8 +139,10 @@ export function getResearchSummary(
   providerId: string,
   registry: MarketRegistry = markets,
 ): ResearchSummary | undefined {
-  const market = getProviderMarket(providerId, registry);
-  if (!market) return undefined;
+  const entry = getProviderEntry(providerId, registry);
+  if (!entry) return undefined;
+  const { market, provider } = entry;
+  const homeHealthSurvey = njHomeHealthSurvey(provider, market);
   const records = market.locationResearch;
   const record =
     records && Object.hasOwn(records, providerId)
@@ -157,8 +155,10 @@ export function getResearchSummary(
   );
   if (!record) {
     const facebookResearch = getFacebookSummary(providerId, registry);
-    if (!facebookResearch && !individualReviewCounts) return undefined;
+    if (!facebookResearch && !individualReviewCounts && !homeHealthSurvey)
+      return undefined;
     return {
+      ...(homeHealthSurvey && { homeHealthSurvey }),
       individualReviews: individualReviewCounts,
       familyExperience: getFamilyExperience(providerId, registry),
       facebookResearch,
@@ -181,6 +181,7 @@ export function getResearchSummary(
     (s) => s.id === record.availability.sourceId,
   );
   return {
+    ...(homeHealthSurvey && { homeHealthSurvey }),
     individualReviews: individualReviewCounts,
     familyExperience: getFamilyExperience(providerId, registry),
     facebookResearch: getFacebookSummary(providerId, registry),

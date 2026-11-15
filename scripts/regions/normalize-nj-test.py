@@ -178,6 +178,15 @@ class ActualSourceTests(unittest.TestCase):
         cls.points = json.loads((adapter.RESEARCH / "address-points/providers-by-id.json").read_bytes())
         cls.original_by_id = {row["FacID"]: row for row in cls.original}
 
+    def test_cms_only_nursing_phones_match_the_certified_units(self):
+        rows = json.loads((adapter.RESEARCH / "cms/datasets/4pq5-n9py.json").read_text())
+        numbers = {row[adapter.CCN]: row["telephone_number"] for row in rows}
+        units = [row for row in self.crosswalk if row["status"] == "included_cms_only"]
+        self.assertTrue(units)
+        for unit in units:
+            actual = self.by_id[unit["providerId"]]["phone"]
+            self.assertEqual("".join(c for c in actual if c.isdigit()), numbers[unit["cmsCcn"]])
+
     def test_size_and_positive_settings_match_all_139_exact_retained_units(self):
         rows = json.loads((adapter.RESEARCH / "cms/datasets/4pq5-n9py.json").read_bytes())
         rows = [r for r in rows if r["countyparish"] in adapter.COUNTIES]
@@ -358,6 +367,17 @@ class ActualSourceTests(unittest.TestCase):
             self.assertNotIn("dataAsOf", provider["sources"][0])
             self.assertIn("January 2018", provider["description"])
             self.assertTrue(provider["warnings"])
+
+    def test_only_verified_campus_inquiry_lines_are_released(self):
+        release = json.loads((adapter.RESEARCH / "state/campus-contacts.json").read_bytes())
+        campuses = {pid: p for pid, p in self.by_id.items() if p["category"] == "life-plan"}
+        self.assertEqual(set(campuses), release["contacts"].keys() | release["held"].keys())
+        for pid, contact in release["contacts"].items():
+            self.assertEqual(campuses[pid]["phone"], contact["phone"])
+            self.assertTrue(any(s["url"] == contact["url"] and s["title"] == contact["role"]
+                                and s["checkedAt"] == release["checkedAt"] for s in campuses[pid]["sources"]))
+        for pid in release["held"]:
+            self.assertNotIn("phone", campuses[pid])
 
     def test_operator_testimonials_and_manual_profile_links(self):
         research = json.loads(self.files["locationResearch.json"])

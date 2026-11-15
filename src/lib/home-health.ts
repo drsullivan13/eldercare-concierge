@@ -1,5 +1,11 @@
 import { registeredMarket } from "./market-registration";
-import { getProviderMarket, markets, type MarketRegistry } from "./markets";
+import {
+  getProviderMarket,
+  markets,
+  type MarketRegistry,
+  type MarketSnapshot,
+} from "./markets";
+import type { Provider } from "./providers";
 import type { Market } from "./market-types";
 
 export type HomeHealthMetric = {
@@ -127,6 +133,53 @@ export class HomeHealthEvidenceError extends Error {
     this.name = "HomeHealthEvidenceError";
   }
 }
+/** Only the certified reporting agency can carry its HHCAHPS survey result. */
+export function njHomeHealthSurvey(provider: Provider, market: MarketSnapshot) {
+  if (
+    market.id !== "north-jersey" ||
+    market.state !== "NJ" ||
+    provider.state !== "NJ" ||
+    provider.category !== "home-health" ||
+    !provider.officialRecord ||
+    !/^cms-\d{6}$/.test(provider.id)
+  )
+    return undefined;
+  const matches = market.homeHealthEvidence?.agencies.filter(
+    (agency) =>
+      agency.organizationId === provider.id &&
+      provider.id === `cms-${agency.ccn}` &&
+      agency.cmsAddress.state === "NJ",
+  );
+  if (matches?.length !== 1) return undefined;
+  const survey = matches[0].patientExperience;
+  const { summaryStarRating: stars, completedSurveys: count } = survey;
+  if (
+    survey.datasetId !== "ccn4-8vby" ||
+    stars.status !== "published" ||
+    count.status !== "published" ||
+    stars.value === null ||
+    count.value === null ||
+    !Number.isInteger(stars.value) ||
+    stars.value < 1 ||
+    stars.value > 5 ||
+    !Number.isSafeInteger(count.value) ||
+    count.value < 40
+  )
+    return undefined;
+  const notes = [
+    ...survey.generalFootnoteCodes,
+    ...stars.footnoteCodes,
+    ...count.footnoteCodes,
+  ];
+  // Other CMS qualifications need the detail view and their full definitions.
+  if (notes.some((code) => code !== "11")) return undefined;
+  return {
+    stars: stars.value,
+    completed: count.value,
+    smallSample: notes.includes("11"),
+  };
+}
+
 export function getHomeHealthEvidence(
   providerId: string,
   registry: MarketRegistry = markets,

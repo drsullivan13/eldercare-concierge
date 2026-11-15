@@ -116,6 +116,7 @@ export type LocationResearch = {
   admissionRestriction?: { text: string; sourceId: string };
 };
 export type ResearchSummary = {
+  homeHealthSurvey?: { stars: number; completed: number; smallSample: boolean };
   individualReviews?: { total: number; withText: number };
   familyExperience?: FamilyExperience;
   facebookResearch?: FacebookSummary;

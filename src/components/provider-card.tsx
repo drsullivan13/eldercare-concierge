@@ -87,11 +87,11 @@ export function ProviderCard({
   onCompare?: () => void;
 }) {
   const research = provider.research;
-  const coreq =
+  const showSurvey =
     research?.experience.value == null &&
-    research?.experience.publicationStatus !== "sources-disagree"
-      ? currentNjCoreqValue(provider)
-      : null;
+    research?.experience.publicationStatus !== "sources-disagree";
+  const coreq = showSurvey ? currentNjCoreqValue(provider) : null;
+  const patientSurvey = showSurvey ? research?.homeHealthSurvey : undefined;
   const alerts = new Set<string>();
   if (research?.admissionRestriction) alerts.add(research.admissionRestriction);
   for (const alert of providerCareAlerts(provider)) alerts.add(alert);
@@ -190,6 +190,20 @@ export function ProviderCard({
               </small>
             </span>
           </span>
+        ) : patientSurvey ? (
+          <span className="experience-card-score">
+            <strong>
+              {patientSurvey.stars}
+              <small>/5</small>
+            </strong>
+            <span>
+              CMS patient survey
+              <small>
+                {patientSurvey.completed.toLocaleString("en-US")} completed
+                surveys{patientSurvey.smallSample && " · Small sample"}
+              </small>
+            </span>
+          </span>
         ) : coreq !== null ? (
           <span className="experience-card-score">
             <strong>{formatCoreqPercent(coreq)}</strong>
@@ -223,7 +237,7 @@ export function ProviderCard({
           className="provider-review-entry"
           onClick={(event) => onReviews(event.currentTarget)}
         >
-          {coreq !== null
+          {coreq !== null || patientSurvey
             ? "View survey & review sources"
             : research?.individualReviews?.total
               ? research.individualReviews.withText === 0
