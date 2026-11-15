@@ -238,6 +238,26 @@ def add_cms_nursing_context(rows, metadata, providers, research):
                     text += " This does not establish individual coverage, eligibility or bed availability."
                 facts.append({"id": f"{pid}-cms-{key}", "kind": "care", "text": text,
                               "sourceId": f"{pid}-cms-provider-information", "asOf": as_of})
+        size_setting = []
+        beds = row.get("number_of_certified_beds")
+        if type(beds) is int or isinstance(beds, str) and re.fullmatch(r"[0-9]+", beds):
+            beds = int(beds)
+            if beds > 0:
+                unit = "bed" if beds == 1 else "beds"
+                size_setting.append(f"Certified capacity is {beds} {unit}")
+        settings = [
+            label for field, label in (
+                ("continuing_care_retirement_community", "The nursing home is part of a continuing care retirement community (CCRC)"),
+                ("provider_resides_in_hospital", "The nursing home is located in a hospital"),
+            ) if row.get(field) == "Y"
+        ]
+        size_setting.extend(settings)
+        if size_setting:
+            text = ". ".join(size_setting) + "."
+            text += (" Ask admissions about openings and access to other care levels."
+                     if settings else " Ask admissions about current openings.")
+            facts.append({"id": f"{pid}-cms-size-setting", "kind": "care", "text": text,
+                          "sourceId": f"{pid}-cms-provider-information", "asOf": as_of})
         if not facts:
             continue
         checked = metadata["retrieved_at"][:10]

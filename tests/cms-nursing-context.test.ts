@@ -12,6 +12,9 @@ const rows: {
   countyparish: string;
   provider_type: string;
   with_a_resident_and_family_council: string;
+  number_of_certified_beds: string;
+  continuing_care_retirement_community: string;
+  provider_resides_in_hospital: string;
   processing_date: string;
 }[] = JSON.parse(
   readFileSync(
@@ -32,9 +35,9 @@ const counties = new Set([
 ]);
 const targets = rows.filter((row) => counties.has(row.countyparish));
 const contextFact = (id: string) =>
-  /-cms-(program-participation|councils)$/.test(id);
+  /-cms-(program-participation|councils|size-setting)$/.test(id);
 
-test("the research API projects participation and council facts for all 139 exact NJ CCNs", async () => {
+test("the research API projects participation, councils and size/setting for all 139 exact NJ CCNs", async () => {
   assert.equal(targets.length, 139);
   const councilText: Record<string, string> = {
     Resident: "CMS lists a resident council only.",
@@ -43,14 +46,50 @@ test("the research API projects participation and council facts for all 139 exac
     None: "CMS lists neither a resident nor a family council.",
   };
   let medicareOnly = 0;
+  let ccrc = 0;
+  let hospital = 0;
   for (const row of targets) {
     const id = `cms-${row.cms_certification_number_ccn}`;
     const response = GET(new Request(`http://localhost/api/research?id=${id}`));
     assert.equal(response.status, 200, id);
     const detail: LocationResearchResponse = await response.json();
     const facts = detail.facts.filter((fact) => contextFact(fact.id));
-    assert.equal(facts.length, 2, id);
-    const [participation, council] = facts;
+    assert.equal(facts.length, 3, id);
+    const [participation, council, sizeSetting] = facts;
+    assert.equal(sizeSetting.id, `${id}-cms-size-setting`);
+    const beds = Number(row.number_of_certified_beds);
+    assert.ok(Number.isInteger(beds) && beds > 0, id);
+    assert.ok(
+      sizeSetting.text.startsWith(
+        `Certified capacity is ${beds} beds.`,
+      ),
+      id,
+    );
+    const isCcrc = row.continuing_care_retirement_community === "Y";
+    const inHospital = row.provider_resides_in_hospital === "Y";
+    assert.equal(
+      sizeSetting.text.includes(
+        "part of a continuing care retirement community (CCRC)",
+      ),
+      isCcrc,
+      id,
+    );
+    assert.equal(
+      sizeSetting.text.includes("The nursing home is located in a hospital"),
+      inHospital,
+      id,
+    );
+    assert.equal(
+      sizeSetting.text.includes(
+        "Ask admissions about openings and access to other care levels.",
+      ),
+      isCcrc || inHospital,
+      id,
+    );
+    ccrc += Number(isCcrc);
+    hospital += Number(inHospital);
+    assert.equal(sizeSetting.numericValue, undefined);
+    assert.equal(sizeSetting.sourceId, participation.sourceId);
     assert.equal(
       council.text,
       councilText[row.with_a_resident_and_family_council],
@@ -103,6 +142,8 @@ test("the research API projects participation and council facts for all 139 exac
     );
   }
   assert.equal(medicareOnly, 8);
+  assert.equal(ccrc, 8);
+  assert.equal(hospital, 6);
 });
 
 test("state-only co-located units and Massachusetts never inherit NJ CMS context", async () => {

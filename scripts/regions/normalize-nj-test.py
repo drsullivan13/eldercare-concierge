@@ -37,6 +37,62 @@ class CmsNursingContextTests(unittest.TestCase):
                                        [self.provider] if providers is None else providers, result)
         return result
 
+    def size_fact(self, **fields):
+        record = self.project({**self.row, **fields})["cms-315001"]
+        facts = [f for f in record["facts"] if f["id"].endswith("-cms-size-setting")]
+        self.assertLessEqual(len(facts), 1)
+        return facts[0] if facts else None
+
+    def test_certified_beds_are_positive_integers_not_openings(self):
+        for value in ("1", 1, "120", 120, "00120"):
+            with self.subTest(value=value):
+                fact = self.size_fact(number_of_certified_beds=value)
+                self.assertEqual(fact, {
+                    "id": "cms-315001-cms-size-setting", "kind": "care",
+                    "text": f"Certified capacity is {int(value)} {'bed' if int(value) == 1 else 'beds'}. Ask admissions about current openings.",
+                    "sourceId": "cms-315001-cms-provider-information", "asOf": "2026-10-01",
+                })
+        for value in (None, "", "0", 0, -1, "-1", "120.5", 120.5, "120.0", 120.0,
+                      True, False, [], {}, "N/A", "120 beds", "1,200", "$120", "1e2",
+                      " 120 ", "١٢٠", float("nan"), float("inf")):
+            with self.subTest(value=value):
+                self.assertIsNone(self.size_fact(number_of_certified_beds=value))
+
+    def test_positive_designations_survive_bad_beds_independently(self):
+        labels = {
+            "continuing_care_retirement_community": "The nursing home is part of a continuing care retirement community (CCRC)",
+            "provider_resides_in_hospital": "The nursing home is located in a hospital",
+        }
+        for field, label in labels.items():
+            with self.subTest(field=field):
+                fact = self.size_fact(**{field: "Y", "number_of_certified_beds": "999 bad"})
+                self.assertEqual(fact["text"], f"{label}. "
+                                 "Ask admissions about openings and access to other care levels.")
+                self.assertNotRegex(fact["text"], r"\d")
+        fact = self.size_fact(number_of_certified_beds="120",
+                              continuing_care_retirement_community="Y", provider_resides_in_hospital="Y")
+        self.assertEqual(fact["text"], "Certified capacity is 120 beds. "
+                         "The nursing home is part of a continuing care retirement community (CCRC). The nursing home is located in a hospital. "
+                         "Ask admissions about openings and access to other care levels.")
+
+    def test_negative_missing_and_malformed_designations_add_no_filler(self):
+        fields = ("continuing_care_retirement_community", "provider_resides_in_hospital")
+        for field in fields:
+            other = next(f for f in fields if f != field)
+            expected = self.size_fact(**{"number_of_certified_beds": "120", other: "Y"})
+            for value in (None, "", "N", "Unknown", "N/A", "Yes", "y", " Y ", 1, 0, True, False, [], {}):
+                with self.subTest(field=field, value=value):
+                    self.assertEqual(self.size_fact(**{field: value, other: "Y",
+                                                      "number_of_certified_beds": "120"}), expected)
+                    self.assertIsNone(self.size_fact(**{field: value}))
+        row = {adapter.CCN: "315001", "state": "NJ", "processing_date": "2026-10-01"}
+        self.assertEqual(self.project(row), {})
+        self.assertEqual(self.project({**row, "number_of_certified_beds": "bad",
+                                      fields[0]: "N", fields[1]: None}), {})
+        result = self.project({**row, fields[0]: "Y"})
+        self.assertEqual(len(result["cms-315001"]["facts"]), 1)
+        self.assertEqual(len(result["cms-315001"]["sources"]), 1)
+
     def test_resident_family_both_and_none_are_distinct(self):
         expected = {
             "Resident": "CMS lists a resident council only.",
@@ -66,12 +122,16 @@ class CmsNursingContextTests(unittest.TestCase):
         self.assertEqual(self.project(row), {})
         for value in (None, "", "2026-02-30", "2026-1-01", "unknown", [], {}):
             with self.subTest(date=value):
-                self.assertEqual(self.project({**self.row, "processing_date": value}), {})
+                self.assertEqual(self.project({**self.row, "number_of_certified_beds": "120",
+                                               "processing_date": value}), {})
         for value in (None, "", "31501", "0315001", 315001, [], {}):
             with self.subTest(ccn=value):
-                self.assertEqual(self.project({**self.row, adapter.CCN: value}), {})
+                self.assertEqual(self.project({**self.row, "number_of_certified_beds": "120",
+                                               adapter.CCN: value}), {})
 
     def test_colocated_units_and_other_states_do_not_inherit_facts(self):
+        self.row.update(number_of_certified_beds="120", continuing_care_retirement_community="Y",
+                        provider_resides_in_hospital="Y")
         siblings = [
             {**self.provider, "id": "north-jersey-doh-nj1234", "cms": {"ccn": "315001"}},
             {**self.provider, "id": "cms-315002", "cms": {"ccn": "315002"}},
@@ -87,6 +147,8 @@ class CmsNursingContextTests(unittest.TestCase):
         self.assertEqual(self.project(providers=[]), {})
 
     def test_existing_reviews_availability_and_clinical_fields_are_untouched(self):
+        self.row.update(number_of_certified_beds="120", continuing_care_retirement_community="Y",
+                        provider_resides_in_hospital="Y")
         research = {"cms-315001": {
             "checkedAt": "2026-11-15", "providerDetailsReviewed": False,
             "facts": [{"id": "existing"}], "sources": [{"id": "existing"}],
@@ -115,6 +177,35 @@ class ActualSourceTests(unittest.TestCase):
         cls.original = collector.workbook_rows(adapter.RESEARCH / "state/raw/ltc.xlsx")
         cls.points = json.loads((adapter.RESEARCH / "address-points/providers-by-id.json").read_bytes())
         cls.original_by_id = {row["FacID"]: row for row in cls.original}
+
+    def test_size_and_positive_settings_match_all_139_exact_retained_units(self):
+        rows = json.loads((adapter.RESEARCH / "cms/datasets/4pq5-n9py.json").read_bytes())
+        rows = [r for r in rows if r["countyparish"] in adapter.COUNTIES]
+        research = json.loads(self.files["locationResearch.json"])
+        facts = {pid: [f for f in record["facts"] if f["id"].endswith("-cms-size-setting")]
+                 for pid, record in research.items()}
+        facts = {pid: values for pid, values in facts.items() if values}
+        self.assertEqual(set(facts), {"cms-" + r[adapter.CCN] for r in rows})
+        self.assertEqual(len(facts), 139)
+        ccrc = hospital = 0
+        for row in rows:
+            pid = "cms-" + row[adapter.CCN]
+            fact, = facts[pid]
+            self.assertIn(f'Certified capacity is {int(row["number_of_certified_beds"])} beds', fact["text"])
+            self.assertIn("Certified capacity is", fact["text"])
+            self.assertEqual("continuing care retirement community (CCRC)" in fact["text"],
+                             row["continuing_care_retirement_community"] == "Y")
+            self.assertEqual("The nursing home is located in a hospital" in fact["text"],
+                             row["provider_resides_in_hospital"] == "Y")
+            ccrc += "continuing care retirement community (CCRC)" in fact["text"]
+            hospital += "The nursing home is located in a hospital" in fact["text"]
+            self.assertEqual(fact["asOf"], row["processing_date"])
+            self.assertEqual(fact["kind"], "care")
+            self.assertNotIn("amount", fact)
+            self.assertNotIn("numericValue", fact)
+            self.assertEqual(fact["sourceId"], f"{pid}-cms-provider-information")
+            self.assertEqual(sum(s["id"] == fact["sourceId"] for s in research[pid]["sources"]), 1)
+        self.assertEqual((ccrc, hospital), (8, 6))
 
     def test_cms_participation_and_councils_match_exact_retained_units(self):
         inputs = adapter.Inputs(adapter.RESEARCH)
