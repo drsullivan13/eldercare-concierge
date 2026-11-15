@@ -69,15 +69,30 @@ class ApprovalTests(unittest.TestCase):
         for path, data in outputs.items():
             self.assertEqual(data, (APPROVE.ROOT / path).read_bytes(), str(path))
         batches = self.approvals(outputs)
-        self.assertEqual([len(b["approvals"]) for b in batches], [11, 21, 1])
+        self.assertEqual([len(b["approvals"]) for b in batches], [11, 21, 1, 1])
         self.assertEqual(sum(a["aggregate"]["count"] for a in batches[0]["approvals"]), 1359)
+        sinai_batch = next(b for b in batches if b["id"] == "mylivingchoice-sinai-newark")
+        sinai = sinai_batch["approvals"][0]
+        self.assertEqual(sinai["providerId"], "north-jersey-doh-nj60713")
+        self.assertEqual(sinai["officialId"], "NJ60713")
+        self.assertEqual(sinai["identity"], {
+            "name": "Sinai Post-Acute Nursing & Rehab Center",
+            "address": "65 Jay Street", "city": "Newark", "state": "New Jersey",
+            "zip": "07103", "careUnit": "Skilled Nursing / Long Term Care",
+        })
+        self.assertEqual(sinai["aggregate"]["count"], 131)
         checks = [json.loads(data) for path, data in outputs.items()
                   if path.parent.name == "independent-checks"]
-        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 155)
+        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 160)
         for check in checks:
             if check["providerId"] == "cms-317009":
                 self.assertEqual(check["identity"]["zip"], "07018")
                 self.assertEqual(check["identity"]["publishedCcn"], "317009")
+            elif check["providerId"] == "north-jersey-doh-nj60713":
+                self.assertEqual(check["identity"], sinai["identity"])
+                self.assertEqual(check["officialId"], "NJ60713")
+                self.assertEqual(check["aggregate"]["count"], 131)
+                self.assertEqual(check["reviewSample"]["visibleCount"], 5)
             else:
                 self.assertIsNone(check["identity"]["zip"])
             self.assertIsNone(check["aggregate"]["asOf"])
@@ -205,6 +220,11 @@ class ApprovalTests(unittest.TestCase):
             expected = (APPROVE.ROOT / APPROVE.release.RELEASE / name).read_bytes()
             self.assertEqual(APPROVE.release.encoded(document), expected, name)
         after = actual["experience-verification.json"]["releasedOutput"]
+        sinai = after["north-jersey-doh-nj60713"]
+        self.assertEqual(sinai["value"], 6.2)
+        self.assertEqual(sinai["reviewCount"], 131)
+        self.assertEqual(sinai["independentSourceCount"], 1)
+        self.assertNotIn("cms-315236", after)
         before_batch = self.load(self.index["batches"][0]["path"])
         before = self.load(before_batch["proposals"]["path"])["batches"][0]["approvals"]
         self.assertTrue(all(after[a["providerId"]]["value"] is not None for a in before))
