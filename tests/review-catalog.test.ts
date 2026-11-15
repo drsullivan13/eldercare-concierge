@@ -20,7 +20,8 @@ test("reader returns each exact provider catalog without projecting into scores"
     } else {
       assert.ok(published.checkedAt >= record.checkedAt);
       for (const account of record.accounts) {
-        const updated = published.accounts.find((row) => row.id === account.id);
+        const updated: ReviewCatalog["accounts"][number] | undefined =
+          published.accounts.find((row) => row.id === account.id);
         assert.ok(updated);
         for (const key of [
           "id",
@@ -40,7 +41,8 @@ test("reader returns each exact provider catalog without projecting into scores"
           assert.deepEqual(updated, account);
       }
       for (const source of record.sources) {
-        const updated = published.sources.find((row) => row.id === source.id);
+        const updated: ReviewCatalog["sources"][number] | undefined =
+          published.sources.find((row) => row.id === source.id);
         assert.ok(updated);
         assert.equal(updated.url, source.url);
         assert.equal(updated.sourceFamily, source.sourceFamily);

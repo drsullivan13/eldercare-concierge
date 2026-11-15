@@ -7,12 +7,19 @@ import { Modal } from "../modal";
 import styles from "./outreach.module.css";
 
 type Outreach = ReturnType<typeof useOutreach>;
-const goals = [
+const facilityGoals = [
   "Arrange tour",
   "Pricing",
   "Availability",
   "Waitlist",
   "Care services",
+];
+const agencyGoals = [
+  "Phone agency interview",
+  "ZIP coverage",
+  "Hourly rates and minimum hours",
+  "Staffing and backup",
+  "Caregiver introduction",
 ];
 const stages: Record<OutreachRecord["state"], string> = {
   requested: "Ready to open",
@@ -50,12 +57,14 @@ function useOnline() {
 
 export function OutreachEditor({
   provider,
+  homeCare,
   parent,
   launch,
   error,
   close,
 }: {
   provider: OutreachProvider;
+  homeCare?: boolean;
   parent?: OutreachRecord;
   launch: Outreach["launch"];
   error: string;
@@ -67,7 +76,14 @@ export function OutreachEditor({
   const [question, setQuestion] = useState("");
   const [attempted, setAttempted] = useState(false);
   const questionField = useId();
-  const choices = [...new Set([...goals, ...(parent?.brief.topics ?? [])])];
+  const priorGoals = parent?.brief.topics ?? [];
+  const forAgency =
+    homeCare ??
+    (provider.providerId.startsWith("north-jersey-hp-") ||
+      priorGoals.some((goal) => agencyGoals.includes(goal)));
+  const choices = [
+    ...new Set([...(forAgency ? agencyGoals : facilityGoals), ...priorGoals]),
+  ];
   const suggestions = [...new Set(parent?.nextSteps ?? [])].filter(
     (item) => !choices.includes(item),
   );

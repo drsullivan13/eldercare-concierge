@@ -218,18 +218,20 @@ function WorkspaceDashboard({
   const outreach = useOutreach(workspace, update, state.ready, demo);
   const [outreachDraft, setOutreachDraft] = useState<{
     provider: OutreachProvider;
+    homeCare?: boolean;
     parent?: OutreachRecord;
   } | null>(null);
   const outreachReturnFocus = useRef<HTMLElement | null>(null);
   function prepareOutreach(
     provider: OutreachProvider,
     parent?: OutreachRecord,
+    homeCare?: boolean,
   ) {
     outreachReturnFocus.current =
       document.activeElement instanceof HTMLElement
         ? document.activeElement
         : null;
-    setOutreachDraft({ provider, parent });
+    setOutreachDraft({ provider, parent, homeCare });
   }
   function closeOutreach() {
     setOutreachDraft(null);
@@ -954,11 +956,15 @@ function WorkspaceDashboard({
             }
             onTask={(title) => addTask(title, selectedProvider.id)}
             onOutreach={() =>
-              prepareOutreach({
-                providerId: selectedProvider.id,
-                providerName: selectedProvider.name,
-                phone: selectedProvider.phone || "",
-              })
+              prepareOutreach(
+                {
+                  providerId: selectedProvider.id,
+                  providerName: selectedProvider.name,
+                  phone: selectedProvider.phone || "",
+                },
+                undefined,
+                selectedProvider.category === "home-care",
+              )
             }
             outreachHistory={
               <OutreachHistory
@@ -983,6 +989,7 @@ function WorkspaceDashboard({
       {outreachDraft && (
         <OutreachEditor
           provider={outreachDraft.provider}
+          homeCare={outreachDraft.homeCare}
           parent={outreachDraft.parent}
           launch={outreach.launch}
           error={outreach.error}
