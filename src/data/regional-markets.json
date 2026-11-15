@@ -96806,6 +96806,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0044700": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0044700-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0044700-office-services-source",
+            "text": "The Clark office offers companionship, personal care, dementia support and help after discharge. Families can also ask about 24-hour home care."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0044700",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0044700-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Helping Hands Homecare",
+            "title": "Helping Hands Homecare · Services",
+            "url": "https://www.helpinghandsnj.com/"
+          }
+        ]
+      },
       "north-jersey-hp-hp0045700": {
         "availability": {
           "asOf": null,
@@ -108221,6 +108255,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0346600": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0346600-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0346600-office-services-source",
+            "text": "This Union office specializes in IV infusion nursing, vascular access and central line care. The team also teaches patients how to care for their line."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0346600",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0346600-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Apollo PICC Nursing Contractors",
+            "title": "Apollo PICC Nursing Contractors · Services",
+            "url": "https://apollopiccnursing.com/services/"
+          }
+        ]
+      },
       "north-jersey-hp-hp0347100": {
         "availability": {
           "asOf": null,
@@ -109785,13 +109853,19 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1942140413-registry-classification",
             "kind": "care",
             "sourceId": "supp-nppes-1942140413",
             "text": "NPPES lists AGAPE BEREAN HEALTH SERVICES INC at the matching Union practice address with the published taxonomy labels Home Health. NPI 1942140413. NPPES last updated 2026-04-01. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0374500-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0374500-office-services-source",
+            "text": "The Union agency lists companionship and help with bathing and dressing. It works with families to create an individual care plan."
           }
         ],
         "notes": [
@@ -109816,6 +109890,16 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1942140413"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0374500-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Agape Berean Health Services",
+            "title": "Agape Berean Health Services · Services",
+            "url": "https://agapebereanhealthservices.com/our-services/"
           }
         ]
       },
@@ -110414,6 +110498,40 @@
             "publisher": "U.S. Department of Health and Human Services",
             "title": "New Jersey Medicaid enrollment history",
             "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0380800": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0380800-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0380800-office-services-source",
+            "text": "The Springfield agency lists companionship, help with everyday tasks and wellness monitoring for older adults at home."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0380800",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0380800-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Guiding Hearts",
+            "title": "Guiding Hearts · Services",
+            "url": "https://www.guidingheartsllc.com/services"
           }
         ]
       },
