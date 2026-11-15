@@ -6210,5 +6210,18 @@
     "withheldCandidates": [],
     "status": "accepted",
     "reason": "Matched the public office survey to the verified operator location."
+  },
+  {
+    "providerId": "north-jersey-hp-hp0191900",
+    "county": "Middlesex",
+    "status": "accepted",
+    "queries": [
+      "SYNERGY HomeCare of Piscataway 15 Corporate Pl S Suite 405 Caring.com"
+    ],
+    "acceptedUrls": [
+      "https://www.caring.com/senior-care/new-jersey/piscataway/synergy-homecare-of-piscataway"
+    ],
+    "withheldCandidates": [],
+    "reason": "Branch name and registered street and suite corroborate the external destination. Navigation only."
   }
 ]

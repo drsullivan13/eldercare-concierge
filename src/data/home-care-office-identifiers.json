@@ -12,6 +12,10 @@
     {
       "file": "research/north-jersey/home-care-network/uhc-verified.json",
       "sha256": "cb6572785c626274ef35a16fd5c37bb8adabb8ffbd8ea186da73155b63073ab7"
+    },
+    {
+      "file": "research/north-jersey/home-care-network/wellpoint-verified.json",
+      "sha256": "0070aff8621cdad6052161407e39936f2e07a8c1125879da183a3d2a29331fc7"
     }
   ],
   "offices": [
@@ -49,6 +53,19 @@
               "asOf": "2026-10-06",
               "physicalPage": 130,
               "printedPage": "114"
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1369,
+              "printedPage": "1364"
             }
           ]
         }
@@ -116,6 +133,27 @@
     },
     {
       "providerId": "north-jersey-hp-hp0020400",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1367,
+              "printedPage": "1362"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1375,
+              "printedPage": "1370"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1598889198",
         "legalName": "CLAREMONT MEDICAL AND REHABILITATION INC.",
@@ -155,6 +193,37 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 342
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1374,
+              "printedPage": "1369"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1394,
+              "printedPage": "1389"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1396,
+              "printedPage": "1391"
             }
           ]
         }
@@ -315,6 +384,19 @@
               "physicalPage": 342
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1371,
+              "printedPage": "1366"
+            }
+          ]
         }
       ],
       "federalOrganization": {
@@ -393,6 +475,25 @@
               "printedPage": "266"
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1374,
+              "printedPage": "1369"
+            }
+          ]
         }
       ],
       "federalOrganization": {
@@ -424,6 +525,37 @@
               "asOf": "2026-10-06",
               "physicalPage": 130,
               "printedPage": "115"
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1370,
+              "printedPage": "1365"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1376,
+              "printedPage": "1371"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1390,
+              "printedPage": "1385"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1398,
+              "printedPage": "1393"
             }
           ]
         }
@@ -494,6 +626,19 @@
               "physicalPage": 345
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1368,
+              "printedPage": "1363"
+            }
+          ]
         }
       ]
     },
@@ -529,6 +674,19 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 344
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1369,
+              "printedPage": "1364"
             }
           ]
         }
@@ -652,6 +810,37 @@
               "physicalPage": 344
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1374,
+              "printedPage": "1369"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1389,
+              "printedPage": "1384"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1396,
+              "printedPage": "1391"
+            }
+          ]
         }
       ]
     },
@@ -711,6 +900,43 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 342
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1380,
+              "printedPage": "1375"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0076201",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1394,
+              "printedPage": "1389"
             }
           ]
         }
@@ -979,6 +1205,31 @@
               "printedPage": "153"
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1367,
+              "printedPage": "1362"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1394,
+              "printedPage": "1389"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1396,
+              "printedPage": "1391"
+            }
+          ]
         }
       ]
     },
@@ -995,6 +1246,19 @@
               "asOf": "2026-10-06",
               "physicalPage": 248,
               "printedPage": "232"
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1398,
+              "printedPage": "1393"
             }
           ]
         }
@@ -1024,6 +1288,19 @@
               "physicalPage": 269
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            }
+          ]
         }
       ]
     },
@@ -1039,6 +1316,25 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 105
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1367,
+              "printedPage": "1362"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1375,
+              "printedPage": "1370"
             }
           ]
         }
@@ -1135,6 +1431,19 @@
               "physicalPage": 344
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1368,
+              "printedPage": "1363"
+            }
+          ]
         }
       ]
     },
@@ -1160,6 +1469,25 @@
               "asOf": "2026-10-06",
               "physicalPage": 185,
               "printedPage": "170"
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1371,
+              "printedPage": "1366"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1395,
+              "printedPage": "1390"
             }
           ]
         }
@@ -1203,6 +1531,25 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 345
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1368,
+              "printedPage": "1363"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1375,
+              "printedPage": "1370"
             }
           ]
         }
@@ -1274,6 +1621,19 @@
               "physicalPage": 343
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1367,
+              "printedPage": "1362"
+            }
+          ]
         }
       ],
       "federalOrganization": {
@@ -1342,6 +1702,19 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 268
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1375,
+              "printedPage": "1370"
             }
           ]
         }
@@ -1454,6 +1827,25 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 344
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1380,
+              "printedPage": "1375"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1388,
+              "printedPage": "1383"
             }
           ]
         }
@@ -1601,6 +1993,19 @@
               "physicalPage": 345
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1379,
+              "printedPage": "1374"
+            }
+          ]
         }
       ],
       "federalOrganization": {
@@ -1661,12 +2066,57 @@
     },
     {
       "providerId": "north-jersey-hp-hp0158800",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1385,
+              "printedPage": "1380"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1389,
+              "printedPage": "1384"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1962774422",
         "legalName": "TRUE VINE HEALTH CARE SOLUTIONS LLP",
         "lastUpdated": "2012-01-30",
         "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1962774422"
       }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0162500",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1382,
+              "printedPage": "1377"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1388,
+              "printedPage": "1383"
+            }
+          ]
+        }
+      ]
     },
     {
       "providerId": "north-jersey-hp-hp0168700",
@@ -1719,11 +2169,57 @@
               "printedPage": "197"
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1366,
+              "printedPage": "1361"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0174500",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1384,
+              "printedPage": "1379"
+            }
+          ]
         }
       ]
     },
     {
       "providerId": "north-jersey-hp-hp0174800",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1366,
+              "printedPage": "1361"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1225467772",
         "legalName": "ALTERNATIVE CARE ESSENTIALS, LLC",
@@ -1748,6 +2244,36 @@
         "lastUpdated": "2020-08-18",
         "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1235741554"
       }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0177700",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1381,
+              "printedPage": "1376"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1388,
+              "printedPage": "1383"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1413,
+              "printedPage": "1408"
+            }
+          ]
+        }
+      ]
     },
     {
       "providerId": "north-jersey-hp-hp0178100",
@@ -1786,6 +2312,66 @@
               "asOf": "2026-10-06",
               "physicalPage": 244,
               "printedPage": "228"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0181800",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0181804",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1367,
+              "printedPage": "1362"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "north-jersey-hp-hp0184400",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1379,
+              "printedPage": "1374"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1388,
+              "printedPage": "1383"
             }
           ]
         }
@@ -1878,6 +2464,31 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 345
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1381,
+              "printedPage": "1376"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1388,
+              "printedPage": "1383"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1412,
+              "printedPage": "1407"
             }
           ]
         }
@@ -2079,6 +2690,27 @@
     },
     {
       "providerId": "north-jersey-hp-hp0224600",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1368,
+              "printedPage": "1363"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1394,
+              "printedPage": "1389"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1063663110",
         "legalName": "QUALITY HEALTH CARE, INC.",
@@ -2279,6 +2911,25 @@
               "physicalPage": 342
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1374,
+              "printedPage": "1369"
+            }
+          ]
         }
       ],
       "federalOrganization": {
@@ -2290,6 +2941,21 @@
     },
     {
       "providerId": "north-jersey-hp-hp0249201",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1380,
+              "printedPage": "1375"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1720538044",
         "legalName": "CALIBERHEALTH PLUS",
@@ -2298,7 +2964,58 @@
       }
     },
     {
+      "providerId": "north-jersey-hp-hp0250200",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1365,
+              "printedPage": "1360"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1374,
+              "printedPage": "1369"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "providerId": "north-jersey-hp-hp0254700",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1371,
+              "printedPage": "1366"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1387,
+              "printedPage": "1382"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1395,
+              "printedPage": "1390"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1023521101",
         "legalName": "A1 PLUS HOME CARE SERVICES LLC",
@@ -2495,7 +3212,40 @@
       }
     },
     {
+      "providerId": "north-jersey-hp-hp0265900",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1367,
+              "printedPage": "1362"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "providerId": "north-jersey-hp-hp0266700",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1366,
+              "printedPage": "1361"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1538754403",
         "legalName": "PRIVATE AID CONTRACTOR, LLC",
@@ -2550,6 +3300,19 @@
               "url": "https://www.uhc.com/communityplan/assets/plandocuments/providerdirectory/NJ_MLTSS_Provider_List_by_County.pdf",
               "asOf": "2026-06",
               "physicalPage": 345
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1370,
+              "printedPage": "1365"
             }
           ]
         }
@@ -2615,6 +3378,19 @@
               "physicalPage": 344
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1369,
+              "printedPage": "1364"
+            }
+          ]
         }
       ],
       "federalOrganization": {
@@ -2656,6 +3432,31 @@
               "physicalPage": 212
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1382,
+              "printedPage": "1377"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1406,
+              "printedPage": "1401"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1414,
+              "printedPage": "1409"
+            }
+          ]
         }
       ]
     },
@@ -2688,6 +3489,27 @@
     },
     {
       "providerId": "north-jersey-hp-hp0277700",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1371,
+              "printedPage": "1366"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1376,
+              "printedPage": "1371"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1023522604",
         "legalName": "AVILO CARE SERVICES LLC",
@@ -2821,6 +3643,25 @@
               "physicalPage": 344
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1369,
+              "printedPage": "1364"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1375,
+              "printedPage": "1370"
+            }
+          ]
         }
       ],
       "federalOrganization": {
@@ -2841,6 +3682,21 @@
     },
     {
       "providerId": "north-jersey-hp-hp0287200",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1367,
+              "printedPage": "1362"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1114493277",
         "legalName": "EXPRESS ENTERPRISE",
@@ -2937,6 +3793,21 @@
     },
     {
       "providerId": "north-jersey-hp-hp0293800",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1380,
+              "printedPage": "1375"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1619573730",
         "legalName": "BEST GIFT HOME HEALTH CARE LLC",
@@ -2991,6 +3862,21 @@
     },
     {
       "providerId": "north-jersey-hp-hp0306500",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1368,
+              "printedPage": "1363"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1548051170",
         "legalName": "VICTORY HEALTH SOLUTIONS INC.",
@@ -3009,6 +3895,27 @@
     },
     {
       "providerId": "north-jersey-hp-hp0308700",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1370,
+              "printedPage": "1365"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1395,
+              "printedPage": "1390"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1689292336",
         "legalName": "365 HOME HEALTH SERVICES LLC",
@@ -3251,6 +4158,25 @@
               "printedPage": "163"
             }
           ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1370,
+              "printedPage": "1365"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1387,
+              "printedPage": "1382"
+            }
+          ]
         }
       ]
     },
@@ -3265,6 +4191,21 @@
     },
     {
       "providerId": "north-jersey-hp-hp0330200",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1368,
+              "printedPage": "1363"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1629679188",
         "legalName": "LONG ISLAND SENIOR CARE LLC",
@@ -3307,6 +4248,24 @@
         "lastUpdated": "2025-08-27",
         "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1023725389"
       }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0337100",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1384,
+              "printedPage": "1379"
+            }
+          ]
+        }
+      ]
     },
     {
       "providerId": "north-jersey-hp-hp0339700",
@@ -3384,6 +4343,24 @@
       }
     },
     {
+      "providerId": "north-jersey-hp-hp0345400",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1372,
+              "printedPage": "1367"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "providerId": "north-jersey-hp-hp0347100",
       "federalOrganization": {
         "npi": "1306524079",
@@ -3414,6 +4391,25 @@
               "asOf": "2026-10-06",
               "physicalPage": 164,
               "printedPage": "149"
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1382,
+              "printedPage": "1377"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1414,
+              "printedPage": "1409"
             }
           ]
         }
@@ -3664,6 +4660,21 @@
     },
     {
       "providerId": "north-jersey-hp-hp0377700",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1366,
+              "printedPage": "1361"
+            }
+          ]
+        }
+      ],
       "federalOrganization": {
         "npi": "1972317584",
         "legalName": "PRIORITY HEALTH HOME CARE AGENCY, LLC",
@@ -3679,6 +4690,36 @@
         "lastUpdated": "2026-06-04",
         "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1578014858"
       }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0378600",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1384,
+              "printedPage": "1379"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1403,
+              "printedPage": "1398"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+              "asOf": "2026-11",
+              "physicalPage": 1415,
+              "printedPage": "1410"
+            }
+          ]
+        }
+      ]
     },
     {
       "providerId": "north-jersey-hp-hp0379000",
@@ -3774,6 +4815,43 @@
               "asOf": "2026-10-06",
               "physicalPage": 103,
               "printedPage": "88"
+            }
+          ]
+        },
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1370,
+              "printedPage": "1365"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1375,
+              "printedPage": "1370"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1389,
+              "printedPage": "1384"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1395,
+              "printedPage": "1390"
+            },
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1397,
+              "printedPage": "1392"
             }
           ]
         }
@@ -4514,6 +5592,24 @@
         "lastUpdated": "2026-06-04",
         "sourceUrl": "https://npiregistry.cms.hhs.gov/provider-view/1073446779"
       }
+    },
+    {
+      "providerId": "north-jersey-hp-hp0440600",
+      "historicalDirectories": [
+        {
+          "payer": "Wellpoint",
+          "program": "NJ FamilyCare Medicaid",
+          "checkedAt": "2026-11-15",
+          "sources": [
+            {
+              "url": "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+              "asOf": "2026-11",
+              "physicalPage": 1372,
+              "printedPage": "1367"
+            }
+          ]
+        }
+      ]
     },
     {
       "providerId": "north-jersey-hp-hp0440700",

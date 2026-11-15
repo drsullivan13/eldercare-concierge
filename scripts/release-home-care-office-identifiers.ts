@@ -8,6 +8,18 @@ import type { HomeCareOfficeIdentifiers } from "../src/lib/home-care-office-iden
 const root = new URL("../", import.meta.url);
 const networkFile = "research/north-jersey/home-care-network/verified.json";
 const uhcFile = "research/north-jersey/home-care-network/uhc-verified.json";
+const wellpointFile =
+  "research/north-jersey/home-care-network/wellpoint-verified.json";
+const wellpointPageLimits = new Map([
+  [
+    "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+    1444,
+  ],
+  [
+    "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+    1462,
+  ],
+]);
 const nppesFile =
   "research/north-jersey/home-care-nppes/verified-branch-facts.json";
 const outputFile = new URL("src/data/home-care-office-identifiers.json", root);
@@ -103,6 +115,7 @@ export function projectHomeCareOfficeIdentifiers(
   nppes: unknown,
   uhc: unknown,
   providers: readonly Provider[],
+  wellpoint: unknown = {},
 ): HomeCareOfficeIdentifiers[] {
   const catalog = new Map(
     providers
@@ -120,24 +133,36 @@ export function projectHomeCareOfficeIdentifiers(
       rows: networkRows,
       payer: "Fidelis Care New Jersey",
       program: "NJ FamilyCare Medicaid",
-      sourceUrl:
-        /^https:\/\/www\.fideliscarenj\.com\/content\/dam\/centene\/wellcare\/nj\/pdfs\/directories\/NJ_Caid_Provider_Directory_Region_(?:1_[12]|2_[12]|3_[12]|4_2)_Eng_Spa_R\.PDF$/,
-      maxPage: Number.MAX_SAFE_INTEGER,
+      pageLimit: (url: string) =>
+        /^https:\/\/www\.fideliscarenj\.com\/content\/dam\/centene\/wellcare\/nj\/pdfs\/directories\/NJ_Caid_Provider_Directory_Region_(?:1_[12]|2_[12]|3_[12]|4_2)_Eng_Spa_R\.PDF$/.test(
+          url,
+        )
+          ? Number.MAX_SAFE_INTEGER
+          : 0,
     },
     {
       rows: uhcRows,
       payer: "UnitedHealthcare Community Plan",
       program: "NJ FamilyCare Medicaid MLTSS",
-      sourceUrl:
-        /^https:\/\/www\.uhc\.com\/communityplan\/assets\/plandocuments\/providerdirectory\/NJ_MLTSS_Provider_List_by_County\.pdf$/,
-      maxPage: 373,
+      pageLimit: (url: string) =>
+        /^https:\/\/www\.uhc\.com\/communityplan\/assets\/plandocuments\/providerdirectory\/NJ_MLTSS_Provider_List_by_County\.pdf$/.test(
+          url,
+        )
+          ? 373
+          : 0,
+    },
+    {
+      rows: record(wellpoint),
+      payer: "Wellpoint",
+      program: "NJ FamilyCare Medicaid",
+      pageLimit: (url: string) => wellpointPageLimits.get(url) ?? 0,
+      sourceMonth: "2026-11",
     },
   ];
   const ids = [
     ...new Set([
-      ...Object.keys(networkRows),
       ...Object.keys(nppesRows),
-      ...Object.keys(uhcRows),
+      ...directories.flatMap(({ rows }) => Object.keys(rows)),
     ]),
   ].sort();
   const digits = (value: string) => value.replace(/\D/g, "");
@@ -186,16 +211,17 @@ export function projectHomeCareOfficeIdentifiers(
           );
         const url = text(listing.sourceUrl);
         if (
-          !directory.sourceUrl.test(url) ||
           typeof listing.physicalPage !== "number" ||
           !Number.isSafeInteger(listing.physicalPage) ||
           listing.physicalPage < 1 ||
-          listing.physicalPage > directory.maxPage
+          listing.physicalPage > directory.pageLimit(url)
         )
           throw new Error(
             "Expected an official directory PDF and physical page.",
           );
         const asOf = date(listing.sourceDate, true);
+        if (directory.sourceMonth && asOf !== directory.sourceMonth)
+          throw new Error("Expected the month printed in the directory.");
         if (asOf > checkedAt)
           throw new Error("Directory date is after its check.");
         const printedPage =
@@ -270,11 +296,16 @@ if (
   const uhcRows = record(JSON.parse(uhc));
   if (!Object.keys(uhcRows).length)
     throw new Error("Expected nonempty reviewed UHC directory evidence.");
+  const wellpoint = readFileSync(new URL(wellpointFile, root), "utf8");
+  const wellpointRows = record(JSON.parse(wellpoint));
+  if (!Object.keys(wellpointRows).length)
+    throw new Error("Expected nonempty reviewed Wellpoint directory evidence.");
   const offices = projectHomeCareOfficeIdentifiers(
     JSON.parse(network),
     JSON.parse(nppes),
     uhcRows,
     getMarket("north-jersey")!.providers,
+    wellpointRows,
   );
   const output =
     JSON.stringify(
@@ -284,6 +315,7 @@ if (
           { file: networkFile, sha256: digest(network) },
           { file: nppesFile, sha256: digest(nppes) },
           { file: uhcFile, sha256: digest(uhc) },
+          { file: wellpointFile, sha256: digest(wellpoint) },
         ],
         offices,
       },

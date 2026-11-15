@@ -9,6 +9,7 @@ import ts from "typescript";
 import release from "../src/data/home-care-office-identifiers.json";
 import { HomeCareOfficeIdentifiers } from "../src/components/home-care-office-identifiers";
 import { getHomeCareOfficeIdentifiers } from "../src/lib/home-care-office-identifiers";
+import { evidenceDate } from "../src/components/evidence-date";
 import { getMarket } from "../src/lib/markets";
 import { projectHomeCareOfficeIdentifiers } from "../scripts/release-home-care-office-identifiers";
 import { GET } from "../src/app/api/research/route";
@@ -22,6 +23,9 @@ const nppes = JSON.parse(read(release.inputs[1].file));
 const uhc = JSON.parse(
   read("research/north-jersey/home-care-network/uhc-verified.json"),
 );
+const wellpoint = JSON.parse(
+  read("research/north-jersey/home-care-network/wellpoint-verified.json"),
+);
 const providers = getMarket("north-jersey")!.providers;
 const projected = () =>
   projectHomeCareOfficeIdentifiers(network, nppes, uhc, providers);
@@ -31,12 +35,16 @@ test("the release replays offline in normal form with every reviewed branch ID",
   for (const input of release.inputs) {
     assert.equal(input.sha256, hash(read(input.file)));
   }
-  assert.deepEqual(release.offices, projected());
+  assert.deepEqual(
+    release.offices,
+    projectHomeCareOfficeIdentifiers(network, nppes, uhc, providers, wellpoint),
+  );
   const ids = [
     ...new Set([
       ...Object.keys(network),
       ...Object.keys(nppes),
       ...Object.keys(uhc),
+      ...Object.keys(wellpoint),
     ]),
   ].sort();
   assert.deepEqual(
@@ -58,7 +66,9 @@ test("the release replays offline in normal form with every reviewed branch ID",
       Object.keys(office).sort(),
       [
         "providerId",
-        ...(network[office.providerId] || uhc[office.providerId]
+        ...(network[office.providerId] ||
+        uhc[office.providerId] ||
+        wellpoint[office.providerId]
           ? ["historicalDirectories"]
           : []),
         ...(nppes[office.providerId] ? ["federalOrganization"] : []),
@@ -139,6 +149,7 @@ await import(pathToFileURL(process.argv[1]).href);
 test("every payer keeps its check date, source date, printed page and physical PDF page", () => {
   for (const [id, value] of Object.entries(network).concat(
     Object.entries(uhc),
+    Object.entries(wellpoint),
   )) {
     const row = value as {
       payer: string;
@@ -306,7 +317,10 @@ test("overlapping payers merge by exact provider ID without replacing the NPI or
     })),
   );
   assert.equal(office.federalOrganization?.npi, nppes[id].npi);
-  assert.deepEqual(office, getHomeCareOfficeIdentifiers(id));
+  assert.deepEqual(
+    office,
+    projected().find((result) => result.providerId === id),
+  );
   const reversedNetwork = structuredClone(network);
   const reversedUhc = structuredClone(uhc);
   for (const row of Object.values(reversedNetwork).concat(
@@ -374,6 +388,40 @@ test("the existing research API passes both payer directories and the organizati
       Object.hasOwn(data.officeIdentifiers, "historicalDirectory"),
       false,
     );
+  }
+});
+
+test("Wellpoint accepts only its reviewed editions, physical pages and printed month", () => {
+  const id = Object.keys(wellpoint)[0];
+  const row = wellpoint[id];
+  const urls = [
+    [
+      "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111",
+      1444,
+    ],
+    [
+      "https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035",
+      1462,
+    ],
+  ] as const;
+  const project = (change: Record<string, unknown>) =>
+    projectHomeCareOfficeIdentifiers({}, {}, {}, providers, {
+      [id]: { ...row, listings: [{ ...row.listings[0], ...change }] },
+    });
+  for (const [sourceUrl, maxPage] of urls) {
+    const source = project({ sourceUrl, physicalPage: maxPage })[0]
+      .historicalDirectories![0].sources[0];
+    assert.equal(source.asOf, "2026-11");
+    assert.equal(source.physicalPage, maxPage);
+    for (const change of [
+      { sourceUrl, physicalPage: maxPage + 1 },
+      { sourceUrl: sourceUrl + "&extra=1" },
+      { sourceUrl: sourceUrl.replace("provider.wellpoint.com", "example.org") },
+      { sourceDate: "2026-11-01" },
+      { sourceDate: "2026-10" },
+      { phone: "0000000000" },
+    ])
+      assert.throws(() => project(change));
   }
 });
 
@@ -639,17 +687,22 @@ test("the compact disclosure labels historical evidence and organizational ident
         (html.match(/Historical directory listing/g) ?? []).length,
         data.historicalDirectories.length,
       );
-      assert.match(html, /Checked Nov 14, 2026/);
+
       assert.equal((html.match(/Confirm current coverage/g) ?? []).length, 1);
       assert.match(html, /office and your plan/);
       for (const directory of data.historicalDirectories) {
         assert.ok(html.includes(directory.payer));
+        assert.ok(
+          html.includes("Checked " + evidenceDate(directory.checkedAt)),
+        );
         assert.ok(html.includes(directory.program));
         assert.match(
           html,
           directory.payer === "Fidelis Care New Jersey"
             ? /as of Oct 6, 2026/
-            : /as of Jun 2026/,
+            : directory.payer === "Wellpoint"
+              ? /as of Nov 2026/
+              : /as of Jun 2026/,
         );
         assert.doesNotMatch(html, /Jun 1, 2026/);
         for (const source of directory.sources) {

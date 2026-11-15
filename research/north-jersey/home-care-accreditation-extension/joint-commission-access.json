@@ -1,0 +1,53 @@
+{
+  "asOf": "2026-11-15",
+  "newOfficeAccreditations": 0,
+  "newOfficeServiceDates": 0,
+  "alreadyCovered": "Existing NJ pipeline includes CAHC, ACHC, CHAP and NIHCA. No dedicated Joint Commission accreditation acquisition was identified in project research documentation.",
+  "publicLookup": {
+    "URL": "https://www.jointcommission.org/en-us/about-us/recognizing-excellence/find-accredited-organizations",
+    "availability": "DataMart documentation describes organization-specific lookup as free. The normal browser visit to the official link returned HTTP 403 with a maintenance notice. No directory records or public statuses were read. This is a reachability limitation, not a statement that any office lacks accreditation.",
+    "entryPoint": "https://www.jointcommission.org/en-us/about-us/find-the-gold-seal",
+    "terms": "https://www.jointcommission.org/en-us/policies/terms-of-use",
+    "publicationBasis": "Website terms restrict reprinting to personal use absent prior written consent; DataMart explicitly prices web display separately."
+  },
+  "licensedFeed": {
+    "URL": "https://www.jointcommission.org/en-us/products-and-services/datamart",
+    "product": "Home Care Accreditation Demographic Data Subscription",
+    "oneTimeListUSD": 500,
+    "publication": "Yearly web display fee quoted through the linked DataMart Information Request Form; one-time list purchase does not establish web-display rights.",
+    "fields": [
+      "Organization ID",
+      "Program Type",
+      "Organization Name",
+      "Address",
+      "Phone Number",
+      "Web Page URL",
+      "Accreditation or Certification Status",
+      "Decision Date"
+    ],
+    "gap": "Request the location type, sites explicitly in scope, service-specific program and renewal/withdrawal semantics. Same name at headquarters and a branch does not establish the certified activities of both."
+  },
+  "checks": [
+    {
+      "providerId": "north-jersey-hp-hp0449900",
+      "office": "BrightStar Care of Hoboken & Jersey City",
+      "coverage": "registry-only",
+      "finding": "The local operator's page describes a Joint Commission on-site review. No Joint Commission-issued decision date or accreditor scope was verified. Hold as operator-reported lead.",
+      "source": "https://www.brightstarcare.com/locations/hoboken-jersey-city/services/in-home-care/why-choose-brightstar-home-care/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0322900",
+      "office": "Kinder Healthcare Services",
+      "coverage": "registry-only",
+      "finding": "Operator homepage describes DDD approval. No Joint Commission decision or certificate was established. Distinct approval program.",
+      "source": "https://www.kinderhealthcareservices.com/"
+    },
+    {
+      "providerId": "north-jersey-hp-hp0250200",
+      "office": "Eleon Healthcare",
+      "coverage": "already researched",
+      "finding": "No new exact accreditor-confirmed home-care decision."
+    }
+  ],
+  "purchaseOrOutreach": false
+}

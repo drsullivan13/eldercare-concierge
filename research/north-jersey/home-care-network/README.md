@@ -161,3 +161,11 @@ The completed focused suite has 32 passing tests with resource warnings treated 
 Model the Domain kept directory occurrences, phone hits, and provider dispositions separate. Build the Lever put the completeness proof in replay rather than a one-time hand audit. Prove It Works required the original failing Valley scenario, independent source scans, and fresh source capture.
 
 No whole-application checks, commits, knowledge-base changes, delegates, or writes outside this folder are part of this task. Temporary helpers and downloads are removed.
+
+## Wellpoint, November 2026
+
+The publisher dates its [Northeast directory](https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNortheast.pdf?v=202501172111) and [Northwest/Central directory](https://www.provider.wellpoint.com/docs/gpp/NJ_WLP_ProviderDirectoryNorthwestCentral.pdf?v=202601262035) to November 2026 inside each PDF. The version parameter in the URL is not the publication date.
+
+The release contains 57 active office registrations and 100 page references. Two independent PDF extractions verified the name, physical street and unit, city, ZIP and telephone within the same column. The state roster supplied the legal name and trade names. Thirteen candidate occurrences were held, including Broadway Respite & Home Care, where two active registrations share an office identity. The public profile links open the verified PDF pages. Family experience, current payment eligibility, availability and authorization require separate evidence.
+
+The reviewed records are in `wellpoint-verified.json`. `wellpoint-office-audit.json` records the file hashes, review method and held candidates. Run `node --import tsx scripts/release-home-care-office-identifiers.ts --check` from the repository root to verify the published projection against the accepted records.
