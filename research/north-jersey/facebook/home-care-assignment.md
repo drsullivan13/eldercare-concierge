@@ -9,7 +9,11 @@ Find public recommendations and firsthand family experiences about paid, nonmedi
 | Union | Visiting Angels Union (Springfield, HP0065000), HomeWell Care Services (Union, HP0249500), BrightStar Care Westfield & Summit (Westfield, HP0191600), BAYADA Union County (Westfield, HP0015320) |
 | Morris | Senior Helpers (Madison, HP0104400), Home Instead Morris County (Parsippany, HP0397500), Life Home Care (East Hanover, HP0285900), BAYADA Morris County (Morristown, HP0015347) |
 | Essex | Visiting Angels Montclair (Caldwell, HP0119000), Right at Home Essex County (West Orange, HP0058900), Home Instead (Millburn, HP0118200), Comfort Keepers (Montclair, HP0179100) |
+| Somerset | Right at Home Somerset & Hunterdon (105 Omni Dr, Hillsborough, HP0101000), Home Instead Somerset (220 Davidson Ave Suite 98, HP0289000) |
+| Middlesex | Visiting Angels East Brunswick (A2 Brier Hill Ct Suite 3, HP0436900), Senior Helpers (2 Hospital Dr Building B, Plainsboro, HP0347100) |
 | Nearby comparison offices | Senior Helpers Bergen County (Paramus, HP0171100), Visiting Angels (Ramsey, HP0151500), BAYADA Passaic County (Clifton, HP0015321), Senior Helpers Fairfield (Totowa, HP0242300) |
+
+**Somerset identity hold:** Two active HP registrations share the Senior Helpers address at 764 Easton Ave Suite 8 (HP0423200 and HP0175500). Leave that office unassigned until the current operator can be corroborated. It is separate from the Plainsboro assignment.
 
 **2. Look for names Harbor might have missed.** Search public community and caregiver discussions in all five launch counties: Union, Morris, Essex, Somerset and Middlesex. Start with Chatham (07928), Summit, Westfield, Morristown, Montclair, Bridgewater, Somerville, Edison and New Brunswick. Try “home care agency for my mom,” “companion for dad,” “respite aide,” “weekend aide,” and “who have you actually used?” Record the search town separately from office address and service area. Keep new independent agencies and small operators in the results. An individual aide recommendation is outside the agency cohort; tally it without collecting personal details. Distinguish a generic suggestion from experience after paid care began. Exclude facility stays, employee reviews and Medicare skilled home-health episodes from family experience evidence.
 
