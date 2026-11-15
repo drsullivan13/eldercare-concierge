@@ -1,0 +1,126 @@
+[
+  {
+    "providerId": "north-jersey-doh-nj07a021",
+    "officialId": "NJ07A021",
+    "sourceUrl": "https://www.mylivingchoice.com/property/brandywine-livingston-by-monarch",
+    "observedAt": "2026-11-15T13:39:16.512488+00:00",
+    "bodySha256": "1e40d9654b5d63259c6e50e334d566a24365d3be329857bece1008baed610013",
+    "sourceFamily": "google",
+    "rating": 4.3,
+    "count": 45,
+    "scale": 5,
+    "listingCareTypes": [
+      "Assisted Living",
+      "Independent Living"
+    ],
+    "licensedCareType": "Assisted Living Residence",
+    "stateSource": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ07A021",
+    "operatorSource": "https://www.brandycare.com/community/livingston",
+    "operatorCare": [
+      "Assisted Living",
+      "Memory Care",
+      "Respite Care"
+    ],
+    "visibleWindow": [
+      {
+        "reportId": "628866",
+        "date": "2026-07",
+        "relationship": "visitor-tour",
+        "sentiment": "positive"
+      },
+      {
+        "reportId": "628867",
+        "date": "2026-04",
+        "relationship": "family",
+        "sentiment": "mixed"
+      },
+      {
+        "reportId": "628868",
+        "date": "2026-04",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "reportId": "628869",
+        "date": "2026-04",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "reportId": "628870",
+        "date": "2025-11",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      }
+    ],
+    "decision": {
+      "code": "hold-livingston-unseparated-care-population",
+      "eligibleForSingleSourceEstimate": false,
+      "reason": "The fresh 4.3/45 Google panel clears the numerical floor, all five rows are accounted for, and the exact institution is verified. The visible family account and tour are compatible with ordinary consumer evidence, with no explicit workforce contaminant or contrary-majority veto. However, the published aggregate still spans an unseparated AL/independent-living listing against an exact AL-license provider. Current operator material does not eliminate that ambiguity. Preserve the existing scope hold rather than attest consumer scope from address equality.",
+      "futureResolution": "Obtain permitted source evidence that the Google aggregate represents the exact licensed residence's broad consumer population rather than a broader independent-living population, or explicitly review a correctly scoped institution/campus record. Refresh the whole visible window then; do not remove selected rows or use their five-star mean.",
+      "publicationAction": "None. No approval or score promoted."
+    }
+  },
+  {
+    "providerId": "north-jersey-doh-nj02a024",
+    "officialId": "NJ02A024",
+    "sourceUrl": "https://www.mylivingchoice.com/property/brandywine-mahwah-by-monarch",
+    "observedAt": "2026-11-15T13:39:18.866114+00:00",
+    "bodySha256": "e1897b48288c477f03807c90f2facc219281bb0f37133033ad21fbca2b600009",
+    "sourceFamily": "google",
+    "rating": 4.9,
+    "count": 57,
+    "scale": 5,
+    "listingCareTypes": [
+      "Assisted Living",
+      "Independent Living"
+    ],
+    "licensedCareType": "Assisted Living Residence",
+    "stateSource": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ02A024",
+    "operatorSource": "https://www.brandycare.com/community/mahwah",
+    "operatorCare": [
+      "Assisted Living",
+      "Memory Care",
+      "Respite Care"
+    ],
+    "visibleWindow": [
+      {
+        "reportId": "628779",
+        "date": "2025-10",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "reportId": "628780",
+        "date": "2025-09",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "reportId": "628781",
+        "date": "2025-08",
+        "relationship": "visitor-tour",
+        "sentiment": "positive"
+      },
+      {
+        "reportId": "628782",
+        "date": "2024-08",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      },
+      {
+        "reportId": "628783",
+        "date": "2024-08",
+        "relationship": "unknown",
+        "sentiment": "positive"
+      }
+    ],
+    "decision": {
+      "code": "hold-mahwah-contradictory-care-scope",
+      "eligibleForSingleSourceEstimate": false,
+      "reason": "The 4.9/57 Google panel clears the numeric floor and is internally consistent, with five positive rows and one carried place identity. Unlike Livingston, the window has no explicit family account and two older rows, but neither fact independently disqualifies a consumer aggregate. The decisive unresolved issue is the AL/independent-living scope asserted by the carrier versus the exact licensed AL-unit record and narrower operator care list. The current evidence does not justify overturning the existing mixed-care hold.",
+      "futureResolution": "Resolve whether the Google place reviews cover only this licensed residence or an additional independent-living population, and document any carrier care-label correction through permitted sources. An independent reviewer must recheck all rows and current aggregate, not infer consumer scope from uniformly favorable stars.",
+      "publicationAction": "None. No approval or score promoted."
+    }
+  }
+]
