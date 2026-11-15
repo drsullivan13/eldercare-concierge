@@ -1,0 +1,2625 @@
+[
+  {
+    "entry_id": "morris-2025-002",
+    "provider_id": "north-jersey-hp-hp0024800",
+    "official_registration_id": "HP0024800",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0024800",
+      "official_registration_id": "HP0024800",
+      "county": "Union",
+      "registered_name": "AMAZING GRACE NURSING CARE SERVICE",
+      "dba": "",
+      "runtime_name": "AMAZING GRACE NURSING CARE SERVICE",
+      "registered_address": "2165 MORRIS AVENUE, SUITE 1A ",
+      "address": "2165 MORRIS AVENUE, SUITE 1A",
+      "city": "UNION",
+      "state": "NJ",
+      "zip": "07083",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match disambiguated by DOH city and ZIP county",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 315
+      },
+      "registration_source_rows": [
+        315
+      ],
+      "source_county_file": "research/north-jersey/state/union/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0024800",
+        "name": "AMAZING GRACE NURSING CARE SERVICE",
+        "dba": "",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "2165 MORRIS AVENUE, SUITE 1A ",
+        "city": "UNION",
+        "state": "NJ",
+        "zip": "07083",
+        "county": "Union",
+        "county_basis": "NJ municipality name match disambiguated by DOH city and ZIP county",
+        "county_candidates": [
+          "Hunterdon",
+          "Union"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          },
+          {
+            "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+            "file": "raw/ltc.xlsx",
+            "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716",
+            "retrieved_at": "2026-11-12T15:01:16.444870+00:00",
+            "http_last_modified": "Fri, 06 Nov 2026 18:16:17 GMT"
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 315
+        },
+        "source_fields": {
+          "source_row": 315,
+          "Business Name": "AMAZING GRACE NURSING CARE SERVICE",
+          "License/Registration": "HP0024800",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "United States",
+          "Business Address": "2165 MORRIS AVENUE, SUITE 1A ",
+          "Business City": "UNION",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "NJ",
+          "Business Zipcode": "07083",
+          "Business Phone": "(908)-206-9988"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=2",
+      "year": 2025,
+      "page": 2,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-002",
+      "page": 2,
+      "name": "Amazing Grace Nursing Care Service",
+      "address_text": "2165 Morris Avenue, Suite 1A, Union, NJ 07083",
+      "phone_numbers": [
+        "9082069986",
+        "9082069988"
+      ],
+      "services_text": "Certified Home Health Aide; Certified Nurses Aide; Homemaker; Companion",
+      "accepts_text": "Private Pay, Long Term Care insurance",
+      "source_text": "Amazing Grace Nursing Care Service\n2165 Morris Avenue, Suite 1A, Union, NJ 07083\n(908) 206-9988, (908) 206-9986 Fax\ninfo@amazinggracenursingcare.com\n Services Offered: Certified Home Health Aide; Certified Nurses Aide; Homemaker; Companion\n Accepts: Private Pay, Long Term Care insurance"
+    },
+    "private_pay_text": "Private Pay, Long Term Care insurance",
+    "nonmedical_services": [
+      "Homemaker",
+      "Companion"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-006",
+    "provider_id": "north-jersey-hp-hp0022400",
+    "official_registration_id": "HP0022400",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0022400",
+      "official_registration_id": "HP0022400",
+      "county": "Somerset",
+      "registered_name": "ATLANTIC PRIVATE CARE SERVICES, INC.",
+      "dba": "MORRIS HOME CARE, INC., MORRIS HOME CARE",
+      "runtime_name": "ATLANTIC PRIVATE CARE SERVICES, INC.",
+      "registered_address": "200 MT. AIRY ROAD ",
+      "address": "200 MT. AIRY ROAD ",
+      "city": "BASKING RIDGE",
+      "state": "NJ",
+      "zip": "07920",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "Municipality label, outside original six-county inventory",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "query": {
+          "License/Registration Number": "HP*",
+          "other_filters": "blank"
+        },
+        "displayed_rows": 3623,
+        "exported_rows": 3623,
+        "method": "Public portal search and its Click Here to Download XLSX export",
+        "source_date": null,
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "bytes": 334727,
+        "file": "raw/firms.xlsx",
+        "row": 489
+      },
+      "registration_source_rows": [
+        489
+      ],
+      "discovery_status": "new-supply-candidate",
+      "integration_note": "Proposed provider ID only. Not present in runtime or original inventory."
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0022400",
+        "name": "ATLANTIC PRIVATE CARE SERVICES, INC.",
+        "dba": "MORRIS HOME CARE, INC., MORRIS HOME CARE",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "200 MT. AIRY ROAD ",
+        "city": "BASKING RIDGE",
+        "state": "NJ",
+        "zip": "07920",
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "query": {
+            "License/Registration Number": "HP*",
+            "other_filters": "blank"
+          },
+          "displayed_rows": 3623,
+          "exported_rows": 3623,
+          "method": "Public portal search and its Click Here to Download XLSX export",
+          "source_date": null,
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "bytes": 334727,
+          "file": "raw/firms.xlsx",
+          "row": 489
+        },
+        "source_fields": {
+          "source_row": 489,
+          "Business Name": "ATLANTIC PRIVATE CARE SERVICES, INC.",
+          "License/Registration": "HP0022400",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "MORRIS HOME CARE, INC., MORRIS HOME CARE",
+          "Business Country": "United States",
+          "Business Address": "200 MT. AIRY ROAD ",
+          "Business City": "BASKING RIDGE",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07920",
+          "Business Phone": "(973)-540-9000"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3",
+      "year": 2025,
+      "page": 3,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-006",
+      "page": 3,
+      "name": "Atlantic Private Care Services",
+      "address_text": "200 Mt. Airy Rd., Basking Ridge, NJ 07920",
+      "phone_numbers": [
+        "9735408816",
+        "9735409000"
+      ],
+      "services_text": "Registered Nurse; Licensed Practical Nurse; Certified Home Health Aide;\nPhysical Therapy; Live-in; Social Worker",
+      "accepts_text": "private pay, most LTC Insurance plans",
+      "source_text": "Atlantic Private Care Services\n200 Mt. Airy Rd., Basking Ridge, NJ 07920\n(973) 540-9000, (973) 540-8816 Fax\nServices Offered: Registered Nurse; Licensed Practical Nurse; Certified Home Health Aide;\nPhysical Therapy; Live-in; Social Worker\nAccepts: private pay, most LTC Insurance plans"
+    },
+    "private_pay_text": "private pay, most LTC Insurance plans",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-007",
+    "provider_id": "north-jersey-hp-hp0015325",
+    "official_registration_id": "HP0015325",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0015325",
+      "official_registration_id": "HP0015325",
+      "county": "Morris",
+      "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+      "dba": "",
+      "runtime_name": "BAYADA HOME HEALTH CARE, INC.",
+      "registered_address": "383 WEST BLACKWELL ST, 1ST FL, STE 1A",
+      "address": "383 WEST BLACKWELL ST, 1ST FL, STE 1A",
+      "city": "DOVER",
+      "state": "NJ",
+      "zip": "07801",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 557
+      },
+      "registration_source_rows": [
+        557
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "matched",
+      "evidence_record_ids": [
+        "bayada-dover-hp0015325"
+      ]
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0015325",
+        "name": "BAYADA HOME HEALTH CARE, INC.",
+        "dba": "",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "383 WEST BLACKWELL ST, 1ST FL, STE 1A",
+        "city": "DOVER",
+        "state": "NJ",
+        "zip": "07801",
+        "county": "Morris",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 557
+        },
+        "source_fields": {
+          "source_row": 557,
+          "Business Name": "BAYADA HOME HEALTH CARE, INC.",
+          "License/Registration": "HP0015325",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "",
+          "Business Address": "383 WEST BLACKWELL ST, 1ST FL, STE 1A",
+          "Business City": "DOVER",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07801",
+          "Business Phone": "(973)-328-1790"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3",
+      "year": 2025,
+      "page": 3,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-007",
+      "page": 3,
+      "name": "Bayada Assistive Care-State Programs",
+      "address_text": "383 W. Blackwell St., First Floor, Suite 1A, Dover, NJ 07801",
+      "phone_numbers": [
+        "9733281731",
+        "9733281790"
+      ],
+      "services_text": "Home Health Aide",
+      "accepts_text": "private pay, long term care insurance, JACC**",
+      "source_text": "Bayada Assistive Care-State Programs\n383 W. Blackwell St., First Floor, Suite 1A, Dover, NJ 07801\n(973) 328-1790, (973) 328-1731 Fax\nwww.bayada.com\n Services Offered: Home Health Aide\n Accepts: private pay, long term care insurance, JACC**"
+    },
+    "private_pay_text": "private pay, long term care insurance, JACC**",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-008",
+    "provider_id": "north-jersey-hp-hp0015347",
+    "official_registration_id": "HP0015347",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County's second Bayada block has no repeated heading. Inherit Bayada identity only, not State Programs sub-brand."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0015347",
+      "official_registration_id": "HP0015347",
+      "county": "Morris",
+      "registered_name": "BAYADA HOME HEALTH CARE, INC.",
+      "dba": "",
+      "runtime_name": "BAYADA HOME HEALTH CARE, INC.",
+      "registered_address": "32 MAPLE AVENUE,1ST FL",
+      "address": "32 MAPLE AVENUE,1ST FL",
+      "city": "MORRISTOWN",
+      "state": "NJ",
+      "zip": "07960",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 555
+      },
+      "registration_source_rows": [
+        555
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "matched",
+      "evidence_record_ids": [
+        "bayada-morristown-hp0015347"
+      ]
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0015347",
+        "name": "BAYADA HOME HEALTH CARE, INC.",
+        "dba": "",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "32 MAPLE AVENUE,1ST FL",
+        "city": "MORRISTOWN",
+        "state": "NJ",
+        "zip": "07960",
+        "county": "Morris",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 555
+        },
+        "source_fields": {
+          "source_row": 555,
+          "Business Name": "BAYADA HOME HEALTH CARE, INC.",
+          "License/Registration": "HP0015347",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "",
+          "Business Address": "32 MAPLE AVENUE,1ST FL",
+          "Business City": "MORRISTOWN",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07960",
+          "Business Phone": "(973)-867-3000"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3",
+      "year": 2025,
+      "page": 3,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-008",
+      "page": 3,
+      "name": "Bayada Assistive Care-State Programs",
+      "address_text": "32 Maple Avenue, 1st Floor, Morristown, NJ 07960",
+      "phone_numbers": [
+        "9738673000",
+        "9739840450"
+      ],
+      "services_text": "Registered Nurse; Licensed Practical Nurse; Certified Home Health Aide;\nHomemaker; Live-in; Companion; Home Health Aide; Rehabilitation Service",
+      "accepts_text": "private pay, long term care insurance, JACC**",
+      "source_text": "32 Maple Avenue, 1st Floor, Morristown, NJ 07960\n(973) 867-3000, (973) 984-0450 Fax\nwww.bayada.com\nServices Offered: Registered Nurse; Licensed Practical Nurse; Certified Home Health Aide;\nHomemaker; Live-in; Companion; Home Health Aide; Rehabilitation Service\nAccepts: private pay, long term care insurance, JACC**"
+    },
+    "private_pay_text": "private pay, long term care insurance, JACC**",
+    "nonmedical_services": [
+      "Homemaker",
+      "Companion"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-010",
+    "provider_id": "north-jersey-hp-hp0217600",
+    "official_registration_id": "HP0217600",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0217600",
+      "official_registration_id": "HP0217600",
+      "county": "Morris",
+      "registered_name": "SOLOFF DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+      "dba": "SOLOFF LLC DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+      "runtime_name": "SOLOFF DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+      "registered_address": "14 RIDGEDALE AVENUE, SUITE 208 ",
+      "address": "14 RIDGEDALE AVENUE, SUITE 208",
+      "city": "CEDAR KNOLLS",
+      "state": "NJ",
+      "zip": "07927",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ locality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 3142
+      },
+      "registration_source_rows": [
+        3142
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "matched",
+      "evidence_record_ids": [
+        "brightstar-morris-hp0217600"
+      ]
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0217600",
+        "name": "SOLOFF DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+        "dba": "SOLOFF LLC DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "14 RIDGEDALE AVENUE, SUITE 208 ",
+        "city": "CEDAR KNOLLS",
+        "state": "NJ",
+        "zip": "07927",
+        "county": "Morris",
+        "county_basis": "NJ locality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 3142
+        },
+        "source_fields": {
+          "source_row": 3142,
+          "Business Name": "SOLOFF DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+          "License/Registration": "HP0217600",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "SOLOFF LLC DBA BRIGHTSTAR CARE OF MORRIS COUNTY NJ",
+          "Business Country": "United States",
+          "Business Address": "14 RIDGEDALE AVENUE, SUITE 208 ",
+          "Business City": "CEDAR KNOLLS",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07927",
+          "Business Phone": "(973) 898-0800"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3",
+      "year": 2025,
+      "page": 3,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-010",
+      "page": 3,
+      "name": "Bright Star Care Morris County",
+      "address_text": "14 Ridgedale Avenue, Suite 208, Cedar Knolls, NJ 07927",
+      "phone_numbers": [
+        "9738980800"
+      ],
+      "services_text": "Registered Nurse; Licensed Practical Nurse; Certified Nurses Aide;\nCertified Home Health Aide; Companion",
+      "accepts_text": "Private pay, long term care insurance",
+      "source_text": "Bright Star Care Morris County\n14 Ridgedale Avenue, Suite 208, Cedar Knolls, NJ 07927\n(973) 898-0800\nwww.brightstarhealthcare.com\n  Services Offered: Registered Nurse; Licensed Practical Nurse; Certified Nurses Aide;\nCertified Home Health Aide; Companion\n Accepts: Private pay, long term care insurance"
+    },
+    "private_pay_text": "Private pay, long term care insurance",
+    "nonmedical_services": [
+      "Companion"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-014",
+    "provider_id": "north-jersey-hp-hp0257500",
+    "official_registration_id": "HP0257500",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0257500",
+      "official_registration_id": "HP0257500",
+      "county": "Passaic",
+      "registered_name": "CARING PEOPLE NJ OPERATING LLC",
+      "dba": "",
+      "runtime_name": "CARING PEOPLE NJ OPERATING LLC",
+      "registered_address": "1169 Main Avenue",
+      "address": "1169 Main Avenue",
+      "city": "Clifton",
+      "state": "NJ",
+      "zip": "07011",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 901
+      },
+      "registration_source_rows": [
+        901
+      ],
+      "source_county_file": "research/north-jersey/state/passaic/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "matched",
+      "evidence_record_ids": [
+        "caring-people-nj-hp0257500"
+      ]
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0257500",
+        "name": "CARING PEOPLE NJ OPERATING LLC",
+        "dba": "",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "1169 Main Avenue",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07011",
+        "county": "Passaic",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Passaic"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 901
+        },
+        "source_fields": {
+          "source_row": 901,
+          "Business Name": "CARING PEOPLE NJ OPERATING LLC",
+          "License/Registration": "HP0257500",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "United States",
+          "Business Address": "1169 Main Avenue",
+          "Business City": "Clifton",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07011",
+          "Business Phone": "(973)-859-2700"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=4",
+      "year": 2025,
+      "page": 4,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-014",
+      "page": 4,
+      "name": "Caring People",
+      "address_text": "1169 Main Avenue, Clifton, NJ 07011",
+      "phone_numbers": [
+        "9738592700"
+      ],
+      "services_text": "Registered Nurse; Certified Nurses Aide; Certified Home Health Aide;\n  Live-in",
+      "accepts_text": "Private pay, long term care insurance",
+      "source_text": "Caring People\n1169 Main Avenue, Clifton, NJ 07011\n(973) 859-2700\nwww.caringpeopleinc.com\n Services Offered: Registered Nurse; Certified Nurses Aide; Certified Home Health Aide;\n  Live-in\n Accepts: Private pay, long term care insurance"
+    },
+    "private_pay_text": "Private pay, long term care insurance",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-015",
+    "provider_id": "north-jersey-hp-hp0061600",
+    "official_registration_id": "HP0061600",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0061600",
+      "official_registration_id": "HP0061600",
+      "county": "Middlesex",
+      "registered_name": "CARING WORLD & HEALTH SERVICES, INC.",
+      "dba": "",
+      "runtime_name": "CARING WORLD & HEALTH SERVICES, INC.",
+      "registered_address": "1445 ROUTE 130 SOUTH ",
+      "address": "1445 ROUTE 130 SOUTH ",
+      "city": "NORTH BRUNSWICK",
+      "state": "NJ",
+      "zip": "08902",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "Municipality label, outside original six-county inventory",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "query": {
+          "License/Registration Number": "HP*",
+          "other_filters": "blank"
+        },
+        "displayed_rows": 3623,
+        "exported_rows": 3623,
+        "method": "Public portal search and its Click Here to Download XLSX export",
+        "source_date": null,
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "bytes": 334727,
+        "file": "raw/firms.xlsx",
+        "row": 914
+      },
+      "registration_source_rows": [
+        914
+      ],
+      "discovery_status": "new-supply-candidate",
+      "integration_note": "Proposed provider ID only. Not present in runtime or original inventory."
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0061600",
+        "name": "CARING WORLD & HEALTH SERVICES, INC.",
+        "dba": "",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "1445 ROUTE 130 SOUTH ",
+        "city": "NORTH BRUNSWICK",
+        "state": "NJ",
+        "zip": "08902",
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "query": {
+            "License/Registration Number": "HP*",
+            "other_filters": "blank"
+          },
+          "displayed_rows": 3623,
+          "exported_rows": 3623,
+          "method": "Public portal search and its Click Here to Download XLSX export",
+          "source_date": null,
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "bytes": 334727,
+          "file": "raw/firms.xlsx",
+          "row": 914
+        },
+        "source_fields": {
+          "source_row": 914,
+          "Business Name": "CARING WORLD & HEALTH SERVICES, INC.",
+          "License/Registration": "HP0061600",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "United States",
+          "Business Address": "1445 ROUTE 130 SOUTH ",
+          "Business City": "NORTH BRUNSWICK",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "08902",
+          "Business Phone": "(732)-698-0680"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=4",
+      "year": 2025,
+      "page": 4,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-015",
+      "page": 4,
+      "name": "Caring World & Health Services",
+      "address_text": "1445 US Highway 130, North Brunswick, NJ 08902",
+      "phone_numbers": [
+        "7326980680",
+        "7326980794"
+      ],
+      "services_text": "Certified Nurses Aide; Certified Home Health Aide; Live-in",
+      "accepts_text": "private pay, long term care insurance",
+      "source_text": "Caring World & Health Services\n1445 US Highway 130, North Brunswick, NJ 08902\n(732) 698-0680, (732) 698-0794 Fax\nwww.supercaring.com\n  Services Offered: Certified Nurses Aide; Certified Home Health Aide; Live-in\n  Accepts: private pay, long term care insurance"
+    },
+    "private_pay_text": "private pay, long term care insurance",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-022",
+    "provider_id": "north-jersey-hp-hp0219400",
+    "official_registration_id": "HP0219400",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "Exact agency name/street/Suite 320/city/ZIP. County toll-free phone matches first-party contact page. See sources/expert-contact.json."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "First-party contact page confirms county toll-free number, exact agency address and Suite 320. Registry local phone differs.",
+      "Territory page also contains directions to Suite 515. Use contact page Suite 320 for identity."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0219400",
+      "official_registration_id": "HP0219400",
+      "county": "Middlesex",
+      "registered_name": "EXPERT HOME CARE",
+      "dba": "EXPERT HEALTH CARE, HELPING HANDS, INC.",
+      "runtime_name": "EXPERT HOME CARE",
+      "registered_address": "317 GEORGE STREET, SUITE 320 ",
+      "address": "317 GEORGE STREET, SUITE 320 ",
+      "city": "NEW BRUNSWICK",
+      "state": "NJ",
+      "zip": "08901",
+      "license_status": "Active",
+      "license_expires": "2026-09-30",
+      "county_basis": "Municipality label, outside original six-county inventory",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "query": {
+          "License/Registration Number": "HP*",
+          "other_filters": "blank"
+        },
+        "displayed_rows": 3623,
+        "exported_rows": 3623,
+        "method": "Public portal search and its Click Here to Download XLSX export",
+        "source_date": null,
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "bytes": 334727,
+        "file": "raw/firms.xlsx",
+        "row": 1374
+      },
+      "registration_source_rows": [
+        1374
+      ],
+      "discovery_status": "new-supply-candidate",
+      "integration_note": "Proposed provider ID only. Not present in runtime or original inventory."
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0219400",
+        "name": "EXPERT HOME CARE",
+        "dba": "EXPERT HEALTH CARE, HELPING HANDS, INC.",
+        "license_status": "Active",
+        "license_expires": "2026-09-30",
+        "address": "317 GEORGE STREET, SUITE 320 ",
+        "city": "NEW BRUNSWICK",
+        "state": "NJ",
+        "zip": "08901",
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "query": {
+            "License/Registration Number": "HP*",
+            "other_filters": "blank"
+          },
+          "displayed_rows": 3623,
+          "exported_rows": 3623,
+          "method": "Public portal search and its Click Here to Download XLSX export",
+          "source_date": null,
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "bytes": 334727,
+          "file": "raw/firms.xlsx",
+          "row": 1374
+        },
+        "source_fields": {
+          "source_row": 1374,
+          "Business Name": "EXPERT HOME CARE",
+          "License/Registration": "HP0219400",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46295.1666666667",
+          "DBAs": "EXPERT HEALTH CARE, HELPING HANDS, INC.",
+          "Business Country": "United States",
+          "Business Address": "317 GEORGE STREET, SUITE 320 ",
+          "Business City": "NEW BRUNSWICK",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "08901",
+          "Business Phone": "(732)-937-5320"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=6",
+      "year": 2025,
+      "page": 6,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-022",
+      "page": 6,
+      "name": "Expert Home Care",
+      "address_text": "317 George Street, Suite 320, New Brunswick, NJ 08901",
+      "phone_numbers": [
+        "7329375810",
+        "8008482336"
+      ],
+      "services_text": "Home Health Aide; Live-in",
+      "accepts_text": "Private pay, long term care insurance",
+      "source_text": "Expert Home Care\n317 George Street, Suite 320, New Brunswick, NJ 08901\n(800) 848-2336, (732) 937-5810 Fax\nwww.experthomecare.com\n Services Offered: Home Health Aide; Live-in\n Accepts: Private pay, long term care insurance"
+    },
+    "private_pay_text": "Private pay, long term care insurance",
+    "nonmedical_services": [],
+    "served_territories": [],
+    "registration_status_caveat": {
+      "portal_status": "Active",
+      "license_expires": "2026-09-30",
+      "checked_at": "2026-11-14",
+      "observation_scope": "historical",
+      "current_eligibility_asserted": false,
+      "reason": "The portal reports Active, but the listed license expiration date elapsed before this check."
+    }
+  },
+  {
+    "entry_id": "morris-2025-025",
+    "provider_id": "north-jersey-hp-hp0023300",
+    "official_registration_id": "HP0023300",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0023300",
+      "official_registration_id": "HP0023300",
+      "county": "Middlesex",
+      "registered_name": "GENTLE CARE HOME SERVICES, INC.",
+      "dba": "",
+      "runtime_name": "GENTLE CARE HOME SERVICES, INC.",
+      "registered_address": "1180 STELTON ROAD ",
+      "address": "1180 STELTON ROAD ",
+      "city": "PISCATAWAY",
+      "state": "NJ",
+      "zip": "08854",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "Municipality label, outside original six-county inventory",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "query": {
+          "License/Registration Number": "HP*",
+          "other_filters": "blank"
+        },
+        "displayed_rows": 3623,
+        "exported_rows": 3623,
+        "method": "Public portal search and its Click Here to Download XLSX export",
+        "source_date": null,
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "bytes": 334727,
+        "file": "raw/firms.xlsx",
+        "row": 1526
+      },
+      "registration_source_rows": [
+        1526
+      ],
+      "discovery_status": "new-supply-candidate",
+      "integration_note": "Proposed provider ID only. Not present in runtime or original inventory."
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0023300",
+        "name": "GENTLE CARE HOME SERVICES, INC.",
+        "dba": "",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "1180 STELTON ROAD ",
+        "city": "PISCATAWAY",
+        "state": "NJ",
+        "zip": "08854",
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "query": {
+            "License/Registration Number": "HP*",
+            "other_filters": "blank"
+          },
+          "displayed_rows": 3623,
+          "exported_rows": 3623,
+          "method": "Public portal search and its Click Here to Download XLSX export",
+          "source_date": null,
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "bytes": 334727,
+          "file": "raw/firms.xlsx",
+          "row": 1526
+        },
+        "source_fields": {
+          "source_row": 1526,
+          "Business Name": "GENTLE CARE HOME SERVICES, INC.",
+          "License/Registration": "HP0023300",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "United States",
+          "Business Address": "1180 STELTON ROAD ",
+          "Business City": "PISCATAWAY",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "08854",
+          "Business Phone": "(732)-777-0021"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=6",
+      "year": 2025,
+      "page": 6,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-025",
+      "page": 6,
+      "name": "Gentle Care Home Services",
+      "address_text": "1180 Stelton Road, Piscataway, NJ 08854",
+      "phone_numbers": [
+        "7327770021"
+      ],
+      "services_text": "Registered Nurse; Certified Home Health Aide",
+      "accepts_text": "private pay, long term care insurance, JACC**",
+      "source_text": "Gentle Care Home Services\n1180 Stelton Road, Piscataway, NJ 08854\n(732) 777-0021, (732) 777-10224 Fax\nwww.gchshome.com\nServices Offered: Registered Nurse; Certified Home Health Aide\n  Accepts: private pay, long term care insurance, JACC**"
+    },
+    "private_pay_text": "private pay, long term care insurance, JACC**",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-033",
+    "provider_id": "north-jersey-hp-hp0367900",
+    "official_registration_id": "HP0367900",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County omits payment and services. Registry omits Suite 408 but agrees on fourth floor, street, city and exact phone. No payment or service claim generated."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0367900",
+      "official_registration_id": "HP0367900",
+      "county": "Essex",
+      "registered_name": "HCA DBA Home Helpers Home Care of Summit NJ",
+      "dba": "Home Helpers Home Care of Summit, NJ",
+      "runtime_name": "HCA DBA Home Helpers Home Care of Summit NJ",
+      "registered_address": "830 Morris Tpke 4th Floor",
+      "address": "830 Morris Tpke 4th Floor",
+      "city": "Short Hills",
+      "state": "NJ",
+      "zip": "07078",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ locality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 1684
+      },
+      "registration_source_rows": [
+        1684
+      ],
+      "source_county_file": "research/north-jersey/state/essex/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0367900",
+        "name": "HCA DBA Home Helpers Home Care of Summit NJ",
+        "dba": "Home Helpers Home Care of Summit, NJ",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "830 Morris Tpke 4th Floor",
+        "city": "Short Hills",
+        "state": "NJ",
+        "zip": "07078-2601",
+        "county": "Essex",
+        "county_basis": "NJ locality name match",
+        "county_candidates": [
+          "Essex"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 1684
+        },
+        "source_fields": {
+          "source_row": 1684,
+          "Business Name": "HCA DBA Home Helpers Home Care of Summit NJ",
+          "License/Registration": "HP0367900",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "Home Helpers Home Care of Summit, NJ",
+          "Business Country": "United States",
+          "Business Address": "830 Morris Tpke 4th Floor",
+          "Business City": "Short Hills",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07078-2601",
+          "Business Phone": "(732) 501-5793"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=8",
+      "year": 2025,
+      "page": 8,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-033",
+      "page": 8,
+      "name": "Home Helpers Cared-4",
+      "address_text": "830 Morris Turnpike, 4th Floor, Ste. 408\nShort Hills, NJ 07078",
+      "phone_numbers": [
+        "7325015793"
+      ],
+      "services_text": null,
+      "accepts_text": null,
+      "source_text": "Home Helpers Cared-4\n830 Morris Turnpike, 4th Floor, Ste. 408\nShort Hills, NJ 07078\n(732)501-5793\nwww.HomeHelpersHomeCare.com/Summit-NJ\n59053@homehelpershomecare.com"
+    },
+    "private_pay_text": null,
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-037",
+    "provider_id": "north-jersey-hp-hp0077800",
+    "official_registration_id": "HP0077800",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0077800",
+      "official_registration_id": "HP0077800",
+      "county": "Bergen",
+      "registered_name": "CENTURION ENTERPRISES, LLC DBA HOMEWELL CARE SERVICES",
+      "dba": "HOMEWELL CARE SERVICES",
+      "runtime_name": "CENTURION ENTERPRISES, LLC DBA HOMEWELL CARE SERVICES",
+      "registered_address": "15 DYATT PLACE ",
+      "address": "15 DYATT PLACE",
+      "city": "HACKENSACK",
+      "state": "NJ",
+      "zip": "07601",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 944
+      },
+      "registration_source_rows": [
+        944
+      ],
+      "source_county_file": "research/north-jersey/state/bergen/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "matched",
+      "evidence_record_ids": [
+        "homewell-hackensack-hp0077800"
+      ]
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0077800",
+        "name": "CENTURION ENTERPRISES, LLC DBA HOMEWELL CARE SERVICES",
+        "dba": "HOMEWELL CARE SERVICES",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "15 DYATT PLACE ",
+        "city": "HACKENSACK",
+        "state": "NJ",
+        "zip": "07601",
+        "county": "Bergen",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Bergen"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 944
+        },
+        "source_fields": {
+          "source_row": 944,
+          "Business Name": "CENTURION ENTERPRISES, LLC DBA HOMEWELL CARE SERVICES",
+          "License/Registration": "HP0077800",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "HOMEWELL CARE SERVICES",
+          "Business Country": "United States",
+          "Business Address": "15 DYATT PLACE ",
+          "Business City": "HACKENSACK",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07601",
+          "Business Phone": "(201)-487-9220"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=8",
+      "year": 2025,
+      "page": 8,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-037",
+      "page": 8,
+      "name": "HomeWell Care Services",
+      "address_text": "15 Dyatt Pl., Hackensack, NJ 07601",
+      "phone_numbers": [
+        "2014879220",
+        "2014879221"
+      ],
+      "services_text": "Certified Home Health Aide; Certified Nurses Aide; Companions; Live-in",
+      "accepts_text": "Long Term Care insurance, Private pay",
+      "source_text": "HomeWell Care Services\n15 Dyatt Pl., Hackensack, NJ 07601\n(201) 487-9220 (201) 487-9221 Fax\nwww.essex.homewellcares.com\nServices offered: Certified Home Health Aide; Certified Nurses Aide; Companions; Live-in\nAccepts: Long Term Care insurance, Private pay"
+    },
+    "private_pay_text": "Long Term Care insurance, Private pay",
+    "nonmedical_services": [
+      "Companions"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-043",
+    "provider_id": "north-jersey-hp-hp0245900",
+    "official_registration_id": "HP0245900",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name/street match registered DBA. First-party contact body confirms exact suite and county phone. See sources/katrix-contact.json."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County omits Suite 11. First-party contact body confirms registered Suite 11 and county phone. Registry phone differs.",
+      "First-party header also lists 47 Peach Tree Avenue. Historical county facts only. Current office address unresolved."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0245900",
+      "official_registration_id": "HP0245900",
+      "county": "Morris",
+      "registered_name": "KATRIX LLC DBA KATRIX HOME CARE & CONCIERGE SVCS",
+      "dba": "KATRIX HOME CARE & CONCIERGE SERVICES",
+      "runtime_name": "KATRIX LLC DBA KATRIX HOME CARE & CONCIERGE SVCS",
+      "registered_address": "434 RIDGEDALE AVENUE, SUITE 11",
+      "address": "434 RIDGEDALE AVENUE, SUITE 11",
+      "city": "EAST HANOVER",
+      "state": "NJ",
+      "zip": "07936",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 2094
+      },
+      "registration_source_rows": [
+        2094
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0245900",
+        "name": "KATRIX LLC DBA KATRIX HOME CARE & CONCIERGE SVCS",
+        "dba": "KATRIX HOME CARE & CONCIERGE SERVICES",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "434 RIDGEDALE AVENUE, SUITE 11",
+        "city": "EAST HANOVER",
+        "state": "NJ",
+        "zip": "07936",
+        "county": "Morris",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 2094
+        },
+        "source_fields": {
+          "source_row": 2094,
+          "Business Name": "KATRIX LLC DBA KATRIX HOME CARE & CONCIERGE SVCS",
+          "License/Registration": "HP0245900",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "KATRIX HOME CARE & CONCIERGE SERVICES",
+          "Business Country": "",
+          "Business Address": "434 RIDGEDALE AVENUE, SUITE 11",
+          "Business City": "EAST HANOVER",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07936",
+          "Business Phone": "(908)-304-5313"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=9",
+      "year": 2025,
+      "page": 9,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-043",
+      "page": 9,
+      "name": "Katrix Home Care & Concierge Services",
+      "address_text": "434 Ridgedale Avenue, East Hanover, NJ 07936",
+      "phone_numbers": [
+        "9735854229",
+        "9738840353"
+      ],
+      "services_text": "Houry care; Live-in care; Nursing assessments and visits, Essential services;\nConcierge services; RN; LPN; P.T.; O.T.; Social Workers; Home Health Aides.",
+      "accepts_text": "Medicaid, Private Pay, Long-term insurance, JACC**",
+      "source_text": "Katrix Home Care & Concierge Services\n434 Ridgedale Avenue, East Hanover, NJ 07936\n(973) 585-4229 (973) 884-0353 Fax\ninfo@mysite.com\nServices offered: Houry care; Live-in care; Nursing assessments and visits, Essential services;\nConcierge services; RN; LPN; P.T.; O.T.; Social Workers; Home Health Aides.\nAccepts: Medicaid, Private Pay, Long-term insurance, JACC**"
+    },
+    "private_pay_text": "Medicaid, Private Pay, Long-term insurance, JACC**",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-052",
+    "provider_id": "north-jersey-hp-hp0168700",
+    "official_registration_id": "HP0168700",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County omits registry Suite 8."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0168700",
+      "official_registration_id": "HP0168700",
+      "county": "Morris",
+      "registered_name": "AT HOME CARE DBA PREFERRED CARE AT HOME OF N W NJ",
+      "dba": "PREFERRED CARE AT HOME OF NORTH WEST NEW JERSEY",
+      "runtime_name": "AT HOME CARE DBA PREFERRED CARE AT HOME OF N W NJ",
+      "registered_address": "143 LAKESIDE BOULEVARD, SUITE 8",
+      "address": "143 LAKESIDE BOULEVARD, SUITE 8",
+      "city": "LANDING",
+      "state": "NJ",
+      "zip": "07850",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ locality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 467
+      },
+      "registration_source_rows": [
+        467
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0168700",
+        "name": "AT HOME CARE DBA PREFERRED CARE AT HOME OF N W NJ",
+        "dba": "PREFERRED CARE AT HOME OF NORTH WEST NEW JERSEY",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "143 LAKESIDE BOULEVARD, SUITE 8",
+        "city": "LANDING",
+        "state": "NJ",
+        "zip": "07850",
+        "county": "Morris",
+        "county_basis": "NJ locality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 467
+        },
+        "source_fields": {
+          "source_row": 467,
+          "Business Name": "AT HOME CARE DBA PREFERRED CARE AT HOME OF N W NJ",
+          "License/Registration": "HP0168700",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "PREFERRED CARE AT HOME OF NORTH WEST NEW JERSEY",
+          "Business Country": "",
+          "Business Address": "143 LAKESIDE BOULEVARD, SUITE 8",
+          "Business City": "LANDING",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07850",
+          "Business Phone": "(973)-512-5131"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=11",
+      "year": 2025,
+      "page": 11,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-052",
+      "page": 11,
+      "name": "Preferred Care at Home of Northwest New Jersey",
+      "address_text": "143 Lakeside Blvd.\nLanding, NJ 07850",
+      "phone_numbers": [
+        "9733986857",
+        "9735125131"
+      ],
+      "services_text": "Registered Nurse; Certified Home Health Aide",
+      "accepts_text": "Private Pay, Long term care insurance",
+      "source_text": "  Preferred Care at Home of Northwest New Jersey\n143 Lakeside Blvd.\nLanding, NJ 07850\n(973) 512-5131 (973) 398-6857 Fax\nServices Offered: Registered Nurse; Certified Home Health Aide\nAccepts: Private Pay, Long term care insurance"
+    },
+    "private_pay_text": "Private Pay, Long term care insurance",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-054",
+    "provider_id": "north-jersey-hp-hp0116700",
+    "official_registration_id": "HP0116700",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0116700",
+      "official_registration_id": "HP0116700",
+      "county": "Essex",
+      "registered_name": "PROGRESSIVE HOME CARE, INC.",
+      "dba": "",
+      "runtime_name": "PROGRESSIVE HOME CARE, INC.",
+      "registered_address": "570 BROAD STREET, SUITE 501",
+      "address": "570 BROAD STREET, SUITE 501",
+      "city": "NEWARK",
+      "state": "NJ",
+      "zip": "07102",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 2840
+      },
+      "registration_source_rows": [
+        2840
+      ],
+      "source_county_file": "research/north-jersey/state/essex/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0116700",
+        "name": "PROGRESSIVE HOME CARE, INC.",
+        "dba": "",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "570 BROAD STREET, SUITE 501",
+        "city": "NEWARK",
+        "state": "NJ",
+        "zip": "07102",
+        "county": "Essex",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Essex"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 2840
+        },
+        "source_fields": {
+          "source_row": 2840,
+          "Business Name": "PROGRESSIVE HOME CARE, INC.",
+          "License/Registration": "HP0116700",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "",
+          "Business Address": "570 BROAD STREET, SUITE 501",
+          "Business City": "NEWARK",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07102",
+          "Business Phone": "(973) 622-2321"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=11",
+      "year": 2025,
+      "page": 11,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-054",
+      "page": 11,
+      "name": "Progressive Home Care, Inc.",
+      "address_text": "570 Broad Street, Suite 501, Newark, NJ 07102",
+      "phone_numbers": [
+        "9736222321",
+        "9737350563"
+      ],
+      "services_text": "Registered Nurse; Licensed Practical Nurse; Certified Home Health Aide;\n Physical Therapy",
+      "accepts_text": "Private pay, long term care insurance, JACC",
+      "source_text": "Progressive Home Care, Inc.\n570 Broad Street, Suite 501, Newark, NJ 07102\n(973) 622-2321, (973) 735-0563 Fax\n www.bpseniorcare.com\n Services Offered: Registered Nurse; Licensed Practical Nurse; Certified Home Health Aide;\n Physical Therapy\nAccepts: Private pay, long term care insurance, JACC"
+    },
+    "private_pay_text": "Private pay, long term care insurance, JACC",
+    "nonmedical_services": [],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-056",
+    "provider_id": "north-jersey-hp-hp0045700",
+    "official_registration_id": "HP0045700",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0045700",
+      "official_registration_id": "HP0045700",
+      "county": "Morris",
+      "registered_name": "NUSOURCE TECH,INC DBA RIGHT AT HOME MORRIS COUNTY",
+      "dba": "RIGHT AT HOME MORRIS COUNTY",
+      "runtime_name": "NUSOURCE TECH,INC DBA RIGHT AT HOME MORRIS COUNTY",
+      "registered_address": "10 FAIRMOUNT AVENUE ",
+      "address": "10 FAIRMOUNT AVENUE",
+      "city": "CHATHAM",
+      "state": "NJ",
+      "zip": "07928",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 2580
+      },
+      "registration_source_rows": [
+        2580
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "candidate",
+      "evidence_record_ids": [
+        "right-at-home-morris"
+      ]
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0045700",
+        "name": "NUSOURCE TECH,INC DBA RIGHT AT HOME MORRIS COUNTY",
+        "dba": "RIGHT AT HOME MORRIS COUNTY",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "10 FAIRMOUNT AVENUE ",
+        "city": "CHATHAM",
+        "state": "NJ",
+        "zip": "07928",
+        "county": "Morris",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 2580
+        },
+        "source_fields": {
+          "source_row": 2580,
+          "Business Name": "NUSOURCE TECH,INC DBA RIGHT AT HOME MORRIS COUNTY",
+          "License/Registration": "HP0045700",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "RIGHT AT HOME MORRIS COUNTY",
+          "Business Country": "United States",
+          "Business Address": "10 FAIRMOUNT AVENUE ",
+          "Business City": "CHATHAM",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07928",
+          "Business Phone": "(973)-701-9832"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12",
+      "year": 2025,
+      "page": 12,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-056",
+      "page": 12,
+      "name": "Right At Home",
+      "address_text": "10 Fairmount Avenue, Chatham, NJ 07928",
+      "phone_numbers": [
+        "9737019617",
+        "9737019832"
+      ],
+      "services_text": "Certified Home Health Aide; Certified Nurses Aide; Companion; Live-in",
+      "accepts_text": "Private pay, Long term care insurance, veterans benefits",
+      "source_text": "Right At Home\n10 Fairmount Avenue, Chatham, NJ 07928\n(973) 701-9832, (973) 701-9617 Fax\nwww.rightathome.net/morrisnj\n Services Offered: Certified Home Health Aide; Certified Nurses Aide; Companion; Live-in\n Accepts: Private pay, Long term care insurance, veterans benefits"
+    },
+    "private_pay_text": "Private pay, Long term care insurance, veterans benefits",
+    "nonmedical_services": [
+      "Companion"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-057",
+    "provider_id": "north-jersey-hp-hp0353500",
+    "official_registration_id": "HP0353500",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County omits registry Suite 2B."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0353500",
+      "official_registration_id": "HP0353500",
+      "county": "Morris",
+      "registered_name": "CareBelongsHome, LLC",
+      "dba": "Right at Home",
+      "runtime_name": "CareBelongsHome, LLC",
+      "registered_address": "104 Broadway, Suite 2B",
+      "address": "104 Broadway, Suite 2B",
+      "city": "Denville",
+      "state": "NJ",
+      "zip": "07834",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 837
+      },
+      "registration_source_rows": [
+        837
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0353500",
+        "name": "CareBelongsHome, LLC",
+        "dba": "Right at Home",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "104 Broadway, Suite 2B",
+        "city": "Denville",
+        "state": "NJ",
+        "zip": "07834",
+        "county": "Morris",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 837
+        },
+        "source_fields": {
+          "source_row": 837,
+          "Business Name": "CareBelongsHome, LLC",
+          "License/Registration": "HP0353500",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "Right at Home",
+          "Business Country": "",
+          "Business Address": "104 Broadway, Suite 2B",
+          "Business City": "Denville",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07834",
+          "Business Phone": "(973) 400-4170"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12",
+      "year": 2025,
+      "page": 12,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-057",
+      "page": 12,
+      "name": "Right At Home",
+      "address_text": "104 Broadway, Denville, NJ 07834",
+      "phone_numbers": [
+        "9734004170",
+        "9739702008"
+      ],
+      "services_text": "Certified Home Health Aide; Certified Nurses Aide; Companion; Live-in",
+      "accepts_text": "Private pay",
+      "source_text": "Right At Home\n104 Broadway, Denville, NJ 07834\n(973) 400-4170 (973) 970-2008 Fax\nwww.rightathome.net/morrisnj\nServices offered: Certified Home Health Aide; Certified Nurses Aide; Companion; Live-in\nAccepts: Private pay"
+    },
+    "private_pay_text": "Private pay",
+    "nonmedical_services": [
+      "Companion"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-058",
+    "provider_id": "north-jersey-hp-hp0233100",
+    "official_registration_id": "HP0233100",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County spells Shelley Drive, registry says Shelle Drive. House number, suite, town, ZIP, brand and phone agree."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0233100",
+      "official_registration_id": "HP0233100",
+      "county": "Warren",
+      "registered_name": "J&E  DBA RIGHT AT HOME OF WARREN & SUSSEX COUNTY",
+      "dba": "RIGHT AT HOME OF WARREN AND SUSSEX COUNTY",
+      "runtime_name": "J&E  DBA RIGHT AT HOME OF WARREN & SUSSEX COUNTY",
+      "registered_address": "121 SHELLE DRIVE, SUITE 2A",
+      "address": "121 SHELLE DRIVE, SUITE 2A",
+      "city": "HACKETTSTOWN",
+      "state": "NJ",
+      "zip": "07840",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "Municipality label, outside original six-county inventory",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "query": {
+          "License/Registration Number": "HP*",
+          "other_filters": "blank"
+        },
+        "displayed_rows": 3623,
+        "exported_rows": 3623,
+        "method": "Public portal search and its Click Here to Download XLSX export",
+        "source_date": null,
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "bytes": 334727,
+        "file": "raw/firms.xlsx",
+        "row": 1998
+      },
+      "registration_source_rows": [
+        1998
+      ],
+      "discovery_status": "new-supply-candidate",
+      "integration_note": "Proposed provider ID only. Not present in runtime or original inventory."
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0233100",
+        "name": "J&E  DBA RIGHT AT HOME OF WARREN & SUSSEX COUNTY",
+        "dba": "RIGHT AT HOME OF WARREN AND SUSSEX COUNTY",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "121 SHELLE DRIVE, SUITE 2A",
+        "city": "HACKETTSTOWN",
+        "state": "NJ",
+        "zip": "07840",
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "query": {
+            "License/Registration Number": "HP*",
+            "other_filters": "blank"
+          },
+          "displayed_rows": 3623,
+          "exported_rows": 3623,
+          "method": "Public portal search and its Click Here to Download XLSX export",
+          "source_date": null,
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "bytes": 334727,
+          "file": "raw/firms.xlsx",
+          "row": 1998
+        },
+        "source_fields": {
+          "source_row": 1998,
+          "Business Name": "J&E  DBA RIGHT AT HOME OF WARREN & SUSSEX COUNTY",
+          "License/Registration": "HP0233100",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "RIGHT AT HOME OF WARREN AND SUSSEX COUNTY",
+          "Business Country": "",
+          "Business Address": "121 SHELLE DRIVE, SUITE 2A",
+          "Business City": "HACKETTSTOWN",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07840",
+          "Business Phone": "(908)-651-5408"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12",
+      "year": 2025,
+      "page": 12,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-058",
+      "page": 12,
+      "name": "Right at Home Warren and Sussex",
+      "address_text": "121 Shelley Drive, Suite 2A, Hackettstown, NJ 07840",
+      "phone_numbers": [
+        "9086515408",
+        "9086515409"
+      ],
+      "services_text": "Certified Home Health Aide; Certified Nurses Aide; Companion; Live-in",
+      "accepts_text": "Private pay, Long term care insurance, veterans benefits",
+      "source_text": "Right at Home Warren and Sussex\n121 Shelley Drive, Suite 2A, Hackettstown, NJ 07840\n(908) 651-5408 (908) 651-5409 Fax\nwww.rahnwj.com\nServices offered: Certified Home Health Aide; Certified Nurses Aide; Companion; Live-in\nAccepts: Private pay, Long term care insurance, veterans benefits"
+    },
+    "private_pay_text": "Private pay, Long term care insurance, veterans benefits",
+    "nonmedical_services": [
+      "Companion"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-060",
+    "provider_id": "north-jersey-hp-hp0068300",
+    "official_registration_id": "HP0068300",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0068300",
+      "official_registration_id": "HP0068300",
+      "county": "Bergen",
+      "registered_name": "SAMARITAN SERVICE, INC.",
+      "dba": "SAMARITAN SERVICE, INC.",
+      "runtime_name": "SAMARITAN SERVICE, INC.",
+      "registered_address": "111 WOOD STREET",
+      "address": "111 WOOD STREET",
+      "city": "ENGLEWOOD",
+      "state": "NJ",
+      "zip": "07631",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 3024
+      },
+      "registration_source_rows": [
+        3024
+      ],
+      "source_county_file": "research/north-jersey/state/bergen/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0068300",
+        "name": "SAMARITAN SERVICE, INC.",
+        "dba": "SAMARITAN SERVICE, INC.",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "111 WOOD STREET",
+        "city": "ENGLEWOOD",
+        "state": "NJ",
+        "zip": "07631",
+        "county": "Bergen",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Bergen"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 3024
+        },
+        "source_fields": {
+          "source_row": 3024,
+          "Business Name": "SAMARITAN SERVICE, INC.",
+          "License/Registration": "HP0068300",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "SAMARITAN SERVICE, INC.",
+          "Business Country": "",
+          "Business Address": "111 WOOD STREET",
+          "Business City": "ENGLEWOOD",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07631",
+          "Business Phone": "(201)-568-3781"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=12",
+      "year": 2025,
+      "page": 12,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-060",
+      "page": 12,
+      "name": "Samaritan Services Inc.",
+      "address_text": "111 Wood St., Englewood, NJ 07631",
+      "phone_numbers": [
+        "2015683771",
+        "2015683781"
+      ],
+      "services_text": "Registered Nurse; Licensed Practical Nurse; Certified Nurses Aide;\n Home Health Aide; Homemaker; Companion; Live-in",
+      "accepts_text": "Long term care insurance, private pay",
+      "source_text": "Samaritan Services Inc.\n111 Wood St., Englewood, NJ 07631\n(201) 568-3781, (201) 568-3771 Fax\nwww.samaritanservices.com\n Services Offered: Registered Nurse; Licensed Practical Nurse; Certified Nurses Aide;\n Home Health Aide; Homemaker; Companion; Live-in\n Accepts: Long term care insurance, private pay"
+    },
+    "private_pay_text": "Long term care insurance, private pay",
+    "nonmedical_services": [
+      "Homemaker",
+      "Companion"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-062",
+    "provider_id": "north-jersey-hp-hp0104400",
+    "official_registration_id": "HP0104400",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County omits registry second floor."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0104400",
+      "official_registration_id": "HP0104400",
+      "county": "Morris",
+      "registered_name": "HM SARROW, INC. D/B/A SENIOR HELPERS",
+      "dba": "",
+      "runtime_name": "HM SARROW, INC. D/B/A SENIOR HELPERS",
+      "registered_address": "214 MAIN STREET, 2ND FLOOR",
+      "address": "214 MAIN STREET, 2ND FLOOR",
+      "city": "MADISON",
+      "state": "NJ",
+      "zip": "07940",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 1782
+      },
+      "registration_source_rows": [
+        1782
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "matched",
+      "evidence_record_ids": [
+        "senior-helpers-madison-hp0104400"
+      ]
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0104400",
+        "name": "HM SARROW, INC. D/B/A SENIOR HELPERS",
+        "dba": "",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "214 MAIN STREET, 2ND FLOOR",
+        "city": "MADISON",
+        "state": "NJ",
+        "zip": "07940",
+        "county": "Morris",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 1782
+        },
+        "source_fields": {
+          "source_row": 1782,
+          "Business Name": "HM SARROW, INC. D/B/A SENIOR HELPERS",
+          "License/Registration": "HP0104400",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "",
+          "Business Country": "",
+          "Business Address": "214 MAIN STREET, 2ND FLOOR",
+          "Business City": "MADISON",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07940",
+          "Business Phone": "(973)-360-1500"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=13",
+      "year": 2025,
+      "page": 13,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-062",
+      "page": 13,
+      "name": "Senior Helpers",
+      "address_text": "214 Main Street, Madison, NJ 07940",
+      "phone_numbers": [
+        "9733601500",
+        "9733601550"
+      ],
+      "services_text": "Certified Home Health Aide; Certified Nurses Aide;\nHomemaker; Companions",
+      "accepts_text": "Long term care insurance, private pay",
+      "source_text": "Senior Helpers\n214 Main Street, Madison, NJ 07940\n(973) 360-1500, (973) 360-1550 Fax\nwww.seniorhelpers.com\nServices Offered: Certified Home Health Aide; Certified Nurses Aide;\nHomemaker; Companions\nAccepts: Long term care insurance, private pay"
+    },
+    "private_pay_text": "Long term care insurance, private pay",
+    "nonmedical_services": [
+      "Homemaker",
+      "Companions"
+    ],
+    "served_territories": []
+  },
+  {
+    "entry_id": "morris-2025-066",
+    "provider_id": "north-jersey-hp-hp0136300",
+    "official_registration_id": "HP0136300",
+    "scope": "exact_office",
+    "decision": "accepted",
+    "identity_basis": [
+      "County name or registered DBA, street address and telephone match retained registration row."
+    ],
+    "limitations": [
+      "County payment/service statements are from 2025, not confirmation of current terms or availability.",
+      "County omits registry Suite 32 within Building D. No competing suite asserted."
+    ],
+    "registry_record": {
+      "provider_id": "north-jersey-hp-hp0136300",
+      "official_registration_id": "HP0136300",
+      "county": "Morris",
+      "registered_name": "PODIAS ENTERPRISES LLC DBA SYNERGY HOMECARE",
+      "dba": "SYNERGY HOMECARE",
+      "runtime_name": "PODIAS ENTERPRISES LLC DBA SYNERGY HOMECARE",
+      "registered_address": "115 ROUTE 46 WEST BLDG. D, STE  32 ",
+      "address": "115 ROUTE 46 WEST BLDG. D, STE 32",
+      "city": "MOUNTAIN LAKES",
+      "state": "NJ",
+      "zip": "07046",
+      "license_status": "Active",
+      "license_expires": "2027-09-30",
+      "county_basis": "NJ municipality name match",
+      "source": {
+        "url": "https://rgbportal.dca.njoag.gov/public-view/",
+        "file": "raw/firms.xlsx",
+        "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+        "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+        "http_last_modified": null,
+        "row": 2747
+      },
+      "registration_source_rows": [
+        2747
+      ],
+      "source_county_file": "research/north-jersey/state/morris/home-care-firms.json",
+      "known_website": null,
+      "known_website_source": null,
+      "discovery_status": "not-researched"
+    },
+    "registry_rows": [
+      {
+        "record_kind": "home_care_firm_registration",
+        "official_registration_id": "HP0136300",
+        "name": "PODIAS ENTERPRISES LLC DBA SYNERGY HOMECARE",
+        "dba": "SYNERGY HOMECARE",
+        "official_type": "Health Care Services",
+        "license_status": "Active",
+        "license_expires": "2027-09-30",
+        "address": "115 ROUTE 46 WEST BLDG. D, STE  32 ",
+        "city": "MOUNTAIN LAKES",
+        "state": "NJ",
+        "zip": "07046",
+        "county": "Morris",
+        "county_basis": "NJ municipality name match",
+        "county_candidates": [
+          "Morris"
+        ],
+        "county_reference_sources": [
+          {
+            "url": "https://data.nj.gov/resource/k9xb-zgh4.json?%24limit=1000",
+            "file": "raw/municipalities.json",
+            "sha256": "890f23f7a5d55364482e69dbb543db5d5ddee46ce764061004132b1048fe071a",
+            "retrieved_at": "2026-11-12T15:01:19.579670+00:00",
+            "http_last_modified": "Wed, 26 Mar 2025 17:35:18 GMT"
+          },
+          {
+            "url": "https://www.nj.gov/cgi-bin/infobank/localsearch.pl",
+            "file": "raw/localities.html",
+            "sha256": "13a8e5c51af0106f128d58c401eec070d50af0e3eb2f3b9e77d5d6303a1cd437",
+            "retrieved_at": "2026-11-12T15:01:19.849674+00:00",
+            "http_last_modified": null
+          }
+        ],
+        "source_date": null,
+        "source": {
+          "url": "https://rgbportal.dca.njoag.gov/public-view/",
+          "file": "raw/firms.xlsx",
+          "sha256": "c533cc04af927e39c9e539381dbbf6bb1e20821f58dd3892c6d9c16a13716708",
+          "retrieved_at": "2026-11-12T15:01:27.707527+00:00",
+          "http_last_modified": null,
+          "row": 2747
+        },
+        "source_fields": {
+          "source_row": 2747,
+          "Business Name": "PODIAS ENTERPRISES LLC DBA SYNERGY HOMECARE",
+          "License/Registration": "HP0136300",
+          "License Type": "Health Care Services",
+          "License Status": "Active",
+          "Expiration Date": "46660.1666666667",
+          "DBAs": "SYNERGY HOMECARE",
+          "Business Country": "United States",
+          "Business Address": "115 ROUTE 46 WEST BLDG. D, STE  32 ",
+          "Business City": "MOUNTAIN LAKES",
+          "Business USA State": "NJ",
+          "Business Foreign State/Province": "",
+          "Business Zipcode": "07046",
+          "Business Phone": "(973)-394-5638"
+        }
+      }
+    ],
+    "county_source": {
+      "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+      "page_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=14",
+      "year": 2025,
+      "page": 14,
+      "checked_at": "2026-11-14",
+      "text_sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad",
+      "pdf_sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "county_office": {
+      "entry_id": "morris-2025-066",
+      "page": 14,
+      "name": "Synergy Home Care North West NJ",
+      "address_text": "115 Route 46 West, Building D, Mountain Lakes, NJ 07046",
+      "phone_numbers": [
+        "9733945638",
+        "9739094154"
+      ],
+      "services_text": "Certified Home Health Aides provide in-home personal care for all ages;\n  Hourly or live-in. Consistent 95% average client-satisfaction rating. Companionship and light\n  housekeeping also available. Management on call 24/7.",
+      "accepts_text": "Private Pay, Long Term Care Insurance",
+      "source_text": "Synergy Home Care North West NJ\n115 Route 46 West, Building D, Mountain Lakes, NJ 07046\n(973) 394-5638 (973) 909-4154 Fax\nServices Offered: Certified Home Health Aides provide in-home personal care for all ages;\n  Hourly or live-in. Consistent 95% average client-satisfaction rating. Companionship and light\n  housekeeping also available. Management on call 24/7.\n  Accepts: Private Pay, Long Term Care Insurance"
+    },
+    "private_pay_text": "Private Pay, Long Term Care Insurance",
+    "nonmedical_services": [
+      "Companionship and light\n  housekeeping also available"
+    ],
+    "served_territories": []
+  }
+]

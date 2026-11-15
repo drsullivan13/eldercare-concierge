@@ -16,7 +16,7 @@ export type ResearchSource = {
   url: string;
   title: string;
   publisher: string;
-  kind: "provider" | "regulator" | "review-platform" | "public-discussion";
+  kind: "provider" | "regulator" | "public-directory" | "review-platform" | "public-discussion";
   checkedAt: string;
   publishedAt: string | null;
   access: "full-page" | "search-result" | "pdf";

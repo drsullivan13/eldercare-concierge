@@ -1,0 +1,5 @@
+# County-reported payment and care services
+
+The Morris County Office on Aging directory is a historical source for a named office’s services and accepted payment. Page references are preserved. An active NJ registration and an exact office match are required for each public record. A missing entry says nothing about whether the family can obtain care. Harbor does not turn private-pay acceptance into a quoted rate, availability or a verified care visit.
+
+Run `python3 research/north-jersey/home-care-pay-services/transform.py` from the repository root to rebuild the county observations from the retained state, county and office inputs. Run `python3 research/north-jersey/home-care-pay-services/test_transform.py` for transformation tests. The North Jersey market build joins accepted entries through `scripts/regions/nj_pay_context.py`. Only offices in the published market are displayed. The supplementary first-party fee schedule for Bonjour could not be tied to an active branch and is excluded.

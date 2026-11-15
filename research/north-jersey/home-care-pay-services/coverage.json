@@ -1,0 +1,998 @@
+{
+  "checked_at": "2026-11-14",
+  "source_url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf",
+  "source_year": 2025,
+  "provenance": {
+    "county_text": {
+      "path": "research/north-jersey/home-care-pay-services/sources/hh-agencies-2025.txt",
+      "sha256": "156189aba7181b0953eb69f0b96578b57b5ea572e4a5af17d889e7ccc29457ad"
+    },
+    "county_pdf": {
+      "path": "research/north-jersey/home-care-pay-services/sources/hh-agencies-2025.pdf",
+      "sha256": "99deac0b4aa7ad5548c48229b620ba7b4b5ef1bde263e50bd7816c90dfa9a7f8"
+    },
+    "inventory": [
+      {
+        "path": "research/north-jersey/home-care-first-party/inventory.json",
+        "sha256": "a5857ad6e7e8db077827fc7dc8ecc0e0713286f29ebd68cc3156459ba1fd63d7"
+      },
+      {
+        "path": "research/north-jersey/home-care-pay-services/inventory-supplement.json",
+        "sha256": "8534ebac5a5bc894d372c7e1fdb4fc9954a2c28dd56d485f7368dcdb969aa063"
+      }
+    ],
+    "state": [
+      {
+        "path": "research/north-jersey/state/bergen/home-care-firms.json",
+        "sha256": "9dcb4283478df396cafb9234847cfa95b20860b4bd0e688f69e64dcb8331cef0"
+      },
+      {
+        "path": "research/north-jersey/state/essex/home-care-firms.json",
+        "sha256": "db292d469c149d0f39437e8b03a94f4c4414b7a260144fe519ea6049cc289392"
+      },
+      {
+        "path": "research/north-jersey/state/hudson/home-care-firms.json",
+        "sha256": "535a3d9c3358621a51cbfb3d60cf4e639c30e8aee581e60a838be5a23780d60e"
+      },
+      {
+        "path": "research/north-jersey/state/morris/home-care-firms.json",
+        "sha256": "07ffb010db01354cc9e91f7392878d04fc2c08f9ba23d7cb004e521f4d8fb4cf"
+      },
+      {
+        "path": "research/north-jersey/state/passaic/home-care-firms.json",
+        "sha256": "63ecb860b7c590a47d2a7a83ba0d7208bad9ad880f9f2d7d683805b228bd2b3d"
+      },
+      {
+        "path": "research/north-jersey/state/union/home-care-firms.json",
+        "sha256": "85d1b9c3c18ca9dbb4a201c2c11a7cdbc38ac1a9b90a513f9df3e19c5fe94955"
+      },
+      {
+        "path": "research/north-jersey/home-care-pay-services/state-supplement.json",
+        "sha256": "938202c46b59061de1abf2f9d0f006e79dd608d6e1e8e60c4f58f7146f8ee424"
+      }
+    ]
+  },
+  "county_entry_count": 72,
+  "entries_by_physical_page": {
+    "2": 5,
+    "3": 5,
+    "4": 6,
+    "5": 5,
+    "6": 4,
+    "7": 6,
+    "8": 6,
+    "9": 6,
+    "10": 6,
+    "11": 5,
+    "12": 6,
+    "13": 5,
+    "14": 5,
+    "15": 2
+  },
+  "active_inventory_count": 678,
+  "entries_with_candidates": 42,
+  "candidate_pair_count": 84,
+  "reviewed_entry_count": 72,
+  "accepted_entry_count": 20,
+  "accepted_provider_count": 20,
+  "unresolved_entry_count": 52,
+  "missing_services_count": 2,
+  "missing_accepts_count": 2,
+  "unresolved_cases": [
+    {
+      "entry_id": "morris-2025-001",
+      "page": 2,
+      "name": "Always Best Care Senior Services",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0180400"
+      ],
+      "review": {
+        "entry_id": "morris-2025-001",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Flanders office. Active Always Best Care candidates use West Orange addresses and different phones."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-003",
+      "page": 2,
+      "name": "Americarenj, Corp.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-003",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "HP0095300 at same street/phone is Expired."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-004",
+      "page": 2,
+      "name": "Angela’s Angels Home Health Agency",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0408400"
+      ],
+      "review": {
+        "entry_id": "morris-2025-004",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Active HP0408400 uses Riveredge address and different phone, not county Oradell branch."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-005",
+      "page": 2,
+      "name": "Atlantic Visiting Nurse",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-005",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Clinical home-health supply. No exact active HP office established. County ZIP 07690 retained as printed."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-009",
+      "page": 3,
+      "name": "Betty Nursing Services Home Care, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0194000"
+      ],
+      "review": {
+        "entry_id": "morris-2025-009",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Active Betty Nursing HP0194000 is in Union with a different phone, not county Englewood branch."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-011",
+      "page": 4,
+      "name": "Caliber Health Plus-Iselin",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0249200"
+      ],
+      "review": {
+        "entry_id": "morris-2025-011",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County phone shared by active Caliber branches, none at county Iselin address. County entry does not say private pay."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-012",
+      "page": 4,
+      "name": "CareFinders Total Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-012",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County address/phone match Expired FAMILY FIRST HOMECARE HP0116300. CARE FINDERS HP0181808 is Closed at different Parsippany address."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-013",
+      "page": 4,
+      "name": "CareFocus",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-013",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County phone resolves to Expired CAREFOCUS HP0125100 at Misty Lane, not county Misty Mountain Road."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-016",
+      "page": 4,
+      "name": "Claddagh Home Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-016",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone CLADDAGH HOMECARE HP0045500 is Expired. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-017",
+      "page": 5,
+      "name": "ComForCare Home Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0261600",
+        "north-jersey-hp-hp0333700"
+      ],
+      "review": {
+        "entry_id": "morris-2025-017",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Active CFCNJ HP0261600 shares phone but uses 45 Broadway, not county 66 Ford Road."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-018",
+      "page": 5,
+      "name": "Comfort Keepers",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0124500",
+        "north-jersey-hp-hp0132200",
+        "north-jersey-hp-hp0179100",
+        "north-jersey-hp-hp0241800",
+        "north-jersey-hp-hp0350700",
+        "north-jersey-hp-hp0413600",
+        "north-jersey-hp-hp0420900"
+      ],
+      "review": {
+        "entry_id": "morris-2025-018",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "181 New Road Suite 304 has unrelated active firms. No exact Comfort Keepers name/phone match. Co-location is not identity."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-019",
+      "page": 5,
+      "name": "Delight Care Home Health Agency",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-019",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Phone resolves to Expired Delight HP0059900 and Expired Broadway Respite HP0247300 at different floors/suites."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-020",
+      "page": 5,
+      "name": "Dorson Home Care Services",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-020",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone DORSON HP0060700 is Expired. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-021",
+      "page": 5,
+      "name": "Emerald Health Care Services, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-021",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact name/address/phone EMERALD HP0141300 is Expired. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-023",
+      "page": 6,
+      "name": "First Light Home Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-023",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone FIRSTLIGHT HP0238200 is Expired."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-024",
+      "page": 6,
+      "name": "Freedom Home Healthcare",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0279400",
+        "north-jersey-hp-hp0284300",
+        "north-jersey-hp-hp0302900",
+        "north-jersey-hp-hp0312800",
+        "north-jersey-hp-hp0319100"
+      ],
+      "review": {
+        "entry_id": "morris-2025-024",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Active AROSA HP0312800 shares phone but is in Englewood. County Freedom HP0169200 at One University Plaza is Expired."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-026",
+      "page": 7,
+      "name": "Glenlora Home Outreach Service",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-026",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone GLENLORA HP0043600 is Expired. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-027",
+      "page": 7,
+      "name": "Griswold Special Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-027",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Griswold office at 470 Ridgedale Avenue Suite 2D established."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-028",
+      "page": 7,
+      "name": "Heartfelt Home Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-028",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone HEARTFELT HP0152900 is Expired. Services line mixes Homemaker with payment wording, not all text is a service."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-029",
+      "page": 7,
+      "name": "Helpmates",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-029",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Helpmates office at 387 Passaic Avenue and county phone established. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-030",
+      "page": 7,
+      "name": "Hilda’s Helping Hands",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-030",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active HP registration for Hilda's Helping Hands established. County household support/private-pay claims remain unlinked. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-031",
+      "page": 7,
+      "name": "Holistic Care Medical Staffing LLC",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-031",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County phone resolves to Expired HOLISTIC CARE MEDICAL STAFFING HP0134000 in Rahway, not county Plainfield."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-032",
+      "page": 8,
+      "name": "Home Care/Assistance",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-032",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Home Care Assistance office at 55 Mountain Boulevard Suite 104 established."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-034",
+      "page": 8,
+      "name": "Home Instead",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0118200",
+        "north-jersey-hp-hp0297500",
+        "north-jersey-hp-hp0397500"
+      ],
+      "review": {
+        "entry_id": "morris-2025-034",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact county address/phone SNS/HOME INSTEAD HP0114800 is Closed. Active KS Care HP0397500 has different Parsippany address."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-035",
+      "page": 8,
+      "name": "Homewatch Caregivers of Morris",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0280400",
+        "north-jersey-hp-hp0408100",
+        "north-jersey-hp-hp0413400"
+      ],
+      "review": {
+        "entry_id": "morris-2025-035",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Active ANSSR'D CARE HP0280400 shares phone/name but uses 12 Castle Court, Randolph, not 55 Madison Avenue Suite 478."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-036",
+      "page": 8,
+      "name": "Homewatch CareGivers of Bridgewater",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-036",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Bridgewater Homewatch office at 991 US-22 Suite 201-50 and county phone established."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-038",
+      "page": 9,
+      "name": "HomeWell Senior Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0077800",
+        "north-jersey-hp-hp0249500"
+      ],
+      "review": {
+        "entry_id": "morris-2025-038",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact county address/phone MORRIS CARE SERVICES/HOMEWELL HP0182400 is Expired. Other active HomeWell branches are not substitutes."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-039",
+      "page": 9,
+      "name": "Humane Concepts Healthcare Professional, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-039",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact name/phone HUMANE CONCEPTS HP0038800 is Expired."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-040",
+      "page": 9,
+      "name": "Integral Care Home Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0331600"
+      ],
+      "review": {
+        "entry_id": "morris-2025-040",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Active CITADEL/INTEGRAL HP0331600 shares street/phone but registry city/ZIP are Morris Plains 07950, county says Morristown 07960. First-party homepage omits address. County has no payment statement."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-041",
+      "page": 9,
+      "name": "Interim Health Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0283100",
+        "north-jersey-hp-hp0346600",
+        "north-jersey-hp-hp0425700"
+      ],
+      "review": {
+        "entry_id": "morris-2025-041",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Interim office at 2414 Morris Avenue Suite 106 and county phone established. Other suites are different firms."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-042",
+      "page": 9,
+      "name": "Jewish Vocational Services",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0127200",
+        "north-jersey-hp-hp0282000",
+        "north-jersey-hp-hp0366200",
+        "north-jersey-hp-hp0432700"
+      ],
+      "review": {
+        "entry_id": "morris-2025-042",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County phone resolves to Expired JVS HP0177000 at 111 Prospect Street, not county 7 Glenwood Avenue."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-044",
+      "page": 10,
+      "name": "Loving Care Agency",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-044",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County phone resolves to Expired SECURA HP0200002 at 2 East Blackwell Street, not county 66 East McFarlan."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-045",
+      "page": 10,
+      "name": "Maxim Healthcare Services",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0035003"
+      ],
+      "review": {
+        "entry_id": "morris-2025-045",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Maxim office at 76 South Orange Avenue Suite 1 established. Other firm's Suite 309 is not the same care unit."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-046",
+      "page": 10,
+      "name": "My Girls Home Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-046",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active HP registration for My Girls Home Care at 34B Speedwell Avenue established. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-047",
+      "page": 10,
+      "name": "Nursing Care, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-047",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "NURSING CARE HP0032300 at same street is Expired. Registry phone matches county fax, not primary phone."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-048",
+      "page": 10,
+      "name": "Opt2care Senior Homecare Services",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-048",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "No exact active Opt2care office established. Phone appears on Expired HUMANA/SENIORBRIDGE HP0153900 in East Brunswick."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-049",
+      "page": 10,
+      "name": "Patient Care, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-049",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Clinical home-health supply. No exact active HP office at 400 Morris Avenue Suite 218 established. Heartfelt Suite 207 is different."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-050",
+      "page": 11,
+      "name": "Polish-American Care Agency, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-050",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County phone resolves to Expired POLISH AMERICAN SENIOR CARE HP0251400 in Clark, not county Linden."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-051",
+      "page": 11,
+      "name": "Precious Hands Home Care",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-051",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "PRECIOUS HANDS HP0258600 and HP0123700 are Expired. HP0123700 raw name includes AGENCY LICENSE IS SUSPENDED. Preserve warning."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-053",
+      "page": 11,
+      "name": "Preferred Home Health Care & Nursing Services Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0149300"
+      ],
+      "review": {
+        "entry_id": "morris-2025-053",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County address/name resembles Expired STOUFFERS HP0103500. Active PREFERRED/CARE OPTIONS FOR KIDS offices elsewhere are not substitutes."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-055",
+      "page": 12,
+      "name": "Qualicare of Morris and Essex",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-055",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone QCARE/QUALICARE HP0195100 is Expired."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-059",
+      "page": 12,
+      "name": "SAGE Eldercare",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0104800"
+      ],
+      "review": {
+        "entry_id": "morris-2025-059",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "SAGE HP0104800 matches name/street/city but registry phone differs. First-party homecare text confirms services but omits address/phone. Hold exact phone reconciliation."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-061",
+      "page": 13,
+      "name": "Senior Bridge Family Companies (NJ) Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-061",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone HUMANA/SENIORBRIDGE HP0258400 is Expired."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-063",
+      "page": 13,
+      "name": "Seniors In Place, LLC",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-063",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone SENIORS IN PLACE HP0148200 is Expired. Independent lead retained."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-064",
+      "page": 13,
+      "name": "Seniors Helping Seniors",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0285900",
+        "north-jersey-hp-hp0309800",
+        "north-jersey-hp-hp0404500",
+        "north-jersey-hp-hp0415400"
+      ],
+      "review": {
+        "entry_id": "morris-2025-064",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County suite 157 matches Expired JJD HP0182600. Active R&M HP0309800 shares building/phone but omits suite. Active successor exact-suite continuity not established."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-065",
+      "page": 13,
+      "name": "Senior Home Care Services, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-065",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "SENIOR HOME CARE SERVICES HP0027800 is Expired at 150-152 Speedwell, not county 2 Whippany Road. Same phone also on Expired THEKEY HP0312400."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-067",
+      "page": 14,
+      "name": "Touching Hearts at Home; North-Central New Jersey",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0229900"
+      ],
+      "review": {
+        "entry_id": "morris-2025-067",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Active L&M/TOUCHING HEARTS HP0229900 matches street/phone but uses Gillette 07933, county says Stirling 07980. Locality/ZIP not reconciled."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-068",
+      "page": 14,
+      "name": "Tri-State Home Healthcare Agency",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [],
+      "review": {
+        "entry_id": "morris-2025-068",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone TRI-STATE HP0056000 is Expired."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-069",
+      "page": 14,
+      "name": "VIP Care, Inc.",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0441200"
+      ],
+      "review": {
+        "entry_id": "morris-2025-069",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Exact address/phone VIP CARE HP0060002 is Expired. Active VIP HOME CARE SERVICES in Newark is different."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-070",
+      "page": 14,
+      "name": "Visiting Angels",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0065000",
+        "north-jersey-hp-hp0151500",
+        "north-jersey-hp-hp0154800",
+        "north-jersey-hp-hp0167700",
+        "north-jersey-hp-hp0221500",
+        "north-jersey-hp-hp0320800",
+        "north-jersey-hp-hp0408100",
+        "north-jersey-hp-hp0413400",
+        "north-jersey-hp-hp0438000"
+      ],
+      "review": {
+        "entry_id": "morris-2025-070",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "County phone shared with active Visiting Angels HP0055100 in Branchburg, not county Morristown. Co-located active firms have different names/phones."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-071",
+      "page": 15,
+      "name": "Visiting Nurse Association of Northern New Jersey (Affiliated Health Services, Inc.)",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0104000"
+      ],
+      "review": {
+        "entry_id": "morris-2025-071",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "VNANNJ AFFILIATED HEALTH SERVICES HP0104000 matches alias/street/city but phone differs. County's first-party URL returns 404. Hold phone reconciliation."
+        ]
+      }
+    },
+    {
+      "entry_id": "morris-2025-072",
+      "page": 15,
+      "name": "Visiting Nurse Association of Somerset Hills",
+      "reason": "no_provider_id",
+      "candidate_provider_ids": [
+        "north-jersey-hp-hp0022400"
+      ],
+      "review": {
+        "entry_id": "morris-2025-072",
+        "provider_id": null,
+        "decision": "unresolved",
+        "identity_basis": [],
+        "limitations": [
+          "Same address/phone VNA SOMERSET HILLS HP0213800 is Expired. Co-located active Atlantic Private Care is a different organization."
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "County directory listing is not an endorsement or proof of current availability.",
+    "Candidate signals do not establish exact-office identity and are never auto-promoted.",
+    "County listing does not establish served territories.",
+    "Health aide, nurse, therapy and live-in labels alone do not establish nonmedical services.",
+    "Private pay is source wording, not a rate or confirmation of current payment terms."
+  ]
+}
