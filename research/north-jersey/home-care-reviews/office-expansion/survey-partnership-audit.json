@@ -1,0 +1,57 @@
+{
+  "asOf": "2026-11-14",
+  "publishableAdditionalOfficeScores": 0,
+  "contacted": false,
+  "targets": "Unscored offices with an existing single review family of at least five; targeted program-level investigation and an exact North Brunswick case test.",
+  "evidence": [
+    {
+      "program": "Caring Stars 2026",
+      "result": "Annual presence and eligibility cutoffs only. No exact numerator or denominator published in the award roster. North Jersey winner Homewatch South Orange is distinct from Homewatch Bridgewater in North Brunswick; no transfer. Home Helpers Freehold and Visiting Angels Toms River likewise cannot stand for other offices.",
+      "sources": [
+        "https://www.caring.com/bestseniorliving/caring-stars-senior-care",
+        "https://www.caring.com/about/news-room/best-senior-care-2026"
+      ],
+      "contact": "reviews@caring.com (published awards/reviews contact; ask for data licensing team, not authority to redistribute)."
+    },
+    {
+      "program": "Activated Insights Best of Home Care",
+      "result": "Provider of Choice award qualification documents OSAT 8.75+ and 12 client and/or employee surveys; Leader in Experience covers both client and employee feedback. Neither award gives the actual client-only mean or the office-specific number of respondents. The public reviews FAQ describes a randomly selected percentage of the respondent pool, so the displayed account count cannot substitute for the full denominator.",
+      "sources": [
+        "https://info.activatedinsights.com/hubfs/2025%20Best%20of%20Home%20Care/2025%20Survey%20Questions%20and%202026%20Award%20Criteria.pdf",
+        "https://awards.activatedinsights.com/faq/"
+      ],
+      "contact": "Activated Insights sales, 208-356-7880 or https://benchmarking.homecarepulse.com/contact/; no public license verified."
+    },
+    {
+      "program": "Caring / Activated Insights upstream duplication",
+      "result": "Opted-in offices automatically feed reviews, ratings and badges to Caring. Require an origin breakdown and review IDs or a documented disjoint comparison before treating the sources as independently collected.",
+      "sources": [
+        "https://partners.caring.com/home-care-pulse-caring-com-partnership-expands-availability-agency-reviews/",
+        "https://activatedinsights.com/latest-news/home-care-pulse-partners-with-caring-com/"
+      ]
+    },
+    {
+      "program": "Homewatch CareGivers of Bridgewater",
+      "result": "Operator verifies current location at 1578 US 130, North Brunswick. Caring index lists only two reviews against a Bridgewater record, below secondary threshold. Birdeye indexes a 40-review Bradley Gardens listing; no eligible independent family or confirmed same-office continuum. Discovery leads only; no restricted-domain scrape.",
+      "sources": [
+        "https://www.homewatchcaregivers.com/bridgewater/contact-us/get-care-today/",
+        "https://www.caring.com/senior-care/new-jersey/bridgewater/homewatch-caregivers-of-bridgewater",
+        "https://reviews.birdeye.com/homewatch-caregivers-of-bridgewater-155751093504404"
+      ]
+    },
+    {
+      "program": "Being Patient / NJ NCI-AD",
+      "result": "Being Patient documents its use of official data or public online ratings, including Google; no new independently collected review family. NJ NCI-AD public consumer survey reports state-level denominators and estimates, without office-specific data.",
+      "sources": [
+        "https://beingpatient.com/directory/methodology",
+        "https://nci-ad.org/upload/state-reports/NCI-AD_22-23_NJ_State_Report.pdf"
+      ]
+    }
+  ],
+  "requestedLicenseFields": [
+    "NJ license/DBA, exact physical office and changes",
+    "client/family-only arithmetic mean, exact item, scale, responding client count, denominator definition, start/end and as-of dates",
+    "whether staff are surveyed separately, sampling and exclusions, overlap with other feeds, upstream origin",
+    "permission to persist, transform, score, display and refresh"
+  ]
+}
