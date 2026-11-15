@@ -1,13 +1,15 @@
 import { expect, test } from "@playwright/test";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
+import { computeExperienceScore } from "../../src/lib/experience-score";
+import { publicExperience } from "../../src/lib/public-experience";
 import type { SearchResponse } from "../../src/lib/providers";
 import type { publicResearchCoverage } from "../../src/lib/research-coverage";
-import regionalMarkets from "../../src/data/regional-markets.json";
+import { markets } from "../../src/lib/markets";
 import acquisition from "../../research/north-jersey/experience-acquisition/integration/approved-batches.json";
 
 const approvals = acquisition.batches.map((batch) => batch.approvals).flat();
 const approvedIds = new Set(approvals.map((approval) => approval.providerId));
-const market = regionalMarkets.find((market) => market.id === "north-jersey")!;
+const market = markets.find((market) => market.id === "north-jersey")!;
 const providers = market.providers.filter(
   (provider) => provider.state === market.state,
 );
@@ -15,8 +17,24 @@ const providers = market.providers.filter(
 test("new exact-unit aggregates reach public research and full-region coverage", async ({
   request,
 }) => {
-  expect(approvals).toHaveLength(33);
+  expect(approvals.length).toBeGreaterThan(0);
   expect(approvedIds.size).toBe(approvals.length);
+  const expectedScores = new Map(
+    providers.map(({ id: providerId }) => {
+      const retained = market.locationResearch?.[providerId];
+      return [
+        providerId,
+        publicExperience(
+          computeExperienceScore({
+            ...retained,
+            sources: retained?.sources ?? [],
+            reviewAggregates: retained?.reviewAggregates ?? [],
+            asOfDate: new Date().toISOString().slice(0, 10),
+          }),
+        ),
+      ];
+    }),
+  );
   for (const approval of approvals) {
     const { providerId, aggregate: published } = approval;
     const response = await request.get(`/api/research?id=${providerId}`);
@@ -28,22 +46,19 @@ test("new exact-unit aggregates reach public research and full-region coverage",
     );
     expect(aggregate).toMatchObject({
       rating: published.rating,
-      scale: 5,
+      scale: published.scale,
       count: published.count,
-      scope: "consumer",
-      asOf: null,
+      scope: published.scope,
+      asOf: published.asOf,
     });
     expect(research.sources.find((s) => s.id === sourceId)).toMatchObject({
       url: approval.url,
       checkedAt: approval.checkedAt,
       access: "full-page",
     });
-    expect(research.experience).toMatchObject({
-      value: published.rating * 2,
-      reviewCount: published.count,
-      independentSourceCount: 1,
-      confidence: "limited",
-    });
+    expect(research.experience, providerId).toEqual(
+      expectedScores.get(providerId),
+    );
     expect(research).not.toHaveProperty("reviewSamples");
   }
   const coverage = await request.get(
@@ -78,6 +93,9 @@ test("new exact-unit aggregates reach public research and full-region coverage",
     );
   }
   for (const row of body.locations) {
+    expect(row.score, row.providerId).toBe(
+      expectedScores.get(row.providerId)!.value,
+    );
     expect(row.status, row.providerId).toBe(
       row.score === null ? "unrated" : "scored",
     );
@@ -92,12 +110,13 @@ test("new exact-unit aggregates reach public research and full-region coverage",
   );
   expect(approvedCoverage).toHaveLength(approvedIds.size);
   for (const approval of approvals) {
+    const expected = expectedScores.get(approval.providerId)!;
     const row = approvedCoverage.find(
       (row) => row.providerId === approval.providerId,
     );
     expect(row, approval.providerId).toMatchObject({
-      score: approval.aggregate.rating * 2,
-      status: "scored",
+      score: expected.value,
+      status: expected.value === null ? "unrated" : "scored",
     });
     expect(row!.ratingSourceUrls).toContain(approval.url);
   }

@@ -63,6 +63,7 @@ test("the keyboard demo preserves shortlist and manual selections and drills int
   await choices.nth(0).check();
   await choices.nth(1).check();
   await navigate(page, "Overview");
+  await expect(page.getByRole("heading", { level: 1 })).toBeFocused();
   const before = await page.evaluate((key) => localStorage.getItem(key), key);
   const lookup = page.waitForRequest((request) => {
     const url = new URL(request.url());
@@ -72,6 +73,7 @@ test("the keyboard demo preserves shortlist and manual selections and drills int
     );
   });
   await entry.focus();
+  await expect(entry).toBeFocused();
   await page.keyboard.press("Enter");
   const request = await lookup;
   expect(new URL(request.url()).searchParams.get("market")).toBe(

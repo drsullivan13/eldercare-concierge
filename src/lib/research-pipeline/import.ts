@@ -809,6 +809,18 @@ export function validateResearchImport(input: {
   }
   duplicateGroups.sort((a, b) => a.id.localeCompare(b.id));
   for (const observation of staged) observation.duplicateGroupIds.sort();
+  const observationCounts = new Map<string, Map<string | null, number>>();
+  for (const observation of staged) {
+    let counts = observationCounts.get(observation.runId);
+    if (!counts) {
+      counts = new Map<string | null, number>();
+      observationCounts.set(observation.runId, counts);
+    }
+    counts.set(
+      observation.providerId,
+      (counts.get(observation.providerId) ?? 0) + 1,
+    );
+  }
   const coverageIds = new Set<string>();
   coverageRows.forEach((r, index) => {
     const row = index + 2,
@@ -862,12 +874,9 @@ export function validateResearchImport(input: {
         "count_invalid",
         "Observation count must be a whole number from 0 to 10,000, not a people count.",
       );
-    const exact = staged.filter(
-      (o) => o.providerId === r.provider_id && o.runId === r.run_id,
-    ).length;
-    const unresolved = staged.filter(
-      (o) => !o.providerId && o.runId === r.run_id,
-    ).length;
+    const counts = observationCounts.get(r.run_id);
+    const exact = counts?.get(r.provider_id) ?? 0;
+    const unresolved = counts?.get(null) ?? 0;
     if (count < exact || count > exact + unresolved)
       issue(
         "coverage",

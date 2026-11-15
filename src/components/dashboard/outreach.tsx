@@ -312,6 +312,12 @@ function OutreachPlanAction({
   const [added, setAdded] = useState(false);
   const [error, setError] = useState("");
   const uid = useId();
+  let actionLabel = "Add to plan";
+  if (added) {
+    actionLabel = "Added to plan";
+  } else if (step.length > 200) {
+    actionLabel = "Summarize for plan";
+  }
   function save(value: string) {
     if (!addTask(value, providerId)) {
       setError(
@@ -359,13 +365,9 @@ function OutreachPlanAction({
           className="text-link"
           disabled={added}
           onClick={() => (step.length > 200 ? setEditing(true) : save(step))}
-          aria-label={`${added ? "Added to plan" : step.length > 200 ? "Summarize for plan" : "Add to plan"}: ${step}`}
+          aria-label={`${actionLabel}: ${step}`}
         >
-          {added
-            ? "Added to plan"
-            : step.length > 200
-              ? "Summarize for plan"
-              : "Add to plan"}
+          {actionLabel}
         </button>
       )}
       {added && (
@@ -414,12 +416,15 @@ function OutreachEntry({
       commitments.set(key, { text: commitment.text, kinds: [commitment.kind] });
     }
   }
-  const nextSteps = [
-    ...new Map(record.nextSteps.map((step) => [textKey(step), step])).values(),
-  ];
+  const nextSteps = new Map(
+    record.nextSteps.map((step) => [textKey(step), step]),
+  );
+  const remainingNextSteps = [...nextSteps].filter(
+    ([key]) => !commitments.has(key),
+  );
   const supportingText = new Set([
     ...commitments.keys(),
-    ...nextSteps.map(textKey),
+    ...nextSteps.keys(),
     textKey(record.brief.question),
   ]);
   const disclaimer = `Rehearsal only. These are the practice receptionist's own words, not verified facts about ${record.brief.providerName}. No real placement, tour or booking was made.`;
@@ -489,7 +494,7 @@ function OutreachEntry({
           </p>
           <ul className={styles.commitmentList}>
             {[...commitments].map(([key, commitment]) => {
-              const step = nextSteps.find((item) => textKey(item) === key);
+              const step = nextSteps.get(key);
               return (
                 <li key={key}>
                   <div className={styles.commitmentKinds}>
@@ -517,22 +522,20 @@ function OutreachEntry({
           </ul>
         </div>
       )}
-      {nextSteps.some((step) => !commitments.has(textKey(step))) && (
+      {remainingNextSteps.length > 0 && (
         <div className={styles.detail}>
           <h4>Next steps to confirm</h4>
           <ul className={styles.nextSteps}>
-            {nextSteps
-              .filter((step) => !commitments.has(textKey(step)))
-              .map((step) => (
-                <li key={textKey(step)}>
-                  <span>{step}</span>
-                  <OutreachPlanAction
-                    step={step}
-                    providerId={record.brief.providerId}
-                    addTask={addTask}
-                  />
-                </li>
-              ))}
+            {remainingNextSteps.map(([key, step]) => (
+              <li key={key}>
+                <span>{step}</span>
+                <OutreachPlanAction
+                  step={step}
+                  providerId={record.brief.providerId}
+                  addTask={addTask}
+                />
+              </li>
+            ))}
           </ul>
         </div>
       )}
@@ -544,9 +547,9 @@ function OutreachEntry({
           )}
           {record.brief.question &&
             !commitments.has(textKey(record.brief.question)) &&
-            !nextSteps.some(
-              (step) => textKey(step) === textKey(record.brief.question),
-            ) && <p className={styles.questionText}>{record.brief.question}</p>}
+            !nextSteps.has(textKey(record.brief.question)) && (
+              <p className={styles.questionText}>{record.brief.question}</p>
+            )}
         </div>
       )}
       <div className={styles.detail}>
