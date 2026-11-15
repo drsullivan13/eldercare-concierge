@@ -12,6 +12,11 @@
       "sha256": "2f89a88fd7d444b228ba7f9d5c33d26c7ad860a3a929040917dad48b80615a6a"
     },
     {
+      "bytes": 4944,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/collector-receipts.json",
+      "sha256": "738559ebe5c4be51ba962544b44407776f9c1484275eac44cedf05d49e023c3c"
+    },
+    {
       "bytes": 32631,
       "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/collector-receipts.json",
       "sha256": "a09a3d2e363eb9a2824e0de0acb9df11e7d039459b078b59e228446c3c86edb8"
@@ -33,20 +38,90 @@
     }
   ],
   "counts": {
-    "approved": 104,
+    "approved": 105,
     "excerptCandidates": 204,
     "excluded": 0,
-    "included": 104,
-    "observations": 104,
+    "included": 105,
+    "observations": 105,
     "pendingOrInventory": 10,
-    "providers": 104,
+    "providers": 105,
     "publishedExcerpts": 73
   },
   "inputs": [
     {
-      "bytes": 74257,
+      "bytes": 77393,
       "path": "research/north-jersey/experience-acquisition/integration/approved-batches.json",
-      "sha256": "08a01fff4658cc7607526ca6b50f28f63918db6eccc81bd1b4baa6765b5081f4"
+      "sha256": "97b52a66a793f33f65358776b3a009e93ea96e80572356bd33a4b8a666e6620d"
+    },
+    {
+      "bytes": 2450,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/access.json",
+      "sha256": "242fbb01dd7efb57f199de1ce1c7351900289ee4ebbff530b1f82531439f022f"
+    },
+    {
+      "bytes": 648,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/aliases.json",
+      "sha256": "b71b04880fb389587f8d23aa294d1f473be0275667a20d7d1ffe03ae75eb4127"
+    },
+    {
+      "bytes": 864,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/avalon-street-corroboration.json",
+      "sha256": "b1a04c080c4a4e14ee7f80e24dfdd83c2b830bd46749f6d3ab540da96e0c2a9d"
+    },
+    {
+      "bytes": 2627,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/batch.json",
+      "sha256": "6b64d820877319aaf26910302fc551745832fa2e81431282207229c6cd10cfb5"
+    },
+    {
+      "bytes": 9253,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/collection/avalon-rehab-and-care-center.json",
+      "sha256": "c61c00d0706924b30370df77ab7536a002543c9a50c24513f0c220caf88c93f4"
+    },
+    {
+      "bytes": 9374,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/collection/careone-at-the-cupola.json",
+      "sha256": "5f6553cba0170a475af790ecc62b52ad52f039e7050ce6502fa789340316dd06"
+    },
+    {
+      "bytes": 972,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/identity-checks/avalon.json",
+      "sha256": "138cc6fbf9b5a080a621dc58cab26f1305f165af0471f4970f88ee693621511a"
+    },
+    {
+      "bytes": 2773,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/independent-review.json",
+      "sha256": "120687a92af14ce7575435967c4d20f08233d546d21077c54a0635b773921dc4"
+    },
+    {
+      "bytes": 420,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/primary/avalon-operator.json",
+      "sha256": "142934d40a458bfb114fc245cfa87e81bdc0a2ec307fb64fb0fa375a6771c0cd"
+    },
+    {
+      "bytes": 472,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/primary/avalon-regulatory.json",
+      "sha256": "b259602f0f73f0177b1634d043819cf2b094baf2e5a9a8f92aa5f8f570b54940"
+    },
+    {
+      "bytes": 3965,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/proposals.json",
+      "sha256": "e6fb7faabf6ebbfe2d4e6e1b38baa69fe519ce7d4aae3bbdf659bab0b26f0e70"
+    },
+    {
+      "bytes": 4716,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/reviewed.json",
+      "sha256": "91e13eb48e6c015474a0a415f7cda01e490058de48a0b2cc9b0f9dc89cefd0a8"
+    },
+    {
+      "bytes": 2566,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/source-checks/avalon-rehab-and-care-center.json",
+      "sha256": "460d4658f9e7b7596d5c36d3ecc1282504bdeb6ca8ffcff21a9603c0220f62db"
+    },
+    {
+      "bytes": 2706,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/source-checks/careone-at-the-cupola.json",
+      "sha256": "b7d91533834b29d57a0cb84ad78f3d5ebcc2884e1be187f8c724281e7c3c3ea6"
     },
     {
       "bytes": 659,
@@ -432,6 +507,16 @@
       "bytes": 1669,
       "path": "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/source.json",
       "sha256": "b3b72945df5cf20911ff7af98c2fc829e0d4f1373813601b66d9a52d6450ee49"
+    },
+    {
+      "bytes": 4944,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/collector-receipts.json",
+      "sha256": "738559ebe5c4be51ba962544b44407776f9c1484275eac44cedf05d49e023c3c"
+    },
+    {
+      "bytes": 4452,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/independent-checks/avalon-rehab-and-care-center.json",
+      "sha256": "aeae80f95c6bda0c1b3b0565ea571c2f6a9e1fdf832474a5eb48ab54e69b1cd7"
     },
     {
       "bytes": 32631,
@@ -1094,9 +1179,9 @@
       "sha256": "78563a501c95f0a65c5703881050fd1c4d66fb8f39f9ba36942da3298eb6feea"
     },
     {
-      "bytes": 22289,
+      "bytes": 23113,
       "path": "research/north-jersey/review-release/identity-corroboration.json",
-      "sha256": "44e0c2bb6b6cdde7292800496fca5852af73855a2e45ec75f5c62c1f7643c4e8"
+      "sha256": "18adc379508d3d734a01de8c837727d4504bf85ce0fb2b520e1f665f03b89135"
     },
     {
       "bytes": 1469,
@@ -1230,12 +1315,12 @@
     }
   ],
   "outputs": {
-    "approvals-audit.json": "9c7783b26c2f7a835a21e0ddd92e575a79eb622f97665ed3c03ba3c1d49c6e60",
+    "approvals-audit.json": "a114cbf5294ca88652344b59225b818eb4dec1880fa2ede86f87c1137d0dcb2a",
     "excerpt-audit.json": "611b4341690e50fd0dd0b203fba66b80f082b629dbe8a7626c843b326d6a1e28",
     "exclusions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-    "experience-verification.json": "a1252f16cae9b2154a4e87d57aad2f841f56f690dd2b127ff6639b1d2f4a7a22",
-    "locationResearch.json": "6d776d86e9a30af385d6bbd6d13b3a4a56e6f5134f6f0a0c91cdf3ae2e3b8b48",
-    "observation-registry.json": "8701a3e856db09121f0c12991addbcacb38e226b90dcf0162e0a35d7a8c79aa7",
+    "experience-verification.json": "535fc7ed6542da63ef009ad35aa0b2c2aa6e69ac785e926a79b472e35c789f4b",
+    "locationResearch.json": "56ec1db74053df66dd21749e2ef3084a9d6a98481da087ba43672f5a1221c126",
+    "observation-registry.json": "1f2a109ab75a870a3587f6c31c5462e058bccdeec7a7d82364c43f9e09e0531b",
     "staging.json": "0cfbb4798aca802800de9ce15d361a7320525f87b350339dbd12a0241a84a5e1"
   },
   "rosterIdentitySha256": "71a3ab4a7f48704a2d7b9490f3a53f6590b7cf26b2bbceec394cfcc4ad1f5da5",
@@ -1246,6 +1331,6 @@
   },
   "transformer": {
     "path": "scripts/regions/release-reviews.py",
-    "sha256": "c894fe77cc6869ff35ce98fa72392a026cc418c0a9111fbf1ca85dc56f419693"
+    "sha256": "138f54c756e4607913e0ef9d281e0154858865719f1bbc8241d1b7a96e1c636c"
   }
 }

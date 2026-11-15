@@ -1,0 +1,67 @@
+{
+  "url": "https://www.mylivingchoice.com/property/avalon-rehab-and-care-center",
+  "identity": {
+    "name": "Avalon Rehab and Care Center",
+    "address": "2020 NJ-23",
+    "city": "Wayne",
+    "state": "New Jersey",
+    "zip": "07470",
+    "careUnit": "Skilled Nursing / Long Term Care"
+  },
+  "aggregate": {
+    "rating": 4.5,
+    "count": 149,
+    "scale": 5,
+    "asOf": null,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "inspection": "full-page",
+  "httpStatus": 200,
+  "checkedAt": "2026-11-15",
+  "bodySha256": "d005e576eea035108e7f36d731defabb4ae5f0f6726b68cd4998ad333396806f",
+  "observedAt": "2026-11-15T13:12:39.941841+00:00",
+  "scopeHold": null,
+  "googlePlaceIds": [
+    "0x89c303dd8a0624c9:0xddd8c101e46a7dc2"
+  ],
+  "population": {
+    "visibleCount": 5,
+    "rows": [
+      {
+        "id": "mlc-google-312150",
+        "date": "2026-05",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-312151",
+        "date": "2026-05",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-312148",
+        "date": "2026-04",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-312152",
+        "date": "2026-04",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-312149",
+        "date": "2026-03",
+        "sentiment": "positive"
+      }
+    ]
+  },
+  "populationReview": "Google's 4.5/5 average covers 149 ratings and is republished by MyLivingChoice, not an independent second source. All five displayed accounts were independently reviewed, three residents and two family members, all positive and describing rehabilitation stays. This platform-selected window does not establish the experience of all 149 writers or long-stay residents. The aggregate may include short- and long-stay feedback for this one licensed nursing facility. Its publication date is unknown. NJ DOH's current detail page uses the prior Atrium Post Acute Care Of Wayneview name. CMS and the operator use Avalon at the same street, phone and 170-bed nursing unit. Some ratings may predate the rename.",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/collection/avalon-rehab-and-care-center.json",
+    "sha256": "c61c00d0706924b30370df77ab7536a002543c9a50c24513f0c220caf88c93f4"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/independent-review.json",
+    "sha256": "120687a92af14ce7575435967c4d20f08233d546d21077c54a0635b773921dc4"
+  }
+}

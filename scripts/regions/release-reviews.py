@@ -296,7 +296,71 @@ def comparable_name(value, category):
     return token(name)
 
 
-def validate_identity(approval, observed, providers, crosswalk, aliases=()):
+def validate_street_corroboration(approval, provider, providers, crosswalk, inputs):
+    require(inputs is not None, "Street corroboration requires hash-bound primary evidence")
+    reference = approval["streetCorroboration"]
+    proof = parse_json(inputs.bound(reference))
+    require(Path(reference["path"]).is_relative_to(ACQUISITION),
+            "Street corroboration must stay inside experience-acquisition")
+    fields(proof, "providerId officialId observedIdentity officialAddress category phone primarySources",
+           "street corroboration")
+    identity = approval["identity"]
+    require(proof["providerId"] == approval["providerId"]
+            and proof["officialId"] == approval["officialId"]
+            and proof["observedIdentity"] == identity
+            and proof["officialAddress"] == provider["address"]
+            and proof["category"] == provider["category"]
+            and identity["zip"] is not None
+            and token(proof["phone"]) == token(provider.get("phone", ""))
+            and text_value(proof["phone"]),
+            "Street corroboration exact identity mismatch")
+    siblings = {
+        row["providerId"] for row in crosswalk
+        if row.get("status") == "included" and row.get("providerId") in providers
+        and provider_street(providers[row["providerId"]]) == provider_street(provider)
+        and token(providers[row["providerId"]]["city"]) == token(provider["city"])
+        and providers[row["providerId"]]["zip"][:5] == provider["zip"][:5]
+        and compatible_unit(identity["careUnit"], providers[row["providerId"]]["category"])
+    }
+    require(siblings == {approval["providerId"]}, "Street corroboration has ambiguous care-unit identity")
+    require(isinstance(proof["primarySources"], list) and len(proof["primarySources"]) == 2,
+            "Street corroboration requires separate operator and regulatory witnesses")
+    witnesses = {}
+    for source in proof["primarySources"]:
+        require(source["path"] not in {reference["path"], approval["observation"]["path"],
+                                      approval["material"]["path"]}
+                and Path(source["path"]).is_relative_to(ACQUISITION),
+                "Street corroboration requires separate primary witnesses")
+        witness = parse_json(inputs.bound(source))
+        fields(witness, "sourceType kind sourceUrl checkedAt inspection httpStatus name addresses "
+               "city state zip phone careUnit officialId", "primary street witness")
+        require(witness["sourceType"] == "PRIMARY" and witness["kind"] in ("operator", "regulatory")
+                and witness["kind"] not in witnesses and witness["httpStatus"] == 200
+                and witness["inspection"] == "full-page"
+                and valid_date(witness["checkedAt"])
+                and witness["checkedAt"] == approval["checkedAt"]
+                and canonical_url(witness["sourceUrl"]) != canonical_url(approval["url"])
+                and text_value(witness["name"])
+                and isinstance(witness["addresses"], list) and witness["addresses"]
+                and all(text_value(address) for address in witness["addresses"])
+                and token(witness["city"]) == token(identity["city"])
+                and token(witness["state"]) in ("nj", "newjersey")
+                and witness["zip"] == identity["zip"][:5] == provider["zip"][:5]
+                and token(witness["phone"]) == token(proof["phone"])
+                and compatible_unit(witness["careUnit"], provider["category"]),
+                "Invalid primary street witness")
+        witnesses[witness["kind"]] = witness
+    operator, regulatory = witnesses["operator"], witnesses["regulatory"]
+    require(canonical_url(operator["sourceUrl"]) != canonical_url(regulatory["sourceUrl"])
+            and comparable_name(operator["name"], provider["category"])
+            == comparable_name(identity["name"], provider["category"])
+            and regulatory["officialId"] == approval["officialId"]
+            and words(identity["address"]) in {words(a) for a in operator["addresses"]}
+            and provider_street(provider) in {words(a) for a in regulatory["addresses"]},
+            "Primary witnesses do not corroborate the observed and official streets")
+
+
+def validate_identity(approval, observed, providers, crosswalk, aliases=(), inputs=None):
     provider_id, official_id = approval["providerId"], approval["officialId"]
     require(provider_id in providers, f"Unknown runtime identity: {provider_id}")
     matches = [row for row in crosswalk if row.get("officialId") == official_id
@@ -337,7 +401,11 @@ def validate_identity(approval, observed, providers, crosswalk, aliases=()):
         # The page identifies the certified unit even when the street omits its suite.
         if words(identity["address"]) != street:
             street = re.sub(r" ste [a-z0-9]+$", "", street)
-    require(words(identity["address"]) == street
+    street_matches = words(identity["address"]) == street
+    if "streetCorroboration" in approval:
+        validate_street_corroboration(approval, provider, providers, crosswalk, inputs)
+        street_matches = True
+    require(street_matches
             and token(identity["city"]) == token(provider["city"])
             and token(provider["state"]) == "nj"
             and token(identity["state"]) in {"nj", "newjersey"},
@@ -395,7 +463,8 @@ def raw_listing_observation(approval, original, inputs):
 
 def validate_approval(approval, inputs, observations, providers, crosswalk, aliases, assessment_date):
     fields(approval, "id providerId officialId observation material url checkedAt access "
-           "platform identity aggregate reason" + (" reconciliation" if "reconciliation" in approval else ""), "approval")
+           "platform identity aggregate reason" + (" reconciliation" if "reconciliation" in approval else "")
+           + (" streetCorroboration" if "streetCorroboration" in approval else ""), "approval")
     if "reconciliation" in approval:
         fields(approval["reconciliation"], "name address", "editorial reconciliation note")
     require(all(text_value(approval[key]) for key in
@@ -444,7 +513,7 @@ def validate_approval(approval, inputs, observations, providers, crosswalk, alia
     if "mylivingchoice.com/" in canonical_url(approval["url"]):
         require(token(approval["aggregate"]["sourceFamily"]) == "google",
                 "MyLivingChoice Google republication must use google family")
-    resolution = validate_identity(approval, observed, providers, crosswalk, aliases)
+    resolution = validate_identity(approval, observed, providers, crosswalk, aliases, inputs)
     material = inputs.bound(approval["material"])
     require(approval["material"]["path"] != approval["observation"]["path"],
             "Independent full-page material cannot be the observation registry")

@@ -2309,6 +2309,59 @@
     },
     {
       "acquisitionBatch": {
+        "assessmentDate": "2026-11-15",
+        "id": "mylivingchoice-avalon-cupola"
+      },
+      "approval": {
+        "access": "full-page",
+        "aggregate": {
+          "asOf": null,
+          "count": 149,
+          "rating": 4.5,
+          "scale": 5,
+          "scope": "consumer",
+          "sourceFamily": "google"
+        },
+        "checkedAt": "2026-11-15",
+        "id": "mlc-acquisition-avalon-rehab-and-care-center",
+        "identity": {
+          "address": "2020 NJ-23",
+          "careUnit": "Skilled Nursing / Long Term Care",
+          "city": "Wayne",
+          "name": "Avalon Rehab and Care Center",
+          "state": "New Jersey",
+          "zip": "07470"
+        },
+        "material": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/independent-checks/avalon-rehab-and-care-center.json",
+          "sha256": "aeae80f95c6bda0c1b3b0565ea571c2f6a9e1fdf832474a5eb48ab54e69b1cd7"
+        },
+        "observation": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/collector-receipts.json",
+          "pointer": "/receipts/0",
+          "sha256": "738559ebe5c4be51ba962544b44407776f9c1484275eac44cedf05d49e023c3c"
+        },
+        "officialId": "NJ61629",
+        "platform": "MyLivingChoice",
+        "providerId": "cms-315291",
+        "reason": "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. Google's 4.5/5 average covers 149 ratings and is republished by MyLivingChoice, not an independent second source. All five displayed accounts were independently reviewed, three residents and two family members, all positive and describing rehabilitation stays. This platform-selected window does not establish the experience of all 149 writers or long-stay residents. The aggregate may include short- and long-stay feedback for this one licensed nursing facility. Its publication date is unknown. NJ DOH's current detail page uses the prior Atrium Post Acute Care Of Wayneview name. CMS and the operator use Avalon at the same street, phone and 170-bed nursing unit. Some ratings may predate the rename.",
+        "streetCorroboration": {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/avalon-street-corroboration.json",
+          "sha256": "b1a04c080c4a4e14ee7f80e24dfdd83c2b830bd46749f6d3ab540da96e0c2a9d"
+        },
+        "url": "https://www.mylivingchoice.com/property/avalon-rehab-and-care-center"
+      },
+      "disposition": "included",
+      "identityResolution": {
+        "observedZip": "07470",
+        "officialZip": "07470",
+        "zipResolution": "observed"
+      },
+      "observationKey": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/collector-receipts.json#/receipts/0",
+      "sourceId": "review-release-mlc-acquisition-avalon-rehab-and-care-center"
+    },
+    {
+      "acquisitionBatch": {
         "assessmentDate": "2026-11-13",
         "id": "mylivingchoice-direct-review"
       },

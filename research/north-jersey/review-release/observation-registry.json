@@ -3,6 +3,38 @@
     {
       "aggregate": {
         "asOf": null,
+        "count": 149,
+        "rating": 4.5,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "identity": {
+        "address": "2020 NJ-23",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Wayne",
+        "name": "Avalon Rehab and Care Center",
+        "state": "New Jersey",
+        "zip": "07470"
+      },
+      "inspection": "full-page",
+      "key": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/collector-receipts.json#/receipts/0",
+      "kind": "review-platform",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-avalon-cupola/collector-receipts.json",
+        "pointer": "/receipts/0",
+        "sha256": "738559ebe5c4be51ba962544b44407776f9c1484275eac44cedf05d49e023c3c"
+      },
+      "officialId": "NJ61629",
+      "platform": "MyLivingChoice",
+      "providerId": "cms-315291",
+      "status": null,
+      "url": "https://www.mylivingchoice.com/property/avalon-rehab-and-care-center"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
         "count": 47,
         "rating": 4.6,
         "scale": 5,

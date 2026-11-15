@@ -32,6 +32,17 @@ class ApprovalTests(unittest.TestCase):
             for key in ("sources", "checks", "identities"):
                 for evidence in batch.get(key, {}).values():
                     self.copy(evidence["path"])
+            for evidence in batch.get("evidence", []):
+                self.copy(evidence["path"])
+            proposals = self.load(batch["proposals"]["path"])
+            proposals = (proposals["batches"][0]["approvals"] if batch["mode"] == "released"
+                         else proposals["approvals"])
+            for proposal in proposals:
+                if "streetCorroboration" in proposal:
+                    self.copy(proposal["streetCorroboration"]["path"])
+                    proof = self.load(proposal["streetCorroboration"]["path"])
+                    for primary in proof["primarySources"]:
+                        self.copy(primary["path"])
         self.second_ref = self.index["batches"][1]
         self.second = self.load(self.second_ref["path"])
 
@@ -69,8 +80,13 @@ class ApprovalTests(unittest.TestCase):
         for path, data in outputs.items():
             self.assertEqual(data, (APPROVE.ROOT / path).read_bytes(), str(path))
         batches = self.approvals(outputs)
-        self.assertEqual([len(b["approvals"]) for b in batches], [11, 21, 1, 1])
-        self.assertEqual(sum(a["aggregate"]["count"] for a in batches[0]["approvals"]), 1359)
+        self.assertEqual({b["id"]: len(b["approvals"]) for b in batches}, {
+            "mylivingchoice-avalon-cupola": 1, "mylivingchoice-direct-review": 11,
+            "mylivingchoice-second-wave": 21, "mylivingchoice-sinai-newark": 1,
+            "mylivingchoice-third-wave-clinical": 1,
+        })
+        first = next(b for b in batches if b["id"] == "mylivingchoice-direct-review")
+        self.assertEqual(sum(a["aggregate"]["count"] for a in first["approvals"]), 1359)
         sinai_batch = next(b for b in batches if b["id"] == "mylivingchoice-sinai-newark")
         sinai = sinai_batch["approvals"][0]
         self.assertEqual(sinai["providerId"], "north-jersey-doh-nj60713")
@@ -83,7 +99,7 @@ class ApprovalTests(unittest.TestCase):
         self.assertEqual(sinai["aggregate"]["count"], 131)
         checks = [json.loads(data) for path, data in outputs.items()
                   if path.parent.name == "independent-checks"]
-        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 160)
+        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 165)
         for check in checks:
             if check["providerId"] == "cms-317009":
                 self.assertEqual(check["identity"]["zip"], "07018")
@@ -93,6 +109,18 @@ class ApprovalTests(unittest.TestCase):
                 self.assertEqual(check["officialId"], "NJ60713")
                 self.assertEqual(check["aggregate"]["count"], 131)
                 self.assertEqual(check["reviewSample"]["visibleCount"], 5)
+            elif check["providerId"] == "cms-315291":
+                self.assertEqual(check["identity"]["address"], "2020 NJ-23")
+                self.assertEqual(check["identity"]["zip"], "07470")
+                self.assertEqual(check["aggregate"]["rating"], 4.5)
+                self.assertEqual(check["aggregate"]["count"], 149)
+                self.assertEqual(check["reviewSample"]["observations"], [
+                    {"id": "mlc-google-" + rid, "date": month, "sentiment": "positive"}
+                    for rid, month in [
+                        ("312150", "2026-05"), ("312151", "2026-05"), ("312148", "2026-04"),
+                        ("312152", "2026-04"), ("312149", "2026-03"),
+                    ]
+                ])
             else:
                 self.assertIsNone(check["identity"]["zip"])
             self.assertIsNone(check["aggregate"]["asOf"])
@@ -102,11 +130,67 @@ class ApprovalTests(unittest.TestCase):
     def test_all_first_wave_approval_meaning_is_preserved(self):
         batch = self.load(self.index["batches"][0]["path"])
         original = self.load(batch["proposals"]["path"])["batches"][0]
-        current = self.approvals(APPROVE.build(self.root))[0]
+        current = next(b for b in self.approvals(APPROVE.build(self.root)) if b["id"] == original["id"])
         self.assertEqual(original["id"], current["id"])
         for before, after in zip(original["approvals"], current["approvals"], strict=True):
             for key in before.keys() - {"observation", "material"}:
                 self.assertEqual(before[key], after[key], key)
+
+    def test_avalon_cupola_decisions_cover_complete_independent_populations(self):
+        reference = next(r for r in self.index["batches"] if "/avalon-cupola/" in r["path"])
+        batch = self.load(reference["path"])
+        decisions = self.load(batch["reviewed"]["path"])
+        self.assertEqual([row[1] for row in decisions["approvals"]], ["cms-315291"])
+        self.assertEqual([row["providerId"] for row in decisions["withheld"]],
+                         ["north-jersey-doh-nj5a000"])
+        held = decisions["withheld"][0]
+        self.assertEqual(held["identity"]["address"], "W. 100 W Ridgewood Ave")
+        self.assertEqual(held["aggregate"]["scope"], "ambiguous")
+        self.assertEqual(held["aggregate"]["count"], 59)
+        independent = self.load(decisions["independentReview"]["path"])
+        populations = {row["providerId"]: row for row in independent["locations"]}
+        self.assertEqual([r["relationship"] for r in populations["cms-315291"]["rows"]],
+                         ["resident", "family", "family", "resident", "resident"])
+        self.assertEqual([r["relationship"] for r in populations["north-jersey-doh-nj5a000"]["rows"]],
+                         ["family", "unknown", "unknown", "staff", "unknown"])
+        for slug, reference in batch["sources"].items():
+            source = self.load(reference["path"])
+            collection = self.load(source["collection"]["path"])
+            window = collection["page"]["visibleReviewWindow"]
+            self.assertTrue(window["complete"])
+            self.assertEqual(window["rowCount"], 5)
+            self.assertEqual(window["unparsedArticleCount"], 0)
+            self.assertEqual([("mlc-google-" + r["sourceReviewId"], r["datePublished"])
+                              for r in window["rows"]],
+                             [(r["id"], r["date"]) for r in source["population"]["rows"]])
+
+    def test_immutable_primary_witness_hash_is_checked_by_compiler(self):
+        reference = next(r for r in self.index["batches"] if "/avalon-cupola/" in r["path"])
+        batch = self.load(reference["path"])
+        proposal = self.load(batch["proposals"]["path"])["approvals"][0]
+        proof = self.load(proposal["streetCorroboration"]["path"])
+        self.write(proof["primarySources"][0]["path"], {})
+        with self.assertRaisesRegex(APPROVE.release.ReleaseError, "Source hash drift"):
+            APPROVE.build(self.root)
+
+    def test_cupola_population_hold_cannot_be_overridden_by_an_approval(self):
+        reference = next(r for r in self.index["batches"] if "/avalon-cupola/" in r["path"])
+        batch = self.load(reference["path"])
+        decisions = self.load(batch["reviewed"]["path"])
+        held = decisions["withheld"].pop()
+        identity, aggregate = held["identity"], held["aggregate"]
+        decisions["approvals"].append([
+            held["slug"], held["providerId"], identity["name"], identity["address"], identity["city"],
+            identity["careUnit"], identity["zip"], aggregate["rating"], aggregate["count"],
+            [[r["id"].removeprefix("mlc-google-"), r["date"], r["sentiment"]] for r in held["rows"]],
+        ])
+        self.write(batch["reviewed"]["path"], decisions)
+        batch["reviewed"].update(self.reference(batch["reviewed"]["path"]))
+        self.write(reference["path"], batch)
+        reference.update(self.reference(reference["path"]))
+        self.write(APPROVE.INDEX, self.index)
+        with self.assertRaisesRegex(APPROVE.release.ReleaseError, "unresolved source hold"):
+            APPROVE.build(self.root)
 
     def test_rebound_historical_receipt_must_match_released_hash(self):
         reference = self.index["batches"][0]
@@ -135,7 +219,8 @@ class ApprovalTests(unittest.TestCase):
         full = APPROVE.build(self.root)
         self.write(APPROVE.INDEX, {**self.index, "batches": self.index["batches"][:1]})
         first = APPROVE.build(self.root)
-        self.assertEqual(self.approvals(first)[0], self.approvals(full)[0])
+        self.assertEqual(self.approvals(first)[0], next(
+            b for b in self.approvals(full) if b["id"] == self.approvals(first)[0]["id"]))
         for path, data in first.items():
             if path not in (APPROVE.ALIASES, APPROVE.release.ACQUISITION_LEDGER):
                 self.assertEqual(data, full[path])
@@ -225,6 +310,10 @@ class ApprovalTests(unittest.TestCase):
         self.assertEqual(sinai["reviewCount"], 131)
         self.assertEqual(sinai["independentSourceCount"], 1)
         self.assertNotIn("cms-315236", after)
+        self.assertEqual(after["cms-315291"]["value"], 9.0)
+        self.assertEqual(after["cms-315291"]["reviewCount"], 149)
+        self.assertEqual(after["cms-315291"]["independentSourceCount"], 1)
+        self.assertNotIn("north-jersey-doh-nj5a000", after)
         before_batch = self.load(self.index["batches"][0]["path"])
         before = self.load(before_batch["proposals"]["path"])["batches"][0]["approvals"]
         self.assertTrue(all(after[a["providerId"]]["value"] is not None for a in before))
@@ -263,6 +352,24 @@ class ApprovalTests(unittest.TestCase):
         self.assertEqual(len(new_scored), 21)
         for row in decisions["withheld"]:
             self.assertIsNone(current[row["providerId"]]["experience"]["value"])
+
+    def test_actual_runtime_releases_only_avalon_at_its_assessment_date(self):
+        result = subprocess.run([
+            "node", "--import", "tsx",
+            str(APPROVE.ROOT / "tests/nj-experience-acquisition.test.ts"),
+            "--snapshot", "2026-11-15",
+        ], cwd=APPROVE.ROOT, capture_output=True, text=True, check=True, timeout=60)
+        current = {p["providerId"]: p for p in json.loads(result.stdout)["runtimeProviders"]}
+        avalon = current["cms-315291"]
+        self.assertEqual(avalon["experience"]["value"], 9.0)
+        self.assertEqual(avalon["experience"]["reviewCount"], 149)
+        self.assertEqual(avalon["experience"]["independentSourceCount"], 1)
+        self.assertEqual(len(avalon["reviewAggregates"]), 1)
+        self.assertEqual(avalon["reviewAggregates"][0]["rating"], 4.5)
+        self.assertIsNone(avalon["reviewAggregates"][0]["asOf"])
+        cupola = current["north-jersey-doh-nj5a000"]
+        self.assertIsNone(cupola["experience"]["value"])
+        self.assertEqual(cupola["reviewAggregates"], [])
 
 
 if __name__ == "__main__":

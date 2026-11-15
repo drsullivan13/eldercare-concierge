@@ -139,6 +139,123 @@ class ReleaseTests(unittest.TestCase):
             self.write(str(release.ACQUISITION_LEDGER), {"schemaVersion": 1, "batches": batches})
             self.assertEqual(release.encoded(before), release.encoded(self.build()))
 
+    def street_proof(self):
+        self.providers[0]["phone"] = "(973) 555-0100"
+        self.write("research/north-jersey/runtime/providers.json", self.providers)
+        self.approval["identity"]["address"] = "151 County Route 10"
+        self.approval["identity"]["zip"] = "07960"
+        self.observation["identity"]["observed_address"] = "151 County Route 10"
+        self.observation["identity"]["observed_zip"] = "07960"
+        self.update_observation()
+        base = str(release.ACQUISITION / "wave-two/batches/example")
+        self.primary_paths = [base + "/operator.json", base + "/regulatory.json"]
+        for kind, path, address in zip(
+                ("operator", "regulatory"), self.primary_paths,
+                ("151 County Route 10", "151 Madison Avenue"), strict=True):
+            self.write(path, {
+                "sourceType": "PRIMARY", "kind": kind,
+                "sourceUrl": f"https://{kind}.example.org/location",
+                "checkedAt": "2026-11-12", "inspection": "full-page", "httpStatus": 200,
+                "name": "Example Home", "addresses": [address], "city": "Morristown",
+                "state": "New Jersey", "zip": "07960", "phone": "(973) 555-0100",
+                "careUnit": "Skilled Nursing / Long Term Care",
+                "officialId": "NJ60921" if kind == "regulatory" else None,
+            })
+        self.proof_path = base + "/street.json"
+        self.proof = {
+            "providerId": "cms-315488", "officialId": "NJ60921",
+            "observedIdentity": copy.deepcopy(self.approval["identity"]),
+            "officialAddress": self.providers[0]["address"], "category": "nursing-home",
+            "phone": "(973) 555-0100",
+            "primarySources": [self.reference(path) for path in self.primary_paths],
+        }
+        self.bind_street_proof()
+
+    def bind_street_proof(self):
+        self.write(self.proof_path, self.proof)
+        self.approval["streetCorroboration"] = self.reference(self.proof_path)
+
+    def test_alternate_street_requires_explicit_primary_corroboration(self):
+        self.street_proof()
+        reference = self.approval.pop("streetCorroboration")
+        self.assert_fails("street/city/state")
+        self.approval["streetCorroboration"] = reference
+        output = self.build()
+        audit = output["approvals-audit.json"]["approvals"][0]
+        self.assertEqual(audit["approval"]["identity"]["address"], "151 County Route 10")
+        paths = {row["path"] for row in output["manifest.json"]["inputs"]}
+        self.assertTrue({self.proof_path, *self.primary_paths} <= paths)
+
+    def test_street_corroboration_rejects_changed_proof_or_primary_hash(self):
+        for target in ("proof", "primary"):
+            with self.subTest(target=target):
+                self.street_proof()
+                self.write(self.proof_path if target == "proof" else self.primary_paths[0], {})
+                self.assert_fails("Source hash drift")
+
+    def test_street_corroboration_rejects_unrelated_identity_fields(self):
+        for field, value in (
+                ("providerId", "cms-999999"), ("officialId", "NJ99999"),
+                ("officialAddress", "152 Madison Avenue"), ("category", "assisted-living"),
+                ("phone", "(973) 555-9999")):
+            with self.subTest(field=field):
+                self.street_proof()
+                self.proof[field] = value
+                self.bind_street_proof()
+                self.assert_fails("exact identity mismatch")
+
+    def test_street_corroboration_rejects_edited_observation(self):
+        self.street_proof()
+        self.proof["observedIdentity"]["address"] = "152 County Route 10"
+        self.bind_street_proof()
+        self.assert_fails("exact identity mismatch")
+
+    def test_street_corroboration_rejects_nonprimary_stale_or_wrong_unit_witness(self):
+        for field, value in (
+                ("sourceType", "review-platform"), ("checkedAt", "2026-11-11"),
+                ("httpStatus", 403), ("inspection", "snippet"), ("city", "Wayne"),
+                ("state", "NY"), ("zip", "07470"), ("phone", "9735559999"),
+                ("careUnit", "Assisted Living")):
+            with self.subTest(field=field):
+                self.street_proof()
+                witness = json.loads((self.root / self.primary_paths[0]).read_bytes())
+                witness[field] = value
+                self.write(self.primary_paths[0], witness)
+                self.proof["primarySources"][0] = self.reference(self.primary_paths[0])
+                self.bind_street_proof()
+                self.assert_fails("Invalid primary street witness")
+
+    def test_street_corroboration_requires_both_written_streets_and_official_id(self):
+        for index, field, value in (
+                (0, "addresses", ["151 Other Road"]), (1, "addresses", ["151 Other Road"]),
+                (1, "officialId", "NJ99999"), (0, "name", "Different Home")):
+            with self.subTest(index=index, field=field):
+                self.street_proof()
+                witness = json.loads((self.root / self.primary_paths[index]).read_bytes())
+                witness[field] = value
+                self.write(self.primary_paths[index], witness)
+                self.proof["primarySources"][index] = self.reference(self.primary_paths[index])
+                self.bind_street_proof()
+                self.assert_fails("do not corroborate")
+
+    def test_street_corroboration_rejects_duplicate_or_missing_primary_witness(self):
+        for duplicate in (True, False):
+            with self.subTest(duplicate=duplicate):
+                self.street_proof()
+                self.proof["primarySources"] = ([self.proof["primarySources"][0]] * 2
+                                                if duplicate else self.proof["primarySources"][:1])
+                self.bind_street_proof()
+                self.assert_fails("primary street witness|separate operator")
+
+    def test_street_corroboration_rejects_ambiguous_official_care_unit(self):
+        self.street_proof()
+        sibling = {**self.providers[0], "id": "cms-315489"}
+        self.providers.append(sibling)
+        self.crosswalk.append({**self.crosswalk[0], "providerId": sibling["id"], "officialId": "NJ60922"})
+        self.write("research/north-jersey/runtime/providers.json", self.providers)
+        self.write("research/north-jersey/runtime/crosswalk.json", self.crosswalk)
+        self.assert_fails("ambiguous care-unit")
+
     def test_acquisition_adds_original_mean_count_without_overwriting_legacy(self):
         before = self.build()
         approval, _ = self.acquisition()

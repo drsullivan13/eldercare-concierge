@@ -3666,6 +3666,87 @@
       }
     ]
   },
+  "cms-315291": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Current availability has not been independently researched. Contact the provider."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [],
+    "notes": [
+      "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+      "Reported counts are not unique people. Unknown cross-posting may remain.",
+      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+    ],
+    "providerDetailsReviewed": false,
+    "providerId": "cms-315291",
+    "reviewAggregates": [
+      {
+        "asOf": null,
+        "count": 149,
+        "notes": [
+          "Second-wave reviewer read the original full-page witness, About and every visible Google row before highlighting. Independent published facility/office identity corroborates the unique official care unit. Original Google mean and count remain unchanged. All visible dates and sentiments, including critical and mixed rows, accompany the aggregate. This is a platform-selected window, not all ratings or a verified resident survey. Visitors and tours can appear. Reviewer identities are not verified. The listing supplies its ZIP. The aggregate publication date is unknown. Google's 4.5/5 average covers 149 ratings and is republished by MyLivingChoice, not an independent second source. All five displayed accounts were independently reviewed, three residents and two family members, all positive and describing rehabilitation stays. This platform-selected window does not establish the experience of all 149 writers or long-stay residents. The aggregate may include short- and long-stay feedback for this one licensed nursing facility. Its publication date is unknown. NJ DOH's current detail page uses the prior Atrium Post Acute Care Of Wayneview name. CMS and the operator use Avalon at the same street, phone and 170-bed nursing unit. Some ratings may predate the rename.",
+          "Observed ZIP matches the exact official care unit."
+        ],
+        "platform": "MyLivingChoice",
+        "rating": 4.5,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-avalon-rehab-and-care-center"
+      }
+    ],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-google-312150",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-312151",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-google-312148",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-google-312152",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-03",
+            "id": "mlc-google-312149",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-avalon-rehab-and-care-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "review-release-mlc-acquisition-avalon-rehab-and-care-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "MyLivingChoice",
+        "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/avalon-rehab-and-care-center"
+      }
+    ]
+  },
   "cms-315295": {
     "availability": {
       "asOf": null,

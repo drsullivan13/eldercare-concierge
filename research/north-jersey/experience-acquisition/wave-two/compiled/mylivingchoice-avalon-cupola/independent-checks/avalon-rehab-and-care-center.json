@@ -1,0 +1,117 @@
+{
+  "access_decision": "permitted_low_volume",
+  "aggregate": {
+    "asOf": null,
+    "count": 149,
+    "rating": 4.5,
+    "scale": 5,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "checkedAt": "2026-11-15",
+  "evidence": [
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/source-checks/avalon-rehab-and-care-center.json",
+      "sha256": "460d4658f9e7b7596d5c36d3ecc1282504bdeb6ca8ffcff21a9603c0220f62db"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/access.json",
+      "sha256": "242fbb01dd7efb57f199de1ce1c7351900289ee4ebbff530b1f82531439f022f"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/batch.json",
+      "sha256": "6b64d820877319aaf26910302fc551745832fa2e81431282207229c6cd10cfb5"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/proposals.json",
+      "sha256": "e6fb7faabf6ebbfe2d4e6e1b38baa69fe519ce7d4aae3bbdf659bab0b26f0e70"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/reviewed.json",
+      "sha256": "91e13eb48e6c015474a0a415f7cda01e490058de48a0b2cc9b0f9dc89cefd0a8"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/independent-review.json",
+      "sha256": "120687a92af14ce7575435967c4d20f08233d546d21077c54a0635b773921dc4"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/collection/avalon-rehab-and-care-center.json",
+      "sha256": "c61c00d0706924b30370df77ab7536a002543c9a50c24513f0c220caf88c93f4"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/collection/careone-at-the-cupola.json",
+      "sha256": "5f6553cba0170a475af790ecc62b52ad52f039e7050ce6502fa789340316dd06"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/source-checks/careone-at-the-cupola.json",
+      "sha256": "b7d91533834b29d57a0cb84ad78f3d5ebcc2884e1be187f8c724281e7c3c3ea6"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/avalon-street-corroboration.json",
+      "sha256": "b1a04c080c4a4e14ee7f80e24dfdd83c2b830bd46749f6d3ab540da96e0c2a9d"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/primary/avalon-operator.json",
+      "sha256": "142934d40a458bfb114fc245cfa87e81bdc0a2ec307fb64fb0fa375a6771c0cd"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/primary/avalon-regulatory.json",
+      "sha256": "b259602f0f73f0177b1634d043819cf2b094baf2e5a9a8f92aa5f8f570b54940"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/identity-checks/avalon.json",
+      "sha256": "138cc6fbf9b5a080a621dc58cab26f1305f165af0471f4970f88ee693621511a"
+    },
+    {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/aliases.json",
+      "sha256": "b71b04880fb389587f8d23aa294d1f473be0275667a20d7d1ffe03ae75eb4127"
+    }
+  ],
+  "httpStatus": 200,
+  "identity": {
+    "address": "2020 NJ-23",
+    "careUnit": "Skilled Nursing / Long Term Care",
+    "city": "Wayne",
+    "name": "Avalon Rehab and Care Center",
+    "state": "New Jersey",
+    "zip": "07470"
+  },
+  "inspection": "full-page",
+  "officialId": "NJ61629",
+  "platform": "MyLivingChoice",
+  "providerId": "cms-315291",
+  "reviewSample": {
+    "observations": [
+      {
+        "date": "2026-05",
+        "id": "mlc-google-312150",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-05",
+        "id": "mlc-google-312151",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-312148",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-04",
+        "id": "mlc-google-312152",
+        "sentiment": "positive"
+      },
+      {
+        "date": "2026-03",
+        "id": "mlc-google-312149",
+        "sentiment": "positive"
+      }
+    ],
+    "selection": "all-visible-before-highlighting",
+    "sourceFamily": "google",
+    "visibleCount": 5
+  },
+  "sourceType": "review-platform",
+  "url": "https://www.mylivingchoice.com/property/avalon-rehab-and-care-center"
+}

@@ -1,0 +1,96 @@
+{
+  "assessmentDate": "2026-11-15",
+  "method": "Each property page read once through FetchUrl. Every publicly visible review row was read (5 per page; no next-page control exposed). Months are the server-rendered display month (no timestamp exposed). Relationship categories follow release-reviews.py roles: family, resident, staff, visitor, unknown. Sentiment: positive, critical, mixed, unknown. Author names and review prose are not retained.",
+  "locations": [
+    {
+      "providerId": "north-jersey-doh-nj5a000",
+      "decision": "not_eligible_scope_ambiguous",
+      "canScore": false,
+      "url": "https://www.mylivingchoice.com/property/careone-at-the-cupola",
+      "aggregate": {
+        "mean": 4.5,
+        "scale": 5,
+        "count": 59,
+        "sourceFamily": "google",
+        "asOf": null
+      },
+      "rows": [
+        {
+          "reportId": "628744",
+          "month": "2026-08",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "628745",
+          "month": "2026-05",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "628746",
+          "month": "2026-03",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "628747",
+          "month": "2026-03",
+          "relationship": "staff",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "628748",
+          "month": "2024-04",
+          "relationship": "unknown",
+          "sentiment": "positive"
+        }
+      ]
+    },
+    {
+      "providerId": "cms-315291",
+      "decision": "eligible_single_source_estimate",
+      "canScore": true,
+      "url": "https://www.mylivingchoice.com/property/avalon-rehab-and-care-center",
+      "aggregate": {
+        "mean": 4.5,
+        "scale": 5,
+        "count": 149,
+        "sourceFamily": "google",
+        "asOf": null
+      },
+      "rows": [
+        {
+          "reportId": "312150",
+          "month": "2026-05",
+          "relationship": "resident",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "312151",
+          "month": "2026-05",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "312148",
+          "month": "2026-04",
+          "relationship": "family",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "312152",
+          "month": "2026-04",
+          "relationship": "resident",
+          "sentiment": "positive"
+        },
+        {
+          "reportId": "312149",
+          "month": "2026-03",
+          "relationship": "resident",
+          "sentiment": "positive"
+        }
+      ]
+    }
+  ]
+}

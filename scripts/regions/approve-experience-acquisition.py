@@ -66,6 +66,9 @@ def build(root=ROOT):
                         and set(approved_ids + withheld_ids) == set(by_id),
                         "Duplicate or unreviewed immutable proposal")
         batch_aliases = bound(batch["aliases"])["locations"] if mode == "reviewed" else []
+        batch_evidence = batch.get("evidence", [])
+        for reference in batch_evidence:
+            bound(reference)
         receipts, approvals = [], []
         directory = ARCHIVE / "compiled" / bid
         receipt_path = directory / "collector-receipts.json"
@@ -82,7 +85,13 @@ def build(root=ROOT):
             source_reference = batch["sources"][slug]
             source_document = bound(source_reference)
             evidence = [source_reference, batch["access"], batch_reference,
-                        batch["proposals"], batch["reviewed"]]
+                        batch["proposals"], batch["reviewed"], *batch_evidence]
+            if "streetCorroboration" in proposal:
+                proof = bound(proposal["streetCorroboration"])
+                evidence.append(proposal["streetCorroboration"])
+                for primary in proof["primarySources"]:
+                    bound(primary)
+                    evidence.append(primary)
             if mode == "released":
                 source = release.receipt_at(source_document, proposal["observation"]["pointer"])
                 original_check_reference = batch["checks"][slug]

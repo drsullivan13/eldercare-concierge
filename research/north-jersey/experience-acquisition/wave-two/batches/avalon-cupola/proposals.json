@@ -1,0 +1,78 @@
+{
+  "approvals": [
+    {
+      "id": "mlc-acquisition-avalon-rehab-and-care-center",
+      "providerId": "cms-315291",
+      "officialId": "NJ61629",
+      "url": "https://www.mylivingchoice.com/property/avalon-rehab-and-care-center",
+      "checkedAt": "2026-11-15",
+      "access": "full-page",
+      "platform": "MyLivingChoice",
+      "identity": {
+        "name": "Avalon Rehab and Care Center",
+        "address": "2020 NJ-23",
+        "city": "Wayne",
+        "state": "New Jersey",
+        "zip": "07470",
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 4.5,
+        "count": 149,
+        "scale": 5,
+        "asOf": null,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "reason": "Google's 4.5/5 average covers 149 ratings and is republished by MyLivingChoice, not an independent second source. All five displayed accounts were independently reviewed, three residents and two family members, all positive and describing rehabilitation stays. This platform-selected window does not establish the experience of all 149 writers or long-stay residents. The aggregate may include short- and long-stay feedback for this one licensed nursing facility. Its publication date is unknown. NJ DOH's current detail page uses the prior Atrium Post Acute Care Of Wayneview name. CMS and the operator use Avalon at the same street, phone and 170-bed nursing unit. Some ratings may predate the rename.",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/source-checks/avalon-rehab-and-care-center.json",
+        "sha256": "460d4658f9e7b7596d5c36d3ecc1282504bdeb6ca8ffcff21a9603c0220f62db",
+        "pointer": ""
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/independent-review.json",
+        "sha256": "120687a92af14ce7575435967c4d20f08233d546d21077c54a0635b773921dc4"
+      },
+      "streetCorroboration": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/avalon-street-corroboration.json",
+        "sha256": "b1a04c080c4a4e14ee7f80e24dfdd83c2b830bd46749f6d3ab540da96e0c2a9d"
+      }
+    },
+    {
+      "id": "mlc-acquisition-careone-at-the-cupola",
+      "providerId": "north-jersey-doh-nj5a000",
+      "officialId": "NJ5A000",
+      "url": "https://www.mylivingchoice.com/property/careone-at-the-cupola",
+      "checkedAt": "2026-11-15",
+      "access": "full-page",
+      "platform": "MyLivingChoice",
+      "identity": {
+        "name": "CareOne at The Cupola",
+        "address": "W. 100 W Ridgewood Ave",
+        "city": "Paramus",
+        "state": "New Jersey",
+        "zip": "07652",
+        "careUnit": "Assisted Living"
+      },
+      "aggregate": {
+        "rating": 4.5,
+        "count": 59,
+        "scale": 5,
+        "asOf": null,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "reason": "Visible row 628747 describes joining the CareOne team and onboarding with staff and vendor partners. It is staff/professional evidence, not established resident-family feedback. The 59-rating Google mean cannot be separated into eligible consumer and employee ratings. Keep scope ambiguous and withhold the entire aggregate. Do not remove the row, recalculate the mean or transfer it to CareOne at Ridgewood Avenue or Harmony Village Paramus.",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/source-checks/careone-at-the-cupola.json",
+        "sha256": "b7d91533834b29d57a0cb84ad78f3d5ebcc2884e1be187f8c724281e7c3c3ea6",
+        "pointer": ""
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/independent-review.json",
+        "sha256": "120687a92af14ce7575435967c4d20f08233d546d21077c54a0635b773921dc4"
+      }
+    }
+  ]
+}

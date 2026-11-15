@@ -1,0 +1,67 @@
+{
+  "url": "https://www.mylivingchoice.com/property/careone-at-the-cupola",
+  "identity": {
+    "name": "CareOne at The Cupola",
+    "address": "W. 100 W Ridgewood Ave",
+    "city": "Paramus",
+    "state": "New Jersey",
+    "zip": "07652",
+    "careUnit": "Assisted Living"
+  },
+  "aggregate": {
+    "rating": 4.5,
+    "count": 59,
+    "scale": 5,
+    "asOf": null,
+    "scope": "ambiguous",
+    "sourceFamily": "google"
+  },
+  "inspection": "full-page",
+  "httpStatus": 200,
+  "checkedAt": "2026-11-15",
+  "bodySha256": "9a5f9902dd1c172d48d7c9bee55499a27ef84bc3f35fa6fa345af690f73836e9",
+  "observedAt": "2026-11-15T13:12:37.372344+00:00",
+  "scopeHold": "Visible row 628747 describes joining the CareOne team and onboarding with staff and vendor partners. It is staff/professional evidence, not established resident-family feedback. The 59-rating Google mean cannot be separated into eligible consumer and employee ratings. Keep scope ambiguous and withhold the entire aggregate. Do not remove the row, recalculate the mean or transfer it to CareOne at Ridgewood Avenue or Harmony Village Paramus.",
+  "googlePlaceIds": [
+    "0x0:0x776eb94fa29aa25a"
+  ],
+  "population": {
+    "visibleCount": 5,
+    "rows": [
+      {
+        "id": "mlc-google-628744",
+        "date": "2026-08",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-628745",
+        "date": "2026-05",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-628746",
+        "date": "2026-03",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-628747",
+        "date": "2026-03",
+        "sentiment": "positive"
+      },
+      {
+        "id": "mlc-google-628748",
+        "date": "2024-04",
+        "sentiment": "positive"
+      }
+    ]
+  },
+  "populationReview": "Visible row 628747 describes joining the CareOne team and onboarding with staff and vendor partners. It is staff/professional evidence, not established resident-family feedback. The 59-rating Google mean cannot be separated into eligible consumer and employee ratings. Keep scope ambiguous and withhold the entire aggregate. Do not remove the row, recalculate the mean or transfer it to CareOne at Ridgewood Avenue or Harmony Village Paramus.",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/collection/careone-at-the-cupola.json",
+    "sha256": "5f6553cba0170a475af790ecc62b52ad52f039e7050ce6502fa789340316dd06"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/avalon-cupola/independent-review.json",
+    "sha256": "120687a92af14ce7575435967c4d20f08233d546d21077c54a0635b773921dc4"
+  }
+}
