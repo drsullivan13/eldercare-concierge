@@ -135,7 +135,7 @@ def project(workbook, cms, state, payment_ids=None):
     cms_ccns = Counter(row["cms_certification_number_ccn"] for row in cms)
     state_names = index(state, lambda row: normalize(row["name"]))
     state_ids = Counter(row["facilityId"] for row in state)
-    results, withheld = {}, defaultdict(list)
+    results, withheld, matched = {}, defaultdict(list), []
     for row in workbook:
         key = normalize(row["name"])
         federal, licensed = cms_names[key], state_names[key]
@@ -170,24 +170,35 @@ def project(workbook, cms, state, payment_ids=None):
                     or medicaid_ids[row["medicaidId"]] != 1):
                 reason = "ambiguous-payment-unit"
             elif (units[0]["state"] != "NJ"
+                  or not re.fullmatch(r"315\d{3}", mapped_ccn)
+                  or not re.fullmatch(r"\d{10}", npi)
                   or units[0].get("provider_type") not in {"Medicare", "Medicare and Medicaid"}
                   or (len(federal) == 1 and federal[0]["cms_certification_number_ccn"] != mapped_ccn)):
                 reason = "conflicting-payment-unit"
-            elif reason is not None:
+            else:
                 reason = None
                 verified_npi = npi
                 federal = units
-        value = composite(row["score"])
-        if reason is None and value is None:
-            reason = "unreported-or-invalid-composite"
         if reason:
             withheld[reason].append({
                 "name": row["name"], "medicaidId": row["medicaidId"],
                 "cell": f"AZ{row['row']}", "raw": row["score"].get("raw", ""),
             })
             continue
-        federal = federal[0]
+        matched.append((row, federal[0], licensed, verified_npi))
+    certified_results = Counter(federal["cms_certification_number_ccn"]
+                                for _, federal, _, _ in matched)
+    for row, federal, licensed, verified_npi in matched:
         ccn = federal["cms_certification_number_ccn"]
+        value = composite(row["score"])
+        reason = ("ambiguous-certified-result" if certified_results[ccn] != 1
+                  else "unreported-or-invalid-composite" if value is None else None)
+        if reason:
+            withheld[reason].append({
+                "name": row["name"], "medicaidId": row["medicaidId"],
+                "cell": f"AZ{row['row']}", "raw": row["score"].get("raw", ""),
+            })
+            continue
         results[ccn] = {
             "value": value,
             "identity": {

@@ -56,6 +56,24 @@ class CoreqImportTests(unittest.TestCase):
         mapping["54321"] = ("1154081990", "315083")
         self.assertEqual(coreq.project(self.workbook, self.cms, [], mapping)[0], {})
 
+    def test_official_identifier_is_preferred_even_when_names_match(self):
+        mapping = {"917532": ("1154081990", "315083")}
+        results, _ = coreq.project(self.workbook, self.cms, self.state, mapping)
+        self.assertEqual(results["315083"]["identity"]["method"], "NJ-Medicaid-ID-to-NPI-to-CCN")
+        self.assertEqual(results["315083"]["identity"]["npi"], "1154081990")
+
+    def test_mixed_identifier_and_name_matches_cannot_overwrite_one_certified_result(self):
+        other = copy.deepcopy(self.workbook[0])
+        other.update(name="Historical name", medicaidId="54321", row=9)
+        self.workbook.append(other)
+        mapping = {"54321": ("1154081990", "315083")}
+        for score in ["0.5", "NS"]:
+            with self.subTest(score=score):
+                other["score"]["raw"] = score
+                results, withheld = coreq.project(self.workbook, self.cms, self.state, mapping)
+                self.assertEqual(results, {})
+                self.assertEqual(len(withheld["ambiguous-certified-result"]), 2)
+
     def test_real_zero_is_not_missing(self):
         self.workbook[0]["score"]["raw"] = "0"
         self.assertEqual(self.project()[0]["315083"]["value"], 0)

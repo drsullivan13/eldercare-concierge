@@ -1,0 +1,248 @@
+{
+  "checkedAt": "2026-11-15",
+  "results": [
+    {
+      "providerId": "cms-315476",
+      "url": "https://www.mylivingchoice.com/property/optima-care-fountains",
+      "observedAt": "2026-11-15T12:37:33.536159+00:00",
+      "bodySha256": "ccbba2dc951677959d80e3609ca53de55e39aa63151cbe146835a59c0caf6ad3",
+      "publishedGoogleAverage": 4.2,
+      "ratingCount": 149,
+      "decision": "withheld",
+      "reason": "runtime/crosswalk.json lists this CCN as included_cms_only. release-reviews.validate_identity accepts only status included and rejects the provider with 'Unknown or ambiguous official identity'. A separate NJ DOH runtime provider describes the same physical facility. Scoring only the CMS record splits one facility's identity, which the runtime limitation forbids. Official sources disagree between 595 and 505 County Avenue. Every visible account still needs an independent narrative reading for population, care-unit scope and sentiment. Reader cues are triage only.",
+      "identityEvidence": {
+        "providerId": "cms-315476",
+        "officialId": "315476",
+        "duplicateRuntimeProviderId": "north-jersey-doh-nj60918",
+        "witnesses": [
+          {
+            "source": "CMS Provider Information dataset 4pq5-n9py (live API)",
+            "sourceUrl": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Bvalue%5D=315476&conditions%5B0%5D%5Boperator%5D=%3D&limit=1",
+            "httpStatus": 200,
+            "checkedAt": "2026-11-15",
+            "inspection": "full-record",
+            "matchedPublishedFacts": [
+              "CCN 315476",
+              "OPTIMA CARE FOUNTAINS",
+              "595 COUNTY AVENUE",
+              "SECAUCUS",
+              "07094",
+              "telephone 2018638866",
+              "334 certified beds",
+              "legal business name OPTIMA CARE SECAUCUS, LLC",
+              "provider type Medicare and Medicaid",
+              "processing date 2026-10-01"
+            ]
+          },
+          {
+            "source": "NJ DOH Health Facilities detail",
+            "sourceUrl": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ60918",
+            "httpStatus": 200,
+            "checkedAt": "2026-11-15",
+            "inspection": "full-page",
+            "matchedPublishedFacts": [
+              "Licensed name Optima Care Fountains",
+              "Long Term Care Facility",
+              "License 60918",
+              "(201) 863-8866",
+              "Licensed owner OPTIMA CARE SECAUCUS, LLC",
+              "334 long term care beds"
+            ],
+            "conflictingPublishedFacts": [
+              "505 County Avenue, Secaucus, NJ 07094"
+            ]
+          },
+          {
+            "source": "Operator contact page",
+            "sourceUrl": "https://www.optimacarefountains.com/contact/",
+            "httpStatus": 200,
+            "checkedAt": "2026-11-15",
+            "inspection": "full-page",
+            "matchedPublishedFacts": [
+              "Secaucus, NJ 07094",
+              "short-term rehabilitation and long-term residents"
+            ],
+            "conflictingPublishedFacts": [
+              "505 County Ave",
+              "Tel. (201) 526-8700"
+            ]
+          }
+        ],
+        "assessment": "CMS and NJ DOH share owner LLC, phone and 334 beds, so they likely describe one physical facility (inferred). The review page and CMS publish 595 County Avenue. NJ DOH and the operator publish 505 County Avenue. The runtime keeps two unmerged records for it.",
+        "privacy": "Administrator and staff names are not retained."
+      }
+    },
+    {
+      "providerId": "cms-315236",
+      "url": "https://www.mylivingchoice.com/property/sinai-post-acute-nursing-rehab-center",
+      "observedAt": "2026-11-15T12:37:35.404034+00:00",
+      "bodySha256": "c5b9a66895cd1211b50b6b417febb75a37793d12837f6ba1185528fe824da459",
+      "publishedGoogleAverage": 3.1,
+      "ratingCount": 131,
+      "decision": "withheld",
+      "reason": "runtime/crosswalk.json lists this CCN as included_cms_only. release-reviews.validate_identity accepts only status included and rejects the provider with 'Unknown or ambiguous official identity'. A separate NJ DOH runtime provider describes the same physical facility. Scoring only the CMS record splits one facility's identity, which the runtime limitation forbids. Every visible account still needs an independent narrative reading for population, care-unit scope and sentiment. Reader cues are triage only.",
+      "identityEvidence": {
+        "providerId": "cms-315236",
+        "officialId": "315236",
+        "duplicateRuntimeProviderId": "north-jersey-doh-nj60713",
+        "witnesses": [
+          {
+            "source": "CMS Provider Information dataset 4pq5-n9py (live API)",
+            "sourceUrl": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Bvalue%5D=315236&conditions%5B0%5D%5Boperator%5D=%3D&limit=1",
+            "httpStatus": 200,
+            "checkedAt": "2026-11-15",
+            "inspection": "full-record",
+            "matchedPublishedFacts": [
+              "CCN 315236",
+              "SINAI POST-ACUTE NURSING & REHAB CENTER",
+              "65 JAY STREET",
+              "NEWARK",
+              "07103",
+              "telephone 9734836800",
+              "430 certified beds",
+              "legal business name SINAI CENTER FOR REHABILITATION AND HEALTHCARE LLC",
+              "provider type Medicare and Medicaid",
+              "processing date 2026-10-01"
+            ]
+          },
+          {
+            "source": "NJ DOH Health Facilities detail",
+            "sourceUrl": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ60713",
+            "httpStatus": 200,
+            "checkedAt": "2026-11-15",
+            "inspection": "full-page",
+            "matchedPublishedFacts": [
+              "Licensed name Sinai Post Acute Nursing And Rehab Center",
+              "65 Jay Street, Newark, NJ 07103",
+              "(973) 483-6800",
+              "Long Term Care Facility",
+              "License 060713",
+              "Licensed owner SINAI CENTER FOR REHABILITATION AND HEALTHCARE LLC",
+              "430 long term care beds"
+            ]
+          },
+          {
+            "source": "Operator contact and services pages",
+            "sourceUrl": "https://sinaipostacutecare.com/contact-us/",
+            "httpStatus": 200,
+            "checkedAt": "2026-11-15",
+            "inspection": "full-page",
+            "matchedPublishedFacts": [
+              "65 Jay Street, Newark, NJ 07103",
+              "973-483-6800",
+              "services page: sub-acute rehabilitation with a 49-bed therapy unit, short-term and long-term rehabilitation, dialysis coordination, palliative and hospice"
+            ]
+          }
+        ],
+        "assessment": "CMS, NJ DOH and the operator agree on street, ZIP, phone, owner LLC and 430 beds. The review page names the same street and ZIP. The runtime keeps two unmerged records for this one facility.",
+        "privacy": "Administrator and staff names are not retained."
+      }
+    },
+    {
+      "providerId": "north-jersey-campus-crane-s-mill-07006",
+      "url": "https://www.mylivingchoice.com/property/crane-s-mill",
+      "observedAt": "2026-11-15T12:40:13.576033+00:00",
+      "bodySha256": "e4fc4048bbe6b538765360bcbffe783d376862dd3f967d5736d8d2acc997e6d2",
+      "publishedGoogleAverage": 3.9,
+      "ratingCount": 43,
+      "decision": "withheld",
+      "reason": "Identity hold. Exact published campus place match fails: the operator publishes no Google place ID and the contact page's automatic grounds-tile feature differs from the review rows' 0x0:0x7c735d2840ca5a30. All five visible accounts were read and retained, including one mixed and two negative. Importer hold: the campus has no official ID and an included_historical crosswalk row, and life-plan is not a compatible care-unit category. No score may transfer to cms-315457 or north-jersey-doh-nj30a005.",
+      "identityEvidence": {
+        "kind": "sanitized-published-identity-check",
+        "sourceUrl": "https://www.cranesmill.org/planning-your-visit/contact/",
+        "inspection": "full-page",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-15",
+        "operatorName": "Crane's Mill (Lutheran Social Ministries of New Jersey)",
+        "matchedPublishedFacts": [
+          "459 Passaic Avenue",
+          "West Caldwell, New Jersey",
+          "(973) 276-6700",
+          "cranesmill@lsmnj.org"
+        ],
+        "publishedGooglePlaceIds": {
+          "selectedPlace": null,
+          "addressGeocode": null
+        },
+        "publishedGoogleLinkBasis": "The only Google link is an address query (maps?ll=40.858807,-74.324241&q=459 Passaic Ave West Caldwell, NJ 07006). The embedded map tiles spotlight an automatic compound-grounds feature 1y9926778732201623867!2y290251151567059106 (hex 0x89c300a9a0c7c13b:0x4072de270cd78a2, /g/11bw3yl38y). That is a map-render parameter, not an operator review or place link, and its feature half differs from the review rows' 0x7c735d2840ca5a30.",
+        "placeMatch": "none: no operator-published place ID equals the review rows' 0x0:0x7c735d2840ca5a30",
+        "otherPagesChecked": [
+          {
+            "url": "https://www.cranesmill.org/",
+            "httpStatus": 200,
+            "googleLinks": 0,
+            "artifact": {
+              "path": "/Users/dansullivan/.factory/artifacts/scripts/6ff4afd2-f83c-4a16-b272-ff8cf5421092/call_f41bcb4a09357b32_1.log",
+              "section": "r57"
+            }
+          },
+          {
+            "url": "https://www.cranesmill.org/about/",
+            "effectiveUrl": "https://www.cranesmill.org/explore-life/",
+            "httpStatus": 200,
+            "googleLinks": 0,
+            "artifact": {
+              "path": "/Users/dansullivan/.factory/artifacts/scripts/6ff4afd2-f83c-4a16-b272-ff8cf5421092/call_126670d78df9a682_1.log",
+              "section": "r59",
+              "sha256": "28b3bddc619b94f360c5fb9a07c01b66d5335dfd7034de74a5fe14bdccfa7735"
+            }
+          },
+          {
+            "url": "https://www.lsmnj.org/",
+            "httpStatus": 404,
+            "artifact": {
+              "path": "/Users/dansullivan/.factory/artifacts/scripts/6ff4afd2-f83c-4a16-b272-ff8cf5421092/call_126670d78df9a682_1.log",
+              "section": "r58"
+            }
+          }
+        ],
+        "artifact": {
+          "path": "/Users/dansullivan/.factory/artifacts/scripts/6ff4afd2-f83c-4a16-b272-ff8cf5421092/call_f41bcb4a09357b32_1.log",
+          "section": "r55",
+          "sha256": "94d204775d05a3d9077cbbceffbe98c258f3075988c2e7c63ece135645713e30"
+        },
+        "limitation": "Identity corroboration only. Street, city and phone match the review listing. The Google population is not tied to the campus by any operator publication."
+      }
+    },
+    {
+      "providerId": "north-jersey-campus-winchester-gardens-07040",
+      "url": "https://www.mylivingchoice.com/property/winchester-gardens-health-care-center",
+      "observedAt": "2026-11-15T12:40:15.481781+00:00",
+      "bodySha256": "fb776a844dd14e6e968546a2e75725213a3d8852d91e5c41a546d5f1c78ca291",
+      "publishedGoogleAverage": 4.6,
+      "ratingCount": 74,
+      "decision": "withheld",
+      "reason": "Population hold. The official contact page publishes place 0x89c3add25e295c1f:0x188e3d3471ba330 and every visible row links it, so identity passes. Row 609589 is an explicit professional referral-partner account and row 609588 states no relationship; the existing professional-relationship rule withholds the window. The platform labels the page Skilled Nursing / Long Term Care only. Importer hold: no official campus ID, included_historical crosswalk row, no life-plan care-unit compatibility. No score may transfer to cms-315527 or north-jersey-doh-nj30a000.",
+      "identityEvidence": {
+        "kind": "sanitized-published-identity-check",
+        "sourceUrl": "https://winchestergardens.com/contact/",
+        "inspection": "full-page",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-15",
+        "operatorName": "Winchester Gardens (Springpoint Senior Living)",
+        "matchedPublishedFacts": [
+          "333 Elmwood Ave. Maplewood , NJ 07040",
+          "(973) 762-5050",
+          "Google Maps place link titled Winchester Gardens"
+        ],
+        "publishedGooglePlaceIds": {
+          "selectedPlace": "0x89c3add25e295c1f:0x188e3d3471ba330",
+          "addressGeocode": "0x89c3acf1b5cd80dd:0x8debeab1505a43e5"
+        },
+        "publishedGoogleLinkBasis": "The address link opens /maps/place/Winchester+Gardens/. Its data path first names the 333 Elmwood Ave geocode, then selects place 0x89c3add25e295c1f:0x188e3d3471ba330 (/g/11s1wqrj7j).",
+        "placeMatch": "exact: every visible review row links 0x89c3add25e295c1f:0x188e3d3471ba330",
+        "priorWitness": {
+          "path": "research/north-jersey/descriptions/residential/receipts/winchester-contact.json",
+          "checkedAt": "2026-11-13",
+          "samePlaceIds": true
+        },
+        "artifact": {
+          "path": "/Users/dansullivan/.factory/artifacts/scripts/6ff4afd2-f83c-4a16-b272-ff8cf5421092/call_f41bcb4a09357b32_1.log",
+          "section": "r56",
+          "sha256": "94d204775d05a3d9077cbbceffbe98c258f3075988c2e7c63ece135645713e30"
+        },
+        "limitation": "Identity corroboration only. This source supplies no review aggregate or reviewer population."
+      }
+    }
+  ]
+}

@@ -124,14 +124,14 @@ test("every result retains separate official identity evidence and source hashes
       raw: snapshot.results["315083"].raw,
       cell: snapshot.results["315083"].cell,
       medicaidId: snapshot.results["315083"].identity.medicaidId,
-      stateFacilityId: snapshot.results["315083"].identity.stateFacilityId,
+      npi: snapshot.results["315083"].identity.npi,
     },
     {
       value: 96,
       raw: "0.96",
       cell: "AZ8",
       medicaidId: "917532",
-      stateFacilityId: "60909",
+      npi: "1154081990",
     },
   );
   for (const [ccn, result] of Object.entries(snapshot.results)) {
