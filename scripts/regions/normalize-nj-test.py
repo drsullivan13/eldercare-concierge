@@ -33,6 +33,20 @@ class ActualSourceTests(unittest.TestCase):
         cls.points = json.loads((adapter.RESEARCH / "address-points/providers-by-id.json").read_bytes())
         cls.original_by_id = {row["FacID"]: row for row in cls.original}
 
+    def test_federal_history_is_bound_to_the_registered_office_identity(self):
+        inputs = adapter.Inputs(adapter.RESEARCH)
+        pid = "north-jersey-hp-hp0015320"
+        office = self.by_id[pid]
+        research = {}
+        adapter.add_federal_home_care_history(inputs, [office], research)
+        facts = research[pid]["facts"]
+        enrollment = next(f for f in facts if f["id"] == pid + "-hhs-nj-enrollment")
+        self.assertIn("December 2018", enrollment["text"])
+        self.assertEqual(research[pid]["reviewAggregates"], [])
+        self.assertTrue(all(f["kind"] == "care" and "amount" not in f for f in facts))
+        with self.assertRaisesRegex(ValueError, "no longer matches registered office"):
+            adapter.add_federal_home_care_history(inputs, [{**office, "address": "Different office"}], {})
+
     def test_every_original_doh_row_has_exactly_one_disposition(self):
         dispositions = [row for row in self.crosswalk + self.ledger if row["source"] == "NJ DOH All_LTC"]
         self.assertEqual(len(self.original), 894)

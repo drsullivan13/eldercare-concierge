@@ -26333,7 +26333,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-home-bayada-westfield-hp0015320-services-0",
@@ -26364,6 +26364,12 @@
         "kind": "care",
         "sourceId": "supp-nppes-1659689206",
         "text": "NPPES lists BAYADA HOME HEALTH CARE, INC. at the matching WESTFIELD practice address with the published taxonomy labels Home Health. NPI 1659689206. NPPES last updated 2026-03-26. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0015320-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015320-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2018. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -26404,6 +26410,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1659689206"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0015320-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -26474,7 +26490,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-14",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-home-bayada-dover-hp0015325-services-0",
@@ -26511,6 +26527,18 @@
         "kind": "cost",
         "sourceId": "morris-2025-007-directory",
         "text": "Private pay listed in the 2025 county directory. Confirm current terms with the agency."
+      },
+      {
+        "id": "north-jersey-hp-hp0015325-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015325-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0015325-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015325-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -26561,6 +26589,60 @@
         "publisher": "Morris County",
         "title": "2025 Home Care Agencies, page 3",
         "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0015325-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0015325-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0015339": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0015339-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015339-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0015339",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0015339-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -26653,13 +26735,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1043625130-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1043625130",
         "text": "NPPES lists BAYADA HOME HEALTH CARE, INC. at the matching LITTLE FALLS practice address with the published taxonomy labels Home Health. NPI 1043625130. NPPES last updated 2026-03-26. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0015343-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0015343-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -26683,6 +26771,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1043625130"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0015343-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -26796,6 +26894,56 @@
       }
     ]
   },
+  "north-jersey-hp-hp0020400": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0020400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0020400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0020400-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0020400-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0020400",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0020400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0020400-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0022400": {
     "availability": {
       "asOf": null,
@@ -26853,7 +27001,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-home-bergen-home-care-hp0022500-services-0",
@@ -26884,6 +27032,18 @@
         "kind": "care",
         "sourceId": "supp-nppes-1902094220",
         "text": "NPPES lists BERGEN HOME CARE AND NURSING INC at the matching HACKENSACK practice address with the published taxonomy labels Home Health, Nursing Care. NPI 1902094220. NPPES last updated 2019-11-15. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0022500-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0022500-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0022500-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0022500-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -26924,6 +27084,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1902094220"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0022500-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0022500-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -26993,6 +27173,18 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0024800-union-caregiver-directory-source",
         "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-206-9988."
+      },
+      {
+        "id": "north-jersey-hp-hp0024800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0024800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0024800-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0024800-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -27036,6 +27228,26 @@
         "publisher": "Union County Division on Aging",
         "title": "Union County resource directory for older adults, page 13",
         "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=13"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0024800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0024800-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -27197,13 +27409,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1538216601-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1538216601",
         "text": "NPPES lists AWCA HOMECARE AGENCY at the matching TEANECK practice address with the published taxonomy labels Home Health. NPI 1538216601. NPPES last updated 2020-08-22. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0038100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0038100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0038100-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0038100-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -27228,6 +27452,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1538216601"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0038100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0038100-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -27731,6 +27975,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0069600": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0069600-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0069600-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0069600",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0069600-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0076201": {
     "availability": {
       "asOf": null,
@@ -27881,13 +28159,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1265560247-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1265560247",
         "text": "NPPES lists GENTLE HEART CARE, LLC at the matching ENGLEWOOD CLIFFS practice address with the published taxonomy labels Home Health. NPI 1265560247. NPPES last updated 2015-10-29. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0081200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0081200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0081200-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0081200-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -27911,6 +28201,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1265560247"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0081200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0081200-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -27921,13 +28231,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1811106925-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1811106925",
         "text": "NPPES lists SERENITY SENIOR CARE at the matching BLOOMFIELD practice address with the published taxonomy labels Home Health. NPI 1811106925. NPPES last updated 2024-09-26. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0082500-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0082500-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -27951,6 +28267,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1811106925"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0082500-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -27995,13 +28321,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1730366592-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1730366592",
         "text": "NPPES lists BERGEN CARE PERSONAL TOUCH, LLC at the matching PARAMUS practice address with the published taxonomy labels Home Health Aide, Nursing Care. NPI 1730366592. NPPES last updated 2023-06-30. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0091902-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0091902-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -28025,6 +28357,66 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1730366592"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0091902-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0092800": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0092800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0092800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0092800-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0092800-hhs-personal-care-claims-source",
+        "text": "In April 2018, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0092800",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0092800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0092800-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -28363,13 +28755,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1346411857-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1346411857",
         "text": "NPPES lists ALWAYS CARING HEALTH CARE SERVICES, LLC at the matching WEST NEW YORK practice address with the published taxonomy labels Home Health. NPI 1346411857. NPPES last updated 2011-07-14. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0105200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0105200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0105200-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0105200-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -28393,6 +28797,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1346411857"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0105200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0105200-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -28513,6 +28937,18 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0115500-nj211-respite-services-source",
         "text": "NJ 211 lists in-home respite care for Essex County residents. Call 973-744-8103 for intake."
+      },
+      {
+        "id": "north-jersey-hp-hp0115500-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0115500-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0115500-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0115500-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -28556,6 +28992,26 @@
         "publisher": "NJ 211 statewide information and referral directory",
         "title": "NJ 211 · In-home respite care",
         "url": "https://search.nj211.org/search/41e2dc2e-0c1c-559d-b0b0-1c2917afbf89"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0115500-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0115500-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -28854,13 +29310,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1841690070-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1841690070",
         "text": "NPPES lists EPIC HEALTH SERVICES, INC. at the matching CLARK practice address with the published taxonomy labels Behavior Analyst, Home Health, Nursing Care. NPI 1841690070. NPPES last updated 2025-01-27. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0120800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0120800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -28884,6 +29346,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1841690070"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0120800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -29028,13 +29500,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1790008969-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1790008969",
         "text": "NPPES lists CROSSLINKS CARE LLC at the matching IRVINGTON practice address with the published taxonomy labels Home Health. NPI 1790008969. NPPES last updated 2023-02-16. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0126900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0126900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -29058,6 +29536,66 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1790008969"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0126900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0130200": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0130200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0130200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0130200-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0130200-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0130200",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0130200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0130200-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -29230,13 +29768,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1902220577-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1902220577",
         "text": "NPPES lists BEST HOME CARE, INC at the matching WEST NEW YORK practice address with the published taxonomy labels Home Health. NPI 1902220577. NPPES last updated 2020-07-14. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0131701-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0131701-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0131701-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0131701-hhs-personal-care-claims-source",
+        "text": "In October 2023, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -29260,6 +29810,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1902220577"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0131701-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0131701-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -29270,13 +29840,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1558774786-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1558774786",
         "text": "NPPES lists BEST HOME CARE INC at the matching ELIZABETH practice address with the published taxonomy labels Home Health. NPI 1558774786. NPPES last updated 2020-06-26. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0131702-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0131702-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -29300,6 +29876,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1558774786"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0131702-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -29317,6 +29903,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0131703-office-services-source",
         "text": "Personal care includes assistance with bathing, dressing and getting around, plus help planning and preparing meals."
+      },
+      {
+        "id": "north-jersey-hp-hp0131703-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0131703-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [],
@@ -29334,6 +29926,16 @@
         "publisher": "Best Home Care – Fort Lee",
         "title": "Best Home Care – Fort Lee · Home care services",
         "url": "https://besthomecarenj.com/personal-care-services/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0131703-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -29523,6 +30125,56 @@
       }
     ]
   },
+  "north-jersey-hp-hp0138300": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0138300-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0138300-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0138300-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0138300-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0138300",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0138300-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0138300-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0138400": {
     "availability": {
       "asOf": null,
@@ -29588,6 +30240,106 @@
         "publisher": "ComForCare Home Care of Central and South Monmouth",
         "title": "ComForCare Home Care of Central and South Monmouth · In-home care services",
         "url": "https://www.comforcare.com/new-jersey/central-monmouth/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0143900": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0143900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0143900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0143900-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0143900-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0143900",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0143900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0143900-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0147200": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0147200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0147200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0147200-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0147200-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0147200",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0147200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0147200-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -29879,6 +30631,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0153402": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0153402-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0153402-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0153402",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0153402-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0154800": {
     "availability": {
       "asOf": null,
@@ -30010,6 +30796,56 @@
         "publisher": "Always Home Care",
         "title": "Always Home Care · Home care services",
         "url": "https://alwayshomecare.org/our-location/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0158800": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0158800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0158800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0158800-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0158800-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0158800",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0158800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0158800-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -30352,6 +31188,56 @@
       }
     ]
   },
+  "north-jersey-hp-hp0171300": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0171300-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0171300-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0171300-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0171300-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0171300",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0171300-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0171300-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0174300": {
     "availability": {
       "asOf": null,
@@ -30406,6 +31292,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0174800-essex-respite-2025-source",
         "text": "Named in Essex County’s 2025 respite program schedule. Contact the county for the current provider list."
+      },
+      {
+        "id": "north-jersey-hp-hp0174800-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0174800-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -30439,6 +31331,50 @@
         "publisher": "Essex County Board of County Commissioners, Department of Citizen Services / Division of Senior Services",
         "title": "Essex County 2025 respite program schedule, page 8",
         "url": "https://ecode360.com/ES1525/document/753118519.pdf#page=8"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0174800-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0176400": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0176400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0176400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in July 2021. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0176400",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0176400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -30449,13 +31385,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1235741554-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1235741554",
         "text": "NPPES lists ROYAL HEARTS HEALTHCARE at the matching LODI practice address with the published taxonomy labels Home Health. NPI 1235741554. NPPES last updated 2020-08-18. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0176700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0176700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -30479,6 +31421,50 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1235741554"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0176700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0177700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0177700-ddd-2022-program",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0177700-ddd-2022-program-source",
+        "text": "New Jersey’s May 2022 developmental disabilities program directory listed this office for community based supports, individual supports, respite. Confirm current participation with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0177700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0177700-ddd-2022-program-source",
+        "kind": "public-directory",
+        "publishedAt": "2022-05-06",
+        "publisher": "New Jersey Department of Human Services, Division of Developmental Disabilities",
+        "title": "New Jersey DDD Provider Search Report, May 6, 2022, page 183",
+        "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4744/DVR/4249557/DDD_Provider_List_Hunterdon_County.pdf#page=183"
       }
     ]
   },
@@ -30918,6 +31904,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0191600-union-caregiver-directory-source",
         "text": "Union County’s May 2026 guide lists this office for home care and caregiver services. Call 908-322-8200."
+      },
+      {
+        "id": "north-jersey-hp-hp0191600-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0191600-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -30978,6 +31970,16 @@
         "publisher": "Union County Division on Aging",
         "title": "Union County resource directory for older adults, page 13",
         "url": "https://ucnj.org/dhs/wp-content/uploads/sites/21/2026/05/Resource-Directory_5.2026-1.pdf#page=13"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0191600-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -31037,6 +32039,106 @@
       }
     ]
   },
+  "north-jersey-hp-hp0197100": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0197100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0197100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0197100-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0197100-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0197100",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0197100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0197100-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0200100": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0200100-ddd-2022-program",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0200100-ddd-2022-program-source",
+        "text": "New Jersey’s May 2022 developmental disabilities program directory listed this office for community based supports, individual supports, respite. Confirm current participation with the agency."
+      },
+      {
+        "id": "north-jersey-hp-hp0200100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0200100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0200100",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0200100-ddd-2022-program-source",
+        "kind": "public-directory",
+        "publishedAt": "2022-05-06",
+        "publisher": "New Jersey Department of Human Services, Division of Developmental Disabilities",
+        "title": "New Jersey DDD Provider Search Report, May 6, 2022, page 116",
+        "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4744/DVR/4249557/DDD_Provider_List_Hunterdon_County.pdf#page=116"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0200100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0204200": {
     "availability": {
       "asOf": null,
@@ -31068,6 +32170,56 @@
         "publisher": "Always Best Care of Basking Ridge",
         "title": "Always Best Care of Basking Ridge · Home care services",
         "url": "https://alwaysbestcare.com/baskingridge/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0204600": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0204600-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0204600-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0204600-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0204600-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0204600",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0204600-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0204600-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -31302,7 +32454,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-14",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-home-brightstar-morris-hp0217600-services-0",
@@ -31357,6 +32509,12 @@
         "kind": "care",
         "sourceId": "morris-2025-010-directory",
         "text": "Services listed in the 2025 county directory: Companion."
+      },
+      {
+        "id": "north-jersey-hp-hp0217600-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0217600-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -31417,6 +32575,16 @@
         "publisher": "Morris County",
         "title": "2025 Home Care Agencies, page 3",
         "url": "https://www.morriscountynj.gov/files/sharedassets/public/v/1/departments/human-services/division-on-agingdisability/hh-agencies-2025.pdf#page=3"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0217600-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -31618,6 +32786,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0221800-office-services-source",
         "text": "The agency offers personal care, companion visits and respite care for family caregivers."
+      },
+      {
+        "id": "north-jersey-hp-hp0221800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0221800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -31651,6 +32825,16 @@
         "publisher": "Raymond Home Care Services",
         "title": "Raymond Home Care Services · Home care services",
         "url": "https://www.raymondhomecareservicesllc.com/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0221800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -31701,13 +32885,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1063663110-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1063663110",
         "text": "NPPES lists QUALITY HEALTH CARE, INC. at the matching BLOOMFIELD practice address with the published taxonomy labels Home Health. NPI 1063663110. NPPES last updated 2021-04-26. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0224600-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0224600-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -31731,6 +32921,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1063663110"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0224600-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -31823,13 +33023,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1033188495-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1033188495",
         "text": "NPPES lists CONFIDENT CARE CORP at the matching ELIZABETH practice address with the published taxonomy labels Home Health. NPI 1033188495. NPPES last updated 2026-01-29. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0227902-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0227902-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0227902-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0227902-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -31853,6 +33065,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1033188495"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0227902-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0227902-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -31863,13 +33095,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1053525352-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1053525352",
         "text": "NPPES lists PREMIER HOME HEALTH CARE SERVICES, INC at the matching UNION practice address with the published taxonomy labels Home Health, Nursing Care. NPI 1053525352. NPPES last updated 2019-01-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0231605-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0231605-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0231605-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0231605-hhs-personal-care-claims-source",
+        "text": "In April 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -31893,6 +33137,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1053525352"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0231605-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0231605-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -31978,13 +33242,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1871034108-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1871034108",
         "text": "NPPES lists ASSISTINGSENIORS NJ001 at the matching POMPTON PLAINS practice address with the published taxonomy labels Home Health. NPI 1871034108. NPPES last updated 2017-03-20. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0235400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0235400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0235400-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0235400-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -32008,6 +33284,60 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1871034108"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0235400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0235400-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0241200": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0241200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0241200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0241200",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0241200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -32175,13 +33505,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1366912685-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1366912685",
         "text": "NPPES lists ALPHA CARE HOME HEALTH SERVICES OF NJ, INC. at the matching HACKENSACK practice address with the published taxonomy labels Home Health. NPI 1366912685. NPPES last updated 2021-06-16. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0246500-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0246500-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0246500-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0246500-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -32205,6 +33547,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1366912685"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0246500-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0246500-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -32262,6 +33624,56 @@
         "publisher": "VIPrivate Care New Jersey",
         "title": "VIPrivate Care New Jersey · Home care services",
         "url": "https://viprivatecare.com/services/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0249201": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0249201-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0249201-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0249201-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0249201-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0249201",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0249201-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0249201-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -32452,13 +33864,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1023521101-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1023521101",
         "text": "NPPES lists A1 PLUS HOME CARE SERVICES LLC at the matching UNION practice address with the published taxonomy labels Home Health. NPI 1023521101. NPPES last updated 2021-05-06. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0254700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0254700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -32482,6 +33900,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1023521101"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0254700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -32499,6 +33927,18 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0255500-office-services-source",
         "text": "The Somerset office lists respite care, personal care and companionship."
+      },
+      {
+        "id": "north-jersey-hp-hp0255500-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0255500-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0255500-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0255500-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [],
@@ -32516,6 +33956,26 @@
         "publisher": "Goodwill Caring Healthcare",
         "title": "Goodwill Caring Healthcare · Home care services",
         "url": "https://www.goodwillcaringhcs.com/home-newjersey"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0255500-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0255500-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -32892,6 +34352,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0259804": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0259804-ddd-2022-program",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0259804-ddd-2022-program-source",
+        "text": "New Jersey’s May 2022 developmental disabilities program directory listed this office for community based supports, individual supports, respite. Confirm current participation with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0259804",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0259804-ddd-2022-program-source",
+        "kind": "public-directory",
+        "publishedAt": "2022-05-06",
+        "publisher": "New Jersey Department of Human Services, Division of Developmental Disabilities",
+        "title": "New Jersey DDD Provider Search Report, May 6, 2022, page 64",
+        "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4744/DVR/4249557/DDD_Provider_List_Hunterdon_County.pdf#page=64"
+      }
+    ]
+  },
   "north-jersey-hp-hp0259805": {
     "availability": {
       "asOf": null,
@@ -32930,6 +34424,56 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1982551354"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0261400": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0261400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0261400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0261400-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0261400-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0261400",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0261400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0261400-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -33021,13 +34565,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1558578369-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1558578369",
         "text": "NPPES lists LIBERTY MEDICAL CARE SERVICES LLC at the matching MAPLEWOOD practice address with the published taxonomy labels Home Health, Social Worker, Clinical. NPI 1558578369. NPPES last updated 2024-12-24. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0265700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0265700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0265700-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0265700-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -33051,6 +34607,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1558578369"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0265700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0265700-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -33061,13 +34637,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1538754403-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1538754403",
         "text": "NPPES lists PRIVATE AID CONTRACTOR, LLC at the matching TEANECK practice address with the published taxonomy labels Registered Nurse, Home Health. NPI 1538754403. NPPES last updated 2022-11-14. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0266700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0266700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0266700-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0266700-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -33091,6 +34679,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1538754403"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0266700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0266700-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -33101,13 +34709,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1497245591-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1497245591",
         "text": "NPPES lists SACRED HOME HEALTH CARE at the matching KEARNY practice address with the published taxonomy labels Home Health. NPI 1497245591. NPPES last updated 2022-09-03. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0267700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0267700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0267700-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0267700-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -33131,6 +34751,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1497245591"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0267700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0267700-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -33168,6 +34808,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0272000": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0272000-ddd-2022-program",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0272000-ddd-2022-program-source",
+        "text": "New Jersey’s May 2022 developmental disabilities program directory listed this office for community based supports, individual supports, respite. Confirm current participation with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0272000",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0272000-ddd-2022-program-source",
+        "kind": "public-directory",
+        "publishedAt": "2022-05-06",
+        "publisher": "New Jersey Department of Human Services, Division of Developmental Disabilities",
+        "title": "New Jersey DDD Provider Search Report, May 6, 2022, page 126",
+        "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4744/DVR/4249557/DDD_Provider_List_Hunterdon_County.pdf#page=126"
+      }
+    ]
+  },
   "north-jersey-hp-hp0273100": {
     "availability": {
       "asOf": null,
@@ -33175,13 +34849,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1679080204-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1679080204",
         "text": "NPPES lists NJFIRST HOME HEALTH CARE LLC at the matching Union City practice address with the published taxonomy labels Home Health, Home Health Aide, Registered Nurse, Home Health. NPI 1679080204. NPPES last updated 2024-11-07. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0273100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0273100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0273100-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0273100-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -33205,6 +34891,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1679080204"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0273100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0273100-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -33263,6 +34969,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0276400-office-services-source",
         "text": "The Sea Girt office lists help with dressing, bathing and grooming, medication reminders, and companionship."
+      },
+      {
+        "id": "north-jersey-hp-hp0276400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0276400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [],
@@ -33280,6 +34992,16 @@
         "publisher": "Assisting Hands Home Care Jersey Shore",
         "title": "Assisting Hands Home Care Jersey Shore · In-home care services",
         "url": "https://assistinghands.com/29/newjersey/monmouth/faq/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0276400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -33303,6 +35025,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0277000-office-services-source",
         "text": "The Maplewood agency offers personal care and companionship."
+      },
+      {
+        "id": "north-jersey-hp-hp0277000-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0277000-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -33336,6 +35064,16 @@
         "publisher": "Alayia Helping Hands",
         "title": "Alayia Helping Hands · In-home care services",
         "url": "https://www.alayiahelpinghands.com/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0277000-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -33386,13 +35124,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1023522604-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1023522604",
         "text": "NPPES lists AVILO CARE SERVICES LLC at the matching UNION practice address with the published taxonomy labels Home Health. NPI 1023522604. NPPES last updated 2023-11-07. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0277700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0277700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0277700-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0277700-hhs-personal-care-claims-source",
+        "text": "In October 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -33416,6 +35166,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1023522604"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0277700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0277700-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -33456,6 +35226,40 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1275154460"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0278600": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0278600-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0278600-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0278600",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0278600-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -33666,13 +35470,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1801351580-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1801351580",
         "text": "NPPES lists 247 HEALTHCARE SOLUTIONS LLC at the matching WAYNE practice address with the published taxonomy labels Home Health. NPI 1801351580. NPPES last updated 2024-02-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0283100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0283100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -33696,6 +35506,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1801351580"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0283100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -33706,13 +35526,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1144799701-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1144799701",
         "text": "NPPES lists PERFECT HOME CARE at the matching BAYONNE practice address with the published taxonomy labels Home Health. NPI 1144799701. NPPES last updated 2020-01-16. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0284400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0284400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0284400-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0284400-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -33736,6 +35568,60 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1144799701"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0284400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0284400-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0284900": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0284900-ddd-2022-program",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0284900-ddd-2022-program-source",
+        "text": "New Jersey’s May 2022 developmental disabilities program directory listed this office for community based supports, individual supports, respite. Confirm current participation with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0284900",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0284900-ddd-2022-program-source",
+        "kind": "public-directory",
+        "publishedAt": "2022-05-06",
+        "publisher": "New Jersey Department of Human Services, Division of Developmental Disabilities",
+        "title": "New Jersey DDD Provider Search Report, May 6, 2022, page 123",
+        "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4744/DVR/4249557/DDD_Provider_List_Hunterdon_County.pdf#page=123"
       }
     ]
   },
@@ -33880,6 +35766,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0286600": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0286600-ddd-2022-program",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0286600-ddd-2022-program-source",
+        "text": "New Jersey’s May 2022 developmental disabilities program directory listed this office for community based supports. Confirm current participation with the agency."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0286600",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0286600-ddd-2022-program-source",
+        "kind": "public-directory",
+        "publishedAt": "2022-05-06",
+        "publisher": "New Jersey Department of Human Services, Division of Developmental Disabilities",
+        "title": "New Jersey DDD Provider Search Report, May 6, 2022, page 119",
+        "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4744/DVR/4249557/DDD_Provider_List_Hunterdon_County.pdf#page=119"
+      }
+    ]
+  },
   "north-jersey-hp-hp0287000": {
     "availability": {
       "asOf": null,
@@ -33921,13 +35841,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1114493277-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1114493277",
         "text": "NPPES lists EXPRESS ENTERPRISE at the matching EAST ORANGE practice address with the published taxonomy labels Home Health, Home Health Aide, In Home Supportive Care. NPI 1114493277. NPPES last updated 2023-09-21. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0287200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0287200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0287200-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0287200-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -33951,6 +35883,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1114493277"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0287200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0287200-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -33961,7 +35913,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-association-p46-1-services-0",
@@ -33998,6 +35950,18 @@
         "kind": "care",
         "sourceId": "supp-nppes-1922563345",
         "text": "NPPES lists NJ HOME HEALTH CARE LLC at the matching JERSEY CITY practice address with the published taxonomy labels Home Health, In Home Supportive Care. NPI 1922563345. NPPES last updated 2020-05-29. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0287900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0287900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0287900-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0287900-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -34067,6 +36031,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1922563345"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0287900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0287900-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -34232,6 +36216,56 @@
       }
     ]
   },
+  "north-jersey-hp-hp0293100": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0293100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0293100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0293100-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0293100-hhs-personal-care-claims-source",
+        "text": "In July 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0293100",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0293100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0293100-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0293200": {
     "availability": {
       "asOf": null,
@@ -34269,6 +36303,40 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1033753199"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0293800": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0293800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0293800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0293800",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0293800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -34356,13 +36424,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1073148664-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1073148664",
         "text": "NPPES lists WOORI HOME CARE LLC at the matching ENGLEWOOD CLIFFS practice address with the published taxonomy labels Home Health, Home Health Aide, In Home Supportive Care. NPI 1073148664. NPPES last updated 2024-01-24. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0299300-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0299300-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -34386,6 +36460,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1073148664"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0299300-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -34396,7 +36480,7 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-home-brightstar-passaic-hp0299800-services-0",
@@ -34433,6 +36517,12 @@
         "kind": "care",
         "sourceId": "supp-home-b493c8866f8f8e2e",
         "text": "Only the locally confirmed broad service categories are retained. The brandwide nursing menu is not assigned to this office."
+      },
+      {
+        "id": "north-jersey-hp-hp0299800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0299800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -34468,6 +36558,16 @@
         "publisher": "BrightStar Care Passaic and Bergen County",
         "title": "BrightStar Care Passaic and Bergen County official office information",
         "url": "https://www.brightstarcare.com/locations/passaic-western-bergen-county/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0299800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -34675,13 +36775,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1033706080-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1033706080",
         "text": "NPPES lists CARE NEW JERSEY NURSING SERVICES INC at the matching ELIZABETH practice address with the published taxonomy labels Home Health. NPI 1033706080. NPPES last updated 2023-02-14. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0308300-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0308300-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -34705,6 +36811,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1033706080"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0308300-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -34715,13 +36831,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1689292336-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1689292336",
         "text": "NPPES lists 365 HOME HEALTH SERVICES LLC at the matching PATERSON practice address with the published taxonomy labels Home Health. NPI 1689292336. NPPES last updated 2020-07-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0308700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0308700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0308700-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0308700-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -34745,6 +36873,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1689292336"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0308700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0308700-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -34755,13 +36903,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1548871163-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1548871163",
         "text": "NPPES lists LE CHOIX HOME CARE LLC at the matching IRVINGTON practice address with the published taxonomy labels Home Health. NPI 1548871163. NPPES last updated 2020-08-17. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0309300-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0309300-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -34785,6 +36939,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1548871163"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0309300-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -34802,6 +36966,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0309400-office-services-source",
         "text": "The Woodbridge team based in Matawan offers care and companionship at home."
+      },
+      {
+        "id": "north-jersey-hp-hp0309400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0309400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [],
@@ -34819,6 +36989,16 @@
         "publisher": "SYNERGY HomeCare of Woodbridge",
         "title": "SYNERGY HomeCare of Woodbridge · In-home care services",
         "url": "https://synergyhomecare.com/nj-matawan-07747/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0309400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -34863,13 +37043,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1417538612-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1417538612",
         "text": "NPPES lists EROS HEALTHCARE SERVICES LLC at the matching Union practice address with the published taxonomy labels Home Health. NPI 1417538612. NPPES last updated 2026-03-26. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0310500-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0310500-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -34893,6 +37079,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1417538612"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0310500-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -35201,13 +37397,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1336890508-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1336890508",
         "text": "NPPES lists STATEWIDE FAMILY CARE at the matching East Orange practice address with the published taxonomy labels Home Health. NPI 1336890508. NPPES last updated 2026-05-07. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0317300-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0317300-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -35231,6 +37433,66 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1336890508"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0317300-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0317700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0317700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0317700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0317700-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0317700-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0317700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0317700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0317700-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -35282,13 +37544,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1962147033-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1962147033",
         "text": "NPPES lists MIYOU CARING HANDS LLC. at the matching NEWARK practice address with the published taxonomy labels Home Health Aide. NPI 1962147033. NPPES last updated 2022-05-03. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0320300-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0320300-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -35312,6 +37580,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1962147033"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0320300-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -35448,13 +37726,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1083287403-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1083287403",
         "text": "NPPES lists HOLISTIC CARE SOLUTIONS at the matching EAST ORANGE practice address with the published taxonomy labels Home Health. NPI 1083287403. NPPES last updated 2022-12-13. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0325900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0325900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0325900-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0325900-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -35478,6 +37768,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1083287403"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0325900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0325900-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -35570,13 +37880,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1851044416-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1851044416",
         "text": "NPPES lists WECARE HOME CAREGIVERS CORPORATION at the matching NEWARK practice address with the published taxonomy labels Community/Behavioral Health, Day Training, Developmentally Disabled Services, Early Intervention Provider Agency, Home Health, Hospice Care, Community Based, In Home Supportive Care, Nursing Care, Private Vehicle, Respite Care, Respite Care, Respite Care, Intellectual and/or Developmental Disabilities, Child, Respite Care, Respite Care, Mental Illness, Child, Respite Care, Respite Care, Physical Disabilities, Child, Transportation Network Company. NPI 1851044416. NPPES last updated 2025-10-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0328800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0328800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -35600,6 +37916,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1851044416"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0328800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -35644,13 +37970,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1629679188-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1629679188",
         "text": "NPPES lists LONG ISLAND SENIOR CARE LLC at the matching ORANGE practice address with the published taxonomy labels Adult Companion, Home Health. NPI 1629679188. NPPES last updated 2024-04-29. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0330200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0330200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -35674,6 +38006,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1629679188"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0330200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -35832,13 +38174,25 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1144948019-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1144948019",
         "text": "NPPES lists ENCLAVE HOME HEALTH SOLUTIONS at the matching RUTHERFORD practice address with the published taxonomy labels Home Health. NPI 1144948019. NPPES last updated 2022-08-17. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0336100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0336100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0336100-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0336100-hhs-personal-care-claims-source",
+        "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
       }
     ],
     "notes": [
@@ -35862,6 +38216,26 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1144948019"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0336100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0336100-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -35902,6 +38276,56 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1023725389"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0339700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0339700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0339700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0339700-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0339700-hhs-personal-care-claims-source",
+        "text": "In December 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0339700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0339700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0339700-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -36127,6 +38551,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0344100": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0344100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0344100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0344100",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0344100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0344700": {
     "availability": {
       "asOf": null,
@@ -36134,13 +38592,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1710757232-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1710757232",
         "text": "NPPES lists AA QUALITY HOME CARE at the matching UNION practice address with the published taxonomy labels Home Health. NPI 1710757232. NPPES last updated 2024-01-05. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0344700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0344700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -36164,6 +38628,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1710757232"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0344700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -36174,13 +38648,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1679106181-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1679106181",
         "text": "NPPES lists HAPPY FAMILY HOME HEALTHCARE AGENCY LLC at the matching BERKELEY HEIGHTS practice address with the published taxonomy labels Clinic/Center, Multi-Specialty, Home Health. NPI 1679106181. NPPES last updated 2023-08-22. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0345000-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0345000-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -36204,6 +38684,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1679106181"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0345000-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -36289,13 +38779,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1972201846-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1972201846",
         "text": "NPPES lists COMPASSIONATE HEALTHCARE SERVICES LLC at the matching NEWARK practice address with the published taxonomy labels Home Health. NPI 1972201846. NPPES last updated 2024-01-08. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0348900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0348900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -36319,6 +38815,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1972201846"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0348900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -36439,6 +38945,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0351900-office-services-source",
         "text": "Vanejup offers companionship and help with bathing, personal care and meal preparation."
+      },
+      {
+        "id": "north-jersey-hp-hp0351900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0351900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -36472,6 +38984,16 @@
         "publisher": "Vanejup Quality Care",
         "title": "Vanejup Quality Care · Home care services",
         "url": "https://vanejupqualitycare.com/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0351900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -36506,6 +39028,40 @@
         "publisher": "Caring Connections",
         "title": "Caring Connections · In-home care services",
         "url": "https://www.thecaringconnections.com/"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0353200": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0353200-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0353200-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0353200",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0353200-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -36687,13 +39243,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1194509117-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1194509117",
         "text": "NPPES lists AVM CARE LLC at the matching Lyndhurst practice address with the published taxonomy labels In Home Supportive Care. NPI 1194509117. NPPES last updated 2025-04-25. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0355900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0355900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -36717,6 +39279,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1194509117"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0355900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -36780,6 +39352,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0359900-office-services-source",
         "text": "Aides help with bathing and dressing, laundry, grocery shopping, meal preparation and medication reminders."
+      },
+      {
+        "id": "north-jersey-hp-hp0359900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0359900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -36813,6 +39391,16 @@
         "publisher": "Glowing Hearts Home Care Services",
         "title": "Glowing Hearts Home Care Services · Home care services",
         "url": "https://www.glowingheartshomecare.com/services"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0359900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -37200,13 +39788,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1508324062-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1508324062",
         "text": "NPPES lists KEON HOME HEALTHCARE LLC at the matching Union practice address with the published taxonomy labels Home Health. NPI 1508324062. NPPES last updated 2024-07-08. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0366900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0366900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -37230,6 +39824,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1508324062"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0366900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -37406,6 +40010,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0371700": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0371700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0371700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0371700",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0371700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0371800": {
     "availability": {
       "asOf": null,
@@ -37514,6 +40152,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0374100": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0374100-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0374100-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0374100",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0374100-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0374200": {
     "availability": {
       "asOf": null,
@@ -37593,6 +40265,40 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1942140413"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0374900": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0374900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0374900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0374900",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0374900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -37828,6 +40534,56 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1972317584"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0378000": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0378000-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0378000-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      },
+      {
+        "id": "north-jersey-hp-hp0378000-hhs-personal-care-claims",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0378000-hhs-personal-care-claims-source",
+        "text": "In October 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0378000",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0378000-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0378000-hhs-personal-care-claims-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-02-09",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "Medicaid personal care claims history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
       }
     ]
   },
@@ -38074,6 +40830,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0380700-office-services-source",
         "text": "The agency lists personal care, companionship and respite care."
+      },
+      {
+        "id": "north-jersey-hp-hp0380700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0380700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [],
@@ -38091,6 +40853,16 @@
         "publisher": "Boikin Healthcare Services",
         "title": "Boikin Healthcare Services · Home care",
         "url": "https://boikinhealthcare.com/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0380700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -38265,6 +41037,40 @@
       }
     ]
   },
+  "north-jersey-hp-hp0383400": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0383400-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0383400-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0383400",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0383400-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+      }
+    ]
+  },
   "north-jersey-hp-hp0383600": {
     "availability": {
       "asOf": null,
@@ -38272,13 +41078,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1063260479-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1063260479",
         "text": "NPPES lists GRACECARE NJ HEALTH SERVICES LLC at the matching Linden practice address with the published taxonomy labels Home Health. NPI 1063260479. NPPES last updated 2024-05-09. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0383600-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0383600-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -38302,6 +41114,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1063260479"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0383600-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -38942,13 +41764,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1154193910-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1154193910",
         "text": "NPPES lists VITAL HEALTH SERVICES at the matching West Orange practice address with the published taxonomy labels Home Health, Nurse Practitioner, Psych/Mental Health. NPI 1154193910. NPPES last updated 2026-11-12. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0392800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0392800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -38972,6 +41800,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1154193910"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0392800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -40298,6 +43136,12 @@
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0412700-office-services-source",
         "text": "The agency offers personal care and respite visits, with help preparing meals, light housekeeping, grocery shopping and medication reminders."
+      },
+      {
+        "id": "north-jersey-hp-hp0412700-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0412700-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [],
@@ -40315,6 +43159,16 @@
         "publisher": "Harmony Support",
         "title": "Harmony Support · Home care services",
         "url": "https://www.harmonysupport.care/home-care.html"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0412700-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -41041,13 +43895,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1114511615-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1114511615",
         "text": "NPPES lists ROKAH LLC at the matching West Orange practice address with the published taxonomy labels Assisted Living Facility, Assisted Living, Behavioral Disturbances, Lodging, Meals, Non-Pharmacy Dispensing Site, Non-emergency Medical Transport (VAN), Nurse's Aide, Nursing Care, Registered Nurse, Residential Treatment Facility, Intellectual and/or Developmental Disabilities. NPI 1114511615. NPPES last updated 2025-11-15. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0423800-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0423800-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -41071,6 +43931,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1114511615"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0423800-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -41201,13 +44071,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1033574447-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1033574447",
         "text": "NPPES lists TRAINING WITH A PURPOSE HOME HEALTHCARE LLC at the matching Hawthorne practice address with the published taxonomy labels Home Health. NPI 1033574447. NPPES last updated 2026-02-17. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0424900-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0424900-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in October 2021. Ask the office which plans it accepts today."
       }
     ],
     "notes": [
@@ -41231,6 +44107,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1033574447"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0424900-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },
@@ -41700,6 +44586,40 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1477350114"
+      }
+    ]
+  },
+  "north-jersey-hp-hp0430500": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the agency for current availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "id": "north-jersey-hp-hp0430500-hhs-nj-enrollment",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0430500-hhs-nj-enrollment-source",
+        "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-hp-hp0430500",
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0430500-hhs-nj-enrollment-source",
+        "kind": "public-directory",
+        "publishedAt": "2026-07-24",
+        "publisher": "U.S. Department of Health and Human Services",
+        "title": "New Jersey Medicaid enrollment history",
+        "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
       }
     ]
   },

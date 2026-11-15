@@ -662,6 +662,43 @@ def evidence_coverage(inputs, providers, county_by_id, addresses, research):
     return groups
 
 
+def add_federal_home_care_history(inputs, providers, research):
+    from nj_pay_context import add_fact
+
+    sources = inputs.json("home-care-pay-services/federal-program-history.json")
+    identities = inputs.json("home-care-nppes/verified-branch-facts.json")
+    offices = {p["id"]: p for p in providers if p["category"] == "home-care"}
+    for group in sources["datasets"]:
+        for item in group["offices"]:
+            pid = item["providerId"]
+            if pid not in offices:
+                continue
+            witness = identities[pid]
+            identity = {key: offices[pid].get(key) for key in
+                        ("id", "name", "address", "city", "state", "zip", "phone", "locationKind")}
+            if (witness["provider_id"] != pid or witness["npi"] != item["npi"]
+                    or witness["basis"] != "exact_organization_practice_address_unit_and_phone"
+                    or witness["nppes_status"] != "A"
+                    or witness["roster_identity_sha256"] != digest(encode(identity))):
+                raise ValueError(f"Federal organization no longer matches registered office: {pid}")
+            month = item["month"]
+            if not "2018-01" <= month <= "2024-12":
+                raise ValueError(f"Federal reporting month outside source period: {month}")
+            date_label = datetime.strptime(month, "%Y-%m").strftime("%B %Y")
+            if group["key"] == "hhs-nj-enrollment":
+                text = (f"New Jersey recorded this office’s organization as enrolled in Medicaid in {date_label}. "
+                        "Ask the office which plans it accepts today.")
+            elif group["key"] == "hhs-personal-care-claims":
+                if not item["codes"] or not set(item["codes"]) <= {"T1019", "T1020"}:
+                    raise ValueError(f"Unexpected personal care billing code: {pid}")
+                text = (f"In {date_label}, federal claims list this office’s organization as both billing "
+                        "and providing personal care. The claims identify the organization only.")
+            else:
+                raise ValueError(f"Unknown federal program history: {group['key']}")
+            add_fact(research, pid, group["key"], group["title"], text, group,
+                     "full-page", sources["checkedAt"], group["publishedAt"])
+
+
 def normalize(root, counties, *, source_only=False):
     inputs = Inputs(root)
     geography_manifest = inputs.json("geography/manifest.json")
@@ -1017,6 +1054,7 @@ def normalize(root, counties, *, source_only=False):
         enrich(inputs, providers, zips, county_by_id)
         from nj_pay_context import add_county_home_care_context
         add_county_home_care_context(inputs, providers, research)
+        add_federal_home_care_history(inputs, providers, research)
         if set(counties) == set(COUNTIES):
             scope_counties += SUPPLY_COUNTIES
     providers.sort(key=lambda p: p["id"])

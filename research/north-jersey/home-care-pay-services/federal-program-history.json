@@ -1,0 +1,829 @@
+{
+  "checkedAt": "2026-11-15",
+  "nppesSha256": "b4176df950750faede8fcacab20babafbacd9f5614bf4eea35b0b1ce253f8f14",
+  "datasets": [
+    {
+      "key": "hhs-nj-enrollment",
+      "title": "New Jersey Medicaid enrollment history",
+      "publisher": "U.S. Department of Health and Human Services",
+      "sourceUrl": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/",
+      "sha256": "b70930a9a017d258cc3292ee74e2941b809487c966d9a3792548550030b9c59c",
+      "publishedAt": "2026-07-24",
+      "offices": [
+        {
+          "providerId": "north-jersey-hp-hp0383400",
+          "npi": "1003705351",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0254700",
+          "npi": "1023521101",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0277700",
+          "npi": "1023522604",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0227902",
+          "npi": "1033188495",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0424900",
+          "npi": "1033574447",
+          "month": "2021-10"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0308300",
+          "npi": "1033706080",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0015343",
+          "npi": "1043625130",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0380700",
+          "npi": "1053140665",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0231605",
+          "npi": "1053525352",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0353200",
+          "npi": "1063129161",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0383600",
+          "npi": "1063260479",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0224600",
+          "npi": "1063663110",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0299300",
+          "npi": "1073148664",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0325900",
+          "npi": "1083287403",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0200100",
+          "npi": "1104327626",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0287200",
+          "npi": "1114493277",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0423800",
+          "npi": "1114511615",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0371700",
+          "npi": "1114789732",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0131703",
+          "npi": "1134610652",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0171300",
+          "npi": "1144668120",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0284400",
+          "npi": "1144799701",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0336100",
+          "npi": "1144948019",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0392800",
+          "npi": "1154193910",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0276400",
+          "npi": "1164911558",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0355900",
+          "npi": "1194509117",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0147200",
+          "npi": "1205910940",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0278600",
+          "npi": "1215437553",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0217600",
+          "npi": "1225402126",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0176700",
+          "npi": "1235741554",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0339700",
+          "npi": "1235857061",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0081200",
+          "npi": "1265560247",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0412700",
+          "npi": "1275351181",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0317300",
+          "npi": "1336890508",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0105200",
+          "npi": "1346411857",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0015325",
+          "npi": "1366473068",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0246500",
+          "npi": "1366912685",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0299800",
+          "npi": "1386284917",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0153402",
+          "npi": "1386356780",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0351900",
+          "npi": "1396450136",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0310500",
+          "npi": "1417538612",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0293100",
+          "npi": "1447824644",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0126900",
+          "npi": "1447939962",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0221800",
+          "npi": "1467104356",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0267700",
+          "npi": "1497245591",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0366900",
+          "npi": "1508324062",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0344100",
+          "npi": "1528777000",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0241200",
+          "npi": "1538147202",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0266700",
+          "npi": "1538754403",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0309300",
+          "npi": "1548871163",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0024800",
+          "npi": "1558488908",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0265700",
+          "npi": "1558578369",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0131702",
+          "npi": "1558774786",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0378000",
+          "npi": "1578014858",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0143900",
+          "npi": "1578842860",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0020400",
+          "npi": "1598889198",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0293800",
+          "npi": "1619573730",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0330200",
+          "npi": "1629679188",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0115500",
+          "npi": "1639208119",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0038100",
+          "npi": "1639329527",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0015320",
+          "npi": "1659689206",
+          "month": "2018-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0015339",
+          "npi": "1669719316",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0130200",
+          "npi": "1669759643",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0273100",
+          "npi": "1679080204",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0345000",
+          "npi": "1679106181",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0261400",
+          "npi": "1689063299",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0308700",
+          "npi": "1689292336",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0309400",
+          "npi": "1699371336",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0344700",
+          "npi": "1710757232",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0204600",
+          "npi": "1720201874",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0249201",
+          "npi": "1720538044",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0091902",
+          "npi": "1730366592",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0092800",
+          "npi": "1740474493",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0374100",
+          "npi": "1740986892",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0191600",
+          "npi": "1790197713",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0283100",
+          "npi": "1801351580",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0317700",
+          "npi": "1801566500",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0082500",
+          "npi": "1811106925",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0120800",
+          "npi": "1841690070",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0328800",
+          "npi": "1851044416",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0176400",
+          "npi": "1851770234",
+          "month": "2021-07"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0359900",
+          "npi": "1861168205",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0374900",
+          "npi": "1861242885",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0235400",
+          "npi": "1871034108",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0069600",
+          "npi": "1871651455",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0138300",
+          "npi": "1871884346",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0022500",
+          "npi": "1902094220",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0131701",
+          "npi": "1902220577",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0197100",
+          "npi": "1912380841",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0287900",
+          "npi": "1922563345",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0320300",
+          "npi": "1962147033",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0158800",
+          "npi": "1962774422",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0277000",
+          "npi": "1962980565",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0348900",
+          "npi": "1972201846",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0255500",
+          "npi": "1992230460",
+          "month": "2024-12"
+        },
+        {
+          "providerId": "north-jersey-hp-hp0430500",
+          "npi": "1992531578",
+          "month": "2024-12"
+        }
+      ]
+    },
+    {
+      "key": "hhs-personal-care-claims",
+      "title": "Medicaid personal care claims history",
+      "publisher": "U.S. Department of Health and Human Services",
+      "sourceUrl": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/",
+      "sha256": "f646d426126638dd0177cb14a86bfe7d7e9ed6b081a3e1c270bfe5070fb3fb94",
+      "publishedAt": "2026-02-09",
+      "offices": [
+        {
+          "providerId": "north-jersey-hp-hp0277700",
+          "npi": "1023522604",
+          "month": "2024-10",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0227902",
+          "npi": "1033188495",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0231605",
+          "npi": "1053525352",
+          "month": "2024-04",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0325900",
+          "npi": "1083287403",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0287200",
+          "npi": "1114493277",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0171300",
+          "npi": "1144668120",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0284400",
+          "npi": "1144799701",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0336100",
+          "npi": "1144948019",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0147200",
+          "npi": "1205910940",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0174800",
+          "npi": "1225467772",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0339700",
+          "npi": "1235857061",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0081200",
+          "npi": "1265560247",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0105200",
+          "npi": "1346411857",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0015325",
+          "npi": "1366473068",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0246500",
+          "npi": "1366912685",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0293100",
+          "npi": "1447824644",
+          "month": "2024-07",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0267700",
+          "npi": "1497245591",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0266700",
+          "npi": "1538754403",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0024800",
+          "npi": "1558488908",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0265700",
+          "npi": "1558578369",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0378000",
+          "npi": "1578014858",
+          "month": "2024-10",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0143900",
+          "npi": "1578842860",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0020400",
+          "npi": "1598889198",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0115500",
+          "npi": "1639208119",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0038100",
+          "npi": "1639329527",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0130200",
+          "npi": "1669759643",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0273100",
+          "npi": "1679080204",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0261400",
+          "npi": "1689063299",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0308700",
+          "npi": "1689292336",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0204600",
+          "npi": "1720201874",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0249201",
+          "npi": "1720538044",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0092800",
+          "npi": "1740474493",
+          "month": "2018-04",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0317700",
+          "npi": "1801566500",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0235400",
+          "npi": "1871034108",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0138300",
+          "npi": "1871884346",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0022500",
+          "npi": "1902094220",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0131701",
+          "npi": "1902220577",
+          "month": "2023-10",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0197100",
+          "npi": "1912380841",
+          "month": "2024-12",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0287900",
+          "npi": "1922563345",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0158800",
+          "npi": "1962774422",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0255500",
+          "npi": "1992230460",
+          "month": "2024-11",
+          "codes": [
+            "T1019"
+          ]
+        }
+      ]
+    }
+  ]
+}

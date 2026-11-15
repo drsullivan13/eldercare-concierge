@@ -42,6 +42,21 @@ def add_county_home_care_context(inputs, providers, research):
     add_respite_context(respite, offices, research)
     union = inputs.json("home-care-pay-services/union-caregiver-directory.json")
     add_union_context(union, offices, research)
+    ddd = inputs.json("home-care-pay-services/ddd-historical.json")
+    for row in ddd["offices"]:
+        pid = row["providerId"]
+        if pid not in offices:
+            continue
+        registry = row["registryOffice"]
+        if any(offices[pid][key] != registry[key] for key in ("name", "address", "city", "zip", "phone")):
+            raise ValueError(f"Changed historical DDD office identity: {pid}")
+        categories = ", ".join(category.lower() for category in row["programCategories"])
+        text = (f"New Jersey’s May 2022 developmental disabilities program directory listed this office "
+                f"for {categories}. Confirm current participation with the agency.")
+        title = f"New Jersey DDD Provider Search Report, May 6, 2022, page {row['page']}"
+        source = {"publisher": ddd["publisher"], "sourceUrl": f"{ddd['sourceUrl']}#page={row['page']}"}
+        add_fact(research, pid, "ddd-2022-program", title, text, source, "pdf", ddd["checkedAt"], ddd["sourceDate"])
+
     for row in inputs.json("home-care-pay-services/verified-office-services.json"):
         pid = row["providerId"]
         if pid not in offices:
