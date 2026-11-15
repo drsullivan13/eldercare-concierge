@@ -168,7 +168,11 @@ def build(root=ROOT):
             approval = copy.deepcopy(proposal)
             approval["observation"] = {"pointer": f"/receipts/{len(receipts)}"}
             approval["material"] = {"path": str(check_path), "sha256": release.digest(outputs[check_path])}
-            if mode == "reviewed" and "publishedCcn" not in identity:
+            if mode == "reviewed" and slug in decisions.get("publicPopulationNotes", {}):
+                note = decisions["publicPopulationNotes"][slug]
+                release.require(release.text_value(note), "Missing public population note")
+                approval["reason"] = note
+            elif mode == "reviewed" and "publishedCcn" not in identity:
                 approval["reason"] = (
                     "Second-wave reviewer read the original full-page witness, About and every visible "
                     "Google row before highlighting. Independent published facility/office identity "

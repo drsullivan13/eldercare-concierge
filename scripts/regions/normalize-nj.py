@@ -198,6 +198,67 @@ def cms_summary(row, as_of):
     return result
 
 
+def add_cms_nursing_context(rows, metadata, providers, research):
+    participation = {
+        "Medicare and Medicaid": "CMS reports Medicare and Medicaid participation for this certified nursing unit.",
+        "Medicare": "CMS reports Medicare participation only. Medicaid participation is not reported.",
+        "Medicaid": "CMS reports Medicaid participation only. Medicare participation is not reported.",
+    }
+    councils = {
+        "Resident": "CMS lists a resident council only.",
+        "Family": "CMS lists a family council only.",
+        "Both": "CMS lists both a resident council and a family council.",
+        "None": "CMS lists neither a resident nor a family council.",
+    }
+    units = {p["id"] for p in providers
+             if p["state"] == "NJ" and p["category"] == "nursing-home" and "cms" in p
+             and p["id"] == "cms-" + p["cms"]["ccn"]}
+    for row in rows:
+        ccn = row.get(CCN)
+        if not isinstance(ccn, str) or not re.fullmatch(r"\d{6}", ccn) or row.get("state") != "NJ":
+            continue
+        pid = "cms-" + ccn
+        if pid not in units:
+            continue
+        as_of = row.get("processing_date")
+        if not isinstance(as_of, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", as_of):
+            continue
+        try:
+            datetime.strptime(as_of, "%Y-%m-%d")
+        except ValueError:
+            continue
+        facts = []
+        for key, field, labels in (
+                ("program-participation", "provider_type", participation),
+                ("councils", "with_a_resident_and_family_council", councils)):
+            value = row.get(field)
+            text = labels.get(value) if isinstance(value, str) else None
+            if text:
+                if key == "program-participation":
+                    text += " This does not establish individual coverage, eligibility or bed availability."
+                facts.append({"id": f"{pid}-cms-{key}", "kind": "care", "text": text,
+                              "sourceId": f"{pid}-cms-provider-information", "asOf": as_of})
+        if not facts:
+            continue
+        checked = metadata["retrieved_at"][:10]
+        record = research.setdefault(pid, {
+            "providerId": pid, "checkedAt": checked, "providerDetailsReviewed": True,
+            "sources": [], "facts": [], "notes": [], "reviewAggregates": [], "reviews": [],
+            "availability": {"status": "not-published", "asOf": None, "sourceId": None,
+                             "text": "Contact the provider for current availability."},
+        })
+        record["checkedAt"] = max(record["checkedAt"] or checked, checked)
+        record["providerDetailsReviewed"] = True
+        record["sources"].append({
+            "id": f"{pid}-cms-provider-information", "kind": "regulator", "access": "full-page",
+            "publisher": "Centers for Medicare & Medicaid Services",
+            "title": f"CMS Provider Information · CCN {ccn} · processing date {as_of}",
+            "url": metadata["landing_url"], "checkedAt": checked,
+            "publishedAt": metadata["released"][:10],
+        })
+        record["facts"].extend(facts)
+
+
 def name_key(value):
     value = re.sub(r"\b(THE|LLC|INC)\b", "", clean(value).upper())
     return re.sub(r"[^A-Z0-9]", "", value)
@@ -1055,6 +1116,8 @@ def normalize(root, counties, *, source_only=False):
         from nj_pay_context import add_county_home_care_context
         add_county_home_care_context(inputs, providers, research)
         add_federal_home_care_history(inputs, providers, research)
+        if nursing is not None:
+            add_cms_nursing_context(nursing, metadata, providers, research)
         if set(counties) == set(COUNTIES):
             scope_counties += SUPPLY_COUNTIES
     providers.sort(key=lambda p: p["id"])

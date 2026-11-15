@@ -387,6 +387,70 @@
     {
       "aggregate": {
         "asOf": null,
+        "count": 65,
+        "rating": 4.2,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "identity": {
+        "address": "311 S Livingston Ave",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Livingston",
+        "name": "Inglemoor Rehabilitation & Care Center",
+        "state": "New Jersey",
+        "zip": "07039"
+      },
+      "inspection": "full-page",
+      "key": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json#/receipts/0",
+      "kind": "review-platform",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json",
+        "pointer": "/receipts/0",
+        "sha256": "2af9ece2c30d088822dc228d517dea75d5220d9ad8828f81085df5626cf37381"
+      },
+      "officialId": "NJ60708",
+      "platform": "MyLivingChoice",
+      "providerId": "north-jersey-doh-nj60708",
+      "status": null,
+      "url": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
+        "count": 38,
+        "rating": 3.8,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "identity": {
+        "address": "1 Veterans Drive",
+        "careUnit": "Skilled Nursing / Long Term Care",
+        "city": "Paramus",
+        "name": "New Jersey Veterans Memorial Home At Paramus",
+        "state": "New Jersey",
+        "zip": "07652"
+      },
+      "inspection": "full-page",
+      "key": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json#/receipts/1",
+      "kind": "review-platform",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json",
+        "pointer": "/receipts/1",
+        "sha256": "2af9ece2c30d088822dc228d517dea75d5220d9ad8828f81085df5626cf37381"
+      },
+      "officialId": "NJ60228",
+      "platform": "MyLivingChoice",
+      "providerId": "north-jersey-doh-nj60228",
+      "status": null,
+      "url": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
         "count": 197,
         "rating": 4.4,
         "scale": 5,

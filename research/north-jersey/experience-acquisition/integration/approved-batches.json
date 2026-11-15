@@ -442,6 +442,82 @@
           "access": "full-page",
           "aggregate": {
             "asOf": null,
+            "count": 65,
+            "rating": 4.2,
+            "scale": 5,
+            "scope": "consumer",
+            "sourceFamily": "google"
+          },
+          "checkedAt": "2026-11-15",
+          "id": "mlc-acquisition-inglemoor-rehabilitation-and-care-center",
+          "identity": {
+            "address": "311 S Livingston Ave",
+            "careUnit": "Skilled Nursing / Long Term Care",
+            "city": "Livingston",
+            "name": "Inglemoor Rehabilitation & Care Center",
+            "state": "New Jersey",
+            "zip": "07039"
+          },
+          "material": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/independent-checks/inglemoor-rehabilitation-and-care-center.json",
+            "sha256": "7f99f533f7ba26615740ebb6ff795658136234b521dfae9cbd6ab2a6d77099c7"
+          },
+          "observation": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json",
+            "pointer": "/receipts/0",
+            "sha256": "2af9ece2c30d088822dc228d517dea75d5220d9ad8828f81085df5626cf37381"
+          },
+          "officialId": "NJ60708",
+          "platform": "MyLivingChoice",
+          "providerId": "north-jersey-doh-nj60708",
+          "reason": "Google's 4.2/5 average covers 65 ratings for the Livingston nursing home. All five displayed accounts are positive, from three family members and two residents. These selected accounts do not represent every stay or verify clinical quality. Writers' identities are unverified. MyLivingChoice republishes Google, not a second set of reviews. The rating's publication date is unknown. This is not the Inglemoor facility in Englewood.",
+          "url": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center"
+        },
+        {
+          "access": "full-page",
+          "aggregate": {
+            "asOf": null,
+            "count": 38,
+            "rating": 3.8,
+            "scale": 5,
+            "scope": "consumer",
+            "sourceFamily": "google"
+          },
+          "checkedAt": "2026-11-15",
+          "id": "mlc-acquisition-new-jersey-veterans-memorial-home-at-paramus",
+          "identity": {
+            "address": "1 Veterans Drive",
+            "careUnit": "Skilled Nursing / Long Term Care",
+            "city": "Paramus",
+            "name": "New Jersey Veterans Memorial Home At Paramus",
+            "state": "New Jersey",
+            "zip": "07652"
+          },
+          "material": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/independent-checks/new-jersey-veterans-memorial-home-at-paramus.json",
+            "sha256": "e01f15870e50e7b787e53c7d1376207606464d6f2c4c345d041d8821f8182ba4"
+          },
+          "observation": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json",
+            "pointer": "/receipts/1",
+            "sha256": "2af9ece2c30d088822dc228d517dea75d5220d9ad8828f81085df5626cf37381"
+          },
+          "officialId": "NJ60228",
+          "platform": "MyLivingChoice",
+          "providerId": "north-jersey-doh-nj60228",
+          "reason": "Google's 3.8/5 average covers 38 ratings. The five displayed accounts include family praise, a family warning about weekend care, a mixed family account and a positive visitor account. One family account dates to February 2023 and may not reflect current care. These selected, unverified accounts do not show how common each experience is or establish clinical quality. MyLivingChoice republishes Google. The rating's publication date is unknown.",
+          "url": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus"
+        }
+      ],
+      "assessmentDate": "2026-11-15",
+      "id": "mylivingchoice-four-nj-nursing"
+    },
+    {
+      "approvals": [
+        {
+          "access": "full-page",
+          "aggregate": {
+            "asOf": null,
             "count": 197,
             "rating": 4.4,
             "scale": 5,

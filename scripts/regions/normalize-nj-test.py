@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from copy import deepcopy
 from unittest.mock import patch
 
 
@@ -19,6 +20,88 @@ spec.loader.exec_module(adapter)
 collector_spec = importlib.util.spec_from_file_location("nj_collector", SCRIPT.with_name("nj_collect.py"))
 collector = importlib.util.module_from_spec(collector_spec)
 collector_spec.loader.exec_module(collector)
+
+
+class CmsNursingContextTests(unittest.TestCase):
+    def setUp(self):
+        self.provider = {"id": "cms-315001", "state": "NJ", "category": "nursing-home",
+                         "cms": {"ccn": "315001"}, "address": "1 Shared Street"}
+        self.row = {adapter.CCN: "315001", "state": "NJ", "processing_date": "2026-10-01",
+                    "provider_type": "Medicare", "with_a_resident_and_family_council": "Resident"}
+        self.metadata = {"retrieved_at": "2026-11-12T15:02:07+00:00", "released": "2026-10-28",
+                         "landing_url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py"}
+
+    def project(self, row=None, providers=None, research=None):
+        result = research if research is not None else {}
+        adapter.add_cms_nursing_context([self.row if row is None else row], self.metadata,
+                                       [self.provider] if providers is None else providers, result)
+        return result
+
+    def test_resident_family_both_and_none_are_distinct(self):
+        expected = {
+            "Resident": "CMS lists a resident council only.",
+            "Family": "CMS lists a family council only.",
+            "Both": "CMS lists both a resident council and a family council.",
+            "None": "CMS lists neither a resident nor a family council.",
+        }
+        for value, text in expected.items():
+            with self.subTest(value=value):
+                result = self.project({**self.row, "with_a_resident_and_family_council": value})
+                self.assertEqual(result["cms-315001"]["facts"][1]["text"], text)
+
+    def test_absent_and_malformed_fields_are_omitted_independently(self):
+        for field in ("provider_type", "with_a_resident_and_family_council"):
+            for value in (None, "", "Unknown", "resident", "N/A", [], {}, 0, True):
+                with self.subTest(field=field, value=value):
+                    result = self.project({**self.row, field: value})
+                    facts = result["cms-315001"]["facts"]
+                    self.assertEqual(len(facts), 1)
+                    self.assertEqual(facts[0]["id"], "cms-315001-cms-" +
+                                     ("councils" if field == "provider_type" else "program-participation"))
+            row = {**self.row}
+            del row[field]
+            self.assertEqual(len(self.project(row)["cms-315001"]["facts"]), 1)
+        row = {k: v for k, v in self.row.items()
+               if k not in ("provider_type", "with_a_resident_and_family_council")}
+        self.assertEqual(self.project(row), {})
+        for value in (None, "", "2026-02-30", "2026-1-01", "unknown", [], {}):
+            with self.subTest(date=value):
+                self.assertEqual(self.project({**self.row, "processing_date": value}), {})
+        for value in (None, "", "31501", "0315001", 315001, [], {}):
+            with self.subTest(ccn=value):
+                self.assertEqual(self.project({**self.row, adapter.CCN: value}), {})
+
+    def test_colocated_units_and_other_states_do_not_inherit_facts(self):
+        siblings = [
+            {**self.provider, "id": "north-jersey-doh-nj1234", "cms": {"ccn": "315001"}},
+            {**self.provider, "id": "cms-315002", "cms": {"ccn": "315002"}},
+        ]
+        result = self.project(providers=[self.provider, *siblings])
+        self.assertEqual(set(result), {"cms-315001"})
+        for changes in ({"state": "MA"}, {"category": "assisted-living"},
+                        {"category": "life-plan"}, {"cms": {"ccn": "315002"}}):
+            with self.subTest(changes=changes):
+                self.assertEqual(self.project(providers=[{**self.provider, **changes}]), {})
+        self.assertEqual(self.project({**self.row, "state": "MA"}), {})
+        self.assertEqual(self.project({**self.row, adapter.CCN: "315002"}), {})
+        self.assertEqual(self.project(providers=[]), {})
+
+    def test_existing_reviews_availability_and_clinical_fields_are_untouched(self):
+        research = {"cms-315001": {
+            "checkedAt": "2026-11-15", "providerDetailsReviewed": False,
+            "facts": [{"id": "existing"}], "sources": [{"id": "existing"}],
+            "reviews": [{"id": "review"}], "reviewAggregates": [{"rating": 4}],
+            "availability": {"status": "inquiry-only"}, "notes": ["Retained note"],
+        }}
+        before = deepcopy(research)
+        provider = deepcopy(self.provider)
+        self.project(research=research)
+        self.assertEqual(self.provider, provider)
+        record = research["cms-315001"]
+        for field in ("reviews", "reviewAggregates", "availability", "notes", "checkedAt"):
+            self.assertEqual(record[field], before["cms-315001"][field])
+        self.assertEqual(record["facts"][0], {"id": "existing"})
+        self.assertEqual(record["sources"][0], {"id": "existing"})
 
 
 class ActualSourceTests(unittest.TestCase):
@@ -33,6 +116,43 @@ class ActualSourceTests(unittest.TestCase):
         cls.points = json.loads((adapter.RESEARCH / "address-points/providers-by-id.json").read_bytes())
         cls.original_by_id = {row["FacID"]: row for row in cls.original}
 
+    def test_cms_participation_and_councils_match_exact_retained_units(self):
+        inputs = adapter.Inputs(adapter.RESEARCH)
+        manifest = inputs.json("cms/manifest.json")
+        rows, metadata = adapter.cms_dataset(inputs, manifest, "4pq5-n9py")
+        rows = [r for r in rows if r["countyparish"] in adapter.COUNTIES]
+        research = json.loads(self.files["locationResearch.json"])
+        published = {}
+        for pid, record in research.items():
+            facts = [f for f in record["facts"] if f["id"] in
+                     (f"{pid}-cms-program-participation", f"{pid}-cms-councils")]
+            if facts:
+                published[pid] = facts
+        self.assertEqual(set(published), {"cms-" + r[adapter.CCN] for r in rows})
+        self.assertEqual(len(published), 139)
+        self.assertEqual(Counter(r["provider_type"] for r in rows),
+                         {"Medicare and Medicaid": 131, "Medicare": 8})
+        self.assertEqual(Counter(r["with_a_resident_and_family_council"] for r in rows),
+                         {"Resident": 122, "Both": 10, "None": 7})
+        for row in rows:
+            pid = "cms-" + row[adapter.CCN]
+            facts = published[pid]
+            self.assertEqual(len(facts), 2)
+            self.assertTrue(all(f["kind"] == "care" and f["asOf"] == "2026-10-01" and
+                                "amount" not in f for f in facts))
+            source, = [s for s in research[pid]["sources"]
+                       if s["id"] == facts[0]["sourceId"]]
+            self.assertEqual(source["kind"], "regulator")
+            self.assertEqual(source["checkedAt"], metadata["retrieved_at"][:10])
+            self.assertEqual(source["publishedAt"], metadata["released"][:10])
+            self.assertEqual(source["url"], metadata["landing_url"])
+            self.assertIn(row[adapter.CCN], source["title"])
+            self.assertIn(row["processing_date"], source["title"])
+            if row["provider_type"] == "Medicare":
+                self.assertIn("Medicaid participation is not reported.", facts[0]["text"])
+            self.assertEqual(self.by_id[pid]["category"], "nursing-home")
+            self.assertEqual(self.by_id[pid]["cms"]["ccn"], row[adapter.CCN])
+
     def test_federal_history_is_bound_to_the_registered_office_identity(self):
         inputs = adapter.Inputs(adapter.RESEARCH)
         pid = "north-jersey-hp-hp0015320"
@@ -46,6 +166,32 @@ class ActualSourceTests(unittest.TestCase):
         self.assertTrue(all(f["kind"] == "care" and "amount" not in f for f in facts))
         with self.assertRaisesRegex(ValueError, "no longer matches registered office"):
             adapter.add_federal_home_care_history(inputs, [{**office, "address": "Different office"}], {})
+
+    def test_verified_services_reject_changed_offices_and_colocated_suites(self):
+        from nj_pay_context import add_county_home_care_context
+        pid = "north-jersey-hp-hp0366200"
+        provider = self.by_id[pid]
+        inputs = adapter.Inputs(adapter.RESEARCH)
+        original_json = inputs.json
+        row = next(r for r in inputs.json("home-care-pay-services/verified-office-services.json")
+                   if r["providerId"] == pid)
+        before = deepcopy(row)
+        for field, value in (("street", "7 Glenwood Avenue, Suite 412"),
+                             ("name", "Another registered firm"), ("city", "Newark"),
+                             ("zip", "07102"), ("phone", "973-965-0366")):
+            with self.subTest(field=field):
+                changed = {**row, field: value}
+                with patch.object(inputs, "json", side_effect=lambda path:
+                                  [changed] if path.endswith("/verified-office-services.json")
+                                  else original_json(path)):
+                    with self.assertRaisesRegex(ValueError, "Changed office service identity"):
+                        add_county_home_care_context(inputs, [provider], {})
+        research = {}
+        add_county_home_care_context(inputs, [provider], research)
+        fact, = [f for f in research[pid]["facts"] if f["id"] == pid + "-office-services"]
+        self.assertEqual(fact["text"], row["text"])
+        self.assertEqual(row, before)
+        self.assertEqual(provider["phone"], row["phone"])
 
     def test_every_original_doh_row_has_exactly_one_disposition(self):
         dispositions = [row for row in self.crosswalk + self.ledger if row["source"] == "NJ DOH All_LTC"]

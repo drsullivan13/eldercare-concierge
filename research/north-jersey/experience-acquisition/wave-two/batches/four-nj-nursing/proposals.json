@@ -1,0 +1,144 @@
+{
+  "approvals": [
+    {
+      "id": "mlc-acquisition-inglemoor-rehabilitation-and-care-center",
+      "providerId": "north-jersey-doh-nj60708",
+      "officialId": "NJ60708",
+      "url": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+      "checkedAt": "2026-11-15",
+      "access": "full-page",
+      "platform": "MyLivingChoice",
+      "identity": {
+        "name": "Inglemoor Rehabilitation & Care Center",
+        "address": "311 S Livingston Ave",
+        "city": "Livingston",
+        "state": "New Jersey",
+        "zip": "07039",
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 4.2,
+        "count": 65,
+        "scale": 5,
+        "asOf": null,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "reason": "Fresh direct header, NJ DOH, CMS and operator contact/map corroborate one Livingston nursing facility. Resolve the missing-header and duplicate-identity holds for editorial attribution only. All five visible accounts are resident/family care experiences without self-identified workforce, student, or professional-partner roles. Recommend the observed Google aggregate once on NJ60708, not on its separate CMS duplicate.",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/inglemoor-rehabilitation-and-care-center.json",
+        "sha256": "c86c672c517e31a576ac14d02738a323480eee9774eea66d01fda5ccc0204172",
+        "pointer": ""
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+        "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+      }
+    },
+    {
+      "id": "mlc-acquisition-new-jersey-veterans-memorial-home-at-paramus",
+      "providerId": "north-jersey-doh-nj60228",
+      "officialId": "NJ60228",
+      "url": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+      "checkedAt": "2026-11-15",
+      "access": "full-page",
+      "platform": "MyLivingChoice",
+      "identity": {
+        "name": "New Jersey Veterans Memorial Home At Paramus",
+        "address": "1 Veterans Drive",
+        "city": "Paramus",
+        "state": "New Jersey",
+        "zip": "07652",
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 3.8,
+        "count": 38,
+        "scale": 5,
+        "asOf": null,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "reason": "DOH and CMS agree on one 336-bed nursing home and regulatory phone. The state operator identifies the same site, two residential buildings and its selected Google place. Resolve the duplicate-identity hold without splitting its nursing wings into separate recipients. The visible family warning and mixed dignity account remain context; the visitor account is eligible broad consumer feedback, not verified resident evidence.",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/new-jersey-veterans-memorial-home-at-paramus.json",
+        "sha256": "ddb779e4e316d98b044650cd4f4a76cbdc9b33739c8e3a3320a84befa3ff5c44",
+        "pointer": ""
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+        "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+      }
+    },
+    {
+      "id": "mlc-acquisition-livingston-post-acute-care",
+      "providerId": "north-jersey-doh-njnh07001",
+      "officialId": "NJNH07001",
+      "url": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+      "checkedAt": "2026-11-15",
+      "access": "full-page",
+      "platform": "MyLivingChoice",
+      "identity": {
+        "name": "Livingston Post Acute Care",
+        "address": "348 E Cedar Street",
+        "city": "Livingston",
+        "state": "New Jersey",
+        "zip": "07039",
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 4.3,
+        "count": 526,
+        "scale": 5,
+        "asOf": null,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "reason": "New primary evidence strongly matches current NJNH07001 to CMS 315526 and the nursing Google place. It corrects the retained 134-bed value to live DOH/CMS/operator-audit 124, but does not explicitly establish the disposition or succession of retained NJ07NH000/Atrium. Its blank live detail response is not closure evidence. Keep the previous multi-record hold pending a primary former/current-license bridge; do not infer a completed rename/transfer or select both state recipients.",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/livingston-post-acute-care.json",
+        "sha256": "c4182f84a4745eb9ac49fa5ea6b04f3fcb7f8e4ebf945efcd480c101001004b4",
+        "pointer": ""
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+        "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+      }
+    },
+    {
+      "id": "mlc-acquisition-elizabeth-nursing-and-rehab-center",
+      "providerId": "north-jersey-doh-nj62007x",
+      "officialId": "NJ62007X",
+      "url": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+      "checkedAt": "2026-11-15",
+      "access": "full-page",
+      "platform": "MyLivingChoice",
+      "identity": {
+        "name": "Elizabeth Nursing and Rehabilitation Center",
+        "address": "1048 Grove Street",
+        "city": "Elizabeth",
+        "state": "New Jersey",
+        "zip": "07202",
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 4.8,
+        "count": 358,
+        "scale": 5,
+        "asOf": null,
+        "scope": "ambiguous",
+        "sourceFamily": "google"
+      },
+      "reason": "Live DOH and CMS match the 102-bed BRACHA nursing facility; operator contact and exact selected Google CID resolve the duplicate-identity question editorially. However, expanded primary Google evidence at that same place explicitly includes an outside healthcare professional's pharmacy-work interaction. Following the prior partner-population caution, do not attest a separable consumer-only aggregate from the five favorable mirror rows. The newer 361-rating population is not proved identical to, or disjoint from, the mirror's 358; do not assert the professional is definitely in the older 358 or silently score around it.",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/elizabeth-nursing-and-rehab-center.json",
+        "sha256": "6a31d5b6de2d476f930bcc058ebf21efed19763528289dce684b619a9bce1fd2",
+        "pointer": ""
+      },
+      "material": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+        "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+      }
+    }
+  ]
+}

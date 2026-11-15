@@ -66,7 +66,12 @@ def add_county_home_care_context(inputs, providers, research):
                 (("address", "street"), ("city", "city"), ("name", "name"), ("zip", "zip")))
                 or re.sub(r"\D", "", office["phone"]) != re.sub(r"\D", "", row["phone"])):
             raise ValueError(f"Changed office service identity: {pid}")
-        key = "office-staffing" if row.get("facilityStaffing") else "office-services"
+        if row.get("facilityStaffing"):
+            key = "office-staffing"
+        elif row.get("workforceTraining"):
+            key = "office-training"
+        else:
+            key = "office-services"
         add_fact(research, pid, key, row["title"], row["text"], row,
                  "full-page", row["checkedAt"], kind=row["category"])
         for rate in row.get("rates", []):

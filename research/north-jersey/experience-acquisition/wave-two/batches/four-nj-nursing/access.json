@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://www.mylivingchoice.com/robots.txt",
+    "observedAt": "2026-11-15T14:06:33.784451+00:00",
+    "httpStatus": 200,
+    "responseHeaders": {
+      "content-type": "text/plain; charset=utf-8",
+      "date": "Sun, 15 Nov 2026 14:06:33 GMT",
+      "etag": "\"cbece5d345256ac7ca5f6a7cd880f8a4\"",
+      "last-modified": "Sun, 15 Nov 2026 10:02:05 GMT"
+    },
+    "bodySha256": "e772f4d519f6baba090de6d2f97b7b54895b6014daca3fb7ab40bb166438b2c9",
+    "bodyBytes": 769,
+    "transport": "serial public curl GET; raw body held in process memory only",
+    "collectorVersion": "sanitized-html-v1",
+    "propertyPathAllowed": true,
+    "cityPathAllowed": true,
+    "checkedUserAgent": "GPTBot",
+    "policyText": "User-Agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /guidance/\nDisallow: /partners/\nDisallow: /login\nDisallow: /signin\nDisallow: /unsubscribe\n\nUser-Agent: GPTBot\nUser-Agent: OAI-SearchBot\nUser-Agent: ChatGPT-User\nUser-Agent: ClaudeBot\nUser-Agent: Claude-Web\nUser-Agent: anthropic-ai\nUser-Agent: Google-Extended\nUser-Agent: CCBot\nUser-Agent: PerplexityBot\nUser-Agent: Perplexity-User\nUser-Agent: Applebot-Extended\nUser-Agent: Bytespider\nUser-Agent: cohere-ai\nUser-Agent: Meta-ExternalAgent\nUser-Agent: Amazonbot\nUser-Agent: DuckAssistBot\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /guidance/\nDisallow: /partners/\nDisallow: /login\nDisallow: /signin\nDisallow: /unsubscribe\nDisallow: /how-we-work\n\nSitemap: https://www.mylivingchoice.com/sitemap.xml\n",
+    "checkedAt": "2026-11-15"
+  },
+  {
+    "url": "https://www.mylivingchoice.com/terms-of-service",
+    "observedAt": "2026-11-15T14:06:35.903241+00:00",
+    "httpStatus": 200,
+    "responseHeaders": {
+      "content-type": "text/html; charset=utf-8",
+      "date": "Sun, 15 Nov 2026 14:06:36 GMT",
+      "etag": "\"ffb315ad4a0009e6bf15a4309620d577\""
+    },
+    "bodySha256": "82d30f92bd1364b9b419f894f7991533fd8a58398575b94468025e9dc7cdd01c",
+    "bodyBytes": 46465,
+    "transport": "serial public curl GET; raw body held in process memory only",
+    "collectorVersion": "sanitized-html-v1",
+    "effectiveDate": "2026-10-30",
+    "decision": "permitted_low_volume",
+    "minimalAccessText": "no scraping at disruptive volume",
+    "bounds": "Serial public city/property HTML only. No APIs, forms, Google requests, restricted hosts, redirects, login, or provider contact.",
+    "checkedAt": "2026-11-15"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "url": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+  "inspection": "full-page",
+  "httpStatus": 200,
+  "checkedAt": "2026-11-15",
+  "observedAt": "2026-11-15T14:06:45.310812+00:00",
+  "bodySha256": "df0f0e6d14c4dadcdb108ccb57a6e049a0f4b19893c06be5ddeed7eb05b75dd6",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/new-jersey-veterans-memorial-home-at-paramus.json",
+    "sha256": "6417864e1d9624627d5734744b1e4e9d7ed8f34700c458c1abe819f0cf0a7f4f"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+    "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+  },
+  "identity": {
+    "name": "New Jersey Veterans Memorial Home At Paramus",
+    "address": "1 Veterans Drive",
+    "city": "Paramus",
+    "state": "New Jersey",
+    "zip": "07652",
+    "careUnit": "Skilled Nursing / Long Term Care"
+  },
+  "aggregate": {
+    "rating": 3.8,
+    "count": 38,
+    "scale": 5,
+    "asOf": null,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "googlePlaceIds": [
+    "0x89c2facddf181d5f:0xbd11423eee95ca00"
+  ],
+  "population": {
+    "visibleCount": 5,
+    "rows": [
+      {
+        "id": "mlc-google-609131",
+        "date": "2026-02",
+        "sentiment": "negative",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-609132",
+        "date": "2025-10",
+        "sentiment": "positive",
+        "relationship": "visitor"
+      },
+      {
+        "id": "mlc-google-609133",
+        "date": "2025-06",
+        "sentiment": "mixed",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-609135",
+        "date": "2025-01",
+        "sentiment": "positive",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-609134",
+        "date": "2023-02",
+        "sentiment": "positive",
+        "relationship": "family"
+      }
+    ]
+  },
+  "populationReview": "DOH and CMS agree on one 336-bed nursing home and regulatory phone. The state operator identifies the same site, two residential buildings and its selected Google place. Resolve the duplicate-identity hold without splitting its nursing wings into separate recipients. The visible family warning and mixed dignity account remain context; the visitor account is eligible broad consumer feedback, not verified resident evidence.",
+  "scopeHold": null,
+  "listingAnnotations": {
+    "observedIdentity": {
+      "name": "New Jersey Veterans Memorial Home At Paramus",
+      "address": "1 Veterans Drive",
+      "city": "Paramus",
+      "state": "New Jersey",
+      "zip": "07652"
+    },
+    "careTypes": [
+      "Skilled Nursing / Long Term Care"
+    ],
+    "aggregateScopeBeforeEditorial": "unverified-platform-population"
+  }
+}

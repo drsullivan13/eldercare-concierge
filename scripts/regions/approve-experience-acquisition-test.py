@@ -86,6 +86,7 @@ class ApprovalTests(unittest.TestCase):
             "mylivingchoice-avalon-cupola": 1, "mylivingchoice-direct-review": 11,
             "mylivingchoice-second-wave": 21, "mylivingchoice-sinai-newark": 1,
             "mylivingchoice-third-wave-clinical": 1, "mylivingchoice-six-sites": 2,
+            "mylivingchoice-four-nj-nursing": 2,
         })
         first = next(b for b in batches if b["id"] == "mylivingchoice-direct-review")
         self.assertEqual(sum(a["aggregate"]["count"] for a in first["approvals"]), 1359)
@@ -101,7 +102,7 @@ class ApprovalTests(unittest.TestCase):
         self.assertEqual(sinai["aggregate"]["count"], 131)
         checks = [json.loads(data) for path, data in outputs.items()
                   if path.parent.name == "independent-checks"]
-        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 175)
+        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 185)
         for check in checks:
             if check["providerId"] == "cms-317009":
                 self.assertEqual(check["identity"]["zip"], "07018")
@@ -126,11 +127,168 @@ class ApprovalTests(unittest.TestCase):
             elif check["providerId"] in {"north-jersey-doh-nj70a002", "north-jersey-doh-nj60729"}:
                 self.assertEqual(check["identity"]["zip"],
                                  "07470" if check["providerId"].endswith("nj70a002") else "07009")
+            elif check["providerId"] in {"north-jersey-doh-nj60708", "north-jersey-doh-nj60228"}:
+                self.assertEqual(check["identity"]["zip"],
+                                 "07039" if check["providerId"].endswith("nj60708") else "07652")
             else:
                 self.assertIsNone(check["identity"]["zip"])
             self.assertIsNone(check["aggregate"]["asOf"])
             self.assertEqual(check["aggregate"]["sourceFamily"], "google")
             self.assertNotIn("reviews", check)
+
+    def test_four_nj_preserves_original_aggregates_care_units_and_complete_windows(self):
+        reference = next(r for r in self.index["batches"] if "/four-nj-nursing/" in r["path"])
+        batch = self.load(reference["path"])
+        decisions = self.load(batch["reviewed"]["path"])
+        independent = self.load(decisions["independentReview"]["path"])
+        by_url = {row["url"]: row for row in independent["results"]}
+        expected = {
+            "elizabeth-nursing-and-rehab-center": (4.8, 358, "07202"),
+            "inglemoor-rehabilitation-and-care-center": (4.2, 65, "07039"),
+            "new-jersey-veterans-memorial-home-at-paramus": (3.8, 38, "07652"),
+            "livingston-post-acute-care": (4.3, 526, "07039"),
+        }
+        self.assertEqual(set(batch["sources"]), set(expected))
+        for slug, reference in batch["sources"].items():
+            with self.subTest(slug=slug):
+                source = self.load(reference["path"])
+                collection = self.load(source["collection"]["path"])
+                page = collection["page"]
+                window = page["visibleReviewWindow"]
+                self.assertTrue(window["complete"])
+                self.assertEqual(window["rowCount"], 5)
+                self.assertEqual(window["htmlArticleCount"], 5)
+                self.assertEqual(window["unparsedArticleCount"], 0)
+                self.assertEqual(source["identity"]["careUnit"], "Skilled Nursing / Long Term Care")
+                self.assertEqual(source["listingAnnotations"]["careTypes"],
+                                 ["Skilled Nursing / Long Term Care"])
+                self.assertEqual(source["identity"],
+                                 {**page["sourceIdentity"], "careUnit": "Skilled Nursing / Long Term Care"})
+                self.assertEqual((source["aggregate"]["rating"], source["aggregate"]["count"],
+                                  source["identity"]["zip"]), expected[slug])
+                self.assertEqual(source["aggregate"]["rating"], page["aggregate"]["rating"])
+                self.assertEqual(source["aggregate"]["count"], page["aggregate"]["count"])
+                self.assertEqual(source["aggregate"]["sourceFamily"], "google")
+                self.assertIsNone(source["aggregate"]["asOf"])
+                self.assertEqual([(r["id"], r["date"]) for r in source["population"]["rows"]],
+                                 [("mlc-google-" + r["sourceReviewId"], r["datePublished"])
+                                  for r in window["rows"]])
+                editorial = by_url[source["url"]]
+                self.assertEqual([(r["id"], r["date"], r["sentiment"], r["relationship"])
+                                  for r in source["population"]["rows"]],
+                                 [("mlc-google-" + r["id"], r["date"], r["sentiment"], r["relationship"])
+                                  for r in editorial["visibleAccounts"]])
+                self.assertEqual([r["sourceReviewUrl"] for r in window["rows"]],
+                                 [r["originalReviewUrl"] for r in editorial["visibleAccounts"]])
+                self.assertEqual(source["scopeHold"] is None, editorial["recipientProviderId"] is not None)
+
+    def test_four_nj_holds_do_not_disappear_after_identity_corroboration(self):
+        reference = next(r for r in self.index["batches"] if "/four-nj-nursing/" in r["path"])
+        batch = self.load(reference["path"])
+        decisions = self.load(batch["reviewed"]["path"])
+        self.assertEqual({r[1] for r in decisions["approvals"]},
+                         {"north-jersey-doh-nj60708", "north-jersey-doh-nj60228"})
+        held = {r["providerId"]: r for r in decisions["withheld"]}
+        self.assertEqual(set(held), {"north-jersey-doh-nj62007x", "north-jersey-doh-njnh07001"})
+        self.assertEqual(held["north-jersey-doh-nj62007x"]["blockers"][0]["gate"], "population")
+        self.assertEqual(held["north-jersey-doh-njnh07001"]["blockers"][0]["gate"],
+                         "historical-license-and-unit")
+        independent = self.load(decisions["independentReview"]["path"])
+        by_slug = {r["url"].split("/")[-1]: r for r in independent["results"]}
+        elizabeth = by_slug["elizabeth-nursing-and-rehab-center"]["additionalPrimaryPopulationConcern"]
+        self.assertTrue(elizabeth["notInMirrorWindow"])
+        self.assertEqual(elizabeth["includedIn358"], "unknown")
+        livingston = by_slug["livingston-post-acute-care"]
+        self.assertEqual(livingston["visibleAccounts"][2]["sentiment"], "negative")
+        self.assertEqual(livingston["visibleAccounts"][4]["sentiment"], "mixed")
+        self.assertIn("solicitationConcern", livingston["visibleAccounts"][4])
+        self.second_ref, self.second = reference, batch
+        batch["evidence"] = [batch["reviewed"] if r["path"] == batch["reviewed"]["path"] else r
+                             for r in batch["evidence"]]
+        held_row = held["north-jersey-doh-njnh07001"]
+        identity = held_row["identity"]
+        row = [held_row["slug"], held_row["providerId"], identity["name"], identity["address"],
+               identity["city"], identity["careUnit"], identity["zip"], 4.3, 526,
+               [[r["id"].removeprefix("mlc-google-"), r["date"], r["sentiment"]]
+                for r in held_row["rows"]]]
+        def approve_held(document):
+            document["withheld"] = [r for r in document["withheld"]
+                                    if r["providerId"] != held_row["providerId"]]
+            document["approvals"].append(row)
+        self.mutate(batch["reviewed"], approve_held)
+        with self.assertRaisesRegex(APPROVE.release.ReleaseError, "unresolved source hold"):
+            APPROVE.build(self.root)
+
+    def test_four_nj_primary_identity_and_held_material_are_hash_bound(self):
+        reference = next(r for r in self.index["batches"] if "/four-nj-nursing/" in r["path"])
+        batch = self.load(reference["path"])
+        evidence = {r["path"]: r for r in batch["evidence"]}
+        for identity in batch["identities"].values():
+            witness = self.load(identity["path"])
+            cms = witness["cmsSource"]["retainedFields"]
+            state = witness["stateSource"]
+            self.assertEqual(cms["cms_certification_number_ccn"], witness["cmsCcn"])
+            self.assertEqual(cms["telephone_number"], state["phone"])
+            self.assertEqual(int(cms["number_of_certified_beds"]), state["licensedBeds"])
+            self.assertEqual(cms["zip_code"], state["zip"])
+            self.assertEqual(state["sourceUrl"].split("=")[-1], witness["officialId"])
+            self.assertEqual(witness["httpStatus"], 200)
+            self.assertEqual(witness["inspection"], "full-page")
+        paths = [r["path"] for r in batch["identities"].values()]
+        paths.extend(r["path"] for r in batch["sources"].values())
+        paths.extend(r["path"] for r in batch["evidence"] if
+                     "/collection/" in r["path"] or r["path"].endswith("nursing-editorial.json"))
+        for path in paths:
+            with self.subTest(path=path):
+                self.assertIn(path, evidence)
+                original = (self.root / path).read_bytes()
+                self.write(path, {})
+                with self.assertRaisesRegex(APPROVE.release.ReleaseError, "Source hash drift"):
+                    APPROVE.build(self.root)
+                (self.root / path).write_bytes(original)
+
+    def test_four_nj_public_notes_are_concise_and_do_not_replace_provenance(self):
+        reference = next(r for r in self.index["batches"] if "/four-nj-nursing/" in r["path"])
+        batch = self.load(reference["path"])
+        decisions = self.load(batch["reviewed"]["path"])
+        outputs = APPROVE.build(self.root)
+        compiled = next(b for b in self.approvals(outputs) if b["id"] == batch["id"])
+        self.assertEqual(len(compiled["approvals"]), 2)
+        for approval in compiled["approvals"]:
+            slug = approval["url"].split("/")[-1]
+            note = approval["reason"]
+            self.assertEqual(note, decisions["publicPopulationNotes"][slug])
+            self.assertLessEqual(len(note.split()), 90)
+            self.assertNotRegex(note, r"mlc-google-|609\d{3}|threshold|730|gate|north-jersey-doh-")
+            self.assertIn("five", note)
+            self.assertIn("unknown", note)
+            self.assertIn("unverified", note)
+            material = json.loads(outputs[Path(approval["material"]["path"])])
+            self.assertIn(decisions["independentReview"], material["evidence"])
+            self.assertEqual(material["reviewSample"]["visibleCount"], 5)
+        self.second_ref, self.second = reference, batch
+        batch["evidence"] = [batch["reviewed"] if r["path"] == batch["reviewed"]["path"] else r
+                             for r in batch["evidence"]]
+        self.mutate(batch["reviewed"], lambda d: d["publicPopulationNotes"].__setitem__(
+            "inglemoor-rehabilitation-and-care-center", ""))
+        with self.assertRaisesRegex(APPROVE.release.ReleaseError, "Missing public population note"):
+            APPROVE.build(self.root)
+
+    def test_four_nj_addition_preserves_every_prior_compiled_approval_and_alias(self):
+        full = APPROVE.build(self.root)
+        self.write(APPROVE.INDEX, {**self.index, "batches": [
+            r for r in self.index["batches"] if "/four-nj-nursing/" not in r["path"]]})
+        before = APPROVE.build(self.root)
+        after_batches = {b["id"]: b for b in self.approvals(full)}
+        for batch in self.approvals(before):
+            self.assertEqual(batch, after_batches[batch["id"]])
+        for path, data in before.items():
+            if path not in (APPROVE.ALIASES, APPROVE.release.ACQUISITION_LEDGER):
+                self.assertEqual(data, full[path], str(path))
+        before_aliases = json.loads(before[APPROVE.ALIASES])
+        new_aliases = [r for r in json.loads(full[APPROVE.ALIASES]) if r not in before_aliases]
+        self.assertEqual({r["providerId"] for r in new_aliases},
+                         {"north-jersey-doh-nj60708", "north-jersey-doh-nj60228"})
 
     def test_all_first_wave_approval_meaning_is_preserved(self):
         batch = self.load(self.index["batches"][0]["path"])
@@ -393,6 +551,34 @@ class ApprovalTests(unittest.TestCase):
         self.assertEqual(after["north-jersey-doh-nj70a002"]["value"], 9.4)
         self.assertEqual(after["north-jersey-doh-nj60729"]["value"], 7.2)
         self.assertNotIn("cms-315204", after)
+        for pid, rating, count, value in [
+                ("north-jersey-doh-nj60708", 4.2, 65, 8.4),
+                ("north-jersey-doh-nj60228", 3.8, 38, 7.6)]:
+            self.assertEqual(after[pid]["value"], value)
+            self.assertEqual(after[pid]["reviewCount"], count)
+            self.assertEqual(after[pid]["independentSourceCount"], 1)
+            approvals = [a for b in self.approvals(outputs) for a in b["approvals"]
+                         if a["providerId"] == pid]
+            self.assertEqual(len(approvals), 1)
+            self.assertEqual(approvals[0]["aggregate"]["rating"], rating)
+            self.assertEqual(actual["locationResearch.json"][pid]["reviewAggregates"][0]["notes"][0],
+                             approvals[0]["reason"])
+            self.assertEqual(after[pid]["confidence"], "limited")
+        self.assertFalse(after["north-jersey-doh-nj60708"]["selectedConcerns"])
+        self.assertTrue(after["north-jersey-doh-nj60228"]["selectedConcerns"])
+        self.assertEqual(after["north-jersey-doh-nj60228"]["sampleDiagnostics"][0]["visible"], 5)
+        self.assertEqual(after["north-jersey-doh-nj60228"]["sampleDiagnostics"][0]["eligible"], 4)
+        for pid in ("cms-315322", "cms-315346", "cms-315106", "cms-315526",
+                    "north-jersey-doh-nj62007x", "north-jersey-doh-njnh07001",
+                    "north-jersey-doh-nj07nh000", "north-jersey-doh-nj07a022"):
+            self.assertNotIn(pid, after)
+        paramus = next(json.loads(data) for path, data in outputs.items()
+                       if path.name == "new-jersey-veterans-memorial-home-at-paramus.json")
+        self.assertEqual([(r["date"], r["sentiment"]) for r in
+                          paramus["reviewSample"]["observations"]],
+                         [("2026-02", "negative"), ("2025-10", "positive"),
+                          ("2025-06", "mixed"), ("2025-01", "positive"),
+                          ("2023-02", "positive")])
         before_batch = self.load(self.index["batches"][0]["path"])
         before = self.load(before_batch["proposals"]["path"])["batches"][0]["approvals"]
         self.assertTrue(all(after[a["providerId"]]["value"] is not None for a in before))
@@ -469,7 +655,8 @@ class ApprovalTests(unittest.TestCase):
             self.assertEqual(fingerprint({key: current[pid][key] for key in
                                           ("experience", "reviewAggregates", "sources")}), expected, pid)
         scored = {pid for pid, row in current.items() if row["experience"]["value"] is not None}
-        self.assertEqual(scored - baseline["scoredProviders"].keys(),
+        self.assertEqual(scored - baseline["scoredProviders"].keys()
+                         - {"north-jersey-doh-nj60708", "north-jersey-doh-nj60228"},
                          {"north-jersey-doh-nj70a002", "north-jersey-doh-nj60729"})
         for pid, rating, count, value in [
                 ("north-jersey-doh-nj70a002", 4.7, 53, 9.4),

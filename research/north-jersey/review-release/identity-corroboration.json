@@ -61,6 +61,42 @@
     "zip": "07470"
   },
   {
+    "basis": "State and CMS identify the same nursing facility by exact street, ZIP, phone, 138 beds and Livingston Care Center partnership. The operator links the same Google place and describes nursing sub-acute and long-term departments. These are not separate assisted-living or independent-living licenses. Attribute once to the included state nursing record, not the Englewood Inglemoor facility and not the separate unresolved CMS record. Retain the operator capacity and phone discrepancies.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-15",
+    "city": "Livingston",
+    "listingName": "Inglemoor Rehabilitation & Care Center",
+    "officeOrFacility": "311 S Livingston Ave",
+    "officialId": "NJ60708",
+    "operatorName": "Inglemoor Rehabilitation & Care Center",
+    "providerId": "north-jersey-doh-nj60708",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/identity-checks/inglemoor-rehabilitation-and-care-center.json",
+      "sha256": "6aefda8c3783b06ff1d8658907965aad7f122093108f034fb7ef163d84a11ce8"
+    },
+    "sourceUrl": "https://www.inglemoor.com/",
+    "state": "NJ",
+    "zip": "07039"
+  },
+  {
+    "basis": "State and CMS identify the same 336-bed state nursing facility by street, ZIP and phone. The current state operator confirms the address, capacity and nursing setting. Attribute at most once to the included state nursing record. No rating may transfer to another veterans home or to a non-nursing unit. Retain the department-name and main-phone differences.",
+    "category": "nursing-home",
+    "checkedAt": "2026-11-15",
+    "city": "Paramus",
+    "listingName": "New Jersey Veterans Memorial Home At Paramus",
+    "officeOrFacility": "1 Veterans Drive",
+    "officialId": "NJ60228",
+    "operatorName": "New Jersey Veterans Home at Paramus",
+    "providerId": "north-jersey-doh-nj60228",
+    "receipt": {
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/identity-checks/new-jersey-veterans-memorial-home-at-paramus.json",
+      "sha256": "e64f0028aab7716493a57eea9b8ae27cafee41f48329560a373a93ecb09f722d"
+    },
+    "sourceUrl": "https://www.nj.gov/dva/veterans/memorial-homes/paramus/",
+    "state": "NJ",
+    "zip": "07652"
+  },
+  {
     "basis": "Direct published facility/office name and street-city facts corroborate the unique official unit. ZIP in this mapping is the official crosswalk ZIP, not an observed MyLivingChoice ZIP.",
     "category": "nursing-home",
     "checkedAt": "2026-11-13",

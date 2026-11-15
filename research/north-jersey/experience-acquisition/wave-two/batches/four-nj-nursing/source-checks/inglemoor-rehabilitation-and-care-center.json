@@ -1,0 +1,85 @@
+{
+  "url": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+  "inspection": "full-page",
+  "httpStatus": 200,
+  "checkedAt": "2026-11-15",
+  "observedAt": "2026-11-15T14:06:40.469824+00:00",
+  "bodySha256": "488dfbf56fae7fe1a0d667c460d6fcc8c3bf5f196aac8f72a2451eece93a9b53",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/inglemoor-rehabilitation-and-care-center.json",
+    "sha256": "ce26b1ee68dd6bd7c1a30467b15cdfda11d395ab9e0d727e023ca883019c418f"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+    "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+  },
+  "identity": {
+    "name": "Inglemoor Rehabilitation & Care Center",
+    "address": "311 S Livingston Ave",
+    "city": "Livingston",
+    "state": "New Jersey",
+    "zip": "07039",
+    "careUnit": "Skilled Nursing / Long Term Care"
+  },
+  "aggregate": {
+    "rating": 4.2,
+    "count": 65,
+    "scale": 5,
+    "asOf": null,
+    "scope": "consumer",
+    "sourceFamily": "google"
+  },
+  "googlePlaceIds": [
+    "0x89c3a961c94f1e47:0x16aab5602aa1c8fc"
+  ],
+  "population": {
+    "visibleCount": 5,
+    "rows": [
+      {
+        "id": "mlc-google-609076",
+        "date": "2026-07",
+        "sentiment": "positive",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-609072",
+        "date": "2026-07",
+        "sentiment": "positive",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-609074",
+        "date": "2026-04",
+        "sentiment": "positive",
+        "relationship": "resident"
+      },
+      {
+        "id": "mlc-google-609078",
+        "date": "2026-04",
+        "sentiment": "positive",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-609080",
+        "date": "2025-12",
+        "sentiment": "positive",
+        "relationship": "resident"
+      }
+    ]
+  },
+  "populationReview": "Fresh direct header, NJ DOH, CMS and operator contact/map corroborate one Livingston nursing facility. Resolve the missing-header and duplicate-identity holds for editorial attribution only. All five visible accounts are resident/family care experiences without self-identified workforce, student, or professional-partner roles. Recommend the observed Google aggregate once on NJ60708, not on its separate CMS duplicate.",
+  "scopeHold": null,
+  "listingAnnotations": {
+    "observedIdentity": {
+      "name": "Inglemoor Rehabilitation & Care Center",
+      "address": "311 S Livingston Ave",
+      "city": "Livingston",
+      "state": "New Jersey",
+      "zip": "07039"
+    },
+    "careTypes": [
+      "Skilled Nursing / Long Term Care"
+    ],
+    "aggregateScopeBeforeEditorial": "unverified-platform-population"
+  }
+}

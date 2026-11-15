@@ -8787,6 +8787,168 @@
       }
     ]
   },
+  "north-jersey-doh-nj60228": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Current availability has not been independently researched. Contact the provider."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [],
+    "notes": [
+      "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+      "Reported counts are not unique people. Unknown cross-posting may remain.",
+      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+    ],
+    "providerDetailsReviewed": false,
+    "providerId": "north-jersey-doh-nj60228",
+    "reviewAggregates": [
+      {
+        "asOf": null,
+        "count": 38,
+        "notes": [
+          "Google's 3.8/5 average covers 38 ratings. The five displayed accounts include family praise, a family warning about weekend care, a mixed family account and a positive visitor account. One family account dates to February 2023 and may not reflect current care. These selected, unverified accounts do not show how common each experience is or establish clinical quality. MyLivingChoice republishes Google. The rating's publication date is unknown.",
+          "Observed ZIP matches the exact official care unit."
+        ],
+        "platform": "MyLivingChoice",
+        "rating": 3.8,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-new-jersey-veterans-memorial-home-at-paramus"
+      }
+    ],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-02",
+            "id": "mlc-google-609131",
+            "sentiment": "negative"
+          },
+          {
+            "date": "2025-10",
+            "id": "mlc-google-609132",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-06",
+            "id": "mlc-google-609133",
+            "sentiment": "mixed"
+          },
+          {
+            "date": "2025-01",
+            "id": "mlc-google-609135",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2023-02",
+            "id": "mlc-google-609134",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-new-jersey-veterans-memorial-home-at-paramus",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "review-release-mlc-acquisition-new-jersey-veterans-memorial-home-at-paramus",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "MyLivingChoice",
+        "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus"
+      }
+    ]
+  },
+  "north-jersey-doh-nj60708": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Current availability has not been independently researched. Contact the provider."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [],
+    "notes": [
+      "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+      "Reported counts are not unique people. Unknown cross-posting may remain.",
+      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+    ],
+    "providerDetailsReviewed": false,
+    "providerId": "north-jersey-doh-nj60708",
+    "reviewAggregates": [
+      {
+        "asOf": null,
+        "count": 65,
+        "notes": [
+          "Google's 4.2/5 average covers 65 ratings for the Livingston nursing home. All five displayed accounts are positive, from three family members and two residents. These selected accounts do not represent every stay or verify clinical quality. Writers' identities are unverified. MyLivingChoice republishes Google, not a second set of reviews. The rating's publication date is unknown. This is not the Inglemoor facility in Englewood.",
+          "Observed ZIP matches the exact official care unit."
+        ],
+        "platform": "MyLivingChoice",
+        "rating": 4.2,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-inglemoor-rehabilitation-and-care-center"
+      }
+    ],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-07",
+            "id": "mlc-google-609076",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-07",
+            "id": "mlc-google-609072",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-google-609074",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-04",
+            "id": "mlc-google-609078",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2025-12",
+            "id": "mlc-google-609080",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-inglemoor-rehabilitation-and-care-center",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "review-release-mlc-acquisition-inglemoor-rehabilitation-and-care-center",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "MyLivingChoice",
+        "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center"
+      }
+    ]
+  },
   "north-jersey-doh-nj60713": {
     "availability": {
       "asOf": null,

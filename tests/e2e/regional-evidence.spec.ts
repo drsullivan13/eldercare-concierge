@@ -1,6 +1,10 @@
 import { expect, test, type Page } from "@playwright/test";
 import retainedNJZips from "../../research/north-jersey/geography/nj-zips.json";
-import type { SearchProvider, SearchResponse } from "../../src/lib/providers";
+import {
+  CATEGORY_LABELS,
+  type SearchProvider,
+  type SearchResponse,
+} from "../../src/lib/providers";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
 import type { IndividualReviewsResponse } from "../../src/lib/individual-reviews";
 
@@ -39,12 +43,127 @@ async function openProvider(page: Page, provider: SearchProvider) {
     .locator("form.research-search")
     .getByRole("button", { name: "Apply filters", exact: true })
     .click();
-  const card = page.locator(".provider-card").filter({
-    has: page.getByRole("button", { name: provider.name, exact: true }),
-  });
+  const card = page
+    .locator(".provider-card")
+    .filter({
+      has: page.getByRole("button", { name: provider.name, exact: true }),
+    })
+    .filter({
+      has: page.getByText(CATEGORY_LABELS[provider.category], { exact: true }),
+    });
   await card.getByRole("button", { name: "View details" }).click();
   return page.getByRole("dialog", { name: provider.name, exact: true });
 }
+
+for (const fixture of [
+  {
+    id: "cms-315523",
+    council: "CMS lists a resident council only.",
+    medicareOnly: true,
+  },
+  {
+    id: "cms-315369",
+    council: "CMS lists both a resident council and a family council.",
+    medicareOnly: false,
+  },
+  {
+    id: "cms-315512",
+    council: "CMS lists neither a resident nor a family council.",
+    medicareOnly: true,
+  },
+]) {
+  test(`CMS program participation and councils reach Details for ${fixture.id}`, async ({
+    page,
+    request,
+  }) => {
+    const response = await request.get(`/api/providers?ids=${fixture.id}`);
+    expect(response.status()).toBe(200);
+    const { providers }: { providers: SearchProvider[] } =
+      await response.json();
+    const provider = providers[0];
+    expect(provider.id).toBe(fixture.id);
+    const researchResponse = await request.get(
+      `/api/research?id=${fixture.id}`,
+    );
+    expect(researchResponse.status()).toBe(200);
+    const research: LocationResearchResponse = await researchResponse.json();
+    const participation = research.facts.find(
+      (fact) => fact.id === `${fixture.id}-cms-program-participation`,
+    )!;
+    const council = research.facts.find(
+      (fact) => fact.id === `${fixture.id}-cms-councils`,
+    )!;
+    expect(council.text).toBe(fixture.council);
+    expect(participation.asOf).toBe("2026-10-01");
+    expect(participation.text).toContain(
+      fixture.medicareOnly
+        ? "Medicaid participation is not reported."
+        : "Medicare and Medicaid participation",
+    );
+    await openSearch(page, provider.zip);
+    const detail = await openProvider(page, provider);
+    await detail.getByRole("tab", { name: "Details", exact: true }).click();
+    const section = detail
+      .locator("section")
+      .filter({
+        has: page.getByRole("heading", {
+          name: "Licensing & care setting",
+          exact: true,
+        }),
+      })
+      .last();
+    const more = section.locator(".offering-more summary");
+    if (await more.count()) await more.click();
+    for (const fact of [participation, council]) {
+      const item = section
+        .locator(".offering-fact")
+        .filter({ hasText: fact.text });
+      await expect(item).toBeVisible();
+      await expect(item).toContainText("Oct 1, 2026");
+      await expect(item.getByRole("link")).toHaveAttribute(
+        "href",
+        "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+      );
+      await expect(item.getByRole("link")).toContainText(
+        "checked Nov 12, 2026",
+      );
+    }
+  });
+}
+
+test("new office services reach Details without replacing the registry contact or claiming an opening", async ({
+  page,
+  request,
+}) => {
+  const id = "north-jersey-hp-hp0368100";
+  const response = await request.get(`/api/providers?ids=${id}`);
+  const { providers }: { providers: SearchProvider[] } = await response.json();
+  const provider = providers[0];
+  expect(provider.phone).toBe("(551) 404-0571");
+  const researchResponse = await request.get(`/api/research?id=${id}`);
+  const research: LocationResearchResponse = await researchResponse.json();
+  const fact = research.facts.find(
+    (fact) => fact.id === `${id}-office-services`,
+  )!;
+  expect(fact.text).toContain(
+    "551-343-9333, different from the retained registry phone",
+  );
+  expect(research.availability.status).toBe("not-published");
+  await openSearch(page, provider.zip);
+  const detail = await openProvider(page, provider);
+  await detail.getByRole("tab", { name: "Details", exact: true }).click();
+  const more = detail.locator(".offering-more summary");
+  for (const summary of await more.all()) await summary.click();
+  await expect(
+    detail
+      .getByRole("region", { name: "Care team & visit support", exact: true })
+      .getByText(fact.text, { exact: true }),
+  ).toBeVisible();
+  await expect(detail).toContainText("Current availability is not established");
+  await expect(
+    detail.getByRole("link", { name: "Call (551) 404-0571", exact: true }),
+  ).toHaveAttribute("href", "tel:5514040571");
+});
 
 test("real NJ details show unknown evidence without retrying a legitimate research gap and retain catalog source links", async ({
   page,

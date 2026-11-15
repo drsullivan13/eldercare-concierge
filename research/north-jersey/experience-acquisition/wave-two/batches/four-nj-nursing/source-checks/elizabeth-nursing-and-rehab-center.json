@@ -1,0 +1,85 @@
+{
+  "url": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+  "inspection": "full-page",
+  "httpStatus": 200,
+  "checkedAt": "2026-11-15",
+  "observedAt": "2026-11-15T14:06:38.032167+00:00",
+  "bodySha256": "89522338d30062a7077943b15d9c3fb8f9e7642b23ca104a0efb509aca9939b2",
+  "collection": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/elizabeth-nursing-and-rehab-center.json",
+    "sha256": "cba728c6b78934ed34d4056ce55d11ccde50711f1e99562bc1f3192a811fc90a"
+  },
+  "independentReview": {
+    "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+    "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+  },
+  "identity": {
+    "name": "Elizabeth Nursing and Rehabilitation Center",
+    "address": "1048 Grove Street",
+    "city": "Elizabeth",
+    "state": "New Jersey",
+    "zip": "07202",
+    "careUnit": "Skilled Nursing / Long Term Care"
+  },
+  "aggregate": {
+    "rating": 4.8,
+    "count": 358,
+    "scale": 5,
+    "asOf": null,
+    "scope": "ambiguous",
+    "sourceFamily": "google"
+  },
+  "googlePlaceIds": [
+    "0x89c3b2b172e4f8b9:0x46e212a9df52bdb4"
+  ],
+  "population": {
+    "visibleCount": 5,
+    "rows": [
+      {
+        "id": "mlc-google-608559",
+        "date": "2026-03",
+        "sentiment": "positive",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-608557",
+        "date": "2026-02",
+        "sentiment": "positive",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-608556",
+        "date": "2025-12",
+        "sentiment": "positive",
+        "relationship": "unknown"
+      },
+      {
+        "id": "mlc-google-608558",
+        "date": "2025-12",
+        "sentiment": "positive",
+        "relationship": "family"
+      },
+      {
+        "id": "mlc-google-608560",
+        "date": "2025-11",
+        "sentiment": "positive",
+        "relationship": "family"
+      }
+    ]
+  },
+  "populationReview": "Live DOH and CMS match the 102-bed BRACHA nursing facility; operator contact and exact selected Google CID resolve the duplicate-identity question editorially. However, expanded primary Google evidence at that same place explicitly includes an outside healthcare professional's pharmacy-work interaction. Following the prior partner-population caution, do not attest a separable consumer-only aggregate from the five favorable mirror rows. The newer 361-rating population is not proved identical to, or disjoint from, the mirror's 358; do not assert the professional is definitely in the older 358 or silently score around it.",
+  "scopeHold": "Live DOH and CMS match the 102-bed BRACHA nursing facility; operator contact and exact selected Google CID resolve the duplicate-identity question editorially. However, expanded primary Google evidence at that same place explicitly includes an outside healthcare professional's pharmacy-work interaction. Following the prior partner-population caution, do not attest a separable consumer-only aggregate from the five favorable mirror rows. The newer 361-rating population is not proved identical to, or disjoint from, the mirror's 358; do not assert the professional is definitely in the older 358 or silently score around it.",
+  "listingAnnotations": {
+    "observedIdentity": {
+      "name": "Elizabeth Nursing and Rehabilitation Center",
+      "address": "1048 Grove Street",
+      "city": "Elizabeth",
+      "state": "New Jersey",
+      "zip": "07202"
+    },
+    "careTypes": [
+      "Skilled Nursing / Long Term Care"
+    ],
+    "aggregateScopeBeforeEditorial": "unverified-platform-population"
+  }
+}

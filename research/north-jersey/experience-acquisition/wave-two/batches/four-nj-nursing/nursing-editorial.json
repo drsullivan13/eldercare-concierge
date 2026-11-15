@@ -1,0 +1,748 @@
+{
+  "schemaVersion": 1,
+  "assessmentDate": "2026-11-15",
+  "mode": "Research and editorial staging only. No publication, code changes, repository writes, KB writes, or nested agents.",
+  "summary": {
+    "recommendEligible": 2,
+    "hold": 2,
+    "myLivingChoiceVisibleAccountsRead": 20
+  },
+  "policy": {
+    "precedents": [
+      "research/north-jersey/experience-acquisition/wave-two/batches/six-sites/nursing-editorial.json",
+      "research/north-jersey/experience-acquisition/wave-two/batches/sinai-newark/reviewed.json",
+      "research/north-jersey/experience-acquisition/wave-two/residential-location-holds.json"
+    ],
+    "rule": "One included state nursing listing is the sole potential review recipient where its CMS duplicate is included_cms_only. Never score both or silently merge saved IDs. Primary identity corroboration does not itself resolve care-unit or review-population ambiguity.",
+    "sourceFamily": "Google. MyLivingChoice and operator Google widgets are mirrors, not independent votes. Do not add their counts.",
+    "access": {
+      "robotsUrl": "https://www.mylivingchoice.com/robots.txt",
+      "termsUrl": "https://www.mylivingchoice.com/terms-of-service",
+      "checkedAt": "2026-11-15",
+      "finding": "Public property paths allowed; terms prohibit disruptive-volume scraping. Four serial direct property reads, plus one rendered revisit to verify Elizabeth controls. No MyLivingChoice API, login, restricted page, report action, inquiry, or submission used.",
+      "operatorFinding": "Public contact/home pages and robots checked. No applicable automation prohibition identified on the inspected pages or targeted terms searches. Absence of a found terms page is not a blanket license or permission to republish narratives."
+    },
+    "privacy": "No reviewer, resident, relative, employee, administrator, or individual owner names; no quotes, contact details of individuals, avatars, or medical narratives retained. Public facility contacts and corporate licensed operators only. Original review identifiers and URLs retained for audit.",
+    "dateBasis": "Calendar-month labels in the public MyLivingChoice response. Original Google posting days are unknown; do not manufacture first-of-month posting dates. Google relative-age labels are not converted to exact calendar months.",
+    "populationLimit": "All five accounts on each direct MyLivingChoice page were read before selection. These are platform-selected windows, not all reported ratings, verified residents, independent people, or representative prevalence. Google place panels were checked for identity and aggregate comparison, not collected as a full second review window. A targeted expanded professional account at Elizabeth is separately flagged and never added to the five-row denominator.",
+    "clinicalSeparation": "No CMS quality rating, inspection result, staffing fact, admission eligibility claim, or operator promotional star claim contributes to the consumer aggregate."
+  },
+  "results": [
+    {
+      "name": "Inglemoor Rehabilitation & Care Center",
+      "decision": "recommend-eligible-editorial-only",
+      "reason": "Fresh direct header, NJ DOH, CMS and operator contact/map corroborate one Livingston nursing facility. Resolve the missing-header and duplicate-identity holds for editorial attribution only. All five visible accounts are resident/family care experiences without self-identified workforce, student, or professional-partner roles. Recommend the observed Google aggregate once on NJ60708, not on its separate CMS duplicate.",
+      "recipientProviderId": "north-jersey-doh-nj60708",
+      "soleCandidateRecipient": "north-jersey-doh-nj60708",
+      "officialId": "NJ60708",
+      "excludedRecipients": [
+        "cms-315322",
+        "cms-315349"
+      ],
+      "url": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+      "observedHeader": {
+        "name": "Inglemoor Rehabilitation & Care Center",
+        "street": "311 S Livingston Ave",
+        "city": "Livingston",
+        "state": "New Jersey",
+        "zip": null,
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 4.2,
+        "scale": 5,
+        "count": 65,
+        "sourceFamily": "google",
+        "scope": "consumer",
+        "asOf": null
+      },
+      "googlePanel": {
+        "url": "https://maps.google.com/maps?cid=1633317239511959804",
+        "name": "Inglemoor Rehabilitation & Care Center",
+        "address": "311 S Livingston Ave, Livingston, NJ 07039",
+        "phone": "9739940221",
+        "rating": 4.2,
+        "count": 65,
+        "featureId": "0x89c3a961c94f1e47:0x16aab5602aa1c8fc",
+        "operatorCid": "1633317239511959804",
+        "operatorPlaceMatch": "Exact CID equals the low 64 bits of every visible review place feature ID; direct CID link resolves to the full matching selected place."
+      },
+      "identity": {
+        "licensedName": "Inglemoor Rehabilitation And Care Center Of Living",
+        "license": "060708",
+        "stateFacilityId": "NJ60708",
+        "ccn": "315322",
+        "cmsName": "INGLEMOOR REHABILITATION AND CARE CENTER",
+        "address": "311 S Livingston Ave, Livingston, NJ 07039",
+        "statePhone": "9739940221",
+        "cmsPhone": "9739940221",
+        "operatorContactPhone": "9739940221",
+        "operatorHeaderAlternatePhone": "9733709521",
+        "licensedBeds": 138,
+        "cmsCertifiedBeds": 138,
+        "stateLicensedOwner": "LIVINGSTON CARE CENTER, LP",
+        "cmsLegalBusinessName": "LIVINGSTON CARE CENTER LIMITED PARTNERSHIP",
+        "licenseExpires": "2026-12-31",
+        "cmsProcessingDate": "2026-10-01",
+        "stateCrosswalkStatus": "included",
+        "cmsCrosswalkStatus": "included_cms_only",
+        "operatorCapacityConflict": "Operator homepage promotional copy calls it 130 beds. Do not silently substitute that for the independently matching live DOH and CMS 138. The operator contact address, direct main phone and selected place agree."
+      },
+      "unitsAndNames": {
+        "finding": "Operator explicitly describes separate sub-acute and long-term nursing units, including a 44-bed sub-acute unit, within the one skilled nursing facility. These are not evidence of separately licensed assisted living. No other care-setting record at this address was found in the retained provider catalog.",
+        "sameNameExclusion": "Complete Care at Inglemoor is the different Englewood location, 333 Grand Ave, CMS 315349. Nothing in this decision transfers its already-scored evidence to Livingston.",
+        "rename": "Licensed-name truncation and AND versus ampersand, not a newly established operator change."
+      },
+      "previousHold": {
+        "inventory": "overlapping-runtime-identities",
+        "pageInventory": "unconfirmed_page_header",
+        "resolution": "Fresh directly observed header supplies the street and Livingston location. Primary license/CCN, 138 beds, main phone, corporate operator and selected Google place tie the records to one nursing facility. No registry merge or alias was written."
+      },
+      "visibleAccounts": [
+        {
+          "id": "609076",
+          "date": "2026-07",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Relative's rehabilitation stay and subsequent departure; staff praise is from a family perspective.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT21KSFpWVlZTbGRhVEcxa09VczNjalJDZVZabFNuYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21KSFpWVlZTbGRhVEcxa09VczNjalJDZVZabFNuYxAB!2m1!1s0x89c3a961c94f1e47:0x16aab5602aa1c8fc",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+          "observationLog": "call_2ac45c0ac2505afc_0.log"
+        },
+        {
+          "id": "609072",
+          "date": "2026-07",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Care and support for a relative; names employees but does not claim employment.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xGT1dVczNibWQ0VVhJMk9XcElVVTU1ZW1KbVFYYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGT1dVczNibWQ0VVhJMk9XcElVVTU1ZW1KbVFYYxAB!2m1!1s0x89c3a961c94f1e47:0x16aab5602aa1c8fc",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+          "observationLog": "call_2ac45c0ac2505afc_0.log"
+        },
+        {
+          "id": "609074",
+          "date": "2026-04",
+          "relationship": "resident",
+          "sentiment": "positive",
+          "basis": "Explicit first-person rehabilitation stay and care appraisal; references outside clinicians as care providers, not the writer's employer.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2pONFZWSXdSRTQxVnpZM2VHZ3RNSEZWYlhSZlQxRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pONFZWSXdSRTQxVnpZM2VHZ3RNSEZWYlhSZlQxRRAB!2m1!1s0x89c3a961c94f1e47:0x16aab5602aa1c8fc",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+          "observationLog": "call_2ac45c0ac2505afc_0.log"
+        },
+        {
+          "id": "609078",
+          "date": "2026-04",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Explicit relative's care experience; no professional affiliation claimed.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xkUVRteGZWbDlSUVZVd1FpMUtjelpvVTNWYVJVRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xkUVRteGZWbDlSUVZVd1FpMUtjelpvVTNWYVJVRRAB!2m1!1s0x89c3a961c94f1e47:0x16aab5602aa1c8fc",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+          "observationLog": "call_2ac45c0ac2505afc_0.log"
+        },
+        {
+          "id": "609080",
+          "date": "2025-12",
+          "relationship": "resident",
+          "sentiment": "positive",
+          "basis": "Explicit first-person rehabilitation admission and recovery experience.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2poZkxVbFFXVzFFZGkxNk5IRnViMUZzTWpSdlduYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2poZkxVbFFXVzFFZGkxNk5IRnViMUZzTWpSdlduYxAB!2m1!1s0x89c3a961c94f1e47:0x16aab5602aa1c8fc",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+          "observationLog": "call_2ac45c0ac2505afc_0.log"
+        }
+      ],
+      "roleConcerns": {
+        "employee": "None self-identified in the five visible accounts.",
+        "student": "None self-identified.",
+        "partner": "None self-identified; mentioning treating professionals does not make the writer a partner.",
+        "verification": "Relationships are self-reported, not independently verified."
+      },
+      "sampleAssessment": {
+        "visible": 5,
+        "recentEligible": 5,
+        "positive": 5,
+        "negative": 0,
+        "mixed": 0,
+        "headlineConflict": false
+      },
+      "editorialEstimateIfReleased": {
+        "value": 8.4,
+        "label": "single-source estimate",
+        "confidence": "limited",
+        "basis": "Arithmetic normalization of the eligible published 4.2/5, not an application release or executed scorer result."
+      },
+      "sources": {
+        "state": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ60708",
+        "operatorContact": "https://www.inglemoor.com/contact-us/",
+        "operatorUnits": "https://www.inglemoor.com/",
+        "operatorRobots": "https://www.inglemoor.com/robots.txt",
+        "reviews": "https://www.mylivingchoice.com/property/inglemoor-rehabilitation-and-care-center",
+        "cms": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Bvalue%5D=315322&conditions%5B0%5D%5Boperator%5D=%3D&limit=1"
+      },
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "name": "New Jersey Veterans Memorial Home At Paramus",
+      "decision": "recommend-eligible-with-selected-concerns-editorial-only",
+      "reason": "DOH and CMS agree on one 336-bed nursing home and regulatory phone. The state operator identifies the same site, two residential buildings and its selected Google place. Resolve the duplicate-identity hold without splitting its nursing wings into separate recipients. The visible family warning and mixed dignity account remain context; the visitor account is eligible broad consumer feedback, not verified resident evidence.",
+      "recipientProviderId": "north-jersey-doh-nj60228",
+      "soleCandidateRecipient": "north-jersey-doh-nj60228",
+      "officialId": "NJ60228",
+      "excludedRecipients": [
+        "cms-315346"
+      ],
+      "url": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+      "observedHeader": {
+        "name": "New Jersey Veterans Memorial Home At Paramus",
+        "street": "1 Veterans Drive",
+        "city": "Paramus",
+        "state": "New Jersey",
+        "zip": null,
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 3.8,
+        "scale": 5,
+        "count": 38,
+        "sourceFamily": "google",
+        "scope": "consumer",
+        "asOf": null
+      },
+      "googlePanel": {
+        "url": "https://goo.gl/maps/7vQEiQaeYt519TkT7",
+        "name": "Paramus Veterans Memorial Home",
+        "address": "1 Veterans Way, Paramus, NJ 07652",
+        "phone": "2016348200",
+        "rating": 3.8,
+        "count": 39,
+        "featureId": "0x89c2facddf181d5f:0xbd11423eee95ca00",
+        "operatorPlaceMatch": "State operator's Google Maps link resolves to exactly the selected feature ID in all five MyLivingChoice original-review links.",
+        "difference": "Google says Veterans Way; DOH/CMS/operator say Veterans Drive. Exact operator-selected place, location, site name, operator main phone and 336-bed primary site evidence explain the physical-site match. Do not silently rewrite the licensed street or merge counts."
+      },
+      "identity": {
+        "licensedName": "N J Veterans Mem Home Paramus",
+        "license": "060228",
+        "stateFacilityId": "NJ60228",
+        "ccn": "315346",
+        "cmsName": "NEW JERSEY VETERANS MEMORIAL HOME AT PARAMUS",
+        "address": "1 Veterans Drive, Paramus, NJ 07652",
+        "statePhone": "2016348212",
+        "cmsPhone": "2016348212",
+        "operatorMainPhone": "2016348200",
+        "operatorAdmissionsPhone": "2016348435",
+        "licensedBeds": 336,
+        "cmsCertifiedBeds": 336,
+        "operatorCapacity": 336,
+        "stateLicensedOwner": "STATE OF NJ/DEPT. MILITARY & VETERAN AFFAIRS",
+        "cmsLegalBusinessName": "STATE OF NEW JERSEY OMB CENTRALIZED PAYROLL",
+        "operatorIdentity": "State-operated New Jersey Veterans Home at Paramus. DVA branding differs from the older DOH department label; the CMS payroll entity is not a separate nursing-home operator.",
+        "licenseExpires": "2027-08-31",
+        "cmsProcessingDate": "2026-10-01",
+        "stateCrosswalkStatus": "included",
+        "cmsCrosswalkStatus": "included_cms_only"
+      },
+      "unitsAndNames": {
+        "finding": "Two residential buildings and six nursing units, including a 42-bed certified Alzheimer's unit, are described by the state operator within this one home. Visible references to Valor and Serenity are internal wings/units, not evidence for separate care-setting recipients. No separate licensed care setting at this address was found in the retained catalog.",
+        "rename": "Abbreviated licensed name versus full federal/operator name; no ownership-transfer date established."
+      },
+      "previousHold": {
+        "inventory": "overlapping-runtime-identities",
+        "pageInventory": "overlapping_official_units",
+        "resolution": "New live DOH/CMS and operator site/place evidence establish duplicate representations of one nursing home, not separate licensed settings. Recommend the included state record alone, following Sinai."
+      },
+      "visibleAccounts": [
+        {
+          "id": "609131",
+          "date": "2026-02",
+          "relationship": "family",
+          "sentiment": "negative",
+          "basis": "Relative's care and staffing-continuity warning. Describing the burden of helping on weekends as becoming a volunteer is not self-identification as a workforce reviewer.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT214aVpFUm1VR1ZEV2xoa1VVdHJOREpqU1dKeFkwRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT214aVpFUm1VR1ZEV2xoa1VVdHJOREpqU1dKeFkwRRAB!2m1!1s0x89c2facddf181d5f:0xbd11423eee95ca00",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+          "observationLog": "call_6ed53ad7b678415d_0.log"
+        },
+        {
+          "id": "609132",
+          "date": "2025-10",
+          "relationship": "visitor",
+          "sentiment": "positive",
+          "basis": "Explicit visit, wayfinding help and meal experience. Not a resident/family care-outcome account; no staff or business-partner claim.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xOWVZFeEZaMVEwYURWSmRVUkRNVlo1Y2s1V1ZuYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xOWVZFeEZaMVEwYURWSmRVUkRNVlo1Y2s1V1ZuYxAB!2m1!1s0x89c2facddf181d5f:0xbd11423eee95ca00",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+          "observationLog": "call_6ed53ad7b678415d_0.log"
+        },
+        {
+          "id": "609133",
+          "date": "2025-06",
+          "relationship": "family",
+          "sentiment": "mixed",
+          "basis": "Expresses appreciation for care while materially warning that family oversight is needed for dignity.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xWclNqZHFVM1kzU1dzMlRrOHRRelp1T1RkNmRuYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWclNqZHFVM1kzU1dzMlRrOHRRelp1T1RkNmRuYxAB!2m1!1s0x89c2facddf181d5f:0xbd11423eee95ca00",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+          "observationLog": "call_6ed53ad7b678415d_0.log"
+        },
+        {
+          "id": "609135",
+          "date": "2025-01",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Relative's care; favorable staffing and cleanliness account.",
+          "originalGoogleReviewId": "ChdDSUhNMG9nS0VJQ0FnSURfb3IzSG9BRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURfb3IzSG9BRRAB!2m1!1s0x89c2facddf181d5f:0xbd11423eee95ca00",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+          "observationLog": "call_6ed53ad7b678415d_0.log"
+        },
+        {
+          "id": "609134",
+          "date": "2023-02",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Relative's care in an internal nursing unit; too old for current 730-day diagnostics, retained rather than omitted.",
+          "originalGoogleReviewId": "ChZDSUhNMG9nS0VJQ0FnSUNoNHBDZU5BEAE",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNoNHBDZU5BEAE!2m1!1s0x89c2facddf181d5f:0xbd11423eee95ca00",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+          "observationLog": "call_6ed53ad7b678415d_0.log"
+        }
+      ],
+      "roleConcerns": {
+        "employee": "None self-identified.",
+        "student": "None self-identified.",
+        "partner": "None self-identified. Visitor dining feedback is broad consumer feedback, not partner evidence.",
+        "verification": "No writer authenticity or residency verification inferred from platform FAQ."
+      },
+      "sampleAssessment": {
+        "visible": 5,
+        "recentEligible": 4,
+        "positive": 2,
+        "negative": 1,
+        "mixed": 1,
+        "excludedFromRecentIds": [
+          "609134"
+        ],
+        "headlineConflict": false,
+        "selectedConcerns": true
+      },
+      "editorialEstimateIfReleased": {
+        "value": 7.6,
+        "label": "single-source estimate",
+        "confidence": "limited",
+        "basis": "Arithmetic normalization of MyLivingChoice's 3.8/5 from 38. Google 39 is a separate same-family observation, not an added rating or denominator replacement. Application scorer not executed."
+      },
+      "sources": {
+        "state": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ60228",
+        "operator": "https://www.nj.gov/dva/veterans/memorial-homes/paramus/",
+        "operatorUnits": "https://www.nj.gov/dva/veterans/memorial-homes/paramus/facilities.shtml",
+        "reviews": "https://www.mylivingchoice.com/property/new-jersey-veterans-memorial-home-at-paramus",
+        "cms": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Bvalue%5D=315346&conditions%5B0%5D%5Boperator%5D=%3D&limit=1"
+      },
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "name": "Livingston Post Acute Care",
+      "decision": "hold-historical-license-and-unit-attribution",
+      "reason": "New primary evidence strongly matches current NJNH07001 to CMS 315526 and the nursing Google place. It corrects the retained 134-bed value to live DOH/CMS/operator-audit 124, but does not explicitly establish the disposition or succession of retained NJ07NH000/Atrium. Its blank live detail response is not closure evidence. Keep the previous multi-record hold pending a primary former/current-license bridge; do not infer a completed rename/transfer or select both state recipients.",
+      "recipientProviderId": null,
+      "soleCandidateRecipient": "north-jersey-doh-njnh07001",
+      "officialId": "NJNH07001",
+      "excludedRecipients": [
+        "cms-315526",
+        "north-jersey-doh-nj07nh000",
+        "north-jersey-doh-nj07a022"
+      ],
+      "url": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+      "observedHeader": {
+        "name": "Livingston Post Acute Care",
+        "street": "348 E Cedar Street",
+        "city": "Livingston",
+        "state": "New Jersey",
+        "zip": null,
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 4.3,
+        "scale": 5,
+        "count": 526,
+        "sourceFamily": "google",
+        "scope": "ambiguous",
+        "asOf": null
+      },
+      "googlePanel": {
+        "url": "https://goo.gl/maps/ohg3dxa8HxQ7QzCP6",
+        "name": "Livingston Post Acute Care",
+        "address": "348 E Cedar St, Livingston, NJ 07039",
+        "phone": "9737588200",
+        "rating": 4.4,
+        "count": 542,
+        "featureId": "0x89c3abf97107ad5f:0x9a6773784a04bd28",
+        "operatorPlaceMatch": "Rendered operator contact page publishes this link; redirect selects precisely the feature ID in all five review URLs.",
+        "renameCaution": "Redirect URL retains the Spring Hills Post Acute Livingston slug while the live panel title is Livingston Post Acute Care. A historical Google slug is not a state license-succession document.",
+        "difference": "Do not substitute 4.4/542 for MyLivingChoice 4.3/526 or add them as independent evidence."
+      },
+      "identity": {
+        "licensedName": "Livingston Post Acute Care",
+        "license": "NH07001",
+        "stateFacilityId": "NJNH07001",
+        "ccn": "315526",
+        "cmsName": "LIVINGSTON POST ACUTE CARE",
+        "address": "348 E Cedar Street, Livingston, NJ 07039",
+        "statePhone": "9737588200",
+        "cmsPhone": "9737588200",
+        "operatorPhone": "9737588200",
+        "licensedBeds": 124,
+        "cmsCertifiedBeds": 124,
+        "operatorAuditBeds": 124,
+        "retainedRosterBeds": 134,
+        "stateLicensedOwner": "LIVINGSTON POST ACUTE OPERATOR, LLC",
+        "cmsLegalBusinessName": "LIVINGSTON POST ACUTE OPERATOR LLC",
+        "operatorAuditLegalName": "LIVINGSTON POST ACUTE OPERATOR, LLC (DBA LIVINGSTON POST ACUTE)",
+        "licenseExpires": "2027-06-30",
+        "cmsProcessingDate": "2026-10-01",
+        "stateCrosswalkStatus": "included",
+        "cmsCrosswalkStatus": "included_cms_only",
+        "operatorPrimaryBridge": "Operator-posted audited 2025 statements, Note 1, describe its 124-bed nursing facility. Operator-posted 2025 Medicare cost report identifies CCN 31-5526, 348 E. Cedar St, and 124 SNF beds. These support the current corporate operator/site/CCN, not an unproven historical license transfer."
+      },
+      "unitsAndNames": {
+        "formerOrDuplicate": {
+          "providerId": "north-jersey-doh-nj07nh000",
+          "license": "07NH000",
+          "name": "ATRIUM POST ACUTE CARE OF LIVINGSTON",
+          "retainedAddress": "348 EAST CEDAR STREET, LIVINGSTON, NJ 07039",
+          "retainedBeds": 124,
+          "retainedPhone": "9177342787",
+          "liveDetailFinding": "HTTP 200 with generic Label and blank identity fields. Does not establish active status, closure, transfer date, or succession."
+        },
+        "adjacentDistinctSetting": {
+          "providerId": "north-jersey-doh-nj07a022",
+          "license": "07A022",
+          "name": "Spring Hills Livingston",
+          "address": "346 E Cedar Street, Livingston, NJ 07039",
+          "setting": "Assisted Living Residence",
+          "licensedOwner": "LIVINGSTON AL AMOP LLC",
+          "phone": "9736942100",
+          "retainedRosterCapacity": 150,
+          "liveBeds": null,
+          "liveBedsNote": "Live detail bed table is blank; no live capacity inferred.",
+          "licenseExpires": "2027-04-30",
+          "reasonExcluded": "Different neighboring assisted-living licensed entity. Do not extend the nursing place or its reviews to this residence merely because of Spring Hills naming or campus proximity."
+        },
+        "rename": "Current Livingston, historical Atrium and Google Spring Hills naming are documented separately. No primary instrument tying 07NH000 to NH07001, including transfer/effective dates, was located in this bounded pass."
+      },
+      "previousHold": {
+        "inventory": "overlapping-runtime-identities",
+        "pageInventory": "overlapping_official_units",
+        "resolution": "Current operator/site/CCN and 124-bed identity strengthened, not full hold clearance. No historical state-license record removed and no registry merge performed."
+      },
+      "visibleAccounts": [
+        {
+          "id": "609577",
+          "date": "2026-08",
+          "relationship": "family",
+          "sentiment": "negative",
+          "basis": "Explicit relative's stay; serious care, hygiene and staffing allegations. Allegations are not independently adjudicated facts.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2poSWFVbHlZbEJPVm1OTWVsTndNRzlqTVd4R2VuYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2poSWFVbHlZbEJPVm1OTWVsTndNRzlqTVd4R2VuYxAB!2m1!1s0x89c3abf97107ad5f:0x9a6773784a04bd28",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+          "observationLog": "call_0535a9b2bf5a6cf5_1.log"
+        },
+        {
+          "id": "609584",
+          "date": "2026-06",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Explicit relative's care; strong praise of particular workers, not a claim of employment.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2pselpUQmxSSEpYWjA4d1lVUkVNVUo0U1ZSdmFYYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pselpUQmxSSEpYWjA4d1lVUkVNVUo0U1ZSdmFYYxAB!2m1!1s0x89c3abf97107ad5f:0x9a6773784a04bd28",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+          "observationLog": "call_0535a9b2bf5a6cf5_1.log"
+        },
+        {
+          "id": "609580",
+          "date": "2026-06",
+          "relationship": "family",
+          "sentiment": "negative",
+          "basis": "Explicit relative's care and witnessed conduct; general respect for healthcare work is not favorable appraisal of this facility.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT25OU2FHRm9TMmx4VlZCR1JGUkVTVmhwVmpSbVIxRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25OU2FHRm9TMmx4VlZCR1JGUkVTVmhwVmpSbVIxRRAB!2m1!1s0x89c3abf97107ad5f:0x9a6773784a04bd28",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+          "observationLog": "call_0535a9b2bf5a6cf5_1.log"
+        },
+        {
+          "id": "609578",
+          "date": "2026-06",
+          "relationship": "resident",
+          "sentiment": "positive",
+          "basis": "First-person ongoing care; writer distinguishes own family from staff working with the writer. Not classified as an employee.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT210T1ZrNVRaVWRmYkVKT1IwVTRVekZmWWtRemNXYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT210T1ZrNVRaVWRmYkVKT1IwVTRVekZmWWtRemNXYxAB!2m1!1s0x89c3abf97107ad5f:0x9a6773784a04bd28",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+          "observationLog": "call_0535a9b2bf5a6cf5_1.log"
+        },
+        {
+          "id": "609582",
+          "date": "2026-05",
+          "relationship": "family",
+          "sentiment": "mixed",
+          "overallDirection": "critical",
+          "basis": "Substantial explicit praise of daytime workers and care alongside substantial night-care and management criticism. Retain both, not incidental-praise-only. Professional title does not override the explicitly described family role.",
+          "solicitationConcern": "Writer says positive reviews help reward employees. This is a report of a recognition/review-solicitation mechanism, not proof the writer is employed, paid, a student, or a business partner. It is not independent confirmation of the practice.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT25kYVpGVldVRUZuU2pCSE1rTjZUMm8xTURkdlptYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25kYVpGVldVRUZuU2pCSE1rTjZUMm8xTURkdlptYxAB!2m1!1s0x89c3abf97107ad5f:0x9a6773784a04bd28",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+          "observationLog": "call_0535a9b2bf5a6cf5_1.log"
+        }
+      ],
+      "roleConcerns": {
+        "employee": "None self-identified in the five; praise for employees is not employee authorship.",
+        "student": "None self-identified.",
+        "partner": "None self-identified; a professional honorific alone is insufficient.",
+        "solicitation": "Explicit recognition-related positive-review solicitation allegation in 609582 retained as a bias concern; do not silently ignore it.",
+        "verification": "All roles self-reported or contextual, not verified."
+      },
+      "sampleAssessment": {
+        "visible": 5,
+        "recentEligible": 5,
+        "positive": 2,
+        "negative": 2,
+        "mixed": 1,
+        "headlineConflictOnThisCoding": false,
+        "sensitivity": "If 609582 were editorially classified as negative overall, the strong 8.6/10 aggregate would face 3/5 contrary recent rows and require withholding. This ambiguity cannot rescue publication; identity hold already independently withholds the aggregate."
+      },
+      "editorialEstimateIfReleased": null,
+      "toResolve": "Permission-compatible primary state/operator historical evidence explicitly bridging former NJ07NH000/Atrium to NJNH07001, with effective dates and any changes in licensed unit. Resolve review-solicitation and historical-operator interpretation before release; never relax the guard based on five nursing-themed accounts.",
+      "sources": {
+        "state": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJNH07001",
+        "formerStateRecord": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ07NH000",
+        "neighborStateRecord": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ07A022",
+        "operatorContact": "https://livingstonpostacute.com/contact-us/",
+        "operator": "https://livingstonpostacute.com/",
+        "operatorAudit": "https://livingstonpostacute.com/wp-content/uploads/2026/07/Livingston-OpCo-Audit-Report-12.31.25.pdf",
+        "operatorCostReport": "https://livingstonpostacute.com/wp-content/uploads/2026/07/MCare-Cost-Report-Livingston-2025.pdf",
+        "operatorRobots": "https://livingstonpostacute.com/robots.txt",
+        "stateTransferIndexChecked": "https://www.nj.gov/health/healthfacilities/certificate-need/ltc-transfer-ownership/",
+        "reviews": "https://www.mylivingchoice.com/property/livingston-post-acute-care",
+        "cms": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Bvalue%5D=315526&conditions%5B0%5D%5Boperator%5D=%3D&limit=1"
+      },
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "name": "Elizabeth Nursing and Rehabilitation Center",
+      "decision": "identity-hold-cleared-but-aggregate-population-recheck-held",
+      "reason": "Live DOH and CMS match the 102-bed BRACHA nursing facility; operator contact and exact selected Google CID resolve the duplicate-identity question editorially. However, expanded primary Google evidence at that same place explicitly includes an outside healthcare professional's pharmacy-work interaction. Following the prior partner-population caution, do not attest a separable consumer-only aggregate from the five favorable mirror rows. The newer 361-rating population is not proved identical to, or disjoint from, the mirror's 358; do not assert the professional is definitely in the older 358 or silently score around it.",
+      "recipientProviderId": null,
+      "soleCandidateRecipient": "north-jersey-doh-nj62007x",
+      "officialId": "NJ62007X",
+      "excludedRecipients": [
+        "cms-315106"
+      ],
+      "url": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+      "observedHeader": {
+        "name": "Elizabeth Nursing and Rehabilitation Center",
+        "street": "1048 Grove Street",
+        "city": "Elizabeth",
+        "state": "New Jersey",
+        "zip": null,
+        "careUnit": "Skilled Nursing / Long Term Care"
+      },
+      "aggregate": {
+        "rating": 4.8,
+        "scale": 5,
+        "count": 358,
+        "sourceFamily": "google",
+        "scope": "ambiguous",
+        "asOf": null
+      },
+      "googlePanel": {
+        "url": "https://maps.google.com/maps?cid=5107665448197078452",
+        "name": "Elizabeth Nursing and Rehabilitation Center",
+        "address": "1048 Grove St, Elizabeth, NJ 07202",
+        "phone": "9083540002",
+        "rating": 4.8,
+        "count": 361,
+        "featureId": "0x89c3b2b172e4f8b9:0x46e212a9df52bdb4",
+        "operatorCid": "5107665448197078452",
+        "operatorPlaceMatch": "Operator contact's actual Maps CID equals the review feature ID's low 64 bits. This is a clickable selected place, not just automatic map-tile geography.",
+        "difference": "Keep Google 361 and mirror 358 separate; no sum, silent refresh, or second independent source."
+      },
+      "identity": {
+        "licensedName": "Elizabeth Nursing And Rehab",
+        "license": "62007X",
+        "stateFacilityId": "NJ62007X",
+        "ccn": "315106",
+        "cmsName": "ELIZABETH NURSING AND REHAB CENTER",
+        "address": "1048 Grove Street, Elizabeth, NJ 07202",
+        "statePhone": "9083540002",
+        "cmsPhone": "9083540002",
+        "operatorPhone": "9083540002",
+        "licensedBeds": 102,
+        "cmsCertifiedBeds": 102,
+        "stateLicensedOwner": "BRACHA, INC.",
+        "cmsLegalBusinessName": "BRACHA INC",
+        "licenseExpires": "2027-08-31",
+        "cmsProcessingDate": "2026-10-01",
+        "stateCrosswalkStatus": "included",
+        "cmsCrosswalkStatus": "included_cms_only"
+      },
+      "unitsAndNames": {
+        "finding": "First/second floors in an account are internal nursing floors, not separately licensed units. Only this nursing DOH/CMS pair appears at 1048 Grove in the retained catalog.",
+        "rename": "Abbreviated Rehab versus Rehabilitation Center names do not establish an operator change.",
+        "siblingCaution": "The operator site reuses Plaza-hosted logo assets and its policy page includes Plaza contact text. Those are not proof of a shared Google feed or permission to transfer ratings. Exact contact/phone/CID, DOH and CMS, rather than copied policy text, establish this facility."
+      },
+      "previousHold": {
+        "inventory": "overlapping-runtime-identities",
+        "pageInventory": "overlapping_official_units",
+        "resolution": "Duplicate nursing identity explained by primary operator/DOH/CMS/place match, but no aggregate released. New professional-population evidence creates a separate unresolved scope concern."
+      },
+      "visibleAccounts": [
+        {
+          "id": "608559",
+          "date": "2026-03",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Explicit relative's rehabilitation and subsequent improvement; no workplace claim.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2kxTmJuSTVTbEF6WkZFd1NESm9OVWhETlVObmVWRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2kxTmJuSTVTbEF6WkZFd1NESm9OVWhETlVObmVWRRAB!2m1!1s0x89c3b2b172e4f8b9:0x46e212a9df52bdb4",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+          "observationLog": "call_7822ac2519b72de2_0.log"
+        },
+        {
+          "id": "608557",
+          "date": "2026-02",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Explicit relative's rehabilitation and discharge. Materially resembles the care episode in 608559; two original IDs are not proof of two independent resident outcomes.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT25VMVoydEZURVJHYURKalIzQmtlVEYzV1RoM2NFRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25VMVoydEZURVJHYURKalIzQmtlVEYzV1RoM2NFRRAB!2m1!1s0x89c3b2b172e4f8b9:0x46e212a9df52bdb4",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+          "observationLog": "call_7822ac2519b72de2_0.log"
+        },
+        {
+          "id": "608556",
+          "date": "2025-12",
+          "relationship": "unknown",
+          "sentiment": "positive",
+          "basis": "General praise of owners, staff and atmosphere without stating resident/family, employee, student or partner relationship. Do not invent a family role or infer employment from praise.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT21wTFdETjFXRlJxY0c0dFlXRlBhVlZKVkVwdWVuYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21wTFdETjFXRlJxY0c0dFlXRlBhVlZKVkVwdWVuYxAB!2m1!1s0x89c3b2b172e4f8b9:0x46e212a9df52bdb4",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+          "observationLog": "call_7822ac2519b72de2_0.log"
+        },
+        {
+          "id": "608558",
+          "date": "2025-12",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Explicit relative's care and communication experience; staff praise from a family perspective.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT21Wa1VUZDBiVFpzTjBjemJUZ3dlbGxFWTFaT1JrRRAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21Wa1VUZDBiVFpzTjBjemJUZ3dlbGxFWTFaT1JrRRAB!2m1!1s0x89c3b2b172e4f8b9:0x46e212a9df52bdb4",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+          "observationLog": "call_7822ac2519b72de2_0.log"
+        },
+        {
+          "id": "608560",
+          "date": "2025-11",
+          "relationship": "family",
+          "sentiment": "positive",
+          "basis": "Explicit spouse's post-hospital care; positive therapy and scheduling appraisal.",
+          "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2pCNlFrVnNZUzFwVlVsVVptcEhkRGsyYjJGVlJYYxAB",
+          "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pCNlFrVnNZUzFwVlVsVVptcEhkRGsyYjJGVlJYYxAB!2m1!1s0x89c3b2b172e4f8b9:0x46e212a9df52bdb4",
+          "datePrecision": "month",
+          "sourceUrl": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+          "observationLog": "call_7822ac2519b72de2_0.log"
+        }
+      ],
+      "additionalPrimaryPopulationConcern": {
+        "sourceUrl": "https://maps.google.com/maps?cid=5107665448197078452",
+        "originalGoogleReviewId": "Ci9DQUlRQUNvZENodHljRjlvT2toRVRWQlJXbXRCWTJoVFRFUkNOV1l0T0dkc1ZWRRAB",
+        "originalReviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2toRVRWQlJXbXRCWTJoVFRFUkNOV1l0T0dkc1ZWRRAB!2m1!1s0x89c3b2b172e4f8b9:0x46e212a9df52bdb4",
+        "inspection": "Expanded full account in the rendered public Google panel.",
+        "date": null,
+        "dateLabel": "2 months ago",
+        "datePrecision": "relative only; exact month not established",
+        "relationship": "outside-healthcare-professional-pharmacy",
+        "sentiment": "negative",
+        "basis": "Writer explicitly describes calls in a healthcare-professional capacity concerning pharmacy coordination and another clinician. This is professional interaction evidence, not a claimed resident or family stay.",
+        "notInMirrorWindow": true,
+        "includedIn358": "unknown",
+        "denominatorTreatment": "Not appended to or substituted for the five-account mirror sample. Not used to fabricate a consumer-only mean or to change sentiment direction numerically.",
+        "limitation": "No contractual partnership or employment at this nursing home established. The professional nature, not a verified contract, is the concern."
+      },
+      "roleConcerns": {
+        "employee": "None self-identified in the five MyLivingChoice accounts. Generic 608556 remains unknown, not exonerated or accused.",
+        "student": "None self-identified.",
+        "partner": "Outside healthcare-professional interaction explicitly observed on primary Google at the same place; separation from retained aggregate unknown.",
+        "verification": "No reviewer identity or affiliation verification attempted beyond the account's own stated capacity."
+      },
+      "sampleAssessment": {
+        "visible": 5,
+        "recentEligible": 5,
+        "positive": 5,
+        "negative": 0,
+        "mixed": 0,
+        "headlineConflictOnMirrorWindow": false,
+        "populationGate": "withhold independently of favorable mirror sentiment"
+      },
+      "editorialEstimateIfReleased": null,
+      "toResolve": "A primary, dated, separable consumer aggregate or evidence establishing the retained 358-rating population's eligibility despite the professional row. Do not subtract one review from a rounded mean, assume its star value, or infer absence from five selected favorable accounts.",
+      "sources": {
+        "state": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ62007X",
+        "operatorContact": "https://elizabethnursingrehab.com/contacts/",
+        "operator": "https://elizabethnursingrehab.com/",
+        "operatorPolicyCaution": "https://elizabethnursingrehab.com/policies/",
+        "operatorRobots": "https://elizabethnursingrehab.com/robots.txt",
+        "reviews": "https://www.mylivingchoice.com/property/elizabeth-nursing-and-rehab-center",
+        "cms": "https://data.cms.gov/provider-data/api/1/datastore/query/4pq5-n9py/0?conditions%5B0%5D%5Bproperty%5D=cms_certification_number_ccn&conditions%5B0%5D%5Bvalue%5D=315106&conditions%5B0%5D%5Boperator%5D=%3D&limit=1"
+      },
+      "checkedAt": "2026-11-15"
+    }
+  ],
+  "validation": {
+    "existingEvidenceUsed": [
+      "retained-inventory.json, runtime/crosswalk.json, runtime/providers.json and listing-index/release/page-inventory.json",
+      "Prior six-sites nursing editorial decisions and Sinai sole-state-recipient resolution",
+      "docs/experience-score.md and existing src/lib/experience-score.ts read for eligibility and 730-day sample semantics",
+      "Live full-page NJ DOH details, live exact-CCN CMS Provider Information queries, direct operator contacts and selected Google place panels",
+      "Two operator-posted Livingston PDF disclosures, read in memory using installed pdftotext after FetchUrl reported binary unsupported"
+    ],
+    "newResearchChecks": [
+      "Exactly five MyLivingChoice rows per location, 20 unique mirror IDs, each paired with an original Google review token and same-page place ID",
+      "Each sole potential state recipient has included crosswalk status; each excluded CMS duplicate is included_cms_only",
+      "State/CMS names, corporate operator, physical address, phone and bed facts reconciled, with every mismatch retained explicitly",
+      "All five roles and sentiments independently read per page, including unknown relationship, aged row, internal-unit references and solicitation concern",
+      "Clickable operator-selected Google identity distinguished from geocode/map-tile identity",
+      "No public mirror count combined with a later Google count; no inferred day dates or reconstructed consumer mean"
+    ],
+    "notRun": "No publication compiler, application scorer, build, code tests or application mutation. This is research-only staging, not a deployed or replay-validated score release. Arithmetic eligibility estimates for two locations are explicitly not scorer execution.",
+    "accessLimitations": "FetchUrl omitted Livingston's rendered header/footer; a dedicated browser verified the address and Google link. FetchUrl could not process two operator PDFs; public read-only curl to installed pdftotext recovered them in memory, with no downloaded files retained. Former NJ07NH000 returns a blank template rather than a usable current identity."
+  },
+  "provenance": {
+    "toolLogDirectory": "/Users/dansullivan/.factory/artifacts/scripts/fc8bfee4-80c2-4958-aa88-ba9cd25ac026/",
+    "method": "Direct public pages read with FetchUrl; Google professional concern and operator hidden contact links verified through dedicated agent-browser. Only sanitized decisions retained here.",
+    "retainedInput": "research/north-jersey/experience-acquisition/mylivingchoice/retained-inventory.json"
+  }
+}

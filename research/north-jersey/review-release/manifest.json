@@ -22,6 +22,11 @@
       "sha256": "a09a3d2e363eb9a2824e0de0acb9df11e7d039459b078b59e228446c3c86edb8"
     },
     {
+      "bytes": 15747,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json",
+      "sha256": "2af9ece2c30d088822dc228d517dea75d5220d9ad8828f81085df5626cf37381"
+    },
+    {
       "bytes": 68733,
       "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/collector-receipts.json",
       "sha256": "7a49f91945c4e3b3ced01c2427fc4b2c8ee6dc90a8944b8415855e22182c510a"
@@ -43,20 +48,20 @@
     }
   ],
   "counts": {
-    "approved": 107,
+    "approved": 109,
     "excerptCandidates": 204,
     "excluded": 0,
-    "included": 107,
-    "observations": 107,
+    "included": 109,
+    "observations": 109,
     "pendingOrInventory": 10,
-    "providers": 107,
+    "providers": 109,
     "publishedExcerpts": 73
   },
   "inputs": [
     {
-      "bytes": 84250,
+      "bytes": 88355,
       "path": "research/north-jersey/experience-acquisition/integration/approved-batches.json",
-      "sha256": "8daef033d7a3c05d749daca74f6d43d6c8291dc1e5baffa5935b7c94bf08caec"
+      "sha256": "e7de3a5c895e1f192d850dc4d8b947cd477fe5f2c63ba13a2052dd4a4d8c24a5"
     },
     {
       "bytes": 2450,
@@ -242,6 +247,101 @@
       "bytes": 4062,
       "path": "research/north-jersey/experience-acquisition/wave-two/batches/first-wave/reviewed.json",
       "sha256": "a3a197bd7c8c1d3b6aae0bf2dcfe4a673ca559e861a2bfce34a571ca22d899cf"
+    },
+    {
+      "bytes": 2450,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/access.json",
+      "sha256": "9b96a5f2592b2d55216eeaeb5491d074e49efff454071a61bdb89380c11a074b"
+    },
+    {
+      "bytes": 1839,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/aliases.json",
+      "sha256": "8b0e25e1df4f126f6c6c0337985f4792e73e10b3527d20ecba3c54a4f8270c79"
+    },
+    {
+      "bytes": 7479,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/batch.json",
+      "sha256": "88ac93fee527c286e2faf19edf40ce316efb352dba5cbbe3d9a56d58c65274a5"
+    },
+    {
+      "bytes": 2388,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/access-evidence.json",
+      "sha256": "a573b0ecd8ca3e38aeeec5584a687ae70e03df25d2bc1024433784d702460d78"
+    },
+    {
+      "bytes": 9239,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/elizabeth-nursing-and-rehab-center.json",
+      "sha256": "cba728c6b78934ed34d4056ce55d11ccde50711f1e99562bc1f3192a811fc90a"
+    },
+    {
+      "bytes": 9242,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/inglemoor-rehabilitation-and-care-center.json",
+      "sha256": "ce26b1ee68dd6bd7c1a30467b15cdfda11d395ab9e0d727e023ca883019c418f"
+    },
+    {
+      "bytes": 9203,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/livingston-post-acute-care.json",
+      "sha256": "96d7f4d5636049183821c91daedfb0735eeafc5926a1754fc903adade38a65f6"
+    },
+    {
+      "bytes": 9178,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/collection/new-jersey-veterans-memorial-home-at-paramus.json",
+      "sha256": "6417864e1d9624627d5734744b1e4e9d7ed8f34700c458c1abe819f0cf0a7f4f"
+    },
+    {
+      "bytes": 3337,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/identity-checks/elizabeth-nursing-and-rehab-center.json",
+      "sha256": "42d861296a1e14f5aca75b7d1094434db9c78ac9e31f0e2bfda146536ebb196f"
+    },
+    {
+      "bytes": 4392,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/identity-checks/inglemoor-rehabilitation-and-care-center.json",
+      "sha256": "6aefda8c3783b06ff1d8658907965aad7f122093108f034fb7ef163d84a11ce8"
+    },
+    {
+      "bytes": 4290,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/identity-checks/livingston-post-acute-care.json",
+      "sha256": "391269976d98a58f41a281b883ed8ce6cad9f6ee4949f8fe6c6f2bd3c016b6fe"
+    },
+    {
+      "bytes": 4198,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/identity-checks/new-jersey-veterans-memorial-home-at-paramus.json",
+      "sha256": "e64f0028aab7716493a57eea9b8ae27cafee41f48329560a373a93ecb09f722d"
+    },
+    {
+      "bytes": 48680,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/nursing-editorial.json",
+      "sha256": "9625e6e26c522156afeeee1734d35a2c4a1776898190f32d6c17f67b78100adb"
+    },
+    {
+      "bytes": 7354,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/proposals.json",
+      "sha256": "0d1968e7e0fce6cc695a2c35aa62bc52c6c0b348768a1958313ec45ba88691a0"
+    },
+    {
+      "bytes": 8587,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/reviewed.json",
+      "sha256": "4c5337715f3f225889a8e1ae239dbeacdda733205cb830bc5407258b493c053a"
+    },
+    {
+      "bytes": 3703,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/elizabeth-nursing-and-rehab-center.json",
+      "sha256": "6a31d5b6de2d476f930bcc058ebf21efed19763528289dce684b619a9bce1fd2"
+    },
+    {
+      "bytes": 2884,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/inglemoor-rehabilitation-and-care-center.json",
+      "sha256": "c86c672c517e31a576ac14d02738a323480eee9774eea66d01fda5ccc0204172"
+    },
+    {
+      "bytes": 3369,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/livingston-post-acute-care.json",
+      "sha256": "c4182f84a4745eb9ac49fa5ea6b04f3fcb7f8e4ebf945efcd480c101001004b4"
+    },
+    {
+      "bytes": 2889,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/four-nj-nursing/source-checks/new-jersey-veterans-memorial-home-at-paramus.json",
+      "sha256": "ddb779e4e316d98b044650cd4f4a76cbdc9b33739c8e3a3320a84befa3ff5c44"
     },
     {
       "bytes": 1225,
@@ -747,6 +847,21 @@
       "bytes": 2693,
       "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-direct-review/independent-checks/sunrise-of-franklin-lakes.json",
       "sha256": "5e4a95c937f305ffaf0ccbb025a4150d17c4b6acce19a873af016175da5ec8fe"
+    },
+    {
+      "bytes": 15747,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/collector-receipts.json",
+      "sha256": "2af9ece2c30d088822dc228d517dea75d5220d9ad8828f81085df5626cf37381"
+    },
+    {
+      "bytes": 7213,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/independent-checks/inglemoor-rehabilitation-and-care-center.json",
+      "sha256": "7f99f533f7ba26615740ebb6ff795658136234b521dfae9cbd6ab2a6d77099c7"
+    },
+    {
+      "bytes": 7221,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-four-nj-nursing/independent-checks/new-jersey-veterans-memorial-home-at-paramus.json",
+      "sha256": "e01f15870e50e7b787e53c7d1376207606464d6f2c4c345d041d8821f8182ba4"
     },
     {
       "bytes": 68733,
@@ -1364,9 +1479,9 @@
       "sha256": "78563a501c95f0a65c5703881050fd1c4d66fb8f39f9ba36942da3298eb6feea"
     },
     {
-      "bytes": 24759,
+      "bytes": 27050,
       "path": "research/north-jersey/review-release/identity-corroboration.json",
-      "sha256": "97542f9601eff933c9b5736294ba00656a3f1050bc95bb3c36b83de612cd755d"
+      "sha256": "cce42689434c6928a974b5870dd960b8174948251ece48b28d082c1efa2f20af"
     },
     {
       "bytes": 1469,
@@ -1500,12 +1615,12 @@
     }
   ],
   "outputs": {
-    "approvals-audit.json": "988c5d28df152ea4864a3236fb5c9975451ee25ddf90190151adb841c6557622",
+    "approvals-audit.json": "fbdb8b2f61d2a2b8a50e919fa5d0cf9598880f35f78cdea6168e074128b0e1d5",
     "excerpt-audit.json": "611b4341690e50fd0dd0b203fba66b80f082b629dbe8a7626c843b326d6a1e28",
     "exclusions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-    "experience-verification.json": "11f670a1e17047a381fb20a1189111d98c6040681e782a09e3182789f2d625ad",
-    "locationResearch.json": "2a134758ef8ba3166d56e2cc482c8a4f1672b18b106be3828c307b0d18d71871",
-    "observation-registry.json": "3e8d26a20a19198ccef0a3a7d1f208773b6f94f73231a43c27accc8c0021326b",
+    "experience-verification.json": "df7b92e59e7ac2e401649521b35c17c073bfde491d60b43edb46ee65d4c9e1e2",
+    "locationResearch.json": "3aa295a7f8599728e1b43677c4bf27f53c4b174263383cd75d382fb61d2eb0fc",
+    "observation-registry.json": "be7f3ccb8d6abdfb9f8c029982f8c74bb0aea852b2cd5f9a4cda56a50971bd03",
     "staging.json": "0cfbb4798aca802800de9ce15d361a7320525f87b350339dbd12a0241a84a5e1"
   },
   "rosterIdentitySha256": "71a3ab4a7f48704a2d7b9490f3a53f6590b7cf26b2bbceec394cfcc4ad1f5da5",
