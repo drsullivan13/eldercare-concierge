@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { getReviewCatalog } from "../src/lib/review-catalog";
+import officeRelease from "../src/data/home-care-reviews.json";
 import type { ReviewCatalog } from "../src/lib/review-catalog-types";
 
 const snapshot = JSON.parse(
@@ -12,9 +13,44 @@ const snapshot = JSON.parse(
 test("reader returns each exact provider catalog without projecting into scores", () => {
   for (const [id, record] of Object.entries(snapshot)) {
     assert.equal(record.providerId, id);
-    assert.deepEqual(getReviewCatalog(id), record);
-    assert.ok(!Object.hasOwn(record, "score"));
-    assert.ok(!Object.hasOwn(record, "rating"));
+    const published = getReviewCatalog(id);
+    assert.ok(published);
+    if (!Object.hasOwn(officeRelease.providers, id)) {
+      assert.deepEqual(published, record);
+    } else {
+      assert.ok(published.checkedAt >= record.checkedAt);
+      for (const account of record.accounts) {
+        const updated = published.accounts.find((row) => row.id === account.id);
+        assert.ok(updated);
+        for (const key of [
+          "id",
+          "sourceId",
+          "sourceFamily",
+          "date",
+          "datePrecision",
+          "url",
+          "nativeReviewId",
+        ] as const)
+          assert.equal(
+            updated[key],
+            account[key],
+            `${id}: ${account.id} ${key}`,
+          );
+        if (account.excerpt || account.summary)
+          assert.deepEqual(updated, account);
+      }
+      for (const source of record.sources) {
+        const updated = published.sources.find((row) => row.id === source.id);
+        assert.ok(updated);
+        assert.equal(updated.url, source.url);
+        assert.equal(updated.sourceFamily, source.sourceFamily);
+        if (source.reportedCount !== null)
+          assert.notEqual(updated.reportedCount, null);
+      }
+      assert.ok(record.notes.every((note) => published.notes.includes(note)));
+    }
+    assert.ok(!Object.hasOwn(published, "score"));
+    assert.ok(!Object.hasOwn(published, "rating"));
   }
 });
 

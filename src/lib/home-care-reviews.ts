@@ -150,7 +150,10 @@ export function mergeHomeCareReviews(
         if (prior) {
           sourceAliases.set(source.id, prior.id);
           if (patch.catalog.checkedAt >= catalog.checkedAt) {
-            Object.assign(prior, source, { id: prior.id });
+            Object.assign(prior, source, {
+              id: prior.id,
+              reportedCount: source.reportedCount ?? prior.reportedCount,
+            });
           }
         } else {
           catalog.sources.push({ ...source });
@@ -185,7 +188,11 @@ export function mergeHomeCareReviews(
             !prior.summary &&
             (account.excerpt || account.summary)
           )
-            Object.assign(prior, account, { id: prior.id, sourceId });
+            Object.assign(prior, account, {
+              id: prior.id,
+              sourceId,
+              nativeReviewId: prior.nativeReviewId ?? account.nativeReviewId,
+            });
         } else {
           const retained = record.reviews.find(
             (item) =>
