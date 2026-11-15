@@ -1,0 +1,61 @@
+{
+  "assessmentDate": "2026-11-15",
+  "method": "Separate full-page readings of Google panel, five public accounts and labeled Medicare CCN, followed by branch cross-check on operator contact page.",
+  "columns": [
+    "slug",
+    "providerId",
+    "name",
+    "address",
+    "city",
+    "careUnit",
+    "zip",
+    "publishedCcn",
+    "rating",
+    "count",
+    "rows"
+  ],
+  "approvals": [
+    [
+      "promise-care-of-essex-county-new-jersey",
+      "cms-317009",
+      "Promise Care of Essex County, New Jersey",
+      "576 Central Ave",
+      "East Orange",
+      "Home Health",
+      "07018",
+      "317009",
+      4.9,
+      35,
+      [
+        [
+          "440045",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "440042",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "440046",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "440043",
+          "2026-05",
+          "positive"
+        ],
+        [
+          "440044",
+          "2026-05",
+          "positive"
+        ]
+      ]
+    ]
+  ],
+  "populationNotes": {
+    "promise-care-of-essex-county-new-jersey": "The review page explicitly identifies CCN 317009 and its Essex office. All five displayed accounts describe nursing or therapy for the writer or a relative. The operator solicits Google feedback and links the two county offices separately. The platform average represents 35 public ratings. Its reviewer identities and the other 30 ratings were not individually verified. Medicare clinical quality and survey stars were excluded."
+  }
+}

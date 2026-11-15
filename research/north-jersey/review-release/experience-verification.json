@@ -3441,6 +3441,54 @@
       "singleSourceLabel": "Google",
       "value": 8.8
     },
+    "cms-317009": {
+      "aggregateRange": {
+        "maximum": 9.8,
+        "minimum": 9.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 9.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 35,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.8
+    },
     "cms-317020": {
       "aggregateRange": {
         "maximum": 2,
@@ -4267,7 +4315,7 @@
       "value": null
     }
   },
-  "assessmentDate": "2026-11-13",
+  "assessmentDate": "2026-11-15",
   "releasedOutput": {
     "cms-315005": {
       "aggregateRange": {
@@ -8481,6 +8529,54 @@
       "selectedConcerns": false,
       "singleSourceLabel": "Google",
       "value": 8.8
+    },
+    "cms-317009": {
+      "aggregateRange": {
+        "maximum": 9.8,
+        "minimum": 9.8,
+        "substantial": false
+      },
+      "confidence": "limited",
+      "excludedSources": [],
+      "includedSources": [
+        {
+          "count": 35,
+          "normalizedRating": 9.8,
+          "platform": "MyLivingChoice",
+          "rating": 4.9,
+          "scale": 5,
+          "sourceFamily": "google",
+          "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+          "weight": 1
+        }
+      ],
+      "independentSourceCount": 1,
+      "label": "Consumer experience index",
+      "limitations": [
+        "Consumer sentiment, not clinical quality, safety, current availability or a verified-resident rating. Regulatory warnings and CMS evidence remain separate.",
+        "Reported review counts may overlap across platforms; they are not unique people. Known source-family and page duplication is removed, but unknown cross-posts cannot be identified.",
+        "Aggregate review ages and reviewer mix are not fully available. A recent source check does not mean recent care experiences; tour and visitor reviews may be included.",
+        "Selected primary resident/family sentiment can qualify the confidence explanation, but never supplies numeric ratings, reported counts or representative prevalence. Social posts remain separate. Missing, inaccessible and excluded evidence is not a negative rating.",
+        "Coverage labels and thresholds are provisional product rules, not calibrated probabilities. Platforms differ in collection, moderation, solicitation and selection bias."
+      ],
+      "methodVersion": "2.0",
+      "platformCount": 1,
+      "publicationStatus": "single-source-estimate",
+      "reason": "Limited evidence coverage: source/sample concentration or observed disagreement prevents moderate coverage. Of 5 recent eligible reviews in a visible sample of 5, 0 were critical and 5 were favorable. The platform controls which reviews appear; these counts do not represent all reviewers.",
+      "reviewCount": 35,
+      "sampleDiagnostics": [
+        {
+          "conflicts": false,
+          "eligible": 5,
+          "negative": 0,
+          "positive": 5,
+          "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+          "visible": 5
+        }
+      ],
+      "selectedConcerns": false,
+      "singleSourceLabel": "Google",
+      "value": 9.8
     },
     "cms-317020": {
       "aggregateRange": {

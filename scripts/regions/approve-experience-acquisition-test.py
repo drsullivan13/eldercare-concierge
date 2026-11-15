@@ -69,13 +69,17 @@ class ApprovalTests(unittest.TestCase):
         for path, data in outputs.items():
             self.assertEqual(data, (APPROVE.ROOT / path).read_bytes(), str(path))
         batches = self.approvals(outputs)
-        self.assertEqual([len(b["approvals"]) for b in batches], [11, 21])
+        self.assertEqual([len(b["approvals"]) for b in batches], [11, 21, 1])
         self.assertEqual(sum(a["aggregate"]["count"] for a in batches[0]["approvals"]), 1359)
         checks = [json.loads(data) for path, data in outputs.items()
                   if path.parent.name == "independent-checks"]
-        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 150)
+        self.assertEqual(sum(c["reviewSample"]["visibleCount"] for c in checks), 155)
         for check in checks:
-            self.assertIsNone(check["identity"]["zip"])
+            if check["providerId"] == "cms-317009":
+                self.assertEqual(check["identity"]["zip"], "07018")
+                self.assertEqual(check["identity"]["publishedCcn"], "317009")
+            else:
+                self.assertIsNone(check["identity"]["zip"])
             self.assertIsNone(check["aggregate"]["asOf"])
             self.assertEqual(check["aggregate"]["sourceFamily"], "google")
             self.assertNotIn("reviews", check)
@@ -213,11 +217,14 @@ class ApprovalTests(unittest.TestCase):
     def test_actual_runtime_gains_21_and_preserves_all_67_existing_scores(self):
         baseline = json.loads((APPROVE.ROOT / APPROVE.ARCHIVE / "score-fingerprints.json").read_bytes())
         result = subprocess.run([
-            str(APPROVE.ROOT / "node_modules/.bin/tsx"),
+            "node", "--import", "tsx",
             str(APPROVE.ROOT / "tests/nj-experience-acquisition.test.ts"),
             "--snapshot", baseline["assessmentDate"],
         ], cwd=APPROVE.ROOT, capture_output=True, text=True, check=True, timeout=60)
         current = {p["providerId"]: p for p in json.loads(result.stdout)["runtimeProviders"]}
+        historic_ids = json.loads((APPROVE.ROOT / "tests/fixtures/nj-experience-baseline.json").read_bytes())["providers"]
+        self.assertTrue(historic_ids.keys() <= current.keys())
+        current = {pid: current[pid] for pid in historic_ids}
         self.assertEqual(hashlib.sha256(json.dumps(
             sorted(current), sort_keys=True, separators=(",", ":"), ensure_ascii=True,
         ).encode("utf-8")).hexdigest(), baseline["activeProviderIdsSha256"])

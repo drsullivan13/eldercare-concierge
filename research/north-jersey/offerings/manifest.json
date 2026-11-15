@@ -22,7 +22,7 @@
       "locationsWithPrice": 0,
       "operatorPagesChecked": 0,
       "publishedPriorityLists": 0,
-      "records": 161,
+      "records": 164,
       "regulatoryCoverage": 0
     },
     {
@@ -70,7 +70,7 @@
       "locationsWithPrice": 0,
       "operatorPagesChecked": 0,
       "publishedPriorityLists": 0,
-      "records": 207,
+      "records": 216,
       "regulatoryCoverage": 0
     },
     {
@@ -130,7 +130,7 @@
       "locationsWithPrice": 0,
       "operatorPagesChecked": 0,
       "publishedPriorityLists": 0,
-      "records": 70,
+      "records": 72,
       "regulatoryCoverage": 0
     },
     {
@@ -170,6 +170,30 @@
       "regulatoryCoverage": 16
     },
     {
+      "category": "home-care",
+      "county": "Middlesex",
+      "datedVacancies": 0,
+      "identityDiscrepancies": 0,
+      "locationsWithComparableRate": 0,
+      "locationsWithPrice": 0,
+      "operatorPagesChecked": 0,
+      "publishedPriorityLists": 0,
+      "records": 194,
+      "regulatoryCoverage": 0
+    },
+    {
+      "category": "home-care",
+      "county": "Monmouth",
+      "datedVacancies": 0,
+      "identityDiscrepancies": 0,
+      "locationsWithComparableRate": 0,
+      "locationsWithPrice": 0,
+      "operatorPagesChecked": 0,
+      "publishedPriorityLists": 0,
+      "records": 107,
+      "regulatoryCoverage": 0
+    },
+    {
       "category": "assisted-living",
       "county": "Morris",
       "datedVacancies": 0,
@@ -190,7 +214,7 @@
       "locationsWithPrice": 0,
       "operatorPagesChecked": 1,
       "publishedPriorityLists": 0,
-      "records": 60,
+      "records": 65,
       "regulatoryCoverage": 0
     },
     {
@@ -250,7 +274,7 @@
       "locationsWithPrice": 0,
       "operatorPagesChecked": 0,
       "publishedPriorityLists": 0,
-      "records": 58,
+      "records": 59,
       "regulatoryCoverage": 0
     },
     {
@@ -290,6 +314,18 @@
       "regulatoryCoverage": 19
     },
     {
+      "category": "home-care",
+      "county": "Somerset",
+      "datedVacancies": 0,
+      "identityDiscrepancies": 0,
+      "locationsWithComparableRate": 0,
+      "locationsWithPrice": 0,
+      "operatorPagesChecked": 0,
+      "publishedPriorityLists": 0,
+      "records": 77,
+      "regulatoryCoverage": 0
+    },
+    {
       "category": "assisted-living",
       "county": "Union",
       "datedVacancies": 0,
@@ -310,7 +346,7 @@
       "locationsWithPrice": 0,
       "operatorPagesChecked": 0,
       "publishedPriorityLists": 0,
-      "records": 117,
+      "records": 120,
       "regulatoryCoverage": 0
     },
     {
@@ -353,21 +389,21 @@
   "inputs": {
     "offerings/directory-amenities.json": "025ced47f89cefc71a91c8f3d178257689266dde5a6a79d6c79910217651bc45",
     "offerings/provider-page-checks.json": "a454ce8ccfe757f47690b985a56913ddc7479698b7e7495b9e1ccaa9a30474ec",
-    "review-release/locationResearch.json": "df88544b86406d858162154368edc2c746fcf294b254d1a6fb5a3f7da4866050",
-    "rosterIdentityAndRegulatoryFactsSha256": "c143ce6d26cde85f00d8b3ff93eb3ad6c3e9c547e8aca4cd1000acb29736090a",
-    "runtime/crosswalk.json": "d1c245c73dad30cbd5fb32fe987ab3fb53d02df8ef51378a4663ee54a73caa95"
+    "review-release/locationResearch.json": "ca81b26d64e0bc2f7701414bb11319b886d8b360eaef826eb6f329ece23f9417",
+    "rosterIdentityAndRegulatoryFactsSha256": "fc55a8e2368578c7802cec60b0adea8c5d26da657c2dafbaa1f26517b5eb2df2",
+    "runtime/crosswalk.json": "fc2fec4a60b728a0a7e2c612e7d0af2f2e071686c31c03e7e8ab0f48adde3a36"
   },
   "matchedPages": 31,
   "outputs": {
     "coverage.json": {
-      "sha256": "f9ed3cc0b45dc3813048fa1b5b65fa7d25a38c3750e51b5dc3fc85c88692330a"
+      "sha256": "2bb5e25662fe20f1726ffed0d363316e38380bfb734d39663fd951ffeb3d713c"
     },
     "locationResearch.json": {
       "sha256": "a779d135e33204cccca76fc0231f41c9139c35d8daa1e105dc20e41bc3c02881"
     }
   },
   "providerPriceLocations": 27,
-  "roster": 974,
+  "roster": 1375,
   "rowsWithFacts": 283,
   "sourcePages": 34
 }

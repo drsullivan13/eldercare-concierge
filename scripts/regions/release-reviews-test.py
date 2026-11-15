@@ -350,6 +350,25 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(output["locationResearch.json"], {})
         self.assertTrue(any(row["status"] == "pending-unapproved" for row in output["staging.json"]))
 
+    def test_published_clinical_ccn_resolves_only_an_omitted_suite(self):
+        pid, ccn = "cms-317009", "317009"
+        office = dict(id=pid, name="Promise Care NJ", address="576 Central Ave, Suite 304",
+                      city="East Orange", state="NJ", zip="07018", category="home-health")
+        registry = [dict(providerId=pid, officialId=ccn, licensedName=office["name"], status="included")]
+        base = dict(name=office["name"], address="576 Central Ave", city=office["city"],
+                    state="New Jersey", zip=office["zip"], careUnit="Home Health", publishedCcn=ccn)
+
+        def validate(identity):
+            observation = dict(providerId=pid, officialId=ccn, identity=identity)
+            return release.validate_identity(observation, observation, {pid: office}, registry)
+
+        self.assertEqual(validate(base)["observedZip"], "07018")
+        for identity in ({k: v for k, v in base.items() if k != "publishedCcn"},
+                         dict(base, publishedCcn="317064"), dict(base, zip=None),
+                         dict(base, address="576 Central Ave, Suite 203"), dict(base, address="578 Central Ave")):
+            with self.subTest(identity=identity), self.assertRaises(release.ReleaseError):
+                validate(identity)
+
     def test_unknown_provider_fails(self):
         self.approval["providerId"] = "cms-999999"
         self.assert_fails("Unknown runtime identity")

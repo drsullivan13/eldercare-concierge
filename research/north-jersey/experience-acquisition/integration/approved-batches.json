@@ -1131,6 +1131,48 @@
       ],
       "assessmentDate": "2026-11-13",
       "id": "mylivingchoice-second-wave"
+    },
+    {
+      "approvals": [
+        {
+          "access": "full-page",
+          "aggregate": {
+            "asOf": null,
+            "count": 35,
+            "rating": 4.9,
+            "scale": 5,
+            "scope": "consumer",
+            "sourceFamily": "google"
+          },
+          "checkedAt": "2026-11-15",
+          "id": "mlc-acquisition-promise-care-of-essex-county-new-jersey",
+          "identity": {
+            "address": "576 Central Ave",
+            "careUnit": "Home Health",
+            "city": "East Orange",
+            "name": "Promise Care of Essex County, New Jersey",
+            "publishedCcn": "317009",
+            "state": "New Jersey",
+            "zip": "07018"
+          },
+          "material": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/independent-checks/promise-care-of-essex-county-new-jersey.json",
+            "sha256": "b5ae71e66d8b1efc910529be999ff50aa284aa637d6093314ad5f4610c65f20b"
+          },
+          "observation": {
+            "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/collector-receipts.json",
+            "pointer": "/receipts/0",
+            "sha256": "7a782ce634fa9e80be9adaa2e07d0ee97092c4881ba318bf33754e391e53e13c"
+          },
+          "officialId": "317009",
+          "platform": "MyLivingChoice",
+          "providerId": "cms-317009",
+          "reason": "The review page explicitly identifies CCN 317009 and its Essex office. All five displayed accounts describe nursing or therapy for the writer or a relative. The operator solicits Google feedback and links the two county offices separately. The platform average represents 35 public ratings. Its reviewer identities and the other 30 ratings were not individually verified. Medicare clinical quality and survey stars were excluded.",
+          "url": "https://www.mylivingchoice.com/property/promise-care-of-essex-county-new-jersey"
+        }
+      ],
+      "assessmentDate": "2026-11-15",
+      "id": "mylivingchoice-third-wave-clinical"
     }
   ],
   "schemaVersion": 1

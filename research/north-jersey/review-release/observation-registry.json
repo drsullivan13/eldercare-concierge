@@ -1027,6 +1027,39 @@
     {
       "aggregate": {
         "asOf": null,
+        "count": 35,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "identity": {
+        "address": "576 Central Ave",
+        "careUnit": "Home Health",
+        "city": "East Orange",
+        "name": "Promise Care of Essex County, New Jersey",
+        "publishedCcn": "317009",
+        "state": "New Jersey",
+        "zip": "07018"
+      },
+      "inspection": "full-page",
+      "key": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/collector-receipts.json#/receipts/0",
+      "kind": "review-platform",
+      "observation": {
+        "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/collector-receipts.json",
+        "pointer": "/receipts/0",
+        "sha256": "7a782ce634fa9e80be9adaa2e07d0ee97092c4881ba318bf33754e391e53e13c"
+      },
+      "officialId": "317009",
+      "platform": "MyLivingChoice",
+      "providerId": "cms-317009",
+      "status": null,
+      "url": "https://www.mylivingchoice.com/property/promise-care-of-essex-county-new-jersey"
+    },
+    {
+      "aggregate": {
+        "asOf": null,
         "count": 400,
         "rating": 4.7,
         "scale": 5,

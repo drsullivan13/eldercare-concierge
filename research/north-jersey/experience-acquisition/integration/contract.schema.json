@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reviewed North Jersey acquisition batches",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "batches"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "batches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "assessmentDate", "approvals"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "assessmentDate": {"$ref": "#/$defs/date"},
+          "approvals": {"type": "array", "items": {"$ref": "#/$defs/approval"}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "date": {"type": "string", "format": "date"},
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^research/north-jersey/experience-acquisition/"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "observationReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "pointer"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^research/north-jersey/experience-acquisition/"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "pointer": {"type": "string", "pattern": "^(?:/(?:[^~]|~[01])*)?$"}
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "address", "city", "state", "zip", "careUnit"],
+      "properties": {
+        "name": {"$ref": "#/$defs/text"},
+        "address": {"$ref": "#/$defs/text"},
+        "city": {"$ref": "#/$defs/text"},
+        "state": {"$ref": "#/$defs/text"},
+        "zip": {"type": ["string", "null"], "pattern": "^[0-9]{5}(?:-[0-9]{4})?$"},
+        "careUnit": {"$ref": "#/$defs/text"},
+        "publishedCcn": {"type": "string", "pattern": "^[0-9]{6}$"}
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rating", "scale", "count", "asOf", "scope", "sourceFamily"],
+      "properties": {
+        "rating": {"type": ["number", "null"]},
+        "scale": {"type": ["number", "null"]},
+        "count": {"type": ["number", "null"]},
+        "asOf": {"type": ["string", "null"], "format": "date"},
+        "scope": {"$ref": "#/$defs/text"},
+        "sourceFamily": {"$ref": "#/$defs/text"}
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerId", "officialId", "url", "platform", "sourceType", "inspection", "checkedAt", "access_decision", "httpStatus", "identity", "aggregate", "reviewSample", "evidence"],
+      "properties": {
+        "providerId": {"$ref": "#/$defs/text"},
+        "officialId": {"$ref": "#/$defs/text"},
+        "url": {"type": "string", "format": "uri"},
+        "platform": {"$ref": "#/$defs/text"},
+        "sourceType": {"const": "review-platform"},
+        "inspection": {"const": "full-page"},
+        "checkedAt": {"$ref": "#/$defs/date"},
+        "access_decision": {"type": "string", "pattern": "^permitted"},
+        "httpStatus": {"const": 200},
+        "identity": {"$ref": "#/$defs/identity"},
+        "aggregate": {"$ref": "#/$defs/aggregate"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/reference"}},
+        "reviewSample": {"$ref": "#/$defs/reviewSample"}
+      }
+    },
+    "reviewSample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceFamily", "selection", "visibleCount", "observations"],
+      "properties": {
+        "sourceFamily": {"$ref": "#/$defs/text"},
+        "selection": {"const": "all-visible-before-highlighting"},
+        "visibleCount": {"type": "integer", "minimum": 0},
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "date", "sentiment"],
+            "properties": {
+              "id": {"$ref": "#/$defs/text"},
+              "date": {"type": ["string", "null"], "pattern": "^[0-9]{4}(?:-[0-9]{2}(?:-[0-9]{2})?)?$"},
+              "sentiment": {"enum": ["positive", "negative", "mixed", "neutral"]}
+            }
+          }
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "providerId", "officialId", "observation", "material", "url", "checkedAt", "access", "platform", "identity", "aggregate", "reason"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "providerId": {"$ref": "#/$defs/text"},
+        "officialId": {"$ref": "#/$defs/text"},
+        "observation": {"$ref": "#/$defs/observationReference"},
+        "material": {"$ref": "#/$defs/reference"},
+        "url": {"type": "string", "format": "uri"},
+        "checkedAt": {"$ref": "#/$defs/date"},
+        "access": {"const": "full-page"},
+        "platform": {"$ref": "#/$defs/text"},
+        "identity": {"$ref": "#/$defs/identity"},
+        "aggregate": {"$ref": "#/$defs/aggregate"},
+        "reason": {"$ref": "#/$defs/text"},
+        "reconciliation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "address"],
+          "properties": {
+            "name": {"$ref": "#/$defs/text"},
+            "address": {"$ref": "#/$defs/text"}
+          }
+        }
+      }
+    }
+  }
+}

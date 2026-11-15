@@ -188,6 +188,7 @@ class Observation:
                          or (value.get("observedAt") or "")[:10]
                          or self.context.get("checked_at"),
             "identity": {
+                **({"publishedCcn": identity["publishedCcn"]} if "publishedCcn" in identity else {}),
                 "name": identity.get("observed_name", identity.get("name")),
                 "address": identity.get("observed_street", identity.get(
                     "observed_address", identity.get("street", identity.get("address")))),
@@ -307,7 +308,7 @@ def validate_identity(approval, observed, providers, crosswalk, aliases=()):
     require(not observed["providerId"] or observed["providerId"] == provider_id,
             "Observation runtime identity mismatch")
     identity = approval["identity"]
-    fields(identity, "name address city state zip careUnit", "observed identity")
+    fields(identity, "name address city state zip careUnit" + (" publishedCcn" if "publishedCcn" in identity else ""), "observed identity")
     require(identity == observed["identity"], "Approval observed identity mismatch")
     require(all(text_value(identity[key]) for key in
                 ("name", "address", "city", "state", "careUnit")), "Incomplete observed identity")
@@ -326,7 +327,17 @@ def validate_identity(approval, observed, providers, crosswalk, aliases=()):
                  and r["state"] == provider["state"] and valid_date(r["checkedAt"])
                  and canonical_url(r["sourceUrl"]) and text_value(r["operatorName"])]
         require(len(proof) == 1, "Observed name does not match exact runtime or corroborated location name")
-    require(words(identity["address"]) == provider_street(provider)
+    street = provider_street(provider)
+    if "publishedCcn" in identity:
+        ccn = identity["publishedCcn"]
+        require(isinstance(ccn, str) and re.fullmatch(r"[0-9]{6}", ccn)
+                and ccn == official_id and provider_id == "cms-" + ccn
+                and provider["category"] == "home-health" and identity["zip"],
+                "Published clinical office CCN or ZIP mismatch")
+        # The page identifies the certified unit even when the street omits its suite.
+        if words(identity["address"]) != street:
+            street = re.sub(r" ste [a-z0-9]+$", "", street)
+    require(words(identity["address"]) == street
             and token(identity["city"]) == token(provider["city"])
             and token(provider["state"]) == "nj"
             and token(identity["state"]) in {"nj", "newjersey"},

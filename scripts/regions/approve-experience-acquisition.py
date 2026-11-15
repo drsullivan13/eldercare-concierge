@@ -127,7 +127,9 @@ def build(root=ROOT):
                             and source["url"] == proposal["url"],
                             "Direct review retrieval mismatch")
             identity = {key: row[key] for key in ("name", "address", "city", "careUnit")}
-            identity.update(state="New Jersey", zip=None)
+            identity.update(state="New Jersey", zip=row.get("zip"))
+            if "publishedCcn" in row:
+                identity["publishedCcn"] = row["publishedCcn"]
             aggregate = dict(rating=row["rating"], count=row["count"], scale=5, asOf=None,
                              scope="consumer", sourceFamily="google")
             sample = {
@@ -155,7 +157,7 @@ def build(root=ROOT):
             approval = copy.deepcopy(proposal)
             approval["observation"] = {"pointer": f"/receipts/{len(receipts)}"}
             approval["material"] = {"path": str(check_path), "sha256": release.digest(outputs[check_path])}
-            if mode == "reviewed":
+            if mode == "reviewed" and "publishedCcn" not in identity:
                 approval["reason"] = (
                     "Second-wave reviewer read the original full-page witness, About and every visible "
                     "Google row before highlighting. Independent published facility/office identity "
@@ -163,7 +165,9 @@ def build(root=ROOT):
                     "unchanged. All visible dates and sentiments, including critical and mixed rows, "
                     "accompany the aggregate. This is a platform-selected window, not all ratings or "
                     "a verified resident survey. Visitors and tours can appear. Reviewer identities "
-                    "are not verified. Observed ZIP and aggregate publication date remain unknown. "
+                    "are not verified. "
+                    + ("Observed ZIP and aggregate publication date remain unknown. " if identity["zip"] is None
+                       else "The listing supplies its ZIP. The aggregate publication date is unknown. ")
                     + decisions.get("populationNotes", {}).get(slug, "")
                 ).strip()
             receipts.append(receipt)

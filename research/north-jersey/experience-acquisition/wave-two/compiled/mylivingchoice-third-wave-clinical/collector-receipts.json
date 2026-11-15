@@ -1,0 +1,94 @@
+{
+  "receipts": [
+    {
+      "access_decision": "permitted_low_volume",
+      "aggregate": {
+        "asOf": null,
+        "count": 35,
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google"
+      },
+      "checkedAt": "2026-11-15",
+      "evidence": [
+        {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/source.json",
+          "sha256": "0287cd6e3980d46c6b35d2c937aee3d33412004be3a78c5a71958232a054c6f1"
+        },
+        {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/access.json",
+          "sha256": "2f5c84cd75ea66ee8dd495b5c2370944eb2d0a915fc6ad0b8369295964510e6e"
+        },
+        {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/batch.json",
+          "sha256": "ea2f20678090e8aa3842af89ef23f2483006bb5521cb42d6779d0828e00cf061"
+        },
+        {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/proposals.json",
+          "sha256": "e869a4204e1591105b68ea3b37397fbe0b6c35c0f503cf025da42dabafa44510"
+        },
+        {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/reviewed.json",
+          "sha256": "6a75ebf0c57662ad80b296ff5f420a32c9ec134017e27b7e0c2aa740a063b26a"
+        },
+        {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/operator.json",
+          "sha256": "ede5236fb7181b1d28b4e4681e1a55bc8697e12460a55360f31c4334bd13debc"
+        },
+        {
+          "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/aliases.json",
+          "sha256": "bc5b80c07bf69eb82556fb33d6a7c489f8efce5f3c4e0c23b51df151e3f05f67"
+        }
+      ],
+      "httpStatus": 200,
+      "identity": {
+        "address": "576 Central Ave",
+        "careUnit": "Home Health",
+        "city": "East Orange",
+        "name": "Promise Care of Essex County, New Jersey",
+        "publishedCcn": "317009",
+        "state": "New Jersey",
+        "zip": "07018"
+      },
+      "inspection": "full-page",
+      "officialId": "317009",
+      "platform": "MyLivingChoice",
+      "providerId": "cms-317009",
+      "reviewSample": {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440045",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440042",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440046",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440043",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440044",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "visibleCount": 5
+      },
+      "sourceType": "review-platform",
+      "url": "https://www.mylivingchoice.com/property/promise-care-of-essex-county-new-jersey"
+    }
+  ]
+}

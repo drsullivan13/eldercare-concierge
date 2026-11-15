@@ -7909,6 +7909,87 @@
       }
     ]
   },
+  "cms-317009": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Current availability has not been independently researched. Contact the provider."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [],
+    "notes": [
+      "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+      "Reported counts are not unique people. Unknown cross-posting may remain.",
+      "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
+    ],
+    "providerDetailsReviewed": false,
+    "providerId": "cms-317009",
+    "reviewAggregates": [
+      {
+        "asOf": null,
+        "count": 35,
+        "notes": [
+          "The review page explicitly identifies CCN 317009 and its Essex office. All five displayed accounts describe nursing or therapy for the writer or a relative. The operator solicits Google feedback and links the two county offices separately. The platform average represents 35 public ratings. Its reviewer identities and the other 30 ratings were not individually verified. Medicare clinical quality and survey stars were excluded.",
+          "Observed ZIP matches the exact official care unit."
+        ],
+        "platform": "MyLivingChoice",
+        "rating": 4.9,
+        "scale": 5,
+        "scope": "consumer",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey"
+      }
+    ],
+    "reviewSamples": [
+      {
+        "observations": [
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440045",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440042",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440046",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440043",
+            "sentiment": "positive"
+          },
+          {
+            "date": "2026-05",
+            "id": "mlc-google-440044",
+            "sentiment": "positive"
+          }
+        ],
+        "selection": "all-visible-before-highlighting",
+        "sourceFamily": "google",
+        "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+        "visibleCount": 5
+      }
+    ],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+        "kind": "review-platform",
+        "publishedAt": null,
+        "publisher": "MyLivingChoice",
+        "title": "MyLivingChoice consumer aggregate",
+        "url": "https://www.mylivingchoice.com/property/promise-care-of-essex-county-new-jersey"
+      }
+    ]
+  },
   "cms-317020": {
     "availability": {
       "asOf": null,

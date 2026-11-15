@@ -1,5 +1,5 @@
 {
-  "assessmentDate": "2026-11-13",
+  "assessmentDate": "2026-11-15",
   "collectionInventory": [
     {
       "bytes": 21531,
@@ -20,23 +20,63 @@
       "bytes": 68733,
       "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-second-wave/collector-receipts.json",
       "sha256": "7a49f91945c4e3b3ced01c2427fc4b2c8ee6dc90a8944b8415855e22182c510a"
+    },
+    {
+      "bytes": 3284,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/collector-receipts.json",
+      "sha256": "7a782ce634fa9e80be9adaa2e07d0ee97092c4881ba318bf33754e391e53e13c"
     }
   ],
   "counts": {
-    "approved": 102,
+    "approved": 103,
     "excerptCandidates": 204,
     "excluded": 0,
-    "included": 102,
-    "observations": 102,
+    "included": 103,
+    "observations": 103,
     "pendingOrInventory": 10,
-    "providers": 102,
+    "providers": 103,
     "publishedExcerpts": 73
   },
   "inputs": [
     {
-      "bytes": 69676,
+      "bytes": 71785,
       "path": "research/north-jersey/experience-acquisition/integration/approved-batches.json",
-      "sha256": "443918176abe7ac1834017d7fb11133e0b0485e843e36d6732434ed392eee147"
+      "sha256": "377cd5222d57c2f68736aeaa39fcecf58d06b3e005f2413b3eb46c1b1750cce6"
+    },
+    {
+      "bytes": 659,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/access.json",
+      "sha256": "2f5c84cd75ea66ee8dd495b5c2370944eb2d0a915fc6ad0b8369295964510e6e"
+    },
+    {
+      "bytes": 616,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/aliases.json",
+      "sha256": "bc5b80c07bf69eb82556fb33d6a7c489f8efce5f3c4e0c23b51df151e3f05f67"
+    },
+    {
+      "bytes": 1444,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/batch.json",
+      "sha256": "ea2f20678090e8aa3842af89ef23f2483006bb5521cb42d6779d0828e00cf061"
+    },
+    {
+      "bytes": 326,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/operator.json",
+      "sha256": "ede5236fb7181b1d28b4e4681e1a55bc8697e12460a55360f31c4334bd13debc"
+    },
+    {
+      "bytes": 1749,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/proposals.json",
+      "sha256": "e869a4204e1591105b68ea3b37397fbe0b6c35c0f503cf025da42dabafa44510"
+    },
+    {
+      "bytes": 1584,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/reviewed.json",
+      "sha256": "6a75ebf0c57662ad80b296ff5f420a32c9ec134017e27b7e0c2aa740a063b26a"
+    },
+    {
+      "bytes": 1699,
+      "path": "research/north-jersey/experience-acquisition/wave-two/batches/clinical-offices/source.json",
+      "sha256": "0287cd6e3980d46c6b35d2c937aee3d33412004be3a78c5a71958232a054c6f1"
     },
     {
       "bytes": 1225,
@@ -524,6 +564,16 @@
       "sha256": "5e9fd7f220404537e24024eeb70f55af1f155b858b7f7f4a5c5ec0b42eef7723"
     },
     {
+      "bytes": 3284,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/collector-receipts.json",
+      "sha256": "7a782ce634fa9e80be9adaa2e07d0ee97092c4881ba318bf33754e391e53e13c"
+    },
+    {
+      "bytes": 2900,
+      "path": "research/north-jersey/experience-acquisition/wave-two/compiled/mylivingchoice-third-wave-clinical/independent-checks/promise-care-of-essex-county-new-jersey.json",
+      "sha256": "b5ae71e66d8b1efc910529be999ff50aa284aa637d6093314ad5f4610c65f20b"
+    },
+    {
       "bytes": 79497,
       "path": "research/north-jersey/listing-index/release/approvals.json",
       "sha256": "b0aed1e94fcb35c18508b6922c693ea007fa7e55214dc032a9308ebdeb91aac2"
@@ -994,9 +1044,9 @@
       "sha256": "78563a501c95f0a65c5703881050fd1c4d66fb8f39f9ba36942da3298eb6feea"
     },
     {
-      "bytes": 20653,
+      "bytes": 21434,
       "path": "research/north-jersey/review-release/identity-corroboration.json",
-      "sha256": "b7c929c0ad79bca6edf13ecfc1ab317a6638c9cf020885f2e1d07c4b7b6e510c"
+      "sha256": "290dff5bb57cf5778a0916e3176b5a6e9cdbb6c6a18efd633ae1812f1eb305d2"
     },
     {
       "bytes": 1469,
@@ -1124,21 +1174,21 @@
       "sha256": "43961fc2f75274e7b3c2e672a61e1e54425acb946c0d709e4c5393aabc91ed7f"
     },
     {
-      "bytes": 496119,
+      "bytes": 718718,
       "path": "research/north-jersey/runtime/crosswalk.json",
-      "sha256": "d1c245c73dad30cbd5fb32fe987ab3fb53d02df8ef51378a4663ee54a73caa95"
+      "sha256": "fc2fec4a60b728a0a7e2c612e7d0af2f2e071686c31c03e7e8ab0f48adde3a36"
     }
   ],
   "outputs": {
-    "approvals-audit.json": "b74ef5e819b0271e337e02782275e7b26a9400829cf407b1bcb96bcbf8f9d030",
+    "approvals-audit.json": "00be7300af29a075837c76188bc4a66a9e67b6f11dec51e046ea22441e6eac21",
     "excerpt-audit.json": "611b4341690e50fd0dd0b203fba66b80f082b629dbe8a7626c843b326d6a1e28",
     "exclusions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-    "experience-verification.json": "2b3443c816bfb911e310d4d41c2e36e320bb1a10e490c99a1e6d983a919db31b",
-    "locationResearch.json": "df88544b86406d858162154368edc2c746fcf294b254d1a6fb5a3f7da4866050",
-    "observation-registry.json": "44cfa4c74e95ab6846ee7ce73e656ce17a00c362ab4652eb69c14ec479c07976",
+    "experience-verification.json": "4c341a1f482370ba59e7d63d034fb9068a65f99b467cef39c4f3479cdf378ca0",
+    "locationResearch.json": "ca81b26d64e0bc2f7701414bb11319b886d8b360eaef826eb6f329ece23f9417",
+    "observation-registry.json": "ea51dee632ded8a5a951c51bc895118022068163835e706a5390b6d060da1f87",
     "staging.json": "0cfbb4798aca802800de9ce15d361a7320525f87b350339dbd12a0241a84a5e1"
   },
-  "rosterIdentitySha256": "b24190dbd11b8963658f41fa3b12eaed1adf9a65f4f031ee953229e1a45882c7",
+  "rosterIdentitySha256": "71a3ab4a7f48704a2d7b9490f3a53f6590b7cf26b2bbceec394cfcc4ad1f5da5",
   "schemaVersion": 1,
   "scorer": {
     "path": "src/lib/experience-score.ts",
@@ -1146,6 +1196,6 @@
   },
   "transformer": {
     "path": "scripts/regions/release-reviews.py",
-    "sha256": "1629bc96ab0206039a2b1fdd865c8b77980160ccf95430fe32d6f950d342c743"
+    "sha256": "c894fe77cc6869ff35ce98fa72392a026cc418c0a9111fbf1ca85dc56f419693"
   }
 }

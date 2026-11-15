@@ -83143,7 +83143,7 @@
           "status": "not-published",
           "text": "Availability has not been independently checked."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "asOf": "2026-10-21",
@@ -83201,6 +83201,9 @@
           }
         ],
         "notes": [
+          "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
+          "Reported counts are not unique people. Unknown cross-posting may remain.",
+          "No provider offerings, prices, individual reviews or availability claims are released by this transformer.",
           "The 2026-2027 directory reports offerings, not current availability, authorization, network participation, or an individual's plan coverage.",
           "Missing codes do not prove a service or payment type is unavailable.",
           "County coverage does not prove availability at an individual address.",
@@ -83210,7 +83213,57 @@
         ],
         "providerDetailsReviewed": true,
         "providerId": "cms-317009",
-        "reviewAggregates": [],
+        "reviewAggregates": [
+          {
+            "asOf": null,
+            "count": 35,
+            "notes": [
+              "The review page explicitly identifies CCN 317009 and its Essex office. All five displayed accounts describe nursing or therapy for the writer or a relative. The operator solicits Google feedback and links the two county offices separately. The platform average represents 35 public ratings. Its reviewer identities and the other 30 ratings were not individually verified. Medicare clinical quality and survey stars were excluded.",
+              "Observed ZIP matches the exact official care unit."
+            ],
+            "platform": "MyLivingChoice",
+            "rating": 4.9,
+            "scale": 5,
+            "scope": "consumer",
+            "sourceFamily": "google",
+            "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey"
+          }
+        ],
+        "reviewSamples": [
+          {
+            "observations": [
+              {
+                "date": "2026-05",
+                "id": "mlc-google-440045",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-05",
+                "id": "mlc-google-440042",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-05",
+                "id": "mlc-google-440046",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-05",
+                "id": "mlc-google-440043",
+                "sentiment": "positive"
+              },
+              {
+                "date": "2026-05",
+                "id": "mlc-google-440044",
+                "sentiment": "positive"
+              }
+            ],
+            "selection": "all-visible-before-highlighting",
+            "sourceFamily": "google",
+            "sourceId": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+            "visibleCount": 5
+          }
+        ],
         "reviews": [],
         "sources": [
           {
@@ -83222,6 +83275,16 @@
             "publisher": "Centers for Medicare & Medicaid Services",
             "title": "Home Health Care Agencies",
             "url": "https://data.cms.gov/provider-data/dataset/6jpm-sxkc"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "review-release-mlc-acquisition-promise-care-of-essex-county-new-jersey",
+            "kind": "review-platform",
+            "publishedAt": null,
+            "publisher": "MyLivingChoice",
+            "title": "MyLivingChoice consumer aggregate",
+            "url": "https://www.mylivingchoice.com/property/promise-care-of-essex-county-new-jersey"
           },
           {
             "access": "pdf",
@@ -107152,6 +107215,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0322300": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0322300-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0322300-office-services-source",
+            "text": "The agency lists personal care, companionship, meal preparation and medication reminders. Its published Middlesex County contact is in East Brunswick. Call before visiting the Edison registration address."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0322300",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0322300-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "JoyBringers Home Care",
+            "title": "JoyBringers Home Care · Office and home care services",
+            "url": "https://joybringersnj.com/"
+          }
+        ]
+      },
       "north-jersey-hp-hp0323200": {
         "availability": {
           "asOf": null,
@@ -109357,6 +109454,40 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1295415776"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0365500": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0365500-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0365500-office-services-source",
+            "text": "The agency lists a Somerset office. Its home health aides work under registered nurse supervision and can help with personal care, groceries and pharmacy errands."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0365500",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0365500-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Life Home Care",
+            "title": "Life Home Care · Office and home care services",
+            "url": "https://homecare.life/"
           }
         ]
       },
@@ -111810,6 +111941,40 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1104633205"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0397400": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0397400-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0397400-office-services-source",
+            "text": "JoyBringers lists an Oakhurst office and offers an initial home assessment. Ask about help with bathing, grooming, meals and light housekeeping."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0397400",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0397400-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "JoyBringers Home Care",
+            "title": "JoyBringers Home Care · Office and home care services",
+            "url": "https://joybringersnj.com/"
           }
         ]
       },
