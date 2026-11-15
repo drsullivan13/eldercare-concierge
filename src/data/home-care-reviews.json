@@ -1893,10 +1893,10 @@
             "pagesChecked": 1,
             "previouslyUnseenCount": 5,
             "publisher": "MyLivingChoice",
-            "reportedCount": 29,
+            "reportedCount": null,
             "retainedCount": 5,
             "sourceFamily": "google",
-            "stopReason": "Every review row served on this public property page was inspected before selection. This is not an exhaustive read or verification of the underlying Google population.",
+            "stopReason": "Every review row served on this public property page was inspected before selection. This is not an exhaustive read or verification of the underlying Google population. A second public window of the same branch Google feed, https://www.homewatchcaregivers.com/bridgewater/about-us/client-caregiver-reviews/, includes an explicit workplace review dated June 20, 2026. Withhold the entire mixed-population aggregate; retain individually verified family accounts.",
             "url": "https://www.mylivingchoice.com/property/homewatch-caregivers-of-bridgewater"
           }
         ]
@@ -1915,23 +1915,7 @@
         "Published averages and reported counts are separate from retained individual accounts. Known source families and pages contribute once through the existing experience policy.",
         "A link grants no text rights. Missing evidence is not a negative rating."
       ],
-      "reviewAggregates": [
-        {
-          "asOf": null,
-          "count": 29,
-          "notes": [
-            "Selected public consumer accounts are not verified people, representative prevalence or clinical evidence.",
-            "Published averages and reported counts are separate from retained individual accounts. Known source families and pages contribute once through the existing experience policy.",
-            "A link grants no text rights. Missing evidence is not a negative rating."
-          ],
-          "platform": "MyLivingChoice",
-          "rating": 5,
-          "scale": 5,
-          "scope": "consumer",
-          "sourceFamily": "google",
-          "sourceId": "home-care-review-0ad07667f619bf8e28e42b1e"
-        }
-      ],
+      "reviewAggregates": [],
       "reviewSamples": [
         {
           "observations": [
@@ -13664,6 +13648,6 @@
       ]
     }
   },
-  "reviewedInputSha256": "ed757f9ddd94580de491f4a8768cd1203933cc83c1e336455864e232531b4bb2",
+  "reviewedInputSha256": "5a661c618013be803d48283b2a27778ca72b601409f7cfee201b5d810fc3feed",
   "schemaVersion": 1
 }
