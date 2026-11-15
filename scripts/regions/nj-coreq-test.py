@@ -74,6 +74,27 @@ class CoreqImportTests(unittest.TestCase):
                 self.assertEqual(results, {})
                 self.assertEqual(len(withheld["ambiguous-certified-result"]), 2)
 
+    def test_identifier_matching_still_rejects_wrong_setting_state_ccn_and_conflicts(self):
+        mapping = {"917532": ("1154081990", "315083")}
+        for row, field, value in [
+            (self.workbook[0], "setting", "SCNF"),
+            (self.cms[0], "state", "MA"),
+            (self.cms[0], "provider_type", "Home Health"),
+            (self.cms[0], "cms_certification_number_ccn", "317001"),
+        ]:
+            with self.subTest(field=field, value=value):
+                original = row[field]
+                row[field] = value
+                self.assertEqual(coreq.project(self.workbook, self.cms, self.state, mapping)[0], {})
+                row[field] = original
+        for npi, ccn in [("", "315083"), ("1154081990", "317001"), ("1154081990", "225083")]:
+            self.assertEqual(coreq.project(self.workbook, self.cms, self.state,
+                                          {"917532": (npi, ccn)})[0], {})
+        other = dict(self.cms[0], cms_certification_number_ccn="315029", provider_name="Another home")
+        self.cms.append(other)
+        self.assertEqual(coreq.project(self.workbook, self.cms, self.state,
+                                      {"917532": ("1154081990", "315029")})[0], {})
+
     def test_real_zero_is_not_missing(self):
         self.workbook[0]["score"]["raw"] = "0"
         self.assertEqual(self.project()[0]["315083"]["value"], 0)
@@ -163,6 +184,8 @@ class CoreqImportTests(unittest.TestCase):
                       coreq.raw(next(row for row in cover if row["row"] == 32), "A"))
         self.assertIn("85%", coreq.raw(next(row for row in cover if row["row"] == 34), "A"))
         projection, withheld = coreq.generate(path, COST_REPORT)
+        self.assertEqual(coreq.certified_identities(COST_REPORT)["917532"],
+                         ("1154081990", "315083"))
         self.assertEqual(projection["results"]["315083"]["value"], 96)
         self.assertEqual(projection["source"]["unit"], "percent")
         self.assertEqual(projection["source"]["surveyPeriod"], None)
