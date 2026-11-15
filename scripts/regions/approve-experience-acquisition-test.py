@@ -173,6 +173,14 @@ class ApprovalTests(unittest.TestCase):
         with self.assertRaisesRegex(APPROVE.release.ReleaseError, "Source hash drift"):
             APPROVE.build(self.root)
 
+    def test_held_collection_hash_is_checked_without_a_publication(self):
+        reference = next(r for r in self.index["batches"] if "/avalon-cupola/" in r["path"])
+        batch = self.load(reference["path"])
+        held = self.load(batch["sources"]["careone-at-the-cupola"]["path"])
+        self.write(held["collection"]["path"], {})
+        with self.assertRaisesRegex(APPROVE.release.ReleaseError, "Source hash drift"):
+            APPROVE.build(self.root)
+
     def test_cupola_population_hold_cannot_be_overridden_by_an_approval(self):
         reference = next(r for r in self.index["batches"] if "/avalon-cupola/" in r["path"])
         batch = self.load(reference["path"])
