@@ -1,0 +1,733 @@
+{
+  "checkedAt": "2026-11-15",
+  "outcome": "No candidate clears every existing gate. Ten unscored NJ DOH residential listings were read in full. The Bristal at Woodcliff Lake (NJ02A016) is the strongest: exact operator place-ID match, sole state recipient, a clean five-row window, and 4.8/5 from 45 Google ratings. It stays held because the operator markets an independent-lifestyle option, and the only evidence that those residents occupy licensed ALR beds is carrier unit data. This is the precedent that held Brandywine Livingston and Mahwah.",
+  "decisions": [
+    {
+      "providerId": "north-jersey-doh-nj02a016",
+      "officialId": "NJ02A016",
+      "runtime": {
+        "name": "BRISTAL AT WOODCLIFF LAKE, THE",
+        "address": "364 CHESTNUT RIDGE ROAD WOODCLIFF LAKE, NJ 07677",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/bristal-at-woodcliff-lake-the",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:30.016614+00:00",
+        "httpStatus": 200,
+        "bodySha256": "c29ea591b96382498cffa586946d07d6f8b41f5c51f02fac50d0a50bfb44e718",
+        "observedIdentity": {
+          "name": "The Bristal Assisted Living at Woodcliff Lake",
+          "address": "364 Chestnut Ridge Road",
+          "city": "Woodcliff Lake",
+          "state": "New Jersey",
+          "zip": "07677"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.8,
+          "scale": 5,
+          "count": 45,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0xba5cc21659cced7d"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "strongest-candidate-hold-pending-independent-scope-review",
+      "scopeEvidence": "Care-type chips say Assisted Living, Independent Living, Memory Care. The About section and the operator community page describe assisted living and Reflections memory care. The operator also markets an 'Independent Lifestyle' option at this community, and its brand-level page describes it as a non-ADL residential option. NJ DOH licenses 160 assisted living beds under one ALR license, NJ02A016. The carrier's Quick Facts say 160 total units and 160 licensed residents; that equality is carrier data, not an independent unit count. No separate IL, nursing or CMS unit exists at 364 Chestnut Ridge Road in the runtime.",
+      "identityEvidence": "Exact. Page name, street, city and ZIP 07677 match DOH NJ02A016. The operator page's Google Maps link carries place 0x89c2e5d39cf7ffa7:0xba5cc21659cced7d, the same feature ID as all five review rows (0x0:0xba5cc21659cced7d). Operator phone 201-505-9500 matches DOH (201) 505-9500. DOH licensed owner is WOODCLIFF LAKE SENIOR CARE, LLC.",
+      "blocker": "The Brandywine/Monarch precedent (monarch-scope-recheck-2026-11-15.json) holds an AL-license recipient when the listing asserts IL and operator material does not separate it. Here the operator confirms an independent-lifestyle option. Whether those residents occupy licensed ALR beds (making the aggregate the exact licensed residence's population) is supported only by carrier unit data. An independent reviewer must decide whether the exact place-ID match plus 160 licensed beds suffices, or obtain an operator or state unit count.",
+      "witnesses": [
+        {
+          "source": "NJ DOH Health Facilities detail",
+          "url": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ02A016",
+          "checkedAt": "2026-11-15",
+          "httpStatus": 200,
+          "inspection": "full-page",
+          "privateLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_419dd5629c80a03d_1.log; beds in call_0be3ff5c8ed2b427_1.log",
+          "matchedPublishedFacts": [
+            "Licensed name Bristal At Woodcliff Lake, The",
+            "364 Chestnut Ridge Road, Woodcliff Lake, NJ 07677",
+            "(201) 505-9500",
+            "Assisted Living Residence",
+            "License 02A016, expires 10/31/2026",
+            "Licensed owner WOODCLIFF LAKE SENIOR CARE, LLC",
+            "Assisted Living Beds 160"
+          ]
+        },
+        {
+          "source": "Operator community page",
+          "url": "https://thebristal.com/collection/woodcliff-lake/",
+          "requestedUrl": "https://www.thebristal.com/woodcliff-lake/",
+          "checkedAt": "2026-11-15",
+          "httpStatus": 200,
+          "inspection": "full-page",
+          "robots": "https://www.thebristal.com/robots.txt allows all paths except /wp-admin/",
+          "privateLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_0be3ff5c8ed2b427_1.log; call_b9f1af8d5084012c_1.log",
+          "matchedPublishedFacts": [
+            "364 Chestnut Ridge Road Woodcliff Lake, NJ 07677",
+            "201-505-9500",
+            "Google place 0x89c2e5d39cf7ffa7:0xba5cc21659cced7d",
+            "Assisted Living and Reflections Memory Care"
+          ],
+          "conflictingOrScopeFacts": [
+            "Independent Lifestyle section linking /independent-living/"
+          ]
+        },
+        {
+          "source": "Operator independent lifestyle page",
+          "url": "https://thebristal.com/offerings/independent-living/",
+          "checkedAt": "2026-11-15",
+          "httpStatus": 200,
+          "inspection": "full-page",
+          "privateLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_0a838fb6dca6b94e_1.log",
+          "matchedPublishedFacts": [
+            "Brand offers an independent lifestyle without ADL support in New Jersey communities",
+            "Residents may add ADL support and a care plan later",
+            "Does not state a unit count or license status for independent-lifestyle apartments"
+          ]
+        }
+      ],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-nj13a021",
+      "officialId": "NJ13A021",
+      "runtime": {
+        "name": "BRISTAL AT WALDWICK, THE",
+        "address": "245 WYCKOFF AVENUE WALDWICK, NJ 07463",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/bristal-at-waldwick-the",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:27.539680+00:00",
+        "httpStatus": 200,
+        "bodySha256": "603a12ae6a86e57f70a682ab19832a33efbb4569b4018bee6b848d6acbb420a7",
+        "observedIdentity": {
+          "name": "The Bristal Assisted Living at Waldwick",
+          "address": "245 Wyckoff Ave",
+          "city": "Waldwick",
+          "state": "New Jersey",
+          "zip": "07463"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.5,
+          "scale": 5,
+          "count": 46,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0x19af169443449d15"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-place-identity-and-independent-lifestyle-scope",
+      "scopeEvidence": "Chips include Independent Living. About and operator page describe assisted living and memory care only, but the operator page carries the same Independent Lifestyle section. DOH: 93 assisted living beds; carrier: 93 total units.",
+      "identityEvidence": "Street, city, ZIP 07463 and phone (201) 857-7200 match DOH NJ13A021, owner ENGEL BURMAN SENIOR CARE AT WALDWICK, LLC. The operator map link is an address geocode (0x89c2e3767b96bda5:0xb871ee345cd9aae1), not the review place 0x0:0x19af169443449d15, so the place match is not corroborated (same rule as Crane's Mill).",
+      "blocker": "Place-ID corroboration missing, plus the same independent-lifestyle scope question as Woodcliff Lake.",
+      "witnesses": [
+        {
+          "source": "NJ DOH Health Facilities detail",
+          "url": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ13A021",
+          "checkedAt": "2026-11-15",
+          "httpStatus": 200,
+          "inspection": "full-page",
+          "matchedPublishedFacts": [
+            "245 Wyckoff Avenue, Waldwick, NJ 07463",
+            "(201) 857-7200",
+            "Assisted Living Residence",
+            "License 13A021",
+            "Assisted Living Beds 93"
+          ]
+        },
+        {
+          "source": "Operator community page",
+          "url": "https://thebristal.com/collection/waldwick/",
+          "checkedAt": "2026-11-15",
+          "httpStatus": 200,
+          "inspection": "full-page",
+          "matchedPublishedFacts": [
+            "245 Wyckoff Ave. Waldwick, NJ 07463",
+            "201-857-7200",
+            "Assisted Living and Reflections memory care"
+          ],
+          "conflictingOrScopeFacts": [
+            "Independent Lifestyle section",
+            "Map link is an address geocode, not a business place"
+          ]
+        }
+      ],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-nj31446",
+      "officialId": "NJ31446",
+      "runtime": {
+        "name": "MIRA VIE AT MONTVILLE",
+        "address": "165 CHANGEBRIDGE ROAD MONTVILLE, NJ 07045",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "COMPREHENSIVE PERSONAL CARE HOME"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/mira-vie-at-montville-assisted-living-montville",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:42.163201+00:00",
+        "httpStatus": 200,
+        "bodySha256": "48d7105443e9e2977a1a8569185060126f54c2a35822beee7d98cad27cd72329",
+        "observedIdentity": {
+          "name": "Mira Vie at Montville | Assisted Living Montville",
+          "address": "165 Changebridge Road",
+          "city": "Montville",
+          "state": "New Jersey",
+          "zip": "07045"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care",
+          "Respite / Short-Term Care"
+        ],
+        "aggregate": {
+          "rating": 4.4,
+          "scale": 5,
+          "count": 37,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0x51aa0460e6660c37"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-independent-living-label-and-staff-praise-population",
+      "scopeEvidence": "Chips include Independent Living and Respite; About describes assisted living, memory care and respite. DOH license is a Comprehensive Personal Care Home (031446) with 152 CPC beds, not an ALR.",
+      "identityEvidence": "Street, city, ZIP 07045 and phone (973) 402-1100 match DOH NJ31446, owner MIRA VIE AT MONTVILLE OPCO LLC. Operator place ID not checked.",
+      "blocker": "IL chip unresolved, CPCH license type, and an unresolved staff/leadership-praise population.",
+      "witnesses": [
+        {
+          "source": "NJ DOH Health Facilities detail",
+          "url": "https://healthapps.nj.gov/facilities/fsFacilityDetails.aspx?item=NJ31446",
+          "checkedAt": "2026-11-15",
+          "httpStatus": 200,
+          "inspection": "full-page",
+          "matchedPublishedFacts": [
+            "165 Changebridge Road, Montville, NJ 07045",
+            "(973) 402-1100",
+            "Comprehensive Personal Care Home",
+            "License 031446",
+            "Comprehensive Personal Care beds 152"
+          ]
+        }
+      ],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a012",
+      "officialId": "NJ60A012",
+      "runtime": {
+        "name": "SUNRISE ASSISTED LIVING OF RANDOLPH",
+        "address": "648 ROUTE 10 RANDOLPH, NJ 07869",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/sunrise-of-randolph",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:05.041081+00:00",
+        "httpStatus": 200,
+        "bodySha256": "4d0baf5393c679bdbfa4f3f2879f95b696d29e341e41bc98a44eb21fc88b9775",
+        "observedIdentity": {
+          "name": "Sunrise of Randolph",
+          "address": "648 Route 10 West",
+          "city": "Randolph",
+          "state": "New Jersey",
+          "zip": "07869"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Memory Care",
+          "Respite / Short-Term Care"
+        ],
+        "aggregate": {
+          "rating": 4.2,
+          "scale": 5,
+          "count": 45,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0xa213255524573a5c"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_40e714e2cb323b32_1.log"
+      },
+      "decision": "hold-about-combines-independent-and-assisted-living-plus-professional-account",
+      "scopeEvidence": "The About section says 'an independent living and assisted living community', the same pattern that held Sunrise Cresskill, Edgewater, Wayne and Morris Plains.",
+      "identityEvidence": "Page: 648 Route 10 West, Randolph 07869; runtime: 648 ROUTE 10, RANDOLPH 07869, ALR NJ60A012. Carrier states licensed capacity 100. No co-located runtime unit. No state or operator witness was fetched because the scope and population holds are decisive.",
+      "blocker": "Two independent prior-rule holds.",
+      "witnesses": [],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a029",
+      "officialId": "NJ02A029",
+      "runtime": {
+        "name": "BRISTAL AT ENGLEWOOD, THE",
+        "address": "412 SOUTH VAN BRUNT STREET ENGLEWOOD, NJ 07631",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/bristal-at-englewood-the",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:22.640601+00:00",
+        "httpStatus": 200,
+        "bodySha256": "9fce1b3900d7f114be0baaf5da38190ba42bc86b00160fd0df360bd7bdf3033d",
+        "observedIdentity": {
+          "name": "The Bristal Assisted Living at Englewood",
+          "address": "412 South Van Brunt Street",
+          "city": "Englewood",
+          "state": "New Jersey",
+          "zip": "07631"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.9,
+          "scale": 5,
+          "count": 84,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0x49bf611e0ff550b0"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-about-combines-independent-and-assisted-living-plus-staff-recognition-rows",
+      "scopeEvidence": "About says the community offers 'independent living and assisted living services alongside memory care'. Carrier: 288 units and 288 licensed residents.",
+      "identityEvidence": "Street, city and ZIP 07631 match runtime ALR NJ02A029. No state or operator witness was fetched because the scope hold is decisive.",
+      "blocker": "Prior IL/AL combination rule.",
+      "witnesses": [],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-nj16a023",
+      "officialId": "NJ16A023",
+      "runtime": {
+        "name": "BRISTAL AT WAYNE, THE",
+        "address": "1440 HAMBURG TURNPIKE WAYNE, NJ 07470",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/the-bristal-assisted-living-at-wayne",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:25.166206+00:00",
+        "httpStatus": 200,
+        "bodySha256": "29d7308bddf86b83f9f4c079a6e8ed8d41fb1bdedce4dad0da84ef7d5b7541ad",
+        "observedIdentity": {
+          "name": "The Bristal Assisted Living at Wayne",
+          "address": "1440 Hamburg Turnpike",
+          "city": "Wayne",
+          "state": "New Jersey",
+          "zip": "07470"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.4,
+          "scale": 5,
+          "count": 65,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0x352d1474965c8ffa"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-about-combines-independent-and-assisted-living",
+      "scopeEvidence": "About: 'a residential community offering independent living and assisted living'. Carrier: 170 licensed residents.",
+      "identityEvidence": "Street, city and ZIP 07470 match runtime ALR NJ16A023.",
+      "blocker": "Prior IL/AL combination rule.",
+      "witnesses": [],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a020a",
+      "officialId": "NJ02A020A",
+      "runtime": {
+        "name": "BRIGHTVIEW PARAMUS",
+        "address": "396 FOREST AVENUE PARAMUS, NJ 07652",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/brightview-paramus-senior-independent-living-assisted-living-memory-care",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:32.359813+00:00",
+        "httpStatus": 200,
+        "bodySha256": "e0ede583eee7885eeba930e18145ee1260a9e269689b187cbd312ca11e895864",
+        "observedIdentity": {
+          "name": "Brightview Paramus - Senior Independent Living, Assisted Living, Memory Care",
+          "address": "396 Forest Ave.",
+          "city": "Paramus",
+          "state": "New Jersey",
+          "zip": "07652"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.5,
+          "scale": 5,
+          "count": 108,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0xa2ccea7fa05b277f"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-explicit-independent-living-population",
+      "scopeEvidence": "The listing name, About and row 628790 establish an independent-living population inside the aggregate. DOH ALR NJ02A020A (carrier: 90 licensed residents).",
+      "identityEvidence": "Street, city and ZIP 07652 match runtime.",
+      "blocker": "An IL population is confirmed by a visible account.",
+      "witnesses": [],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-njal16002",
+      "officialId": "NJAL16002",
+      "runtime": {
+        "name": "BRIGHTVIEW WAYNE",
+        "address": "1139 HAMBURG TURNPIKE WAYNE, NJ 07470",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/brightview-wayne-senior-independent-living-assisted-living-memory-care",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:34.837026+00:00",
+        "httpStatus": 200,
+        "bodySha256": "a2e82337e71b414515c5e29ba8c9ec7f6d5138c2772609d6aad44fed7273cab2",
+        "observedIdentity": {
+          "name": "Brightview Wayne - Senior Independent Living, Assisted Living, Memory Care",
+          "address": "1139 Hamburg Turnpike",
+          "city": "Wayne",
+          "state": "New Jersey",
+          "zip": "07470"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.8,
+          "scale": 5,
+          "count": 69,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0xe0369b47bd3ff785"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-explicit-independent-living-population-and-professional-visitor",
+      "scopeEvidence": "About: 190 apartments with independent living, assisted living, memory care and enhanced care; IL apartments have in-unit laundry. Carrier: 108 licensed residents, so IL apartments exceed the licensed ALR capacity.",
+      "identityEvidence": "Street, city and ZIP 07470 match runtime ALR NJAL16002.",
+      "blocker": "Unseparated IL population (190 apartments against 108 licensed).",
+      "witnesses": [],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a013",
+      "officialId": "NJ60A013",
+      "runtime": {
+        "name": "BRIGHTVIEW RANDOLPH, LLC",
+        "address": "175 QUAKER CHURCH ROAD RANDOLPH, NJ 07869",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/brightview-randolph-senior-independent-living-assisted-living-memory-care",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:37.282253+00:00",
+        "httpStatus": 200,
+        "bodySha256": "42c5fc9f07a677f760246f31e25f9bcaf4fbb985a515e72a6acfa859d7067aa6",
+        "observedIdentity": {
+          "name": "Brightview Randolph - Senior Independent Living, Assisted Living, Memory Care",
+          "address": "175 Quaker Church Rd",
+          "city": "Randolph",
+          "state": "New Jersey",
+          "zip": "07869"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.7,
+          "scale": 5,
+          "count": 67,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0x9e79af6fb9ea5729"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-explicit-independent-living-population",
+      "scopeEvidence": "About and row 628930 establish an IL population. Carrier: 75 licensed residents.",
+      "identityEvidence": "Street, city and ZIP 07869 match runtime ALR NJ60A013.",
+      "blocker": "An IL population is confirmed by a visible account.",
+      "witnesses": [],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    },
+    {
+      "providerId": "north-jersey-doh-njal02000",
+      "officialId": "NJAL02000",
+      "runtime": {
+        "name": "ALLEGRO",
+        "address": "200 OLD HOOK ROAD HARRINGTON PARK, NJ 07640",
+        "category": "assisted-living",
+        "licensedSetting": [
+          "ASSISTED LIVING RESIDENCE"
+        ],
+        "currentScore": null,
+        "coverageStatus": "no-rating-evidence",
+        "crosswalkStatus": "included",
+        "sameStreetNumberAndZipRuntimeProviders": [],
+        "soleStateRecipient": true
+      },
+      "source": {
+        "url": "https://www.mylivingchoice.com/property/allegro-harrington-park",
+        "checkedAt": "2026-11-15",
+        "observedAt": "2026-11-15T14:40:39.654941+00:00",
+        "httpStatus": 200,
+        "bodySha256": "c73c642b93b039777e1ff18b37cd86cf192aa9654ff4bd1394c38359942c37b5",
+        "observedIdentity": {
+          "name": "Allegro Harrington Park",
+          "address": "200 Old Hook Road",
+          "city": "Harrington Park",
+          "state": "New Jersey",
+          "zip": "07640"
+        },
+        "careTypeChips": [
+          "Assisted Living",
+          "Independent Living",
+          "Memory Care"
+        ],
+        "aggregate": {
+          "rating": 4.6,
+          "scale": 5,
+          "count": 75,
+          "sourceFamily": "google",
+          "platform": "MyLivingChoice",
+          "asOf": null
+        },
+        "faqAgrees": true,
+        "googlePlaceIds": [
+          "0x0:0xa6626b5d1b6b0ec6"
+        ],
+        "window": {
+          "complete": true,
+          "rowCount": 5,
+          "htmlArticleCount": 5,
+          "htmlReportLinkCount": 5,
+          "unparsedArticleCount": 0,
+          "scope": "all review articles served in the public property HTML, not all Google reviews"
+        },
+        "privateToolLog": "/Users/dansullivan/.factory/artifacts/scripts/925ce9fa-9708-4069-9a8f-fe51c9b1d8c2/call_847472943c6dbfa1_1.log (About paragraphs also in call_3fcfb361e224f89a_1.log)"
+      },
+      "decision": "hold-on-site-independent-living-population",
+      "scopeEvidence": "Quick Facts: 'Also offers independent living and memory care on-site'. Carrier: 116 units and 116 licensed residents. The About text says 'across 74 Google reviews' while the panel says 75.",
+      "identityEvidence": "Street, city and ZIP 07640 match runtime ALR NJAL02000.",
+      "blocker": "On-site IL population is not separated.",
+      "witnesses": [],
+      "publicationAction": "None. Research only; no approval, batch or score."
+    }
+  ]
+}
