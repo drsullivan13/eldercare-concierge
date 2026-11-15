@@ -92,6 +92,10 @@ class ReviewLinksTests(unittest.TestCase):
         self.assertTrue(report["errors"])
 
     def test_valid_fixture_and_read_only_cli(self):
+        (self.base / "portal-links.json").write_text(json.dumps({"schemaVersion": 1, "links": [{
+            "providerId": PID, "publisher": "Yelp", "url": URL,
+            "checkedAt": self.reviewed[PID]["checkedAt"], "catalogAddress": self.catalog[PID]["address"],
+        }]}))
         before = {p: p.read_bytes() for p in self.base.parent.rglob("*") if p.is_file()}
         result = subprocess.run([
             sys.executable, "-B", str(HERE / "validate.py"),
@@ -104,6 +108,23 @@ class ReviewLinksTests(unittest.TestCase):
         self.assertEqual(report["links"], 1)
         after = {p: p.read_bytes() for p in self.base.parent.rglob("*") if p.is_file()}
         self.assertEqual(before, after)
+
+    def test_verified_service_witness_checks_suite_and_phone(self):
+        source = self.base.parent / "home-care-pay-services/verified-office-services.json"
+        source.parent.mkdir()
+        identity = self.reviewed[PID]["identity"]
+        identity.update(recordId=PID, recordsFile="../home-care-pay-services/verified-office-services.json")
+        office = self.catalog[PID]
+        office.update(name="Example LLC", city="EXAMPLE", zip="07001", phone="2015550101")
+        witness = {"providerId": PID, "name": office["name"], "street": identity["registeredAddress"],
+                   "city": office["city"], "zip": office["zip"], "phone": office["phone"],
+                   "observedAddress": identity["observedAddress"], "checkedAt": identity["checkedAt"]}
+        self.write_fixture()
+        source.write_text(json.dumps([witness]))
+        self.assertTrue(validator.validate(self.base, self.catalog)["valid"])
+        for field, wrong_value in (("street", "1 MAIN STREET UNIT B"), ("phone", "2015550102")):
+            source.write_text(json.dumps([{**witness, field: wrong_value}]))
+            self.assertFalse(validator.validate(self.base, self.catalog)["valid"])
 
     def test_empty_location_map_gets_only_public_shell(self):
         result = validator.merge_links({}, self.catalog, self.reviewed)

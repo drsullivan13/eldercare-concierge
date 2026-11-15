@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-15",
+  "publisher": "Listen360",
+  "decision": "Hold public aggregate and count from display and Experience Score.",
+  "publicAverageScope": "undetermined",
+  "publicCountScope": "undetermined",
+  "thirdPartyReuse": "No affirmative authorization for Harbor located.",
+  "knownFacts": {
+    "calculation": "Individual likelihood-to-recommend answers are converted into stars and averaged. Public star rating differs from NPS.",
+    "publication": "Subscriber may choose promoter testimonials only, all feedback with or without visitor filtering, or no public feedback. A public review may be removed while the original feedback remains in the application.",
+    "denominator": "Publisher documentation describes an average across responses but does not state whether promoter-only display, comment suppression or public removals affect the public numerator or count. Available documentation establishes neither that all responses count nor that only visible testimonials count.",
+    "rights": "The published customer contract limits the service license to the customer. Sections 2.3 and 4 restrict extraction, while section 4 describes customer-enabled API data sharing with appropriate rights. Section 3.2 grants Listen360 rights in deidentified aggregates and grants Harbor no branch-specific publication rights."
+  },
+  "sources": {
+    "method": "https://support.listen360.com/hc/en-us/articles/207612843-How-Does-NPS-Translate-to-a-Star-Rating",
+    "disclosureChoice": "https://support.listen360.com/hc/en-us/articles/204460089-How-to-Add-a-Reviews-Button-to-Your-Website",
+    "disclosureScreenshot": "https://support.listen360.com/hc/article_attachments/4409592815515/Screen_Shot_2021-11-04_at_12.15.51_PM.png",
+    "disclosureScreenshotSha256": "f796e4b11accee283ed67a3c222546cf6aaefe135d77d709ecbe7258856d779c",
+    "individualRemoval": "https://support.listen360.com/hc/en-us/articles/204459869-How-to-Remove-a-Review-from-the-Listen360-Public-Reviews-Page-and-Website-Widget-Reviews-Feeds",
+    "sharing": "https://support.listen360.com/hc/en-us/articles/204460039-Sharing-Your-Customer-Feedback-Publicly",
+    "terms": "https://www.listen360.com/terms-of-service/"
+  },
+  "example": {
+    "providerId": "north-jersey-hp-hp0171100",
+    "publisher": "Listen360",
+    "url": "https://reviews.listen360.com/senior-helpers-of-paramus",
+    "officialAddress": "22 MADISON AVENUE, SUITE 305",
+    "checkedAt": "2026-11-14",
+    "sourceAddress": "22 Madison Ave  Suite 305, Paramus, NJ, 07652",
+    "phone": "201-968-5777",
+    "sourceRating": 4.8,
+    "sourceReviewCount": 78,
+    "visibleWindowCount": 20,
+    "visibleMinimumStarRating": 4.6,
+    "htmlSha256": "58f5f47c4e656a21ee799181348a3ee29d65acd19166f857bea7dc84076d3208"
+  },
+  "exampleLimitation": "Prior receipt only. The 20 displayed accounts cannot establish the inclusion rules for the 78 headline reviews.",
+  "requirementsForRelease": [
+    "Document branch and respondent population, time window, rating denominator, neutral and negative response handling, repeat responses, and the effect of deletions or selective display on the public rating and count.",
+    "Obtain an authorized branch export or permitted interface plus explicit rights to publish branch-level statistics in Harbor and use them for scoring."
+  ],
+  "newOfficeScores": 0
+}

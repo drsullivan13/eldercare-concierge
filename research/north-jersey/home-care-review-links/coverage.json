@@ -457,7 +457,8 @@
     "status": "accepted",
     "queries": [],
     "acceptedUrls": [
-      "https://www.google.com/maps/search/?api=1&query=Home%20care&query_place_id=ChIJUYJ9mIqlw4kRSIYOfMYU58M"
+      "https://www.google.com/maps/search/?api=1&query=Home%20care&query_place_id=ChIJUYJ9mIqlw4kRSIYOfMYU58M",
+      "https://reviews.listen360.com/senior-helpers-of-madison-4"
     ],
     "withheldCandidates": [],
     "reason": "Office-specific destinations accepted with retained provenance. No review text, score or aggregate acquired."
@@ -1006,7 +1007,8 @@
     "status": "accepted",
     "queries": [],
     "acceptedUrls": [
-      "https://www.google.com/maps/search/?api=1&query=Home%20care&query_place_id=ChIJ5bZtI0z6wokR5Dt6_AzB3EQ"
+      "https://www.google.com/maps/search/?api=1&query=Home%20care&query_place_id=ChIJ5bZtI0z6wokR5Dt6_AzB3EQ",
+      "https://reviews.listen360.com/senior-helpers-of-paramus"
     ],
     "withheldCandidates": [],
     "reason": "Office-specific destinations accepted with retained provenance. No review text, score or aggregate acquired."
@@ -4516,11 +4518,13 @@
   {
     "providerId": "north-jersey-hp-hp0402100",
     "county": "Hudson",
-    "status": "not_attempted",
+    "status": "accepted",
     "queries": [],
-    "acceptedUrls": [],
+    "acceptedUrls": [
+      "https://reviews.listen360.com/senior-helpers-of-north-hudson-north-bergen"
+    ],
     "withheldCandidates": [],
-    "reason": "Outside this bounded set of dated, independently matched first-party offices. Not searched in this task. Missing coverage does not mean missing reviews."
+    "reason": "Matched the public office survey to the verified operator location."
   },
   {
     "providerId": "north-jersey-hp-hp0402200",
@@ -6184,5 +6188,27 @@
     "acceptedUrls": [],
     "withheldCandidates": [],
     "reason": "Outside this bounded set of dated, independently matched first-party offices. Not searched in this task. Missing coverage does not mean missing reviews."
+  },
+  {
+    "providerId": "north-jersey-hp-hp0347100",
+    "county": "Middlesex",
+    "queries": [],
+    "acceptedUrls": [
+      "https://reviews.listen360.com/senior-helpers-princeton-plainsboro"
+    ],
+    "withheldCandidates": [],
+    "status": "accepted",
+    "reason": "Matched the public office survey to the verified operator location."
+  },
+  {
+    "providerId": "north-jersey-hp-hp0382700",
+    "county": "Somerset",
+    "queries": [],
+    "acceptedUrls": [
+      "https://reviews.listen360.com/comforcare-home-care-somerville"
+    ],
+    "withheldCandidates": [],
+    "status": "accepted",
+    "reason": "Matched the public office survey to the verified operator location."
   }
 ]

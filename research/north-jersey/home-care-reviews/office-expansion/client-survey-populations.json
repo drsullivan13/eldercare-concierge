@@ -1,0 +1,42 @@
+{
+  "asOf": "2026-11-15",
+  "eligibleNewOfficeScores": 0,
+  "externalOutreach": false,
+  "scope": "Checked public survey-program documentation and available local examples against the nine-county nonmedical home-care roster. A negative search does not establish that private licensing cannot supply data.",
+  "findings": [
+    {
+      "publisher": "ClearlyRated Best of Staffing",
+      "result": "2026 NJ Allied\u2013Home Health lists Insight Global and The Judge Group as client winners and Accountable Healthcare Staffing as an employee winner. ClearlyRated\u2019s client survey examines the staffing buyer relationship. Award qualification uses an NPS cutoff, and a separate patient/family population with an actual office mean/count is absent. A staffing firm may also furnish home care without making these respondents family care customers.",
+      "sources": [
+        "https://www.clearlyrated.com/staffing/healthcare-staffing/allied-home-health-staffing/nj-usa",
+        "https://go.clearlyrated.com/hubfs/Staffing/2025-Staffing-Buyer-Insights-Report_Client-Edition.pdf"
+      ]
+    },
+    {
+      "publisher": "Atlantic Private Care Services",
+      "providerId": "north-jersey-hp-hp0022400",
+      "registryIdentity": "ATLANTIC PRIVATE CARE SERVICES, INC. DBA Morris Home Care, 200 Mt. Airy Road, Basking Ridge, NJ; 973-540-9000",
+      "result": "Exact roster organization publishes a genuine patient/family survey instrument covering nurses and aides. The public PDF is an uncompleted questionnaire, without the survey period, independent collector, numeric office mean or number responding. A strong primary-data lead for an authorized follow-up; no score.",
+      "sources": [
+        "https://atlanticprivatecare.com/css/atlantic-private-care-services-private-duty-home-care--nursi/uploads/Satisfaction_Survey_Q1_updated_2010.pdf"
+      ]
+    },
+    {
+      "publisher": "Trustpilot",
+      "result": "Locations are optional; the API documentation explains how reviews without an attributed location remain unassigned. Local filters are documented for a private business API and broader data solutions require a key and plan. TrustScore is weighted, unlike an ordinary client-only mean. No exact eligible target-office result with a separately defined family denominator was established in this pass.",
+      "sources": [
+        "https://developers.trustpilot.com/locations-api-overview/",
+        "https://developers.trustpilot.com/data-solutions-get-started",
+        "https://help.trustpilot.com/s/article/TrustScore-and-star-rating-explained?language=en_US"
+      ]
+    },
+    {
+      "publisher": "Pinnacle Quality Insight",
+      "result": "Home Care Pulse acquired Pinnacle Quality Insight and all three brands consolidated under Activated Insights. Do not treat this as a new independent family absent disjoint respondent provenance. Public instruments or award cutoffs do not identify a new NJ office-specific family average and count.",
+      "sources": [
+        "https://activatedinsights.com/latest-news/home-care-pulse-acquires-activated-insights-and-pinnacle-quality-insight/",
+        "https://activatedinsights.com/latest-news/home-care-pulse-activated-insights-and-pinnacle-quality-insights-unify-under-the-activated-insights-brand/"
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ from urllib.parse import parse_qsl, unquote, urlsplit
 
 
 BASE = Path(__file__).resolve().parent
-COUNTIES = {"Bergen", "Essex", "Hudson", "Morris", "Passaic", "Union"}
+COUNTIES = {"Bergen", "Essex", "Hudson", "Morris", "Passaic", "Union", "Somerset", "Middlesex", "Monmouth"}
 RECORD_FIELDS = {
     "catalogAddress", "officialRegistrationId", "officeName", "county",
     "checkedAt", "identity", "reviewLinks",
@@ -322,29 +322,52 @@ def validate(base=BASE, catalog=None):
             receipts[path.resolve()] = receipt_urls(read_json(path), denied)
         for provider_id, row in reviewed.items():
             identity = row["identity"]
-            path = relative_file(base, identity["recordsFile"], base.parent / "home-care-first-party")
-            require(path == (base.parent / "home-care-first-party/records.json").resolve(),
-                    "identity must reference retained first-party records.json")
-            first_party = read_json(path)
-            require(isinstance(first_party, list), "first-party records must be an array")
-            matches = [r for r in first_party if isinstance(r, dict)
-                       and r.get("record_id") == identity["recordId"]]
-            require(len(matches) == 1, "exact first-party record ID is missing or duplicated")
-            record = matches[0]
-            for actual, expected, label in (
-                (record.get("provider_id"), provider_id, "provider_id"),
-                (record.get("official_registration_id"), row["officialRegistrationId"], "registration"),
-                (record.get("county"), row["county"], "county"),
-                (record.get("registered_address"), identity["registeredAddress"], "registered address"),
-                (record.get("registered_city"), identity["registeredCity"], "registered city"),
-                (record.get("registered_state"), identity["registeredState"], "registered state"),
-                (record.get("registered_zip"), identity["registeredZip"], "registered ZIP"),
-                (record.get("observed_address"), identity["observedAddress"], "observed address"),
-                (record.get("checked_at"), identity["checkedAt"], "identity date"),
-            ):
-                require(actual == expected, f"first-party {label} differs from reviewed identity")
-            require(" ".join(record["registered_address"].split()) == row["catalogAddress"],
-                    f"{provider_id}: first-party registered address differs from catalog")
+            if identity["recordsFile"] == "../home-care-pay-services/verified-office-services.json":
+                path = relative_file(base, identity["recordsFile"], base.parent / "home-care-pay-services")
+                require(path == (base.parent / "home-care-pay-services/verified-office-services.json").resolve(),
+                        "unexpected verified service record file")
+                matches = [r for r in read_json(path) if r["providerId"] == provider_id]
+                require(len(matches) == 1 and identity["recordId"] == provider_id,
+                        "verified office service identity is missing or duplicated")
+                service = matches[0]
+                office = catalog[provider_id]
+                for registry, witness, claimed in (
+                    ("address", "street", "registeredAddress"), ("city", "city", "registeredCity"),
+                    ("zip", "zip", "registeredZip"),
+                ):
+                    require(service[witness] == identity[claimed] and
+                            service[witness].strip().casefold() == office[registry].strip().casefold(),
+                            f"{provider_id}: verified service {registry} differs from office")
+                require(identity["registeredState"] == "NJ" and
+                        service["observedAddress"] == identity["observedAddress"] and
+                        service["checkedAt"] == identity["checkedAt"] and
+                        service["name"].strip().casefold() == office["name"].strip().casefold() and
+                        re.sub(r"\D", "", service["phone"]) == re.sub(r"\D", "", office["phone"]),
+                        f"{provider_id}: verified service witness differs from identity")
+            else:
+                path = relative_file(base, identity["recordsFile"], base.parent / "home-care-first-party")
+                require(path == (base.parent / "home-care-first-party/records.json").resolve(),
+                        "identity must reference retained first-party records.json")
+                first_party = read_json(path)
+                require(isinstance(first_party, list), "first-party records must be an array")
+                matches = [r for r in first_party if isinstance(r, dict)
+                           and r.get("record_id") == identity["recordId"]]
+                require(len(matches) == 1, "exact first-party record ID is missing or duplicated")
+                record = matches[0]
+                for actual, expected, label in (
+                    (record.get("provider_id"), provider_id, "provider_id"),
+                    (record.get("official_registration_id"), row["officialRegistrationId"], "registration"),
+                    (record.get("county"), row["county"], "county"),
+                    (record.get("registered_address"), identity["registeredAddress"], "registered address"),
+                    (record.get("registered_city"), identity["registeredCity"], "registered city"),
+                    (record.get("registered_state"), identity["registeredState"], "registered state"),
+                    (record.get("registered_zip"), identity["registeredZip"], "registered ZIP"),
+                    (record.get("observed_address"), identity["observedAddress"], "observed address"),
+                    (record.get("checked_at"), identity["checkedAt"], "identity date"),
+                ):
+                    require(actual == expected, f"first-party {label} differs from reviewed identity")
+                require(" ".join(record["registered_address"].split()) == row["catalogAddress"],
+                        f"{provider_id}: first-party registered address differs from catalog")
             for link in row["reviewLinks"]:
                 path = relative_file(base, link["discoveryReceipt"], base / "discovery")
                 if path not in receipts:

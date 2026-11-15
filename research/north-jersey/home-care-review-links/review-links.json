@@ -160,7 +160,7 @@
     "officialRegistrationId": "HP0171100",
     "officeName": "Senior Helpers Bergen County",
     "county": "Bergen",
-    "checkedAt": "2026-11-14",
+    "checkedAt": "2026-11-15",
     "identity": {
       "recordId": "senior-helpers-bergen-hp0171100",
       "recordsFile": "../home-care-first-party/records.json",
@@ -178,6 +178,13 @@
         "originalUrl": "https://search.google.com/local/writereview?placeid=ChIJ5bZtI0z6wokR5Dt6_AzB3EQ",
         "discoveryReceipt": "discovery/provider-HP0171100.json",
         "identityBasis": "Exact branch provider page publishes this Google review action place ID. Dated first-party evidence matches 22 Madison Avenue Suite 305 in Paramus. Read-only destination preserves that place ID rather than opening the submission action. Destination not fetched."
+      },
+      {
+        "url": "https://reviews.listen360.com/senior-helpers-of-paramus",
+        "originalUrl": "https://reviews.listen360.com/senior-helpers-of-paramus",
+        "publisher": "Listen360",
+        "discoveryReceipt": "discovery/listen360-offices.json",
+        "identityBasis": "The survey profile names Senior Helpers of Paramus at 22 Madison Avenue, Suite 305 and lists 201-968-5777, matching the registered office."
       }
     ]
   },
@@ -212,7 +219,7 @@
     "officialRegistrationId": "HP0104400",
     "officeName": "Senior Helpers Madison",
     "county": "Morris",
-    "checkedAt": "2026-11-14",
+    "checkedAt": "2026-11-15",
     "identity": {
       "recordId": "senior-helpers-madison-hp0104400",
       "recordsFile": "../home-care-first-party/records.json",
@@ -230,6 +237,13 @@
         "originalUrl": "https://search.google.com/local/writereview?placeid=ChIJUYJ9mIqlw4kRSIYOfMYU58M",
         "discoveryReceipt": "discovery/provider-HP0104400.json",
         "identityBasis": "Exact branch provider page publishes this Google review action place ID. Dated first-party evidence matches 214 Main Street, second floor in Madison. Read-only destination preserves that place ID rather than opening the submission action. Destination not fetched."
+      },
+      {
+        "url": "https://reviews.listen360.com/senior-helpers-of-madison-4",
+        "originalUrl": "https://reviews.listen360.com/senior-helpers-of-madison-4",
+        "publisher": "Listen360",
+        "discoveryReceipt": "discovery/listen360-offices.json",
+        "identityBasis": "The survey profile names Senior Helpers of Madison at 214 Main Street, second floor and lists 973-360-1500, matching the registered office."
       }
     ]
   },
@@ -471,6 +485,84 @@
         "originalUrl": "https://goo.gl/maps/P4X1uH1TE7E4ZFBA6",
         "discoveryReceipt": "discovery/right-at-home-retained.json",
         "identityBasis": "Dated exact-provider receipt publishes this short link on the 735 Northfield Avenue, West Orange address itself. First-party evidence independently matches the exact registration. Short link not live-resolved."
+      }
+    ]
+  },
+  "north-jersey-hp-hp0347100": {
+    "catalogAddress": "2 HOSPITAL DRIVE, BUILDING B",
+    "officialRegistrationId": "HP0347100",
+    "officeName": "NJKH SENIOR CARE LLC DBA SENIOR HELPERS",
+    "county": "Middlesex",
+    "checkedAt": "2026-11-15",
+    "identity": {
+      "recordId": "north-jersey-hp-hp0347100",
+      "recordsFile": "../home-care-pay-services/verified-office-services.json",
+      "checkedAt": "2026-11-15",
+      "registeredAddress": "2 HOSPITAL DRIVE, BUILDING B",
+      "registeredCity": "PLAINSBORO",
+      "registeredState": "NJ",
+      "registeredZip": "08536",
+      "observedAddress": "2 Hospital Drive, Building B, Plainsboro, NJ 08536"
+    },
+    "reviewLinks": [
+      {
+        "url": "https://reviews.listen360.com/senior-helpers-princeton-plainsboro",
+        "originalUrl": "https://reviews.listen360.com/senior-helpers-princeton-plainsboro",
+        "publisher": "Listen360",
+        "discoveryReceipt": "discovery/listen360-offices.json",
+        "identityBasis": "Survey and local operator name the same office. The retained operator and registry evidence identifies its physical branch."
+      }
+    ]
+  },
+  "north-jersey-hp-hp0382700": {
+    "catalogAddress": "92 E Main Street, Suite 305",
+    "officialRegistrationId": "HP0382700",
+    "officeName": "MCN Care Svcs LLC DBA ComForCare Home Care - Somerset NJ",
+    "county": "Somerset",
+    "checkedAt": "2026-11-15",
+    "identity": {
+      "recordId": "north-jersey-hp-hp0382700",
+      "recordsFile": "../home-care-pay-services/verified-office-services.json",
+      "checkedAt": "2026-11-15",
+      "registeredAddress": "92 E Main Street, Suite 305",
+      "registeredCity": "Somerville",
+      "registeredState": "NJ",
+      "registeredZip": "08876",
+      "observedAddress": "92 E. Main Street, Suite 305, Somerville, NJ 08876"
+    },
+    "reviewLinks": [
+      {
+        "url": "https://reviews.listen360.com/comforcare-home-care-somerville",
+        "originalUrl": "https://reviews.listen360.com/comforcare-home-care-somerville",
+        "publisher": "Listen360",
+        "discoveryReceipt": "discovery/listen360-offices.json",
+        "identityBasis": "Survey and local operator name the same office. The retained operator and registry evidence identifies its physical branch."
+      }
+    ]
+  },
+  "north-jersey-hp-hp0402100": {
+    "catalogAddress": "7915 John F. Kennedy Blvd",
+    "officialRegistrationId": "HP0402100",
+    "officeName": "AJ Family Legacy Corporation",
+    "county": "Hudson",
+    "checkedAt": "2026-11-15",
+    "identity": {
+      "recordId": "north-jersey-hp-hp0402100",
+      "recordsFile": "../home-care-pay-services/verified-office-services.json",
+      "checkedAt": "2026-11-15",
+      "registeredAddress": "7915 John F. Kennedy Blvd",
+      "registeredCity": "North Bergen",
+      "registeredState": "NJ",
+      "registeredZip": "07047",
+      "observedAddress": "7915 John F. Kennedy Blvd., North Bergen, NJ 07047"
+    },
+    "reviewLinks": [
+      {
+        "url": "https://reviews.listen360.com/senior-helpers-of-north-hudson-north-bergen",
+        "originalUrl": "https://reviews.listen360.com/senior-helpers-of-north-hudson-north-bergen",
+        "publisher": "Listen360",
+        "discoveryReceipt": "discovery/listen360-offices.json",
+        "identityBasis": "Survey and local operator name the same office. The retained operator and registry evidence identifies its physical branch."
       }
     ]
   }
