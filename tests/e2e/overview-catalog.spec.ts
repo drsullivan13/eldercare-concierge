@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { openSavedRegistryListing } from "./saved-registry-listing";
 import type { IndividualReviewsResponse } from "../../src/lib/individual-reviews";
 import type { SearchResponse } from "../../src/lib/providers";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
@@ -329,7 +330,7 @@ test("a missing street address never becomes directions to an inferred locality"
 
 for (const entry of [
   { id: "cms-317058", zip: "07960", office: true },
-  { id: "north-jersey-hp-hp0144800", zip: "07632", office: true },
+  { id: "north-jersey-hp-hp0021600", zip: "07601", office: true },
   { id: "lifeplan-brooksby-village", zip: "02459", office: false },
 ]) {
   test(`ZIP precision preserves the care setting across tabs for ${entry.id}`, async ({
@@ -424,9 +425,20 @@ for (const entry of [
 test("a published PO box is preserved without directions to a guessed office", async ({
   page,
 }) => {
-  const dialog = await openOverview(
+  const id = "north-jersey-hp-hp0144800";
+  const nearby = await page.request.get("/api/search", {
+    params: {
+      zip: "07632",
+      radius: "50",
+      q: "GARDEN STATE HOME CARE SERVICES LLC",
+    },
+  });
+  expect(nearby.ok()).toBe(true);
+  const results: SearchResponse = await nearby.json();
+  expect(results.providers.map((provider) => provider.id)).not.toContain(id);
+  const dialog = await openSavedRegistryListing(
     page,
-    "07632",
+    id,
     "GARDEN STATE HOME CARE SERVICES LLC",
   );
   const location = dialog.locator(".overview-location");

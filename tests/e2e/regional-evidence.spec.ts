@@ -249,7 +249,15 @@ test("published NJ coverage rejects excluded or unrecognized ZIPs without a pend
   await expect(error).toContainText("published North Jersey coverage");
   await expect(error).not.toContainText(/pending/i);
   await expect(page.locator(".provider-card")).toHaveCount(0);
-  for (const zip of ["08002", "08901", "07000"]) {
+  const middlesex = await request.get("/api/search?zip=08901");
+  expect(middlesex.status()).toBe(200);
+  const expanded: SearchResponse = await middlesex.json();
+  expect(expanded.market.id).toBe("north-jersey");
+  expect(expanded.origin).toMatchObject({
+    zip: "08901",
+    city: "New Brunswick",
+  });
+  for (const zip of ["08002", "07000"]) {
     const response = await request.get(`/api/search?zip=${zip}`);
     expect(response.status(), zip).toBe(400);
     const { error } = await response.json();

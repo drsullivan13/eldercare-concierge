@@ -12,7 +12,7 @@ async function findCare(page: Page) {
     .click();
   await expect(page.locator(".search-summary")).toContainText("Chatham, 07928");
   await expect(
-    page.getByRole("heading", { name: "Nearby agency offices." }),
+    page.getByRole("heading", { name: "Home-care options." }),
   ).toBeFocused();
 }
 
@@ -38,7 +38,7 @@ test("matching pending and completed submissions reuse results and one request",
       .getByRole("button", { name: "Find in-home care", exact: true })
       .click();
     await expect(
-      page.getByRole("heading", { name: "Nearby agency offices." }),
+      page.getByRole("heading", { name: "Home-care options." }),
     ).toBeFocused();
     expect(searches).toBe(1);
     release();

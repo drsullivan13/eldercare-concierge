@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { openSavedRegistryListing } from "./saved-registry-listing";
 import { getMarket } from "../../src/lib/markets";
 import type { LocationDescriptionResponse } from "../../src/lib/location-description-types";
 import { CATEGORY_LABELS, type Provider } from "../../src/lib/providers";
@@ -159,8 +160,13 @@ for (const id of [
         ? "provider"
         : "official-listing",
     );
-    await search(page, provider.zip, provider.name);
-    const dialog = await openProfile(page, provider);
+    let dialog;
+    if (id === "north-jersey-hp-hp0144800") {
+      dialog = await openSavedRegistryListing(page, id, provider.name);
+    } else {
+      await search(page, provider.zip, provider.name);
+      dialog = await openProfile(page, provider);
+    }
     const section = dialog.getByRole("region", {
       name: "Location description",
     });

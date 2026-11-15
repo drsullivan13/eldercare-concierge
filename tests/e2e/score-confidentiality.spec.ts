@@ -23,7 +23,12 @@ test("public pages, research downloads and loaded client scripts keep scoring de
   ]) {
     const response = await request.get(path);
     expect(response.ok(), path).toBe(true);
-    expect(await response.text(), path).not.toMatch(privateScoreDetails);
+    const payload = await response.text();
+    // The published CSV contains an official name that includes "365 Days".
+    const scoreText = path.endsWith("format=csv")
+      ? payload.replaceAll('"365 Days of Care Healthcare Agency LLC"', '""')
+      : payload;
+    expect(scoreText, path).not.toMatch(privateScoreDetails);
   }
   await page.goto("/methodology");
   await expect(page.locator("#experience")).toContainText(

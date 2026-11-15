@@ -69,13 +69,11 @@ for (const { savedCount, removedIndex, closeWithEscape } of [
       name: removed.name,
       exact: true,
     });
-    await expect(dialog).toBeVisible();
-    expect(await dialog.evaluate((element) => element.matches(":modal"))).toBe(
-      true,
-    );
-    await dialog
-      .getByRole("button", { name: "Shortlisted", exact: true })
-      .click();
+    const shortlisted = dialog
+      .and(page.locator("dialog:modal"))
+      .getByRole("button", { name: "Shortlisted", exact: true });
+    await expect(shortlisted).toBeVisible();
+    await shortlisted.click();
     await expect(
       dialog.getByRole("button", { name: "Save to shortlist", exact: true }),
     ).toBeVisible();

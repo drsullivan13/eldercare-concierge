@@ -11,10 +11,6 @@ import type { IndividualReviewsResponse } from "../../src/lib/individual-reviews
 
 async function search(page: Page, zip: string, name: string) {
   await page.goto("/dashboard?demo=1");
-  await page
-    .getByRole("combobox", { name: "Care type", exact: true })
-    .selectOption("all");
-
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Find in-home care for your family.",
   );
