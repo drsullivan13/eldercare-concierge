@@ -4246,5 +4246,278 @@
       "cell": "AZ302",
       "raw": "0.8600000000000001"
     }
+  },
+  "historical": {
+    "source": {
+      "publisher": "New Jersey Department of Human Services",
+      "title": "FY2026 NF QIPP CoreQ long-stay resident/family satisfaction composite",
+      "reportingYear": "FY2026",
+      "yearMeaning": "reporting/payment year, not survey year",
+      "unit": "percent",
+      "measure": "CoreQ Composite Score",
+      "population": "Long-stay nursing-home residents and their families",
+      "definitionUrl": "https://www.nj.gov/humanservices/doas/resources/nursing/",
+      "definition": "Three questions rate the facility overall, staff and care received. Responses range from 1 (poor) to 5 (excellent). The QIPP composite benchmark is 85%.",
+      "surveyPeriod": null,
+      "sampleSize": null,
+      "workbook": {
+        "url": "https://www.nj.gov/humanservices/doas/documents/FY26%20NH%20Rates%20FFS%20Residents%20%20NF%20QIPP%20R1.5.7%20062626%20Final%20R1.1.xlsx",
+        "sha256": "2aadc8e657cbfec78cfbf0d606c2d4fa4d7ba49d64709e5b8bb6216172ca86dd",
+        "sheet": "SFY26 FFS Rate_NFQIPP-112525 R2",
+        "headerCell": "AZ5",
+        "numberFormat": "0%",
+        "numberFormatId": 9,
+        "definitionCells": "'Cover '!A32:A37",
+        "revised": "2026-06-26"
+      },
+      "cms": {
+        "url": "https://data.cms.gov/provider-data/dataset/4pq5-n9py",
+        "sha256": "8f40d10148f7b25e9b23bfe00f4dda97d38bfba4aa273f2093a17f0fc571a45c",
+        "file": "research/north-jersey/cms/raw/4pq5-n9py/primary/page-0000000.json",
+        "statewideRows": 348
+      },
+      "state": {
+        "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+        "sha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716",
+        "file": "research/north-jersey/state/raw/ltc.xlsx"
+      },
+      "costReport": {
+        "url": "https://www.nj.gov/humanservices/doas/documents/CY-2024-Nursing-Facility-Medicaid-Cost-Report-Data-FINAL-20260929.xlsx",
+        "sha256": "20574bc6f03edf7d1aad60c768cc7a638e43ee325b14cff95199510dbcc14f04",
+        "sheets": [
+          "Data Summary",
+          "Schedule A-8"
+        ]
+      },
+      "identityPolicy": "Unique Medicaid ID to NPI to CCN through the CY2024 NJ Medicaid cost report, or unique normalized exact names across all workbook, CMS NJ and DOH statewide records, plus exact DOH/CMS street, city and ZIP. No fuzzy names or campus inheritance. Gainwell IDs are retained, not treated as CCNs.",
+      "workbookRows": 370,
+      "comparability": "Both releases label AZ as CoreQ Composite Score, with the same three questions, 1-to-5 response scale and 85% benchmark. FY2026 Cover A32 says 'long-stay families and their families'; the DHS CoreQ definition identifies long-stay residents and families. The payment add-on changed from $3.00 to $2.50, not the measure. Survey dates and sample sizes remain unknown; no trend is inferred.",
+      "selectionPolicy": "FY2026 visible release sheet only. Never backfill FY2026 suppressions from hidden same-year sheets. Require a unique NF Medicaid ID, NPI and CCN, unchanged unique payment-unit name in FY2027, and one DOH-licensed nursing unit at the exact CMS street, city and ZIP with a unique state facility ID. Only select history for explicit FY2027 CoreQ suppressions, never a published current result or an indeterminate current identity.",
+      "suppressionDefinitions": {
+        "NS": "No Score: insufficient survey responses for scoring.",
+        "NA": "Not Applicable: unable to meet the minimum survey sample size.",
+        "N/A": "Not Applicable: unable to meet the minimum survey sample size.",
+        "NE": "Not Eligible: mandatory CoreQ Survey Sample Size Calculation Grid not provided."
+      }
+    },
+    "results": {
+      "315124": {
+        "value": 93.0,
+        "identity": {
+          "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+          "workbookName": "BELLE CARE NURSING AND REHABILITATION CENTER",
+          "medicaidId": "895172",
+          "nameCell": "A58",
+          "medicaidIdCell": "B58",
+          "cmsName": "BELLE CARE NURSING AND REHABILITATION CENTER",
+          "npi": "1689322489",
+          "address": "439 BELLEVUE AVENUE",
+          "city": "TRENTON",
+          "state": "NJ",
+          "zip": "08618",
+          "stateFacilityId": "NJ61101",
+          "stateRow": 691,
+          "stateName": "BELLE CARE NURSING AND REHABILITATION CENTER"
+        },
+        "cell": "AZ58",
+        "raw": "0.93",
+        "currentSuppression": {
+          "reportingYear": "FY2027",
+          "cell": "AZ58",
+          "raw": "NA",
+          "meaning": "Not Applicable: unable to meet the minimum survey sample size.",
+          "nameCell": "A58",
+          "medicaidIdCell": "B58",
+          "workbookName": "BELLE CARE NURSING AND REHABILITATION CENTER",
+          "medicaidId": "895172"
+        }
+      },
+      "315138": {
+        "value": 72.0,
+        "identity": {
+          "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+          "workbookName": "TROY HILLS CENTER",
+          "medicaidId": "4491700",
+          "nameCell": "A306",
+          "medicaidIdCell": "B306",
+          "cmsName": "TROY HILLS CENTER",
+          "npi": "1174707475",
+          "address": "200 REYNOLDS AVE",
+          "city": "PARSIPPANY",
+          "state": "NJ",
+          "zip": "07054",
+          "stateFacilityId": "NJ61416",
+          "stateRow": 742,
+          "stateName": "Excelcare at Troy Hills"
+        },
+        "cell": "AZ306",
+        "raw": "0.72",
+        "currentSuppression": {
+          "reportingYear": "FY2027",
+          "cell": "AZ307",
+          "raw": "NS",
+          "meaning": "No Score: insufficient survey responses for scoring.",
+          "nameCell": "A307",
+          "medicaidIdCell": "B307",
+          "workbookName": "TROY HILLS CENTER",
+          "medicaidId": "4491700"
+        }
+      },
+      "315183": {
+        "value": 95.0,
+        "identity": {
+          "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+          "workbookName": "PREMIER CADBURY OF CHERRY HILL",
+          "medicaidId": "550817",
+          "nameCell": "A255",
+          "medicaidIdCell": "B255",
+          "cmsName": "PREMIER CADBURY OF CHERRY HILL",
+          "npi": "1669479796",
+          "address": "2150 ROUTE 38",
+          "city": "CHERRY HILL",
+          "state": "NJ",
+          "zip": "08002",
+          "stateFacilityId": "NJ60409",
+          "stateRow": 636,
+          "stateName": "PREMIER CADBURY OF CHERRY HILL"
+        },
+        "cell": "AZ255",
+        "raw": "0.95",
+        "currentSuppression": {
+          "reportingYear": "FY2027",
+          "cell": "AZ256",
+          "raw": "NA",
+          "meaning": "Not Applicable: unable to meet the minimum survey sample size.",
+          "nameCell": "A256",
+          "medicaidIdCell": "B256",
+          "workbookName": "PREMIER CADBURY OF CHERRY HILL",
+          "medicaidId": "550817"
+        }
+      },
+      "315224": {
+        "value": 86.0,
+        "identity": {
+          "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+          "workbookName": "FOREST MANOR HEALTH CARE CENTER",
+          "medicaidId": "9032401",
+          "nameCell": "A172",
+          "medicaidIdCell": "B172",
+          "cmsName": "FOREST MANOR HCC",
+          "npi": "1710974936",
+          "address": "145 STATE PARK ROAD",
+          "city": "BLAIRSTOWN",
+          "state": "NJ",
+          "zip": "07825",
+          "stateFacilityId": "NJ62103",
+          "stateRow": 812,
+          "stateName": "FOREST MANOR HCC"
+        },
+        "cell": "AZ172",
+        "raw": "0.86",
+        "currentSuppression": {
+          "reportingYear": "FY2027",
+          "cell": "AZ173",
+          "raw": "NS",
+          "meaning": "No Score: insufficient survey responses for scoring.",
+          "nameCell": "A173",
+          "medicaidIdCell": "B173",
+          "workbookName": "FOREST MANOR HEALTH CARE CENTER",
+          "medicaidId": "9032401"
+        }
+      },
+      "315253": {
+        "value": 91.0,
+        "identity": {
+          "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+          "workbookName": "PARKER AT SOMERSET",
+          "medicaidId": "502162",
+          "nameCell": "A241",
+          "medicaidIdCell": "B241",
+          "cmsName": "PARKER AT SOMERSET, INC",
+          "npi": "1063819811",
+          "address": "15 DELLWOOD LANE",
+          "city": "SOMERSET",
+          "state": "NJ",
+          "zip": "08873",
+          "stateFacilityId": "NJ61812",
+          "stateRow": 788,
+          "stateName": "PARKER AT SOMERSET, INC"
+        },
+        "cell": "AZ241",
+        "raw": "0.91",
+        "currentSuppression": {
+          "reportingYear": "FY2027",
+          "cell": "AZ242",
+          "raw": "NS",
+          "meaning": "No Score: insufficient survey responses for scoring.",
+          "nameCell": "A242",
+          "medicaidIdCell": "B242",
+          "workbookName": "PARKER AT SOMERSET",
+          "medicaidId": "502162"
+        }
+      },
+      "315376": {
+        "value": 92.0,
+        "identity": {
+          "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+          "workbookName": "CHRISTIAN HEALTH CARE CENTER",
+          "medicaidId": "4463501",
+          "nameCell": "A88",
+          "medicaidIdCell": "B88",
+          "cmsName": "CHRISTIAN HEALTH CARE CENTER",
+          "npi": "1427047232",
+          "address": "301 SICOMAC AVE",
+          "city": "WYCKOFF",
+          "state": "NJ",
+          "zip": "07481",
+          "stateFacilityId": "NJ60204",
+          "stateRow": 532,
+          "stateName": "CHRISTIAN HEALTH CARE CENTER"
+        },
+        "cell": "AZ88",
+        "raw": "0.92",
+        "currentSuppression": {
+          "reportingYear": "FY2027",
+          "cell": "AZ89",
+          "raw": "NS",
+          "meaning": "No Score: insufficient survey responses for scoring.",
+          "nameCell": "A89",
+          "medicaidIdCell": "B89",
+          "workbookName": "CHRISTIAN HEALTH CARE CENTER",
+          "medicaidId": "4463501"
+        }
+      },
+      "315393": {
+        "value": 86.0,
+        "identity": {
+          "method": "NJ-Medicaid-ID-to-NPI-to-CCN",
+          "workbookName": "NEW COMMUNITY EXTENDED CARE FACILITY",
+          "medicaidId": "4476701",
+          "nameCell": "A231",
+          "medicaidIdCell": "B231",
+          "cmsName": "NEW COMMUNITY EXTENDED CARE FACILITY",
+          "npi": "1003898636",
+          "address": "266 S ORANGE AVE",
+          "city": "NEWARK",
+          "state": "NJ",
+          "zip": "07103",
+          "stateFacilityId": "NJ60731",
+          "stateRow": 666,
+          "stateName": "NEW COMMUNITY EXTENDED CARE FACILITY"
+        },
+        "cell": "AZ231",
+        "raw": "0.86",
+        "currentSuppression": {
+          "reportingYear": "FY2027",
+          "cell": "AZ232",
+          "raw": "NA",
+          "meaning": "Not Applicable: unable to meet the minimum survey sample size.",
+          "nameCell": "A232",
+          "medicaidIdCell": "B232",
+          "workbookName": "NEW COMMUNITY EXTENDED CARE FACILITY",
+          "medicaidId": "4476701"
+        }
+      }
+    }
   }
 }

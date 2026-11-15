@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Project FY2027 NJ DHS CoreQ composites without changing other snapshots."""
+"""Project current NJ DHS CoreQ composites with optional verified FY2026 history."""
 
 import argparse
 from collections import Counter, defaultdict
@@ -20,6 +20,15 @@ WORKBOOK_SHA256 = "95482f38a3f9707cda3d0507049d180fa362fc4c643cdf639034ef957a1ae
 WORKBOOK_URL = "https://www.nj.gov/humanservices/doas/documents/FY27%20NH%20Rates%20FFS%20Residents%20%20NF%20QIPP%20UPTD%20073026%20R2.4.2.2%20Final.xlsx"
 DEFINITION_URL = "https://www.nj.gov/humanservices/doas/resources/nursing/"
 SHEET = "SFY27FFS Rate-NFQIPP70726 R2.4"
+FY26_SHEET = "SFY26 FFS Rate_NFQIPP-112525 R2"
+FY26_SHA256 = "2aadc8e657cbfec78cfbf0d606c2d4fa4d7ba49d64709e5b8bb6216172ca86dd"
+FY26_URL = "https://www.nj.gov/humanservices/doas/documents/FY26%20NH%20Rates%20FFS%20Residents%20%20NF%20QIPP%20R1.5.7%20062626%20Final%20R1.1.xlsx"
+SUPPRESSIONS = {
+    "NS": "No Score: insufficient survey responses for scoring.",
+    "NA": "Not Applicable: unable to meet the minimum survey sample size.",
+    "N/A": "Not Applicable: unable to meet the minimum survey sample size.",
+    "NE": "Not Eligible: mandatory CoreQ Survey Sample Size Calculation Grid not provided.",
+}
 NS = {"s": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 NURSING_TYPES = {
     "LONG TERM CARE FACILITY SNF/NF",
@@ -77,12 +86,12 @@ def raw(row, column):
     return row["cells"].get(column, {}).get("raw", "")
 
 
-def read_workbook(path):
-    rows = xlsx_rows(path, SHEET)
+def read_workbook(path, sheet=SHEET):
+    rows = xlsx_rows(path, sheet)
     header = next(row for row in rows if row["row"] == 5)
     require([raw(header, col) for col in ("A", "B", "C", "AZ")] ==
             ["Facility Name", "Gainwell #", "Facility Type", "CoreQ Composite Score"],
-            "Unexpected FY2027 CoreQ columns")
+            "Unexpected CoreQ columns")
     return [{
         "row": row["row"], "name": raw(row, "A").strip(),
         "medicaidId": raw(row, "B"), "setting": raw(row, "C"),
@@ -220,7 +229,57 @@ def fingerprint(path, url):
     return {"url": url, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
 
 
-def generate(workbook, cost_report):
+def project_historical(current_rows, historical_rows, cms, state, payment_ids, current_results):
+    historical, withheld = project(historical_rows, cms, state, payment_ids)
+    current_ids = index(current_rows, lambda row: row["medicaidId"])
+    current_names = Counter(normalize(row["name"]) for row in current_rows)
+    current_ccns = Counter(payment_ids.get(row["medicaidId"], (None, None))[1]
+                           for row in current_rows if row["setting"] == "NF")
+    state_addresses = index(
+        [row for row in state if row["setting"] in NURSING_TYPES and row["state"] == "NJ"],
+        lambda row: (normalize(row["address"]), normalize(row["city"]), row["zip"]))
+    state_ids = Counter(row["facilityId"] for row in state)
+    results = {}
+    for ccn, result in historical.items():
+        if ccn in current_results:
+            continue
+        identity = result["identity"]
+        mid = identity["medicaidId"]
+        rows = current_ids[mid]
+        if (len(rows) != 1 or rows[0]["setting"] != "NF"
+                or current_names[normalize(rows[0]["name"])] != 1
+                or normalize(rows[0]["name"]) != normalize(identity["workbookName"])
+                or "npi" not in identity
+                or payment_ids.get(mid) != (identity["npi"], ccn)
+                or current_ccns[ccn] != 1):
+            withheld.setdefault("unverified-cross-year-identity", []).append(result)
+            continue
+        current = rows[0]
+        code = current["score"].get("raw", "")
+        if code not in SUPPRESSIONS:
+            withheld.setdefault("no-explicit-current-suppression", []).append(result)
+            continue
+        licensed = state_addresses[(normalize(identity["address"]), normalize(identity["city"]), identity["zip"])]
+        if len(licensed) != 1 or state_ids[licensed[0]["facilityId"]] != 1:
+            withheld.setdefault("unverified-state-nursing-unit", []).append(result)
+            continue
+        results[ccn] = {
+            **result,
+            "identity": {
+                **identity, "stateFacilityId": licensed[0]["facilityId"],
+                "stateRow": licensed[0]["row"], "stateName": licensed[0]["name"],
+            },
+            "currentSuppression": {
+                "reportingYear": "FY2027", "cell": f"AZ{current['row']}",
+                "raw": code, "meaning": SUPPRESSIONS[code],
+                "nameCell": f"A{current['row']}", "medicaidIdCell": f"B{current['row']}",
+                "workbookName": current["name"], "medicaidId": mid,
+            },
+        }
+    return results, withheld
+
+
+def generate(workbook, cost_report, historical_workbook=None):
     require(hashlib.sha256(workbook.read_bytes()).hexdigest() == WORKBOOK_SHA256,
             "Workbook differs from the verified official FY2027 release")
     payload = json.loads(CMS.read_text())
@@ -232,7 +291,9 @@ def generate(workbook, cost_report):
                 f"Retained official input hash mismatch: {path}")
     rows = read_workbook(workbook)
     require(len(rows) == 370, "Expected all 370 statewide payment rows")
-    results, withheld = project(rows, payload["results"], read_state(STATE), certified_identities(cost_report))
+    state = read_state(STATE)
+    payment_ids = certified_identities(cost_report)
+    results, withheld = project(rows, payload["results"], state, payment_ids)
     source = {
         "publisher": "New Jersey Department of Human Services",
         "title": "FY2027 NF QIPP CoreQ long-stay resident/family satisfaction composite",
@@ -253,26 +314,69 @@ def generate(workbook, cost_report):
         "identityPolicy": "Unique Medicaid ID to NPI to CCN through the CY2024 NJ Medicaid cost report, or unique normalized exact names across all workbook, CMS NJ and DOH statewide records, plus exact DOH/CMS street, city and ZIP. No fuzzy names or campus inheritance. Gainwell IDs are retained, not treated as CCNs.",
         "workbookRows": len(rows),
     }
-    return {"source": source, "results": results}, withheld
+    projection = {"source": source, "results": results}
+    if historical_workbook is not None:
+        require(hashlib.sha256(historical_workbook.read_bytes()).hexdigest() == FY26_SHA256,
+                "Workbook differs from the verified official FY2026 release")
+        historical_rows = read_workbook(historical_workbook, FY26_SHEET)
+        require(len(historical_rows) == 370, "Expected all 370 FY2026 payment rows")
+        historical_results, _ = project_historical(
+            rows, historical_rows, payload["results"], state, payment_ids, results)
+        projection["historical"] = {
+            "source": {
+                **source,
+                "title": "FY2026 NF QIPP CoreQ long-stay resident/family satisfaction composite",
+                "reportingYear": "FY2026",
+                "workbook": {
+                    **fingerprint(historical_workbook, FY26_URL), "sheet": FY26_SHEET,
+                    "headerCell": "AZ5", "numberFormat": "0%", "numberFormatId": 9,
+                    "definitionCells": "'Cover '!A32:A37", "revised": "2026-06-26",
+                },
+                "comparability": "Both releases label AZ as CoreQ Composite Score, with the same three questions, 1-to-5 response scale and 85% benchmark. FY2026 Cover A32 says 'long-stay families and their families'; the DHS CoreQ definition identifies long-stay residents and families. The payment add-on changed from $3.00 to $2.50, not the measure. Survey dates and sample sizes remain unknown; no trend is inferred.",
+                "selectionPolicy": "FY2026 visible release sheet only. Never backfill FY2026 suppressions from hidden same-year sheets. Require a unique NF Medicaid ID, NPI and CCN, unchanged unique payment-unit name in FY2027, and one DOH-licensed nursing unit at the exact CMS street, city and ZIP with a unique state facility ID. Only select history for explicit FY2027 CoreQ suppressions, never a published current result or an indeterminate current identity.",
+                "suppressionDefinitions": SUPPRESSIONS,
+                "workbookRows": len(historical_rows),
+            },
+            "results": historical_results,
+        }
+    return projection, withheld
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workbook", type=Path, required=True)
     parser.add_argument("--cost-report", type=Path, required=True)
+    parser.add_argument("--historical-workbook", type=Path,
+                        help="Verified FY2026 workbook, required to rebuild default or existing combined output")
     parser.add_argument("--output", type=Path, default=OUTPUT)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    projection, withheld = generate(args.workbook, args.cost_report)
+    projection, withheld = generate(args.workbook, args.cost_report, args.historical_workbook)
     body = json.dumps(projection, ensure_ascii=False, indent=2) + "\n"
     if args.check:
-        require(args.output.read_text() == body, f"Projection differs: {args.output}")
+        existing_body = args.output.read_text()
+        existing = json.loads(existing_body)
+        require(existing_body == json.dumps(existing, ensure_ascii=False, indent=2) + "\n",
+                f"Projection formatting differs: {args.output}")
+        if args.historical_workbook is None:
+            existing.pop("historical", None)
+        require(existing == projection, f"Projection differs: {args.output}")
     else:
-        require(args.output.resolve() not in {args.workbook.resolve(), args.cost_report.resolve(), CMS.resolve(), STATE.resolve()},
+        require(args.output.resolve() not in {args.workbook.resolve(), args.cost_report.resolve(), CMS.resolve(), STATE.resolve(),
+                                              args.historical_workbook.resolve() if args.historical_workbook else None},
                 "Output cannot overwrite source evidence")
+        if args.historical_workbook is None:
+            require(args.output.resolve() != OUTPUT.resolve(),
+                    "Rebuilding the default combined projection requires --historical-workbook")
+            if args.output.exists():
+                existing = json.loads(args.output.read_text())
+                require(isinstance(existing, dict) and "historical" not in existing,
+                        "Rebuilding an existing combined projection requires --historical-workbook")
         args.output.write_text(body)
     print(json.dumps({
         "emitted": len(projection["results"]),
+        **({"historicalEmitted": len(projection["historical"]["results"])}
+           if "historical" in projection else {}),
         "withheld": {key: {"count": len(rows), "examples": rows[:3]}
                      for key, rows in withheld.items()},
         "sha256": hashlib.sha256(body.encode()).hexdigest(),
