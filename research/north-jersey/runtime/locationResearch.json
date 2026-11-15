@@ -37757,6 +37757,12 @@
     "checkedAt": "2026-11-15",
     "facts": [
       {
+        "id": "north-jersey-hp-hp0204600-ocean-jacc-2026",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0204600-ocean-jacc-2026-source",
+        "text": "Ocean County’s March 2026 guide lists this office as a home-care contact for Jersey Assistance for Community Caregiving (JACC). Confirm current participation and eligibility with the county."
+      },
+      {
         "id": "north-jersey-hp-hp0204600-hhs-nj-enrollment",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0204600-hhs-nj-enrollment-source",
@@ -37775,6 +37781,16 @@
     "reviewAggregates": [],
     "reviews": [],
     "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0204600-ocean-jacc-2026-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Ocean County Office of Senior Services",
+        "title": "Ocean County Caregiver Resources, page 2",
+        "url": "https://www.co.ocean.nj.us/WebContentFiles/CaregiverResources.pdf#page=2"
+      },
       {
         "access": "full-page",
         "checkedAt": "2026-11-15",
@@ -38636,6 +38652,12 @@
     "checkedAt": "2026-11-15",
     "facts": [
       {
+        "id": "north-jersey-hp-hp0227901-ocean-jacc-2026",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0227901-ocean-jacc-2026-source",
+        "text": "Ocean County’s March 2026 guide lists this office as a home-care contact for Jersey Assistance for Community Caregiving (JACC). Confirm current participation and eligibility with the county."
+      },
+      {
         "id": "north-jersey-hp-hp0227901-office-services",
         "kind": "care",
         "sourceId": "north-jersey-hp-hp0227901-office-services-source",
@@ -38648,6 +38670,16 @@
     "reviewAggregates": [],
     "reviews": [],
     "sources": [
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0227901-ocean-jacc-2026-source",
+        "kind": "public-directory",
+        "publishedAt": null,
+        "publisher": "Ocean County Office of Senior Services",
+        "title": "Ocean County Caregiver Resources, page 2",
+        "url": "https://www.co.ocean.nj.us/WebContentFiles/CaregiverResources.pdf#page=2"
+      },
       {
         "access": "full-page",
         "checkedAt": "2026-11-15",
@@ -47584,13 +47616,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1033972237-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1033972237",
         "text": "NPPES lists EVERVITAL CARE LLC at the matching Cranford practice address with the published taxonomy labels Home Health. NPI 1033972237. NPPES last updated 2025-10-31. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0379900-office-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0379900-office-services-source",
+        "text": "The Cranford office offers hourly companionship and help with bathing, dressing and toileting. Caregivers can also prepare meals, give medication reminders and provide transportation."
       }
     ],
     "notes": [
@@ -47615,6 +47653,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1033972237"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0379900-office-services-source",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Evervital Care LLC",
+        "title": "Evervital Care LLC · In-home care services",
+        "url": "https://evervitalcare.com/"
       }
     ]
   },
@@ -48692,13 +48740,19 @@
       "status": "not-published",
       "text": "Current availability is not verified. Contact the provider."
     },
-    "checkedAt": "2026-11-13",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "id": "supp-nppes-1003771015-registry-classification",
         "kind": "care",
         "sourceId": "supp-nppes-1003771015",
         "text": "NPPES lists IZABELLA HOME CARE SERVICES LLC at the matching Westfield practice address with the published taxonomy labels Home Health, In Home Supportive Care, Nursing Care, Respite Care. NPI 1003771015. NPPES last updated 2025-12-22. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+      },
+      {
+        "id": "north-jersey-hp-hp0393000-office-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0393000-office-services-source",
+        "text": "The Westfield office lists help with bathing and dressing, companionship and dementia support. After a hospital stay, caregivers can help with mobility and medication reminders."
       }
     ],
     "notes": [
@@ -48722,6 +48776,16 @@
         "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
         "title": "NPPES organization and practice-address record",
         "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1003771015"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0393000-office-services-source",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Izabella Home Care",
+        "title": "Izabella Home Care · In-home care services",
+        "url": "https://izabellahomecare.com/"
       }
     ]
   },

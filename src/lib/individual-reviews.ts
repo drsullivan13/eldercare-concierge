@@ -12,6 +12,8 @@ export type IndividualReview = RetainedReview & {
 export type IndividualReviewsResponse = {
   providerId: string;
   accounts: IndividualReview[];
+  interviewUrl?: string;
+  surveyDistinction?: { year: number; categories: string[]; sourceUrl: string };
   externalProfiles?: { publisher: string; url: string }[];
   sources: Omit<ReviewCatalog["sources"][number], "sourceFamily">[];
   notes: string[];

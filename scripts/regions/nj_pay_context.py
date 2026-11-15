@@ -97,6 +97,27 @@ def add_county_home_care_context(inputs, providers, research):
 
     respite = inputs.json("home-care-pay-services/county-respite-programs.json")
     add_respite_context(respite, offices, research)
+    jacc = inputs.json("home-care-pay-services/ocean-jacc-history.json")
+    for contact in jacc["contacts"]:
+        if contact["disposition"] != "eligible_2026_directory_contact":
+            continue
+        registry, = contact["registryMatches"]
+        pid = "north-jersey-hp-" + registry["registration"].lower()
+        if pid not in offices:
+            continue
+        office = offices[pid]
+        if (registry["status"] != "Active" or "county:p2" not in contact["seen"]
+                or not contact.get("identityUrl")
+                or any(office[key].casefold().split() != registry[field].casefold().split()
+                       for key, field in (("address", "street"), ("name", "name"), ("city", "city")))
+                or re.sub(r"\D", "", office["phone"]) != re.sub(r"\D", "", contact["phone"])):
+            raise ValueError(f"Changed Ocean County JACC office identity: {pid}")
+        source = {"publisher": "Ocean County Office of Senior Services",
+                  "sourceUrl": jacc["sources"]["county"]["url"] + "#page=2"}
+        add_fact(research, pid, "ocean-jacc-2026", "Ocean County Caregiver Resources, page 2",
+                 "Ocean County’s March 2026 guide lists this office as a home-care contact for "
+                 "Jersey Assistance for Community Caregiving (JACC). Confirm current participation "
+                 "and eligibility with the county.", source, "pdf", jacc["checkedOn"])
     union = inputs.json("home-care-pay-services/union-caregiver-directory.json")
     add_union_context(union, offices, research)
     ddd = inputs.json("home-care-pay-services/ddd-historical.json")

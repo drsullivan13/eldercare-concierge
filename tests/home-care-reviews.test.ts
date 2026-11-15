@@ -86,6 +86,19 @@ function temporaryApp(t: { after: (callback: () => void) => void }) {
     ),
     { schemaVersion: 1, links: [] },
   );
+  for (const name of [
+    "resident-interview-profiles",
+    "sunrise-survey-distinctions",
+  ]) {
+    writeJson(
+      join(
+        path,
+        "research/north-jersey/review-catalog-editorial",
+        name + ".json",
+      ),
+      { records: [] },
+    );
+  }
   for (const name of readdirSync(join(root, "src/data"))) {
     const target = join(path, "src/data", name);
     if (

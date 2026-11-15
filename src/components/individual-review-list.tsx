@@ -113,6 +113,44 @@ export function IndividualReviewList({
       <div className="review-section-title">
         <h3 id={`${uid}-title`}>What people say</h3>
       </div>
+      {data?.surveyDistinction && (
+        <p>
+          <strong>
+            U.S. News Best Senior Living · {data.surveyDistinction.year}
+          </strong>
+          <br />
+          Recognized for{" "}
+          {data.surveyDistinction.categories
+            .map((category) => category.toLowerCase())
+            .join(" and ")}{" "}
+          in the resident and family survey.{" "}
+          <a
+            className="research-source"
+            href={data.surveyDistinction.sourceUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sunrise award list <ExternalLink aria-hidden size={13} />
+          </a>
+        </p>
+      )}
+      {data?.interviewUrl && (
+        <p>
+          <a
+            className="research-source"
+            href={data.interviewUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read selected resident and family interviews on Lilisity{" "}
+            <ExternalLink aria-hidden size={13} />
+          </a>
+          <br />
+          <small>
+            Communities pay to participate in the interview program.
+          </small>
+        </p>
+      )}
       {externalProfiles.length > 0 && (
         <nav aria-label="External office review profiles">
           <ul className="research-specifics">
