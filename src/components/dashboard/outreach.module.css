@@ -98,6 +98,23 @@
   flex-shrink: 0;
 }
 
+.familyField {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.familyField :is(input, select) {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border, #d8ddd8);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .editor textarea {
   width: 100%;
   min-width: 0;
@@ -146,7 +163,7 @@
 }
 
 .history :is(button, a, summary):focus-visible,
-.editor :is(button, input, textarea):focus-visible,
+.editor :is(button, input, select, textarea):focus-visible,
 .entry:focus {
   outline: 3px solid var(--teal, #246b61);
   outline-offset: 4px;

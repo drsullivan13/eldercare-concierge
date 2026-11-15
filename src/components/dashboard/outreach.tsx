@@ -2,6 +2,11 @@ import { useId, useState, useSyncExternalStore } from "react";
 import { ExternalLink, RefreshCw } from "lucide-react";
 import type { useOutreach } from "@/hooks/use-outreach";
 import type { OutreachProvider, OutreachRecord } from "@/lib/outreach";
+import {
+  familyQuestion,
+  familyScenarios,
+  readFamilyQuestion,
+} from "@/lib/home-care-rehearsal";
 import { formatPhone } from "@/lib/providers";
 import { Modal } from "../modal";
 import styles from "./outreach.module.css";
@@ -73,21 +78,38 @@ export function OutreachEditor({
   const uid = useId();
   const online = useOnline();
   const [topics, setTopics] = useState<string[]>(parent?.brief.topics ?? []);
-  const [question, setQuestion] = useState("");
   const [attempted, setAttempted] = useState(false);
   const questionField = useId();
   const priorGoals = parent?.brief.topics ?? [];
+  const priorFamily = parent && readFamilyQuestion(parent.brief.question);
   const forAgency =
     homeCare ??
-    (provider.providerId.startsWith("north-jersey-hp-") ||
+    (Boolean(priorFamily) ||
+      provider.providerId.startsWith("north-jersey-hp-") ||
       priorGoals.some((goal) => agencyGoals.includes(goal)));
+  const initialFamily =
+    familyScenarios.find(({ label }) => label === priorFamily?.label) ??
+    familyScenarios[0];
+  const [family, setFamily] = useState(initialFamily);
+  const [start, setStart] = useState<string>(
+    priorFamily?.start ?? initialFamily.start,
+  );
+  const [situation, setSituation] = useState<string>(
+    priorFamily?.situation ?? initialFamily.situation,
+  );
+  const [question, setQuestion] = useState<string>(
+    forAgency && !parent ? initialFamily.question : "",
+  );
+  const questionLimit = forAgency ? 600 : 1000;
   const choices = [
     ...new Set([...(forAgency ? agencyGoals : facilityGoals), ...priorGoals]),
   ];
   const suggestions = [...new Set(parent?.nextSteps ?? [])].filter(
     (item) => !choices.includes(item),
   );
-  const valid = topics.length > 0 || question.trim().length > 0;
+  const valid =
+    (topics.length > 0 || question.trim().length > 0) &&
+    (!forAgency || Boolean(start.trim() && situation.trim()));
   function toggle(topic: string) {
     setTopics((current) =>
       current.includes(topic)
@@ -106,7 +128,15 @@ export function OutreachEditor({
           event.preventDefault();
           setAttempted(true);
           if (!valid || !navigator.onLine) return;
-          if (launch(provider, topics, question.trim(), parent)) close();
+          const request = forAgency
+            ? familyQuestion({
+                label: family.label,
+                start,
+                situation,
+                question,
+              })
+            : question.trim();
+          if (launch(provider, topics, request, parent)) close();
         }}
       >
         <h2 className={styles.provider}>{provider.providerName}</h2>
@@ -115,6 +145,52 @@ export function OutreachEditor({
         </p>
         {provider.phone && (
           <p className="small muted">{formatPhone(provider.phone)}</p>
+        )}
+        {forAgency && (
+          <>
+            <label className={styles.familyField}>
+              Practice family
+              <select
+                value={family.id}
+                onChange={(event) => {
+                  const chosen = familyScenarios.find(
+                    ({ id }) => id === event.target.value,
+                  );
+                  if (!chosen) return;
+                  setFamily(chosen);
+                  setStart(chosen.start);
+                  setSituation(chosen.situation);
+                  setQuestion(chosen.question);
+                }}
+              >
+                {familyScenarios.map(({ id, label }) => (
+                  <option key={id} value={id}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className={styles.familyField}>
+              When should care start?
+              <input
+                required
+                maxLength={80}
+                value={start}
+                onChange={(event) => setStart(event.target.value)}
+                placeholder="For example, within 24 hours"
+              />
+            </label>
+            <label className={styles.familyField}>
+              Fictional family situation
+              <textarea
+                required
+                maxLength={240}
+                rows={3}
+                value={situation}
+                onChange={(event) => setSituation(event.target.value)}
+              />
+            </label>
+          </>
         )}
         <fieldset className={styles.goals}>
           <legend>
@@ -142,12 +218,12 @@ export function OutreachEditor({
                   type="button"
                   className="text-link"
                   onClick={() => {
-                    setQuestion(item.slice(0, 1000));
+                    setQuestion(item.slice(0, questionLimit));
                     document.getElementById(questionField)?.focus();
                   }}
                 >
-                  {item.length > 1000
-                    ? "Use first 1000 characters as question"
+                  {item.length > questionLimit
+                    ? `Use first ${questionLimit} characters as question`
                     : "Use as question"}
                 </button>
               </div>
@@ -161,19 +237,21 @@ export function OutreachEditor({
           id={questionField}
           value={question}
           onChange={(event) => setQuestion(event.target.value)}
-          maxLength={1000}
+          maxLength={questionLimit}
           rows={2}
           placeholder="What would make your next conversation useful?"
           aria-describedby={`${uid}-guidance${attempted && !valid ? ` ${uid}-validation` : ""}`}
           aria-invalid={attempted && !valid}
         />
         <p id={`${uid}-guidance`} className="small muted">
-          {question.length}/1000. Leave out names and sensitive personal
-          details.
+          {question.length}/{questionLimit}. Leave out names and sensitive
+          personal details.
         </p>
         {attempted && !valid && (
           <p id={`${uid}-validation`} className="form-error" role="alert">
-            Choose at least one goal or write a question.
+            {forAgency && (!start.trim() || !situation.trim())
+              ? "Enter the requested start and a short fictional situation."
+              : "Choose at least one goal or write a question."}
           </p>
         )}
         {!online && (

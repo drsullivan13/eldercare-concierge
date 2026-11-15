@@ -356,3 +356,80 @@ test("home-care-outreach missing contacts stay missing and failed demo writes ne
   );
   expect((await stored(page)).homeCareOutreach).toBeUndefined();
 });
+
+test("home-care rehearsal keeps the chosen family and start time with the selected agency in the plan", async ({
+  page,
+}) => {
+  await start(page);
+  await page
+    .context()
+    .route("https://harbor-voice-lab.vercel.app/**", (route) =>
+      route.fulfill({ body: "Rehearsal test" }),
+    );
+  await page.route("**/api/outreach-result", (route) =>
+    route.fulfill({ status: 404, json: { error: "Pending" } }),
+  );
+  await navigate(page, "Find care");
+  await page
+    .locator(".provider-card")
+    .getByRole("button", { name: provider.name, exact: true })
+    .click();
+  const profile = page.getByRole("dialog", {
+    name: provider.name,
+    exact: true,
+  });
+  await profile
+    .getByRole("button", { name: "Voice rehearsal", exact: true })
+    .click();
+  const editor = page.getByRole("dialog", { name: "Prepare outreach" });
+  const family = editor.getByLabel("Practice family");
+  await expect(family).toHaveValue("home-care-chris");
+  await expect(editor.getByLabel("Fictional family situation")).toHaveValue(/Morristown/);
+  await family.selectOption("home-care-rob");
+  await expect(editor.getByLabel("Fictional family situation")).toHaveValue(/Montclair/);
+  await family.selectOption("home-care-priya");
+  await expect(editor.getByLabel("Fictional family situation")).toHaveValue(
+    /Edison/,
+  );
+  await editor.getByLabel("When should care start?").fill("Within 24 hours");
+  await editor
+    .getByLabel("Fictional family situation")
+    .fill("Dad needs a ride home and help with meals.");
+  await editor
+    .getByLabel("Your question or another goal")
+    .fill("What is your shortest visit?");
+  const opening = page.context().waitForEvent("page");
+  await editor.getByRole("button", { name: "Open rehearsal" }).click();
+  const popup = await opening;
+  await expect(popup).toHaveURL(/#outreach=/);
+  const encoded = new URLSearchParams(new URL(popup.url()).hash.slice(1)).get(
+    "outreach",
+  )!;
+  const brief = JSON.parse(Buffer.from(encoded, "base64url").toString("utf8"));
+  expect(brief.providerId).toBe(provider.id);
+  expect(brief.question).toBe(
+    "Family scenario: Proactive Priya\nRequested start: Within 24 hours\nSituation: Dad needs a ride home and help with meals.\nWhat is your shortest visit?",
+  );
+  await popup.close();
+  const completed = {
+    state: "completed", updatedAt: "2026-11-14T15:02:00.000Z",
+    findings: ["The agency described a two-hour minimum."],
+    nextSteps: ["Family to confirm the start date."],
+    commitments: [{kind: "proposed", text: "An intake call was proposed for tomorrow."}],
+  };
+  await page.route("**/api/outreach-result", route => route.fulfill({json: completed}));
+  await page.reload();
+  await navigate(page, "Your plan");
+  const history = page.getByRole("region", { name: "Outreach history" });
+  await expect(history).toContainText("Proactive Priya");
+  await expect(history).toContainText("Within 24 hours");
+  await expect(history).toContainText("Rehearsal completed");
+  await expect(history).toContainText(completed.findings[0]);
+  await expect(history).toContainText(completed.commitments[0].text);
+  expect((await stored(page)).outreach?.[0]).toMatchObject({...completed, brief});
+  await history.getByRole("button", {name: "Prepare follow-up"}).click();
+  const follow = page.getByRole("dialog", {name: "Follow-up rehearsal"});
+  await expect(follow.getByLabel("Practice family")).toHaveValue("home-care-priya");
+  await expect(follow.getByLabel("When should care start?")).toHaveValue("Within 24 hours");
+  await expect(follow.getByLabel("Fictional family situation")).toHaveValue("Dad needs a ride home and help with meals.");
+});
