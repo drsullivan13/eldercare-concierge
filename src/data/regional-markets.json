@@ -120760,13 +120760,19 @@
           "status": "not-published",
           "text": "Current availability is not verified. Contact the provider."
         },
-        "checkedAt": "2026-11-13",
+        "checkedAt": "2026-11-15",
         "facts": [
           {
             "id": "supp-nppes-1972492775-registry-classification",
             "kind": "care",
             "sourceId": "supp-nppes-1972492775",
             "text": "NPPES lists LIVE EASY HOME CARE MORRISTOWN at the matching Morristown practice address with the published taxonomy labels In Home Supportive Care. NPI 1972492775. NPPES last updated 2025-06-30. Taxonomy labels are provider-reported classifications, not verified staffed services. NPI issuance does not establish licensing, Medicare certification, payment acceptance, service coverage, availability or current staffing."
+          },
+          {
+            "id": "north-jersey-hp-hp0413400-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0413400-office-services-source",
+            "text": "The Morristown office offers hourly and live-in care. Caregivers can help with bathing and dressing, transfers, meal preparation and light housekeeping."
           }
         ],
         "notes": [
@@ -120790,6 +120796,16 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1972492775"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0413400-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Live Easy Home Care",
+            "title": "Live Easy Home Care Morristown · Hourly and live-in support",
+            "url": "https://liveeasycare.com/home-care-in-morristown-nj-2/"
           }
         ]
       },
