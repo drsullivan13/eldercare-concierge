@@ -841,6 +841,11 @@ def add_federal_home_care_history(inputs, providers, research):
     sources = inputs.json("home-care-pay-services/federal-program-history.json")
     identities = inputs.json("home-care-nppes/verified-branch-facts.json")
     offices = {p["id"]: p for p in providers if p["category"] == "home-care"}
+    billing_groups = {
+        "hhs-personal-care-claims": ("personal care", {"T1019", "T1020"}),
+        "hhs-nursing-claims": ("nursing services", {"T1000", "T1002", "S9123", "S9124"}),
+        "hhs-respite-claims": ("respite care", {"T1005"}),
+    }
     for group in sources["datasets"]:
         for item in group["offices"]:
             pid = item["providerId"]
@@ -861,11 +866,12 @@ def add_federal_home_care_history(inputs, providers, research):
             if group["key"] == "hhs-nj-enrollment":
                 text = (f"New Jersey recorded this office’s organization as enrolled in Medicaid in {date_label}. "
                         "Ask the office which plans it accepts today.")
-            elif group["key"] == "hhs-personal-care-claims":
-                if not item["codes"] or not set(item["codes"]) <= {"T1019", "T1020"}:
-                    raise ValueError(f"Unexpected personal care billing code: {pid}")
+            elif group["key"] in billing_groups:
+                service, allowed_codes = billing_groups[group["key"]]
+                if not item["codes"] or not set(item["codes"]) <= allowed_codes:
+                    raise ValueError(f"Unexpected {service} billing code: {pid}")
                 text = (f"In {date_label}, federal claims list this office’s organization as both billing "
-                        "and providing personal care. The claims identify the organization only.")
+                        f"and providing {service}. The claims identify the organization only.")
             else:
                 raise ValueError(f"Unknown federal program history: {group['key']}")
             add_fact(research, pid, group["key"], group["title"], text, group,

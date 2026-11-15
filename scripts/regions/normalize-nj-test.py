@@ -268,6 +268,24 @@ class ActualSourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "no longer matches registered office"):
             adapter.add_federal_home_care_history(inputs, [{**office, "address": "Different office"}], {})
 
+    def test_nursing_and_respite_history_stays_with_each_matched_organization(self):
+        cases = {
+            "hp0344100": ("nursing", "October 2024"),
+            "hp0015339": ("nursing", "March 2024"),
+            "hp0120800": ("nursing", "September 2024"),
+            "hp0015325": ("respite", "January 2019"),
+        }
+        inputs = adapter.Inputs(adapter.RESEARCH)
+        for registration, (service, month) in cases.items():
+            pid = "north-jersey-hp-" + registration
+            research = {}
+            adapter.add_federal_home_care_history(inputs, [self.by_id[pid]], research)
+            fact = next(f for f in research[pid]["facts"] if f["id"] == f"{pid}-hhs-{service}-claims")
+            self.assertIn(month, fact["text"])
+            self.assertIn(service, fact["text"])
+            self.assertNotIn("amount", fact)
+            self.assertEqual(research[pid]["reviewAggregates"], [])
+
     def test_verified_services_reject_changed_offices_and_colocated_suites(self):
         from nj_pay_context import add_county_home_care_context
         pid = "north-jersey-hp-hp0366200"

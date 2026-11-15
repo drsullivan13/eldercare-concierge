@@ -824,6 +824,58 @@
           ]
         }
       ]
+    },
+    {
+      "key": "hhs-nursing-claims",
+      "title": "Medicaid nursing claims history",
+      "publisher": "U.S. Department of Health and Human Services",
+      "sourceUrl": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/",
+      "sha256": "f646d426126638dd0177cb14a86bfe7d7e9ed6b081a3e1c270bfe5070fb3fb94",
+      "publishedAt": "2026-02-09",
+      "offices": [
+        {
+          "providerId": "north-jersey-hp-hp0344100",
+          "npi": "1528777000",
+          "month": "2024-10",
+          "codes": [
+            "T1000"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0015339",
+          "npi": "1669719316",
+          "month": "2024-03",
+          "codes": [
+            "T1002"
+          ]
+        },
+        {
+          "providerId": "north-jersey-hp-hp0120800",
+          "npi": "1841690070",
+          "month": "2024-09",
+          "codes": [
+            "T1002"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hhs-respite-claims",
+      "title": "Medicaid respite claims history",
+      "publisher": "U.S. Department of Health and Human Services",
+      "sourceUrl": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/",
+      "sha256": "f646d426126638dd0177cb14a86bfe7d7e9ed6b081a3e1c270bfe5070fb3fb94",
+      "publishedAt": "2026-02-09",
+      "offices": [
+        {
+          "providerId": "north-jersey-hp-hp0015325",
+          "npi": "1366473068",
+          "month": "2019-01",
+          "codes": [
+            "T1005"
+          ]
+        }
+      ]
     }
   ]
 }

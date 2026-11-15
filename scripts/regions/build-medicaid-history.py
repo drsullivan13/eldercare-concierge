@@ -55,8 +55,10 @@ if __name__ == "__main__":
     by_npi = {r["npi"]: pid for pid, r in identities.items()}
     if len(by_npi) != len(identities):
         raise ValueError("An organization identifier maps to multiple offices")
-    billing = [{"providerId": pid, "npi": r["npi"], "month": r["latestMonth"], "codes": r["hcpcsCodes"]}
-               for r in claims["organizations"] for pid in r["providerIds"]]
+    def billed_offices(rows):
+        return [{"providerId": pid, "npi": r["npi"], "month": r["latestMonth"], "codes": r["hcpcsCodes"]}
+                for r in rows for pid in r["providerIds"]]
+
     publisher = "U.S. Department of Health and Human Services"
     result = {"checkedAt": args.checked_at.isoformat(), "nppesSha256": claims["nppesSha256"], "datasets": [
         {"key": "hhs-nj-enrollment", "title": "New Jersey Medicaid enrollment history",
@@ -64,6 +66,11 @@ if __name__ == "__main__":
          "publishedAt": "2026-07-24", "offices": enrollment_offices(args.enrollment, by_npi)},
         {"key": "hhs-personal-care-claims", "title": "Medicaid personal care claims history",
          "publisher": publisher, "sourceUrl": claims["source"]["url"], "sha256": claims["source"]["sha256"],
-         "publishedAt": claims["source"]["release"], "offices": billing},
+         "publishedAt": claims["source"]["release"], "offices": billed_offices(claims["organizations"])},
     ]}
+    for service, rows in claims.get("additionalServices", {}).items():
+        title = {"nursing": "Medicaid nursing claims history", "respite": "Medicaid respite claims history"}[service]
+        result["datasets"].append({"key": f"hhs-{service}-claims", "title": title, "publisher": publisher,
+                                   "sourceUrl": claims["source"]["url"], "sha256": claims["source"]["sha256"],
+                                   "publishedAt": claims["source"]["release"], "offices": billed_offices(rows)})
     args.output.write_text(json.dumps(result, indent=2) + "\n")

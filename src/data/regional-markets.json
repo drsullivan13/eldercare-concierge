@@ -101765,6 +101765,12 @@
             "kind": "care",
             "sourceId": "north-jersey-hp-hp0015325-hhs-personal-care-claims-source",
             "text": "In November 2024, federal claims list this office’s organization as both billing and providing personal care. The claims identify the organization only."
+          },
+          {
+            "id": "north-jersey-hp-hp0015325-hhs-respite-claims",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0015325-hhs-respite-claims-source",
+            "text": "In January 2019, federal claims list this office’s organization as both billing and providing respite care. The claims identify the organization only."
           }
         ],
         "notes": [
@@ -101835,6 +101841,16 @@
             "publisher": "U.S. Department of Health and Human Services",
             "title": "Medicaid personal care claims history",
             "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0015325-hhs-respite-claims-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-02-09",
+            "publisher": "U.S. Department of Health and Human Services",
+            "title": "Medicaid respite claims history",
+            "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
           }
         ]
       },
@@ -101888,6 +101904,12 @@
             "kind": "care",
             "sourceId": "north-jersey-hp-hp0015339-hhs-nj-enrollment-source",
             "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+          },
+          {
+            "id": "north-jersey-hp-hp0015339-hhs-nursing-claims",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0015339-hhs-nursing-claims-source",
+            "text": "In March 2024, federal claims list this office’s organization as both billing and providing nursing services. The claims identify the organization only."
           }
         ],
         "notes": [],
@@ -101905,6 +101927,16 @@
             "publisher": "U.S. Department of Health and Human Services",
             "title": "New Jersey Medicaid enrollment history",
             "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0015339-hhs-nursing-claims-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-02-09",
+            "publisher": "U.S. Department of Health and Human Services",
+            "title": "Medicaid nursing claims history",
+            "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
           }
         ]
       },
@@ -104910,6 +104942,12 @@
             "kind": "care",
             "sourceId": "north-jersey-hp-hp0120800-hhs-nj-enrollment-source",
             "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+          },
+          {
+            "id": "north-jersey-hp-hp0120800-hhs-nursing-claims",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0120800-hhs-nursing-claims-source",
+            "text": "In September 2024, federal claims list this office’s organization as both billing and providing nursing services. The claims identify the organization only."
           }
         ],
         "notes": [
@@ -104954,6 +104992,16 @@
             "publisher": "U.S. Department of Health and Human Services",
             "title": "New Jersey Medicaid enrollment history",
             "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0120800-hhs-nursing-claims-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-02-09",
+            "publisher": "U.S. Department of Health and Human Services",
+            "title": "Medicaid nursing claims history",
+            "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
           }
         ]
       },
@@ -112753,6 +112801,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0301900": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0301900-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0301900-office-services-source",
+            "text": "The Hackensack office lists in-home companionship, medication reminders and light housekeeping. Families can schedule an appointment to discuss care needs."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0301900",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0301900-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Round the Clock Home Care",
+            "title": "Round the Clock Home Care · Companion care and household support",
+            "url": "https://roundtheclockhomecare.com/"
+          }
+        ]
+      },
       "north-jersey-hp-hp0302400": {
         "availability": {
           "asOf": null,
@@ -112906,6 +112988,40 @@
             "publisher": "Centers for Medicare & Medicaid Services, NPI Registry",
             "title": "NPPES organization and practice-address record",
             "url": "https://npiregistry.cms.hhs.gov/api/?version=2.1&number=1548051170"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0306600": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0306600-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0306600-office-services-source",
+            "text": "The Perth Amboy agency offers hourly and live-in support for adults, including personal care, meals, household cleaning and respite."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0306600",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0306600-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "All In One Home HealthCare",
+            "title": "All In One Home HealthCare · Hourly and live-in home care",
+            "url": "https://allin1homehealthcare.com/"
           }
         ]
       },
@@ -114231,6 +114347,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0328200": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0328200-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0328200-office-services-source",
+            "text": "The Jersey City agency offers a free in-home assessment to plan care, companionship visits and respite for family caregivers."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0328200",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0328200-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "MOMANA HOMECARE, LLC",
+            "title": "MOMANA HOMECARE, LLC · In-home assessment and companionship",
+            "url": "https://www.momanahomecare.com/"
+          }
+        ]
+      },
       "north-jersey-hp-hp0328800": {
         "availability": {
           "asOf": null,
@@ -114707,6 +114857,40 @@
           }
         ]
       },
+      "north-jersey-hp-hp0337800": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0337800-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0337800-office-services-source",
+            "text": "The Perth Amboy agency lists respite care, daily meal preparation and help with personal hygiene at home."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0337800",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0337800-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "RamYdia Health Care",
+            "title": "RamYdia Health Care · Personal assistance, meals and respite",
+            "url": "https://www.ramydia.com/"
+          }
+        ]
+      },
       "north-jersey-hp-hp0339700": {
         "availability": {
           "asOf": null,
@@ -114993,6 +115177,12 @@
             "kind": "care",
             "sourceId": "north-jersey-hp-hp0344100-hhs-nj-enrollment-source",
             "text": "New Jersey recorded this office’s organization as enrolled in Medicaid in December 2024. Ask the office which plans it accepts today."
+          },
+          {
+            "id": "north-jersey-hp-hp0344100-hhs-nursing-claims",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0344100-hhs-nursing-claims-source",
+            "text": "In October 2024, federal claims list this office’s organization as both billing and providing nursing services. The claims identify the organization only."
           }
         ],
         "notes": [],
@@ -115010,6 +115200,16 @@
             "publisher": "U.S. Department of Health and Human Services",
             "title": "New Jersey Medicaid enrollment history",
             "url": "https://opendata.hhs.gov/datasets/medicaid-provider-enrollment-segments/"
+          },
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0344100-hhs-nursing-claims-source",
+            "kind": "public-directory",
+            "publishedAt": "2026-02-09",
+            "publisher": "U.S. Department of Health and Human Services",
+            "title": "Medicaid nursing claims history",
+            "url": "https://opendata.hhs.gov/datasets/medicaid-provider-spending/"
           }
         ]
       },
@@ -117971,6 +118171,40 @@
             "publisher": "Key Family Care LLC",
             "title": "Key Family Care · Hourly prices and minimum visits",
             "url": "https://www.keyfamilycarellc.com/costs-and-coverage/"
+          }
+        ]
+      },
+      "north-jersey-hp-hp0381900": {
+        "availability": {
+          "asOf": null,
+          "sourceId": null,
+          "status": "not-published",
+          "text": "Contact the agency for current availability."
+        },
+        "checkedAt": "2026-11-15",
+        "facts": [
+          {
+            "id": "north-jersey-hp-hp0381900-office-services",
+            "kind": "care",
+            "sourceId": "north-jersey-hp-hp0381900-office-services-source",
+            "text": "The Edison agency offers help with bathing, dressing, transfers and medication reminders. Companion visits can include reading, games and outings."
+          }
+        ],
+        "notes": [],
+        "providerDetailsReviewed": true,
+        "providerId": "north-jersey-hp-hp0381900",
+        "reviewAggregates": [],
+        "reviews": [],
+        "sources": [
+          {
+            "access": "full-page",
+            "checkedAt": "2026-11-15",
+            "id": "north-jersey-hp-hp0381900-office-services-source",
+            "kind": "provider",
+            "publishedAt": null,
+            "publisher": "Helping Wings Homecare",
+            "title": "Helping Wings Homecare · Help with personal care and companionship",
+            "url": "https://www.helpingwingshomecare.com/services"
           }
         ]
       },

@@ -1,4 +1,4 @@
-"""Report the latest published personal-care billing month for matched organizations."""
+"""Report the latest published billing month per service and matched organization."""
 
 import argparse
 import hashlib
@@ -49,7 +49,9 @@ def audit(parquet_path, registry_path):
         identity["providerIds"].append(provider_id)
 
     npi_set = pa.array(sorted(organizations), type=pa.string())
-    codes = pa.array(["T1019", "T1020"])
+    groups = {"T1019": "personal-care", "T1020": "personal-care", "T1000": "nursing",
+              "T1002": "nursing", "S9123": "nursing", "S9124": "nursing", "T1005": "respite"}
+    codes = pa.array(list(groups))
     latest = {}
     for batch in source.iter_batches(columns=COLUMNS, batch_size=131072):
         billing, servicing, hcpcs, months = batch.columns
@@ -59,10 +61,18 @@ def audit(parquet_path, registry_path):
         for npi, code, month in zip(*(matches.column(i).to_pylist() for i in (0, 2, 3))):
             if not month or not re.fullmatch(r"(201[89]|202[0-4])-(0[1-9]|1[0-2])", month):
                 raise ValueError(f"Unexpected claim month for {npi}")
-            if npi not in latest or month > latest[npi][0]:
-                latest[npi] = (month, {code})
-            elif month == latest[npi][0]:
-                latest[npi][1].add(code)
+            key = (groups[code], npi)
+            if key not in latest or month > latest[key][0]:
+                latest[key] = (month, {code})
+            elif month == latest[key][0]:
+                latest[key][1].add(code)
+
+    def matched_organizations(group):
+        return [
+            {"npi": npi, "operator": organizations[npi]["operator"], "providerIds": sorted(organizations[npi]["providerIds"]),
+             "latestMonth": month, "hcpcsCodes": sorted(observed)}
+            for (service, npi), (month, observed) in sorted(latest.items()) if service == group
+        ]
 
     return {
         "source": {"release": "2026-02-09", "url": SOURCE_PAGE, "fileUrl": SOURCE_FILE,
@@ -71,12 +81,8 @@ def audit(parquet_path, registry_path):
         "matchedInputOrganizations": len(organizations),
         "scope": "Published aggregate cells with the same organization NPI for billing and servicing. "
                  "Practice addresses identify the organization. The place of service is unknown.",
-        "organizations": [
-            {"npi": npi, "operator": organizations[npi]["operator"],
-             "providerIds": sorted(organizations[npi]["providerIds"]),
-             "latestMonth": latest[npi][0], "hcpcsCodes": sorted(latest[npi][1])}
-            for npi in sorted(latest)
-        ],
+        "organizations": matched_organizations("personal-care"),
+        "additionalServices": {group: matched_organizations(group) for group in ("nursing", "respite")},
     }
 
 
