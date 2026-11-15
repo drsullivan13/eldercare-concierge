@@ -91,6 +91,7 @@ export function ProviderCard({
     research?.experience.value == null &&
     research?.experience.publicationStatus !== "sources-disagree";
   const coreq = showSurvey ? currentNjCoreqValue(provider) : null;
+  const engagement = showSurvey ? research?.residentEngagement : undefined;
   const patientSurvey = showSurvey ? research?.homeHealthSurvey : undefined;
   const alerts = new Set<string>();
   if (research?.admissionRestriction) alerts.add(research.admissionRestriction);
@@ -190,6 +191,20 @@ export function ProviderCard({
               </small>
             </span>
           </span>
+        ) : engagement ? (
+          <span className="experience-card-score">
+            <strong>
+              {engagement.index}
+              <small>/{engagement.maximum}</small>
+            </strong>
+            <span>
+              Resident engagement
+              <small>
+                {engagement.year} · {engagement.respondents} independent-living
+                residents responded
+              </small>
+            </span>
+          </span>
         ) : patientSurvey ? (
           <span className="experience-card-score">
             <strong>
@@ -237,7 +252,7 @@ export function ProviderCard({
           className="provider-review-entry"
           onClick={(event) => onReviews(event.currentTarget)}
         >
-          {coreq !== null || patientSurvey
+          {coreq !== null || patientSurvey || engagement
             ? "View survey & review sources"
             : research?.individualReviews?.total
               ? research.individualReviews.withText === 0

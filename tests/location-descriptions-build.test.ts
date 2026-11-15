@@ -433,8 +433,17 @@ test("every active North Jersey ID has a dated collection disposition or is outs
   for (const pid of originalIds) assert.ok(currentIds.has(pid));
   for (const provider of providers as CatalogProvider[]) {
     if (!originalIds.has(provider.id)) {
-      assert.equal(provider.category, "home-care");
-      assert.ok(provider.sources.some((s) => s.kind === "regulatory"));
+      if (provider.category === "life-plan") {
+        const description = JSON.parse(
+          readFileSync(join(root, research, "provider-residential.json"), "utf8"),
+        )[provider.id];
+        assert.equal(description.scope, "campus");
+        assert.equal(description.basis, "provider");
+        assert.ok(provider.sources.some((s) => s.kind === "provider"));
+      } else {
+        assert.equal(provider.category, "home-care");
+        assert.ok(provider.sources.some((s) => s.kind === "regulatory"));
+      }
     }
   }
   assert.deepEqual(

@@ -20,7 +20,9 @@ class OfferingEvidenceTests(unittest.TestCase):
         roster = json.loads((offerings.DEFAULT/"runtime/providers.json").read_text())
         self.assertEqual({p["id"] for p in roster}, set(self.coverage))
         self.assertEqual(len(roster), len(self.release["coverage.json"]))
-        self.assertEqual(len({r["county"] for r in self.coverage.values()}), 6)
+        self.assertEqual({r["county"] for r in self.coverage.values()},
+                         {"Bergen", "Essex", "Hudson", "Middlesex", "Monmouth",
+                          "Morris", "Passaic", "Somerset", "Union"})
 
     def test_all_released_facts_reference_inspected_sources(self):
         for pid, rec in self.records.items():
@@ -44,6 +46,16 @@ class OfferingEvidenceTests(unittest.TestCase):
                          tuple(fees[0][k] for k in ("min","max","period","type")))
         self.assertEqual("waitlist-published",rec["availability"]["status"])
         self.assertNotIn(1000,{a["min"] for a in fees})
+
+    def test_cranford_floor_plans_use_operator_monthly_rent(self):
+        record = self.records["north-jersey-doh-nj82472"]
+        rates = [fact for fact in record["facts"] if fact.get("amount")]
+        self.assertEqual([4995, 11895, 9995], [f["amount"]["min"] for f in rates])
+        sources = {s["id"]: s["url"] for s in record["sources"]}
+        for fact in rates:
+            self.assertEqual("month", fact["amount"]["period"])
+            self.assertTrue(sources[fact["sourceId"]].endswith("/apartments"))
+        self.assertEqual("inquiry-only", record["availability"]["status"])
 
     def test_capacity_inquiry_and_unknown_do_not_establish_opening(self):
         self.assertFalse(any(r["availability"]["status"]=="opening-published" for r in self.records.values()))

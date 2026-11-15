@@ -40,6 +40,9 @@ export function IndividualReviewList({
   const accountRefs = useRef(new Map<string, HTMLElement>());
   const accounts = data?.accounts ?? individualReviews(research, null).accounts;
   const counts = reviewAccountCounts(accounts);
+  const engagement = research.residentEngagement;
+  const surveySource =
+    engagement && research.sources.find(({ id }) => id === engagement.sourceId);
   const externalProfiles = data?.externalProfiles ?? [];
   const sourceReports = [
     ...(data?.sources ?? []).map((item) => ({
@@ -113,6 +116,29 @@ export function IndividualReviewList({
       <div className="review-section-title">
         <h3 id={`${uid}-title`}>What people say</h3>
       </div>
+      {engagement && surveySource && (
+        <section>
+          <h4>Independent-living resident survey</h4>
+          <p>
+            Holleran’s {engagement.year} engagement index was{" "}
+            <strong>
+              {engagement.index} out of {engagement.maximum}
+            </strong>
+            . {engagement.respondents} of {engagement.eligibleResidents}{" "}
+            residents responded. The index measures residents’ sense of voice,
+            connection, fulfillment and well-being.
+          </p>
+          <a
+            className="research-source"
+            href={surveySource.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read the community’s survey report{" "}
+            <ExternalLink aria-hidden size={13} />
+          </a>
+        </section>
+      )}
       {data?.surveyDistinction && (
         <p>
           <strong>

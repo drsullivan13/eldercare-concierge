@@ -11044,6 +11044,51 @@
     "zip": "07834"
   },
   {
+    "address": "299 Sicomac Avenue",
+    "category": "life-plan",
+    "city": "Wyckoff",
+    "description": "Independent-living apartments on Christian Health’s Wyckoff campus. Prospective residents can arrange a campus tour by appointment.",
+    "id": "north-jersey-campus-the-vista-07481",
+    "lat": 40.984281000003,
+    "limitations": [],
+    "lng": -74.171911500001,
+    "locationKind": "facility",
+    "name": "The Vista",
+    "officialRecord": false,
+    "phone": "(201) 848-4200",
+    "services": [],
+    "sources": [
+      {
+        "checkedAt": "2026-11-15",
+        "kind": "provider",
+        "publisher": "Christian Health",
+        "supports": "Names the regulated continuing-care entity and its independent-living apartments.",
+        "title": "2025 audited financial statements",
+        "url": "https://www.christianhealthnj.org/documents/compliance/Christian-Health-Care-Center-2025.AFS).pdf#page=11"
+      },
+      {
+        "checkedAt": "2026-11-15",
+        "kind": "provider",
+        "publisher": "The Vista",
+        "supports": "Campus street address and inquiry telephone.",
+        "title": "Campus contact and tours",
+        "url": "https://thevista.org/contact/"
+      },
+      {
+        "checkedAt": "2026-11-15",
+        "kind": "directory",
+        "publisher": "New Jersey Office of GIS",
+        "supports": "Matched street location; confirm the visitor entrance with the campus.",
+        "title": "New Jersey address point",
+        "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?SingleLine=299+Sicomac+Avenue%2C+Wyckoff%2C+NJ+07481&outFields=Addr_type%2CMatch_addr%2CCity%2CPostal&outSR=4326&locationType=rooftop&f=pjson"
+      }
+    ],
+    "state": "NJ",
+    "warnings": [],
+    "website": "https://thevista.org/contact/",
+    "zip": "07481"
+  },
+  {
     "address": "333 Elmwood Avenue",
     "category": "life-plan",
     "city": "Maplewood",

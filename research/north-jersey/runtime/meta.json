@@ -1,11 +1,11 @@
 {
   "asOf": "2026-11-15",
-  "catalogTotal": 1375,
+  "catalogTotal": 1376,
   "categories": {
     "assisted-living": 116,
     "home-care": 1074,
     "home-health": 18,
-    "life-plan": 7,
+    "life-plan": 8,
     "nursing-home": 160
   },
   "countyCounts": {
@@ -13,6 +13,7 @@
       "assisted-living": 43,
       "home-care": 164,
       "home-health": 5,
+      "life-plan": 1,
       "nursing-home": 30
     },
     "Essex": {
@@ -68,5 +69,5 @@
     "ZIP locations from Census 2026 Gazetteer and GeoNames CC BY 4.0. County overlaps from Census 2020. ZIP fallback points are approximate.",
     "Somerset, Middlesex and Monmouth have no licensed facility, campus or certified home-health collection. ZIP search origins cover the nine counties. Office geography alone does not establish home service coverage."
   ],
-  "scope": "Licensed care units, certified home-health offices, active registered business offices and explicitly historical named campuses. Somerset, Middlesex and Monmouth add only active registered home-care business offices from the reviewed supply release."
+  "scope": "Licensed care units, certified home-health offices, active registered business offices and explicitly historical named campuses. Includes The Vista continuing-care campus from a current audited disclosure. Somerset, Middlesex and Monmouth add only active registered home-care business offices from the reviewed supply release."
 }

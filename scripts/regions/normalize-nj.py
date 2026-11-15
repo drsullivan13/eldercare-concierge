@@ -718,6 +718,65 @@ def reviewed_facebook(inputs, providers):
     return dataset
 
 
+def add_vista_campus(inputs, providers, county_by_id, crosswalk, research, zips):
+    path = "campus-offerings/vista-wyckoff-survey.json"
+    release = inputs.json(path)
+    site, sources = release["identity"], release["sources"]
+    checked = release["checkedAt"]
+    pid = f"{MARKET}-campus-{slug(site['name'])}-{site['zip']}"
+    geo = site["geocode"]
+    require(geo["type"] == "PointAddress" and geo["score"] == 100 and
+            geo["result"] == f"{site['street']}, {site['city']}, New Jersey, {site['zip']}",
+            "Vista campus address does not match the NJ geocoder")
+    campus = base_provider(pid, site["name"], site["category"], site["street"], site["city"], site["zip"], {
+        "kind": "provider", "publisher": "Christian Health", "title": "2025 audited financial statements",
+        "supports": "Names the regulated continuing-care entity and its independent-living apartments.",
+        "url": sources["financials"]["url"] + "#page=11", "checkedAt": checked,
+    })
+    campus.update(officialRecord=False, phone=site["phone"], website=sources["contact"]["url"],
+                  description="Independent-living apartments on Christian Health’s Wyckoff campus. "
+                              "Prospective residents can arrange a campus tour by appointment.")
+    campus["sources"].extend([
+        {"kind": "provider", "publisher": "The Vista", "title": "Campus contact and tours",
+         "supports": "Campus street address and inquiry telephone.", "url": sources["contact"]["url"], "checkedAt": checked},
+        {"kind": "directory", "publisher": "New Jersey Office of GIS", "title": "New Jersey address point",
+         "supports": "Matched street location; confirm the visitor entrance with the campus.",
+         "url": sources["geocode"]["url"], "checkedAt": checked},
+    ])
+    location_point(campus, zips, geo["lat"], geo["lng"])
+    providers.append(campus)
+    county_by_id[pid] = site["county"]
+    crosswalk.append({"providerId": pid, "county": site["county"], "campusName": site["name"],
+                      "status": "included", "source": "Audited CCRC disclosure", "sourceFile": path,
+                      "sourceSha256": sources["financials"]["sha256"], "cmsCcn": None, "officialId": None})
+    survey, fees = release["survey"], release["independentLivingFees"]
+    facts = []
+    for field, label, period, kind in (
+        ("entranceFeeFromUsd", "entrance fee", "one-time", "entrance-fee"),
+        ("monthlyServiceFeeFromUsd", "monthly service fee", "month", "other"),
+    ):
+        value = fees[field]
+        facts.append({"id": "vista-" + kind, "kind": "cost", "sourceId": "vista-pricing",
+                      "text": f"Independent-living {label} starts at ${value:,}. Confirm the amount for your apartment.",
+                      "amount": {"min": value, "max": None, "currency": "USD", "period": period, "type": kind, "asOf": None}})
+    facts.append({"id": "vista-apartments", "kind": "room", "sourceId": "vista-financials",
+                  "text": f"The 2025 audited financial statements report {site['independentApartments']} independent-living apartments."})
+    research[pid] = {
+        "providerId": pid, "checkedAt": checked, "providerDetailsReviewed": True, "facts": facts,
+        "sources": [{"id": "vista-" + key, "kind": "provider", "publisher": publisher, "title": title,
+                     "url": sources[key]["url"], "checkedAt": checked, "publishedAt": date, "access": access}
+                    for key, title, publisher, date, access in (
+                        ("survey", "2026 independent-living resident engagement survey", "The Vista", survey["operatorPostDate"], "full-page"),
+                        ("pricing", "Apartment floor plans and starting fees", "The Vista", None, "full-page"),
+                        ("financials", "2025 audited financial statements", "Christian Health", None, "pdf"))],
+        "residentEngagement": {"index": survey["engagementIndex"], "maximum": survey["engagementIndexMaximum"],
+                               "year": survey["fieldYear"], "respondents": survey["responses"],
+                               "eligibleResidents": survey["eligibleResidents"], "sourceId": "vista-survey"},
+        "availability": {"status": "not-published", "text": "Contact the campus for apartment availability.",
+                         "sourceId": None, "asOf": None}, "reviewAggregates": [], "reviews": [], "notes": [],
+    }
+
+
 def evidence_coverage(inputs, providers, county_by_id, addresses, research):
     scores = {}
     if "review-release/manifest.json" in inputs.hashes:
@@ -733,7 +792,7 @@ def evidence_coverage(inputs, providers, county_by_id, addresses, research):
         detail = research.get(pid, {})
         facts = detail.get("facts", [])
         bucket.update({
-            "locations": 1, "streetMatched": addresses.get(pid, {}).get("status") == "matched" or (pid not in addresses and provider["locationKind"] == "office"),
+            "locations": 1, "streetMatched": addresses.get(pid, {}).get("status") == "matched" or (pid not in addresses and provider["locationKind"] in ("office", "facility")),
             "locationsWithFacts": bool(facts), "locationsWithPublishedRate": any(f.get("amount") for f in facts),
             "locationsWithReviewAggregate": bool(detail.get("reviewAggregates")),
             "scoredLocations": scores.get(pid, {}).get("value") is not None,
@@ -1144,6 +1203,8 @@ def normalize(root, counties, *, source_only=False):
                 reason = "The registry gives a PO box." if issue == "po_box_address" else "The registry city and ZIP give conflicting counties."
                 provider.update(lat=None, lng=None)
                 provider["warnings"].append(f"{reason} The physical office location is unverified.")
+        if "Bergen" in counties:
+            add_vista_campus(inputs, providers, county_by_id, crosswalk, research, zips)
         providers.extend(supply["providers"])
         county_by_id.update(supply["countyById"])
         zips = {**zips, **supply["zips"]}
@@ -1177,6 +1238,8 @@ def normalize(root, counties, *, source_only=False):
         ],
     }
     if supply is not None:
+        if "Bergen" in counties:
+            meta["scope"] += " Includes The Vista continuing-care campus from a current audited disclosure."
         meta["scope"] += (" Somerset, Middlesex and Monmouth add only active registered home-care business offices "
                           "from the reviewed supply release.")
         meta["limitations"].append(

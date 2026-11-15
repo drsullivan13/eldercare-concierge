@@ -3,7 +3,7 @@
     "assisted-living": 116,
     "home-care": 1074,
     "home-health": 18,
-    "life-plan": 7,
+    "life-plan": 8,
     "nursing-home": 160
   },
   "cmsLinkedCount": 139,
@@ -13,6 +13,7 @@
       "assisted-living": 43,
       "home-care": 164,
       "home-health": 5,
+      "life-plan": 1,
       "nursing-home": 30
     },
     "Essex": {
@@ -60,7 +61,7 @@
       "nursing-home": 24
     }
   },
-  "crosswalkRows": 1375,
+  "crosswalkRows": 1376,
   "dohSourceRows": 894,
   "evidenceByCountyAndSetting": {
     "Bergen": {
@@ -93,6 +94,16 @@
         "publishedWaitlists": 0,
         "scoredLocations": 1,
         "streetMatched": 5
+      },
+      "life-plan": {
+        "locations": 1,
+        "locationsWithFacts": true,
+        "locationsWithPublishedRate": true,
+        "locationsWithReviewAggregate": false,
+        "publishedOpenings": false,
+        "publishedWaitlists": false,
+        "scoredLocations": false,
+        "streetMatched": true
       },
       "nursing-home": {
         "locations": 30,
@@ -353,7 +364,7 @@
       "assisted-living": {
         "locations": 11,
         "locationsWithFacts": 11,
-        "locationsWithPublishedRate": 3,
+        "locationsWithPublishedRate": 4,
         "locationsWithReviewAggregate": 6,
         "publishedOpenings": 0,
         "publishedWaitlists": 0,
@@ -877,7 +888,7 @@
     "registration_outside_retained_county_scope": 2046,
     "service_coverage_is_not_an_office_location": 1246
   },
-  "providerCount": 1375,
+  "providerCount": 1376,
   "publishedHomeHealthOffices": 18,
   "verifiedHomeHealthOfficeInputs": 18
 }

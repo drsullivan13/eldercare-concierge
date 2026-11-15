@@ -1,5 +1,5 @@
 {
-  "comparableRates": 108,
+  "comparableRates": 111,
   "countyAndSetting": [
     {
       "category": "assisted-living",
@@ -36,6 +36,18 @@
       "publishedPriorityLists": 0,
       "records": 5,
       "regulatoryCoverage": 5
+    },
+    {
+      "category": "life-plan",
+      "county": "Bergen",
+      "datedVacancies": 0,
+      "identityDiscrepancies": 0,
+      "locationsWithComparableRate": 0,
+      "locationsWithPrice": 0,
+      "operatorPagesChecked": 0,
+      "publishedPriorityLists": 0,
+      "records": 1,
+      "regulatoryCoverage": 0
     },
     {
       "category": "nursing-home",
@@ -330,8 +342,8 @@
       "county": "Union",
       "datedVacancies": 0,
       "identityDiscrepancies": 0,
-      "locationsWithComparableRate": 3,
-      "locationsWithPrice": 4,
+      "locationsWithComparableRate": 4,
+      "locationsWithPrice": 5,
       "operatorPagesChecked": 5,
       "publishedPriorityLists": 0,
       "records": 11,
@@ -388,22 +400,22 @@
   ],
   "inputs": {
     "offerings/directory-amenities.json": "025ced47f89cefc71a91c8f3d178257689266dde5a6a79d6c79910217651bc45",
-    "offerings/provider-page-checks.json": "a454ce8ccfe757f47690b985a56913ddc7479698b7e7495b9e1ccaa9a30474ec",
+    "offerings/provider-page-checks.json": "9092a50e9f0caedc0fbbb7a24163519f4d2080e8d4a647b00a6a1bae5e9e88b7",
     "review-release/locationResearch.json": "3aa295a7f8599728e1b43677c4bf27f53c4b174263383cd75d382fb61d2eb0fc",
-    "rosterIdentityAndRegulatoryFactsSha256": "fc55a8e2368578c7802cec60b0adea8c5d26da657c2dafbaa1f26517b5eb2df2",
-    "runtime/crosswalk.json": "fc2fec4a60b728a0a7e2c612e7d0af2f2e071686c31c03e7e8ab0f48adde3a36"
+    "rosterIdentityAndRegulatoryFactsSha256": "e5c5b95944769dafbc176d03a7c08b80a0fe24d6761f4d1b77d5716baf229e1a",
+    "runtime/crosswalk.json": "52b9a1bda63a9621640b5a88980258ddebcf864c9fb320db45f890f4dd4924f3"
   },
   "matchedPages": 31,
   "outputs": {
     "coverage.json": {
-      "sha256": "2bb5e25662fe20f1726ffed0d363316e38380bfb734d39663fd951ffeb3d713c"
+      "sha256": "3ce8b157d9a8d8981cac98bf950deddfb0e10347694be978820ffd05dcbb9a61"
     },
     "locationResearch.json": {
-      "sha256": "a779d135e33204cccca76fc0231f41c9139c35d8daa1e105dc20e41bc3c02881"
+      "sha256": "54c4a28424a25165ed5ae51b25dc7a59222932e8c7bf8b78b85366b3436bf75a"
     }
   },
-  "providerPriceLocations": 27,
-  "roster": 1375,
+  "providerPriceLocations": 28,
+  "roster": 1376,
   "rowsWithFacts": 283,
   "sourcePages": 34
 }

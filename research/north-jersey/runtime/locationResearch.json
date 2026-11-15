@@ -21031,6 +21031,96 @@
       }
     ]
   },
+  "north-jersey-campus-the-vista-07481": {
+    "availability": {
+      "asOf": null,
+      "sourceId": null,
+      "status": "not-published",
+      "text": "Contact the campus for apartment availability."
+    },
+    "checkedAt": "2026-11-15",
+    "facts": [
+      {
+        "amount": {
+          "asOf": null,
+          "currency": "USD",
+          "max": null,
+          "min": 269900,
+          "period": "one-time",
+          "type": "entrance-fee"
+        },
+        "id": "vista-entrance-fee",
+        "kind": "cost",
+        "sourceId": "vista-pricing",
+        "text": "Independent-living entrance fee starts at $269,900. Confirm the amount for your apartment."
+      },
+      {
+        "amount": {
+          "asOf": null,
+          "currency": "USD",
+          "max": null,
+          "min": 4128,
+          "period": "month",
+          "type": "other"
+        },
+        "id": "vista-other",
+        "kind": "cost",
+        "sourceId": "vista-pricing",
+        "text": "Independent-living monthly service fee starts at $4,128. Confirm the amount for your apartment."
+      },
+      {
+        "id": "vista-apartments",
+        "kind": "room",
+        "sourceId": "vista-financials",
+        "text": "The 2025 audited financial statements report 161 independent-living apartments."
+      }
+    ],
+    "notes": [],
+    "providerDetailsReviewed": true,
+    "providerId": "north-jersey-campus-the-vista-07481",
+    "residentEngagement": {
+      "eligibleResidents": 203,
+      "index": 8,
+      "maximum": 8,
+      "respondents": 171,
+      "sourceId": "vista-survey",
+      "year": 2026
+    },
+    "reviewAggregates": [],
+    "reviews": [],
+    "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "vista-survey",
+        "kind": "provider",
+        "publishedAt": "2026-03-12",
+        "publisher": "The Vista",
+        "title": "2026 independent-living resident engagement survey",
+        "url": "https://thevista.org/news/the-vista-receives-outstanding-scores-in-resident-satisfaction-survey/"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "vista-pricing",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "The Vista",
+        "title": "Apartment floor plans and starting fees",
+        "url": "https://thevista.org/community/floor-plans/"
+      },
+      {
+        "access": "pdf",
+        "checkedAt": "2026-11-15",
+        "id": "vista-financials",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Christian Health",
+        "title": "2025 audited financial statements",
+        "url": "https://www.christianhealthnj.org/documents/compliance/Christian-Health-Care-Center-2025.AFS).pdf"
+      }
+    ]
+  },
   "north-jersey-campus-winchester-gardens-07040": {
     "availability": {
       "asOf": null,
@@ -28345,11 +28435,11 @@
   "north-jersey-doh-nj82472": {
     "availability": {
       "asOf": null,
-      "sourceId": "offering-060545b667f861",
+      "sourceId": "offering-54e7cb5e8f45fd",
       "status": "inquiry-only",
       "text": "Contact the community for availability. No dated vacancy or waitlist position was verified."
     },
-    "checkedAt": "2026-11-12",
+    "checkedAt": "2026-11-15",
     "facts": [
       {
         "asOf": "2026-11-06",
@@ -28370,54 +28460,106 @@
         "asOf": null,
         "id": "north-jersey-doh-nj82472-offering-3",
         "kind": "care",
-        "sourceId": "offering-060545b667f861",
+        "sourceId": "offering-54e7cb5e8f45fd",
         "text": "The provider lists independent living."
       },
       {
         "asOf": null,
         "id": "north-jersey-doh-nj82472-offering-4",
         "kind": "care",
-        "sourceId": "offering-060545b667f861",
+        "sourceId": "offering-54e7cb5e8f45fd",
         "text": "The provider lists assisted living."
       },
       {
         "asOf": null,
         "id": "north-jersey-doh-nj82472-offering-5",
         "kind": "care",
-        "sourceId": "offering-060545b667f861",
+        "sourceId": "offering-54e7cb5e8f45fd",
         "text": "The provider lists memory care."
       },
       {
         "asOf": null,
         "id": "north-jersey-doh-nj82472-offering-6",
+        "kind": "room",
+        "sourceId": "offering-54e7cb5e8f45fd",
+        "text": "Studio and one-bedroom layouts have walk-in showers and individual temperature control. Atria offers month-to-month leases with no buy-in fee."
+      },
+      {
+        "asOf": null,
+        "id": "north-jersey-doh-nj82472-offering-7",
         "kind": "dining",
         "sourceId": "offering-060545b667f861",
         "text": "Three meals are included daily."
       },
       {
+        "amount": {
+          "asOf": null,
+          "currency": "USD",
+          "max": null,
+          "min": 4995,
+          "period": "month",
+          "type": "base-rent"
+        },
         "asOf": null,
-        "id": "north-jersey-doh-nj82472-offering-7",
+        "id": "north-jersey-doh-nj82472-offering-8",
+        "kind": "cost",
+        "sourceId": "offering-54e7cb5e8f45fd",
+        "text": "Independent or assisted living studio, starting rent before care and medication management: from $4,995 per month. Confirm the current quote."
+      },
+      {
+        "amount": {
+          "asOf": null,
+          "currency": "USD",
+          "max": null,
+          "min": 11895,
+          "period": "month",
+          "type": "base-rent"
+        },
+        "asOf": null,
+        "id": "north-jersey-doh-nj82472-offering-9",
+        "kind": "cost",
+        "sourceId": "offering-54e7cb5e8f45fd",
+        "text": "Independent or assisted living one-bedroom, starting rent before care and medication management: from $11,895 per month. Confirm the current quote."
+      },
+      {
+        "amount": {
+          "asOf": null,
+          "currency": "USD",
+          "max": null,
+          "min": 9995,
+          "period": "month",
+          "type": "base-rent"
+        },
+        "asOf": null,
+        "id": "north-jersey-doh-nj82472-offering-10",
+        "kind": "cost",
+        "sourceId": "offering-54e7cb5e8f45fd",
+        "text": "Memory care studio, starting apartment rate: from $9,995 per month. Confirm the current quote."
+      },
+      {
+        "asOf": null,
+        "id": "north-jersey-doh-nj82472-offering-11",
         "kind": "room",
         "sourceId": "offering-140c63958e0e57",
         "text": "MyLivingChoice lists: Cable or Satellite TV; Private Rooms. Confirm these details with the location."
       },
       {
         "asOf": null,
-        "id": "north-jersey-doh-nj82472-offering-8",
+        "id": "north-jersey-doh-nj82472-offering-12",
         "kind": "dining",
         "sourceId": "offering-140c63958e0e57",
         "text": "MyLivingChoice lists: Restaurant style Dining Room. Confirm these details with the location."
       },
       {
         "asOf": null,
-        "id": "north-jersey-doh-nj82472-offering-9",
+        "id": "north-jersey-doh-nj82472-offering-13",
         "kind": "amenity",
         "sourceId": "offering-140c63958e0e57",
         "text": "MyLivingChoice lists: Gathering / Activity Spaces; Housekeeping; Laundry Service; Salon / Barber; Social Activities. Confirm these details with the location."
       }
     ],
     "notes": [
-      "The provider FAQ and state community list advertise different starting prices. Confirm the applicable unit, care charges and current rate directly.",
+      "Atria lists rent by apartment and care setting. Independent and assisted living rent excludes care and medication management and may exclude phone, cable and internet. Request an itemized quote.",
       "Approved published consumer aggregates only. Consumer sentiment is not clinical quality or safety.",
       "Reported counts are not unique people. Unknown cross-posting may remain.",
       "No provider offerings, prices, individual reviews or availability claims are released by this transformer."
@@ -28451,6 +28593,16 @@
         "publisher": "New Jersey Department of Health",
         "title": "NJ DOH licensed long-term care facilities",
         "url": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx"
+      },
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "offering-54e7cb5e8f45fd",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Atria Senior Living",
+        "title": "Atria Cranford apartment floor plans and starting monthly rents",
+        "url": "https://www.atriaseniorliving.com/retirement-communities/atria-cranford-cranford-nj/apartments"
       },
       {
         "access": "full-page",
@@ -43819,6 +43971,12 @@
     "checkedAt": "2026-11-15",
     "facts": [
       {
+        "id": "north-jersey-hp-hp0322800-office-services",
+        "kind": "care",
+        "sourceId": "north-jersey-hp-hp0322800-office-services-source",
+        "text": "The Short Hills office lists personal care, meal preparation, live-in and 24-hour support. Families can also ask about respite visits or in-home support for a person living with dementia."
+      },
+      {
         "asOf": "2026-11-15",
         "id": "north-jersey-hp-hp0322800-njmmis-cbe7a2cbf36dc67f-services",
         "kind": "care",
@@ -43832,6 +43990,16 @@
     "reviewAggregates": [],
     "reviews": [],
     "sources": [
+      {
+        "access": "full-page",
+        "checkedAt": "2026-11-15",
+        "id": "north-jersey-hp-hp0322800-office-services-source",
+        "kind": "provider",
+        "publishedAt": null,
+        "publisher": "Dazzle Healthcare",
+        "title": "Dazzle Healthcare · Daily living and respite care",
+        "url": "https://dazzlehealthcare.com/"
+      },
       {
         "access": "pdf",
         "checkedAt": "2026-11-15",

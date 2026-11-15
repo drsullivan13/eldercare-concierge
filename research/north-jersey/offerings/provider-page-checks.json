@@ -1245,21 +1245,59 @@
   },
   {
     "providerId": "north-jersey-doh-nj82472",
-    "url": "https://www.atriaseniorliving.com/retirement-communities/atria-cranford-cranford-nj/faq-and-resources",
+    "url": "https://www.atriaseniorliving.com/retirement-communities/atria-cranford-cranford-nj/apartments",
     "publisher": "Atria Senior Living",
-    "title": "Atria Cranford FAQs",
+    "title": "Atria Cranford apartment floor plans and starting monthly rents",
     "address": "10 Jackson Dr, Cranford, NJ 07016",
     "services": [
       "Independent living",
       "Assisted living",
       "Memory care"
     ],
-    "dining": "Three meals are included daily.",
-    "rates": [],
-    "rateNote": "The provider FAQ and state community list advertise different starting prices. Confirm the applicable unit, care charges and current rate directly.",
+    "rates": [
+      {
+        "label": "Independent or assisted living studio, starting rent before care and medication management",
+        "min": 4995,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Independent or assisted living one-bedroom, starting rent before care and medication management",
+        "min": 11895,
+        "period": "month",
+        "type": "base-rent"
+      },
+      {
+        "label": "Memory care studio, starting apartment rate",
+        "min": 9995,
+        "period": "month",
+        "type": "base-rent"
+      }
+    ],
+    "rateNote": "Atria lists rent by apartment and care setting. Independent and assisted living rent excludes care and medication management and may exclude phone, cable and internet. Request an itemized quote.",
     "inquiry": true,
     "asOf": null,
-    "checkedAt": "2026-11-12"
+    "checkedAt": "2026-11-15",
+    "additionalPages": [
+      {
+        "url": "https://www.atriaseniorliving.com/retirement-communities/atria-cranford-cranford-nj/faq-and-resources",
+        "title": "Atria Cranford FAQs",
+        "checkedAt": "2026-11-12",
+        "facts": [
+          {
+            "kind": "dining",
+            "text": "Three meals are included daily."
+          }
+        ]
+      }
+    ],
+    "pageSha256": "e190b015e8b636bf279c9b3b364d8ef621e7a0c67866c356f3bc7adf40b40fa0",
+    "practicalFacts": [
+      {
+        "kind": "room",
+        "text": "Studio and one-bedroom layouts have walk-in showers and individual temperature control. Atria offers month-to-month leases with no buy-in fee."
+      }
+    ]
   },
   {
     "providerId": "north-jersey-campus-lantern-hill-07974",

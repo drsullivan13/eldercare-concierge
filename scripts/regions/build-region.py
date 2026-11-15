@@ -180,6 +180,8 @@ REVIEW = shape({
 })
 LOCATION = shape({
     "providerId": ID, "checkedAt": D, "providerDetailsReviewed": boolean,
+    "residentEngagement?": shape({"year": count, "index": count, "maximum": count,
+                                  "respondents": count, "eligibleResidents": count, "sourceId": text}),
     "sources": array(RESEARCH_SOURCE), "facts": array(FACT), "availability": AVAILABILITY,
     "reviewAggregates": array(AGGREGATE), "reviews": array(REVIEW), "notes": STRINGS,
     "admissionRestriction?": shape({"text": text, "sourceId": text}),
@@ -406,6 +408,11 @@ def validate_market(market, review, prefixes):
             unique([r["id"] for r in research[collection]], f"{pid}.{collection}")
         linked = research["facts"] + research["reviewAggregates"] + research["reviews"]
         linked += [research["availability"]]
+        if survey := research.get("residentEngagement"):
+            require(by_id[pid]["category"] == "life-plan" and 0 < survey["respondents"] <= survey["eligibleResidents"]
+                    and 0 < survey["maximum"] and survey["index"] <= survey["maximum"],
+                    f"{pid}: invalid independent-living survey scope, sample or index")
+            linked.append(survey)
         if "admissionRestriction" in research:
             linked += [research["admissionRestriction"]]
         for item in linked:

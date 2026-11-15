@@ -938,9 +938,9 @@
     "official/capture.json": "61042a8151a51d37ffb1f203f549ea49b37b0a8526d7b00e0c960c02b162b8bd",
     "official/coverage.json": "a73508f6f10e9a00d318c71884d59d8e6ee4c423296af4d910564fb38ef6bf3d",
     "provider-offices.json": "d60b87c19499bd62e05746d8d3f42cd79c04fdbff48257ce0e0fda9bcf14cc4e",
-    "provider-residential.json": "d15ef24665a5ccc41132c9197ce6cb0bb9863b7bb17cab1a5dd664da0878e557"
+    "provider-residential.json": "4dcaa03e3d79221a94598e44d05949da0190e3af60e403e2ba5353660be8b788"
   },
-  "inventoryIdentitySha256": "70e621fdd0c30149b72d5fa624dfacbf20a9d671bd5ee6d631fe50c59745fa28",
+  "inventoryIdentitySha256": "7c07d4ca9bc60cfac48269040219706fff00f7ee866f31282d3fea69cc53c0c8",
   "marketId": "north-jersey",
   "meaning": "Audited normalized inputs and exact active inventory for public offline replay. Hashes detect unreviewed input changes, not the truth of source claims. Original bodies remain private; run LOCATION_DESCRIPTIONS_PRIVATE_SOURCES=1 npx tsx --test tests/location-descriptions-build.test.ts in the local acquisition checkout to verify them.",
   "originalInventoryIdentitySha256": "a4e6a7d4b67501bec7ae3fd102e7fea9fbc1c1131ee5774bda25191f339d844a",

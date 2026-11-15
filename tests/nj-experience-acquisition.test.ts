@@ -223,8 +223,10 @@ if (snapshotIndex !== -1) {
     assert.ok(
       added.every(
         (row) =>
-          row.category === "home-care" &&
-          /^north-jersey-hp-hp\d+$/.test(row.providerId),
+          (row.category === "home-care" &&
+            /^north-jersey-hp-hp\d+$/.test(row.providerId)) ||
+          (row.category === "life-plan" &&
+            row.providerId === "north-jersey-campus-the-vista-07481"),
       ),
     );
     assert.equal(

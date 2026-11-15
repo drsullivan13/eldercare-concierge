@@ -101,7 +101,17 @@ type PublicReview = {
   aspects: { aspect: string; sentiment: "positive" | "negative" | "mixed" }[];
   notes: string[];
 };
+export type ResidentEngagementSurvey = {
+  year: number;
+  index: number;
+  maximum: number;
+  respondents: number;
+  eligibleResidents: number;
+  sourceId: string;
+};
+
 export type LocationResearch = {
+  residentEngagement?: ResidentEngagementSurvey;
   providerId: string;
   checkedAt: string | null;
   providerDetailsReviewed: boolean;
@@ -116,6 +126,7 @@ export type LocationResearch = {
   admissionRestriction?: { text: string; sourceId: string };
 };
 export type ResearchSummary = {
+  residentEngagement?: ResidentEngagementSurvey;
   homeHealthSurvey?: { stars: number; completed: number; smallSample: boolean };
   individualReviews?: { total: number; withText: number };
   familyExperience?: FamilyExperience;

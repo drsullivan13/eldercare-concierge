@@ -617,5 +617,31 @@
         "identityBasis": "The indexed profile identifies the Piscataway branch at the same street and suite as the operator and registration."
       }
     ]
+  },
+  "north-jersey-hp-hp0322800": {
+    "catalogAddress": "51 JFK PARKWAY, 1ST FLOOR WEST",
+    "officialRegistrationId": "HP0322800",
+    "officeName": "Dazzle Healthcare LLC",
+    "county": "Essex",
+    "checkedAt": "2026-11-15",
+    "identity": {
+      "recordId": "north-jersey-hp-hp0322800",
+      "recordsFile": "../home-care-pay-services/verified-office-services.json",
+      "checkedAt": "2026-11-15",
+      "registeredAddress": "51 JFK PARKWAY, 1ST FLOOR WEST",
+      "registeredCity": "SHORT HILLS",
+      "registeredState": "NJ",
+      "registeredZip": "07078",
+      "observedAddress": "51 JFK Parkway First Floor West Short Hills NJ 07078"
+    },
+    "reviewLinks": [
+      {
+        "publisher": "Birdeye",
+        "url": "https://reviews.birdeye.com/dazzle-healthcare-llc-168242479627916",
+        "originalUrl": "https://reviews.birdeye.com/dazzle-healthcare-llc-168242479627916",
+        "discoveryReceipt": "discovery/dazzle-short-hills-birdeye.json",
+        "identityBasis": "The indexed destination names Dazzle Healthcare LLC at its Short Hills street address and links to the agency website. The agency contact page confirms the registered floor, city and telephone."
+      }
+    ]
   }
 }

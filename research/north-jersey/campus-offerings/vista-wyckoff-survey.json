@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-11-15",
+  "sources": {
+    "survey": {
+      "url": "https://thevista.org/news/the-vista-receives-outstanding-scores-in-resident-satisfaction-survey/",
+      "sha256": "557fd02193f647297b56fcc46cbe0f607689b758af5285045d27af6da2f48f50"
+    },
+    "operatorRelease": {
+      "url": "https://www.christianhealthnj.org/news/2026/march/the-vista-earns-choice-community-recognition-in-/"
+    },
+    "contact": {
+      "url": "https://thevista.org/contact/",
+      "sha256": "ba3a695f0a5edcac4e41b0a10494023ebed50843f3314df1fecbe664d233a1e3"
+    },
+    "faq": {
+      "url": "https://thevista.org/community/faq/",
+      "sha256": "af62c6e5780eb22f55a10e0fb0655db84a2b6fabab79b136b8314365a30838c0"
+    },
+    "financials": {
+      "url": "https://www.christianhealthnj.org/documents/compliance/Christian-Health-Care-Center-2025.AFS).pdf",
+      "file": "christian-health-2025-financials.pdf",
+      "sha256": "02144c5783881bb4c68c5e068c45bc8900b47e77795db2301cdba8fac0d3912a",
+      "physicalPages": [
+        11,
+        12,
+        16
+      ]
+    },
+    "campusMap": {
+      "url": "https://www.christianhealthnj.org/documents/Christian-Health-Wyckoff-Campus-Map_2025.pdf"
+    },
+    "regulator": {
+      "url": "https://www.nj.gov/dca/codes/offices/ccrc.shtml"
+    },
+    "geocode": {
+      "url": "https://geo.nj.gov/arcgis/rest/services/Tasks/NJ_Geocode/GeocodeServer/findAddressCandidates?SingleLine=299+Sicomac+Avenue%2C+Wyckoff%2C+NJ+07481&outFields=Addr_type%2CMatch_addr%2CCity%2CPostal&outSR=4326&locationType=rooftop&f=pjson",
+      "sha256": "e22a39e9dbe635849795e23c82196947bc7de381e7d71cb0304536af0ab6e5b9"
+    },
+    "pricing": {
+      "url": "https://thevista.org/community/floor-plans/"
+    }
+  },
+  "identity": {
+    "name": "The Vista",
+    "legalName": "CHCC CCRC, Inc. dba The Vista",
+    "street": "299 Sicomac Avenue",
+    "city": "Wyckoff",
+    "state": "NJ",
+    "zip": "07481",
+    "county": "Bergen",
+    "phone": "(201) 848-4200",
+    "category": "life-plan",
+    "openMonth": "2021-07",
+    "independentApartments": 161,
+    "geocode": {
+      "result": "299 Sicomac Avenue, Wyckoff, New Jersey, 07481",
+      "type": "PointAddress",
+      "score": 100,
+      "lat": 40.984281000003,
+      "lng": -74.171911500001
+    },
+    "basis": "Operator FAQ, campus map, and 2025 audited financial statements establish the CCRC as an independent-living campus operated separately from Longview assisted living and Heritage Manor nursing. The auditor reports NJ DCA regulation in note 2. The state DCA public CCRC landing page directs consumers to a guide preceding the July 2021 opening. No current DCA license number is evidenced.",
+    "dcaCertificateNumber": null
+  },
+  "independentLivingFees": {
+    "entranceFeeFromUsd": 269900,
+    "monthlyServiceFeeFromUsd": 4128,
+    "asDisplayedOn": "2026-11-15",
+    "source": "pricing",
+    "scope": "Published independent apartment starting amounts. Unit-specific total, additional charges, and availability require confirmation."
+  },
+  "survey": {
+    "fieldYear": 2026,
+    "fieldStart": null,
+    "fieldEnd": null,
+    "announcementDate": "2026-03-11",
+    "operatorPostDate": "2026-03-12",
+    "surveyOrganization": "Holleran",
+    "population": "Independent-living residents of The Vista",
+    "eligibleResidents": 203,
+    "responses": 171,
+    "responseRatePercent": 84.2,
+    "benchmark": "National independent-living resident engagement benchmark",
+    "percentileByDomain": {
+      "voice": 88,
+      "connection": 93,
+      "fulfillment": 95,
+      "wellBeing": 96
+    },
+    "publishedItemMeans": {
+      "conciergeReceptionHelpfulness": 4.94,
+      "staffFriendliness": 4.88,
+      "groundsSafetySecurity": 4.81
+    },
+    "itemScaleMaximum": null,
+    "overallSatisfactionMean": null,
+    "limits": "Overall survey participation is explicit; per-item denominators, scale endpoints, exact field dates and an overall satisfaction mean were not published in the two survey pages. Percentiles describe a national benchmark rather than the proportion satisfied. No transfer to a care unit, another campus, or a Harbor consumer score.",
+    "engagementIndex": 8,
+    "engagementIndexMaximum": 8
+  }
+}

@@ -185,6 +185,7 @@ export function getResearchSummary(
     individualReviews: individualReviewCounts,
     familyExperience: getFamilyExperience(providerId, registry),
     facebookResearch: getFacebookSummary(providerId, registry),
+    residentEngagement: record.residentEngagement,
     detailsAvailable: record.providerDetailsReviewed,
     publishedCosts: record.facts.filter(
       (f) => f.kind === "cost" && f.amount && f.amount.min > 0,

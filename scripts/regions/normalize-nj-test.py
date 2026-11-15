@@ -359,7 +359,7 @@ class ActualSourceTests(unittest.TestCase):
         self.assertEqual(len(live), 3628)
 
     def test_historical_campuses_have_no_invented_certification_or_date(self):
-        campuses = [p for p in self.providers if p["category"] == "life-plan"]
+        campuses = [self.by_id[r["providerId"]] for r in self.crosswalk if r["status"] == "included_historical"]
         self.assertEqual(len(campuses), 7)
         for provider in campuses:
             self.assertNotIn("cms", provider)
@@ -371,7 +371,7 @@ class ActualSourceTests(unittest.TestCase):
     def test_only_verified_campus_inquiry_lines_are_released(self):
         release = json.loads((adapter.RESEARCH / "state/campus-contacts.json").read_bytes())
         campuses = {pid: p for pid, p in self.by_id.items() if p["category"] == "life-plan"}
-        self.assertEqual(set(campuses), release["contacts"].keys() | release["held"].keys())
+        self.assertEqual(set(campuses), release["contacts"].keys() | release["held"].keys() | {"north-jersey-campus-the-vista-07481"})
         for pid, contact in release["contacts"].items():
             self.assertEqual(campuses[pid]["phone"], contact["phone"])
             self.assertTrue(any(s["url"] == contact["url"] and s["title"] == contact["role"]
@@ -446,7 +446,7 @@ class ActualSourceTests(unittest.TestCase):
             for count in settings.values():
                 actual.update(count)
         self.assertEqual(actual["locations"], len(self.providers))
-        self.assertEqual(actual["streetMatched"], 853 + 236)
+        self.assertEqual(actual["streetMatched"], 853 + 236 + 1)
         details = json.loads(self.files["locationResearch.json"])
         self.assertEqual(actual["locationsWithPublishedRate"],
                          sum(any(f.get("amount") for f in r["facts"]) for r in details.values()))
@@ -461,6 +461,8 @@ class ActualSourceTests(unittest.TestCase):
         baseline = json.loads(files["meta.json"])
         published = json.loads(self.files["meta.json"])
         for county, totals in baseline["countyCounts"].items():
+            if county == "Bergen":
+                totals = {**totals, "life-plan": totals.get("life-plan", 0) + 1}
             current = published["countyCounts"][county]
             self.assertEqual({k:v for k,v in totals.items() if k != "home-care"}, {k:v for k,v in current.items() if k != "home-care"})
             self.assertGreaterEqual(current.get("home-care",0), totals.get("home-care",0))

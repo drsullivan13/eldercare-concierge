@@ -87,6 +87,9 @@ export function publicLocationResearch(
         excerpt: publicResearchNotes([source.excerpt]).join(" "),
       }),
     })),
+    ...(data.residentEngagement && {
+      residentEngagement: data.residentEngagement,
+    }),
     facts: data.facts,
     availability: data.availability,
     reviewAggregates: data.reviewAggregates.map((aggregate) => ({
