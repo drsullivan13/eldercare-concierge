@@ -17,10 +17,11 @@ import {
   getFacebookSummary,
   getFamilyExperience,
 } from "./facebook-research";
-import type {
-  LocationResearch,
-  InternalLocationResearchResponse,
-  ResearchSummary,
+import {
+  emptyLocationResearch,
+  type LocationResearch,
+  type InternalLocationResearchResponse,
+  type ResearchSummary,
 } from "./location-research-types";
 
 export class ResearchInputError extends Error {
@@ -101,24 +102,9 @@ export function getLocationResearch(
   const record: LocationResearch =
     records && Object.hasOwn(records, providerId)
       ? records[providerId]
-      : {
-          providerId,
-          checkedAt: null,
-          providerDetailsReviewed: false,
-          sources: [],
-          facts: [],
-          reviews: [],
-          reviewAggregates: [],
-          availability: {
-            status: "not-published",
-            text: "Current availability has not been researched for this location. Contact the provider to confirm openings and waitlist timing.",
-            sourceId: null,
-            asOf: null,
-          },
-          notes: [
-            "No retained location research is available for this catalog provider. Missing evidence does not imply poor care or that no public information exists.",
-          ],
-        };
+      : emptyLocationResearch(providerId, [
+          "No retained location research is available for this catalog provider. Missing evidence does not imply poor care or that no public information exists.",
+        ]);
   return {
     ...record,
     ...(publishedOffice && {

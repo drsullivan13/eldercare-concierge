@@ -961,6 +961,7 @@ def normalize(root, counties, *, source_only=False):
                         "cmsSourceFile": "cms/" + receipt["file"],
                         "cmsSourceRowIndex": index, "cmsSourceSha256": receipt["sha256"],
                     }
+        state_crosswalk = {entry["providerId"]: entry for entry in crosswalk}
         address_index = defaultdict(list)
         for provider in providers:
             if provider["category"] == "nursing-home":
@@ -969,8 +970,6 @@ def normalize(root, counties, *, source_only=False):
                 address_index[(provider["zip"], address_key(street))].append(provider)
         cms_keys = Counter((row["zip_code"][:5], address_key(row["provider_address"])) for row in nursing)
         for row in nursing:
-            if row["countyparish"] not in counties:
-                continue
             key = (row["zip_code"][:5], address_key(row["provider_address"]))
             matches = address_index.get(key, [])
             if (len(matches) == 1 and cms_keys[key] == 1
@@ -978,24 +977,18 @@ def normalize(root, counties, *, source_only=False):
                 provider = matches[0]
                 old_id = provider["id"]
                 provider["id"] = f"cms-{row[CCN]}"
-                provider["cms"] = cms_summary(row, metadata["released"][:10])
                 provider["sources"].append(source(
                     {"url": metadata["landing_url"], "retrieved_at": metadata["retrieved_at"]},
                     metadata["title"], "Centers for Medicare & Medicaid Services",
                     "Exact unique nursing-unit street address and ZIP match. CMS clinical evidence "
                     "belongs only to this CCN, not assisted living or a campus.", metadata["released"][:10]))
-                for match in crosswalk:
-                    if match["providerId"] == old_id:
-                        match.update(providerId=provider["id"], cmsCcn=row[CCN],
-                                     cmsMatchBasis="unique_nursing_unit_normalized_name_street_and_zip",
-                                     cmsName=row["provider_name"], cmsAddress=row["provider_address"],
-                                     cmsDataset="4pq5-n9py")
-                        match.update(cms_row_sources[row[CCN]])
+                state_crosswalk[old_id].update(
+                    providerId=provider["id"], cmsCcn=row[CCN],
+                    cmsMatchBasis="unique_nursing_unit_normalized_name_street_and_zip",
+                    cmsName=row["provider_name"], cmsAddress=row["provider_address"],
+                    cmsDataset="4pq5-n9py", **cms_row_sources[row[CCN]],
+                )
                 county_by_id[provider["id"]] = county_by_id.pop(old_id)
-                if provider["cms"]["abuse"]:
-                    provider["warnings"].append("CMS abuse icon is present for this certified nursing unit.")
-                if provider["cms"]["specialFocus"]:
-                    provider["warnings"].append("CMS special-focus status: " + provider["cms"]["specialFocus"])
             else:
                 ledger.append({"source": "CMS Provider Information", "officialId": row[CCN],
                                "county": row["countyparish"], "status": "unresolved",
@@ -1016,7 +1009,6 @@ def normalize(root, counties, *, source_only=False):
                            metadata["title"], "Centers for Medicare & Medicaid Services",
                            "Exact CMS certified nursing-home roster record. State-license identity unresolved.",
                            metadata["released"][:10]))
-                provider["cms"] = cms_summary(row, metadata["released"][:10])
                 location_point(provider, zips, row.get("latitude"), row.get("longitude"))
                 provider["description"] = "CMS certified nursing-home record. State-license crosswalk is unresolved."
                 provider["limitations"].append(
@@ -1030,10 +1022,8 @@ def normalize(root, counties, *, source_only=False):
                                   "sourceAsOf": metadata["released"][:10],
                                   **cms_row_sources[row[CCN]]})
                 providers.append(provider)
-        for provider in providers:
-            if "cms" not in provider:
-                continue
-            row = next(row for row in nursing if row[CCN] == provider["cms"]["ccn"])
+
+            provider["cms"] = cms_summary(row, metadata["released"][:10])
             if not source_only and not provider.get("phone"):
                 phone = clean(row.get("telephone_number"))
                 if re.fullmatch(r"[2-9][0-9]{2}[2-9][0-9]{6}", phone):
@@ -1048,9 +1038,9 @@ def normalize(root, counties, *, source_only=False):
             provider["limitations"].append(
                 "CMS release date is not a measurement period. Staffing and clinical measures can cover different periods."
             )
-            if provider["cms"]["abuse"] and not provider["warnings"]:
+            if provider["cms"]["abuse"]:
                 provider["warnings"].append("CMS abuse icon is present for this certified nursing unit.")
-            if provider["cms"]["specialFocus"] and not any("special-focus" in w for w in provider["warnings"]):
+            if provider["cms"]["specialFocus"]:
                 provider["warnings"].append("CMS special-focus status: " + provider["cms"]["specialFocus"])
     service_edges_path = root / "cms/home_health_service_zip_edges.json"
     if service_edges_path.exists() and cms_manifest.get("status") == "complete":

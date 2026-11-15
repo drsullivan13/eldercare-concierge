@@ -1,6 +1,6 @@
 import snapshotData from "@/data/location-descriptions.json";
 import upgradeData from "../../research/north-jersey/supplemental-release/first-party-upgrades.json";
-import { getProviderMarket } from "./markets";
+import { getProviderEntry } from "./markets";
 import {
   isLocationDescriptionResponse,
   type LocationDescriptionResponse,
@@ -35,8 +35,8 @@ export async function getLocationDescription(
 ): Promise<LocationDescriptionResponse | null> {
   if (providerId.length > 150 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(providerId))
     throw new LocationDescriptionInputError("Supply one exact provider ID.");
-  const market = getProviderMarket(providerId);
-  if (market?.id !== "north-jersey")
+  const entry = getProviderEntry(providerId);
+  if (entry?.market.id !== "north-jersey")
     throw new LocationDescriptionInputError(
       "No North Jersey catalog provider matches this ID.",
       404,
@@ -75,7 +75,7 @@ export async function getLocationDescription(
     return existing;
 
   const upgrade = officeUpgrades[providerId];
-  const provider = market.providers.find(({ id }) => id === providerId)!;
+  const { provider } = entry;
   if (
     upgrade.providerId !== providerId ||
     provider.category !== "home-care" ||

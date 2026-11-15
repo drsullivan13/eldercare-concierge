@@ -1,19 +1,6 @@
-import type { ExperienceSummary } from "./experience-score";
+import type { ExperienceSummary, PublicExperience } from "./experience-score";
 
-export type PublicExperience = {
-  label: "Consumer experience index";
-  value: number | null;
-  reviewCount: number;
-  independentSourceCount: number;
-  confidence: "unrated" | "limited" | "moderate";
-  publicationStatus?:
-    | "single-source-estimate"
-    | "multi-source-index"
-    | "insufficient-evidence"
-    | "sources-disagree";
-  singleSourceLabel?: string;
-  selectedConcerns?: boolean;
-};
+export type { PublicExperience } from "./experience-score";
 
 export function publicExperience(score: ExperienceSummary): PublicExperience {
   return {

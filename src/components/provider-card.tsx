@@ -33,6 +33,13 @@ const categoryServices: Partial<Record<CareCategory, string[]>> = {
   staffing: ["Staffing"],
 };
 
+const availabilityLabels: Partial<
+  Record<NonNullable<SearchProvider["research"]>["availabilityStatus"], string>
+> = {
+  "opening-published": "Openings listed · confirm",
+  "waitlist-published": "Waitlist published",
+};
+
 function Rating({ value }: { value: number | null }) {
   return (
     <span className="rating">
@@ -69,6 +76,41 @@ export function providerCareAlerts(provider: Provider) {
   return alerts;
 }
 
+function ExperienceBadge({
+  score,
+  maximum,
+  label,
+  detail,
+}: {
+  score: string | number;
+  maximum?: number;
+  label: string;
+  detail: React.ReactNode;
+}) {
+  return (
+    <span className="experience-card-score">
+      <strong>
+        {score}
+        {maximum !== undefined && <small>/{maximum}</small>}
+      </strong>
+      <span>
+        {label}
+        <small>{detail}</small>
+      </span>
+    </span>
+  );
+}
+
+function reviewButtonLabel(
+  reviews: NonNullable<SearchProvider["research"]>["individualReviews"],
+): string {
+  if (!reviews?.total) return "Explore review sources";
+  const { total, withText } = reviews;
+  if (withText === 0) return `Browse ${total} review links`;
+  if (withText === total) return `Read ${withText} reviews`;
+  return `Read ${withText} reviews, browse ${total - withText} links`;
+}
+
 export function ProviderCard({
   provider,
   saved,
@@ -96,23 +138,21 @@ export function ProviderCard({
   const alerts = new Set<string>();
   if (research?.admissionRestriction) alerts.add(research.admissionRestriction);
   for (const alert of providerCareAlerts(provider)) alerts.add(alert);
-  const availability =
-    research?.availabilityStatus === "opening-published"
-      ? "Openings listed · confirm"
-      : research?.availabilityStatus === "waitlist-published"
-        ? "Waitlist published"
-        : null;
-  const tags = [
-    ...(availability ? [availability] : []),
-    ...(research?.publishedCosts ? ["Published costs"] : []),
-    ...(research?.facebookResearch?.findingCount &&
+  const tags: string[] = [];
+  const status = research?.availabilityStatus;
+  const availability = status && availabilityLabels[status];
+  if (availability) tags.push(availability);
+  if (research?.publishedCosts) tags.push("Published costs");
+  if (
+    research?.facebookResearch?.findingCount &&
     !research.familyExperience?.distinctThreadCount
-      ? ["Facebook findings"]
-      : []),
-    ...provider.services.filter(
-      (service) => !categoryServices[provider.category]?.includes(service),
-    ),
-  ].slice(0, 3);
+  )
+    tags.push("Facebook findings");
+  for (const service of provider.services) {
+    if (tags.length === 3) break;
+    if (!categoryServices[provider.category]?.includes(service))
+      tags.push(service);
+  }
   return (
     <article className={`provider-card${compare ? " is-compared" : ""}`}>
       <div className="provider-card-top">
@@ -175,61 +215,40 @@ export function ProviderCard({
       )}
       <div className="provider-research-summary">
         {research && research.experience.value !== null ? (
-          <span className="experience-card-score">
-            <strong>
-              {research.experience.value.toFixed(1)}
-              <small>/10</small>
-            </strong>
-            <span>
-              Consumer experience
-              <small>
+          <ExperienceBadge
+            score={research.experience.value.toFixed(1)}
+            maximum={10}
+            label="Consumer experience"
+            detail={
+              <>
                 Based on {research.experience.reviewCount}{" "}
                 {research.experience.independentSourceCount === 1
                   ? research.experience.singleSourceLabel
                   : "source"}{" "}
                 ratings
-              </small>
-            </span>
-          </span>
+              </>
+            }
+          />
         ) : engagement ? (
-          <span className="experience-card-score">
-            <strong>
-              {engagement.index}
-              <small>/{engagement.maximum}</small>
-            </strong>
-            <span>
-              Resident engagement
-              <small>
-                {engagement.year} · {engagement.respondents} independent-living
-                residents responded
-              </small>
-            </span>
-          </span>
+          <ExperienceBadge
+            score={engagement.index}
+            maximum={engagement.maximum}
+            label="Resident engagement"
+            detail={`${engagement.year} · ${engagement.respondents} independent-living residents responded`}
+          />
         ) : patientSurvey ? (
-          <span className="experience-card-score">
-            <strong>
-              {patientSurvey.stars}
-              <small>/5</small>
-            </strong>
-            <span>
-              CMS patient survey
-              <small>
-                {patientSurvey.completed.toLocaleString("en-US")} completed
-                surveys{patientSurvey.smallSample && " · Small sample"}
-              </small>
-            </span>
-          </span>
+          <ExperienceBadge
+            score={patientSurvey.stars}
+            maximum={5}
+            label="CMS patient survey"
+            detail={`${patientSurvey.completed.toLocaleString("en-US")} completed surveys${patientSurvey.smallSample ? " · Small sample" : ""}`}
+          />
         ) : coreq !== null ? (
-          <span className="experience-card-score">
-            <strong>{formatCoreqPercent(coreq)}</strong>
-            <span>
-              NJ resident &amp; family survey
-              <small>
-                Long-stay satisfaction composite · {coreqReportingYear}{" "}
-                reporting year
-              </small>
-            </span>
-          </span>
+          <ExperienceBadge
+            score={formatCoreqPercent(coreq)}
+            label="NJ resident & family survey"
+            detail={`Long-stay satisfaction composite · ${coreqReportingYear} reporting year`}
+          />
         ) : (
           <span className="experience-card-unrated">
             <span>
@@ -254,14 +273,7 @@ export function ProviderCard({
         >
           {coreq !== null || patientSurvey || engagement
             ? "View survey & review sources"
-            : research?.individualReviews?.total
-              ? research.individualReviews.withText === 0
-                ? `Browse ${research.individualReviews.total} review links`
-                : research.individualReviews.withText ===
-                    research.individualReviews.total
-                  ? `Read ${research.individualReviews.withText} reviews`
-                  : `Read ${research.individualReviews.withText} reviews, browse ${research.individualReviews.total - research.individualReviews.withText} links`
-              : "Explore review sources"}
+            : reviewButtonLabel(research?.individualReviews)}
           <ArrowUpRight size={15} />
         </button>
         {research?.experience.selectedConcerns && (

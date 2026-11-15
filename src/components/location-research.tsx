@@ -75,7 +75,7 @@ function Facts({
   targetRef,
 }: {
   facts: OfferingFact[];
-  sources: ResearchSource[];
+  sources: ReadonlyMap<string | null, ResearchSource>;
   empty: string;
   uid?: string;
   targetId?: string;
@@ -122,9 +122,7 @@ function Facts({
             Source effective date: {date(fact.asOf || fact.amount?.asOf)}
           </span>
         )}
-        <SourceLink
-          source={sources.find((source) => source.id === fact.sourceId)}
-        />
+        <SourceLink source={sources.get(fact.sourceId)} />
       </footer>
     </li>
   ));
@@ -192,40 +190,46 @@ export function LocationResearch({
   }, [navigation, targetId, data]);
   const facts = (kinds: OfferingFact["kind"][]) =>
     data?.facts.filter((f) => kinds.includes(f.kind)) ?? [];
-  const availabilitySource = data?.sources.find(
-    (s) => s.id === data.availability.sourceId,
-  );
-  const offeringFacts = facts(["care", "amenity", "activity", "dining"]);
-  const displayedFacts = [
-    ...offeringFacts,
-    ...(data
-      ? dailyLife(data, provider).groups.flatMap((group) =>
-          group.facts.map(({ fact }) => fact),
-        )
-      : []),
-  ];
+  const sources = new Map<string | null, ResearchSource>();
+  for (const item of data?.sources ?? []) {
+    if (!sources.has(item.id)) sources.set(item.id, item);
+  }
+  const offeringFacts =
+    pane === "details" ? facts(["care", "amenity", "activity", "dining"]) : [];
   const licensingFacts = offeringFacts.filter(
-    (fact) =>
-      data?.sources.find((source) => source.id === fact.sourceId)?.kind ===
-      "regulator",
+    (fact) => sources.get(fact.sourceId)?.kind === "regulator",
   );
-  const catalogServices = provider.services.filter(
-    (service) =>
-      !displayedFacts.some((fact) =>
-        ` ${normalized(fact.text)} `.includes(` ${normalized(service)} `),
-      ),
-  );
-  const availabilityFacts = facts(["availability"]).filter(
-    (fact) =>
-      normalized(fact.text) !== normalized(data?.availability.text ?? ""),
-  );
-  const inventoryDetails = availabilityFacts.filter(
-    (fact) =>
-      data?.availability.status === "opening-published" &&
-      fact.sourceId === data.availability.sourceId &&
-      fact.numericValue != null,
-  );
-  const costFacts = facts(["cost"]);
+  let catalogServices = provider.services;
+  if (pane === "details" && data && catalogServices.length) {
+    const phrases = offeringFacts.map((fact) => ` ${normalized(fact.text)} `);
+    for (const group of dailyLife(data, provider).groups) {
+      for (const { fact } of group.facts)
+        if (fact.acquiredKind) phrases.push(` ${normalized(fact.text)} `);
+    }
+    catalogServices = catalogServices.filter((service) => {
+      const phrase = ` ${normalized(service)} `;
+      return !phrases.some((text) => text.includes(phrase));
+    });
+  }
+  const availabilityFacts: OfferingFact[] = [];
+  const inventoryDetails: OfferingFact[] = [];
+  if (pane === "details" && data) {
+    const summary = normalized(data.availability.text);
+    for (const fact of facts(["availability"])) {
+      if (normalized(fact.text) === summary) continue;
+      if (
+        data.availability.status === "opening-published" &&
+        fact.sourceId === data.availability.sourceId &&
+        fact.numericValue != null
+      ) {
+        inventoryDetails.push(fact);
+      } else {
+        availabilityFacts.push(fact);
+      }
+    }
+  }
+  const costFacts = pane === "costs" ? facts(["cost"]) : [];
+  const capacityFacts = pane === "details" ? facts(["capacity"]) : [];
   const amenities = data && (
     <section aria-labelledby={`${uid}-life`}>
       <h4 id={`${uid}-life`}>Amenities & everyday life</h4>
@@ -270,9 +274,7 @@ export function LocationResearch({
           <strong>Admission eligibility needs checking</strong>
           <p>{data.admissionRestriction.text}</p>
           <SourceLink
-            source={data.sources.find(
-              (source) => source.id === data.admissionRestriction?.sourceId,
-            )}
+            source={sources.get(data.admissionRestriction.sourceId)}
           />
         </div>
       )}
@@ -322,7 +324,7 @@ export function LocationResearch({
                   </h4>
                   <Facts
                     facts={costFacts}
-                    sources={data.sources}
+                    sources={sources}
                     uid={uid}
                     targetId={targetId}
                     targetRef={targetRef}
@@ -375,7 +377,7 @@ export function LocationResearch({
                   </h4>
                   <Facts
                     facts={facts(["room"])}
-                    sources={data.sources}
+                    sources={sources}
                     empty={
                       office
                         ? "Care is arranged through an office, not a residential room. Confirm visits, shifts and service at your address."
@@ -416,7 +418,9 @@ export function LocationResearch({
                             : "Current availability is not established"}
                     </h4>
                     <p>{data.availability.text}</p>
-                    <SourceLink source={availabilitySource} />
+                    <SourceLink
+                      source={sources.get(data.availability.sourceId)}
+                    />
                   </div>
                 </div>
                 {data.availability.status === "opening-published" && (
@@ -432,20 +436,14 @@ export function LocationResearch({
                   </p>
                 )}
                 {availabilityFacts.length > 0 && (
-                  <Facts
-                    facts={availabilityFacts.filter(
-                      (fact) => !inventoryDetails.includes(fact),
-                    )}
-                    sources={data.sources}
-                    empty=""
-                  />
+                  <Facts facts={availabilityFacts} sources={sources} empty="" />
                 )}
                 {inventoryDetails.length > 0 && (
                   <details className="evidence-disclosure">
                     <summary>Published inventory breakdown</summary>
                     <Facts
                       facts={inventoryDetails}
-                      sources={data.sources}
+                      sources={sources}
                       empty=""
                     />
                   </details>
@@ -513,17 +511,13 @@ export function LocationResearch({
             {pane === "details" && licensingFacts.length > 0 && (
               <section aria-labelledby={`${uid}-licensing`}>
                 <h4 id={`${uid}-licensing`}>Licensing & care setting</h4>
-                <Facts facts={licensingFacts} sources={data.sources} empty="" />
+                <Facts facts={licensingFacts} sources={sources} empty="" />
               </section>
             )}
-            {pane === "details" && facts(["capacity"]).length > 0 && (
+            {capacityFacts.length > 0 && (
               <section aria-labelledby={`${uid}-capacity`}>
                 <h4 id={`${uid}-capacity`}>Community size</h4>
-                <Facts
-                  facts={facts(["capacity"])}
-                  sources={data.sources}
-                  empty=""
-                />
+                <Facts facts={capacityFacts} sources={sources} empty="" />
                 <details className="evidence-disclosure">
                   <summary>What capacity figures mean</summary>
                   <p>

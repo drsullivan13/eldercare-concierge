@@ -44,23 +44,19 @@ export function IndividualReviewList({
   const surveySource =
     engagement && research.sources.find(({ id }) => id === engagement.sourceId);
   const externalProfiles = data?.externalProfiles ?? [];
-  const sourceReports = [
-    ...(data?.sources ?? []).map((item) => ({
-      publisher: item.publisher,
-      count: item.reportedCount,
-    })),
-    ...research.reviewAggregates.map((item) => ({
-      publisher: item.platform,
-      count: item.count,
-    })),
-  ].filter(
-    (item, index, reports) =>
-      item.count !== null &&
-      reports.findIndex(
-        (other) =>
-          other.publisher === item.publisher && other.count === item.count,
-      ) === index,
-  );
+  const sourceReports: { publisher: string; count: number }[] = [];
+  const seenReports = new Set<string>();
+  function addSourceReport(publisher: string, count: number | null): void {
+    if (count === null) return;
+    const key = `${count}:${publisher}`;
+    if (seenReports.has(key)) return;
+    seenReports.add(key);
+    sourceReports.push({ publisher, count });
+  }
+  for (const source of data?.sources ?? [])
+    addSourceReport(source.publisher, source.reportedCount);
+  for (const aggregate of research.reviewAggregates)
+    addSourceReport(aggregate.platform, aggregate.count);
   const filtered = accounts
     .filter(
       (review) =>
@@ -68,7 +64,7 @@ export function IndividualReviewList({
         review.relationship === "family" ||
         review.relationship === "resident",
     )
-    .toSorted(
+    .sort(
       (a, b) =>
         Number(b.aspects.some(({ sentiment }) => sentiment !== "positive")) -
           Number(a.aspects.some(({ sentiment }) => sentiment !== "positive")) ||

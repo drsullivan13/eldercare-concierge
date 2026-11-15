@@ -1,5 +1,5 @@
 import snapshot from "@/data/nursing-staffing.json";
-import { getProviderMarket } from "./markets";
+import { getProviderEntry } from "./markets";
 import type { NursingStaffingResearch } from "./nursing-staffing-types";
 
 type MetricKey = keyof NursingStaffingResearch["metrics"];
@@ -33,9 +33,7 @@ const evidence = snapshot as unknown as Snapshot;
 export function getNursingStaffingResearch(
   providerId: string,
 ): NursingStaffingResearch | null {
-  const provider = getProviderMarket(providerId)?.providers.find(
-    (entry) => entry.id === providerId,
-  );
+  const provider = getProviderEntry(providerId)?.provider;
   if (
     provider?.category !== "nursing-home" ||
     !provider.cms ||

@@ -15,3 +15,17 @@ export function distanceMiles(
     Math.atan2(Math.sqrt(Math.max(0, h)), Math.sqrt(Math.max(0, 1 - h)))
   );
 }
+
+export function providerDistanceMiles(
+  origin: { lat: number; lng: number },
+  { lat, lng }: { lat: number | null; lng: number | null },
+): number | null {
+  if (
+    lat === null ||
+    lng === null ||
+    !Number.isFinite(lat) ||
+    !Number.isFinite(lng)
+  )
+    return null;
+  return distanceMiles(origin, { lat, lng });
+}

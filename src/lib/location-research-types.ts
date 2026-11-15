@@ -101,7 +101,7 @@ type PublicReview = {
   aspects: { aspect: string; sentiment: "positive" | "negative" | "mixed" }[];
   notes: string[];
 };
-export type ResidentEngagementSurvey = {
+type ResidentEngagementSurvey = {
   year: number;
   index: number;
   maximum: number;
@@ -155,3 +155,25 @@ export type LocationResearchResponse = Omit<
   experience: PublicExperience;
   reviewAggregates: Omit<ReviewAggregate, "sourceFamily">[];
 };
+
+export function emptyLocationResearch(
+  providerId: string,
+  notes: string[] = [],
+): LocationResearch {
+  return {
+    providerId,
+    checkedAt: null,
+    providerDetailsReviewed: false,
+    sources: [],
+    facts: [],
+    reviews: [],
+    reviewAggregates: [],
+    availability: {
+      status: "not-published",
+      text: "Current availability has not been researched for this location. Contact the provider to confirm openings and waitlist timing.",
+      sourceId: null,
+      asOf: null,
+    },
+    notes,
+  };
+}

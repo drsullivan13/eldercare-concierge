@@ -104,16 +104,17 @@ def mapping(validator):
 
 
 def shape(fields, extra=False):
+    schema = {key.removesuffix("?"): (validator, key.endswith("?")) for key, validator in fields.items()}
+
     def validate(value, path):
         require(isinstance(value, dict), f"{path}: expected object")
-        allowed = {key.removesuffix("?") for key in fields}
-        require(extra or set(value) <= allowed, f"{path}: unknown fields {sorted(set(value) - allowed)}")
-        for key, validator in fields.items():
-            name = key.removesuffix("?")
-            if name not in value:
-                require(key.endswith("?"), f"{path}.{name}: required field")
-            else:
+        if not extra and (unknown := value.keys() - schema.keys()):
+            raise ValueError(f"{path}: unknown fields {sorted(unknown)}")
+        for name, (validator, optional) in schema.items():
+            if name in value:
                 validator(value[name], f"{path}.{name}")
+            elif not optional:
+                raise ValueError(f"{path}.{name}: required field")
     return validate
 
 

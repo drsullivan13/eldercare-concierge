@@ -18,6 +18,28 @@ export class SearchInputError extends Error {
   }
 }
 
+export function searchParameters(
+  input: URLSearchParams,
+  kind: "search" | "suggestion",
+): Record<string, string> {
+  const params: Record<string, string> = {};
+  for (const [key, value] of input) {
+    const allowed =
+      ["zip", "radius", "category", "q"].includes(key) ||
+      (kind === "search" && (key === "sort" || key === "evidence"));
+    if (!allowed || Object.hasOwn(params, key))
+      throw new SearchInputError(
+        `Supply each supported ${kind} parameter at most once.`,
+      );
+    params[key] = value;
+  }
+  return params;
+}
+
+export const compareSearchNames = new Intl.Collator("en", {
+  sensitivity: "base",
+}).compare;
+
 export function resolveSearchScope(
   opts: { zip?: string; radius?: string | number; category?: string },
   registry: MarketRegistry = markets,

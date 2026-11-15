@@ -56,14 +56,12 @@ type NarrativeDiagnostics = {
   }[];
   excludedReviews: { reviewId: string; reason: string }[];
 };
-export type ExperienceSummary = {
+export type PublicExperience = {
   label: "Consumer experience index";
   value: number | null;
   reviewCount: number;
-  platformCount: number;
   independentSourceCount: number;
   confidence: "unrated" | "limited" | "moderate";
-  reason: string;
   publicationStatus?:
     | "single-source-estimate"
     | "multi-source-index"
@@ -71,6 +69,11 @@ export type ExperienceSummary = {
     | "sources-disagree";
   singleSourceLabel?: string;
   selectedConcerns?: boolean;
+};
+
+export type ExperienceSummary = PublicExperience & {
+  platformCount: number;
+  reason: string;
   sampleDiagnostics?: SampleDiagnostic[];
   methodVersion: "1.0" | "2.0";
   aggregateRange?: { minimum: number; maximum: number; substantial: boolean };
@@ -432,36 +435,56 @@ function assessReviewSamples(
       unique.set(post.id, post);
     }
     if (!valid) continue;
-    const recent = [...unique.values()].filter((post) => {
+    let eligible = 0;
+    let positive = 0;
+    let negative = 0;
+    for (const post of unique.values()) {
       // A month-only source date qualifies only if its earliest possible day
       // is recent. The capture establishes that the review was already public.
       const date =
         typeof post.date === "string" && /^\d{4}-\d{2}$/.test(post.date)
           ? dateValue(post.date + "-01")
           : dateValue(post.date);
-      return (
-        date !== null &&
-        date <= checked &&
-        now - date <= EXPERIENCE_SCORE_POLICY.maximumNarrativeAgeDays * DAY
-      );
-    });
-    const negative = recent.filter(
-      (post) => post.sentiment === "negative",
-    ).length;
-    const positive = recent.filter(
-      (post) => post.sentiment === "positive",
-    ).length;
+      if (
+        date === null ||
+        date > checked ||
+        now - date > EXPERIENCE_SCORE_POLICY.maximumNarrativeAgeDays * DAY
+      )
+        continue;
+      eligible++;
+      if (post.sentiment === "negative") negative++;
+      if (post.sentiment === "positive") positive++;
+    }
     const contrary = average >= 8 ? negative : average <= 4 ? positive : 0;
     diagnostics.push({
       sourceId: sample.sourceId,
-      eligible: recent.length,
+      eligible,
       visible: sample.visibleCount,
       negative,
       positive,
-      conflicts: contrary >= 3 && contrary * 2 > recent.length,
+      conflicts: contrary >= 3 && contrary * 2 > eligible,
     });
   }
   return diagnostics.sort((a, b) => a.sourceId.localeCompare(b.sourceId));
+}
+
+function ratingRange(
+  sources: ExperienceSummary["includedSources"],
+): ExperienceSummary["aggregateRange"] {
+  if (!sources.length) return undefined;
+  let minimum = Infinity;
+  let maximum = -Infinity;
+  for (const { normalizedRating } of sources) {
+    minimum = Math.min(minimum, normalizedRating);
+    maximum = Math.max(maximum, normalizedRating);
+  }
+  return {
+    minimum,
+    maximum,
+    substantial:
+      maximum - minimum >=
+      EXPERIENCE_SCORE_POLICY.disagreementPoints - Number.EPSILON * 10,
+  };
 }
 
 /** Published averages and selected narrative evidence retain separate meanings. */
@@ -473,10 +496,7 @@ export function computeExperienceScore(
     throw new RangeError("asOfDate must be a valid YYYY-MM-DD UTC date.");
   const excludedSources: ExperienceSummary["excludedSources"] = [];
   const candidates: Candidate[] = [];
-  const sources = new Map<string, ExperienceSource[]>();
-  for (const source of input.sources) {
-    sources.set(source.id, [...(sources.get(source.id) ?? []), source]);
-  }
+  const sources = Map.groupBy(input.sources, (source) => source.id);
   for (const aggregate of input.reviewAggregates) {
     const reject = (reason: string) =>
       excludedSources.push({ sourceId: aggregate.sourceId, reason });
@@ -639,16 +659,7 @@ export function computeExperienceScore(
       includedSources.some(
         (source) => source.count >= EXPERIENCE_SCORE_POLICY.singleFamilyMinimum,
       ));
-  const ratings = includedSources.map((source) => source.normalizedRating);
-  const aggregateRange = ratings.length
-    ? {
-        minimum: Math.min(...ratings),
-        maximum: Math.max(...ratings),
-        substantial:
-          Math.max(...ratings) - Math.min(...ratings) >=
-          EXPERIENCE_SCORE_POLICY.disagreementPoints - Number.EPSILON * 10,
-      }
-    : undefined;
+  const aggregateRange = ratingRange(includedSources);
   const weightedAverage = includedSources.reduce(
     (sum, source) => sum + source.normalizedRating * source.weight,
     0,
@@ -671,13 +682,7 @@ export function computeExperienceScore(
   const substantialSources = includedSources.filter(
     (source) => source.count >= EXPERIENCE_SCORE_POLICY.moderateFamilyMinimum,
   );
-  const sourceDisagreement = substantialSources.some((source) =>
-    substantialSources.some(
-      (other) =>
-        source.normalizedRating - other.normalizedRating >=
-        EXPERIENCE_SCORE_POLICY.disagreementPoints - Number.EPSILON * 10,
-    ),
-  );
+  const sourceDisagreement = ratingRange(substantialSources)?.substantial;
   const opposingNarratives = independentNarratives.filter(
     (review) =>
       (weightedAverage >= 8 && review.sentiment === "negative") ||
@@ -724,10 +729,7 @@ export function computeExperienceScore(
     );
   const confidence = !rated
     ? "unrated"
-    : includedSources.filter(
-          (source) =>
-            source.count >= EXPERIENCE_SCORE_POLICY.moderateFamilyMinimum,
-        ).length >= 2 &&
+    : substantialSources.length >= 2 &&
         reviewCount >= EXPERIENCE_SCORE_POLICY.moderateCoverageReviews &&
         !aggregateRange?.substantial &&
         !narrativeConflict

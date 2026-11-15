@@ -1,6 +1,9 @@
 import { isDeepStrictEqual } from "node:util";
 import type { MarketSnapshot } from "./markets";
-import type { LocationResearch } from "./location-research-types";
+import {
+  emptyLocationResearch,
+  type LocationResearch,
+} from "./location-research-types";
 import type { Provider } from "./providers";
 import type { ReviewCatalog } from "./review-catalog-types";
 
@@ -73,18 +76,25 @@ export function mergeHomeCareReviews(
 } {
   if (supplement.schemaVersion !== 1)
     throw new Error("Unknown home-care review supplement version.");
-  if (!Object.keys(supplement.providers).length)
+  const patches = Object.entries(supplement.providers);
+  if (!patches.length)
     return { snapshots, catalogs: baseCatalogs };
   const catalogs = { ...baseCatalogs };
   const remaining = new Set(Object.keys(supplement.providers));
   const merged = snapshots.map((market) => {
-    const entries = Object.entries(supplement.providers).filter(([pid]) =>
-      market.providers.some((provider) => provider.id === pid),
-    );
-    if (!entries.length) return market;
+    const providers = new Map<string, Provider>();
+    for (const provider of market.providers) {
+      if (
+        Object.hasOwn(supplement.providers, provider.id) &&
+        !providers.has(provider.id)
+      )
+        providers.set(provider.id, provider);
+    }
+    if (!providers.size) return market;
     const records = { ...market.locationResearch };
-    for (const [pid, patch] of entries) {
-      const provider = market.providers.find((item) => item.id === pid)!;
+    for (const [pid, patch] of patches) {
+      const provider = providers.get(pid);
+      if (!provider) continue;
       if (
         market.id !== "north-jersey" ||
         !/^north-jersey-hp-hp\d+$/.test(pid) ||
@@ -97,24 +107,7 @@ export function mergeHomeCareReviews(
         Object.keys(patch.identity).length !== 7
       )
         throw new Error("Home-care review supplement identity drift.");
-      const record =
-        records[pid] ??
-        ({
-          providerId: pid,
-          checkedAt: null,
-          providerDetailsReviewed: false,
-          sources: [],
-          facts: [],
-          reviews: [],
-          reviewAggregates: [],
-          availability: {
-            status: "not-published",
-            text: "Current availability has not been researched for this location. Contact the provider to confirm openings and waitlist timing.",
-            sourceId: null,
-            asOf: null,
-          },
-          notes: [],
-        } satisfies LocationResearch);
+      const record = records[pid] ?? emptyLocationResearch(pid);
       const priorCatalog = catalogs[pid];
       const catalog: ReviewCatalog = structuredClone(
         priorCatalog ?? {
@@ -214,22 +207,26 @@ export function mergeHomeCareReviews(
           });
         }
       }
+      const accountsBySource = Map.groupBy(
+        catalog.accounts,
+        (account) => account.sourceId,
+      );
+      const priorAccounts = Map.groupBy(
+        priorCatalog?.accounts ?? [],
+        (account) => account.sourceId,
+      );
       for (const source of catalog.sources) {
-        source.retainedCount = catalog.accounts.filter(
-          (account) => account.sourceId === source.id,
-        ).length;
+        const accounts = accountsBySource.get(source.id) ?? [];
+        source.retainedCount = accounts.length;
         const original = priorCatalog?.sources.find(
           (item) => item.id === source.id,
         );
         const previousIds = new Set(
-          priorCatalog?.accounts
-            .filter((account) => account.sourceId === source.id)
-            .map((account) => account.id),
+          priorAccounts.get(source.id)?.map((account) => account.id),
         );
-        const added = catalog.accounts.filter(
-          (account) =>
-            account.sourceId === source.id && !previousIds.has(account.id),
-        ).length;
+        let added = 0;
+        for (const account of accounts)
+          if (!previousIds.has(account.id)) added++;
         source.previouslyUnseenCount = Math.min(
           source.retainedCount,
           (original?.previouslyUnseenCount ?? 0) + added,

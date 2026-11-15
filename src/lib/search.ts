@@ -1,4 +1,4 @@
-import { distanceMiles } from "./distance";
+import { providerDistanceMiles } from "./distance";
 import {
   getMarket,
   getProviderEntry,
@@ -17,7 +17,12 @@ import {
   type SearchProvider,
   type SearchResponse,
 } from "./providers";
-import { resolveSearchScope, SearchInputError } from "./search-scope";
+import {
+  compareSearchNames,
+  resolveSearchScope,
+  searchParameters,
+  SearchInputError,
+} from "./search-scope";
 
 export type SearchOptions = {
   zip?: string;
@@ -33,27 +38,15 @@ export const catalog: Provider[] = getMarket()!.providers;
 const categoryKeys = Object.keys(CATEGORY_LABELS) as CareCategory[];
 
 export { distanceMiles } from "./distance";
-function optionsFrom(input: URLSearchParams | SearchOptions): SearchOptions {
-  if (input instanceof URLSearchParams) {
-    const allowed = ["zip", "radius", "category", "sort", "q", "evidence"];
-    if (
-      [...input.keys()].some(
-        (key) => !allowed.includes(key) || input.getAll(key).length !== 1,
-      )
-    )
-      throw new SearchInputError(
-        "Supply each supported search parameter at most once.",
-      );
-    return Object.fromEntries(input.entries());
-  }
-  return input;
-}
 export function searchProviders(
   input: URLSearchParams | SearchOptions = {},
   records?: readonly Provider[],
   registry: MarketRegistry = markets,
 ): SearchResponse {
-  const opts = optionsFrom(input);
+  const opts =
+    input instanceof URLSearchParams
+      ? searchParameters(input, "search")
+      : input;
   const { zip, market, point, radius, category } = resolveSearchScope(
     opts,
     registry,
@@ -120,13 +113,7 @@ export function searchProviders(
       category,
     );
     if (evidence === "service-area" && !serviceAreaMatch) continue;
-    const distance =
-      provider.lat === null ||
-      provider.lng === null ||
-      !Number.isFinite(provider.lat) ||
-      !Number.isFinite(provider.lng)
-        ? null
-        : distanceMiles(point, { lat: provider.lat, lng: provider.lng });
+    const distance = providerDistanceMiles(point, provider);
     if (distance === null && !matchesCategory) continue;
     if (distance !== null && distance > radius && !serviceAreaMatch) continue;
     const research =
@@ -167,7 +154,7 @@ export function searchProviders(
   }
   const byDistanceName = (a: SearchProvider, b: SearchProvider) =>
     (a.distanceMiles ?? Infinity) - (b.distanceMiles ?? Infinity) ||
-    a.name.localeCompare(b.name, "en", { sensitivity: "base" }) ||
+    compareSearchNames(a.name, b.name) ||
     a.id.localeCompare(b.id, "en");
   providers.sort((a, b) => {
     let ratingDifference = 0;

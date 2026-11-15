@@ -1,6 +1,11 @@
-import { distanceMiles } from "./distance";
+import { distanceMiles, providerDistanceMiles } from "./distance";
 import { markets, type MarketRegistry, type MarketSnapshot } from "./markets";
-import { resolveSearchScope, SearchInputError } from "./search-scope";
+import {
+  compareSearchNames,
+  resolveSearchScope,
+  searchParameters,
+  SearchInputError,
+} from "./search-scope";
 import { matchesHomeCareServiceArea } from "./providers";
 import { providerSearchText } from "./provider-search-text";
 import type {
@@ -31,20 +36,12 @@ export function searchSuggestions(
   input: URLSearchParams,
   registry: MarketRegistry = markets,
 ): SearchSuggestionsResponse {
-  const allowed = ["zip", "radius", "category", "q"];
-  if (
-    [...input.keys()].some(
-      (key) => !allowed.includes(key) || input.getAll(key).length !== 1,
-    )
-  )
-    throw new SearchInputError(
-      "Supply each supported suggestion parameter at most once.",
-    );
-  const query = (input.get("q") ?? "").trim().toLocaleLowerCase("en-US");
+  const params = searchParameters(input, "suggestion");
+  const query = (params.q ?? "").trim().toLocaleLowerCase("en-US");
   if (query.length > 200)
     throw new SearchInputError("Search text must be 200 characters or fewer.");
   const { zip, market, point, radius, category } = resolveSearchScope(
-    Object.fromEntries(input),
+    params,
     registry,
   );
   if (query.length < 2) return { suggestions: [] };
@@ -87,13 +84,7 @@ export function searchSuggestions(
       zip,
       category,
     );
-    const distance =
-      provider.lat === null ||
-      provider.lng === null ||
-      !Number.isFinite(provider.lat) ||
-      !Number.isFinite(provider.lng)
-        ? Infinity
-        : distanceMiles(point, { lat: provider.lat, lng: provider.lng });
+    const distance = providerDistanceMiles(point, provider) ?? Infinity;
     if (distance > radius && !serviceAreaMatch) continue;
     providers.push({
       id: provider.id,
@@ -108,7 +99,7 @@ export function searchSuggestions(
     Number(!a.normalizedValue.startsWith(query)) -
       Number(!b.normalizedValue.startsWith(query)) ||
     a.distance - b.distance ||
-    a.value.localeCompare(b.value, "en", { sensitivity: "base" }) ||
+    compareSearchNames(a.value, b.value) ||
     a.id.localeCompare(b.id, "en");
   const townMatches = [...towns.values()].sort(compare).slice(0, 4);
   const providerMatches = providers

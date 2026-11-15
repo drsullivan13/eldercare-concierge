@@ -1,6 +1,6 @@
 import { registeredMarket } from "./market-registration";
 import {
-  getProviderMarket,
+  getProviderEntry,
   markets,
   type MarketRegistry,
   type MarketSnapshot,
@@ -191,11 +191,10 @@ export function getHomeHealthEvidence(
   ) {
     throw new HomeHealthEvidenceError("Supply one exact catalog provider ID.");
   }
-  const market = getProviderMarket(providerId, registry);
+  const entry = getProviderEntry(providerId, registry);
+  const market = entry?.market;
+  const provider = entry?.provider;
   const snapshot = market?.homeHealthEvidence;
-  const provider = market?.providers.find(
-    (record) => record.id === providerId && record.state === market.state,
-  );
   const maIdentity =
     market?.id === "massachusetts" &&
     Object.hasOwn(HOME_HEALTH_PROVIDER_CCNS, providerId);
