@@ -40,7 +40,9 @@ test("the shareable demo resolves exactly the published North Jersey pair", asyn
         (fact) => fact.kind === "care" && /memory care/i.test(fact.text),
       ),
     );
-    const costs = research.facts.filter((fact) => fact.kind === "cost");
+    const costs = research.facts.filter(
+      (fact) => fact.kind === "cost" && fact.amount,
+    );
     assert.equal(costs.length, 3);
     for (const cost of costs)
       assert.ok(

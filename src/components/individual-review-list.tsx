@@ -156,9 +156,54 @@ export function IndividualReviewList({
             target="_blank"
             rel="noreferrer"
           >
-            Sunrise award list <ExternalLink aria-hidden size={13} />
+            See the award announcement <ExternalLink aria-hidden size={13} />
           </a>
         </p>
+      )}
+      {data?.mixedSurveyRank && (
+        <p>
+          <strong>
+            #{data.mixedSurveyRank.rank} in the {data.mixedSurveyRank.year}{" "}
+            Activated Insights Top 100
+          </strong>
+          <br />
+          This home-care ranking combines client and employee feedback collected
+          in {data.mixedSurveyRank.surveyPeriod}.{" "}
+          <a
+            className="research-source"
+            href={data.mixedSurveyRank.sourceUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            See the agency ranking <ExternalLink aria-hidden size={13} />
+          </a>
+        </p>
+      )}
+      {data?.serviceDistinction && (
+        <details>
+          <summary>
+            Activated Insights customer experience award ·{" "}
+            {data.serviceDistinction.year}
+          </summary>
+          <p>
+            The community reports placing in the top 15% of participating
+            providers in these survey categories.
+          </p>
+          <ul>
+            {data.serviceDistinction.categories.map((category) => (
+              <li key={category}>{category}</li>
+            ))}
+          </ul>
+          <a
+            className="research-source"
+            href={data.serviceDistinction.sourceUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read the operator’s announcement{" "}
+            <ExternalLink aria-hidden size={13} />
+          </a>
+        </details>
       )}
       {data?.interviewUrl && (
         <p>

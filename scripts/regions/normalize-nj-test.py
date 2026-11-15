@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Behavioral checks against original retained NJ source rows and release inputs."""
 
-from collections import Counter
+from collections import Counter, defaultdict
 import importlib.util
 import json
+import re
 from pathlib import Path
 import subprocess
 import tempfile
@@ -357,6 +358,34 @@ class ActualSourceTests(unittest.TestCase):
         original_dispositions = [r for r in self.crosswalk + self.ledger if r["source"] == "NJ HP registry" and r.get("sourceFile") != live_file]
         self.assertEqual(Counter(r["sourceRow"] for r in original_dispositions), Counter(old.keys()))
         self.assertEqual(len(live), 3628)
+
+    def test_medicaid_schedule_matches_only_the_named_city_and_licensed_unit(self):
+        release = json.loads((adapter.RESEARCH / "state/assisted-living-medicaid-schedule.json").read_bytes())
+        names = defaultdict(list)
+        def words(name):
+            return " ".join(re.findall("[A-Z0-9]+", name.upper()))
+        for row in adapter.workbook_rows((adapter.RESEARCH / release["licenseFile"]).read_bytes()):
+            name = row["LICENSED_NAME"].removesuffix("(" + row["FacID"] + ")").strip()
+            names[words(name)].append(row)
+        records = json.loads(self.files["locationResearch.json"])
+        linked = {pid for pid, record in records.items() if any(f["id"] == "njmmis-sfy2027-assisted-living-listing"
+                  for f in record["facts"])}
+        self.assertEqual(linked, {row["providerId"] for row in release["records"]})
+        self.assertEqual(len(linked), 39)
+        for row in release["records"]:
+            unit, = names[words(row["scheduleName"])]
+            self.assertEqual(unit["FacID"], row["facilityId"])
+            self.assertIn(" " + words(unit["FAC_CITY"]) + " ", " " + words(row["scheduleName"]) + " ")
+            self.assertEqual(" ".join(unit["ADDRESS"].split()), row["catalogAddress"])
+            record = records[row["providerId"]]
+            fact, = [f for f in record["facts"] if f["id"] == "njmmis-sfy2027-assisted-living-listing"]
+            self.assertEqual(fact["asOf"], release["effectiveAt"])
+            self.assertNotIn("amount", fact)
+            source, = [s for s in record["sources"] if s["id"] == fact["sourceId"]]
+            self.assertEqual(source["url"], f"{release['sourceUrl']}#page={row['sourcePage']}")
+        self.assertTrue(linked.isdisjoint(row["providerId"] for row in release["heldExactNameOnly"]))
+        self.assertTrue(linked.isdisjoint("north-jersey-doh-" + unit.lower()
+                for units in release["coLocatedUnitCheck"]["excludedNeighboringFacilityIds"].values() for unit in units))
 
     def test_historical_campuses_have_no_invented_certification_or_date(self):
         campuses = [self.by_id[r["providerId"]] for r in self.crosswalk if r["status"] == "included_historical"]

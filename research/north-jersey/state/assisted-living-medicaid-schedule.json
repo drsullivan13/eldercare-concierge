@@ -1,0 +1,570 @@
+{
+  "year": "SFY 2027",
+  "checkedAt": "2026-11-15",
+  "effectiveAt": "2026-07-01",
+  "publisher": "New Jersey Medicaid (NJMMIS)",
+  "sourceUrl": "https://www.njmmis.com/documentDownload.aspx?document=SFY_2027_Assisted_Living_Rates.pdf",
+  "file": "state/raw/assisted-living-rates-sfy2027.pdf",
+  "sha256": "4132a628862cade921ba02a3d8b7c5789d69e45afb8ab4671eb39014860b5d77",
+  "licenseSource": "https://healthapps.nj.gov/facilities/documents2/All_LTC.xlsx",
+  "licenseFile": "state/raw/ltc.xlsx",
+  "licenseSha256": "39d0e7f6af13130a4e7fb328e9cfc7704853702e65f503d6e8b8724dd710f716",
+  "scheduleRows": 242,
+  "stateRows": 894,
+  "method": "Require a unique exact normalized licensed name across the statewide NJ DOH workbook, a literal municipality in the schedule name, an assisted-living residence or comprehensive personal care home, and the exact catalog ID and address. The schedule gives no facility identifiers or addresses; name and municipality jointly resolve the licensed unit. Default rates for unlisted facilities supply no positive listing.",
+  "scope": "This is a dated provider reimbursement schedule. Confirm plan coverage, Medicaid admission and availability directly. A blank or unresolved match gives no evidence of nonparticipation.",
+  "dispositions": {
+    "unmatched_or_ambiguous_state_name": 75,
+    "missing_literal_city_or_setting": 13,
+    "outside_catalog_al_units": 115,
+    "matched": 39
+  },
+  "heldExactNameOnly": [
+    {
+      "providerId": "north-jersey-doh-nj7u0nfd",
+      "scheduleName": "ALARIS HEALTH AT THE ATRIUM",
+      "sourcePage": 1
+    },
+    {
+      "providerId": "north-jersey-doh-njal02000",
+      "scheduleName": "ALLEGRO",
+      "sourcePage": 1
+    },
+    {
+      "providerId": "north-jersey-doh-nj30225",
+      "scheduleName": "BRIGHT SIDE MANOR",
+      "sourcePage": 2
+    },
+    {
+      "providerId": "north-jersey-doh-nj5a000",
+      "scheduleName": "CARE ONE AT THE CUPOLA",
+      "sourcePage": 2
+    },
+    {
+      "providerId": "north-jersey-doh-nj16a001",
+      "scheduleName": "CHESTNUT HILL RESIDENCES BY COMPLETE CARE",
+      "sourcePage": 2
+    },
+    {
+      "providerId": "north-jersey-doh-nj30a008",
+      "scheduleName": "CLIFFS AT EAGLE ROCK, THE",
+      "sourcePage": 2
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a00",
+      "scheduleName": "JEWISH HOME ASSISTED LIVING",
+      "sourcePage": 3
+    },
+    {
+      "providerId": "north-jersey-doh-nj14a002",
+      "scheduleName": "MERRY HEART ASSISTED LIVING, LLC",
+      "sourcePage": 3
+    },
+    {
+      "providerId": "north-jersey-doh-922tyu",
+      "scheduleName": "MT ARLINGTON SENIOR LIVING",
+      "sourcePage": 4
+    },
+    {
+      "providerId": "north-jersey-doh-nj07c009",
+      "scheduleName": "ROSEVILLE MANOR",
+      "sourcePage": 4
+    },
+    {
+      "providerId": "north-jersey-doh-nj30a003",
+      "scheduleName": "SUNRISE ASSISTED LIVING AT WEST ESSEX",
+      "sourcePage": 4
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a004",
+      "scheduleName": "VICTORIA MEWS ASSISTED LIVING",
+      "sourcePage": 5
+    },
+    {
+      "providerId": "north-jersey-doh-nj30a000",
+      "scheduleName": "WINCHESTER GARDENS ASSISTED LIVING CENTER",
+      "sourcePage": 5
+    }
+  ],
+  "records": [
+    {
+      "providerId": "north-jersey-doh-nj5c001",
+      "catalogName": "ALLENDALE SENIOR LIVING",
+      "catalogAddress": "85 HARRETON ROAD ALLENDALE, NJ 07401",
+      "city": "ALLENDALE",
+      "license": "05C001",
+      "facilityId": "NJ5C001",
+      "licensedSetting": "COMPREHENSIVE PERSONAL CARE HOME",
+      "licenseRow": 466,
+      "sourcePage": 1,
+      "scheduleName": "ALLENDALE SENIOR LIVING"
+    },
+    {
+      "providerId": "north-jersey-doh-nj13a012",
+      "catalogName": "ARBOR TERRACE MORRIS PLAINS",
+      "catalogAddress": "361 SPEEDWELL AVENUE MORRIS PLAINS, NJ 07950",
+      "city": "MORRIS PLAINS",
+      "license": "13A012",
+      "facilityId": "NJ13A012",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 237,
+      "sourcePage": 1,
+      "scheduleName": "ARBOR TERRACE MORRIS PLAINS"
+    },
+    {
+      "providerId": "north-jersey-doh-nj20a013",
+      "catalogName": "ARBOR TERRACE MOUNTAINSIDE",
+      "catalogAddress": "1050 SPRINGFIELD AVENUE MOUNTAINSIDE, NJ 07092",
+      "city": "MOUNTAINSIDE",
+      "license": "AL20001",
+      "facilityId": "NJ20A013",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 278,
+      "sourcePage": 1,
+      "scheduleName": "ARBOR TERRACE MOUNTAINSIDE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a026",
+      "catalogName": "ARBOR TERRACE NORWOOD",
+      "catalogAddress": "545 TAPPAN ROAD NORWOOD, NJ 07648",
+      "city": "NORWOOD",
+      "license": "02A026",
+      "facilityId": "NJ02A026",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 202,
+      "sourcePage": 1,
+      "scheduleName": "ARBOR TERRACE NORWOOD"
+    },
+    {
+      "providerId": "north-jersey-doh-nj82472",
+      "catalogName": "ATRIA CRANFORD",
+      "catalogAddress": "10 JACKSON DRIVE CRANFORD, NJ 07016",
+      "city": "Cranford",
+      "license": "82472",
+      "facilityId": "NJ82472",
+      "licensedSetting": "COMPREHENSIVE PERSONAL CARE HOME",
+      "licenseRow": 471,
+      "sourcePage": 1,
+      "scheduleName": "ATRIA CRANFORD"
+    },
+    {
+      "providerId": "north-jersey-doh-nj07a021",
+      "catalogName": "BRANDYWINE LIVING AT LIVINGSTON",
+      "catalogAddress": "369 EAST MT PLEASANT AVENUE LIVINGSTON, NJ 07039",
+      "city": "LIVINGSTON",
+      "license": "07A021",
+      "facilityId": "NJ07A021",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 220,
+      "sourcePage": 1,
+      "scheduleName": "BRANDYWINE LIVING AT LIVINGSTON"
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a024",
+      "catalogName": "BRANDYWINE LIVING AT MAHWAH",
+      "catalogAddress": "814 WYCKOFF AVENUE MAHWAH, NJ 07430",
+      "city": "MAHWAH",
+      "license": "02A024",
+      "facilityId": "NJ02A024",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 201,
+      "sourcePage": 1,
+      "scheduleName": "BRANDYWINE LIVING AT MAHWAH"
+    },
+    {
+      "providerId": "north-jersey-doh-nj90a001",
+      "catalogName": "BRANDYWINE LIVING AT SUMMIT",
+      "catalogAddress": "41 SPRINGFIELD AVENUE SUMMIT, NJ 07901",
+      "city": "SUMMIT",
+      "license": "90a001",
+      "facilityId": "NJ90A001",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 400,
+      "sourcePage": 1,
+      "scheduleName": "BRANDYWINE LIVING AT SUMMIT"
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a001",
+      "catalogName": "BRIGHTON GARDENS OF FLORHAM PARK",
+      "catalogAddress": "21 RIDGEDALE AVENUE FLORHAM PARK, NJ 07932",
+      "city": "FLORHAM PARK",
+      "license": "60A001",
+      "facilityId": "NJ60A001",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 338,
+      "sourcePage": 2,
+      "scheduleName": "BRIGHTON GARDENS OF FLORHAM PARK"
+    },
+    {
+      "providerId": "north-jersey-doh-nj90122",
+      "catalogName": "BRIGHTON GARDENS OF MOUNTAINSIDE",
+      "catalogAddress": "1350 ROUTE 22 WEST MOUNTAINSIDE, NJ 07092",
+      "city": "MOUNTAINSIDE",
+      "license": "90122",
+      "facilityId": "NJ90122",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 395,
+      "sourcePage": 2,
+      "scheduleName": "BRIGHTON GARDENS OF MOUNTAINSIDE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj30a004",
+      "catalogName": "BRIGHTON GARDENS OF WEST ORANGE",
+      "catalogAddress": "220 PLEASANT VALLEY WAY WEST ORANGE, NJ 07052",
+      "city": "WEST ORANGE",
+      "license": "30A004",
+      "facilityId": "NJ30A004",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 290,
+      "sourcePage": 2,
+      "scheduleName": "BRIGHTON GARDENS OF WEST ORANGE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a020a",
+      "catalogName": "BRIGHTVIEW PARAMUS",
+      "catalogAddress": "396 FOREST AVENUE PARAMUS, NJ 07652",
+      "city": "PARAMUS",
+      "license": "02A020",
+      "facilityId": "NJ02A020A",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 199,
+      "sourcePage": 2,
+      "scheduleName": "BRIGHTVIEW PARAMUS"
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a013",
+      "catalogName": "BRIGHTVIEW RANDOLPH, LLC",
+      "catalogAddress": "175 QUAKER CHURCH ROAD RANDOLPH, NJ 07869",
+      "city": "RANDOLPH",
+      "license": "60A013",
+      "facilityId": "NJ60A013",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 350,
+      "sourcePage": 2,
+      "scheduleName": "BRIGHTVIEW RANDOLPH, LLC"
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a023",
+      "catalogName": "BRIGHTVIEW TENAFLY",
+      "catalogAddress": "55 HUDSON AVENUE TENAFLY, NJ 07670",
+      "city": "TENAFLY",
+      "license": "02A023",
+      "facilityId": "NJ02A023",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 200,
+      "sourcePage": 2,
+      "scheduleName": "BRIGHTVIEW TENAFLY"
+    },
+    {
+      "providerId": "north-jersey-doh-njal16002",
+      "catalogName": "BRIGHTVIEW WAYNE",
+      "catalogAddress": "1139 HAMBURG TURNPIKE WAYNE, NJ 07470",
+      "city": "WAYNE",
+      "license": "AL16002",
+      "facilityId": "NJAL16002",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 413,
+      "sourcePage": 2,
+      "scheduleName": "BRIGHTVIEW WAYNE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a029",
+      "catalogName": "BRISTAL AT ENGLEWOOD, THE",
+      "catalogAddress": "412 SOUTH VAN BRUNT STREET ENGLEWOOD, NJ 07631",
+      "city": "ENGLEWOOD",
+      "license": "02A029",
+      "facilityId": "NJ02A029",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 203,
+      "sourcePage": 2,
+      "scheduleName": "BRISTAL AT ENGLEWOOD, THE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj13a021",
+      "catalogName": "BRISTAL AT WALDWICK, THE",
+      "catalogAddress": "245 WYCKOFF AVENUE WALDWICK, NJ 07463",
+      "city": "WALDWICK",
+      "license": "13A021",
+      "facilityId": "NJ13A021",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 242,
+      "sourcePage": 2,
+      "scheduleName": "BRISTAL AT WALDWICK, THE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj16a023",
+      "catalogName": "BRISTAL AT WAYNE, THE",
+      "catalogAddress": "1440 HAMBURG TURNPIKE WAYNE, NJ 07470",
+      "city": "WAYNE",
+      "license": "16A023",
+      "facilityId": "NJ16A023",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 259,
+      "sourcePage": 2,
+      "scheduleName": "BRISTAL AT WAYNE, THE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a016",
+      "catalogName": "BRISTAL AT WOODCLIFF LAKE, THE",
+      "catalogAddress": "364 CHESTNUT RIDGE ROAD WOODCLIFF LAKE, NJ 07677",
+      "city": "WOODCLIFF LAKE",
+      "license": "02A016",
+      "facilityId": "NJ02A016",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 198,
+      "sourcePage": 2,
+      "scheduleName": "BRISTAL AT WOODCLIFF LAKE, THE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj5a004",
+      "catalogName": "BROOKDALE EMERSON",
+      "catalogAddress": "590 OLD HOOK ROAD EMERSON, NJ 07630",
+      "city": "EMERSON",
+      "license": "05A004",
+      "facilityId": "NJ5A004",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 332,
+      "sourcePage": 2,
+      "scheduleName": "BROOKDALE EMERSON"
+    },
+    {
+      "providerId": "north-jersey-doh-nj30a009",
+      "catalogName": "CARE ONE AT LIVINGSTON ASSISTED LIVING",
+      "catalogAddress": "76 PASSAIC AVENUE LIVINGSTON, NJ 07039",
+      "city": "LIVINGSTON",
+      "license": "30A009",
+      "facilityId": "NJ30A009",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 294,
+      "sourcePage": 2,
+      "scheduleName": "CARE ONE AT LIVINGSTON ASSISTED LIVING"
+    },
+    {
+      "providerId": "north-jersey-doh-njvqxwiz",
+      "catalogName": "CARE ONE AT WAYNE - ALR",
+      "catalogAddress": "493 BLACK OAK RIDGE ROAD WAYNE, NJ 07470",
+      "city": "WAYNE",
+      "license": "VQXWIZ",
+      "facilityId": "NJVQXWIZ",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 417,
+      "sourcePage": 2,
+      "scheduleName": "CARE ONE AT WAYNE - ALR"
+    },
+    {
+      "providerId": "north-jersey-doh-nj02a031",
+      "catalogName": "CARE ONE HARMONY VILLAGE AT PARAMUS",
+      "catalogAddress": "189 PARAMUS ROAD PARAMUS, NJ 07652",
+      "city": "PARAMUS",
+      "license": "02A031",
+      "facilityId": "NJ02A031",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 204,
+      "sourcePage": 2,
+      "scheduleName": "CARE ONE HARMONY VILLAGE AT PARAMUS"
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a006",
+      "catalogName": "JUNIPER VILLAGE AT CHATHAM",
+      "catalogAddress": "500 SOUTHERN BOULEVARD CHATHAM, NJ 07928",
+      "city": "CHATHAM",
+      "license": "60A006",
+      "facilityId": "NJ60A006",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 343,
+      "sourcePage": 3,
+      "scheduleName": "JUNIPER VILLAGE AT CHATHAM"
+    },
+    {
+      "providerId": "north-jersey-doh-njlrr782",
+      "catalogName": "MILL GARDENS AT MIDLAND PARK",
+      "catalogAddress": "36 FANER ROAD MIDLAND PARK, NJ 07432",
+      "city": "MIDLAND PARK",
+      "license": "LRR782",
+      "facilityId": "NJLRR782",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 416,
+      "sourcePage": 3,
+      "scheduleName": "MILL GARDENS AT MIDLAND PARK"
+    },
+    {
+      "providerId": "north-jersey-doh-nj25240",
+      "catalogName": "MIRA VIE AT CLIFTON",
+      "catalogAddress": "782 VALLEY ROAD CLIFTON, NJ 07013",
+      "city": "Clifton",
+      "license": "25240",
+      "facilityId": "NJ25240",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 282,
+      "sourcePage": 3,
+      "scheduleName": "MIRA VIE AT CLIFTON"
+    },
+    {
+      "providerId": "north-jersey-doh-nj31446",
+      "catalogName": "MIRA VIE AT MONTVILLE",
+      "catalogAddress": "165 CHANGEBRIDGE ROAD MONTVILLE, NJ 07045",
+      "city": "MONTVILLE",
+      "license": "031446",
+      "facilityId": "NJ31446",
+      "licensedSetting": "COMPREHENSIVE PERSONAL CARE HOME",
+      "licenseRow": 461,
+      "sourcePage": 3,
+      "scheduleName": "MIRA VIE AT MONTVILLE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj70a000",
+      "catalogName": "MIRA VIE AT WEST MILFORD",
+      "catalogAddress": "197 CAHILL CROSS ROAD WEST MILFORD, NJ 07480",
+      "city": "WEST MILFORD",
+      "license": "70A000",
+      "facilityId": "NJ70A000",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 362,
+      "sourcePage": 3,
+      "scheduleName": "MIRA VIE AT WEST MILFORD"
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a005",
+      "catalogName": "SPRING HILLS AT MORRISTOWN",
+      "catalogAddress": "17 SPRING PLACE MORRISTOWN, NJ 07960",
+      "city": "MORRISTOWN",
+      "license": "60a005",
+      "facilityId": "NJ60A005",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 342,
+      "sourcePage": 4,
+      "scheduleName": "SPRING HILLS AT MORRISTOWN"
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a012",
+      "catalogName": "SUNRISE ASSISTED LIVING OF RANDOLPH",
+      "catalogAddress": "648 ROUTE 10 RANDOLPH, NJ 07869",
+      "city": "RANDOLPH",
+      "license": "60A012",
+      "facilityId": "NJ60A012",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 349,
+      "sourcePage": 4,
+      "scheduleName": "SUNRISE ASSISTED LIVING OF RANDOLPH"
+    },
+    {
+      "providerId": "north-jersey-doh-nj05a200",
+      "catalogName": "SUNRISE OF CRESSKILL",
+      "catalogAddress": "3 TENAKILL PARK DRIVE EAST CRESSKILL, NJ 07626",
+      "city": "CRESSKILL",
+      "license": "05A200",
+      "facilityId": "NJ05A200",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 217,
+      "sourcePage": 4,
+      "scheduleName": "SUNRISE OF CRESSKILL"
+    },
+    {
+      "providerId": "north-jersey-doh-nj5a008",
+      "catalogName": "SUNRISE OF EDGEWATER",
+      "catalogAddress": "351 RIVER ROAD EDGEWATER, NJ 07020",
+      "city": "EDGEWATER",
+      "license": "05a008",
+      "facilityId": "NJ5A008",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 336,
+      "sourcePage": 4,
+      "scheduleName": "SUNRISE OF EDGEWATER"
+    },
+    {
+      "providerId": "north-jersey-doh-nj25284",
+      "catalogName": "SUNRISE OF FRANKLIN LAKES",
+      "catalogAddress": "728 FRANKLIN AVENUE FRANKLIN LAKES, NJ 07417",
+      "city": "FRANKLIN LAKES",
+      "license": "AL25284",
+      "facilityId": "NJ25284",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 283,
+      "sourcePage": 4,
+      "scheduleName": "SUNRISE OF FRANKLIN LAKES"
+    },
+    {
+      "providerId": "north-jersey-doh-nj07a030",
+      "catalogName": "SUNRISE OF LIVINGSTON",
+      "catalogAddress": "290 SOUTH ORANGE AVENUE LIVINGSTON, NJ 07039",
+      "city": "LIVINGSTON",
+      "license": "07A030",
+      "facilityId": "NJ07A030",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 425,
+      "sourcePage": 4,
+      "scheduleName": "SUNRISE OF LIVINGSTON"
+    },
+    {
+      "providerId": "north-jersey-doh-nj60a009",
+      "catalogName": "SUNRISE OF MADISON",
+      "catalogAddress": "215 MADISON AVENUE MADISON, NJ 07940",
+      "city": "MADISON",
+      "license": "60A009",
+      "facilityId": "NJ60A009",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 346,
+      "sourcePage": 4,
+      "scheduleName": "SUNRISE OF MADISON"
+    },
+    {
+      "providerId": "north-jersey-doh-njal14003",
+      "catalogName": "SUNRISE OF MOUNTAIN LAKES",
+      "catalogAddress": "23 BLOOMFIELD AVENUE MOUNTAIN LAKES, NJ 07046",
+      "city": "MOUNTAIN LAKES",
+      "license": "AL14003",
+      "facilityId": "NJAL14003",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 412,
+      "sourcePage": 4,
+      "scheduleName": "SUNRISE OF MOUNTAIN LAKES"
+    },
+    {
+      "providerId": "north-jersey-doh-nj20a014",
+      "catalogName": "SUNRISE OF SUMMIT",
+      "catalogAddress": "26 RIVER ROAD SUMMIT, NJ 07901",
+      "city": "SUMMIT",
+      "license": "20A014",
+      "facilityId": "NJ20A014",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 279,
+      "sourcePage": 5,
+      "scheduleName": "SUNRISE OF SUMMIT"
+    },
+    {
+      "providerId": "north-jersey-doh-njal02005",
+      "catalogName": "THRIVE AT MONTVALE",
+      "catalogAddress": "110 SUMMIT AVENUE MONTVALE, NJ 07645",
+      "city": "MONTVALE",
+      "license": "al02005",
+      "facilityId": "NJAL02005",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 405,
+      "sourcePage": 5,
+      "scheduleName": "THRIVE AT MONTVALE"
+    },
+    {
+      "providerId": "north-jersey-doh-nj8xd1wy",
+      "catalogName": "VAN DYK'S SENIOR RESIDENCE OF HAWTHORNE",
+      "catalogAddress": "644 GOFFLE ROAD HAWTHORNE, NJ 07506",
+      "city": "HAWTHORNE",
+      "license": "8XD1WY",
+      "facilityId": "NJ8XD1WY",
+      "licensedSetting": "ASSISTED LIVING RESIDENCE",
+      "licenseRow": 386,
+      "sourcePage": 5,
+      "scheduleName": "VAN DYK'S SENIOR RESIDENCE OF HAWTHORNE"
+    }
+  ],
+  "coLocatedUnitCheck": {
+    "method": "Compared normalized state addresses for every accepted license against the full statewide workbook. Two sites have another licensed unit at the address; the exact facility name and AL/CPCH setting in this reimbursement schedule resolve the assisted-living unit.",
+    "excludedNeighboringFacilityIds": {
+      "NJ5C001": [
+        "NJ60201"
+      ],
+      "NJVQXWIZ": [
+        "NJ61619"
+      ]
+    }
+  }
+}

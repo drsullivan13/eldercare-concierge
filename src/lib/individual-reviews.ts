@@ -13,6 +13,17 @@ export type IndividualReviewsResponse = {
   providerId: string;
   accounts: IndividualReview[];
   interviewUrl?: string;
+  mixedSurveyRank?: {
+    year: number;
+    surveyPeriod: string;
+    rank: number;
+    sourceUrl: string;
+  };
+  serviceDistinction?: {
+    year: number;
+    categories: string[];
+    sourceUrl: string;
+  };
   surveyDistinction?: { year: number; categories: string[]; sourceUrl: string };
   externalProfiles?: { publisher: string; url: string }[];
   sources: Omit<ReviewCatalog["sources"][number], "sourceFamily">[];

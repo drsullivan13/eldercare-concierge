@@ -802,6 +802,39 @@ def evidence_coverage(inputs, providers, county_by_id, addresses, research):
     return groups
 
 
+def add_al_medicaid_schedule(inputs, providers, research):
+    from nj_pay_context import office_record
+    schedule = inputs.json("state/assisted-living-medicaid-schedule.json")
+    require(digest(inputs.read(schedule["file"])) == schedule["sha256"] and
+            inputs.hashes[schedule["licenseFile"]] == schedule["licenseSha256"],
+            "Assisted-living Medicaid schedule or licensing source changed")
+    by_id = {p["id"]: p for p in providers}
+    for row in schedule["records"]:
+        pid = row["providerId"]
+        if pid not in by_id:
+            continue
+        provider = by_id[pid]
+        require(pid == f"{MARKET}-doh-{slug(row['facilityId'])}" and
+                provider["category"] == "assisted-living" and provider["name"] == row["catalogName"] and
+                provider["address"] == row["catalogAddress"] and provider["city"].casefold() == row["city"].casefold() and
+                row["licensedSetting"] in provider["services"],
+                f"Assisted-living Medicaid schedule identity changed: {pid}")
+        checked = schedule["checkedAt"]
+        record = office_record(research, pid, checked)
+        key = "njmmis-sfy2027-assisted-living"
+        record["sources"].append({
+            "id": key, "kind": "regulator", "access": "pdf", "publisher": schedule["publisher"],
+            "title": f"SFY 2027 Assisted Living Provider Rates, page {row['sourcePage']}",
+            "url": f"{schedule['sourceUrl']}#page={row['sourcePage']}", "checkedAt": checked, "publishedAt": None,
+        })
+        record["facts"].append({
+            "id": key + "-listing", "kind": "cost", "sourceId": key, "asOf": schedule["effectiveAt"],
+            "text": "New Jersey Medicaid named this facility in its assisted-living reimbursement schedule "
+                    "effective July 1, 2026. Ask your health plan about coverage and the facility about "
+                    "Medicaid admissions and current availability.",
+        })
+
+
 def add_federal_home_care_history(inputs, providers, research):
     from nj_pay_context import add_fact
 
@@ -1212,6 +1245,7 @@ def normalize(root, counties, *, source_only=False):
         enrich(inputs, providers, zips, county_by_id)
         from nj_pay_context import add_county_home_care_context
         add_county_home_care_context(inputs, providers, research)
+        add_al_medicaid_schedule(inputs, providers, research)
         add_federal_home_care_history(inputs, providers, research)
         if nursing is not None:
             add_cms_nursing_context(nursing, metadata, providers, research)

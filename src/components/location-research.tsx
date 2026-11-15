@@ -146,7 +146,9 @@ function Facts({
         >
           <summary>
             Show {items.length - limit} more{" "}
-            {facts[0].kind === "cost" ? "price entries" : "details"}
+            {facts.slice(limit).every((fact) => fact.amount)
+              ? "price entries"
+              : "details"}
           </summary>
           <ul className="offering-facts" role="list">
             {items.slice(limit)}

@@ -3,7 +3,7 @@ import {
   ResearchInputError,
 } from "@/lib/location-research";
 import {
-  getCommunityFeedback,
+  getLocationFeedback,
   getExternalReviewProfiles,
   getReviewCatalog,
 } from "@/lib/review-catalog";
@@ -22,7 +22,7 @@ export function GET(request: Request) {
     return Response.json(
       {
         providerId: reviews.providerId,
-        ...getCommunityFeedback(id),
+        ...getLocationFeedback(id),
         ...(externalProfiles.length ? { externalProfiles } : {}),
         accounts: reviews.accounts.map((account) => ({
           ...account,

@@ -89,6 +89,11 @@ function temporaryApp(t: { after: (callback: () => void) => void }) {
   for (const name of [
     "resident-interview-profiles",
     "sunrise-survey-distinctions",
+    "brookdale-survey-distinctions",
+    "brightview-survey-distinctions",
+    "benchmark-survey-distinctions",
+    "wyckoff-activated-insights",
+    "home-care-mixed-survey-ranks",
   ]) {
     writeJson(
       join(
@@ -96,7 +101,7 @@ function temporaryApp(t: { after: (callback: () => void) => void }) {
         "research/north-jersey/review-catalog-editorial",
         name + ".json",
       ),
-      { records: [] },
+      { records: [], awards: [] },
     );
   }
   for (const name of readdirSync(join(root, "src/data"))) {
