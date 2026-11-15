@@ -146,7 +146,7 @@
       "publishedGoogleAverage": 3.9,
       "ratingCount": 43,
       "decision": "withheld",
-      "reason": "Identity hold. Exact published campus place match fails: the operator publishes no Google place ID and the contact page's automatic grounds-tile feature differs from the review rows' 0x0:0x7c735d2840ca5a30. All five visible accounts were read and retained, including one mixed and two negative. Importer hold: the campus has no official ID and an included_historical crosswalk row, and life-plan is not a compatible care-unit category. No score may transfer to cms-315457 or north-jersey-doh-nj30a005.",
+      "reason": "No place identifier on the inspected operator pages confirms that the Google review listing represents the entire campus. Its embedded map tile cannot establish that identity.",
       "identityEvidence": {
         "kind": "sanitized-published-identity-check",
         "sourceUrl": "https://www.cranesmill.org/planning-your-visit/contact/",
@@ -164,8 +164,8 @@
           "selectedPlace": null,
           "addressGeocode": null
         },
-        "publishedGoogleLinkBasis": "The only Google link is an address query (maps?ll=40.858807,-74.324241&q=459 Passaic Ave West Caldwell, NJ 07006). The embedded map tiles spotlight an automatic compound-grounds feature 1y9926778732201623867!2y290251151567059106 (hex 0x89c300a9a0c7c13b:0x4072de270cd78a2, /g/11bw3yl38y). That is a map-render parameter, not an operator review or place link, and its feature half differs from the review rows' 0x7c735d2840ca5a30.",
-        "placeMatch": "none: no operator-published place ID equals the review rows' 0x0:0x7c735d2840ca5a30",
+        "publishedGoogleLinkBasis": "The only Google link is an address query (maps?ll=40.858807,-74.324241&q=459 Passaic Ave West Caldwell, NJ 07006). The embedded map tiles spotlight an automatic compound-grounds feature 1y9926778732201623867!2y290251151567059106 (hex 0x89c300a9a0c7c13b:0x4072de270cd78a2, /g/11bw3yl38y). That is a map-render parameter, not an operator review or place link. Its identifier differs textually from the review rows' 0x0:0x7c735d2840ca5a30; no equivalence or non-equivalence between the two places is inferred.",
+        "placeMatch": "none found: no place ID published on the inspected operator pages equals the review rows' 0x0:0x7c735d2840ca5a30",
         "otherPagesChecked": [
           {
             "url": "https://www.cranesmill.org/",
@@ -201,8 +201,9 @@
           "section": "r55",
           "sha256": "94d204775d05a3d9077cbbceffbe98c258f3075988c2e7c63ece135645713e30"
         },
-        "limitation": "Identity corroboration only. Street, city and phone match the review listing. The Google population is not tied to the campus by any operator publication."
-      }
+        "limitation": "Identity corroboration only. Street, city and phone match the review listing. No inspected operator page ties the Google population to the campus. Pages not listed here were not inspected."
+      },
+      "unitScope": "Campus investigation only. Do not apply the aggregate to separately licensed nursing, assisted living or home-care operations."
     },
     {
       "providerId": "north-jersey-campus-winchester-gardens-07040",
@@ -212,7 +213,7 @@
       "publishedGoogleAverage": 4.6,
       "ratingCount": 74,
       "decision": "withheld",
-      "reason": "Population hold. The official contact page publishes place 0x89c3add25e295c1f:0x188e3d3471ba330 and every visible row links it, so identity passes. Row 609589 is an explicit professional referral-partner account and row 609588 states no relationship; the existing professional-relationship rule withholds the window. The platform labels the page Skilled Nursing / Long Term Care only. Importer hold: no official campus ID, included_historical crosswalk row, no life-plan care-unit compatibility. No score may transfer to cms-315527 or north-jersey-doh-nj30a000.",
+      "reason": "The operator links the same Google place as the public reviews. The visible accounts span care settings and include a discharge-planning professional describing collaboration. The eligible consumer population remains unresolved.",
       "identityEvidence": {
         "kind": "sanitized-published-identity-check",
         "sourceUrl": "https://winchestergardens.com/contact/",
@@ -242,7 +243,8 @@
           "sha256": "94d204775d05a3d9077cbbceffbe98c258f3075988c2e7c63ece135645713e30"
         },
         "limitation": "Identity corroboration only. This source supplies no review aggregate or reviewer population."
-      }
+      },
+      "unitScope": "Campus investigation only. Do not apply the aggregate to separately licensed nursing, assisted living or home-care operations."
     }
   ]
 }
