@@ -90,7 +90,7 @@ test("new exact-unit aggregates reach public research and full-region coverage",
   const approvedCoverage = body.locations.filter((row) =>
     approvedIds.has(row.providerId),
   );
-  expect(approvedCoverage).toHaveLength(32);
+  expect(approvedCoverage).toHaveLength(approvedIds.size);
   for (const approval of approvals) {
     const row = approvedCoverage.find(
       (row) => row.providerId === approval.providerId,
