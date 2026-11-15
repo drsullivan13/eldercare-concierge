@@ -1,0 +1,66 @@
+{
+  "asOf": "2026-11-14",
+  "officeCount": 72,
+  "byMunicipality": {
+    "Union City": 6,
+    "Jersey City": 38,
+    "West New York": 9,
+    "North Bergen": 3,
+    "Guttenberg": 1,
+    "Hoboken": 4,
+    "Bayonne": 5,
+    "Kearny": 4,
+    "Secaucus": 1,
+    "Weehawken": 1
+  },
+  "candidateSitemapPropertyUrls": 62070,
+  "eligibleNewOffices": 0,
+  "eligibleNewAccounts": 0,
+  "eligibleNewScores": 0,
+  "sources": [
+    {
+      "source": "Homewatch CareGivers Jersey City",
+      "url": "https://www.homewatchcaregivers.com/jerseycity/about-us/client-caregiver-reviews/",
+      "finding": "Same registered trade name, street, suite and municipality. Newer indexed office page displays 4.5 from 17; earlier snapshot displays 4.5 from 15. Multiple dated family accounts visible. Direct page fetch unavailable, widget supplies no observed native review IDs or links, selection and publication rights unverified.",
+      "status": "hold"
+    },
+    {
+      "source": "Visiting Angels Jersey City, operating from Bayonne",
+      "url": "https://www.mylivingchoice.com/property/visiting-angels-jersey-city",
+      "finding": "Bayonne office has no independently attributable review on listing. Brand rating must stay separate.",
+      "status": "hold"
+    },
+    {
+      "source": "Visiting Angels Hoboken",
+      "url": "https://www.mylivingchoice.com/property/visiting-angels-hoboken",
+      "finding": "Exact office lists 4 ratings with a single generic two-word written account. No observed family narrative.",
+      "status": "no-increment"
+    },
+    {
+      "source": "BAYADA Home Health North Bergen",
+      "url": "https://www.mylivingchoice.com/property/bayada-home-health-north-bergen",
+      "finding": "Clinical home health listing; no evidence linking its review population to the nonclinical HP service line.",
+      "status": "hold"
+    },
+    {
+      "source": "Best Home Care Inc",
+      "url": "https://reviews.birdeye.com/best-home-care-inc-155750594113996",
+      "finding": "Discovery lead only, search index reports 69 reviews. Fidelis provider directory lists exact 879 Bergen Avenue, suite 200, Jersey City. Restricted publisher, population and underlying rating unverified. Do not import.",
+      "status": "licensed-source-lead"
+    },
+    {
+      "source": "LTC News Hudson directory",
+      "url": "https://www.ltcnews.com/index.php/terms-of-use",
+      "finding": "Publisher explicitly restricts automated access and commercial reuse.",
+      "status": "rights-hold"
+    },
+    {
+      "source": "HomeCareAtlas",
+      "url": "https://homecareatlas.com/for-agencies/reputation",
+      "finding": "Publisher offers agency controls on public reviews. Neutral population unverified.",
+      "status": "hold"
+    }
+  ],
+  "scope": "Matched roster IDs, trade names and municipality slugs against the previously collected all-category publisher sitemap and existing full-page receipts. Investigated highest-probability source pages. This is not a distinct live visit to each of the 72 offices.",
+  "roster": "roster.json"
+}

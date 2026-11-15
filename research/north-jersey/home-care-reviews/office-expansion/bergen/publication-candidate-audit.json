@@ -1,0 +1,791 @@
+{
+  "affirmed-home-care": {
+    "publicAcquisition": {
+      "identity": {
+        "name": "Affirmed Home Care",
+        "address": "1 Rossmoor Dr",
+        "city": "Monroe Township",
+        "state": "New Jersey",
+        "zip": "08831"
+      },
+      "registryCandidate": null,
+      "sha256": "79db1cb17f6fedc10b6536db185139ea730b3f6c6a829a1e1d1c372f2c8e3979",
+      "visible": 2,
+      "decision": null,
+      "flags": [
+        "unresolved-identity",
+        "ambiguous-population-window"
+      ]
+    }
+  },
+  "always-home-care": {
+    "newTown": {
+      "registryDecision": {
+        "decision": "no-exact-office-match",
+        "providerId": null,
+        "basis": "Roster Always Home Care offices are in West New York, Paterson, Jersey City and Hackensack; none in Perth Amboy. Brand-only transfer is not allowed.",
+        "normalizations": [],
+        "cautions": []
+      },
+      "pageEvidenceSha256": "903f369b8053792f5a5c578c6a2f605f715f17c0ad098b4f7bba81697241f678"
+    }
+  },
+  "assisting-hands-home-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Florence",
+        "addressRegion": "Kentucky",
+        "postalCode": "41042",
+        "streetAddress": "6900 Houston Rd Ste 39"
+      },
+      "bodySha256": "fe76ac0767d4fb6c4aee94cf67b8a10d6e4a4374401909d8b4e97e987d4e49b0",
+      "visible": 5,
+      "name": "Assisting Hands Home Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0276400",
+        "north-jersey-hp-hp0355900"
+      ]
+    }
+  },
+  "aveanna-healthcare": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Edina",
+        "addressRegion": "Minnesota",
+        "postalCode": "55439",
+        "streetAddress": "8000 W 78th St #330"
+      },
+      "bodySha256": "23eda9c0511ab240e761ec9da758be586b392c92b550af93bea770735c34bf9d",
+      "visible": 1,
+      "name": "Aveanna Healthcare",
+      "providerCandidates": [
+        "north-jersey-hp-hp0076201",
+        "north-jersey-hp-hp0120800"
+      ]
+    }
+  },
+  "best-home-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Cypress",
+        "addressRegion": "California",
+        "postalCode": "90630",
+        "streetAddress": "5433 Rome Avenue"
+      },
+      "bodySha256": "cf17e967eff773af0ea790c098bfb7214ebb82a0b0a147b93608a6eb51265a7e",
+      "visible": 0,
+      "name": "Best Home Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0131700",
+        "north-jersey-hp-hp0131701",
+        "north-jersey-hp-hp0131702",
+        "north-jersey-hp-hp0131703",
+        "north-jersey-hp-hp0131705",
+        "north-jersey-hp-hp0357200",
+        "north-jersey-hp-hp0379600",
+        "north-jersey-hp-hp0392900"
+      ]
+    }
+  },
+  "best-home-care-corporation": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Hialeah Gardens",
+        "addressRegion": "Florida",
+        "postalCode": "33016",
+        "streetAddress": "9500 Nw 77 Ave Ste 18"
+      },
+      "bodySha256": "eae56fa725261541fcb9edef1299ed9df330c54bab34e183e464238dd60721b0",
+      "visible": 0,
+      "name": "BEST HOME CARE CORPORATION",
+      "providerCandidates": [
+        "north-jersey-hp-hp0131700",
+        "north-jersey-hp-hp0131701",
+        "north-jersey-hp-hp0131702",
+        "north-jersey-hp-hp0131703",
+        "north-jersey-hp-hp0131705",
+        "north-jersey-hp-hp0357200",
+        "north-jersey-hp-hp0379600",
+        "north-jersey-hp-hp0392900"
+      ]
+    }
+  },
+  "best-home-care-inc": {
+    "publicAcquisition": {
+      "identity": {
+        "name": "Best Home Care, Inc.",
+        "address": "333 N Broad St",
+        "city": "Elizabeth",
+        "state": "New Jersey",
+        "zip": "07208"
+      },
+      "registryCandidate": null,
+      "sha256": "a64ded43ab70cbba943f800176c3f75466e42e869d4d5ded177fd2bfc0b01768",
+      "visible": 5,
+      "decision": null,
+      "flags": [
+        "unresolved-identity",
+        "ambiguous-population-window"
+      ]
+    }
+  },
+  "careone-at-home": {
+    "officeAudit": {
+      "decision": "no-review-window",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Paramus",
+        "addressRegion": "New Jersey",
+        "postalCode": "07652",
+        "streetAddress": "100 W Ridgewood Ave"
+      },
+      "bodySha256": "b6a6e5a5921f0ad1bd01ae8c7873cde0cb4181b7eee395b5823f36d32036b663",
+      "visible": 0,
+      "name": "CareOne at Home",
+      "providerCandidates": [
+        "north-jersey-hp-hp0091902"
+      ]
+    }
+  },
+  "caring-hearts-home-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "West Des Moines",
+        "addressRegion": "Iowa",
+        "postalCode": "50265",
+        "streetAddress": "2045 Grand Ave C"
+      },
+      "bodySha256": "3964bb2362ee2176a8d08d886c9b25558650f9083c3c4d3805df17ac1668562e",
+      "visible": 5,
+      "name": "Caring Hearts Home Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0334500"
+      ]
+    }
+  },
+  "classic-elite-home-care-services": {
+    "publicAcquisition": {
+      "identity": {
+        "name": "Classic Elite Home Care Services",
+        "address": "1258 Teaneck Rd",
+        "city": "Teaneck",
+        "state": "New Jersey",
+        "zip": "07666"
+      },
+      "registryCandidate": "north-jersey-hp-hp0117000",
+      "sha256": "6f6f22310ef3e04d1ffbfa7ea4bcc8ab806b2f9b121eae77d85dfe2cb348c07f",
+      "visible": 0,
+      "decision": null,
+      "flags": [
+        "no-observed-google-aggregate",
+        "missing-or-empty-visible-window"
+      ]
+    }
+  },
+  "comfort-keepers": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Johns Creek",
+        "addressRegion": "Georgia",
+        "postalCode": "30097",
+        "streetAddress": "6290 Abbotts Bridge Rd Ste 302"
+      },
+      "bodySha256": "6f13360896d489357270cb9480eabfa8ca3d94e3db6704054d0452a8c1662bf2",
+      "visible": 5,
+      "name": "Comfort Keepers",
+      "providerCandidates": [
+        "north-jersey-hp-hp0124500",
+        "north-jersey-hp-hp0179100",
+        "north-jersey-hp-hp0241800",
+        "north-jersey-hp-hp0420900"
+      ]
+    }
+  },
+  "confident-care-corp": {
+    "publicAcquisition": {
+      "identity": {
+        "name": "Confident Care Corp",
+        "address": "2477 County Rd 516 Ste 203",
+        "city": "Old Bridge",
+        "state": "New Jersey",
+        "zip": "08857"
+      },
+      "registryCandidate": null,
+      "sha256": "6b938886a4c3e74c20eaeb5f4b0acb9a3ccbe7a5c420cec7272ca20f4dbddd2f",
+      "visible": 1,
+      "decision": null,
+      "flags": [
+        "unresolved-identity"
+      ]
+    }
+  },
+  "forever-home-care-llc": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Brooklyn Center",
+        "addressRegion": "Minnesota",
+        "postalCode": "55429",
+        "streetAddress": "4806 69th Ave N"
+      },
+      "bodySha256": "c0b4c4e2c79ad0788870cc3a1d9a2f15156bb1fa7fe93defb7b47b98ddf71fa4",
+      "visible": 0,
+      "name": "Forever Home Care LLC",
+      "providerCandidates": [
+        "north-jersey-hp-hp0290500"
+      ]
+    }
+  },
+  "home-care-agency": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Hamden",
+        "addressRegion": "Connecticut",
+        "postalCode": "06518",
+        "streetAddress": "2494 Whitney Ave"
+      },
+      "bodySha256": "b1410cc99a7e7158de43139cec5f609f261628d609c62e73c6ce68771e31430a",
+      "visible": 5,
+      "name": "Home Care Agency",
+      "providerCandidates": [
+        "north-jersey-hp-hp0374200",
+        "north-jersey-hp-hp0403400",
+        "north-jersey-hp-hp0441700"
+      ]
+    }
+  },
+  "home-helpers": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Palm Beach Gardens",
+        "addressRegion": "Florida",
+        "postalCode": "33418",
+        "streetAddress": "4580 PGA Blvd Ste 213"
+      },
+      "bodySha256": "e5d1e56036f47f9c6cdf943cecf985efd2012401d0818a320c12b800f072a94c",
+      "visible": 5,
+      "name": "Home Helpers",
+      "providerCandidates": [
+        "north-jersey-hp-hp0116500",
+        "north-jersey-hp-hp0131300",
+        "north-jersey-hp-hp0241000"
+      ]
+    }
+  },
+  "home-helpers-and-direct-link": {
+    "officeAudit": {
+      "decision": "unmatched-registered-branch",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Brick Township",
+        "addressRegion": "New Jersey",
+        "postalCode": "08723",
+        "streetAddress": "2850 Yorktowne Blvd Ste 12 and 13"
+      },
+      "bodySha256": "246fc0f8098571fcfda84d862d09b218baa31ab255999f606a46cb3eceae93d2",
+      "visible": 5,
+      "name": "Home Helpers & Direct Link",
+      "providerCandidates": [
+        "north-jersey-hp-hp0131300"
+      ]
+    }
+  },
+  "home-instead-senior-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Chicago",
+        "addressRegion": "Illinois",
+        "postalCode": "60657",
+        "streetAddress": "2835 N Sheffield Ave #407"
+      },
+      "bodySha256": "893c2d288ce3579b9b10c565275d46a6d5a9a3a81134ea515b8e7aad54239152",
+      "visible": 5,
+      "name": "Home Instead",
+      "providerCandidates": [
+        "north-jersey-hp-hp0118200",
+        "north-jersey-hp-hp0172800",
+        "north-jersey-hp-hp0289000",
+        "north-jersey-hp-hp0297500"
+      ]
+    }
+  },
+  "homewell-care-services": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Georgetown",
+        "addressRegion": "Delaware",
+        "postalCode": "19947",
+        "streetAddress": "142 E Market St First Floor"
+      },
+      "bodySha256": "8693a09e6f47c608ebe0d17bf3df0aa73d0548008c65d058da7bd236e30074ac",
+      "visible": 5,
+      "name": "HomeWell Care Services",
+      "providerCandidates": [
+        "north-jersey-hp-hp0077800",
+        "north-jersey-hp-hp0249500"
+      ]
+    }
+  },
+  "interim-healthcare": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Ellisville",
+        "addressRegion": "Missouri",
+        "postalCode": "63011",
+        "streetAddress": "15950 Manchester Rd"
+      },
+      "bodySha256": "92c242f3eb334c0883423e8b157434d87785585caf30cea99dcd445031a877e5",
+      "visible": 5,
+      "name": "Interim HealthCare",
+      "providerCandidates": [
+        "north-jersey-hp-hp0194700",
+        "north-jersey-hp-hp0283100"
+      ]
+    }
+  },
+  "live-easy-home-care": {
+    "publicAcquisition": {
+      "identity": {
+        "name": "Live Easy Home Care",
+        "address": "55 Madison Ave #400",
+        "city": "Morristown",
+        "state": "New Jersey",
+        "zip": "07960"
+      },
+      "registryCandidate": "north-jersey-hp-hp0413400",
+      "sha256": "37c2cb76e689190a1ba94eb1242b9eed7db3bf8762404ba770da4c253df47e2a",
+      "visible": 5,
+      "decision": null,
+      "flags": [
+        "ambiguous-population-window"
+      ]
+    }
+  },
+  "loving-care-agency": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Carl Junction",
+        "addressRegion": "Missouri",
+        "postalCode": "64834",
+        "streetAddress": "327 Briarbrook Dr"
+      },
+      "bodySha256": "a0d42eb6e227dc20953bd750d48c4fd2483b1054ae7f66dfca35c4404c525b7d",
+      "visible": 3,
+      "name": "Loving Care Agency",
+      "providerCandidates": [
+        "north-jersey-hp-hp0076201"
+      ]
+    }
+  },
+  "omni-healthcare-services-llc": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Lithia Springs",
+        "addressRegion": "Georgia",
+        "postalCode": "30122",
+        "streetAddress": "560 Thornton Rd #214"
+      },
+      "bodySha256": "599a9130bb6cf220a9080e7adb5e1dd13b46873b2a6415384580a642459c7350",
+      "visible": 5,
+      "name": "Omni HealthCare Services LLC",
+      "providerCandidates": [
+        "north-jersey-hp-hp0409300"
+      ]
+    }
+  },
+  "passionate-care-inc": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Munster",
+        "addressRegion": "Indiana",
+        "postalCode": "46321",
+        "streetAddress": "1650 45th Avenue, Suite B"
+      },
+      "bodySha256": "3067e5a7636931ae34d3d3456be5c85ce94f6bf4b0336fa3871e40f091d6d143",
+      "visible": 0,
+      "name": "Passionate Care, Inc",
+      "providerCandidates": [
+        "north-jersey-hp-hp0398800"
+      ]
+    }
+  },
+  "preferred-care-at-home-of-bergen-county-west": {
+    "newTown": {
+      "registryDecision": {
+        "decision": "exact-office-match",
+        "providerId": "north-jersey-hp-hp0394000",
+        "basis": "Registered trade name Preferred Care at Home of Bergen County West at 301 Route 17 N, Rutherford.",
+        "normalizations": [
+          "State route forms NJ-n, Route n, Highway n and State Route n are the same road (released precedent: NJ-27 and Highway 27).",
+          "Direction N omitted on the page."
+        ],
+        "cautions": []
+      },
+      "pageEvidenceSha256": "5e30a8be440bb10d67e7b5891314d262bb1fa764127ef4a1de4cd29893e4da6f"
+    }
+  },
+  "preferred-home-health-care-and-nursing-services": {
+    "officeAudit": {
+      "decision": "unmatched-registered-branch",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Robbinsville Twp",
+        "addressRegion": "New Jersey",
+        "postalCode": "08691",
+        "streetAddress": "1 Washington Blvd Suite 7"
+      },
+      "bodySha256": "5be2d76c2f765ccaa7ba5b32a1a5ab96b0cb907839ddb01066b1829e0daf8900",
+      "visible": 2,
+      "name": "Preferred Home Health Care & Nursing Services",
+      "providerCandidates": [
+        "north-jersey-hp-hp0243102",
+        "north-jersey-hp-hp0243103",
+        "north-jersey-hp-hp0243107"
+      ]
+    }
+  },
+  "preferred-home-health-care-and-nursing-services-inc": {
+    "officeAudit": {
+      "decision": "unmatched-registered-branch",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Brick Township",
+        "addressRegion": "New Jersey",
+        "postalCode": "08724",
+        "streetAddress": "192 Jack Martin Blvd"
+      },
+      "bodySha256": "a61bbaed4769c770d6d793034bcbab8c97986a91a9685642ae26b85fe5da213f",
+      "visible": 1,
+      "name": "Preferred Home Health Care & Nursing Services, Inc.",
+      "providerCandidates": [
+        "north-jersey-hp-hp0243102",
+        "north-jersey-hp-hp0243103",
+        "north-jersey-hp-hp0243107"
+      ]
+    }
+  },
+  "prestige-health-services": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Allen",
+        "addressRegion": "Texas",
+        "postalCode": "75002",
+        "streetAddress": "303 S Jupiter Rd #200"
+      },
+      "bodySha256": "a1ee6991628e54c492c76fa15948f1c9918c356f487590efb2dcdb316482a254",
+      "visible": 3,
+      "name": "Prestige Health Services",
+      "providerCandidates": [
+        "north-jersey-hp-hp0241800"
+      ]
+    }
+  },
+  "reliant-home-health-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Las Vegas",
+        "addressRegion": "Nevada",
+        "postalCode": "89147",
+        "streetAddress": "3900 S Hualapai Way #106"
+      },
+      "bodySha256": "c468b68aba6d0eb6fafc84ac690c5ad30ed0b7c3eaf6fd7ddccfbc635630d4a3",
+      "visible": 0,
+      "name": "Reliant Home Health Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0353300"
+      ]
+    }
+  },
+  "royalty-home-care-services": {
+    "publicAcquisition": {
+      "identity": {
+        "name": "Royalty Home Care Services",
+        "address": "175 Cedar Ln Ste 8A",
+        "city": "Teaneck",
+        "state": "New Jersey",
+        "zip": "07666"
+      },
+      "registryCandidate": "north-jersey-hp-hp0388600",
+      "sha256": "d023371f3fa1e5f6913228e63b72aeb42403404dc2e3a3b7c7a73ecaac1c3613",
+      "visible": 5,
+      "decision": null,
+      "flags": [
+        "ambiguous-population-window"
+      ]
+    }
+  },
+  "senior-helpers": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Akron",
+        "addressRegion": "Ohio",
+        "postalCode": "44320",
+        "streetAddress": "450 White Pond Dr #200"
+      },
+      "bodySha256": "310fee5aeb4bf3c198bba9315aa52cafda84a664ccd47398bf1906d5c14e7dd4",
+      "visible": 5,
+      "name": "Senior Helpers",
+      "providerCandidates": [
+        "north-jersey-hp-hp0104400",
+        "north-jersey-hp-hp0171100",
+        "north-jersey-hp-hp0175500",
+        "north-jersey-hp-hp0223700",
+        "north-jersey-hp-hp0347100",
+        "north-jersey-hp-hp0381000",
+        "north-jersey-hp-hp0423200"
+      ]
+    }
+  },
+  "seniors-helping-seniors": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Hilo",
+        "addressRegion": "Hawaii",
+        "postalCode": "96720",
+        "streetAddress": "80 Kinoole St #204"
+      },
+      "bodySha256": "80e1bb76cd671387c070b9a7dc66122053f299715a4fd019241134982dd9960e",
+      "visible": 1,
+      "name": "Seniors Helping Seniors",
+      "providerCandidates": [
+        "north-jersey-hp-hp0309800",
+        "north-jersey-hp-hp0403800",
+        "north-jersey-hp-hp0403900",
+        "north-jersey-hp-hp0404500",
+        "north-jersey-hp-hp0415400",
+        "north-jersey-hp-hp0437400"
+      ]
+    }
+  },
+  "sunshine-home-health-services": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Davie",
+        "addressRegion": "Florida",
+        "postalCode": "33330",
+        "streetAddress": "12525 Orange Dr Ste 707"
+      },
+      "bodySha256": "e41c23e1c2ea4ead2cbaa94930f64d730bc8fe564cdb910a3d32897cf2223f82",
+      "visible": 3,
+      "name": "Sunshine Home Health Services.",
+      "providerCandidates": [
+        "north-jersey-hp-hp0278000"
+      ]
+    }
+  },
+  "sunshine-home-health-services-inc": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Long Beach",
+        "addressRegion": "California",
+        "postalCode": "90807",
+        "streetAddress": "4201 Long Beach Blvd Suite 412b"
+      },
+      "bodySha256": "8241318309d8411950edbbbe89979ac99d6244bf3356ff9004eb0f30c247502f",
+      "visible": 0,
+      "name": "Sunshine Home Health Services, Inc.",
+      "providerCandidates": [
+        "north-jersey-hp-hp0278000"
+      ]
+    }
+  },
+  "thrive-at-home": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Fairfax",
+        "addressRegion": "Virginia",
+        "postalCode": "22030",
+        "streetAddress": "3702 Pender Dr Ste 420B"
+      },
+      "bodySha256": "44564afca91ad6754a4e287fef743d683bfe95523355404ba3eab337344bf0af",
+      "visible": 5,
+      "name": "Thrive At Home",
+      "providerCandidates": [
+        "north-jersey-hp-hp0403400"
+      ]
+    }
+  },
+  "valley-home-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Fresno",
+        "addressRegion": "California",
+        "postalCode": "93704",
+        "streetAddress": "3030 N Maroa Ave Ste 202"
+      },
+      "bodySha256": "66e838f7d4b214a8abf5289a555fde26bcf7e9df13f86fd978722d169ceac8db",
+      "visible": 5,
+      "name": "Valley Home Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0174100"
+      ]
+    }
+  },
+  "valley-home-care-paramus": {
+    "officeAudit": {
+      "decision": "clinical-service-or-no-visible-window",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Paramus",
+        "addressRegion": "New Jersey",
+        "postalCode": "07652",
+        "streetAddress": "15 Essex Road, Suite #301"
+      },
+      "bodySha256": "17d9347d5af11663e8e56755a54ecfab4aeb4889e6d5537c7b014eb3b5a51f9c",
+      "visible": 0,
+      "name": "Valley Home Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0174100"
+      ]
+    }
+  },
+  "visiting-angels-ramsey": {
+    "publicAcquisition": {
+      "identity": {
+        "name": "Visiting Angels Ramsey",
+        "address": "17 S. Franklin Tpk 1st Floor #3",
+        "city": "Ramsey",
+        "state": "New Jersey",
+        "zip": "07446"
+      },
+      "registryCandidate": null,
+      "sha256": "c2565a0758f4226463455de1b3de018d6394c035a34f6955b5676f0c0a6ff87a",
+      "visible": 0,
+      "decision": null,
+      "flags": [
+        "unresolved-identity",
+        "missing-or-empty-visible-window"
+      ]
+    }
+  },
+  "welcome-home-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Sacramento",
+        "addressRegion": "California",
+        "postalCode": "95815",
+        "streetAddress": "HHWG+J4, 1900 Point W Way Suite 142"
+      },
+      "bodySha256": "cc2f0ce3dc61ecff757b69c7911be367c47791f484b557859d34bd66fbb25b19",
+      "visible": 5,
+      "name": "Welcome Home Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0145000"
+      ]
+    }
+  },
+  "welcome-home-care-llc": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Wenatchee",
+        "addressRegion": "Washington",
+        "postalCode": "98801",
+        "streetAddress": "18 S Mission St #201"
+      },
+      "bodySha256": "c237e6f5fed3d52b4263ccf629d53f01dd8bb65e07afb151891ae53b82a60138",
+      "visible": 0,
+      "name": "Welcome Home Care LLC",
+      "providerCandidates": [
+        "north-jersey-hp-hp0145000"
+      ]
+    }
+  },
+  "woori-home-care": {
+    "officeAudit": {
+      "decision": "outside-new-jersey",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressLocality": "Farmers Branch",
+        "addressRegion": "Texas",
+        "postalCode": "75234",
+        "streetAddress": "2665 Villa Creek Dr. Ste A127"
+      },
+      "bodySha256": "a820c5195314ad1188b05bf2c6e7caa5122e1cb88656257c2581076c68a5bde9",
+      "visible": 0,
+      "name": "Woori Home Care",
+      "providerCandidates": [
+        "north-jersey-hp-hp0299300"
+      ]
+    }
+  }
+}
