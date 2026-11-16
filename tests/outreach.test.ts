@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { createRequire } from "node:module";
 import { resolve } from "node:path";
-import { chromium } from "@playwright/test";
+import { launchWorkspaceBrowser } from "./helpers/workspace-browser";
 import type { useOutreach } from "../src/hooks/use-outreach";
 import type { Workspace } from "../src/lib/workspace";
 import {
@@ -989,10 +989,7 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
     tsconfig: "tsconfig.json",
     define: { "process.env.NODE_ENV": '"production"' },
   });
-  const browser = await chromium.launch({
-    executablePath:
-      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  });
+  const browser = await launchWorkspaceBrowser();
   try {
     const context = await browser.newContext();
     await context.route("https://harbor.test/", (route) =>
