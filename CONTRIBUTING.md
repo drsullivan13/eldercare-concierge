@@ -15,6 +15,8 @@ Provider research works without secrets. Accounts are off by default, so the das
 
 Install Bun for local hooks, then run `bunx --no-install lefthook install` from the checkout after `npm ci`. On commit, Harbor formats staged files with Prettier and runs Oxlint on staged JavaScript and TypeScript. Oxlint prints agent-format diagnostics and treats warnings as failures. The hook uses the locked project tools and preserves unstaged edits.
 
+On push, Harbor checks formatting, Oxlint and types on changed source. The hook uses Bun 1.4.4 through `bunx` and may download it on first use. It reads the commits being pushed. If your working files differ, it checks an isolated copy. For new branches it compares against the common ancestor with `origin/HEAD` when available.
+
 For a focused React review, run `bunx react-doctor@0.9.23 src/components/brand.tsx --no-score` with the component path you want to inspect.
 
 Before publishing a code change:
