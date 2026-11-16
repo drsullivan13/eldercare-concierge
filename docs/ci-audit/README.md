@@ -40,3 +40,16 @@ The sample used 556.7 runner-minutes. Browser tests consumed 284.9 minutes (51.2
 [Every job and its GitHub log](jobs.csv) · [Timestamped steps](steps.csv) · [Workflow durations](runs.csv)
 
 During development, run the Playwright spec for the journey you changed. Before merging to main, CI runs the full desktop and mobile matrix.
+
+## Hosted comparisons
+
+| Change                                                                                                                  | End-to-end | Runner time | Result                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ---------: | ----------: | -------------------------------------------------- |
+| [Shared CI workflow](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43885524505)                      |     8m 26s |     19m 21s | Both browser shards and unit tests passed          |
+| [Isolated browser spec](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43885934547)                   |     3m 22s |      5m 01s | The changed spec passed on desktop and mobile      |
+| [Audit text plus a broken shared fixture](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43885626931) |     7m 52s |     18m 23s | Full suite selected, unit checks caught the defect |
+| [Same PR with the fixture restored](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43887079259)       |        53s |         58s | Documentation-only checks passed                   |
+
+Runner time sums the occupied job durations across parallel jobs. End-to-end measures elapsed time from workflow creation to completion. These individual runs cover different changes. A representative sample of new PRs is needed to assess the two-minute median and three-minute p95 targets. The full browser inventory comprises 391 passing cases and 13 existing skips. [Browser counts](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43887409404)
+
+On six fresh Linux runners, setting up Node and running `npm ci` against a warm npm cache took 18, 23 and 23 seconds. Setup with an exact `node_modules` restore took 6, 5 and 5 seconds. All six runners passed native binding and TypeScript checks. The first cold PR installation took 38s including Node setup. The real PR cache-hit rate depends on main seeding the cache and on subsequent changes to dependencies and runtime versions. [Benchmark](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43888796090) · [Cold PR job](https://github.com/drsullivan13/eldercare-concierge/actions/runs/43889736293/job/133377378843)
