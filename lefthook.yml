@@ -1,0 +1,4 @@
+pre-commit:
+  jobs:
+    - name: check staged files
+      run: bunx --no-install lint-staged

@@ -1,0 +1,35 @@
+name: Install dependencies
+description: Restore exact node_modules or install from the lockfile.
+inputs:
+  save-cache:
+    description: Allow the trusted main static lane to save a clean install.
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v7
+      with:
+        node-version: 24
+        package-manager-cache: false
+    - id: runtime
+      shell: bash
+      run: |
+        source /etc/os-release
+        node_version=$(node --version)
+        npm_version=$(npm --version)
+        echo "image=$ID-$VERSION_ID" >> "$GITHUB_OUTPUT"
+        echo "node=$node_version" >> "$GITHUB_OUTPUT"
+        echo "npm=$npm_version" >> "$GITHUB_OUTPUT"
+    - uses: actions/cache/restore@v5
+      id: modules
+      with:
+        path: node_modules
+        key: node-modules-${{ runner.os }}-${{ runner.arch }}-${{ steps.runtime.outputs.image }}-node-${{ steps.runtime.outputs.node }}-npm-${{ steps.runtime.outputs.npm }}-${{ hashFiles('**/package.json', '**/package-lock.json', '**/.npmrc', '.github/actions/install-dependencies/action.yml') }}
+    - if: steps.modules.outputs.cache-hit != 'true'
+      shell: bash
+      run: npm ci
+    - uses: actions/cache/save@v5
+      if: inputs.save-cache == 'true' && github.job == 'static' && github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.modules.outputs.cache-hit != 'true'
+      with:
+        path: node_modules
+        key: ${{ steps.modules.outputs.cache-primary-key }}

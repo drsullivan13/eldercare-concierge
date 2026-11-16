@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { createRequire } from "node:module";
 import { resolve } from "node:path";
+import type { Page } from "@playwright/test";
 import { launchWorkspaceBrowser } from "./helpers/workspace-browser";
 import type { useOutreach } from "../src/hooks/use-outreach";
 import type { Workspace } from "../src/lib/workspace";
@@ -77,13 +78,15 @@ test("audit boundaries copy exact maxima and keep absent fields absent", () => {
       activity: [],
       commitments: [],
     });
+    const sparse: unknown[] = [];
+    sparse.length = 1;
     for (const change of [
       { activity: Array(129).fill(full.activity[0]) },
       { commitments: Array(9).fill(full.commitments[0]) },
-      ...[null, {}, "opened", [null], [[]], [1], new Array(1), undefined].map(
+      ...[null, {}, "opened", [null], [[]], [1], sparse, undefined].map(
         (activity) => ({ activity }),
       ),
-      ...[null, {}, "agreed", [null], [[]], [1], new Array(1), undefined].map(
+      ...[null, {}, "agreed", [null], [[]], [1], sparse, undefined].map(
         (commitments) => ({ commitments }),
       ),
       ...[
@@ -992,6 +995,14 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
   const browser = await launchWorkspaceBrowser();
   try {
     const context = await browser.newContext();
+    // Freeze backoff deadlines and the periodic outreach poll while allowing browser renders.
+    await context.clock.setFixedTime(new Date("2026-11-14T12:00:01Z"));
+    await context.addInitScript(() => {
+      const browser: Window = window;
+      const nativeInterval = browser.setInterval.bind(browser);
+      browser.setInterval = (handler, delay, ...args) =>
+        delay === 15_000 ? 0 : nativeInterval(handler, delay, ...args);
+    });
     await context.route("https://harbor.test/", (route) =>
       route.fulfill({
         contentType: "text/html",
@@ -999,9 +1010,12 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
       }),
     );
     let calls = 0;
+    const tabCalls = new Map<Page, number>();
     let result: unknown = null;
     await context.route("**/api/outreach-result", (route) => {
       calls++;
+      const page = route.request().frame().page();
+      tabCalls.set(page, (tabCalls.get(page) ?? 0) + 1);
       return route.fulfill(result ? { json: result } : { status: 404 });
     });
     const mount = async () => {
@@ -1009,6 +1023,7 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
       await page.goto("https://harbor.test/");
       await page.addScriptTag({ content: bundle.outputFiles[0].text });
       await page.waitForFunction(() => Boolean(window.__integration?.api));
+      await page.evaluate(() => window.__integration.api.refresh(false));
       return page;
     };
     const first = await mount();
@@ -1061,6 +1076,8 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
 
     await first.evaluate(() => window.__integration.api.refresh());
     const polled = calls;
+    assert.equal(polled, 4);
+    assert.deepEqual([tabCalls.get(first), tabCalls.get(second)], [3, 1]);
     const writes = await first.evaluate(() => window.__integration.writes);
     await first.evaluate(() => window.__integration.api.refresh(false));
     assert.equal(calls, polled);
@@ -1074,7 +1091,10 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
       findings: [],
       nextSteps: [],
     };
-    await first.evaluate(() => window.dispatchEvent(new Event("focus")));
+    await first.evaluate(() => {
+      window.dispatchEvent(new Event("focus"));
+      return window.__integration.api.refresh(false);
+    });
     await first.waitForFunction(() =>
       window.__integration.api.records.every(
         (record) => record.state === "opened",
@@ -1103,6 +1123,7 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
     };
     await first.evaluate(() => window.__integration.api.refresh());
     assert.equal(calls, polled + 9);
+    assert.deepEqual([tabCalls.get(first), tabCalls.get(second)], [12, 1]);
     await second.waitForFunction(() =>
       window.__integration.api.records.every(
         (record) => record.state === "completed",

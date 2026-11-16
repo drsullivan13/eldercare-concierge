@@ -10,30 +10,96 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 jobs:
-  verify:
+  selection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      plan: ${{ steps.scope.outputs.plan }}
+      unit: ${{ steps.scope.outputs.unit }}
+      browser: ${{ steps.scope.outputs.browser }}
+      shards: ${{ steps.scope.outputs.shards }}
+    steps:
+      - uses: actions/checkout@v7
+        with: &checkout-options
+          fetch-depth: 0
+          filter: blob:none
+      - id: scope
+        run: node scripts/ci/selection.mjs plan
+  static:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+        with: *checkout-options
+      - id: dependencies
+        uses: ./.github/actions/install-dependencies
         with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
+          save-cache: "true"
       - run: npm run lint
       - run: npm run knip
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+      - name: Typecheck
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+        run: npx next typegen && npx tsc --noEmit
+  unit-database:
+    needs: selection
+    if: needs.selection.outputs.unit == 'true'
+    env:
+      TEST_PLAN: ${{ needs.selection.outputs.plan }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with: *checkout-options
+      - uses: ./.github/actions/install-dependencies
       - run: npx playwright install --with-deps --only-shell chromium
-      - run: npm run test
+      - run: node scripts/ci/selection.mjs unit
+  build-browser:
+    needs: selection
+    if: needs.selection.outputs.browser == 'true'
+    env:
+      TEST_PLAN: ${{ needs.selection.outputs.plan }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.selection.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v7
+        with: *checkout-options
+      - uses: ./.github/actions/install-dependencies
+      - run: npx playwright install --with-deps --only-shell chromium
       - run: npm run build
       - id: browser-e2e
-        run: npm run test:e2e
+        run: node scripts/ci/selection.mjs browser
         env:
           PLAYWRIGHT_START_SERVER: "1"
+          BROWSER_SHARD: ${{ matrix.shard }}/${{ strategy.job-total }}
       - uses: actions/upload-artifact@v7
         if: failure() && steps.browser-e2e.outcome == 'failure'
         with:
-          name: browser-failure-evidence
+          name: browser-failure-evidence-${{ matrix.shard }}
           path: |
             playwright-report/
             test-results/
           retention-days: 7
+  verify:
+    if: ${{ always() }}
+    needs: [selection, static, unit-database, build-browser]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Require every lane to succeed
+        env:
+          PLAN_RESULT: ${{ needs.selection.result }}
+          UNIT_EXPECTED: ${{ needs.selection.outputs.unit == 'false' && 'skipped' || 'success' }}
+          BROWSER_EXPECTED: ${{ needs.selection.outputs.browser == 'false' && 'skipped' || 'success' }}
+          STATIC_RESULT: ${{ needs.static.result }}
+          UNIT_DATABASE_RESULT: ${{ needs.unit-database.result }}
+          BUILD_BROWSER_RESULT: ${{ needs.build-browser.result }}
+        run: |
+          test "$PLAN_RESULT" = success
+          test "$STATIC_RESULT" = success
+          test "$UNIT_DATABASE_RESULT" = "$UNIT_EXPECTED"
+          test "$BUILD_BROWSER_RESULT" = "$BROWSER_EXPECTED"
