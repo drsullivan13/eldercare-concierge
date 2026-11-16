@@ -12,7 +12,7 @@ type Change = {
 // output so validation failures can never alter the retained or published evidence.
 function rebuild(changes: Change[] = []) {
   const result = spawnSync(
-    "python",
+    "python3",
     [
       "-B",
       "-c",
