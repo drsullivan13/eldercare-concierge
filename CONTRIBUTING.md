@@ -13,6 +13,10 @@ npm run dev
 
 Provider research works without secrets. Accounts are off by default, so the dashboard opens the browser-local demo at `/dashboard?demo=1`. Do not turn on accounts just to test care search. To work on the account flow, follow "Enable accounts" in the README; account workspaces are stored per user in Supabase, separate from demo storage.
 
+Install Bun for local hooks, then run `bunx --no-install lefthook install` from the checkout after `npm ci`. On commit, Harbor formats staged files with Prettier and runs Oxlint on staged JavaScript and TypeScript. Oxlint prints agent-format diagnostics and treats warnings as failures. The hook uses the locked project tools and preserves unstaged edits.
+
+For a focused React review, run `bunx react-doctor@0.9.23 src/components/brand.tsx --no-score` with the component path you want to inspect.
+
 Before publishing a code change:
 
 ```sh
@@ -23,7 +27,7 @@ npm run build
 PLAYWRIGHT_START_SERVER=1 npm run test:e2e
 ```
 
-Stop any server using `.next` before rebuilding it. Playwright uses system Chromium when available; otherwise install its browser with `npx playwright install chromium`. CI runs the same checks on Node 24.
+Stop any server using `.next` before rebuilding it. Playwright uses system Chromium when available; otherwise install its browser with `bunx --no-install playwright install chromium`. CI runs the same checks on Node 24.
 
 Run focused tests while changing a module, then the complete relevant checks at integration. Tests should exercise behavior through a module's interface: search results, score exclusions, exported plans, request recovery and actual user actions. Avoid tests that merely repeat implementation details.
 
