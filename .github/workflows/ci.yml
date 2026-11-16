@@ -31,12 +31,10 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with: *checkout-options
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
       - id: dependencies
-        run: npm ci
+        uses: ./.github/actions/install-dependencies
+        with:
+          save-cache: "true"
       - run: npm run lint
       - run: npm run knip
         if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
@@ -53,11 +51,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with: *checkout-options
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
+      - uses: ./.github/actions/install-dependencies
       - run: npx playwright install --with-deps --only-shell chromium
       - run: node scripts/ci/selection.mjs unit
   build-browser:
@@ -74,11 +68,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with: *checkout-options
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
+      - uses: ./.github/actions/install-dependencies
       - run: npx playwright install --with-deps --only-shell chromium
       - run: npm run build
       - id: browser-e2e
