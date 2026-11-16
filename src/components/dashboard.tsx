@@ -1,5 +1,9 @@
 "use client";
 import {
+  AgencyConsultation,
+  ConsultationHistory,
+} from "./dashboard/agency-consultation";
+import {
   lazy,
   Suspense,
   useCallback,
@@ -783,6 +787,7 @@ function WorkspaceDashboard({
                 exportPlan={exportPlan}
                 notify={notify}
               />
+              {!demo && <ConsultationHistory />}
               <HomeCareOutreachPlan
                 records={workspace.homeCareOutreach ?? {}}
                 open={(id) => {
@@ -929,22 +934,31 @@ function WorkspaceDashboard({
             initialHomeCareOpen={initialHomeCareOpen}
             homeCareOutreach={
               selectedProvider.category === "home-care" ? (
-                <HomeCareOutreach
-                  provider={selectedProvider}
-                  record={workspace.homeCareOutreach?.[selectedProvider.id]}
-                  saveStatus={saveStatus}
-                  saveError={error}
-                  blocked={conflict}
-                  onRecord={(record) =>
-                    update((w) => ({
-                      ...w,
-                      homeCareOutreach: {
-                        ...w.homeCareOutreach,
-                        [selectedProvider.id]: record,
-                      },
-                    }))
-                  }
-                />
+                <>
+                  {!demo && (
+                    <AgencyConsultation
+                      key={selectedProvider.id}
+                      providerId={selectedProvider.id}
+                      email={email ?? ""}
+                    />
+                  )}
+                  <HomeCareOutreach
+                    provider={selectedProvider}
+                    record={workspace.homeCareOutreach?.[selectedProvider.id]}
+                    saveStatus={saveStatus}
+                    saveError={error}
+                    blocked={conflict}
+                    onRecord={(record) =>
+                      update((w) => ({
+                        ...w,
+                        homeCareOutreach: {
+                          ...w.homeCareOutreach,
+                          [selectedProvider.id]: record,
+                        },
+                      }))
+                    }
+                  />
+                </>
               ) : undefined
             }
             onSave={() => saveProvider(selectedProvider)}

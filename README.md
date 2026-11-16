@@ -126,6 +126,6 @@ For E2E tests, start the production server first, or use `PLAYWRIGHT_START_SERVE
 
 ## Current boundaries
 
-This is a personal research workspace. Multi-person invitations, staff operations, appointment booking, outreach, payments and clinical record uploads are not implemented. A full-document workspace save is last-write-wins across devices; the UI serializes saves within a session. Multi-user collaboration needs revisions and conflict handling before it is enabled.
+This is a personal research workspace. Participating home-care offices support [consultation booking](docs/consultation-booking.md). Multi-person workspace invitations, payments and clinical record uploads are outside this pilot. A full-document workspace save is last-write-wins across devices; the UI serializes saves within a session. Multi-user collaboration needs revisions and conflict handling before it is enabled.
 
 The product does not diagnose care needs, confirm suitability or promise that a provider is safe. See [`docs/quality-roadmap.md`](docs/quality-roadmap.md) for the next evidence and workflow milestones.
