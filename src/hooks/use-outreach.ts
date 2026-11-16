@@ -201,7 +201,11 @@ export function useOutreach(
       )
         return;
       try {
-        save([]);
+        if (event.newValue) {
+          const checked = validateWorkspace(JSON.parse(event.newValue));
+          if (!checked.ok) throw new Error("Invalid demo workspace.");
+          save(checked.workspace.outreach ?? []);
+        } else save([]);
       } catch {
         setError("Your browser could not restore saved outreach.");
       }

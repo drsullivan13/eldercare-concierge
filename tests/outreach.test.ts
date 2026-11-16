@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { createRequire } from "node:module";
+import { once } from "node:events";
 import { resolve } from "node:path";
 import type { Page } from "@playwright/test";
 import { launchWorkspaceBrowser } from "./helpers/workspace-browser";
@@ -1012,10 +1013,17 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
     let calls = 0;
     const tabCalls = new Map<Page, number>();
     let result: unknown = null;
-    await context.route("**/api/outreach-result", (route) => {
+    let openedResponses: number | undefined;
+    let releaseOpened!: () => void;
+    const openedGate = new Promise<void>((resolve) => {
+      releaseOpened = resolve;
+    });
+    await context.route("**/api/outreach-result", async (route) => {
       calls++;
       const page = route.request().frame().page();
       tabCalls.set(page, (tabCalls.get(page) ?? 0) + 1);
+      if (openedResponses !== undefined && ++openedResponses > 1)
+        await openedGate;
       return route.fulfill(result ? { json: result } : { status: 404 });
     });
     const mount = async () => {
@@ -1091,10 +1099,29 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
       findings: [],
       nextSteps: [],
     };
-    await first.evaluate(() => {
+    const debug = await context.newCDPSession(second);
+    await debug.send("Debugger.enable");
+    const { result: storageWrite } = await debug.send("Runtime.evaluate", {
+      expression: "Storage.prototype.setItem",
+    });
+    const breakpoint = await debug.send("Debugger.setBreakpointOnFunctionCall", {
+      objectId: storageWrite.objectId!,
+    });
+    const paused = once(debug, "Debugger.paused", {
+      signal: AbortSignal.timeout(30_000),
+    });
+    openedResponses = 0;
+    // Hold the second tab's stale write while the first tab saves the newer results.
+    const refreshing = first.evaluate(() => {
       window.dispatchEvent(new Event("focus"));
       return window.__integration.api.refresh(false);
     });
+    await paused;
+    releaseOpened();
+    await refreshing;
+    await debug.send("Debugger.removeBreakpoint", breakpoint);
+    await debug.send("Debugger.resume");
+    await debug.detach();
     await first.waitForFunction(() =>
       window.__integration.api.records.every(
         (record) => record.state === "opened",

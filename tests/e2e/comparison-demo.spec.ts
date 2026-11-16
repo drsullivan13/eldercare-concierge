@@ -12,6 +12,7 @@ const key = "harbor.demo.workspace.v1";
 const savedIds = ["north-jersey-doh-nj5a004", "north-jersey-doh-nj25284"];
 
 async function navigate(page: Page, name: string) {
+  await expect(page.locator(".app-shell")).toBeVisible();
   const menu = page.getByRole("button", { name: "Open navigation" });
   if (await menu.isVisible()) await menu.click();
   await page
