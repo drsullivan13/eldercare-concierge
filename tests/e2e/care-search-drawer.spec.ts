@@ -60,7 +60,10 @@ test("matching pending and completed submissions reuse results and one request",
 });
 
 for (const failure of ["http", "network"] as const) {
-  test(`same search retries after ${failure} failure`, async ({ page }) => {
+  test(`same search retries after ${failure} failure`, async ({
+    page,
+    isMobile,
+  }) => {
     const requests: string[] = [];
     await page.route("**/api/search?*", async (route) => {
       requests.push(route.request().url());
@@ -73,7 +76,7 @@ for (const failure of ["http", "network"] as const) {
     });
     await page.goto("/dashboard?demo=1");
     const menu = page.getByRole("button", { name: "Open navigation" });
-    if (await menu.isVisible()) await menu.click();
+    if (isMobile) await menu.click();
     await page
       .locator(".side-nav")
       .getByRole("button", { name: "Find care", exact: true })
