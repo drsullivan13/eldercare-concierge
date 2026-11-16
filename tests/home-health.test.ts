@@ -390,7 +390,7 @@ test("offline rebuild is byte-identical, excludes its own hash manifest, and dis
         .digest("hex"),
     );
   const before = hashes();
-  execFileSync("python", ["scripts/prepare-home-health.py"], {
+  execFileSync("python3", ["scripts/prepare-home-health.py"], {
     cwd: root,
     stdio: "pipe",
   });
@@ -402,7 +402,7 @@ test("offline rebuild is byte-identical, excludes its own hash manifest, and dis
   );
   const actual = JSON.parse(
     execFileSync(
-      "python",
+      "python3",
       [
         "-c",
         "import runpy,json; m=runpy.run_path('scripts/prepare-home-health.py'); print(json.dumps([m['numeric'](v) for v in [None,'','-','NA','N/A','Not Available','0','0.00','2.5']]))",
