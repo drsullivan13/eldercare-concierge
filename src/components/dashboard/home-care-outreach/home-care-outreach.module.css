@@ -75,3 +75,11 @@
     padding: 16px;
   }
 }
+
+.officeCalendar {
+  display: block;
+  width: 100%;
+  height: clamp(32rem, 72dvh, 48rem);
+  border: 1px solid var(--line, #d8ded8);
+  border-radius: 0.5rem;
+}
