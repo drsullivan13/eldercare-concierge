@@ -27,6 +27,7 @@ test("one-use recovery tickets lease unresolved bookings, release expired window
       source: string,
       status: string,
       past: boolean,
+      providerId = id,
     ) {
       await db.query(
         `insert into public.consultation_bookings(id,user_id,provider_id,agency_name,invitee_email,source,status,window_start,window_end,timezone,created_at,starts_at,call_sid)
@@ -34,7 +35,7 @@ test("one-use recovery tickets lease unresolved bookings, release expired window
         [
           id,
           owner,
-          id,
+          providerId,
           source,
           status,
           past ? "-1 hour" : "1 hour",
@@ -80,7 +81,7 @@ test("one-use recovery tickets lease unresolved bookings, release expired window
       [expired],
     );
     await db.exec("reset role");
-    await fixture(crypto.randomUUID(), "phone", "searching", false);
+    await fixture(crypto.randomUUID(), "phone", "searching", false, expired);
     assert.equal(
       (
         await db.query(
