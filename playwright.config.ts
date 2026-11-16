@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { availableParallelism } from 'node:os';
 import { chromiumLaunchOptions } from './scripts/lib/chromium.mjs';
 
 const baseURL = process.env.PLAYWRIGHT_BASE_URL || 'http://127.0.0.1:3000';
@@ -8,7 +9,7 @@ export default defineConfig({
   timeout: 60_000,
   expect: { timeout: 10_000 },
   fullyParallel: true,
-  workers: 2,
+  workers: process.env.CI ? Math.min(availableParallelism(), 4) : 2,
   retries: 0,
   reporter: [['list'], ['html', { open: 'never', outputFolder: 'playwright-report' }]],
   outputDir: 'test-results/e2e',
