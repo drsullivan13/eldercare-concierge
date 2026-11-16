@@ -10,7 +10,8 @@
     "knip": "knip",
     "test": "tsx --test tests/*.test.ts",
     "test:e2e": "playwright test",
-    "format": "prettier --write src scripts tests docs README.md next.config.ts playwright.config.ts knip.ts"
+    "format": "prettier --write src scripts tests docs README.md next.config.ts playwright.config.ts knip.ts",
+    "hooks:install": "lefthook install"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
@@ -34,11 +35,21 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "knip": "6.45.1",
+    "lefthook": "2.2.2",
+    "lint-staged": "17.6.1",
+    "oxlint": "1.94.0",
     "prettier": "3.10.0",
     "tsx": "4.23.15",
     "typescript": "^5"
   },
   "engines": {
     "node": "24.x"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}": [
+      "bunx --no-install prettier --write",
+      "bunx --no-install oxlint --format=agent --deny-warnings"
+    ],
+    "!(*.{js,jsx,mjs,cjs,ts,tsx,mts,cts})": "bunx --no-install prettier --write --ignore-unknown"
   }
 }

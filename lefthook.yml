@@ -1,0 +1,10 @@
+pre-commit:
+  jobs:
+    - name: check staged files
+      run: bunx --no-install lint-staged
+
+pre-push:
+  jobs:
+    - name: check pushed source
+      use_stdin: true
+      run: bunx bun@1.4.4 scripts/check-push.mjs

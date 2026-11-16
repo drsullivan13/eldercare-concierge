@@ -44,9 +44,7 @@ test("normal dashboard entry finds home-care options and keeps facility search a
   ).toBeVisible();
   const notice = page.locator(".care-search-view .care-search-guidance");
   await expect(notice).toContainText("report serving your ZIP");
-  await expect(notice).toContainText(
-    "Confirm your address and staffing",
-  );
+  await expect(notice).toContainText("Confirm your address and staffing");
   const estimate = page
     .locator(".provider-card")
     .filter({ hasText: "Aquinas Healthcare" });
@@ -179,6 +177,12 @@ test("the exact BAYADA branch keeps six source ratings and opens its own review 
     .click();
   await page.getByRole("button", { name: "Filters", exact: true }).click();
   await page.getByRole("combobox", { name: "Provider or town" }).fill("BAYADA");
+  await expect(
+    page.getByRole("combobox", { name: "Provider or town" }),
+  ).toHaveAttribute("aria-expanded", "true");
+  await page
+    .getByRole("combobox", { name: "Provider or town" })
+    .press("Escape");
   await page
     .getByRole("button", { name: "Apply filters", exact: true })
     .click();
