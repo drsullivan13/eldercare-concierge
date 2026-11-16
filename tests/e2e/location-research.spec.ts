@@ -401,6 +401,10 @@ test("published openings, waitlists and unestablished inventory stay distinct; a
   expect(added[0].status).toBe("todo");
   await noOverflow(page);
   await dialog.getByRole("button", { name: "Close dialog" }).click();
+  const dismissNotification = page
+    .getByRole("region", { name: "Workspace notifications" })
+    .getByRole("button", { name: "Dismiss", exact: true });
+  if (await dismissNotification.isVisible()) await dismissNotification.click();
   dialog = await openLocation(page, "lifeplan-brooksby-village");
   await showPane(dialog, "Details");
   panel = dialog.locator(".research-panel");
