@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { createRequire } from "node:module";
-import { once } from "node:events";
 import { resolve } from "node:path";
 import type { Page } from "@playwright/test";
 import { launchWorkspaceBrowser } from "./helpers/workspace-browser";
@@ -1104,11 +1103,22 @@ test("canonical demo sync is isolated, no-op refresh is read-only, and manual re
     const { result: storageWrite } = await debug.send("Runtime.evaluate", {
       expression: "Storage.prototype.setItem",
     });
-    const breakpoint = await debug.send("Debugger.setBreakpointOnFunctionCall", {
-      objectId: storageWrite.objectId!,
-    });
-    const paused = once(debug, "Debugger.paused", {
-      signal: AbortSignal.timeout(30_000),
+    const breakpoint = await debug.send(
+      "Debugger.setBreakpointOnFunctionCall",
+      {
+        objectId: storageWrite.objectId!,
+      },
+    );
+    const paused = new Promise<void>((resolve, reject) => {
+      const timeout = setTimeout(
+        () =>
+          reject(new Error("The second tab did not reach its storage write.")),
+        30_000,
+      );
+      debug.once("Debugger.paused", () => {
+        clearTimeout(timeout);
+        resolve();
+      });
     });
     openedResponses = 0;
     // Hold the second tab's stale write while the first tab saves the newer results.
