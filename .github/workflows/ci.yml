@@ -10,7 +10,24 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 jobs:
-  verify:
+  static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - id: dependencies
+        run: npm ci
+      - run: npm run lint
+      - run: npm run knip
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+      - name: Typecheck
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+        run: npx next typegen && npx tsc --noEmit
+  unit-database:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -20,10 +37,19 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run lint
-      - run: npm run knip
       - run: npx playwright install --with-deps --only-shell chromium
       - run: npm run test
+  build-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps --only-shell chromium
       - run: npm run build
       - id: browser-e2e
         run: npm run test:e2e
@@ -37,3 +63,18 @@ jobs:
             playwright-report/
             test-results/
           retention-days: 7
+  verify:
+    if: ${{ always() }}
+    needs: [static, unit-database, build-browser]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Require every lane to succeed
+        env:
+          STATIC_RESULT: ${{ needs.static.result }}
+          UNIT_DATABASE_RESULT: ${{ needs.unit-database.result }}
+          BUILD_BROWSER_RESULT: ${{ needs.build-browser.result }}
+        run: |
+          test "$STATIC_RESULT" = success
+          test "$UNIT_DATABASE_RESULT" = success
+          test "$BUILD_BROWSER_RESULT" = success
