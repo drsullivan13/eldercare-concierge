@@ -38,3 +38,5 @@ The window includes 4 successful PR runs. Their end-to-end p50 / p95 was 655 / 7
 The sample used 556.7 runner-minutes. Browser tests consumed 284.9 minutes (51.2%). The selected changes target browser setup and duplicated browser work. Queue time met the ten-second target at p95.
 
 [Every job and its GitHub log](jobs.csv) · [Timestamped steps](steps.csv) · [Workflow durations](runs.csv)
+
+During development, run the Playwright spec for the journey you changed. Before merging to main, CI runs the full desktop and mobile matrix.
