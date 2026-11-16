@@ -1,0 +1,277 @@
+name: Benchmark dependency install
+on:
+  push:
+    branches: [codex/hosted-install-benchmark]
+permissions:
+  contents: read
+jobs:
+  seed:
+    if: >-
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/codex/hosted-install-benchmark' &&
+      github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      key: ${{ steps.key.outputs.value }}
+      fingerprint: ${{ steps.runtime.outputs.fingerprint }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Require a tree without node_modules
+        run: test ! -e node_modules
+      - id: setup-node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - &runtime
+        id: runtime
+        name: Record the runtime fingerprint
+        env:
+          LOCK_HASH: ${{ hashFiles('package-lock.json') }}
+        run: |
+          test "$RUNNER_ENVIRONMENT" = github-hosted
+          test -n "$ImageOS"
+          test -n "$ImageVersion"
+          test -n "$LOCK_HASH"
+          node_version=$(node --version)
+          npm_version=$(npm --version)
+          {
+            echo "node=$node_version"
+            echo "npm=$npm_version"
+            echo "fingerprint=$(git rev-parse HEAD)-$RUNNER_OS-$RUNNER_ARCH-$ImageOS-$ImageVersion-node$node_version-npm$npm_version-lock$LOCK_HASH"
+          } >> "$GITHUB_OUTPUT"
+      - id: key
+        env:
+          FINGERPRINT: ${{ steps.runtime.outputs.fingerprint }}
+        run: echo "value=benchmark-install-node-modules-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT-$FINGERPRINT" >> "$GITHUB_OUTPUT"
+      - id: existing
+        uses: actions/cache/restore@v5
+        with:
+          path: node_modules
+          key: ${{ steps.key.outputs.value }}
+          lookup-only: true
+      - name: Require a new cache key
+        env:
+          EXISTING_HIT: ${{ steps.existing.outputs.cache-hit }}
+        run: test "$EXISTING_HIT" != true
+      - run: npm ci
+        timeout-minutes: 10
+      - uses: actions/cache/save@v5
+        with:
+          path: node_modules
+          key: ${{ steps.key.outputs.value }}
+      - id: saved
+        uses: actions/cache/restore@v5
+        with:
+          path: node_modules
+          key: ${{ steps.key.outputs.value }}
+          lookup-only: true
+      - name: Require the saved node_modules entry
+        env:
+          SAVED_HIT: ${{ steps.saved.outputs.cache-hit }}
+          SAVED_KEY: ${{ steps.saved.outputs.cache-matched-key }}
+          KEY: ${{ steps.key.outputs.value }}
+        run: |
+          test "$SAVED_HIT" = true
+          test "$SAVED_KEY" = "$KEY"
+      - name: Write seed summary
+        if: ${{ always() }}
+        env:
+          KEY: ${{ steps.key.outputs.value }}
+          NODE_VERSION: ${{ steps.runtime.outputs.node }}
+          NPM_VERSION: ${{ steps.runtime.outputs.npm }}
+          NPM_CACHE_HIT: ${{ steps.setup-node.outputs.cache-hit }}
+          NPM_CACHE_KEY: ${{ steps.setup-node.outputs.cache-primary-key }}
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<EOF
+          ## Install benchmark seed
+
+          | Field | Value |
+          | --- | --- |
+          | SHA | \`$GITHUB_SHA\` |
+          | Runner | $RUNNER_ENVIRONMENT $RUNNER_OS/$RUNNER_ARCH, $ImageOS $ImageVersion, $(nproc) CPUs |
+          | Runtime | Node $NODE_VERSION, npm $NPM_VERSION |
+          | node_modules key | \`$KEY\` |
+          | npm cache key | \`$NPM_CACHE_KEY\` |
+          | npm cache hit at seed | ${NPM_CACHE_HIT:-false} |
+
+          The seed ran a clean \`npm ci\` and saved only \`node_modules\`. When the npm cache missed, setup-node saves \`~/.npm\` in its post step, which finishes before any observation starts.
+          EOF
+
+  observe:
+    needs: seed
+    name: ${{ matrix.variant }} sample ${{ matrix.sample }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        variant: [npm-ci, node-modules]
+        sample: [1, 2, 3]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - id: setup-start
+        run: echo "ns=$(date +%s%N)" >> "$GITHUB_OUTPUT"
+      - id: setup-node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: ${{ matrix.variant == 'npm-ci' && 'npm' || '' }}
+          package-manager-cache: ${{ matrix.variant == 'npm-ci' }}
+      - id: setup-stop
+        run: echo "ns=$(date +%s%N)" >> "$GITHUB_OUTPUT"
+      - *runtime
+      - name: Require the seed runtime and a tree without node_modules
+        env:
+          SEED_FINGERPRINT: ${{ needs.seed.outputs.fingerprint }}
+          FINGERPRINT: ${{ steps.runtime.outputs.fingerprint }}
+          VARIANT: ${{ matrix.variant }}
+          NPM_CACHE_HIT: ${{ steps.setup-node.outputs.cache-hit }}
+        run: |
+          test -n "$SEED_FINGERPRINT"
+          test "$FINGERPRINT" = "$SEED_FINGERPRINT"
+          test ! -e node_modules
+          if [ "$VARIANT" = npm-ci ]; then
+            test "$NPM_CACHE_HIT" = true
+          fi
+      - id: install-start
+        run: echo "ns=$(date +%s%N)" >> "$GITHUB_OUTPUT"
+      - id: npm-ci
+        if: ${{ matrix.variant == 'npm-ci' }}
+        run: npm ci
+        timeout-minutes: 10
+      - id: restore
+        if: ${{ matrix.variant == 'node-modules' }}
+        uses: actions/cache/restore@v5
+        timeout-minutes: 10
+        with:
+          path: node_modules
+          key: ${{ needs.seed.outputs.key }}
+          fail-on-cache-miss: true
+      - id: install-stop
+        run: echo "ns=$(date +%s%N)" >> "$GITHUB_OUTPUT"
+      - id: installed
+        name: Require the installed tree
+        env:
+          VARIANT: ${{ matrix.variant }}
+          RESTORE_HIT: ${{ steps.restore.outputs.cache-hit }}
+          RESTORE_KEY: ${{ steps.restore.outputs.cache-matched-key }}
+          KEY: ${{ needs.seed.outputs.key }}
+        run: |
+          test -d node_modules
+          if [ "$VARIANT" = node-modules ]; then
+            test "$RESTORE_HIT" = true
+            test "$RESTORE_KEY" = "$KEY"
+          fi
+      - id: swc
+        name: Transform with the native Next SWC binding
+        if: ${{ !cancelled() && steps.installed.outcome == 'success' }}
+        run: |
+          node -e '
+            const assert = require("node:assert");
+            const swc = require("next/dist/build/swc");
+            const output = swc.transformSync("const answer: number = 42; export default answer;", {
+              jsc: { parser: { syntax: "typescript" }, target: "es2022" },
+            });
+            assert.strictEqual(swc.getBindingsSync().isWasm, false, "Next SWC fell back to wasm");
+            assert.match(output.code, /const answer = 42/);
+            console.log(require.resolve("@next/swc-linux-x64-gnu"), swc.getBinaryMetadata().target);
+          '
+      - id: sharp
+        name: Resize an image with sharp
+        if: ${{ !cancelled() && steps.installed.outcome == 'success' }}
+        run: |
+          node -e '
+            const assert = require("node:assert");
+            const sharp = require("sharp");
+            (async () => {
+              const png = await sharp({ create: { width: 16, height: 8, channels: 3, background: "#336699" } }).png().toBuffer();
+              const { info } = await sharp(png).resize(4, 2).webp().toBuffer({ resolveWithObject: true });
+              assert.deepStrictEqual([info.format, info.width, info.height], ["webp", 4, 2]);
+              console.log(sharp.versions);
+            })();
+          '
+      - id: esbuild
+        name: Run TypeScript through tsx and esbuild
+        if: ${{ !cancelled() && steps.installed.outcome == 'success' }}
+        run: |
+          check="$RUNNER_TEMP/esbuild-check.ts"
+          printf 'const answer: number = 42;\nconsole.log(answer);\n' > "$check"
+          test "$(npx --no-install tsx "$check")" = 42
+      - id: oxlint
+        if: ${{ !cancelled() && steps.installed.outcome == 'success' }}
+        run: npx --no-install oxlint --version
+      - id: typecheck
+        name: Typecheck
+        if: ${{ !cancelled() && steps.installed.outcome == 'success' }}
+        run: npx next typegen && npx tsc --noEmit
+      - name: Write observation summary
+        if: ${{ always() }}
+        env:
+          VARIANT: ${{ matrix.variant }}
+          SAMPLE: ${{ matrix.sample }}
+          KEY: ${{ needs.seed.outputs.key }}
+          NODE_VERSION: ${{ steps.runtime.outputs.node }}
+          NPM_VERSION: ${{ steps.runtime.outputs.npm }}
+          SETUP_START: ${{ steps.setup-start.outputs.ns }}
+          SETUP_STOP: ${{ steps.setup-stop.outputs.ns }}
+          INSTALL_START: ${{ steps.install-start.outputs.ns }}
+          INSTALL_STOP: ${{ steps.install-stop.outputs.ns }}
+          INSTALL_OUTCOME: ${{ matrix.variant == 'npm-ci' && steps.npm-ci.outcome || steps.restore.outcome }}
+          NPM_CACHE_HIT: ${{ steps.setup-node.outputs.cache-hit }}
+          NPM_CACHE_KEY: ${{ steps.setup-node.outputs.cache-matched-key }}
+          MODULES_CACHE_HIT: ${{ steps.restore.outputs.cache-hit }}
+          INSTALLED: ${{ steps.installed.outcome }}
+          SWC: ${{ steps.swc.outcome }}
+          SHARP: ${{ steps.sharp.outcome }}
+          ESBUILD: ${{ steps.esbuild.outcome }}
+          OXLINT: ${{ steps.oxlint.outcome }}
+          TYPECHECK: ${{ steps.typecheck.outcome }}
+        run: |
+          seconds() {
+            if [ -n "$1" ] && [ -n "$2" ]; then
+              ms=$(( ($2 - $1) / 1000000 ))
+              printf '%d.%03d' $((ms / 1000)) $((ms % 1000))
+            else
+              printf 'not measured'
+            fi
+          }
+          if [ "$VARIANT" = npm-ci ]; then
+            region='`npm ci` with `~/.npm` already restored by setup-node, including lifecycle scripts'
+          else
+            region='`actions/cache/restore@v5` exact-key lookup, archive download, and extraction of `node_modules`'
+          fi
+          cat >> "$GITHUB_STEP_SUMMARY" <<EOF
+          ## Install observation: $VARIANT sample $SAMPLE
+
+          | Field | Value |
+          | --- | --- |
+          | Install elapsed seconds | $(seconds "$INSTALL_START" "$INSTALL_STOP") |
+          | setup-node elapsed seconds | $(seconds "$SETUP_START" "$SETUP_STOP") |
+          | Install outcome | $INSTALL_OUTCOME |
+          | SHA | \`$GITHUB_SHA\` |
+          | Runner | $RUNNER_ENVIRONMENT $RUNNER_OS/$RUNNER_ARCH, $ImageOS $ImageVersion, $(nproc) CPUs |
+          | Runtime | Node $NODE_VERSION, npm $NPM_VERSION |
+          | npm cache hit | ${NPM_CACHE_HIT:-not used} \`$NPM_CACHE_KEY\` |
+          | node_modules cache hit | ${MODULES_CACHE_HIT:-not used} |
+          | Seed key | \`$KEY\` |
+
+          **Measured region.** Wall clock from the step before the install step to the step after it, so both variants include the same two step transitions. It covers $region.
+
+          **Excluded from the install time.** Queueing and runner provisioning, action downloads during job setup, checkout, setup-node (reported separately; for npm-ci it includes the \`~/.npm\` restore, for node-modules it has no package cache), the checks below, and post-job steps.
+
+          | Check after the measured region | Outcome |
+          | --- | --- |
+          | Installed tree and exact cache key | $INSTALLED |
+          | Next SWC native transform | $SWC |
+          | sharp resize | $SHARP |
+          | tsx and esbuild TypeScript run | $ESBUILD |
+          | \`oxlint --version\` | $OXLINT |
+          | \`next typegen\` and \`tsc --noEmit\` | $TYPECHECK |
+          EOF
