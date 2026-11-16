@@ -17,6 +17,7 @@ jobs:
       plan: ${{ steps.scope.outputs.plan }}
       unit: ${{ steps.scope.outputs.unit }}
       browser: ${{ steps.scope.outputs.browser }}
+      shards: ${{ steps.scope.outputs.shards }}
     steps:
       - uses: actions/checkout@v7
         with: &checkout-options
@@ -66,6 +67,10 @@ jobs:
       TEST_PLAN: ${{ needs.selection.outputs.plan }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.selection.outputs.shards) }}
     steps:
       - uses: actions/checkout@v7
         with: *checkout-options
@@ -80,10 +85,11 @@ jobs:
         run: node scripts/ci/selection.mjs browser
         env:
           PLAYWRIGHT_START_SERVER: "1"
+          BROWSER_SHARD: ${{ matrix.shard }}/${{ strategy.job-total }}
       - uses: actions/upload-artifact@v7
         if: failure() && steps.browser-e2e.outcome == 'failure'
         with:
-          name: browser-failure-evidence
+          name: browser-failure-evidence-${{ matrix.shard }}
           path: |
             playwright-report/
             test-results/

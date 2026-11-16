@@ -91,6 +91,7 @@ if (process.argv[2] === "plan") {
   const output = (name, value) =>
     appendFileSync(process.env.GITHUB_OUTPUT, name + "=" + value + "\n");
   output("plan", JSON.stringify(plan));
+  output("shards", plan.mode === "full" ? "[1,2]" : "[1]");
   for (const lane of Object.keys(testFiles))
     output(lane, plan.mode === "full" || plan[lane].length > 0);
 } else {
@@ -99,7 +100,16 @@ if (process.argv[2] === "plan") {
   const plan = JSON.parse(process.env.TEST_PLAN);
   let command;
   if (plan.mode === "full") {
-    command = lane === "unit" ? ["npm", "test"] : ["npm", "run", "test:e2e"];
+    command =
+      lane === "unit"
+        ? ["npm", "test"]
+        : [
+            "npm",
+            "run",
+            "test:e2e",
+            "--",
+            "--shard=" + process.env.BROWSER_SHARD,
+          ];
   } else {
     const paths = plan[lane];
     if (
