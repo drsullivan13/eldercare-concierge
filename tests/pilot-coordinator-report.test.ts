@@ -116,13 +116,16 @@ test("read-only PostgreSQL report preserves meaning, privacy and complete determ
       "next_action",
     ]);
     assert.equal(
-      (await db.query("select count(*)::int as n from outreach_followups"))
-        .rows[0].n,
+      (
+        await db.query<{ n: number }>(
+          "select count(*)::int as n from outreach_followups",
+        )
+      ).rows[0].n,
       12,
     );
     assert.equal(
       (
-        await db.query(
+        await db.query<{ n: number }>(
           "select count(*)::int as n from consultation_invites where status='sending'",
         )
       ).rows[0].n,
