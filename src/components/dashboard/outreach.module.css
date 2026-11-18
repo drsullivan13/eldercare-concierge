@@ -420,3 +420,11 @@
     padding-left: 4px;
   }
 }
+
+.factFields {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
