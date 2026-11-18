@@ -32,7 +32,16 @@ with parameters as (
   union all
   select 'consultation_unknown', md5(b.id::text), b.id, b.provider_id,
     b.created_at, 'Reconcile booking with the provider before any new booking attempt.', b.user_id
-  from public.consultation_bookings b where b.status = 'unknown'
+  from public.consultation_bookings b where b.status = 'unknown' and not b.office_callback_pending
+  union all
+  select case when b.status = 'expired' or b.window_end <= p.as_of
+      then 'office_callback_window_ended' else 'office_callback_pending' end,
+    md5(b.id::text), b.id, b.provider_id, b.window_end,
+    case when b.status = 'expired' or b.window_end <= p.as_of
+      then 'Callback was pending when the availability window ended; contact the office or choose a new window. No consultation was confirmed.'
+      else 'Wait for the office callback; no consultation time is confirmed.' end, b.user_id
+  from public.consultation_bookings b cross join parameters p
+  where b.office_callback_pending
   union all
   select case when i.status = 'review' then 'invitation_needs_review'
       when i.status = 'ready' then 'invitation_retry'

@@ -42,7 +42,7 @@ export async function GET(request: Request) {
     const bookings = await client
       .from("consultation_bookings")
       .select(
-        "id,provider_id,status,source,starts_at,ends_at,timezone,created_at",
+        "id,provider_id,status,source,starts_at,ends_at,timezone,created_at,window_end,office_callback_pending",
       )
       .eq("user_id", user.id)
       .eq("outreach_request_id", requestId.toLowerCase())

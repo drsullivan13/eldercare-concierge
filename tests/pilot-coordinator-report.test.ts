@@ -40,6 +40,8 @@ test("read-only PostgreSQL report preserves meaning, privacy and complete determ
         '00000000-0000-0000-0000-000000000001', 'provider-' || n,
         case when n = 1 then 'unknown' when n = 8 then 'past' else 'confirmed' end,
         '2026-11-18T13:00Z','PRIVATE@example.test' from generate_series(1,8) n;
+      alter table consultation_bookings add column office_callback_pending boolean not null default false;
+      alter table consultation_bookings add column window_end timestamptz;
       insert into consultation_invites
       select id, v.status, v.first_attempt_at::timestamptz, v.lease_at::timestamptz, 'PRIVATE'
       from (values
@@ -130,6 +132,25 @@ test("read-only PostgreSQL report preserves meaning, privacy and complete determ
         )
       ).rows[0].n,
       3,
+    );
+    await db.exec(`insert into consultation_bookings
+      (id,user_id,provider_id,status,created_at,office_callback_pending,window_end) values
+      (gen_random_uuid(),'00000000-0000-0000-0000-000000000001','callback-active','unknown','2026-11-18T13:00Z',true,'2026-11-18T16:00Z'),
+      (gen_random_uuid(),'00000000-0000-0000-0000-000000000001','callback-elapsed','expired','2026-11-18T13:00Z',true,'2026-11-18T14:00Z');`);
+    const callbacks = (await rows()).filter((r) =>
+      String(r.provider_id).startsWith("callback-"),
+    );
+    assert.equal(callbacks.length, 2);
+    assert.equal(
+      callbacks.find((r) => r.provider_id === "callback-active")?.exception,
+      "office_callback_pending",
+    );
+    assert.equal(
+      callbacks.find((r) => r.provider_id === "callback-elapsed")?.exception,
+      "office_callback_window_ended",
+    );
+    assert.ok(
+      callbacks.every((r) => /no consultation/i.test(String(r.next_action))),
     );
   } finally {
     await db.close();

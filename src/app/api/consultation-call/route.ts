@@ -7,6 +7,7 @@ import {
   consultationPhone,
   fitsWindow,
   officeTime,
+  officeCallbackIntent,
   spokenOfficeSlot,
   verifiedOffice,
   verifyCall,
@@ -54,7 +55,7 @@ export async function POST(request: Request) {
   const table = () => client.from("consultation_bookings");
   const { data: r, error } = await table()
     .select(
-      "id,user_id,provider_id,source,call_sid,status,window_start,window_end,starts_at,invitee_name,callback_phone",
+      "id,user_id,provider_id,source,call_sid,status,window_start,window_end,starts_at,invitee_name,callback_phone,office_callback_pending",
     )
     .eq("id", id)
     .maybeSingle();
@@ -83,6 +84,8 @@ export async function POST(request: Request) {
       .eq("id", id)
       .eq("call_sid", sid)
       .in("status", ["submitting", "unknown"])
+      .eq("office_callback_pending", false)
+      .gt("window_end", new Date().toISOString())
       .select("id");
     if (result.error) throw Error("Could not save agency response");
     return Boolean(result.data?.length);
@@ -102,6 +105,12 @@ export async function POST(request: Request) {
   }
   if (!["submitting", "unknown"].includes(r.status))
     return reply("This request is closed. Thank you.");
+  if (r.office_callback_pending || Date.parse(r.window_end) <= Date.now())
+    return step === "status"
+      ? new Response(null, { status: 204 })
+      : reply(
+          "This request is awaiting an office callback or is closed. No appointment has been reserved. Thank you.",
+        );
   if (step === "status") {
     const status = body.get("CallStatus");
     if (["busy", "failed", "no-answer", "canceled"].includes(status ?? ""))
@@ -117,6 +126,38 @@ export async function POST(request: Request) {
   const at = query.get("at") ?? "";
   const valid = (time: string) =>
     fitsWindow(time, r.window_start, r.window_end);
+  if (step === "callback-confirm" && (digits === "1" || yes(speech))) {
+    const saved = await update({
+      status: "unknown",
+      office_callback_pending: true,
+      starts_at: null,
+      ends_at: null,
+    });
+    return reply(
+      saved
+        ? "Thank you. The family will wait for your office to call back. No appointment has been reserved."
+        : "The request has already been updated. Thank you.",
+    );
+  }
+  if (
+    ["choice", "custom", "confirm"].includes(step ?? "") &&
+    officeCallbackIntent(speech)
+  ) {
+    return ask(
+      callURL(id, "callback-confirm"),
+      "Please confirm: your office will call " +
+        r.invitee_name +
+        " at " +
+        phone.slice(2).split("").join(" ") +
+        " to arrange a consultation within the requested window, between " +
+        officeTime(r.window_start) +
+        " and " +
+        officeTime(r.window_end) +
+        " Eastern. No appointment is reserved. Say confirmed or press one to record this pending callback. Press two to offer an appointment instead.",
+      1,
+      true,
+    );
+  }
   if (step === "offer") {
     const first = new Date(
       Math.ceil(
@@ -150,9 +191,14 @@ export async function POST(request: Request) {
     await update({ status: "unavailable" });
     return reply("Thank you. I'll let the family know.");
   }
-  const alternate = speech
-    ? spokenOfficeSlot(speech, r.window_start, r.window_end)
-    : undefined;
+  const tentative =
+    /\b(if|unless|once|after|probably|perhaps|maybe|might|no|not|never|cannot|can't|won't|don't|doesn't)\b/i.test(
+      speech,
+    );
+  const alternate =
+    speech && !tentative
+      ? spokenOfficeSlot(speech, r.window_start, r.window_end)
+      : undefined;
   const offered =
     alternate ??
     (step === "custom" ? agencySlot(digits, r.window_start, r.window_end) : at);

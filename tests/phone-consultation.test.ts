@@ -4,6 +4,7 @@ import { createHmac } from "node:crypto";
 import {
   agencySlot,
   callURL,
+  officeCallbackIntent,
   startPhoneConsultation,
 } from "../src/lib/phone-consultation";
 import { POST } from "../src/app/api/consultation-call/route";
@@ -57,6 +58,7 @@ test("the authenticated call flow reserves an alternate slot only after readback
     invite_delivery: "harbor",
     call_sid: null,
     status: "submitting",
+    office_callback_pending: false,
     window_start: "2099-06-01T13:00:00Z",
     window_end: "2099-06-01T17:00:00Z",
     starts_at: null,
@@ -64,6 +66,7 @@ test("the authenticated call flow reserves an alternate slot only after readback
     callback_phone: "+19735550102",
   };
   let reachedInvite = false;
+  let raceCallback = false;
   t.mock.method(
     globalThis,
     "fetch",
@@ -81,6 +84,16 @@ test("the authenticated call flow reserves an alternate slot only after readback
         return Response.json(row);
       }
       if (init?.method === "PATCH") {
+        if (raceCallback && url.searchParams.has("office_callback_pending")) {
+          row.office_callback_pending = true;
+          row.status = "unknown";
+          raceCallback = false;
+        }
+        if (
+          url.searchParams.get("office_callback_pending") === "eq.false" &&
+          row.office_callback_pending
+        )
+          return Response.json([]);
         Object.assign(row, JSON.parse(String(init.body)));
         return Response.json([{ id }]);
       }
@@ -149,6 +162,78 @@ test("the authenticated call flow reserves an alternate slot only after readback
     })
   ).text();
   assert.match(spoken, /10:30 AM/);
+  const callbackReview = await (
+    await webhook("choice", {
+      SpeechResult:
+        "We can probably do Tuesday, but the scheduler has to call you.",
+    })
+  ).text();
+  assert.match(callbackReview, /No appointment is reserved/);
+  assert.match(callbackReview, /callback-confirm/);
+  assert.equal(row.office_callback_pending, false);
+  assert.equal(
+    (await webhook("callback-confirm", { Digits: "1" }, undefined, false))
+      .status,
+    403,
+  );
+  // A negative or dependent offer cannot become an appointment or callback.
+  for (const words of [
+    "We cannot do Monday at ten AM, the scheduler won't call you.",
+    "If Monday at ten AM works, the scheduler will call you.",
+    "We can probably do Monday at ten AM.",
+  ]) {
+    const answer = await (
+      await webhook("choice", { SpeechResult: words })
+    ).text();
+    assert.doesNotMatch(answer, /Once you have reserved it|callback-confirm/);
+  }
+  assert.match(
+    await (
+      await webhook("callback-confirm", { SpeechResult: "not confirmed" })
+    ).text(),
+    /Please offer a time/,
+  );
+  assert.equal(row.office_callback_pending, false);
+  assert.match(
+    await (await webhook("callback-confirm", { Digits: "1" })).text(),
+    /No appointment has been reserved/,
+  );
+  assert.equal(row.office_callback_pending, true);
+  assert.equal(row.status, "unknown");
+  assert.equal(row.starts_at, null);
+  for (const status of ["completed", "failed", "no-answer"]) {
+    await webhook("status", { CallStatus: status });
+    assert.equal(row.status, "unknown");
+    assert.equal(row.office_callback_pending, true);
+  }
+  await webhook("confirm", { Digits: "1" }, "2099-06-01T14:30:00.000Z");
+  await webhook("callback-confirm", { Digits: "1" });
+  assert.equal(row.status, "unknown");
+  assert.equal(row.starts_at, null);
+  assert.equal(reachedInvite, false);
+  // A completed-call status that read stale data cannot overwrite a callback.
+  row.office_callback_pending = false;
+  row.status = "submitting";
+  raceCallback = true;
+  await webhook("status", { CallStatus: "failed" });
+  assert.equal(row.office_callback_pending, true);
+  assert.equal(row.status, "unknown");
+  // An appointment readback that read stale data cannot overwrite a callback.
+  row.office_callback_pending = false;
+  raceCallback = true;
+  await webhook("confirm", { Digits: "1" }, "2099-06-01T14:30:00.000Z");
+  assert.equal(row.office_callback_pending, true);
+  assert.equal(row.starts_at, null);
+  // Expired windows cannot accept a fresh callback.
+  row.office_callback_pending = false;
+  const windowEnd = row.window_end;
+  row.window_end = "2000-01-01T00:00:00Z";
+  await webhook("callback-confirm", { Digits: "1" });
+  assert.equal(row.office_callback_pending, false);
+  row.window_end = windowEnd;
+  // Restore the fixture to exercise the independent appointment outcome.
+  row.office_callback_pending = false;
+  row.status = "submitting";
   // Simulate a temporarily unavailable mail account after the office has accepted the call.
   delete process.env.RESEND_API_KEY;
   const acknowledged = await webhook(
@@ -165,4 +250,20 @@ test("the authenticated call flow reserves an alternate slot only after readback
     204,
   );
   assert.equal(reachedInvite, true);
+});
+
+test("office callback intent requires an unambiguous commitment to call", () => {
+  for (const words of [
+    "We will call you back.",
+    "The scheduler has to call you.",
+    "We can probably do Tuesday, but the scheduler has to call you.",
+  ])
+    assert.equal(officeCallbackIntent(words), true, words);
+  for (const words of [
+    "The scheduler will not call you.",
+    "If Tuesday works, we will call you.",
+    "Maybe we will call you.",
+    "We can do Tuesday.",
+  ])
+    assert.equal(officeCallbackIntent(words), false, words);
 });
