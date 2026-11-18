@@ -30,6 +30,12 @@ export type ResearchSource = {
   excerpt?: string;
 };
 export type OfferingFact = {
+  /** Reviewed exact-office public claim, never account or appointment evidence. */
+  publicOfficeFact?: {
+    field: "minimum-hours" | "earliest-start";
+    officeAddress: string;
+    officeZip: string;
+  };
   id: string;
   kind:
     | "care"

@@ -10,6 +10,7 @@ const config: KnipConfig = {
     "scripts/check-hosted.mjs",
     "scripts/check-location-research.mjs",
     "scripts/import-research.ts",
+    "scripts/office-evidence-review.ts",
     "supabase/functions/research-collector/index.ts",
   ],
   project: [

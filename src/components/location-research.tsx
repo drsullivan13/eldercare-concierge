@@ -14,6 +14,10 @@ import type {
   OfferingFact,
   ResearchSource,
 } from "@/lib/location-research-types";
+import {
+  publicOfficeEvidence,
+  OFFICE_FACT_LABELS,
+} from "@/lib/public-office-evidence";
 import { dailyLife } from "@/lib/daily-life-display";
 import { isServiceProvider, type Provider } from "@/lib/providers";
 import type { ProfileNavigation } from "./profile-pane";
@@ -194,6 +198,7 @@ export function LocationResearch({
   for (const item of data?.sources ?? []) {
     if (!sources.has(item.id)) sources.set(item.id, item);
   }
+  const officeEvidence = publicOfficeEvidence(provider, data ?? undefined);
   const offeringFacts =
     pane === "details" ? facts(["care", "amenity", "activity", "dining"]) : [];
   const licensingFacts = offeringFacts.filter(
@@ -255,6 +260,54 @@ export function LocationResearch({
             <span>Research checked {date(data.checkedAt)}</span>
           )}
         </div>
+      )}
+      {pane === "details" && officeEvidence && (
+        <section
+          aria-label="Public office planning facts"
+          className="research-intro"
+        >
+          <h4>Public office planning facts</h4>
+          <p>Confirm care at your address and staffing with this office.</p>
+          <dl>
+            {officeEvidence
+              .filter((fact) => fact.state !== "unknown")
+              .map((fact) => (
+                <div key={fact.field}>
+                  <dt>{OFFICE_FACT_LABELS[fact.field]}</dt>
+                  <dd>
+                    {fact.state === "known"
+                      ? fact.field === "intake"
+                        ? "Office inquiry route published"
+                        : fact.value
+                      : fact.state === "stale"
+                        ? "Public observation needs a recheck"
+                        : "Conflicting public claims; coordinator review needed"}
+                    {fact.sources.map((source, index) => (
+                      <div
+                        className="small muted"
+                        key={`${source.url}-${index}`}
+                      >
+                        <a href={source.url} target="_blank" rel="noreferrer">
+                          Public source
+                        </a>
+                        {` · checked ${date(source.checkedAt)} · recheck by ${date(source.expiresAt)}`}
+                      </div>
+                    ))}
+                  </dd>
+                </div>
+              ))}
+          </dl>
+          {officeEvidence.some((fact) => fact.state === "unknown") && (
+            <p className="small muted">
+              Unknown:{" "}
+              {officeEvidence
+                .filter((fact) => fact.state === "unknown")
+                .map((fact) => OFFICE_FACT_LABELS[fact.field].toLowerCase())
+                .join(", ")}
+              . Confirm with this office.
+            </p>
+          )}
+        </section>
       )}
       {loading && (
         <p role="status" className="small muted">
