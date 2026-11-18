@@ -131,6 +131,31 @@ export type SearchResponse = {
     facebookCovered: number;
   };
 };
+/** Complete ordered search index, including service-area matches without coordinates. */
+export type SearchMarker = Pick<
+  SearchProvider,
+  | "id"
+  | "name"
+  | "category"
+  | "city"
+  | "state"
+  | "lat"
+  | "lng"
+  | "locationKind"
+  | "distanceMiles"
+  | "serviceAreaMatch"
+>;
+export type CompactSearchResponse = Omit<SearchResponse, "providers"> & {
+  providers: SearchProvider[];
+  /** Complete index is included only on the first page. */
+  markers?: SearchMarker[];
+  pagination: {
+    page: number;
+    pageSize: number;
+    totalPages: number;
+    hasMore: boolean;
+  };
+};
 export function formatPhone(phone?: string) {
   if (!phone) return "";
   const digits = phone.replace(/\D/g, "");
