@@ -1,6 +1,7 @@
 import { Dashboard } from "@/components/dashboard";
 import { redirect } from "next/navigation";
 import { ACCOUNTS_ENABLED } from "@/lib/features";
+import { isBookingAdminConfigured } from "@/lib/supabase/booking-admin";
 import { createClient } from "@/lib/supabase/server";
 
 export default async function Page({
@@ -15,5 +16,10 @@ export default async function Page({
   const client = await createClient();
   const { data } = await client.auth.getUser();
   if (!data.user) redirect("/login");
-  return <Dashboard demo={false} />;
+  return (
+    <Dashboard
+      demo={false}
+      accountOutreachAvailable={isBookingAdminConfigured()}
+    />
+  );
 }

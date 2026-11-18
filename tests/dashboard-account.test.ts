@@ -5,7 +5,9 @@ import { resolve } from "node:path";
 import test from "node:test";
 import { chromium, expect, type Page } from "@playwright/test";
 import { chromiumLaunchOptions } from "../scripts/lib/chromium.mjs";
+import type { Provider } from "../src/lib/providers";
 import { createEmptyWorkspace, type Workspace } from "../src/lib/workspace";
+import { homeCareProvider } from "./helpers/home-care-outreach";
 
 type AccountState = {
   workspace: Workspace;
@@ -19,6 +21,7 @@ type AccountState = {
   error: string;
 };
 type DashboardHarness = {
+  accountOutreachAvailable: boolean;
   state: AccountState;
   checks: number;
   imports: number;
@@ -93,7 +96,9 @@ function dashboardBundle(realHook = false) {
           import { createRoot } from "react-dom/client";
           import { Dashboard } from "./src/components/dashboard";
           import "./src/app/globals.css";
-          createRoot(document.getElementById("root")).render(<Dashboard demo={false} />);
+          createRoot(document.getElementById("root")).render(
+            <Dashboard demo={false} accountOutreachAvailable={window.__dashboardAccount.accountOutreachAvailable} />
+          );
         `,
       },
       plugins: [
@@ -234,6 +239,8 @@ async function mount(
   page: Page,
   patch: Partial<AccountState> = {},
   realHook = false,
+  providers: readonly Provider[] = [],
+  accountOutreachAvailable = true,
 ) {
   const errors: Error[] = [];
   page.on("pageerror", (error) => errors.push(error));
@@ -254,10 +261,12 @@ async function mount(
   );
   await page.route("**/api/**", (route) => {
     const path = new URL(route.request().url()).pathname;
+    if (path === "/api/consultations")
+      return route.fulfill({ json: { configured: false, bookings: [] } });
     return route.fulfill({
       json:
         path === "/api/providers"
-          ? { providers: [] }
+          ? { providers }
           : {
               market: {
                 id: "north-jersey",
@@ -309,9 +318,10 @@ async function mount(
     });
   await page.goto("https://harbor.test/");
   await page.evaluate(
-    ({ initial, latest }) => {
+    ({ initial, latest, accountOutreachAvailable }) => {
       Object.assign(window, {
         __dashboardAccount: {
+          accountOutreachAvailable,
           initial,
           latest,
           checks: 0,
@@ -322,7 +332,7 @@ async function mount(
         },
       });
     },
-    { initial, latest: original },
+    { initial, latest: original, accountOutreachAvailable },
   );
   if (realHook)
     await page.evaluate((demo) => {
@@ -365,6 +375,291 @@ test("account dashboard preserves the plan and requires deliberate import and co
     headless: true,
   });
   try {
+    await t.test(
+      "account agency rehearsal retries one request and reopens it from owner history",
+      async () => {
+        const context = await browser.newContext();
+        try {
+          const page = await context.newPage();
+          page.setDefaultTimeout(7000);
+          const workspace = {
+            ...original,
+            savedProviderIds: [homeCareProvider.id],
+          };
+          await mount(page, { workspace }, false, [homeCareProvider]);
+          const requests: Array<{ providerId: string; requestId: string }> = [];
+          const handoffs: unknown[] = [];
+          const createdAt = "2026-11-18T12:00:00.000Z";
+          const token = "b".repeat(64);
+          let owner = "account-a";
+          let handoffAttempt = 0;
+          let historyReads = 0;
+          await page.route("**/api/outreach-requests", async (route) => {
+            if (route.request().method() === "GET") {
+              historyReads++;
+              const request = requests.at(-1);
+              return route.fulfill({
+                json: {
+                  requests:
+                    request && owner === "account-a"
+                      ? [
+                          {
+                            requestId: request.requestId,
+                            providerId: request.providerId,
+                            providerName: homeCareProvider.name,
+                            status: "requested",
+                            createdAt,
+                          },
+                        ]
+                      : [],
+                },
+              });
+            }
+            const body = route.request().postDataJSON();
+            requests.push(body);
+            return route.fulfill({
+              status: requests.length === 1 ? 201 : 200,
+              json: {
+                requestId: body.requestId,
+                providerId: body.providerId,
+                status: "requested",
+                createdAt,
+                replayed: requests.length > 1,
+              },
+            });
+          });
+          await page.route("**/api/outreach-handoff", (route) => {
+            handoffs.push(route.request().postDataJSON());
+            handoffAttempt++;
+            return handoffAttempt === 1
+              ? route.fulfill({ status: 503, json: { error: "Unavailable" } })
+              : route.fulfill({
+                  json: {
+                    token: handoffAttempt === 2 ? "malformed" : token,
+                    expiresAt: "2026-11-18T12:05:00.000Z",
+                  },
+                });
+          });
+          await context.route(
+            "https://harbor-voice-lab.vercel.app/**",
+            (route) =>
+              route.fulfill({
+                contentType: "text/html",
+                body: "<p>Mock rehearsal</p>",
+              }),
+          );
+
+          await page.getByRole("button", { name: /^Your shortlist/ }).click();
+          await page
+            .getByRole("button", { name: "View details", exact: true })
+            .click();
+          await page
+            .getByRole("button", { name: "Voice rehearsal", exact: true })
+            .click();
+          const editor = page.getByRole("dialog", {
+            name: "Prepare outreach",
+            exact: true,
+          });
+          await editor.getByLabel("Care ZIP code (optional)").fill("07928");
+          await editor.getByLabel("ZIP coverage", { exact: true }).check();
+          await editor
+            .getByLabel("Your question or another goal")
+            .fill("Are Tuesday visits available?");
+          const open = editor.getByRole("button", { name: "Open rehearsal" });
+          await open.evaluate((button: HTMLButtonElement) => {
+            button.form?.requestSubmit(button);
+            button.form?.requestSubmit(button);
+          });
+          await expect(editor.getByRole("alert")).toHaveText(
+            "Could not open the rehearsal. Please retry.",
+          );
+          await open.click();
+          await expect(editor.getByRole("alert")).toHaveText(
+            "Could not confirm the rehearsal link. Please retry.",
+          );
+          await expect(page).toHaveURL("https://harbor.test/");
+          assert.equal(context.pages().length, 1);
+          assert.match(requests[0].requestId, /^[0-9a-f-]{36}$/);
+          assert.deepEqual(requests[0], {
+            requestId: requests[0].requestId,
+            providerId: homeCareProvider.id,
+            brief: {
+              scenarioId: "home-care-chris",
+              topics: ["ZIP coverage"],
+              timing: "Within 48–72 hours",
+              situation: await editor
+                .getByLabel("Fictional family situation")
+                .inputValue(),
+              question: "Are Tuesday visits available?",
+              careZip: "07928",
+            },
+          });
+          assert.deepEqual(requests, [requests[0], requests[0]]);
+          assert.deepEqual(
+            await page.evaluate(
+              () => window.__dashboardAccount.state.workspace.outreach,
+            ),
+            original.outreach,
+          );
+
+          await editor
+            .getByRole("button", { name: "Cancel", exact: true })
+            .click();
+          await page
+            .getByRole("dialog", {
+              name: homeCareProvider.name,
+              exact: true,
+            })
+            .getByRole("button", { name: "Close dialog", exact: true })
+            .click();
+          await page
+            .getByRole("button", { name: "Your plan", exact: true })
+            .click();
+          const history = page.getByRole("region", {
+            name: "Account outreach requests",
+          });
+          await expect(history).toContainText(homeCareProvider.name);
+          await expect(history).toContainText("Requested");
+          await history
+            .getByRole("button", { name: "Refresh account requests" })
+            .click();
+          await expect.poll(() => historyReads).toBe(2);
+          await expect(history).toContainText(homeCareProvider.name);
+          owner = "account-b";
+          await page.evaluate(() =>
+            window.__dashboardAccount.patch({ owner: "account-b" }),
+          );
+          await page
+            .getByRole("button", { name: "Your plan", exact: true })
+            .click();
+          await expect(history).toContainText(
+            "No account outreach requests yet.",
+          );
+          await expect(history).not.toContainText(homeCareProvider.name);
+          owner = "account-a";
+          await page.evaluate(() =>
+            window.__dashboardAccount.patch({ owner: "account-a" }),
+          );
+          await page
+            .getByRole("button", { name: "Your plan", exact: true })
+            .click();
+          await expect(history).toContainText(homeCareProvider.name);
+          await history
+            .getByRole("button", { name: "Reopen rehearsal" })
+            .click();
+          await expect(page).toHaveURL(
+            `https://harbor-voice-lab.vercel.app/rehearsal.html#handoff=${token}`,
+          );
+          assert.equal(context.pages().length, 1);
+          assert.deepEqual(
+            handoffs,
+            Array(3).fill({ requestId: requests[0].requestId }),
+          );
+        } finally {
+          await context.close();
+        }
+      },
+    );
+
+    await t.test(
+      "unconfigured account outreach keeps history readable and offers no new agency handoff",
+      async () => {
+        const context = await browser.newContext();
+        try {
+          const page = await context.newPage();
+          page.setDefaultTimeout(7000);
+          const agency = {
+            ...homeCareProvider,
+            id: "north-jersey-hp-hp0000216",
+          };
+          const message = "Account voice rehearsal is temporarily unavailable.";
+          const residential = original.outreach?.[0];
+          assert.ok(residential);
+          const previous = {
+            ...residential,
+            brief: {
+              ...residential.brief,
+              requestId: "aabbee22-2233-4455-8899-aabbccddeeff",
+              providerId: agency.id,
+              providerName: agency.name,
+            },
+          };
+          const workspace = {
+            ...original,
+            savedProviderIds: [agency.id],
+            outreach: [residential, previous],
+          };
+          await mount(page, { workspace }, false, [agency], false);
+          let postCalls = 0;
+          await page.route("**/api/outreach-{requests,handoff}", (route) => {
+            if (route.request().method() !== "GET") {
+              postCalls++;
+              return route.abort();
+            }
+            return route.fulfill({
+              json: {
+                requests: [
+                  {
+                    requestId: "11111111-1111-4111-8111-111111111144",
+                    providerId: agency.id,
+                    providerName: agency.name,
+                    status: "requested",
+                    createdAt: "2026-11-18T12:00:00.000Z",
+                  },
+                ],
+              },
+            });
+          });
+          await page.getByRole("button", { name: /^Your shortlist/ }).click();
+          await page
+            .getByRole("button", { name: "View details", exact: true })
+            .click();
+          const profile = page.getByRole("dialog", {
+            name: agency.name,
+            exact: true,
+          });
+          await expect(
+            profile.getByText(message, { exact: true }).first(),
+          ).toBeVisible();
+          await expect(
+            profile.getByRole("button", {
+              name: "Voice rehearsal",
+              exact: true,
+            }),
+          ).toHaveCount(0);
+          await expect(
+            profile.getByRole("button", {
+              name: "Agency interview & introduction",
+            }),
+          ).toBeVisible();
+          await profile
+            .getByRole("button", { name: "Close dialog", exact: true })
+            .click();
+          await page
+            .getByRole("button", { name: "Your plan", exact: true })
+            .click();
+          const history = page.getByRole("region", {
+            name: "Account outreach requests",
+          });
+          await expect(history).toContainText(agency.name);
+          await expect(history).toContainText("Requested");
+          await expect(history).toContainText(message);
+          await expect(
+            history.getByRole("button", { name: "Reopen rehearsal" }),
+          ).toHaveCount(0);
+          const legacy = page.getByRole("region", {
+            name: "Outreach history",
+            exact: true,
+          });
+          await expect(
+            legacy.getByRole("button", { name: "Prepare follow-up" }),
+          ).toHaveCount(1);
+          assert.equal(postCalls, 0);
+        } finally {
+          await context.close();
+        }
+      },
+    );
     await t.test(
       "real workspace hook imports only after consent and preserves the local demo",
       async () => {
