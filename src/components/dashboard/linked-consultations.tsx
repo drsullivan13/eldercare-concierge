@@ -9,8 +9,14 @@ type Booking = {
   startsAt: string | null;
   timezone: string;
   nextAction: string;
+  officeCallbackPending: boolean;
+  callbackWindowEnded: boolean;
 };
 const actions: Record<string, string> = {
+  wait_for_office_callback:
+    "The office said it would call you back. No consultation time is confirmed.",
+  callback_window_ended:
+    "The office callback was pending when your availability window ended. No consultation was confirmed. Contact the office or choose a new window.",
   wait_for_receipt:
     "Wait for the office’s booking receipt. No consultation is confirmed yet.",
   review_confirmation:
@@ -138,18 +144,26 @@ function LinkedHistory({
           )}
           {result?.bookings.map((row) => (
             <article key={row.bookingId}>
-              <h4>{statuses[row.status]}</h4>
+              <h4>
+                {row.officeCallbackPending
+                  ? row.callbackWindowEnded
+                    ? "Callback pending when window ended"
+                    : "Office callback pending"
+                  : statuses[row.status]}
+              </h4>
               <p>Verified booking ledger · {sources[row.source]}</p>
-              {["confirmed", "past"].includes(row.status) && row.startsAt && (
-                <p>
-                  <time dateTime={row.startsAt}>
-                    {new Date(row.startsAt).toLocaleString(undefined, {
-                      timeZone: row.timezone,
-                    })}
-                  </time>{" "}
-                  ({row.timezone})
-                </p>
-              )}
+              {!row.officeCallbackPending &&
+                ["confirmed", "past"].includes(row.status) &&
+                row.startsAt && (
+                  <p>
+                    <time dateTime={row.startsAt}>
+                      {new Date(row.startsAt).toLocaleString(undefined, {
+                        timeZone: row.timezone,
+                      })}
+                    </time>{" "}
+                    ({row.timezone})
+                  </p>
+                )}
               <p>{actions[row.nextAction]}</p>
             </article>
           ))}
