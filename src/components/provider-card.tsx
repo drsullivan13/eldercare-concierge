@@ -5,7 +5,7 @@ import {
   currentNjCoreqValue,
   coreqReportingYear,
   formatCoreqPercent,
-} from "./nj-coreq";
+} from "@/lib/nj-coreq";
 import { providerDisplayName } from "./provider-display-name";
 import {
   ArrowUpRight,

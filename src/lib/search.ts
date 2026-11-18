@@ -1,4 +1,4 @@
-import { currentNjCoreqValue } from "../components/nj-coreq";
+import { currentNjCoreqValue } from "./nj-coreq";
 import { providerDistanceMiles } from "./distance";
 import {
   getMarket,
