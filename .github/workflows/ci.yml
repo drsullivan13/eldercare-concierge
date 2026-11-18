@@ -54,8 +54,25 @@ jobs:
       - uses: ./.github/actions/install-dependencies
       - run: npx playwright install --with-deps --only-shell chromium
       - run: node scripts/ci/selection.mjs unit
-  build-browser:
+  production-build:
     needs: selection
+    if: needs.selection.outputs.browser == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with: *checkout-options
+      - uses: ./.github/actions/install-dependencies
+      - run: npm run build
+      - run: tar --exclude=.next/cache -czf "$RUNNER_TEMP/harbor-build.tgz" .next
+      - uses: actions/upload-artifact@v7
+        with:
+          name: harbor-browser-build
+          path: ${{ runner.temp }}/harbor-build.tgz
+          compression-level: 0
+          retention-days: 1
+  build-browser:
+    needs: [selection, production-build]
     if: needs.selection.outputs.browser == 'true'
     env:
       TEST_PLAN: ${{ needs.selection.outputs.plan }}
@@ -70,7 +87,11 @@ jobs:
         with: *checkout-options
       - uses: ./.github/actions/install-dependencies
       - run: npx playwright install --with-deps --only-shell chromium
-      - run: npm run build
+      - uses: actions/download-artifact@v8
+        with:
+          name: harbor-browser-build
+          path: ${{ runner.temp }}/harbor-build
+      - run: tar -xzf "$RUNNER_TEMP/harbor-build/harbor-build.tgz"
       - id: browser-e2e
         run: node scripts/ci/selection.mjs browser
         env:
@@ -86,7 +107,7 @@ jobs:
           retention-days: 7
   verify:
     if: ${{ always() }}
-    needs: [selection, static, unit-database, build-browser]
+    needs: [selection, static, unit-database, production-build, build-browser]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -95,6 +116,7 @@ jobs:
           PLAN_RESULT: ${{ needs.selection.result }}
           UNIT_EXPECTED: ${{ needs.selection.outputs.unit == 'false' && 'skipped' || 'success' }}
           BROWSER_EXPECTED: ${{ needs.selection.outputs.browser == 'false' && 'skipped' || 'success' }}
+          PRODUCTION_BUILD_RESULT: ${{ needs.production-build.result }}
           STATIC_RESULT: ${{ needs.static.result }}
           UNIT_DATABASE_RESULT: ${{ needs.unit-database.result }}
           BUILD_BROWSER_RESULT: ${{ needs.build-browser.result }}
@@ -102,4 +124,5 @@ jobs:
           test "$PLAN_RESULT" = success
           test "$STATIC_RESULT" = success
           test "$UNIT_DATABASE_RESULT" = "$UNIT_EXPECTED"
+          test "$PRODUCTION_BUILD_RESULT" = "$BROWSER_EXPECTED"
           test "$BUILD_BROWSER_RESULT" = "$BROWSER_EXPECTED"
