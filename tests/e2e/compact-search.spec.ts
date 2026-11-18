@@ -118,66 +118,99 @@ test("changing sort cancels a pending card page without appending stale options"
   }
 });
 
-test("opening a card cancels slower off-page map details", async ({ page }) => {
-  let first!: CompactSearchResponse;
-  let release!: () => void;
-  const pending = new Promise<void>((resolve) => {
-    release = resolve;
+for (const destination of ["card", "plan", "history"] as const) {
+  test(`${destination} cancels slower off-page map details`, async ({
+    page,
+    isMobile,
+  }) => {
+    let first!: CompactSearchResponse;
+    let release!: () => void;
+    const pending = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    let requested!: () => void;
+    const lookup = new Promise<void>((resolve) => {
+      requested = resolve;
+    });
+    let completed!: () => void;
+    const completion = new Promise<void>((resolve) => {
+      completed = resolve;
+    });
+    await page.route("**/api/search?*", async (route) => {
+      const response = await route.fetch();
+      first = await response.json();
+      await route.fulfill({ response });
+    });
+    await page.route("**/api/providers?*", async (route) => {
+      if (!new URL(route.request().url()).searchParams.has("market"))
+        return route.continue();
+      const response = await route.fetch();
+      requested();
+      await pending;
+      await route.fulfill({ response });
+      completed();
+    });
+    try {
+      await page.goto("/dashboard?demo=1");
+      await page
+        .locator("form.quick-search")
+        .getByRole("button", { name: "Find in-home care", exact: true })
+        .click();
+      const cards = page.locator(".care-search-view .provider-card");
+      await expect(cards).toHaveCount(18);
+      await page.getByRole("radio", { name: "Map view", exact: true }).click();
+      const located = first.markers!.filter(
+        (marker) => marker.lat !== null && marker.lng !== null,
+      );
+      const marker = located.find(
+        (item) => !first.providers.some((provider) => provider.id === item.id),
+      )!;
+      const paths = page.locator(".care-map .leaflet-interactive");
+      await expect(paths).toHaveCount(located.length + 2);
+      await paths.nth(located.indexOf(marker) + 2).dispatchEvent("click");
+      await lookup;
+      const cardName = await cards
+        .first()
+        .locator(".provider-title")
+        .innerText();
+      if (destination === "card") {
+        await cards
+          .first()
+          .getByRole("button", { name: "View details", exact: true })
+          .click();
+        await expect(
+          page
+            .getByRole("dialog")
+            .getByRole("heading", { name: cardName, exact: true }),
+        ).toBeVisible();
+      } else {
+        if (destination === "history") {
+          await page.evaluate(() => {
+            window.location.hash = "outreach-history";
+          });
+        } else {
+          if (isMobile)
+            await page.getByRole("button", { name: "Open navigation" }).click();
+          await page
+            .locator(".side-nav")
+            .getByRole("button", { name: "Your plan", exact: true })
+            .click();
+        }
+        await expect(page.locator(".care-search-view")).toHaveCount(0);
+      }
+      release();
+      await completion;
+      if (destination === "card") {
+        await expect(
+          page
+            .getByRole("dialog")
+            .getByRole("heading", { name: cardName, exact: true }),
+        ).toBeVisible();
+      } else {
+        await expect(page.getByRole("dialog")).toHaveCount(0);
+      }
+    } finally {
+      release();
+    }
   });
-  let requested!: () => void;
-  const lookup = new Promise<void>((resolve) => {
-    requested = resolve;
-  });
-  let completed!: () => void;
-  const completion = new Promise<void>((resolve) => {
-    completed = resolve;
-  });
-  await page.route("**/api/search?*", async (route) => {
-    const response = await route.fetch();
-    first = await response.json();
-    await route.fulfill({ response });
-  });
-  await page.route("**/api/providers?*", async (route) => {
-    if (!new URL(route.request().url()).searchParams.has("market"))
-      return route.continue();
-    const response = await route.fetch();
-    requested();
-    await pending;
-    await route.fulfill({ response });
-    completed();
-  });
-  try {
-    await page.goto("/dashboard?demo=1");
-    await page
-      .locator("form.quick-search")
-      .getByRole("button", { name: "Find in-home care", exact: true })
-      .click();
-    const cards = page.locator(".care-search-view .provider-card");
-    await expect(cards).toHaveCount(18);
-    await page.getByRole("radio", { name: "Map view", exact: true }).click();
-    const located = first.markers!.filter(
-      (marker) => marker.lat !== null && marker.lng !== null,
-    );
-    const marker = located.find(
-      (item) => !first.providers.some((provider) => provider.id === item.id),
-    )!;
-    const paths = page.locator(".care-map .leaflet-interactive");
-    await expect(paths).toHaveCount(located.length + 2);
-    await paths.nth(located.indexOf(marker) + 2).dispatchEvent("click");
-    await lookup;
-    const cardName = await cards.first().locator(".provider-title").innerText();
-    await cards
-      .first()
-      .getByRole("button", { name: "View details", exact: true })
-      .click();
-    const selected = page
-      .getByRole("dialog")
-      .getByRole("heading", { name: cardName, exact: true });
-    await expect(selected).toBeVisible();
-    release();
-    await completion;
-    await expect(selected).toBeVisible();
-  } finally {
-    release();
-  }
-});
+}

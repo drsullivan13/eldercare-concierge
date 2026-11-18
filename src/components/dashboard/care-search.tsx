@@ -75,6 +75,8 @@ export function CareSearchView({
   );
   const { draft, request, data, loading, error, displayCount } = search;
   const resolveMarker = search.openMarker;
+  const cancelProviderLookup = search.cancelProviderLookup;
+  useEffect(() => () => cancelProviderLookup(), [cancelProviderLookup]);
   const openMarker = useCallback(
     (marker: Parameters<CareSearch["openMarker"]>[0]) => {
       void resolveMarker(marker, openProvider);
