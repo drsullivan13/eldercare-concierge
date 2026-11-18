@@ -25,6 +25,12 @@ The modules under `src/components/dashboard/` own search, overview, shortlist, p
 
 Provider cards show the information needed to choose which options to investigate. Details expose source-linked offerings, costs, availability, consumer reviews, Facebook findings and applicable CMS evidence. Location research and home-health panels share a request hook that checks the returned provider ID, cancels superseded requests and supports retry. The provider detail disclosure preserves the complete list of source-reported services. Material care warnings remain visible on cards.
 
+### Account outreach requests
+
+Apply `supabase/outreach-requests.sql` before `supabase/outreach-handoffs.sql` in the dashboard’s Supabase project. The authenticated `/api/outreach-requests` endpoint creates a request for a published North Jersey home-care office and returns a receipt. The caller supplies a stable request UUID. Retrying with the same brief and office returns the original receipt. Changing either under the same UUID returns a conflict.
+
+Families can read their own requests and events. The initial event records when Harbor accepted the request. A real agency confirmation comes through the consultation workflow. Existing demo and workspace history retain their original provenance.
+
 ## Search and evidence
 
 | Module                         | Responsibility and test surface                                                                                                                                              |
