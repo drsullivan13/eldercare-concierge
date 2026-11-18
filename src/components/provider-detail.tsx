@@ -50,6 +50,7 @@ export function ProviderDetail({
   onNote,
   onTask,
   onOutreach,
+  outreachUnavailable,
   outreachHistory,
   homeCareOutreach,
   initialHomeCareOpen = false,
@@ -65,6 +66,7 @@ export function ProviderDetail({
   onNote: (note: string) => boolean;
   onTask: (title: string) => boolean;
   onOutreach?: () => void;
+  outreachUnavailable?: string;
   outreachHistory?: ReactNode;
   homeCareOutreach?: ReactNode;
   initialHomeCareOpen?: boolean;
@@ -192,6 +194,9 @@ export function ProviderDetail({
                 </button>
               )}
             </div>
+            {outreachUnavailable && (
+              <p className="small muted">{outreachUnavailable}</p>
+            )}
           </div>
           <TabsList className="place-sections" aria-label="Provider profile">
             {destinations.map(({ key, label }) => (

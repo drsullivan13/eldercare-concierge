@@ -9,6 +9,11 @@ import {
 } from "@/lib/home-care-rehearsal";
 import { formatPhone } from "@/lib/providers";
 import { Modal } from "../modal";
+import {
+  accountOutreachUnavailable,
+  useAccountRehearsal,
+  type AccountOutreachBrief,
+} from "./account-outreach";
 import styles from "./outreach.module.css";
 
 type Outreach = ReturnType<typeof useOutreach>;
@@ -65,6 +70,7 @@ export function OutreachEditor({
   homeCare,
   parent,
   launch,
+  accountRequestId,
   error,
   close,
 }: {
@@ -72,6 +78,10 @@ export function OutreachEditor({
   homeCare?: boolean;
   parent?: OutreachRecord;
   launch: Outreach["launch"];
+  accountRequestId?: (draft: {
+    providerId: string;
+    brief: AccountOutreachBrief;
+  }) => string;
   error: string;
   close: () => void;
 }) {
@@ -79,6 +89,10 @@ export function OutreachEditor({
   const online = useOnline();
   const [topics, setTopics] = useState<string[]>(parent?.brief.topics ?? []);
   const [attempted, setAttempted] = useState(false);
+  const [careZip, setCareZip] = useState("");
+  const accountRehearsal = useAccountRehearsal();
+  const { busy } = accountRehearsal;
+  const launchError = accountRequestId ? accountRehearsal.error : error;
   const questionField = useId();
   const priorGoals = parent?.brief.topics ?? [];
   const priorFamily = parent && readFamilyQuestion(parent.brief.question);
@@ -98,7 +112,11 @@ export function OutreachEditor({
     priorFamily?.situation ?? initialFamily.situation,
   );
   const [question, setQuestion] = useState<string>(
-    forAgency && !parent ? initialFamily.question : "",
+    accountRequestId && priorFamily
+      ? priorFamily.question
+      : forAgency && !parent
+        ? initialFamily.question
+        : "",
   );
   const questionLimit = forAgency ? 600 : 1000;
   const choices = [
@@ -122,12 +140,29 @@ export function OutreachEditor({
       title={parent ? "Follow-up rehearsal" : "Prepare outreach"}
       close={close}
     >
+      {busy && <p role="status">Opening rehearsal…</p>}
       <form
         className={styles.editor}
+        aria-busy={busy}
         onSubmit={(event) => {
           event.preventDefault();
           setAttempted(true);
-          if (!valid || !navigator.onLine) return;
+          if (!valid || !navigator.onLine || busy) return;
+          if (accountRequestId) {
+            const draft = {
+              providerId: provider.providerId,
+              brief: {
+                scenarioId: family.id,
+                topics: choices.filter((choice) => topics.includes(choice)),
+                timing: start.trim(),
+                situation: situation.trim(),
+                question: question.trim(),
+                ...(careZip ? { careZip } : {}),
+              },
+            };
+            void accountRehearsal.open(accountRequestId(draft), draft);
+            return;
+          }
           const request = forAgency
             ? familyQuestion({
                 label: family.label,
@@ -151,6 +186,7 @@ export function OutreachEditor({
             <label className={styles.familyField}>
               Practice family
               <select
+                disabled={busy}
                 value={family.id}
                 onChange={(event) => {
                   const chosen = familyScenarios.find(
@@ -173,6 +209,7 @@ export function OutreachEditor({
             <label className={styles.familyField}>
               When should care start?
               <input
+                disabled={busy}
                 required
                 maxLength={80}
                 value={start}
@@ -183,6 +220,7 @@ export function OutreachEditor({
             <label className={styles.familyField}>
               Fictional family situation
               <textarea
+                disabled={busy}
                 required
                 maxLength={240}
                 rows={3}
@@ -190,9 +228,22 @@ export function OutreachEditor({
                 onChange={(event) => setSituation(event.target.value)}
               />
             </label>
+            {accountRequestId && (
+              <label className={styles.familyField}>
+                Care ZIP code (optional)
+                <input
+                  disabled={busy}
+                  inputMode="numeric"
+                  pattern="[0-9]{5}"
+                  maxLength={5}
+                  value={careZip}
+                  onChange={(event) => setCareZip(event.target.value)}
+                />
+              </label>
+            )}
           </>
         )}
-        <fieldset className={styles.goals}>
+        <fieldset className={styles.goals} disabled={busy}>
           <legend>
             {choices.length > 6 ? "Choose up to 6 goals" : "Choose your goals"}
           </legend>
@@ -216,6 +267,7 @@ export function OutreachEditor({
                 <p>{item}</p>
                 <button
                   type="button"
+                  disabled={busy}
                   className="text-link"
                   onClick={() => {
                     setQuestion(item.slice(0, questionLimit));
@@ -235,6 +287,7 @@ export function OutreachEditor({
         </label>
         <textarea
           id={questionField}
+          disabled={busy}
           value={question}
           onChange={(event) => setQuestion(event.target.value)}
           maxLength={questionLimit}
@@ -260,9 +313,9 @@ export function OutreachEditor({
             rehearsal.
           </p>
         )}
-        {error && (
+        {launchError && (
           <p role="alert" className="form-error">
-            {error}
+            {launchError}
           </p>
         )}
         <div className={styles.actions}>
@@ -276,9 +329,10 @@ export function OutreachEditor({
           <button
             type="submit"
             className="button button-primary"
-            disabled={!online}
+            disabled={!online || busy}
           >
-            Open rehearsal <ExternalLink size={16} aria-hidden="true" />
+            {busy ? "Opening rehearsal…" : "Open rehearsal"}{" "}
+            <ExternalLink size={16} aria-hidden="true" />
           </button>
         </div>
       </form>
@@ -395,7 +449,7 @@ function OutreachEntry({
 }: {
   record: OutreachRecord;
   reopen: Outreach["reopen"];
-  followUp: (record: OutreachRecord) => void;
+  followUp?: (record: OutreachRecord) => void;
   addTask: (title: string, providerId: string) => boolean;
   online: boolean;
   entryId: string;
@@ -597,12 +651,16 @@ function OutreachEntry({
             Reopen rehearsal <ExternalLink size={15} aria-hidden="true" />
           </button>
         )}
-        <button
-          className="button button-outline"
-          onClick={() => followUp(record)}
-        >
-          Prepare follow-up
-        </button>
+        {followUp ? (
+          <button
+            className="button button-outline"
+            onClick={() => followUp(record)}
+          >
+            Prepare follow-up
+          </button>
+        ) : (
+          <p className="small muted">{accountOutreachUnavailable}</p>
+        )}
       </div>
     </article>
   );
@@ -615,11 +673,13 @@ export function OutreachHistory({
   error,
   reopen,
   followUp,
+  followUpUnavailable,
   addTask,
   findCare,
   viewPlan,
 }: Pick<Outreach, "records" | "refreshing" | "refresh" | "error" | "reopen"> & {
   followUp: (record: OutreachRecord) => void;
+  followUpUnavailable?: (record: OutreachRecord) => boolean;
   addTask: (title: string, providerId: string) => boolean;
   findCare?: () => void;
   viewPlan?: () => void;
@@ -706,7 +766,7 @@ export function OutreachHistory({
               key={record.brief.requestId}
               record={record}
               reopen={reopen}
-              followUp={followUp}
+              followUp={followUpUnavailable?.(record) ? undefined : followUp}
               addTask={addTask}
               online={online}
               entryId={entryIds.get(record.brief.requestId)!}

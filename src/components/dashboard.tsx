@@ -52,6 +52,11 @@ import {
   HomeCareOutreachPlan,
 } from "./dashboard/home-care-outreach";
 import { OutreachEditor, OutreachHistory } from "./dashboard/outreach";
+import {
+  AccountOutreachHistory,
+  accountOutreachUnavailable,
+  type AccountOutreachBrief,
+} from "./dashboard/account-outreach";
 import { ComparisonTray, useComparison } from "./dashboard/compare-dialog";
 import { ProfileDialog } from "./dashboard/profile-dialog";
 import { DemoImportDialog } from "./dashboard/demo-import-dialog";
@@ -80,7 +85,13 @@ const NAV = [
   { id: "shortlist", label: "Your shortlist", icon: Bookmark },
   { id: "plan", label: "Your plan", icon: ClipboardList },
 ] as const;
-export function Dashboard({ demo }: { demo: boolean }) {
+export function Dashboard({
+  demo,
+  accountOutreachAvailable = false,
+}: {
+  demo: boolean;
+  accountOutreachAvailable?: boolean;
+}) {
   const state = useWorkspace(demo);
   const [workspaceVersion, setWorkspaceVersion] = useState(0);
   if (!state.ready)
@@ -103,6 +114,7 @@ export function Dashboard({ demo }: { demo: boolean }) {
     <WorkspaceDashboard
       key={`${demo ? "demo" : state.owner}:${workspaceVersion}`}
       demo={demo}
+      accountOutreachAvailable={accountOutreachAvailable}
       state={state}
       resetViews={() => setWorkspaceVersion((version) => version + 1)}
     />
@@ -110,10 +122,12 @@ export function Dashboard({ demo }: { demo: boolean }) {
 }
 function WorkspaceDashboard({
   demo,
+  accountOutreachAvailable,
   state,
   resetViews,
 }: {
   demo: boolean;
+  accountOutreachAvailable: boolean;
   state: ReturnType<typeof useWorkspace>;
   resetViews: () => void;
 }) {
@@ -224,18 +238,32 @@ function WorkspaceDashboard({
     provider: OutreachProvider;
     homeCare?: boolean;
     parent?: OutreachRecord;
+    account?: boolean;
   } | null>(null);
+  const accountRequestIds = useRef(new Map<string, string>());
+  function accountRequestId(draft: {
+    providerId: string;
+    brief: AccountOutreachBrief;
+  }) {
+    const key = JSON.stringify(draft);
+    const prior = accountRequestIds.current.get(key);
+    if (prior) return prior;
+    const id = crypto.randomUUID();
+    accountRequestIds.current.set(key, id);
+    return id;
+  }
   const outreachReturnFocus = useRef<HTMLElement | null>(null);
   function prepareOutreach(
     provider: OutreachProvider,
     parent?: OutreachRecord,
     homeCare?: boolean,
+    account?: boolean,
   ) {
     outreachReturnFocus.current =
       document.activeElement instanceof HTMLElement
         ? document.activeElement
         : null;
-    setOutreachDraft({ provider, parent, homeCare });
+    setOutreachDraft({ provider, parent, homeCare, account });
   }
   function closeOutreach() {
     setOutreachDraft(null);
@@ -245,8 +273,15 @@ function WorkspaceDashboard({
         target.focus({ preventScroll: true });
     });
   }
-  const followUp = (record: OutreachRecord) =>
-    prepareOutreach(record.brief, record);
+  const isAccountAgencyRehearsal = (record: OutreachRecord) =>
+    !demo && record.brief.providerId.startsWith("north-jersey-hp-");
+  const followUp = (record: OutreachRecord) => {
+    const account = isAccountAgencyRehearsal(record);
+    if (account && !accountOutreachAvailable) return;
+    prepareOutreach(record.brief, record, undefined, account);
+  };
+  const followUpUnavailable = (record: OutreachRecord) =>
+    isAccountAgencyRehearsal(record) && !accountOutreachAvailable;
   const [selected, setSelected] = useState<Provider | null>(null);
   const [initialHomeCareOpen, setInitialHomeCareOpen] = useState(false);
   const [initialPane, setInitialPane] = useState<ProfilePane>("overview");
@@ -287,6 +322,10 @@ function WorkspaceDashboard({
     });
   }
   const selectedProvider = selected;
+  const selectedAccountOutreach =
+    !demo &&
+    selectedProvider?.state === "NJ" &&
+    selectedProvider.category === "home-care";
   const openProvider = useCallback(
     (
       provider: Provider,
@@ -814,9 +853,15 @@ function WorkspaceDashboard({
                 </button>
               )}
               <div id="outreach-history" ref={outreachHistory} tabIndex={-1}>
+                {!demo && (
+                  <AccountOutreachHistory
+                    available={accountOutreachAvailable}
+                  />
+                )}
                 <OutreachHistory
                   {...outreach}
                   followUp={followUp}
+                  followUpUnavailable={followUpUnavailable}
                   addTask={(title, providerId) =>
                     addTask(title, providerId, "Outreach")
                   }
@@ -969,16 +1014,25 @@ function WorkspaceDashboard({
               }))
             }
             onTask={(title) => addTask(title, selectedProvider.id)}
-            onOutreach={() =>
-              prepareOutreach(
-                {
-                  providerId: selectedProvider.id,
-                  providerName: selectedProvider.name,
-                  phone: selectedProvider.phone || "",
-                },
-                undefined,
-                selectedProvider.category === "home-care",
-              )
+            outreachUnavailable={
+              selectedAccountOutreach && !accountOutreachAvailable
+                ? accountOutreachUnavailable
+                : undefined
+            }
+            onOutreach={
+              selectedAccountOutreach && !accountOutreachAvailable
+                ? undefined
+                : () =>
+                    prepareOutreach(
+                      {
+                        providerId: selectedProvider.id,
+                        providerName: selectedProvider.name,
+                        phone: selectedProvider.phone || "",
+                      },
+                      undefined,
+                      selectedProvider.category === "home-care",
+                      selectedAccountOutreach,
+                    )
             }
             outreachHistory={
               <OutreachHistory
@@ -987,6 +1041,7 @@ function WorkspaceDashboard({
                   (record) => record.brief.providerId === selectedProvider.id,
                 )}
                 followUp={followUp}
+                followUpUnavailable={followUpUnavailable}
                 viewPlan={() => {
                   closeProvider();
                   openOutreachHistory();
@@ -1000,16 +1055,20 @@ function WorkspaceDashboard({
           />
         </Suspense>
       )}
-      {outreachDraft && (
-        <OutreachEditor
-          provider={outreachDraft.provider}
-          homeCare={outreachDraft.homeCare}
-          parent={outreachDraft.parent}
-          launch={outreach.launch}
-          error={outreach.error}
-          close={closeOutreach}
-        />
-      )}
+      {outreachDraft &&
+        (!outreachDraft.account || accountOutreachAvailable) && (
+          <OutreachEditor
+            provider={outreachDraft.provider}
+            homeCare={outreachDraft.homeCare}
+            parent={outreachDraft.parent}
+            launch={outreach.launch}
+            accountRequestId={
+              outreachDraft.account ? accountRequestId : undefined
+            }
+            error={outreach.error}
+            close={closeOutreach}
+          />
+        )}
       {profileOpen && (
         <ProfileDialog
           profile={workspace.profile}
