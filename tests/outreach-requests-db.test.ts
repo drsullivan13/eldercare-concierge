@@ -37,7 +37,19 @@ describe("outreach request ledger in PostgreSQL", { timeout: 30_000 }, () => {
       alter default privileges in schema public grant all on sequences to anon, authenticated, service_role;
     `);
     await db.exec(migration);
-    await db.exec(migration);
+    // Upgrade an existing deployment, and prove the upgrade is rerunnable.
+    await db.query("insert into auth.users values ($1)", [ownerA]);
+    await db.query(
+      "insert into public.outreach_requests(owner_id,request_id,provider_id,brief) values ($1,$2,$3,$4)",
+      [ownerA, requestId, providerId, JSON.stringify(brief)],
+    );
+    const v2Migration = readFileSync("supabase/outreach-brief-v2.sql", "utf8");
+    await db.exec(v2Migration);
+    await db.exec(v2Migration);
+    assert.equal(
+      (await db.query("select * from public.outreach_requests")).rows.length,
+      1,
+    );
   });
 
   after(async () => {
@@ -84,6 +96,43 @@ describe("outreach request ledger in PostgreSQL", { timeout: 30_000 }, () => {
     ]);
     return rows[0].request;
   }
+
+  test("v2 arrays enforce version, bounds, Unicode and controls under the server role", async () => {
+    await setRole("service_role");
+    for (const payload of [
+      {
+        ...brief,
+        briefVersion: 2,
+        knownAnswers: ["😀".repeat(160)],
+        outstandingQuestions: ["One\tTwo\nThree\r"],
+      },
+      { ...brief, briefVersion: 2 },
+      { ...brief, briefVersion: 2, knownAnswers: [], outstandingQuestions: [] },
+    ]) {
+      await create(ownerA, providerId, payload);
+      await db.exec(
+        "reset role; delete from public.outreach_requests; set role service_role",
+      );
+    }
+    for (const extra of [
+      { knownAnswers: [] },
+      { briefVersion: 1 },
+      { briefVersion: null },
+      { briefVersion: 2, knownAnswers: null },
+      { briefVersion: 2, knownAnswers: [["nested"]] },
+      { briefVersion: 2, knownAnswers: [" "] },
+      { briefVersion: 2, knownAnswers: ["\u00a0\ufeff"] },
+      { briefVersion: 2, knownAnswers: Array(4).fill("answer") },
+      { briefVersion: 2, outstandingQuestions: ["😀".repeat(161)] },
+      ...["\u0001", "\u000b", "\u007f", "\u0085"].map((control) => ({
+        briefVersion: 2,
+        knownAnswers: ["a" + control],
+      })),
+    ])
+      await assert.rejects(create(ownerA, providerId, { ...brief, ...extra }), {
+        code: "23514",
+      });
+  });
 
   test("creates one ordered event and replays the request without writing", async () => {
     await setRole("service_role");

@@ -202,6 +202,52 @@ test("outreach request route authenticates, validates, writes idempotently and e
   );
   assert.equal(calls, 0);
 
+  for (const extra of [
+    { knownAnswers: [] },
+    { briefVersion: 1 },
+    { briefVersion: null },
+    { briefVersion: 2, knownAnswers: null },
+    { briefVersion: 2, knownAnswers: [["nested"]] },
+    { briefVersion: 2, knownAnswers: [" "] },
+    { briefVersion: 2, knownAnswers: Array(4).fill("a") },
+    { briefVersion: 2, outstandingQuestions: ["😀".repeat(161)] },
+    ...["\u0001", "\u000b", "\u007f", "\u0085"].map((control) => ({
+      briefVersion: 2,
+      knownAnswers: ["a" + control],
+    })),
+  ])
+    assert.equal(
+      (await post({ ...payload, brief: { ...brief, ...extra } })).status,
+      400,
+    );
+  assert.equal(calls, 0);
+  const v2Payload = {
+    ...payload,
+    requestId: "abcdefab-abcd-4abc-8abc-abcdefabcd01",
+    brief: {
+      ...brief,
+      briefVersion: 2,
+      knownAnswers: ["😀".repeat(160)],
+      outstandingQuestions: ["A\tB\nC\r"],
+    },
+  };
+  assert.equal((await post(v2Payload)).status, 201);
+  assert.equal((await post(v2Payload)).status, 200);
+  const v2Detail = await GET(
+    new Request(`${url}?requestId=${v2Payload.requestId}`),
+  );
+  assert.deepEqual((await v2Detail.json()).request.brief, v2Payload.brief);
+  assert.equal(
+    (
+      await post({
+        ...v2Payload,
+        brief: { ...v2Payload.brief, knownAnswers: ["Changed"] },
+      })
+    ).status,
+    409,
+  );
+  rows.length = 0;
+
   const created = await post({
     ...payload,
     requestId: requestId.toUpperCase(),
