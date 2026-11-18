@@ -1,5 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import styles from "./outreach.module.css";
+import { FamilyFollowups } from "./family-followups";
 import { LinkedConsultations } from "./linked-consultations";
 import { RehearsalReports } from "./rehearsal-reports";
 
@@ -187,76 +188,79 @@ export function AccountOutreachHistory({
   }, [revision]);
 
   return (
-    <section className={styles.history} aria-labelledby={heading}>
-      <div className={styles.heading}>
-        <div>
-          <h2 id={heading}>Account outreach requests</h2>
-          <p className="small muted">
-            Practice requests saved to your account.
-          </p>
+    <>
+      <FamilyFollowups requests={result?.requests ?? []} />
+      <section className={styles.history} aria-labelledby={heading}>
+        <div className={styles.heading}>
+          <div>
+            <h2 id={heading}>Account outreach requests</h2>
+            <p className="small muted">
+              Practice requests saved to your account.
+            </p>
+          </div>
+          <button
+            type="button"
+            className="button button-outline"
+            disabled={refreshing || rehearsal.busy}
+            onClick={() => setRevision((current) => current + 1)}
+          >
+            Refresh account requests
+          </button>
         </div>
-        <button
-          type="button"
-          className="button button-outline"
-          disabled={refreshing || rehearsal.busy}
-          onClick={() => setRevision((current) => current + 1)}
-        >
-          Refresh account requests
-        </button>
-      </div>
-      {refreshing && <p role="status">Loading account outreach requests…</p>}
-      {rehearsal.busy && <p role="status">Opening rehearsal…</p>}
-      {!refreshing && result?.error && (
-        <p className="form-error" role="alert">
-          {result.error}
-        </p>
-      )}
-      {rehearsal.error && (
-        <p className="form-error" role="alert">
-          {rehearsal.error}
-        </p>
-      )}
-      {!refreshing && !result?.error && result?.requests.length === 0 && (
-        <p>No account outreach requests yet.</p>
-      )}
-      {!available && Boolean(result?.requests.length) && (
-        <p className="small muted">{accountOutreachUnavailable}</p>
-      )}
-      {result?.requests.map(
-        ({ providerId, providerName, requestId, createdAt }) => (
-          <article className={styles.entry} key={requestId}>
-            <header>
-              <h3>{providerName || providerId}</h3>
-              <p>
-                Requested{" "}
-                <time dateTime={createdAt}>
-                  {new Date(createdAt).toLocaleDateString()}
-                </time>
-              </p>
-            </header>
-            <RehearsalReports
-              requestId={requestId}
-              revision={result.revision}
-            />
-            <LinkedConsultations
-              key={`${requestId}:${result.revision}`}
-              requestId={requestId}
-              providerId={providerId}
-              email={email}
-            />
-            {available && (
-              <button
-                type="button"
-                className="button button-outline"
-                disabled={refreshing || rehearsal.busy}
-                onClick={() => void rehearsal.open(requestId)}
-              >
-                Reopen rehearsal
-              </button>
-            )}
-          </article>
-        ),
-      )}
-    </section>
+        {refreshing && <p role="status">Loading account outreach requests…</p>}
+        {rehearsal.busy && <p role="status">Opening rehearsal…</p>}
+        {!refreshing && result?.error && (
+          <p className="form-error" role="alert">
+            {result.error}
+          </p>
+        )}
+        {rehearsal.error && (
+          <p className="form-error" role="alert">
+            {rehearsal.error}
+          </p>
+        )}
+        {!refreshing && !result?.error && result?.requests.length === 0 && (
+          <p>No account outreach requests yet.</p>
+        )}
+        {!available && Boolean(result?.requests.length) && (
+          <p className="small muted">{accountOutreachUnavailable}</p>
+        )}
+        {result?.requests.map(
+          ({ providerId, providerName, requestId, createdAt }) => (
+            <article className={styles.entry} key={requestId}>
+              <header>
+                <h3>{providerName || providerId}</h3>
+                <p>
+                  Requested{" "}
+                  <time dateTime={createdAt}>
+                    {new Date(createdAt).toLocaleDateString()}
+                  </time>
+                </p>
+              </header>
+              <RehearsalReports
+                requestId={requestId}
+                revision={result.revision}
+              />
+              <LinkedConsultations
+                key={`${requestId}:${result.revision}`}
+                requestId={requestId}
+                providerId={providerId}
+                email={email}
+              />
+              {available && (
+                <button
+                  type="button"
+                  className="button button-outline"
+                  disabled={refreshing || rehearsal.busy}
+                  onClick={() => void rehearsal.open(requestId)}
+                >
+                  Reopen rehearsal
+                </button>
+              )}
+            </article>
+          ),
+        )}
+      </section>
+    </>
   );
 }
