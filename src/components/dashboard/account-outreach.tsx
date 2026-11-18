@@ -2,6 +2,7 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import styles from "./outreach.module.css";
 import { FamilyFollowups } from "./family-followups";
 import { LinkedConsultations } from "./linked-consultations";
+import { PrivateInquiryFacts } from "./private-inquiry-facts";
 import { RehearsalReports } from "./rehearsal-reports";
 
 const requestsPath = "/api/outreach-requests";
@@ -246,6 +247,10 @@ export function AccountOutreachHistory({
                 requestId={requestId}
                 providerId={providerId}
                 email={email}
+              />
+              <PrivateInquiryFacts
+                requestId={requestId}
+                providerId={providerId}
               />
               {available && (
                 <button
