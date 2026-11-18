@@ -17,7 +17,7 @@ const digest = (value: string) =>
   createHash("sha256").update(value).digest("hex");
 
 async function bundleRoute(
-  endpoint: "outreach-handoff" | "outreach-exchange",
+  endpoint: "outreach-handoff" | "outreach-exchange" | "outreach-run",
   stubs: object,
 ) {
   const bundle = await build({
@@ -200,4 +200,105 @@ test("exchange rejects unauthorized callers and exposes a run only once", async 
   assert.equal(reused.status, 404);
   assert.equal(unknown.status, 404);
   assert.equal(await reused.text(), await unknown.text());
+});
+
+test("run lookup requires service authorization and a matching run credential", async (t) => {
+  const previous = process.env.HARBOR_OUTREACH_SERVICE_KEY;
+  t.after(() => {
+    if (previous === undefined) delete process.env.HARBOR_OUTREACH_SERVICE_KEY;
+    else process.env.HARBOR_OUTREACH_SERVICE_KEY = previous;
+  });
+  const runId = "aaaabbbb-cccc-4123-8234-abcdefabcd00";
+  const runKey = "ab".repeat(32);
+  const otherRunId = "ddddbbbb-cccc-4123-8234-abcdefabcd00";
+  const otherRunKey = "cd".repeat(32);
+  const calls: unknown[] = [];
+  let rpcUnavailable = false;
+  const resolve = await bundleRoute("outreach-run", {
+    getProviderEntry,
+    rpc(name: string, args: Record<string, string>) {
+      calls.push([name, args]);
+      if (rpcUnavailable) return { error: { message: "internal error" } };
+      if (args.p_run_id !== runId || args.p_run_key_digest !== digest(runKey))
+        return { data: null };
+      return {
+        data: {
+          runId,
+          requestId,
+          providerId,
+          brief,
+          phone: "ignored",
+          ownerId,
+          runKey,
+        },
+      };
+    },
+  });
+  const credentials = { runId, runKey };
+  const request = (body: unknown = credentials, key = secret) =>
+    post("outreach-run", body, { Authorization: `Bearer ${key}` });
+
+  delete process.env.HARBOR_OUTREACH_SERVICE_KEY;
+  assert.equal((await resolve(request())).status, 401);
+  process.env.HARBOR_OUTREACH_SERVICE_KEY = secret;
+  assert.equal((await resolve(request(credentials, runKey))).status, 401);
+  assert.equal((await resolve(post("outreach-run", credentials))).status, 401);
+  assert.equal(
+    (await resolve(request({ ...credentials, requestId }))).status,
+    404,
+  );
+  assert.equal((await resolve(request({ token: runKey }))).status, 404);
+  assert.equal(
+    (await resolve(request({ runId: "wrong", runKey }))).status,
+    404,
+  );
+  assert.equal(
+    (await resolve(request({ runId, runKey: "wrong" }))).status,
+    404,
+  );
+  assert.equal(
+    (await resolve(request({ runId, runKey: runKey.repeat(20) }))).status,
+    413,
+  );
+  assert.equal(calls.length, 0);
+
+  const result = await resolve(request({ runId: runId.toUpperCase(), runKey }));
+  assert.equal(result.status, 200);
+  assert.match(result.headers.get("cache-control") ?? "", /private, no-store/);
+  assert.deepEqual(calls, [
+    [
+      "authorize_outreach_run",
+      {
+        p_run_id: runId,
+        p_run_key_digest: digest(runKey),
+      },
+    ],
+  ]);
+  const office = getProviderEntry(providerId)?.provider;
+  assert.ok(office);
+  assert.deepEqual(await result.json(), {
+    runId,
+    requestId,
+    providerId,
+    providerName: office.name,
+    phone: office.phone || null,
+    brief,
+  });
+
+  const wrongKey = await resolve(request({ runId, runKey: otherRunKey }));
+  const wrongRun = await resolve(request({ runId: otherRunId, runKey }));
+  const malformed = await resolve(request({ runId }));
+  assert.equal(wrongKey.status, 404);
+  assert.equal(wrongRun.status, 404);
+  assert.equal(malformed.status, 404);
+  const failure = await wrongKey.text();
+  assert.equal(await wrongRun.text(), failure);
+  assert.equal(await malformed.text(), failure);
+
+  rpcUnavailable = true;
+  const unavailable = await resolve(request());
+  assert.equal(unavailable.status, 503);
+  assert.deepEqual(await unavailable.json(), {
+    error: "Outreach run is temporarily unavailable.",
+  });
 });

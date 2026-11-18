@@ -21,13 +21,12 @@ export function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-export async function readHandoffField(
+export async function readHandoffObject(
   request: Request,
-  field: "requestId" | "token",
-  pattern: RegExp,
+  fields: readonly string[],
   invalid: () => Response,
   respond = handoffResponse,
-): Promise<string | Response> {
+): Promise<Record<string, unknown> | Response> {
   const contentType = request.headers.get("content-type")?.split(";", 1)[0];
   if (contentType?.trim().toLowerCase() !== "application/json")
     return respond({ error: "Use application/json." }, 415);
@@ -49,13 +48,30 @@ export async function readHandoffField(
       text += decoder.decode(value, { stream: true });
     }
     const body: unknown = JSON.parse(text + decoder.decode());
-    if (!isRecord(body) || Object.keys(body).length !== 1) return invalid();
-    const value = body[field];
-    return typeof value === "string" && pattern.test(value) ? value : invalid();
+    if (
+      !isRecord(body) ||
+      Object.keys(body).length !== fields.length ||
+      !fields.every((field) => Object.hasOwn(body, field))
+    )
+      return invalid();
+    return body;
   } catch {
     void reader.cancel().catch(() => {});
     return invalid();
   } finally {
     reader.releaseLock();
   }
+}
+
+export async function readHandoffField(
+  request: Request,
+  field: "requestId" | "token",
+  pattern: RegExp,
+  invalid: () => Response,
+  respond = handoffResponse,
+): Promise<string | Response> {
+  const body = await readHandoffObject(request, [field], invalid, respond);
+  if (body instanceof Response) return body;
+  const value = body[field];
+  return typeof value === "string" && pattern.test(value) ? value : invalid();
 }
