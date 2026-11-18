@@ -308,9 +308,9 @@ for (const location of [
 test("a missing street address never becomes directions to an inferred locality", async ({
   page,
 }) => {
-  await page.route("**/api/search?**", async (route) => {
+  await page.route("**/api/providers?**", async (route) => {
     const response = await route.fetch();
-    const result: SearchResponse = await response.json();
+    const result: Pick<SearchResponse, "providers"> = await response.json();
     for (const provider of result.providers) {
       if (provider.id === "all-care") provider.address = "";
     }

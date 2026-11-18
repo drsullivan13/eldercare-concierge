@@ -401,7 +401,9 @@ test("landing to demo: search real providers, save two, compare, inspect sources
   await detail.getByRole("tab", { name: "Details", exact: true }).click();
   await detail.locator(".source-disclosure summary").click();
   await expect(detail.locator(".source-list")).toBeVisible();
-  for (const [index, source] of first.sources.entries()) {
+  const sources = actualById.get(first.id)!.sources;
+  expect(sources.length).toBeGreaterThan(0);
+  for (const [index, source] of sources.entries()) {
     const link = detail.locator(".source-list a").nth(index);
     await expect(link).toHaveAttribute("href", source.url);
     await expect(link).toContainText(source.title);
