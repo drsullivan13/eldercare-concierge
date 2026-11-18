@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import type { SearchProvider } from "@/lib/providers";
+import type { SearchMarker } from "@/lib/providers";
 import "leaflet/dist/leaflet.css";
 export default function CareMap({
   providers,
@@ -8,10 +8,10 @@ export default function CareMap({
   radius,
   onOpen,
 }: {
-  providers: SearchProvider[];
+  providers: SearchMarker[];
   origin: { lat: number; lng: number; city: string };
   radius: number;
-  onOpen: (provider: SearchProvider) => void;
+  onOpen: (provider: SearchMarker) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [failed, setFailed] = useState(false);

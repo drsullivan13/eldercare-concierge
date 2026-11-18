@@ -227,7 +227,7 @@ function WorkspaceDashboard({
       sidebar.current?.querySelector<HTMLElement>(".mobile-close")?.focus();
   }, [isMobile, mobileMenu]);
   const search = useCareSearch(workspace.profile);
-  const { data } = search;
+  const { data, cancelProviderLookup } = search;
   const saved = useSavedProviders(workspace.savedProviderIds);
   const savedProviders = saved.providers;
   const homeCareProviders = useSavedProviders(
@@ -332,6 +332,7 @@ function WorkspaceDashboard({
       pane: ProfilePane = "overview",
       trigger?: HTMLElement,
     ) => {
+      cancelProviderLookup();
       providerReturnFocus.current =
         trigger ??
         (document.activeElement instanceof HTMLElement
@@ -341,7 +342,7 @@ function WorkspaceDashboard({
       setInitialHomeCareOpen(false);
       setSelected(provider);
     },
-    [],
+    [cancelProviderLookup],
   );
   const closeProvider = useCallback(() => {
     setSelected(null);

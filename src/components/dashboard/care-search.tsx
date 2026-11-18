@@ -1,4 +1,5 @@
 import {
+  useCallback,
   useEffect,
   useRef,
   useState,
@@ -73,6 +74,13 @@ export function CareSearchView({
     "closed",
   );
   const { draft, request, data, loading, error, displayCount } = search;
+  const resolveMarker = search.openMarker;
+  const openMarker = useCallback(
+    (marker: Parameters<CareSearch["openMarker"]>[0]) => {
+      void resolveMarker(marker, openProvider);
+    },
+    [resolveMarker, openProvider],
+  );
   const mobile = useSyncExternalStore(
     subscribeMobile,
     mobileSnapshot,
@@ -302,6 +310,7 @@ export function CareSearchView({
               <summary>Sources & evidence</summary>
               <ResearchDisclosure
                 data={data}
+                markers={search.markers}
                 filtered={
                   search.request.sort === "experience" ||
                   search.request.evidence !== "all"
@@ -310,28 +319,46 @@ export function CareSearchView({
             </details>
             {showMap && (
               <CareMap
-                providers={data.providers}
+                providers={search.markers}
                 origin={data.origin}
                 radius={data.radius}
-                onOpen={openProvider}
+                onOpen={openMarker}
               />
+            )}
+            {search.providerLoading && (
+              <p role="status">Opening care option…</p>
+            )}
+            {search.providerError && (
+              <p role="alert" className="form-error">
+                {search.providerError}
+              </p>
             )}
             {data.providers.length > 0 ? (
               <>
                 <div className="provider-grid">
                   {cards(data.providers.slice(0, displayCount))}
                 </div>
-                {displayCount < data.providers.length && (
+                {search.pageError && (
+                  <p role="alert" className="form-error">
+                    {search.pageError}
+                  </p>
+                )}
+                {search.hasMore && (
                   <div className="load-more">
                     <button
                       className="button button-outline"
                       onClick={search.showMore}
+                      disabled={search.pageLoading}
+                      aria-busy={search.pageLoading}
                     >
-                      Show more options <ChevronDown size={16} />
+                      {search.pageLoading
+                        ? "Loading more options…"
+                        : "Show more options"}{" "}
+                      <ChevronDown size={16} />
                     </button>
                     <span>
                       Showing {Math.min(displayCount, data.providers.length)} of{" "}
-                      {data.providers.length}
+                      {data.total}
                     </span>
                   </div>
                 )}

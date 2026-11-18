@@ -1,14 +1,16 @@
 import { ArrowUpRight } from "lucide-react";
-import type { SearchResponse } from "@/lib/providers";
+import type { SearchMarker, SearchResponse } from "@/lib/providers";
 
 export function ResearchDisclosure({
   data,
   filtered,
+  markers,
 }: {
   data: SearchResponse;
   filtered: boolean;
+  markers?: SearchMarker[];
 }) {
-  const hasOffices = data.providers.some(
+  const hasOffices = (markers ?? data.providers).some(
     (provider) => provider.locationKind === "office",
   );
   return (
