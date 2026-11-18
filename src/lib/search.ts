@@ -17,6 +17,7 @@ import {
   type SearchProvider,
   type SearchResponse,
   type CompactSearchResponse,
+  type SearchMarker,
 } from "./providers";
 import {
   compareSearchNames,
@@ -198,18 +199,20 @@ function runSearch(
     ...(page && {
       markers:
         page.page === 1
-          ? providers.map(({ provider, distanceMiles, serviceAreaMatch }) => ({
-              id: provider.id,
-              name: provider.name,
-              category: provider.category,
-              city: provider.city,
-              state: provider.state,
-              lat: provider.lat,
-              lng: provider.lng,
-              locationKind: provider.locationKind,
-              distanceMiles,
-              ...(serviceAreaMatch && { serviceAreaMatch: true }),
-            }))
+          ? providers.map<SearchMarker>(
+              ({ provider, distanceMiles, serviceAreaMatch }) => ({
+                id: provider.id,
+                name: provider.name,
+                category: provider.category,
+                city: provider.city,
+                state: provider.state,
+                lat: provider.lat,
+                lng: provider.lng,
+                locationKind: provider.locationKind,
+                distanceMiles,
+                ...(serviceAreaMatch && { serviceAreaMatch: true }),
+              }),
+            )
           : undefined,
       pagination: {
         ...page,
