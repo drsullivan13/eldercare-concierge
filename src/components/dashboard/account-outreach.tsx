@@ -14,6 +14,9 @@ export const accountOutreachUnavailable =
   "Account voice rehearsal is temporarily unavailable.";
 
 export type AccountOutreachBrief = {
+  briefVersion?: 2;
+  knownAnswers?: string[];
+  outstandingQuestions?: string[];
   scenarioId: string;
   topics: string[];
   timing: string;

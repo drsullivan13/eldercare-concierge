@@ -15,6 +15,9 @@ const BRIEF_KEYS = [
   "timing",
   "situation",
   "scenarioId",
+  "briefVersion",
+  "knownAnswers",
+  "outstandingQuestions",
 ];
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -63,8 +66,29 @@ function parseBrief(value: unknown) {
     Object.keys(value).some((key) => !BRIEF_KEYS.includes(key))
   )
     return null;
-  const { topics, question, careZip, timing, situation, scenarioId } = value;
+  const {
+    topics,
+    question,
+    careZip,
+    timing,
+    situation,
+    scenarioId,
+    briefVersion,
+    knownAnswers,
+    outstandingQuestions,
+  } = value;
+  const validList = (list: unknown) =>
+    Array.isArray(list) &&
+    list.length <= 3 &&
+    list.every(
+      (item) => briefText(item, 160) && !/[\u0080-\u009f]/u.test(item),
+    );
   if (
+    (briefVersion !== undefined && briefVersion !== 2) ||
+    (("knownAnswers" in value || "outstandingQuestions" in value) &&
+      briefVersion !== 2) ||
+    ("knownAnswers" in value && !validList(knownAnswers)) ||
+    ("outstandingQuestions" in value && !validList(outstandingQuestions)) ||
     !Array.isArray(topics) ||
     topics.length > 6 ||
     !topics.every((topic) => briefText(topic, 80)) ||
@@ -81,6 +105,9 @@ function parseBrief(value: unknown) {
   return {
     topics,
     question,
+    ...(briefVersion === 2 ? { briefVersion: 2 } : {}),
+    ...(knownAnswers !== undefined ? { knownAnswers } : {}),
+    ...(outstandingQuestions !== undefined ? { outstandingQuestions } : {}),
     ...(careZip !== undefined ? { careZip } : {}),
     ...(timing !== undefined ? { timing } : {}),
     ...(situation !== undefined ? { situation } : {}),
