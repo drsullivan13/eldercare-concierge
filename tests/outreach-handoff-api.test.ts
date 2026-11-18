@@ -17,7 +17,11 @@ const digest = (value: string) =>
   createHash("sha256").update(value).digest("hex");
 
 async function bundleRoute(
-  endpoint: "outreach-handoff" | "outreach-exchange" | "outreach-run",
+  endpoint:
+    | "outreach-handoff"
+    | "outreach-exchange"
+    | "outreach-run"
+    | "outreach-receipt",
   stubs: object,
 ) {
   const bundle = await build({
@@ -301,4 +305,215 @@ test("run lookup requires service authorization and a matching run credential", 
   assert.deepEqual(await unavailable.json(), {
     error: "Outreach run is temporarily unavailable.",
   });
+});
+
+test("receipt records terminal outcomes, retries safely, and contains failures", async (t) => {
+  const previous = process.env.HARBOR_OUTREACH_SERVICE_KEY;
+  t.after(() => {
+    if (previous === undefined) delete process.env.HARBOR_OUTREACH_SERVICE_KEY;
+    else process.env.HARBOR_OUTREACH_SERVICE_KEY = previous;
+  });
+  process.env.HARBOR_OUTREACH_SERVICE_KEY = secret;
+  const runId = "aaaabbbb-cccc-4123-8234-abcdefabcd00";
+  const runKey = "ab".repeat(32);
+  const outcome = {
+    status: "completed",
+    takeaways: ["Simulated availability."],
+    nextSteps: [],
+  };
+  let mode = "normal";
+  let stored: unknown;
+  const calls: unknown[] = [];
+  const receipt = await bundleRoute("outreach-receipt", {
+    rpc(name: string, args: Record<string, unknown>) {
+      calls.push([name, args]);
+      if (mode === "throw") throw new Error("sensitive backend detail");
+      if (mode === "error")
+        return { error: { message: "sensitive backend detail" } };
+      if (mode === "constraint") return { error: { code: "23514" } };
+      if (mode === "takeaways-mismatch" || mode === "nextSteps-mismatch")
+        return {
+          data: {
+            runId,
+            requestId,
+            outcome: {
+              ...outcome,
+              [mode === "takeaways-mismatch" ? "takeaways" : "nextSteps"]: [
+                "Different summary.",
+              ],
+            },
+            createdAt: expiresAt,
+          },
+        };
+      if (mode === "mismatch")
+        return {
+          data: {
+            runId,
+            requestId,
+            outcome: { ...outcome, status: "failed" },
+            createdAt: expiresAt,
+          },
+        };
+      if (mode === "reordered")
+        return {
+          data: {
+            runId,
+            requestId,
+            outcome: {
+              nextSteps: outcome.nextSteps,
+              takeaways: outcome.takeaways,
+              status: outcome.status,
+            },
+            createdAt: expiresAt,
+          },
+        };
+      if (mode === "malformed") return { data: { runId, ownerId, runKey } };
+      if (mode === "missing" || args.p_run_key_digest !== digest(runKey))
+        return { data: null };
+      if (stored && JSON.stringify(stored) !== JSON.stringify(args.p_outcome))
+        return {
+          error: { code: "23505", message: "sensitive backend detail" },
+        };
+      stored = args.p_outcome;
+      return {
+        data: {
+          runId,
+          requestId,
+          outcome: stored,
+          createdAt: expiresAt,
+          ownerId,
+          runKey,
+        },
+      };
+    },
+  });
+  const body = { runId, runKey, outcome };
+  const request = (value: unknown = body) =>
+    post("outreach-receipt", value, { Authorization: `Bearer ${secret}` });
+  assert.equal((await receipt(post("outreach-receipt", body))).status, 401);
+  for (const value of [
+    { ...body, ownerId },
+    { ...body, runId: "bad" },
+    { ...body, runKey: "bad" },
+    { ...body, outcome: { ...outcome, transcript: "private" } },
+    { ...body, outcome: { ...outcome, status: "requested" } },
+    { ...body, outcome: { ...outcome, takeaways: [" "] } },
+    { ...body, outcome: { ...outcome, takeaways: ["x".repeat(241)] } },
+    { ...body, outcome: { ...outcome, nextSteps: Array(7).fill("next") } },
+    { ...body, outcome: { ...outcome, takeaways: [null] } },
+    { ...body, outcome: { ...outcome, takeaways: ["\u0000"] } },
+  ])
+    assert.equal((await receipt(request(value))).status, 400);
+  const malformed = new Request("https://harbor.example/api/outreach-receipt", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${secret}`,
+    },
+    body: "{",
+  });
+  assert.equal((await receipt(malformed)).status, 400);
+  assert.equal(
+    (await receipt(request({ ...body, runKey: "x".repeat(13000) }))).status,
+    400,
+  );
+  assert.equal(
+    (
+      await receipt(
+        new Request("https://harbor.example/api/outreach-receipt", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${secret}`,
+            "Content-Type": "text/plain",
+          },
+          body: JSON.stringify(body),
+        }),
+      )
+    ).status,
+    400,
+  );
+  assert.equal(calls.length, 0);
+
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const result = await receipt(
+      request({ ...body, runId: runId.toUpperCase() }),
+    );
+    assert.equal(result.status, 200);
+    assert.match(
+      result.headers.get("cache-control") ?? "",
+      /private, no-store/,
+    );
+    assert.deepEqual(await result.json(), { recorded: true });
+  }
+  assert.deepEqual(calls[0], [
+    "record_outreach_rehearsal_receipt",
+    {
+      p_run_id: runId,
+      p_run_key_digest: digest(runKey),
+      p_outcome: outcome,
+    },
+  ]);
+  const conflict = await receipt(
+    request({ ...body, outcome: { ...outcome, status: "failed" } }),
+  );
+  assert.equal(conflict.status, 409);
+  stored = undefined;
+  assert.equal(
+    (
+      await receipt(
+        request({
+          ...body,
+          outcome: {
+            status: "failed",
+            takeaways: [],
+            nextSteps: ["Retry rehearsal."],
+          },
+        }),
+      )
+    ).status,
+    200,
+  );
+  stored = undefined;
+  assert.equal(
+    (
+      await receipt(
+        request({
+          ...body,
+          outcome: {
+            status: "completed",
+            takeaways: Array(6).fill("x".repeat(240)),
+            nextSteps: Array(6).fill("y".repeat(240)),
+          },
+        }),
+      )
+    ).status,
+    200,
+  );
+  mode = "reordered";
+  assert.equal((await receipt(request())).status, 200);
+  mode = "normal";
+  const wrongKey = await receipt(request({ ...body, runKey: "cd".repeat(32) }));
+  assert.equal(wrongKey.status, 404);
+  for (const [failure, status] of [
+    ["missing", 404],
+    ["error", 503],
+    ["throw", 503],
+    ["malformed", 503],
+    ["mismatch", 503],
+    ["takeaways-mismatch", 503],
+    ["nextSteps-mismatch", 503],
+    ["constraint", 400],
+  ] as const) {
+    mode = failure;
+    const result = await receipt(request());
+    assert.equal(result.status, status);
+    assert.match(
+      result.headers.get("cache-control") ?? "",
+      /private, no-store/,
+    );
+    assert.doesNotMatch(
+      await result.text(),
+      /sensitive|ownerId|runKey|Simulated/,
+    );
+  }
 });
