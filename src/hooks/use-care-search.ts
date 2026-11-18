@@ -4,6 +4,8 @@ import { DEFAULT_DASHBOARD_SEARCH_ZIP } from "@/lib/dashboard-defaults";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type {
   CompactSearchResponse,
+  CardSearchResponse,
+  SearchProvider,
   SearchCard,
   Provider,
   SearchMarker,
@@ -48,9 +50,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
   }>({ fields: request, status: "pending" });
   const [data, setData] = useState<
     | (Omit<SearchResponse, "providers"> & {
-        providers: (
-          (Provider & { distanceMiles: number | null }) | SearchCard
-        )[];
+        providers: (SearchProvider | SearchCard)[];
         pagination?: CompactSearchResponse["pagination"];
         markers?: SearchMarker[];
       })
@@ -180,8 +180,9 @@ export function useCareSearch(profile: Workspace["profile"]) {
         })}`,
         { signal: controller.signal },
       );
-      const result: CompactSearchResponse & { error?: string } =
-        await response.json();
+      const result: (CompactSearchResponse | CardSearchResponse) & {
+        error?: string;
+      } = await response.json();
       if (!response.ok)
         throw new Error(result.error || "More options could not be loaded.");
       if (result.pagination?.page !== pagination.page + 1)

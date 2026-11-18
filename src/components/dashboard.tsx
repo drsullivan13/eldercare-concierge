@@ -602,12 +602,13 @@ function WorkspaceDashboard({
       notify("Compare up to three options at a time.");
       return;
     }
+    if (!data) return;
     const controller = new AbortController();
     comparisonRequests.current.set(provider.id, controller);
     setPendingComparisons(new Set(comparisonRequests.current.keys()));
     try {
       const response = await fetch(
-        `/api/providers?${new URLSearchParams({ ids: provider.id, market: data!.market.id })}`,
+        `/api/providers?${new URLSearchParams({ ids: provider.id, market: data.market.id })}`,
         { signal: controller.signal },
       );
       if (!response.ok)

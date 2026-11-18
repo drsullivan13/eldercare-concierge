@@ -99,7 +99,7 @@ test("card identities preserve unsaved note names and saved detail fallback with
   assert.match(text, /### Known care option/);
   assert.match(text, /Provider details could not be loaded/);
   assert.match(text, /### Unsaved agency/);
-  assert.match(text, /Notes: Ask about hours/);
+  assert.match(text, /Provider ID: unsaved-card\nAsk about hours/);
   assert.doesNotMatch(text, /State listing|undefined/);
   const hydrated = carePlanText(
     workspace,
