@@ -38,9 +38,6 @@ create policy followup_events_owner_read on public.outreach_followup_events for 
 revoke all on public.outreach_followups,public.outreach_followup_events from public,anon,authenticated,service_role;
 grant select on public.outreach_followups,public.outreach_followup_events to authenticated;
 -- Caller-owned RPCs derive identity internally; no elevated server key required.
--- Remove superseded owner-argument overloads when reapplying this script.
-drop function if exists public.record_outreach_followup(uuid,uuid,uuid,text,text,text,timestamptz,text);
-drop function if exists public.complete_outreach_followup(uuid,uuid);
 create or replace function public.record_outreach_followup(p_followup_id uuid,p_request_id uuid,p_kind text,p_assignee text,p_note text,p_due_at timestamptz,p_channel text)
 returns jsonb language plpgsql security definer set search_path='' as $$
 declare r public.outreach_followups; replayed boolean; v_owner_id uuid := auth.uid();
