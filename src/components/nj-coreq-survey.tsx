@@ -1,6 +1,6 @@
 import snapshot from "@/data/nj-coreq.json";
 import type { Provider } from "@/lib/providers";
-import { exactNjNursingFacilityCcn, formatCoreqPercent } from "./nj-coreq";
+import { exactNjNursingFacilityCcn, formatCoreqPercent } from "@/lib/nj-coreq";
 
 const currentSource = snapshot.source;
 const historicalSource = snapshot.historical.source;

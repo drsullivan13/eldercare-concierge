@@ -1,6 +1,17 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { searchProviders, searchResponse } from "../src/lib/search";
+import {
+  searchProviders,
+  searchResponse,
+  projectSearchCard,
+} from "../src/lib/search";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+require.extensions[".css"] = () => {};
+const { ProviderCard } =
+  require("../src/components/provider-card") as typeof import("../src/components/provider-card");
 import { GET } from "../src/app/api/search/route";
 
 const query = "zip=07928&radius=25&category=home-care";
@@ -53,6 +64,8 @@ test("compact pages preserve the complete ordered index and legacy metadata", ()
 test("compact pagination is strict and variants avoid shared caches", () => {
   for (const suffix of [
     "response=compact&q=test",
+    "response=cards&q=test",
+    "response=cards&page=2&pageSize=18",
     "response=compact&page=2&pageSize=48",
   ]) {
     const response = GET(
@@ -66,6 +79,7 @@ test("compact pagination is strict and variants avoid shared caches", () => {
     "pageSize=24",
     "response=full",
     "response=compact&response=compact",
+    "response=cards&response=cards",
     "response=compact&page=0",
     "response=compact&page=01",
     "response=compact&page=1.1",
@@ -87,12 +101,83 @@ test("compact pagination is strict and variants avoid shared caches", () => {
   );
 });
 
-test("canonical compact first page uses bounded shared caching", () => {
-  const response = GET(
-    new Request(`https://harbor.example/api/search?${query}&response=compact`),
+test("canonical first pages use bounded shared caching for both finite modes", () => {
+  for (const mode of ["compact", "cards"]) {
+    const response = GET(
+      new Request(
+        `https://harbor.example/api/search?${query}&response=${mode}`,
+      ),
+    );
+    assert.match(
+      response.headers.get("cache-control")!,
+      /^public, max-age=0, s-maxage=\d+, must-revalidate$/,
+    );
+  }
+});
+
+test("cards response projects display fields while compact v1 and full detail remain intact", () => {
+  for (const radius of [25, 50]) {
+    const params = `zip=07928&radius=${radius}&category=home-care`;
+    const full = searchProviders(new URLSearchParams(params));
+    const cards = searchResponse(
+      new URLSearchParams(`${params}&response=cards`),
+    );
+    const compact = searchResponse(
+      new URLSearchParams(`${params}&response=compact`),
+    );
+    assert.deepEqual(compact.providers, full.providers.slice(0, 18));
+    assert.deepEqual(
+      cards.providers,
+      full.providers.slice(0, 18).map(projectSearchCard),
+    );
+    assert.deepEqual(
+      { ...cards, providers: [] },
+      { ...compact, providers: [] },
+    );
+    for (const card of cards.providers) {
+      for (const key of [
+        "sources",
+        "limitations",
+        "officialRecord",
+        "address",
+        "description",
+        "phone",
+        "website",
+        "serviceAreaZips",
+        "ownership",
+        "capacity",
+      ])
+        assert.equal(key in card, false, key);
+      const provider = full.providers.find((item) => item.id === card.id)!;
+      assert.deepEqual(card.research, provider.research);
+      assert.deepEqual(card.warnings, provider.warnings);
+      assert.deepEqual(card.services, provider.services);
+    }
+    assert.ok(JSON.stringify(cards).length < JSON.stringify(compact).length);
+  }
+});
+
+test("projected cards render identical content and care alerts across care categories", () => {
+  const full = searchProviders(
+    new URLSearchParams("zip=07928&radius=50&category=all"),
   );
-  assert.match(
-    response.headers.get("cache-control")!,
-    /^public, max-age=0, s-maxage=\d+, must-revalidate$/,
-  );
+  for (const provider of full.providers) {
+    const props = {
+      saved: false,
+      onSave() {},
+      onOpen() {},
+      onReviews() {},
+      onCompare() {},
+    };
+    assert.equal(
+      renderToStaticMarkup(
+        createElement(ProviderCard, {
+          ...props,
+          provider: projectSearchCard(provider),
+        }),
+      ),
+      renderToStaticMarkup(createElement(ProviderCard, { ...props, provider })),
+      provider.id,
+    );
+  }
 });

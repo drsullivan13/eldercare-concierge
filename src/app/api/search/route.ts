@@ -8,7 +8,7 @@ function cacheableSearch({ search, searchParams }: URL) {
   // Validated filters have finite choices. Limit equivalent URL spellings too.
   return (
     (!searchParams.has("response") ||
-      (searchParams.get("response") === "compact" &&
+      (["compact", "cards"].includes(searchParams.get("response") ?? "") &&
         (!searchParams.has("page") || searchParams.get("page") === "1") &&
         (!searchParams.has("pageSize") ||
           searchParams.get("pageSize") === "18"))) &&

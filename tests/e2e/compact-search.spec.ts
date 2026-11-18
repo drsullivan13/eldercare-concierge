@@ -8,7 +8,7 @@ test("compact results retain every map option while cards paginate and retry", a
   let secondAttempts = 0;
   await page.route("**/api/search?*", async (route) => {
     const url = new URL(route.request().url());
-    expect(url.searchParams.get("response")).toBe("compact");
+    expect(url.searchParams.get("response")).toBe("cards");
     expect(url.searchParams.get("pageSize")).toBe("18");
     if (url.searchParams.get("page") === "2" && ++secondAttempts === 1) {
       return route.fulfill({
@@ -142,7 +142,14 @@ for (const destination of ["card", "plan", "history"] as const) {
       await route.fulfill({ response });
     });
     await page.route("**/api/providers?*", async (route) => {
-      if (!new URL(route.request().url()).searchParams.has("market"))
+      if (
+        !new URL(route.request().url()).searchParams.has("market") ||
+        first.providers.some(
+          (provider) =>
+            provider.id ===
+            new URL(route.request().url()).searchParams.get("ids"),
+        )
+      )
         return route.continue();
       const response = await route.fetch();
       requested();
@@ -214,3 +221,101 @@ for (const destination of ["card", "plan", "history"] as const) {
     }
   });
 }
+
+test("projected card retries detail loading and restores its keyboard trigger", async ({
+  page,
+}) => {
+  let attempts = 0;
+  await page.route("**/api/providers?*", async (route) => {
+    if (!new URL(route.request().url()).searchParams.has("market"))
+      return route.continue();
+    if (++attempts === 1)
+      return route.fulfill({ status: 503, json: { error: "Unavailable" } });
+    return route.continue();
+  });
+  await page.goto("/dashboard?demo=1");
+  await page
+    .locator("form.quick-search")
+    .getByRole("button", { name: "Find in-home care", exact: true })
+    .click();
+  const card = page.locator(".care-search-view .provider-card").first();
+  const trigger = card.getByRole("button", {
+    name: "View details",
+    exact: true,
+  });
+  const name = await card.locator(".provider-title").innerText();
+  await trigger.focus();
+  await trigger.press("Enter");
+  await expect(
+    page.locator(".care-search-view").getByRole("alert"),
+  ).toContainText("Select it again to retry");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await trigger.press("Enter");
+  await expect(
+    page.getByRole("dialog").getByRole("heading", { name, exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Close dialog" })
+    .click();
+  await expect(trigger).toBeFocused();
+  expect(attempts).toBe(2);
+});
+
+test("rapid comparison picks resolve independently and Clear cancels pending picks", async ({
+  page,
+}) => {
+  const held: { release: () => void; done: Promise<void> }[] = [];
+  await page.route("**/api/providers?*", async (route) => {
+    if (!new URL(route.request().url()).searchParams.has("market"))
+      return route.continue();
+    const response = await route.fetch();
+    let release!: () => void;
+    const pending = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    let done!: () => void;
+    const completion = new Promise<void>((resolve) => {
+      done = resolve;
+    });
+    held.push({ release, done: completion });
+    await pending;
+    await route.fulfill({ response });
+    done();
+  });
+  try {
+    await page.goto("/dashboard?demo=1");
+    await page
+      .locator("form.quick-search")
+      .getByRole("button", { name: "Find in-home care", exact: true })
+      .click();
+    const checks = page
+      .locator(".care-search-view .provider-card")
+      .getByRole("checkbox");
+    await checks.nth(0).check();
+    await checks.nth(1).check();
+    await expect.poll(() => held.length).toBe(2);
+    held[1].release();
+    await held[1].done;
+    held[0].release();
+    await held[0].done;
+    await expect(
+      page.locator('[aria-label="Comparison selections"]'),
+    ).toContainText("2 of 3 selected");
+    await expect(checks.nth(0)).toBeChecked();
+    await expect(checks.nth(1)).toBeChecked();
+    await checks.nth(2).check();
+    await expect.poll(() => held.length).toBe(3);
+    await page.getByRole("button", { name: "Clear", exact: true }).click();
+    held[2].release();
+    await held[2].done;
+    await expect(checks.nth(0)).not.toBeChecked();
+    await expect(checks.nth(1)).not.toBeChecked();
+    await expect(checks.nth(2)).not.toBeChecked();
+    await expect(
+      page.locator('[aria-label="Comparison selections"]'),
+    ).toHaveCount(0);
+  } finally {
+    for (const request of held) request.release();
+  }
+});

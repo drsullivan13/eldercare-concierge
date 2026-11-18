@@ -12,20 +12,28 @@ const CompareContent = lazy(() =>
 );
 
 /** Keep selected records available when a filter removes them from the result list. */
-export function useComparison() {
+export function useComparison(onClear?: () => void) {
   const [providers, setProviders] = useState<Provider[]>([]);
+  const latest = useRef(providers);
+  function replace(next: Provider[]) {
+    latest.current = next;
+    setProviders(next);
+  }
   return {
     providers,
     contains: (id: string) => providers.some((provider) => provider.id === id),
-    clear: () => setProviders([]),
+    clear: () => {
+      onClear?.();
+      replace([]);
+    },
     toggle(provider: Provider) {
-      if (providers.some((selected) => selected.id === provider.id)) {
-        setProviders((current) =>
-          current.filter((selected) => selected.id !== provider.id),
+      if (latest.current.some((selected) => selected.id === provider.id)) {
+        replace(
+          latest.current.filter((selected) => selected.id !== provider.id),
         );
       } else {
-        if (providers.length >= 3) return false;
-        setProviders((current) => [...current, provider]);
+        if (latest.current.length >= 3) return false;
+        replace([...latest.current, provider]);
       }
       return true;
     },
