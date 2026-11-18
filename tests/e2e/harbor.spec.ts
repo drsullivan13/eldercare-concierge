@@ -7,7 +7,11 @@ import {
 import { readFileSync } from "node:fs";
 import catalogue from "../../src/data/providers.json";
 import zipPoints from "../../src/data/ma-zips.json";
-import type { Provider, SearchResponse } from "../../src/lib/providers";
+import type {
+  CompactSearchResponse,
+  Provider,
+  SearchResponse,
+} from "../../src/lib/providers";
 import type { InspectionEvidence } from "../../src/lib/inspections";
 import type { LocationResearchResponse } from "../../src/lib/location-research-types";
 
@@ -456,6 +460,38 @@ test("landing to demo: search real providers, save two, compare, inspect sources
 test("CMS sort is exposed only for nursing homes and the map keeps actual result coordinates", async ({
   page,
 }) => {
+  async function expectFullCatalogMap(
+    result: CompactSearchResponse,
+    category: string,
+    sort: string,
+  ) {
+    const full = await searchAPI(page.request, { category, sort });
+    expect(
+      result.markers?.map(({ id, lat, lng }) => ({ id, lat, lng })),
+    ).toEqual(full.providers.map(({ id, lat, lng }) => ({ id, lat, lng })));
+    expect(result.markers).toHaveLength(result.total);
+    expect(result.markers!.length).toBeGreaterThan(result.providers.length);
+    for (const marker of result.markers!) {
+      const source = actualById.get(marker.id)!;
+      expect({ lat: marker.lat, lng: marker.lng }).toEqual({
+        lat: source.lat,
+        lng: source.lng,
+      });
+    }
+    const located = result.markers!.filter(
+      (marker) => marker.lat !== null && marker.lng !== null,
+    );
+    const paths = page.locator(".leaflet-overlay-pane path");
+    // Radius and searched ZIP precede the complete ordered provider markers.
+    await expect(paths).toHaveCount(located.length + 2);
+    for (const [index, marker] of located.entries()) {
+      await paths.nth(index + 2).dispatchEvent("mouseover");
+      await expect(page.locator(".leaflet-tooltip").last()).toContainText(
+        `${marker.name} · ${marker.city}, ${marker.state}`,
+      );
+      await paths.nth(index + 2).dispatchEvent("mouseout");
+    }
+  }
   await openDemo(page);
   await searchTenMiles(page);
   const nursingResponse = page.waitForResponse(
@@ -479,15 +515,13 @@ test("CMS sort is exposed only for nursing homes and the map keeps actual result
       new URL(response.url()).searchParams.get("sort") === "cms-rating",
   );
   await sort.selectOption("cms-rating");
-  const sorted = (await (await sortedResponse).json()) as SearchResponse;
+  const sorted = (await (await sortedResponse).json()) as CompactSearchResponse;
   await expect(page.locator(".provider-card").first()).toContainText(
     sorted.providers[0].name,
   );
   await page.getByRole("radio", { name: "Map view", exact: true }).click();
   await expect(page.getByLabel("Map of care locations")).toBeVisible();
-  await expect(page.locator(".leaflet-overlay-pane path")).toHaveCount(
-    sorted.providers.length + 2,
-  );
+  await expectFullCatalogMap(sorted, "nursing-home", "cms-rating");
   await noDocumentOverflow(page);
   const assistedResponse = page.waitForResponse(
     (response) =>
@@ -502,7 +536,9 @@ test("CMS sort is exposed only for nursing homes and the map keeps actual result
   await page
     .getByRole("button", { name: "Apply filters", exact: true })
     .click();
-  const assisted = (await (await assistedResponse).json()) as SearchResponse;
+  const assisted = (await (
+    await assistedResponse
+  ).json()) as CompactSearchResponse;
   expect(
     assisted.providers.every(
       (provider) => provider.category === "assisted-living",
@@ -511,9 +547,7 @@ test("CMS sort is exposed only for nursing homes and the map keeps actual result
   await expect(sort).toHaveValue("distance");
   await expect(sort.locator('option[value="cms-rating"]')).toHaveCount(0);
   await expect(page.locator(".provider-card .rating")).toHaveCount(0);
-  await expect(page.locator(".leaflet-overlay-pane path")).toHaveCount(
-    assisted.providers.length + 2,
-  );
+  await expectFullCatalogMap(assisted, "assisted-living", "distance");
 });
 
 test("families filter and compare options, then use the place section selector with a keyboard", async ({
