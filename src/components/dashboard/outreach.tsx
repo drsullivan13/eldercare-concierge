@@ -90,6 +90,16 @@ export function OutreachEditor({
   const [topics, setTopics] = useState<string[]>(parent?.brief.topics ?? []);
   const [attempted, setAttempted] = useState(false);
   const [careZip, setCareZip] = useState("");
+  const [knownAnswersText, setKnownAnswersText] = useState("");
+  const [outstandingQuestionsText, setOutstandingQuestionsText] = useState("");
+  const lines = (text: string) =>
+    text
+      .split(/\r?\n/)
+      .map((item) => item.trim())
+      .filter(Boolean);
+  const knownAnswers = lines(knownAnswersText);
+  const outstandingQuestions = lines(outstandingQuestionsText);
+  const hasContext = knownAnswers.length > 0 || outstandingQuestions.length > 0;
   const accountRehearsal = useAccountRehearsal();
   const { busy } = accountRehearsal;
   const launchError = accountRequestId ? accountRehearsal.error : error;
@@ -127,7 +137,12 @@ export function OutreachEditor({
   );
   const valid =
     (topics.length > 0 || question.trim().length > 0) &&
-    (!forAgency || Boolean(start.trim() && situation.trim()));
+    (!forAgency || Boolean(start.trim() && situation.trim())) &&
+    knownAnswers.length <= 3 &&
+    outstandingQuestions.length <= 3 &&
+    [...knownAnswers, ...outstandingQuestions].every(
+      (item) => [...item].length <= 160,
+    );
   function toggle(topic: string) {
     setTopics((current) =>
       current.includes(topic)
@@ -152,6 +167,13 @@ export function OutreachEditor({
             const draft = {
               providerId: provider.providerId,
               brief: {
+                ...(hasContext
+                  ? {
+                      briefVersion: 2 as const,
+                      knownAnswers,
+                      outstandingQuestions,
+                    }
+                  : {}),
                 scenarioId: family.id,
                 topics: choices.filter((choice) => topics.includes(choice)),
                 timing: start.trim(),
@@ -194,11 +216,16 @@ export function OutreachEditor({
                   );
                   if (!chosen) return;
                   setFamily(chosen);
+                  setKnownAnswersText("");
+                  setOutstandingQuestionsText("");
                   setStart(chosen.start);
                   setSituation(chosen.situation);
                   setQuestion(chosen.question);
                 }}
               >
+                <option value="" disabled>
+                  Choose a fictional scenario
+                </option>
                 {familyScenarios.map(({ id, label }) => (
                   <option key={id} value={id}>
                     {label}
@@ -242,6 +269,37 @@ export function OutreachEditor({
               </label>
             )}
           </>
+        )}
+        {accountRequestId && (
+          <details>
+            <summary>More context for this rehearsal (optional)</summary>
+            <p className="small muted">
+              Enter fictional details you approve for this practice. No private
+              contact details are supplied. One item per line, up to three per
+              field and 160 characters per item. Keep the primary question below
+              separate.
+            </p>
+            <label className={styles.familyField}>
+              Known answers (optional)
+              <textarea
+                disabled={busy}
+                rows={3}
+                value={knownAnswersText}
+                onChange={(event) => setKnownAnswersText(event.target.value)}
+              />
+            </label>
+            <label className={styles.familyField}>
+              Other outstanding questions (optional)
+              <textarea
+                disabled={busy}
+                rows={3}
+                value={outstandingQuestionsText}
+                onChange={(event) =>
+                  setOutstandingQuestionsText(event.target.value)
+                }
+              />
+            </label>
+          </details>
         )}
         <fieldset className={styles.goals} disabled={busy}>
           <legend>
@@ -302,9 +360,15 @@ export function OutreachEditor({
         </p>
         {attempted && !valid && (
           <p id={`${uid}-validation`} className="form-error" role="alert">
-            {forAgency && (!start.trim() || !situation.trim())
-              ? "Enter the requested start and a short fictional situation."
-              : "Choose at least one goal or write a question."}
+            {[...knownAnswers, ...outstandingQuestions].some(
+              (item) => [...item].length > 160,
+            )
+              ? "Keep each answer and question within 160 characters."
+              : knownAnswers.length > 3 || outstandingQuestions.length > 3
+                ? "Enter up to three answers and three other questions."
+                : forAgency && (!start.trim() || !situation.trim())
+                  ? "Enter the requested start and a short fictional situation."
+                  : "Choose at least one goal or write a question."}
           </p>
         )}
         {!online && (
