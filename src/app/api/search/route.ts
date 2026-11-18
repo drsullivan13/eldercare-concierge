@@ -1,4 +1,4 @@
-import { SearchInputError, searchProviders } from "@/lib/search";
+import { SearchInputError, searchResponse } from "@/lib/search";
 
 const privateCache = "private, no-store";
 
@@ -7,6 +7,11 @@ function cacheableSearch({ search, searchParams }: URL) {
   const radius = searchParams.get("radius");
   // Validated filters have finite choices. Limit equivalent URL spellings too.
   return (
+    (!searchParams.has("response") ||
+      (searchParams.get("response") === "compact" &&
+        (!searchParams.has("page") || searchParams.get("page") === "1") &&
+        (!searchParams.has("pageSize") ||
+          searchParams.get("pageSize") === "18"))) &&
     !searchParams.get("q") &&
     search.slice(1) === searchParams.toString() &&
     (zip === null || /^\d{5}$/.test(zip)) &&
@@ -19,7 +24,7 @@ export function GET(request: Request) {
   const nextUtcMidnight = new Date();
   nextUtcMidnight.setUTCHours(24, 0, 0, 0);
   try {
-    const response = Response.json(searchProviders(url.searchParams));
+    const response = Response.json(searchResponse(url.searchParams));
     const ttl = Math.min(
       300,
       Math.floor((nextUtcMidnight.getTime() - Date.now()) / 1000),

@@ -16,6 +16,7 @@ import {
   type Provider,
   type SearchProvider,
   type SearchResponse,
+  type CompactSearchResponse,
 } from "./providers";
 import {
   compareSearchNames,
@@ -38,11 +39,12 @@ export const catalog: Provider[] = getMarket()!.providers;
 const categoryKeys = Object.keys(CATEGORY_LABELS) as CareCategory[];
 
 export { distanceMiles } from "./distance";
-export function searchProviders(
+function runSearch(
   input: URLSearchParams | SearchOptions = {},
   records?: readonly Provider[],
   registry: MarketRegistry = markets,
-): SearchResponse {
+  page?: { page: number; pageSize: number },
+): SearchResponse | CompactSearchResponse {
   const opts =
     input instanceof URLSearchParams
       ? searchParameters(input, "search")
@@ -88,7 +90,12 @@ export function searchProviders(
   const categories: Record<string, number> = Object.fromEntries(
     categoryKeys.map((key) => [key, 0]),
   );
-  const providers: SearchProvider[] = [];
+  const providers: {
+    provider: Provider;
+    research: SearchProvider["research"];
+    distanceMiles: number | null;
+    serviceAreaMatch?: boolean;
+  }[] = [];
   const experienceCoverage = {
     scored: 0,
     unscored: 0,
@@ -140,7 +147,7 @@ export function searchProviders(
     for (const key of searchableCategories) categories[key]++;
     if (matchesCategory) {
       providers.push({
-        ...provider,
+        provider,
         research,
         distanceMiles: distance,
         ...(serviceAreaMatch && { serviceAreaMatch: true }),
@@ -152,14 +159,18 @@ export function searchProviders(
       if (research?.facebookResearch) experienceCoverage.facebookCovered++;
     }
   }
-  const byDistanceName = (a: SearchProvider, b: SearchProvider) =>
+  const byDistanceName = (
+    a: (typeof providers)[number],
+    b: (typeof providers)[number],
+  ) =>
     (a.distanceMiles ?? Infinity) - (b.distanceMiles ?? Infinity) ||
-    compareSearchNames(a.name, b.name) ||
-    a.id.localeCompare(b.id, "en");
+    compareSearchNames(a.provider.name, b.provider.name) ||
+    a.provider.id.localeCompare(b.provider.id, "en");
   providers.sort((a, b) => {
     let ratingDifference = 0;
     if (sort === "cms-rating") {
-      ratingDifference = (b.cms?.overall ?? -1) - (a.cms?.overall ?? -1);
+      ratingDifference =
+        (b.provider.cms?.overall ?? -1) - (a.provider.cms?.overall ?? -1);
     } else if (sort === "experience") {
       ratingDifference =
         (b.research?.experience.value ?? -1) -
@@ -177,7 +188,35 @@ export function searchProviders(
   });
   return {
     market: marketIdentity(market),
-    providers,
+    providers: (page
+      ? providers.slice(
+          (page.page - 1) * page.pageSize,
+          page.page * page.pageSize,
+        )
+      : providers
+    ).map(({ provider, ...match }) => ({ ...provider, ...match })),
+    ...(page && {
+      markers:
+        page.page === 1
+          ? providers.map(({ provider, distanceMiles, serviceAreaMatch }) => ({
+              id: provider.id,
+              name: provider.name,
+              category: provider.category,
+              city: provider.city,
+              state: provider.state,
+              lat: provider.lat,
+              lng: provider.lng,
+              locationKind: provider.locationKind,
+              distanceMiles,
+              ...(serviceAreaMatch && { serviceAreaMatch: true }),
+            }))
+          : undefined,
+      pagination: {
+        ...page,
+        totalPages: Math.ceil(providers.length / page.pageSize),
+        hasMore: page.page * page.pageSize < providers.length,
+      },
+    }),
     total: providers.length,
     origin: { zip, ...point },
     radius,
@@ -188,6 +227,41 @@ export function searchProviders(
     experienceCoverage,
   };
 }
+export function searchProviders(
+  input: URLSearchParams | SearchOptions = {},
+  records?: readonly Provider[],
+  registry: MarketRegistry = markets,
+): SearchResponse {
+  return runSearch(input, records, registry) as SearchResponse;
+}
+
+/** Opt-in HTTP shape; all legacy parameters remain validated by the search parser. */
+export function searchResponse(
+  input: URLSearchParams,
+): SearchResponse | CompactSearchResponse {
+  const params = new URLSearchParams(input);
+  const response = params.get("response");
+  const hasPagination = params.has("page") || params.has("pageSize");
+  if (response === null && !hasPagination) return searchProviders(params);
+  if (response !== "compact" || params.getAll("response").length !== 1)
+    throw new SearchInputError("Use response=compact for paginated search.");
+  const integer = (key: string, fallback: number, max: number) => {
+    if (!params.has(key)) return fallback;
+    const raw = params.get(key)!;
+    if (
+      params.getAll(key).length !== 1 ||
+      !/^[1-9]\d*$/.test(raw) ||
+      Number(raw) > max
+    )
+      throw new SearchInputError(`${key} must be an integer from 1 to ${max}.`);
+    return Number(raw);
+  };
+  const page = integer("page", 1, 10000);
+  const pageSize = integer("pageSize", 18, 48);
+  for (const key of ["response", "page", "pageSize"]) params.delete(key);
+  return runSearch(params, undefined, markets, { page, pageSize });
+}
+
 export function getProvidersByIds(
   ids: readonly string[],
   marketId?: string,
