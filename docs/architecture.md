@@ -27,7 +27,7 @@ Provider cards show the information needed to choose which options to investigat
 
 ### Account outreach requests
 
-Apply `supabase/outreach-requests.sql` before `supabase/outreach-handoffs.sql` in the dashboard’s Supabase project. The authenticated `/api/outreach-requests` endpoint creates a request for a published North Jersey home-care office and returns a receipt. The caller supplies a stable request UUID. Retrying with the same brief and office returns the original receipt. Changing either under the same UUID returns a conflict.
+Apply `supabase/outreach-requests.sql` before `supabase/outreach-handoffs.sql`, then apply `supabase/outreach-rehearsal-receipts.sql` in the dashboard’s Supabase project. Each simulated run can have one terminal receipt. The account retains it after the run credential expires or is purged. The authenticated `/api/outreach-requests` endpoint creates a request for a published North Jersey home-care office and returns a receipt. The caller supplies a stable request UUID. Retrying with the same brief and office returns the original receipt. Changing either under the same UUID returns a conflict.
 
 Families can read their own requests and events. The initial event records when Harbor accepted the request. A real agency confirmation comes through the consultation workflow. Existing demo and workspace history retain their original provenance.
 
