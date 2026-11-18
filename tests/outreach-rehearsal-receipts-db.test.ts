@@ -194,7 +194,9 @@ describe(
         owner,
       ]);
       const rows = (
-        await db.query<{ outcome: unknown }>("select * from public.outreach_rehearsal_receipts")
+        await db.query<{ outcome: unknown }>(
+          "select * from public.outreach_rehearsal_receipts",
+        )
       ).rows;
       assert.equal(rows.length, 1);
       assert.deepEqual(rows[0].outcome, outcome);

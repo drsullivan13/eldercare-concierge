@@ -26,6 +26,7 @@ export async function readHandoffObject(
   fields: readonly string[],
   invalid: () => Response,
   respond = handoffResponse,
+  maxBodyBytes = MAX_BODY_BYTES,
 ): Promise<Record<string, unknown> | Response> {
   const contentType = request.headers.get("content-type")?.split(";", 1)[0];
   if (contentType?.trim().toLowerCase() !== "application/json")
@@ -41,7 +42,7 @@ export async function readHandoffObject(
       const { value, done } = await reader.read();
       if (done) break;
       bytes += value.byteLength;
-      if (bytes > MAX_BODY_BYTES) {
+      if (bytes > maxBodyBytes) {
         void reader.cancel().catch(() => {});
         return respond({ error: "Request payload is too large." }, 413);
       }
