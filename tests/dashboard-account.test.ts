@@ -562,7 +562,7 @@ test("account dashboard preserves the plan and requires deliberate import and co
     );
 
     await t.test(
-      "unconfigured account outreach keeps history readable and offers no new agency handoff",
+      "unconfigured account outreach shows the owner’s simulated reports and offers no new handoff",
       async () => {
         const context = await browser.newContext();
         try {
@@ -591,6 +591,46 @@ test("account dashboard preserves the plan and requires deliberate import and co
           };
           await mount(page, { workspace }, false, [agency], false);
           let postCalls = 0;
+          const reportRequestId = "11111111-1111-4111-8111-111111111144";
+          const firstRunId = "22222222-2222-4222-8222-222222222266";
+          const olderRunId = "22222222-2222-4222-8222-222222222255";
+          const newestTime = "2026-11-18T19:22:00.000Z";
+          const cursor = `${newestTime}|${firstRunId}`;
+          let reportReads = 0;
+          let owner = "account-a";
+          await page.route("**/api/outreach-rehearsal-receipts?**", (route) => {
+            const query = new URL(route.request().url()).searchParams;
+            assert.equal(query.get("requestId"), reportRequestId);
+            reportReads++;
+            if (reportReads === 1) return route.fulfill({ status: 503 });
+            if (owner === "account-b")
+              return route.fulfill({
+                json: { receipts: [], nextCursor: null },
+              });
+            const before = query.get("before");
+            assert.equal(before, reportReads === 2 ? null : cursor);
+            return route.fulfill({
+              json: {
+                receipts: [
+                  {
+                    requestId: reportRequestId,
+                    runId: before ? olderRunId : firstRunId,
+                    createdAt: before ? "2026-11-17T09:05:00.000Z" : newestTime,
+                    outcome: {
+                      status: before ? "failed" : "completed",
+                      takeaways: before
+                        ? []
+                        : ["The simulated agent asked about weekend coverage."],
+                      nextSteps: before
+                        ? []
+                        : ["Ask the actual agency about fit."],
+                    },
+                  },
+                ],
+                nextCursor: before ? null : cursor,
+              },
+            });
+          });
           await page.route("**/api/outreach-{requests,handoff}", (route) => {
             if (route.request().method() !== "GET") {
               postCalls++;
@@ -600,7 +640,7 @@ test("account dashboard preserves the plan and requires deliberate import and co
               json: {
                 requests: [
                   {
-                    requestId: "11111111-1111-4111-8111-111111111144",
+                    requestId: reportRequestId,
                     providerId: agency.id,
                     providerName: agency.name,
                     status: "requested",
@@ -647,6 +687,40 @@ test("account dashboard preserves the plan and requires deliberate import and co
           await expect(
             history.getByRole("button", { name: "Reopen rehearsal" }),
           ).toHaveCount(0);
+          assert.equal(reportReads, 0);
+          await history
+            .getByText("Simulated rehearsal reports", { exact: true })
+            .click();
+          await expect(history.getByRole("alert")).toHaveText(
+            "Could not load simulated rehearsal reports.",
+          );
+          await expect(history).toContainText("Requested");
+          await history.getByRole("button", { name: "Retry reports" }).click();
+          await expect(
+            history.getByRole("heading", { name: "Simulation completed" }),
+          ).toBeVisible();
+          const localized = await page.evaluate(
+            (timestamp) => new Date(timestamp).toLocaleString(),
+            newestTime,
+          );
+          await expect(
+            history.locator(`time[datetime="${newestTime}"]`),
+          ).toHaveText(localized);
+          await expect(history).toContainText(
+            "The simulated agent asked about weekend coverage.",
+          );
+          await history
+            .getByRole("button", { name: "Load older reports" })
+            .click();
+          await expect(
+            history.getByRole("heading", { name: "Simulation interrupted" }),
+          ).toBeVisible();
+          await expect(
+            history.getByRole("heading", { name: "Simulation completed" }),
+          ).toBeVisible();
+          await expect(
+            history.getByRole("button", { name: "Load older reports" }),
+          ).toHaveCount(0);
           const legacy = page.getByRole("region", {
             name: "Outreach history",
             exact: true,
@@ -654,6 +728,22 @@ test("account dashboard preserves the plan and requires deliberate import and co
           await expect(
             legacy.getByRole("button", { name: "Prepare follow-up" }),
           ).toHaveCount(1);
+          owner = "account-b";
+          await page.evaluate(() =>
+            window.__dashboardAccount.patch({ owner: "account-b" }),
+          );
+          await page
+            .getByRole("button", { name: "Your plan", exact: true })
+            .click();
+          await history
+            .getByText("Simulated rehearsal reports", { exact: true })
+            .click();
+          await expect(
+            history.getByText("No simulated rehearsal reports yet."),
+          ).toBeVisible();
+          await expect(history).not.toContainText(
+            "The simulated agent asked about weekend coverage.",
+          );
           assert.equal(postCalls, 0);
         } finally {
           await context.close();

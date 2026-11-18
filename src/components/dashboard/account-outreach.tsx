@@ -1,5 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import styles from "./outreach.module.css";
+import { RehearsalReports } from "./rehearsal-reports";
 
 const requestsPath = "/api/outreach-requests";
 const handoffPath = "/api/outreach-handoff";
@@ -226,6 +227,10 @@ export function AccountOutreachHistory({ available }: { available: boolean }) {
                 </time>
               </p>
             </header>
+            <RehearsalReports
+              requestId={requestId}
+              revision={result.revision}
+            />
             {available && (
               <button
                 type="button"
