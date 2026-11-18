@@ -18,6 +18,7 @@ import {
   CATEGORY_LABELS,
   type Provider,
   type SearchProvider,
+  type SearchCard,
 } from "@/lib/providers";
 import type { CareSearch } from "@/hooks/use-care-search";
 import { ResultViewControl } from "./result-view-control";
@@ -66,7 +67,7 @@ export function CareSearchView({
 }: {
   search: CareSearch;
   submit: () => void;
-  cards: (providers: SearchProvider[]) => ReactNode;
+  cards: (providers: (SearchProvider | SearchCard)[]) => ReactNode;
   openProvider: (provider: Provider) => void;
 }) {
   const [showMap, setShowMap] = useState(false);

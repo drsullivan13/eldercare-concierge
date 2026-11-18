@@ -95,6 +95,28 @@ export type SearchProvider = Provider & {
   /** The searched ZIP is in the published provider-reported area, not verified address coverage or vacancy. */
   serviceAreaMatch?: boolean;
 };
+/** Display fields only; opening or comparing a card resolves its full provider. */
+export type SearchCard = Pick<
+  SearchProvider,
+  | "id"
+  | "name"
+  | "category"
+  | "city"
+  | "state"
+  | "zip"
+  | "lat"
+  | "lng"
+  | "locationKind"
+  | "distanceMiles"
+  | "serviceAreaMatch"
+  | "services"
+  | "warnings"
+  | "cms"
+  | "research"
+> & { coreqPercent: number | null };
+export type CardSearchResponse = Omit<CompactSearchResponse, "providers"> & {
+  providers: SearchCard[];
+};
 export function matchesHomeCareServiceArea(
   provider: Pick<Provider, "category" | "serviceAreaZips">,
   zip: string,

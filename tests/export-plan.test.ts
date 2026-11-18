@@ -80,3 +80,32 @@ test("partially hydrated exports include sources while preserving missing saved 
   assert.match(text, /### unresolved-provider/);
   assert.match(text, /Notes: Keep this option/);
 });
+
+test("card identities preserve unsaved note names and saved detail fallback without inventing sources", () => {
+  const workspace = createEmptyWorkspace();
+  workspace.savedProviderIds = [provider.id];
+  workspace.notes = {
+    [provider.id]: "Confirm care",
+    "unsaved-card": "Ask about hours",
+  };
+  const text = carePlanText(
+    workspace,
+    [
+      { id: provider.id, name: provider.name },
+      { id: "unsaved-card", name: "Unsaved agency" },
+    ],
+    "07928",
+  );
+  assert.match(text, /### Known care option/);
+  assert.match(text, /Provider details could not be loaded/);
+  assert.match(text, /### Unsaved agency/);
+  assert.match(text, /Notes: Ask about hours/);
+  assert.doesNotMatch(text, /State listing|undefined/);
+  const hydrated = carePlanText(
+    workspace,
+    [{ id: provider.id, name: provider.name }, provider],
+    "07928",
+  );
+  assert.match(hydrated, /1 Main Street/);
+  assert.match(hydrated, /State listing: https:\/\/www.mass.gov\//);
+});

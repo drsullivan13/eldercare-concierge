@@ -6,7 +6,7 @@ export function ResearchDisclosure({
   filtered,
   markers,
 }: {
-  data: SearchResponse;
+  data: Omit<SearchResponse, "providers"> & { providers: SearchMarker[] };
   filtered: boolean;
   markers?: SearchMarker[];
 }) {

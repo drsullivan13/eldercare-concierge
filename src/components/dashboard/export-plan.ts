@@ -8,7 +8,7 @@ import {
 /** The saved workspace is authoritative even when provider hydration is incomplete. */
 export function carePlanText(
   workspace: Workspace,
-  providers: Provider[],
+  providers: (Provider | Pick<Provider, "id" | "name">)[],
   searchZip: string,
   exportedAt = new Date(),
 ) {
@@ -25,7 +25,7 @@ export function carePlanText(
       return [
         `### ${provider?.name || id}`,
         `Provider ID: ${id}`,
-        ...(provider
+        ...(provider && "sources" in provider
           ? [
               `${CATEGORY_LABELS[provider.category]} · ${provider.address}, ${provider.city} ${provider.zip}`,
               ...provider.sources.map(

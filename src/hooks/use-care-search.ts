@@ -4,6 +4,7 @@ import { DEFAULT_DASHBOARD_SEARCH_ZIP } from "@/lib/dashboard-defaults";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type {
   CompactSearchResponse,
+  SearchCard,
   Provider,
   SearchMarker,
   SearchResponse,
@@ -46,7 +47,14 @@ export function useCareSearch(profile: Workspace["profile"]) {
     status: "pending" | "succeeded" | "failed";
   }>({ fields: request, status: "pending" });
   const [data, setData] = useState<
-    SearchResponse | CompactSearchResponse | null
+    | (Omit<SearchResponse, "providers"> & {
+        providers: (
+          (Provider & { distanceMiles: number | null }) | SearchCard
+        )[];
+        pagination?: CompactSearchResponse["pagination"];
+        markers?: SearchMarker[];
+      })
+    | null
   >(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -66,7 +74,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
     async function load() {
       try {
         const response = await fetch(
-          `/api/search?${new URLSearchParams({ ...request, response: "compact", page: "1", pageSize: "18" })}`,
+          `/api/search?${new URLSearchParams({ ...request, response: "cards", page: "1", pageSize: "18" })}`,
           {
             signal: controller.signal,
           },
@@ -166,7 +174,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
       const response = await fetch(
         `/api/search?${new URLSearchParams({
           ...fields,
-          response: "compact",
+          response: "cards",
           page: String(pagination.page + 1),
           pageSize: "18",
         })}`,
@@ -224,7 +232,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
       const loaded = data.providers.find(
         (provider) => provider.id === marker.id,
       );
-      if (loaded) {
+      if (loaded && "sources" in loaded) {
         setProviderLoading(false);
         onOpen(loaded);
         return;

@@ -21,6 +21,7 @@ import {
   type CareCategory,
   type Provider,
   type SearchProvider,
+  type SearchCard,
 } from "@/lib/providers";
 const categoryServices: Partial<Record<CareCategory, string[]>> = {
   "nursing-home": [
@@ -59,7 +60,9 @@ function Rating({ value }: { value: number | null }) {
   );
 }
 
-export function providerCareAlerts(provider: Provider) {
+export function providerCareAlerts(
+  provider: Pick<Provider, "warnings" | "category" | "cms">,
+) {
   const alerts = provider.warnings.filter((warning) =>
     /abuse|special.focus|certification is unverified|ownership change|admission restriction/i.test(
       warning,
@@ -120,7 +123,7 @@ export function ProviderCard({
   compare,
   onCompare,
 }: {
-  provider: SearchProvider;
+  provider: SearchProvider | SearchCard;
   saved: boolean;
   onSave: () => void;
   onOpen: () => void;
@@ -132,7 +135,11 @@ export function ProviderCard({
   const showSurvey =
     research?.experience.value == null &&
     research?.experience.publicationStatus !== "sources-disagree";
-  const coreq = showSurvey ? currentNjCoreqValue(provider) : null;
+  const coreq = showSurvey
+    ? "coreqPercent" in provider
+      ? provider.coreqPercent
+      : currentNjCoreqValue(provider)
+    : null;
   const engagement = showSurvey ? research?.residentEngagement : undefined;
   const patientSurvey = showSurvey ? research?.homeHealthSurvey : undefined;
   const alerts = new Set<string>();

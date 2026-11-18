@@ -1,3 +1,4 @@
+import { currentNjCoreqValue } from "../components/nj-coreq";
 import { providerDistanceMiles } from "./distance";
 import {
   getMarket,
@@ -15,6 +16,8 @@ import {
   type CareCategory,
   type Provider,
   type SearchProvider,
+  type SearchCard,
+  type CardSearchResponse,
   type SearchResponse,
   type CompactSearchResponse,
   type SearchMarker,
@@ -45,7 +48,7 @@ function runSearch(
   records?: readonly Provider[],
   registry: MarketRegistry = markets,
   page?: { page: number; pageSize: number },
-): SearchResponse | CompactSearchResponse {
+): SearchResponse | CompactSearchResponse | CardSearchResponse {
   const opts =
     input instanceof URLSearchParams
       ? searchParameters(input, "search")
@@ -241,12 +244,15 @@ export function searchProviders(
 /** Opt-in HTTP shape; all legacy parameters remain validated by the search parser. */
 export function searchResponse(
   input: URLSearchParams,
-): SearchResponse | CompactSearchResponse {
+): SearchResponse | CompactSearchResponse | CardSearchResponse {
   const params = new URLSearchParams(input);
   const response = params.get("response");
   const hasPagination = params.has("page") || params.has("pageSize");
   if (response === null && !hasPagination) return searchProviders(params);
-  if (response !== "compact" || params.getAll("response").length !== 1)
+  if (
+    !["compact", "cards"].includes(response ?? "") ||
+    params.getAll("response").length !== 1
+  )
     throw new SearchInputError("Use response=compact for paginated search.");
   const integer = (key: string, fallback: number, max: number) => {
     if (!params.has(key)) return fallback;
@@ -262,7 +268,12 @@ export function searchResponse(
   const page = integer("page", 1, 10000);
   const pageSize = integer("pageSize", 18, 48);
   for (const key of ["response", "page", "pageSize"]) params.delete(key);
-  return runSearch(params, undefined, markets, { page, pageSize });
+  const result = runSearch(params, undefined, markets, {
+    page,
+    pageSize,
+  }) as CompactSearchResponse;
+  if (response !== "cards") return result;
+  return { ...result, providers: result.providers.map(projectSearchCard) };
 }
 
 export function getProvidersByIds(
@@ -276,4 +287,43 @@ export function getProvidersByIds(
       return [];
     return [{ ...entry.provider, research: getResearchSummary(id, registry) }];
   });
+}
+
+/** Keep rich source records out of the card response without changing legacy search. */
+export function projectSearchCard(provider: SearchProvider): SearchCard {
+  const {
+    id,
+    name,
+    category,
+    city,
+    state,
+    zip,
+    lat,
+    lng,
+    locationKind,
+    distanceMiles,
+    serviceAreaMatch,
+    services,
+    warnings,
+    cms,
+    research,
+  } = provider;
+  return {
+    id,
+    name,
+    category,
+    city,
+    state,
+    zip,
+    lat,
+    lng,
+    locationKind,
+    distanceMiles,
+    ...(serviceAreaMatch && { serviceAreaMatch }),
+    services,
+    warnings,
+    ...(cms && { cms }),
+    ...(research && { research }),
+    coreqPercent: currentNjCoreqValue(provider),
+  };
 }

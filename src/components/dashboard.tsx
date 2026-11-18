@@ -38,7 +38,11 @@ import { useSavedProviders } from "@/hooks/use-saved-providers";
 import { useOutreach } from "@/hooks/use-outreach";
 import type { OutreachProvider, OutreachRecord } from "@/lib/outreach";
 import { createClient } from "@/lib/supabase/client";
-import { type Provider, type SearchProvider } from "@/lib/providers";
+import {
+  type Provider,
+  type SearchProvider,
+  type SearchCard,
+} from "@/lib/providers";
 import { Brand } from "./brand";
 import { ProviderCard } from "./provider-card";
 import { Modal } from "./modal";
@@ -286,7 +290,18 @@ function WorkspaceDashboard({
   const [initialHomeCareOpen, setInitialHomeCareOpen] = useState(false);
   const [initialPane, setInitialPane] = useState<ProfilePane>("overview");
   const providerReturnFocus = useRef<HTMLElement | null>(null);
-  const comparison = useComparison();
+  const comparison = useComparison(cancelPendingComparisons);
+  const [pendingComparisons, setPendingComparisons] = useState<Set<string>>(
+    new Set(),
+  );
+  const comparisonRequests = useRef(new Map<string, AbortController>());
+  useEffect(
+    () => () => {
+      for (const controller of comparisonRequests.current.values())
+        controller.abort();
+    },
+    [],
+  );
   const [profileOpen, setProfileOpen] = useState(false);
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
   const [pendingNotifications, setPendingNotifications] = useState<
@@ -397,7 +412,7 @@ function WorkspaceDashboard({
     setMobileMenu(false);
     requestAnimationFrame(() => menuButton.current?.focus());
   }
-  function saveProvider(provider: Provider) {
+  function saveProvider(provider: Pick<Provider, "id" | "name">) {
     let originalIndex = -1;
     const focused = document.activeElement;
     const focusedCard =
@@ -482,20 +497,48 @@ function WorkspaceDashboard({
     if (accepted) notify("Added to your plan", { description: title });
     return accepted;
   }
-  function exportPlan() {
-    const text = carePlanText(
-      workspace,
-      [...savedProviders, ...(data?.providers ?? [])],
-      search.request.zip,
-    );
-    const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "harbor-care-plan.md";
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    notify("Your care plan has been exported.");
+  const exportingPlan = useRef(false);
+  async function exportPlan() {
+    if (exportingPlan.current) return;
+    exportingPlan.current = true;
+    try {
+      const providers: (Provider | SearchCard)[] = [
+        ...(data?.providers ?? []),
+        ...savedProviders,
+      ];
+      const fullIds = new Set(
+        providers
+          .filter((provider) => "sources" in provider)
+          .map((provider) => provider.id),
+      );
+      const missing = workspace.savedProviderIds.filter(
+        (id) => !fullIds.has(id),
+      );
+      if (missing.length) {
+        try {
+          const response = await fetch(
+            `/api/providers?${new URLSearchParams({ ids: missing.join(",") })}`,
+          );
+          if (response.ok) {
+            const result: { providers: Provider[] } = await response.json();
+            providers.push(...result.providers);
+          }
+        } catch {
+          // The export retains IDs, card names and notes when details are unavailable.
+        }
+      }
+      const text = carePlanText(workspace, providers, search.request.zip);
+      const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "harbor-care-plan.md";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      notify("Your care plan has been exported.");
+    } finally {
+      exportingPlan.current = false;
+    }
   }
   async function signOut() {
     if (
@@ -519,19 +562,107 @@ function WorkspaceDashboard({
     router.push("/");
     router.refresh();
   }
-  const cards = (providers: SearchProvider[]) =>
+  const resolveCard = (
+    provider: Provider | SearchCard,
+    action: (full: Provider) => void,
+  ) => {
+    if ("sources" in provider) action(provider);
+    else void search.openMarker(provider, action);
+  };
+  function cancelPendingComparisons() {
+    for (const controller of comparisonRequests.current.values())
+      controller.abort();
+    comparisonRequests.current.clear();
+    setPendingComparisons(new Set());
+  }
+  useEffect(() => {
+    cancelPendingComparisons();
+  }, [search.request]);
+  async function toggleComparison(provider: SearchProvider | SearchCard) {
+    const pending = comparisonRequests.current.get(provider.id);
+    if (pending) {
+      pending.abort();
+      comparisonRequests.current.delete(provider.id);
+      setPendingComparisons(new Set(comparisonRequests.current.keys()));
+      return;
+    }
+    const selected = comparison.providers.find(
+      (item) => item.id === provider.id,
+    );
+    if (selected) {
+      comparison.toggle(selected);
+      return;
+    }
+    if ("sources" in provider) {
+      if (!comparison.toggle(provider))
+        notify("Compare up to three options at a time.");
+      return;
+    }
+    if (comparison.providers.length + comparisonRequests.current.size >= 3) {
+      notify("Compare up to three options at a time.");
+      return;
+    }
+    const controller = new AbortController();
+    comparisonRequests.current.set(provider.id, controller);
+    setPendingComparisons(new Set(comparisonRequests.current.keys()));
+    try {
+      const response = await fetch(
+        `/api/providers?${new URLSearchParams({ ids: provider.id, market: data!.market.id })}`,
+        { signal: controller.signal },
+      );
+      if (!response.ok)
+        throw new Error(
+          "This option could not be compared. Select Compare again to retry.",
+        );
+      const result: { providers: Provider[] } = await response.json();
+      const full = result.providers.find((item) => item.id === provider.id);
+      if (!full)
+        throw new Error(
+          "This option could not be compared. Select Compare again to retry.",
+        );
+      if (!controller.signal.aborted && !comparison.toggle(full))
+        notify("Compare up to three options at a time.");
+    } catch (cause) {
+      if (!controller.signal.aborted)
+        notify(
+          cause instanceof Error
+            ? cause.message
+            : "This option could not be compared.",
+        );
+    } finally {
+      if (comparisonRequests.current.get(provider.id) === controller) {
+        comparisonRequests.current.delete(provider.id);
+        setPendingComparisons(new Set(comparisonRequests.current.keys()));
+      }
+    }
+  }
+  const cards = (providers: (SearchProvider | SearchCard)[]) =>
     providers.map((provider) => (
       <ProviderCard
         key={provider.id}
         provider={provider}
         saved={savedSet.has(provider.id)}
         onSave={() => saveProvider(provider)}
-        onOpen={() => openProvider(provider)}
-        onReviews={(trigger) => openProvider(provider, "reviews", trigger)}
-        compare={comparison.contains(provider.id)}
+        onOpen={() => {
+          const trigger =
+            document.activeElement instanceof HTMLElement
+              ? document.activeElement
+              : undefined;
+          resolveCard(provider, (full) =>
+            openProvider(full, "overview", trigger),
+          );
+        }}
+        onReviews={(trigger) =>
+          resolveCard(provider, (full) =>
+            openProvider(full, "reviews", trigger),
+          )
+        }
+        compare={
+          comparison.contains(provider.id) ||
+          pendingComparisons.has(provider.id)
+        }
         onCompare={() => {
-          if (!comparison.toggle(provider))
-            notify("Compare up to three options at a time.");
+          void toggleComparison(provider);
         }}
       />
     ));
@@ -844,8 +975,10 @@ function WorkspaceDashboard({
                     );
                     return;
                   }
-                  openProvider(provider);
-                  setInitialHomeCareOpen(true);
+                  resolveCard(provider, (full) => {
+                    openProvider(full);
+                    setInitialHomeCareOpen(true);
+                  });
                 }}
               />
               {homeCareProviders.error && (
