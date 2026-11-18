@@ -255,3 +255,19 @@ export function xmlText(s: string) {
       })[c]!,
   );
 }
+
+// A callback is a separate office outcome, never evidence of a reserved slot.
+export function officeCallbackIntent(words: string) {
+  const text = words.toLowerCase().replace(/[’]/g, "'");
+  if (
+    /\b(if|unless|once|after|might|maybe)\b|\b(?:no|not|never|cannot|can't|won't|don't|doesn't)\b/.test(
+      text,
+    )
+  )
+    return false;
+  return (
+    /\b(?:scheduler|office|we|someone)\s+(?:(?:has|have|needs?) to|will|must)\s+call\s+(?:you|the family|them)(?:\s+back)?\b/.test(
+      text,
+    ) || /\b(?:we|the scheduler|our office)\s+will\s+call\s+back\b/.test(text)
+  );
+}

@@ -18,7 +18,8 @@ async function load(url: string, options?: RequestInit) {
 }
 function BookingReceipt({ booking }: { booking: Consultation }) {
   const [delivery, setDelivery] = useState("");
-  const confirmed = booking.status === "confirmed";
+  const confirmed =
+    !booking.office_callback_pending && booking.status === "confirmed";
   const when = confirmed && booking.starts_at && booking.ends_at;
   const stamp = (v: string) =>
     new Date(v)

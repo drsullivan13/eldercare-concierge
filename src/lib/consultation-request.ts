@@ -84,11 +84,21 @@ export type Consultation = {
   agency_name: string;
   provider_id: string;
   status: string;
+  office_callback_pending?: boolean;
+  window_end?: string;
   starts_at: string | null;
   ends_at: string | null;
   timezone: string;
 };
 export function bookingMessage(row: Consultation): string {
+  if (row.office_callback_pending) {
+    const elapsed =
+      row.status === "expired" ||
+      (row.window_end && Date.parse(row.window_end) <= Date.now());
+    return elapsed
+      ? "The office callback was pending when your availability window ended. No consultation was confirmed. Contact the office or choose a new window."
+      : "The office said it would call you back. Callback pending; no consultation time is confirmed.";
+  }
   if (row.status === "confirmed" || row.status === "past") {
     const when = new Date(row.starts_at!).toLocaleString(undefined, {
       dateStyle: "medium",

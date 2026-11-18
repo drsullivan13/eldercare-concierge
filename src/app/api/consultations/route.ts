@@ -18,7 +18,7 @@ import {
 
 export const dynamic = "force-dynamic";
 const columns =
-  "id,agency_name,provider_id,status,starts_at,ends_at,timezone,source,created_at,invite_delivery,window_end";
+  "id,agency_name,provider_id,status,starts_at,ends_at,timezone,source,created_at,invite_delivery,window_end,office_callback_pending";
 function db() {
   return bookingAdmin().from("consultation_bookings");
 }
