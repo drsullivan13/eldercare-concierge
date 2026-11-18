@@ -1,11 +1,11 @@
 /** Private family-reported office responses; never published or treated as confirmation. */
-export const INQUIRY_FACT_KINDS = [
+const INQUIRY_FACT_KINDS = [
   "coverage_zip",
   "hourly_rate",
   "minimum_hours",
   "earliest_start",
 ] as const;
-export type InquiryFactKind = (typeof INQUIRY_FACT_KINDS)[number];
+type InquiryFactKind = (typeof INQUIRY_FACT_KINDS)[number];
 export type InquiryFact = {
   id: string;
   requestId: string;
@@ -26,7 +26,7 @@ export function isInquiryId(value: unknown): value is string {
     )
   );
 }
-export function isInquiryDate(value: unknown): value is string {
+function isInquiryDate(value: unknown): value is string {
   return (
     typeof value === "string" &&
     /^\d{4}-\d{2}-\d{2}$/.test(value) &&

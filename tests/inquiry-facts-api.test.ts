@@ -121,7 +121,7 @@ test("actual private fact handlers verify auth, owner, scope, append retries and
       },
     ],
   });
-  const module = {
+  const routeModule = {
     exports: {} as {
       GET: (r: Request) => Promise<Response>;
       POST: (r: Request) => Promise<Response>;
@@ -129,10 +129,10 @@ test("actual private fact handlers verify auth, owner, scope, append retries and
   };
   new Function("__auth", "module", "exports", bundle.outputFiles[0].text)(
     auth,
-    module,
-    module.exports,
+    routeModule,
+    routeModule.exports,
   );
-  const { GET, POST } = module.exports;
+  const { GET, POST } = routeModule.exports;
   const get = () =>
     GET(new Request(`https://harbor.test/api/inquiry-facts?requestId=${R}`));
   const post = (
