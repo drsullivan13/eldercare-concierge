@@ -1,26 +1,22 @@
-import { randomBytes, randomUUID, timingSafeEqual } from "node:crypto";
-import { getProviderEntry } from "@/lib/markets";
+import { randomBytes, randomUUID } from "node:crypto";
 import { bookingAdmin } from "@/lib/supabase/booking-admin";
 import {
   handoffResponse,
-  isRecord,
   readHandoffField,
-  requestUuid,
   sha256,
 } from "../outreach-handoff-response";
+import {
+  isOutreachServiceAuthorized,
+  outreachCredential,
+  outreachHandoffInvalid,
+  outreachRunDetails,
+  outreachServiceUnauthorized,
+} from "../outreach-handoff-service";
 
 export async function POST(request: Request) {
-  const secret = process.env.HARBOR_OUTREACH_SERVICE_KEY;
-  const authorization = request.headers.get("authorization") ?? "";
-  if (
-    !secret ||
-    secret.length < 32 ||
-    !timingSafeEqual(sha256(authorization), sha256(`Bearer ${secret}`))
-  )
-    return handoffResponse({ error: "Unauthorized." }, 401);
+  if (!isOutreachServiceAuthorized(request))
+    return outreachServiceUnauthorized();
 
-  const invalid = () =>
-    handoffResponse({ error: "Outreach handoff is unavailable." }, 404);
   const unavailable = () =>
     handoffResponse(
       { error: "Outreach exchange is temporarily unavailable." },
@@ -31,8 +27,8 @@ export async function POST(request: Request) {
     const token = await readHandoffField(
       request,
       "token",
-      /^[0-9a-f]{64}$/,
-      invalid,
+      outreachCredential,
+      outreachHandoffInvalid,
     );
     if (typeof token !== "string") return token;
 
@@ -47,30 +43,10 @@ export async function POST(request: Request) {
       },
     );
     if (error) return unavailable();
-    if (data === null) return invalid();
-    if (
-      !isRecord(data) ||
-      data.runId !== runId ||
-      typeof data.requestId !== "string" ||
-      !requestUuid.test(data.requestId) ||
-      typeof data.providerId !== "string" ||
-      !isRecord(data.brief)
-    )
-      return unavailable();
-
-    const { requestId, providerId, brief } = data;
-    const entry = getProviderEntry(providerId);
-    if (entry?.market.state !== "NJ" || entry.provider.category !== "home-care")
-      return invalid();
-    return handoffResponse({
-      runId,
-      runKey,
-      requestId,
-      providerId,
-      providerName: entry.provider.name,
-      phone: entry.provider.phone || null,
-      brief,
-    });
+    const details = outreachRunDetails(data, runId, unavailable);
+    return details instanceof Response
+      ? details
+      : handoffResponse({ ...details, runKey });
   } catch {
     return unavailable();
   }
