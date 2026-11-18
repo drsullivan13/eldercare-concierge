@@ -1,6 +1,7 @@
 type Instruction = {
   requestId: string;
   providerId: string;
+  outreachRequestId?: string;
   name: string;
   phone?: string;
   startTime: string;
@@ -27,6 +28,11 @@ export function parseInstruction(
     !/^[\da-f]{8}-[\da-f]{4}-4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i.test(
       requestId,
     ) ||
+    (v.outreachRequestId !== undefined &&
+      (typeof v.outreachRequestId !== "string" ||
+        !/^[\da-f]{8}-[\da-f]{4}-[\da-f]{4}-[\da-f]{4}-[\da-f]{12}$/i.test(
+          v.outreachRequestId,
+        ))) ||
     typeof providerId !== "string" ||
     !providerId ||
     providerId.length > 200 ||
@@ -59,6 +65,9 @@ export function parseInstruction(
   }
   return {
     requestId,
+    ...(typeof v.outreachRequestId === "string"
+      ? { outreachRequestId: v.outreachRequestId.toLowerCase() }
+      : {}),
     providerId,
     name: name.trim(),
     phone,

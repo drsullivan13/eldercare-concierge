@@ -1,5 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import styles from "./outreach.module.css";
+import { LinkedConsultations } from "./linked-consultations";
 import { RehearsalReports } from "./rehearsal-reports";
 
 const requestsPath = "/api/outreach-requests";
@@ -136,7 +137,13 @@ export function useAccountRehearsal() {
   return { open, busy, error };
 }
 
-export function AccountOutreachHistory({ available }: { available: boolean }) {
+export function AccountOutreachHistory({
+  available,
+  email = "",
+}: {
+  available: boolean;
+  email?: string;
+}) {
   const heading = useId();
   const [revision, setRevision] = useState(0);
   const [result, setResult] = useState<{
@@ -230,6 +237,12 @@ export function AccountOutreachHistory({ available }: { available: boolean }) {
             <RehearsalReports
               requestId={requestId}
               revision={result.revision}
+            />
+            <LinkedConsultations
+              key={`${requestId}:${result.revision}`}
+              requestId={requestId}
+              providerId={providerId}
+              email={email}
             />
             {available && (
               <button

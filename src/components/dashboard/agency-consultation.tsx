@@ -129,9 +129,13 @@ export function ConsultationHistory() {
 export function AgencyConsultation({
   providerId,
   email,
+  outreachRequestId,
+  onBooking,
 }: {
   providerId: string;
   email: string;
+  outreachRequestId?: string;
+  onBooking?: () => void;
 }) {
   const label = useId();
   const [state, setState] = useState<Status | null>(null);
@@ -142,6 +146,7 @@ export function AgencyConsultation({
   const [end, setEnd] = useState("");
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [consent, setConsent] = useState(false);
   const [openedAt] = useState(Date.now);
   const submitting = useRef(false);
   const requestId = useRef("");
@@ -192,7 +197,11 @@ export function AgencyConsultation({
     Date.parse(end) > Date.parse(start) &&
     Date.parse(end) - Date.parse(start) <= 7 * 86400000;
   async function act(preview: boolean) {
-    if (submitting.current || !ready)
+    if (
+      submitting.current ||
+      !ready ||
+      (!preview && outreachRequestId && !consent)
+    )
       return "Enter your name and preferred time window first.";
     submitting.current = true;
     setBusy(true);
@@ -205,6 +214,7 @@ export function AgencyConsultation({
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             providerId,
+            ...(outreachRequestId ? { outreachRequestId } : {}),
             name: name.trim(),
             phone: phone.trim() || undefined,
             startTime: new Date(start).toISOString(),
@@ -231,6 +241,7 @@ export function AgencyConsultation({
       } else {
         setState((old) => old && { ...old, bookings: [data.booking] });
         answer = bookingMessage(data.booking);
+        onBooking?.();
         if (["failed", "unavailable"].includes(data.booking.status))
           requestId.current = "";
       }
@@ -251,11 +262,20 @@ export function AgencyConsultation({
       setBusy(false);
     }
   }
+  if (!state?.configured && outreachRequestId)
+    return (
+      <p role="status">
+        {message ||
+          (state
+            ? "Actual consultation booking is unavailable for this office. Contact the office directly; no consultation has been requested."
+            : "Checking consultation booking availability…")}
+      </p>
+    );
   if (!state?.configured && state?.publicUrl)
     return (
       <section className={styles.workflow} aria-labelledby={label}>
         <h3 id={label}>Book a consultation</h3>
-        {row && <BookingReceipt booking={row} />}
+        {row && !outreachRequestId && <BookingReceipt booking={row} />}
         <p>
           This calendar is run by Elderly Savior. Choose an opening and the
           office will follow up to confirm your consultation.
@@ -291,7 +311,14 @@ export function AgencyConsultation({
   return (
     <section className={styles.workflow} aria-labelledby={label}>
       <h3 id={label}>Book an agency consultation</h3>
-      {row && <BookingReceipt booking={row} />}
+      {row && !outreachRequestId && <BookingReceipt booking={row} />}
+      {outreachRequestId && occupied && (
+        <p role="status">
+          This office already has an active consultation request for your
+          account. Review linked consultations above, or check your agency
+          consultation history before requesting another.
+        </p>
+      )}
       {state?.configured && !occupied && (
         <>
           <p>
@@ -338,6 +365,17 @@ export function AgencyConsultation({
             </label>
           </fieldset>
           <p>Times in {timezone}. Choose up to seven days.</p>
+          {outreachRequestId && (
+            <label>
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(event) => setConsent(event.target.checked)}
+              />
+              I authorize Harbor to contact this office and request a real
+              consultation using these details. This does not arrange care.
+            </label>
+          )}
           <div className={styles.contacts}>
             {state.source !== "phone" && (
               <button
@@ -352,7 +390,7 @@ export function AgencyConsultation({
             <button
               className="button button-primary"
               type="button"
-              disabled={!ready}
+              disabled={!ready || (!!outreachRequestId && !consent)}
               onClick={() => void act(false)}
             >
               {state.source === "phone"
@@ -364,7 +402,7 @@ export function AgencyConsultation({
       )}
       {state?.configured && row?.status !== "confirmed" && (
         <ConsultationVoice
-          ready={!!ready}
+          ready={!!ready && (!outreachRequestId || consent)}
           availability={() => act(true)}
           book={() => act(false)}
         />

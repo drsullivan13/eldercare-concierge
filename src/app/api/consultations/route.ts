@@ -87,6 +87,24 @@ async function serve(request: Request, write: boolean) {
       );
     const { providerId, requestId, startTime, endTime, timezone, name, phone } =
       input;
+    // Verify the explicit account request before any scheduler read or write.
+    if (input.outreachRequestId) {
+      if (user.is_anonymous)
+        return send({ error: "Sign in to link an outreach request." }, 401);
+      const linked = await client
+        .from("outreach_requests")
+        .select("request_id")
+        .eq("owner_id", user.id)
+        .eq("request_id", input.outreachRequestId)
+        .eq("provider_id", providerId)
+        .maybeSingle();
+      if (linked.error) throw linked.error;
+      if (!linked.data)
+        return send(
+          { error: "Outreach request not found for this office." },
+          404,
+        );
+    }
     const config = consultationConfig(providerId);
     const byPhone = !config && phoneConsultationConfigured(providerId);
     if (!config && !byPhone)
@@ -146,6 +164,9 @@ async function serve(request: Request, write: boolean) {
     }
     const claim = await db().insert({
       id: requestId,
+      ...(input.outreachRequestId
+        ? { outreach_request_id: input.outreachRequestId }
+        : {}),
       user_id: user.id,
       provider_id: providerId,
       agency_name: agency.name,
@@ -162,15 +183,36 @@ async function serve(request: Request, write: boolean) {
     if (claim.error) {
       if (claim.error.code !== "23505") throw claim.error;
       let read = await db()
-        .select(columns)
+        .select(`${columns},outreach_request_id`)
         .eq("user_id", user.id)
         .eq("provider_id", providerId)
         .eq("id", requestId)
         .maybeSingle();
       if (read.error) throw read.error;
+      if (
+        read.data &&
+        (read.data.outreach_request_id ?? null) !==
+          (input.outreachRequestId ?? null)
+      )
+        return send(
+          {
+            error:
+              "This booking ID belongs to a different request. Refresh your booking history.",
+          },
+          409,
+        );
+      // Linked submissions must never borrow another open or legacy booking.
+      if (!read.data && input.outreachRequestId)
+        return send(
+          {
+            error:
+              "An existing booking needs review before this request can be booked.",
+          },
+          409,
+        );
       if (!read.data)
         read = await db()
-          .select(columns)
+          .select(`${columns},outreach_request_id`)
           .eq("user_id", user.id)
           .eq("provider_id", providerId)
           .in("status", ["searching", "submitting", "confirmed", "unknown"])
@@ -180,7 +222,9 @@ async function serve(request: Request, write: boolean) {
           { error: "Refresh your booking history before trying again." },
           409,
         );
-      return send({ booking: read.data });
+      const booking = { ...read.data };
+      delete booking.outreach_request_id;
+      return send({ booking });
     }
     async function change(
       from: string,

@@ -856,6 +856,8 @@ function WorkspaceDashboard({
               <div id="outreach-history" ref={outreachHistory} tabIndex={-1}>
                 {!demo && (
                   <AccountOutreachHistory
+                    key={email ?? ""}
+                    email={email ?? ""}
                     available={accountOutreachAvailable}
                   />
                 )}
