@@ -121,7 +121,7 @@ if (process.argv[2] === "plan") {
       throw new Error("Invalid test plan");
     command =
       lane === "unit"
-        ? ["node_modules/.bin/tsx", "--test", ...paths]
+        ? ["node_modules/.bin/tsx", "--test", "--test-concurrency=2", ...paths]
         : [
             "node_modules/.bin/playwright",
             "test",
