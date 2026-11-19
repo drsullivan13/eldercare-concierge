@@ -757,7 +757,7 @@ test(
           await expect(f.page.getByLabel("US phone number")).toHaveValue("");
           await expect(f.page.getByLabel("Earliest start")).toHaveValue("");
           await expect(consent(f.page)).not.toBeChecked();
-          await expect(consent(f.page)).toHaveAccessibleName(/WELLCARE NURSES/);
+          await expect(consent(f.page)).toHaveAccessibleName(/WellCare Nurses/);
           await expect(approve(f.page)).toBeDisabled();
           await fillFirstTime(f.page);
           await consent(f.page).check();
