@@ -54,6 +54,7 @@ export function ProviderDetail({
   outreachHistory,
   homeCareOutreach,
   initialHomeCareOpen = false,
+  concierge = false,
   close,
   saveStatus,
   saveError,
@@ -70,6 +71,7 @@ export function ProviderDetail({
   outreachHistory?: ReactNode;
   homeCareOutreach?: ReactNode;
   initialHomeCareOpen?: boolean;
+  concierge?: boolean;
   close: () => void;
   saveStatus: string;
   saveError: string;
@@ -169,7 +171,7 @@ export function ProviderDetail({
               )}
               {agencyWorkflow && (
                 <button
-                  className="button button-primary"
+                  className={`button button-primary ${concierge ? "concierge-action" : ""}`}
                   aria-expanded={homeCareOpen}
                   aria-controls={`${uid}-home-care`}
                   onClick={() => {
@@ -182,7 +184,9 @@ export function ProviderDetail({
                     });
                   }}
                 >
-                  Agency interview & introduction
+                  {concierge
+                    ? "Reach out for me"
+                    : "Agency interview & introduction"}
                 </button>
               )}
               {onOutreach && (

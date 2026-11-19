@@ -1,5 +1,8 @@
 "use client";
-import { PublicFormBooking } from "./dashboard/public-form-booking";
+import {
+  ELDERLY_SAVIOR_PROVIDER_ID,
+  PublicFormBooking,
+} from "./dashboard/public-form-booking";
 import {
   AgencyConsultation,
   ConsultationHistory,
@@ -338,6 +341,8 @@ function WorkspaceDashboard({
     });
   }
   const selectedProvider = selected;
+  const selectedConcierge =
+    !demo && !!email && selectedProvider?.id === ELDERLY_SAVIOR_PROVIDER_ID;
   const selectedAccountOutreach =
     !demo &&
     selectedProvider?.state === "NJ" &&
@@ -701,6 +706,24 @@ function WorkspaceDashboard({
     </section>
   );
 
+  const manualHomeCareOutreach = selectedProvider && (
+    <HomeCareOutreach
+      provider={selectedProvider}
+      record={workspace.homeCareOutreach?.[selectedProvider.id]}
+      saveStatus={saveStatus}
+      saveError={error}
+      blocked={conflict}
+      onRecord={(record) =>
+        update((w) => ({
+          ...w,
+          homeCareOutreach: {
+            ...w.homeCareOutreach,
+            [selectedProvider.id]: record,
+          },
+        }))
+      }
+    />
+  );
   return (
     <div
       className={`app-shell${comparison.providers.length && ["search", "shortlist"].includes(view) ? " has-comparison" : ""}`}
@@ -954,11 +977,12 @@ function WorkspaceDashboard({
                 addTask={addTask}
                 exportPlan={exportPlan}
                 notify={notify}
-              />
+              >
+                {!demo && email && (
+                  <PublicFormBooking key={email} email={email} historyOnly />
+                )}
+              </PlanView>
               {!demo && <ConsultationHistory />}
-              {!demo && email && (
-                <PublicFormBooking key={email} email={email} historyOnly />
-              )}
               <HomeCareOutreachPlan
                 records={workspace.homeCareOutreach ?? {}}
                 open={(id) => {
@@ -1113,6 +1137,7 @@ function WorkspaceDashboard({
             saveStatus={saveStatus}
             saveError={error}
             initialHomeCareOpen={initialHomeCareOpen}
+            concierge={selectedConcierge}
             homeCareOutreach={
               selectedProvider.category === "home-care" ? (
                 <>
@@ -1121,24 +1146,20 @@ function WorkspaceDashboard({
                       key={selectedProvider.id}
                       providerId={selectedProvider.id}
                       email={email ?? ""}
+                      onViewPlan={() => {
+                        closeProvider();
+                        navigate("plan");
+                      }}
                     />
                   )}
-                  <HomeCareOutreach
-                    provider={selectedProvider}
-                    record={workspace.homeCareOutreach?.[selectedProvider.id]}
-                    saveStatus={saveStatus}
-                    saveError={error}
-                    blocked={conflict}
-                    onRecord={(record) =>
-                      update((w) => ({
-                        ...w,
-                        homeCareOutreach: {
-                          ...w.homeCareOutreach,
-                          [selectedProvider.id]: record,
-                        },
-                      }))
-                    }
-                  />
+                  {selectedConcierge ? (
+                    <details>
+                      <summary>Manual interview & introduction tools</summary>
+                      {manualHomeCareOutreach}
+                    </details>
+                  ) : (
+                    manualHomeCareOutreach
+                  )}
                 </>
               ) : undefined
             }
@@ -1151,7 +1172,9 @@ function WorkspaceDashboard({
             }
             onTask={(title) => addTask(title, selectedProvider.id)}
             outreachUnavailable={
-              selectedAccountOutreach && !accountOutreachAvailable
+              !selectedConcierge &&
+              selectedAccountOutreach &&
+              !accountOutreachAvailable
                 ? accountOutreachUnavailable
                 : undefined
             }
