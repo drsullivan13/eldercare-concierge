@@ -51,8 +51,8 @@ const minute = 60000;
 type Defaults = {
   name: string;
   phone: string;
-  windowStart: string;
-  windowEnd: string;
+  windowStart?: string;
+  windowEnd?: string;
 };
 function validContact(name: string, phone: string) {
   return (
@@ -82,7 +82,6 @@ function reusableDefaults(
   office: PublicFormProvider,
 ): Defaults | null {
   if (
-    !job ||
     !publicFormRebookable(job, office, Date.now()) ||
     !value ||
     typeof value !== "object"
@@ -93,10 +92,12 @@ function reusableDefaults(
   if (
     typeof name !== "string" ||
     typeof phone !== "string" ||
-    typeof windowStart !== "string" ||
-    typeof windowEnd !== "string" ||
     !validContact(name, phone)
   )
+    return null;
+  // A first request at this office must never inherit another office's window.
+  if (!job) return { name, phone };
+  if (typeof windowStart !== "string" || typeof windowEnd !== "string")
     return null;
   return { name, phone, windowStart, windowEnd };
 }
@@ -206,6 +207,8 @@ function OfficeBooking({
             setName(defaults.name);
             setPhone(defaults.phone);
             if (
+              defaults.windowStart &&
+              defaults.windowEnd &&
               validWindow(
                 Date.parse(defaults.windowStart),
                 Date.parse(defaults.windowEnd),

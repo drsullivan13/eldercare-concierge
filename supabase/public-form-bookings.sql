@@ -125,7 +125,7 @@ $$;
 revoke all on function public.request_public_form_booking(uuid,text,timestamptz,timestamptz,text,text,text,text) from public, anon;
 grant execute on function public.request_public_form_booking(uuid,text,timestamptz,timestamptz,text,text,text,text) to authenticated;
 
--- Only the verified account that authorized the latest reusable request can recover its contact details.
+-- Same-office history keeps its defaults; a first request elsewhere recovers contact only.
 create or replace function harbor_booking_private.latest_booking_defaults(p_provider_id text)
 returns jsonb language sql stable security definer set search_path = '' as $$
   with latest as (
@@ -142,6 +142,18 @@ returns jsonb language sql stable security definer set search_path = '' as $$
   where current_email = invitee_email and
     (status in ('failed','unavailable') or
       (status = 'confirmed' and start_time + interval '30 minutes' <= now()))
+  union all
+  (select jsonb_build_object('name', b.invitee_name, 'phone', b.invitee_phone)
+   from public.public_form_bookings b join auth.users u on u.id = b.owner_id
+   where p_provider_id in ('north-jersey-hp-hp0265900','north-jersey-hp-hp0054400')
+     and b.owner_id = (select auth.uid()) and b.invitee_email = u.email
+     and coalesce(u.email, '') <> '' and u.email_confirmed_at is not null
+     and not coalesce(u.is_anonymous, false)
+     and not exists (
+       select from public.public_form_bookings own
+       where own.owner_id = b.owner_id and own.provider_id = p_provider_id
+     )
+   order by b.created_at desc, b.id desc limit 1)
 $$;
 revoke all on function harbor_booking_private.latest_booking_defaults(text) from public, anon;
 grant execute on function harbor_booking_private.latest_booking_defaults(text) to authenticated;

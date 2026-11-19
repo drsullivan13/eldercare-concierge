@@ -118,7 +118,7 @@ async function serve(req: Request, write: boolean) {
         .limit(1)
         .maybeSingle();
       if (error) throw error;
-      if (prefill && data && publicFormRebookable(data, office, Date.now())) {
+      if (prefill && publicFormRebookable(data, office, Date.now())) {
         const { data: defaults, error } = await client.rpc(
           "public_form_booking_defaults",
           { p_provider_id: office.providerId },
