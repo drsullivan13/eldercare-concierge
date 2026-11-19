@@ -1,7 +1,19 @@
 import { randomUUID } from "node:crypto";
 import postgres from "postgres";
 
-const pilot = "north-jersey-hp-hp0265900";
+export const bookingProviders = Object.freeze({
+  "north-jersey-hp-hp0265900": Object.freeze({
+    load: () => import("./elderly-savior.mjs"),
+    meeting: "Google Meet",
+    clickAction: "Schedule meeting",
+  }),
+  "north-jersey-hp-hp0054400": Object.freeze({
+    load: () => import("./wellcare.mjs"),
+    meeting: "Available Online",
+    clickAction: "Book Now",
+  }),
+});
+const providerIds = Object.keys(bookingProviders);
 
 export function openStore(connectionString) {
   if (!connectionString)
@@ -21,15 +33,15 @@ export function openStore(connectionString) {
         await tx`update public.public_form_bookings set
           status = case when status = 'submitting' then 'unknown' else 'failed' end,
           worker_lease = null, updated_at = now()
-          where provider_id = ${pilot} and
+          where provider_id = any(${tx.array(providerIds, 25)}::text[]) and
             ((status in ('booking','submitting') and updated_at < now() - interval '15 minutes')
             or (status = 'queued_booking' and window_end <= now()))`;
         const [job] = await tx`update public.public_form_bookings as j set
           status='booking', worker_lease=${randomUUID()}, updated_at=now()
           where j.id = (select id from public.public_form_bookings
-            where provider_id=${pilot} and status='queued_booking' and window_end>now()
+            where provider_id = any(${tx.array(providerIds, 25)}::text[]) and status='queued_booking' and window_end>now()
             order by created_at, id limit 1 for update skip locked)
-          returning id, worker_lease as lease, window_start as "windowStart",
+          returning id, provider_id as "providerId", worker_lease as lease, window_start as "windowStart",
             window_end as "windowEnd", invitee_name as name, invitee_phone as phone,
             invitee_email as email, consent_version as "consentVersion"`;
         return job;
@@ -44,8 +56,13 @@ export function openStore(connectionString) {
       return rows.length === 1;
     },
     async markClickObserved(job, httpStatus) {
+      if (
+        typeof job.providerId !== "string" ||
+        !Object.hasOwn(bookingProviders, job.providerId)
+      )
+        throw new Error("Unsupported booking provider.");
       const receipt =
-        "The browser observed a click on Schedule meeting." +
+        `The browser observed a click on ${bookingProviders[job.providerId].clickAction}.` +
         (Number.isInteger(httpStatus)
           ? ` The agency form returned HTTP ${httpStatus}.`
           : "");

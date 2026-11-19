@@ -1,7 +1,8 @@
 import { pathToFileURL } from "node:url";
 import { setTimeout as delay } from "node:timers/promises";
 import { chromium } from "playwright";
-import { readSlots, submitApproved } from "./elderly-savior.mjs";
+import { readSlots } from "./elderly-savior.mjs";
+import { bookingProviders } from "./worker-store.mjs";
 
 const halfHour = 30 * 60_000;
 const easternDate = new Intl.DateTimeFormat("en-CA", {
@@ -39,13 +40,28 @@ export async function runJob(
   job,
   store,
   launch = () => chromium.launch(),
-  read = readSlots,
-  submit = submitApproved,
+  read,
+  submit,
 ) {
+  const provider =
+    typeof job.providerId === "string" &&
+    Object.hasOwn(bookingProviders, job.providerId)
+      ? bookingProviders[job.providerId]
+      : undefined;
+  // Older injected callers omit identity; production jobs must always be allowlisted.
+  if (!provider && !(job.providerId === undefined && read && submit)) {
+    await store.finish(job, "needs_human", undefined, false);
+    return "needs_human";
+  }
   let browser;
   let claimed = false;
   let result;
   try {
+    if (!read || !submit) {
+      const adapter = await provider.load();
+      read ??= adapter.readSlots;
+      submit ??= adapter.submitApproved;
+    }
     browser = await launch();
     const page = await browser.newPage({
       viewport: { width: 390, height: 780 },
@@ -62,7 +78,7 @@ export async function runJob(
         {
           ...job,
           startTime,
-          meeting: "Google Meet",
+          meeting: provider?.meeting ?? "Google Meet",
           message: "Please send the consultation details to my email.",
         },
         async () => {
