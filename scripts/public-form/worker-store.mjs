@@ -43,9 +43,14 @@ export function openStore(connectionString) {
           and ${instant}::timestamptz + interval '30 minutes' <= window_end returning id`;
       return rows.length === 1;
     },
-    async markClickObserved(job) {
+    async markClickObserved(job, httpStatus) {
+      const receipt =
+        "The browser observed a click on Schedule meeting." +
+        (Number.isInteger(httpStatus)
+          ? ` The agency form returned HTTP ${httpStatus}.`
+          : "");
       await sql`update public.public_form_bookings set
-        receipt='The browser observed a click on Schedule meeting.', updated_at=now()
+        receipt=${receipt}, updated_at=now()
         where id=${job.id} and worker_lease=${job.lease} and status='submitting'`;
     },
     async finish(job, status, receipt, claimed) {

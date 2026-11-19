@@ -70,7 +70,7 @@ export async function runJob(
           claimed = await store.markSubmitting(job, startTime);
           return claimed;
         },
-        () => store.markClickObserved(job),
+        (httpStatus) => store.markClickObserved(job, httpStatus),
       );
   } catch {
     result = { status: claimed ? "unknown" : "needs_human" };
