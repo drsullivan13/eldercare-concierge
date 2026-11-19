@@ -127,7 +127,10 @@ test("public-form worker scopes to the office widget and requires office evidenc
       contact,
     );
     assert.equal((await submitApproved(page, job, claim)).status, "pending");
-    html = fixture("<p role=alert>Appointment rejected</p>", contact);
+    html = fixture(
+      confirmed + "<p role=alert>We cannot confirm this appointment.</p>",
+      contact,
+    );
     const rejection = await submitApproved(page, job, claim);
     assert.equal(rejection.status, "unknown");
     assert.match(rejection.receipt, /booking or validation error/);

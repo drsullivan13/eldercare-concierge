@@ -44,6 +44,7 @@ function trustedReceiptUrl(value) {
   try {
     const url = new URL(value);
     return (
+      url.protocol === "https:" &&
       url.origin === new URL(bookingUrl).origin &&
       !url.username &&
       !url.password
@@ -182,7 +183,7 @@ async function observeReceipt(page, start) {
         )
           continue;
         rejected ||=
-          /\b(?:not confirmed|(?:booking|appointment|meeting|consultation|scheduling) (?:failed|rejected|cancelled|canceled)|(?:unable|failed|could not|cannot) to (?:book|schedule|confirm)|(?:slot|time).{0,30}(?:unavailable|no longer available)|something went wrong)\b/i.test(
+          /\b(?:not confirmed|(?:booking|appointment|meeting|consultation|scheduling)(?: (?:is|was|has been))? (?:failed|rejected|declined|cancelled|canceled|unsuccessful)|(?:(?:unable|failed) to|could not|cannot|can't) (?:book|schedule|confirm)|(?:slot|time).{0,30}(?:unavailable|no longer available)|something went wrong)\b/i.test(
             text,
           );
         pending ||=
