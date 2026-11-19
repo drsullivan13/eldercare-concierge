@@ -326,7 +326,21 @@ test("receipt ambiguity, mismatched details, and denial cannot become confirmati
       confirmed.replace("</section>", "<p>PST</p></section>"),
       "unknown",
     ],
-    ["missing duration", confirmed.replace("<p>30 min</p>", ""), "unknown"],
+    [
+      "date and service on native confirmation",
+      "<section><h2>Thanks for booking!</h2><p>Free Assessment</p><p>November 30, 2026 at 11:30 am</p></section>",
+      "confirmed",
+    ],
+    [
+      "generic thanks",
+      "<section><h2>Thanks for booking!</h2></section>",
+      "unknown",
+    ],
+    [
+      "receipt omits duration",
+      confirmed.replace("<p>30 min</p>", ""),
+      "confirmed",
+    ],
     [
       "hidden details",
       "<section><h2>Booking confirmed</h2><div hidden>" +

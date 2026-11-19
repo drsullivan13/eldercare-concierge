@@ -393,7 +393,7 @@ async function observeClick(page, submit, reviewed, job, onObservedClick) {
       );
       let consumed = false;
       // Synchronous capture closes the last check-to-click gap. Also block a second click.
-      const guard = (event) => {
+      window[expected.marker] = (event) => {
         if (!event.composedPath().includes(button)) return;
         if (
           consumed ||
@@ -419,8 +419,7 @@ async function observeClick(page, submit, reviewed, job, onObservedClick) {
         consumed = true;
         console.debug(expected.marker);
       };
-      window[expected.marker] = guard;
-      window.addEventListener("click", guard, true);
+      window.addEventListener("click", window[expected.marker], true);
     }, expected);
   } catch (error) {
     page.off("console", observe);
@@ -460,42 +459,44 @@ async function observeReceipt(page, start, network) {
           if (heading.parentElement !== document.body)
             regions.add(heading.parentElement);
         }
-        const visibleText = (element, owned = false) => {
-          const walker = document.createTreeWalker(
-            element,
-            NodeFilter.SHOW_TEXT,
-          );
-          const parts = [];
-          for (let node; (node = walker.nextNode());) {
-            let visible = true;
-            for (let p = node.parentElement; p; p = p.parentElement) {
-              const style = getComputedStyle(p);
-              if (
-                p.matches(
-                  "footer,nav,aside,script,style,template,[hidden],[aria-hidden=true],[inert]",
-                ) ||
-                style.display === "none" ||
-                style.visibility !== "visible" ||
-                Number(style.opacity) === 0 ||
-                style.contentVisibility === "hidden" ||
-                style.clip !== "auto" ||
-                style.clipPath !== "none" ||
-                (owned &&
-                  p !== element &&
-                  element.contains(p) &&
-                  regions.has(p) &&
-                  !p.matches("[role=status],[role=alert]"))
-              ) {
-                visible = false;
-                break;
+        const view = {
+          visibleText(element, owned = false) {
+            const walker = document.createTreeWalker(
+              element,
+              NodeFilter.SHOW_TEXT,
+            );
+            const parts = [];
+            for (let node; (node = walker.nextNode());) {
+              let visible = true;
+              for (let p = node.parentElement; p; p = p.parentElement) {
+                const style = getComputedStyle(p);
+                if (
+                  p.matches(
+                    "footer,nav,aside,script,style,template,[hidden],[aria-hidden=true],[inert]",
+                  ) ||
+                  style.display === "none" ||
+                  style.visibility !== "visible" ||
+                  Number(style.opacity) === 0 ||
+                  style.contentVisibility === "hidden" ||
+                  style.clip !== "auto" ||
+                  style.clipPath !== "none" ||
+                  (owned &&
+                    p !== element &&
+                    element.contains(p) &&
+                    regions.has(p) &&
+                    !p.matches("[role=status],[role=alert]"))
+                ) {
+                  visible = false;
+                  break;
+                }
               }
+              const range = document.createRange();
+              range.selectNodeContents(node);
+              if (visible && range.getClientRects().length)
+                parts.push(node.textContent);
             }
-            const range = document.createRange();
-            range.selectNodeContents(node);
-            if (visible && range.getClientRects().length)
-              parts.push(node.textContent);
-          }
-          return parts.join(" ").replace(/\s+/g, " ").trim();
+            return parts.join(" ").replace(/\s+/g, " ").trim();
+          },
         };
         return {
           url: location.href,
@@ -508,14 +509,14 @@ async function observeReceipt(page, start, network) {
             }),
           ),
           regions: [...regions].map((region) => ({
-            text: visibleText(region, true),
+            text: view.visibleText(region, true),
             headings: [...region.querySelectorAll("h1,h2,h3,h4,[role=heading]")]
               .filter(
                 (heading) =>
                   regions.has(heading.parentElement) &&
                   heading.parentElement === region,
               )
-              .map((heading) => visibleText(heading)),
+              .map((heading) => view.visibleText(heading)),
           })),
         };
       });
