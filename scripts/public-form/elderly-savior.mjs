@@ -403,19 +403,22 @@ async function observeSubmitClick(page, submit, saveClick) {
     )
       bookingRequest = request;
   };
+  const persistAcknowledgement = () => {
+    if (saved && httpStatus !== undefined)
+      saved = saved.then(() => saveClick(httpStatus)).catch(() => {});
+  };
   const observeResponse = (response) => {
     if (response.request() !== bookingRequest || httpStatus !== undefined)
       return;
     httpStatus = response.status();
-    saved = saved.then(() => saveClick(httpStatus)).catch(() => {});
+    persistAcknowledgement();
   };
   const observe = (message) => {
     if (message.type() === "debug" && message.text() === marker && !saved) {
       saved = Promise.resolve()
         .then(saveClick)
         .catch(() => {});
-      page.on("request", observeRequest);
-      page.on("response", observeResponse);
+      persistAcknowledgement();
     }
   };
   await submit.evaluate((button, marker) => {
@@ -427,13 +430,17 @@ async function observeSubmitClick(page, submit, saveClick) {
       { once: true, capture: true },
     );
   }, marker);
+  // CDP may deliver the booking request before it delivers the click's console event.
+  // Reconcile the two signals in either order, after the durable claim.
   page.on("console", observe);
+  page.on("request", observeRequest);
+  page.on("response", observeResponse);
   return {
     get observed() {
       return Boolean(saved);
     },
     get responseDiagnostic() {
-      return httpStatus === undefined
+      return !saved || httpStatus === undefined
         ? ""
         : `The agency form returned HTTP ${httpStatus}. `;
     },
@@ -479,10 +486,10 @@ export async function submitApproved(
     });
     verifiedPage(page);
     await submit.click({ trial: true });
-    click = await observeSubmitClick(page, submit, saveClick);
     if ((await beforeClick()) !== true) return { status: "needs_human" };
     claimed = true;
     verifiedPage(page);
+    click = await observeSubmitClick(page, submit, saveClick);
     try {
       await submit.click({ timeout: 3000 });
     } catch {

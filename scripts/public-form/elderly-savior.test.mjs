@@ -197,7 +197,10 @@ test("public-form HTTP acknowledgement is diagnostic only and scoped to the clic
         "another-calendar",
       );
       const script =
-        (matching ? post() : "") + post(otherCalendar) + post(endpoint, "GET");
+        (matching ? post() : "") +
+        post(otherCalendar) +
+        post(endpoint, "GET") +
+        ";window.releaseWitness?.();";
       html = fixture(
         "<p role=alert>Appointment rejected</p>",
         contact,
@@ -209,6 +212,14 @@ test("public-form HTTP acknowledgement is diagnostic only and scoped to the clic
         page,
         job,
         async () => {
+          // Hold the console signal until after the mocked form has received its response.
+          if (matching)
+            await page.evaluate(() => {
+              const debug = console.debug.bind(console);
+              console.debug = (message) => {
+                window.releaseWitness = () => debug(message);
+              };
+            });
           // The same endpoint can respond before Harbor attempts the final button.
           await page.evaluate(
             (url) => fetch(url, { method: "POST" }).then(() => {}),
