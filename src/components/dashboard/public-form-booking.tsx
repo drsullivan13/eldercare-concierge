@@ -18,10 +18,9 @@ const messages = {
   booking: "Harbor is checking for an opening within your window.",
   submitting:
     "Harbor is submitting your booking. Check here for the agency’s response.",
-  confirmed: "The agency confirmed your consultation.",
+  confirmed: "Scheduled",
   pending: "The agency received your request. Office confirmation is pending.",
-  unknown:
-    "The outcome is unclear. Check your email or contact the office before requesting another appointment.",
+  unknown: "Awaiting verification",
   unavailable:
     "The agency could not offer a consultation within your window. Choose another window.",
   needs_human:
@@ -212,7 +211,22 @@ export function PublicFormBooking({
       {!loaded && !error && <p role="status">Loading booking status…</p>}
       {loaded && job && (
         <>
-          <p role="status">{messages[job.status]}</p>
+          <p role="status">
+            <strong>{messages[job.status]}</strong>
+          </p>
+          <p>Elderly Savior Homecare LLC · 30-minute Google Meet</p>
+          {job.status === "unknown" && (
+            <p>
+              Check your invitation email or contact the office before
+              requesting another appointment.
+            </p>
+          )}
+          {job.startTime && (
+            <p>
+              {job.status === "confirmed" ? "Appointment" : "Requested start"} ·{" "}
+              {easternTime.format(new Date(job.startTime))}
+            </p>
+          )}
           <p>
             Approved window ·{" "}
             {easternTime.formatRange(
@@ -220,12 +234,17 @@ export function PublicFormBooking({
               new Date(job.windowEnd),
             )}
           </p>
-          {job.startTime && job.status === "confirmed" && (
-            <p>Appointment · {easternTime.format(new Date(job.startTime))}</p>
+          {job.receipt && (
+            <p>
+              {["confirmed", "pending"].includes(job.status)
+                ? "Agency receipt"
+                : "Submission details"}{" "}
+              · {job.receipt}
+            </p>
           )}
-          {job.receipt && ["confirmed", "pending"].includes(job.status) && (
-            <p>Agency receipt · {job.receipt}</p>
-          )}
+          <button type="button" onClick={() => setRevision((n) => n + 1)}>
+            Refresh status
+          </button>
         </>
       )}
       {!historyOnly && canBook && (
