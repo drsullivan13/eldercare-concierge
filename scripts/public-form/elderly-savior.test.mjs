@@ -21,7 +21,7 @@ const job = {
   message: "Fictional test.",
 };
 const dateLabel = "Wed, Jul 1, 2099";
-function fixture(result, terms, destination) {
+function fixture(result, terms, destination, onSubmit = "") {
   return `<main id="calendarAppointmentBookingMain">
     <h4>Client Booking</h4>
     <table><tr><td data-id="2099-7-1" class="selectable vdpCell">1</td></tr></table>
@@ -43,9 +43,10 @@ function fixture(result, terms, destination) {
     document.querySelector('#select').onclick=()=>show('#details');
     document.querySelector('.meeting-location-container').onclick=()=>document.querySelector('.radio-container').classList.add('selected');
     window.submits=0;
-    document.querySelector('#schedule').onclick=()=>{
+    document.querySelector('#schedule').onclick=async ()=>{
       window.submits++;
       window.sent=Array.from(root.querySelectorAll('input,textarea')).map(e=>e.type==='checkbox'?e.checked:e.value);
+      ${onSubmit}
       ${destination ? `location.href=${JSON.stringify(destination)};` : `root.innerHTML=${JSON.stringify(result)};`}
     };
     </script>`;
@@ -160,6 +161,80 @@ test("public-form worker scopes to the office widget and requires office evidenc
     );
     assert.equal(await page.evaluate(() => window.submits), 0);
     assert.equal(witnesses, 4);
+  } finally {
+    await browser.close();
+  }
+});
+
+test("public-form HTTP acknowledgement is diagnostic only and scoped to the clicked office form", async () => {
+  const browser = await chromium.launch(chromiumLaunchOptions);
+  try {
+    const page = await browser.newPage();
+    const endpoint =
+      "https://backend.leadconnectorhq.com/calendars/QnvoAQkNH8HYRfrJk8Ri/event/submit";
+    const post = (url = endpoint, method = "POST") =>
+      `await fetch(${JSON.stringify(url)}, { method: ${JSON.stringify(method)} });`;
+    let html;
+    await page.route("**/*", (route) => {
+      const url = route.request().url();
+      if (url === "https://elderlysaviorhc.com/book-now")
+        return route.fulfill({ contentType: "text/html", body: html });
+      if (url.startsWith("https://backend.leadconnectorhq.com/"))
+        return route.fulfill({
+          status: 201,
+          headers: { "access-control-allow-origin": "*" },
+          body: "Private response body must not appear in the diagnostic.",
+        });
+      return route.abort();
+    });
+    // Unrelated routes and methods finish after the eligible response; they must not overwrite it.
+    for (const [matching, expected] of [
+      [true, 201],
+      [false, null],
+    ]) {
+      const otherCalendar = endpoint.replace(
+        "QnvoAQkNH8HYRfrJk8Ri",
+        "another-calendar",
+      );
+      const script =
+        (matching ? post() : "") +
+        post(otherCalendar) +
+        post(endpoint, "GET") +
+        ";window.releaseWitness?.();";
+      html = fixture(
+        "<p role=alert>Appointment rejected</p>",
+        contact,
+        undefined,
+        script,
+      );
+      const signals = [];
+      const result = await submitApproved(
+        page,
+        job,
+        async () => {
+          // Hold the console signal until after the mocked form has received its response.
+          if (matching)
+            await page.evaluate(() => {
+              const debug = console.debug.bind(console);
+              console.debug = (message) => {
+                window.releaseWitness = () => debug(message);
+              };
+            });
+          // The same endpoint can respond before Harbor attempts the final button.
+          await page.evaluate(
+            (url) => fetch(url, { method: "POST" }).then(() => {}),
+            endpoint,
+          );
+          return true;
+        },
+        (status) => signals.push(status),
+      );
+      assert.equal(result.status, "unknown");
+      assert.equal(await page.evaluate(() => window.submits), 1);
+      assert.deepEqual(signals, matching ? [undefined, 201] : [undefined]);
+      assert.equal(/HTTP 201/.test(result.receipt), expected === 201);
+      assert.doesNotMatch(result.receipt, /Private response body/);
+    }
   } finally {
     await browser.close();
   }

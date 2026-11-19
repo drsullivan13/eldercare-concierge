@@ -385,11 +385,41 @@ async function reviewFields(page, root, job, start) {
 async function observeSubmitClick(page, submit, saveClick) {
   const marker = randomUUID();
   let saved;
+  let bookingRequest, httpStatus;
+  const observeRequest = (request) => {
+    if (
+      bookingRequest ||
+      request.method() !== "POST" ||
+      request.serviceWorker()
+    )
+      return;
+    const url = new URL(request.url());
+    if (
+      url.origin === "https://backend.leadconnectorhq.com" &&
+      url.pathname.replace(/\/$/, "") ===
+        "/calendars/QnvoAQkNH8HYRfrJk8Ri/event/submit" &&
+      ["fetch", "xhr"].includes(request.resourceType()) &&
+      request.frame() === page.mainFrame()
+    )
+      bookingRequest = request;
+  };
+  const persistAcknowledgement = () => {
+    if (saved && httpStatus !== undefined)
+      saved = saved.then(() => saveClick(httpStatus)).catch(() => {});
+  };
+  const observeResponse = (response) => {
+    if (response.request() !== bookingRequest || httpStatus !== undefined)
+      return;
+    httpStatus = response.status();
+    persistAcknowledgement();
+  };
   const observe = (message) => {
-    if (message.type() === "debug" && message.text() === marker && !saved)
+    if (message.type() === "debug" && message.text() === marker && !saved) {
       saved = Promise.resolve()
         .then(saveClick)
         .catch(() => {});
+      persistAcknowledgement();
+    }
   };
   await submit.evaluate((button, marker) => {
     button.addEventListener(
@@ -400,13 +430,24 @@ async function observeSubmitClick(page, submit, saveClick) {
       { once: true, capture: true },
     );
   }, marker);
+  // CDP may deliver the booking request before it delivers the click's console event.
+  // Reconcile the two signals in either order, after the durable claim.
   page.on("console", observe);
+  page.on("request", observeRequest);
+  page.on("response", observeResponse);
   return {
     get observed() {
       return Boolean(saved);
     },
+    get responseDiagnostic() {
+      return !saved || httpStatus === undefined
+        ? ""
+        : `The agency form returned HTTP ${httpStatus}. `;
+    },
     async close() {
       page.off("console", observe);
+      page.off("request", observeRequest);
+      page.off("response", observeResponse);
       await saved;
     },
   };
@@ -445,10 +486,10 @@ export async function submitApproved(
     });
     verifiedPage(page);
     await submit.click({ trial: true });
-    click = await observeSubmitClick(page, submit, saveClick);
     if ((await beforeClick()) !== true) return { status: "needs_human" };
     claimed = true;
     verifiedPage(page);
+    click = await observeSubmitClick(page, submit, saveClick);
     try {
       await submit.click({ timeout: 3000 });
     } catch {
@@ -460,14 +501,19 @@ export async function submitApproved(
         (click.observed
           ? "The browser observed a click on Schedule meeting. "
           : "Harbor could not verify a click on Schedule meeting. ") +
+        click.responseDiagnostic +
         result.receipt;
+    if (result.status !== "unknown" && click.responseDiagnostic)
+      result.receipt += " " + click.responseDiagnostic.trim();
     return result;
   } catch {
     return claimed
       ? {
           status: "unknown",
           receipt: click?.observed
-            ? "The browser observed a click on Schedule meeting. The office response could not be read."
+            ? "The browser observed a click on Schedule meeting. " +
+              click.responseDiagnostic +
+              "The office response could not be read."
             : "Harbor could not verify a click on Schedule meeting.",
         }
       : {
