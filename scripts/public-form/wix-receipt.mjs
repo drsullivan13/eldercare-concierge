@@ -1,3 +1,5 @@
+import { setTimeout as delay } from "node:timers/promises";
+
 // Observe the request made by the provider's own button. Never issue or replay a booking request.
 const bookingPath =
   "https://www.wellcarenurses.com/_api/bookings-service/v2/bulk/bookings/create";
@@ -30,6 +32,8 @@ function sameSlot(slot, start) {
 }
 export function observeWixReceipt(page, start) {
   let evidence;
+  let reference;
+  let reading;
   const read = async (response) => {
     try {
       const request = response.request();
@@ -46,7 +50,8 @@ export function observeWixReceipt(page, start) {
         !sameSlot(items[0]?.booking?.bookedEntity?.slot, start)
       )
         return;
-      const body = await response.json();
+      reading = response.json();
+      const body = await reading;
       if (body.results?.length !== 1) return;
       const { itemMetadata, item } = body.results[0];
       const booking = item?.booking ?? item;
@@ -57,6 +62,13 @@ export function observeWixReceipt(page, start) {
         !sameSlot(booking?.bookedEntity?.slot, start)
       )
         return;
+      if (
+        !["CONFIRMED", "PENDING", "PENDING_APPROVAL", "CREATED"].includes(
+          booking.status,
+        )
+      )
+        return;
+      reference = id;
       if (booking.status === "CONFIRMED")
         evidence = {
           status: "confirmed",
@@ -65,7 +77,7 @@ export function observeWixReceipt(page, start) {
             id +
             ".",
         };
-      if (["PENDING", "PENDING_APPROVAL", "CREATED"].includes(booking.status))
+      else
         evidence = {
           status: "pending",
           receipt:
@@ -81,6 +93,16 @@ export function observeWixReceipt(page, start) {
   return {
     get evidence() {
       return evidence;
+    },
+    async reference() {
+      if (reading && !reference) {
+        // The browser may paint the receipt before Playwright finishes reading the body.
+        await Promise.race([
+          reading.catch(() => {}),
+          delay(1000, undefined, { ref: false }),
+        ]);
+      }
+      return reference;
     },
     close() {
       page.off("response", read);

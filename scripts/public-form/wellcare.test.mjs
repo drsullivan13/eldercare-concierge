@@ -6,6 +6,8 @@ import { readSlots, submitApproved } from "./wellcare.mjs";
 
 const origin = "https://www.wellcarenurses.com";
 const calendarUrl = origin + "/booking-calendar/free-assessment";
+const createBookingUrl =
+  origin + "/_api/bookings-service/v2/bulk/bookings/create";
 const day = "2026-11-30";
 const job = {
   startTime: "2026-11-30T16:30:00.000Z",
@@ -100,6 +102,10 @@ async function setup(t, options = {}) {
   await page.route("**/*", (route) => {
     const request = route.request();
     requests.push({ url: request.url(), method: request.method() });
+    if (options.bookingResponse && request.url() === createBookingUrl) {
+      requests.at(-1).payload = request.postDataJSON();
+      return route.fulfill({ json: options.bookingResponse });
+    }
     if (request.url() === calendarUrl)
       return route.fulfill({
         contentType: "text/html",
@@ -697,4 +703,93 @@ test("Wix shared endpoint HTTP responses are never treated as provider acknowled
   assert.equal(receipt.status, "unknown");
   assert.deepEqual(state.signals, [[]]);
   assert.doesNotMatch(receipt.receipt, /HTTP|Private response/);
+});
+
+test("a CREATED Wix booking retains its network reference while the receipt shell hydrates or stays pending", async (t) => {
+  for (const hydrate of [true, false]) {
+    await t.test(
+      hydrate ? "hydrates after polling" : "never hydrates",
+      async (t) => {
+        const slot = {
+          serviceId: "fdc44397-89fc-4d88-8dfd-997a4839e0e6",
+          startDate: "2026-11-30T16:30:00.000Z",
+          endDate: "2026-11-30T17:00:00.000Z",
+          timezone: "America/New_York",
+        };
+        const payload = {
+          createBookingsInfo: [{ booking: { bookedEntity: { slot } } }],
+        };
+        const pending =
+          "<section><h2>Request received</h2><p>Awaiting confirmation.</p></section>";
+        const hydrated =
+          "<section><h2>Thanks for booking!</h2><p>Free Assessment</p><p>November 30, 2026 at 11:30 am</p></section>";
+        const { page, requests } = await setup(t, {
+          onSubmit: `
+          await fetch(${JSON.stringify(createBookingUrl)}, {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(${JSON.stringify(payload)})
+          });
+          history.pushState({}, '', '/thank-you-page');
+        `,
+          receipt: pending,
+          bookingResponse: {
+            results: [
+              {
+                itemMetadata: { success: true },
+                item: {
+                  booking: {
+                    id: uuid,
+                    bookedEntity: { slot },
+                    status: "CREATED",
+                  },
+                },
+              },
+            ],
+          },
+        });
+        let polls = 0;
+        page.waitForTimeout = async () => {
+          if (page.url() !== origin + "/thank-you-page") return;
+          if (++polls === 2 && hydrate)
+            await page.locator("main").evaluate((main, html) => {
+              main.innerHTML = html;
+            }, hydrated);
+        };
+        const state = counters();
+        const actual = await submitApproved(
+          page,
+          job,
+          state.claim,
+          state.observed,
+        );
+
+        assert.ok(
+          polls >= 2,
+          "the provisional receipt must be observed past the first poll",
+        );
+        assert.equal(page.url(), origin + "/thank-you-page");
+        assert.doesNotMatch(
+          await page.content(),
+          /reference|[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}/i,
+        );
+        assert.deepEqual(
+          await page.evaluate(() => [window.submits, window.clickTrusted]),
+          [1, [true]],
+        );
+        assert.equal(state.claims, 1);
+        assert.deepEqual(state.signals, [[]]);
+        assert.deepEqual(
+          requests.filter(({ method }) => method === "POST"),
+          [{ url: createBookingUrl, method: "POST", payload }],
+        );
+        assert.deepEqual(actual, {
+          status: hydrate ? "confirmed" : "pending",
+          receipt: hydrate
+            ? `Wellcare confirmed the approved online Free Assessment. Appointment reference: ${uuid}.`
+            : `Wellcare recorded the assessment request. Appointment reference: ${uuid}.`,
+        });
+      },
+    );
+  }
 });
