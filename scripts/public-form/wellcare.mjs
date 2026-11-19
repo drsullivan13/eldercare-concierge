@@ -562,9 +562,10 @@ async function observeReceipt(page, start, network) {
       } else if (network.evidence?.status === "confirmed") {
         return network.evidence;
       } else if (confirmed) {
-        if (reference && network.reference && reference !== network.reference)
+        const createdReference = await network.reference();
+        if (reference && createdReference && reference !== createdReference)
           return result("unknown");
-        reference ??= network.reference;
+        reference ??= createdReference;
         const receipt = result("confirmed");
         if (reference)
           receipt.receipt += ` Appointment reference: ${reference}.`;
