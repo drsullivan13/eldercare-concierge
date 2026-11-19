@@ -97,15 +97,24 @@ test(
         page.getByText(/Harbor received your approval/),
       ).toBeVisible();
       await expect(book).toHaveCount(0);
-      Object.assign(job!, { status: "unknown" });
+      Object.assign(job!, {
+        status: "unknown",
+        startTime: "2026-11-30T15:15:00Z",
+      });
       await page.clock.fastForward(4000);
-      await expect(page.getByText(/outcome is unclear/)).toBeVisible();
+      await expect(page.getByRole("status")).toHaveText(
+        "Awaiting verification",
+      );
+      await expect(page.getByText(/Requested start ·/)).toContainText("10:15");
       await expect(book).toHaveCount(0);
       Object.assign(job!, {
         status: "confirmed",
         startTime: "2026-11-30T15:15:00Z",
         receipt: "Office receipt 123",
       });
+      await page.getByRole("button", { name: "Refresh status" }).click();
+      await expect(page.getByRole("status")).toHaveText("Scheduled");
+      await expect(page.getByText(/Requested start ·/)).toHaveCount(0);
       await page.evaluate(() => {
         location.hash = "plan";
       });

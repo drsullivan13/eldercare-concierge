@@ -43,7 +43,7 @@ export async function runJob(
   submit = submitApproved,
 ) {
   let browser;
-  let clicked = false;
+  let claimed = false;
   let result;
   try {
     browser = await launch();
@@ -66,24 +66,25 @@ export async function runJob(
           message: "Please send the consultation details to my email.",
         },
         async () => {
-          if (clicked) return false;
-          clicked = await store.markSubmitting(job, startTime);
-          return clicked;
+          if (claimed) return false;
+          claimed = await store.markSubmitting(job, startTime);
+          return claimed;
         },
+        () => store.markClickObserved(job),
       );
   } catch {
-    result = { status: clicked ? "unknown" : "needs_human" };
+    result = { status: claimed ? "unknown" : "needs_human" };
   } finally {
     await browser?.close().catch(() => {});
   }
-  if (clicked && !["confirmed", "pending", "unknown"].includes(result.status))
+  if (claimed && !["confirmed", "pending", "unknown"].includes(result.status))
     result = { status: "unknown" };
   if (
-    !clicked &&
+    !claimed &&
     !["unavailable", "failed", "needs_human"].includes(result.status)
   )
     result = { status: "failed" };
-  await store.finish(job, result.status, result.receipt, clicked);
+  await store.finish(job, result.status, result.receipt, claimed);
   return result.status;
 }
 

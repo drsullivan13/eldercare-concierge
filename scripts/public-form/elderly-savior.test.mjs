@@ -21,7 +21,7 @@ const job = {
   message: "Fictional test.",
 };
 const dateLabel = "Wed, Jul 1, 2099";
-function fixture(result, terms) {
+function fixture(result, terms, destination) {
   return `<main id="calendarAppointmentBookingMain">
     <h4>Client Booking</h4>
     <table><tr><td data-id="2099-7-1" class="selectable vdpCell">1</td></tr></table>
@@ -46,7 +46,7 @@ function fixture(result, terms) {
     document.querySelector('#schedule').onclick=()=>{
       window.submits++;
       window.sent=Array.from(root.querySelectorAll('input,textarea')).map(e=>e.type==='checkbox'?e.checked:e.value);
-      root.innerHTML=${JSON.stringify(result)};
+      ${destination ? `location.href=${JSON.stringify(destination)};` : `root.innerHTML=${JSON.stringify(result)};`}
     };
     </script>`;
 }
@@ -68,7 +68,15 @@ test("public-form worker scopes to the office widget and requires office evidenc
       claims++;
       return true;
     };
-    assert.equal((await submitApproved(page, job, claim)).status, "confirmed");
+    let witnesses = 0;
+    const observed = () => {
+      witnesses++;
+    };
+    assert.equal(
+      (await submitApproved(page, job, claim, observed)).status,
+      "confirmed",
+    );
+    assert.equal(witnesses, 1);
     assert.equal(claims, 1);
     assert.deepEqual(
       await page.evaluate(() => [
@@ -90,25 +98,68 @@ test("public-form worker scopes to the office widget and requires office evidenc
         "",
       ],
     );
+    for (const [url, body, expected] of [
+      [
+        "https://elderlysaviorhc.com/appointment-receipt",
+        confirmed,
+        "confirmed",
+      ],
+      ["https://example.invalid/appointment-receipt", confirmed, "unknown"],
+    ]) {
+      await page.route(url, (route) =>
+        route.fulfill({
+          contentType: "text/html",
+          body: "<main>" + body + "</main>",
+        }),
+      );
+      html = fixture("", contact, url);
+      assert.equal(
+        (await submitApproved(page, job, claim, observed)).status,
+        expected,
+      );
+    }
     html = fixture(confirmed.replace("10:00 AM", "11:00 AM"), contact);
-    assert.equal((await submitApproved(page, job, claim)).status, "unknown");
+    const mismatch = await submitApproved(page, job, claim, observed);
+    assert.equal(mismatch.status, "unknown");
+    assert.match(mismatch.receipt, /browser observed a click/);
     html = fixture(
       "<h3>Request received</h3>We will contact you to confirm.",
       contact,
     );
     assert.equal((await submitApproved(page, job, claim)).status, "pending");
+    html = fixture(
+      confirmed + "<p role=alert>We cannot confirm this appointment.</p>",
+      contact,
+    );
+    const rejection = await submitApproved(page, job, claim);
+    assert.equal(rejection.status, "unknown");
+    assert.match(rejection.receipt, /booking or validation error/);
+    html = fixture(confirmed, contact);
+    const neverClicked = await submitApproved(
+      page,
+      job,
+      async () => {
+        await page.goto("https://example.invalid/appointment-receipt");
+        return true;
+      },
+      observed,
+    );
+    assert.equal(neverClicked.status, "unknown");
+    assert.match(neverClicked.receipt, /could not verify a click/);
+    const before = claims;
     html = fixture(confirmed, contact + " Different terms.");
     assert.equal(
       (await submitApproved(page, job, claim)).status,
       "needs_human",
     );
-    assert.equal(claims, 3);
+    assert.equal(claims, before);
     html = fixture(confirmed, contact);
     assert.equal(
-      (await submitApproved(page, job, async () => false)).status,
+      (await submitApproved(page, job, async () => false, observed)).status,
       "needs_human",
     );
     assert.equal(await page.evaluate(() => window.submits), 0);
+    assert.equal(witnesses, 4);
   } finally {
     await browser.close();
   }

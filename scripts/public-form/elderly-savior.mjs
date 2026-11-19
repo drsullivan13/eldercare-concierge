@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 // This adapter drives the same public, mobile calendar a family uses. It has no agency API credentials.
 const bookingUrl = "https://elderlysaviorhc.com/book-now";
 const widget = "#calendarAppointmentBookingMain";
@@ -37,6 +38,193 @@ function verifiedPage(page) {
     url.pathname.replace(/\/$/, "") !== "/book-now"
   )
     throw new Error("Unexpected booking page");
+}
+
+function trustedReceiptUrl(value) {
+  try {
+    const url = new URL(value);
+    return (
+      url.protocol === "https:" &&
+      url.origin === new URL(bookingUrl).origin &&
+      !url.username &&
+      !url.password
+    );
+  } catch {
+    return false;
+  }
+}
+
+function receiptResult(status) {
+  // The worker stores and forwards this string. Never include page text, URLs or errors.
+  const messages = {
+    confirmed:
+      "Office calendar confirmed the approved Google Meet consultation.",
+    pending: "Office calendar reported a request pending confirmation.",
+    unknown: "Office calendar confirmation could not be verified.",
+  };
+  return { status, receipt: messages[status] };
+}
+
+async function observeReceipt(page, start) {
+  const dates = [
+    dayLabel(start, "short", "short"),
+    dayLabel(start, "long"),
+    dayLabel(start, "short"),
+  ];
+  const time = timeFormat.format(start);
+  const deadline = Date.now() + 15_000;
+  // Poll across document replacement, not a stale locator or a disappearing submit button.
+  // Both the deadline and sample count bound observation; submission is never retried.
+  for (let sample = 0; sample <= 60; sample++) {
+    if (!trustedReceiptUrl(page.url())) return receiptResult("unknown");
+    try {
+      const snapshot = await page.evaluate((widget) => {
+        const root = document.querySelector(widget);
+        const scope = root || document.body;
+        if (!scope) return { url: location.href, regions: [] };
+        const boundaries =
+          "main, [role=main], section, article, [role=dialog], [role=status], [role=alert]";
+        const regions = new Set(scope.querySelectorAll(boundaries));
+        if (root) regions.add(root);
+        // A plain div wrapping a receipt heading is also a region, never the whole body.
+        const headings = scope.querySelectorAll(
+          "h1,h2,h3,h4,h5,h6,[role=heading]",
+        );
+        for (const heading of headings) {
+          const parent = heading.parentElement;
+          if (parent !== document.body && parent !== document.documentElement)
+            regions.add(
+              parent.matches("header") ? parent.closest(boundaries) : parent,
+            );
+        }
+        regions.delete(null);
+        const excluded =
+          "footer,nav,aside,[role=contentinfo],[role=navigation],script,style,template,noscript,[hidden],[aria-hidden=true],[inert]";
+        const rendered = {
+          text(element, owned = false) {
+            const walker = document.createTreeWalker(
+              element,
+              NodeFilter.SHOW_TEXT,
+            );
+            const parts = [];
+            for (let node; (node = walker.nextNode());) {
+              if (!node.textContent.trim()) continue;
+              let visible = true;
+              for (let p = node.parentElement; p; p = p.parentElement) {
+                const style = getComputedStyle(p);
+                if (
+                  p.matches(excluded) ||
+                  style.display === "none" ||
+                  style.visibility !== "visible" ||
+                  Number(style.opacity) === 0 ||
+                  style.contentVisibility === "hidden" ||
+                  style.clip !== "auto" ||
+                  style.clipPath !== "none" ||
+                  (owned &&
+                    p !== element &&
+                    element.contains(p) &&
+                    regions.has(p) &&
+                    !p.matches("[role=status],[role=alert]"))
+                ) {
+                  visible = false;
+                  break;
+                }
+              }
+              const range = document.createRange();
+              range.selectNodeContents(node);
+              if (visible && range.getClientRects().length)
+                parts.push(node.textContent);
+            }
+            return parts.join(" ").replace(/\s+/g, " ").trim();
+          },
+        };
+        return {
+          url: location.href,
+          invalid:
+            root &&
+            [
+              ...root.querySelectorAll("[aria-invalid=true], :user-invalid"),
+            ].some((field) =>
+              field.checkVisibility({
+                checkOpacity: true,
+                checkVisibilityCSS: true,
+              }),
+            ),
+          regions: [...regions].map((region) => {
+            const text = rendered.text(region, true);
+            const confirmed = [
+              ...region.querySelectorAll("h1,h2,h3,h4,h5,h6,[role=heading]"),
+            ].some((heading) => {
+              let owner = heading.parentElement;
+              while (owner && !regions.has(owner)) owner = owner.parentElement;
+              return (
+                owner === region &&
+                /^(?:your )?(?:appointment|meeting|booking|consultation) (?:is |has been )?confirmed[!.]?$/i.test(
+                  rendered.text(heading),
+                )
+              );
+            });
+            return { text, confirmed, widget: !!root };
+          }),
+        };
+      }, widget);
+      if (!trustedReceiptUrl(snapshot.url) || !trustedReceiptUrl(page.url()))
+        return receiptResult("unknown");
+      if (snapshot.url !== page.url()) continue;
+      let confirmed = false;
+      let pending = false;
+      let rejected = Boolean(snapshot.invalid);
+      for (const region of snapshot.regions) {
+        const text = normalize(region.text);
+        if (
+          !region.widget &&
+          !region.confirmed &&
+          !/\b(?:appointment|meeting|booking|consultation)\b/i.test(text)
+        )
+          continue;
+        rejected ||=
+          /\b(?:not confirmed|(?:booking|appointment|meeting|consultation|scheduling)(?: (?:is|was|has been))? (?:failed|rejected|declined|cancelled|canceled|unsuccessful)|(?:(?:unable|failed) to|could not|cannot|can't) (?:book|schedule|confirm)|(?:slot|time).{0,30}(?:unavailable|no longer available)|something went wrong)\b/i.test(
+            text,
+          );
+        pending ||=
+          /\b(?:(?:will|need to|needs to|must).{0,50}confirm|pending confirmation|awaiting confirmation|request (?:was |has been )?received|(?:appointment|meeting|booking|consultation) (?:is )?pending)\b/i.test(
+            text,
+          );
+        const times = [
+          ...text.matchAll(/(?<![\w:])\d{1,2}:\d{2}\s*[AP]M(?![\w:])/gi),
+        ].map(([value]) => value.toUpperCase().padStart(8, "0"));
+        // Never accept the requested start when it appears only as the end of another appointment.
+        const hasTime =
+          times[0] === time &&
+          (times.length === 1 ||
+            (times.length === 2 &&
+              times[1] === timeFormat.format(new Date(+start + 30 * 60_000))));
+        confirmed ||=
+          region.confirmed &&
+          dates.some((date) =>
+            new RegExp(`(?:^|[^\\w])${date}(?=$|[^\\w])`).test(text),
+          ) &&
+          hasTime &&
+          /(?:^|[^\w/])America\/New_York(?=$|[^\w/])/.test(text) &&
+          /\bGoogle Meet\b/.test(text);
+      }
+      // Negative or provisional evidence always outranks a simultaneous success heading.
+      if (rejected)
+        return {
+          status: "unknown",
+          receipt: "The agency form reported a booking or validation error.",
+        };
+      if (pending) return receiptResult("pending");
+      if (confirmed) return receiptResult("confirmed");
+    } catch {
+      // Navigation can destroy the execution context between samples.
+    }
+    if (sample === 60 || Date.now() >= deadline) break;
+    await page.waitForTimeout(
+      Math.max(0, Math.min(250, deadline - Date.now())),
+    );
+  }
+  return receiptResult("unknown");
 }
 
 function slotInstant(date, label) {
@@ -192,7 +380,44 @@ async function reviewFields(page, root, job, start) {
   return (await required.isChecked()) && !(await optional.isChecked());
 }
 
-export async function submitApproved(page, job, beforeClick) {
+// Observe the real, trusted click separately from the durable permission to attempt it.
+// The opaque marker survives navigation through Playwright's console channel. No form data is retained.
+async function observeSubmitClick(page, submit, saveClick) {
+  const marker = randomUUID();
+  let saved;
+  const observe = (message) => {
+    if (message.type() === "debug" && message.text() === marker && !saved)
+      saved = Promise.resolve()
+        .then(saveClick)
+        .catch(() => {});
+  };
+  await submit.evaluate((button, marker) => {
+    button.addEventListener(
+      "click",
+      (event) => {
+        if (event.isTrusted) console.debug(marker);
+      },
+      { once: true, capture: true },
+    );
+  }, marker);
+  page.on("console", observe);
+  return {
+    get observed() {
+      return Boolean(saved);
+    },
+    async close() {
+      page.off("console", observe);
+      await saved;
+    },
+  };
+}
+
+export async function submitApproved(
+  page,
+  job,
+  beforeClick,
+  saveClick = () => {},
+) {
   if (
     job?.consentVersion !== consentVersion ||
     job.meeting !== "Google Meet" ||
@@ -201,6 +426,7 @@ export async function submitApproved(page, job, beforeClick) {
   )
     return { status: "needs_human" };
   let claimed = false;
+  let click;
   try {
     const start = new Date(job.startTime);
     if (!Number.isFinite(+start) || +start <= Date.now())
@@ -219,50 +445,36 @@ export async function submitApproved(page, job, beforeClick) {
     });
     verifiedPage(page);
     await submit.click({ trial: true });
+    click = await observeSubmitClick(page, submit, saveClick);
     if ((await beforeClick()) !== true) return { status: "needs_human" };
     claimed = true;
     verifiedPage(page);
-    await submit.click({ timeout: 3000 });
-    // Wait for the office's receipt in this calendar, never infer success from a click or a vanished slot.
-    await submit.waitFor({ state: "hidden", timeout: 10000 });
-    await root
-      .getByText(/confirmed|thank you|requested|received/i)
-      .first()
-      .waitFor({ timeout: 5000 });
-    verifiedPage(page);
-    const text = normalize(await root.innerText());
-    if (
-      /will.{0,50}confirm|pending confirmation|request (?:was |has been )?received/i.test(
-        text,
-      )
-    )
-      return { status: "pending" };
-    const dates = [
-      dayLabel(start, "short", "short"),
-      dayLabel(start, "long"),
-      dayLabel(start, "short"),
-    ];
-    const explicit = await root
-      .getByRole("heading", {
-        name: /^(?:your )?(?:appointment|meeting|booking|consultation) (?:is |has been )?confirmed[!.]?$/i,
-      })
-      .isVisible();
-    if (
-      explicit &&
-      dates.some((d) => text.includes(d)) &&
-      text.includes(timeFormat.format(start)) &&
-      text.includes(timezone) &&
-      text.includes("Google Meet")
-    ) {
-      return {
-        status: "confirmed",
-        receipt:
-          "Office calendar confirmed a Google Meet consultation at " +
-          start.toISOString(),
-      };
+    try {
+      await submit.click({ timeout: 3000 });
+    } catch {
+      // A click error may follow a successful submission/navigation. Observe, never resubmit.
     }
-    return { status: "unknown" };
+    const result = await observeReceipt(page, start);
+    if (result.status === "unknown")
+      result.receipt =
+        (click.observed
+          ? "The browser observed a click on Schedule meeting. "
+          : "Harbor could not verify a click on Schedule meeting. ") +
+        result.receipt;
+    return result;
   } catch {
-    return { status: claimed ? "unknown" : "needs_human" };
+    return claimed
+      ? {
+          status: "unknown",
+          receipt: click?.observed
+            ? "The browser observed a click on Schedule meeting. The office response could not be read."
+            : "Harbor could not verify a click on Schedule meeting.",
+        }
+      : {
+          status: "needs_human",
+          receipt: "Harbor stopped before attempting the final booking click.",
+        };
+  } finally {
+    await click?.close();
   }
 }
