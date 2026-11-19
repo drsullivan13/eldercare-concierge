@@ -77,6 +77,7 @@ function FactsEditor({
     const controller = new AbortController();
     async function load() {
       setLoading(true);
+      setOwner("");
       setError("");
       try {
         const response = await fetch(
@@ -101,7 +102,6 @@ function FactsEditor({
           throw new Error();
         if (!controller.signal.aborted) {
           if (initialOwner.current && initialOwner.current !== data.owner) {
-            setOwner("");
             setError(
               "The signed-in account changed. Reload this page before saving. Your draft is retained.",
             );
@@ -113,7 +113,6 @@ function FactsEditor({
         }
       } catch {
         if (!controller.signal.aborted) {
-          setOwner("");
           setError(
             "Could not load private facts. Your draft is retained. Retry loading before saving.",
           );
@@ -169,16 +168,21 @@ function FactsEditor({
         redirect: "error",
         body: JSON.stringify(attempt),
       });
-      const data = await response.json();
-      if (response.status === 409) {
+      if ([401, 403, 409].includes(response.status)) {
         setOwner("");
         throw new Error(
           "The account or saved record changed. Reload this page before saving. Your draft is retained.",
         );
       }
+      const data = await response.json();
+      if (response.ok && data?.owner !== attempt.expectedOwner) {
+        setOwner("");
+        throw new Error(
+          "Could not verify the signed-in account. Refresh private facts before saving. Your draft is retained.",
+        );
+      }
       if (
         !response.ok ||
-        data.owner !== attempt.expectedOwner ||
         !isFact(data.fact, requestId, providerId) ||
         Object.entries(attempt.fact).some(
           ([key, value]) => data.fact[key] !== value,
@@ -209,7 +213,7 @@ function FactsEditor({
     }
   }
   const today = new Date().toISOString().slice(0, 10);
-  const matching = facts.filter((fact) => fact.careZip === zip);
+  const matching = owner ? facts.filter((fact) => fact.careZip === zip) : [];
   return (
     <div className={styles.editor}>
       <p className="small muted">
@@ -350,7 +354,9 @@ function FactsEditor({
         Refresh private facts
       </button>
       <h4>Evidence for {/^\d{5}$/.test(zip) ? zip : "a care ZIP"}</h4>
-      {!matching.length && <p>No private responses recorded for this ZIP.</p>}
+      {owner && !matching.length && (
+        <p>No private responses recorded for this ZIP.</p>
+      )}
       {summarizeInquiryFacts(matching, today).map(
         ({ kind: key, status, facts: rows }) => {
           if (!rows.length) return null;

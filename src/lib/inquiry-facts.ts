@@ -97,32 +97,25 @@ export function summarizeInquiryFacts(
 ) {
   return INQUIRY_FACT_KINDS.map((kind) => {
     const history = facts.filter((f) => f.kind === kind);
-    const latest =
-      [...history]
-        .sort((a, b) => a.checkedOn.localeCompare(b.checkedOn))
-        .at(-1) ?? null;
-    const current = history.filter(
-      (f) =>
-        f.value !== null &&
-        f.validUntil !== null &&
-        f.checkedOn <= today &&
-        f.validUntil >= today,
-    );
-    const values = new Set(
-      current.map((f) =>
-        kind === "hourly_rate" || kind === "minimum_hours"
-          ? String(Number(f.value))
-          : f.value,
-      ),
-    );
-    const status: "unknown" | "stale" | "reported" | "conflicting" =
-      values.size > 1
-        ? "conflicting"
-        : !latest || latest.value === null || latest.validUntil === null
-          ? "unknown"
-          : latest.validUntil < today
-            ? "stale"
-            : "reported";
+    let latest: InquiryFact | null = null;
+    const numeric = kind === "hourly_rate" || kind === "minimum_hours";
+    const values = new Set<string>();
+    for (const fact of history) {
+      if (!latest || fact.checkedOn >= latest.checkedOn) latest = fact;
+      if (
+        fact.value !== null &&
+        fact.validUntil !== null &&
+        fact.checkedOn <= today &&
+        fact.validUntil >= today
+      ) {
+        values.add(numeric ? String(Number(fact.value)) : fact.value);
+      }
+    }
+    let status: "unknown" | "stale" | "reported" | "conflicting" = "unknown";
+    if (values.size > 1) status = "conflicting";
+    else if (latest && latest.value !== null && latest.validUntil !== null) {
+      status = latest.validUntil < today ? "stale" : "reported";
+    }
     return { kind, status, facts: history, latest };
   });
 }

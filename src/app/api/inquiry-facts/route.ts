@@ -1,3 +1,4 @@
+import { PayloadTooLarge, readBoundedJson } from "@/lib/read-bounded-json";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 import { isSameOriginRequest } from "@/lib/request-origin";
 import {
@@ -75,28 +76,6 @@ export async function GET(request: Request) {
     );
   }
 }
-async function boundedBody(request: Request): Promise<unknown> {
-  if (!request.body) throw Error("Invalid JSON");
-  const reader = request.body.getReader();
-  const decoder = new TextDecoder();
-  let bytes = 0,
-    text = "";
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      bytes += value.byteLength;
-      if (bytes > 4096) {
-        await reader.cancel();
-        throw Error("TOO_LARGE");
-      }
-      text += decoder.decode(value, { stream: true });
-    }
-    return JSON.parse(text + decoder.decode());
-  } finally {
-    reader.releaseLock();
-  }
-}
 export async function POST(request: Request) {
   const headers = new Headers();
   if (!isSameOriginRequest(request))
@@ -117,11 +96,11 @@ export async function POST(request: Request) {
     if (auth.error) return auth.error;
     let body;
     try {
-      body = await boundedBody(request);
+      body = await readBoundedJson(request, 4096);
     } catch (error) {
       return response(
         { error: "Invalid or oversized payload." },
-        error instanceof Error && error.message === "TOO_LARGE" ? 413 : 400,
+        error instanceof PayloadTooLarge ? 413 : 400,
         headers,
       );
     }

@@ -1,3 +1,4 @@
+import { PayloadTooLarge, readBoundedJson } from "@/lib/read-bounded-json";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 import { MAX_WORKSPACE_BYTES, validateWorkspace } from "@/lib/workspace";
 import {
@@ -109,29 +110,6 @@ export async function GET() {
   }
 }
 
-async function boundedBody(request: Request) {
-  if (!request.body) throw new Error("EMPTY");
-  const reader = request.body.getReader();
-  const decoder = new TextDecoder();
-  let size = 0,
-    text = "";
-  try {
-    while (true) {
-      const { value, done } = await reader.read();
-      if (done) break;
-      size += value.byteLength;
-      if (size > MAX_WORKSPACE_BYTES + 1024) {
-        await reader.cancel();
-        throw new Error("TOO_LARGE");
-      }
-      text += decoder.decode(value, { stream: true });
-    }
-    return JSON.parse(text + decoder.decode()) as unknown;
-  } finally {
-    reader.releaseLock();
-  }
-}
-
 export async function PUT(request: Request) {
   const headers = new Headers();
   if (!isSameOriginRequest(request)) {
@@ -154,16 +132,16 @@ export async function PUT(request: Request) {
     if (auth.error) return auth.error;
     let body: unknown;
     try {
-      body = await boundedBody(request);
+      body = await readBoundedJson(request, MAX_WORKSPACE_BYTES + 1024);
     } catch (error) {
       return response(
         {
           error:
-            error instanceof Error && error.message === "TOO_LARGE"
+            error instanceof PayloadTooLarge
               ? "Workspace payload is too large."
               : "Invalid JSON payload.",
         },
-        error instanceof Error && error.message === "TOO_LARGE" ? 413 : 400,
+        error instanceof PayloadTooLarge ? 413 : 400,
         headers,
       );
     }
