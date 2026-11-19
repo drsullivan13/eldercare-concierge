@@ -1,4 +1,5 @@
 "use client";
+import { PublicFormBooking } from "./dashboard/public-form-booking";
 import {
   AgencyConsultation,
   ConsultationHistory,
@@ -955,6 +956,9 @@ function WorkspaceDashboard({
                 notify={notify}
               />
               {!demo && <ConsultationHistory />}
+              {!demo && email && (
+                <PublicFormBooking key={email} email={email} historyOnly />
+              )}
               <HomeCareOutreachPlan
                 records={workspace.homeCareOutreach ?? {}}
                 open={(id) => {
