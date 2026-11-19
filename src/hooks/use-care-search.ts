@@ -4,7 +4,6 @@ import { DEFAULT_DASHBOARD_SEARCH_ZIP } from "@/lib/dashboard-defaults";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type {
   CompactSearchResponse,
-  CardSearchResponse,
   SearchProvider,
   SearchCard,
   Provider,
@@ -22,10 +21,53 @@ type SearchFields = {
   evidence: string;
 };
 
+type DashboardSearchResult = Omit<SearchResponse, "providers"> & {
+  providers: (SearchProvider | SearchCard)[];
+  pagination?: CompactSearchResponse["pagination"];
+  markers?: SearchMarker[];
+};
+
+async function fetchSearchPage(
+  fields: SearchFields,
+  page: number,
+  signal: AbortSignal,
+): Promise<DashboardSearchResult> {
+  const params = new URLSearchParams({
+    ...fields,
+    response: "cards",
+    page: String(page),
+    pageSize: "18",
+  });
+  const response = await fetch(`/api/search?${params}`, { signal });
+  const result = await response.json();
+  if (!response.ok)
+    throw new Error(
+      result.error ||
+        (page === 1
+          ? "Search is unavailable right now."
+          : "More options could not be loaded."),
+    );
+  return result;
+}
+
 function compatibleEvidence(fields: SearchFields): SearchFields {
   return fields.category !== "home-care" && fields.evidence === "service-area"
     ? { ...fields, evidence: "all" }
     : fields;
+}
+
+export async function fetchSearchProvider(
+  id: string,
+  market: string,
+  signal: AbortSignal,
+): Promise<Provider | undefined> {
+  const response = await fetch(
+    `/api/providers?${new URLSearchParams({ ids: id, market })}`,
+    { signal },
+  );
+  if (!response.ok) return;
+  const { providers }: { providers: Provider[] } = await response.json();
+  return providers.find((provider) => provider.id === id);
 }
 
 /** Keeps edits separate from the last submitted search and cancels stale requests. */
@@ -48,14 +90,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
     fields: SearchFields;
     status: "pending" | "succeeded" | "failed";
   }>({ fields: request, status: "pending" });
-  const [data, setData] = useState<
-    | (Omit<SearchResponse, "providers"> & {
-        providers: (SearchProvider | SearchCard)[];
-        pagination?: CompactSearchResponse["pagination"];
-        markers?: SearchMarker[];
-      })
-    | null
-  >(null);
+  const [data, setData] = useState<DashboardSearchResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [displayCount, setDisplayCount] = useState(18);
@@ -73,15 +108,7 @@ export function useCareSearch(profile: Workspace["profile"]) {
       !controller.signal.aborted && submitted.current.fields === request;
     async function load() {
       try {
-        const response = await fetch(
-          `/api/search?${new URLSearchParams({ ...request, response: "cards", page: "1", pageSize: "18" })}`,
-          {
-            signal: controller.signal,
-          },
-        );
-        const result = await response.json();
-        if (!response.ok)
-          throw new Error(result.error || "Search is unavailable right now.");
+        const result = await fetchSearchPage(request, 1, controller.signal);
         if (current()) {
           submitted.current.status = "succeeded";
           setData(result);
@@ -171,20 +198,11 @@ export function useCareSearch(profile: Workspace["profile"]) {
     const current = () =>
       !controller.signal.aborted && submitted.current.fields === fields;
     try {
-      const response = await fetch(
-        `/api/search?${new URLSearchParams({
-          ...fields,
-          response: "cards",
-          page: String(pagination.page + 1),
-          pageSize: "18",
-        })}`,
-        { signal: controller.signal },
+      const result = await fetchSearchPage(
+        fields,
+        pagination.page + 1,
+        controller.signal,
       );
-      const result: (CompactSearchResponse | CardSearchResponse) & {
-        error?: string;
-      } = await response.json();
-      if (!response.ok)
-        throw new Error(result.error || "More options could not be loaded.");
       if (result.pagination?.page !== pagination.page + 1)
         throw new Error("More options could not be loaded.");
       if (!current()) return;
@@ -240,16 +258,11 @@ export function useCareSearch(profile: Workspace["profile"]) {
       }
       setProviderLoading(true);
       try {
-        const response = await fetch(
-          `/api/providers?${new URLSearchParams({ ids: marker.id, market: data.market.id })}`,
-          { signal: controller.signal },
+        const provider = await fetchSearchProvider(
+          marker.id,
+          data.market.id,
+          controller.signal,
         );
-        if (!response.ok)
-          throw new Error(
-            "This option could not be opened. Select it again to retry.",
-          );
-        const result: { providers: Provider[] } = await response.json();
-        const provider = result.providers.find((item) => item.id === marker.id);
         if (!provider)
           throw new Error(
             "This option could not be opened. Select it again to retry.",

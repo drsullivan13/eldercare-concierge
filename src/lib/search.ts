@@ -43,12 +43,17 @@ export const catalog: Provider[] = getMarket()!.providers;
 const categoryKeys = Object.keys(CATEGORY_LABELS) as CareCategory[];
 
 export { distanceMiles } from "./distance";
-function runSearch(
+type MatchDetails = Pick<
+  SearchProvider,
+  "distanceMiles" | "serviceAreaMatch" | "research"
+>;
+type SearchMatch = MatchDetails & { provider: Provider };
+
+function rankSearchMatches(
   input: URLSearchParams | SearchOptions = {},
   records?: readonly Provider[],
   registry: MarketRegistry = markets,
-  page?: { page: number; pageSize: number },
-): SearchResponse | CompactSearchResponse | CardSearchResponse {
+) {
   const opts =
     input instanceof URLSearchParams
       ? searchParameters(input, "search")
@@ -94,12 +99,7 @@ function runSearch(
   const categories: Record<string, number> = Object.fromEntries(
     categoryKeys.map((key) => [key, 0]),
   );
-  const providers: {
-    provider: Provider;
-    research: SearchProvider["research"];
-    distanceMiles: number | null;
-    serviceAreaMatch?: boolean;
-  }[] = [];
+  const providers: SearchMatch[] = [];
   const experienceCoverage = {
     scored: 0,
     unscored: 0,
@@ -112,12 +112,10 @@ function runSearch(
     if (provider.state !== market.state) continue;
     catalogTotal++;
     if (query && !providerSearchText(provider).includes(query)) continue;
-    const searchableCategories = [
-      ...new Set([provider.category, ...(provider.searchCategories ?? [])]),
-    ];
     const matchesCategory =
       category === "all" ||
-      searchableCategories.includes(category as CareCategory);
+      provider.category === category ||
+      provider.searchCategories?.includes(category);
     const serviceAreaMatch = matchesHomeCareServiceArea(
       provider,
       zip,
@@ -148,7 +146,12 @@ function runSearch(
       excludedWithoutCoordinates++;
       continue;
     }
-    for (const key of searchableCategories) categories[key]++;
+    categories[provider.category]++;
+    if (provider.searchCategories?.length) {
+      for (const key of new Set(provider.searchCategories)) {
+        if (key !== provider.category) categories[key]++;
+      }
+    }
     if (matchesCategory) {
       providers.push({
         provider,
@@ -192,37 +195,7 @@ function runSearch(
   });
   return {
     market: marketIdentity(market),
-    providers: (page
-      ? providers.slice(
-          (page.page - 1) * page.pageSize,
-          page.page * page.pageSize,
-        )
-      : providers
-    ).map(({ provider, ...match }) => ({ ...provider, ...match })),
-    ...(page && {
-      markers:
-        page.page === 1
-          ? providers.map<SearchMarker>(
-              ({ provider, distanceMiles, serviceAreaMatch }) => ({
-                id: provider.id,
-                name: provider.name,
-                category: provider.category,
-                city: provider.city,
-                state: provider.state,
-                lat: provider.lat,
-                lng: provider.lng,
-                locationKind: provider.locationKind,
-                distanceMiles,
-                ...(serviceAreaMatch && { serviceAreaMatch: true }),
-              }),
-            )
-          : undefined,
-      pagination: {
-        ...page,
-        totalPages: Math.ceil(providers.length / page.pageSize),
-        hasMore: page.page * page.pageSize < providers.length,
-      },
-    }),
+    providers,
     total: providers.length,
     origin: { zip, ...point },
     radius,
@@ -233,12 +206,17 @@ function runSearch(
     experienceCoverage,
   };
 }
+function fullProvider({ provider, ...match }: SearchMatch): SearchProvider {
+  return { ...provider, ...match };
+}
+
 export function searchProviders(
   input: URLSearchParams | SearchOptions = {},
   records?: readonly Provider[],
   registry: MarketRegistry = markets,
 ): SearchResponse {
-  return runSearch(input, records, registry) as SearchResponse;
+  const result = rankSearchMatches(input, records, registry);
+  return { ...result, providers: result.providers.map(fullProvider) };
 }
 
 /** Opt-in HTTP shape; all legacy parameters remain validated by the search parser. */
@@ -268,12 +246,26 @@ export function searchResponse(
   const page = integer("page", 1, 10000);
   const pageSize = integer("pageSize", 18, 48);
   for (const key of ["response", "page", "pageSize"]) params.delete(key);
-  const result = runSearch(params, undefined, markets, {
-    page,
-    pageSize,
-  }) as CompactSearchResponse;
-  if (response !== "cards") return result;
-  return { ...result, providers: result.providers.map(projectSearchCard) };
+  const { market, providers, ...summary } = rankSearchMatches(params);
+  const matches = providers.slice((page - 1) * pageSize, page * pageSize);
+  const pageInfo = {
+    markers:
+      page === 1
+        ? providers.map((match) => searchMarker(match.provider, match))
+        : undefined,
+    pagination: {
+      page,
+      pageSize,
+      totalPages: Math.ceil(summary.total / pageSize),
+      hasMore: page * pageSize < summary.total,
+    },
+    ...summary,
+  };
+  if (response === "cards") {
+    const cards = matches.map((match) => cardFromMatch(match.provider, match));
+    return { market, providers: cards, ...pageInfo };
+  }
+  return { market, providers: matches.map(fullProvider), ...pageInfo };
 }
 
 export function getProvidersByIds(
@@ -291,39 +283,36 @@ export function getProvidersByIds(
 
 /** Keep rich source records out of the card response without changing legacy search. */
 export function projectSearchCard(provider: SearchProvider): SearchCard {
-  const {
-    id,
-    name,
-    category,
-    city,
-    state,
-    zip,
-    lat,
-    lng,
-    locationKind,
-    distanceMiles,
-    serviceAreaMatch,
-    services,
-    warnings,
-    cms,
-    research,
-  } = provider;
+  return cardFromMatch(provider, provider);
+}
+
+function searchMarker(
+  provider: Provider,
+  { distanceMiles, serviceAreaMatch }: MatchDetails,
+): SearchMarker {
+  const { id, name, category, city, state, lat, lng, locationKind } = provider;
   return {
     id,
     name,
     category,
     city,
     state,
-    zip,
     lat,
     lng,
     locationKind,
     distanceMiles,
-    ...(serviceAreaMatch && { serviceAreaMatch }),
-    services,
-    warnings,
-    ...(cms && { cms }),
-    ...(research && { research }),
+    ...(serviceAreaMatch && { serviceAreaMatch: true }),
+  };
+}
+
+function cardFromMatch(provider: Provider, match: MatchDetails): SearchCard {
+  return {
+    ...searchMarker(provider, match),
+    zip: provider.zip,
+    services: provider.services,
+    warnings: provider.warnings,
+    ...(provider.cms && { cms: provider.cms }),
+    ...(match.research && { research: match.research }),
     coreqPercent: currentNjCoreqValue(provider),
   };
 }

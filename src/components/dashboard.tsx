@@ -33,7 +33,7 @@ import {
 } from "lucide-react";
 import { ACCOUNTS_ENABLED } from "@/lib/features";
 import { useWorkspace } from "@/hooks/use-workspace";
-import { useCareSearch } from "@/hooks/use-care-search";
+import { fetchSearchProvider, useCareSearch } from "@/hooks/use-care-search";
 import { useSavedProviders } from "@/hooks/use-saved-providers";
 import { useOutreach } from "@/hooks/use-outreach";
 import type { OutreachProvider, OutreachRecord } from "@/lib/outreach";
@@ -607,16 +607,11 @@ function WorkspaceDashboard({
     comparisonRequests.current.set(provider.id, controller);
     setPendingComparisons(new Set(comparisonRequests.current.keys()));
     try {
-      const response = await fetch(
-        `/api/providers?${new URLSearchParams({ ids: provider.id, market: data.market.id })}`,
-        { signal: controller.signal },
+      const full = await fetchSearchProvider(
+        provider.id,
+        data.market.id,
+        controller.signal,
       );
-      if (!response.ok)
-        throw new Error(
-          "This option could not be compared. Select Compare again to retry.",
-        );
-      const result: { providers: Provider[] } = await response.json();
-      const full = result.providers.find((item) => item.id === provider.id);
       if (!full)
         throw new Error(
           "This option could not be compared. Select Compare again to retry.",

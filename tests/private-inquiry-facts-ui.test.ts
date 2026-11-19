@@ -136,6 +136,11 @@ test(
       await expect(
         detail.getByRole("button", { name: "Save private fact", exact: true }),
       ).toBeDisabled();
+      await detail.getByLabel("Care ZIP", { exact: true }).fill("07928");
+      await expect(detail.getByText(/checked 2026-11-18/)).toHaveCount(0);
+      await expect(
+        detail.getByText("No private responses recorded for this ZIP."),
+      ).toHaveCount(0);
     } finally {
       await browser.close();
     }

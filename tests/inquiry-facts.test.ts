@@ -51,5 +51,9 @@ test("history distinguishes conflicts, stale, unknown and family reports without
     status([fact, { ...fact, value: null, checkedOn: "2026-11-18" }]).status,
     "unknown",
   );
-  assert.equal(status([fact]).facts.length, 1);
+  const corrected = { ...fact, value: "40" };
+  const earlier = { ...fact, checkedOn: "2026-10-30" };
+  const history = [fact, corrected, earlier];
+  assert.equal(status(history).latest, corrected);
+  assert.deepEqual(status(history).facts, history);
 });
