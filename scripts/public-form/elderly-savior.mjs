@@ -135,7 +135,7 @@ async function reviewFields(page, root, job, start) {
     return false;
   const choices = root
     .locator(".meeting-location-container")
-    .filter({ hasText: /^Google Meet$/ });
+    .filter({ hasText: /^\s*Google Meet\s*$/ });
   await choices.click();
   if (!(await choices.locator(".radio-container.selected").count()))
     return false;
