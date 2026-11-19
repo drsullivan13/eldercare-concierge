@@ -466,6 +466,54 @@ test(
 
       for (const providerId of [office, wellcare]) {
         await t.test(
+          `${providerId} first request reuses only account contact and requires a fresh window and consent`,
+          async () => {
+            const f = await mount(browser, {
+              providerId,
+              defaults: {
+                ...defaults,
+                startTime: defaults.windowStart,
+                consent: true,
+                consentVersion: "old-office-terms",
+              },
+            });
+            const dialog = await f.openProfile();
+            await dialog
+              .getByRole("button", { name: "Reach out for me", exact: true })
+              .click();
+            await expect(dialog.getByText("Set up your request")).toBeVisible();
+            await expect(dialog.getByLabel("Full name")).toHaveValue(
+              defaults.name,
+            );
+            await expect(dialog.getByLabel("US phone number")).toHaveValue(
+              defaults.phone,
+            );
+            await expect(dialog.getByLabel("Earliest start")).toHaveValue("");
+            await expect(dialog.getByLabel("Latest finish")).toHaveValue("");
+            await expect(consent(f.page)).not.toBeChecked();
+            await consent(f.page).check();
+            await expect(approve(f.page)).toBeDisabled();
+            await dialog.getByLabel("Earliest start").fill("2026-12-01T07:00");
+            await expect(consent(f.page)).not.toBeChecked();
+            await dialog.getByLabel("Latest finish").fill("2026-12-01T09:00");
+            await expect(approve(f.page)).toBeDisabled();
+            assert.equal(f.posts.length, 0);
+            await consent(f.page).check();
+            await approve(f.page).click();
+            await expect(f.page.getByRole("dialog")).toHaveCount(0);
+            assert.equal(f.posts.length, 1);
+            assert.equal(f.posts[0].windowStart, "2026-12-01T15:00:00.000Z");
+            assert.equal(f.posts[0].windowEnd, "2026-12-01T17:00:00.000Z");
+            assert.equal(
+              f.posts[0].consentVersion,
+              providerId === office ? "elderly-savior-v1" : "wellcare-v1",
+            );
+            assert.equal(f.posts[0].expectedEmail, email);
+            await f.finish();
+          },
+        );
+
+        await t.test(
           `${providerId} repeat request is a compact editable summary with fresh consent`,
           async () => {
             const f = await mount(browser, {
@@ -600,7 +648,7 @@ test(
       }
 
       await t.test(
-        "expired, invalid, unverified and out-of-range defaults never prefill",
+        "invalid or out-of-range windows stay blank; contact-only defaults need no window",
         async () => {
           for (const invalid of [
             { ...defaults, windowStart: "2026-11-18T15:00:00Z" },
@@ -622,9 +670,19 @@ test(
             await expect(approve(f.page)).toBeDisabled();
             await f.finish();
           }
-          const f = await mount(browser, { direct: true, defaults });
+          const f = await mount(browser, {
+            direct: true,
+            defaults: { name: defaults.name, phone: defaults.phone },
+          });
           await expect(f.page.getByText("Set up your request")).toBeVisible();
-          await expect(f.page.getByLabel("Full name")).toHaveValue("");
+          await expect(f.page.getByLabel("Full name")).toHaveValue(
+            defaults.name,
+          );
+          await expect(f.page.getByLabel("US phone number")).toHaveValue(
+            defaults.phone,
+          );
+          await expect(f.page.getByLabel("Earliest start")).toHaveValue("");
+          await expect(consent(f.page)).not.toBeChecked();
           await f.finish();
         },
       );
@@ -701,36 +759,44 @@ test(
       await t.test(
         "history never requests personal defaults and mismatched accounts fail closed",
         async () => {
-          const history = await mount(browser, {
-            direct: true,
-            historyOnly: true,
-            job: prior("pending"),
-            defaults,
-          });
-          await expect(
-            history.page.getByText("Waiting for agency confirmation", {
-              exact: true,
-            }),
-          ).toBeVisible();
-          assert.ok(
-            history.gets.every((url) => !url.searchParams.has("prefill")),
-          );
-          await expect(approve(history.page)).toHaveCount(0);
-          await history.finish();
-          const mismatch = await mount(browser, {
-            direct: true,
-            responseEmail: "other@example.test",
-            job: prior(),
-            defaults,
-          });
-          await expect(mismatch.page.getByRole("alert")).toContainText(
-            "signed-in account changed",
-          );
-          await expect(approve(mismatch.page)).toHaveCount(0);
-          await expect(
-            mismatch.page.getByText(`${defaults.name} · ${defaults.phone}`),
-          ).toHaveCount(0);
-          await mismatch.finish();
+          for (const job of [null, prior(), prior("pending")]) {
+            const history = await mount(browser, {
+              direct: true,
+              historyOnly: true,
+              job,
+              defaults,
+            });
+            await expect.poll(() => history.gets.length).toBe(1);
+            if (job)
+              await expect(
+                history.page.getByRole("heading", {
+                  name: "Latest Elderly Savior consultation",
+                }),
+              ).toBeVisible();
+            assert.ok(
+              history.gets.every((url) => !url.searchParams.has("prefill")),
+            );
+            await expect(approve(history.page)).toHaveCount(0);
+            await expect(history.page.getByLabel("Full name")).toHaveCount(0);
+            assert.equal(history.posts.length, 0);
+            await history.finish();
+          }
+          for (const job of [null, prior()]) {
+            const mismatch = await mount(browser, {
+              direct: true,
+              responseEmail: "other@example.test",
+              job,
+              defaults,
+            });
+            await expect(mismatch.page.getByRole("alert")).toContainText(
+              "signed-in account changed",
+            );
+            await expect(approve(mismatch.page)).toHaveCount(0);
+            await expect(
+              mismatch.page.getByText(`${defaults.name} · ${defaults.phone}`),
+            ).toHaveCount(0);
+            await mismatch.finish();
+          }
         },
       );
 

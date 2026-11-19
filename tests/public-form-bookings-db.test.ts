@@ -11,6 +11,7 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     id = randomUUID();
   const email = "ada@example.test",
     provider = "north-jersey-hp-hp0265900";
+  const wellcare = "north-jersey-hp-hp0054400";
   const begin = new Date(Date.now() + 86400000),
     end = new Date(+begin + 3600000);
   const args = [
@@ -28,16 +29,21 @@ test("public form jobs bind verified approval, block repeat submissions and prot
       "select public.request_public_form_booking($1,$2,$3,$4,$5,$6,$7,$8) j",
       Object.assign([...args], overrides),
     );
-  const defaults = async () =>
+  const defaults = async (providerId?: string) =>
     (
       await db.query<{
         d: {
           name: string;
           phone: string;
-          windowStart: string;
-          windowEnd: string;
+          windowStart?: string;
+          windowEnd?: string;
         } | null;
-      }>("select public.public_form_booking_defaults() d")
+      }>(
+        providerId === undefined
+          ? "select public.public_form_booking_defaults() d"
+          : "select public.public_form_booking_defaults($1) d",
+        providerId === undefined ? [] : [providerId],
+      )
     ).rows[0].d;
   async function role(name: string, owner = a) {
     await db.exec("reset role");
@@ -74,6 +80,9 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     assert.equal(await defaults(), null);
     const job = (await book()).rows[0].j;
     assert.equal(await defaults(), null);
+    const contact = { name: "Ada Doe", phone: "+12025550101" };
+    assert.deepEqual(await defaults(wellcare), contact);
+    assert.equal(await defaults("unknown-office"), null);
     assert.equal(job.id, id);
     assert.equal(job.status, "queued_booking");
     assert.deepEqual(
@@ -92,7 +101,6 @@ test("public form jobs bind verified approval, block repeat submissions and prot
       book({ 4: "Anonymous Example" }),
       /Request ID already used/,
     );
-    const wellcare = "north-jersey-hp-hp0054400";
     const wellcareId = randomUUID();
     await assert.rejects(
       book({ 1: wellcare, 6: "wellcare-v1" }),
@@ -113,7 +121,48 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     // Keep this test independent of historical fixture counts and later all-row updates.
     await db.exec("begin");
     const wellcareArgs = { 0: wellcareId, 1: wellcare, 6: "wellcare-v1" };
-    assert.equal((await book(wellcareArgs)).rows[0].j.id, wellcareId);
+    assert.equal(
+      (await book({ ...wellcareArgs, 4: "Other Contact" })).rows[0].j.id,
+      wellcareId,
+    );
+    assert.equal(
+      await defaults(wellcare),
+      null,
+      "Unresolved own job blocks defaults",
+    );
+    await role("harbor_public_form_worker");
+    await db.query(
+      "update public.public_form_bookings set status='failed' where id=$1",
+      [wellcareId],
+    );
+    await role("authenticated");
+    const otherDefaults = await defaults(wellcare);
+    assert.equal(otherDefaults?.name, "Other Contact");
+    assert.equal(otherDefaults?.phone, contact.phone);
+    assert.equal(Date.parse(otherDefaults!.windowStart!), +begin);
+    assert.equal(Date.parse(otherDefaults!.windowEnd!), +end);
+    assert.equal(
+      await defaults(),
+      null,
+      "An unresolved same-office job cannot fall back to another office",
+    );
+    await db.exec("reset role");
+    await db.query(
+      "update public.public_form_bookings set invitee_email='old@example.test' where id=$1",
+      [wellcareId],
+    );
+    await role("authenticated");
+    assert.equal(
+      await defaults(wellcare),
+      null,
+      "Existing history with an old email cannot fall back to other contact",
+    );
+    await role("harbor_public_form_worker");
+    await db.query(
+      "update public.public_form_bookings set status='queued_booking' where id=$1",
+      [wellcareId],
+    );
+    await role("authenticated");
     await assert.rejects(
       book({ ...wellcareArgs, 0: randomUUID() }),
       /previous booking/,
@@ -171,26 +220,23 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     await db.exec("update public.public_form_bookings set status='failed'");
     await role("authenticated");
     const own = await defaults();
-    assert.equal(
-      (
-        await db.query<{ d: unknown }>(
-          "select public.public_form_booking_defaults($1) d",
-          [wellcare],
-        )
-      ).rows[0].d,
-      null,
-    );
+    assert.deepEqual(await defaults(wellcare), contact);
     assert.equal(own?.name, "Ada Doe");
     assert.equal(own?.phone, "+12025550101");
-    assert.equal(Date.parse(own!.windowStart), +begin);
-    assert.equal(Date.parse(own!.windowEnd), +end);
+    assert.equal(Date.parse(own!.windowStart!), +begin);
+    assert.equal(Date.parse(own!.windowEnd!), +end);
     await db.exec("reset role");
     await db.query(
-      "update auth.users set email_confirmed_at=now() where id=$1",
-      [b],
+      "update auth.users set email_confirmed_at=now(),email=$2 where id=$1",
+      [b, email],
     );
     await role("authenticated", b);
     assert.equal(await defaults(), null);
+    assert.equal(
+      await defaults(wellcare),
+      null,
+      "Even matching emails cannot cross accounts",
+    );
     await db.exec("reset role");
     await db.query(
       "update auth.users set email='changed@example.test' where id=$1",
@@ -198,8 +244,23 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     );
     await role("authenticated");
     assert.equal(await defaults(), null);
+    assert.equal(
+      await defaults(wellcare),
+      null,
+      "Contact must match the current account email",
+    );
     await db.exec("reset role");
     await db.query("update auth.users set email=$2 where id=$1", [a, email]);
+    for (const state of ["email_confirmed_at=null", "is_anonymous=true"]) {
+      await db.exec(`update auth.users set ${state} where id='${a}'`);
+      await role("authenticated");
+      assert.equal(await defaults(wellcare), null);
+      await db.exec("reset role");
+      await db.query(
+        "update auth.users set email_confirmed_at=now(),is_anonymous=false where id=$1",
+        [a],
+      );
+    }
     for (let n = 1; n < 6; n++) {
       await role("authenticated");
       await book({ 0: randomUUID() });

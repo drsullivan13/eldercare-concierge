@@ -18,6 +18,7 @@ for (const { providerId, consentVersion } of offices) {
     let verified = true;
     let anonymous = false;
     let signedIn = true;
+    let noHistory = false;
     const job = {
       id,
       status: "queued_booking",
@@ -57,7 +58,12 @@ for (const { providerId, consentVersion } of offices) {
       order: () => query,
       limit: () => query,
       maybeSingle: async () => ({
-        data: filters.provider_id === providerId ? job : otherJob,
+        data:
+          filters.provider_id === providerId
+            ? noHistory
+              ? null
+              : job
+            : otherJob,
         error: null,
       }),
     };
@@ -90,7 +96,12 @@ for (const { providerId, consentVersion } of offices) {
             if (name === "public_form_booking_defaults") {
               assert.deepEqual(args, { p_provider_id: providerId });
               defaultReads++;
-              return { data: defaults, error: null };
+              return {
+                data: noHistory
+                  ? { name: defaults.name, phone: defaults.phone }
+                  : defaults,
+                error: null,
+              };
             }
             assert.equal(name, "request_public_form_booking");
             writes.push(args);
@@ -213,6 +224,34 @@ for (const { providerId, consentVersion } of offices) {
       defaults,
     });
     assert.equal(defaultReads, 2);
+    noHistory = true;
+    assert.deepEqual(
+      await (await GET(new Request(url + "?providerId=" + providerId))).json(),
+      { email, job: null },
+      "History-only reads never request contact",
+    );
+    assert.equal(defaultReads, 2);
+    assert.deepEqual(await (await readSetup()).json(), {
+      email,
+      job: null,
+      defaults: { name: defaults.name, phone: defaults.phone },
+    });
+    assert.equal(defaultReads, 3);
+    for (const state of ["unverified", "anonymous", "signed-out"]) {
+      verified = state !== "unverified";
+      anonymous = state === "anonymous";
+      signedIn = state !== "signed-out";
+      assert.equal((await readSetup()).status, signedIn ? 403 : 401);
+    }
+    assert.equal(
+      defaultReads,
+      3,
+      "Only verified nonanonymous accounts read contact",
+    );
+    verified = true;
+    anonymous = false;
+    signedIn = true;
+    noHistory = false;
     job.startTime = null;
     job.status = "queued_booking";
     assert.equal((await post({}, "https://evil.test")).status, 403);
