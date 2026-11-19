@@ -102,6 +102,18 @@
   box-shadow: none;
 }
 
+.provider-detail .detail-actions .concierge-action {
+  order: -1;
+  padding: 10px 16px;
+  margin-block: 8px;
+  background: #315c44;
+  color: white;
+}
+
+.provider-detail .detail-actions .concierge-action:hover {
+  background: #244b37;
+}
+
 .provider-detail .detail-actions > .text-link {
   width: auto;
   display: inline-flex;

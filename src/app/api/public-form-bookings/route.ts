@@ -82,10 +82,11 @@ async function serve(req: Request, write: boolean) {
   if (write && !isSameOriginRequest(req))
     return send({ error: "Cross-site request refused." }, 403);
   const params = new URL(req.url).searchParams;
+  const prefill = !write && params.get("prefill") === "1";
   if (
     write
       ? params.size !== 0
-      : params.size !== 1 || params.get("providerId") !== OFFICE
+      : params.size !== (prefill ? 2 : 1) || params.get("providerId") !== OFFICE
   )
     return send({ error: "Invalid booking scope." }, 400);
   if (
@@ -114,6 +115,21 @@ async function serve(req: Request, write: boolean) {
         .limit(1)
         .maybeSingle();
       if (error) throw error;
+      if (
+        prefill &&
+        data &&
+        (data.status === "failed" ||
+          data.status === "unavailable" ||
+          (data.status === "confirmed" &&
+            data.startTime &&
+            Date.parse(data.startTime) + 30 * 60_000 <= Date.now()))
+      ) {
+        const { data: defaults, error } = await client.rpc(
+          "public_form_booking_defaults",
+        );
+        if (error) throw error;
+        return send({ email: user.email, job: data, defaults });
+      }
       return send({ email: user.email, job: data });
     }
     let body: unknown;

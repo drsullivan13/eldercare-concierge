@@ -136,11 +136,13 @@ export function AgencyConsultation({
   email,
   outreachRequestId,
   onBooking,
+  onViewPlan,
 }: {
   providerId: string;
   email: string;
   outreachRequestId?: string;
   onBooking?: () => void;
+  onViewPlan?: () => void;
 }) {
   const label = useId();
   const [state, setState] = useState<Status | null>(null);
@@ -266,6 +268,48 @@ export function AgencyConsultation({
       submitting.current = false;
       setBusy(false);
     }
+  }
+  if (
+    providerId === ELDERLY_SAVIOR_PROVIDER_ID &&
+    email &&
+    !outreachRequestId &&
+    !state?.configured
+  ) {
+    const existing =
+      row &&
+      (row.office_callback_pending ||
+        !["failed", "unavailable", "expired", "past", "cancelled"].includes(
+          row.status,
+        )) &&
+      !(
+        row.status === "confirmed" &&
+        row.ends_at &&
+        Date.parse(row.ends_at) <= openedAt
+      );
+    return (
+      <section className={styles.workflow} aria-labelledby={label}>
+        <h3 id={label}>Reach out for me</h3>
+        {!state ? (
+          <p role="status">{message || "Checking your requests…"}</p>
+        ) : existing ? (
+          <>
+            <p>{row.agency_name} · Free 30-minute Google Meet</p>
+            <BookingReceipt booking={row} />
+            {onViewPlan && (
+              <button className="button button-primary" onClick={onViewPlan}>
+                Go to Your plan
+              </button>
+            )}
+          </>
+        ) : (
+          <PublicFormBooking
+            key={providerId + email}
+            email={email}
+            onViewPlan={onViewPlan}
+          />
+        )}
+      </section>
+    );
   }
   if (!state?.configured && outreachRequestId)
     return (

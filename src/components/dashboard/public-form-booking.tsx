@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import styles from "./home-care-outreach/home-care-outreach.module.css";
 
 export const ELDERLY_SAVIOR_PROVIDER_ID = "north-jersey-hp-hp0265900";
 const endpoint = "/api/public-form-bookings";
@@ -19,8 +20,8 @@ const messages = {
   submitting:
     "Harbor is submitting your booking. Check here for the agency’s response.",
   confirmed: "Scheduled",
-  pending: "The agency received your request. Office confirmation is pending.",
-  unknown: "Awaiting verification",
+  pending: "Waiting for agency confirmation",
+  unknown: "Waiting for agency confirmation",
   unavailable:
     "The agency could not offer a consultation within your window. Choose another window.",
   needs_human:
@@ -42,6 +43,64 @@ const processing = new Set<Job["status"]>([
   "submitting",
 ]);
 const minute = 60000;
+type Defaults = {
+  name: string;
+  phone: string;
+  windowStart: string;
+  windowEnd: string;
+};
+function validContact(name: string, phone: string) {
+  return (
+    name.length <= 100 &&
+    /\S+\s+\S+/.test(name.trim()) &&
+    phone.length <= 24 &&
+    /^(?:\+?1)?[2-9]\d{9}$/.test(phone.replace(/[- ().]/g, ""))
+  );
+}
+function validWindow(from: number, to: number, now: number) {
+  return (
+    from > now &&
+    to - from >= 30 * minute &&
+    to - from <= 7 * 1440 * minute &&
+    to <= now + 31 * 1440 * minute
+  );
+}
+function rebookable(job: Job | null, now: number) {
+  return (
+    !job ||
+    job.status === "failed" ||
+    job.status === "unavailable" ||
+    (job.status === "confirmed" &&
+      job.startTime !== null &&
+      Date.parse(job.startTime) + 30 * minute <= now)
+  );
+}
+function localTime(instant: string) {
+  const date = new Date(instant);
+  return new Date(date.getTime() - date.getTimezoneOffset() * minute)
+    .toISOString()
+    .slice(0, 16);
+}
+function reusableDefaults(value: unknown, job: Job | null): Defaults | null {
+  if (
+    !job ||
+    !rebookable(job, Date.now()) ||
+    !value ||
+    typeof value !== "object"
+  )
+    return null;
+  const fields = value as Record<string, unknown>;
+  const { name, phone, windowStart, windowEnd } = fields;
+  if (
+    typeof name !== "string" ||
+    typeof phone !== "string" ||
+    typeof windowStart !== "string" ||
+    typeof windowEnd !== "string" ||
+    !validContact(name, phone)
+  )
+    return null;
+  return { name, phone, windowStart, windowEnd };
+}
 function localInstant(value: string): number {
   const d = new Date(value);
   // A nonexistent local time during spring-forward must never roll into another hour silently.
@@ -54,7 +113,7 @@ function localInstant(value: string): number {
 async function readResult(
   response: Response,
   email: string,
-): Promise<Job | null> {
+): Promise<{ job: Job | null; defaults?: unknown }> {
   const result = await response.json();
   if (!response.ok)
     throw new Error(result.error || "Harbor could not load your booking.");
@@ -62,15 +121,19 @@ async function readResult(
     throw new Error(
       "The signed-in account changed. Reload Harbor to continue.",
     );
-  return result.job;
+  return result;
 }
+
+const readTime = () => Date.now();
 
 export function PublicFormBooking({
   email,
   historyOnly = false,
+  onViewPlan,
 }: {
   email: string;
   historyOnly?: boolean;
+  onViewPlan?: () => void;
 }) {
   const providerId = ELDERLY_SAVIOR_PROVIDER_ID;
   const [job, setJob] = useState<Job | null>(null);
@@ -83,6 +146,8 @@ export function PublicFormBooking({
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [consent, setConsent] = useState(false);
+  const [reused, setReused] = useState(false);
+  const setupRead = useRef(false);
   const pendingWrite = useRef<AbortController | null>(null);
   const attempt = useRef<{ instruction: string; id: string } | null>(null);
 
@@ -91,8 +156,14 @@ export function PublicFormBooking({
     let timer: ReturnType<typeof setTimeout>;
     async function refresh() {
       try {
+        const setup = !historyOnly && !setupRead.current;
         const response = await fetch(
-          endpoint + "?" + new URLSearchParams({ providerId }),
+          endpoint +
+            "?" +
+            new URLSearchParams({
+              providerId,
+              ...(setup ? { prefill: "1" } : {}),
+            }),
           {
             signal: abort.signal,
             cache: "no-store",
@@ -100,8 +171,29 @@ export function PublicFormBooking({
             redirect: "error",
           },
         );
-        const current = await readResult(response, email);
+        const result = await readResult(response, email);
         if (abort.signal.aborted) return;
+        const current = result.job;
+        if (setup) {
+          setupRead.current = true;
+          const defaults = reusableDefaults(result.defaults, current);
+          if (defaults) {
+            setName(defaults.name);
+            setPhone(defaults.phone);
+            if (
+              validWindow(
+                Date.parse(defaults.windowStart),
+                Date.parse(defaults.windowEnd),
+                readTime(),
+              )
+            ) {
+              setStart(localTime(defaults.windowStart));
+              setEnd(localTime(defaults.windowEnd));
+              setReused(true);
+            }
+          }
+          setConsent(false);
+        }
         setJob(current);
         setLoaded(true);
         setError("");
@@ -123,28 +215,39 @@ export function PublicFormBooking({
       abort.abort();
       clearTimeout(timer);
     };
-  }, [email, providerId, revision]);
+  }, [email, providerId, revision, historyOnly]);
   useEffect(() => () => pendingWrite.current?.abort(), []);
 
   const from = localInstant(start),
     to = localInstant(end);
-  const [now] = useState(Date.now);
-  const validWindow =
-    from > now &&
-    to - from >= 30 * minute &&
-    to - from <= 7 * 1440 * minute &&
-    to <= now + 31 * 1440 * minute;
-  const canBook =
-    loaded &&
-    (!job ||
-      job.status === "failed" ||
-      job.status === "unavailable" ||
-      (job.status === "confirmed" &&
-        job.startTime !== null &&
-        new Date(job.startTime).getTime() + 30 * minute <= now));
+  const [now, setNow] = useState(readTime);
+  const windowIsValid = validWindow(from, to, now);
+  const canBook = loaded && rebookable(job, now);
+  useEffect(() => {
+    if (!Number.isFinite(from) || from <= readTime()) return;
+    const timer = setTimeout(
+      () => {
+        setNow(readTime());
+        setConsent(false);
+      },
+      Math.min(from - readTime() + 1, 2147483647),
+    );
+    return () => clearTimeout(timer);
+  }, [from, now]);
   async function submit(event: FormEvent) {
     event.preventDefault();
-    if (!canBook || !validWindow || !consent || pendingWrite.current) return;
+    if (
+      !canBook ||
+      !rebookable(job, readTime()) ||
+      !validWindow(from, to, readTime()) ||
+      !validContact(name, phone) ||
+      !consent ||
+      pendingWrite.current
+    ) {
+      setNow(readTime());
+      setConsent(false);
+      return;
+    }
     const fields = {
       action: "bookWindow",
       providerId,
@@ -171,7 +274,7 @@ export function PublicFormBooking({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...fields, requestId: attempt.current.id }),
       });
-      const current = await readResult(response, email);
+      const { job: current } = await readResult(response, email);
       if (abort.signal.aborted) return;
       if (!current) throw new Error("Check booking status before continuing.");
       setJob(current);
@@ -180,6 +283,7 @@ export function PublicFormBooking({
       setName("");
       setPhone("");
       setRevision((n) => n + 1);
+      onViewPlan?.();
     } catch (failure) {
       if (abort.signal.aborted) return;
       // A lost response can follow a committed approval. Check the stored job before enabling another action.
@@ -198,8 +302,9 @@ export function PublicFormBooking({
   }
   if (historyOnly && !job && !error) return null;
   return (
-    <>
+    <section className={styles.booking} aria-label="Elderly Savior reach out">
       {historyOnly && <h2>Latest Elderly Savior consultation</h2>}
+      <p>Elderly Savior Homecare LLC · Free 30-minute Google Meet</p>
       {error && (
         <>
           <p role="alert">{error}</p>
@@ -209,12 +314,11 @@ export function PublicFormBooking({
         </>
       )}
       {!loaded && !error && <p role="status">Loading booking status…</p>}
-      {loaded && job && (
+      {loaded && job && (historyOnly || !canBook) && (
         <>
           <p role="status">
             <strong>{messages[job.status]}</strong>
           </p>
-          <p>Elderly Savior Homecare LLC · 30-minute Google Meet</p>
           {job.status === "unknown" && (
             <p>
               Check your invitation email or contact the office before
@@ -223,104 +327,135 @@ export function PublicFormBooking({
           )}
           {job.startTime && (
             <p>
-              {job.status === "confirmed" ? "Appointment" : "Requested start"} ·{" "}
-              {easternTime.format(new Date(job.startTime))}
+              {job.status === "confirmed" ? "Scheduled time" : "Intended start"}{" "}
+              · {easternTime.format(new Date(job.startTime))}
             </p>
           )}
           <p>
-            Approved window ·{" "}
+            Intended window ·{" "}
             {easternTime.formatRange(
               new Date(job.windowStart),
               new Date(job.windowEnd),
             )}
           </p>
           {job.receipt && (
-            <p>
-              {["confirmed", "pending"].includes(job.status)
-                ? "Agency receipt"
-                : "Submission details"}{" "}
-              · {job.receipt}
-            </p>
+            <details>
+              <summary>Submission details & receipt</summary>
+              <p>{job.receipt}</p>
+            </details>
           )}
           <button type="button" onClick={() => setRevision((n) => n + 1)}>
             Refresh status
           </button>
+          {!historyOnly && onViewPlan && (
+            <button
+              className="button button-primary"
+              type="button"
+              onClick={onViewPlan}
+            >
+              Go to Your plan
+            </button>
+          )}
         </>
       )}
       {!historyOnly && canBook && (
         <form onSubmit={submit}>
           <fieldset disabled={busy}>
-            <legend>Free 30-minute Google Meet consultation</legend>
+            <legend>
+              {reused ? "Review your request" : "Set up your request"}
+            </legend>
             <p>
-              Choose a window. Harbor can book one opening that fits entirely
-              inside it.
+              {reused
+                ? "Details from your previous request. Review them before approving."
+                : "Add your contact details and a time window. Harbor can book one opening entirely within it."}
             </p>
-            <small>
-              Enter times in {Intl.DateTimeFormat().resolvedOptions().timeZone}.
-              Choose 30 minutes to 7 days within the next 31 days.
-            </small>
-            <label>
-              Earliest start
-              <input
-                type="datetime-local"
-                required
-                value={start}
-                onChange={(e) => {
-                  setStart(e.target.value);
-                  setConsent(false);
-                }}
-              />
-            </label>
-            <label>
-              Latest finish
-              <input
-                type="datetime-local"
-                required
-                value={end}
-                onChange={(e) => {
-                  setEnd(e.target.value);
-                  setConsent(false);
-                }}
-              />
-            </label>
-            {start && end && (
-              <p role="status">
-                {validWindow
-                  ? "New Jersey time · " +
-                    easternTime.formatRange(new Date(from), new Date(to))
-                  : "Choose a future window of 30 minutes to 7 days within the next 31 days."}
-              </p>
+            {reused && (
+              <div>
+                <p>
+                  {name} · {phone}
+                </p>
+                {windowIsValid && (
+                  <p>
+                    Intended window ·{" "}
+                    {easternTime.formatRange(new Date(from), new Date(to))}
+                  </p>
+                )}
+                {!windowIsValid && (
+                  <p role="status">
+                    Your time window has expired. Choose a future window.
+                  </p>
+                )}
+              </div>
             )}
-            <label>
-              Full name
-              <input
-                placeholder="First and last name"
-                autoComplete="name"
-                required
-                maxLength={100}
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                  setConsent(false);
-                }}
-              />
-            </label>
-            <label>
-              US phone number
-              <input
-                type="tel"
-                placeholder="(201) 555-0123"
-                autoComplete="tel"
-                required
-                maxLength={24}
-                value={phone}
-                onChange={(e) => {
-                  setPhone(e.target.value);
-                  setConsent(false);
-                }}
-              />
-            </label>
             <p>Invitation email · {email}</p>
+            <details open={reused ? undefined : true}>
+              <summary>Edit contact details & time</summary>
+              <small>
+                Enter times in{" "}
+                {Intl.DateTimeFormat().resolvedOptions().timeZone}. Choose 30
+                minutes to 7 days within the next 31 days.
+              </small>
+              <label>
+                Earliest start
+                <input
+                  type="datetime-local"
+                  required
+                  value={start}
+                  onChange={(e) => {
+                    setStart(e.target.value);
+                    setConsent(false);
+                  }}
+                />
+              </label>
+              <label>
+                Latest finish
+                <input
+                  type="datetime-local"
+                  required
+                  value={end}
+                  onChange={(e) => {
+                    setEnd(e.target.value);
+                    setConsent(false);
+                  }}
+                />
+              </label>
+              {start && end && (
+                <p role="status">
+                  {windowIsValid
+                    ? "New Jersey time · " +
+                      easternTime.formatRange(new Date(from), new Date(to))
+                    : "Choose a future window of 30 minutes to 7 days within the next 31 days."}
+                </p>
+              )}
+              <label>
+                Full name
+                <input
+                  placeholder="First and last name"
+                  autoComplete="name"
+                  required
+                  maxLength={100}
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                    setConsent(false);
+                  }}
+                />
+              </label>
+              <label>
+                US phone number
+                <input
+                  type="tel"
+                  autoComplete="tel"
+                  required
+                  maxLength={24}
+                  value={phone}
+                  onChange={(e) => {
+                    setPhone(e.target.value);
+                    setConsent(false);
+                  }}
+                />
+              </label>
+            </details>
             <label>
               <input
                 type="checkbox"
@@ -345,17 +480,14 @@ export function PublicFormBooking({
               className="button button-primary"
               type="submit"
               disabled={
-                !consent ||
-                !validWindow ||
-                !/\S+\s+\S+/.test(name.trim()) ||
-                !/^(?:\+?1)?[2-9]\d{9}$/.test(phone.replace(/[- ().]/g, ""))
+                !consent || !windowIsValid || !validContact(name, phone)
               }
             >
-              Book for me
+              {busy ? "Sending approval…" : "Approve reach out"}
             </button>
           </fieldset>
         </form>
       )}
-    </>
+    </section>
   );
 }

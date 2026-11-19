@@ -17,6 +17,13 @@ test("public-form route scopes reads to the account and sends only validated app
     startTime: null,
     receipt: null,
   };
+  const defaults = {
+    name: "Ada Doe",
+    phone: "+12025550101",
+    windowStart: job.windowStart,
+    windowEnd: job.windowEnd,
+  };
+  let defaultReads = 0;
   const writes: Record<string, unknown>[] = [];
   let dbError: string | null = null;
   const filters: Record<string, string> = {};
@@ -54,6 +61,11 @@ test("public-form route scopes reads to the account and sends only validated app
           return query;
         },
         rpc: async (name: string, args: Record<string, unknown>) => {
+          if (name === "public_form_booking_defaults") {
+            assert.equal(args, undefined);
+            defaultReads++;
+            return { data: defaults, error: null };
+          }
           assert.equal(name, "request_public_form_booking");
           writes.push(args);
           return { data: job, error: dbError ? { code: dbError } : null };
@@ -122,6 +134,18 @@ test("public-form route scopes reads to the account and sends only validated app
   assert.ok(read.headers.get("Set-cookie"));
   assert.deepEqual(await read.json(), { email, job });
   assert.deepEqual(filters, { owner_id: "owner", provider_id: providerId });
+  const readSetup = () =>
+    GET(new Request(url + "?providerId=" + providerId + "&prefill=1"));
+  assert.deepEqual(await (await readSetup()).json(), { email, job });
+  assert.equal(defaultReads, 0);
+  job.status = "failed";
+  assert.deepEqual(await (await readSetup()).json(), { email, job, defaults });
+  assert.deepEqual(
+    await (await GET(new Request(url + "?providerId=" + providerId))).json(),
+    { email, job },
+  );
+  assert.equal(defaultReads, 1);
+  job.status = "queued_booking";
   assert.equal((await post({}, "https://evil.test")).status, 403);
   verified = false;
   assert.equal((await post()).status, 403);

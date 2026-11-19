@@ -28,6 +28,17 @@ test("public form jobs bind verified approval, block repeat submissions and prot
       "select public.request_public_form_booking($1,$2,$3,$4,$5,$6,$7,$8) j",
       Object.assign([...args], overrides),
     );
+  const defaults = async () =>
+    (
+      await db.query<{
+        d: {
+          name: string;
+          phone: string;
+          windowStart: string;
+          windowEnd: string;
+        } | null;
+      }>("select public.public_form_booking_defaults() d")
+    ).rows[0].d;
   async function role(name: string, owner = a) {
     await db.exec("reset role");
     await db.query("select set_config('request.jwt.claim.sub',$1,false)", [
@@ -49,8 +60,10 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     );
     await role("anon");
     await assert.rejects(book(), /permission denied/);
+    await assert.rejects(defaults(), /permission denied/);
     await role("authenticated", b);
     await assert.rejects(book(), /Verified account required/);
+    assert.equal(await defaults(), null);
     await role("authenticated");
     await assert.rejects(book({ 7: "foreign@example.test" }), /email changed/);
     await assert.rejects(book({ 6: "outdated" }), /Invalid booking approval/);
@@ -58,7 +71,9 @@ test("public form jobs bind verified approval, block repeat submissions and prot
       book({ 3: begin.toISOString() }),
       /Invalid booking approval/,
     );
+    assert.equal(await defaults(), null);
     const job = (await book()).rows[0].j;
+    assert.equal(await defaults(), null);
     assert.equal(job.id, id);
     assert.equal(job.status, "queued_booking");
     assert.deepEqual(
@@ -127,6 +142,28 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     await assert.rejects(book({ 0: randomUUID() }), /previous booking/);
     await role("harbor_public_form_worker");
     await db.exec("update public.public_form_bookings set status='failed'");
+    await role("authenticated");
+    const own = await defaults();
+    assert.equal(own?.name, "Ada Doe");
+    assert.equal(own?.phone, "+12025550101");
+    assert.equal(Date.parse(own!.windowStart), +begin);
+    assert.equal(Date.parse(own!.windowEnd), +end);
+    await db.exec("reset role");
+    await db.query(
+      "update auth.users set email_confirmed_at=now() where id=$1",
+      [b],
+    );
+    await role("authenticated", b);
+    assert.equal(await defaults(), null);
+    await db.exec("reset role");
+    await db.query(
+      "update auth.users set email='changed@example.test' where id=$1",
+      [a],
+    );
+    await role("authenticated");
+    assert.equal(await defaults(), null);
+    await db.exec("reset role");
+    await db.query("update auth.users set email=$2 where id=$1", [a, email]);
     for (let n = 1; n < 6; n++) {
       await role("authenticated");
       await book({ 0: randomUUID() });
