@@ -29,7 +29,9 @@ function fixture(result, terms) {
     <h4>Choose Time Slot</h4>Duration : 30 min<ul><li class="widgets-time-slot">10:00 AM</li></ul>
     <button id="select" hidden>Select</button></section>
     <section id="details" hidden>10:00 AM - 10:30 AM, ${dateLabel} America/New_York
-    <div class="meeting-location-container"><span class="radio-container"></span>Google Meet</div>
+    <div class="meeting-location-container"><span class="radio-container"></span><span class="meeting-location-icon">
+      <svg></svg>
+    </span><p>Google Meet</p></div>
     <input placeholder="First Name"><input placeholder="Last Name"><input placeholder="Phone"><input placeholder="Email"><textarea placeholder="Message"></textarea>
     <fieldset><legend>T &amp; C</legend>${[terms, marketing].map((t) => `<label><input type="checkbox" aria-label="${t}"><p>${t}</p></label>`).join("")}</fieldset>
     <button id="schedule">Schedule meeting</button></section></main>
