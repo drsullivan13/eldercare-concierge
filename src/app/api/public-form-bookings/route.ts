@@ -1,9 +1,12 @@
 import { PayloadTooLarge, readBoundedJson } from "@/lib/read-bounded-json";
 import { isSameOriginRequest } from "@/lib/request-origin";
 import { createClient } from "@/lib/supabase/server";
+import {
+  publicFormProvider,
+  publicFormRebookable,
+} from "@/lib/public-form-providers";
 
 export const dynamic = "force-dynamic";
-const OFFICE = "north-jersey-hp-hp0265900";
 const FIELDS =
   "id,status,windowStart:window_start,windowEnd:window_end,startTime:start_time,receipt";
 const APPROVAL_KEYS = [
@@ -39,9 +42,11 @@ function approval(input: unknown) {
     consentVersion,
     expectedEmail,
   } = body;
+  const office =
+    typeof providerId === "string" ? publicFormProvider(providerId) : undefined;
   if (
     action !== "bookWindow" ||
-    providerId !== OFFICE ||
+    !office ||
     typeof requestId !== "string" ||
     !/^[a-f\d]{8}-[a-f\d]{4}-4[a-f\d]{3}-[89ab][a-f\d]{3}-[a-f\d]{12}$/i.test(
       requestId,
@@ -54,7 +59,8 @@ function approval(input: unknown) {
     name.length > 100 ||
     !/\S+\s+\S+/.test(name.trim()) ||
     typeof phone !== "string" ||
-    consentVersion !== "elderly-savior-v1" ||
+    phone.length > 24 ||
+    consentVersion !== office.consentVersion ||
     typeof expectedEmail !== "string"
   )
     return;
@@ -62,7 +68,7 @@ function approval(input: unknown) {
   if (!/^(?:\+?1)?[2-9]\d{9}$/.test(digits)) return;
   return {
     p_request_id: requestId,
-    p_provider_id: OFFICE,
+    p_provider_id: office.providerId,
     p_window_start: windowStart,
     p_window_end: windowEnd,
     p_name: name.trim(),
@@ -82,12 +88,9 @@ async function serve(req: Request, write: boolean) {
   if (write && !isSameOriginRequest(req))
     return send({ error: "Cross-site request refused." }, 403);
   const params = new URL(req.url).searchParams;
+  const office = publicFormProvider(params.get("providerId") ?? "");
   const prefill = !write && params.get("prefill") === "1";
-  if (
-    write
-      ? params.size !== 0
-      : params.size !== (prefill ? 2 : 1) || params.get("providerId") !== OFFICE
-  )
+  if (write ? params.size !== 0 : params.size !== (prefill ? 2 : 1) || !office)
     return send({ error: "Invalid booking scope." }, 400);
   if (
     write &&
@@ -105,27 +108,20 @@ async function serve(req: Request, write: boolean) {
       return send({ error: "Sign in to book for your family." }, 401);
     if (user.is_anonymous || !user.email_confirmed_at || !user.email)
       return send({ error: "A verified account email is required." }, 403);
-    if (!write) {
+    if (!write && office) {
       const { data, error } = await client
         .from("public_form_bookings")
         .select(FIELDS)
         .eq("owner_id", user.id)
-        .eq("provider_id", OFFICE)
+        .eq("provider_id", office.providerId)
         .order("created_at", { ascending: false })
         .limit(1)
         .maybeSingle();
       if (error) throw error;
-      if (
-        prefill &&
-        data &&
-        (data.status === "failed" ||
-          data.status === "unavailable" ||
-          (data.status === "confirmed" &&
-            data.startTime &&
-            Date.parse(data.startTime) + 30 * 60_000 <= Date.now()))
-      ) {
+      if (prefill && data && publicFormRebookable(data, office, Date.now())) {
         const { data: defaults, error } = await client.rpc(
           "public_form_booking_defaults",
+          { p_provider_id: office.providerId },
         );
         if (error) throw error;
         return send({ email: user.email, job: data, defaults });

@@ -12,7 +12,7 @@ grant usage on schema harbor_booking_private to authenticated;
 create table if not exists public.public_form_bookings (
   id uuid primary key,
   owner_id uuid not null references auth.users (id) on delete cascade,
-  provider_id text not null check (provider_id = 'north-jersey-hp-hp0265900'),
+  provider_id text not null,
   window_start timestamptz not null,
   window_end timestamptz not null,
   check (window_end - window_start between interval '30 minutes' and interval '7 days'),
@@ -22,7 +22,7 @@ create table if not exists public.public_form_bookings (
   )),
   start_time timestamptz check (start_time >= window_start and start_time + interval '30 minutes' <= window_end),
   approved_at timestamptz not null default now(),
-  consent_version text not null check (consent_version = 'elderly-savior-v1'),
+  consent_version text not null,
   invitee_name text not null,
   invitee_phone text not null,
   invitee_email text not null,
@@ -32,6 +32,14 @@ create table if not exists public.public_form_bookings (
   updated_at timestamptz not null default now(),
   check (status not in ('submitting','confirmed','pending','unknown') or start_time is not null),
   check (status <> 'confirmed' or receipt is not null)
+);
+alter table public.public_form_bookings
+  drop constraint if exists public_form_bookings_provider_id_check,
+  drop constraint if exists public_form_bookings_consent_version_check,
+  drop constraint if exists public_form_bookings_office_consent;
+alter table public.public_form_bookings add constraint public_form_bookings_office_consent check (
+  (provider_id, consent_version) in (('north-jersey-hp-hp0265900','elderly-savior-v1'),
+                                    ('north-jersey-hp-hp0054400','wellcare-v1'))
 );
 create index if not exists public_form_booking_history on public.public_form_bookings(owner_id, provider_id, created_at desc);
 create index if not exists public_form_booking_queue on public.public_form_bookings(created_at)
@@ -67,9 +75,10 @@ begin
   if coalesce(verified_email, '') = '' then raise exception using errcode='42501', message='Verified account required'; end if;
   if verified_email is distinct from p_expected_email then raise exception using errcode='55000', message='Account email changed'; end if;
   p_name := btrim(p_name);
-  if p_request_id is null or p_provider_id is distinct from 'north-jersey-hp-hp0265900'
+  if p_request_id is null or ((p_provider_id,p_consent_version) in (('north-jersey-hp-hp0265900','elderly-savior-v1'),
+        ('north-jersey-hp-hp0054400','wellcare-v1'))) is not true
     or p_window_start is null or p_window_end is null or not isfinite(p_window_start) or not isfinite(p_window_end)
-    or p_consent_version is distinct from 'elderly-savior-v1' or p_name is null
+    or p_name is null
     or length(p_name) not between 3 and 100 or p_name !~ '[^[:space:]]+[[:space:]]+[^[:space:]]+'
     or p_name ~ '[[:cntrl:]]' or p_phone is null or p_phone !~ '^[+]1[2-9][0-9]{9}$'
     or p_window_end - p_window_start not between interval '30 minutes' and interval '7 days' then
@@ -79,7 +88,8 @@ begin
   select * into job from public.public_form_bookings where owner_id = family and id = p_request_id;
   checked_at := clock_timestamp();
   if job.id is not null then
-    if job.window_start <> p_window_start or job.window_end <> p_window_end or job.invitee_name <> p_name
+    if job.provider_id <> p_provider_id or job.consent_version <> p_consent_version
+        or job.window_start <> p_window_start or job.window_end <> p_window_end or job.invitee_name <> p_name
         or job.invitee_phone <> p_phone or job.invitee_email <> verified_email then
       raise exception using errcode='23505', message='Request ID already used';
     end if;
@@ -116,13 +126,13 @@ revoke all on function public.request_public_form_booking(uuid,text,timestamptz,
 grant execute on function public.request_public_form_booking(uuid,text,timestamptz,timestamptz,text,text,text,text) to authenticated;
 
 -- Only the verified account that authorized the latest reusable request can recover its contact details.
-create or replace function harbor_booking_private.latest_booking_defaults()
+create or replace function harbor_booking_private.latest_booking_defaults(p_provider_id text)
 returns jsonb language sql stable security definer set search_path = '' as $$
   with latest as (
     select b.invitee_name, b.invitee_phone, b.invitee_email, b.window_start, b.window_end,
            b.status, b.start_time, u.email as current_email
     from public.public_form_bookings b join auth.users u on u.id = b.owner_id
-    where b.owner_id = (select auth.uid()) and b.provider_id = 'north-jersey-hp-hp0265900'
+    where b.owner_id = (select auth.uid()) and b.provider_id = p_provider_id
       and u.email_confirmed_at is not null and not coalesce(u.is_anonymous, false)
     order by b.created_at desc, b.id desc limit 1
   )
@@ -133,12 +143,21 @@ returns jsonb language sql stable security definer set search_path = '' as $$
     (status in ('failed','unavailable') or
       (status = 'confirmed' and start_time + interval '30 minutes' <= now()))
 $$;
-revoke all on function harbor_booking_private.latest_booking_defaults() from public, anon;
-grant execute on function harbor_booking_private.latest_booking_defaults() to authenticated;
+revoke all on function harbor_booking_private.latest_booking_defaults(text) from public, anon;
+grant execute on function harbor_booking_private.latest_booking_defaults(text) to authenticated;
+create or replace function public.public_form_booking_defaults(p_provider_id text)
+returns jsonb language sql stable security invoker set search_path = '' as $$
+  select harbor_booking_private.latest_booking_defaults(p_provider_id)
+$$;
+revoke all on function public.public_form_booking_defaults(text) from public, anon;
+grant execute on function public.public_form_booking_defaults(text) to authenticated;
+
+-- Existing signed-in clients can continue to read their first-office defaults.
 create or replace function public.public_form_booking_defaults()
 returns jsonb language sql stable security invoker set search_path = '' as $$
-  select harbor_booking_private.latest_booking_defaults()
+  select harbor_booking_private.latest_booking_defaults('north-jersey-hp-hp0265900')
 $$;
 revoke all on function public.public_form_booking_defaults() from public, anon;
 grant execute on function public.public_form_booking_defaults() to authenticated;
+drop function if exists harbor_booking_private.latest_booking_defaults();
 commit;

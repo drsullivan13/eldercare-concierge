@@ -92,6 +92,33 @@ test("public form jobs bind verified approval, block repeat submissions and prot
       book({ 4: "Anonymous Example" }),
       /Request ID already used/,
     );
+    const wellcare = "north-jersey-hp-hp0054400";
+    const wellcareId = randomUUID();
+    await assert.rejects(
+      book({ 1: wellcare, 6: "wellcare-v1" }),
+      /Request ID already used/,
+    );
+    await assert.rejects(
+      book({ 0: wellcareId, 1: wellcare }),
+      /Invalid booking approval/,
+    );
+    await assert.rejects(
+      book({ 0: wellcareId, 6: "wellcare-v1" }),
+      /Invalid booking approval/,
+    );
+    await assert.rejects(
+      book({ 0: wellcareId, 1: null, 6: null }),
+      /Invalid booking approval/,
+    );
+    // Keep this test independent of historical fixture counts and later all-row updates.
+    await db.exec("begin");
+    const wellcareArgs = { 0: wellcareId, 1: wellcare, 6: "wellcare-v1" };
+    assert.equal((await book(wellcareArgs)).rows[0].j.id, wellcareId);
+    await assert.rejects(
+      book({ ...wellcareArgs, 0: randomUUID() }),
+      /previous booking/,
+    );
+    await db.exec("rollback");
     await assert.rejects(book({ 0: randomUUID() }), /previous booking/);
     await assert.rejects(
       db.exec("update public.public_form_bookings set status='confirmed'"),
@@ -144,6 +171,15 @@ test("public form jobs bind verified approval, block repeat submissions and prot
     await db.exec("update public.public_form_bookings set status='failed'");
     await role("authenticated");
     const own = await defaults();
+    assert.equal(
+      (
+        await db.query<{ d: unknown }>(
+          "select public.public_form_booking_defaults($1) d",
+          [wellcare],
+        )
+      ).rows[0].d,
+      null,
+    );
     assert.equal(own?.name, "Ada Doe");
     assert.equal(own?.phone, "+12025550101");
     assert.equal(Date.parse(own!.windowStart), +begin);

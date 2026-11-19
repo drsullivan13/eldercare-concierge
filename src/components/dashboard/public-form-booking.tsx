@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import {
+  ELDERLY_SAVIOR_PROVIDER_ID,
+  publicFormProvider,
+  publicFormRebookable,
+  type PublicFormProvider,
+} from "@/lib/public-form-providers";
 import styles from "./home-care-outreach/home-care-outreach.module.css";
 
-export const ELDERLY_SAVIOR_PROVIDER_ID = "north-jersey-hp-hp0265900";
+export { ELDERLY_SAVIOR_PROVIDER_ID } from "@/lib/public-form-providers";
 const endpoint = "/api/public-form-bookings";
 const easternTime = new Intl.DateTimeFormat("en-US", {
   timeZone: "America/New_York",
@@ -65,26 +71,20 @@ function validWindow(from: number, to: number, now: number) {
     to <= now + 31 * 1440 * minute
   );
 }
-function rebookable(job: Job | null, now: number) {
-  return (
-    !job ||
-    job.status === "failed" ||
-    job.status === "unavailable" ||
-    (job.status === "confirmed" &&
-      job.startTime !== null &&
-      Date.parse(job.startTime) + 30 * minute <= now)
-  );
-}
 function localTime(instant: string) {
   const date = new Date(instant);
   return new Date(date.getTime() - date.getTimezoneOffset() * minute)
     .toISOString()
     .slice(0, 16);
 }
-function reusableDefaults(value: unknown, job: Job | null): Defaults | null {
+function reusableDefaults(
+  value: unknown,
+  job: Job | null,
+  office: PublicFormProvider,
+): Defaults | null {
   if (
     !job ||
-    !rebookable(job, Date.now()) ||
+    !publicFormRebookable(job, office, Date.now()) ||
     !value ||
     typeof value !== "object"
   )
@@ -127,15 +127,41 @@ async function readResult(
 const readTime = () => Date.now();
 
 export function PublicFormBooking({
+  providerId = ELDERLY_SAVIOR_PROVIDER_ID,
   email,
   historyOnly = false,
   onViewPlan,
 }: {
+  providerId?: string;
   email: string;
   historyOnly?: boolean;
   onViewPlan?: () => void;
 }) {
-  const providerId = ELDERLY_SAVIOR_PROVIDER_ID;
+  const office = publicFormProvider(providerId);
+  if (!office) return null;
+  return (
+    <OfficeBooking
+      key={`${providerId}:${email}:${historyOnly}`}
+      office={office}
+      email={email}
+      historyOnly={historyOnly}
+      onViewPlan={onViewPlan}
+    />
+  );
+}
+
+function OfficeBooking({
+  office,
+  email,
+  historyOnly,
+  onViewPlan,
+}: {
+  office: PublicFormProvider;
+  email: string;
+  historyOnly: boolean;
+  onViewPlan?: () => void;
+}) {
+  const { providerId } = office;
   const [job, setJob] = useState<Job | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -176,7 +202,7 @@ export function PublicFormBooking({
         const current = result.job;
         if (setup) {
           setupRead.current = true;
-          const defaults = reusableDefaults(result.defaults, current);
+          const defaults = reusableDefaults(result.defaults, current, office);
           if (defaults) {
             setName(defaults.name);
             setPhone(defaults.phone);
@@ -215,14 +241,14 @@ export function PublicFormBooking({
       abort.abort();
       clearTimeout(timer);
     };
-  }, [email, providerId, revision, historyOnly]);
+  }, [email, providerId, revision, historyOnly, office]);
   useEffect(() => () => pendingWrite.current?.abort(), []);
 
   const from = localInstant(start),
     to = localInstant(end);
   const [now, setNow] = useState(readTime);
   const windowIsValid = validWindow(from, to, now);
-  const canBook = loaded && rebookable(job, now);
+  const canBook = loaded && publicFormRebookable(job, office, now);
   useEffect(() => {
     if (!Number.isFinite(from) || from <= readTime()) return;
     const timer = setTimeout(
@@ -238,7 +264,7 @@ export function PublicFormBooking({
     event.preventDefault();
     if (
       !canBook ||
-      !rebookable(job, readTime()) ||
+      !publicFormRebookable(job, office, readTime()) ||
       !validWindow(from, to, readTime()) ||
       !validContact(name, phone) ||
       !consent ||
@@ -256,7 +282,7 @@ export function PublicFormBooking({
       name: name.trim(),
       phone: phone.trim(),
       expectedEmail: email,
-      consentVersion: "elderly-savior-v1",
+      consentVersion: office.consentVersion,
     };
     const instruction = JSON.stringify(fields);
     if (attempt.current?.instruction !== instruction)
@@ -302,9 +328,14 @@ export function PublicFormBooking({
   }
   if (historyOnly && !job && !error) return null;
   return (
-    <section className={styles.booking} aria-label="Elderly Savior reach out">
-      {historyOnly && <h2>Latest Elderly Savior consultation</h2>}
-      <p>Elderly Savior Homecare LLC · Free 30-minute Google Meet</p>
+    <section
+      className={styles.booking}
+      aria-label={`${office.shortName} reach out`}
+    >
+      {historyOnly && <h2>Latest {office.shortName} consultation</h2>}
+      <p>
+        {office.agencyName} · {office.serviceTitle}
+      </p>
       {error && (
         <>
           <p role="alert">{error}</p>
@@ -463,19 +494,9 @@ export function PublicFormBooking({
                 checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
               />{" "}
-              I authorize Harbor to book one consultation in this window and
-              share my name, email and phone with Elderly Savior Homecare LLC. I
-              agree to phone calls, texts or emails about home care,
-              appointments, referrals and related marketing, including automated
-              or prerecorded calls and AI voice. Message and data rates may
-              apply.
+              {office.consent}
             </label>
-            <small>
-              Consent is optional for purchasing services. Opt out by replying
-              STOP, asking the office to stop calling, or calling (973)
-              855-4461. Harbor leaves the separate promotional-text opt-in
-              unchecked.
-            </small>
+            {office.consentNote && <small>{office.consentNote}</small>}
             <button
               className="button button-primary"
               type="submit"
