@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { bookingMessage, type Consultation } from "@/lib/consultation-request";
 import styles from "./home-care-outreach/home-care-outreach.module.css";
+import {
+  ELDERLY_SAVIOR_PROVIDER_ID,
+  PublicFormBooking,
+} from "./public-form-booking";
 import { ConsultationVoice } from "./consultation-voice";
 
 type Status = {
@@ -277,10 +281,9 @@ export function AgencyConsultation({
       <section className={styles.workflow} aria-labelledby={label}>
         <h3 id={label}>Book a consultation</h3>
         {row && !outreachRequestId && <BookingReceipt booking={row} />}
-        <p>
-          This calendar is run by Elderly Savior. Choose an opening and the
-          office will follow up to confirm your consultation.
-        </p>
+        {providerId === ELDERLY_SAVIOR_PROVIDER_ID && email && !occupied && (
+          <PublicFormBooking key={providerId + email} email={email} />
+        )}
         <button
           type="button"
           className="button button-outline"

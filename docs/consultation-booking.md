@@ -13,3 +13,13 @@ For the first pilot, use [the six-office booking study](../research/north-jersey
 After the dashboard is deployed, apply `supabase/enable-consultation-recovery.sql` to the Harbor production database. It schedules a check each minute and calls the dashboard only when a booking needs attention. The worker reads pending receipts and retries eligible email delivery after the browser closes.
 
 Use a single test booking to verify the provider's attendee record, the family's saved receipt and the appointment in the test recipient's calendar. A failed phone connection has no appointment. If a provider accepted a request but the receipt was lost, check the existing request before submitting another. Appointment status describes the consultation only. The agency arranges staffing and care separately.
+
+## Elderly Savior public-form pilot
+
+From the signed-in office profile, choose **Book for me** and approve one availability window, the contact details and the office’s required contact terms. Harbor can book one free 30-minute Google Meet entirely inside that window. The worker checks the Eastern calendar by day and reopens the selected slot before submission. The optional promotional-text checkbox stays clear. The family can close the browser and see the result in **Your plan**.
+
+Apply `supabase/public-form-bookings.sql` to the dashboard database. The authenticated user can authorize only their own job. Use a separate Postgres login with membership in `harbor_public_form_worker` for the worker. That role can read jobs and update progress, and cannot create approvals. The Vercel dashboard uses the signed-in Supabase session for this flow.
+
+Run the worker on an awake host with Node 24, the locked development dependencies and Chromium. Supply `HARBOR_WORKER_DATABASE_URL` through the host’s secret store and configure the Supabase CA with `NODE_EXTRA_CA_CERTS` for verified TLS. Run `npm run worker:bookings` under a process supervisor. The Mac pilot uses LaunchAgent `com.harbor.public-form-worker`; inspect it with `launchctl print gui/$(id -u)/com.harbor.public-form-worker`. It resumes when the user logs in. A production deployment should monitor queue age and worker health on an always-on host.
+
+A job moves to `submitting` durably before the one allowed final click. A lost response or interrupted submission stays uncertain. Confirm with the office before resolving a pending or unknown outcome. A human-verification prompt or changed terms stop the worker. The portal labels a consultation confirmed only when the office supplies matching confirmation evidence. This pilot implements the Elderly Savior calendar only.
