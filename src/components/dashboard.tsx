@@ -977,11 +977,12 @@ function WorkspaceDashboard({
                 addTask={addTask}
                 exportPlan={exportPlan}
                 notify={notify}
-              />
+              >
+                {!demo && email && (
+                  <PublicFormBooking key={email} email={email} historyOnly />
+                )}
+              </PlanView>
               {!demo && <ConsultationHistory />}
-              {!demo && email && (
-                <PublicFormBooking key={email} email={email} historyOnly />
-              )}
               <HomeCareOutreachPlan
                 records={workspace.homeCareOutreach ?? {}}
                 open={(id) => {
@@ -1171,7 +1172,9 @@ function WorkspaceDashboard({
             }
             onTask={(title) => addTask(title, selectedProvider.id)}
             outreachUnavailable={
-              selectedAccountOutreach && !accountOutreachAvailable
+              !selectedConcierge &&
+              selectedAccountOutreach &&
+              !accountOutreachAvailable
                 ? accountOutreachUnavailable
                 : undefined
             }

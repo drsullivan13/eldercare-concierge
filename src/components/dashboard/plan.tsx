@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import {
   Bookmark,
   Check,
@@ -19,7 +19,9 @@ export function PlanView({
   addTask,
   exportPlan,
   notify,
+  children,
 }: {
+  children?: ReactNode;
   workspace: Workspace;
   update: ReturnType<typeof useWorkspace>["update"];
   addTask: (
@@ -88,6 +90,7 @@ export function PlanView({
             <Plus size={17} /> Add a next step
           </button>
         </div>
+        {children}
         <div className="plan-summary">
           <div>
             <CheckCircle2 size={24} />

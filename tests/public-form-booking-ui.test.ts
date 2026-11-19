@@ -258,7 +258,8 @@ async function mount(
       if (options.mobile)
         await page.getByRole("button", { name: "Open navigation" }).click();
       await page
-        .getByRole("button", { name: "Your shortlist", exact: true })
+        .getByRole("navigation")
+        .getByRole("button", { name: /^Your shortlist/ })
         .click();
       await page
         .getByRole("button", { name: currentProvider.name, exact: true })
@@ -318,9 +319,7 @@ test(
           ).toHaveCount(0);
           await expect(dialog.locator("iframe")).toHaveCount(0);
           const manual = dialog.locator("details").filter({
-            has: dialog.getByText("Manual interview & introduction tools", {
-              exact: true,
-            }),
+            hasText: "Manual interview & introduction tools",
           });
           await expect(manual).not.toHaveAttribute("open", "");
           await fillFirstTime(f.page);
@@ -350,11 +349,9 @@ test(
           assert.equal(f.gets[0].searchParams.get("prefill"), "1");
           await expect(f.page.getByRole("dialog")).toHaveCount(0);
           await expect(
-            f.page.getByRole("heading", { name: "Your plan", exact: true }),
-          ).toBeVisible();
-          await expect(
             f.page.getByRole("heading", {
               name: "Latest Elderly Savior consultation",
+              exact: true,
             }),
           ).toBeVisible();
           assert.equal(f.gets.at(-1)!.searchParams.has("prefill"), false);
@@ -400,7 +397,10 @@ test(
           await consent(f.page).check();
           await approve(f.page).click();
           await expect(
-            f.page.getByRole("heading", { name: "Your plan", exact: true }),
+            f.page.getByRole("heading", {
+              name: "Latest Elderly Savior consultation",
+              exact: true,
+            }),
           ).toBeVisible();
           assert.equal(f.posts.length, 1);
           assert.equal(f.posts[0].name, "Updated Family");
@@ -465,7 +465,10 @@ test(
               .getByRole("button", { name: "Go to Your plan" })
               .click();
             await expect(
-              f.page.getByRole("heading", { name: "Your plan", exact: true }),
+              f.page.getByRole("heading", {
+                name: "Latest Elderly Savior consultation",
+                exact: true,
+              }),
             ).toBeVisible();
             assert.equal(f.posts.length, 0);
             assert.equal(f.gets.at(-1)!.searchParams.has("prefill"), false);
