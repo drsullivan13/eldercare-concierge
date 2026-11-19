@@ -30,6 +30,7 @@ function sameSlot(slot, start) {
 }
 export function observeWixReceipt(page, start) {
   let evidence;
+  let reference;
   const read = async (response) => {
     try {
       const request = response.request();
@@ -57,6 +58,13 @@ export function observeWixReceipt(page, start) {
         !sameSlot(booking?.bookedEntity?.slot, start)
       )
         return;
+      if (
+        !["CONFIRMED", "PENDING", "PENDING_APPROVAL", "CREATED"].includes(
+          booking.status,
+        )
+      )
+        return;
+      reference = id;
       if (booking.status === "CONFIRMED")
         evidence = {
           status: "confirmed",
@@ -65,7 +73,7 @@ export function observeWixReceipt(page, start) {
             id +
             ".",
         };
-      if (["PENDING", "PENDING_APPROVAL", "CREATED"].includes(booking.status))
+      else
         evidence = {
           status: "pending",
           receipt:
@@ -81,6 +89,9 @@ export function observeWixReceipt(page, start) {
   return {
     get evidence() {
       return evidence;
+    },
+    get reference() {
+      return reference;
     },
     close() {
       page.off("response", read);

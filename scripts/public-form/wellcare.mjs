@@ -443,8 +443,11 @@ async function observeClick(page, submit, reviewed, job, onObservedClick) {
 }
 
 async function observeReceipt(page, start, network) {
-  const deadline = Date.now() + 15_000;
-  for (let sample = 0; sample <= 60; sample++) {
+  const started = Date.now();
+  let deadline = started + 15_000;
+  let sawThankYou = false;
+  let provisional;
+  for (let sample = 0; sample <= 120; sample++) {
     if (!trustedUrl(page.url())) return result("unknown");
     try {
       const snapshot = await page.evaluate(() => {
@@ -523,6 +526,11 @@ async function observeReceipt(page, start, network) {
       if (!trustedUrl(snapshot.url) || !trustedUrl(page.url()))
         return result("unknown");
       if (snapshot.url !== page.url()) continue;
+      if (!sawThankYou && trustedUrl(snapshot.url, "/thank-you-page")) {
+        // Wix can navigate only after its create response. Give the receipt time to render.
+        sawThankYou = true;
+        deadline = Math.min(started + 30_000, Date.now() + 15_000);
+      }
       let confirmed = false;
       let pending = false;
       let reference;
@@ -549,12 +557,14 @@ async function observeReceipt(page, start, network) {
         }
       }
       if (rejected) return result("unknown");
-      if (pending)
-        return network.evidence?.status === "pending"
-          ? network.evidence
-          : result("pending");
-      if (network.evidence?.status === "confirmed") return network.evidence;
-      if (confirmed) {
+      if (pending) {
+        provisional = result("pending");
+      } else if (network.evidence?.status === "confirmed") {
+        return network.evidence;
+      } else if (confirmed) {
+        if (reference && network.reference && reference !== network.reference)
+          return result("unknown");
+        reference ??= network.reference;
         const receipt = result("confirmed");
         if (reference)
           receipt.receipt += ` Appointment reference: ${reference}.`;
@@ -563,12 +573,13 @@ async function observeReceipt(page, start, network) {
     } catch {
       // Navigation may replace the execution context. Observe again, never submit again.
     }
-    if (sample === 60 || Date.now() >= deadline) break;
+    if (Date.now() >= deadline) break;
     await page.waitForTimeout(
       Math.max(0, Math.min(250, deadline - Date.now())),
     );
   }
-  return network.evidence || result("unknown");
+  if (provisional && network.evidence?.status !== "pending") return provisional;
+  return network.evidence || provisional || result("unknown");
 }
 
 export async function submitApproved(
