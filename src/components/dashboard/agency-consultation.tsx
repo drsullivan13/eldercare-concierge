@@ -1,10 +1,8 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { bookingMessage, type Consultation } from "@/lib/consultation-request";
 import styles from "./home-care-outreach/home-care-outreach.module.css";
-import {
-  ELDERLY_SAVIOR_PROVIDER_ID,
-  PublicFormBooking,
-} from "./public-form-booking";
+import { PublicFormBooking } from "./public-form-booking";
+import { publicFormProvider } from "@/lib/public-form-providers";
 import { ConsultationVoice } from "./consultation-voice";
 
 type Status = {
@@ -176,6 +174,7 @@ export function AgencyConsultation({
     return () => abort.abort();
   }, [refresh]);
   const row = state?.bookings[0];
+  const publicOffice = publicFormProvider(providerId);
   const pending =
     row && ["searching", "submitting", "unknown"].includes(row.status);
   useEffect(() => {
@@ -269,12 +268,7 @@ export function AgencyConsultation({
       setBusy(false);
     }
   }
-  if (
-    providerId === ELDERLY_SAVIOR_PROVIDER_ID &&
-    email &&
-    !outreachRequestId &&
-    !state?.configured
-  ) {
+  if (publicOffice && email && !outreachRequestId && !state?.configured) {
     const existing =
       row &&
       (row.office_callback_pending ||
@@ -293,7 +287,9 @@ export function AgencyConsultation({
           <p role="status">{message || "Checking your requests…"}</p>
         ) : existing ? (
           <>
-            <p>{row.agency_name} · Free 30-minute Google Meet</p>
+            <p>
+              {row.agency_name} · {publicOffice.serviceTitle}
+            </p>
             <BookingReceipt booking={row} />
             {onViewPlan && (
               <button className="button button-primary" onClick={onViewPlan}>
@@ -304,6 +300,7 @@ export function AgencyConsultation({
         ) : (
           <PublicFormBooking
             key={providerId + email}
+            providerId={providerId}
             email={email}
             onViewPlan={onViewPlan}
           />
@@ -325,8 +322,12 @@ export function AgencyConsultation({
       <section className={styles.workflow} aria-labelledby={label}>
         <h3 id={label}>Book a consultation</h3>
         {row && !outreachRequestId && <BookingReceipt booking={row} />}
-        {providerId === ELDERLY_SAVIOR_PROVIDER_ID && email && !occupied && (
-          <PublicFormBooking key={providerId + email} email={email} />
+        {publicOffice && email && !occupied && (
+          <PublicFormBooking
+            key={providerId + email}
+            providerId={providerId}
+            email={email}
+          />
         )}
         <button
           type="button"
@@ -338,7 +339,7 @@ export function AgencyConsultation({
         </button>
         {showCalendar && (
           <iframe
-            title="Elderly Savior consultation availability"
+            title="Agency consultation availability"
             src={state.publicUrl + "#calendarAppointmentBookingMain"}
             referrerPolicy="no-referrer"
             className={styles.officeCalendar}

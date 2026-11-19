@@ -1,8 +1,9 @@
 "use client";
+import { PublicFormBooking } from "./dashboard/public-form-booking";
 import {
-  ELDERLY_SAVIOR_PROVIDER_ID,
-  PublicFormBooking,
-} from "./dashboard/public-form-booking";
+  publicFormProvider,
+  publicFormProviders,
+} from "@/lib/public-form-providers";
 import {
   AgencyConsultation,
   ConsultationHistory,
@@ -342,7 +343,10 @@ function WorkspaceDashboard({
   }
   const selectedProvider = selected;
   const selectedConcierge =
-    !demo && !!email && selectedProvider?.id === ELDERLY_SAVIOR_PROVIDER_ID;
+    !demo &&
+    !!email &&
+    !!selectedProvider &&
+    !!publicFormProvider(selectedProvider.id);
   const selectedAccountOutreach =
     !demo &&
     selectedProvider?.state === "NJ" &&
@@ -978,9 +982,16 @@ function WorkspaceDashboard({
                 exportPlan={exportPlan}
                 notify={notify}
               >
-                {!demo && email && (
-                  <PublicFormBooking key={email} email={email} historyOnly />
-                )}
+                {!demo &&
+                  email &&
+                  publicFormProviders.map((office) => (
+                    <PublicFormBooking
+                      key={office.providerId + email}
+                      providerId={office.providerId}
+                      email={email}
+                      historyOnly
+                    />
+                  ))}
               </PlanView>
               {!demo && <ConsultationHistory />}
               <HomeCareOutreachPlan

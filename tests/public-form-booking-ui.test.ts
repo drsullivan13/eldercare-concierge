@@ -7,6 +7,7 @@ import { homeCareProvider } from "./helpers/home-care-outreach";
 import { createEmptyWorkspace } from "../src/lib/workspace";
 
 const office = "north-jersey-hp-hp0265900";
+const wellcare = "north-jersey-hp-hp0054400";
 const email = "pilot@example.test";
 const time = "2026-11-19T10:00:00Z";
 const defaults = {
@@ -48,10 +49,12 @@ function fixtureBundle() {
         import {PublicFormBooking} from "./src/components/dashboard/public-form-booking";
         import "./src/app/globals.css";
         const f = window.__concierge;
-        createRoot(document.getElementById("root")).render(
-          f.direct ? <PublicFormBooking email={f.email} historyOnly={f.historyOnly}/> :
+        const root = createRoot(document.getElementById("root"));
+        window.__renderConcierge = (providerId = f.providerId, email = f.email) => root.render(
+          f.direct ? <PublicFormBooking providerId={providerId} email={email} historyOnly={f.historyOnly}/> :
           <Dashboard demo={f.demo} accountOutreachAvailable={false}/>
-        );`,
+        );
+        window.__renderConcierge();`,
       loader: "tsx",
       resolveDir: process.cwd(),
     },
@@ -120,6 +123,9 @@ async function mount(
     lostResponse?: boolean;
     legacy?: Record<string, unknown>[];
     mobile?: boolean;
+    providerId?: string;
+    jobs?: Record<string, Job | null>;
+    configured?: boolean;
   } = {},
 ) {
   const page = await browser.newPage({
@@ -135,10 +141,16 @@ async function mount(
   const unexpected: string[] = [];
   const gets: URL[] = [];
   const posts: Record<string, unknown>[] = [];
-  let job = options.job ?? null;
+  const currentOffice = options.providerId ?? office;
+  const jobs: Record<string, Job | null> = {
+    [currentOffice]: options.job ?? null,
+    ...options.jobs,
+  };
   const currentProvider = options.otherOffice
     ? { ...provider, id: "other-office", name: "Other local fixture office" }
-    : provider;
+    : currentOffice === wellcare
+      ? { ...provider, id: wellcare, name: "WellCare Nurses and Staffing Inc." }
+      : provider;
   page.on("pageerror", (error) => errors.push(error));
   await page.route("**/*", async (route) => {
     const request = route.request();
@@ -153,10 +165,12 @@ async function mount(
         body: '<html><body><div id="root"></div></body></html>',
       });
     if (url.pathname === "/api/public-form-bookings") {
+      let requestedOffice = url.searchParams.get("providerId")!;
       if (request.method() === "POST") {
         const body = request.postDataJSON();
+        requestedOffice = body.providerId;
         posts.push(body);
-        job = {
+        jobs[requestedOffice] = {
           id: body.requestId,
           status: "queued_booking",
           windowStart: body.windowStart,
@@ -169,8 +183,9 @@ async function mount(
       return route.fulfill({
         json: {
           email: options.responseEmail ?? email,
-          job,
-          ...(url.searchParams.has("prefill")
+          job: jobs[requestedOffice] ?? null,
+          ...(url.searchParams.has("prefill") &&
+          requestedOffice === currentOffice
             ? { defaults: options.defaults }
             : {}),
         },
@@ -183,9 +198,15 @@ async function mount(
     if (url.pathname === "/api/consultations")
       return route.fulfill({
         json: {
-          configured: false,
+          configured: options.configured ?? false,
+          source: options.configured ? "phone" : null,
+          phoneRequired: options.configured ?? false,
           publicUrl: "https://agency.example.invalid/calendar",
-          bookings: options.legacy ?? [],
+          bookings: (options.legacy ?? []).filter(
+            (row) =>
+              !url.searchParams.has("providerId") ||
+              row.provider_id === url.searchParams.get("providerId"),
+          ),
         },
       });
     if (url.pathname === "/api/providers")
@@ -231,6 +252,7 @@ async function mount(
       historyOnly: options.historyOnly ?? false,
       demo: options.demo ?? false,
       email,
+      providerId: options.providerId,
       state: {
         workspace,
         email,
@@ -252,7 +274,7 @@ async function mount(
     gets,
     posts,
     setJob(value: Job) {
-      job = value;
+      jobs[currentOffice] = value;
     },
     async openProfile() {
       if (options.mobile)
@@ -360,121 +382,221 @@ test(
       );
 
       await t.test(
-        "repeat request is a compact editable summary with fresh consent",
+        "WellCare mobile profile approves the researched assessment and shows its own plan outcome",
         async () => {
-          const f = await mount(browser, { job: prior(), defaults });
+          const f = await mount(browser, {
+            providerId: wellcare,
+            mobile: true,
+            jobs: {
+              [office]: {
+                ...prior("confirmed"),
+                startTime: defaults.windowStart,
+              },
+            },
+          });
           const dialog = await f.openProfile();
           await dialog
             .getByRole("button", { name: "Reach out for me", exact: true })
             .click();
+          await expect(dialog.getByText("Set up your request")).toBeVisible();
           await expect(
-            dialog.getByText("Review your request", { exact: true }),
+            dialog.getByText(
+              "WellCare Nurses and Staffing Inc. · Free Assessment · 30 minutes · Available online",
+              { exact: true },
+            ),
           ).toBeVisible();
           await expect(
-            dialog.getByText(`${defaults.name} · ${defaults.phone}`),
-          ).toBeVisible();
-          await expect(dialog.getByLabel("Full name")).toBeHidden();
+            dialog.getByText(/Google Meet|AI voice|marketing|STOP|973.*855/),
+          ).toHaveCount(0);
+          await expect(dialog.locator("iframe")).toHaveCount(0);
           await expect(consent(f.page)).not.toBeChecked();
-          await expect(approve(f.page)).toBeDisabled();
-          await dialog
-            .getByText("Edit contact details & time", { exact: true })
-            .click();
-          await expect(dialog.getByLabel("Earliest start")).toHaveValue(
-            "2026-11-30T07:00",
+          await expect(consent(f.page)).toHaveAccessibleName(
+            "I authorize Harbor to book one assessment in this window and share my name, verified account email and phone with WellCare Nurses and Staffing Inc. By completing this booking, I agree to receive booking-related phone notifications.",
           );
-          for (const [label, value] of [
-            ["Full name", "Updated Family"],
-            ["US phone number", "2015550199"],
-            ["Earliest start", "2026-11-30T07:30"],
-            ["Latest finish", "2026-11-30T10:00"],
-          ]) {
-            await consent(f.page).check();
-            await expect(approve(f.page)).toBeEnabled();
-            await dialog.getByLabel(label).fill(value);
-            await expect(consent(f.page)).not.toBeChecked();
-            await expect(approve(f.page)).toBeDisabled();
-          }
+          await expect(dialog.getByLabel("Full name")).toHaveValue("");
+          await fillFirstTime(f.page);
+          await expect(dialog.getByText(/New Jersey time/)).toContainText(
+            "10:00",
+          );
+          await expect(approve(f.page)).toBeDisabled();
           await consent(f.page).check();
           await approve(f.page).click();
+          await expect(f.page.getByRole("dialog")).toHaveCount(0);
+          const own = f.page.getByRole("region", {
+            name: "WellCare reach out",
+            exact: true,
+          });
+          const other = f.page.getByRole("region", {
+            name: "Elderly Savior reach out",
+            exact: true,
+          });
           await expect(
-            f.page.getByRole("heading", {
-              name: "Latest Elderly Savior consultation",
-              exact: true,
-            }),
+            own.getByRole("heading", { name: "Latest WellCare consultation" }),
           ).toBeVisible();
-          assert.equal(f.posts.length, 1);
-          assert.equal(f.posts[0].name, "Updated Family");
-          assert.equal(f.posts[0].windowStart, "2026-11-30T15:30:00.000Z");
-          assert.equal(
-            await f.page.evaluate(() =>
-              Object.values(localStorage).some((value) =>
-                value.includes("Updated Family"),
-              ),
-            ),
-            false,
+          await expect(
+            own.getByText(/Harbor received your approval/),
+          ).toBeVisible();
+          await expect(own.getByText("Scheduled", { exact: true })).toHaveCount(
+            0,
+          );
+          await expect(
+            other.getByText("Scheduled", { exact: true }),
+          ).toBeVisible();
+          assert.deepEqual(f.posts, [
+            {
+              action: "bookWindow",
+              providerId: wellcare,
+              windowStart: defaults.windowStart,
+              windowEnd: defaults.windowEnd,
+              name: defaults.name,
+              phone: defaults.phone,
+              expectedEmail: email,
+              consentVersion: "wellcare-v1",
+              requestId: f.posts[0].requestId,
+            },
+          ]);
+          assert.equal(f.gets[0].searchParams.get("providerId"), wellcare);
+          assert.equal(f.gets[0].searchParams.get("prefill"), "1");
+          assert.ok(
+            f.gets.slice(1).every((url) => !url.searchParams.has("prefill")),
           );
           await f.finish();
         },
       );
 
-      for (const status of [
-        "queued_booking",
-        "booking",
-        "submitting",
-        "pending",
-        "unknown",
-        "needs_human",
-        "confirmed",
-      ]) {
+      for (const providerId of [office, wellcare]) {
         await t.test(
-          `existing ${status} cannot duplicate, receipt stays closed`,
+          `${providerId} repeat request is a compact editable summary with fresh consent`,
           async () => {
-            const job = {
-              ...prior(status),
-              startTime: "2026-11-30T15:15:00Z",
-              receipt: "HTTP 200 · fixture receipt",
-            };
-            const f = await mount(browser, { job, defaults });
+            const f = await mount(browser, {
+              providerId,
+              job: prior(),
+              defaults,
+            });
             const dialog = await f.openProfile();
             await dialog
               .getByRole("button", { name: "Reach out for me", exact: true })
               .click();
             await expect(
-              dialog.getByRole("button", { name: "Go to Your plan" }),
+              dialog.getByText("Review your request", { exact: true }),
             ).toBeVisible();
-            await expect(approve(f.page)).toHaveCount(0);
-            await expect(consent(f.page)).toHaveCount(0);
-            await expect(dialog.getByText(job.receipt)).toBeHidden();
-            if (["pending", "unknown"].includes(status))
-              await expect(
-                dialog
-                  .getByRole("status")
-                  .filter({ hasText: "Waiting for agency confirmation" }),
-              ).toBeVisible();
             await expect(
-              dialog.getByText("Scheduled", { exact: true }),
-            ).toHaveCount(status === "confirmed" ? 1 : 0);
-            await expect(
-              dialog.getByText(
-                status === "confirmed"
-                  ? /Scheduled time ·/
-                  : /Intended start ·/,
-              ),
-            ).toContainText("10:15");
+              dialog.getByText(`${defaults.name} · ${defaults.phone}`),
+            ).toBeVisible();
+            await expect(dialog.getByLabel("Full name")).toBeHidden();
+            await expect(consent(f.page)).not.toBeChecked();
+            await expect(approve(f.page)).toBeDisabled();
             await dialog
-              .getByRole("button", { name: "Go to Your plan" })
+              .getByText("Edit contact details & time", { exact: true })
               .click();
+            await expect(dialog.getByLabel("Earliest start")).toHaveValue(
+              "2026-11-30T07:00",
+            );
+            for (const [label, value] of [
+              ["Full name", "Updated Family"],
+              ["US phone number", "2015550199"],
+              ["Earliest start", "2026-11-30T07:30"],
+              ["Latest finish", "2026-11-30T10:00"],
+            ]) {
+              await consent(f.page).check();
+              await expect(approve(f.page)).toBeEnabled();
+              await dialog.getByLabel(label).fill(value);
+              await expect(consent(f.page)).not.toBeChecked();
+              await expect(approve(f.page)).toBeDisabled();
+            }
+            await consent(f.page).check();
+            await approve(f.page).click();
             await expect(
               f.page.getByRole("heading", {
-                name: "Latest Elderly Savior consultation",
+                name:
+                  providerId === office
+                    ? "Latest Elderly Savior consultation"
+                    : "Latest WellCare consultation",
                 exact: true,
               }),
             ).toBeVisible();
-            assert.equal(f.posts.length, 0);
-            assert.equal(f.gets.at(-1)!.searchParams.has("prefill"), false);
+            assert.equal(f.posts.length, 1);
+            assert.equal(f.posts[0].name, "Updated Family");
+            assert.equal(f.posts[0].providerId, providerId);
+            assert.equal(
+              f.posts[0].consentVersion,
+              providerId === office ? "elderly-savior-v1" : "wellcare-v1",
+            );
+            assert.equal(f.posts[0].windowStart, "2026-11-30T15:30:00.000Z");
+            assert.equal(
+              await f.page.evaluate(() =>
+                Object.values(localStorage).some((value) =>
+                  value.includes("Updated Family"),
+                ),
+              ),
+              false,
+            );
             await f.finish();
           },
         );
+
+        for (const status of [
+          "queued_booking",
+          "booking",
+          "submitting",
+          "pending",
+          "unknown",
+          "needs_human",
+          "confirmed",
+        ]) {
+          await t.test(
+            `${providerId} existing ${status} cannot duplicate, receipt stays closed`,
+            async () => {
+              const job = {
+                ...prior(status),
+                startTime: "2026-11-30T15:15:00Z",
+                receipt: "HTTP 200 · fixture receipt",
+              };
+              const f = await mount(browser, { providerId, job, defaults });
+              const dialog = await f.openProfile();
+              await dialog
+                .getByRole("button", { name: "Reach out for me", exact: true })
+                .click();
+              await expect(
+                dialog.getByRole("button", { name: "Go to Your plan" }),
+              ).toBeVisible();
+              await expect(approve(f.page)).toHaveCount(0);
+              await expect(consent(f.page)).toHaveCount(0);
+              await expect(dialog.getByText(job.receipt)).toBeHidden();
+              if (["pending", "unknown"].includes(status))
+                await expect(
+                  dialog
+                    .getByRole("status")
+                    .filter({ hasText: "Waiting for agency confirmation" }),
+                ).toBeVisible();
+              await expect(
+                dialog.getByText("Scheduled", { exact: true }),
+              ).toHaveCount(status === "confirmed" ? 1 : 0);
+              await expect(
+                dialog.getByText(
+                  status === "confirmed"
+                    ? /Scheduled time ·/
+                    : /Intended start ·/,
+                ),
+              ).toContainText("10:15");
+              await dialog
+                .getByRole("button", { name: "Go to Your plan" })
+                .click();
+              await expect(
+                f.page.getByRole("heading", {
+                  name:
+                    providerId === office
+                      ? "Latest Elderly Savior consultation"
+                      : "Latest WellCare consultation",
+                  exact: true,
+                }),
+              ).toBeVisible();
+              assert.equal(f.posts.length, 0);
+              assert.equal(f.gets.at(-1)!.searchParams.has("prefill"), false);
+              await f.finish();
+            },
+          );
+        }
       }
 
       await t.test(
@@ -613,28 +735,107 @@ test(
       );
 
       await t.test(
-        "legacy unresolved consultation also blocks a duplicate pilot request",
+        "switching office or account clears contact, consent and attempts before the next approval",
         async () => {
           const f = await mount(browser, {
-            legacy: [
-              {
-                id: "legacy-fixture",
-                provider_id: office,
-                agency_name: provider.name,
-                status: "unknown",
-                source: "highlevel",
-                starts_at: null,
-                ends_at: null,
-                timezone: "America/New_York",
-              },
-            ],
+            direct: true,
+            job: prior(),
+            defaults,
+          });
+          await expect(
+            f.page.getByText("Review your request", { exact: true }),
+          ).toBeVisible();
+          await consent(f.page).check();
+          await f.page.evaluate((providerId) => {
+            const fixture = window as unknown as {
+              __renderConcierge: (providerId: string, email?: string) => void;
+            };
+            fixture.__renderConcierge(providerId);
+          }, wellcare);
+          await expect(f.page.getByText("Set up your request")).toBeVisible();
+          await expect(f.page.getByLabel("Full name")).toHaveValue("");
+          await expect(f.page.getByLabel("US phone number")).toHaveValue("");
+          await expect(f.page.getByLabel("Earliest start")).toHaveValue("");
+          await expect(consent(f.page)).not.toBeChecked();
+          await expect(consent(f.page)).toHaveAccessibleName(/WellCare Nurses/);
+          await expect(approve(f.page)).toBeDisabled();
+          await fillFirstTime(f.page);
+          await consent(f.page).check();
+          await f.page.evaluate((providerId) => {
+            const fixture = window as unknown as {
+              __renderConcierge: (providerId: string, email?: string) => void;
+            };
+            fixture.__renderConcierge(providerId, "changed@example.test");
+          }, wellcare);
+          await expect(f.page.getByRole("alert")).toContainText(
+            "signed-in account changed",
+          );
+          await expect(approve(f.page)).toHaveCount(0);
+          await expect(
+            f.page.getByText(`${defaults.name} · ${defaults.phone}`),
+          ).toHaveCount(0);
+          assert.equal(f.posts.length, 0);
+          assert.equal(f.gets.at(-1)!.searchParams.get("providerId"), wellcare);
+          await f.finish();
+        },
+      );
+
+      for (const providerId of [office, wellcare]) {
+        await t.test(
+          `${providerId} legacy unresolved consultation also blocks a duplicate request`,
+          async () => {
+            const f = await mount(browser, {
+              providerId,
+              legacy: [
+                {
+                  id: "legacy-fixture",
+                  provider_id: providerId,
+                  agency_name:
+                    providerId === office
+                      ? provider.name
+                      : "WellCare Nurses and Staffing Inc.",
+                  status: "unknown",
+                  source: "highlevel",
+                  starts_at: null,
+                  ends_at: null,
+                  timezone: "America/New_York",
+                },
+              ],
+            });
+            const dialog = await f.openProfile();
+            await dialog
+              .getByRole("button", { name: "Reach out for me", exact: true })
+              .click();
+            await expect(
+              dialog.getByRole("button", { name: "Go to Your plan" }),
+            ).toBeVisible();
+            await expect(approve(f.page)).toHaveCount(0);
+            if (providerId === wellcare)
+              await expect(dialog.getByText(/Google Meet/)).toHaveCount(0);
+            assert.equal(f.gets.length, 0);
+            await f.finish();
+          },
+        );
+      }
+
+      await t.test(
+        "WellCare still uses a connected normal scheduler when configured",
+        async () => {
+          const f = await mount(browser, {
+            providerId: wellcare,
+            configured: true,
           });
           const dialog = await f.openProfile();
           await dialog
             .getByRole("button", { name: "Reach out for me", exact: true })
             .click();
           await expect(
-            dialog.getByRole("button", { name: "Go to Your plan" }),
+            dialog.getByRole("heading", {
+              name: "Book an agency consultation",
+            }),
+          ).toBeVisible();
+          await expect(
+            dialog.getByRole("button", { name: "Ask Harbor to call and book" }),
           ).toBeVisible();
           await expect(approve(f.page)).toHaveCount(0);
           assert.equal(f.gets.length, 0);
@@ -642,13 +843,17 @@ test(
         },
       );
 
-      for (const demo of [false, true]) {
+      for (const { demo, providerId, otherOffice } of [
+        { demo: false, providerId: office, otherOffice: true },
+        { demo: true, providerId: office, otherOffice: false },
+        { demo: true, providerId: wellcare, otherOffice: false },
+      ]) {
         await t.test(
           demo
-            ? "guest demo has no concierge entry"
+            ? `${providerId} guest demo has no concierge entry`
             : "other offices keep the existing workflow",
           async () => {
-            const f = await mount(browser, { demo, otherOffice: !demo });
+            const f = await mount(browser, { demo, providerId, otherOffice });
             const dialog = await f.openProfile();
             await expect(
               dialog.getByRole("button", {
