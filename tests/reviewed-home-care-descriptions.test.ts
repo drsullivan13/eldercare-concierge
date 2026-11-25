@@ -33,6 +33,7 @@ type Harness = {
   getMarket: typeof import("../src/lib/markets").getMarket;
   renderOverview: (provider: Provider) => string;
   renderDetail: (provider: Provider) => string;
+  renderCard: (provider: Provider) => string;
   project: (provider: Provider) => LocationDescriptionResponse | null;
 };
 
@@ -50,6 +51,13 @@ async function harness(records: Record<string, unknown>): Promise<Harness> {
         import {renderToStaticMarkup} from "react-dom/server";
         import {PropertyOverview} from "./src/components/property-overview";
         import {ProviderDetail} from "./src/components/provider-detail";
+        import {ProviderCard} from "./src/components/provider-card";
+        import {projectSearchCard} from "./src/lib/search";
+        export const renderCard = provider => renderToStaticMarkup(
+          createElement(ProviderCard, {
+            provider: projectSearchCard({...provider, distanceMiles:1}),
+            saved:false, onSave(){}, onOpen(){}, onReviews(){}
+          }));
         export const renderOverview = provider =>
           renderToStaticMarkup(createElement(PropertyOverview, {provider}));
         export const renderDetail = provider =>
@@ -150,6 +158,8 @@ for (const present of [true, false]) {
       );
     }
     assert.ok(app.renderOverview(provider).includes(provider.address));
+    assert.equal(app.renderCard(provider).includes(reviewed.text), present);
+    assert.equal(app.renderCard(provider).includes(legacy), false);
     assert.ok(
       app
         .renderDetail(provider)
@@ -168,16 +178,22 @@ for (const present of [true, false]) {
     for (const mode of ["", "&response=compact", "&response=cards"]) {
       const response = app.searchGET(
         new Request(
-          `https://harbor.test/api/search?zip=07928&radius=50&category=home-care${mode}`,
+          `https://harbor.test/api/search?zip=${office.zip}&radius=50&category=home-care&q=${encodeURIComponent(office.name)}${mode}`,
         ),
       );
       assert.equal(response.status, 200);
       const body = await response.json();
       assert.ok(body.providers.length);
+      assert.ok(body.providers.some((item: Provider) => item.id === office.id));
       for (const item of body.providers) {
         if (mode === "&response=cards") {
           assert.equal("description" in item, false);
-          assert.equal("locationDescription" in item, false);
+          const expected = present && [office.id, other.id].includes(item.id);
+          assert.equal(Boolean(item.locationDescription), expected);
+          if (expected)
+            assert.deepEqual(Object.keys(item.locationDescription), [
+              "summary",
+            ]);
         } else {
           const expected = present && [office.id, other.id].includes(item.id);
           assert.equal(Boolean(item.description), expected);

@@ -38,7 +38,10 @@ test("projectSearchCard omits missing descriptions without legacy fallback or pl
     });
     assert.equal("locationDescription" in card, false);
     assert.equal("description" in card, false);
-    assert.equal("locationDescription" in JSON.parse(JSON.stringify(card)), false);
+    assert.equal(
+      "locationDescription" in JSON.parse(JSON.stringify(card)),
+      false,
+    );
   }
 });
 

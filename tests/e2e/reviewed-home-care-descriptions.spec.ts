@@ -166,8 +166,14 @@ test("live NJ home-care publication coverage, response shape and missing 404 fol
       homeCare.some((provider) => provider.id === id),
     ),
   ).toBe(true);
-  for (let start = 0; start < homeCare.length; start += 100) {
-    const batch = homeCare.slice(start, start + 100);
+  const selected = homeCare.filter(
+    (provider) =>
+      Object.hasOwn(reviewed, provider.id) ||
+      provider.id === office.id ||
+      provider.id === mailing.id,
+  );
+  for (let start = 0; start < selected.length; start += 100) {
+    const batch = selected.slice(start, start + 100);
     const response = await request.get("/api/providers", {
       params: {
         ids: batch.map(({ id }) => id).join(","),

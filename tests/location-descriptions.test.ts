@@ -7,7 +7,6 @@ import {
 } from "../src/lib/location-descriptions";
 import {
   isLocationDescriptionResponse,
-  type LocationDescription,
   type LocationDescriptionResponse,
 } from "../src/lib/location-description-types";
 import { getMarket } from "../src/lib/markets";
@@ -121,7 +120,7 @@ test("unknown IDs and non-NJ catalog records never receive a description", async
 test("published descriptions retain legacy provenance outside North Jersey home care", async () => {
   const snapshot: {
     checkedAt: string;
-    locations: Record<string, LocationDescription>;
+    locations: Record<string, Record<string, unknown>>;
   } = snapshotData;
   for (const provider of getMarket("north-jersey")!.providers) {
     const description = await getLocationDescription(provider.id);

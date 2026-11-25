@@ -152,6 +152,12 @@ test("cards response projects display fields while compact v1 and full detail re
       assert.deepEqual(card.research, provider.research);
       assert.deepEqual(card.warnings, provider.warnings);
       assert.deepEqual(card.services, provider.services);
+      assert.deepEqual(
+        card.locationDescription,
+        provider.locationDescription
+          ? { summary: provider.locationDescription.summary }
+          : undefined,
+      );
     }
     assert.ok(JSON.stringify(cards).length < JSON.stringify(compact).length);
   }
