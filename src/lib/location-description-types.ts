@@ -1,4 +1,4 @@
-export type LocationDescription = {
+type LocationDescription = {
   providerId: string;
   summary: string;
   scope: "facility" | "campus" | "agency-office" | "service-area";

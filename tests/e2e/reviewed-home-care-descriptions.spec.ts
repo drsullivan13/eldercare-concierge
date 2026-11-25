@@ -4,7 +4,11 @@ import regionalData from "../../src/data/regional-markets.json";
 import legacyDescriptions from "../../src/data/location-descriptions.json";
 import { getMarket } from "../../src/lib/markets";
 import type { LocationDescriptionResponse } from "../../src/lib/location-description-types";
-import type { Provider, SearchResponse } from "../../src/lib/providers";
+import type {
+  Provider,
+  CompactSearchResponse,
+  SearchResponse,
+} from "../../src/lib/providers";
 import { evidenceDate } from "../../src/components/evidence-date";
 import { openSavedRegistryListing } from "./saved-registry-listing";
 
@@ -125,6 +129,9 @@ async function fixtureSearch(
       locationKind: provider.locationKind,
       services: provider.services,
       warnings: provider.warnings,
+      ...(description && {
+        locationDescription: { summary: description.summary },
+      }),
       distanceMiles: 0,
       coreqPercent: null,
     };
@@ -149,6 +156,11 @@ async function fixtureSearch(
   const card = page.locator(".care-search-view .provider-card");
   await expect(card).toHaveCount(1);
   await expect(card).not.toContainText(provider.description);
+  if (description)
+    await expect(card.locator(".provider-description")).toHaveText(
+      description.summary,
+    );
+  else await expect(card.locator(".provider-description")).toHaveCount(0);
   await card.getByRole("button", { name: "View details", exact: true }).click();
   const dialog = page.getByRole("dialog", { name: provider.name, exact: true });
   await expect(
@@ -172,70 +184,99 @@ test("live NJ home-care publication coverage, response shape and missing 404 fol
       provider.id === office.id ||
       provider.id === mailing.id,
   );
-  for (let start = 0; start < selected.length; start += 100) {
-    const batch = selected.slice(start, start + 100);
-    const response = await request.get("/api/providers", {
-      params: {
-        ids: batch.map(({ id }) => id).join(","),
-        market: "north-jersey",
-      },
-    });
-    expect(response.status()).toBe(200);
-    const result: { providers: Provider[] } = await response.json();
-    expect(result.providers.map(({ id }) => id).sort()).toEqual(
-      batch.map(({ id }) => id).sort(),
-    );
-    for (const provider of result.providers) {
-      const publication = reviewed[provider.id];
-      expect(provider.description).toBe(publication?.text ?? "");
-      const original = batch.find(({ id }) => id === provider.id)!;
-      for (const field of [
-        "address",
-        "city",
-        "state",
-        "zip",
-        "phone",
-        "website",
-        "services",
-        "sources",
-      ] as const)
-        expect(provider[field]).toEqual(original[field]);
-    }
-  }
-  for (const [id, publication] of Object.entries(reviewed)) {
-    const response = await request.get("/api/location-description", {
-      params: { id },
-    });
-    expect(response.status()).toBe(200);
-    const data: LocationDescriptionResponse = await response.json();
-    expect(Object.keys(data).sort()).toEqual(
-      [
-        "schemaVersion",
-        "marketId",
-        "providerId",
-        "checkedAt",
-        "summary",
-        "basis",
-        "scope",
-        "sources",
-        "limitations",
-      ].sort(),
-    );
-    expect(data).toMatchObject({
-      schemaVersion: 1,
-      marketId: "north-jersey",
-      providerId: id,
-      summary: publication.text,
-      checkedAt: publication.checkedAt,
-      basis: "provider",
-    });
-    expect(["agency-office", "service-area"]).toContain(data.scope);
-    expect(data.sources).toEqual([
-      expect.objectContaining({
-        url: publication.source,
-        checkedAt: publication.checkedAt,
+  const batches = Array.from(
+    { length: Math.ceil(selected.length / 100) },
+    (_, index) => selected.slice(index * 100, (index + 1) * 100),
+  );
+  await Promise.all(
+    batches.map(async (batch) => {
+      const response = await request.get("/api/providers", {
+        params: {
+          ids: batch.map(({ id }) => id).join(","),
+          market: "north-jersey",
+        },
+      });
+      expect(response.status()).toBe(200);
+      const result: { providers: Provider[] } = await response.json();
+      expect(result.providers.map(({ id }) => id).sort()).toEqual(
+        batch.map(({ id }) => id).sort(),
+      );
+      for (const provider of result.providers) {
+        const publication = reviewed[provider.id];
+        expect(provider.description).toBe(publication?.text ?? "");
+        if (publication)
+          expect(provider.locationDescription).toMatchObject({
+            summary: publication.text,
+            basis: "provider",
+            checkedAt: publication.checkedAt,
+            sources: [expect.objectContaining({ url: publication.source })],
+          });
+        else expect(provider.locationDescription).toBeNull();
+        const original = batch.find(({ id }) => id === provider.id)!;
+        for (const field of [
+          "address",
+          "city",
+          "state",
+          "zip",
+          "phone",
+          "website",
+          "services",
+          "sources",
+        ] as const)
+          expect(provider[field]).toEqual(original[field]);
+      }
+    }),
+  );
+  const scopes = new Set<string>();
+  const publications = Object.entries(reviewed).filter(([id]) => {
+    const provider = homeCare.find((entry) => entry.id === id)!;
+    const scope = /\bP\.?\s*O\.?\s*BOX\b|\bPOST OFFICE BOX\b/i.test(
+      provider.address,
+    )
+      ? "service-area"
+      : "agency-office";
+    if (scopes.has(scope)) return false;
+    scopes.add(scope);
+    return true;
+  });
+  for (let start = 0; start < publications.length; start += 8) {
+    await Promise.all(
+      publications.slice(start, start + 8).map(async ([id, publication]) => {
+        const response = await request.get("/api/location-description", {
+          params: { id },
+        });
+        expect(response.status()).toBe(200);
+        const data: LocationDescriptionResponse = await response.json();
+        expect(Object.keys(data).sort()).toEqual(
+          [
+            "schemaVersion",
+            "marketId",
+            "providerId",
+            "checkedAt",
+            "summary",
+            "basis",
+            "scope",
+            "sources",
+            "limitations",
+          ].sort(),
+        );
+        expect(data).toMatchObject({
+          schemaVersion: 1,
+          marketId: "north-jersey",
+          providerId: id,
+          summary: publication.text,
+          checkedAt: publication.checkedAt,
+          basis: "provider",
+        });
+        expect(["agency-office", "service-area"]).toContain(data.scope);
+        expect(data.sources).toEqual([
+          expect.objectContaining({
+            url: publication.source,
+            checkedAt: publication.checkedAt,
+          }),
+        ]);
       }),
-    ]);
+    );
   }
   const missing = homeCare.find(({ id }) => !Object.hasOwn(reviewed, id));
   test.skip(!missing, "Every published NJ home-care office has reviewed text.");
@@ -260,16 +301,25 @@ for (const responseMode of ["full", "compact", "cards"] as const) {
       },
     });
     expect(response.status()).toBe(200);
-    const result: SearchResponse = await response.json();
+    const result: CompactSearchResponse = await response.json();
     expect(result.providers.length).toBeGreaterThan(0);
     for (const provider of result.providers) {
       expect(provider.category).toBe("home-care");
       if (responseMode === "cards") {
         expect(provider).not.toHaveProperty("description");
-        expect(provider).not.toHaveProperty("locationDescription");
+        const publication = reviewed[provider.id];
+        if (publication)
+          expect(provider.locationDescription).toEqual({
+            summary: publication.text,
+          });
+        else expect(provider).not.toHaveProperty("locationDescription");
       } else {
         expect(provider.description).toBe(reviewed[provider.id]?.text ?? "");
       }
+    }
+    for (const marker of result.markers ?? []) {
+      expect(marker).not.toHaveProperty("description");
+      expect(marker).not.toHaveProperty("locationDescription");
     }
   });
 }
@@ -384,6 +434,38 @@ test("a live missing home-care description stays omitted when opened from the sa
   await expect(
     dialog.getByRole("heading", { name: "About this provider", exact: true }),
   ).toHaveCount(0);
+});
+
+test("live reviewed home-care text and its exact source appear in both profile panes", async ({
+  page,
+}) => {
+  const provider = homeCare.find(({ id }) => Object.hasOwn(reviewed, id));
+  test.skip(
+    !provider,
+    "Publication has no reviewed home-care text; route fixtures cover the present state.",
+  );
+  const publication = reviewed[provider!.id];
+  const dialog = await openSavedRegistryListing(
+    page,
+    provider!.id,
+    provider!.name,
+  );
+  for (const pane of ["Overview", "Details"] as const) {
+    await dialog.getByRole("tab", { name: pane, exact: true }).click();
+    const section = dialog.getByRole("region", {
+      name: "Location description",
+    });
+    await expect(
+      section.getByText(publication.text, { exact: true }),
+    ).toBeVisible();
+    await expect(
+      section.getByRole("link", {
+        name: `Description source · ${provider!.name} · checked ${evidenceDate(publication.checkedAt)}`,
+        exact: true,
+      }),
+    ).toHaveAttribute("href", publication.source);
+    await noLegacyDescription(dialog, provider!);
+  }
 });
 
 test("live non-home-care and Massachusetts descriptions retain their catalog wording", async ({

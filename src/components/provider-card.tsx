@@ -264,7 +264,8 @@ export function ProviderCard({
             detail={`Long-stay satisfaction composite · ${coreqReportingYear} reporting year`}
           />
         ) : !reviewedHomeCare ||
-          research?.experience.publicationStatus === "sources-disagree" ? (
+          research?.experience.publicationStatus === "sources-disagree" ||
+          Boolean(research?.experience.reviewCount) ? (
           <span className="experience-card-unrated">
             <span>
               Consumer experience

@@ -189,11 +189,14 @@ for (const present of [true, false]) {
         if (mode === "&response=cards") {
           assert.equal("description" in item, false);
           const expected = present && [office.id, other.id].includes(item.id);
-          assert.equal(Boolean(item.locationDescription), expected);
           if (expected)
-            assert.deepEqual(Object.keys(item.locationDescription), [
-              "summary",
-            ]);
+            assert.deepEqual(item.locationDescription, {
+              summary:
+                item.id === office.id
+                  ? reviewed.text
+                  : "Another office's private projection.",
+            });
+          else assert.equal("locationDescription" in item, false);
         } else {
           const expected = present && [office.id, other.id].includes(item.id);
           assert.equal(Boolean(item.description), expected);
@@ -201,6 +204,10 @@ for (const present of [true, false]) {
           if (item.id === office.id)
             assert.equal(item.description, description);
         }
+      }
+      for (const marker of body.markers ?? []) {
+        assert.equal("description" in marker, false);
+        assert.equal("locationDescription" in marker, false);
       }
     }
     for (const market of [app.getMarket()!, app.getMarket("north-jersey")!]) {
