@@ -11,6 +11,7 @@ import reviewCatalog from "@/data/review-catalog.json";
 import { mergeHomeCareReviews } from "./home-care-reviews";
 import type { ReviewCatalog } from "./review-catalog-types";
 import type { Provider } from "./providers";
+import { reviewedHomeCareDescription } from "./reviewed-home-care-descriptions";
 import type { LocationResearch } from "./location-research-types";
 import type { FacebookResearchDataset } from "./facebook-research";
 import type { InspectionHistorySnapshot } from "./inspections";
@@ -119,7 +120,22 @@ const reviewedMarkets = createMarketRegistry([
       inspectionHistory as unknown as InspectionHistorySnapshot,
     homeHealthEvidence: homeHealthEvidence as HomeHealthEvidenceSnapshot,
   },
-  ...(regionalMarkets as unknown as MarketSnapshot[]),
+  ...(regionalMarkets as unknown as MarketSnapshot[]).map((market) =>
+    market.id !== "north-jersey"
+      ? market
+      : {
+          ...market,
+          providers: market.providers.map((provider) => {
+            if (provider.category !== "home-care") return provider;
+            const locationDescription = reviewedHomeCareDescription(provider);
+            return {
+              ...provider,
+              description: locationDescription?.summary ?? "",
+              locationDescription,
+            };
+          }),
+        },
+  ),
 ]);
 
 export const { snapshots: markets, catalogs: publishedReviewCatalogs } =

@@ -7,6 +7,7 @@ import {
 } from "@/lib/location-description-types";
 import {
   isServiceProvider,
+  usesReviewedHomeCareDescription,
   type Provider,
   type RegistrationFacts,
 } from "@/lib/providers";
@@ -53,6 +54,14 @@ function LocationDescriptionSummary({ providerId }: { providerId: string }) {
       </section>
     );
 
+  return <LocationDescriptionContent description={description} />;
+}
+
+export function LocationDescriptionContent({
+  description,
+}: {
+  description?: LocationDescriptionResponse | null;
+}) {
   if (!description) return null;
   const official = description.basis === "official-listing";
   return (
@@ -123,11 +132,17 @@ export function PropertyOverview({
       role="region"
       aria-label="Property overview"
     >
-      {provider.state === "NJ" && (
-        <LocationDescriptionSummary
-          key={provider.id}
-          providerId={provider.id}
+      {usesReviewedHomeCareDescription(provider) ? (
+        <LocationDescriptionContent
+          description={provider.locationDescription}
         />
+      ) : (
+        provider.state === "NJ" && (
+          <LocationDescriptionSummary
+            key={provider.id}
+            providerId={provider.id}
+          />
+        )
       )}
       <div className="overview-location">
         <h4>{office ? "Service location & access" : "Location & access"}</h4>

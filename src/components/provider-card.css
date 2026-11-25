@@ -106,6 +106,13 @@
   font-size: 15px;
   color: #5f6e61;
 }
+.provider-description {
+  margin: 12px 0 0;
+  color: #294a40;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
 .provider-proof {
   display: flex;
   align-items: center;

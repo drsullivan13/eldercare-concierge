@@ -1,5 +1,4 @@
 import { expect, test, type Page } from "@playwright/test";
-import { openSavedRegistryListing } from "./saved-registry-listing";
 import { getMarket } from "../../src/lib/markets";
 import type { LocationDescriptionResponse } from "../../src/lib/location-description-types";
 import { CATEGORY_LABELS, type Provider } from "../../src/lib/providers";
@@ -138,12 +137,7 @@ test("the published sidecar loads one real campus description directly before lo
   });
 });
 
-for (const id of [
-  "cms-317008",
-  unitId,
-  "north-jersey-hp-hp0144800",
-  "north-jersey-hp-hp0015318",
-]) {
+for (const id of ["cms-317008", unitId]) {
   test(`the real published ${id} description preserves location safeguards`, async ({
     page,
     request,
@@ -156,17 +150,10 @@ for (const id of [
     const data: LocationDescriptionResponse = await response.json();
     expect(data.providerId).toBe(id);
     expect(data.basis).toBe(
-      ["cms-317008", "north-jersey-hp-hp0015318"].includes(id)
-        ? "provider"
-        : "official-listing",
+      id === "cms-317008" ? "provider" : "official-listing",
     );
-    let dialog;
-    if (id === "north-jersey-hp-hp0144800") {
-      dialog = await openSavedRegistryListing(page, id, provider.name);
-    } else {
-      await search(page, provider.zip, provider.name);
-      dialog = await openProfile(page, provider);
-    }
+    await search(page, provider.zip, provider.name);
+    const dialog = await openProfile(page, provider);
     const section = dialog.getByRole("region", {
       name: "Location description",
     });

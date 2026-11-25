@@ -19,7 +19,13 @@ import {
   ShieldAlert,
   Star,
 } from "lucide-react";
-import { CATEGORY_LABELS, formatPhone, type Provider } from "@/lib/providers";
+import {
+  CATEGORY_LABELS,
+  formatPhone,
+  usesReviewedHomeCareDescription,
+  type Provider,
+} from "@/lib/providers";
+import { LocationDescriptionContent } from "./property-overview";
 import { Modal } from "./modal";
 import { providerCareAlerts } from "./provider-card";
 import { providerDisplayName } from "./provider-display-name";
@@ -251,8 +257,18 @@ export function ProviderDetail({
               )}
             {navigation.pane === "details" && (
               <div>
-                <h3 className="place-details-heading">About this provider</h3>
-                <p className="detail-description">{provider.description}</p>
+                {usesReviewedHomeCareDescription(provider) ? (
+                  <LocationDescriptionContent
+                    description={provider.locationDescription}
+                  />
+                ) : (
+                  <>
+                    <h3 className="place-details-heading">
+                      About this provider
+                    </h3>
+                    <p className="detail-description">{provider.description}</p>
+                  </>
+                )}
                 {researchNotes.length > 0 && (
                   <details className="detail-disclosure provider-background">
                     <summary>Provider research notes</summary>

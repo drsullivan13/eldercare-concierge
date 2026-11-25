@@ -1,5 +1,6 @@
 import type { ResearchSummary } from "./location-research-types";
 import type { Market } from "./market-types";
+import type { LocationDescriptionResponse } from "./location-description-types";
 export type CareCategory =
   | "nursing-home"
   | "assisted-living"
@@ -60,6 +61,8 @@ export type Provider = {
   phone?: string;
   website?: string;
   description: string;
+  /** Per-office editorial publication; null means no approved description. */
+  locationDescription?: LocationDescriptionResponse | null;
   services: string[];
   serviceArea?: string;
   /** Published provider-reported coverage, not confirmation of an individual address or vacancy. */
@@ -113,7 +116,10 @@ export type SearchCard = Pick<
   | "warnings"
   | "cms"
   | "research"
-> & { coreqPercent: number | null };
+> & {
+  coreqPercent: number | null;
+  locationDescription?: { summary: string };
+};
 export type CardSearchResponse = Omit<CompactSearchResponse, "providers"> & {
   providers: SearchCard[];
 };
@@ -133,6 +139,14 @@ export function isServiceProvider(provider: Pick<Provider, "category">) {
     provider.category === "home-care" ||
     provider.category === "home-health" ||
     provider.category === "staffing"
+  );
+}
+
+export function usesReviewedHomeCareDescription(
+  provider: Pick<Provider, "id" | "category">,
+) {
+  return (
+    provider.category === "home-care" && provider.id.startsWith("north-jersey-")
   );
 }
 

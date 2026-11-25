@@ -30,6 +30,7 @@ import {
 } from "../src/lib/individual-reviews";
 import { searchProviders } from "../src/lib/search";
 import { GET as reviewGET } from "../src/app/api/reviews/route";
+import type { Provider } from "../src/lib/providers";
 
 const root = resolve(import.meta.dirname, "..");
 const pid = "north-jersey-hp-hp9999999";
@@ -37,6 +38,18 @@ const syntheticUrl =
   "https://www.mylivingchoice.com/property/synthetic-test-office";
 const area = "research/north-jersey/home-care-reviews";
 const asOf = "2026-11-14";
+
+function catalogFacts(provider: Provider) {
+  if (
+    provider.category !== "home-care" ||
+    !provider.id.startsWith("north-jersey-")
+  )
+    return provider;
+  const { description, locationDescription, ...facts } = provider;
+  void description;
+  void locationDescription;
+  return facts;
+}
 
 function json(path: string) {
   return JSON.parse(readFileSync(path, "utf8"));
@@ -172,7 +185,9 @@ assert.deepEqual(twice, merged);
 const original = raw[0].locationResearch[pid];
 for (const key of Object.keys(original).filter(k => !["sources","reviewAggregates","reviews","reviewSamples","notes"].includes(k)))
  assert.deepEqual(research[key], original[key], key);
-assert.deepEqual(markets.find(m => m.id === "north-jersey").providers, raw[0].providers);
+assert.deepEqual(markets.find(m => m.id === "north-jersey").providers,
+ raw[0].providers.map(p => p.category === "home-care"
+   ? {...p, description:"", locationDescription:null} : p));
 Promise.all([
  reviewGET(new Request("https://harbor.example/api/reviews?id=" + pid)).json(),
  researchGET(new Request("https://harbor.example/api/research?id=" + pid)).json()
@@ -201,7 +216,10 @@ function probe(path: string) {
 test("published review evidence is present in the office catalog and leaves other offices unchanged", async () => {
   const raw = regionalMarkets.find((market) => market.id === "north-jersey")!;
   const published = markets.find((market) => market.id === raw.id)!;
-  assert.deepEqual(published.providers, raw.providers);
+  assert.deepEqual(
+    published.providers.map(catalogFacts),
+    (raw.providers as Provider[]).map(catalogFacts),
+  );
   for (const provider of raw.providers.filter(
     (entry) => entry.category === "home-care",
   )) {

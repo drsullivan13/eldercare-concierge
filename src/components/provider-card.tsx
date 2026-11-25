@@ -18,6 +18,7 @@ import {
 import {
   CATEGORY_LABELS,
   isServiceProvider,
+  usesReviewedHomeCareDescription,
   type CareCategory,
   type Provider,
   type SearchProvider,
@@ -132,6 +133,11 @@ export function ProviderCard({
   onCompare?: () => void;
 }) {
   const research = provider.research;
+  const reviewedHomeCare = usesReviewedHomeCareDescription(provider);
+  const description =
+    reviewedHomeCare && "locationDescription" in provider
+      ? provider.locationDescription?.summary
+      : undefined;
   const showSurvey =
     research?.experience.value == null &&
     research?.experience.publicationStatus !== "sources-disagree";
@@ -199,6 +205,7 @@ export function ProviderCard({
       <p className="provider-address">
         {providerDisplayName(provider.city)}, {provider.state} {provider.zip}
       </p>
+      {description && <p className="provider-description">{description}</p>}
       {(provider.locationKind === "office" || isServiceProvider(provider)) && (
         <p className="provider-location-note">
           {provider.category === "home-care" &&
@@ -256,7 +263,8 @@ export function ProviderCard({
             label="NJ resident & family survey"
             detail={`Long-stay satisfaction composite · ${coreqReportingYear} reporting year`}
           />
-        ) : (
+        ) : !reviewedHomeCare ||
+          research?.experience.publicationStatus === "sources-disagree" ? (
           <span className="experience-card-unrated">
             <span>
               Consumer experience
@@ -267,7 +275,7 @@ export function ProviderCard({
               </small>
             </span>
           </span>
-        )}
+        ) : null}
         {research?.experience.value == null &&
           Boolean(research?.experience.reviewCount) && (
             <p className="provider-rating-count">

@@ -311,6 +311,9 @@ function cardFromMatch(provider: Provider, match: MatchDetails): SearchCard {
     zip: provider.zip,
     services: provider.services,
     warnings: provider.warnings,
+    ...(provider.locationDescription && {
+      locationDescription: { summary: provider.locationDescription.summary },
+    }),
     ...(provider.cms && { cms: provider.cms }),
     ...(match.research && { research: match.research }),
     coreqPercent: currentNjCoreqValue(provider),
